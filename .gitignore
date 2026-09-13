@@ -1,6 +1,9 @@
 # Generated site — rebuild with scripts/build_site.py; never hand-edit
 /dist/
 
+# Generated Pages Function allowlist (scripts/generate_works_gate.py)
+/functions/works/
+
 # Wrangler / Cloudflare local cache (may hold account metadata)
 .wrangler/
 .dev.vars

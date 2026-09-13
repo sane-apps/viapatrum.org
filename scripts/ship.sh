@@ -173,6 +173,9 @@ if ! node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-review; then
 fi
 
 if [[ "$DRY_RUN" -eq 1 ]]; then
+  echo "==> Generate withdrawn-works Pages Function gate (dry-run)"
+  "$PYTHON" "$ROOT/scripts/generate_works_gate.py" --works-dir "$ROOT/dist/works" --functions-dir "$ROOT/functions"
+  test -f "$ROOT/functions/works/[[path]].js"
   echo "==> Deploy skipped (--dry-run)"
   echo "CSS hash: ${CSS_HASH}"
   echo "Preview was http://127.0.0.1:${PORT}/"
@@ -189,6 +192,8 @@ cp -R "$ROOT/dist/." "$STAGE/"
 node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-review "$STAGE"
 # Routing-only safety layer is added after the reviewed rendered artifact is
 # verified, so withdrawing a cached URL cannot invalidate visual evidence.
+# _redirects covers the deployment hostname; the Pages Function covers the
+# custom-domain preservation cache that zone purges do not clear.
 "$PYTHON" - "$STAGE" "$ROOT/outputs/catalogue-quality.json" <<'PY'
 import json, pathlib, sys
 stage = pathlib.Path(sys.argv[1])
@@ -196,6 +201,9 @@ held = json.loads(pathlib.Path(sys.argv[2]).read_text())["held_works"]
 (stage / "_redirects").write_text("".join(f"/works/{w['slug']}/ /404.html 404\n" for w in held), encoding="utf-8")
 PY
 test -s "$STAGE/_redirects"
+"$PYTHON" "$ROOT/scripts/generate_works_gate.py" --stage "$STAGE" --functions-dir "$ROOT/functions"
+test -f "$ROOT/functions/works/[[path]].js"
+test -f "$STAGE/_routes.json"
 
 echo "==> Cloudflare Pages deploy (${PAGES_PROJECT})"
 DEPLOY_LOG="$(mktemp /tmp/fathers-ship-deploy.XXXXXX)"
@@ -203,6 +211,7 @@ set +e
 npx --yes wrangler@4 pages deploy "$STAGE" \
   --project-name "$PAGES_PROJECT" \
   --commit-dirty=true \
+  --cwd "$ROOT" \
   2>&1 | tee "$DEPLOY_LOG"
 DEPLOY_RC=${PIPESTATUS[0]}
 set -e
@@ -234,6 +243,32 @@ if [[ "$live_ok" -ne 1 ]]; then
   exit 1
 else
   echo "  OK live ${PUBLIC_ORIGIN}/ has site.css?v=${CSS_HASH}"
+fi
+
+# Functions/asset cutover can lag the homepage by a few seconds on the custom domain.
+HELD_PROBE="$("$PYTHON" - <<'PY'
+import json
+from pathlib import Path
+held = json.loads(Path("outputs/catalogue-quality.json").read_text())["held_works"]
+print(held[0]["slug"] if held else "")
+PY
+)"
+if [[ -n "$HELD_PROBE" ]]; then
+  echo "==> Wait for withdrawn-route Function on /works/${HELD_PROBE}/"
+  held_ok=0
+  for attempt in $(seq 1 20); do
+    held_code="$(curl --connect-timeout 5 --max-time 20 -sS -o /tmp/fathers-held-probe.html -w '%{http_code}' "${PUBLIC_ORIGIN}/works/${HELD_PROBE}/" || echo 000)"
+    if [[ "$held_code" == "404" ]] && grep -q "Page unavailable" /tmp/fathers-held-probe.html; then
+      held_ok=1
+      break
+    fi
+    sleep 2
+  done
+  if [[ "$held_ok" -ne 1 ]]; then
+    echo "BLOCKED: held probe /works/${HELD_PROBE}/ still not 404 after deploy; Functions may not be active on the custom domain." >&2
+    exit 1
+  fi
+  echo "  OK held probe /works/${HELD_PROBE}/ → 404"
 fi
 
 echo "==> Verify live catalogue bytes and withdrawn routes"

@@ -12,6 +12,7 @@ Do not restore build_site.py from old commits to add corpus globs. That removed 
 - Julian (and any post-Nicene corpus) must show an era banner — do not silently call the whole site ante-Nicene only.
 - Donate: GitHub Sponsors `MrSaneApps`. No paywall.
 - Deploy to Cloudflare Pages `fathers-site`; hostname `fathers.saneapps.com`.
+- Withdrawn works: never rely on missing assets alone. `ship.sh` regenerates a `/works/*` Pages Function allowlist (`scripts/generate_works_gate.py`) so custom-domain preservation cache cannot resurrect held URLs.
 - Prefer `./scripts/ship.sh` (build → smoke → deploy → print CSS `?v=`).
 - **Original English Translation** = no previous complete English translation. Only a documented bibliographic review may enable it in FIRST_ENGLISH_NOTES; inherited metadata flags and absence from ANF are insufficient. No repeated provenance badges on catalogue rows. Details: `/methodology/`.
 - Public catalogue gate: merge duplicate work batches, then run `partition_catalogue`. Hold scaffold/contaminated/scope-review entries before generating readers, search, author hubs, or related links. Preserve source files; release named holds only after edition comparison. Passing this gate does not certify fidelity or completeness.
