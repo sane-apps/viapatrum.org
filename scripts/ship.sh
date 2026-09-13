@@ -89,6 +89,9 @@ PY
   )"
 fi
 
+echo "==> Check all local links and reader anchors"
+"$PYTHON" "$ROOT/scripts/check_links.py"
+
 echo "==> Smoke local dist"
 PORT=48765
 python3 -m http.server "$PORT" --directory "$ROOT/dist" >/tmp/fathers-ship-http.log 2>&1 &

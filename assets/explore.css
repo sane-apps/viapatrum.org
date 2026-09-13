@@ -30,9 +30,8 @@ body.explore-mode .site-footer {
 .explore-paths {
   padding: 1.25rem 1.25rem 0.5rem;
   border-bottom: 1px solid var(--rule);
-  background:
-    radial-gradient(900px 320px at 0% 0%, #fff8e8 0%, transparent 60%),
-    var(--paper);
+  background: var(--paper);
+  color: var(--ink);
   flex-shrink: 0;
 }
 .explore-paths-head h1 {
@@ -128,8 +127,8 @@ body.explore-mode .site-footer {
   gap: 0.65rem 1rem;
   padding: 0.85rem 1.25rem;
   border-bottom: 1px solid var(--rule);
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--paper) 92%, #fff) 0%, var(--paper) 100%);
+  background: var(--paper);
+  color: var(--ink);
   z-index: 20;
   flex-shrink: 0;
 }
@@ -357,10 +356,8 @@ body.explore-mode .site-footer {
 
 .explore-canvas {
   position: relative;
-  background:
-    radial-gradient(800px 400px at 20% 0%, color-mix(in srgb, var(--verified) 8%, transparent), transparent 60%),
-    radial-gradient(700px 380px at 90% 80%, color-mix(in srgb, var(--gold) 12%, transparent), transparent 55%),
-    var(--stage);
+  background: var(--stage);
+  color: var(--ink);
   overflow: hidden;
   min-height: 0;
   height: 100%;
@@ -580,3 +577,22 @@ body.explore-mode .site-footer {
 .explore-legend-inline {
   display: none;
 }
+
+/* Compact controls remain operable with touch, keyboard, and reduced motion. */
+.explore-path-grid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 16.5rem), 1fr)); }
+.explore-chrome { scroll-margin-top: var(--header-offset); }
+.explore-chrome select, .explore-seg button, .explore-filters-toggle,
+.explore-tip button, .explore-chip button { min-height: 44px; }
+.explore-chip button { min-width: 32px; }
+.explore-path-card:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .explore-chrome select { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .explore *, .explore *::before, .explore *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.explore-tooltip { box-sizing: border-box; max-width: min(16rem, calc(100% - 16px)); overflow-wrap: anywhere; }

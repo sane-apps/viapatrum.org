@@ -67,3 +67,20 @@ npx --yes wrangler@4 pages deploy dist --project-name fathers-site --commit-dirt
 ```bash
 python3 -m http.server 8765 --directory dist
 ```
+
+## UI regression checks and responsive preview
+
+After building the static site:
+
+```bash
+npm ci
+npm test
+python3 scripts/check_links.py
+npm run dev -- --host 0.0.0.0
+```
+
+The development-only `/__qa__` page offers 320, 390, 768, and 1280-pixel
+viewport frames. It is supplied by Vite middleware and is never written to
+`dist/` or deployed. Production remains a Python-built static Cloudflare Pages
+site. The ship script checks every generated internal link and fragment before
+uploading. See `docs/UI_REVIEW.md` for the review evidence and limitations.

@@ -434,6 +434,39 @@ def build_explore_index(
     """Merge stance tags with library points for /explore/."""
     raw = load_explore_raw()
     by_excerpt = {x["id"]: x for x in excerpts if x.get("id")}
+    # Several source batches can extend one work. Previously each batch rewrote
+    # the reader, leaving earlier citation pages linking to missing anchors.
+    merged_works: dict[str, dict] = {}
+    for work in works:
+        previous = merged_works.get(work["slug"])
+        if previous:
+            if previous["author_slug"] != work["author_slug"]:
+                raise ValueError(f"Conflicting authors for work {work['slug']}")
+            sections = {str(section["section"]): section for section in previous["sections"]}
+            sections.update({str(section["section"]): section for section in work["sections"]})
+            combined = {**previous, **work, "sections": list(sections.values()), "section_count": len(sections)}
+            # Retain the source disclosures for every batch represented here.
+            histories = [previous.get("text_history") or {}, work.get("text_history") or {}]
+            combined["text_history"] = {
+                "method": " ".join(dict.fromkeys(h["method"] for h in histories if h.get("method"))),
+                **{key: list({json.dumps(item, sort_keys=True): item for h in histories for item in h.get(key, [])}.values())
+                   for key in ("witnesses", "joins")},
+            }
+            combined["first_english"] = bool(previous.get("first_english") and work.get("first_english"))
+            combined["first_english_note"] = " ".join(dict.fromkeys(
+                w["first_english_note"] for w in (previous, work) if w.get("first_english_note")))
+            combined["related_topics"] = list(dict.fromkeys(
+                (previous.get("related_topics") or []) + (work.get("related_topics") or [])))
+            if previous.get("groups") or work.get("groups"):
+                groups = {}
+                for group in (previous.get("groups") or []) + (work.get("groups") or []):
+                    old = groups.get(group["title"], {"sections": []})
+                    groups[group["title"]] = {**group, "sections": list(dict.fromkeys(old["sections"] + group["sections"]))}
+                combined["groups"] = list(groups.values())
+            merged_works[work["slug"]] = combined
+        else:
+            merged_works[work["slug"]] = work
+    works = list(merged_works.values())
     works_by_slug = {w["slug"]: w for w in works}
     section_lookup: dict[str, dict] = {}
     for w in works:
@@ -1980,23 +2013,7 @@ def load_cyril_works() -> list[dict]:
             slug = meta.get("slug") or f"cyril-{stem.replace('_', '-')}"
             title = meta.get("title") or stem.replace("_", " ").title()
             sections = _origen_rows(rows, src_map)
-            # Merge tip slices that share a work slug (e.g. Trinity Dial.1 open+rem).
-            existing = next((w for w in works if w["slug"] == slug), None)
-            if existing is not None:
-                seen = {str(s.get("section")) for s in existing["sections"]}
-                for sec in sections:
-                    if str(sec.get("section")) not in seen:
-                        existing["sections"].append(sec)
-                        seen.add(str(sec.get("section")))
-                existing["section_count"] = len(existing["sections"])
-                if meta.get("blurb"):
-                    existing["blurb"] = meta["blurb"]
-                if meta.get("first_english_note"):
-                    existing["first_english_note"] = meta["first_english_note"]
-                    note = (meta.get("first_english_note") or "").strip()
-                    if existing.get("first_english") and note:
-                        existing["first_english_note"] = oet_banner_gloss(note) if "oet_banner_gloss" in globals() else note
-                continue
+            # Shared merge in build() retains sections and disclosures across batches.
             works.append(
                 _pack_work(
                     slug=slug,
@@ -3743,7 +3760,7 @@ def layout(
         crumbs = '<nav class="crumbs" aria-label="Breadcrumb">' + " / ".join(parts) + "</nav>"
 
     def nav_cls(name: str) -> str:
-        return ' class="is-active"' if active == name else ""
+        return ' class="is-active" aria-current="page"' if active == name else ""
 
     extra_css = "".join(f'<link rel="stylesheet" href="{escape(h)}?v={ASSET_VER}">\n' for h in styles or [])
     extra_js = "".join(f'<script src="{escape(h)}?v={ASSET_VER}" defer></script>\n' for h in scripts or [])
@@ -3770,7 +3787,7 @@ def layout(
   <div class="header-inner">
     <a class="brand" href="/">{SITE_NAME}</a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav">
+    <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <a href="/topics/"{nav_cls("topics")}>Topics</a>
       <a href="/works/"{nav_cls("works")}>Works</a>
       <a href="/explore/"{nav_cls("explore")}>Explore</a>
@@ -3782,7 +3799,7 @@ def layout(
   </div>
 </header>
 {crumbs}
-<main id="main" class="main">
+<main id="main" class="main" tabindex="-1">
 {body}
 </main>
 <footer class="site-footer">
@@ -3797,6 +3814,10 @@ def layout(
 
 def write(path: Path, html: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
+    if path.suffix == ".html" and path.is_relative_to(DIST):
+        route = "/" + path.relative_to(DIST).as_posix().removesuffix("index.html")
+        html = html.replace('<link rel="canonical" href="https://fathers.saneapps.com/">',
+                            f'<link rel="canonical" href="https://fathers.saneapps.com{escape(route)}">')
     path.write_text(html, encoding="utf-8")
 
 
@@ -3837,6 +3858,39 @@ def build() -> None:
         + load_irenaeus_demonstration()
         + load_julian_works()
     )
+    # Several source batches can extend one work. Previously each batch rewrote
+    # the reader, leaving earlier citation pages linking to missing anchors.
+    merged_works: dict[str, dict] = {}
+    for work in works:
+        previous = merged_works.get(work["slug"])
+        if previous:
+            if previous["author_slug"] != work["author_slug"]:
+                raise ValueError(f"Conflicting authors for work {work['slug']}")
+            sections = {str(section["section"]): section for section in previous["sections"]}
+            sections.update({str(section["section"]): section for section in work["sections"]})
+            combined = {**previous, **work, "sections": list(sections.values()), "section_count": len(sections)}
+            # Retain the source disclosures for every batch represented here.
+            histories = [previous.get("text_history") or {}, work.get("text_history") or {}]
+            combined["text_history"] = {
+                "method": " ".join(dict.fromkeys(h["method"] for h in histories if h.get("method"))),
+                **{key: list({json.dumps(item, sort_keys=True): item for h in histories for item in h.get(key, [])}.values())
+                   for key in ("witnesses", "joins")},
+            }
+            combined["first_english"] = bool(previous.get("first_english") and work.get("first_english"))
+            combined["first_english_note"] = " ".join(dict.fromkeys(
+                w["first_english_note"] for w in (previous, work) if w.get("first_english_note")))
+            combined["related_topics"] = list(dict.fromkeys(
+                (previous.get("related_topics") or []) + (work.get("related_topics") or [])))
+            if previous.get("groups") or work.get("groups"):
+                groups = {}
+                for group in (previous.get("groups") or []) + (work.get("groups") or []):
+                    old = groups.get(group["title"], {"sections": []})
+                    groups[group["title"]] = {**group, "sections": list(dict.fromkeys(old["sections"] + group["sections"]))}
+                combined["groups"] = list(groups.values())
+            merged_works[work["slug"]] = combined
+        else:
+            merged_works[work["slug"]] = work
+    works = list(merged_works.values())
     works_by_slug = {w["slug"]: w for w in works}
 
     by_topic: dict[str, list[dict]] = defaultdict(list)
@@ -3888,8 +3942,8 @@ def build() -> None:
         )
     first_works = [w for w in works if w.get("first_english")]
     other_works = [w for w in works if not w.get("first_english")]
-    first_cards = "".join(work_card_html(w) for w in first_works)
-    other_cards = "".join(work_card_html(w) for w in other_works)
+    first_cards = "".join(work_card_html(w) for w in first_works[:6])
+    other_cards = "".join(work_card_html(w) for w in other_works[:4])
 
     home = f"""
 <section class="hero">
@@ -4057,7 +4111,7 @@ def build() -> None:
                     "href": f"/e/{x['id']}/",
                     "topic": tid,
                     "verified": x.get("confidence") == "source_verified",
-                    "text": strip_logos_markup(" ".join(eng_list(x.get("english"))))[:400],
+                    "text": strip_logos_markup(" ".join(eng_list(x.get("english")))),
                 }
             )
         if current_author is not None:
@@ -4171,7 +4225,8 @@ def build() -> None:
 <section id="passage-hits" class="passage-hits" hidden>
   <h2>Passages &amp; topics</h2>
   <p class="intro fine">Matches beyond the treatise list — excerpts and sections.</p>
-  <ul id="passage-results" class="card-list"></ul>
+  <p class="meta">Matching passages across the whole library; the filters above apply to the work catalog.</p>
+  <ul id="passage-results" class="card-list" aria-live="polite"></ul>
 </section>
 <p class="intro fine" id="original-english">
   <span id="no-prior-english" class="anchor-alias" aria-hidden="true"></span>
@@ -4453,12 +4508,13 @@ def build() -> None:
                 f'<ol class="toc">{toc_items_from_chunks(chunks)}</ol></details>'
             )
 
-        back_to_top = '<a class="reader-top" href="#contents">Contents ↑</a>'
+        back_to_top = '<a class="reader-top" href="#contents">Contents</a>'
 
         def reader_page(main: str, *, contents_html: str, mast_extra: str = "", mast: str | None = None) -> str:
             """Slim title; rail holds Contents + meta; reading column starts at once."""
             return (
                 f"{mast if mast is not None else work_mast}{mast_extra}"
+                f'<p class="reader-quick"><a href="#contents">Jump to contents</a></p>'
                 f'<div class="reader-layout">'
                 f'<aside class="reader-rail">'
                 f"{contents_html}"
@@ -4650,7 +4706,7 @@ def build() -> None:
                     "author": w["author"],
                     "href": f"/works/{w['slug']}/{s['section']}/",
                     "verified": False,
-                    "text": strip_logos_markup(" ".join(s["english"]))[:400],
+                    "text": strip_logos_markup(" ".join(s["english"])),
                 }
             )
 
@@ -4673,6 +4729,8 @@ def build() -> None:
             elif slug == "julian-of-eclanum" and "julian" in al:
                 ot.extend(rows)
             elif slug == "cyril-of-alexandria" and "cyril of alexandria" in al:
+                ot.extend(rows)
+            elif slugify(a) == slug or a.casefold() == display.casefold():
                 ot.extend(rows)
         ot_by_topic: dict[str, list] = defaultdict(list)
         for x in ot:
@@ -4768,6 +4826,12 @@ def build() -> None:
         '<title>Augustine of Hippo</title>'
         '<p><a href="/authors/augustine-of-hippo/">Augustine of Hippo has moved.</a></p>',
     )
+
+    # Every loaded work must have an author destination, including newly added
+    # writers that are absent from the topical-excerpt corpus.
+    for work in works:
+        if work["author_slug"] not in hubs_done:
+            write_author_hub(work["author_slug"], work["author"])
 
     for author in sorted(by_author.keys(), key=lambda a: alpha_key(a)):
         al = author.lower()

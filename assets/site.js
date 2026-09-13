@@ -10,6 +10,33 @@
     });
   }
 
+  if (toggle && nav) {
+    const closeMenu = () => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+    nav.addEventListener("click", (event) => { if (event.target.closest("a")) closeMenu(); });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        closeMenu();
+        toggle.focus();
+      }
+    });
+  }
+  const header = document.querySelector(".site-header");
+  if (header && "ResizeObserver" in window) {
+    new ResizeObserver(() => {
+      const sticky = getComputedStyle(header).position === "sticky";
+      document.documentElement.style.setProperty("--header-offset", `${sticky ? header.offsetHeight + 16 : 16}px`);
+    }).observe(header);
+  }
+  document.querySelectorAll('a[href="#contents"]').forEach((link) => {
+    link.addEventListener("click", () => {
+      const contents = document.getElementById("contents");
+      if (contents instanceof HTMLDetailsElement) contents.open = true;
+    });
+  });
+
   // Works catalog: find + sort + era/OET filters (Search tab merged here).
   const worksRoot = document.querySelector("[data-works-browse]");
   if (worksRoot) {
@@ -24,12 +51,14 @@
     let filter = "all";
     let index = [];
     let indexReady = false;
+    let indexError = false;
+    let indexLoading = false;
 
     const params = new URLSearchParams(location.search);
     if (["chrono", "author", "title"].includes(params.get("sort") || "")) {
       sort = params.get("sort");
     }
-    if (params.get("filter")) filter = params.get("filter");
+    if (filterBtns.some(b => b.dataset.filter === params.get("filter"))) filter = params.get("filter");
     if (params.get("q") && qInput) qInput.value = params.get("q");
     if (location.hash === "#original-english" || location.hash === "#no-prior-english") {
       filter = "oet";
@@ -57,16 +86,16 @@
       arr.sort((a, b) => {
         if (sort === "author") {
           return (
-            (a.dataset.author || "").localeCompare(b.dataset.author || "", undefined, { sensitivity: "base" }) ||
-            (a.dataset.title || "").localeCompare(b.dataset.title || "", undefined, { sensitivity: "base" })
+            (a.dataset.author || "").localeCompare(b.dataset.author || "", undefined, { sensitivity: "base", numeric: true }) ||
+            (a.dataset.title || "").localeCompare(b.dataset.title || "", undefined, { sensitivity: "base", numeric: true })
           );
         }
         if (sort === "title") {
-          return (a.dataset.title || "").localeCompare(b.dataset.title || "", undefined, { sensitivity: "base" });
+          return (a.dataset.title || "").localeCompare(b.dataset.title || "", undefined, { sensitivity: "base", numeric: true });
         }
         const ya = Number(a.dataset.year || 9999);
         const yb = Number(b.dataset.year || 9999);
-        return ya - yb || (a.dataset.author || "").localeCompare(b.dataset.author || "", undefined, { sensitivity: "base" });
+        return ya - yb || (a.dataset.author || "").localeCompare(b.dataset.author || "", undefined, { sensitivity: "base", numeric: true });
       });
       return arr;
     };
@@ -96,6 +125,14 @@
       if (status) {
         status.textContent = `${shown} treatise${shown === 1 ? "" : "s"} · sorted by ${sortLabel} · ${filterLabel}`;
       }
+      let empty = worksRoot.querySelector(".search-empty");
+      if (!empty) {
+        empty = document.createElement("p");
+        empty.className = "search-empty";
+        empty.textContent = "No matching works. Try another word or select All to clear the era filter.";
+        list.after(empty);
+      }
+      empty.hidden = shown > 0;
       syncUrl();
       renderPassages(term);
     };
@@ -114,45 +151,64 @@
         passageList.innerHTML = "";
         return;
       }
+      if (indexError) {
+        passageSec.hidden = false;
+        passageList.innerHTML = '<li class="search-hint">Passage search could not load. <button type="button" class="search-retry">Try again</button></li>';
+        passageList.querySelector("button").addEventListener("click", loadIndex);
+        return;
+      }
       if (!indexReady) {
         passageSec.hidden = false;
         passageList.innerHTML = '<li class="search-hint">Loading passages…</li>';
+        if (!indexLoading) loadIndex();
         return;
       }
       const hits = [];
       for (const row of index) {
-        if (row.kind === "work") continue; // already in treatise list
+        // Work records are individual passages, not catalog entries.
         const blob = `${row.title} ${row.author || ""} ${row.text || ""}`.toLowerCase();
         if (blob.includes(term)) hits.push(row);
         if (hits.length >= 30) break;
       }
       if (!hits.length) {
-        passageSec.hidden = true;
-        passageList.innerHTML = "";
+        passageSec.hidden = false;
+        passageList.innerHTML = '<li class="search-hint">No matching passages. Try a shorter phrase.</li>';
         return;
       }
       passageSec.hidden = false;
       passageList.innerHTML = hits
         .map(
           (h) =>
-            `<li><a href="${h.href}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
+            `<li><a href="${escapeHtml(h.href)}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
               h.author || h.kind
             )}</span></a></li>`
         )
         .join("");
     };
 
-    fetch("/data/search-index.json")
-      .then((r) => r.json())
-      .then((data) => {
-        index = data;
-        indexReady = true;
-        apply();
-      })
-      .catch(() => {
-        indexReady = true;
-        apply();
-      });
+    function loadIndex() {
+      indexLoading = true;
+      indexReady = false;
+      indexError = false;
+      renderPassages((qInput?.value || "").trim().toLowerCase());
+      fetch("/data/search-index.json")
+        .then((r) => {
+          if (!r.ok) throw new Error("Search unavailable");
+          return r.json();
+        })
+        .then((data) => {
+          if (!Array.isArray(data)) throw new Error("Invalid search index");
+          index = data;
+          indexReady = true;
+          indexLoading = false;
+          apply();
+        })
+        .catch(() => {
+          indexError = true;
+          indexLoading = false;
+          apply();
+        });
+    }
 
     sortBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -234,7 +290,7 @@
       if (!row) return;
       const prev = rail.style.scrollBehavior;
       rail.style.scrollBehavior = "auto";
-      const rowTop = row.offsetTop;
+      const rowTop = row.getBoundingClientRect().top - rail.getBoundingClientRect().top + rail.scrollTop;
       const rowBottom = rowTop + row.offsetHeight;
       const viewTop = rail.scrollTop;
       const viewBottom = viewTop + rail.clientHeight;
@@ -262,7 +318,7 @@
         hereEl.textContent = `Here · ${idx + 1} of ${entries.length}`;
       }
       if (!followRail) return;
-      if (pointerInToc) return;
+      if (pointerInToc || tocRoot.contains(document.activeElement)) return;
       if (Date.now() < railFollowUntil) return;
       snapRailTo(active);
     };
@@ -314,6 +370,7 @@
   if (topBtn) {
     const syncTop = () => {
       const show = window.scrollY > Math.min(420, window.innerHeight * 0.55);
+      topBtn.tabIndex = show ? 0 : -1;
       topBtn.classList.toggle("is-visible", show);
     };
     let topTick = false;

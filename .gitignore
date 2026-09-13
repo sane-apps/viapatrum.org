@@ -30,3 +30,5 @@ venv/
 *.p8
 credentials.*
 secrets.*
+
+node_modules/

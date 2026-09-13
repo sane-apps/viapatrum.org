@@ -71,7 +71,7 @@
   }
 
   fetch("/data/explore-index.json")
-    .then((r) => r.json())
+    .then((r) => { if (!r.ok) throw new Error("Explore unavailable"); return r.json(); })
     .then((json) => {
       data = json;
       // Prefer short labels from source claims if rebuild hasn't landed yet
@@ -81,12 +81,13 @@
       if (params.get("topic") && [...els.topic.options].some((o) => o.value === params.get("topic"))) {
         els.topic.value = params.get("topic");
       }
-      if (params.get("author") && params.get("author") !== "all") {
+      if ([...els.author.options].some(o => o.value === params.get("author"))) {
         els.author.value = params.get("author");
       }
+      if ([...els.era.options].some(o => o.value === params.get("era"))) els.era.value = params.get("era");
       if (params.get("zoom") === "century") zoom = "century";
       const cmp = (params.get("compare") || "").split(",").filter(Boolean);
-      compare = cmp.slice(0, 3);
+      compare = [...new Set(cmp)].filter(slug => data.authors.some(a => a.slug === slug)).slice(0, 3);
       syncZoom();
       fillCompareAdd();
       renderChips();
@@ -154,7 +155,7 @@
           animateNextDraw = true;
           render();
           showEmptyDrawer();
-          els.chrome?.scrollIntoView({ behavior: "smooth", block: "start" });
+          els.chrome?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
         } else {
           const first = card.querySelector(".path-links a");
           if (first) first.click();
@@ -162,6 +163,7 @@
       };
       card.addEventListener("click", activate);
       card.addEventListener("keydown", (ev) => {
+        if (ev.target !== card) return;
         if (ev.key === "Enter" || ev.key === " ") {
           ev.preventDefault();
           activate(ev);
@@ -208,7 +210,7 @@
         const a = data.authors.find((x) => x.slug === slug);
         const name = a ? a.name : slug;
         const c = aColors[slug] || "#1f5c45";
-        return `<span class="explore-chip" style="color:${c};border-color:color-mix(in srgb, ${c} 45%, transparent);background:color-mix(in srgb, ${c} 10%, #fff)">${esc(name)} <button type="button" data-remove="${escAttr(slug)}" aria-label="Remove">×</button></span>`;
+        return `<span class="explore-chip" style="color:${c};border-color:color-mix(in srgb, ${c} 45%, transparent);background:color-mix(in srgb, ${c} 10%, #fff)">${esc(name)} <button type="button" data-remove="${escAttr(slug)}" aria-label="Remove ${escAttr(name)}">×</button></span>`;
       })
       .join("");
   }
@@ -235,6 +237,8 @@
   }
 
   function syncZoom() {
+    els.zoomCentury.setAttribute("aria-pressed", String(zoom === "century"));
+    els.zoomYear.setAttribute("aria-pressed", String(zoom === "year"));
     els.zoomCentury.classList.toggle("is-active", zoom === "century");
     els.zoomYear.classList.toggle("is-active", zoom === "year");
   }
@@ -287,6 +291,7 @@
     const mode = zoom === "century" ? "century" : "year";
     const display = mode === "century" && points.length > 14 ? aggregateByCentury(points) : mode === "century" ? aggregateByCentury(points) : points;
     displayCache = display;
+    if (activeId && !display.some(p => p.id === activeId)) { activeId = null; showEmptyDrawer(); }
 
     if (updateTip) {
       const rupture = (data.ruptures || []).find((r) => r.topic === topic.id);
@@ -361,8 +366,7 @@
       if (!lanesPlaced.has(p.claim_id)) lanesPlaced.set(p.claim_id, []);
       const placed = lanesPlaced.get(p.claim_id);
       let off = 0;
-      for (const L of [0, 1, -1, 2, -2, 3, -3]) {
-        const cand = Math.sign(L) * Math.min(Math.abs(L) * (rDot * 1.9), maxOff);
+      for (const cand of [0, ...Array.from({length: Math.floor(maxOff)}, (_, i) => i + 1).flatMap(n => [n, -n])]) {
         const collides = placed.some(
           (q) => Math.hypot(q.x - x, q.off - cand) < q.rad + rad + 2
         );
@@ -386,7 +390,7 @@
       const color = LANE[i % LANE.length];
       const midY = top + labelZone + (laneH - labelZone) / 2;
       html += `<rect x="0" y="${top}" width="${W}" height="${laneH}" fill="${color}" fill-opacity="${i % 2 ? 0.06 : 0.09}"/>`;
-      html += `<text x="${padL + 8}" y="${top + (compact ? 14 : 19)}" font-family="Fraunces, Georgia, serif" font-size="${compact ? 12.5 : 15}" font-weight="650" fill="${color}" stroke="#fbf7ef" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">${esc(shortClaim(c))}</text>`;
+      html += `<text x="${padL + 8}" y="${top + (compact ? 14 : 19)}" font-family="Fraunces, Georgia, serif" font-size="${compact ? 12.5 : 15}" font-weight="650" fill="${color}" stroke="var(--stage)" stroke-width="3.5" paint-order="stroke" stroke-linejoin="round">${esc(shortClaim(c))}</text>`;
       html += `<line x1="${padL}" x2="${W - padR}" y1="${midY}" y2="${midY}" stroke="${color}" stroke-opacity="0.25" stroke-width="1.5"/>`;
     });
 
@@ -395,14 +399,14 @@
       const major = t % 100 === 0;
       html += `<line x1="${x}" x2="${x}" y1="${padT}" y2="${H - padB}" stroke="#d5cbb6" stroke-opacity="${major ? 0.9 : 0.35}" stroke-dasharray="${major ? "0" : "3 5"}"/>`;
       if (major || (y1 - y0 < 220 && t % 50 === 0)) {
-        html += `<text x="${x}" y="${H - 16}" text-anchor="middle" font-size="12" fill="#2a2833" font-family="Source Sans 3, system-ui, sans-serif">${t}</text>`;
+        html += `<text x="${x}" y="${H - 16}" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Source Sans 3, system-ui, sans-serif">${t}</text>`;
       }
     });
 
     if (ruptureYear) {
       const rx = xScale(ruptureYear);
       html += `<line x1="${rx}" x2="${rx}" y1="${padT - 8}" y2="${H - padB + 4}" stroke="#8a6a2f" stroke-width="2" stroke-dasharray="5 6" stroke-opacity="0.85"/>`;
-      html += `<text x="${rx + 6}" y="${padT - 14}" font-size="${compact ? 10 : 11}" fill="#6b5224" font-weight="650" font-family="Source Sans 3, system-ui, sans-serif">${compact ? "break →" : "later break →"}</text>`;
+      html += `<text x="${Math.min(rx + 6, W - padR)}" text-anchor="${rx > W - 100 ? "end" : "start"}" y="${padT - 14}" font-size="${compact ? 10 : 11}" fill="#6b5224" font-weight="650" font-family="Source Sans 3, system-ui, sans-serif">${compact ? "break →" : "later break →"}</text>`;
     }
 
     // Soft river through the first claim lane (earlier consensus)
@@ -437,23 +441,23 @@
       const cls = `explore-point${active ? " is-active" : ""}${dim ? " is-dim" : ""}${isContrast ? " is-pulse" : ""}`;
       const label = isBucket ? `${p.author} (${p.count})` : `${p.author}`;
       const delay = Math.min(idx * 0.03, 0.6);
-      const animStyle = animateNextDraw ? `animation: fadeUp 0.5s ease ${delay}s both` : "";
+      const animStyle = animateNextDraw && !window.matchMedia("(prefers-reduced-motion: reduce)").matches ? `animation: fadeUp 0.5s ease ${delay}s both` : "";
       const hit = `<circle cx="${x}" cy="${y}" r="${placed.rad + (compact ? 9 : 6)}" fill="transparent" stroke="none"/>`;
       if (isContrast) {
         const s = placed.rad;
-        html += `<g class="${cls}" tabindex="0" data-id="${escAttr(p.id)}" data-label="${escAttr(label)}" data-sub="${escAttr(p.title || "Contrast")}" role="button" style="${animStyle}">
+        html += `<g class="${cls}" tabindex="0" data-id="${escAttr(p.id)}" data-label="${escAttr(label)}" data-sub="${escAttr(p.title || "Contrast")}" role="button" aria-label="${escAttr(label + ": " + (p.title || p.stance || "passages"))}" style="${animStyle}">
           ${hit}
           <rect class="diamond" x="${x - s}" y="${y - s}" width="${s * 2}" height="${s * 2}" transform="rotate(45 ${x} ${y})" fill="${color}" stroke="#fff" stroke-width="${dotStroke}" filter="url(#soft)"/>
         </g>`;
       } else if (isBucket) {
         const r = placed.rad;
-        html += `<g class="${cls}" tabindex="0" data-id="${escAttr(p.id)}" data-label="${escAttr(label)}" data-sub="${escAttr(p.count + " texts")}" role="button" style="${animStyle}">
+        html += `<g class="${cls}" tabindex="0" data-id="${escAttr(p.id)}" data-label="${escAttr(label)}" data-sub="${escAttr(p.count + " texts")}" role="button" aria-label="${escAttr(label + ": " + (p.title || p.stance || "passages"))}" style="${animStyle}">
           ${hit}
           <circle cx="${x}" cy="${y}" r="${r}" fill="${color}" stroke="#fff" stroke-width="2" filter="url(#soft)"/>
           <text x="${x}" y="${y + 4}" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">${p.count}</text>
         </g>`;
       } else {
-        html += `<g class="${cls}" tabindex="0" data-id="${escAttr(p.id)}" data-label="${escAttr(label)}" data-sub="${escAttr((p.year || "") + " · " + (p.stance || ""))}" role="button" style="${animStyle}">
+        html += `<g class="${cls}" tabindex="0" data-id="${escAttr(p.id)}" data-label="${escAttr(label)}" data-sub="${escAttr((p.year || "") + " · " + (p.stance || ""))}" role="button" aria-label="${escAttr(label + ": " + (p.title || p.stance || "passages"))}" style="${animStyle}">
           ${hit}
           <circle cx="${x}" cy="${y}" r="${placed.rad}" fill="${color}" stroke="#fff" stroke-width="${dotStroke}" filter="url(#soft)"/>
         </g>`;
@@ -467,7 +471,7 @@
     els.canvas.insertAdjacentHTML("afterbegin", html);
 
     els.canvas.querySelectorAll(".explore-point").forEach((g) => {
-      const open = () => selectPoint(g.getAttribute("data-id"));
+      const open = () => { hideTip(); selectPoint(g.getAttribute("data-id")); };
       g.addEventListener("click", open);
       g.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
@@ -488,6 +492,7 @@
   }
 
   function showTip(e, g) {
+    if (e.pointerType === "touch") return;
     els.tooltip.innerHTML = `${esc(g.getAttribute("data-label") || "")}<small>${esc(g.getAttribute("data-sub") || "")}</small>`;
     els.tooltip.classList.add("is-on");
     moveTip(e);
@@ -496,8 +501,9 @@
     const box = els.canvas.getBoundingClientRect();
     const x = e.clientX - box.left + 12;
     const y = e.clientY - box.top + 12;
-    els.tooltip.style.left = `${Math.min(x, box.width - 180)}px`;
-    els.tooltip.style.top = `${Math.min(y, box.height - 60)}px`;
+    const tip = els.tooltip.getBoundingClientRect();
+    els.tooltip.style.left = `${Math.max(8, Math.min(x, box.width - tip.width - 8))}px`;
+    els.tooltip.style.top = `${Math.max(8, Math.min(y, box.height - tip.height - 8))}px`;
   }
   function hideTip() {
     els.tooltip.classList.remove("is-on");
@@ -617,6 +623,8 @@
     syncFiltersToggle();
     const url = new URL(location.href);
     url.searchParams.set("topic", els.topic.value);
+    if (els.era.value !== "all") url.searchParams.set("era", els.era.value);
+    else url.searchParams.delete("era");
     if (els.author.value !== "all") url.searchParams.set("author", els.author.value);
     else url.searchParams.delete("author");
     url.searchParams.set("zoom", zoom);

@@ -37,13 +37,7 @@ body {
   color: var(--ink);
   /* Solid paper first: Safari auto-dark can punch through transparent mixes. */
   background-color: var(--paper);
-  /* Quiet parchment atmosphere: soft fields + fine grain (not flat, not glow). */
-  background-image:
-    radial-gradient(1200px 600px at 10% -10%, #fff8e8 0%, transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, #e4ebe3 0%, transparent 52%),
-    radial-gradient(700px 480px at 70% 110%, #ebe2d0 0%, transparent 55%),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.28  0 0 0 0 0.24  0 0 0 0 0.16  0 0 0 0.045 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
-  background-attachment: fixed, fixed, fixed, scroll;
+  /* Solid surfaces keep browser night-mode text and paper in the same layer. */
   min-height: 100vh;
 }
 
@@ -825,13 +819,10 @@ details summary { cursor: pointer; font-weight: 650; }
   padding: 1.05rem 1.05rem 1.15rem 1.15rem;
   position: relative;
   border-radius: 0.45rem;
-  /* Opaque-enough panel so grain stays behind the ink. */
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--paper) 92%, #fff) 0%,
-      color-mix(in srgb, var(--paper) 96%, var(--paper-2)) 100%
-    );
+  /* Use solid colors: automatic darkening can recolor ink but leave gradient
+     images pale. Keep foreground and background on the same local surface. */
+  color: var(--ink);
+  background: var(--paper);
   box-shadow:
     inset 0 0 0 1px color-mix(in srgb, var(--rule) 42%, transparent),
     0 1px 0 color-mix(in srgb, #fff 55%, transparent);
@@ -842,12 +833,7 @@ details summary { cursor: pointer; font-weight: 650; }
 }
 /* Alternate passage panels: cool ash vs warm parchment — quiet rhythm only. */
 .reader-sec:nth-child(even) {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--paper) 88%, #e7ebe4) 0%,
-      color-mix(in srgb, var(--paper-2) 55%, #eef1ea) 100%
-    );
+  background: var(--paper-2);
 }
 .reader-sec + .reader-sec {
   border-top: none;
@@ -867,12 +853,7 @@ details summary { cursor: pointer; font-weight: 650; }
   transition: background 0.2s ease, opacity 0.2s ease, width 0.2s ease;
 }
 .reader-sec.is-current {
-  background:
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--gold) 7%, var(--paper)) 0%,
-      color-mix(in srgb, var(--paper) 90%, #fff) 100%
-    );
+  background: var(--paper);
   box-shadow:
     inset 0 0 0 1px color-mix(in srgb, var(--gold) 22%, var(--rule)),
     0 1px 0 color-mix(in srgb, #fff 60%, transparent);
@@ -883,6 +864,7 @@ details summary { cursor: pointer; font-weight: 650; }
   background: var(--gold-deep);
 }
 .reader-sec .body p {
+  color: var(--ink);
   /* Keep reading ink on a crisp local surface. */
   text-shadow: none;
 }
@@ -1174,8 +1156,8 @@ details.toc-group .toc {
   padding: 1rem 1.1rem;
   border: 1px solid var(--rule);
   border-radius: 0.55rem;
-  background:
-    linear-gradient(180deg, color-mix(in srgb, var(--paper) 88%, #fff) 0%, var(--paper-2) 100%);
+  background: var(--paper-2);
+  color: var(--ink);
 }
 .works-browse .works-find {
   display: block;
@@ -1290,4 +1272,51 @@ details.toc-group .toc {
   html { scroll-behavior: auto; }
   body { background-attachment: scroll; }
   .btn:hover { transform: none; }
+}
+
+/* Shared navigation, focus, and narrow-screen reading safeguards. */
+:root { --header-offset: 5rem; }
+[hidden] { display: none !important; }
+:where(a, button, input, select, summary):focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+:where(h1, h2, h3, .meta, .crumbs, .body, .intro) { overflow-wrap: anywhere; }
+:where(main, section, aside, .split > div) { min-width: 0; }
+:where(#main, #contents, .reader-sec, .reader .vnum, .explore-chrome) {
+  scroll-margin-top: var(--header-offset);
+}
+.reader-sec .reader-head, .reader-sec .body { color: var(--ink); }
+.reader-sec details { color: var(--ink); background: var(--paper-2); }
+.reader-about > summary::after { content: " +"; }
+.reader-about[open] > summary::after { content: " −"; }
+.site-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 0.3em; }
+.search-empty { padding: 1rem; background: var(--paper-2); border-radius: 0.45rem; }
+.search-retry { font: inherit; cursor: pointer; }
+.works-sort button, .works-filters button, .nav-toggle { min-height: 44px; }
+.reader-top { bottom: calc(1rem + env(safe-area-inset-bottom)); }
+.reader-quick { display: none; }
+@media (max-width: 900px) {
+  .reader-quick { display: block; margin: 0 0 1rem; }
+  .reader-quick a { display: inline-flex; align-items: center; min-height: 44px; }
+}
+@media (max-width: 800px) {
+  /* A tall sticky menu must not cover passage headings on a small screen. */
+  .site-header { position: relative; }
+  :root { --header-offset: 1rem; }
+  .site-nav { display: flex; }
+  .nav-toggle { display: none; }
+  html.js .nav-toggle { display: inline-block; }
+  html.js .site-nav:not(.is-open) { display: none; }
+  .site-nav a { display: flex; align-items: center; min-height: 44px; width: 100%; }
+  .site-nav .support { width: auto; }
+  .reader-head { line-height: 1.35; }
+  .main { padding-inline: 1rem; }
+  .hero { padding-top: 1rem; }
+  .reader-sec { padding: 1rem; }
+  .site-footer { padding-bottom: calc(5rem + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 380px) {
+  .hero-actions .btn { width: 100%; text-align: center; }
+  .section-nav .pn { min-width: 0; padding-inline: 0.45rem; }
 }
