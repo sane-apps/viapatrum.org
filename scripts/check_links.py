@@ -11,9 +11,12 @@ class Page(HTMLParser):
         super().__init__()
         self.links = []
         self.ids = set()
+        self.duplicates = set()
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if 'id' in attrs:
+            if attrs['id'] in self.ids:
+                self.duplicates.add(attrs['id'])
             self.ids.add(attrs['id'])
         if tag in ('a', 'link', 'script', 'img'):
             href = attrs.get('href') or attrs.get('src')
@@ -29,6 +32,8 @@ def main():
     errors = Counter()
     checked = 0
     for path, page in pages.items():
+        for duplicate in page.duplicates:
+            errors[f'Duplicate id {path.relative_to(ROOT)}#{duplicate}'] += 1
         for href in page.links:
             url = urlsplit(href)
             if url.scheme or url.netloc:

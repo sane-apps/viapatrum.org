@@ -10,6 +10,8 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote_plus
 
+from catalogue_quality import partition_catalogue, check_publication
+
 try:
     import yaml
 except ImportError as e:
@@ -299,8 +301,14 @@ def period_key(p: str | None) -> str:
 def year_from_period(p: str | None) -> int | None:
     if not p:
         return None
+    span = re.search(r"\b(\d{3,4})\s*[–-]\s*(\d{3,4})\b", p)
+    if span:
+        return (int(span.group(1)) + int(span.group(2))) // 2
     m = re.search(r"(\d{3,4})", p)
-    return int(m.group(1)) if m else None
+    if m:
+        return int(m.group(1))
+    century = re.search(r"\b(\d{1,2})(?:st|nd|rd|th)\s+cent", p, re.I)
+    return (int(century.group(1)) - 1) * 100 + 50 if century else None
 
 
 def era_band(year: int | None) -> str:
@@ -410,12 +418,22 @@ def author_record(name: str | None) -> dict:
 
 
 def author_sort_year(name: str | None, period: str | None = None) -> int:
-    """Floruit / death year for chronology. Prefer authors.json; else first year in period."""
+    """Floruit / death year for chronology. Prefer authors.json; else approximate midpoint of the stated period."""
     rec = author_record(name)
     if rec.get("sort_year"):
         return int(rec["sort_year"])
     y = year_from_period(period)
     return y if y is not None else 9999
+
+
+def work_era(w: dict) -> str:
+    period = w.get("period") or ""
+    century = re.search(r"\b(\d{1,2})(?:st|nd|rd|th)\s+cent", period, re.I)
+    if century:
+        start = (int(century.group(1)) - 1) * 100 + 1
+        return era_band(start) if era_band(start) == era_band(start + 99) else "Unknown"
+    year = work_chrono_year(w)
+    return era_band(year if year != 9999 else None)
 
 
 def work_chrono_year(w: dict) -> int:
@@ -435,39 +453,6 @@ def build_explore_index(
     """Merge stance tags with library points for /explore/."""
     raw = load_explore_raw()
     by_excerpt = {x["id"]: x for x in excerpts if x.get("id")}
-    # Several source batches can extend one work. Previously each batch rewrote
-    # the reader, leaving earlier citation pages linking to missing anchors.
-    merged_works: dict[str, dict] = {}
-    for work in works:
-        previous = merged_works.get(work["slug"])
-        if previous:
-            if previous["author_slug"] != work["author_slug"]:
-                raise ValueError(f"Conflicting authors for work {work['slug']}")
-            sections = {str(section["section"]): section for section in previous["sections"]}
-            sections.update({str(section["section"]): section for section in work["sections"]})
-            combined = {**previous, **work, "sections": list(sections.values()), "section_count": len(sections)}
-            # Retain the source disclosures for every batch represented here.
-            histories = [previous.get("text_history") or {}, work.get("text_history") or {}]
-            combined["text_history"] = {
-                "method": " ".join(dict.fromkeys(h["method"] for h in histories if h.get("method"))),
-                **{key: list({json.dumps(item, sort_keys=True): item for h in histories for item in h.get(key, [])}.values())
-                   for key in ("witnesses", "joins")},
-            }
-            combined["first_english"] = bool(previous.get("first_english") and work.get("first_english"))
-            combined["first_english_note"] = " ".join(dict.fromkeys(
-                w["first_english_note"] for w in (previous, work) if w.get("first_english_note")))
-            combined["related_topics"] = list(dict.fromkeys(
-                (previous.get("related_topics") or []) + (work.get("related_topics") or [])))
-            if previous.get("groups") or work.get("groups"):
-                groups = {}
-                for group in (previous.get("groups") or []) + (work.get("groups") or []):
-                    old = groups.get(group["title"], {"sections": []})
-                    groups[group["title"]] = {**group, "sections": list(dict.fromkeys(old["sections"] + group["sections"]))}
-                combined["groups"] = list(groups.values())
-            merged_works[work["slug"]] = combined
-        else:
-            merged_works[work["slug"]] = work
-    works = list(merged_works.values())
     works_by_slug = {w["slug"]: w for w in works}
     section_lookup: dict[str, dict] = {}
     for w in works:
@@ -631,13 +616,33 @@ def load_topic_excerpts() -> list[dict]:
             x = dict(x)
             x["_source_file"] = path.name
             items.append(x)
+    # Preserve the previously served (last) record at its existing URL. Earlier
+    # topic excerpts need distinct routes rather than silently overwriting it.
+    seen = set()
+    for x in reversed(items):
+        original = x["id"]
+        if original in seen:
+            x["id"] = f"{original}--{x['topic']}"
+        if x["id"] in seen:
+            raise ValueError(f"Duplicate excerpt route: {x['id']}")
+        seen.add(x["id"])
     return items
+
+
+def display_section(value) -> str:
+    """Edition locus for readers; unique fragment suffixes remain in URLs only."""
+    value = str(value)
+    if re.fullmatch(r"\d+(?:-\d+)+(?:-collective-\d+)?", value):
+        return re.sub(r"-collective-\d+$", "", value).replace("-", ".")
+    return value
 
 
 def _section_sort_key(sec: str):
     if sec == "proem":
         return (0, 0, 0)
-    parts = sec.split(".")
+    # Route separators do not change edition numbering. Equal loci retain
+    # source order, including separate fragments sharing the same citation.
+    parts = re.split(r"[.-]", re.sub(r"-collective-\d+$", "", sec))
     nums = []
     for p in parts:
         try:
@@ -727,687 +732,9 @@ NEVER_OET_SLUGS = frozenset(
 )
 # Gloss only — do not start with the OET label (banner already prints it).
 FIRST_ENGLISH_NOTES: dict[str, str] = {
-    "origen-on-prayer": "No previous English translation.",
-    "origen-exhortation-to-martyrdom": "No previous English translation.",
-    "origen-contra-celsum-book-1": (
-        "Original English Translation of Origen’s Contra Celsum Book I — new OET from Koetschau GCS (ANF Crombie and Chadwick not used as wording)."
-    ),
-    "origen-dialogue-heraclides": (
-        "No previous English translation. The Greek was recovered in the 1940s."
-    ),
-    "origen-on-pascha": (
-        "No previous English translation. The Greek was recovered in the twentieth century."
-    ),
-    "cyril-adoration-1": (
-        "No previous English translation of Cyril’s long On Adorations (seventeen books). "
-        "This page is Book 1 only."
-    ),
-    "origen-homilies-jeremiah": (
-        "No previous English translation of these Greek homilies."
-    ),
-    "origen-john-13": (
-        "No previous English translation of Origen’s Commentary on John Book 13 "
-        "(later tomoi; ANF covers only earlier books)."
-    ),
-    "origen-john-19": (
-        "No previous English translation of Origen’s Commentary on John Book 19 "
-        "(later tomoi; ANF covers only earlier books)."
-    ),
-    "origen-john-20": (
-        "No previous English translation of Origen’s Commentary on John Book 20 "
-        "(later tomoi; ANF covers only earlier books)."
-    ),
-    "origen-john-28": (
-        "No previous English translation of Origen’s Commentary on John Book 28 "
-        "(later tomoi; ANF covers only earlier books)."
-    ),
-    "origen-john-32": (
-        "No previous English translation of Origen’s Commentary on John Book 32 "
-        "(later tomoi; ANF covers only earlier books)."
-    ),
-    "origen-song-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on the Song of Songs (ANF lacks these; Lawson ACW is copyrighted)."
-    ),
-    "origen-song-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on the Song of Songs (ANF lacks these; Lawson ACW is copyrighted)."
-    ),
-    "origen-song-commentary-prologus": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on the Song of Songs Prologus (ANF lacks this; Lawson ACW is copyrighted)."
-    ),
-    "origen-song-commentary-liber-1": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on the Song of Songs Liber I (ANF lacks this; Lawson ACW is copyrighted)."
-    ),
-    "origen-song-commentary-liber-2": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on the Song of Songs Liber II (ANF lacks this; Lawson ACW is copyrighted)."
-    ),
-    "origen-song-commentary-liber-3": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on the Song of Songs Liber III (ANF lacks this; Lawson ACW is copyrighted)."
-    ),
-    "origen-song-commentary-liber-4": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on the Song of Songs Liber IV (ANF lacks this; Lawson ACW is copyrighted)."
-    ),
-    "origen-genesis-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-10": (
-        "No previous public-domain English translation of Origen’s Homilia X "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-11": (
-        "No previous public-domain English translation of Origen’s Homilia XI "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-12": (
-        "No previous public-domain English translation of Origen’s Homilia XII "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-13": (
-        "No previous public-domain English translation of Origen’s Homilia XIII "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-14": (
-        "No previous public-domain English translation of Origen’s Homilia XIV "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-15": (
-        "No previous public-domain English translation of Origen’s Homilia XV "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-genesis-homily-16": (
-        "No previous public-domain English translation of Origen’s Homilia XVI "
-        "on Genesis (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-10": (
-        "No previous public-domain English translation of Origen’s Homilia X "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-11": (
-        "No previous public-domain English translation of Origen’s Homilia XI "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-12": (
-        "No previous public-domain English translation of Origen’s Homilia XII "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-exodus-homily-13": (
-        "No previous public-domain English translation of Origen’s Homilia XIII "
-        "on Exodus (ANF lacks these; Heine FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-10": (
-        "No previous public-domain English translation of Origen’s Homilia X "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-11": (
-        "No previous public-domain English translation of Origen’s Homilia XI "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-12": (
-        "No previous public-domain English translation of Origen’s Homilia XII "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-13": (
-        "No previous public-domain English translation of Origen’s Homilia XIII "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-14": (
-        "No previous public-domain English translation of Origen’s Homilia XIV "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-15": (
-        "No previous public-domain English translation of Origen’s Homilia XV "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-leviticus-homily-16": (
-        "No previous public-domain English translation of Origen’s Homilia XVI "
-        "on Leviticus (ANF lacks these; Barkley FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-10": (
-        "No previous public-domain English translation of Origen’s Homilia X "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-11": (
-        "No previous public-domain English translation of Origen’s Homilia XI "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-12": (
-        "No previous public-domain English translation of Origen’s Homilia XII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-13": (
-        "No previous public-domain English translation of Origen’s Homilia XIII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-14": (
-        "No previous public-domain English translation of Origen’s Homilia XIV "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-15": (
-        "No previous public-domain English translation of Origen’s Homilia XV "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-16": (
-        "No previous public-domain English translation of Origen’s Homilia XVI "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-17": (
-        "No previous public-domain English translation of Origen’s Homilia XVII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-18": (
-        "No previous public-domain English translation of Origen’s Homilia XVIII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-19": (
-        "No previous public-domain English translation of Origen’s Homilia XIX "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-20": (
-        "No previous public-domain English translation of Origen’s Homilia XX "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-21": (
-        "No previous public-domain English translation of Origen’s Homilia XXI "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-22": (
-        "No previous public-domain English translation of Origen’s Homilia XXII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-23": (
-        "No previous public-domain English translation of Origen’s Homilia XXIII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-24": (
-        "No previous public-domain English translation of Origen’s Homilia XXIV "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-25": (
-        "No previous public-domain English translation of Origen’s Homilia XXV "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-26": (
-        "No previous public-domain English translation of Origen’s Homilia XXVI "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-27": (
-        "No previous public-domain English translation of Origen’s Homilia XXVII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-numbers-homily-28": (
-        "No previous public-domain English translation of Origen’s Homilia XXVIII "
-        "on Numbers (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-
-    "origen-joshua-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-10": (
-        "No previous public-domain English translation of Origen’s Homilia X "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-11": (
-        "No previous public-domain English translation of Origen’s Homilia XI "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-12": (
-        "No previous public-domain English translation of Origen’s Homilia XII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-13": (
-        "No previous public-domain English translation of Origen’s Homilia XIII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-14": (
-        "No previous public-domain English translation of Origen’s Homilia XIV "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-15": (
-        "No previous public-domain English translation of Origen’s Homilia XV "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-16": (
-        "No previous public-domain English translation of Origen’s Homilia XVI "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-17": (
-        "No previous public-domain English translation of Origen’s Homilia XVII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-18": (
-        "No previous public-domain English translation of Origen’s Homilia XVIII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-19": (
-        "No previous public-domain English translation of Origen’s Homilia XIX "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-20": (
-        "No previous public-domain English translation of Origen’s Homilia XX "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-21": (
-        "No previous public-domain English translation of Origen’s Homilia XXI "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-22": (
-        "No previous public-domain English translation of Origen’s Homilia XXII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-23": (
-        "No previous public-domain English translation of Origen’s Homilia XXIII "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-24": (
-        "No previous public-domain English translation of Origen’s Homilia XXIV "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-25": (
-        "No previous public-domain English translation of Origen’s Homilia XXV "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-joshua-homily-26": (
-        "No previous public-domain English translation of Origen’s Homilia XXVI "
-        "on Joshua (ANF lacks these; Bruce FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-
-    "origen-judges-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-judges-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Judges (ANF lacks these; modern FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-
-    "origen-isaiah-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-isaiah-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Isaiah (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-6": (
-        "No previous public-domain English translation of Origen’s Homilia VI "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-7": (
-        "No previous public-domain English translation of Origen’s Homilia VII "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-8": (
-        "No previous public-domain English translation of Origen’s Homilia VIII "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-9": (
-        "No previous public-domain English translation of Origen’s Homilia IX "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-10": (
-        "No previous public-domain English translation of Origen’s Homilia X "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-11": (
-        "No previous public-domain English translation of Origen’s Homilia XI "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-12": (
-        "No previous public-domain English translation of Origen’s Homilia XII "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-13": (
-        "No previous public-domain English translation of Origen’s Homilia XIII "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-ezekiel-homily-14": (
-        "No previous public-domain English translation of Origen’s Homilia XIV "
-        "on Ezekiel (ANF lacks these; Scheck FOTC is copyrighted)."
-    ),
-    "origen-psalm-36-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Psalm 36 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-36-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Psalm 36 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-36-homily-3": (
-        "No previous public-domain English translation of Origen’s Homilia III "
-        "on Psalm 36 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-36-homily-4": (
-        "No previous public-domain English translation of Origen’s Homilia IV "
-        "on Psalm 36 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-36-homily-5": (
-        "No previous public-domain English translation of Origen’s Homilia V "
-        "on Psalm 36 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-37-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Psalm 37 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-37-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Psalm 37 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-38-homily-1": (
-        "No previous public-domain English translation of Origen’s Homilia I "
-        "on Psalm 38 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-psalm-38-homily-2": (
-        "No previous public-domain English translation of Origen’s Homilia II "
-        "on Psalm 38 (ANF lacks these; Trigg/Prinzivalli SC is copyrighted)."
-    ),
-    "origen-romans-book-1": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book I (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-2": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book II (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-3": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book III (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-4": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book IV (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-5": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book V (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-6": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book VI (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-7": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book VII (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-8": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book VIII (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-9": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book IX (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-romans-book-10": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Romans Book X (ANF lacks this; Scheck FOTC is copyrighted)."
-    ),
-    "origen-matthew-tomus-15": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Matthew Tomus XV (ANF lacks these later books; Heine is copyrighted)."
-    ),
-    "origen-matthew-tomus-16": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Matthew Tomus XVI (ANF lacks these later books; Heine is copyrighted)."
-    ),
-    "origen-matthew-tomus-17": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Matthew Tomus XVII (ANF lacks these later books; Heine is copyrighted)."
-    ),
-    "origen-matthew-series": (
-        "No previous public-domain English translation of Origen’s Commentary "
-        "on Matthew Series (ANF lacks it; Heine is copyrighted)."
-    ),
+    # Only add a work after a documented bibliographic review establishes that
+    # no earlier complete English translation exists. Legacy metadata flags and
+    # absence from ANF are not evidence. Audit: .codex/research.md.
 }
 
 
@@ -1538,18 +865,11 @@ def _pack_work(
         )
     else:
         sections = sorted(sections, key=lambda s: _section_sort_key(str(s["section"])))
-    if slug in NEVER_OET_SLUGS:
-        is_first = False
-        note = ""
-    else:
-        is_first = (
-            bool(first_english)
-            if first_english is not None
-            else slug in FIRST_ENGLISH_NOTES
-        )
-        note = (first_english_note or FIRST_ENGLISH_NOTES.get(slug) or "").strip()
-        if is_first:
-            note = oet_banner_gloss(note)
+    # Fail closed: inherited booleans and promotional notes cannot establish priority.
+    is_first = slug in FIRST_ENGLISH_NOTES and slug not in NEVER_OET_SLUGS
+    note = FIRST_ENGLISH_NOTES.get(slug, "") if is_first else ""
+    # Legacy blurbs conflate a new rendering / absence from ANF with first English.
+    blurb = re.sub(r"[^.!?]*(?:Original English Translation|no previous|new OET)[^.!?]*[.!?]?", "", blurb, flags=re.I).strip()
     return {
         "slug": slug,
         "title": title,
@@ -1571,44 +891,29 @@ def _pack_work(
 
 
 def work_card_html(w: dict, *, catalog: bool = False) -> str:
-    st = "In progress" if w["status"] == "in_progress" else "Available"
-    mark = ""
-    if w.get("first_english"):
-        mark = (
-            f' · <abbr class="original-english" title="{escape(ORIGINAL_ENGLISH_TITLE)}">'
-            f"{escape(ORIGINAL_ENGLISH_CHIP)}</abbr>"
-        )
     year = work_chrono_year(w)
-    era = era_band(year if year != 9999 else year_from_period(w.get("period")))
+    era = work_era(w)
     topics = " ".join(w.get("related_topics") or [])
-    blob = " ".join(
-        [
-            w.get("title") or "",
-            w.get("author") or "",
-            w.get("period") or "",
-            w.get("blurb") or "",
-            topics,
-            ORIGINAL_ENGLISH_LABEL if w.get("first_english") else "",
-        ]
-    ).casefold()
-    meta = (
-        f"{escape(w['author'])} · {escape(w.get('period') or '')} · "
-        f"{w['section_count']} sections · {st} · {escape(era)}{mark}"
-    )
+    blob = " ".join([w.get("title") or "", w.get("author") or "",
+                     w.get("period") or "", w.get("blurb") or "", topics]).casefold()
+    count = w["section_count"]
+    bits = [f"{count} section{'' if count == 1 else 's'}"]
+    if w["status"] == "in_progress":
+        bits.append("Translation in progress")
     attrs = ""
     if catalog:
-        attrs = (
-            f' data-title="{escape(w["title"])}"'
-            f' data-author="{escape(w["author"])}"'
-            f' data-year="{year}"'
-            f' data-era="{escape(era)}"'
-            f' data-oet="{"1" if w.get("first_english") else "0"}"'
-            f' data-blob="{escape(blob)}"'
-        )
-    return (
-        f"<li{attrs}><a href=\"/works/{escape(w['slug'])}/\"><strong>{escape(w['title'])}</strong>"
-        f"<span>{meta}</span></a></li>"
-    )
+        attrs = (f' data-title="{escape(w["title"])}" data-author="{escape(w["author"])}"'
+                 f' data-author-href="/authors/{escape(w["author_slug"])}/"'
+                 f' data-period="{escape(author_record(w["author"]).get("period") or "")}" data-year="{year}"'
+                 f' data-era="{escape(era)}" data-oet="{int(w.get("first_english", False))}"'
+                 f' data-blob="{escape(blob)}"')
+    period = f' · {escape(w["period"])}' if w.get("period") else ""
+    return (f'<li class="work-entry"{attrs}>'
+            f'<a class="work-link" href="/works/{escape(w["slug"])}/" '
+            f'aria-label="{escape(w["title"])} — {escape(w["author"])}">'
+            f'<strong class="work-title">{escape(w["title"])}</strong>'
+            f'<span class="work-author">{escape(w["author"])}{period}</span>'
+            f'<span class="work-meta">{" · ".join(bits)}</span></a></li>')
 
 
 def load_origen_works() -> list[dict]:
@@ -1617,84 +922,14 @@ def load_origen_works() -> list[dict]:
         str(s.get("section")): s
         for s in json.loads((ORIGEN_BOOK / "translations/gebet_source.json").read_text())
     }
-    # Optional OET overlays from orat_*_* tip slices (ordered by section).
-    orat_en: dict[str, dict] = {}
-    orat_src: dict[str, dict] = {}
-    for orat_path in sorted((ORIGEN_BOOK / "translations").glob("orat_*_english.json")):
-        try:
-            chunk = json.loads(orat_path.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-        if not isinstance(chunk, list):
-            continue
-        for row in chunk:
-            sec = str(row.get("section"))
-            if sec:
-                orat_en[sec] = row
-        src_path = orat_path.with_name(orat_path.name.replace("_english.json", "_source.json"))
-        if src_path.is_file():
-            try:
-                for s in json.loads(src_path.read_text(encoding="utf-8")):
-                    orat_src[str(s.get("section"))] = s
-            except Exception:
-                pass
-    if orat_en:
-        gebet_en = [
-            {
-                **row,
-                **{
-                    k: orat_en[str(row.get("section"))][k]
-                    for k in ("title", "english")
-                    if k in orat_en[str(row.get("section"))]
-                },
-            }
-            if str(row.get("section")) in orat_en
-            else row
-            for row in gebet_en
-        ]
-        gebet_src.update(orat_src)
+    # Tip slices may cover only a paragraph of a numbered chapter. They must
+    # never replace the complete copy-text/English merely because ids match.
+    # Source-backed changes belong in the canonical files and publication gate.
     mart_en = json.loads((ORIGEN_BOOK / "translations/martyrium_english.json").read_text())
     mart_src = {
         str(s.get("section")): s
         for s in json.loads((ORIGEN_BOOK / "translations/martyrium_source.json").read_text())
     }
-    # Optional OET overlays from mart_* tip slices.
-    mart_tip_en: dict[str, dict] = {}
-    mart_tip_src: dict[str, dict] = {}
-    for mart_path in sorted((ORIGEN_BOOK / "translations").glob("mart_*_english.json")):
-        try:
-            chunk = json.loads(mart_path.read_text(encoding="utf-8"))
-        except Exception:
-            continue
-        if not isinstance(chunk, list):
-            continue
-        for row in chunk:
-            sec = str(row.get("section"))
-            if sec:
-                mart_tip_en[sec] = row
-        src_path = mart_path.with_name(mart_path.name.replace("_english.json", "_source.json"))
-        if src_path.is_file():
-            try:
-                for s in json.loads(src_path.read_text(encoding="utf-8")):
-                    mart_tip_src[str(s.get("section"))] = s
-            except Exception:
-                pass
-    if mart_tip_en:
-        mart_en = [
-            {
-                **row,
-                **{
-                    k: mart_tip_en[str(row.get("section"))][k]
-                    for k in ("title", "english")
-                    if k in mart_tip_en[str(row.get("section"))]
-                },
-            }
-            if str(row.get("section")) in mart_tip_en
-            else row
-            for row in mart_en
-        ]
-        mart_src.update(mart_tip_src)
-
     def _nav_title(row: dict, src: dict, sec: str) -> str:
         """Prefer editorial title; never show OCR apparatus as the TOC label."""
         titled = (row.get("title") or "").strip()
@@ -3638,11 +2873,18 @@ def load_julian_works() -> list[dict]:
     )
 
     coll = []
-    for x in json.loads((JULIAN_BOOK / "translations/collective_letter_english.json").read_text()):
+    collective_rows = json.loads((JULIAN_BOOK / "translations/collective_letter_english.json").read_text())
+    last_at_locus = {x["location"]: x for x in collective_rows}
+    for x in collective_rows:
         loc = x["location"]
+        # Several fragments share Augustine's locus. Keep the previously served
+        # last fragment URL and give the other fragments their existing stable id.
+        sec_id = loc.replace(".", "-")
+        if x is not last_at_locus[loc]:
+            sec_id += "-" + x["fragment_id"]
         coll.append(
             {
-                "section": loc.replace(".", "-"),
+                "section": sec_id,
                 "head": f"Collective letter {loc}",
                 "english": eng_list(x.get("english")),
                 "greek": [],
@@ -3687,18 +2929,18 @@ def load_julian_works() -> list[dict]:
 
 
 CONFIDENCE_NOTE = (
-    "English is newly prepared for study from the stated edition. "
+    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
     "It is not a complete critical edition."
 )
 
 CONFIDENCE_NOTE_WITH_GREEK = (
-    "English is newly prepared for study from the stated edition. "
+    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
     "Open Greek on each section for the source text. "
     "This is not a complete critical edition."
 )
 
 CONFIDENCE_NOTE_WITH_LATIN = (
-    "English is newly prepared for study from the stated edition. "
+    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
     "Open Latin on each section (or the Latin source witness link) for the source text. "
     "This is not a complete critical edition."
 )
@@ -3721,7 +2963,7 @@ def prev_next_nav(
         prev = sections[idx - 1]
         parts.append(
             f'<a class="pn prev" href="/works/{escape(work_slug)}/{escape(str(prev["section"]))}/">'
-            f'← §{escape(str(prev["section"]))}</a>'
+            f'← §{escape(display_section(prev["section"]))}</a>'
         )
     else:
         parts.append('<span class="pn prev"></span>')
@@ -3732,7 +2974,7 @@ def prev_next_nav(
         nxt = sections[idx + 1]
         parts.append(
             f'<a class="pn next" href="/works/{escape(work_slug)}/{escape(str(nxt["section"]))}/">'
-            f'§{escape(str(nxt["section"]))} →</a>'
+            f'§{escape(display_section(nxt["section"]))} →</a>'
         )
     else:
         parts.append('<span class="pn next"></span>')
@@ -3827,6 +3069,7 @@ def build() -> None:
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
     shutil.copytree(ASSETS, DIST / "assets")
+    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse works</a> or <a href="/topics/">browse topics</a>.</p></section>').replace("</head>", '<meta name="robots" content="noindex"></head>'))
 
     explore_topic_ids = {c["topic"] for c in load_explore_raw()["claims"] if c.get("topic")}
 
@@ -3892,6 +3135,16 @@ def build() -> None:
         else:
             merged_works[work["slug"]] = work
     works = list(merged_works.values())
+    works, held_works = partition_catalogue(works)
+    works, excerpts, review_holds, review_failures = check_publication(
+        works, excerpts, ROOT, BOOKS.parent)
+    held_works.extend(review_holds)
+    (ROOT / "outputs").mkdir(exist_ok=True)
+    (ROOT / "outputs/catalogue-quality.json").write_text(
+        json.dumps({"published_works": len(works), "published_excerpts": len(excerpts),
+                    "publication_review_failures": review_failures,
+                    "held_works": held_works},
+                   ensure_ascii=False, indent=2), encoding="utf-8")
     works_by_slug = {w["slug"]: w for w in works}
 
     by_topic: dict[str, list[dict]] = defaultdict(list)
@@ -3944,25 +3197,21 @@ def build() -> None:
     first_works = [w for w in works if w.get("first_english")]
     other_works = [w for w in works if not w.get("first_english")]
     first_cards = "".join(work_card_html(w) for w in first_works[:6])
+    priority_section = (f'<section><h2>{ORIGINAL_ENGLISH_LABEL}</h2><ul class="card-list">{first_cards}</ul></section>' if first_works else "")
     other_cards = "".join(work_card_html(w) for w in other_works[:4])
 
     home = f"""
 <section class="hero">
   <p class="eyebrow">Public library · donation supported</p>
   <h1>The Fathers, readable</h1>
-  <p class="lede">Teaching by topic, and whole treatises chapter by chapter. Ante-Nicene voices first; later writers are labeled when they appear. Several treatises here are original English translations — new English of works with no previous English translation.</p>
+  <p class="lede">Teaching by topic, and whole treatises chapter by chapter. Ante-Nicene voices first; later writers are labeled when they appear. Translation sources and notes are listed with each work.</p>
   <div class="hero-actions">
     <a class="btn primary" href="/topics/">Browse topics</a>
     <a class="btn" href="/works/">Browse works</a>
     <a class="btn" href="/explore/?topic=free-will">Explore over time</a>
   </div>
 </section>
-<section>
-  <h2>Original English Translation</h2>
-  <p class="intro">{escape(ORIGINAL_ENGLISH_INTRO)}</p>
-  <ul class="card-list">{first_cards}</ul>
-  <p><a href="/works/#original-english">All of them on the works page →</a></p>
-</section>
+{priority_section}
 <section class="split">
   <div>
     <h2>Topics</h2>
@@ -4111,7 +3360,7 @@ def build() -> None:
                     "author": x.get("author"),
                     "href": f"/e/{x['id']}/",
                     "topic": tid,
-                    "verified": x.get("confidence") == "source_verified",
+                    "verified": False,  # Legacy confidence flags are not current review evidence.
                     "text": strip_logos_markup(" ".join(eng_list(x.get("english")))),
                 }
             )
@@ -4196,13 +3445,14 @@ def build() -> None:
     )
     works_list = "".join(work_card_html(w, catalog=True) for w in works_chrono)
     oet_count = sum(1 for w in works if w.get("first_english"))
+    oet_filter = (f'<button type="button" data-filter="oet" aria-pressed="false">Original English ({oet_count})</button>' if oet_count else "")
     write(
         DIST / "works" / "index.html",
         layout(
             "Works",
             f"""<div class="works-browse" data-works-browse>
 <h1>Works</h1>
-<p class="intro">Whole treatises, read straight through. Find by author, title, topic, or words. Default order is <strong>chronology</strong> — when the author lived and wrote (earliest first). Switch to author name or title when you want a directory.</p>
+<p class="intro">Read works and surviving fragments in English. Browse by author, title, or era, or search within the library.</p>
 <div class="works-chrome">
   <label class="works-find"><span class="vh">Find in library</span>
     <input type="search" id="works-q" class="search-input" placeholder="Find author, title, topic, words…" autocomplete="off">
@@ -4214,14 +3464,14 @@ def build() -> None:
   </div>
   <div class="works-filters" role="group" aria-label="Filter works">
     <button type="button" data-filter="all" aria-pressed="true">All</button>
-    <button type="button" data-filter="oet" aria-pressed="false">Original English ({oet_count})</button>
+    {oet_filter}
     <button type="button" data-filter="Apostolic" aria-pressed="false">Apostolic</button>
     <button type="button" data-filter="Ante-Nicene" aria-pressed="false">Ante-Nicene</button>
     <button type="button" data-filter="Nicene" aria-pressed="false">Nicene</button>
     <button type="button" data-filter="Post-Nicene" aria-pressed="false">Post-Nicene</button>
   </div>
 </div>
-<p class="works-hint meta" id="works-status" aria-live="polite">{len(works)} treatises · sorted by author era (earliest first)</p>
+<p class="works-hint meta" id="works-status" aria-live="polite">{len(works)} works · sorted by author era (earliest first)</p>
 <ul id="works-list" class="card-list works-list">{works_list}</ul>
 <section id="passage-hits" class="passage-hits" hidden>
   <h2>Passages &amp; topics</h2>
@@ -4232,7 +3482,7 @@ def build() -> None:
 <p class="intro fine" id="original-english">
   <span id="no-prior-english" class="anchor-alias" aria-hidden="true"></span>
   <span id="no-earlier-english" class="anchor-alias" aria-hidden="true"></span>
-  {escape(ORIGINAL_ENGLISH_INTRO)} Use the <strong>Original English</strong> filter above to list only those treatises.
+  Translation sources and notes are in <strong>About this text</strong> on each work. A new translation does not by itself mean the work has never appeared in English.
 </p>
 </div>""",
             crumb=[("Home", "/"), ("Works", "")],
@@ -4399,7 +3649,7 @@ def build() -> None:
 
         def chunk_label(ch: dict) -> str:
             secs = ch["secs"]
-            first, last = str(secs[0]["section"]), str(secs[-1]["section"])
+            first, last = display_section(secs[0]["section"]), display_section(secs[-1]["section"])
             rng = first if len(secs) == 1 else f"{first}–{last}"
             if ch["head"]:
                 return f"{rng}  {ch['head']}"
@@ -4409,7 +3659,7 @@ def build() -> None:
 
         def chunk_block(ch: dict) -> str:
             secs = ch["secs"]
-            first, last = str(secs[0]["section"]), str(secs[-1]["section"])
+            first, last = display_section(secs[0]["section"]), display_section(secs[-1]["section"])
             rng = f"§{first}" if len(secs) == 1 else f"§§{first}–{last}"
             if ch["head"]:
                 heading = (
@@ -4445,7 +3695,7 @@ def build() -> None:
                     if i == 0:
                         marker = (
                             f'<a class="vnum" id="s{escape(sid)}" href="/works/{escape(w["slug"])}/{escape(sid)}/" '
-                            f'title="Section {escape(sid)} — page for citing and sharing">{escape(sid)}</a>'
+                            f'title="Section {escape(display_section(sid))} — page for citing and sharing">{escape(display_section(sid))}</a>'
                         )
                     paras.append(f"<p>{marker}{render_reader_html(p)}</p>")
                 scholar = (s.get("scholar_label") or "").strip()
@@ -4456,14 +3706,14 @@ def build() -> None:
                 sid = str(s["section"])
                 if s.get("greek"):
                     if len(secs) > 1:
-                        gk.append(f'<p class="src-sec">§{escape(sid)}</p>')
+                        gk.append(f'<p class="src-sec">§{escape(display_section(sid))}</p>')
                     gk += [f"<p class='src'>{escape(p)}</p>" for p in s["greek"]]
                 if s.get("latin"):
                     if len(secs) > 1:
-                        la.append(f'<p class="src-sec">§{escape(sid)}</p>')
+                        la.append(f'<p class="src-sec">§{escape(display_section(sid))}</p>')
                     la += [f"<p class='src'>{escape(p)}</p>" for p in s["latin"]]
                 if s.get("source_url"):
-                    wit.append(f'<a href="{escape(s["source_url"])}" rel="noopener">§{escape(sid)}</a>')
+                    wit.append(f'<a href="{escape(s["source_url"])}" rel="noopener">§{escape(display_section(sid))}</a>')
             src_block = ""
             if gk:
                 src_block += f'<details><summary>Greek · {escape(rng)}</summary>{"".join(gk)}</details>'
@@ -4483,7 +3733,7 @@ def build() -> None:
             for ch in chunks:
                 first = str(ch["secs"][0]["section"])
                 last = str(ch["secs"][-1]["section"])
-                num = first if len(ch["secs"]) == 1 else f"{first}–{last}"
+                num = display_section(first) if len(ch["secs"]) == 1 else f"{display_section(first)}–{display_section(last)}"
                 label = ch["head"] or chunk_label(ch).split("  ", 1)[-1]
                 out.append(
                     f'<li><a href="{href_prefix}#s{escape(first)}">'
@@ -4676,10 +3926,10 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / str(s["section"]) / "index.html",
                 layout(
-                    f"{w['title']} §{s['section']}",
+                    f"{w['title']} §{display_section(s['section'])}",
                     f"""<article class="work-section">
                     {nav}
-                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(w['title'])}</a> · §{escape(str(s['section']))}</p>
+                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(w['title'])}</a> · §{escape(display_section(s['section']))}</p>
                     {kind}
                     <h1>{escape(str(s['head']))}</h1>
                     {supplied_html}
@@ -4693,7 +3943,7 @@ def build() -> None:
                         ("Home", "/"),
                         ("Works", "/works/"),
                         (w["title"], f"/works/{w['slug']}/"),
-                        (f"§{s['section']}", ""),
+                        (f"§{display_section(s['section'])}", ""),
                     ],
                     active="works",
                     description=strip_logos_markup((s["english"] or [""])[0])[:160],
@@ -4703,7 +3953,7 @@ def build() -> None:
                 {
                     "kind": "work",
                     "id": f"{w['slug']}-{s['section']}",
-                    "title": f"{w['title']} §{s['section']}: {s['head']}",
+                    "title": f"{w['title']} §{display_section(s['section'])}: {s['head']}",
                     "author": w["author"],
                     "href": f"/works/{w['slug']}/{s['section']}/",
                     "verified": False,
@@ -4971,7 +4221,7 @@ def build() -> None:
         DIST / "contribute" / "index.html",
         layout(
             "Help us",
-            """<h1>Help us</h1>
+            f"""<h1>Help us</h1>
             <p class="intro">This library is free. If you want to help it keep growing, pick one of these. None of them is required to read.</p>
 
             <ol class="help-list">
@@ -4992,35 +4242,7 @@ def build() -> None:
                 <h2>Point an AI at a slice</h2>
                 <p>Copy this into your AI. Change YourName to your name.</p>
                 <p><button type="button" class="btn primary" data-copy="#ai-prompt">Copy prompt</button></p>
-                <pre id="ai-prompt"><code># Start here
-
-Copy this whole file into your AI.
-
-You are helping finish public-domain Fathers texts in new English for https://fathers.saneapps.com.
-
-Do not copy FOTC, ACW, ANF, NPNF, blogs, or other English. Translate from the locked Greek or Latin in https://github.com/sane-apps/translations
-
-Clone that repo if you do not already have it. Then run:
-
-```bash
-python3 scripts/claims.py start --agent YourName
-```
-
-Replace YourName with a real name. That takes the next free slice and prints what to do. One slice only.
-
-Then:
-
-- Read the book’s `books/&lt;slug&gt;/SESSION_HANDOFF.md`.
-- Translate only the sections on that claim.
-- **Pass A:** literal gloss + lemmas in `reviews/justifications/&lt;id&gt;.json` (`pass_a_gloss`). Copy an existing file in that folder for the shape.
-- **Pass B:** reading English in `translations/*_english.json` → `english[]`. Same meaning as A, in the author’s voice. Do not paste A as B.
-- Title the thought, not the section number.
-- Finish with `python3 scripts/ai_promote.py --claim &lt;id&gt; --agent YourName`
-- Stop. Do not take a second slice. Do not deploy the website. Do not run Logos.
-
-If there is no free slice, stop and say so.
-
-More detail: `docs/SOP.md`.</code></pre>
+                <pre id="ai-prompt"><code>{escape((BOOKS.parent / "docs/START_HERE.md").read_text())}</code></pre>
               </li>
               <li class="help-option" id="corrections">
                 <p class="n">4</p>
@@ -5042,10 +4264,10 @@ More detail: `docs/SOP.md`.</code></pre>
             f"""<h1>About</h1>
             <p>Fathers is a free public library: a <strong>topic map</strong> of ante-Nicene teaching, <strong>whole works</strong> in edition order, and an <strong>Explore</strong> timeline that shows how writers line up on a claim across time.</p>
             <p>The catalog is always moving. New treatises and topic excerpts land as they are finished; status and era labels live on each work page, not as a fixed inventory here. Authors not yet loaded as whole works may appear first as contrast cards on Explore.</p>
-            <p>Some treatises are marked <strong title="{escape(ORIGINAL_ENGLISH_TITLE)}">{escape(ORIGINAL_ENGLISH_LABEL)}</strong>: there was no previous English translation of the complete work. That group is kept current on the <a href="/works/#original-english">works page</a>, and each marked work says so at the start.</p>
+            <p>These are English translations for study. Translation provenance belongs in <strong>About this text</strong> on each work. Earlier English editions may also exist; a new rendering is not a claim to be the first.</p>
             <p>How the English is made — two passes, source locking, witnesses, and what stays off the reading page — is on the <a href="/methodology/">methodology</a> page.</p>
             <p>This is not a complete scholarly edition. Where Greek or Latin is loaded, open it under the reading text.</p>
-            <p>Each whole work names the print it follows. Other public-domain Greek or Latin prints of the same work are checked when they exist. The reading English follows that copy-text. Where a stretch is missing there and is supplied from another witness, it is marked. Open <strong>About this text</strong> on a work for the list.</p>
+            <p>Each whole work names the print it follows. Any checks against other Greek or Latin prints should be recorded with the work. The reading English follows that copy-text. Where a stretch is missing there and is supplied from another witness, it is marked. Open <strong>About this text</strong> on a work for the list.</p>
             <p>Explore stance tags are editorial readings for study — not rankings of who was right. Start with <a href="/explore/?topic=free-will">Free will over time</a>.</p>
             <p>Want to help finish a text? See <a href="/contribute/">Help</a>.</p>
             <p>If it helps you, you can <a href="{SPONSORS}">support the work on GitHub Sponsors</a>.</p>""",
@@ -5065,26 +4287,30 @@ More detail: `docs/SOP.md`.</code></pre>
             <p>Fathers is a free public library for study: teaching by topic, whole works in edition order, and an Explore timeline. It is not a complete critical edition. The aim is readable English that stays honest about its sources.</p>
 
             <h2>What you will find</h2>
-            <p><strong>Topics</strong> answer “what did they teach about X?” <strong>Works</strong> let you read a treatise straight through. <strong>Explore</strong> shows how writers line up on a claim across time. The catalog is always moving — new treatises and excerpts land as they finish. Status and era labels live on each work page. This site does not keep a rotting title inventory on About or here.</p>
+            <p><strong>Topics</strong> answer “what did they teach about X?” <strong>Works</strong> let you read a treatise straight through. <strong>Explore</strong> shows how writers line up on a claim across time. The catalog is always moving — new treatises and excerpts land as they finish. Status and era labels live on each work page. The works catalogue shows the current reading selection.</p>
 
             <h2>How to read a work</h2>
             <p>Each work opens as a continuous reader. Contents lists one line per thought in plain English, not one line per edition slice. Jump links land on the first section of that thought. Greek or Latin, when loaded, sits under the reading text. Cite pages still exist for a single section; use “Read continuously” to return to the reader at that place.</p>
             <p>The reading column stays clean. Apparatus — copy-text, other prints checked, supplied stretches, confidence notes — lives in the collapsed <strong>About this text</strong> rail, not beside every paragraph.</p>
 
             <h2>Sources and witnesses</h2>
-            <p>English is made from named public-domain Greek or Latin prints, not from modern copyrighted English. For each work we lock as many independent original-language witnesses as exist: a best public-domain critical edition, a second scan or transcription of that print, earlier prints (for example Migne), ancient versions of the same work, and fragment or catena collections when they preserve extra lines.</p>
+            <p>Each work should identify the Greek or Latin edition used for its English. The listed witnesses record the claimed sources; their presence alone does not prove that every section has been checked against the print. Some works have only one listed witness.</p>
             <p>The reading text follows one named <strong>copy-text</strong>. Other prints are <strong>checks</strong>, not silent merges. Where a stretch is missing in the copy-text and is supplied from another witness, it is marked. We do not call the result a manuscript, and we do not claim a combination that was not done.</p>
 
-            <h2>Two passes of English</h2>
+            <h2>Review status</h2>
+            <p>This is an AI-assisted study library. A recent audit found incomplete translations and draft material presented as finished work; those records are withheld. Remaining legacy passages are still under review. Some older topic excerpts derive from earlier English collections. Consult each passage’s source details.</p>
+            <p>New or changed passages require comparison with the named source for meaning, omissions, attribution and Bible references. Sample checks help find defects, but do not certify every passage in a work.</p>
+
+            <h2>Two passes for new translations</h2>
             <p><strong>Pass A</strong> is a literal sense gloss with key lemmas from the locked source block only. Unreadable places stay marked; nothing is invented to fill a gap.</p>
             <p><strong>Pass B</strong> is the reading English — modern literary prose in the author’s voice. It may not add a concept that is not already in Pass A. Pass A is not pasted as Pass B. Modern copyrighted English is never the source of either pass.</p>
 
             <h2>Original English Translation</h2>
             <p>The badge <strong title="{escape(ORIGINAL_ENGLISH_TITLE)}">{escape(ORIGINAL_ENGLISH_LABEL)}</strong> means there was <strong>no previous English translation</strong> of the complete work — no complete prior English of that treatise. It does not mean “this page is in English,” and it is not a claim about “free English.”</p>
-            <p>Marked works are grouped on the <a href="/works/#original-english">works page</a> and named again at the start of each work. Treatises that already have older English (often inside another author’s reply) are not marked that way; they are still here so the arguments can be read in one place.</p>
+            <p>First-English claims are withheld until a bibliographic review supports them. Absence from ANF, absence of a public-domain English edition, and creation of a new translation do not establish that no earlier English translation exists.</p>
 
             <h2>What opens next</h2>
-            <p>When opening a new whole work, priority runs from the earliest untranslated texts forward — works with no previous English translation first. A densify-in-progress lane may finish the current work before starting the next. The public catalog still moves as pieces ship; it is not a fixed roadmap page.</p>
+            <p>When opening a new whole work, priority runs from the earliest untranslated texts forward — works with no previous English translation first. Source repair and review of existing work take priority over adding titles. The public catalog still moves as pieces ship; it is not a fixed roadmap page.</p>
 
             <h2>What we never claim</h2>
             <ul>

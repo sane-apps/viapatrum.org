@@ -60,7 +60,7 @@
     }
     if (filterBtns.some(b => b.dataset.filter === params.get("filter"))) filter = params.get("filter");
     if (params.get("q") && qInput) qInput.value = params.get("q");
-    if (location.hash === "#original-english" || location.hash === "#no-prior-english") {
+    if (filterBtns.some((b) => b.dataset.filter === "oet") && (location.hash === "#original-english" || location.hash === "#no-prior-english")) {
       filter = "oet";
     }
 
@@ -103,7 +103,10 @@
     const apply = () => {
       if (!list) return;
       const term = (qInput?.value || "").trim().toLowerCase();
-      const items = [...list.querySelectorAll(":scope > li")];
+      list.querySelectorAll(".author-group").forEach((heading) => heading.remove());
+      const items = [...list.querySelectorAll(":scope > li.work-entry")];
+      list.classList.toggle("is-grouped", sort !== "title");
+      let previousAuthor = null;
       let shown = 0;
       for (const li of sortItems(items)) {
         list.appendChild(li);
@@ -116,14 +119,34 @@
         if (ok && term.length >= 2) ok = blob.includes(term);
         else if (ok && term.length === 1) ok = blob.includes(term);
         li.hidden = !ok;
-        if (ok) shown += 1;
+        if (ok) {
+          shown += 1;
+          if (sort !== "title" && li.dataset.author !== previousAuthor) {
+            const group = document.createElement("li");
+            group.className = "author-group";
+            const heading = document.createElement("h2");
+            const author = document.createElement("a");
+            author.href = li.dataset.authorHref;
+            author.textContent = li.dataset.author;
+            heading.appendChild(author);
+            group.appendChild(heading);
+            if (li.dataset.period) {
+              const period = document.createElement("span");
+              period.className = "author-period";
+              period.textContent = li.dataset.period;
+              group.appendChild(period);
+            }
+            list.insertBefore(group, li);
+            previousAuthor = li.dataset.author;
+          }
+        }
       }
       const sortLabel =
         sort === "author" ? "author name" : sort === "title" ? "work title" : "author era (earliest first)";
       const filterLabel =
         filter === "oet" ? "Original English only" : filter === "all" ? "all eras" : filter;
       if (status) {
-        status.textContent = `${shown} treatise${shown === 1 ? "" : "s"} · sorted by ${sortLabel} · ${filterLabel}`;
+        status.textContent = `${shown} work${shown === 1 ? "" : "s"} · sorted by ${sortLabel} · ${filterLabel}`;
       }
       let empty = worksRoot.querySelector(".search-empty");
       if (!empty) {

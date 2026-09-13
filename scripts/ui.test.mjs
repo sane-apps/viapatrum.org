@@ -4,8 +4,10 @@ import { readFileSync } from 'node:fs';
 import { JSDOM } from 'jsdom';
 const script = readFileSync(new URL('../assets/site.js', import.meta.url), 'utf8');
 const catalog = readFileSync(new URL('../dist/works/index.html', import.meta.url), 'utf8');
-const reader = readFileSync(new URL('../dist/works/origen-numbers-homily-21/index.html', import.meta.url), 'utf8');
+const reader = readFileSync(new URL('../dist/works/julian-letter-to-rome/index.html', import.meta.url), 'utf8');
 const index = JSON.parse(readFileSync(new URL('../dist/data/search-index.json', import.meta.url), 'utf8'));
+const longPassage = index.find(r=>r.kind==='work'&&r.text.length>600);
+const searchPhrase = longPassage.text.slice(450,510);
 const settle = () => new Promise(resolve => setImmediate(resolve));
 function mount(html, path='/works/', fetcher=async()=>({ok:true,json:async()=>index})) {
   const dom=new JSDOM(html,{url:`https://fathers.saneapps.com${path}`,runScripts:'outside-only',pretendToBeVisual:true});
@@ -19,16 +21,14 @@ function query(dom, value) {
 }
 test('work passages are searchable, including words beyond 400 characters',async()=>{
   const dom=mount(catalog);await settle();
-  query(dom,'second numbering');await settle();
-  assert.ok([...dom.window.document.querySelectorAll('#passage-results a')].some(a=>a.href.includes('origen-numbers-homily-21')));
   const row=index.find(r=>r.kind==='work'&&r.text.length>600);
-  query(dom,row.text.slice(450,510));
+  query(dom,row.text.slice(450,510));await settle();
   assert.ok([...dom.window.document.querySelectorAll('#passage-results a')].some(a=>a.getAttribute('href')===row.href));
   dom.window.close();
 });
 test('failed passage index reports error and Retry recovers',async()=>{
   let calls=0;
-  const dom=mount(catalog,'/works/?q=numbering',async()=> ++calls===1?{ok:false}:{ok:true,json:async()=>index});
+  const dom=mount(catalog,'/works/?q='+encodeURIComponent(searchPhrase),async()=> ++calls===1?{ok:false}:{ok:true,json:async()=>index});
   await settle();
   assert.match(dom.window.document.querySelector('#passage-results').textContent,/could not load/);
   dom.window.document.querySelector('.search-retry').click();await settle();

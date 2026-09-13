@@ -1,5 +1,9 @@
 # AGENTS — fathers.saneapps.com
 
+## Active quality incident — 2026-09-13
+Do not restore build_site.py from old commits to add corpus globs. That removed the publication gate and restored 568 held works, including generated scaffolds and false complete translations. Preserve catalogue_quality.py integration and use scripts/ship.sh with mandatory catalogue/browser checks. A larger catalogue is not proof of quality. The specific conflicting upload from Cursor process group 35630 was stopped before completion; source data and other work are preserved. Coordinate through SESSION_HANDOFF.md before changing this builder.
+
+
 - Dual product: **Topics** + **Works** + **Explore** timeline. Do not collapse into a topics-only site.
 - Canonical data: `~/SaneApps/clients/translations/books/*` — extend books, then rebuild.
 - Explore editorial layer: `data/explore/` (claims, stances, contrast, ruptures). Schema in `clients/translations/docs/SCHEMAS.md`.
@@ -9,7 +13,9 @@
 - Donate: GitHub Sponsors `MrSaneApps`. No paywall.
 - Deploy to Cloudflare Pages `fathers-site`; hostname `fathers.saneapps.com`.
 - Prefer `./scripts/ship.sh` (build → smoke → deploy → print CSS `?v=`).
-- **Original English Translation** = no previous English translation (complete prior English of the work). Never say “free English” in public copy. Deep essay: `/methodology/`.
+- **Original English Translation** = no previous complete English translation. Only a documented bibliographic review may enable it in FIRST_ENGLISH_NOTES; inherited metadata flags and absence from ANF are insufficient. No repeated provenance badges on catalogue rows. Details: `/methodology/`.
+- Public catalogue gate: merge duplicate work batches, then run `partition_catalogue`. Hold scaffold/contaminated/scope-review entries before generating readers, search, author hubs, or related links. Preserve source files; release named holds only after edition comparison. Passing this gate does not certify fidelity or completeness.
+- Works hierarchy: author headings group chronology/author views; title view shows the work first, then author. Dates and section counts remain secondary. Show status only for unfinished translations.
 - Never hand-edit `dist/`; only `scripts/build_site.py` + `assets/` (+ data/books), then rebuild. See `docs/DIST.md`.
 - Mini-first for live visual verification after deploy.
 - Read `docs/IA.md` before changing URL structure.
@@ -28,3 +34,8 @@ How every whole work is presented on the site. Do not invent a second reading pa
 7. **Source panels.** One Greek/Latin `<details>` per thought-chunk (not per slice), labeled with the § range.
 8. **New works** must ship through this builder path (`chunk_sections` / `reader_page` in `scripts/build_site.py`). Do not add a one-section-per-page browsing UX.
 9. **Witnesses.** “About this text” names the copy-text, other prints checked, and every stretch supplied from another witness. The reading column has no apparatus. A one-line italic cue is used only when a whole stretch is supplied from another witness. Do not call the reading text a manuscript. Do not claim a combination that was not actually done.
+
+## Release evidence
+
+`data/publication-review.json` contains a provisional legacy freeze, never semantic certification. New or changed passages need current shared source/English review packets; a claim-board `done`, nonempty English, or inherited confidence flag is not publication approval. Do not update legacy hashes to clear a failure.
+Use `scripts/ship.sh` only. Inspect every saved view/state image and record its actual verdict before release. The script locks publishing and binds the uploaded copy to the reviewed artifact. Never restore an old builder to add a loader glob.

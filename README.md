@@ -1,7 +1,7 @@
 # fathers.saneapps.com
 
 Public Fathers library: **Topics** (ante-Nicene dogmatics map) and **Works**
-(full treatises — Origen complete; Julian of Eclanum surviving arguments).
+(treatises and surviving fragments, including Origen and Julian of Eclanum).
 
 - Live: https://fathers.saneapps.com
 - Donate: https://github.com/sponsors/MrSaneApps
@@ -24,7 +24,7 @@ Writes `dist/`. Cross-refs live in `WORK_TOPICS` inside `scripts/build_site.py`.
 
 ## Ship (one command)
 
-Build → smoke key URLs → Cloudflare Pages deploy → print CSS `?v=` hash:
+Build → content and link checks → real Brave checks → inspected screenshots bound to the built files → Cloudflare Pages deploy:
 
 ```bash
 ./scripts/ship.sh
@@ -53,14 +53,18 @@ python3 scripts/list_prepped_pass_b.py
 
 ## Deploy
 
-Prefer `./scripts/ship.sh`. Manual path:
+Use `./scripts/ship.sh`; direct Wrangler uploads bypass the quality gates.
+The script locks publishing and uploads a private copy of the inspected build.
+`--skip-build` reuses files, but never skips checks or visual review.
 
-Cloudflare Pages project `fathers-site` → custom domain `fathers.saneapps.com`.
+## Content quality
 
-```bash
-source ~/.config/nv/env
-npx --yes wrangler@4 pages deploy dist --project-name fathers-site --commit-dirty=true
-```
+Known scaffolds and false whole-work claims are withheld. `data/publication-review.json`
+freezes the remaining legacy passages provisionally; a frozen hash is **not** a fidelity certificate.
+Every new or changed passage needs a current source-backed semantic review from the shared
+translations pipeline. Do not refresh legacy hashes to bypass review.
+See `docs/IA.md` for findings and `clients/translations/docs/SOP.md` for source and translation review.
+The site remains an AI-assisted study library; a complete independent edition audit is unfinished.
 
 ## Local preview
 

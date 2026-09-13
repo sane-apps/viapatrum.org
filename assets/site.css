@@ -1201,6 +1201,31 @@ details.toc-group .toc {
 .works-list li[hidden] {
   display: none;
 }
+/* Catalogue: author groups lead, then works, with only useful metadata. */
+.card-list .work-title { font-size: 1.18rem; line-height: 1.35; }
+.card-list .work-author { font-size: 1rem; font-weight: 550; }
+.card-list .work-meta { font-size: 0.88rem; }
+.works-list .author-group {
+  display: flex; align-items: baseline; flex-wrap: wrap;
+  gap: 0.4rem 1.2rem; margin-top: 2.25rem;
+  max-width: none; padding-bottom: 0.5rem; border-bottom: 2px solid var(--rule);
+}
+.works-list .author-group:first-child { margin-top: 1.25rem; }
+.works-list .author-group h2 { margin: 0; padding: 0; border: 0; font-size: 1.55rem; line-height: 1.3; }
+.works-list .author-group h2 a {
+  display: inline; padding: 0; border: 0; text-decoration: none;
+}
+.works-list .author-group h2 a:hover { text-decoration: underline; }
+.works-list .author-period { font-size: 0.95rem; }
+.works-list.is-grouped .work-author { display: none; }
+.works-list .work-link { padding: 0.95rem 0; gap: 0.25rem; }
+.works-list .work-link:hover .work-title { text-decoration: underline; }
+.works-list a:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 4px; }
+@media (max-width: 600px) {
+  .works-list .author-group { margin-top: 1.75rem; }
+  .works-list .author-group h2 { font-size: 1.3rem; }
+  .card-list .work-title { font-size: 1.1rem; }
+}
 .passage-hits {
   margin-top: 2.5rem;
   padding-top: 1.5rem;

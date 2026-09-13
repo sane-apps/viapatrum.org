@@ -103,3 +103,15 @@ The production ship command rebuilt 13,689 pages, checked 338,452 local links
 with zero failures, and passed all seven route smoke checks. Upload was blocked
 by the missing CLOUDFLARE_API_TOKEN. Asset version: 0a77e77abe. Production has
 not been verified with this version.
+
+## Final inspected build — 2026-09-13
+
+- Mini Brave: 32 representative view/state captures, all individually inspected (identical PNG bytes reuse their prior actual inspection). Desktop/tablet/phone catalogue, sort/filter/search/empty/error/retry/focus/menu, reader/Contents, home, author/topic/Explore, About/Methodology/Help, unavailable page, and Julian1.27 Bible/source details.
+- Final artifact SHA256: 4a7a9381ed0f51a58cec9910ce944c9e507a5d34ccb52af186dadf111b871bd7; 4783 generated files.
+- Browser runner SHA256: 0f85c45ec81f441c0b89226161a71f415a666cb5c31b724d414e7ea79e83cb3c; CSS version898957519c.
+- Receipt: outputs/ui-review/browser-receipt.json; per-image SHA256, viewport, state and actual verdict. Shared light palette also confirmed with dark OS preference; outputs/ui-review/dark-preference-receipt.json.
+- Visual review caught exposed internal fragment suffixes; edition labels now remain readable while route ids stay unique. A focused parser and browser regression reject that leak.
+- Catalogue quality, duplicate-id/internal-link checks and 7 JS plus2 visual-gate regressions pass; corpus QA/promotion27tests pass. Publication attacks for wrong-work approval, deleted scope, empty work and stale inputs pass.
+- These checks verify the site artifact and selected source reviews; they do not certify every legacy translation.
+
+Source/citation order is now part of image inspection. The final reader shows 2.5.9 before 2.5.10 and preserves same-locus fragment sequence. Four actual corpus-file order regressions cover all330 affected Julian passages.
