@@ -115,3 +115,5 @@ not been verified with this version.
 - These checks verify the site artifact and selected source reviews; they do not certify every legacy translation.
 
 Source/citation order is now part of image inspection. The final reader shows 2.5.9 before 2.5.10 and preserves same-locus fragment sequence. Four actual corpus-file order regressions cover all330 affected Julian passages.
+
+Deployment receipt: https://3d01a09b.fathers-site.pages.dev, site commit e5e5b18. Canonical ship checked 4,775 pages and 115,587 local links with zero failures, then reused the current inspected build. Final production byte comparisons are recorded in SESSION_HANDOFF.md and the live receipt.

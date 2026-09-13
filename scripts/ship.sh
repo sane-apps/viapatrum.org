@@ -187,6 +187,15 @@ node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-review
 STAGE="$(mktemp -d /tmp/fathers-ship.XXXXXX)"
 cp -R "$ROOT/dist/." "$STAGE/"
 node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-review "$STAGE"
+# Routing-only safety layer is added after the reviewed rendered artifact is
+# verified, so withdrawing a cached URL cannot invalidate visual evidence.
+"$PYTHON" - "$STAGE" "$ROOT/outputs/catalogue-quality.json" <<'PY'
+import json, pathlib, sys
+stage = pathlib.Path(sys.argv[1])
+held = json.loads(pathlib.Path(sys.argv[2]).read_text())["held_works"]
+(stage / "_redirects").write_text("".join(f"/works/{w['slug']}/ /404.html 404\n" for w in held), encoding="utf-8")
+PY
+test -s "$STAGE/_redirects"
 
 echo "==> Cloudflare Pages deploy (${PAGES_PROJECT})"
 DEPLOY_LOG="$(mktemp /tmp/fathers-ship-deploy.XXXXXX)"
@@ -226,6 +235,9 @@ if [[ "$live_ok" -ne 1 ]]; then
 else
   echo "  OK live ${PUBLIC_ORIGIN}/ has site.css?v=${CSS_HASH}"
 fi
+
+echo "==> Verify live catalogue bytes and withdrawn routes"
+"$PYTHON" "$ROOT/scripts/check_links.py" --live "$PUBLIC_ORIGIN"
 
 echo
 echo "SHIP OK"
