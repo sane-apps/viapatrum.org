@@ -240,14 +240,33 @@ body {
   padding: 0;
   margin: 1rem 0 0;
 }
+/* Semiotics: row separators on the li, never a fake underline on the name link. */
+.card-list > li,
+.topic-list > li {
+  border-bottom: 1px solid var(--rule);
+}
+.card-list > li:last-child,
+.topic-list > li:last-child {
+  border-bottom: none;
+}
 .card-list li a, .topic-list li a, .toc li a {
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
   padding: 0.85rem 0;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: none;
   text-decoration: none;
   color: inherit;
+}
+.card-list li a:hover strong,
+.topic-list li a:hover .t {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+.card-list .author-dates {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-weight: 400;
 }
 .card-list strong, .topic-list .t { font-weight: 650; }
 .card-list span, .topic-list .c, .meta {

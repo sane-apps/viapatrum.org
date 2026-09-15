@@ -430,6 +430,30 @@ def load_author_bios() -> dict[str, dict]:
 AUTHOR_BIOS = load_author_bios()
 
 
+def load_author_dates() -> dict[str, str]:
+    """slug or display-name → short floruit/lifespan for Authors index."""
+    data = _json_load(ROOT / "data" / "author-dates.json", {})
+    return {str(k): str(v) for k, v in (data or {}).items() if v}
+
+
+AUTHOR_DATES = load_author_dates()
+
+
+def author_dates_display(name: str | None, slug: str | None = None) -> str:
+    """Public dates next to author names (index + hubs). Prefer data file, then authors.json."""
+    if slug and slug in AUTHOR_DATES:
+        return AUTHOR_DATES[slug]
+    if name and name in AUTHOR_DATES:
+        return AUTHOR_DATES[name]
+    rec = author_record(name)
+    if rec.get("dates_display"):
+        return str(rec["dates_display"])
+    bio = AUTHOR_BIOS.get(slug or "") or {}
+    if bio.get("dates"):
+        return str(bio["dates"])
+    return ""
+
+
 def alpha_key(s: str | None) -> str:
     """Case-insensitive Latin sort key for browse lists."""
     return (s or "").casefold().lstrip()
@@ -720,7 +744,7 @@ _BIBLE_LOCUS_TITLE = re.compile(
 _CPG_TITLE = re.compile(r"^CPG\s+\d+", re.I)
 
 
-_TIP_TITLE_SUFFIX = re.compile(r"\s*\([^)]*\btip\)\s*$", re.I)
+_TIP_TITLE_SUFFIX = re.compile(r"\s*\([^)]*\btip\b[^)]*\)\s*$", re.I)
 _DENSE_EDITION_MARK = re.compile(r"\b(?:ESTC|Wing|IA|EEBO|STC)\b", re.I)
 
 # Render-only English H1 / crumb / card titles. Reviewed identity (meta title) stays
@@ -731,11 +755,24 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "davenant-dissertationes-duae": "Two Dissertations",
     "baron-philosophia-theologiae-ancillans": "Philosophy the Handmaid of Theology",
     "placeus-de-imputatione": "On the Imputation of Adam's First Sin",
+    # Catalogue-wide: no Latin-only public H1 / list titles.
+    "epiphanius-ancoratus": "The Anchored One",
+    "epiphanius-anacephalaeosis": "Recapitulation",
+    "epiphanius-panarion": "Medicine Chest against Heresies",
+    "epiphanius-de-mensuris": "On Weights and Measures",
+    "nemesius-de-natura-hominis": "On the Nature of Man",
+    "serapion-antioch-fragmenta": "Fragments",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
 PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "le-blanc-theses-theologicae": "Theses theologicae",
+    "epiphanius-ancoratus": "Ancoratus",
+    "epiphanius-anacephalaeosis": "Anacephalaeosis",
+    "epiphanius-panarion": "Panarion",
+    "epiphanius-de-mensuris": "De mensuris et ponderibus",
+    "nemesius-de-natura-hominis": "De natura hominis",
+    "serapion-antioch-fragmenta": "Fragmenta",
 }
 
 
@@ -4169,6 +4206,7 @@ def build() -> None:
             layout(
                 display,
                 f"""<h1>{escape(display)}</h1>
+                {f'<p class="meta author-dates">{escape(author_dates_display(display, slug))}</p>' if author_dates_display(display, slug) else ""}
                 <h2>Works</h2><ul class="card-list">{ow or "<li>None yet.</li>"}</ul>
                 {topics_ul}{explore_ul}
                 <h2>Topical excerpts</h2>{ot_lis or "<p>None linked yet.</p>"}""",
@@ -4176,8 +4214,11 @@ def build() -> None:
                 active="authors",
             ),
         )
+        dates = author_dates_display(display, slug)
+        dates_html = f'<span class="author-dates">{escape(dates)}</span>' if dates else ""
         author_links.append(
             f'<li><a href="/authors/{escape(slug)}/"><strong>{escape(display)}</strong>'
+            f'{dates_html}'
             f'<span>{len(ww)} work{"s" if len(ww)!=1 else ""} · {len(ot)} topical</span></a></li>'
         )
 
@@ -4213,7 +4254,11 @@ def build() -> None:
     )
     hubs_done.add("augustine-of-hippo")
     author_links.append(
-        f'<li><a href="/authors/augustine-of-hippo/"><strong>Augustine of Hippo</strong><span>{len(aug_rows)} topical · contrast cards</span></a></li>',
+        (
+            f'<li><a href="/authors/augustine-of-hippo/"><strong>Augustine of Hippo</strong>'
+            f'<span class="author-dates">{escape(author_dates_display("Augustine of Hippo", "augustine-of-hippo") or "354–430")}</span>'
+            f'<span>{len(aug_rows)} topical · contrast cards</span></a></li>'
+        ),
     )
     # Old slug kept as a redirect so existing links don't break.
     write(
@@ -4239,8 +4284,12 @@ def build() -> None:
         if sl in hubs_done:
             continue
         n = len(by_author[author])
+        _dates = author_dates_display(author, sl)
+        _dates_html = f'<span class="author-dates">{escape(_dates)}</span>' if _dates else ""
         author_links.append(
-            f'<li><a href="/authors/{escape(sl)}/"><strong>{escape(author)}</strong><span>{n} topical excerpts</span></a></li>'
+            f'<li><a href="/authors/{escape(sl)}/"><strong>{escape(author)}</strong>'
+            f'{_dates_html}'
+            f'<span>{n} topical excerpts</span></a></li>'
         )
         rows = by_author[author]
         rec = author_record(author)

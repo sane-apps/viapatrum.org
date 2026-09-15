@@ -8,7 +8,8 @@ Do not restore build_site.py from old commits to add corpus globs. That removed 
 
 Any agent (Cursor, OpenCode/Nemotron, or human) starting Fathers work must read this section and note/acknowledge these rules in working notes before editing.
 
-1. **English-first public H1 + breadcrumbs.** Latin is secondary only (subtitle / About). Never ship a messy Latin string as the primary public H1 when an English title exists. Map tips in `PUBLIC_ENGLISH_TITLES` / `PUBLIC_LATIN_SUBTITLES` in `scripts/build_site.py`.
+1. **English-first EVERYWHERE public-facing.** H1, breadcrumbs, Works catalogue cards, Authors index labels — lead English. Latin secondary only (subtitle / About). No Latin-only work titles in lists. Map in `PUBLIC_ENGLISH_TITLES` / `PUBLIC_LATIN_SUBTITLES` in `scripts/build_site.py`. Audit new tips before ship.
+1b. **Author dates required.** Authors index and hubs show lifespan/floruit next to every name (`data/author-dates.json` + `authors.json`). Example: Nemesius of Emesa, fl. c. 390.
 2. **Semiotics.** Nothing that looks clickable/interactive unless it is. No decorative underlines or border-bottom rules under titles that read as hyperlinks. Current-passage cues must not use `text-decoration: underline` on non-links.
 3. **Author rail expands like About this text.** Short, high-value researched bios (who / contribution / distinctive belief) — not dumps. Data: `data/author-bios.json`; render via `author_panel()` matching the About accordion. Extend for Reformed tips (Saumur/Frankfurt) as authors ship.
 4. **Mobile top nav always visible** (shipped). Do not restore hamburger-only discovery for primary nav.
