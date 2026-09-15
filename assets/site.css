@@ -557,6 +557,13 @@ details summary { cursor: pointer; font-weight: 650; }
   line-height: 1.12;
   letter-spacing: -0.025em;
 }
+/* Semiotics: mast titles are never link affordances. */
+.reader-mast h1,
+.reader-mast .latin-title {
+  text-decoration: none;
+  border-bottom: none;
+  cursor: text;
+}
 .reader-mast .latin-title {
   margin: -0.1rem 0 0.45rem;
   max-width: 40rem;
@@ -774,11 +781,13 @@ details summary { cursor: pointer; font-weight: 650; }
   color: var(--gold-deep);
   font-weight: 650;
 }
+/* Semiotics: current-passage cue must not look like a hyperlink.
+   Keep the existing ::before rail mark; never underline the title. */
 .reader-sec.is-current .reader-head .reader-title {
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--gold) 35%, transparent);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.22em;
+  text-decoration: none;
+  border-bottom: none;
+  color: var(--ink);
+  font-weight: 650;
 }
 .reader .vnum { scroll-margin-top: 5rem; }
 .search-hint {
@@ -1374,3 +1383,7 @@ details.toc-group .toc {
   .hero-actions .btn { width: 100%; text-align: center; }
   .section-nav .pn { min-width: 0; padding-inline: 0.45rem; }
 }
+
+/* Author accordion: same expand pattern as About this text. */
+.reader-author .intro { margin-top: 0.15rem; }
+.reader-author .intro.fine { margin-bottom: 0.25rem; }

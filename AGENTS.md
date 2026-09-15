@@ -4,6 +4,19 @@
 Do not restore build_site.py from old commits to add corpus globs. That removed the publication gate and restored 568 held works, including generated scaffolds and false complete translations. Preserve catalogue_quality.py integration and use scripts/ship.sh with mandatory catalogue/browser checks. A larger catalogue is not proof of quality. The specific conflicting upload from Cursor process group 35630 was stopped before completion; source data and other work are preserved. Coordinate through SESSION_HANDOFF.md before changing this builder.
 
 
+## Standing UX rules (read first — every session)
+
+Any agent (Cursor, OpenCode/Nemotron, or human) starting Fathers work must read this section and note/acknowledge these rules in working notes before editing.
+
+1. **English-first public H1 + breadcrumbs.** Latin is secondary only (subtitle / About). Never ship a messy Latin string as the primary public H1 when an English title exists. Map tips in `PUBLIC_ENGLISH_TITLES` / `PUBLIC_LATIN_SUBTITLES` in `scripts/build_site.py`.
+2. **Semiotics.** Nothing that looks clickable/interactive unless it is. No decorative underlines or border-bottom rules under titles that read as hyperlinks. Current-passage cues must not use `text-decoration: underline` on non-links.
+3. **Author rail expands like About this text.** Short, high-value researched bios (who / contribution / distinctive belief) — not dumps. Data: `data/author-bios.json`; render via `author_panel()` matching the About accordion. Extend for Reformed tips (Saumur/Frankfurt) as authors ship.
+4. **Mobile top nav always visible** (shipped). Do not restore hamburger-only discovery for primary nav.
+5. **Tip→ship quality bar.** Spot-check + visual QA before `scripts/ship.sh`. When only a tip ships, label closeout as tip/partial — never imply whole-work completion.
+
+Do not regress: tip-suffix strip, ESTC/identifiers in About, publication gate + `scripts/ship.sh`.
+
+
 - Dual product: **Topics** + **Works** + **Explore** timeline. Do not collapse into a topics-only site.
 - Canonical data: `~/SaneApps/clients/translations/books/*` — extend books, then rebuild.
 - Explore editorial layer: `data/explore/` (claims, stances, contrast, ruptures). Schema in `clients/translations/docs/SCHEMAS.md`.

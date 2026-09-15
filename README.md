@@ -7,6 +7,10 @@ Public Fathers library: **Topics** (ante-Nicene dogmatics map) and **Works**
 - Donate: https://github.com/sponsors/MrSaneApps
 - IA: `docs/IA.md`
 
+## Agent start gate
+
+Before editing, read **AGENTS.md → Standing UX rules** (English-first H1s, no fake-link title underlines, Author accordion bios, always-on mobile nav, tip→ship QA). Acknowledge them in working notes.
+
 ## Build
 
 ```bash

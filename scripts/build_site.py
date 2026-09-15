@@ -421,6 +421,15 @@ def load_authors() -> dict[str, dict]:
 AUTHORS = load_authors()
 
 
+def load_author_bios() -> dict[str, dict]:
+    """Short reader-facing bios for Author rail accordion (slug → {name, dates, bio})."""
+    data = _json_load(ROOT / "data" / "author-bios.json", {})
+    return data if isinstance(data, dict) else {}
+
+
+AUTHOR_BIOS = load_author_bios()
+
+
 def alpha_key(s: str | None) -> str:
     """Case-insensitive Latin sort key for browse lists."""
     return (s or "").casefold().lstrip()
@@ -3053,6 +3062,29 @@ def related_panel(title: str, links: list[tuple[str, str]]) -> str:
     return f'<aside class="related"><h2>{escape(title)}</h2><ul>{items}</ul></aside>'
 
 
+def author_panel(author: str, author_slug: str) -> str:
+    """Author rail: expand like About this text when a short bio exists; else hub link."""
+    if not author:
+        return ""
+    href = f"/authors/{author_slug}/" if author_slug else "/authors/"
+    bio_rec = AUTHOR_BIOS.get(author_slug or "") or {}
+    bio = str(bio_rec.get("bio") or "").strip()
+    dates = str(bio_rec.get("dates") or "").strip()
+    display = str(bio_rec.get("name") or author).strip() or author
+    if bio:
+        head = escape(display)
+        if dates:
+            head = f"{head} ({escape(dates)})"
+        return (
+            f'<details class="reader-about reader-author">'
+            f"<summary>Author</summary>"
+            f'<p class="intro"><strong>{head}</strong> — {escape(bio)}</p>'
+            f'<p class="intro fine"><a href="{escape(href)}">All works by {escape(display)}</a></p>'
+            f"</details>"
+        )
+    return related_panel("Author", [(author, href)])
+
+
 def prev_next_nav(
     work_slug: str, sections: list[dict], idx: int, contents_href: str | None = None
 ) -> str:
@@ -3603,10 +3635,7 @@ def build() -> None:
             if meta:
                 topic_links.append((meta["title"], f"/topics/{tid}/"))
         rel_topics = related_panel("Related topics", topic_links)
-        author_link = related_panel(
-            "Author",
-            [(w["author"], f"/authors/{w['author_slug']}/")],
-        )
+        author_link = author_panel(w["author"], w["author_slug"])
 
         note = ""
         if w["status"] == "in_progress":
