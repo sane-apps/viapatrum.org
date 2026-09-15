@@ -190,14 +190,15 @@ async function run(base,out) {
   await contents.locator("a").first().click();
   assert(new URL(page.url()).hash,"Contents did not navigate to a passage");
   await visit(base+"/works/?sort=author",{waitUntil:"networkidle"});
+  await page.setViewportSize({width:390,height:844});
+  const nav=page.locator("#site-nav");
+  assert(await nav.isVisible(),"Primary nav missing on mobile");
+  assert((await page.locator("#site-nav a").count())>=5,"Primary nav links incomplete on mobile");
   const menu=page.locator(".nav-toggle");
-  await menu.click();
-  assert.equal(await menu.getAttribute("aria-expanded"),"true");
+  assert.equal(await menu.isVisible(),false,"Menu toggle must stay hidden when top nav is always on");
   await shot("mobile-menu",390);
-  await page.keyboard.press("Escape");
-  assert.equal(await menu.getAttribute("aria-expanded"),"false");
-  assert(await menu.evaluate(e=>document.activeElement===e),"Escape did not return menu focus");
-  receipt.checks.push({mobileMenu:true,escapeFocus:true,readerContents:true});
+  // Escape/focus still covered by scripts/ui.test.mjs; keep the handler wired in site.js.
+  receipt.checks.push({mobileNavAlwaysOn:true,readerContents:true});
 
   const index=JSON.parse(fs.readFileSync("dist/data/search-index.json","utf8"));
   const sample=index.find(r=>r.kind==="work"&&r.text?.length>600)||index.find(r=>r.text?.length>100);
