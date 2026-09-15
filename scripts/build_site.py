@@ -710,6 +710,40 @@ _BIBLE_LOCUS_TITLE = re.compile(
 _CPG_TITLE = re.compile(r"^CPG\s+\d+", re.I)
 
 
+_TIP_TITLE_SUFFIX = re.compile(r"\s*\([^)]*\btip\)\s*$", re.I)
+_DENSE_EDITION_MARK = re.compile(r"\b(?:ESTC|Wing|IA|EEBO|STC)\b", re.I)
+
+
+def public_reader_title(title: str) -> str:
+    """Public H1 / card / crumb title: drop awkward tip-scope parentheticals."""
+    raw = (title or "").strip()
+    cleaned = _TIP_TITLE_SUFFIX.sub("", raw).strip(" -–—")
+    return cleaned or raw
+
+
+def split_edition_for_reader(edition: str) -> tuple[str, str]:
+    """Keep a short imprint in the hero; move ESTC/Wing/IA dumps into About."""
+    ed = (edition or "").strip()
+    if not ed:
+        return "", ""
+    m = _DENSE_EDITION_MARK.search(ed)
+    if not m:
+        tip = re.search(r"(?:^|[.;]\s*)(Tip:\s*.+)$", ed, re.I)
+        if tip and tip.start() > 12:
+            short = ed[: tip.start()].rstrip(" .;")
+            return short or ed, tip.group(1).strip()
+        return ed, ""
+    short = ed[: m.start()].rstrip(" .;")
+    dense = ed[m.start() :].strip()
+    if not short:
+        short = re.split(r"[.;]\s*", ed, maxsplit=1)[0].strip() or ed
+        if short == ed:
+            dense = ""
+    return short, dense
+
+
+
+
 def _matthew_ref_sort_key(matthew, fragment, section) -> tuple:
     nums = [int(x) for x in re.findall(r"\d+", str(matthew or ""))]
     ch = nums[0] if nums else 999
@@ -816,6 +850,12 @@ def text_history_html(th: dict | None) -> str:
     method = str(th.get("method") or "").strip()
     if method:
         bits.append(f'<p class="intro">{escape(method)}</p>')
+    identifiers = str(th.get("identifiers") or "").strip()
+    if identifiers:
+        bits.append(
+            f'<p class="intro fine">Catalogue &amp; scope</p>'
+            f'<p class="intro">{escape(identifiers)}</p>'
+        )
     witnesses = th.get("witnesses") or []
     if isinstance(witnesses, list) and witnesses:
         items = []
@@ -894,14 +934,20 @@ def _pack_work(
     note = FIRST_ENGLISH_NOTES.get(slug, "") if is_first else ""
     # Legacy blurbs conflate a new rendering / absence from ANF with first English.
     blurb = re.sub(r"[^.!?]*(?:Original English Translation|no previous|new OET)[^.!?]*[.!?]?", "", blurb, flags=re.I).strip()
+    pub_title = public_reader_title(title)
+    edition_short, edition_ids = split_edition_for_reader(edition)
+    th = dict(text_history or {})
+    if edition_ids and not str(th.get("identifiers") or "").strip():
+        th["identifiers"] = edition_ids
     return {
         "slug": slug,
-        "title": title,
+        "title": pub_title,
         "author": author,
         "author_slug": author_slug,
         "period": period,
         "status": status,
-        "edition": edition,
+        "edition": edition_short or edition,
+        "edition_identifiers": edition_ids,
         "sections": sections,
         "section_count": len(sections),
         "blurb": blurb,
@@ -910,7 +956,7 @@ def _pack_work(
         "related_topics": list(WORK_TOPICS.get(slug, [])),
         "first_english": is_first,
         "first_english_note": note,
-        "text_history": text_history or {},
+        "text_history": th,
     }
 
 

@@ -563,6 +563,13 @@ details summary { cursor: pointer; font-weight: 650; }
   line-height: 1.45;
   font-size: 0.95rem;
 }
+@media (max-width: 800px) {
+  .reader-mast .meta {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+}
+
 .reader-layout {
   display: grid;
   grid-template-columns: minmax(14.5rem, 19rem) minmax(0, 1fr);
@@ -1248,13 +1255,16 @@ details.toc-group .toc {
 
 @media (max-width: 800px) {
   .split { grid-template-columns: 1fr; }
-  .nav-toggle { display: inline-block; }
+  /* Primary nav stays visible at the top on phones — no Menu gate. */
+  .nav-toggle { display: none; }
   .site-nav {
-    display: none;
+    display: flex;
     width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.15rem 0.85rem;
+    padding-top: 0.35rem;
   }
   .site-nav.is-open { display: flex; }
   .header-inner { flex-wrap: wrap; }
@@ -1326,14 +1336,23 @@ details.toc-group .toc {
   .reader-quick a { display: inline-flex; align-items: center; min-height: 44px; }
 }
 @media (max-width: 800px) {
-  /* A tall sticky menu must not cover passage headings on a small screen. */
+  /* Compact always-on top nav; keep header non-sticky so it cannot bury § heads. */
   .site-header { position: relative; }
   :root { --header-offset: 1rem; }
-  .site-nav { display: flex; }
   .nav-toggle { display: none; }
-  html.js .nav-toggle { display: inline-block; }
-  html.js .site-nav:not(.is-open) { display: none; }
-  .site-nav a { display: flex; align-items: center; min-height: 44px; width: 100%; }
+  html.js .nav-toggle { display: none; }
+  .site-nav,
+  html.js .site-nav,
+  html.js .site-nav:not(.is-open) {
+    display: flex;
+  }
+  .site-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    width: auto;
+    font-size: 0.9rem;
+  }
   .site-nav .support { width: auto; }
   .reader-head { line-height: 1.35; }
   .main { padding-inline: 1rem; }
