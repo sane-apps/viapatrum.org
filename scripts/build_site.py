@@ -713,12 +713,41 @@ _CPG_TITLE = re.compile(r"^CPG\s+\d+", re.I)
 _TIP_TITLE_SUFFIX = re.compile(r"\s*\([^)]*\btip\)\s*$", re.I)
 _DENSE_EDITION_MARK = re.compile(r"\b(?:ESTC|Wing|IA|EEBO|STC)\b", re.I)
 
+# Render-only English H1 / crumb / card titles. Reviewed identity (meta title) stays
+# Latin when that is the locked work name — publication gates bind on identity.
+# Add future Reformed tips (Baron / Saumur / Frankfurt) here as they ship.
+PUBLIC_ENGLISH_TITLES: dict[str, str] = {
+    "crocius-syntagma": "System of Sacred Theology",
+    "davenant-dissertationes-duae": "Two Dissertations",
+}
 
-def public_reader_title(title: str) -> str:
-    """Public H1 / card / crumb title: drop awkward tip-scope parentheticals."""
+# Latin secondary under an English-leading H1 (Le Blanc already has English identity).
+PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
+    "le-blanc-theses-theologicae": "Theses theologicae",
+}
+
+
+def public_reader_title(title: str, *, slug: str = "") -> str:
+    """Public H1 / card / crumb: English-first when mapped; drop tip parentheticals."""
+    eng = PUBLIC_ENGLISH_TITLES.get(slug or "", "").strip()
+    if eng:
+        return eng
     raw = (title or "").strip()
     cleaned = _TIP_TITLE_SUFFIX.sub("", raw).strip(" -–—")
     return cleaned or raw
+
+
+def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
+    """Latin secondary line when H1 leads English; empty when H1 is already that form."""
+    h1 = public_reader_title(title, slug=slug)
+    mapped = PUBLIC_LATIN_SUBTITLES.get(slug or "", "").strip()
+    if mapped:
+        return "" if mapped.lower() == h1.lower() else mapped
+    if slug in PUBLIC_ENGLISH_TITLES:
+        raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
+        if raw and raw.lower() != h1.lower():
+            return raw
+    return ""
 
 
 def split_edition_for_reader(edition: str) -> tuple[str, str]:
@@ -968,7 +997,7 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
         bits.append("Translation in progress")
     attrs = ""
     if catalog:
-        attrs = (f' data-title="{escape(public_reader_title(w["title"]))}" data-author="{escape(w["author"])}"'
+        attrs = (f' data-title="{escape(public_reader_title(w["title"], slug=w["slug"]))}" data-author="{escape(w["author"])}"'
                  f' data-author-href="/authors/{escape(w["author_slug"])}/"'
                  f' data-period="{escape(author_record(w["author"]).get("period") or "")}" data-year="{year}"'
                  f' data-era="{escape(era)}" data-oet="{int(w.get("first_english", False))}"'
@@ -976,8 +1005,8 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
     period = f' · {escape(w["period"])}' if w.get("period") else ""
     return (f'<li class="work-entry"{attrs}>'
             f'<a class="work-link" href="/works/{escape(w["slug"])}/" '
-            f'aria-label="{escape(public_reader_title(w["title"]))} — {escape(w["author"])}">'
-            f'<strong class="work-title">{escape(public_reader_title(w["title"]))}</strong>'
+            f'aria-label="{escape(public_reader_title(w["title"], slug=w["slug"]))} — {escape(w["author"])}">'
+            f'<strong class="work-title">{escape(public_reader_title(w["title"], slug=w["slug"]))}</strong>'
             f'<span class="work-author">{escape(w["author"])}{period}</span>'
             f'<span class="work-meta">{" · ".join(bits)}</span></a></li>')
 
@@ -3608,7 +3637,11 @@ def build() -> None:
                 f' · <abbr class="original-english" title="{escape(ORIGINAL_ENGLISH_TITLE)}">'
                 f"{escape(ORIGINAL_ENGLISH_CHIP)}</abbr>"
             )
-        pub_title = public_reader_title(w["title"])
+        pub_title = public_reader_title(w["title"], slug=w["slug"])
+        latin_sub = public_reader_latin_subtitle(w["title"], slug=w["slug"])
+        latin_html = (
+            f'<p class="latin-title">{escape(latin_sub)}</p>' if latin_sub else ""
+        )
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
         th_for_about = dict(w.get("text_history") or {})
         if edition_ids and not str(th_for_about.get("identifiers") or "").strip():
@@ -3616,6 +3649,7 @@ def build() -> None:
         work_mast = (
             f"<header class=\"reader-mast\">"
             f"<h1>{escape(pub_title)}</h1>"
+            f"{latin_html}"
             f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
             f"{escape(edition_short or w['edition'])}{prior_mark}</p>"
             f"</header>"
@@ -3637,6 +3671,7 @@ def build() -> None:
         # Overview / hub pages that still want the full stack above the fold.
         work_header = (
             f"<h1>{escape(pub_title)}</h1>"
+            f"{latin_html}"
             f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
             f"{escape(edition_short or w['edition'])}</p>"
             f"{first_banner}{era}{note}{blurb}{hub_about}"
@@ -3923,6 +3958,7 @@ def build() -> None:
                 book_mast = (
                     f"<header class=\"reader-mast\">"
                     f"<h1>{escape(pub_title)} <span class=\"h1-book\">— {escape(g['title'])}</span></h1>"
+                    f"{latin_html}"
                     f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
                     f"{escape(edition_short or w['edition'])}{book_prior}</p>"
                     f"</header>"
@@ -4048,7 +4084,7 @@ def build() -> None:
         hubs_done.add(slug)
         ww = [w for w in works if w["author_slug"] == (work_author_slug or slug)]
         ow = "".join(
-            f'<li><a href="/works/{escape(w["slug"])}/">{escape(public_reader_title(w["title"]))} ({w["section_count"]})</a></li>'
+            f'<li><a href="/works/{escape(w["slug"])}/">{escape(public_reader_title(w["title"], slug=w["slug"]))} ({w["section_count"]})</a></li>'
             for w in ww
         )
         ot = []
