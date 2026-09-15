@@ -4923,6 +4923,18 @@
       "receipt": "books/placeus-de-imputatione/reviews/audit/cap1_tip.review.json",
       "section": "2",
       "payload_sha256": "55171fcabc42c417d90bd2ffdc4e960c0a324535a5d5267138935b89d8a3b27a"
+    },
+    "work:strimesius-in-controversias-evangelicorum:1": {
+      "packet": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.packet.json",
+      "receipt": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.review.json",
+      "section": "1",
+      "payload_sha256": "2364b0b1436002fffec61fac6cf9e30f61a50b099aa356635c38ea24981c287a"
+    },
+    "work:strimesius-in-controversias-evangelicorum:2": {
+      "packet": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.packet.json",
+      "receipt": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.review.json",
+      "section": "2",
+      "payload_sha256": "25cccfb4dfcf9d0e3cf9ed7bdbe6ecbd5aaea693038a724212620d6f57d95e67"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -5064,6 +5076,10 @@
     "placeus-de-imputatione": {
       "packet": "books/placeus-de-imputatione/reviews/audit/cap1_tip.packet.json",
       "receipt": "books/placeus-de-imputatione/reviews/audit/cap1_tip.review.json"
+    },
+    "strimesius-in-controversias-evangelicorum": {
+      "packet": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.packet.json",
+      "receipt": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.review.json"
     }
   }
 }

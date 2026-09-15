@@ -755,6 +755,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "davenant-dissertationes-duae": "Two Dissertations",
     "baron-philosophia-theologiae-ancillans": "Philosophy the Handmaid of Theology",
     "placeus-de-imputatione": "On the Imputation of Adam's First Sin",
+    "strimesius-in-controversias-evangelicorum": "A Candid Inquiry into the Controversies among Evangelicals",
     # Catalogue-wide: no Latin-only public H1 / list titles.
     "epiphanius-ancoratus": "The Anchored One",
     "epiphanius-anacephalaeosis": "Recapitulation",
@@ -767,6 +768,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
 PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "le-blanc-theses-theologicae": "Theses theologicae",
+    "strimesius-in-controversias-evangelicorum": "Ingenua in Controversias Evangelicorum",
     "epiphanius-ancoratus": "Ancoratus",
     "epiphanius-anacephalaeosis": "Anacephalaeosis",
     "epiphanius-panarion": "Panarion",
