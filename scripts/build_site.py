@@ -89,6 +89,7 @@ OTHER_RANK1_TIP_BOOKS = sorted(
     | set(BOOKS.glob("john-antioch-*"))
     | set(BOOKS.glob("olympiodorus-*"))
     | set(BOOKS.glob("epiphanius-*"))
+    | set(BOOKS.glob("serapion-*"))
     | set(BOOKS.glob("alexander-monachus-*"))
     | set(BOOKS.glob("arethas-*"))
     | set(BOOKS.glob("eusebius-emesa-*"))
@@ -111,6 +112,14 @@ OTHER_RANK1_TIP_BOOKS = sorted(
     | set(BOOKS.glob("theophanes-*"))
     | set(BOOKS.glob("symeon-metaphrastes-*"))
     | set(BOOKS.glob("symeon-junior-*"))
+    | set(BOOKS.glob("nemesius-*"))
+    | set(BOOKS.glob("macarius-*"))
+    | set(BOOKS.glob("philostorgius-*"))
+    | set(BOOKS.glob("le-blanc-*"))
+    | set(BOOKS.glob("davenant-*"))
+    | set(BOOKS.glob("crocius-*"))
+    | set(BOOKS.glob("baron-*"))
+    | set(BOOKS.glob("strimesius-*"))
 )
 TIP_FRAGMENT_BOOKS = (
     ORIGEN_PAULINE_FRAGMENT_BOOKS
@@ -145,6 +154,21 @@ BASE = ""
 
 # Work ↔ topic cross-refs (topic ids from ante-nicene-topics/topics.yml).
 WORK_TOPICS: dict[str, list[str]] = {
+    "nemesius-de-natura-hominis": ["image-likeness", "free-will", "sin-and-death"],
+    "macarius-spiritual-homilies": ["monasticism", "spiritual-life", "prayer", "divine-image", "resurrection"],
+    "philostorgius-he": ["arianism", "ecclesiastical-history", "christology"],
+    "gregory-thaumaturgus-de-fide-xii": ["christology", "incarnation", "trinity"],
+    "gregory-thaumaturgus-ad-tatianum-de-anima": ["soul", "anthropology", "philosophy"],
+    "gregory-thaumaturgus-in-annuntiationem": ["annunciation", "incarnation", "virgin-mary"],
+    "gregory-thaumaturgus-sermo-in-omnes-sanctos": ["martyrdom", "resurrection", "christology"],
+    "gregory-thaumaturgus-panegyricus": ["origen", "education", "philosophy", "rhetoric"],
+    "gregory-thaumaturgus-ecclesiastes-metaphrase": ["ecclesiastes", "wisdom-literature", "vanity", "metaphrase"],
+    "gregory-thaumaturgus-epistula-canonica": ["penance", "canonical-epistle", "idolatry", "barbarian-invasion"],
+    "serapion-antioch-fragmenta": ["gospel-canon", "docetism", "apostolic-tradition", "heresy"],
+    "epiphanius-ancoratus": ["trinity", "holy-spirit", "christology", "monarchy-of-god"],
+    "epiphanius-de-mensuris": ["scripture", "weights-measures", "prophecy", "textual-criticism"],
+    "epiphanius-panarion": ["heresy", "church", "adam", "trinity", "panarion"],
+    "epiphanius-anacephalaeosis": ["heresy", "panarion", "recapitulation", "church"],
     "origen-on-prayer": ["liturgy-prayer"],
     "origen-exhortation-to-martyrdom": ["martyrdom-witness"],
     "origen-dialogue-heraclides": [

@@ -4719,6 +4719,162 @@
       "receipt": "books/julian-of-eclanum/reviews/audit/ad-florum-1-27.review.json",
       "section": "27",
       "payload_sha256": "c21e1da81b094af2bf73a527fcb86c3dcf8037ecc0e85b40bd8ed2ed27bb0421"
+    },
+    "work:nemesius-de-natura-hominis:1.1": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "1.1",
+      "payload_sha256": "e97d7f08024296ac5ba149febbc81d5f5343c96fe95003fd718e8074fc7d2a31"
+    },
+    "work:nemesius-de-natura-hominis:1.2": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "1.2",
+      "payload_sha256": "e15981f0cc88e86a6fd69bf1b88a0e684d66796746fb69aa01c454cdfd4a04d7"
+    },
+    "work:nemesius-de-natura-hominis:1.3": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "1.3",
+      "payload_sha256": "acda3c7556b2fd2c2dee8c2d7bdc9383683bce9f2db1175b7410fbf2baef2d45"
+    },
+    "work:nemesius-de-natura-hominis:2.1": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "2.1",
+      "payload_sha256": "7498532ecb4fa3cac186bc7d0f213d58348ffa5281d842487098fe22945a9e94"
+    },
+    "work:nemesius-de-natura-hominis:2.2": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "2.2",
+      "payload_sha256": "de3a1b3fdde04329bd30d72e956612e08c7194cfa1c3045c2a981329ddfdd33f"
+    },
+    "work:nemesius-de-natura-hominis:2.3": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "2.3",
+      "payload_sha256": "f8bcdcb2e8e65562d722a3f08902bbe8bc887c004d209a704c747d288834890f"
+    },
+    "work:nemesius-de-natura-hominis:2.4": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "2.4",
+      "payload_sha256": "789df9c5396828bcde5e2aa055b5823167ef97d3eb9269e3f12ea40743a79828"
+    },
+    "work:nemesius-de-natura-hominis:3.1": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
+      "section": "3.1",
+      "payload_sha256": "3ab3e0e308b64f66cecd80a75d537808ccb39f9466fa12bd880bc1df1f68ec66"
+    },
+    "work:macarius-spiritual-homilies:5": {
+      "packet": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.packet.json",
+      "receipt": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.review.json",
+      "section": "5",
+      "payload_sha256": "56f63c4591a87b329b6c7deb17d5eef210af7b93d2be0671b31179f4e4c1564a"
+    },
+    "work:macarius-spiritual-homilies:6": {
+      "packet": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.packet.json",
+      "receipt": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.review.json",
+      "section": "6",
+      "payload_sha256": "8ed2f76bfe536fa8c8a8b2d8534995f49b54d505bbb5e9d683ca2082e95011c6"
+    },
+    "work:philostorgius-he:1": {
+      "packet": "books/philostorgius-he/reviews/audit/ecclesiastical_history_tip.packet.json",
+      "receipt": "books/philostorgius-he/reviews/audit/ecclesiastical_history_tip.review.json",
+      "section": "1",
+      "payload_sha256": "d863a57adce42c10417743ebb3d4449f0650ffa292ee51b42112b62c31ebfcec"
+    },
+    "work:gregory-thaumaturgus-de-fide-xii:1": {
+      "packet": "books/gregory-thaumaturgus-de-fide-xii/reviews/audit/fide_xii_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-de-fide-xii/reviews/audit/fide_xii_tip.review.json",
+      "section": "1",
+      "payload_sha256": "3729aa7dc12d37febcf390585e59c4d962205e97302adc3735a3d624013ced1d"
+    },
+    "work:gregory-thaumaturgus-de-fide-xii:2": {
+      "packet": "books/gregory-thaumaturgus-de-fide-xii/reviews/audit/fide_xii_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-de-fide-xii/reviews/audit/fide_xii_tip.review.json",
+      "section": "2",
+      "payload_sha256": "48d9ab873334b2732e7e30ec331d25851053b575e513724993261f40322f79a0"
+    },
+    "work:gregory-thaumaturgus-ad-tatianum-de-anima:1": {
+      "packet": "books/gregory-thaumaturgus-ad-tatianum-de-anima/reviews/audit/anima_tatianum_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-ad-tatianum-de-anima/reviews/audit/anima_tatianum_tip.review.json",
+      "section": "1",
+      "payload_sha256": "50b11e52d7b51eb177165bd74e69b56dd1392bb73f43b3439e3869353ffa4867"
+    },
+    "work:gregory-thaumaturgus-in-annuntiationem:1": {
+      "packet": "books/gregory-thaumaturgus-in-annuntiationem/reviews/audit/annuntiationem_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-in-annuntiationem/reviews/audit/annuntiationem_tip.review.json",
+      "section": "1",
+      "payload_sha256": "25a0e0c6cf9c156b298e7814aa66c5e4bbbceddac71d6d4d0680986c677a29cd"
+    },
+    "work:gregory-thaumaturgus-sermo-in-omnes-sanctos:1": {
+      "packet": "books/gregory-thaumaturgus-sermo-in-omnes-sanctos/reviews/audit/omnes_sanctos_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-sermo-in-omnes-sanctos/reviews/audit/omnes_sanctos_tip.review.json",
+      "section": "1",
+      "payload_sha256": "60e24bad5b075fbe7445d8cf4341cc64cf26c9d02e688c92329024f581e63369"
+    },
+    "work:gregory-thaumaturgus-panegyricus:1": {
+      "packet": "books/gregory-thaumaturgus-panegyricus/reviews/audit/panegyricus_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-panegyricus/reviews/audit/panegyricus_tip.review.json",
+      "section": "1",
+      "payload_sha256": "23fcba896fd7bc92271e49fb4ccd9af788b7b52ae37345957f05b7416c53228e"
+    },
+    "work:gregory-thaumaturgus-ecclesiastes-metaphrase:1": {
+      "packet": "books/gregory-thaumaturgus-ecclesiastes-metaphrase/reviews/audit/eccl_metaphrase_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-ecclesiastes-metaphrase/reviews/audit/eccl_metaphrase_tip.review.json",
+      "section": "1",
+      "payload_sha256": "8b45afdab9856456a269225f2aebced89c78175566fc4b243170fc4267aded96"
+    },
+    "work:gregory-thaumaturgus-epistula-canonica:1": {
+      "packet": "books/gregory-thaumaturgus-epistula-canonica/reviews/audit/epistula_canonica_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-epistula-canonica/reviews/audit/epistula_canonica_tip.review.json",
+      "section": "1",
+      "payload_sha256": "c3a6f421328edb32c7ef45d37449412022b6d91c2fa8e94d2b3d1fcba39a0daf"
+    },
+    "work:serapion-antioch-fragmenta:1": {
+      "packet": "books/serapion-antioch-fragmenta/reviews/audit/serapion_fragmenta_tip.packet.json",
+      "receipt": "books/serapion-antioch-fragmenta/reviews/audit/serapion_fragmenta_tip.review.json",
+      "section": "1",
+      "payload_sha256": "c2756139b522bcbdd407224f2c40f95901535949d11f18d9559001558eb75cb6"
+    },
+    "work:epiphanius-ancoratus:1": {
+      "packet": "books/epiphanius-ancoratus/reviews/audit/ancoratus_tip.packet.json",
+      "receipt": "books/epiphanius-ancoratus/reviews/audit/ancoratus_tip.review.json",
+      "section": "1",
+      "payload_sha256": "123630b51374c1d20f757810ed8aa3ef58e69b7a4505655bb34f307dd6a7887b"
+    },
+    "work:epiphanius-de-mensuris:1": {
+      "packet": "books/epiphanius-de-mensuris/reviews/audit/mensuris_tip.packet.json",
+      "receipt": "books/epiphanius-de-mensuris/reviews/audit/mensuris_tip.review.json",
+      "section": "1",
+      "payload_sha256": "44f15b105349f773beb1ee8c4ceb36894176dfcf42ca78ed29ddd4df859bf35b"
+    },
+    "work:epiphanius-panarion:1": {
+      "packet": "books/epiphanius-panarion/reviews/audit/panarion_tip.packet.json",
+      "receipt": "books/epiphanius-panarion/reviews/audit/panarion_tip.review.json",
+      "section": "1",
+      "payload_sha256": "7ea90cec33fc1155c4f9568eca1fdbb1f5d4b236e01cc8ba2c5da0f04eca9ffe"
+    },
+    "work:epiphanius-anacephalaeosis:1": {
+      "packet": "books/epiphanius-anacephalaeosis/reviews/audit/anacephalaeosis_tip.packet.json",
+      "receipt": "books/epiphanius-anacephalaeosis/reviews/audit/anacephalaeosis_tip.review.json",
+      "section": "1",
+      "payload_sha256": "337005146a2a89349a686a3f920cc589b368d7308e409e825c0a26286008d53a"
+    },
+    "work:le-blanc-theses-theologicae:1": {
+      "packet": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.packet.json",
+      "receipt": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.review.json",
+      "section": "1",
+      "payload_sha256": "52b99149fb428cbf32f256c46ba00750478dd221a02b285b23daff7ad7d3c8a7"
+    },
+    "work:le-blanc-theses-theologicae:2": {
+      "packet": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.packet.json",
+      "receipt": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.review.json",
+      "section": "2",
+      "payload_sha256": "58e8ab2a505b585a7a04766649f773b142b5cdbae49fd44371ca30b1e7338d81"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -4778,6 +4934,72 @@
       "before": "284e39ad1824f1f9d6de8a46a7b3e97fcc21ad4b9f26839bed34a83dbfd426d0",
       "after": "0789326b20b9afdc797c11390a0d482a54c5f677af3ace0ab24ae8e8b55bebb4",
       "reason": "Numerical citation order and stable same-locus fragments now match canonical source JSON. Every reader payload and all other scope metadata are unchanged. Independently checked 2026-09-13; this is an ordering repair, not fidelity certification."
+    }
+  },
+  "scope_reviews": {
+    "nemesius-de-natura-hominis": {
+      "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
+      "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json"
+    },
+    "macarius-spiritual-homilies": {
+      "packet": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.packet.json",
+      "receipt": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.review.json"
+    },
+    "philostorgius-he": {
+      "packet": "books/philostorgius-he/reviews/audit/ecclesiastical_history_tip.packet.json",
+      "receipt": "books/philostorgius-he/reviews/audit/ecclesiastical_history_tip.review.json"
+    },
+    "gregory-thaumaturgus-de-fide-xii": {
+      "packet": "books/gregory-thaumaturgus-de-fide-xii/reviews/audit/fide_xii_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-de-fide-xii/reviews/audit/fide_xii_tip.review.json"
+    },
+    "gregory-thaumaturgus-ad-tatianum-de-anima": {
+      "packet": "books/gregory-thaumaturgus-ad-tatianum-de-anima/reviews/audit/anima_tatianum_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-ad-tatianum-de-anima/reviews/audit/anima_tatianum_tip.review.json"
+    },
+    "gregory-thaumaturgus-in-annuntiationem": {
+      "packet": "books/gregory-thaumaturgus-in-annuntiationem/reviews/audit/annuntiationem_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-in-annuntiationem/reviews/audit/annuntiationem_tip.review.json"
+    },
+    "gregory-thaumaturgus-sermo-in-omnes-sanctos": {
+      "packet": "books/gregory-thaumaturgus-sermo-in-omnes-sanctos/reviews/audit/omnes_sanctos_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-sermo-in-omnes-sanctos/reviews/audit/omnes_sanctos_tip.review.json"
+    },
+    "gregory-thaumaturgus-panegyricus": {
+      "packet": "books/gregory-thaumaturgus-panegyricus/reviews/audit/panegyricus_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-panegyricus/reviews/audit/panegyricus_tip.review.json"
+    },
+    "gregory-thaumaturgus-ecclesiastes-metaphrase": {
+      "packet": "books/gregory-thaumaturgus-ecclesiastes-metaphrase/reviews/audit/eccl_metaphrase_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-ecclesiastes-metaphrase/reviews/audit/eccl_metaphrase_tip.review.json"
+    },
+    "gregory-thaumaturgus-epistula-canonica": {
+      "packet": "books/gregory-thaumaturgus-epistula-canonica/reviews/audit/epistula_canonica_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-epistula-canonica/reviews/audit/epistula_canonica_tip.review.json"
+    },
+    "serapion-antioch-fragmenta": {
+      "packet": "books/serapion-antioch-fragmenta/reviews/audit/serapion_fragmenta_tip.packet.json",
+      "receipt": "books/serapion-antioch-fragmenta/reviews/audit/serapion_fragmenta_tip.review.json"
+    },
+    "epiphanius-ancoratus": {
+      "packet": "books/epiphanius-ancoratus/reviews/audit/ancoratus_tip.packet.json",
+      "receipt": "books/epiphanius-ancoratus/reviews/audit/ancoratus_tip.review.json"
+    },
+    "epiphanius-de-mensuris": {
+      "packet": "books/epiphanius-de-mensuris/reviews/audit/mensuris_tip.packet.json",
+      "receipt": "books/epiphanius-de-mensuris/reviews/audit/mensuris_tip.review.json"
+    },
+    "epiphanius-panarion": {
+      "packet": "books/epiphanius-panarion/reviews/audit/panarion_tip.packet.json",
+      "receipt": "books/epiphanius-panarion/reviews/audit/panarion_tip.review.json"
+    },
+    "epiphanius-anacephalaeosis": {
+      "packet": "books/epiphanius-anacephalaeosis/reviews/audit/anacephalaeosis_tip.packet.json",
+      "receipt": "books/epiphanius-anacephalaeosis/reviews/audit/anacephalaeosis_tip.review.json"
+    },
+    "le-blanc-theses-theologicae": {
+      "packet": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.packet.json",
+      "receipt": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.review.json"
     }
   }
 }
