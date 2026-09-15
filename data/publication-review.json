@@ -4887,6 +4887,18 @@
       "receipt": "books/davenant-dissertationes-duae/reviews/audit/morte_christi_tip.review.json",
       "section": "2",
       "payload_sha256": "1dc1aef3600bd444df113eb2e358cdbffa347b9cd8bc1c346231de0212a6a368"
+    },
+    "work:crocius-syntagma:1": {
+      "packet": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.packet.json",
+      "receipt": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.review.json",
+      "section": "1",
+      "payload_sha256": "37af22b371312200012ac3814c48a2c8ccf2eff9eec5163b6f70c7af71529145"
+    },
+    "work:crocius-syntagma:2": {
+      "packet": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.packet.json",
+      "receipt": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.review.json",
+      "section": "2",
+      "payload_sha256": "acc4d39a24cb88eda0e55c39e4e1790d07f9057fe1e05723e0bbd8c3c0d4aa74"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -5016,6 +5028,10 @@
     "davenant-dissertationes-duae": {
       "packet": "books/davenant-dissertationes-duae/reviews/audit/morte_christi_tip.packet.json",
       "receipt": "books/davenant-dissertationes-duae/reviews/audit/morte_christi_tip.review.json"
+    },
+    "crocius-syntagma": {
+      "packet": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.packet.json",
+      "receipt": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.review.json"
     }
   }
 }
