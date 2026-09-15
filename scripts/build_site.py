@@ -934,20 +934,21 @@ def _pack_work(
     note = FIRST_ENGLISH_NOTES.get(slug, "") if is_first else ""
     # Legacy blurbs conflate a new rendering / absence from ANF with first English.
     blurb = re.sub(r"[^.!?]*(?:Original English Translation|no previous|new OET)[^.!?]*[.!?]?", "", blurb, flags=re.I).strip()
-    pub_title = public_reader_title(title)
-    edition_short, edition_ids = split_edition_for_reader(edition)
+    # Keep reviewed identity (title/edition) intact for publication gates.
+    # Public H1 / hero softening happens at render via public_reader_title /
+    # split_edition_for_reader.
     th = dict(text_history or {})
+    edition_ids = split_edition_for_reader(edition)[1]
     if edition_ids and not str(th.get("identifiers") or "").strip():
         th["identifiers"] = edition_ids
     return {
         "slug": slug,
-        "title": pub_title,
+        "title": title,
         "author": author,
         "author_slug": author_slug,
         "period": period,
         "status": status,
-        "edition": edition_short or edition,
-        "edition_identifiers": edition_ids,
+        "edition": edition,
         "sections": sections,
         "section_count": len(sections),
         "blurb": blurb,
@@ -972,7 +973,7 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
         bits.append("Translation in progress")
     attrs = ""
     if catalog:
-        attrs = (f' data-title="{escape(w["title"])}" data-author="{escape(w["author"])}"'
+        attrs = (f' data-title="{escape(public_reader_title(w["title"]))}" data-author="{escape(w["author"])}"'
                  f' data-author-href="/authors/{escape(w["author_slug"])}/"'
                  f' data-period="{escape(author_record(w["author"]).get("period") or "")}" data-year="{year}"'
                  f' data-era="{escape(era)}" data-oet="{int(w.get("first_english", False))}"'
@@ -980,8 +981,8 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
     period = f' · {escape(w["period"])}' if w.get("period") else ""
     return (f'<li class="work-entry"{attrs}>'
             f'<a class="work-link" href="/works/{escape(w["slug"])}/" '
-            f'aria-label="{escape(w["title"])} — {escape(w["author"])}">'
-            f'<strong class="work-title">{escape(w["title"])}</strong>'
+            f'aria-label="{escape(public_reader_title(w["title"]))} — {escape(w["author"])}">'
+            f'<strong class="work-title">{escape(public_reader_title(w["title"]))}</strong>'
             f'<span class="work-author">{escape(w["author"])}{period}</span>'
             f'<span class="work-meta">{" · ".join(bits)}</span></a></li>')
 
@@ -3185,11 +3186,18 @@ def build() -> None:
             combined = {**previous, **work, "sections": list(sections.values()), "section_count": len(sections)}
             # Retain the source disclosures for every batch represented here.
             histories = [previous.get("text_history") or {}, work.get("text_history") or {}]
+            ids = " · ".join(dict.fromkeys(
+                str(h.get("identifiers")).strip()
+                for h in histories
+                if str(h.get("identifiers") or "").strip()
+            ))
             combined["text_history"] = {
                 "method": " ".join(dict.fromkeys(h["method"] for h in histories if h.get("method"))),
                 **{key: list({json.dumps(item, sort_keys=True): item for h in histories for item in h.get(key, [])}.values())
                    for key in ("witnesses", "joins")},
             }
+            if ids:
+                combined["text_history"]["identifiers"] = ids
             combined["first_english"] = bool(previous.get("first_english") and work.get("first_english"))
             combined["first_english_note"] = " ".join(dict.fromkeys(
                 w["first_english_note"] for w in (previous, work) if w.get("first_english_note")))
@@ -3605,14 +3613,19 @@ def build() -> None:
                 f' · <abbr class="original-english" title="{escape(ORIGINAL_ENGLISH_TITLE)}">'
                 f"{escape(ORIGINAL_ENGLISH_CHIP)}</abbr>"
             )
+        pub_title = public_reader_title(w["title"])
+        edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
+        th_for_about = dict(w.get("text_history") or {})
+        if edition_ids and not str(th_for_about.get("identifiers") or "").strip():
+            th_for_about["identifiers"] = edition_ids
         work_mast = (
             f"<header class=\"reader-mast\">"
-            f"<h1>{escape(w['title'])}</h1>"
+            f"<h1>{escape(pub_title)}</h1>"
             f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
-            f"{escape(w['edition'])}{prior_mark}</p>"
+            f"{escape(edition_short or w['edition'])}{prior_mark}</p>"
             f"</header>"
         )
-        history_html = text_history_html(w.get("text_history"))
+        history_html = text_history_html(th_for_about)
         about_bits = "".join(
             x for x in (first_banner, era, note, blurb, history_html, confidence) if x
         )
@@ -3628,8 +3641,9 @@ def build() -> None:
         )
         # Overview / hub pages that still want the full stack above the fold.
         work_header = (
-            f"<h1>{escape(w['title'])}</h1>"
-            f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · {escape(w['edition'])}</p>"
+            f"<h1>{escape(pub_title)}</h1>"
+            f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
+            f"{escape(edition_short or w['edition'])}</p>"
             f"{first_banner}{era}{note}{blurb}{hub_about}"
         )
 
@@ -3876,13 +3890,13 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    w["title"],
+                    pub_title,
                     f"""{work_header}
                     {author_link}{rel_topics}
                     <p class="intro">Each book reads on one continuous page:</p>
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
                     {''.join(overview_toc)}""",
-                    crumb=[("Home", "/"), ("Works", "/works/"), (w["title"], "")],
+                    crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=w.get("blurb") or SITE_TAG,
                 ),
@@ -3913,15 +3927,15 @@ def build() -> None:
                     )
                 book_mast = (
                     f"<header class=\"reader-mast\">"
-                    f"<h1>{escape(w['title'])} <span class=\"h1-book\">— {escape(g['title'])}</span></h1>"
+                    f"<h1>{escape(pub_title)} <span class=\"h1-book\">— {escape(g['title'])}</span></h1>"
                     f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
-                    f"{escape(w['edition'])}{book_prior}</p>"
+                    f"{escape(edition_short or w['edition'])}{book_prior}</p>"
                     f"</header>"
                 )
                 write(
                     DIST / "works" / w["slug"] / bslug / "index.html",
                     layout(
-                        f"{w['title']} — {g['title']}",
+                        f"{pub_title} — {g['title']}",
                         reader_page(
                             f"{bnav}<div class=\"reader\">{blocks}</div>{bnav}",
                             contents_html=contents_details(secs, label=f"{g['title']} contents"),
@@ -3930,7 +3944,7 @@ def build() -> None:
                         crumb=[
                             ("Home", "/"),
                             ("Works", "/works/"),
-                            (w["title"], f"/works/{w['slug']}/"),
+                            (pub_title, f"/works/{w['slug']}/"),
                             (g["title"], ""),
                         ],
                         active="works",
@@ -3944,12 +3958,12 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    w["title"],
+                    pub_title,
                     reader_page(
                         f'<div class="reader">{blocks}</div>',
                         contents_html=contents_details(w["sections"]),
                     ),
-                    crumb=[("Home", "/"), ("Works", "/works/"), (w["title"], "")],
+                    crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=w.get("blurb") or SITE_TAG,
                 ),
@@ -3996,10 +4010,10 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / str(s["section"]) / "index.html",
                 layout(
-                    f"{w['title']} §{display_section(s['section'])}",
+                    f"{pub_title} §{display_section(s['section'])}",
                     f"""<article class="work-section">
                     {nav}
-                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(w['title'])}</a> · §{escape(display_section(s['section']))}</p>
+                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(pub_title)}</a> · §{escape(display_section(s['section']))}</p>
                     {kind}
                     <h1>{escape(str(s['head']))}</h1>
                     {supplied_html}
@@ -4012,7 +4026,7 @@ def build() -> None:
                     crumb=[
                         ("Home", "/"),
                         ("Works", "/works/"),
-                        (w["title"], f"/works/{w['slug']}/"),
+                        (pub_title, f"/works/{w['slug']}/"),
                         (f"§{display_section(s['section'])}", ""),
                     ],
                     active="works",
@@ -4023,7 +4037,7 @@ def build() -> None:
                 {
                     "kind": "work",
                     "id": f"{w['slug']}-{s['section']}",
-                    "title": f"{w['title']} §{display_section(s['section'])}: {s['head']}",
+                    "title": f"{pub_title} §{display_section(s['section'])}: {s['head']}",
                     "author": w["author"],
                     "href": f"/works/{w['slug']}/{s['section']}/",
                     "verified": False,
@@ -4039,7 +4053,7 @@ def build() -> None:
         hubs_done.add(slug)
         ww = [w for w in works if w["author_slug"] == (work_author_slug or slug)]
         ow = "".join(
-            f'<li><a href="/works/{escape(w["slug"])}/">{escape(w["title"])} ({w["section_count"]})</a></li>'
+            f'<li><a href="/works/{escape(w["slug"])}/">{escape(public_reader_title(w["title"]))} ({w["section_count"]})</a></li>'
             for w in ww
         )
         ot = []
