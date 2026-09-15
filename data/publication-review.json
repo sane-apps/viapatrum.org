@@ -4874,7 +4874,7 @@
       "packet": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.packet.json",
       "receipt": "books/le-blanc-theses-theologicae/reviews/audit/theologia_tip.review.json",
       "section": "2",
-      "payload_sha256": "58e8ab2a505b585a7a04766649f773b142b5cdbae49fd44371ca30b1e7338d81"
+      "payload_sha256": "d0803befac82e5829b4171f2e20ae7bffdf167ae97931035ec488e24bdd2897e"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
