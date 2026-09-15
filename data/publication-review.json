@@ -4899,6 +4899,18 @@
       "receipt": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.review.json",
       "section": "2",
       "payload_sha256": "acc4d39a24cb88eda0e55c39e4e1790d07f9057fe1e05723e0bbd8c3c0d4aa74"
+    },
+    "work:baron-philosophia-theologiae-ancillans:1": {
+      "packet": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.packet.json",
+      "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json",
+      "section": "1",
+      "payload_sha256": "dd8caff0f03111ddcb6258efb9bc776f93225b5ce9e0977585049712d7b3125b"
+    },
+    "work:baron-philosophia-theologiae-ancillans:2": {
+      "packet": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.packet.json",
+      "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json",
+      "section": "2",
+      "payload_sha256": "bf1d6d64c97682a5f20fa468d9f2674647070985c5f943984426879af4bbc7d1"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -5032,6 +5044,10 @@
     "crocius-syntagma": {
       "packet": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.packet.json",
       "receipt": "books/crocius-syntagma/reviews/audit/liber1_cap1_tip.review.json"
+    },
+    "baron-philosophia-theologiae-ancillans": {
+      "packet": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.packet.json",
+      "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json"
     }
   }
 }

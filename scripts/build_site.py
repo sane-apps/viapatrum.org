@@ -719,6 +719,7 @@ _DENSE_EDITION_MARK = re.compile(r"\b(?:ESTC|Wing|IA|EEBO|STC)\b", re.I)
 PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "crocius-syntagma": "System of Sacred Theology",
     "davenant-dissertationes-duae": "Two Dissertations",
+    "baron-philosophia-theologiae-ancillans": "Philosophy the Handmaid of Theology",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
