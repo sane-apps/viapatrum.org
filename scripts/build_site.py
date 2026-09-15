@@ -119,6 +119,7 @@ OTHER_RANK1_TIP_BOOKS = sorted(
     | set(BOOKS.glob("davenant-*"))
     | set(BOOKS.glob("crocius-*"))
     | set(BOOKS.glob("baron-*"))
+    | set(BOOKS.glob("placeus-*"))
     | set(BOOKS.glob("strimesius-*"))
 )
 TIP_FRAGMENT_BOOKS = (
@@ -720,6 +721,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "crocius-syntagma": "System of Sacred Theology",
     "davenant-dissertationes-duae": "Two Dissertations",
     "baron-philosophia-theologiae-ancillans": "Philosophy the Handmaid of Theology",
+    "placeus-de-imputatione": "On the Imputation of Adam's First Sin",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).

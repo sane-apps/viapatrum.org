@@ -4911,6 +4911,18 @@
       "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json",
       "section": "2",
       "payload_sha256": "bf1d6d64c97682a5f20fa468d9f2674647070985c5f943984426879af4bbc7d1"
+    },
+    "work:placeus-de-imputatione:1": {
+      "packet": "books/placeus-de-imputatione/reviews/audit/cap1_tip.packet.json",
+      "receipt": "books/placeus-de-imputatione/reviews/audit/cap1_tip.review.json",
+      "section": "1",
+      "payload_sha256": "5d50272b042a0f8f526a5145b714b03b715e300a9679474208fc2db71250e67b"
+    },
+    "work:placeus-de-imputatione:2": {
+      "packet": "books/placeus-de-imputatione/reviews/audit/cap1_tip.packet.json",
+      "receipt": "books/placeus-de-imputatione/reviews/audit/cap1_tip.review.json",
+      "section": "2",
+      "payload_sha256": "55171fcabc42c417d90bd2ffdc4e960c0a324535a5d5267138935b89d8a3b27a"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -5048,6 +5060,10 @@
     "baron-philosophia-theologiae-ancillans": {
       "packet": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.packet.json",
       "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json"
+    },
+    "placeus-de-imputatione": {
+      "packet": "books/placeus-de-imputatione/reviews/audit/cap1_tip.packet.json",
+      "receipt": "books/placeus-de-imputatione/reviews/audit/cap1_tip.review.json"
     }
   }
 }
