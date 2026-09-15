@@ -23,5 +23,20 @@
     "name": "Josué de la Place (Placeus)",
     "dates": "1596–1655",
     "bio": "Reformed professor at the Academy of Saumur. Best known for denying the immediate imputation of Adam's first sin, teaching mediate imputation instead—a signature Saumur position contested by stricter Reformed orthodoxy and later condemned in some synodical debates."
+  },
+  "epiphanius-of-salamis": {
+    "name": "Epiphanius of Salamis",
+    "dates": "c. 310/320–403",
+    "bio": "Bishop of Salamis (Constantia) on Cyprus. Best known for the Panarion (Medicine Chest), a vast catalogue of heresies, with the Ancoratus as a shorter doctrinal anchor for the churches. A fierce defender of Nicene orthodoxy and monastic discipline."
+  },
+  "nemesius-of-emesa": {
+    "name": "Nemesius of Emesa",
+    "dates": "fl. c. 390",
+    "bio": "Bishop of Emesa (Homs) writing near the end of the fourth century. On the Nature of Man joins Christian doctrine to Greek philosophical psychology—soul, body, providence, and free will—in a synthesis widely read in East and West."
+  },
+  "serapion-of-antioch": {
+    "name": "Serapion of Antioch",
+    "dates": "fl. c. 190–211",
+    "bio": "Bishop of Antioch around the turn of the third century. Surviving fragments show a churchman guarding apostolic teaching, including caution about which gospels the churches should read."
   }
 }
