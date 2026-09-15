@@ -934,13 +934,8 @@ def _pack_work(
     note = FIRST_ENGLISH_NOTES.get(slug, "") if is_first else ""
     # Legacy blurbs conflate a new rendering / absence from ANF with first English.
     blurb = re.sub(r"[^.!?]*(?:Original English Translation|no previous|new OET)[^.!?]*[.!?]?", "", blurb, flags=re.I).strip()
-    # Keep reviewed identity (title/edition) intact for publication gates.
-    # Public H1 / hero softening happens at render via public_reader_title /
-    # split_edition_for_reader.
-    th = dict(text_history or {})
-    edition_ids = split_edition_for_reader(edition)[1]
-    if edition_ids and not str(th.get("identifiers") or "").strip():
-        th["identifiers"] = edition_ids
+    # Keep reviewed identity (title/edition/text_history) intact for publication
+    # gates. Public H1 / hero softening happens only at render.
     return {
         "slug": slug,
         "title": title,
@@ -957,7 +952,7 @@ def _pack_work(
         "related_topics": list(WORK_TOPICS.get(slug, [])),
         "first_english": is_first,
         "first_english_note": note,
-        "text_history": th,
+        "text_history": text_history or {},
     }
 
 
