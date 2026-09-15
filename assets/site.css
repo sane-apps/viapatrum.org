@@ -192,6 +192,9 @@ body {
   gap: 1.1rem;
 }
 .help-option {
+  /* help-option overflow harden: long AI prompt tokens must not widen the page */
+  min-width: 0;
+  max-width: 100%;
   border: 1px solid var(--rule);
   border-radius: 0.55rem;
   background: color-mix(in srgb, var(--paper-2) 50%, transparent);
@@ -216,14 +219,21 @@ body {
 .help-option pre {
   margin: 0;
   padding: 0.7rem 0.85rem;
+  max-width: 100%;
   overflow-x: auto;
   background: var(--paper-2);
   border-radius: 0.4rem;
   font-size: 0.82rem;
   line-height: 1.45;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
-.help-option code { font-size: 0.88rem; }
+.help-option code {
+  font-size: 0.88rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 
 .card-list, .topic-list, .toc {
   list-style: none;
