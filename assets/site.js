@@ -132,7 +132,7 @@
             group.appendChild(heading);
             if (li.dataset.period) {
               const period = document.createElement("span");
-              period.className = "author-period";
+              period.className = "author-dates author-period";
               period.textContent = li.dataset.period;
               group.appendChild(period);
             }

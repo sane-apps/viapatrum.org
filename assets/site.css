@@ -1271,7 +1271,12 @@ details.toc-group .toc {
   display: inline; padding: 0; border: 0; text-decoration: none;
 }
 .works-list .author-group h2 a:hover { text-decoration: underline; }
-.works-list .author-period { font-size: 0.95rem; }
+.works-list .author-period,
+.works-list .author-dates {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  font-weight: 400;
+}
 .works-list.is-grouped .work-author { display: none; }
 .works-list .work-link { padding: 0.95rem 0; gap: 0.25rem; }
 .works-list .work-link:hover .work-title { text-decoration: underline; }

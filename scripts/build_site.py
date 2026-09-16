@@ -636,7 +636,14 @@ def build_explore_index(
         if any(p.get("era_band") == band for p in points):
             eras.append(band)
 
-    author_list = [{"slug": s, "name": n} for s, n in sorted(authors.items(), key=lambda kv: alpha_key(kv[1]))]
+    author_list = [
+        {
+            "slug": s,
+            "name": n,
+            "dates": author_dates_display(n, s) or "",
+        }
+        for s, n in sorted(authors.items(), key=lambda kv: alpha_key(kv[1]))
+    ]
 
     paths = _json_load(EXPLORE_DATA / "paths.json", [])
     if not isinstance(paths, list):
@@ -1053,7 +1060,7 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
     if catalog:
         attrs = (f' data-title="{escape(public_reader_title(w["title"], slug=w["slug"]))}" data-author="{escape(w["author"])}"'
                  f' data-author-href="/authors/{escape(w["author_slug"])}/"'
-                 f' data-period="{escape(author_record(w["author"]).get("period") or "")}" data-year="{year}"'
+                 f' data-period="{escape(author_dates_display(w.get("author"), w.get("author_slug")) or "")}" data-year="{year}"'
                  f' data-era="{escape(era)}" data-oet="{int(w.get("first_english", False))}"'
                  f' data-blob="{escape(blob)}"')
     period = f' · {escape(w["period"])}' if w.get("period") else ""

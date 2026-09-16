@@ -184,8 +184,11 @@
     els.era.innerHTML = ["all", ...data.eras]
       .map((e) => `<option value="${escAttr(e)}">${e === "all" ? "All eras" : esc(e)}</option>`)
       .join("");
-    els.author.innerHTML = [{ slug: "all", name: "All authors" }, ...data.authors]
-      .map((a) => `<option value="${escAttr(a.slug)}">${esc(a.name)}</option>`)
+    els.author.innerHTML = [{ slug: "all", name: "All authors", dates: "" }, ...data.authors]
+      .map((a) => {
+        const label = a.dates ? `${a.name} (${a.dates})` : a.name;
+        return `<option value="${escAttr(a.slug)}">${esc(label)}</option>`;
+      })
       .join("");
   }
 
@@ -209,8 +212,10 @@
       .map((slug) => {
         const a = data.authors.find((x) => x.slug === slug);
         const name = a ? a.name : slug;
+        const dates = a && a.dates ? a.dates : "";
+        const label = dates ? `${name} (${dates})` : name;
         const c = aColors[slug] || "#1f5c45";
-        return `<span class="explore-chip" style="color:${c};border-color:color-mix(in srgb, ${c} 45%, transparent);background:color-mix(in srgb, ${c} 10%, #fff)">${esc(name)} <button type="button" data-remove="${escAttr(slug)}" aria-label="Remove ${escAttr(name)}">×</button></span>`;
+        return `<span class="explore-chip" style="color:${c};border-color:color-mix(in srgb, ${c} 45%, transparent);background:color-mix(in srgb, ${c} 10%, #fff)">${esc(label)} <button type="button" data-remove="${escAttr(slug)}" aria-label="Remove ${escAttr(name)}">×</button></span>`;
       })
       .join("");
   }
