@@ -11,6 +11,7 @@
     author: root.querySelector("#explore-author"),
     compareAdd: root.querySelector("#explore-compare-add"),
     chips: root.querySelector("#explore-chips"),
+    summary: root.querySelector("#explore-summary"),
     zoomCentury: root.querySelector("#zoom-century"),
     zoomYear: root.querySelector("#zoom-year"),
     canvas: root.querySelector("#explore-canvas"),
@@ -289,6 +290,24 @@
     if (stage) stage.style.height = `${Math.max(280, window.innerHeight - used)}px`;
   }
 
+  function renderSummary(points) {
+    if (!els.summary) return;
+    if (!points.length) {
+      els.summary.textContent = "No positions under these filters.";
+      return;
+    }
+    const authors = new Set(points.map((p) => p.author_slug));
+    const years = points.map((p) => p.year).filter((y) => typeof y === "number");
+    const span =
+      years.length > 1
+        ? `${Math.min(...years)}\u2013${Math.max(...years)}`
+        : `${years[0] || "undated"}`;
+    const n = (s) => points.filter((p) => p.stance === s).length;
+    els.summary.textContent =
+      `${points.length} positions \u00b7 ${authors.size} writers \u00b7 ${span} \u00b7 ` +
+      `affirms ${n("affirms")} \u00b7 denies ${n("denies")} \u00b7 qualified ${n("qualified")}`;
+  }
+
   function render(updateTip = true) {
     const topic = topicMeta();
     const points = filteredPoints();
@@ -309,6 +328,7 @@
       }
     }
     fitStage();
+    renderSummary(points);
     drawSvg(topic, display, points);
     updateUrl();
   }

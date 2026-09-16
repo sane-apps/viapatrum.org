@@ -85,3 +85,20 @@ test('timeline tooltip stays inside canvas and does not cover touch selections',
   point.dispatchEvent(new w.MouseEvent('click'));assert.equal(tip.classList.contains('is-on'),false);
   dom.window.close();
 });
+
+test('explore summary counts positions for the topic', async()=>{
+  const html=readFileSync(new URL('../dist/explore/index.html',import.meta.url),'utf8');
+  const data=JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
+  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/explore/?topic=free-will',runScripts:'outside-only',pretendToBeVisual:true});
+  const w=dom.window,doc=w.document;
+  w.fetch=async()=>({ok:true,json:async()=>data});
+  w.matchMedia=()=>({matches:false});
+  w.ResizeObserver=class { observe() {} disconnect() {} };
+  w.HTMLElement.prototype.scrollIntoView=()=>{};
+  w.eval(readFileSync(new URL('../assets/explore.js',import.meta.url),'utf8'));await settle();await settle();
+  const s=doc.querySelector('#explore-summary');assert.ok(s);
+  assert.match(s.textContent,/positions/);
+  assert.match(s.textContent,/writers/);
+  assert.match(s.textContent,/affirms/);
+  dom.window.close();
+});

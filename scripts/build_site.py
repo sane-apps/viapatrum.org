@@ -206,6 +206,12 @@ WORK_TOPICS: dict[str, list[str]] = {
     "julian-marriage-extracts": ["sin-and-death", "image-likeness"],
     "julian-letter-to-rome": ["free-will", "grace-and-assistance"],
     "julian-collective-letter": ["free-will", "grace-and-assistance", "sin-and-death"],
+    "crocius-syntagma": ["systematic-theology", "bremen-school", "irenicism", "reformed-orthodoxy"],
+    "davenant-dissertationes-duae": ["atonement", "predestination", "reprobation", "universal-grace"],
+    "baron-philosophia-theologiae-ancillans": ["philosophy", "theology", "being", "essence", "scholasticism"],
+    "placeus-de-imputatione": ["imputation", "original-sin", "adam", "covenant-theology"],
+    "le-blanc-theses-theologicae": ["justification", "protestant-roman", "ireneicism", "catholicism"],
+    "strimesius-in-controversias-evangelicorum": ["ecclesiastical-peace", "protestant-unity", "ireneicism", "controversy"],
 }
 
 
@@ -4384,6 +4390,7 @@ def build() -> None:
     <label class="field field-extra"><span>Author</span><select id="explore-author"></select></label>
     <label class="field field-extra"><span>Compare</span><select id="explore-compare-add"></select></label>
     <div class="explore-chips" id="explore-chips"></div>
+    <p class="intro" id="explore-summary" aria-live="polite"></p>
     <div class="explore-seg" role="group" aria-label="Scale">
       <button type="button" id="zoom-century">Centuries</button>
       <button type="button" id="zoom-year">Years</button>
