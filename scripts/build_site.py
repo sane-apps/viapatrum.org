@@ -751,6 +751,7 @@ _DENSE_EDITION_MARK = re.compile(r"\b(?:ESTC|Wing|IA|EEBO|STC)\b", re.I)
 # Latin when that is the locked work name — publication gates bind on identity.
 # Add future Reformed tips (Baron / Saumur / Frankfurt) here as they ship.
 PUBLIC_ENGLISH_TITLES: dict[str, str] = {
+    "le-blanc-theses-theologicae": "Theological Theses",
     "crocius-syntagma": "System of Sacred Theology",
     "davenant-dissertationes-duae": "Two Dissertations",
     "baron-philosophia-theologiae-ancillans": "Philosophy the Handmaid of Theology",
@@ -1040,7 +1041,9 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
     year = work_chrono_year(w)
     era = work_era(w)
     topics = " ".join(w.get("related_topics") or [])
-    blob = " ".join([w.get("title") or "", w.get("author") or "",
+    pub = public_reader_title(w.get("title") or "", slug=w.get("slug") or "")
+    latin = public_reader_latin_subtitle(w.get("title") or "", slug=w.get("slug") or "")
+    blob = " ".join([pub, latin, w.get("title") or "", w.get("author") or "",
                      w.get("period") or "", w.get("blurb") or "", topics]).casefold()
     count = w["section_count"]
     bits = [f"{count} section{'' if count == 1 else 's'}"]
@@ -3448,7 +3451,7 @@ def build() -> None:
     for tid, rows in by_topic.items():
         meta = topic_meta.get(tid, {"title": tid, "locus_title": "Topics", "locus_id": ""})
         related_works = [
-            (works_by_slug[s]["title"], f"/works/{s}/")
+            (public_reader_title(works_by_slug[s]["title"], slug=s), f"/works/{s}/")
             for s in topic_to_works.get(tid, [])
             if s in works_by_slug
         ]
@@ -3595,7 +3598,7 @@ def build() -> None:
         meta = topic_meta.get(tid)
         if not meta:
             continue
-        related_works = [(works_by_slug[s]["title"], f"/works/{s}/") for s in slugs if s in works_by_slug]
+        related_works = [(public_reader_title(works_by_slug[s]["title"], slug=s), f"/works/{s}/") for s in slugs if s in works_by_slug]
         write(
             DIST / "topics" / tid / "index.html",
             layout(
