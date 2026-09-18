@@ -4724,49 +4724,49 @@
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "1.1",
-      "payload_sha256": "e97d7f08024296ac5ba149febbc81d5f5343c96fe95003fd718e8074fc7d2a31"
+      "payload_sha256": "27bb578122c84b0718e23b4d9b8d52d1522f3a8221f5e2890497fb57726270dd"
     },
     "work:nemesius-de-natura-hominis:1.2": {
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "1.2",
-      "payload_sha256": "e15981f0cc88e86a6fd69bf1b88a0e684d66796746fb69aa01c454cdfd4a04d7"
+      "payload_sha256": "12f3d93fd6ffeb97f2dd92040f5d98791f02b39dbe4604cc9f96e0110e54175f"
     },
     "work:nemesius-de-natura-hominis:1.3": {
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "1.3",
-      "payload_sha256": "acda3c7556b2fd2c2dee8c2d7bdc9383683bce9f2db1175b7410fbf2baef2d45"
+      "payload_sha256": "400264caaa9f4d0c352f552034f72b121b99e02624343a4afa4daa9585c0b8a2"
     },
     "work:nemesius-de-natura-hominis:2.1": {
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "2.1",
-      "payload_sha256": "7498532ecb4fa3cac186bc7d0f213d58348ffa5281d842487098fe22945a9e94"
+      "payload_sha256": "cfb37172acadaa9de80d5ec7e96ea8550c7ea8ac81141cfeaeaf708a47dc87e1"
     },
     "work:nemesius-de-natura-hominis:2.2": {
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "2.2",
-      "payload_sha256": "de3a1b3fdde04329bd30d72e956612e08c7194cfa1c3045c2a981329ddfdd33f"
+      "payload_sha256": "f594f49c1838e13fdfc2f26563daa4a0efb03ac03fa3a93d906b24a787c6b8d2"
     },
     "work:nemesius-de-natura-hominis:2.3": {
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "2.3",
-      "payload_sha256": "f8bcdcb2e8e65562d722a3f08902bbe8bc887c004d209a704c747d288834890f"
+      "payload_sha256": "c79ed641b8d38ca5f17b4fa0a96b8f504800144b10cc991983efd5f70fcb9cdd"
     },
     "work:nemesius-de-natura-hominis:2.4": {
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "2.4",
-      "payload_sha256": "789df9c5396828bcde5e2aa055b5823167ef97d3eb9269e3f12ea40743a79828"
+      "payload_sha256": "0008dcada0e1207696c2e991c9589d4a57ea1b14796bbf8b70431bbed3e1c900"
     },
     "work:nemesius-de-natura-hominis:3.1": {
       "packet": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.packet.json",
       "receipt": "books/nemesius-de-natura-hominis/reviews/audit/nature_hominis_tip.review.json",
       "section": "3.1",
-      "payload_sha256": "3ab3e0e308b64f66cecd80a75d537808ccb39f9466fa12bd880bc1df1f68ec66"
+      "payload_sha256": "7ebda32d4e1e0bd68f78b4078425b6d6d5f6e151bf85c3fc8af61539c8ac1d5c"
     },
     "work:macarius-spiritual-homilies:5": {
       "packet": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.packet.json",
