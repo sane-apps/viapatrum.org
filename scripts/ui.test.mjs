@@ -102,3 +102,56 @@ test('explore summary counts positions for the topic', async()=>{
   assert.match(s.textContent,/affirms/);
   dom.window.close();
 });
+
+test('explore progress strip matches pipeline counts', ()=>{
+  const html=readFileSync(new URL('../dist/explore/index.html',import.meta.url),'utf8');
+  const q=JSON.parse(readFileSync(new URL('../outputs/catalogue-quality.json',import.meta.url),'utf8'));
+  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/explore/',runScripts:'outside-only',pretendToBeVisual:true});
+  const s=dom.window.document.querySelector('#explore-progress');assert.ok(s);
+  assert.match(s.textContent,new RegExp(`${q.published_works} works live`));
+  assert.match(s.textContent,new RegExp(`${q.corpus_translated_sections} of ${q.corpus_total_sections} sections translated`));
+  assert.match(s.textContent,new RegExp(`${q.held_works.length} held for review`));
+  dom.window.close();
+});
+
+test('home has favicon and a deduped feed without repeated author', ()=>{
+  const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
+  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/'});
+  const doc=dom.window.document;
+  assert.ok(doc.querySelector('link[rel="icon"]'),'favicon link present');
+  assert.match(doc.querySelector('link[rel="icon"]').getAttribute('href'),/\/assets\/favicon\.svg/);
+  const section=[...doc.querySelectorAll('section h2')].find(h=>h.textContent.includes('From the topics')).parentElement;
+  const feed=[...section.querySelectorAll('li')];
+  assert.equal(feed.length,8);
+  const roman={i:'1',ii:'2',iii:'3',iv:'4',v:'5',vi:'6',vii:'7',viii:'8',ix:'9',x:'10'};
+  const seen=new Set();
+  for(const li of feed){
+    const strong=li.querySelector('strong').textContent.trim();
+    const span=li.querySelector('span').textContent.trim();
+    assert.ok(!span.startsWith(strong+' — ')&&!span.startsWith(strong+' - '),'subline repeats author: '+span);
+    const key=(strong+' '+span).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(t=>roman[t]||t).join(' ');
+    assert.ok(!seen.has(key),'duplicate feed entry: '+span); seen.add(key);
+  }
+  dom.window.close();
+});
+
+test('favicon files ship in dist', ()=>{
+  assert.ok(readFileSync(new URL('../dist/favicon.ico',import.meta.url)).length>100);
+  assert.match(readFileSync(new URL('../dist/assets/favicon.svg',import.meta.url),'utf8'),/<svg/);
+});
+
+test('link hover system ships in built CSS', ()=>{
+  const css=readFileSync(new URL('../dist/assets/site.css',import.meta.url),'utf8');
+  const hovers=(css.match(/:hover/g)||[]).length;
+  assert.ok(hovers>=40,'expected site-wide :hover coverage, got '+hovers);
+  const focus=(css.match(/:focus-visible/g)||[]).length;
+  assert.ok(focus>=20,'expected focus-visible parity, got '+focus);
+  assert.match(css,/\.card-list li a:hover/,'works-list row hover missing');
+  assert.match(css,/\.topic-list li a:hover/,'topic-list row hover missing');
+  assert.match(css,/\.related li a:hover/,'related row hover missing');
+  assert.match(css,/inset [23]px 0 0 var\(--gold-deep\)/,'gold leading rule missing');
+  assert.match(css,/\.site-nav a:hover/,'nav hover missing');
+  assert.match(css,/prefers-reduced-motion/,'reduced-motion handling missing');
+  assert.ok(!/purple|indigo|violet/i.test(css),'forbidden hue in CSS');
+  assert.ok(!/scale\(/.test(css),'scale transform in CSS');
+});

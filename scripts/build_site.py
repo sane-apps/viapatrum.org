@@ -10,7 +10,7 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote_plus
 
-from catalogue_quality import partition_catalogue, check_publication
+from catalogue_quality import SCAFFOLD, check_publication, partition_catalogue, text_value
 
 try:
     import yaml
@@ -147,6 +147,8 @@ ORIGEN_PSALMS_RUFINUS_BOOK = BOOKS / "origen-psalms-rufinus"
 ORIGEN_ROMANS_BOOK = BOOKS / "origen-romans"
 ORIGEN_MATTHEW_LATER_BOOK = BOOKS / "origen-matthew-later"
 JULIAN_BOOK = BOOKS / "julian-of-eclanum"
+NEMESIUS_BOOK = BOOKS / "nemesius-de-natura-hominis"
+MACARIUS_BOOK = BOOKS / "macarius-spiritual-homilies"
 EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
 SITE_NAME = "Fathers"
@@ -3089,6 +3091,114 @@ def load_julian_works() -> list[dict]:
     )
     return works
 
+def load_nemesius_works() -> list[dict]:
+    """Nemesius of Emesa, On Human Nature — post-Nicene, disclosed as later."""
+    trans = NEMESIUS_BOOK / "translations"
+    en_path = trans / "nature_hominis_english.json"
+    if not en_path.exists():
+        return []
+    rows = json.loads(en_path.read_text(encoding="utf-8"))
+    src_map = {
+        str(s.get("section")): s
+        for s in _source_rows(_json_load(trans / "nature_hominis_source.json", []))
+    }
+    meta = _json_load(trans / "nature_hominis_meta.json", {})
+    # Reviewed scope: site publishes meta.blurb until re-review.
+    # book.yml description is the Logos lane (unreviewed improvements).
+    blurb = meta.get("blurb") or ""
+    sections: list[dict] = []
+    chapters: dict[str, list[str]] = {}
+    for x in rows:
+        sec = str(x.get("section"))
+        src = src_map.get(sec, {})
+        # Heads name the thought, never the bare locus.
+        head = (x.get("title") or src.get("title") or f"Chapter {sec}").strip()
+        group = f"Chapter {sec.split('.')[0]}"
+        chapters.setdefault(group, []).append(sec)
+        sections.append(
+            {
+                "section": sec,
+                "head": head,
+                "english": eng_list(x.get("english")),
+                "greek": eng_list(src.get("greek")),
+                "latin": [],
+                "source_url": None,
+                "group": group,
+            }
+        )
+    groups = [{"title": title, "sections": secs} for title, secs in chapters.items()]
+    return [
+        _pack_work(
+            slug="nemesius-de-natura-hominis",
+            title=meta.get("title") or "De natura hominis",
+            author="Nemesius of Emesa",
+            author_slug="nemesius-of-emesa",
+            period=meta.get("period") or "c. 390-400",
+            status=meta.get("status") or "available",
+            edition=meta.get("edition")
+            or "Wither 1636 Greek (OCR); PG86/BIUSante checks",
+            sections=sections,
+            blurb=blurb,
+            era_note=meta.get("era_note") or "",
+            groups=None,  # Reviewed scope carries no groups.
+            text_history=_text_history_from_meta(meta),
+        )
+    ]
+
+
+def load_macarius_works() -> list[dict]:
+    """Macarius the Egyptian, Spiritual Homilies — fourth-century monastic corpus."""
+    trans = MACARIUS_BOOK / "translations"
+    en_path = trans / "spiritual_homilies_english.json"
+    if not en_path.exists():
+        return []
+    rows = json.loads(en_path.read_text(encoding="utf-8"))
+    src_map = {
+        str(s.get("section")): s
+        for s in _source_rows(_json_load(trans / "spiritual_homilies_source.json", []))
+    }
+    meta = _json_load(trans / "spiritual_homilies_meta.json", {})
+    # Reviewed scope: site publishes meta.blurb until re-review.
+    # book.yml description is the Logos lane (unreviewed improvements).
+    blurb = meta.get("blurb") or ""
+    sections: list[dict] = []
+    homilies: dict[str, list[str]] = {}
+    for x in rows:
+        sec = str(x.get("section"))
+        src = src_map.get(sec, {})
+        # Heads name the thought, never the bare locus.
+        head = (x.get("title") or src.get("title") or f"Homily {sec}").strip()
+        group = f"Homily {sec.split('.')[0]}"
+        homilies.setdefault(group, []).append(sec)
+        sections.append(
+            {
+                "section": sec,
+                "head": head,
+                "english": eng_list(x.get("english")),
+                "greek": eng_list(src.get("greek")),
+                "latin": [],
+                "source_url": None,
+                "group": group,
+            }
+        )
+    groups = [{"title": title, "sections": secs} for title, secs in homilies.items()]
+    return [
+        _pack_work(
+            slug="macarius-spiritual-homilies",
+            title=meta.get("title") or "The Spiritual Homilies",
+            author="Macarius the Egyptian",
+            author_slug="macarius-the-egyptian",
+            period=meta.get("period") or "c. 4th century",
+            status=meta.get("status") or "available",
+            edition=meta.get("edition")
+            or "PG 34 Spiritual Homilies (Homiliae spirituales)",
+            sections=sections,
+            blurb=blurb,
+            era_note=meta.get("era_note") or "",
+            groups=None,  # Reviewed scope carries no groups.
+            text_history=_text_history_from_meta(meta),
+        )
+    ]
 
 CONFIDENCE_NOTE = (
     "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
@@ -3208,6 +3318,8 @@ def layout(
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;550;650&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css?v={ASSET_VER}">
+<link rel="icon" href="/assets/favicon.svg?v={ASSET_VER}" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico" sizes="any">
 {extra_css}</head>
 <body class="{escape(body_class)}">
 <a class="skip" href="#main">Skip to content</a>
@@ -3249,11 +3361,82 @@ def write(path: Path, html: str) -> None:
     path.write_text(html, encoding="utf-8")
 
 
+_ROMAN_NUMERALS = {
+    "i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5,
+    "vi": 6, "vii": 7, "viii": 8, "ix": 9, "x": 10,
+}
+
+
+def _home_citation(x: dict) -> str:
+    """Home feed subline without the redundant leading author name."""
+    cit = x.get("citation") or x["id"]
+    author = (x.get("author") or "").strip()
+    if author:
+        for sep in (" \u2014 ", " - "):
+            if cit.startswith(author + sep):
+                return cit[len(author + sep):]
+    return cit
+
+
+def _home_feed_key(x: dict) -> tuple[str, str]:
+    """Normalize author + work/locus so 'Against Heresies 3.1' and
+    'Against Heresies III.1' collapse to one home feed entry."""
+    author = (x.get("author") or "").strip().lower()
+    cit = _home_citation(x).lower()
+    tokens = re.findall(r"[a-z0-9]+", cit)
+    norm = [str(_ROMAN_NUMERALS[t]) if t in _ROMAN_NUMERALS else t for t in tokens]
+    return (author, " ".join(norm))
+
+
+def _home_feed(excerpts: list[dict], n: int = 8) -> list[dict]:
+    """First n excerpts in source order, deduped by normalized citation."""
+    picked: list[dict] = []
+    seen: set[tuple[str, str]] = set()
+    for x in excerpts:
+        key = _home_feed_key(x)
+        if key in seen:
+            continue
+        seen.add(key)
+        picked.append(x)
+        if len(picked) >= n:
+            break
+    return picked
+
+
+def _favicon_ico_bytes() -> bytes:
+    """32x32 site mark (gold cross on parchment) as a dependency-free ICO."""
+    import struct
+
+    S = 32
+    parchment = (247, 243, 234)
+    gold = (74, 55, 20)
+
+    def ink(px: int, py: int) -> tuple[int, int, int]:
+        edge = px < 2 or py < 2 or px >= S - 2 or py >= S - 2
+        vc = 14 <= px <= 17 and 7 <= py <= 24
+        hc = 8 <= px <= 23 and 13 <= py <= 16
+        return gold if edge or vc or hc else parchment
+
+    px = bytearray()
+    for py in range(S - 1, -1, -1):  # BMP rows run bottom-up
+        for x in range(S):
+            r, g, b = ink(x, py)
+            px += bytes((b, g, r, 255))
+    mask = bytes(S * 4)  # fully opaque
+    dib = struct.pack("<IiiHHIIiiII", 40, S, S * 2, 1, 32, 0, len(px), 0, 0, 0, 0) + bytes(px) + mask
+    return (
+        struct.pack("<HHH", 0, 1, 1)
+        + struct.pack("<BBBBHHII", S, S, 0, 0, 1, 32, len(dib), 6 + 16)
+        + dib
+    )
+
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
     shutil.copytree(ASSETS, DIST / "assets")
+    (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
     write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse works</a> or <a href="/topics/">browse topics</a>.</p></section>').replace("</head>", '<meta name="robots" content="noindex"></head>'))
 
     explore_topic_ids = {c["topic"] for c in load_explore_raw()["claims"] if c.get("topic")}
@@ -3286,6 +3469,8 @@ def build() -> None:
         + load_cyril_works()
         + load_irenaeus_demonstration()
         + load_julian_works()
+        + load_nemesius_works()
+        + load_macarius_works()
     )
     # Several source batches can extend one work. Previously each batch rewrote
     # the reader, leaving earlier citation pages linking to missing anchors.
@@ -3327,6 +3512,18 @@ def build() -> None:
         else:
             merged_works[work["slug"]] = work
     works = list(merged_works.values())
+    # Corpus progress for the Explore strip: totals over everything the
+    # loaders considered, before the quality and publication gates hold
+    # works back. A section counts as translated when it has English that
+    # is not a known draft scaffold (same SCAFFOLD rule as the gate).
+    corpus_total_sections = 0
+    corpus_translated_sections = 0
+    for progress_work in works:
+        for progress_section in progress_work.get("sections", []):
+            corpus_total_sections += 1
+            progress_english = text_value(progress_section.get("english"))
+            if progress_english.strip() and not SCAFFOLD.search(progress_english):
+                corpus_translated_sections += 1
     works, held_works = partition_catalogue(works)
     works, excerpts, review_holds, review_failures = check_publication(
         works, excerpts, ROOT, BOOKS.parent)
@@ -3335,7 +3532,9 @@ def build() -> None:
     (ROOT / "outputs/catalogue-quality.json").write_text(
         json.dumps({"published_works": len(works), "published_excerpts": len(excerpts),
                     "publication_review_failures": review_failures,
-                    "held_works": held_works},
+                    "held_works": held_works,
+                    "corpus_total_sections": corpus_total_sections,
+                    "corpus_translated_sections": corpus_translated_sections},
                    ensure_ascii=False, indent=2), encoding="utf-8")
     works_by_slug = {w["slug"]: w for w in works}
 
@@ -3381,10 +3580,10 @@ def build() -> None:
 
     # --- Home ---
     sample_cards = []
-    for x in excerpts[:8]:
+    for x in _home_feed(excerpts):
         sample_cards.append(
             f"""<li><a href="/e/{escape(x['id'])}/"><strong>{escape(x.get('author') or '')}</strong>
-            <span>{escape(x.get('citation') or x['id'])}</span></a></li>"""
+            <span>{escape(_home_citation(x))}</span></a></li>"""
         )
     first_works = [w for w in works if w.get("first_english")]
     other_works = [w for w in works if not w.get("first_english")]
@@ -4372,12 +4571,18 @@ def build() -> None:
         json.dumps(explore_index, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
-    explore_body = """
+    progress_strip = (
+        f'<p class="intro" id="explore-progress">{len(works)} works live · '
+        f"{corpus_translated_sections} of {corpus_total_sections} sections translated · "
+        f"{len(held_works)} held for review</p>"
+    )
+    explore_body = f"""
 <div class="explore" data-explore>
   <section class="explore-paths" id="explore-paths" aria-label="Curated paths">
     <header class="explore-paths-head">
       <h1>Explore</h1>
       <p class="intro">Curated paths for the questions people actually ask — doctrine timelines, controversies, scripture trails, era bands, and short reading sequences. Open a path, then use the timeline below for the stance map.</p>
+      {progress_strip}
     </header>
     <div class="explore-path-grid" id="explore-path-grid"><p class="empty">Loading paths…</p></div>
   </section>

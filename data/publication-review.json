@@ -1832,7 +1832,7 @@
     "work:julian-to-florus:2.66": "050ea4511878f6466a092cf276ca01439acd573b995451f8bf812e58476ca5b7",
     "work:julian-to-florus:2.67": "20884c2886b22d89c70fff876681d40aad543715a77f3536dbcab8e551a345fa",
     "work:julian-to-florus:2.68": "3c7efebf8bdc4ddc7e6fb6e758b84774e12863355dcae4fbbf468bc274114ed3",
-    "work:julian-to-florus:2.69": "5b2ad9e3522a9c238df66dd260e8c3230da96b4f6973070735ad3b73317852e1",
+    "work:julian-to-florus:2.69": "dc99ec5bcd7da477cbc8f334a2800e2c73a632caaa6eef58f7126ac665d586f2",
     "work:julian-to-florus:2.70": "4bd936eb8de8a7f50d4ff902eb2a09edaa6f3e1827849b1333fa40c72404fda9",
     "work:julian-to-florus:2.71": "ca959b61a8fbd1fc158d38c2909350b50fe8e74b65fcc4ebe4dfedecf2e608be",
     "work:julian-to-florus:2.72": "21e75c7a9da45637eed0f266e6cb790867817bb6ee1842be55beeb4cbda9b16d",
@@ -4772,19 +4772,19 @@
       "packet": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.packet.json",
       "receipt": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.review.json",
       "section": "5",
-      "payload_sha256": "56f63c4591a87b329b6c7deb17d5eef210af7b93d2be0671b31179f4e4c1564a"
+      "payload_sha256": "922c1eb4f37da502d32eb5b8154f622379fe261cadaea35479ca514b5ad5de80"
     },
     "work:macarius-spiritual-homilies:6": {
       "packet": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.packet.json",
       "receipt": "books/macarius-spiritual-homilies/reviews/audit/spiritual_homilies_tip.review.json",
       "section": "6",
-      "payload_sha256": "8ed2f76bfe536fa8c8a8b2d8534995f49b54d505bbb5e9d683ca2082e95011c6"
+      "payload_sha256": "0abac1b3a819523d414d19bddeb39736d3c5b09979b0700d9ec06fab0028b77c"
     },
     "work:philostorgius-he:1": {
       "packet": "books/philostorgius-he/reviews/audit/ecclesiastical_history_tip.packet.json",
       "receipt": "books/philostorgius-he/reviews/audit/ecclesiastical_history_tip.review.json",
       "section": "1",
-      "payload_sha256": "d863a57adce42c10417743ebb3d4449f0650ffa292ee51b42112b62c31ebfcec"
+      "payload_sha256": "dfe95343d5795a2c8dbe53cd9d35ba82a5dff13aa235e9af5187ed8082800a21"
     },
     "work:gregory-thaumaturgus-de-fide-xii:1": {
       "packet": "books/gregory-thaumaturgus-de-fide-xii/reviews/audit/fide_xii_tip.packet.json",
@@ -4904,13 +4904,13 @@
       "packet": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.packet.json",
       "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json",
       "section": "1",
-      "payload_sha256": "dd8caff0f03111ddcb6258efb9bc776f93225b5ce9e0977585049712d7b3125b"
+      "payload_sha256": "33a49219472a175cf5351f1c2beea31a1bd394e5e5ebba5a68372d304830fce9"
     },
     "work:baron-philosophia-theologiae-ancillans:2": {
       "packet": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.packet.json",
       "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json",
       "section": "2",
-      "payload_sha256": "bf1d6d64c97682a5f20fa468d9f2674647070985c5f943984426879af4bbc7d1"
+      "payload_sha256": "3b0b9bb669c9a8aa8003a3166eb925b315869c3fc80430660a4181c13685477c"
     },
     "work:placeus-de-imputatione:1": {
       "packet": "books/placeus-de-imputatione/reviews/audit/cap1_tip.packet.json",
@@ -4935,6 +4935,12 @@
       "receipt": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.review.json",
       "section": "2",
       "payload_sha256": "25cccfb4dfcf9d0e3cf9ed7bdbe6ecbd5aaea693038a724212620d6f57d95e67"
+    },
+    "work:baron-philosophia-theologiae-ancillans:3": {
+      "packet": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.packet.json",
+      "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json",
+      "section": "3",
+      "payload_sha256": "5d095448a0f4660ffd67ab6dbadc100242b95fafb5cff30351f071f6beb14205"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",

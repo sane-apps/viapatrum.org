@@ -1421,3 +1421,122 @@ details.toc-group .toc {
 /* Author accordion: same expand pattern as About this text. */
 .reader-author .intro { margin-top: 0.15rem; }
 .reader-author .intro.fine { margin-bottom: 0.25rem; }
+
+/* Site-wide link hover system: every link shifts toward ink with an
+   underline reveal; list rows add a parchment wash plus a gold leading
+   rule. Hover, focus-visible, and active share the same cues so keyboard
+   and touch users get the same feedback. Fast (150ms) and subtle:
+   parchment/ink/gold only, no glows, no transforms. */
+a {
+  transition:
+    color 0.15s ease,
+    text-decoration-color 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+a:hover,
+a:focus-visible,
+a:active {
+  color: var(--ink);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--gold-deep) 80%, transparent);
+}
+/* Controls with their own cue stay underline-free on hover and focus. */
+.btn:hover,
+.btn:focus-visible,
+.btn:active,
+.book-chip:hover,
+.book-chip:focus-visible,
+.book-chip:active,
+.reader-top:hover,
+.reader-top:focus-visible,
+.toc li a:hover,
+.toc li a:focus-visible,
+.section-nav .pn:hover,
+.section-nav .pn:focus-visible,
+.site-nav .support:hover,
+.site-nav .support:focus-visible,
+.brand:hover,
+.brand:focus-visible,
+a.bible-ref:hover,
+a.bible-ref:focus-visible,
+.card-list li a:hover,
+.card-list li a:focus-visible,
+.card-list li a:active,
+.topic-list li a:hover,
+.topic-list li a:focus-visible,
+.topic-list li a:active {
+  text-decoration-line: none;
+}
+/* Brand mark: accent shift is the cue. */
+.brand:hover,
+.brand:focus-visible {
+  color: var(--gold-deep);
+}
+/* Nav items: underline plus color cue. */
+.site-nav a:hover,
+.site-nav a:focus-visible,
+.site-nav a:active {
+  color: var(--ink);
+  text-decoration-line: underline;
+  text-decoration-color: color-mix(in srgb, var(--gold) 70%, transparent);
+  text-underline-offset: 0.25em;
+}
+/* Rows (works lists, topic lists): wash plus a gold leading rule.
+   Negative side margins keep the text exactly where it was. */
+.card-list li a,
+.topic-list li a {
+  position: relative;
+  margin: 0 -0.5rem;
+  padding: 0.85rem 0.5rem;
+  border-radius: 0.4rem;
+}
+.works-list .work-link { padding: 0.95rem 0.5rem; }
+.works-list .author-group h2 a { margin: 0; }
+.card-list li a:hover,
+.card-list li a:focus-visible,
+.card-list li a:active,
+.topic-list li a:hover,
+.topic-list li a:focus-visible,
+.topic-list li a:active {
+  background: color-mix(in srgb, var(--gold) 9%, var(--paper-2));
+  box-shadow: inset 3px 0 0 var(--gold-deep);
+}
+/* Plain-text rows (author Works lists carry no strong title child):
+   shift to the accent with an underline reveal. */
+.card-list li a:not(:has(strong)):hover,
+.card-list li a:not(:has(strong)):focus-visible,
+.card-list li a:not(:has(strong)):active {
+  color: var(--gold-deep);
+  text-decoration-line: underline;
+}
+/* Group headings are not rows: keep them wash-free. */
+.works-list .author-group h2 a:hover,
+.works-list .author-group h2 a:focus-visible,
+.works-list .author-group h2 a:active {
+  background: transparent;
+  box-shadow: none;
+}
+/* Related topics: full-row hit area with wash plus gold leading rule. */
+.related li { padding: 0; }
+.reader-rail .related li { padding: 0; }
+.related li a {
+  display: block;
+  margin: 0 -0.5rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 0.35rem;
+}
+.reader-rail .related li a { padding-top: 0.28rem; padding-bottom: 0.28rem; }
+.related li a:hover,
+.related li a:focus-visible,
+.related li a:active {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--gold) 10%, var(--paper-2));
+  box-shadow: inset 2px 0 0 var(--gold-deep);
+}
+@media (prefers-reduced-motion: reduce) {
+  a,
+  .section-nav .pn,
+  .reader-about { transition: none; }
+}
