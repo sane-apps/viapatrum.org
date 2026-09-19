@@ -1389,6 +1389,14 @@ def load_origen_book3() -> list[dict]:
     return works
 
 
+# Reviews-A closeout-4 audit packets that bind cleaned Greek sources,
+# keyed by translations stem.
+_RECTA_FIDE_CLEAN_PACKET = {
+    "ad_arcadiam_marinamque": "arcadia_closeout4.packet.json",
+    "ad_pulcheriam_eudociamque": "pulcheria_closeout4.packet.json",
+}
+
+
 def load_cyril_works() -> list[dict]:
     """Cyril of Alexandria whole works — only when English JSON is present."""
     works: list[dict] = []
@@ -1409,10 +1417,29 @@ def load_cyril_works() -> list[dict]:
                 continue
             src_rows = _source_rows(_json_load(trans / f"{stem}_source.json", []))
             src_map = {str(s.get("section")): s for s in src_rows}
+            if stem in _RECTA_FIDE_CLEAN_PACKET:
+                # Reviews-A closeout-4: the audit packets bind the cleaned
+                # Greek source for the reviewed sections; carry that exact
+                # source_text on those reader rows so the gate binds.
+                # Unreviewed sections keep the translations source (legacy).
+                pkt = _json_load(
+                    folder / "reviews" / "audit" / _RECTA_FIDE_CLEAN_PACKET[stem], {})
+                for item in pkt.get("sections", []):
+                    sec = str(item.get("section"))
+                    if sec in src_map:
+                        src_map[sec] = {**src_map[sec], "greek": item.get("source_text")}
             meta = _json_load(trans / f"{stem}_meta.json", {})
             slug = meta.get("slug") or f"cyril-{stem.replace('_', '-')}"
             title = meta.get("title") or stem.replace("_", " ").title()
             sections = _origen_rows(rows, src_map)
+            if slug == "cyril-matthew-fragments":
+                # Reviews-A closeout-4: carry the native fragment locus (Mt ch, v)
+                # on each reader row so audit packets bind locus as well as text.
+                # No template reads section "locus"; other works are untouched.
+                for sec in sections:
+                    locus = src_map.get(str(sec.get("section")), {}).get("locus")
+                    if locus:
+                        sec["locus"] = str(locus)
             # Shared merge in build() retains sections and disclosures across batches.
             works.append(
                 _pack_work(

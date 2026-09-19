@@ -4941,6 +4941,2544 @@
       "receipt": "books/baron-philosophia-theologiae-ancillans/reviews/audit/ente_art1_2_tip.review.json",
       "section": "3",
       "payload_sha256": "5d095448a0f4660ffd67ab6dbadc100242b95fafb5cff30351f071f6beb14205"
+    },
+    "work:cyril-adoration-1:4": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "4",
+      "payload_sha256": "1d7239083dfbe79f203ff83de1241c1df19f5d021ca7d33bee33b92a2093f47a"
+    },
+    "work:cyril-adoration-1:5": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "5",
+      "payload_sha256": "c36e99565ce5cfc3cf7eccb73bcc65bb7ad7093ffad9d84d1ee479ac8a804e72"
+    },
+    "work:cyril-adoration-1:6": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "6",
+      "payload_sha256": "d3058fc36a0b96c305560dae89dd01dc1347efcc7c8fdfe436a7147fa0238423"
+    },
+    "work:cyril-adoration-1:8": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "8",
+      "payload_sha256": "6fa74ecf80d1ef0ead351690efc4cde2b5226280287449c0477f6533554e5a40"
+    },
+    "work:cyril-adoration-1:9": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "9",
+      "payload_sha256": "1e462230134099245aaa78ffc734a845f37bfc873886b069425da4629a7c5a60"
+    },
+    "work:cyril-adoration-1:10": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "10",
+      "payload_sha256": "ab404425fa446c50e74509a2c41e809f1ab7f469500bcf817a2525997ffe0499"
+    },
+    "work:cyril-adoration-1:11": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "11",
+      "payload_sha256": "b9d4404d640da39e3905c2588295e1793b37f55f7c3c5d6840301c7ff904f9b0"
+    },
+    "work:cyril-adoration-1:12": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "12",
+      "payload_sha256": "b27000e3ab30522650a9e112e0f32ea5fe2d220ea6c847841f8f3ee9ebca7054"
+    },
+    "work:cyril-adoration-1:13": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "13",
+      "payload_sha256": "128e671dc1385c37392d3031e09e797c900f39a89a992b76d45bf6c99e7bb644"
+    },
+    "work:cyril-adoration-1:14": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "14",
+      "payload_sha256": "bf64f8b2029f58d271fd62b2d2260eeecffd3e89a5879be3c4787f4f867ce903"
+    },
+    "work:cyril-adoration-1:15": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "15",
+      "payload_sha256": "fa3cd4b0750781d6bb1c20bbe74ea3441d9b19cecb2efc0e51443c0ed78041d7"
+    },
+    "work:cyril-adoration-1:16": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "16",
+      "payload_sha256": "07211e9c49d59a4ef9469b1ea05f2517f394a0bf4ef8c55e9dfc491e536177ae"
+    },
+    "work:cyril-adoration-1:17": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "17",
+      "payload_sha256": "50a9463f7b4237bf8671ae0d06cc182a28110d87209269134a9910325eb814ca"
+    },
+    "work:cyril-adoration-1:18": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "18",
+      "payload_sha256": "2728e8d37f3a6e59662a3a2ce16a1054a10aaa333d99e65c1c3d2aa3c42e6d93"
+    },
+    "work:cyril-adoration-1:19": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "19",
+      "payload_sha256": "66a64e1b96420552f6f7c7ac58d2a771f2b53394ff554679005a206f49e9a396"
+    },
+    "work:cyril-adoration-1:20": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "20",
+      "payload_sha256": "a346f88962c50ea3fa82c5ec701b0cd04b3bd76ae7167c39763e33de0f2f4992"
+    },
+    "work:cyril-adoration-1:21": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "21",
+      "payload_sha256": "e4aa6e56fe913c062a30fa0ad8babd5be6b5682b1456f0f5b4d6a8a0479ae20f"
+    },
+    "work:cyril-adoration-1:22": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "22",
+      "payload_sha256": "04d2397f723e0c48a224b6f36c0a5c85649d60e8eeba308e173dc35ae77b1410"
+    },
+    "work:cyril-adoration-1:23": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "23",
+      "payload_sha256": "9bc1b446f6e6ac6af832d3699500c9d8354d8f93638d608a5f7e47b7aff84c59"
+    },
+    "work:cyril-adoration-1:24": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "24",
+      "payload_sha256": "52a018e5cf1885e7bd3b75d809eb301b1d98a116f96bf3cac3801dd3a856a96b"
+    },
+    "work:cyril-adoration-1:25": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "25",
+      "payload_sha256": "1e1ebc6db71ebf8fd1a546c07ea96d6bd4d0e1ed7583edfe39035021fd98dc3f"
+    },
+    "work:cyril-adoration-1:26": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "26",
+      "payload_sha256": "eccbef01330c6c94f6c12c884cf3120d50092f960c70617daa04bd58b881b888"
+    },
+    "work:cyril-adoration-1:27": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "27",
+      "payload_sha256": "8da836e78cc9f70c8f2e135bc326ad92ceb21ae9b700a64af87f3e2f9e34d369"
+    },
+    "work:cyril-adoration-1:29": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "29",
+      "payload_sha256": "af28413063fd4096c1cc7e87b7697f35a65d44cd43a11c9a96df6d8a0773d42e"
+    },
+    "work:cyril-adoration-1:30": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "30",
+      "payload_sha256": "93f8378abf2ce7bae27be58d7d5584cbeabdd8791d1e8fcd9670590453fef716"
+    },
+    "work:cyril-adoration-1:31": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "31",
+      "payload_sha256": "2fe9705119eac6bfdf08c8fb78b1cf550716965c23533f87d17c23c625941277"
+    },
+    "work:cyril-adoration-1:32": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "32",
+      "payload_sha256": "69fc1ba78113c540f94b695bd52e5404ba6f520deededf6d27db6332683ae287"
+    },
+    "work:cyril-adoration-1:33": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "33",
+      "payload_sha256": "f8a2cbca1744ef0c805b4eb949ab89b9388ec97975f69548da81ccd271cb08bb"
+    },
+    "work:cyril-adoration-1:34": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "34",
+      "payload_sha256": "72367c4c6333864bf2ccfeffb68452ce8f931f7fa0afd677d3a2d9c7bd9f6011"
+    },
+    "work:cyril-adoration-1:35": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "35",
+      "payload_sha256": "f7cc1fcf58138f7e48b09fe9421678a5bfbab865ba745c72a2385ca7febdaefc"
+    },
+    "work:cyril-adoration-1:37": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "37",
+      "payload_sha256": "9d833e75df597ba2b6ac26424fc6e1d60089ad1dc2357dff045eac4b806e7174"
+    },
+    "work:cyril-adoration-1:38": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "38",
+      "payload_sha256": "b429032a14baa0096db127e44e1784c12b42463d80589f75acc809ce564ecb3f"
+    },
+    "work:cyril-adoration-1:39": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/adoration1_closeout4.review.json",
+      "section": "39",
+      "payload_sha256": "b0cbc9810cbb98d92de57a5a15ae3224cbfc6418350ddb622009a287b55cf4db"
+    },
+    "work:cyril-matthew-fragments:1": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "1",
+      "payload_sha256": "52e933e834c7c12e863119068a16de8b281d3ca0a555cd0faeae4ffc8ee5c4fe"
+    },
+    "work:cyril-matthew-fragments:2": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "2",
+      "payload_sha256": "e374d8e0450a6bdac78608c5db8e3e6aa1d61aaa4f0246ef94b2d76a3a969029"
+    },
+    "work:cyril-matthew-fragments:3": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "3",
+      "payload_sha256": "7dc5b708c5c2b8f43481bce61469de753f7a7331efcbe8bd28aa999c961296ca"
+    },
+    "work:cyril-matthew-fragments:4": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "4",
+      "payload_sha256": "9faaace15983508b391657b53be35c4fd3e99cea71aa4b3978ef4e11d21a0a53"
+    },
+    "work:cyril-matthew-fragments:5": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "5",
+      "payload_sha256": "48ef74c89153ae3de80755f5bc478f4f6233f5a70f0d522c1c3e17d831d33977"
+    },
+    "work:cyril-matthew-fragments:6": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "6",
+      "payload_sha256": "69811cfa16e3e86013fd331d929e45e2f9749797eea2c93b321bc3bca34ce5c2"
+    },
+    "work:cyril-matthew-fragments:7": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "7",
+      "payload_sha256": "dc43f5b236b446ef50a56c23e66be0216cd46bfbd94ad17322611720a58e463e"
+    },
+    "work:cyril-matthew-fragments:8": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "8",
+      "payload_sha256": "2a6c6236c43e8e7833e791538d87a19ce3a1855584d1d84e4f54753807482500"
+    },
+    "work:cyril-matthew-fragments:9": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "9",
+      "payload_sha256": "fcc17e27d9c993f36a61c4591179e2d8a1f8b8f61c25ca7590bacc3efe2e35a4"
+    },
+    "work:cyril-matthew-fragments:10": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "10",
+      "payload_sha256": "27b803cd8bae8936389ae329722e1d9ae0e037bdcf65e40cfeda10fa6aaafdf2"
+    },
+    "work:cyril-matthew-fragments:11": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "11",
+      "payload_sha256": "12c399a3184f904725897115ed261bb07812accdcb97ee1e68aeb782a6dcdf3a"
+    },
+    "work:cyril-matthew-fragments:12": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "12",
+      "payload_sha256": "7f78619553c147bb8ac45c9e3ee019125cc111a9b3445ac1d21d0e3caf9fbde9"
+    },
+    "work:cyril-matthew-fragments:13": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "13",
+      "payload_sha256": "83d5c4515f2cbbbf4224a5eb247839cd03641dd4fb96f3d27739e8d1fe219e9b"
+    },
+    "work:cyril-matthew-fragments:14": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "14",
+      "payload_sha256": "4879d8a400e4e078cefbc3347bd6f44c75a51b1da194dd296dae8d4e32deadda"
+    },
+    "work:cyril-matthew-fragments:15": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "15",
+      "payload_sha256": "fa3016b62b0cad5877505c07657dfcf28f16259e82e65a196b9b0aae517cecbf"
+    },
+    "work:cyril-matthew-fragments:16": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "16",
+      "payload_sha256": "fabea1dc3990c9f29e5deb721e587c7af7231919e2f696556b82861e8070646e"
+    },
+    "work:cyril-matthew-fragments:17": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "17",
+      "payload_sha256": "a940cd5a5aa709cd596d42575d9ceee402f52a2ac54242c9f96b8c6650dacd68"
+    },
+    "work:cyril-matthew-fragments:18": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "18",
+      "payload_sha256": "b298e841bb10d022417100750ff258aaeec81a1d98472d662f51634663dc6c8c"
+    },
+    "work:cyril-matthew-fragments:19": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "19",
+      "payload_sha256": "dd7b151949f342543327dae5a8869a9d637eb2c5506eba74638d19adedaa1daa"
+    },
+    "work:cyril-matthew-fragments:20": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "20",
+      "payload_sha256": "e9ec58e9a01eb50d1f7987bde36cb169ab10d1bad3f231c5fa6fea7b5c7709db"
+    },
+    "work:cyril-matthew-fragments:21": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "21",
+      "payload_sha256": "ebe5f75f2a811ddc15bb48282af04dc4e71dc8b1e41ba2eec2f1cf308dbf91ad"
+    },
+    "work:cyril-matthew-fragments:22": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "22",
+      "payload_sha256": "bc7b0e3cefb2cd502a57dd099e40b78d309af6ae2d6a441d7840d75240b1ce82"
+    },
+    "work:cyril-matthew-fragments:23": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "23",
+      "payload_sha256": "e394e37001e36c2fd1bab99dce32c2f1a763860ee8c9868a56f5f5646b7d49cb"
+    },
+    "work:cyril-matthew-fragments:24": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "24",
+      "payload_sha256": "bfaa273592564b8edf5ff6c2cf3858f62fed8fb484e6d986e608c15f795aedc4"
+    },
+    "work:cyril-matthew-fragments:25": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "25",
+      "payload_sha256": "10de80adcaa413552954680d1cbd9564b66274b14f1ff1517560901f8554ff29"
+    },
+    "work:cyril-matthew-fragments:26": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "26",
+      "payload_sha256": "c7b48849292ece2a334364e4c555c49ff234a31e1e76e04450d73496873a6c97"
+    },
+    "work:cyril-matthew-fragments:27": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "27",
+      "payload_sha256": "a809917336a61c1c002c98d8e9b2f5757a809daf47669581b9e069ab1832af1e"
+    },
+    "work:cyril-matthew-fragments:28": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "28",
+      "payload_sha256": "9b91fa683ef7c6ca18d2db2f78de4d073379ee66ef3ab34393375e03613a2aa3"
+    },
+    "work:cyril-matthew-fragments:29": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "29",
+      "payload_sha256": "813d913a3c4d223cee7cbdcbe4405a0eafca73c116140da30b45bd0d94b9e592"
+    },
+    "work:cyril-matthew-fragments:30": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "30",
+      "payload_sha256": "bf0027e91dcac87550bfd48cbb32f1efde2582c060349d4d1b9e4f847840ba5c"
+    },
+    "work:cyril-matthew-fragments:31": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "31",
+      "payload_sha256": "f9876fe676895fd41354bb6c8a09d54221b909c34d6fa542df50b7aefb5ee9cf"
+    },
+    "work:cyril-matthew-fragments:32": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "32",
+      "payload_sha256": "12de2d84529296e89b4eefd32061fb236bf735f1529ef33a6fa0f1e5a2861f4c"
+    },
+    "work:cyril-matthew-fragments:33": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "33",
+      "payload_sha256": "05aeb8f6b44122e98cbfbc1bcb620cb23d86a1a190cacba043f1ecfddfb4ddb2"
+    },
+    "work:cyril-matthew-fragments:34": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "34",
+      "payload_sha256": "c7b3e6ec80f3de702f01603b8e26f9cd02c23c075c758966759d699713dec59a"
+    },
+    "work:cyril-matthew-fragments:35": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "35",
+      "payload_sha256": "43046319b8bad3750ef6add8f65dff3107e3bc657bb65bbbab183e710988cba3"
+    },
+    "work:cyril-matthew-fragments:36": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "36",
+      "payload_sha256": "171aa32b5fe8cb72b0e847b84bfb91eb123dca864abfa36adeefd5deec183686"
+    },
+    "work:cyril-matthew-fragments:37": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "37",
+      "payload_sha256": "cec93483adb290732d67a71b149bbba63571d52f9521ec688d14076105e0a140"
+    },
+    "work:cyril-matthew-fragments:38": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "38",
+      "payload_sha256": "edebf4a3b030bb417561f4d39fe277eca28369ca7c65a3bd3b9fcd51d96629dd"
+    },
+    "work:cyril-matthew-fragments:39": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "39",
+      "payload_sha256": "d6d6cf61b277515c8e8314d899f6c8551696c9e809deb91adb38b1f18d437371"
+    },
+    "work:cyril-matthew-fragments:40": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "40",
+      "payload_sha256": "373c27b00ac9ef641f115d64cb99d06e0dd5c0e4208e12711d4b06a5d04da351"
+    },
+    "work:cyril-matthew-fragments:41": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "41",
+      "payload_sha256": "02c97156527dd9dd4f02c78618b440e84bd924bae5bb1eccab96ed702241f755"
+    },
+    "work:cyril-matthew-fragments:42": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "42",
+      "payload_sha256": "e0aa1da14abf6f0ecfe7c31c55975668a9e0d04b952c90bd5f153d6e7c1ff1e3"
+    },
+    "work:cyril-matthew-fragments:43": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "43",
+      "payload_sha256": "5c0ef1468dd20f9e5282f3c3608cafe8fcbd2463a2d4eeaf4ad7c8d7aecf1064"
+    },
+    "work:cyril-matthew-fragments:44": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "44",
+      "payload_sha256": "d94743b30d56c801b537f0f2c80c6c62fe28abab3a78f28797ff569845889525"
+    },
+    "work:cyril-matthew-fragments:45": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "45",
+      "payload_sha256": "53ec9c4283c0b754fdbd96d490c7b2b9c429cc8ff608ed8932e64ff5c0a0029c"
+    },
+    "work:cyril-matthew-fragments:46": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "46",
+      "payload_sha256": "92ff4a49234b9f9aa487bf7674e46883046e4120af56632f4d9bfd4235c62d9c"
+    },
+    "work:cyril-matthew-fragments:47": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "47",
+      "payload_sha256": "a840d80667801e40f89f6273d9d71e033cc4bf5c2382d18cdadec011de96348b"
+    },
+    "work:cyril-matthew-fragments:48": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "48",
+      "payload_sha256": "fae6f64d1f1e93612f69ffbab3e2fb3eb2279df4a0041b901b615f2c22063826"
+    },
+    "work:cyril-matthew-fragments:49": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "49",
+      "payload_sha256": "0feb747b46d4bb19c64aaed62dc13c5a15300e73a2e0020d1ef2f877d564268a"
+    },
+    "work:cyril-matthew-fragments:50": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "50",
+      "payload_sha256": "3dd36ff5a9c8f58a14ae3923ad66b0c028e878359334f23d06a2b68c9741f9cf"
+    },
+    "work:cyril-matthew-fragments:51": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "51",
+      "payload_sha256": "9b0f50547484d3240225b4acfd1accf20a2c300d9059299d0b5a902b389e846a"
+    },
+    "work:cyril-matthew-fragments:52": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "52",
+      "payload_sha256": "37f8953f3fed12ef7c9a2641758950991bd11bf4f99b89a3e73eaf520892516d"
+    },
+    "work:cyril-matthew-fragments:53": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "53",
+      "payload_sha256": "81f78fee87aa43a7a2612b395f199de23876676004f609b428f79f9c5e011e09"
+    },
+    "work:cyril-matthew-fragments:54": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "54",
+      "payload_sha256": "8fc757578cdd79d13f023df72581cc0e565cc295eee162674895b8cbe01e1235"
+    },
+    "work:cyril-matthew-fragments:55": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "55",
+      "payload_sha256": "3c0718ace67dbf1ebb3d15d935662d1d918f822cf0c8889d5d6a6aed2c06e237"
+    },
+    "work:cyril-matthew-fragments:56": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "56",
+      "payload_sha256": "8376b57131ae1286cd29a023bb6109d41c9d686e4a7145d750ae89b71a303675"
+    },
+    "work:cyril-matthew-fragments:57": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "57",
+      "payload_sha256": "264872f84c0f23ef238dd3ec2805bfe455e567329b6455ef233136841f2ad2bc"
+    },
+    "work:cyril-matthew-fragments:58": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "58",
+      "payload_sha256": "29b56fc44b423a3bd3902cef44440dc5ecef29830ddb1b4c26a4d54a4cb036bc"
+    },
+    "work:cyril-matthew-fragments:59": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "59",
+      "payload_sha256": "eaa2ea189d13f842c308724ddbff78f06b3bdd2d7a4b0b70684a284e93aff6bf"
+    },
+    "work:cyril-matthew-fragments:60": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "60",
+      "payload_sha256": "b90a9b9b1772430fe9e13bd131103be86ab53a41721e85f9068227e5e96d8d71"
+    },
+    "work:cyril-matthew-fragments:61": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "61",
+      "payload_sha256": "e58936083dc511c9cefe67121ccf1dedcec1b06847575d6f391f01fb8e772eb0"
+    },
+    "work:cyril-matthew-fragments:62": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "62",
+      "payload_sha256": "002196feb71c5c3cdaec0d38b13c15c110b439b6a2c780c19e44ed3a370e1a80"
+    },
+    "work:cyril-matthew-fragments:63": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "63",
+      "payload_sha256": "dd1122a3d6d240b626ebd07e0b225a92ff5bc2c86daa702c98ffd80cdac2b3dc"
+    },
+    "work:cyril-matthew-fragments:64": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "64",
+      "payload_sha256": "f7bad0bc1cc3027f48eea3007c202eae8660c6f64d443c3c9281d39f8198153c"
+    },
+    "work:cyril-matthew-fragments:65": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "65",
+      "payload_sha256": "cbc3188c7abd02cc993eba6e468ebb9c9af7d2e2b3ffe4cbf31b16d27a8ec984"
+    },
+    "work:cyril-matthew-fragments:66": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "66",
+      "payload_sha256": "48d6cec2991fb35e20d22cc4f374e2f5fb57bd848fd21184a4ab5fce0969202f"
+    },
+    "work:cyril-matthew-fragments:67": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "67",
+      "payload_sha256": "4ce041cbec4cf692b233f087552063075af3253c3447706ec02a34562bb0cc8c"
+    },
+    "work:cyril-matthew-fragments:68": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "68",
+      "payload_sha256": "fa6afe310c0b36516d02f5fa34bfc9af1cf69e764bdb02cbb00fcb8cc4199947"
+    },
+    "work:cyril-matthew-fragments:69": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "69",
+      "payload_sha256": "a6bcf2b30371bf06d3721b6d3929bff69574830d98e6b109bfe97b895f954d21"
+    },
+    "work:cyril-matthew-fragments:70": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "70",
+      "payload_sha256": "0d329ddf540fcaf7c37a5364dcbd25e5adfce46a1fbab5c5d06d27e79f60141e"
+    },
+    "work:cyril-matthew-fragments:71": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "71",
+      "payload_sha256": "f5342338c592fc533122b7cabc86a5689e2942367a52fcafb73125cc2a14a98c"
+    },
+    "work:cyril-matthew-fragments:72": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "72",
+      "payload_sha256": "de2d39eb92c91c42a66875d0c9f80ef357f20dd6a9ce685d33654464df3fde79"
+    },
+    "work:cyril-matthew-fragments:73": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "73",
+      "payload_sha256": "29bc919449b9402f719610219da1ad98b64ffd0a5880137c71ec31cfc76e13e0"
+    },
+    "work:cyril-matthew-fragments:74": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "74",
+      "payload_sha256": "a116b6148c9cea8f572ff1ffcdc0f9da3e2610e198ffe381cd6324bd5388e9de"
+    },
+    "work:cyril-matthew-fragments:75": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "75",
+      "payload_sha256": "3a0d104e6a005d1c5f144e72e4ab5bd6a9c946ef5373bd31d543cbc9c33e0d61"
+    },
+    "work:cyril-matthew-fragments:76": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "76",
+      "payload_sha256": "093c6b1a959cbe5c736a323a4f78e1c782bdf4d464286c206e0e79367ecfe412"
+    },
+    "work:cyril-matthew-fragments:77": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "77",
+      "payload_sha256": "44a14a5fb38d6778cdb853a50eb6b2b79696d3bc25ead1af5f51c510b42805e8"
+    },
+    "work:cyril-matthew-fragments:78": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "78",
+      "payload_sha256": "4c432a914da6b1d379e9b61dd4d7697473d940f130f6192e2388ceb93d1c5577"
+    },
+    "work:cyril-matthew-fragments:79": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "79",
+      "payload_sha256": "47df3aab4db6a2f716849e7d1e83560cbfb0f46c38588d8e53458a43bfd2ed09"
+    },
+    "work:cyril-matthew-fragments:80": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "80",
+      "payload_sha256": "6726671c8a0d11a61f0af189a4a99398d35afbc638389be27523445f0fb1dca7"
+    },
+    "work:cyril-matthew-fragments:81": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "81",
+      "payload_sha256": "e74049e015a1fe6dbccc2358c1c73697840ad93818849ae2b77cf2b96a4a6972"
+    },
+    "work:cyril-matthew-fragments:82": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "82",
+      "payload_sha256": "c206eaaf609d74aa34d74dba5937ea3c9a1237c870966bcd00f20c6077c90d38"
+    },
+    "work:cyril-matthew-fragments:83": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "83",
+      "payload_sha256": "9d0b49f9d46b934009fb88795b7d5d09e315f6aabcc00c72a15eece75fdae43b"
+    },
+    "work:cyril-matthew-fragments:84": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "84",
+      "payload_sha256": "3c676ee4ff6d4b96cbe48e96e156c4f37495b219fe10671c6b5e99a9037aeb95"
+    },
+    "work:cyril-matthew-fragments:85": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "85",
+      "payload_sha256": "5622b013d7d1dcc0ad29491cca1090482e20c93ea687e5752d3aa62c8b019f73"
+    },
+    "work:cyril-matthew-fragments:86": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "86",
+      "payload_sha256": "b05f4037030b221bd91b574b7ba0fadc8088ec03ce27c1368f90de4a1c626ed4"
+    },
+    "work:cyril-matthew-fragments:87": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "87",
+      "payload_sha256": "a84205e186663a4f12cb90fed8fa1a8d94bf587ab0f7ca6d711df2ce8936c04f"
+    },
+    "work:cyril-matthew-fragments:88": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "88",
+      "payload_sha256": "d96408a41791af09c75f2eadd930592cbc9961e4397893d39072bf39c06f2f37"
+    },
+    "work:cyril-matthew-fragments:89": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "89",
+      "payload_sha256": "952bd74bb977ccde5f5a4f164e9d132dbdba7dfa8faca8ad472b186bd0010480"
+    },
+    "work:cyril-matthew-fragments:90": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "90",
+      "payload_sha256": "385441081e300271c4cf1a7800f164fc9b0146b76cb46bcd5cfebbddfa161454"
+    },
+    "work:cyril-matthew-fragments:91": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "91",
+      "payload_sha256": "7760468e3ea6d3472cc1a44a51426254b654d5a0fa2d4606d5f712ba8c167365"
+    },
+    "work:cyril-matthew-fragments:92": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "92",
+      "payload_sha256": "f0c5836e1e8a270a0acc151706770366438b761141d25e27c1fc86cf97b13026"
+    },
+    "work:cyril-matthew-fragments:93": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "93",
+      "payload_sha256": "551c6a7a35faf5a3b6c5f85b8cde092d54f8a08573e05aaf124fa6be01b56fa9"
+    },
+    "work:cyril-matthew-fragments:94": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "94",
+      "payload_sha256": "41d638c28592e48fcbca09ea7f657003b893c9870f67140af59fe43f79fa2cd0"
+    },
+    "work:cyril-matthew-fragments:95": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "95",
+      "payload_sha256": "e0a5ed7e35130cc5c225efbf18e64a9f7debd0135502265ef0cde4512677754c"
+    },
+    "work:cyril-matthew-fragments:96": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "96",
+      "payload_sha256": "54226bd9edf9e7c091c59ddf3672e3b05e3826f0b330bed1fb23b9d7bfea2307"
+    },
+    "work:cyril-matthew-fragments:97": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "97",
+      "payload_sha256": "8c5df5d8aba9c8918018a412b0a0272290f21d41fa81949d5f4a749c87b6434c"
+    },
+    "work:cyril-matthew-fragments:98": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "98",
+      "payload_sha256": "05fb13bc7dfe4f8c56f2a1dce3348c68a1c747e699e837dd5c730eec7677d446"
+    },
+    "work:cyril-matthew-fragments:99": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "99",
+      "payload_sha256": "8e8054cb991c42a51b4aa869ad6ab106fc10be54aecf747fd4b441a9fd8901e0"
+    },
+    "work:cyril-matthew-fragments:100": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "100",
+      "payload_sha256": "d3a182d22ce15039c33004fc03fe983e14541f0a20d5e60fa6f77b994f66d44b"
+    },
+    "work:cyril-matthew-fragments:101": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "101",
+      "payload_sha256": "db27e86d12035dff448dcc30e0e7ce2188d6c92744e671b188de854147a777a3"
+    },
+    "work:cyril-matthew-fragments:102": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "102",
+      "payload_sha256": "3591bbc52c733be40106fb8276fa1f63800451ecc86b360ecaa80a2b0a472e5e"
+    },
+    "work:cyril-matthew-fragments:103": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "103",
+      "payload_sha256": "19e4710bd7f4a92da4ec97fdea919100d9266f925465b1732ae6097d72ed34f4"
+    },
+    "work:cyril-matthew-fragments:104": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "104",
+      "payload_sha256": "2e77ae452ce53eaf6683ef7efec4ca9a37b75a8c3d218ed4aaeae99fcc2419cc"
+    },
+    "work:cyril-matthew-fragments:105": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "105",
+      "payload_sha256": "81af7417279cb5781517051b302aa830129cb627f4ff4982d71eba51c268a94d"
+    },
+    "work:cyril-matthew-fragments:106": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "106",
+      "payload_sha256": "62bd86437286ab70e2469d46a769a619019c9e8f18d671102a4df36c416cc33b"
+    },
+    "work:cyril-matthew-fragments:107": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "107",
+      "payload_sha256": "dbb53125fe2d6a2eb8b8a34d5de937d25617cc4d7c2802cdbc301891ee8b9662"
+    },
+    "work:cyril-matthew-fragments:108": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "108",
+      "payload_sha256": "61f22bc5c8138e4d80572d9a42fd6d9d890d866bc593a50e11c1bea9a73c9ed6"
+    },
+    "work:cyril-matthew-fragments:109": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "109",
+      "payload_sha256": "33c4be1a9c4384c7698fa7e5cdf2da33759402c9a46e6c290b3f5b8fb27bf6e8"
+    },
+    "work:cyril-matthew-fragments:110": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "110",
+      "payload_sha256": "c94618e71e59c2bcb1a0c7af9467fe3e451ad239805b585cdc87bce8bfbf6139"
+    },
+    "work:cyril-matthew-fragments:111": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "111",
+      "payload_sha256": "58bec4fa86db1d5a7f0b838889409026b2ecf93170ff02efff5dff8c8dfab9ab"
+    },
+    "work:cyril-matthew-fragments:112": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "112",
+      "payload_sha256": "0fd41bda6bfe3ac0bd663915c341af1806ecfcf3f8c8b2e1514467806281182e"
+    },
+    "work:cyril-matthew-fragments:113": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "113",
+      "payload_sha256": "8ad48ec27225dfa04e6bb683554630b5b432da939bce97d7fb7f7acaf1d8b37e"
+    },
+    "work:cyril-matthew-fragments:114": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "114",
+      "payload_sha256": "87c4d49ed8b1c1209d7be1fd8e79661656d0c9678327b00572d33f12e05403d1"
+    },
+    "work:cyril-matthew-fragments:115": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "115",
+      "payload_sha256": "3aa821c472cdede1451169a312e81f8966ad385f8b31b9f327c7551a885c3f59"
+    },
+    "work:cyril-matthew-fragments:116": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "116",
+      "payload_sha256": "dbde774d6df2a1a16083026ce85f2b0b1b59a1ef6e736ab965399d4466bc4f40"
+    },
+    "work:cyril-matthew-fragments:117": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "117",
+      "payload_sha256": "dfd8951fcd907c684c52ccd12d129fc83db29f9f2a3553cee25e58758b199b46"
+    },
+    "work:cyril-matthew-fragments:118": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "118",
+      "payload_sha256": "bc517c01aee106732d46a09a2b9a2ace316e57490ec24269023a5d9ce9d86a33"
+    },
+    "work:cyril-matthew-fragments:119": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "119",
+      "payload_sha256": "653e8dfb3a3091ae5831f3c8381f051e8350a327213fef7db970669af6aed1cc"
+    },
+    "work:cyril-matthew-fragments:120": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "120",
+      "payload_sha256": "f0ec5c6712922f02fea57d2760b1e16816c2a67f568c4ee59199dc28cb5e8655"
+    },
+    "work:cyril-matthew-fragments:121": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "121",
+      "payload_sha256": "6bdcd3bb7ce047cf1b515b4493e20a8b42ca2d5f2fa4bb13311dd686727a99c7"
+    },
+    "work:cyril-matthew-fragments:122": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "122",
+      "payload_sha256": "477805ef110a9b86a8c5e0d3c29e8d481a03515d96719c6cea2c19cb5a3f7a08"
+    },
+    "work:cyril-matthew-fragments:123": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "123",
+      "payload_sha256": "9d2c5f66849c8b9f5b5818bbd2274e84b729f2b5b199cacc7863a10c844eec65"
+    },
+    "work:cyril-matthew-fragments:124": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "124",
+      "payload_sha256": "9a348e3d752abc0cde90bfbec89bd89f300b281110e21bfba44721b5eccbcf38"
+    },
+    "work:cyril-matthew-fragments:125": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "125",
+      "payload_sha256": "007df3fb807bf078aced871799a867d06463ab4c05b97a581934d6da498fc6e7"
+    },
+    "work:cyril-matthew-fragments:126": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "126",
+      "payload_sha256": "69563e1ab2252a28ac590831cb762015d5c7e7e5d8af3a0368ace73076b7c461"
+    },
+    "work:cyril-matthew-fragments:127": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "127",
+      "payload_sha256": "73a9d6f7bbcc5db2b99f7b6e3fd3139f7649b16594f0e55015df49690e318a6c"
+    },
+    "work:cyril-matthew-fragments:128": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "128",
+      "payload_sha256": "1790d26095d28a0a1baa3062ef1fe0b2e6f3fda51b9ae894040d203f911ff8fd"
+    },
+    "work:cyril-matthew-fragments:129": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "129",
+      "payload_sha256": "e88b993dfecab9973c57ad2ccad7908db6b4de5052120a847b8780250ffcbc19"
+    },
+    "work:cyril-matthew-fragments:130": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "130",
+      "payload_sha256": "6b2ef93667361b3824a421126cb9d0cf5cceaefe0df25849d1f5b62cf01de956"
+    },
+    "work:cyril-matthew-fragments:131": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "131",
+      "payload_sha256": "f8907b59976b36f380b3489c578f6b0943e404b756992a6aa97e0b1c6cee1374"
+    },
+    "work:cyril-matthew-fragments:132": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "132",
+      "payload_sha256": "eae06e67d9deec38613cc47d76519bd4ddbcae94b5cad0de4d3797643974712d"
+    },
+    "work:cyril-matthew-fragments:133": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "133",
+      "payload_sha256": "76053ee4822fdd432e50cfde4742149e681c4b6596afe5a1f74bf451ba433184"
+    },
+    "work:cyril-matthew-fragments:134": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "134",
+      "payload_sha256": "1dec644c78adbf82d9ab22aab8d25e5953ff84e11951d4a6f24dcadc9410b38e"
+    },
+    "work:cyril-matthew-fragments:135": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "135",
+      "payload_sha256": "b2a4383a1670b4fad12355fa20f6d04ff2c13e95d593edb2de7dbc02b12c78a6"
+    },
+    "work:cyril-matthew-fragments:136": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "136",
+      "payload_sha256": "faf4a2f3060cdd272c8abd90b93183a474bb4add7a0598c11bcb8b26390deb21"
+    },
+    "work:cyril-matthew-fragments:137": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "137",
+      "payload_sha256": "76cb8dbcbbcfd1830f0dc7a0c0646321cffc83da4086f626f588f2e8b8475e68"
+    },
+    "work:cyril-matthew-fragments:138": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "138",
+      "payload_sha256": "63806d6e22bdf9603d6dead1415022270ab23c421901dc742d5b300fb75bdfc7"
+    },
+    "work:cyril-matthew-fragments:139": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "139",
+      "payload_sha256": "0926746fbefc1f92d2922c2a6721dfbb2f97a79a5500b2c8b75033923096f21e"
+    },
+    "work:cyril-matthew-fragments:140": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "140",
+      "payload_sha256": "6e42d32146e66d16af8432454a690778cb119a9c0719e38c2e9e898d6f0e173a"
+    },
+    "work:cyril-matthew-fragments:141": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "141",
+      "payload_sha256": "3b961a4aa664056a68978d51355c8cc49536bc02b06a599241c30a74e414f8fd"
+    },
+    "work:cyril-matthew-fragments:142": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "142",
+      "payload_sha256": "9ad3dd2aa9fe76cdb7505e568aba7f9962d02efa69376bdcaf4bb58aa7898183"
+    },
+    "work:cyril-matthew-fragments:143": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "143",
+      "payload_sha256": "db9bd2b1354e199819cd4d0c5ce2d00067342a76cd45388f9f48be7fe25f3765"
+    },
+    "work:cyril-matthew-fragments:144": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "144",
+      "payload_sha256": "3486de6bfb357a9ade34259a51ab61ea22b769c446bedaff7fef2e291756c5d3"
+    },
+    "work:cyril-matthew-fragments:145": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "145",
+      "payload_sha256": "89ace6b3a39dcf2343f1b8a5d85a8bd9d320b137c2184449cd67897e3ae0c2c4"
+    },
+    "work:cyril-matthew-fragments:146": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "146",
+      "payload_sha256": "1a441ab007640681f06dba290d88ba646df2dc5a4b680bb74867b9fa30decc20"
+    },
+    "work:cyril-matthew-fragments:147": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "147",
+      "payload_sha256": "8339cc3bc49029ee52d2d3ce281a3df7ef155f5b94f348818039d1348500ff79"
+    },
+    "work:cyril-matthew-fragments:148": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "148",
+      "payload_sha256": "3b91f83ca0d1dcc8b6ddf39352c67a8a961f5802f4bb40c6aea0393467023156"
+    },
+    "work:cyril-matthew-fragments:149": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "149",
+      "payload_sha256": "072163531f05112b3c720354cb796f5c56ccfe6090d1c8011df5f1de347dbbbe"
+    },
+    "work:cyril-matthew-fragments:150": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "150",
+      "payload_sha256": "866955d4a6f2f393bf0fe672da1d6a1c9e0afe1554b025cad18b42f4c8ccef75"
+    },
+    "work:cyril-matthew-fragments:151": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "151",
+      "payload_sha256": "a9fa2c2064bf4397b88abd9eb008cbbb68dd1d72c7197d654e8a6d0e6db61b53"
+    },
+    "work:cyril-matthew-fragments:152": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "152",
+      "payload_sha256": "4087a4a53d09ca00f2407595a8c0875ba05eef9c6acc6706f680970038812f08"
+    },
+    "work:cyril-matthew-fragments:153": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "153",
+      "payload_sha256": "d5cfca2e9530bee4cb4d03cdf63c450b34c5d32f13eac527b1f8f022db975678"
+    },
+    "work:cyril-matthew-fragments:154": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "154",
+      "payload_sha256": "048392e1df88a6a63ed6d732bd5214fd7a6a8f804534878ab20f469b40e3753f"
+    },
+    "work:cyril-matthew-fragments:155": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "155",
+      "payload_sha256": "8a3963f37c77fe0e030c1a000caa3f5129737dff316ef125a703c3016cf85a62"
+    },
+    "work:cyril-matthew-fragments:156": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "156",
+      "payload_sha256": "104a9ac7ebdbbde0c32457a983354308a84c79bfe9df9f38ef089a76c19be3ca"
+    },
+    "work:cyril-matthew-fragments:157": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "157",
+      "payload_sha256": "0b52cc151753644fe0c347d2fd3269bce8a0d522be7bdd90afa8c42dccc8f6ec"
+    },
+    "work:cyril-matthew-fragments:158": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "158",
+      "payload_sha256": "e05ac86927cfc72a8cf16f3e1564a906bda7db645568da7bd3ab9fd5414937db"
+    },
+    "work:cyril-matthew-fragments:159": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "159",
+      "payload_sha256": "b35223edee1c6c7fad1e33e73ca5cb52f7c80ed892b39a779a29e9eda94a51b6"
+    },
+    "work:cyril-matthew-fragments:160": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "160",
+      "payload_sha256": "0bf3cafc72837fae2209a3b5cd372a521fc11129dded3d1f56faab12661306ef"
+    },
+    "work:cyril-matthew-fragments:161": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "161",
+      "payload_sha256": "ac1cfbe3d57007774ab190c3d67fdd2d0c0759f139cc29ac2be9f46887861f4d"
+    },
+    "work:cyril-matthew-fragments:162": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "162",
+      "payload_sha256": "86d95137b976d06df74ed6139c7013870ea2ff3ec15dfe8dc6721cc6d4184b22"
+    },
+    "work:cyril-matthew-fragments:163": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "163",
+      "payload_sha256": "0a2e3dfc51506d49a6b6a7bde82d70e8d603dd1b9afd33ade395b9f4cf85ace0"
+    },
+    "work:cyril-matthew-fragments:164": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "164",
+      "payload_sha256": "c57d8a10594116ee142326970e784f7aeb53a30767c26f3c363c95e477ae737e"
+    },
+    "work:cyril-matthew-fragments:165": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "165",
+      "payload_sha256": "eeaf6365fd83ec1f9d24c174e81c30d52199cad7b8f71cee2b29737d0a98959d"
+    },
+    "work:cyril-matthew-fragments:166": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "166",
+      "payload_sha256": "2b7b589ff2112c69dd802eae65590a23c87fc689ded0b52971fe50553c25fb6d"
+    },
+    "work:cyril-matthew-fragments:167": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "167",
+      "payload_sha256": "004616fcf89881993b9b16306388dda842c0c560d395c972b44e0b11cc351e3e"
+    },
+    "work:cyril-matthew-fragments:168": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "168",
+      "payload_sha256": "6070d03cdd7660015612b3b810df9a9c2fb1f8280134cac903a07191c77ffdbf"
+    },
+    "work:cyril-matthew-fragments:169": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "169",
+      "payload_sha256": "860d475804f001a7f2d6bf2b7eed1c03a99dd96d2b1438e508781dd7d3c432f9"
+    },
+    "work:cyril-matthew-fragments:170": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "170",
+      "payload_sha256": "67ee3a301a3be82d6ab1f5d552172fa739ccbe2a617f381210659c05e98f9aee"
+    },
+    "work:cyril-matthew-fragments:171": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "171",
+      "payload_sha256": "7d24cae549a368952834d044814d397f38e9c759fec00bce536e3ef3224db8f9"
+    },
+    "work:cyril-matthew-fragments:172": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "172",
+      "payload_sha256": "fd05eebea14048735dec3bb9e5d71db50567c2e28f3a8ce6b99c3666e312a6ca"
+    },
+    "work:cyril-matthew-fragments:173": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "173",
+      "payload_sha256": "cb163309eb786366cee9ebe9703b6d4b2a3e2dff82ee5c0e854dd1029788600f"
+    },
+    "work:cyril-matthew-fragments:174": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "174",
+      "payload_sha256": "1cbaaef0c33d8955f996350a94b00bfc25ac5b081588ab18ed900d0310903f0f"
+    },
+    "work:cyril-matthew-fragments:175": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "175",
+      "payload_sha256": "ec2772106c62f2cc902e383c7ecdf656b500e5a849d3a9186b2acb635280e36d"
+    },
+    "work:cyril-matthew-fragments:176": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "176",
+      "payload_sha256": "d26da3d88cf6ed81cff78c3086b77e47daac582f864b361a6313f573c727539e"
+    },
+    "work:cyril-matthew-fragments:177": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "177",
+      "payload_sha256": "0c16d5380ac7dc4a0f50419bf1e7e0b13fdd0cdce31c7170eeae88a89c1ff8f2"
+    },
+    "work:cyril-matthew-fragments:178": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "178",
+      "payload_sha256": "aa0ddabf5baf6cde4b3e1ee6d30aab5bf4ce9dc27d6db968ba4502532d1f3671"
+    },
+    "work:cyril-matthew-fragments:179": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "179",
+      "payload_sha256": "3f6e019708a09f26bf0ced6848843c1aa2a9b856fc6f3bd899f5ead6110a12be"
+    },
+    "work:cyril-matthew-fragments:180": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "180",
+      "payload_sha256": "25e25e8baec86c2626cbd2b78c52b115fd2a2a491e3c23f8bded6ac4665cb711"
+    },
+    "work:cyril-matthew-fragments:181": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "181",
+      "payload_sha256": "911d3c16d57d8c180df373690dc6cc199d8409624f33ee31ddf5a7452dcf8eb5"
+    },
+    "work:cyril-matthew-fragments:182": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "182",
+      "payload_sha256": "4852e84258653621045db75529702bd90f9b41c6cb4d1815dea4e65a84300272"
+    },
+    "work:cyril-matthew-fragments:183": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "183",
+      "payload_sha256": "d1f0c4745e0c7889841fbac8e9730b0f058daac342f81b75e4dc65dd9acebb08"
+    },
+    "work:cyril-matthew-fragments:184": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "184",
+      "payload_sha256": "f733a83e2e269e69182f509bedbf7f48a05e069205bcef90f273ec75c0145789"
+    },
+    "work:cyril-matthew-fragments:185": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "185",
+      "payload_sha256": "70da5bbb0fbd3e41e61cefcc4389d05d88e5fe38c83749c9d8269fd03ea70d63"
+    },
+    "work:cyril-matthew-fragments:186": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "186",
+      "payload_sha256": "2877b657c7962012146e2018a25b843193d784e9ab0ab87cb36555f954be5e31"
+    },
+    "work:cyril-matthew-fragments:187": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "187",
+      "payload_sha256": "3644d1c16a535d36d2d1b0643a4a063f2bf488db41fd5dfa653d86837e9f3627"
+    },
+    "work:cyril-matthew-fragments:188": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "188",
+      "payload_sha256": "27ac4fb4dca0fb2c8d9ffbc2c1c8593575bbda11dab6b9a7f6bea6716c6d605c"
+    },
+    "work:cyril-matthew-fragments:189": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "189",
+      "payload_sha256": "b3de8eccb1396429165cb50a9b0211068d8c4643ce4018c52fcb0dd1da7c9c6b"
+    },
+    "work:cyril-matthew-fragments:190": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "190",
+      "payload_sha256": "f04482c9ab996fbc73effc8fd0ce25cb72fa13283ef0a6441993a647c0a8b0ed"
+    },
+    "work:cyril-matthew-fragments:191": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "191",
+      "payload_sha256": "37e410b54ed9610ff8ffb0324fe0a8412fdaa2cf4dcf53dc02145c3af3cfe5f5"
+    },
+    "work:cyril-matthew-fragments:192": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "192",
+      "payload_sha256": "40bf4743f32b83ff716a057728442cf97b37bfde1bf3f09c618a6177d4079056"
+    },
+    "work:cyril-matthew-fragments:193": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "193",
+      "payload_sha256": "d838c07781a07046b4e5097762403b12ce76cf0db2b42e3cfffc2d2af792c304"
+    },
+    "work:cyril-matthew-fragments:194": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "194",
+      "payload_sha256": "295cc6f3ace3de26ee523ab778f4369874727caaa556483f8c9df786cf4d3f2e"
+    },
+    "work:cyril-matthew-fragments:195": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "195",
+      "payload_sha256": "9e46583df7ed2e0ba8185e13b9f3d80d0cdee5b89c9d9bd0300ddaded82e0022"
+    },
+    "work:cyril-matthew-fragments:196": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "196",
+      "payload_sha256": "1604f0abe926a8621850e3112170bbb44d8a671c0c0e0f1a46fbb70530a3c885"
+    },
+    "work:cyril-matthew-fragments:197": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "197",
+      "payload_sha256": "6a507f4bd166f3a74536ea5481287a7bd458b7c21047a25177138a0899635fda"
+    },
+    "work:cyril-matthew-fragments:198": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "198",
+      "payload_sha256": "1de3598926ab86cc50402ab012dbcea31ee96a1d78022ed8679d84157274bc75"
+    },
+    "work:cyril-matthew-fragments:199": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "199",
+      "payload_sha256": "2faf82af5294c19a9f038572cd4b541a28e02d60e7202c9d99d1cc8189e57b80"
+    },
+    "work:cyril-matthew-fragments:200": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "200",
+      "payload_sha256": "65c2b82e9cae3ccc7eeeb67bbb6577a95f967c2e552997a8b64dfa1f2ece4f17"
+    },
+    "work:cyril-matthew-fragments:201": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "201",
+      "payload_sha256": "4c9d9f39c07707b9ab2352a7c0238e8679fa553b1600dfc2093a72930703f771"
+    },
+    "work:cyril-matthew-fragments:202": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "202",
+      "payload_sha256": "ccf25897f4982506a0d11bff57be80550802d97d1b36b5c69f02347567b9d88d"
+    },
+    "work:cyril-matthew-fragments:203": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "203",
+      "payload_sha256": "6c7809ce6b3d83b150c5090a11117f4a11aac053ae171b08d946ed263dae4143"
+    },
+    "work:cyril-matthew-fragments:204": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "204",
+      "payload_sha256": "7d1469d18cfd11467dd0faa52a8abb575ef9b5487b4c277d402610432d38ee25"
+    },
+    "work:cyril-matthew-fragments:205": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "205",
+      "payload_sha256": "bc2d26e938f7700b64aefd7db295e84bae45d44fd36f82cc5b1fb38c6533eb5b"
+    },
+    "work:cyril-matthew-fragments:206": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "206",
+      "payload_sha256": "9f02920321db4027fd637854369d1f866cd333b25d5f2183fbd6ab835fc5c94a"
+    },
+    "work:cyril-matthew-fragments:207": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "207",
+      "payload_sha256": "afb06ab8c21e2e6e08538cedc033191bf2574d91d8c65c10b4e8a6cb17610221"
+    },
+    "work:cyril-matthew-fragments:208": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "208",
+      "payload_sha256": "076380700c2461c53e215c371748ea1c84f31d7587b2782f3325eccad044cac4"
+    },
+    "work:cyril-matthew-fragments:209": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "209",
+      "payload_sha256": "8ea6172dcaf192249544b38facb88ae9a9006b0d7e519cde7222ead8d09c423c"
+    },
+    "work:cyril-matthew-fragments:210": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "210",
+      "payload_sha256": "411c72bf1822aee69219c02f82b777801750d14e8dbacbb6c902ef84b24609c9"
+    },
+    "work:cyril-matthew-fragments:211": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "211",
+      "payload_sha256": "9cb42ed32ec033390bc2b65307f873121c7d4924c9d9aa19bc6b4b5974538cc1"
+    },
+    "work:cyril-matthew-fragments:212": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "212",
+      "payload_sha256": "49aaf22a06c1dafe0d38fe2bd19902bfa76f8727feb54c9895d2e1fca0ff9535"
+    },
+    "work:cyril-matthew-fragments:213": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "213",
+      "payload_sha256": "6867a37901efe0a1f816fbea35950d6a9b812ccf8e1e4bf1163eafba4aa04024"
+    },
+    "work:cyril-matthew-fragments:214": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "214",
+      "payload_sha256": "2381cdeb6caa11742c63be2d8f2dbdc5afbb35cb3ee09c01b94f95b2bc099eef"
+    },
+    "work:cyril-matthew-fragments:215": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "215",
+      "payload_sha256": "106a1e58c402ded640818dcfa3707cac1df6f44b6acd960fce31c6a917188a13"
+    },
+    "work:cyril-matthew-fragments:216": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "216",
+      "payload_sha256": "0799b0656c351297a5d081c29d3c898df1b1afbfcf69e64198fbf7330bffcc36"
+    },
+    "work:cyril-matthew-fragments:217": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "217",
+      "payload_sha256": "4d6f88d88079cebb237542e648cfaf0a1d053728846d566ae10fb3c2b0a3e312"
+    },
+    "work:cyril-matthew-fragments:218": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "218",
+      "payload_sha256": "05a6fcae65bb3f4f81775708100b2f19560891c32d041a74f8e9240da8cc47ed"
+    },
+    "work:cyril-matthew-fragments:219": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "219",
+      "payload_sha256": "7f60d2a2d49201c66c96b0e65196dbb9766047c015bba705e2954f8e2f5a0a0b"
+    },
+    "work:cyril-matthew-fragments:220": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "220",
+      "payload_sha256": "7812b96d016e92802067de495aa019f9b6d4d1e6ca43270cfd881f9722bba3ce"
+    },
+    "work:cyril-matthew-fragments:221": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "221",
+      "payload_sha256": "c5ed8dc4674a36742c652f0f107058b1d9db3cd6866c6289fb643622bde93ee6"
+    },
+    "work:cyril-matthew-fragments:222": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "222",
+      "payload_sha256": "fb9c1668e5bee3952e7e4333a807eb642b51fbafad8beacacbec158fb97c5b21"
+    },
+    "work:cyril-matthew-fragments:223": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "223",
+      "payload_sha256": "9f861d380f5a4110394854d8692e77901269d3a3e7557a18ab249df7293d1305"
+    },
+    "work:cyril-matthew-fragments:224": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "224",
+      "payload_sha256": "cbcd4f1cc7872b00ed2f8152794baf91cad945434af62f4e63b416241f4fa9c1"
+    },
+    "work:cyril-matthew-fragments:225": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "225",
+      "payload_sha256": "73cc4b788309faeaf78970792fa1afa3ac916c310f41e351d75598210100b8de"
+    },
+    "work:cyril-matthew-fragments:226": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "226",
+      "payload_sha256": "2b09fb0f31988bcd750813d0c43dd7cc044ef529a7b1253abca2508a0df0f94a"
+    },
+    "work:cyril-matthew-fragments:227": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "227",
+      "payload_sha256": "6c293c55ce50e6208186bd2249aa5757cc9996aa5be35a205e2343f801ff7439"
+    },
+    "work:cyril-matthew-fragments:228": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "228",
+      "payload_sha256": "f81fdf8de36caeba5e1232a8c2030f84a45ff705ae50465b341abc7d8a246ca8"
+    },
+    "work:cyril-matthew-fragments:229": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "229",
+      "payload_sha256": "3011f5c389e6507089005a92b39670ef0594f6c110ffc93f1c4abf2632def973"
+    },
+    "work:cyril-matthew-fragments:230": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "230",
+      "payload_sha256": "46f8315520973aad9c1b2557421f8fe2d5ee59580087b8c2f8872051d9a1ffdd"
+    },
+    "work:cyril-matthew-fragments:231": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "231",
+      "payload_sha256": "61debd1529b7aa998503cea85ae566241210020e2e53f4a11d99c019440a4410"
+    },
+    "work:cyril-matthew-fragments:232": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "232",
+      "payload_sha256": "c1dad9e789a8b6f06b5d6cf718fa86c526a9ecbdc88fe1cfa07f85bcf74b49e9"
+    },
+    "work:cyril-matthew-fragments:233": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "233",
+      "payload_sha256": "6710aef84ab75e2adb068648cd3eb46f54a77f0247c4c1c1e2a3e3d478a79d61"
+    },
+    "work:cyril-matthew-fragments:234": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "234",
+      "payload_sha256": "2e5388e46b089f3456ec942074944e8553925d419a51483ca0769079ba3aa057"
+    },
+    "work:cyril-matthew-fragments:235": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "235",
+      "payload_sha256": "ee4f89c9fb5f94f47e2b3bd2064df386329ce3e089d761c37145e506bcf3a4c9"
+    },
+    "work:cyril-matthew-fragments:236": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "236",
+      "payload_sha256": "0bae7231b823ae312b755ad153b30a08275aec9a2503fefdfd099f174bc31844"
+    },
+    "work:cyril-matthew-fragments:237": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "237",
+      "payload_sha256": "125802a31b80ed5d18e8432444daf464c1310a2898eaba1c57140f5b6fd74284"
+    },
+    "work:cyril-matthew-fragments:238": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "238",
+      "payload_sha256": "8565b615f81d655f70500a6dff5fd1cf18f38c17a0321fd93aad72afc6e9a019"
+    },
+    "work:cyril-matthew-fragments:239": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "239",
+      "payload_sha256": "20de4d3fc0ed757be5e2c17f92cd2c939d4a10537a7f178c429853fbbb9d1707"
+    },
+    "work:cyril-matthew-fragments:240": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "240",
+      "payload_sha256": "af6781fa1d109fe956ca2fb44ee28d74c7cdc07a40c015457095bdbcb7633175"
+    },
+    "work:cyril-matthew-fragments:241": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "241",
+      "payload_sha256": "9cb302b9f497aabd91e8e71d0656d37f1f772deb2b86364cd241778e8884441b"
+    },
+    "work:cyril-matthew-fragments:242": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "242",
+      "payload_sha256": "478002737db44fff2f5de8ae9a1bdde72c576cb260639c8b3b69ba1ac186600c"
+    },
+    "work:cyril-matthew-fragments:243": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "243",
+      "payload_sha256": "298b72d10d672efb59ee30e2d7d839ffaa1b492796486146c8edbf91ac822296"
+    },
+    "work:cyril-matthew-fragments:244": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "244",
+      "payload_sha256": "5964b78eef216e2225b95fa64a16bf04dca17f607a689144d97114d103c30402"
+    },
+    "work:cyril-matthew-fragments:245": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "245",
+      "payload_sha256": "a3feee2cd18aa23f3cf555cd7eb0ee3e144d4a273575191a79e18da97d8fdcf2"
+    },
+    "work:cyril-matthew-fragments:246": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "246",
+      "payload_sha256": "1fb437b16cfb6e2facd0ebbb862a81e6ed6561d835035d39cb3d6058d6dead9c"
+    },
+    "work:cyril-matthew-fragments:247": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "247",
+      "payload_sha256": "637aec5c9c87edc0e48c952ac12b55740c313f580e9d6aa3ed09e59ce9d9583c"
+    },
+    "work:cyril-matthew-fragments:248": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "248",
+      "payload_sha256": "746b149ef35e290db6f7f8a81a35a1f723a0aed41e7d0fdb12032bd411e5b86e"
+    },
+    "work:cyril-matthew-fragments:249": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "249",
+      "payload_sha256": "691423abc7811899a5b37d713202785749db0fd9cd21244d6562e8a62693d15a"
+    },
+    "work:cyril-matthew-fragments:250": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "250",
+      "payload_sha256": "9c7ce217a107f1f9c3d9227aa2a00e58964686832ac0a6c5181217d464e9bbb5"
+    },
+    "work:cyril-matthew-fragments:251": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "251",
+      "payload_sha256": "928fa12792971857a5f23760cc406401845a7e9b433b632ae7c811942a8f9b8d"
+    },
+    "work:cyril-matthew-fragments:252": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "252",
+      "payload_sha256": "59d414911e73c0a7114710a253b400bd720ed2141e61d528add462555edffab0"
+    },
+    "work:cyril-matthew-fragments:253": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "253",
+      "payload_sha256": "5c47db3e4dee574bc8c3008ee68a99fcd654c263176cc93a19ee664c0852175c"
+    },
+    "work:cyril-matthew-fragments:254": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "254",
+      "payload_sha256": "e2cf2cc07ab84e6ce58ab47b06fa481eb40b7009749d89ac1cc782a0eea2a51e"
+    },
+    "work:cyril-matthew-fragments:255": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "255",
+      "payload_sha256": "0929915c3539359b2d757e0d7db7ea26c83da268ac734d49ce50744104689972"
+    },
+    "work:cyril-matthew-fragments:256": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "256",
+      "payload_sha256": "a74298fd3de1d472d2e1c25ba46a8e163c040a4d1e19101a983391bdf27a1792"
+    },
+    "work:cyril-matthew-fragments:257": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "257",
+      "payload_sha256": "02ea8edce76a581cf44efdb6f52de07d9fa739563777f9b1e8b22fca6edd7d4c"
+    },
+    "work:cyril-matthew-fragments:258": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "258",
+      "payload_sha256": "be9abd17f19a7ee3b7e088c22f897896befa5ec756fdb293c63f90f1c3e9fb98"
+    },
+    "work:cyril-matthew-fragments:259": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "259",
+      "payload_sha256": "5752731c7c06a78f50154d821e3856779c752e661868555b49f72c61717d7213"
+    },
+    "work:cyril-matthew-fragments:260": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "260",
+      "payload_sha256": "87e6c34441d1ecd420c788e6db039b17601105625835ecbd0d4aa7e8c0c19177"
+    },
+    "work:cyril-matthew-fragments:261": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "261",
+      "payload_sha256": "03a1b633e15c57f66bcbede64778db4ee8881cffb6386b5966c3ff68b3533bd3"
+    },
+    "work:cyril-matthew-fragments:262": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "262",
+      "payload_sha256": "f56461d22a7f537e967871461e3ed310a7c0486092e209117aa078bf166cc5d6"
+    },
+    "work:cyril-matthew-fragments:263": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "263",
+      "payload_sha256": "3686858e6c1838cae76ce328b4f2274d22cdc85d082f89f79662c0e954dd3ea7"
+    },
+    "work:cyril-matthew-fragments:264": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "264",
+      "payload_sha256": "fecde6fbcc97c46da295eb84ca6d8b86d7a8084ceb479c8bf41a6d1d10b68f3e"
+    },
+    "work:cyril-matthew-fragments:265": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "265",
+      "payload_sha256": "36c34b0194548b02c8112fb014cf08e7fbc3e9407a4d890f047bffecf2ab9097"
+    },
+    "work:cyril-matthew-fragments:266": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "266",
+      "payload_sha256": "379d17e02e287792be0c8d6275af8be88fd7321b6abea41530c1ac5aebe44e3c"
+    },
+    "work:cyril-matthew-fragments:267": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "267",
+      "payload_sha256": "35c41d4ee2ad2d84a39af15af29d67987c3d6ba731eb28a488f27699cbb20860"
+    },
+    "work:cyril-matthew-fragments:268": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "268",
+      "payload_sha256": "fb31f1687985e0e62d8c2f0b6981acf520dbd568906f3113ecc1010acd55d4ae"
+    },
+    "work:cyril-matthew-fragments:269": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "269",
+      "payload_sha256": "7ca1b88d19c21b8b5d0e4bd3e459d68c895ec1097d34f137a8c00beac405f0f6"
+    },
+    "work:cyril-matthew-fragments:270": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "270",
+      "payload_sha256": "75c83e258d59597eb5b496eb1d4be3576dd46f9a1131acd17c89f6cd1a5768e4"
+    },
+    "work:cyril-matthew-fragments:271": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "271",
+      "payload_sha256": "3ff19285af8808bdb6f75fb716ec9d17b3c262207bdfb69d820a621e1076cea0"
+    },
+    "work:cyril-matthew-fragments:272": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "272",
+      "payload_sha256": "edee75bee5f5f575104cb7a2eeb948216573ecb97450f9ad8fc8530e32472ed7"
+    },
+    "work:cyril-matthew-fragments:273": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "273",
+      "payload_sha256": "30ba95c04e94a8567e553f3e7ab09dad04cd60717154959702dceb577bf241ab"
+    },
+    "work:cyril-matthew-fragments:274": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "274",
+      "payload_sha256": "dd071bb3f79aeb1c3bf62b82ceaf2c7abd4f827e48e0796de471e52e238d7f84"
+    },
+    "work:cyril-matthew-fragments:275": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "275",
+      "payload_sha256": "7e204c7b103182156fda99dc9e041de5a7c6d9742bb7a70bdf943c7c0d95cedf"
+    },
+    "work:cyril-matthew-fragments:276": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "276",
+      "payload_sha256": "33dc1f360609ac0dac5fd119a6a8b84e135920ace6671de0c374bfc7f7534d56"
+    },
+    "work:cyril-matthew-fragments:277": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "277",
+      "payload_sha256": "caf502703d83cca31447b2cfcb086840d552fcc0a1efdc578346981f860a81e0"
+    },
+    "work:cyril-matthew-fragments:278": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "278",
+      "payload_sha256": "78ed0f356608fcd21db4d217ccc5afa40c1f4a3fe185caf66e0fc04cff551e17"
+    },
+    "work:cyril-matthew-fragments:279": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "279",
+      "payload_sha256": "f14704872a3e6bf3108a08329b5b6405e534fa79e58f59301dca1259ee3253f2"
+    },
+    "work:cyril-matthew-fragments:280": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "280",
+      "payload_sha256": "3b1a2140ddfba9664a9943468049708ec4ca520b041c928f05d342503b381e37"
+    },
+    "work:cyril-matthew-fragments:281": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "281",
+      "payload_sha256": "bdd8865914b86fd4bf484634fa37f6b77fb4170134b9fc26cce5e9e7a0f052be"
+    },
+    "work:cyril-matthew-fragments:282": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "282",
+      "payload_sha256": "a46627dbf126dc58a41414e0c0a64e5857311448bff7d3af15f0e5adf4143992"
+    },
+    "work:cyril-matthew-fragments:283": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "283",
+      "payload_sha256": "8703f3cbbf620d2ea3c3e621f2e225ce86be815e95b5e0675fdc7797b6f46141"
+    },
+    "work:cyril-matthew-fragments:284": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "284",
+      "payload_sha256": "e16b5c3603af4efd7d3aa99ce29d8216f2481e47f25b84a23da4290ae359f33e"
+    },
+    "work:cyril-matthew-fragments:285": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "285",
+      "payload_sha256": "598e6c1bc15ebde4a6767360b33a72729d6ce41d7dfa87711a6ea2eb71a77a2a"
+    },
+    "work:cyril-matthew-fragments:286": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "286",
+      "payload_sha256": "1851cb8b93e5a4b5dd206fef07ae6153573c1a89b18d38dda60cc9aedbd94e9a"
+    },
+    "work:cyril-matthew-fragments:287": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "287",
+      "payload_sha256": "432e3c4c6a9ee896268b70dea0562fd556d61fae3917f62f5b2170855e9cde78"
+    },
+    "work:cyril-matthew-fragments:288": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "288",
+      "payload_sha256": "e9649e89d9acd8fc65fd6061fac98501eefa399d7d4d6e72ec131f53659328c4"
+    },
+    "work:cyril-matthew-fragments:289": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "289",
+      "payload_sha256": "5f6bb70832eca7c27e861e075780a6d222b8e6f3df9e7fb471a7f59a08f4e57e"
+    },
+    "work:cyril-matthew-fragments:290": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json",
+      "section": "290",
+      "payload_sha256": "2aa2e2492c8f1113fc3a9bbef3eba55c7cdf3f861998019accd6d34c85055ebc"
+    },
+    "work:cyril-recta-fide-arcadia:20": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "20",
+      "payload_sha256": "6eec92dd3c4d6051e3a460f7d78b5c89744a2dc4bcbc765cd3ace2ed1c7fcfcc"
+    },
+    "work:cyril-recta-fide-arcadia:22": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "22",
+      "payload_sha256": "305bc460a5c1da5817e02953e273fefa18257db7c71189e4411179921645c251"
+    },
+    "work:cyril-recta-fide-arcadia:24": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "24",
+      "payload_sha256": "1292cf595874733c80b562192e8dd386ada923522d610d005e1a007fb9a3c7c8"
+    },
+    "work:cyril-recta-fide-arcadia:27": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "27",
+      "payload_sha256": "b16aaf319820932332926ee0bfa125ed17efb056546b482d993a22ca0d29a385"
+    },
+    "work:cyril-recta-fide-arcadia:28": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "28",
+      "payload_sha256": "cbcd6df4989ff9c0592be8b3ec7a5c57725d5749e9b98c1cd5b9a9bab0b5da69"
+    },
+    "work:cyril-recta-fide-arcadia:29": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "29",
+      "payload_sha256": "508ad8da2c86116b0baa60981e6378f8e5904de0e84950b3ebb2aa59ee48d4c0"
+    },
+    "work:cyril-recta-fide-arcadia:32": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "32",
+      "payload_sha256": "c210df92d6fa096a443cfbc90160178f24c02b997dac1c8d316828c338d6932b"
+    },
+    "work:cyril-recta-fide-arcadia:33": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "33",
+      "payload_sha256": "676eb5609c48d49867c9dd9ea24e4973c55347fda1b43e23ad9cf1b89dcfbff4"
+    },
+    "work:cyril-recta-fide-arcadia:34": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "34",
+      "payload_sha256": "594118c2cfb430c2581afac570658a0fad4831b9da196b0c9997960e41c10dbd"
+    },
+    "work:cyril-recta-fide-arcadia:35": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "35",
+      "payload_sha256": "5d535721638f241db8f720de22263da6b5fa5d85571afeb821261b2a1bd23723"
+    },
+    "work:cyril-recta-fide-arcadia:40": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "40",
+      "payload_sha256": "d37ca10b5498eb83f93599a35e90cb68d76755ff28e04681780afff69c1aef47"
+    },
+    "work:cyril-recta-fide-arcadia:42": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "42",
+      "payload_sha256": "d2a8c27c7505191bd1adc6d256b88d7be0ef14b10219f2e74bcb208d5f9fa815"
+    },
+    "work:cyril-recta-fide-arcadia:45": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "45",
+      "payload_sha256": "40c831807bd59940c8866ba3bb22ec6e8ad32676781119108448b5f3bafbb4c0"
+    },
+    "work:cyril-recta-fide-arcadia:46": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "46",
+      "payload_sha256": "3a91039ee1c1f2876545e89939ce3528489947d608aa1726262ca880a9476e7c"
+    },
+    "work:cyril-recta-fide-arcadia:47": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "47",
+      "payload_sha256": "669fc75b13d248277417303fd5ed4c74a17a64b71ccfd9de86e9aa6cf022fdd3"
+    },
+    "work:cyril-recta-fide-arcadia:48": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "48",
+      "payload_sha256": "0283efc63c8867f721dfa4102aa33d9c2ad35a9a48daac39ddf1df6fc4b5c03c"
+    },
+    "work:cyril-recta-fide-arcadia:49": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "49",
+      "payload_sha256": "78f7ca6f9c1aec3c89d6e4a487da02da54cde0e9faaf637e2b41245cbc29b987"
+    },
+    "work:cyril-recta-fide-arcadia:51": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "51",
+      "payload_sha256": "063a328d5a47555222bc09dd679f9f71039250f6e943ae01931bbb463245f1ce"
+    },
+    "work:cyril-recta-fide-arcadia:52": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "52",
+      "payload_sha256": "78a248b6ee4349fd3932d295313dd9aee58c59bb8f6562d479536119cc68af69"
+    },
+    "work:cyril-recta-fide-arcadia:53": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "53",
+      "payload_sha256": "73139249d850e7d4a389271998474b053166c600320fe2cf42e92a98a57908ba"
+    },
+    "work:cyril-recta-fide-arcadia:56": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "56",
+      "payload_sha256": "23eda2372e30d8151893bbba6a20c80c9abb711d3c7bd4260d68e32945c7388e"
+    },
+    "work:cyril-recta-fide-arcadia:57": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "57",
+      "payload_sha256": "3fe5a2d7a4868addd66c68f989a1797388bd727de3ecf6d442bac0f70f4a7b87"
+    },
+    "work:cyril-recta-fide-arcadia:59": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "59",
+      "payload_sha256": "e4c5645a431cadffef75838bfe765ec644d34bc24e6fbc7ce615c17c3f1aa848"
+    },
+    "work:cyril-recta-fide-arcadia:64": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "64",
+      "payload_sha256": "87576e284673d39e0137496568a62378fcb8e5f3ceec08b613eb977d086a3107"
+    },
+    "work:cyril-recta-fide-arcadia:67": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "67",
+      "payload_sha256": "127392fb97fc1f6fa80f2c0bb1709122ded10135af9621f18ecfdfaeb4055b56"
+    },
+    "work:cyril-recta-fide-arcadia:68": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "68",
+      "payload_sha256": "a1ebbd1e49e323b8de77885ba16c4e995399e44459728b777ebf88d8bbaf1f19"
+    },
+    "work:cyril-recta-fide-arcadia:69": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "69",
+      "payload_sha256": "cd52c47b85e90bbd0549e08f4e8cbb8df2cab57cad6842da5588339d2a0bc7f7"
+    },
+    "work:cyril-recta-fide-arcadia:73": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "73",
+      "payload_sha256": "14cc07d12ceb1d3b054934e338f6859547213b40ca5a35def25899d2cfc0f706"
+    },
+    "work:cyril-recta-fide-arcadia:79": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "79",
+      "payload_sha256": "abef834271e5bbb36cb9d2bb6739791a56ecd45006e1d4fc0903b2c9193b33ee"
+    },
+    "work:cyril-recta-fide-arcadia:81": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "81",
+      "payload_sha256": "264d3b079af733f0f882e5746ea55e7bc25565ea0e12a2c31aa35fc2bc0029ee"
+    },
+    "work:cyril-recta-fide-arcadia:83": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "83",
+      "payload_sha256": "cf0714e1151b87bdb83374ff15c389ef5729f9fcfbb6ac8ba0731b5bfc0fb679"
+    },
+    "work:cyril-recta-fide-arcadia:84": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "84",
+      "payload_sha256": "cc7f7da750dbab3a70b2efb39cf73fc2f66003ac4d827477b92c9391f4622fa4"
+    },
+    "work:cyril-recta-fide-arcadia:87": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "87",
+      "payload_sha256": "779ac35fa4fe3cf8baba91bb71e2b5cf4df408313f179a8330d5b223138f320b"
+    },
+    "work:cyril-recta-fide-arcadia:89": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "89",
+      "payload_sha256": "2f5ea172eb0d770b9fcd262fd6dbf97144ca62c3d6bd040553be2f4d08d2d712"
+    },
+    "work:cyril-recta-fide-arcadia:90": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "90",
+      "payload_sha256": "918bd54a4e4f2344093cdc866ac5cce50678329a71823615e7d91ce0a2b9622f"
+    },
+    "work:cyril-recta-fide-arcadia:92": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "92",
+      "payload_sha256": "6afbba4ec1ad09741b0a6ddc56f43a1efc44ac6d5c0a602036abfd3ea473ae2a"
+    },
+    "work:cyril-recta-fide-arcadia:93": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "93",
+      "payload_sha256": "3a4fd09a15ff4064e9992a3f5b10505721ac5f2d1ebb1c5a4c9138e1e71cacf4"
+    },
+    "work:cyril-recta-fide-arcadia:94": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "94",
+      "payload_sha256": "090c0995a4c324cbd8bee82d78bcb391e779cfb101e1b4fd062c31212c7c4a83"
+    },
+    "work:cyril-recta-fide-arcadia:96": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "96",
+      "payload_sha256": "5f2f73bc6f99ebbafa873231d73c7de870930d80111ea50d94d6716fb269c456"
+    },
+    "work:cyril-recta-fide-arcadia:97": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "97",
+      "payload_sha256": "cafa2c51d59f6d862ecfadecb588a4c1fd5feab6f9e323bd5938ed9c62faaa2d"
+    },
+    "work:cyril-recta-fide-arcadia:99": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
+      "section": "99",
+      "payload_sha256": "2ed365ba13802005bed6a10246b3432d2a3b460cd0be01f2946292abb2c4d60f"
+    },
+    "work:cyril-recta-fide-pulcheria:3": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "3",
+      "payload_sha256": "072faaa65c7b74ae2b292bc84367434407a26ccbc019210c654443c7846309b0"
+    },
+    "work:cyril-recta-fide-pulcheria:4": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "4",
+      "payload_sha256": "c477afbe2dfe1abc809a4f6d25a5466d97f3fe004fcdf49fa77999a12e469908"
+    },
+    "work:cyril-recta-fide-pulcheria:5": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "5",
+      "payload_sha256": "f4e16ea910c84ece31d2e2b7d867245c65733e272900d900813fdc32b02a100f"
+    },
+    "work:cyril-recta-fide-pulcheria:6": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "6",
+      "payload_sha256": "6bab6b8c8521ddcbd8a0ec846778b40e35129dc7e184cd3fd82f735f822b8b1e"
+    },
+    "work:cyril-recta-fide-pulcheria:7": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "7",
+      "payload_sha256": "d6ae6ef8683f88193550c98eec1cd128bd9e1461b35b06814f379b7cbd1548f6"
+    },
+    "work:cyril-recta-fide-pulcheria:8": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "8",
+      "payload_sha256": "826c6609a26a07237581fc64733d5e04454b2456add7fac753992b29fc58555a"
+    },
+    "work:cyril-recta-fide-pulcheria:9": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "9",
+      "payload_sha256": "889f64f27ff3e25d99a9fde737486d5bafc778cbf98e47d0a7c5cb670bf6c0b8"
+    },
+    "work:cyril-recta-fide-pulcheria:10": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "10",
+      "payload_sha256": "fad5a2ba218c97ea04b28514f6bf09d2d7cd7cb1f9bf641a9aa833b5f5559d4c"
+    },
+    "work:cyril-recta-fide-pulcheria:11": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "11",
+      "payload_sha256": "58f89b6e56748932ea6529c1e1c1f3581afd24596ddd58d61e5443e7fd7bf47d"
+    },
+    "work:cyril-recta-fide-pulcheria:13": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "13",
+      "payload_sha256": "5b33c0d85360f759afeba10b89a597d9c73d83fbaf640bfa6cbe62ee5121378c"
+    },
+    "work:cyril-recta-fide-pulcheria:14": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "14",
+      "payload_sha256": "c4923b1497e622152833ad06b468be73d047e084798d03748c58bb9db6bd7654"
+    },
+    "work:cyril-recta-fide-pulcheria:15": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "15",
+      "payload_sha256": "2bebe3720b3d6671e427402f8066e4ad740001c4fcc2c112a47814b7a9e76d90"
+    },
+    "work:cyril-recta-fide-pulcheria:18": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "18",
+      "payload_sha256": "e43f4539c9fc0367356c7e290b75c757c8e96b00b31ad58a72b03a2120aa135f"
+    },
+    "work:cyril-recta-fide-pulcheria:19": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "19",
+      "payload_sha256": "65abc9626cfff6c9436fbbcb1a95027ebef1fe983bcd26bc517ff70fe0fa8eb9"
+    },
+    "work:cyril-recta-fide-pulcheria:20": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "20",
+      "payload_sha256": "a2d4a131e7554cc47716dce4cbce1c3d84f6de663a72bafc02ea5181d49551db"
+    },
+    "work:cyril-recta-fide-pulcheria:21": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "21",
+      "payload_sha256": "623498bf182313f8d9e35def7481da5189f48c3ffcf39d586777745ff5302148"
+    },
+    "work:cyril-recta-fide-pulcheria:22": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "22",
+      "payload_sha256": "94d747382317a688d936ec67dbb20ea8dd61e22a0c2657fee1e36cd9fbfaa9ba"
+    },
+    "work:cyril-recta-fide-pulcheria:23": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "23",
+      "payload_sha256": "387a331f4811e4b3979a4a245d1ad0fcb845a1b48ee9269fb459d615422b2c61"
+    },
+    "work:cyril-recta-fide-pulcheria:24": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "24",
+      "payload_sha256": "dd0d540f1498e0b769fa53c86eebe9ad896ca53bfeadbe2f2c8daa6768789af7"
+    },
+    "work:cyril-recta-fide-pulcheria:25": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "25",
+      "payload_sha256": "e672e3a013b354112d315ac5b46c1de7d9da8bfabceb7e34d86d2e82572bfbed"
+    },
+    "work:cyril-recta-fide-pulcheria:26": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "26",
+      "payload_sha256": "308bab5202c53075545dee711d04b072f5037de37040af8dc11d44ff5bbe4fca"
+    },
+    "work:cyril-recta-fide-pulcheria:27": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "27",
+      "payload_sha256": "85c7ea37aea8f2651dcb13d7c3ba936cdb28bfcf0a275f199e52782aa271ce3b"
+    },
+    "work:cyril-recta-fide-pulcheria:28": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "28",
+      "payload_sha256": "749060dbd63ceebd6df353eecc6f6176d6ec1ed0dab3dbd29d889d427b0068b9"
+    },
+    "work:cyril-recta-fide-pulcheria:30": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "30",
+      "payload_sha256": "115988d135889523e72d2fd2492762e57470d54fa3f83651cc65854e915982d7"
+    },
+    "work:cyril-recta-fide-pulcheria:31": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "31",
+      "payload_sha256": "bfcbbaea042a758dcd235098f6c1ff386830e340a7e886286732be5c0382b7d0"
+    },
+    "work:cyril-recta-fide-pulcheria:33": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "33",
+      "payload_sha256": "eb495f372c44b7065611a3230359781ea89f5bd8ee092fbb96d86c673a886d66"
+    },
+    "work:cyril-recta-fide-pulcheria:34": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "34",
+      "payload_sha256": "28203ea98c37342dd62ba2a9d31002ea400cb62dd830746266b98af6fdc0aed7"
+    },
+    "work:cyril-recta-fide-pulcheria:35": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "35",
+      "payload_sha256": "7ed97eeabec7f23e81f1d2dbeef2b06a2bbe30e66aabe7e2136f88ac54682b35"
+    },
+    "work:cyril-recta-fide-pulcheria:36": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "36",
+      "payload_sha256": "e48fb9cc990c0fd01fd8202672ac0d31840becb1a6ff160513b3e5b2f64b877a"
+    },
+    "work:cyril-recta-fide-pulcheria:37": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "37",
+      "payload_sha256": "796b9d612a5f9bc2ce5d9dac27f1c930ec38b649656af2f550734a2ae6627898"
+    },
+    "work:cyril-recta-fide-pulcheria:38": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "38",
+      "payload_sha256": "0925f5814f67990ca797df4f59f5d5638466964c0c53e31be252e72c2c77a1e0"
+    },
+    "work:cyril-recta-fide-pulcheria:39": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "39",
+      "payload_sha256": "420671b622c0e9584eaf452c6cc5c995fac053b2871fedae69e7cff26f64af38"
+    },
+    "work:cyril-recta-fide-pulcheria:40": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "40",
+      "payload_sha256": "adbfc2c311c05e320277e2d1f31e5febf6cd92e03458d2280ce3cfe4aacd2cc8"
+    },
+    "work:cyril-recta-fide-pulcheria:41": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "41",
+      "payload_sha256": "2cdce97347eaafc4eff34b4646165baf7f761669659f4a6c9df0e54f7eee2cfb"
+    },
+    "work:cyril-recta-fide-pulcheria:42": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "42",
+      "payload_sha256": "fd44d1c3f50d9b4a5833aec1af21eaa92987af4105c91ca56faaa38bea3b648a"
+    },
+    "work:cyril-recta-fide-pulcheria:43": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "43",
+      "payload_sha256": "8bdee925e538ca2d9828702eea40af2881f116d12fdad47d38286d4a66e6f778"
+    },
+    "work:cyril-recta-fide-pulcheria:44": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "44",
+      "payload_sha256": "bd80f377ac95e8449e0bf19c5f41304392c0426abc81a0b632e94db0986efcf2"
+    },
+    "work:cyril-recta-fide-pulcheria:45": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "45",
+      "payload_sha256": "e2050bbc71d03db3cc45ee616291be61002627bad9271ab514d907fdc0dbbe32"
+    },
+    "work:cyril-recta-fide-pulcheria:46": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "46",
+      "payload_sha256": "fb3739d97871a5eed5a34e8fea7ce71c91ec3d94513ea9e3660b41ea6561003d"
+    },
+    "work:cyril-recta-fide-pulcheria:47": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "47",
+      "payload_sha256": "ceed65cc454a340cda3f67ab9fc72e48c6c5ac46c7285f3a64d7dd6c0eb315b8"
+    },
+    "work:cyril-recta-fide-pulcheria:48": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/pulcheria_closeout4.review.json",
+      "section": "48",
+      "payload_sha256": "fa8ebe37a298dd69f4218e64baa89cf9812ef8308728a7cf16cee3c4f036c5f1"
+    },
+    "work:origen-dialogue-heraclides:5": {
+      "packet": "books/origen-heraclides-pascha/reviews/audit/heraclides_s5_closeout4.packet.json",
+      "receipt": "books/origen-heraclides-pascha/reviews/audit/heraclides_s5_closeout4.review.json",
+      "section": "5",
+      "payload_sha256": "0b7a2c1498f50c7f52d9548b690c01591cd09777717e9c3f4e1adb05320c1331"
+    },
+    "work:photius-bibliotheca:10": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_10_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_10_regship.review.json",
+      "section": "10",
+      "payload_sha256": "d221a700b8099f6834c98d6fe6e964544a1f2cb76026368a04aa396dffb67a7a"
+    },
+    "work:photius-bibliotheca:11": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_11_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_11_regship.review.json",
+      "section": "11",
+      "payload_sha256": "ccc3d2967e0a4be901b9fd9c66d4ff7efc328b433fa5aea3f73acdecca4b1e5a"
+    },
+    "work:photius-bibliotheca:12": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_12_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_12_regship.review.json",
+      "section": "12",
+      "payload_sha256": "bb25f6b1ff33e5c2373575a146345eaa28aedb102bb42e98c4b05a2843b521de"
+    },
+    "work:photius-bibliotheca:13": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_13_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_13_regship.review.json",
+      "section": "13",
+      "payload_sha256": "f1b0e80193020e942bd9a01e7a849dce2dffc64d3c6a13c7aa395aac6d7e2330"
+    },
+    "work:photius-bibliotheca:14": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_14_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_14_regship.review.json",
+      "section": "14",
+      "payload_sha256": "9318b60ab89996afc5c549742d509aae60aed873b8ba334f16310fdea2129bd1"
+    },
+    "work:photius-bibliotheca:15": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_15_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_15_regship.review.json",
+      "section": "15",
+      "payload_sha256": "1fa94f2894beb651ee844a4c0cec4a29f3e7ac8fadaf05e7abe52a52f6a8c9e1"
+    },
+    "work:photius-bibliotheca:16": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_16_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_16_regship.review.json",
+      "section": "16",
+      "payload_sha256": "f13b5ca968da434fe5181f32504eb1eff6c4b95416470704e775cc44ef68626b"
+    },
+    "work:photius-bibliotheca:17": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_17_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_17_regship.review.json",
+      "section": "17",
+      "payload_sha256": "8d48610c8054656828aa8cb579b4fc83a778635d12df893d8e6a93600634dc40"
+    },
+    "work:photius-bibliotheca:1": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_1_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_1_regship.review.json",
+      "section": "1",
+      "payload_sha256": "5735547c518767e802bc29a6fa804335d056d4fba0d3a3c1d25a5c1fd2882b02"
+    },
+    "work:photius-bibliotheca:2": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_2_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_2_regship.review.json",
+      "section": "2",
+      "payload_sha256": "32b1120aba2b19f6970a7da7a6b5fa382ee647b2ac689d855ccd1aef237b713b"
+    },
+    "work:photius-bibliotheca:3": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_3_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_3_regship.review.json",
+      "section": "3",
+      "payload_sha256": "1b9a98676b854050a74d28d64a224768c52b29e09baade41b90be949f97f7113"
+    },
+    "work:photius-bibliotheca:4": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_4_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_4_regship.review.json",
+      "section": "4",
+      "payload_sha256": "14912b66370accb8cae5156282692d072c70581dd5862eab4b9fb39b7e6b2c0d"
+    },
+    "work:photius-bibliotheca:5": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_5_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_5_regship.review.json",
+      "section": "5",
+      "payload_sha256": "eea8cb2a96b850f4fb1061baf6f879ad5efa4f1ff02d9b58900207eab03f638d"
+    },
+    "work:photius-bibliotheca:6": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_6_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_6_regship.review.json",
+      "section": "6",
+      "payload_sha256": "f4b7f75e90f0e262046f7a85ce30715565bcdd6f1a6894ce8a87aec380102fc0"
+    },
+    "work:photius-bibliotheca:7": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_7_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_7_regship.review.json",
+      "section": "7",
+      "payload_sha256": "83901b37c9ad79c97d06b988d5a9d0b5f2a92684093e0c4a9ee1665b5af441d7"
+    },
+    "work:photius-bibliotheca:8": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_8_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_8_regship.review.json",
+      "section": "8",
+      "payload_sha256": "66badb13c1e400f77a751c23273dae5d8253f7ec90e65604cea0451e9f16ddcd"
+    },
+    "work:photius-bibliotheca:9": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_9_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_9_regship.review.json",
+      "section": "9",
+      "payload_sha256": "750516060643405b52f9ddb3ea659c6c797eb454f390b7fdb12a125473b9ea59"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -5086,6 +7624,14 @@
     "strimesius-in-controversias-evangelicorum": {
       "packet": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.packet.json",
       "receipt": "books/strimesius-in-controversias-evangelicorum/reviews/audit/prefatio_si_tip.review.json"
+    },
+    "cyril-matthew-fragments": {
+      "packet": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.packet.json",
+      "receipt": "books/cyril-alexandria-matthew-fragments/reviews/audit/matthew_fragments_closeout4.review.json"
+    },
+    "photius-bibliotheca": {
+      "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_1_regship.packet.json",
+      "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_1_regship.review.json"
     }
   }
 }
