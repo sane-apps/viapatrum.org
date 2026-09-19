@@ -7479,6 +7479,24 @@
       "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_9_regship.review.json",
       "section": "9",
       "payload_sha256": "750516060643405b52f9ddb3ea659c6c797eb454f390b7fdb12a125473b9ea59"
+    },
+    "work:africanus-cesti:1": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "1",
+      "payload_sha256": "ab0a6624d894cdf9f87a38505bf78920e906ce621ec62a738f2f1f83325362f5"
+    },
+    "work:africanus-cesti:2": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "2",
+      "payload_sha256": "84ddadb46e4d930d09748b571c2f8190c397227ae65ee356b148627fd6c1ff50"
+    },
+    "work:africanus-cesti:3": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "3",
+      "payload_sha256": "9c8724f8a9105b82daffc1fd951cf7ce6bacfdad16da5c458c5d18ff65b3750d"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -7632,6 +7650,10 @@
     "photius-bibliotheca": {
       "packet": "books/photius-bibliotheca/reviews/audit/bibl_codex_1_regship.packet.json",
       "receipt": "books/photius-bibliotheca/reviews/audit/bibl_codex_1_regship.review.json"
+    },
+    "africanus-cesti": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json"
     }
   }
 }

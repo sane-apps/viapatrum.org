@@ -779,6 +779,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "epiphanius-de-mensuris": "On Weights and Measures",
     "nemesius-de-natura-hominis": "On the Nature of Man",
     "serapion-antioch-fragmenta": "Fragments",
+    "africanus-cesti": "The Cesti",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
@@ -791,6 +792,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "epiphanius-de-mensuris": "De mensuris et ponderibus",
     "nemesius-de-natura-hominis": "De natura hominis",
     "serapion-antioch-fragmenta": "Fragmenta",
+    "africanus-cesti": "Κεστοί",
 }
 
 
