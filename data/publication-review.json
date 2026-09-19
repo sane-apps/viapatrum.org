@@ -7484,535 +7484,553 @@
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "1",
-      "payload_sha256": "9a4a926ce9330b28233080d98e31e6a65ca14d0df832d920aeb754886549d7dd"
+      "payload_sha256": "980345b6a18786d3845c06172eded84acbb3734199081bcc4688102a11bd8a4a"
     },
     "work:africanus-cesti:2": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "2",
-      "payload_sha256": "ecf13f1f4fbafff46b1c10da5f54bfa549ededf6059da28f8a9315335df04eeb"
+      "payload_sha256": "cfbe60c47146202d9755c5e31836f2147050ec01da97d887a9e12c400fc41376"
     },
     "work:africanus-cesti:3": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "3",
-      "payload_sha256": "ea8e47e9d582615add2ca5d516490fa27a17eaf7e5e76a9679f440caacf50f10"
+      "payload_sha256": "333099199d7eb0ad6cf441ede8c5c3ea93747b96de825dda8e8763a2d0ecbfa7"
     },
     "work:africanus-cesti:4": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "4",
-      "payload_sha256": "e30d1bab5c3903bddff15a3b348f4438c4449efa5bc8c82264c04c0dd0522452"
+      "payload_sha256": "f3d8e0fbb324b46e44bca239eb7024a3828344ff35f67f2adb91151948fbc993"
     },
     "work:africanus-cesti:5": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "5",
-      "payload_sha256": "ddfe8b388fd3aec59ce0509694636089c7e86d2179c49d0ae7b0ef275b8b662e"
+      "payload_sha256": "5170c2778cb045943b3f51480e1e918ac415a39ebb6461ef81f3ff31df3cf23c"
     },
     "work:africanus-cesti:6": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "6",
-      "payload_sha256": "e661e84ee649625db5a02ad3cc62e9cb16a4b0f2531135f2ed6bb58993c87d0b"
+      "payload_sha256": "3043ef82ec5794fa569797788ad67e45c319ea36373868b24982b10714131210"
     },
     "work:africanus-cesti:7": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "7",
-      "payload_sha256": "fc3206b9dbced6837290bff7135bc3c21a4e7e9e18a661cefba591aed6dd2136"
+      "payload_sha256": "9e71a9a32285fa9a65b9759c622375f91aa7da6be79e9116047586776ed04169"
     },
     "work:africanus-cesti:8": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "8",
-      "payload_sha256": "57df24ce6dbad59dc0e75dad9d68bcdfcb51e258789b6c6f17243ef1b067627f"
+      "payload_sha256": "d6d7651aaec26181f0978f02224ed98834b0e108daadaac5dcb02ecd81799d93"
     },
     "work:africanus-cesti:9": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "9",
-      "payload_sha256": "ea385ecdeebbeaf43efdb1fded6ff26251e93c7c1bc9308b5b0875671bfc0fc1"
+      "payload_sha256": "c53a2f67bf2b50adceda5bb824758a45fd6c80ca89f5b6698912730713d795ce"
     },
     "work:africanus-cesti:10": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "10",
-      "payload_sha256": "35e7c6de5057b287d570ab930ebd0061f05f6e03863797aa88fe06445dfdaa48"
+      "payload_sha256": "ddef6557a6f93ffa2aeaa73a31ac2eeec98f4ce99519bb0d99df184342457551"
     },
     "work:africanus-cesti:11": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "11",
-      "payload_sha256": "f2d189e891026111d10180d1b19d600efc2c63ef894e206b0354b48a37d72c1e"
+      "payload_sha256": "a8a977f7dc5869e984bccaadb90399577722160dd7977a5be99f5bbae9505c4a"
     },
     "work:africanus-cesti:12": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "12",
-      "payload_sha256": "c0bef7eab828023e4a26f087f119641783de0972e70d58c3530546eb1b90a50c"
+      "payload_sha256": "1260a60ecc360168e29a634fcdc5fb4f9aff2f4304bfbbdcffd628c95859ba23"
     },
     "work:africanus-cesti:13": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "13",
-      "payload_sha256": "da03fefd59a7990b2f0f39c9b78b6b963c81422ce9b5bc1a4ef3afc111df6aea"
+      "payload_sha256": "592d5271c571ed48c2620a4957c7dd8e5d26a705251681ce547d2ee0018af74c"
     },
     "work:africanus-cesti:14": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "14",
-      "payload_sha256": "d0c7686cb01f4be3b580c85c5735555f147f3c5d1a6d9fe07f0a87a8338dc78b"
+      "payload_sha256": "7d7d43dcc9eac36475cb5ab4178ef642f62181264e1d41de392777113b0fc2aa"
     },
     "work:africanus-cesti:15": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "15",
-      "payload_sha256": "2cae4f80e89faf5156b1056647d76ba903c34a7790c5daae43c815e350e167f4"
+      "payload_sha256": "5fd78e3c49c9647784c93d59ae610500e4a91c5d65164a7c0f12a82db19ea367"
     },
     "work:africanus-cesti:16": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "16",
-      "payload_sha256": "2689224502074600ea7ba846fed9d89be3609d3173c2c4142cb436fea0526ef0"
+      "payload_sha256": "ac943f508e6e056245cee9a3a98f56b431163ab24ae27cdc6b6d6636953b24de"
     },
     "work:africanus-cesti:17": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "17",
-      "payload_sha256": "a7b16ff1282318c5f5aad63a2cd9bef3ec435844cb305d4b0a81dc140f516781"
+      "payload_sha256": "5fabe453afa06f58ff38d7cbdf9486e0fcf8284fc8b1f79596751abb5d13a6ee"
     },
     "work:africanus-cesti:18": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "18",
-      "payload_sha256": "13ed5a5fb56e1b1871642aed7d350b3592296ca29a2b2488ba022f2d5f400bbc"
+      "payload_sha256": "a66f6a5d5db9bc036f0611f9ddfb648582d608729430a42f6c21e1c761696d70"
     },
     "work:africanus-cesti:19": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "19",
-      "payload_sha256": "ef36d4dde199eacfe453d585eb7b89351dd3fc6a52a83b88fa37cf9df258b5ff"
+      "payload_sha256": "74ce8ddb7c2267d6e3445946d58bd2bf3930611eae50ac5e29a74ef03ab86c1c"
     },
     "work:africanus-cesti:20": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "20",
-      "payload_sha256": "6941f58f7b5f711e3eb2b09639525a6600d0e7ccc8f787ea98c93205042f2868"
+      "payload_sha256": "bf8ae8b75674c9e00b3f45f49b59ce11220c7484c3b0254a422d9680f13d476a"
     },
     "work:africanus-cesti:21": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "21",
-      "payload_sha256": "86a217f1d6f7bb5736c5236b7060259117f5581132493f022a444a81101e35bb"
+      "payload_sha256": "1c171c0880aa2aabb54b4024c30e79fa39c60ad6d918425db5731df7c8de6ebd"
     },
     "work:africanus-cesti:22": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "22",
-      "payload_sha256": "54fbbf7e2ae42f9fe9b429363fd63fc0a92237a255aed2c11e97e4ff3515bbfa"
+      "payload_sha256": "1f0b80d2fd2cae5e4ec97ce7ecb2d03c52660ffbaeb75929e884560febe9e404"
     },
     "work:africanus-cesti:23": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "23",
-      "payload_sha256": "2c70c0d17bba3a5433160e83564ad402424967999e70fbf733fb0eecf00c54cd"
+      "payload_sha256": "2173a465f665d4d3df6d7adf10c35431a9ee751f8d059d042d58ca18b2eed408"
     },
     "work:africanus-cesti:24": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "24",
-      "payload_sha256": "69e93ee1bca389b25dfa42b37c1b29b9583aab4037b140df2e1bd9fa710884c9"
+      "payload_sha256": "4a9ad4bd34e006b23dbd577fa36295cafcc23782dddcc2e00295135f8e9b63f4"
     },
     "work:africanus-cesti:25": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "25",
-      "payload_sha256": "6f142e43a722a924db579b027c565fa2f86105fbf2c3cca673eac2d2490ecbb3"
+      "payload_sha256": "b44d4f45c18a213a15eafe543845ecc031bb597cb5acb3345809e36a14f51a08"
     },
     "work:africanus-cesti:26": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "26",
-      "payload_sha256": "b49f1eadbbbfdab54f460d4f91108c9915ee44a3429999f160cf6968f3b2b15e"
+      "payload_sha256": "9064d95fd1c59ec1a1258ea4d1c5928ed500999db74fdf97f3331ae6365ebc3f"
     },
     "work:africanus-cesti:27": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "27",
-      "payload_sha256": "4af1dc6a3d0ac77c2559c7c62837168f3d95b81fdeb93c63033e9f5cd4a3a9f8"
+      "payload_sha256": "80c8ea5907fca54565793d8d6ce183e124a595d2cdfdd4046e3dc51a5bf327b6"
     },
     "work:africanus-cesti:28": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "28",
-      "payload_sha256": "0f103a56880d81f3ec2e186205f12efcc0393382fa4bcff4b81e5c5d062d34a7"
+      "payload_sha256": "1de23a5c3a51a78db54a750e49b2a232648adbdedd5a5079300c9e630b4fbbb2"
     },
     "work:africanus-cesti:29": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "29",
-      "payload_sha256": "2d27e1a2ec7a8b5f36a1375e74b2ff875004e7632d1da9e48cc09746d64f12c7"
+      "payload_sha256": "6e66c43c6bce560fa336787ef26d9ad46fe7059b5edb102cf490441eb817c80c"
     },
     "work:africanus-cesti:30": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "30",
-      "payload_sha256": "43cd32be674bc32de77fcc348e043b5bf62207e42f0ad61f4b05cdf9730352e1"
+      "payload_sha256": "d868f8c2984dcf784cd32e2d3b167ee6db2dd3efde6e69a9ddf3aa9dffd10634"
     },
     "work:africanus-cesti:31": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "31",
-      "payload_sha256": "ea8955e3156c312a668f1380cdd994e72df55dc8e69ca27545d0d7a971c64b61"
+      "payload_sha256": "41d442d05bd1996c5941658e4deb16096750b5d1c643c079339154b963f9e4e2"
     },
     "work:africanus-cesti:32": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "32",
-      "payload_sha256": "0be49f3c2d1d99d69e7740263168036ae14bb7f86830199c74ab5d879f9d93a1"
+      "payload_sha256": "2e52774369c0754b6b45087dfc503665c7c6ef58c75bf075a69971998a01db22"
     },
     "work:africanus-cesti:33": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "33",
-      "payload_sha256": "88c3c4526d67fd541b131c5cb029effeeaf3e2509ac62d600840af7cded331df"
+      "payload_sha256": "5c06856644a8fa966ccac0fe90b24071361b80a4489b0e8a3c35407cb1593af0"
     },
     "work:africanus-cesti:34": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "34",
-      "payload_sha256": "37359a3481108685172e4d78e450840e44a8f4f1a6711b1b0b0e3a169045d717"
+      "payload_sha256": "c971f91e9bc441cdc0a7887d665385ed2a2904addbc1d0adba9d70cef2946801"
     },
     "work:africanus-cesti:35": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "35",
-      "payload_sha256": "2b769b1a7526f750f25e8cf5c0d3a5093b6f772920c23abb2add339fab1c43ab"
+      "payload_sha256": "8f73c1f5d48c5d4d50b9c6942b0521959304d33f62d49240a624f0ff6a70b37f"
     },
     "work:africanus-cesti:36": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "36",
-      "payload_sha256": "de35c9976946b755e2a512da574d78943345888745815e87049f73d73d8e3ade"
+      "payload_sha256": "cab89934de889acd42bb95bb02cc37ecc30e2dd5570e3a1ae4cef3c55f72f920"
     },
     "work:africanus-cesti:37": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "37",
-      "payload_sha256": "1cb1c1da80c323e6096ae09cf26b92ebec9ee361d585d4b7f78ef5ae12d64f66"
+      "payload_sha256": "da479dd7aa104b336d82ae8689186534d86e41c70b25885a89d645347ad79084"
     },
     "work:africanus-cesti:38": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "38",
-      "payload_sha256": "d07a98b08cba8edafe6d45c487a1d37b843dab2f1641c00ef0be68d1127c727e"
+      "payload_sha256": "9efe7c4d3cf7b0acaf1a50cedfb337a4513ab30a781785d5f2aba25bb7a6be65"
     },
     "work:africanus-cesti:39": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "39",
-      "payload_sha256": "cdf9484a0e827739d1744dd7dfbbafc37e1a37d22f660d76f25a9ba0140345c1"
+      "payload_sha256": "b8d1bd8cd8a1c3c299bfad768abab28b2a58df18d50995a7f137840c2063ce87"
     },
     "work:africanus-cesti:40": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "40",
-      "payload_sha256": "7bbc65f914d621a719234ed582ec3e2924148d9dc8743700f8a1abedd3967f63"
+      "payload_sha256": "d4f2b71d4047176b393e074cb705148e1b1d6c64045900cdcb07001b8cf64c6a"
     },
     "work:africanus-cesti:41": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "41",
-      "payload_sha256": "ea182df233cfae412d61f7b7eb9966cbc9f55c01072009306d64cf4b79317bc2"
+      "payload_sha256": "97bf09a92c07e215040bf32a84016a87fe5f189a1982ccc1c467009b6881537d"
     },
     "work:africanus-cesti:42": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "42",
-      "payload_sha256": "35ee84b11a06e897d0f93892408d22a1d8007b3971e2fe81d5c5d1a5bbff11cd"
+      "payload_sha256": "0e3261b24f568661f00a6f796df30b8e5735e909fd9f2b6ffc70f5d5b4ac740b"
     },
     "work:africanus-cesti:43": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "43",
-      "payload_sha256": "c3b441ff89c4505d8e6840829860c6129ca2f0866286aa42f19db0341a1344bf"
+      "payload_sha256": "1aa7aec2603eb4595c150c6d7de617397cd1e536fb7ff798781aa3f5de08cfad"
     },
     "work:africanus-cesti:44": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "44",
-      "payload_sha256": "35f1566344d57d1054416209b507d8995538feca62599394c12ff5454df116b5"
+      "payload_sha256": "4a50db6e45a07124fc2050fa5b65342d9ac7a597bcae397da03e044632262584"
     },
     "work:africanus-cesti:45": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "45",
-      "payload_sha256": "42c1d70976b714da28ca3ca141ac809cb8f3554f4dee2521d18c1e420a6bab2f"
+      "payload_sha256": "85f8ee35a4a70068ab04801f1f88ae0bb31cb64ace5eab8ca240386b1e5526e1"
     },
     "work:africanus-cesti:46": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "46",
-      "payload_sha256": "6c6492eba9ddfdddec48f0a1b4cae97e101674f831c59eb8f73cbefd19fb9137"
+      "payload_sha256": "4f73049e3b43895332b5d05346e3afa0a2abe0403ad5cad8615fe64ac0ecb3db"
     },
     "work:africanus-cesti:47": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "47",
-      "payload_sha256": "3b36f1172f93c79653ce25e0d11e03ccbac0a5a970840faaeb7910301ea7755d"
+      "payload_sha256": "f965a7dad8a2126a27d940247ae8731fac8bd6c58dfe9c7b8b1c83626657dca8"
     },
     "work:africanus-cesti:48": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "48",
-      "payload_sha256": "bcf5dee806b8303c0c5942ffd1df80d679e4e39263e72db36aa36395d4928f4f"
+      "payload_sha256": "34bb52b0cbfcfccc4b3ee9c113521bd55917594b407ee73da983b10a516d7338"
     },
     "work:africanus-cesti:49": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "49",
-      "payload_sha256": "c263a878455002228543d00f2f0773df00d831d181be4de4c6f285d53627806b"
+      "payload_sha256": "9a045ae2530e1e4aa37e93872a35b1f8f7d832d836a1a58718d062b083f4b1fa"
     },
     "work:africanus-cesti:50": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "50",
-      "payload_sha256": "9aae936955f2dfdf5b80182aa98e708eeef2b15f0f45e62ba507a51eea1dfc98"
+      "payload_sha256": "d4f34aaac3abe70f201953010e7cd5a5bed9f001849023f7f6b3d0c0f32223cc"
     },
     "work:africanus-cesti:51": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "51",
-      "payload_sha256": "a7b25a7260c34c227ffc46b6ab8375761944ec3cb7241a02ed76bcb9391416c0"
+      "payload_sha256": "bf616d50c7421dc20e7f17393e1f3e5e49387dc75d1cf6e1ee49bfed46248e52"
     },
     "work:africanus-cesti:52": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "52",
-      "payload_sha256": "490355e58ee5cab91fa96e7e157b9108cf9d64e993a37e131cb0c18e900edf91"
+      "payload_sha256": "e2edaa25c26668bd056736e68cc5eae4db0b6cba6317029d10a80a9ef425ad2f"
     },
     "work:africanus-cesti:53": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "53",
-      "payload_sha256": "d9f3fb5bd54685b6e7d72d84615dd71fac63907e93d3112c943db506a21e1915"
+      "payload_sha256": "ef7b8ed0043e7cdb248bd4596e8df8f4366205c447e899e6fc00065d05857f6a"
     },
     "work:africanus-cesti:54": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "54",
-      "payload_sha256": "a84484babf56e7ef38a5210b6d5a090f59f907f072eb5087e37af21943cf9407"
+      "payload_sha256": "980533734343623d4a738cb69e5ed6a1d1e7c9743c4892125fb5dc2727c00696"
     },
     "work:africanus-cesti:55": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "55",
-      "payload_sha256": "1764cf3f75424ae77c884a4beaa40cf661b5f16ae008758e325fbf9d31eef60c"
+      "payload_sha256": "34a7e4b368973fa4f882c31cc2762ccd4d7dd203cd7e72de015ca62370089fed"
     },
     "work:africanus-cesti:56": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "56",
-      "payload_sha256": "55c079ef2afd5ef77bdb52f84901637b5c8312cb1ae49a2e370ec1cc3442ee40"
+      "payload_sha256": "7a28ba52fafa341483b32d50d5324e50c6b15ba82fc1d64ea617358b1a853882"
     },
     "work:africanus-cesti:57": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "57",
-      "payload_sha256": "6ff7fd510fbb7ebb12e73ea2c3823ca8345b8ff8bb572b5b188f26c9d739f1bb"
+      "payload_sha256": "3f3dde6c35ea6522b004f72ef878e2d2b3bccc5d7d7e693c611d6ffbe4fa674e"
     },
     "work:africanus-cesti:58": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "58",
-      "payload_sha256": "64129868b35bac5023b5605cad68156ffb9db2ec873fdf622bc20e7cc07e2de3"
+      "payload_sha256": "b4aa2f1f9115be1a5d78bbdbda2574d243fe59fcddb4996cd45e7f3e9745f281"
     },
     "work:africanus-cesti:59": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "59",
-      "payload_sha256": "4f5739e88f80201ea97ab0487f44aa50c63e7e9ddac07f343a3ef454a2c58cbe"
+      "payload_sha256": "815f3b540e27b727e4fee7b82977d02f829d9611ea71e0343740ff177c7a0cb6"
     },
     "work:africanus-cesti:60": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "60",
-      "payload_sha256": "b97d51305e337d1c22cfd5a654e82836d10da867d6dc0e15760493e69e4249fd"
+      "payload_sha256": "943254f5d6eaca9b27a36eb0cd7e87ca2388b764b9698f30ab69e5cb1c1179e9"
     },
     "work:africanus-cesti:61": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "61",
-      "payload_sha256": "e664c7a68d7ea7d353e9f85ea43c0d440f63767091cb1b93dfe4adc0a56797f6"
+      "payload_sha256": "1d01206223a0704af099ea0b203f996598c23b4e01b54cbbd1be6adf73144832"
     },
     "work:africanus-cesti:62": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "62",
-      "payload_sha256": "8561888ba73ac158425f21b1fc0f5678dc9f9f1207aa738eeea3e1efed20a891"
+      "payload_sha256": "db3a046cf4889ff685de2cd4dceeb88133abfb3add8b5ad5fe68150d99ff4cbf"
     },
     "work:africanus-cesti:63": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "63",
-      "payload_sha256": "291bb77bce3b57776ac23247f042f681ba5ae91c5410b5ca495f266cd5e807d1"
+      "payload_sha256": "397f8d363055b0c0e16528581facefbdb425589ba944402bcf5be82cd8dcf421"
     },
     "work:africanus-cesti:64": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "64",
-      "payload_sha256": "a9535f8b032efd446216e5dd1a7dd8311d47feb742f1f86ab5839e4260973300"
+      "payload_sha256": "f2c9963c4ffbbdeabc37b25c5458af1611d7d7ebd59e7c15c860391da10e51a8"
     },
     "work:africanus-cesti:65": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "65",
-      "payload_sha256": "51f2a384dd9b1a1f6abdaa354d6689f2e16d004953e718ba64601e34dc92847d"
+      "payload_sha256": "40939a4eb164c4cc7a04dced8b9ba0e1e95d7833224147f9908aa1bee8c2b362"
     },
     "work:africanus-cesti:66": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "66",
-      "payload_sha256": "b589b492b491a5ac44ba0771b877dd56b737cea266d0066a034b784eafcee48b"
+      "payload_sha256": "ece7e59bc476c93f0ffc1a254eb726620f10226c9f8da351b5649feae1df1165"
     },
     "work:africanus-cesti:67": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "67",
-      "payload_sha256": "78b28748f63833e8030aac27306289ccc7abd6f03dc6646464b663586eb79b82"
+      "payload_sha256": "053561afe0dd1b94405bd8200344c0dc93e2a53feb7d6a0ef9edad2e0f4964d9"
     },
     "work:africanus-cesti:68": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "68",
-      "payload_sha256": "c1030afed4b62fb000deaa5ae947bd186dcf1f30d7eedef98039e73460666916"
+      "payload_sha256": "7d75c153f8d93aa5384d3e11e7df8a866980ce4534327ecd9d36612e98a2d66d"
     },
     "work:africanus-cesti:69": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "69",
-      "payload_sha256": "7f34798d7530e89888e507562b5f8b19aca24480beb48ea87a62523ec498b682"
+      "payload_sha256": "af033f32a6c0f472035b558f13374c3b5ebb8b76addd6e5f9fe7c4cf74b968b3"
     },
     "work:africanus-cesti:70": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "70",
-      "payload_sha256": "190c64b40c24d3eadc7b95e8205e3b874f0d2be7ab1aa8e5fb65633a5d74f608"
+      "payload_sha256": "a9715c80c75ee74df645a928403fd01f54378c166a4154cab9a9c1af8f4ea981"
     },
     "work:africanus-cesti:71": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "71",
-      "payload_sha256": "272b8ddb298b1f9ea43bddf9439f465f9b5e1712ab9d8cb12cdc1a71aa4ade70"
+      "payload_sha256": "e55801d158a2d1170847c30c60705452619305e0445d2cf4baa4a0e3b63fa2e3"
     },
     "work:africanus-cesti:72": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "72",
-      "payload_sha256": "342264098bd7428626a2b5bf8b0d9d41f915bd1c1e613c5b4e4b5730b4d96733"
+      "payload_sha256": "609e69e4eee6f2b0da5b4b115f2944655e681285e590f717065743440a01f363"
     },
     "work:africanus-cesti:73": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "73",
-      "payload_sha256": "87cd50d293e72b50fd3a71aebcdca1226cf470a586cd751981c4c8e04540cd76"
+      "payload_sha256": "e449018e8c96a17cfb00b35b394385e6baa06c8426bd36aa935b8e9b32fb0067"
     },
     "work:africanus-cesti:74": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "74",
-      "payload_sha256": "637f70163d9ebb62e7bce285102b52fec2408135e288b6fb3b4ead26d751613f"
+      "payload_sha256": "39b5b4db23a64b45cadf8b86ebd6da1cdb14880814408ea207fa3b59fbc0f260"
     },
     "work:africanus-cesti:75": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "75",
-      "payload_sha256": "0dadb0ef7d28da3ea47fb507854967055edaab53c2050fc44dd54b7b0688a9ce"
+      "payload_sha256": "9b94990dc40bfbe981c4d070d4ed31913453f39ea37b49bc1bfc76cb75af635f"
     },
     "work:africanus-cesti:76": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "76",
-      "payload_sha256": "388aa788b469e250c5a003d427eedd2fc31721ed2ed8a3021ddb16e43a395990"
+      "payload_sha256": "bbcf6a2061588fbee3defe4bb474b495b9830bb079b739875a8191392244ebf0"
     },
     "work:africanus-cesti:77": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "77",
-      "payload_sha256": "c2741db68611e07dc2928f96dda4bf349faf1fa3413d71c0630cf24ca2f6b7ec"
+      "payload_sha256": "263bd49f16b953c3960dd77fe9542f625233b139c298943280d6123b55169b82"
     },
     "work:africanus-cesti:78": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "78",
-      "payload_sha256": "35b27d25355d50f97b753f36158cfcb733a694bcb418fd8d7aab6e5da8636bec"
+      "payload_sha256": "3755dab88b29885edcce2c320a3e7caa0972bf6aee56a5103135038164dca988"
     },
     "work:africanus-cesti:79": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "79",
-      "payload_sha256": "3d26c9780874d831f55dc7fdb87a1105e278ce8eae70ec399a17d896622d9586"
+      "payload_sha256": "d96f3718e71a1d8cf1d2eccaff3d64ced62ecd5eb78945e3e9abb404c10165e2"
     },
     "work:africanus-cesti:80": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "80",
-      "payload_sha256": "0d381f402c9982055cd3b6730ddde094edfc70943b69429909ab305afb6a3e8a"
+      "payload_sha256": "7560590fbcdf06570cde8f4096b468e319034ce97dbc5e4c77e174e073f785c5"
     },
     "work:africanus-cesti:81": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "81",
-      "payload_sha256": "72eeb5b8da259af863f3edf03292853968fec2d36d5601a017ea4008c0dbe2b6"
+      "payload_sha256": "7337eb4bceccb25f1e3a660ed7b170b482f13a583ae0a5d50fd5295f1ec11535"
     },
     "work:africanus-cesti:82": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "82",
-      "payload_sha256": "37a6a62f41268a67e0e0834b2d6f30f74c9fe9101889523a942c64ffb69fb387"
+      "payload_sha256": "2c08edb6b9fd8105ad8167d9bae323fb34ac6379a2d5912ec354dace18711eec"
     },
     "work:africanus-cesti:83": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "83",
-      "payload_sha256": "d728c0513caea800eabcfb0fa13d163f027c76bdf0f11d17c3e6cc6482d6c12a"
+      "payload_sha256": "e5276c3b842e328fc4d80605f5d8076a09642f0789c3d5830892e93355d2b98c"
     },
     "work:africanus-cesti:84": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "84",
-      "payload_sha256": "172c4febe384e0e3ca62e8158d47988dadbac3617447df9218ccb804c487d6dc"
+      "payload_sha256": "70ba9c60dc3733bc1de15708238773b9939686c0e0d37157c1867e0a52b859fb"
     },
     "work:africanus-cesti:85": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "85",
-      "payload_sha256": "6c740ef5e2757848554fbcf589022585813fe2a4fcce4a98720357142e58e715"
+      "payload_sha256": "bb76f25fd01d1d6cdd6a5aa382200c30a32a3262228d3b7e2203bd83d15d7b5d"
     },
     "work:africanus-cesti:86": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "86",
-      "payload_sha256": "c2cfdfc932dc9591f0521b81a7b314b917017086f8fce1a0c53237b199966f60"
+      "payload_sha256": "d2f567bc1f7e062c9b4e33b19a016cbc81807c9ee75b838645eac5ec670da7f6"
     },
     "work:africanus-cesti:87": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "87",
-      "payload_sha256": "9d42fc64f105e75ced19e3c45e73107b982eba445148f7444d2b8a2509d86023"
+      "payload_sha256": "8fcc4db286b1934693795916add544e5e31b327af383898237a0b380231ffe27"
     },
     "work:africanus-cesti:88": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "88",
-      "payload_sha256": "64941dcbba7db78269c3cf4c7905a08242edfe064a302bdc0067e4442ad5d95b"
+      "payload_sha256": "24974acc0ecdeacc0fd686b7db260acf1fa4c59c4be96a95a5bc92b4e9384d8c"
     },
     "work:africanus-cesti:89": {
       "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "89",
-      "payload_sha256": "6ab98c13883bdaabbb45222cde169aa4c7e17d3bd06407e070918aa3b5f6f394"
+      "payload_sha256": "18df99208e480854ac88f0e773f445deab7056fa8b2676edf0290dd6f1fb0463"
+    },
+    "work:africanus-cesti:90": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "90",
+      "payload_sha256": "3b0175b03c85424b42ba16c7c210fa694f8c466b4174cfbe31d8e13cddcebf6e"
+    },
+    "work:africanus-cesti:91": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "91",
+      "payload_sha256": "4f714df23678cc04ea35060442110e3b534c0341245d4afd70c5f81f6d1e5a2d"
+    },
+    "work:africanus-cesti:92": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "92",
+      "payload_sha256": "d3fcdb161a5c52e4de28e95ff3f5c783e08ca18f0760f54a77d31c98240ee148"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
