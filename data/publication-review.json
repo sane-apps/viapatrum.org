@@ -8343,6 +8343,36 @@
       "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
       "section": "46",
       "payload_sha256": "518b7c4c8da50dded34a0c3c5bc2c6d40039ede97703bb91e917f563c521b895"
+    },
+    "work:origen-psalms-fragments-greek:47": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "47",
+      "payload_sha256": "f284dcbd103a26d57c4b1e63ff10220810fbffc4691f505107bdc0543458fcee"
+    },
+    "work:origen-psalms-fragments-greek:48": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "48",
+      "payload_sha256": "f98234d61dfa66b85e6d90f315d3d19a0a5566fffff7f6e23f14024c5f5ff7e1"
+    },
+    "work:origen-psalms-fragments-greek:49": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "49",
+      "payload_sha256": "d63021e434d59a4c162aa89a2f0e4b326a4a12c1574c2955ecb2a9f1b74c772d"
+    },
+    "work:origen-psalms-fragments-greek:50": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "50",
+      "payload_sha256": "1fb70bc4cd0b62697d1d0ef913f16437ce97426fedd32b8a6f65d17ead217525"
+    },
+    "work:origen-psalms-fragments-greek:51": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "51",
+      "payload_sha256": "66c9e600b8a511d9b7350419fcd30cc7daf0810da585c46bb37cc4139c93c62a"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
