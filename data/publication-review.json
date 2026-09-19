@@ -8289,6 +8289,30 @@
       "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
       "section": "37",
       "payload_sha256": "022075ac01656123f43ff1c6e8e620a367ebb6cc35bbebf7dc3fcea6897d1d76"
+    },
+    "work:origen-psalms-fragments-greek:38": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "38",
+      "payload_sha256": "9f5ad4f0dbeec9fd3373accc0700755e7bf7e0a75df68cd35a720f2c6201e93b"
+    },
+    "work:origen-psalms-fragments-greek:39": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "39",
+      "payload_sha256": "9e80f5f20175049fbd141bcfc6c203e8e3193967899fd8f5d27d5b4247e26d76"
+    },
+    "work:origen-psalms-fragments-greek:40": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "40",
+      "payload_sha256": "9893322d7d521bd2fb24fe8a10081d4c4473eb5e34e3082e3f967cd544be87aa"
+    },
+    "work:origen-psalms-fragments-greek:41": {
+      "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
+      "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
+      "section": "41",
+      "payload_sha256": "080b62c6680936f48fb3cb022f3e36e170e4ca0a59593a7a32bcd6fe81826f28"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
