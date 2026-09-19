@@ -7941,6 +7941,36 @@
       "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
       "section": "77",
       "payload_sha256": "cbee89040cad1691e12a71d56e30a64f0a913a4d6608f5ec3e3bf8efbf06682a"
+    },
+    "work:africanus-cesti:78": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "78",
+      "payload_sha256": "7e7492c28d7502d4e9c787c995fdbd326763fd34668bb14390bce8371994d490"
+    },
+    "work:africanus-cesti:79": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "79",
+      "payload_sha256": "402f337826fc487caf5521e4c96ec71584fcc834c5656e09feccd80a30ce58b7"
+    },
+    "work:africanus-cesti:80": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "80",
+      "payload_sha256": "8359f34a370d089fc47543471291ee2416902d034bee9049f02ed2d3fefbdfb6"
+    },
+    "work:africanus-cesti:81": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "81",
+      "payload_sha256": "cff6631dc6779b908de150ebba87f0677c7a68864b799d2b8d7e62b24ecdcf33"
+    },
+    "work:africanus-cesti:82": {
+      "packet": "books/africanus-cesti/reviews/audit/cesti_u01_tip.packet.json",
+      "receipt": "books/africanus-cesti/reviews/audit/cesti_u01_tip.review.json",
+      "section": "82",
+      "payload_sha256": "7074e9d7b739fd3beb778d08066da048d9045cef96f5db7d5d24277faeb71496"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
