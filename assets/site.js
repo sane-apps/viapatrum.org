@@ -85,7 +85,10 @@
       const arr = [...items];
       arr.sort((a, b) => {
         if (sort === "author") {
+          const ya = Number(a.dataset.year || 9999);
+          const yb = Number(b.dataset.year || 9999);
           return (
+            ya - yb ||
             (a.dataset.author || "").localeCompare(b.dataset.author || "", undefined, { sensitivity: "base", numeric: true }) ||
             (a.dataset.title || "").localeCompare(b.dataset.title || "", undefined, { sensitivity: "base", numeric: true })
           );
@@ -142,7 +145,7 @@
         }
       }
       const sortLabel =
-        sort === "author" ? "author name" : sort === "title" ? "work title" : "author era (earliest first)";
+        sort === "author" ? "author (earliest first)" : sort === "title" ? "work title" : "author era (earliest first)";
       const filterLabel =
         filter === "oet" ? "Original English only" : filter === "all" ? "all eras" : filter;
       if (status) {

@@ -108,6 +108,24 @@ assert sum(r["section"].startswith("4-2-2-collective-") for r in collective["sec
 
 assert site.year_from_period("c. 6th cent.") == 550
 assert site.year_from_period("c. 340–395") == 367
+assert site.year_from_period("fl. c. 50 BC") == -50
+assert site.year_from_period("c. 130–c. 202") == 166
+assert site.year_from_period("c. 130–c. 202", bound="end") == 202
+assert site.format_bc_ad("c. 130–c. 202") == "c. 130–c. 202 AD"
+assert site.format_bc_ad("fl. c. 50 BCE") == "fl. c. 50 BC"
+assert site.format_bc_ad("4th century CE") == "4th century AD"
+assert site.format_bc_ad("1708 (Frankfurt)") == "1708 AD (Frankfurt)"
+assert site.author_sort_year("Clement of Rome", slug="clement-of-rome") == 96
+assert site.author_sort_year("Hermas", slug="hermas") == 140
+assert site.author_sort_year("Justin Martyr", slug="justin-martyr") == 165
+assert site.author_sort_year("Irenaeus of Lyons", slug="irenaeus") == 202
+assert site.author_sort_year("Julius Africanus", slug="julius-africanus") == 240
+assert (
+    site.author_sort_year("Hermas", slug="hermas")
+    < site.author_sort_year("Justin Martyr", slug="justin-martyr")
+    < site.author_sort_year("Irenaeus of Lyons", slug="irenaeus")
+    < site.author_sort_year("Julius Africanus", slug="julius-africanus")
+)
 assert site.work_era({"author": "Unlisted writer", "period": "c. 6th cent."}) == "Post-Nicene"
 assert site.work_era({"author": "Unlisted writer", "period": "c. 5th cent."}) == "Unknown"
 assert site.year_from_period("date uncertain") is None

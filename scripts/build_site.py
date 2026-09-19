@@ -331,17 +331,46 @@ def period_key(p: str | None) -> str:
     return m.group(1) if m else "9999"
 
 
-def year_from_period(p: str | None) -> int | None:
+def year_from_period(p: str | None, *, bound: str = "mid") -> int | None:
     if not p:
         return None
-    span = re.search(r"\b(\d{3,4})\s*[–-]\s*(\d{3,4})\b", p)
+    bc = re.search(r"\b(\d{1,4})\s*BC\b", p, re.I)
+    if bc:
+        return -int(bc.group(1))
+    century = re.search(
+        r"\b(\d{1,2})(?:st|nd|rd|th)(?:/(\d{1,2})(?:st|nd|rd|th))?\s*c(?:ent(?:ury)?)?\b",
+        p,
+        re.I,
+    )
+    if century:
+        a = int(century.group(1))
+        b = int(century.group(2)) if century.group(2) else a
+        if bound == "end":
+            return (b - 1) * 100 + 50
+        return int(((a + b) / 2 - 1) * 100 + 50)
+    span = re.search(r"\b(\d{1,4})\s*[–-]\s*(?:c\.\s*)?(\d{1,4})\b", p)
     if span:
-        return (int(span.group(1)) + int(span.group(2))) // 2
-    m = re.search(r"(\d{3,4})", p)
-    if m:
-        return int(m.group(1))
-    century = re.search(r"\b(\d{1,2})(?:st|nd|rd|th)\s+cent", p, re.I)
-    return (int(century.group(1)) - 1) * 100 + 50 if century else None
+        a, b = int(span.group(1)), int(span.group(2))
+        return b if bound == "end" else (a + b) // 2
+    m = re.search(r"\b(\d{1,4})\b(?!\s*(?:st|nd|rd|th))", p, re.I)
+    return int(m.group(1)) if m else None
+
+
+def format_bc_ad(s: str | None) -> str:
+    """Public years use BC and AD. Never CE or BCE."""
+    text = (s or "").strip()
+    if not text:
+        return ""
+    text = re.sub(r"\bBCE\b", "BC", text)
+    text = re.sub(r"\bCE\b", "AD", text)
+    if re.search(r"\b(AD|BC)\b", text):
+        return text
+    if not re.search(r"\d", text):
+        return text
+    paren = re.match(r"^(.*?)(\s*\(.*)$", text)
+    if paren:
+        return f"{paren.group(1).rstrip()} AD{paren.group(2)}"
+    return f"{text} AD"
 
 
 def era_band(year: int | None) -> str:
@@ -447,8 +476,8 @@ def load_author_dates() -> dict[str, str]:
 AUTHOR_DATES = load_author_dates()
 
 
-def author_dates_display(name: str | None, slug: str | None = None) -> str:
-    """Public dates next to author names (index + hubs). Prefer data file, then authors.json."""
+def author_dates_raw(name: str | None, slug: str | None = None) -> str:
+    """Unformatted lifespan/floruit. Prefer data file, then authors.json."""
     if slug and slug in AUTHOR_DATES:
         return AUTHOR_DATES[slug]
     if name and name in AUTHOR_DATES:
@@ -460,6 +489,11 @@ def author_dates_display(name: str | None, slug: str | None = None) -> str:
     if bio.get("dates"):
         return str(bio["dates"])
     return ""
+
+
+def author_dates_display(name: str | None, slug: str | None = None) -> str:
+    """Public dates next to author names (index + hubs). BC/AD, never CE."""
+    return format_bc_ad(author_dates_raw(name, slug))
 
 
 def alpha_key(s: str | None) -> str:
@@ -483,12 +517,19 @@ def author_record(name: str | None) -> dict:
     return {}
 
 
-def author_sort_year(name: str | None, period: str | None = None) -> int:
-    """Floruit / death year for chronology. Prefer authors.json; else approximate midpoint of the stated period."""
+def author_sort_year(name: str | None, period: str | None = None, slug: str | None = None) -> int:
+    """Public chronology: floruit, death, or the later bound of a lifespan (BC negative).
+
+    Lifespan midpoints pull Justin (born c. 100) before Hermas (fl. c. 140).
+    Death-only sort_year values in authors.json pulled Irenaeus after Africanus.
+    """
+    y = year_from_period(author_dates_raw(name, slug), bound="end")
+    if y is not None:
+        return y
     rec = author_record(name)
-    if rec.get("sort_year"):
+    if rec.get("sort_year") is not None and str(rec.get("sort_year")).strip() != "":
         return int(rec["sort_year"])
-    y = year_from_period(period)
+    y = year_from_period(period, bound="end")
     return y if y is not None else 9999
 
 
@@ -650,7 +691,10 @@ def build_explore_index(
             "name": n,
             "dates": author_dates_display(n, s) or "",
         }
-        for s, n in sorted(authors.items(), key=lambda kv: alpha_key(kv[1]))
+        for s, n in sorted(
+            authors.items(),
+            key=lambda kv: (author_sort_year(kv[1], None, kv[0]), alpha_key(kv[1])),
+        )
     ]
 
     paths = _json_load(EXPLORE_DATA / "paths.json", [])
@@ -1073,7 +1117,7 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
                  f' data-period="{escape(author_dates_display(w.get("author"), w.get("author_slug")) or "")}" data-year="{year}"'
                  f' data-era="{escape(era)}" data-oet="{int(w.get("first_english", False))}"'
                  f' data-blob="{escape(blob)}"')
-    period = f' · {escape(w["period"])}' if w.get("period") else ""
+    period = f' · {escape(format_bc_ad(w["period"]))}' if w.get("period") else ""
     return (f'<li class="work-entry"{attrs}>'
             f'<a class="work-link" href="/works/{escape(w["slug"])}/" '
             f'aria-label="{escape(public_reader_title(w["title"], slug=w["slug"]))} — {escape(w["author"])}">'
@@ -3705,8 +3749,7 @@ def build() -> None:
             if author != current_author:
                 if current_author is not None:
                     items_html.append("</section>")
-                rec = AUTHORS.get(author) or {}
-                dates = rec.get("dates_display") or (x.get("period") or "")
+                dates = author_dates_display(author) or format_bc_ad(x.get("period") or "")
                 items_html.append(
                     f'<section class="author-group" id="{escape(slugify(author))}">'
                     f"<h2>{escape(author)}"
@@ -3716,7 +3759,7 @@ def build() -> None:
             items_html.append(
                 f"""<article class="excerpt" id="{escape(x['id'])}">
                 <header><a href="/e/{escape(x['id'])}/"><h2>{escape(x.get('citation') or x['id'])}</h2></a>
-                <p class="meta">{escape(author)} · {escape(x.get('period') or '')} · {escape(x.get('work') or '')}</p></header>
+                <p class="meta">{escape(author)} · {escape(format_bc_ad(x.get('period') or ''))} · {escape(x.get('work') or '')}</p></header>
                 <div class="body">{paras}</div>
                 </article>"""
             )
@@ -3853,7 +3896,7 @@ def build() -> None:
         )
 
     # --- Works ---
-    # Default catalog order: author era / floruit, earliest first (see docs/browse-ia.md).
+    # Default catalog order: author era / floruit, earliest first (see docs/IA.md).
     works_chrono = sorted(
         works,
         key=lambda w: (
@@ -3965,7 +4008,7 @@ def build() -> None:
             f"<header class=\"reader-mast\">"
             f"<h1>{escape(pub_title)}</h1>"
             f"{latin_html}"
-            f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
+            f"<p class=\"meta\">{escape(w['author'])} · {escape(format_bc_ad(w['period']))} · "
             f"{escape(edition_short or w['edition'])}{prior_mark}</p>"
             f"</header>"
         )
@@ -3987,7 +4030,7 @@ def build() -> None:
         work_header = (
             f"<h1>{escape(pub_title)}</h1>"
             f"{latin_html}"
-            f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
+            f"<p class=\"meta\">{escape(w['author'])} · {escape(format_bc_ad(w['period']))} · "
             f"{escape(edition_short or w['edition'])}</p>"
             f"{first_banner}{era}{note}{blurb}{hub_about}"
         )
@@ -4538,8 +4581,7 @@ def build() -> None:
             f'<span>{n} topical excerpts</span></a></li>'
         )
         rows = by_author[author]
-        rec = author_record(author)
-        dates = rec.get("dates_display") or ""
+        dates = author_dates_display(author, sl)
         grouped: dict[str, list] = defaultdict(list)
         for x in rows:
             grouped[x.get("topic") or "unknown"].append(x)
@@ -4571,9 +4613,12 @@ def build() -> None:
             ),
         )
 
-    def _author_link_sort_key(html: str) -> str:
-        m = re.search(r"<strong>(.*?)</strong>", html)
-        return alpha_key(m.group(1) if m else html)
+    def _author_link_sort_key(html: str) -> tuple:
+        name_m = re.search(r"<strong>(.*?)</strong>", html)
+        slug_m = re.search(r"/authors/([^/]+)/", html)
+        name = name_m.group(1) if name_m else html
+        slug = slug_m.group(1) if slug_m else ""
+        return (author_sort_year(name, None, slug), alpha_key(name))
 
     author_links.sort(key=_author_link_sort_key)
 
@@ -4582,7 +4627,7 @@ def build() -> None:
         layout(
             "Authors",
             f"<h1>Authors</h1>"
-            f"<p class=\"intro\">Alphabetical index of writers in this library — whole works and topical excerpts.</p>"
+            f"<p class=\"intro\">Writers in this library, earliest first — whole works and topical excerpts. Dates use BC and AD.</p>"
             f"<ul class='card-list'>{''.join(author_links)}</ul>",
             crumb=[("Home", "/"), ("Authors", "")],
             active="authors",

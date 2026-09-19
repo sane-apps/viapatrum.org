@@ -13,14 +13,15 @@ build — do not invent a second outline.
 | **Works** | Read a whole treatise; find / sort / filter the catalog | `origen-prayer-martyrdom`, `julian-of-eclanum`, … |
 | **Explore** | Curated doctrinal paths + how writers line up on a claim across time | `data/explore/` + library points |
 
-Home presents Topics and Works; Explore is a third nav door (path cards + topic river with optional compare ≤3 authors). Authors is the A–Z index. **Search is not a separate tab** — find lives on Works (`/works/?q=`). Old `/search/` redirects to `/works/`.
+Home presents Topics and Works; Explore is a third nav door (path cards + topic river with optional compare ≤3 authors). Authors is the chronological index (earliest first). **Search is not a separate tab** — find lives on Works (`/works/?q=`). Old `/search/` redirects to `/works/`.
 
 ## Browse rules (2026-09-12)
 
-1. **Alphabetical** for topics (within each locus/area), loci/areas, authors, and Explore topic lists — case-insensitive Latin sort. No load/DB insertion order.
-2. **Works default sort:** chronology by author era / floruit (`author_sort_year`), earliest first. Alternates: author name, work title. Controls are visible on `/works/`.
-3. **Works find** filters the catalog and surfaces passage/topic hits from `search-index.json` so a separate Search tab is unnecessary.
-4. **Explore paths** come from `data/explore/paths.json` (doctrine, controversy, scripture, era, rupture, reading). Stub/partial statuses are honest when the corpus is thin.
+1. **Alphabetical** for topics (within each locus/area), loci/areas, and Explore topic lists — case-insensitive Latin sort. No load/DB insertion order.
+2. **Authors** (index, Explore author list, Works author grouping): chronology by floruit/death (`author_sort_year`), earliest first. Dates use **BC** and **AD**, never CE/BCE.
+3. **Works default sort:** chronology by author era / floruit (`author_sort_year`), earliest first. Alternates: author (earliest first), work title. Controls are visible on `/works/`.
+4. **Works find** filters the catalog and surfaces passage/topic hits from `search-index.json` so a separate Search tab is unnecessary.
+5. **Explore paths** come from `data/explore/paths.json` (doctrine, controversy, scripture, era, rupture, reading). Stub/partial statuses are honest when the corpus is thin.
 
 ## Cross-references (required)
 
@@ -45,7 +46,7 @@ Update `WORK_TOPICS` when a new treatise lands. Topic ids must match
 | `/about/` | Evergreen mission, how to read, badge meaning, Sponsors (no work inventory) |
 | `/methodology/` | How English is made: sources, two passes, OET meaning, apparatus vs reader |
 | `/search/` | **Redirect** → `/works/` (find/filter lives on Works) |
-| `/authors/` | Author index A–Z (both doors) |
+| `/authors/` | Author index, earliest first (both doors) |
 | `/authors/{slug}/` | Author hub → works + topical hits + topics |
 
 ### Explore door

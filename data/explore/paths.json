@@ -191,7 +191,7 @@
     "also_topics": [],
     "links": [
       {"label": "Works by chronology", "href": "/works/?sort=chrono"},
-      {"label": "Authors A–Z", "href": "/authors/"},
+      {"label": "Authors by chronology", "href": "/authors/"},
       {"label": "Explore with era filter", "href": "/explore/?topic=free-will"}
     ]
   },

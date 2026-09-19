@@ -133,7 +133,11 @@ async function run(base,out) {
    assert.equal(await btn.getAttribute("aria-pressed"),"true");
    const data=await visible.evaluateAll(es=>es.map(e=>({...e.dataset})));
    for(let i=1;i<data.length;i++) {
-    const cmp=sort==="chrono"?Number(data[i-1].year)-Number(data[i].year):data[i-1][sort].localeCompare(data[i][sort],undefined,{sensitivity:"base",numeric:true});
+    const loc=(a,b)=>a.localeCompare(b,undefined,{sensitivity:"base",numeric:true});
+    let cmp;
+    if(sort==="chrono") cmp=Number(data[i-1].year)-Number(data[i].year);
+    else if(sort==="author") cmp=Number(data[i-1].year)-Number(data[i].year)||loc(data[i-1].author||"",data[i].author||"");
+    else cmp=loc(data[i-1][sort]||"",data[i][sort]||"");
     assert(cmp<=0,"Incorrect "+sort+" order at "+i);
    }
    const groupNames=await page.locator(".author-group h2 a").allTextContents();
@@ -145,6 +149,23 @@ async function run(base,out) {
    if(sort==="title") for(const width of [1440,390]) await shot("title",width);
    await page.setViewportSize({width:1440,height:1000});
   }
+  await visit(base+"/authors/",{waitUntil:"networkidle"});
+  const authorNames=await page.locator(".card-list a strong").allTextContents();
+  assert(authorNames.length>2,"Authors index empty");
+  const irene=authorNames.indexOf("Irenaeus of Lyons");
+  const africanus=authorNames.indexOf("Julius Africanus");
+  const clement=authorNames.indexOf("Clement of Rome");
+  const hermas=authorNames.indexOf("Hermas");
+  const justin=authorNames.indexOf("Justin Martyr");
+  assert(clement>=0 && hermas>=0 && justin>=0 && irene>=0 && africanus>=0,"Missing chronological authors");
+  assert(clement<hermas && hermas<justin && justin<irene && irene<africanus,
+    "Authors index is not chronological (Hermas, Justin, Irenaeus, Africanus)");
+  const authorsBody=await page.locator("main").innerText();
+  assert(!/\bBCE\b|\bCE\b/.test(authorsBody),"Authors index still uses CE/BCE");
+  assert(/\bAD\b/.test(authorsBody),"Authors index missing AD");
+  assert(authorsBody.includes("earliest first"),"Authors intro lost chronological cue");
+  receipt.checks.push({authors:authorNames.length,first:authorNames[0],irene,africanus});
+  await visit(base+"/works/?sort=author",{waitUntil:"networkidle"});
   for(const filter of ["Apostolic","Ante-Nicene","Nicene","Post-Nicene","oet","all"]) {
    const btn=page.locator('[data-filter="'+filter+'"]');
    if(!await btn.count()) continue;
