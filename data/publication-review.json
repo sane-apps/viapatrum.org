@@ -27285,6 +27285,246 @@
       "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
       "section": "u07-rem-close",
       "payload_sha256": "6a95cac34d8f0ee3fba8ec2a34527b1937144d45f0900e26cc41efd715b9328d"
+    },
+    "work:origen-1-corinthians-fragments:u01-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "4e64fd6b9a06ee347fb7285c0fcb02c0bb153514269f57fcbbac5b3c219a4c65"
+    },
+    "work:origen-1-corinthians-fragments:u01-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "06b96f9c1038075e1e52d6ed02f19ae49b4a9fea99eb80ebecc75e8a5c08dd5f"
+    },
+    "work:origen-1-corinthians-fragments:u01-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "c9abf505a408ca2436d684e308d1f0515b2e99538007962e9757df3faffb156b"
+    },
+    "work:origen-1-corinthians-fragments:u01-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "4726e62e716784b9996a93c3741bc749310e133776651b1d7f74233fa586f960"
+    },
+    "work:origen-1-corinthians-fragments:u02-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "5de9e4fe5c89c09da13a1ff7d639af2a95a7aeddccf7431284ff9ef9ba51da99"
+    },
+    "work:origen-1-corinthians-fragments:u02-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "23bd80940885b786078e544c540143d1e3812e189ed23689d2fb7cf2a84e74cf"
+    },
+    "work:origen-1-corinthians-fragments:u02-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "b7452ae5bf915facacea49e9c354e27210aee9671125f70e49e94d7efd747bbf"
+    },
+    "work:origen-1-corinthians-fragments:u02-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "1432c15a8e77051f63982847f1e6fdc7732054b2692db8ce4b5de35a3b009249"
+    },
+    "work:origen-1-corinthians-fragments:u03-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "0ff444137169c2a259e8d5d89eb788363d54c264ff0f51f52fb6b05d8566aa9f"
+    },
+    "work:origen-1-corinthians-fragments:u03-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "d6fbd5d7b93e0273155b0f46cead3d7eed65fd2f26a3e692f788d253fab9e738"
+    },
+    "work:origen-1-corinthians-fragments:u03-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "c80879a5bb6488271339a026ca52c243791d9bfda3eb52752de448af2d78fe07"
+    },
+    "work:origen-1-corinthians-fragments:u03-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "891c4e38238788769e8158a054f8c176acec64da5346dbee3bd04a7c4d6e2f60"
+    },
+    "work:origen-1-corinthians-fragments:u04-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "a04a4a2cb78aab44e0d8f2479526f1f550164fbe076608ad111de5dd1b95426e"
+    },
+    "work:origen-1-corinthians-fragments:u04-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "b7eca0f5f35d5e492d16e12ee1b99420222d084256806497819734ff8046462d"
+    },
+    "work:origen-1-corinthians-fragments:u04-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "0c965b0b6baf4079cc6f1e4f43464d4c850e6b6fd4c4d4e7dd71e7dde84d76ee"
+    },
+    "work:origen-1-corinthians-fragments:u04-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "2b15ed093d67a4eaff110eaee8ae055a4554df4ade094a190980c1e4400333d1"
+    },
+    "work:origen-1-corinthians-fragments:u05-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "dabade8acb511ab4a983a2b2037ca96c49a4114027edad955e41fa907dad7725"
+    },
+    "work:origen-1-corinthians-fragments:u05-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "15148fafad9c28d90963c163ad0fbce5a7e4fe44664da57297993b1432297641"
+    },
+    "work:origen-1-corinthians-fragments:u05-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "ffb705bf3fa24da70a022ce346a2a639a6213decaa8b36bfba9affc3ce4f540c"
+    },
+    "work:origen-1-corinthians-fragments:u05-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "4db5cc3352f1e09b2347d53bf1e12efa759c4c4914ba5e26474a9202cc6d3b57"
+    },
+    "work:origen-1-corinthians-fragments:u06-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "bf9d1bc9095acd4893ab7c2e9f2f376b532afe57c499c3aa1a8283dfd90cb59a"
+    },
+    "work:origen-1-corinthians-fragments:u06-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "f02525097b983f12d4802799aa318c3c534882395b7a2b0de58ccd8d9c3addb2"
+    },
+    "work:origen-1-corinthians-fragments:u06-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "8b83927347f1fa46086147b8eecdc58b076911bec6249a67da4b365ee728ed40"
+    },
+    "work:origen-1-corinthians-fragments:u06-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "2c9df2bd0d8749e50d1dbc4103ff8c8031067dfbb70f10c88b65abc596e24906"
+    },
+    "work:origen-1-corinthians-fragments:u07-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "9294e0ee434ef4f67392c8bfcaee4e13d676973b3c630700ac6d3f038b4fca01"
+    },
+    "work:origen-1-corinthians-fragments:u07-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "c017d786b4d9895b91f4291fa77dac11b088e4c3d936d770f4542c421ccff3a4"
+    },
+    "work:origen-1-corinthians-fragments:u07-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "9ac3002852d795c7f92b5cc5bf247e9349d8519dac9865e156a02ff315491048"
+    },
+    "work:origen-1-corinthians-fragments:u07-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "f7747b64076990e006284a68b6d95b78e694f4b83207ba2124a59e61f09bd663"
+    },
+    "work:origen-1-corinthians-fragments:u08-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "cd203b75018c06c605c70edddf7af89e20c40c13c6acf954f178e53f0a26890b"
+    },
+    "work:origen-1-corinthians-fragments:u08-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "524fb81246eb418eb282794ed2f44944b4ebcbefcb7dbd04fb23e6e116d5b08f"
+    },
+    "work:origen-1-corinthians-fragments:u08-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "87472e1344500d8eee8552873f4649c263117b4cdaa09d1291268830ce12733a"
+    },
+    "work:origen-1-corinthians-fragments:u08-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "a3f81103193e11c1cfdf0d20342bae1bc18b4eea8d33e42327caf9d842a849a0"
+    },
+    "work:origen-1-corinthians-fragments:u09-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "6f5b87c9d227f75f9631fba9d58ae368f4c55b705749dc6e467d900f4bd62fbb"
+    },
+    "work:origen-1-corinthians-fragments:u09-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "09451ee3ad46543cd1e327a981203ec12ccca4cf427a23a33b953fbdae4223d0"
+    },
+    "work:origen-1-corinthians-fragments:u09-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "a6957046c19640d9a1487a6329cc62f6fd1a9d34a142fa0aa3c1b4ddb9b01ff1"
+    },
+    "work:origen-1-corinthians-fragments:u09-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "3aeb543b919b1d9fde3757686c90ab37a778be863506562978ce6483d73093df"
+    },
+    "work:origen-1-corinthians-fragments:u10-open": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "58fbd90b36310b74812d14ba4341777f4ab483d88c787db006f755ea25aee5ee"
+    },
+    "work:origen-1-corinthians-fragments:u10-rem-early": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "026451a6c7bca1aa5374624ef6d100793e878dc940c7110d8ec3377a5bb26fbe"
+    },
+    "work:origen-1-corinthians-fragments:u10-rem-mid": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "0e8bdae14dfe9e4ecce4dc3c371fe135e5a4ff9c66b9504040979a7520e157c6"
+    },
+    "work:origen-1-corinthians-fragments:u10-rem-close": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "6360cfd328909b5ff3663dddc964a891883bff87a836bbc81586b165b7f3ac38"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27454,6 +27694,10 @@
     "origen-ephesians-fragments": {
       "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
       "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json"
+    },
+    "origen-1-corinthians-fragments": {
+      "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
+      "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json"
     }
   }
 }
