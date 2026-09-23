@@ -64,3 +64,10 @@ How every whole work is presented on the site. Do not invent a second reading pa
 
 `data/publication-review.json` contains a provisional legacy freeze, never semantic certification. New or changed passages need current shared source/English review packets; a claim-board `done`, nonempty English, or inherited confidence flag is not publication approval. Do not update legacy hashes to clear a failure.
 Use `scripts/ship.sh` only. Inspect every saved view/state image and record its actual verdict before release. The script locks publishing and binds the uploaded copy to the reviewed artifact. Never restore an old builder to add a loader glob.
+
+## Multi-agent coordination (2026-09-23)
+
+Lane/book/area owners: translations docs/OWNERSHIP.md. Before regenerating
+data/publication-review.json, hold scripts/manifest_lock.py (acquire with
+agent+task, release after). Never hand-merge manifest conflicts: take one
+side and regenerate from the current tree. Commit only your own files.

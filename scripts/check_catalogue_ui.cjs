@@ -79,6 +79,9 @@ async function geometry(page) {
 }
 async function run(base,out) {
  assert(/mini/i.test(os.hostname()),"Run browser verification on Mini.");
+ assert(/^https?:\/\//.test(base),"First arg must be the preview base URL, e.g. http://127.0.0.1:PORT (no --base flag). Got: "+base);
+ assert(!/:\/\//.test(out),"Second arg must be an output dir, not a URL. Got: "+out);
+ {const abs=path.resolve(out),root=process.cwd();assert(abs===root||abs.startsWith(root+path.sep),"Output dir must stay inside the repo. Got: "+out);}
  fs.mkdirSync(out,{recursive:true});
  const receipt={schema:2,host:os.hostname(),base,artifact:artifact(),started:new Date().toISOString(),checks:[],screenshots:[],errors:[],review:{status:"pending",method:"image-inspection",reviewer:"",reviewed_at:""}};
  fs.writeFileSync(path.join(out,"REVIEW.md"),"Open every PNG listed in browser-receipt.json at native size. Review author/title priority, content readability, source/citation sequence (including repeated-source fragments), clipping/overlap, color contrast, focus, controls, empty/error/recovery states, and mobile proportions. Read the source context in AGENTS.md and docs/UI_REVIEW.md. For each image set inspected=true and write a concrete result only after viewing. Record review.status=passed, method=image-inspection, reviewer identity, and reviewed_at ISO timestamp after every image passes. Leave pending or failed if uncertain. This is an agent inspection step, not a standing human queue. The receipt is bound to the entire dist and browser runner. No visual claim may be inferred from deterministic checks alone.\n");

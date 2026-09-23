@@ -349,6 +349,10 @@ def check_publication(works, excerpts, root, corpus):
 
     exception_types = (OSError, ValueError, KeyError, TypeError, AttributeError)
     works_by_slug = {work["slug"]: work for work in works}
+    # Publish plan per work: the reviewed leading prefix of its sections.
+    # A clean reviewed prefix publishes (tail held, never public); anything
+    # else (reorder, drop, middle edit, metadata change) holds the whole work.
+    publish_ids = {}
     for work in works:
         key = f"work:{work['slug']}:@scope"
         scope = work_scope(work)
@@ -356,6 +360,7 @@ def check_publication(works, excerpts, root, corpus):
             failures[key] = ["empty work"]
             continue
         if manifest.get("provisional_work_scopes", {}).get(work["slug"]) == publication_digest(scope):
+            publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
             continue
         try:
             index = manifest.get("scope_reviews", {}).get(work["slug"])
@@ -363,24 +368,49 @@ def check_publication(works, excerpts, root, corpus):
                 raise ValueError("new or changed work extent/metadata has no source scope review")
             packet, _selected, errors = reviewed_packet(index)
             errors = list(errors) + identity_errors(packet, work.get("author"), work.get("title"), work.get("edition"))
-            if packet.get("publication_scope") != scope:
+            reviewed = packet.get("publication_scope")
+            if not isinstance(reviewed, dict):
                 errors.append("reviewed scope does not match current metadata and ordered sections")
+            else:
+                meta_now = {k: v for k, v in scope.items() if k != "section_ids"}
+                meta_was = {k: v for k, v in reviewed.items() if k != "section_ids"}
+                reviewed_ids = [str(i) for i in reviewed.get("section_ids", [])]
+                current_ids = [str(i) for i in scope["section_ids"]]
+                if meta_now != meta_was or not reviewed_ids:
+                    errors.append("reviewed scope does not match current metadata and ordered sections")
+                elif current_ids[:len(reviewed_ids)] != reviewed_ids:
+                    errors.append("reviewed scope is not a leading prefix of current sections")
+                else:
+                    publish_ids[work["slug"]] = list(reviewed_ids)
             if errors:
                 failures[key] = errors
         except exception_types as exc:
             failures[key] = [f"unusable scope review: {exc}"]
 
+    tails = {}
     for key, payload in entries.items():
         row = payload["row"]
+        slug = key.split(":", 2)[1] if key.startswith("work:") else None
+        sec = key.split(":", 2)[2] if key.startswith("work:") else None
+        tail_hold = (slug is not None and slug in publish_ids
+                     and f"work:{slug}:@scope" not in failures
+                     and str(sec) not in {str(i) for i in publish_ids[slug]})
+
+        def record(errs):
+            if tail_hold:
+                tails.setdefault(slug, []).append({"section": sec, "errors": list(errs)})
+            else:
+                failures[key] = list(errs)
+
         issues = content_errors(text_value(row.get("english")))
         if issues:
-            failures[key] = issues
+            record(issues)
             continue
         if legacy.get(key) == publication_digest(payload):
             continue
         index = reviews.get(key)
         if not isinstance(index, dict):
-            failures[key] = ["new or changed passage has no source review"]
+            record(["new or changed passage has no source review"])
             continue
         try:
             packet, selected, errors = reviewed_packet(index)
@@ -401,9 +431,9 @@ def check_publication(works, excerpts, root, corpus):
             if index.get("payload_sha256") != publication_digest(payload):
                 errors.append("review index does not bind current identity and reader payload")
             if errors:
-                failures[key] = errors
+                record(errors)
         except exception_types as exc:
-            failures[key] = [f"unusable review: {exc}"]
+            record([f"unusable review: {exc}"])
     bad_works = {key.split(":", 2)[1] for key in failures if key.startswith("work:")}
     held = [{"slug": w["slug"], "title": w["title"], "author": w["author"],
              "section_count": len(w["sections"]), "reason": "publication_review_required",
@@ -411,8 +441,42 @@ def check_publication(works, excerpts, root, corpus):
                            "errors": errors} for key, errors in failures.items()
                           if key.startswith(f"work:{w['slug']}:")]}
             for w in works if w["slug"] in bad_works]
-    return ([w for w in works if w["slug"] not in bad_works],
-            [x for x in excerpts if f"excerpt:{x['id']}" not in failures], held, failures)
+    kept = []
+    tail_records = []
+    for w in works:
+        if w["slug"] in bad_works:
+            continue
+        plan = publish_ids.get(w["slug"])
+        current_ids = [str(r["section"]) for r in w["sections"]]
+        if plan is None or [str(i) for i in plan] == current_ids:
+            kept.append(w)
+            continue
+        pubset = {str(i) for i in plan}
+        trimmed = [r for r in w["sections"] if str(r["section"]) in pubset]
+        if [str(r["section"]) for r in trimmed] != [str(i) for i in plan] or not trimmed:
+            failures[f"work:{w['slug']}:@scope"] = ["publish prefix diverged; holding whole work"]
+            held.append({"slug": w["slug"], "title": w["title"], "author": w["author"],
+                         "section_count": len(w["sections"]), "reason": "publication_review_required",
+                         "findings": [{"section": "@scope", "reason": "publication_review_required",
+                                       "errors": failures[f"work:{w['slug']}:@scope"]}]})
+            bad_works.add(w["slug"])
+            continue
+        out = dict(w)
+        out["sections"] = trimmed
+        kept.append(out)
+        held_ids = [i for i in current_ids if i not in pubset]
+        findings = list(tails.get(w["slug"], []))
+        known = {str(f["section"]) for f in findings}
+        for i in held_ids:
+            if i not in known:
+                findings.append({"section": i, "errors": ["beyond reviewed scope"]})
+        tail_records.append({"slug": w["slug"], "title": w["title"], "author": w["author"],
+                             "published_sections": len(trimmed),
+                             "held_sections": [f["section"] for f in findings],
+                             "reason": "unreviewed_tail", "findings": findings})
+    return (kept,
+            [x for x in excerpts if f"excerpt:{x['id']}" not in failures], held, failures,
+            tail_records)
 
 
 def self_check() -> None:

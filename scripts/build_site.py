@@ -3783,13 +3783,14 @@ def build() -> None:
             if progress_english.strip() and not SCAFFOLD.search(progress_english):
                 corpus_translated_sections += 1
     works, held_works = partition_catalogue(works)
-    works, excerpts, review_holds, review_failures = check_publication(
+    works, excerpts, review_holds, review_failures, tail_holds = check_publication(
         works, excerpts, ROOT, BOOKS.parent)
     held_works.extend(review_holds)
     (ROOT / "outputs").mkdir(exist_ok=True)
     (ROOT / "outputs/catalogue-quality.json").write_text(
         json.dumps({"published_works": len(works), "published_excerpts": len(excerpts),
                     "publication_review_failures": review_failures,
+                    "held_tail_sections": tail_holds,
                     "held_works": held_works,
                     "corpus_total_sections": corpus_total_sections,
                     "corpus_translated_sections": corpus_translated_sections},

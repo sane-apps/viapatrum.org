@@ -68,7 +68,7 @@ with tempfile.TemporaryDirectory() as tmp:
     manifest_path = root / "data/publication-review.json"
     manifest_path.write_text(json.dumps(manifest))
     with patch("pipeline.verify_translation_qa.validate_audit_receipt", wraps=validate_audit_receipt) as validate:
-        kept, _, _, errors = check_publication([work], [], root, corpus)
+        kept, _, _, errors, _tails = check_publication([work], [], root, corpus)
         assert kept == [work] and not errors, errors
         assert validate.call_count == 1, "same packet rehashed for every passage"
     transplanted = {**work, "author": "Author B", "title": "Work B"}
@@ -89,6 +89,43 @@ with tempfile.TemporaryDirectory() as tmp:
     from catalogue_quality import partition_catalogue
     assert not partition_catalogue([empty])[0], "zero-section work passed catalogue gate"
     assert not check_publication([empty], [], root, corpus)[0], "zero-section work passed publication gate"
+
+    # Reviewed-prefix publishing: an appended unreviewed tail holds while the
+    # reviewed head still publishes; edits, drops, reorders and metadata
+    # changes anywhere in the reviewed extent hold the whole work.
+    scoped_packet = make_audit_packet(english, source, raw_sources=[raw], identity=identity,
+                                      expected_sections=["1", "2"], selected_sections=["1", "2"],
+                                      publication_scope=work_scope(work))
+    scoped_receipt = {"packet_id": scoped_packet["packet_id"], "reviewer": "offline fixture",
+                      "verdict": "pass",
+                      "reviews": [{**semantic, "section": row["section"]} for row in rows],
+                      "scope_review": semantic}
+    (corpus / "scoped_packet.json").write_text(json.dumps(scoped_packet))
+    (corpus / "scoped_receipt.json").write_text(json.dumps(scoped_receipt))
+    scoped_pair = {"packet": "scoped_packet.json", "receipt": "scoped_receipt.json"}
+    manifest = {"schema": "fathers-publication-v1", "provisional_legacy": {}, "reviews": {
+        key: {**scoped_pair, "section": value["row"]["section"],
+              "payload_sha256": publication_digest(value)}
+        for key, value in publication_inventory([work], []).items()},
+        "scope_reviews": {"fixture": scoped_pair}}
+    manifest_path.write_text(json.dumps(manifest))
+    row3 = {"section": "3", "latin": ["Pax vobiscum."], "english": ["Peace be with you."]}
+    english.write_text(json.dumps(rows + [{"section": "3", "english": row3["english"]}]))
+    source.write_text(json.dumps(rows + [{"section": "3", "latin": row3["latin"]}]))
+    grown = {**work, "sections": rows + [row3]}
+    kept, _, _, errors, tails = check_publication([grown], [], root, corpus)
+    assert kept == [{**work, "sections": rows}], "reviewed head did not publish"
+    assert not [k for k in errors if k.startswith("work:")], errors
+    assert len(tails) == 1 and tails[0]["held_sections"] == ["3"], tails
+    assert tails[0]["published_sections"] == 2
+    edited = {**work, "sections": [{**rows[0], "english": ["Changed English."]}, rows[1], row3]}
+    assert not check_publication([edited], [], root, corpus)[0], "edited reviewed section published"
+    dropped = {**work, "sections": [rows[0]]}
+    assert not check_publication([dropped], [], root, corpus)[0], "dropped section inherited approval"
+    reordered = {**work, "sections": [rows[1], rows[0], row3]}
+    assert not check_publication([reordered], [], root, corpus)[0], "reordered scope published"
+    retitled = {**work, "edition": "Another print", "sections": rows + [row3]}
+    assert not check_publication([retitled], [], root, corpus)[0], "metadata change published"
 
 import sys
 if "--publication-only" in sys.argv:
@@ -183,6 +220,15 @@ for key in receipt["publication_review_failures"]:
 assert not any(row.get("href", "").split("/")[2:3] == [slug]
                for row in index for slug in held)
 assert not any((site.DIST / "works" / slug / "index.html").exists() for slug in held)
+for tail in receipt.get("held_tail_sections", []):
+    slug = tail["slug"]
+    assert slug not in held, "tail-held work was fully held"
+    assert (site.DIST / "works" / slug / "index.html").exists(), "tail-held work missing"
+    for section in tail["held_sections"]:
+        assert not any(row.get("href", "").split("/")[2:4] == [slug, str(section)]
+                       for row in index), f"held tail section remained searchable: {slug} {section}"
+        assert not (site.DIST / "works" / slug / str(section) / "index.html").exists(), \
+            f"held tail section remained public: {slug} {section}"
 print(json.dumps({"status": "passed", "authors": len(page.rows), "works": work_total, "held": len(held)}))
 
 assert site.display_section("4-2-2-collective-23") == "4.2.2"
