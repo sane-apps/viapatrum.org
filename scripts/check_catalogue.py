@@ -1,5 +1,6 @@
 """Focused catalogue regression checks; run with the translations Python."""
 import json
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 import build_site as site
@@ -275,3 +276,19 @@ for slug, filenames in {
     loaded = next(w for w in site.load_julian_works() if w["slug"] == slug)
     assert [row["english"] for row in loaded["sections"]] == [
         site.eng_list(row.get("english")) for row in expected_rows], slug
+
+# English-first titles: no published work page may lead its H1 with Latin.
+# Latin lives only in the secondary subtitle line. Held works are unaffected
+# until the day they publish, when this gate forces the English title then.
+LATIN_H1 = re.compile(
+    r"^(De|In|Contra|Adversus|Pro|Ex|Fragmenta|Fragmentum|Commentarii|"
+    r"Homilia|Homiliae|Epistula|Epistulae|Oratio|Orationes|Sermo|Tractatus|"
+    r"Liber|Tomus|Capitula|Scholia|Catena|Refutatio|Demonstratio|"
+    r"Bibliotheca|Panarion|Ancoratus|Anacephalaeosis|Chronicon|Chronographia|"
+    r"Historiae|Vita|Passio|Martyrium|Encomium|Laudatio|Apologia)\b")
+for _page in sorted((site.DIST / "works").glob("*/index.html")):
+    _h1 = re.search(r"<h1>(.*?)</h1>", _page.read_text(), re.S)
+    assert _h1, "work page without H1: %s" % _page.parent.name
+    _title = re.sub(r"<[^>]+>", "", _h1.group(1)).strip()
+    assert not LATIN_H1.match(_title), \
+        "Latin-primary H1 on /works/%s/: %s" % (_page.parent.name, _title)

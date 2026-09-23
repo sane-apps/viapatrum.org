@@ -609,6 +609,18 @@ details summary { cursor: pointer; font-weight: 650; }
   line-height: 1.45;
   font-size: 0.95rem;
 }
+.work-intro {
+  margin: 0 0 1.35rem;
+  max-width: 44rem;
+}
+.work-intro p {
+  margin: 0 0 0.7rem;
+  line-height: 1.55;
+}
+.work-intro .translation-note {
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--ink) 68%, transparent);
+}
 @media (max-width: 800px) {
   .reader-mast .meta {
     font-size: 0.9rem;

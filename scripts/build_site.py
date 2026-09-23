@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import re
 import shutil
+import sys
 from collections import defaultdict
 from html import escape
 from pathlib import Path
@@ -843,6 +844,11 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "nemesius-de-natura-hominis": "On the Nature of Man",
     "serapion-antioch-fragmenta": "Fragments",
     "africanus-cesti": "The Cesti",
+    "photius-bibliotheca": "The Library",
+    "ammonius-fragmenta-joannem": "Fragments on John",
+    "origen-song-homily-1": "Homilies on the Song of Songs, Homily 1",
+    "origen-song-homily-2": "Homilies on the Song of Songs, Homily 2",
+    "gregory-thaumaturgus-ecclesiastes-metaphrase": "Paraphrase of Ecclesiastes",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
@@ -856,7 +862,76 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "nemesius-de-natura-hominis": "De natura hominis",
     "serapion-antioch-fragmenta": "Fragmenta",
     "africanus-cesti": "Κεστοί",
+    "photius-bibliotheca": "Bibliotheca (Myriobiblon)",
+    "ammonius-fragmenta-joannem": "Fragmenta in Joannem",
+    "origen-song-homily-1": "Homilia I",
+    "origen-song-homily-2": "Homilia II",
+    "gregory-thaumaturgus-ecclesiastes-metaphrase": "Metaphrasis in Ecclesiasten",
 }
+
+
+# Site work slug -> translations book slug for the shared book intro
+# (same words as the Logos front matter; rendered under the masthead
+# on work pages only, never on per-book or per-section pages).
+WORK_BOOK_INTRO: dict[str, str] = {
+    "africanus-cesti": "africanus-cesti",
+    "crocius-syntagma": "crocius-syntagma",
+    "cyril-adoration-1": "cyril-alexandria-adoration-1",
+    "cyril-recta-fide-arcadia": "cyril-alexandria-recta-fide-court",
+    "cyril-recta-fide-pulcheria": "cyril-alexandria-recta-fide-court",
+    "davenant-dissertationes-duae": "davenant-dissertationes-duae",
+    "epiphanius-ancoratus": "epiphanius-ancoratus",
+    "epiphanius-de-mensuris": "epiphanius-de-mensuris",
+    "epiphanius-panarion": "epiphanius-panarion",
+    "gregory-thaumaturgus-de-fide-xii": "gregory-thaumaturgus-de-fide-xii",
+    "gregory-thaumaturgus-ecclesiastes-metaphrase": "gregory-thaumaturgus-ecclesiastes-metaphrase",
+    "gregory-thaumaturgus-epistula-canonica": "gregory-thaumaturgus-epistula-canonica",
+    "gregory-thaumaturgus-in-annuntiationem": "gregory-thaumaturgus-in-annuntiationem",
+    "gregory-thaumaturgus-panegyricus": "gregory-thaumaturgus-panegyricus",
+    "gregory-thaumaturgus-sermo-in-omnes-sanctos": "gregory-thaumaturgus-sermo-in-omnes-sanctos",
+    "julian-collective-letter": "julian-of-eclanum",
+    "julian-letter-to-rome": "julian-of-eclanum",
+    "julian-marriage-extracts": "julian-of-eclanum",
+    "julian-to-florus": "julian-of-eclanum",
+    "julian-turbantius-fragments": "julian-of-eclanum",
+    "le-blanc-theses-theologicae": "le-blanc-theses-theologicae",
+    "macarius-spiritual-homilies": "macarius-spiritual-homilies",
+    "nemesius-de-natura-hominis": "nemesius-de-natura-hominis",
+    "origen-dialogue-heraclides": "origen-heraclides-pascha",
+    "origen-homilies-jeremiah": "origen-jeremiah-samuel",
+    "origen-homily-1samuel-28": "origen-jeremiah-samuel",
+    "origen-lamentations-fragments": "origen-jeremiah-samuel",
+    "origen-on-pascha": "origen-heraclides-pascha",
+    "philostorgius-he": "philostorgius-he",
+    "photius-bibliotheca": "photius-bibliotheca",
+    "placeus-de-imputatione": "placeus-de-imputatione",
+    "serapion-antioch-fragmenta": "serapion-antioch-fragmenta",
+    "strimesius-in-controversias-evangelicorum": "strimesius-in-controversias-evangelicorum",
+}
+WORK_BOOK_PREFIXES: tuple[tuple[str, str], ...] = (
+    ("origen-numbers-homily-", "origen-numbers-homilies"),
+)
+
+
+def work_intro_html(slug: str) -> str:
+    """Shared book intro for a site work page; "" when unmapped."""
+    book = WORK_BOOK_INTRO.get(slug or "")
+    if book is None:
+        for prefix, candidate in WORK_BOOK_PREFIXES:
+            if (slug or "").startswith(prefix):
+                book = candidate
+                break
+    if book is None:
+        return ""
+    intro_path = BOOKS / book / "intro.md"
+    if not intro_path.exists():
+        return ""
+    try:
+        sys.path.insert(0, str(BOOKS.parent))
+        from pipeline.book_frontmatter import render_intro_html
+        return render_intro_html(str(BOOKS / book))
+    except (ImportError, ValueError, OSError):
+        return ""
 
 
 def public_reader_title(title: str, *, slug: str = "") -> str:
@@ -4421,8 +4496,10 @@ def build() -> None:
 
         def reader_page(main: str, *, contents_html: str, mast_extra: str = "", mast: str | None = None) -> str:
             """Slim title; rail holds Contents + meta; reading column starts at once."""
+            intro = work_intro_html(w["slug"]) if mast is None else ""
             return (
                 f"{mast if mast is not None else work_mast}{mast_extra}"
+                f"{intro}"
                 f'<p class="reader-quick"><a href="#contents">Jump to contents</a></p>'
                 f'<div class="reader-layout">'
                 f'<aside class="reader-rail">'
@@ -4466,6 +4543,7 @@ def build() -> None:
                 layout(
                     pub_title,
                     f"""{work_header}
+                    {work_intro_html(w["slug"])}
                     {author_link}{rel_topics}
                     <p class="intro">Each book reads on one continuous page:</p>
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
