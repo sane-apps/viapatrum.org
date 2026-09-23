@@ -867,6 +867,10 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-song-homily-1": "Homilia I",
     "origen-song-homily-2": "Homilia II",
     "gregory-thaumaturgus-ecclesiastes-metaphrase": "Metaphrasis in Ecclesiasten",
+    "origen-hebrews-homily-scrap": "Ex homiliis in epistulam ad Hebraeos",
+    "origen-osee-fragment": "Fragmentum in Osee",
+    "origen-acta-homily-scrap": "Fragmentum ex homiliis in Acta apostolorum",
+    "origen-ruth-scrap": "In Ruth",
 }
 
 
