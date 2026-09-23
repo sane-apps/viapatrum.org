@@ -871,6 +871,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-osee-fragment": "Fragmentum in Osee",
     "origen-acta-homily-scrap": "Fragmentum ex homiliis in Acta apostolorum",
     "origen-ruth-scrap": "In Ruth",
+    "origen-de-resurrectione-scrap": "De Resurrectione",
 }
 
 

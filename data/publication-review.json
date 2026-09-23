@@ -27645,6 +27645,30 @@
       "receipt": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "e25d1681a9d8ccaf0b4006044fe4bda51e44ab44005d47a719bb82b167a7ccba"
+    },
+    "work:origen-de-resurrectione-scrap:frag-open": {
+      "packet": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.packet.json",
+      "receipt": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "04a46e0f1bdcf72ac1a0dd10f9955e42306620a5299c68ca29da04f5a3a458dd"
+    },
+    "work:origen-de-resurrectione-scrap:frag-rem-early": {
+      "packet": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.packet.json",
+      "receipt": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "20e0fbd69a4456cea321658f9b4c000395686819b079b38f2cea9e5334e5114b"
+    },
+    "work:origen-de-resurrectione-scrap:frag-rem-mid": {
+      "packet": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.packet.json",
+      "receipt": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "27ba3e2cf13e86eb191fef235440b4124088f57a98a0bc806f99a1a14b8615f7"
+    },
+    "work:origen-de-resurrectione-scrap:frag-rem-close": {
+      "packet": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.packet.json",
+      "receipt": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "a8a262ebd16f42b61246bbc2d3c21dcbe41156bb67398c0458ce9b6059d3ec97"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27838,6 +27862,10 @@
     "origen-regnorum-fragments": {
       "packet": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.packet.json",
       "receipt": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.review.json"
+    },
+    "origen-de-resurrectione-scrap": {
+      "packet": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.packet.json",
+      "receipt": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.review.json"
     }
   }
 }
