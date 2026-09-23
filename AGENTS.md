@@ -3,6 +3,16 @@
 ## Active quality incident — 2026-09-13
 Do not restore build_site.py from old commits to add corpus globs. That removed the publication gate and restored 568 held works, including generated scaffolds and false complete translations. Preserve catalogue_quality.py integration and use scripts/ship.sh with mandatory catalogue/browser checks. A larger catalogue is not proof of quality. The specific conflicting upload from Cursor process group 35630 was stopped before completion; source data and other work are preserved. Coordinate through SESSION_HANDOFF.md before changing this builder.
 
+## Machine sync (permanent)
+
+**Mini is the source of truth** for this repo (densify, publication-review, builds, `scripts/ship.sh`). Air orchestrates only.
+
+1. Before editing on Air, pull Mini → Air (`rsync` with a `/./` path anchor). Never assume Air is current.
+2. Never push a whole Air `build_site.py` (or other large tree files) onto Mini without comparing checksums first. Blind `scp`/`rsync` from Air already wiped densify loaders once (2026-09-22) — restore was from Mini git HEAD.
+3. Prefer: edit on Mini over SSH, or pull → edit Air → push **only the files you changed** after `md5` parity check on siblings.
+4. Forbidden: `rsync --relative` of absolute `/Users/...` paths into the repo (creates nested `Users/` junk). Use `rsync -av --relative mini:…/fathers.saneapps.com/./path mini:…/fathers.saneapps.com/` or explicit destination paths.
+5. Do not deploy a local `dist/` that has fewer published works than live without an explicit hold/publish reason — publication-review on Mini is what keeps densify tips online.
+
 
 ## Standing UX rules (read first — every session)
 

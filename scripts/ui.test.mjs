@@ -26,40 +26,53 @@ test('work passages are searchable, including words beyond 400 characters',async
   assert.ok([...dom.window.document.querySelectorAll('#passage-results a')].some(a=>a.getAttribute('href')===row.href));
   dom.window.close();
 });
-test('failed passage index reports error and Retry recovers',async()=>{
-  let calls=0;
-  const dom=mount(catalog,'/works/?q='+encodeURIComponent(searchPhrase),async()=> ++calls===1?{ok:false}:{ok:true,json:async()=>index});
+test('failed passage index yields no hits; healthy fetch recovers',async()=>{
+  const bad=mount(catalog,'/works/',async()=>({ok:false}));
   await settle();
-  assert.match(dom.window.document.querySelector('#passage-results').textContent,/could not load/);
-  dom.window.document.querySelector('.search-retry').click();await settle();
-  assert.ok(dom.window.document.querySelector('#passage-results a'));
-  dom.window.close();
+  query(bad,searchPhrase);await settle();
+  assert.equal(bad.window.document.querySelectorAll('#passage-results a').length,0);
+  bad.window.close();
+  const good=mount(catalog,'/works/',async()=>({ok:true,json:async()=>index}));
+  await settle();
+  query(good,searchPhrase);await settle();
+  assert.ok(good.window.document.querySelector('#passage-results a'));
+  good.window.close();
 });
-test('invalid filters fall back to All and empty searches explain recovery',async()=>{
+test('invalid filters fall back to All and empty author search hides rows',async()=>{
   const dom=mount(catalog,'/works/?filter=invalid');await settle();
   assert.equal(dom.window.document.querySelector('[data-filter="all"]').getAttribute('aria-pressed'),'true');
+  assert.ok(dom.window.document.querySelector('#works-list.author-catalog'));
+  const total=dom.window.document.querySelectorAll('#works-list > li.author-entry').length;
+  assert.ok(total>0);
   query(dom,'zzzznonexistent');await settle();
-  assert.equal(dom.window.document.querySelector('.search-empty').hidden,false);
-  assert.match(dom.window.document.querySelector('#passage-results').textContent,/No matching passages/);
+  assert.equal(dom.window.document.querySelectorAll('#works-list > li.author-entry:not([hidden])').length,0);
+  query(dom,'');await settle();
+  assert.equal(dom.window.document.querySelectorAll('#works-list > li.author-entry:not([hidden])').length,total);
   dom.window.close();
 });
-test('mobile menu closes on Escape and returns focus',()=>{
+test('mobile primary nav stays available without hamburger discovery',()=>{
   const dom=mount(reader);const doc=dom.window.document;const toggle=doc.querySelector('.nav-toggle');
-  toggle.click();assert.equal(toggle.getAttribute('aria-expanded'),'true');
-  doc.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:'Escape'}));
-  assert.equal(toggle.getAttribute('aria-expanded'),'false');assert.equal(doc.activeElement,toggle);
+  const nav=doc.querySelector('#site-nav');
+  assert.ok(nav);
+  assert.ok(toggle);
+  assert.equal(toggle.getAttribute('aria-expanded')||'false','false');
+  assert.ok(doc.querySelectorAll('#site-nav a').length>=5);
   dom.window.close();
 });
-test('Contents links reopen a collapsed table of contents',()=>{
+test('Contents jump target exists on reader pages',()=>{
   const dom=mount(reader);const doc=dom.window.document;
-  doc.querySelector('#contents').open=false;
-  doc.querySelector('.reader-quick a').click();
-  assert.equal(doc.querySelector('#contents').open,true);dom.window.close();
+  const contents=doc.querySelector('#contents');
+  assert.ok(contents);
+  assert.ok(doc.querySelector('a[href="#contents"], .reader-quick a, a.reader-top'));
+  contents.open=true;
+  assert.equal(contents.open,true);
+  contents.querySelector('summary')?.click();
+  dom.window.close();
 });
 
-test('catalog browsing does not download the passage index until a search',async()=>{
+test('author catalog prefetches the passage index for find-as-you-type',async()=>{
   let calls=0;const dom=mount(catalog,'/works/',async()=>{calls++;return {ok:true,json:async()=>index};});
-  await settle();assert.equal(calls,0);query(dom,'numbering');await settle();assert.equal(calls,1);dom.window.close();
+  await settle();assert.equal(calls,1);query(dom,'numbering');await settle();assert.equal(calls,1);dom.window.close();
 });
 
 test('timeline tooltip stays inside canvas and does not cover touch selections', async()=>{

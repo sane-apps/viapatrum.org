@@ -1503,6 +1503,80 @@ a.bible-ref:focus-visible,
   background: color-mix(in srgb, var(--gold) 9%, var(--paper-2));
   box-shadow: inset 3px 0 0 var(--gold-deep);
 }
+/* Author-hub series rows: same flat list chrome as single-work links
+   (no Accordion paper box). Expand still reveals book parts. */
+.author-works > .work-series > details {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.author-works > .work-series > details > summary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  position: relative;
+  margin: 0 -0.5rem;
+  padding: 0.85rem 0.5rem;
+  border-radius: 0.4rem;
+  list-style: none;
+  cursor: pointer;
+  font-weight: 400;
+  color: inherit;
+}
+.author-works > .work-series > details > summary::-webkit-details-marker { display: none; }
+.author-works > .work-series > details > summary::before {
+  content: "▸";
+  position: absolute;
+  left: -0.05rem;
+  top: 0.95rem;
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+  transition: transform 0.16s ease;
+}
+.author-works > .work-series > details[open] > summary::before { transform: rotate(90deg); }
+.author-works > .work-series > details > summary .work-series-title {
+  padding-left: 0.85rem;
+  font-weight: 400;
+}
+.author-works > .work-series > details > summary .meta { padding-left: 0.85rem; }
+.author-works > .work-series > details > summary:hover,
+.author-works > .work-series > details > summary:focus-visible {
+  background: color-mix(in srgb, var(--gold) 9%, var(--paper-2));
+  box-shadow: inset 3px 0 0 var(--gold-deep);
+  color: var(--gold-deep);
+  outline: none;
+}
+.author-works > .work-series > details > summary:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 2px;
+}
+.author-works .series-parts {
+  list-style: none;
+  margin: 0 0 0.35rem;
+  padding: 0 0 0 0.85rem;
+}
+.author-works .series-parts > li { border-bottom: 1px solid var(--rule); }
+.author-works .series-parts > li:last-child { border-bottom: none; }
+.author-works .series-parts a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0 -0.5rem;
+  padding: 0.65rem 0.5rem;
+  border-radius: 0.35rem;
+  text-decoration: none;
+  color: inherit;
+}
+.author-works .series-parts a:hover,
+.author-works .series-parts a:focus-visible {
+  background: color-mix(in srgb, var(--gold) 9%, var(--paper-2));
+  box-shadow: inset 3px 0 0 var(--gold-deep);
+  color: var(--gold-deep);
+  text-decoration-line: underline;
+}
+
 /* Plain-text rows (author Works lists carry no strong title child):
    shift to the accent with an underline reveal. */
 .card-list li a:not(:has(strong)):hover,
@@ -1539,4 +1613,43 @@ a.bible-ref:focus-visible,
   a,
   .section-nav .pn,
   .reader-about { transition: none; }
+}
+
+/* Compact /works/ author catalog (one row per author). */
+.author-catalog {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.author-catalog .author-entry {
+  border-bottom: 1px solid var(--rule);
+}
+.author-catalog .author-link {
+  display: grid;
+  gap: 0.15rem;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.9rem 0;
+}
+.author-catalog .author-link:hover .author-name,
+.author-catalog .author-link:focus-visible .author-name {
+  color: var(--gold-deep);
+}
+.author-catalog .author-link:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+.author-catalog .author-name {
+  font-family: var(--font-display);
+  font-weight: 650;
+  font-size: 1.12rem;
+  color: var(--ink);
+}
+.author-catalog .author-sub {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+.author-catalog .author-meta {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
 }

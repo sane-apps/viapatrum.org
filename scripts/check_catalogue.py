@@ -147,20 +147,29 @@ class Catalogue(HTMLParser):
     def __init__(self):
         super().__init__()
         self.rows = []
+        self.has_author_catalog = False
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
-        if tag == "li" and "data-title" in a:
+        if tag == "ul" and a.get("id") == "works-list" and "author-catalog" in (a.get("class") or ""):
+            self.has_author_catalog = True
+        if tag == "li" and ("data-author" in a) and ("author-entry" in (a.get("class") or "") or "data-works" in a):
             self.rows.append(a)
 
 page = Catalogue()
-page.feed((site.DIST / "works/index.html").read_text())
+works_html = (site.DIST / "works/index.html").read_text()
+page.feed(works_html)
 receipt = json.loads((site.ROOT / "outputs/catalogue-quality.json").read_text())
-assert len(page.rows) == receipt["published_works"]
+assert page.has_author_catalog, "Works page missing author-catalog class"
+assert "Book 1" not in works_html, "Works catalogue still shows Book 1 sprawl"
+assert len(page.rows) > 0, "No author-entry rows on Works"
+work_total = sum(int(r.get("data-works") or "0") for r in page.rows)
+assert work_total == receipt["published_works"], (work_total, receipt["published_works"])
+assert receipt["published_works"] >= 57, receipt["published_works"]
 assert "publication_review_failures" in receipt
 failed_excerpts = {key.removeprefix("excerpt:") for key in receipt["publication_review_failures"] if key.startswith("excerpt:")}
 assert receipt["published_excerpts"] == len([x for x in excerpts if x["id"] not in failed_excerpts])
-assert len({r["data-title"] + r["data-author"] for r in page.rows}) == len(page.rows)
-assert all(r["data-oet"] == "0" for r in page.rows)
+assert len({r["data-author"] for r in page.rows}) == len(page.rows)
+assert all(r.get("data-oet") in {"0", "1"} for r in page.rows)
 held = {r["slug"] for r in receipt["held_works"]}
 assert "agathias-historiae" in held
 index = json.loads((site.DIST / "data/search-index.json").read_text())
@@ -174,7 +183,7 @@ for key in receipt["publication_review_failures"]:
 assert not any(row.get("href", "").split("/")[2:3] == [slug]
                for row in index for slug in held)
 assert not any((site.DIST / "works" / slug / "index.html").exists() for slug in held)
-print(json.dumps({"status": "passed", "works": len(page.rows), "held": len(held)}))
+print(json.dumps({"status": "passed", "authors": len(page.rows), "works": work_total, "held": len(held)}))
 
 assert site.display_section("4-2-2-collective-23") == "4.2.2"
 assert site.display_section("1.27") == "1.27"

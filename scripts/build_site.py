@@ -501,6 +501,25 @@ def alpha_key(s: str | None) -> str:
     return (s or "").casefold().lstrip()
 
 
+# Prefer one hub slug when tip metas disagree with dedicated loaders.
+AUTHOR_SLUG_ALIASES = {
+    "origen-of-alexandria": "origen",
+}
+
+
+def canonical_author_slug(slug: str | None, author: str | None = None) -> str:
+    raw = (slug or "").strip() or slugify(author or "unknown")
+    aliased = AUTHOR_SLUG_ALIASES.get(raw, raw)
+    al = (author or "").casefold()
+    if "origen" in al and aliased.startswith("origen"):
+        return "origen"
+    if "julian" in al and "eclanum" in al:
+        return "julian-of-eclanum"
+    if "cyril" in al and "alexandria" in al:
+        return "cyril-of-alexandria"
+    return aliased
+
+
 def author_record(name: str | None) -> dict:
     """Resolve Authors.json even when the display name is longer (e.g. Origen of Alexandria)."""
     if not name:
@@ -1124,6 +1143,171 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
             f'<strong class="work-title">{escape(public_reader_title(w["title"], slug=w["slug"]))}</strong>'
             f'<span class="work-author">{escape(w["author"])}{period}</span>'
             f'<span class="work-meta">{" · ".join(bits)}</span></a></li>')
+
+
+_SERIES_PART_RE = re.compile(
+    r"(?:,?\s+Book\s+(\d+)\s*$)|(?:,?\s+Homilia\s+([IVXLC]+|\d+)\s*$)",
+    re.I,
+)
+_ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8, "ix": 9, "x": 10}
+
+
+def series_base_and_part(title: str) -> tuple[str, int | None]:
+    """Split 'Treatise, Book 12' / '…, Homilia II' into (base, part_num)."""
+    raw = (title or "").strip()
+    m = _SERIES_PART_RE.search(raw)
+    if not m:
+        return raw, None
+    base = raw[: m.start()].strip().rstrip(",").strip()
+    token = (m.group(1) or m.group(2) or "").strip()
+    if token.isdigit():
+        return base, int(token)
+    return base, _ROMAN.get(token.casefold())
+
+
+def author_works_list_html(ww: list[dict]) -> str:
+    """Author-hub works list: collapse multi-book series into one <details> row."""
+    if not ww:
+        return "<li>None yet.</li>"
+    ordered = sorted(
+        ww,
+        key=lambda w: (
+            alpha_key(series_base_and_part(public_reader_title(w.get("title") or "", slug=w.get("slug") or ""))[0]),
+            series_base_and_part(public_reader_title(w.get("title") or "", slug=w.get("slug") or ""))[1] or 0,
+            alpha_key(public_reader_title(w.get("title") or "", slug=w.get("slug") or "")),
+            w.get("slug") or "",
+        ),
+    )
+    buckets: dict[str, list[dict]] = {}
+    singles: list[dict] = []
+    for w in ordered:
+        pub = public_reader_title(w.get("title") or "", slug=w.get("slug") or "")
+        base, part = series_base_and_part(pub)
+        if part is None:
+            singles.append(w)
+            continue
+        buckets.setdefault(base, []).append(w)
+    series_blocks: list[tuple[str, str]] = []
+    for base, members in buckets.items():
+        if len(members) < 2:
+            singles.extend(members)
+            continue
+        parts = sorted(
+            (
+                (
+                    series_base_and_part(
+                        public_reader_title(m.get("title") or "", slug=m.get("slug") or "")
+                    )[1]
+                    or 0,
+                    m,
+                )
+                for m in members
+            ),
+            key=lambda t: t[0],
+        )
+        nums = [n for n, _ in parts if n]
+        span = f"Books {nums[0]}–{nums[-1]}" if nums else f"{len(members)} parts"
+        total = sum(m["section_count"] for m in members)
+        lis = "".join(
+            f'<li><a href="/works/{escape(m["slug"])}/">'
+            f'{escape(public_reader_title(m["title"], slug=m["slug"]))}'
+            f' <span class="meta">({m["section_count"]})</span></a></li>'
+            for _, m in parts
+        )
+        series_blocks.append(
+            (
+                alpha_key(base),
+                (
+                    f'<li class="work-series"><details>'
+                    f'<summary><span class="work-series-title">{escape(base)}</span>'
+                    f' <span class="meta">({escape(span)} · {total})</span></summary>'
+                    f'<ul class="series-parts">{lis}</ul></details></li>'
+                ),
+            )
+        )
+    single_blocks = [
+        (
+            alpha_key(public_reader_title(w.get("title") or "", slug=w.get("slug") or "")),
+            (
+                f'<li><a href="/works/{escape(w["slug"])}/">'
+                f'{escape(public_reader_title(w["title"], slug=w["slug"]))}'
+                f' <span class="meta">({w["section_count"]})</span></a></li>'
+            ),
+        )
+        for w in singles
+    ]
+    return "".join(html for _, html in sorted(series_blocks + single_blocks, key=lambda t: t[0]))
+
+
+def author_catalog_html(works: list[dict]) -> str:
+    """Compact /works/ catalog: one row per author; single-work authors deep-link."""
+    by_author: dict[str, list[dict]] = defaultdict(list)
+    for w in works:
+        slug = canonical_author_slug(w.get("author_slug"), w.get("author"))
+        by_author[slug].append({**w, "author_slug": slug})
+
+    rows: list[tuple[int, str, str]] = []
+    for slug, ww in by_author.items():
+        ww_sorted = sorted(
+            ww,
+            key=lambda w: (
+                alpha_key(public_reader_title(w.get("title") or "", slug=w.get("slug") or "")),
+                w.get("slug") or "",
+            ),
+        )
+        author = ww_sorted[0]["author"]
+        period = author_dates_display(author, slug) or format_bc_ad(ww_sorted[0].get("period") or "")
+        year = min(work_chrono_year(w) for w in ww_sorted)
+        eras = sorted({work_era(w) for w in ww_sorted})
+        oet = any(bool(w.get("first_english")) for w in ww_sorted)
+        n = len(ww_sorted)
+        sections = sum(int(w["section_count"]) for w in ww_sorted)
+        topics = " ".join(t for w in ww_sorted for t in (w.get("related_topics") or []))
+        titles = " ".join(
+            public_reader_title(w.get("title") or "", slug=w.get("slug") or "") for w in ww_sorted
+        )
+        blob = " ".join(
+            [author, period, titles, topics] + [w.get("blurb") or "" for w in ww_sorted]
+        ).casefold()
+        if n == 1:
+            w0 = ww_sorted[0]
+            href = f"/works/{w0['slug']}/"
+            pub = public_reader_title(w0["title"], slug=w0["slug"])
+            label = f"{author} — {pub}"
+            line2 = pub
+            bits = [period] if period else []
+            bits.append(f"{sections} section{'s' if sections != 1 else ''}")
+            if w0.get("status") == "in_progress":
+                bits.append("Translation in progress")
+        else:
+            href = f"/authors/{slug}/"
+            label = f"{author} — {n} works"
+            line2 = f"{n} works"
+            bits = [period] if period else []
+            bits.append(f"{n} works")
+            bits.append(f"{sections} sections")
+        attrs = (
+            f' data-author="{escape(author)}" data-author-href="/authors/{escape(slug)}/"'
+            f' data-year="{year}" data-era="{escape(" ".join(eras))}"'
+            f' data-oet="{int(oet)}" data-blob="{escape(blob)}"'
+            f' data-works="{n}"'
+        )
+        rows.append(
+            (
+                year,
+                alpha_key(author),
+                (
+                    f'<li class="author-entry"{attrs}>'
+                    f'<a class="author-link" href="{escape(href)}" aria-label="{escape(label)}">'
+                    f'<strong class="author-name">{escape(author)}</strong>'
+                    f'<span class="author-sub">{escape(line2)}</span>'
+                    f'<span class="author-meta">{" · ".join(escape(b) for b in bits if b)}</span>'
+                    f"</a></li>"
+                ),
+            )
+        )
+    rows.sort(key=lambda t: (t[0], t[1]))
+    return "".join(html for _, _, html in rows)
 
 
 def load_origen_works() -> list[dict]:
@@ -2796,9 +2980,10 @@ def load_origen_pauline_fragments() -> list[dict]:
             slug = meta.get("slug") or folder.name
             title = meta.get("title") or stem.replace("_", " ").title()
             author = meta.get("author") or "Origen of Alexandria"
-            author_slug = meta.get("author_slug") or re.sub(
-                r"[^a-z0-9]+", "-", author.lower()
-            ).strip("-")
+            author_slug = canonical_author_slug(
+                meta.get("author_slug"),
+                author,
+            )
             sections = _origen_rows(rows, src_map)
             existing = next((w for w in works if w["slug"] == slug), None)
             if existing is not None:
@@ -3896,36 +4081,36 @@ def build() -> None:
         )
 
     # --- Works ---
-    # Default catalog order: author era / floruit, earliest first (see docs/IA.md).
-    works_chrono = sorted(
-        works,
-        key=lambda w: (
-            work_chrono_year(w),
-            alpha_key(w.get("author")),
-            alpha_key(w.get("title")),
-            w.get("slug") or "",
-        ),
+    # Compact catalog: one row per author (multi-work → author hub; single → reader).
+    author_n = len({canonical_author_slug(w.get("author_slug"), w.get("author")) for w in works})
+    works_list = author_catalog_html(works)
+    oet_authors = {
+        canonical_author_slug(w.get("author_slug"), w.get("author"))
+        for w in works
+        if w.get("first_english")
+    }
+    oet_filter = (
+        f'<button type="button" data-filter="oet" aria-pressed="false">'
+        f"Original English ({len(oet_authors)})</button>"
+        if oet_authors
+        else ""
     )
-    works_list = "".join(work_card_html(w, catalog=True) for w in works_chrono)
-    oet_count = sum(1 for w in works if w.get("first_english"))
-    oet_filter = (f'<button type="button" data-filter="oet" aria-pressed="false">Original English ({oet_count})</button>' if oet_count else "")
     write(
         DIST / "works" / "index.html",
         layout(
             "Works",
-            f"""<div class="works-browse" data-works-browse>
+            f"""<div class="works-browse" data-works-browse data-work-count="{len(works)}" data-author-count="{author_n}">
 <h1>Works</h1>
-<p class="intro">Read works and surviving fragments in English. Browse by author, title, or era, or search within the library.</p>
+<p class="intro">Browse by author. Open an author with several treatises to see the shelf; a single work opens the reader directly.</p>
 <div class="works-chrome">
   <label class="works-find"><span class="vh">Find in library</span>
-    <input type="search" id="works-q" class="search-input" placeholder="Find author, title, topic, words…" autocomplete="off">
+    <input type="search" id="works-q" class="search-input" placeholder="Find author, title, topic…" autocomplete="off">
   </label>
-  <div class="works-sort" role="group" aria-label="Sort works">
+  <div class="works-sort" role="group" aria-label="Sort authors">
     <button type="button" data-sort="chrono" aria-pressed="true">Chronology</button>
     <button type="button" data-sort="author" aria-pressed="false">Author</button>
-    <button type="button" data-sort="title" aria-pressed="false">Title</button>
   </div>
-  <div class="works-filters" role="group" aria-label="Filter works">
+  <div class="works-filters" role="group" aria-label="Filter authors">
     <button type="button" data-filter="all" aria-pressed="true">All</button>
     {oet_filter}
     <button type="button" data-filter="Apostolic" aria-pressed="false">Apostolic</button>
@@ -3934,12 +4119,12 @@ def build() -> None:
     <button type="button" data-filter="Post-Nicene" aria-pressed="false">Post-Nicene</button>
   </div>
 </div>
-<p class="works-hint meta" id="works-status" aria-live="polite">{len(works)} works · sorted by author era (earliest first)</p>
-<ul id="works-list" class="card-list works-list">{works_list}</ul>
+<p class="works-hint meta" id="works-status" aria-live="polite">{author_n} authors · {len(works)} works · sorted by era (earliest first)</p>
+<ul id="works-list" class="card-list works-list author-catalog">{works_list}</ul>
 <section id="passage-hits" class="passage-hits" hidden>
   <h2>Passages &amp; topics</h2>
-  <p class="intro fine">Matches beyond the treatise list — excerpts and sections.</p>
-  <p class="meta">Matching passages across the whole library; the filters above apply to the work catalog.</p>
+  <p class="intro fine">Matches beyond the author list — excerpts and sections.</p>
+  <p class="meta">Matching passages across the whole library; the filters above apply to the author catalog.</p>
   <ul id="passage-results" class="card-list" aria-live="polite"></ul>
 </section>
 <p class="intro fine" id="original-english">
@@ -3950,7 +4135,7 @@ def build() -> None:
 </div>""",
             crumb=[("Home", "/"), ("Works", "")],
             active="works",
-            description="Browse whole Fathers treatises — find, filter by era, sort by chronology, author, or title",
+            description="Browse Fathers treatises by author — multi-work shelves on the author page",
         ),
     )
 
@@ -4440,11 +4625,8 @@ def build() -> None:
 
     def write_author_hub(slug: str, display: str, work_author_slug: str | None = None):
         hubs_done.add(slug)
-        ww = [w for w in works if w["author_slug"] == (work_author_slug or slug)]
-        ow = "".join(
-            f'<li><a href="/works/{escape(w["slug"])}/">{escape(public_reader_title(w["title"], slug=w["slug"]))} ({w["section_count"]})</a></li>'
-            for w in ww
-        )
+        ww = [w for w in works if canonical_author_slug(w.get("author_slug"), w.get("author")) == (work_author_slug or slug)]
+        ow = author_works_list_html(ww)
         ot = []
         for a, rows in by_author.items():
             al = a.lower()
@@ -4496,7 +4678,7 @@ def build() -> None:
                 display,
                 f"""<h1>{escape(display)}</h1>
                 {f'<p class="meta author-dates">{escape(author_dates_display(display, slug))}</p>' if author_dates_display(display, slug) else ""}
-                <h2>Works</h2><ul class="card-list">{ow or "<li>None yet.</li>"}</ul>
+                <h2>Works</h2><ul class="card-list author-works">{ow or "<li>None yet.</li>"}</ul>
                 {topics_ul}{explore_ul}
                 <h2>Topical excerpts</h2>{ot_lis or "<p>None linked yet.</p>"}""",
                 crumb=[("Home", "/"), ("Authors", "/authors/"), (display, "")],

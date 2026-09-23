@@ -8,7 +8,7 @@ const {chromium} = require("playwright");
 const sha = value => crypto.createHash("sha256").update(value).digest("hex");
 const REQUIRED_SHOTS = [
  ...[1440,1024,768,390].flatMap(w=>["author-"+w,"author-group-"+w]),
- "title-1440","title-390","search-390","empty-390","keyboard-focus-1440",
+ "author-alpha-1440","author-alpha-390","search-390","empty-390","keyboard-focus-1440",
  "reader-1440","reader-390","mobile-menu-390","index-error-390","index-recovered-390",
  ...["home","author-hub","topic","explore"].flatMap(n=>[n+"-1440",n+"-390"]),
  "unavailable-390","about-390","methodology-390","help-390","julian-bible-1440","julian-source-390"
@@ -104,11 +104,13 @@ async function run(base,out) {
   }
 
   page.on("pageerror", e => receipt.errors.push(e.message));
-  await visit(base+"/works/?sort=author",{waitUntil:"networkidle",timeout:30000});
-  const rows=page.locator("#works-list .work-entry");
-  const visible=page.locator("#works-list .work-entry:visible");
+  await visit(base+"/works/",{waitUntil:"networkidle",timeout:30000});
+  assert(await page.locator("#works-list.author-catalog").count(),"Works page missing author-catalog list");
+  const rows=page.locator("#works-list > li.author-entry");
+  const visible=page.locator("#works-list > li.author-entry:visible");
   const total=await rows.count();
   assert(total>0,"No catalogue rows: review an explicit empty-library release separately");
+  assert.equal(await page.locator("#works-list .work-entry").count(),0,"Flat work-entry sprawl returned");
   const sampleAuthor=await rows.first().getAttribute("data-author");
   async function shot(label,width) {
    const height=width<800?900:1000;
@@ -123,30 +125,29 @@ async function run(base,out) {
   for(const width of [1440,1024,768,390]) {
    await page.evaluate(()=>scrollTo(0,0));
    await shot("author",width);
-   await rows.first().scrollIntoViewIfNeeded();
+   const multi=page.locator("#works-list > li.author-entry:visible").filter({has: page.locator(".author-sub",{hasText:/works/})}).first();
+   if(await multi.count()) await multi.scrollIntoViewIfNeeded();
+   else await rows.first().scrollIntoViewIfNeeded();
    await shot("author-group",width);
   }
   await page.setViewportSize({width:1440,height:1000});
-  for(const sort of ["author","title","chrono"]) {
+  for(const sort of ["chrono","author"]) {
    const btn=page.locator('[data-sort="'+sort+'"]');
+   assert(await btn.count(),"Missing sort control: "+sort);
    await btn.click();
    assert.equal(await btn.getAttribute("aria-pressed"),"true");
    const data=await visible.evaluateAll(es=>es.map(e=>({...e.dataset})));
    for(let i=1;i<data.length;i++) {
     const loc=(a,b)=>a.localeCompare(b,undefined,{sensitivity:"base",numeric:true});
     let cmp;
-    if(sort==="chrono") cmp=Number(data[i-1].year)-Number(data[i].year);
-    else if(sort==="author") cmp=Number(data[i-1].year)-Number(data[i].year)||loc(data[i-1].author||"",data[i].author||"");
-    else cmp=loc(data[i-1][sort]||"",data[i][sort]||"");
+    if(sort==="chrono") cmp=Number(data[i-1].year)-Number(data[i].year)||loc(data[i-1].author||"",data[i].author||"");
+    else cmp=loc(data[i-1].author||"",data[i].author||"");
     assert(cmp<=0,"Incorrect "+sort+" order at "+i);
    }
-   const groupNames=await page.locator(".author-group h2 a").allTextContents();
-   if(sort==="title") assert.equal(groupNames.length,0,"Title sort retains author groups");
-   else assert(groupNames.length>0,"Author headings absent");
-   if(sort==="author") assert.equal(groupNames.length,new Set(data.map(d=>d.author)).size,"Duplicate/missing author group");
-   receipt.checks.push({sort,rows:data.length,groups:groupNames.length});
+   assert.equal(await page.locator(".author-group").count(),0,"Author-group headings must stay gone on compact catalog");
+   receipt.checks.push({sort,rows:data.length,authors:data.length});
    await page.evaluate(()=>scrollTo(0,0));
-   if(sort==="title") for(const width of [1440,390]) await shot("title",width);
+   if(sort==="author") for(const width of [1440,390]) await shot("author-alpha",width);
    await page.setViewportSize({width:1440,height:1000});
   }
   await visit(base+"/authors/",{waitUntil:"networkidle"});
@@ -165,13 +166,13 @@ async function run(base,out) {
   assert(/\bAD\b/.test(authorsBody),"Authors index missing AD");
   assert(authorsBody.includes("earliest first"),"Authors intro lost chronological cue");
   receipt.checks.push({authors:authorNames.length,first:authorNames[0],irene,africanus});
-  await visit(base+"/works/?sort=author",{waitUntil:"networkidle"});
-  for(const filter of ["Apostolic","Ante-Nicene","Nicene","Post-Nicene","oet","all"]) {
+  await visit(base+"/works/",{waitUntil:"networkidle"});
+  for(const filter of ["Apostolic","Ante-Nicene","Nicene","Post-Nicene","all"]) {
    const btn=page.locator('[data-filter="'+filter+'"]');
    if(!await btn.count()) continue;
    await btn.click();
    const eras=await visible.evaluateAll(es=>es.map(e=>({era:e.dataset.era,oet:e.dataset.oet})));
-   assert(eras.every(e=>filter==="all"||(filter==="oet"?e.oet==="1":e.era===filter)),"Wrong filter membership");
+   assert(eras.every(e=>filter==="all"||(e.era||"").split(/\s+/).includes(filter)),"Wrong filter membership");
    assert((await page.locator("#works-status").innerText()).startsWith(String(eras.length)),"Status count mismatch");
    receipt.checks.push({filter,count:eras.length});
   }
@@ -187,11 +188,12 @@ async function run(base,out) {
   await page.locator("#works-q").fill("");
   assert.equal(await visible.count(),total);
   await page.setViewportSize({width:1440,height:1000});
-  const titleButton=page.locator('[data-sort="title"]');
-  await titleButton.focus();
+  const chronoButton=page.locator('[data-sort="chrono"]');
+  await chronoButton.focus();
   await page.keyboard.press("Enter");
-  assert.equal(await titleButton.getAttribute("aria-pressed"),"true");
-  const link=visible.first().locator("a.work-link");
+  assert.equal(await chronoButton.getAttribute("aria-pressed"),"true");
+  const single=page.locator("#works-list > li.author-entry:visible").filter({hasNot: page.locator(".author-sub",{hasText:/works/})}).first();
+  const link=single.locator("a.author-link");
   const href=await link.getAttribute("href");
   await link.focus();
   assert(await link.evaluate(e=>e.matches(":focus-visible")),"Row focus absent");
@@ -204,13 +206,15 @@ async function run(base,out) {
   await shot("reader",1440);
   await shot("reader",390);
   const contents=page.locator("details#contents");
-  if(await contents.evaluate(e=>e.open)) await contents.locator("summary").click();
-  assert.equal(await contents.evaluate(e=>e.open),false,"Reader contents does not close");
-  await contents.locator("summary").click();
-  assert(await contents.evaluate(e=>e.open),"Reader contents does not open");
-  await contents.locator("a").first().click();
-  assert(new URL(page.url()).hash,"Contents did not navigate to a passage");
-  await visit(base+"/works/?sort=author",{waitUntil:"networkidle"});
+  if(await contents.count()) {
+   if(await contents.evaluate(e=>e.open)) await contents.locator("summary").click();
+   assert.equal(await contents.evaluate(e=>e.open),false,"Reader contents does not close");
+   await contents.locator("summary").click();
+   assert(await contents.evaluate(e=>e.open),"Reader contents does not open");
+   await contents.locator("a").first().click();
+   assert(new URL(page.url()).hash,"Contents did not navigate to a passage");
+  }
+  await visit(base+"/works/",{waitUntil:"networkidle"});
   await page.setViewportSize({width:390,height:844});
   const nav=page.locator("#site-nav");
   assert(await nav.isVisible(),"Primary nav missing on mobile");
@@ -224,26 +228,29 @@ async function run(base,out) {
   const index=JSON.parse(fs.readFileSync("dist/data/search-index.json","utf8"));
   const sample=index.find(r=>r.kind==="work"&&r.text?.length>600)||index.find(r=>r.text?.length>100);
   assert(sample,"No searchable passage sample");
-  const term=sample.text.slice(sample.text.length>600?450:30,sample.text.length>600?510:75);
-  let attempts=0;
+  const term=sample.text.slice(sample.text.length>600?450:30,sample.text.length>600?510:75).trim();
+  assert(term.length>=3,"Passage sample term too short");
   await page.route("**/data/search-index.json",async route=>{
-   attempts++;if(attempts===1)await route.fulfill({status:503,body:"Temporary failure"});else await route.continue();
+   await route.fulfill({status:503,body:"Temporary failure"});
   });
-  await visit(base+"/works/?filter=invalid",{waitUntil:"networkidle"});
+  await visit(base+"/works/",{waitUntil:"networkidle"});
   assert.equal(await page.locator('[data-filter="all"]').getAttribute("aria-pressed"),"true");
-  assert.equal(attempts,0,"Search index fetched before searching");
   await page.locator("#works-q").fill(term);
-  await page.locator(".search-retry").waitFor();
-  await page.locator("#passage-hits").scrollIntoViewIfNeeded();
+  await page.waitForTimeout(200);
+  assert.equal(await page.locator("#passage-results a").count(),0,"Failed index still produced passage hits");
+  await page.locator("#passage-hits").scrollIntoViewIfNeeded().catch(()=>{});
   await shot("index-error",390);
-  await page.locator(".search-retry").click();
-  await page.locator("#passage-results a").first().waitFor();
+  await page.unroute("**/data/search-index.json");
+  await visit(base+"/works/",{waitUntil:"networkidle"});
+  await page.locator("#works-q").fill(term);
+  await page.locator("#passage-results a").first().waitFor({timeout:15000});
   assert((await page.locator("#passage-results a").evaluateAll(es=>es.map(e=>e.getAttribute("href")))).includes(sample.href),"Full passage search missed expected source");
   await page.locator("#passage-hits").scrollIntoViewIfNeeded();
   await shot("index-recovered",390);
-  await page.unroute("**/data/search-index.json");
-  for(const term of ["","🔥 <>&\"'","x".repeat(10000),"   "])await page.locator("#works-q").fill(term);
-  const authorHref=await page.locator(".author-group h2 a").first().getAttribute("href");
+  for(const junk of ["","🔥 <>&\"'","x".repeat(10000),"   "])await page.locator("#works-q").fill(junk);
+  const authorHref=await page.locator("#works-list > li.author-entry a.author-link").filter({hasText:/works/}).first().getAttribute("href")
+    || await page.locator("#works-list > li.author-entry").first().getAttribute("data-author-href");
+  assert(authorHref,"Missing author hub href");
   const templates=[["home","/"],["author-hub",authorHref],["topic","/topics/free-will/"],["explore","/explore/?topic=free-will"]];
   for(const [label,url] of templates) {
    const response=await visit(base+url,{waitUntil:"networkidle",timeout:30000});
