@@ -26877,6 +26877,246 @@
       "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json",
       "section": "99",
       "payload_sha256": "fc17446a71f154181d2a66f63b335d6c2e922f7e77d3b9028a1e48ad2ce11c5f"
+    },
+    "work:ammonius-fragmenta-joannem:u01-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "c3be2c15fe4932e489a3ec1a749e014be3651a3b695c9871514756d5ceaf1898"
+    },
+    "work:ammonius-fragmenta-joannem:u01-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "4c93b690b19fd9becf07e082bfeeb2158156704040577827cc89bc65f9786b3d"
+    },
+    "work:ammonius-fragmenta-joannem:u01-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "882a8645813cfefb91a6cd689c1b0722958d4f88810a00134768616874c44a52"
+    },
+    "work:ammonius-fragmenta-joannem:u01-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "840ae99787009b0c167cf6f9719b29a2e1fab4e4053b0ad0df22a75f3a079263"
+    },
+    "work:ammonius-fragmenta-joannem:u02-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "d7dca3bdd47fa7166dd374ca8e2435264331867a74ca8a7e33a6c0be8d5b7216"
+    },
+    "work:ammonius-fragmenta-joannem:u02-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "1afe3e8920b0e3088acecd1c9f42b1699c3b51ce212cfd8806639b6d29711141"
+    },
+    "work:ammonius-fragmenta-joannem:u02-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "fa358eb455f2f627f0dd886a743bace83e972534a18d2785e32bafbc17a9c93d"
+    },
+    "work:ammonius-fragmenta-joannem:u02-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "2d7422f36eb414bc7d0e111b5347c8379e7f5aae431d8761f78bb2cbae04cf27"
+    },
+    "work:ammonius-fragmenta-joannem:u03-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "3c1c197e0f8283beb03eedaefef2fda850b51585bf3491d48819c45ac12c7dd9"
+    },
+    "work:ammonius-fragmenta-joannem:u03-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "a3ea7554df587ebb31cbb52b65dc47101c5849931e70ddc8f4deca95818c80b6"
+    },
+    "work:ammonius-fragmenta-joannem:u03-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "d8cdb7b4bef9fadfced1de2aac3e7785133cd5273082462cd946ec413f2d8e17"
+    },
+    "work:ammonius-fragmenta-joannem:u03-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "45b75c7331e4db0bcae985150c897f56081e61e74ec097c96de7801fe6ab418a"
+    },
+    "work:ammonius-fragmenta-joannem:u04-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "61a2206c532f7d129e9b2a8f028a866a55ba5efc60ddac4e9706a53028618fcf"
+    },
+    "work:ammonius-fragmenta-joannem:u04-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "4660bd18da6eea805f6f82a21a79aad15daadc11c65500be12dabc1f3dd1e748"
+    },
+    "work:ammonius-fragmenta-joannem:u04-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "7f9ab482e5b9f822b85ff4355f2310d8405aa859df00ba4fa53f86d4c8e1aca1"
+    },
+    "work:ammonius-fragmenta-joannem:u04-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "719fc79e6d5fa536aabee989ae51173461860fab68fe33ddf087977f1c51064c"
+    },
+    "work:ammonius-fragmenta-joannem:u05-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "799b764ca67109cb38743c9aabd7c3af34974fa8b566eea46d9c809aad347e6a"
+    },
+    "work:ammonius-fragmenta-joannem:u05-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "3b26a2145fd5d2346b05e5d5adee929179a94d508955fcf88886b252206b891b"
+    },
+    "work:ammonius-fragmenta-joannem:u05-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "0fcee1c89e16bacb8b50cd8d280773fe8a63dcf8f207a5eef86f5c994dce375f"
+    },
+    "work:ammonius-fragmenta-joannem:u05-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "f850c4920592e4fb445e3763cdee28fbf54f151ee819143067c271edaa522f9a"
+    },
+    "work:ammonius-fragmenta-joannem:u06-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "bde25bbfc352ef4af74b57aee402377b492bd092fe0f31f2e3a36fe60ba4425d"
+    },
+    "work:ammonius-fragmenta-joannem:u06-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "06dff7f41dc90aa30eb4eeb954b4320ebac99a3a0ff41b086843a992b331d20e"
+    },
+    "work:ammonius-fragmenta-joannem:u06-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "275ab3be9cdd33fb02d3402367daa430541239f64b0848ad75cf12d7babe169a"
+    },
+    "work:ammonius-fragmenta-joannem:u06-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "af5ea3b2f16e3d80d4ff389265442f05f7228dca99449bf323a244c440e4d25c"
+    },
+    "work:ammonius-fragmenta-joannem:u07-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "b3aa27000538bb553ee0f708a2457b27fe62aacecc944350764b87b09b8f72a5"
+    },
+    "work:ammonius-fragmenta-joannem:u07-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "25f92c4add03e223b9c5d9ab3e419a2901790361afc6d26aaf66ad907818f037"
+    },
+    "work:ammonius-fragmenta-joannem:u07-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "32bbd7df526eb74be4b98e8424bae83ab023119fc2d6c17d207bcf1c8b7a69a5"
+    },
+    "work:ammonius-fragmenta-joannem:u07-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "38c41b7facde700aa5e2b11d6430580f58a3b4e5feefd8a3fa95dd325e65aa6a"
+    },
+    "work:ammonius-fragmenta-joannem:u08-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "826b94e03df27cba56b9ee0d693a4fde746eec4ebbdf11c8c3ee42222cf20b21"
+    },
+    "work:ammonius-fragmenta-joannem:u08-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "412accf06fae9944e1e734e513216ee5f8b4349d47716b7ac576f9b94a2f01bd"
+    },
+    "work:ammonius-fragmenta-joannem:u08-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "d0d38d0a4a08dabee6bfce64d5e9f02a241d9da582460cd4c76c41f690338294"
+    },
+    "work:ammonius-fragmenta-joannem:u08-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "314d30ad357820d3476379ae66d6b9e31bde4e1293a78650c2fae1e769a7d52c"
+    },
+    "work:ammonius-fragmenta-joannem:u09-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "db003a9b485d3646ecc3761f1f561d336c37656902f06ce429f14fb231b53a84"
+    },
+    "work:ammonius-fragmenta-joannem:u09-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "9894c19d30aa9878e081637196eb97b285f2750bb7b3e0f6b83ac947b4dd29f3"
+    },
+    "work:ammonius-fragmenta-joannem:u09-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "b7163f80526971d02147236a1d7c05dfcb28c52612db73a1fd8cfe39b2bb2c22"
+    },
+    "work:ammonius-fragmenta-joannem:u09-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "ce53666849d9350d5611d7d771853fa1823f03983ecd36d70b543d4993b194b5"
+    },
+    "work:ammonius-fragmenta-joannem:u10-open": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "8cfcbaa62a707d53000b85c189a41d98467835099a78346dc645982196d7f27c"
+    },
+    "work:ammonius-fragmenta-joannem:u10-rem-early": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "054bf3eea29f1b538d4ff66149fce6a8c2237cddf90ff52646d0828162d2658c"
+    },
+    "work:ammonius-fragmenta-joannem:u10-rem-mid": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "5753c9575f0aa89d9b04292c50a4b7213b5eeec71ff2104c64583133c7758782"
+    },
+    "work:ammonius-fragmenta-joannem:u10-rem-close": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "57a3e40ccdc1274c0ff5ffcbc63863ccb991e66ac5131846a0bed1c782a03b81"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27038,6 +27278,10 @@
     "origen-psalms-fragments-greek": {
       "packet": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.packet.json",
       "receipt": "books/origen-psalms-fragments-greek/reviews/audit/psfg_psalm1.review.json"
+    },
+    "ammonius-fragmenta-joannem": {
+      "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
+      "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json"
     }
   }
 }
