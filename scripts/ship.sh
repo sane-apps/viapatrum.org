@@ -113,6 +113,8 @@ fi
 
 echo "==> Catalogue and UI regressions"
 "$PYTHON" "$ROOT/scripts/check_catalogue.py"
+echo "==> Research receipts (intros sourced, dates agree)"
+"$PYTHON" "$HOME/SaneApps/clients/translations/scripts/check_research.py"
 node --test "$ROOT/scripts/ui.test.mjs"
 node --test "$ROOT/scripts/check_visual_gate.test.cjs"
 
