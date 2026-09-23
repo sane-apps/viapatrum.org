@@ -27621,6 +27621,30 @@
       "receipt": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.review.json",
       "section": "frag-rem-close",
       "payload_sha256": "0fccc5cfe2783edd2ad12376f7f957213e451b65dd52972db7c3328066a8e9e7"
+    },
+    "work:origen-regnorum-fragments:u01-open": {
+      "packet": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.packet.json",
+      "receipt": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "be1275ddcbd58e7de7f63d992a4753ce247a3d7509d17cedf7cfa0fab36b7581"
+    },
+    "work:origen-regnorum-fragments:u01-rem-early": {
+      "packet": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.packet.json",
+      "receipt": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "545c815ddc4d1b25dd38d9e9ba14ff16f6864e86cdc28d7f963c8d2556e2eb88"
+    },
+    "work:origen-regnorum-fragments:u01-rem-mid": {
+      "packet": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.packet.json",
+      "receipt": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "38202a24e0aa1f571c2f7adbd3891f1d4dcff7f0dc81245d073aedc367e2eec9"
+    },
+    "work:origen-regnorum-fragments:u01-rem-close": {
+      "packet": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.packet.json",
+      "receipt": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "e25d1681a9d8ccaf0b4006044fe4bda51e44ab44005d47a719bb82b167a7ccba"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27810,6 +27834,10 @@
     "origen-ruth-scrap": {
       "packet": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.packet.json",
       "receipt": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.review.json"
+    },
+    "origen-regnorum-fragments": {
+      "packet": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.packet.json",
+      "receipt": "books/origen-regnorum-fragments/reviews/audit/reg_u01_tip.review.json"
     }
   }
 }
