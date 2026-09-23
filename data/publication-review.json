@@ -27117,6 +27117,174 @@
       "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json",
       "section": "u10-rem-close",
       "payload_sha256": "57a3e40ccdc1274c0ff5ffcbc63863ccb991e66ac5131846a0bed1c782a03b81"
+    },
+    "work:origen-ephesians-fragments:u01-open": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "f40e54507ccfbae7aad6b071189a8d3a5647ddd2086235c42c9b3608876cf2e0"
+    },
+    "work:origen-ephesians-fragments:u01-rem-early": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "6fc66e4ba9e29f4d90033c93d35c4433bcf190fcfd013fb99e2842dd338f49fa"
+    },
+    "work:origen-ephesians-fragments:u01-rem-mid": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "f15934dd06467b7ae7f0e2d3650ecf093daa10029f3f42f29091a002c7ea5e4b"
+    },
+    "work:origen-ephesians-fragments:u01-rem-close": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "64b9c766717d8389644ba3f3f6ce4ada2f963df1c32598dc1c7c51db10ad520c"
+    },
+    "work:origen-ephesians-fragments:u02-open": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "b50d5b1850d1b7f8fd656dc8f3d14cc99965c3a75ffa26fc6fec7e55be33bf46"
+    },
+    "work:origen-ephesians-fragments:u02-rem-early": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "f9da6485757c2689fdd2f903f5f28506c66bfb5536b8ecaba164574c4ff11d2b"
+    },
+    "work:origen-ephesians-fragments:u02-rem-mid": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "3134af6d1feaf999f28681fa6a2c1c2d3e2ae860223727ceeb42fd394a210c54"
+    },
+    "work:origen-ephesians-fragments:u02-rem-close": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "b12ec06f2c5cae54876350d40f08813750966d76bb94c80d4c3e0d0137560a7e"
+    },
+    "work:origen-ephesians-fragments:u03-open": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "2d1364cce51bba3bef52007ab078385907ab971a66e2095afc96e7e44bcef420"
+    },
+    "work:origen-ephesians-fragments:u03-rem-early": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "d54361f91599e07c5b07c2433dcd83a26b1ed00909516452024aaa926404a870"
+    },
+    "work:origen-ephesians-fragments:u03-rem-mid": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "54f8b708fc247c18f0d21ce77d9b5ea2eeed2eefb48b08afa14e80adee91179c"
+    },
+    "work:origen-ephesians-fragments:u03-rem-close": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "1c00d888eabb263d3206f8430f027fdc197955a146855f7bf102831aadc7f9bb"
+    },
+    "work:origen-ephesians-fragments:u04-open": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "c8c2ec79982af26efa5e5e40d0755d0a7c230ff4315f410675ee0ef30dd02495"
+    },
+    "work:origen-ephesians-fragments:u04-rem-early": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "cd001914d199ae016edbd84078180a577cc5ab0ffe0a7e8d17e846ea2f927e52"
+    },
+    "work:origen-ephesians-fragments:u04-rem-mid": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "fb3f889e566c29fdab548531e1fafb19a27e01f4e9d155310229c1d5b32b8268"
+    },
+    "work:origen-ephesians-fragments:u04-rem-close": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "7c5a071c72335795033750367e96cb0937408c823d37a334011f84460398ae79"
+    },
+    "work:origen-ephesians-fragments:u05-open": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "361363b615c8778acacbab3464ad96d3efa54b5b489064d08e9b3929e25941a1"
+    },
+    "work:origen-ephesians-fragments:u05-rem-early": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "9b29798ee82804562644c00f0db08f0e50bef58a0a9273307aec12c58ae88e2b"
+    },
+    "work:origen-ephesians-fragments:u05-rem-mid": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "0ce755abc3a48030e18b4fd0d03c03f361edd0c9417df9e46a01ceee9ab297f4"
+    },
+    "work:origen-ephesians-fragments:u05-rem-close": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "3193d615306ead230685e340911135a1da381711bf554031528851edce38d201"
+    },
+    "work:origen-ephesians-fragments:u06-open": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "764648916dacb06bde410293bcaed3cfbba1261c50461074e9f06dd1380c22bf"
+    },
+    "work:origen-ephesians-fragments:u06-rem-early": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "b453ac568d0cef15d4fa2bd1059c5ea4d5ada96e7fa7eb730ff88e81f2ca3ced"
+    },
+    "work:origen-ephesians-fragments:u06-rem-mid": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "6d23f2fc99037688384b63a5d16ca426c690044d6c4e04c1df977497225e1df6"
+    },
+    "work:origen-ephesians-fragments:u06-rem-close": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "e88b9aed09ac75a0ed0802832ac9fc2195ba356c3321561e6a1b2d3004d7aa62"
+    },
+    "work:origen-ephesians-fragments:u07-open": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "f9ff8b5ea4d02a6563049a7f927dbcca6ed4de5daf420e7ce0e30bfc9837bf25"
+    },
+    "work:origen-ephesians-fragments:u07-rem-early": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "efea0d26557486bcdfd9818d9da5c64a6eaca30b1195c3eeb4284c9a7946a510"
+    },
+    "work:origen-ephesians-fragments:u07-rem-mid": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "6bb024522433f7c6493b8fb6701bb038b4c0034d4dd96ea4679aad26fd51d312"
+    },
+    "work:origen-ephesians-fragments:u07-rem-close": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "6a95cac34d8f0ee3fba8ec2a34527b1937144d45f0900e26cc41efd715b9328d"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27282,6 +27450,10 @@
     "ammonius-fragmenta-joannem": {
       "packet": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.packet.json",
       "receipt": "books/ammonius-fragmenta-joannem/reviews/audit/ammfj_u01_u10_tip.review.json"
+    },
+    "origen-ephesians-fragments": {
+      "packet": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.packet.json",
+      "receipt": "books/origen-ephesians-fragments/reviews/audit/eph_u01_u07_tip.review.json"
     }
   }
 }
