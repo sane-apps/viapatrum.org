@@ -27525,6 +27525,30 @@
       "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json",
       "section": "u10-rem-close",
       "payload_sha256": "6360cfd328909b5ff3663dddc964a891883bff87a836bbc81586b165b7f3ac38"
+    },
+    "work:origen-hebrews-homily-scrap:frag-open": {
+      "packet": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.packet.json",
+      "receipt": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "919a6bcb43aabf5036f6c0f3cd4a40277d2f81e12e58c2feb67b665398a7a19c"
+    },
+    "work:origen-hebrews-homily-scrap:frag-rem-early": {
+      "packet": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.packet.json",
+      "receipt": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "97fae5f98443f8a1ecca95d5ca90c11fe4e4e10cbb0af0a621ec1fed3a5b9fc1"
+    },
+    "work:origen-hebrews-homily-scrap:frag-rem-mid": {
+      "packet": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.packet.json",
+      "receipt": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "6ad89b14d6e9e6a3fe95fce57bd37704b814aa7de47f79a7e41df49515b3fb2e"
+    },
+    "work:origen-hebrews-homily-scrap:frag-rem-close": {
+      "packet": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.packet.json",
+      "receipt": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "00714e4ad6eb2076fb7c591aae49e0569345237d00e042acfadce51ab8556ce9"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27698,6 +27722,10 @@
     "origen-1-corinthians-fragments": {
       "packet": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.packet.json",
       "receipt": "books/origen-1-corinthians-fragments/reviews/audit/o1c_u01_u10_tip.review.json"
+    },
+    "origen-hebrews-homily-scrap": {
+      "packet": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.packet.json",
+      "receipt": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.review.json"
     }
   }
 }
