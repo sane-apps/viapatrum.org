@@ -27549,6 +27549,78 @@
       "receipt": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.review.json",
       "section": "frag-rem-close",
       "payload_sha256": "00714e4ad6eb2076fb7c591aae49e0569345237d00e042acfadce51ab8556ce9"
+    },
+    "work:origen-osee-fragment:frag-open": {
+      "packet": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.packet.json",
+      "receipt": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "bce8ce047e58bae5f6bae020a8b0920940087e034bf4ce0c06f2a2eaceba29c5"
+    },
+    "work:origen-osee-fragment:frag-rem-early": {
+      "packet": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.packet.json",
+      "receipt": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "48a21f1fcd38c4a9777d56ff307ad719f2f2376eb7478fdc1473a1d8b2fce90e"
+    },
+    "work:origen-osee-fragment:frag-rem-mid": {
+      "packet": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.packet.json",
+      "receipt": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "b07c83fefe5c008b7a9a6c840846029b23adc329161d7588118bdc27a7ecad1d"
+    },
+    "work:origen-osee-fragment:frag-rem-close": {
+      "packet": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.packet.json",
+      "receipt": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "eecfebfe311835e57c357e70be0ac5e86c1e3105d6c56aeebc23b53a4e500e11"
+    },
+    "work:origen-acta-homily-scrap:frag-open": {
+      "packet": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.packet.json",
+      "receipt": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "231b104a5cdf22dad3d9428fee195db7fc3a8c71da2d7624d9ba0a7ee0cad090"
+    },
+    "work:origen-acta-homily-scrap:frag-rem-early": {
+      "packet": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.packet.json",
+      "receipt": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "098e40d17aed4f47444a05560a21916c676c829c5b603d0b531e42fd1239a24b"
+    },
+    "work:origen-acta-homily-scrap:frag-rem-mid": {
+      "packet": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.packet.json",
+      "receipt": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "dee1d12bcca1106a1086a2e3bddb497424cd2c6ac4039930ec8928c1fbf75b55"
+    },
+    "work:origen-acta-homily-scrap:frag-rem-close": {
+      "packet": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.packet.json",
+      "receipt": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "6451c706119f065912902199abd1464c498b0d5cabd93e3d07caf712e331b20f"
+    },
+    "work:origen-ruth-scrap:frag-open": {
+      "packet": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.packet.json",
+      "receipt": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "f5f275ac45da64ae4cacd8146e3d8c1d9b05ac959171f6aaef464bf8a5677584"
+    },
+    "work:origen-ruth-scrap:frag-rem-early": {
+      "packet": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.packet.json",
+      "receipt": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "5d777e43d59665a26c18e23c62db54bddd4690d61cab90cde64fee9d10bac57f"
+    },
+    "work:origen-ruth-scrap:frag-rem-mid": {
+      "packet": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.packet.json",
+      "receipt": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "04b299d11189a073a568c0bb1137591b40b78d8543773f3ae016cc814b818f92"
+    },
+    "work:origen-ruth-scrap:frag-rem-close": {
+      "packet": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.packet.json",
+      "receipt": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "79d3671b020577bde5e807491fb72505b38322a52c8db5445559021ec8267795"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27726,6 +27798,18 @@
     "origen-hebrews-homily-scrap": {
       "packet": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.packet.json",
       "receipt": "books/origen-hebrews-homily-scrap/reviews/audit/heb_frag_tip.review.json"
+    },
+    "origen-osee-fragment": {
+      "packet": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.packet.json",
+      "receipt": "books/origen-osee-fragment/reviews/audit/osee_frag_tip.review.json"
+    },
+    "origen-acta-homily-scrap": {
+      "packet": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.packet.json",
+      "receipt": "books/origen-acta-homily-scrap/reviews/audit/acta_frag_tip.review.json"
+    },
+    "origen-ruth-scrap": {
+      "packet": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.packet.json",
+      "receipt": "books/origen-ruth-scrap/reviews/audit/ruth_frag_tip.review.json"
     }
   }
 }
