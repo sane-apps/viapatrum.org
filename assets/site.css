@@ -222,7 +222,9 @@ body {
   max-width: 100%;
   overflow-x: auto;
   background: var(--paper-2);
+  border: 1px solid color-mix(in srgb, var(--rule) 75%, transparent);
   border-radius: 0.4rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.82rem;
   line-height: 1.45;
   white-space: pre-wrap;
@@ -230,6 +232,7 @@ body {
   word-break: break-word;
 }
 .help-option code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.88rem;
   overflow-wrap: anywhere;
   word-break: break-word;
