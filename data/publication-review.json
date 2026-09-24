@@ -27854,7 +27854,7 @@
       "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
       "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
       "section": "u04-rem-mid",
-      "payload_sha256": "762488be9495db52f096acce0113f4dd54aa3719b654e5db2d88c49a302c36ac"
+      "payload_sha256": "9e2a43837f005487fc999a035a0437d7f81283c86470ded97d03ebc7820dae5e"
     },
     "work:origen-romans-catena:u04-rem-close": {
       "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
@@ -27878,7 +27878,7 @@
       "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
       "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
       "section": "u05-rem-mid",
-      "payload_sha256": "dd9c49951f8618e8dc7e7e8a524559d8437d4de1ba10c44a9cd86b738d7142cf"
+      "payload_sha256": "87403b19fb9c4cbf30b4a40962eb137b19902623139f5ccd5f497095bb236847"
     },
     "work:origen-romans-catena:u05-rem-close": {
       "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
