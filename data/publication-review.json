@@ -34479,6 +34479,510 @@
       "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
       "section": "u39-rem-close",
       "payload_sha256": "34d1c61324c19487c23c548a28d44eb2b8612ddd4f03f6e17c4bdade5db367c5"
+    },
+    "work:didymus-contra-manichaeos:u01-open": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "475bcc7019b977e970fc85720efbe63259c2705a760ca5a914da61fa94b5b304"
+    },
+    "work:didymus-contra-manichaeos:u01-rem-early": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a667ddb272a2c11e898278038d0e6f7a971179ef915cdb352dc0a391644212ac"
+    },
+    "work:didymus-contra-manichaeos:u01-rem-mid": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "cb00e4c0f848834637fa8efd7d32c93957b598743889b6f786b755b5198ecbcc"
+    },
+    "work:didymus-contra-manichaeos:u01-rem-close": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "c2b3d72ae7e18b63dd957e1f51ac3721b57a4e2b86e819c180d6e4754121e62b"
+    },
+    "work:didymus-contra-manichaeos:u02-open": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "565758aaec832e894ac27c30bf83c5c573325453667f910a2d29794b1b8c6577"
+    },
+    "work:didymus-contra-manichaeos:u02-rem-early": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "6a0994461d9a79e8cf30c54a17af14a24800493ec6992f9e6656796b05ff6666"
+    },
+    "work:didymus-contra-manichaeos:u02-rem-mid": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "6394b8db94daa615a119b7e6b960dd4f354290f274f12f8376502236d4341b28"
+    },
+    "work:didymus-contra-manichaeos:u02-rem-close": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "047fc2cc409ef8ff5fce5bb71268232fb88dcae161137c071a40c3e3ddfb0109"
+    },
+    "work:didymus-de-trinitate:u01-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "50b2d317b6f8a8ff40c17f9dbc49d01efe3845301bf1581fbe1f2e21f8fa1ccc"
+    },
+    "work:didymus-de-trinitate:u01-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "225311a339bca657f4d0d9f861c5c741261469d1b166172f1685168eb11f47ae"
+    },
+    "work:didymus-de-trinitate:u01-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "ee5ca85564e81ab0b92db9830adbd2da8cb8458722f4eb448a563245425ca693"
+    },
+    "work:didymus-de-trinitate:u01-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "e30904d4bf74b6dbe40db3f47cd36f046e1bdd3db87e8e32871bdf0a9c4d944f"
+    },
+    "work:didymus-de-trinitate:u02-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "753e8cd01f218a23a225b4cbf7393cd68e4089e23fa7e9c5e83af8752133ec99"
+    },
+    "work:didymus-de-trinitate:u02-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "9f15b5f6ab7e4c26a7b872fa02636efbf572e61977518876fdaf64df741d9ce9"
+    },
+    "work:didymus-de-trinitate:u02-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "9445b7ebb8aa246cc2529f7bd78efa21914badfbca81bed19bfd267c005fd033"
+    },
+    "work:didymus-de-trinitate:u02-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "13b1ba2eb8a2fbed21167fdf2e187ca93bc522d9b7c97233ec755b27d3be84d5"
+    },
+    "work:didymus-de-trinitate:u03-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "4f831fb361c58676f4942c9035eac12e3da9364ebd2ba2463b4e9ba679b2c922"
+    },
+    "work:didymus-de-trinitate:u03-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "53d422df0cd1d82452a34bc586c64be6e069546b578d6b93a85d43e091f8a6d7"
+    },
+    "work:didymus-de-trinitate:u03-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "18ffc8cefe260db78dd395eb4f780f68f3b1d84edec37d8854fb29d01e182257"
+    },
+    "work:didymus-de-trinitate:u03-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "f9d7b16aaa7a85ae2afab7f8a2908324d5a881126abe2ca20bfca4c65662e7d8"
+    },
+    "work:didymus-de-trinitate:u04-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "2d0b4167149b953860decdcc1492b7f43a9d04a79a95eeaffc4f19680d8ded2a"
+    },
+    "work:didymus-de-trinitate:u04-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "11697deec7a4c04b8314ca6e4afc7a2ea4bde93efbaaebbada381d0b50f9b99b"
+    },
+    "work:didymus-de-trinitate:u04-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "5acf855b10ab7476c3070d58bf10556f572c6fe26bfe3afe8163f2ae6bd548c3"
+    },
+    "work:didymus-de-trinitate:u04-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "468f0d28e891eaba720e894ad6cd8ef82c0297949c6e6e3e05332c65c64dfebc"
+    },
+    "work:didymus-de-trinitate:u05-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "71603c010cfbacfbf3d2182db17332d9ac12418a07e1e60e24bb887cb758cda4"
+    },
+    "work:didymus-de-trinitate:u05-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "5a4f3a4662b975459e8f643e709d3f9a6e17e4c7fe841a31c04c0b963b74e17d"
+    },
+    "work:didymus-de-trinitate:u05-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "e3bfb9daf0d8573c83ab4f49578ddb609ed5ab72984807269938e3c0532098db"
+    },
+    "work:didymus-de-trinitate:u05-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "b845258d62f7ae46eadbd299aa7eb9de7cba55b0a54401eb39246e192b59a104"
+    },
+    "work:didymus-de-trinitate:u06-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "47856b725720c42f27e6a6434a187eec3a2bd4bf41015830a0c84594611a5e2b"
+    },
+    "work:didymus-de-trinitate:u06-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "c6e723dc3793ddb2e90222ce24d1a704c143a548fe6d14df9352b6e7f15e67c3"
+    },
+    "work:didymus-de-trinitate:u06-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "c4a42972d39728de19c48659ab5ac98fcfb612cb72ff5479dcf3a61eca7c3875"
+    },
+    "work:didymus-de-trinitate:u06-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "19c8209e8f03706443bf10566669d748e6ff497ad1d764fd3a4c6e4220edfb9d"
+    },
+    "work:didymus-de-trinitate:u07-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "8436dfd3b70241b5d802867f300bc4e629214f9dee158060f166d36f61647bfd"
+    },
+    "work:didymus-de-trinitate:u07-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "170e7d7fe5b339c4b2143a356127f91336d3be30e8856e3b7edf31b9a401399b"
+    },
+    "work:didymus-de-trinitate:u07-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "e962d39bd73419d138c1d0794fadf1b49d286370851e524aec944cf6eb729030"
+    },
+    "work:didymus-de-trinitate:u07-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "4f86d32409e5ac23fefd1569363123ed263a264da2c9b1f3f6e3e2b6c7d6693a"
+    },
+    "work:didymus-de-trinitate:u08-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "543485fc3701ca9b6644bee3fe0879ab064ae3077feefac3a90b7ba69b097dca"
+    },
+    "work:didymus-de-trinitate:u08-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "0001c9dcd74f316a828b8f8c9eeff4fbbef4a16f23d2901ef37c02b9596177d6"
+    },
+    "work:didymus-de-trinitate:u08-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "6576aa8dfc67474ee390e2ed28d6df9b7caad59ebc6eac934263965586a53dd3"
+    },
+    "work:didymus-de-trinitate:u08-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "ef19751925a4964b3c28fd1f1905b16fcbfecb00cdcf924aaa02b4e9fb32d0d4"
+    },
+    "work:didymus-de-trinitate:u09-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "19386a49614bee373fae4e6f3f83a6ad55b224b0a7774fdd20394b8259eeb94d"
+    },
+    "work:didymus-de-trinitate:u09-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "32e4d1dc5fa652bd5e8497179b3609727ca064b82c0dbdc246194b6568be04b0"
+    },
+    "work:didymus-de-trinitate:u09-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "e8b9a037266a37e527e9ca51cf9a36ee28616593f518ce682d34c9e6116c479d"
+    },
+    "work:didymus-de-trinitate:u09-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "6ffc93f5b15e7dca42052b9a02839d56f8838d5fc4d38fca3a472a0ebb4d0d83"
+    },
+    "work:didymus-de-trinitate:u10-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "299c8dec756f17e7a53c5576d0149c775767129f08e9b21f6fc086974f90b23c"
+    },
+    "work:didymus-de-trinitate:u10-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "60cedd5b15d8773787c0f20e8f7abf797913d3eb1866a71e0fe7c340fcf63820"
+    },
+    "work:didymus-de-trinitate:u10-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "5eb40a4ac0d218f21c7f89244c6d3ecf36512fcc9c35620a6db28183f878c0df"
+    },
+    "work:didymus-de-trinitate:u10-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "b6fb939123ec28744fc007251591f65f7293bffabd2426338dc59c5cce69daa6"
+    },
+    "work:didymus-de-trinitate:u11-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "6cac9cccec9ef18110762affc97e321942eeea21089947e20b4ded1ceb47ae72"
+    },
+    "work:didymus-de-trinitate:u11-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "3226955577022beb4d71222d001ee44d94e2f0ebb68c379cb93a4e831afe3686"
+    },
+    "work:didymus-de-trinitate:u11-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "075ac90e761871602c8cfd00c944e5ee68b1bcf29fbbe5546f2e6cb3376ac8e0"
+    },
+    "work:didymus-de-trinitate:u11-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "0110a36d46010e4fa71c33176a1680fd3a3f246ad9d1b0da330a722834cda44a"
+    },
+    "work:didymus-de-trinitate:u12-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "0fb5ee3ee0df9556bcdd49b5562b34103c7f06424795d86dd31c7a55af4603dd"
+    },
+    "work:didymus-de-trinitate:u12-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "7c84d5b7a7f900aec4e1c6a2d034592a7fbaf9e2070b9438c5631d98516d8a76"
+    },
+    "work:didymus-de-trinitate:u12-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "67ef2b92db5d8a9af8dcc726990508c1f75727e4a0387268fa40e74753fb8ccb"
+    },
+    "work:didymus-de-trinitate:u12-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "57a7f95743192ad8529e98bc292c352769fa60f199674e9032a5ac293667fc94"
+    },
+    "work:didymus-de-trinitate:u13-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "d3865478c394d3d83951a56a116c138c14a23257311bd3f302e4778b6fd85da0"
+    },
+    "work:didymus-de-trinitate:u13-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "85dfe6ff6f7bd656e36690ea35c9d3633ce77116f07aab408f7604981d02b562"
+    },
+    "work:didymus-de-trinitate:u13-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "bf5ec5add3f6fd5791d0ac46728f088d7b8ecb7d4c64e8ba6872874bfd08af6f"
+    },
+    "work:didymus-de-trinitate:u13-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "414fd245e508eff2e06b2c59619952b2b877eb5723b6b0e161ca8e95731b8a6a"
+    },
+    "work:didymus-de-trinitate:u14-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "49994ef536f93f5560fb2964e952e166a9acf46471e90fa504636a0b91baa0c7"
+    },
+    "work:didymus-de-trinitate:u14-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "59da360182565040959c08ce29360bbc60369a59c0fcb9aa9d099f3df3ac9675"
+    },
+    "work:didymus-de-trinitate:u14-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "a2a683f334ecadaa4d3bf24166c047d4217b9733db04f75bf65cd5d2921c2608"
+    },
+    "work:didymus-de-trinitate:u14-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "65a65e1406c4d52dc3374c858f331d34bfc034f3f5970ceee0ff2f8d382d61a8"
+    },
+    "work:didymus-de-trinitate:u15-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "029c4af2a16fe7603938b3ce6189c2eae8d572650cd15cb25994169b481e397b"
+    },
+    "work:didymus-de-trinitate:u15-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "9bc78cc4e31bea34ba06bb23a23a12caa71078963a3b2eb006134df97c800695"
+    },
+    "work:didymus-de-trinitate:u15-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "8df33ca14468a166b95739e98c3ce8a3dd0fcdd788dae10e0c167696abe2c979"
+    },
+    "work:didymus-de-trinitate:u15-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "b0bdee80fa89b711c289d8e2ee77e4e1abe5b4e541344a7ccb64a1fc2aa2460d"
+    },
+    "work:didymus-de-trinitate:u16-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "c2b4fc8f7f2fda408754f7eb1e0fb7d4193eeeb328213c8cd26cd02601286f52"
+    },
+    "work:didymus-de-trinitate:u16-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "b11960a40fb4ba09bbc9518b3be0937a163b20417f6ed8d8a7904381a00e66df"
+    },
+    "work:didymus-de-trinitate:u16-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "02d1ec18e9c01d3fb766c07fe607ddf9b017548543e2abddafefa7c69d146882"
+    },
+    "work:didymus-de-trinitate:u16-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "72f72f9295936fcc4054816d341eb0aac53f8529a2e0c55e86dde8700fca148e"
+    },
+    "work:didymus-de-trinitate:u17-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u17-open",
+      "payload_sha256": "b1f2fdef2c75bcf2b7863e7cced13ada5f053c71ab5d508c70726c0ee89999f4"
+    },
+    "work:didymus-de-trinitate:u17-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u17-rem-early",
+      "payload_sha256": "a7b9bd3975bbef56dd6006daa6e9a44e364fc0972a8fc06ce497698cd173ee26"
+    },
+    "work:didymus-de-trinitate:u17-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u17-rem-mid",
+      "payload_sha256": "cb65fefd18048216e7c3ad71f9fbb5ea0f80a125d2276f325872ec0f9f8ce92c"
+    },
+    "work:didymus-de-trinitate:u17-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u17-rem-close",
+      "payload_sha256": "f86e2b79332bb1f1ecc27cbe71e30c5617662215d903edb2f450ebe034809994"
+    },
+    "work:didymus-de-trinitate:u18-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u18-open",
+      "payload_sha256": "7e2eebb147a102cc5f27a2c59108cf394eff138c2b7f17e6657f3509c989812f"
+    },
+    "work:didymus-de-trinitate:u18-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u18-rem-early",
+      "payload_sha256": "a9e3cdf82e46d14837a7671c25c88d494dc4c10787a0ed20582d06090988ae39"
+    },
+    "work:didymus-de-trinitate:u18-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u18-rem-mid",
+      "payload_sha256": "bbf59dd3065957506b1c2349895afe6003037b15e760cb10b693e2db876313ba"
+    },
+    "work:didymus-de-trinitate:u18-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u18-rem-close",
+      "payload_sha256": "89d9cd3ddcee0361cd2b1ee1aefdfcbb0c7e2ba2e10a5ffa906ca62df10f906d"
+    },
+    "work:didymus-de-trinitate:u19-open": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u19-open",
+      "payload_sha256": "7d8a070e69cbe27844b6ef17e759966fee18364762cb5c3c313270d621aa83e9"
+    },
+    "work:didymus-de-trinitate:u19-rem-early": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u19-rem-early",
+      "payload_sha256": "17b4b4f33613a5c4483fb84e7a5ebc75ed0bba0c0f5be00f2d1a782cc0aa438d"
+    },
+    "work:didymus-de-trinitate:u19-rem-mid": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u19-rem-mid",
+      "payload_sha256": "60185d1c2491f9dc7966f7fb9e539a188e08ccc9ae649aa94f2ab8f7ea562610"
+    },
+    "work:didymus-de-trinitate:u19-rem-close": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u19-rem-close",
+      "payload_sha256": "f907b2187940841a4758a64cb6693c9d9323e00015cd31b63dd87a425e23b283"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -34964,6 +35468,14 @@
     "didymus-commentarii-zacchariam": {
       "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
       "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json"
+    },
+    "didymus-contra-manichaeos": {
+      "packet": "books/didymus-contra-manichaeos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-contra-manichaeos/reviews/audit/tip.review.json"
+    },
+    "didymus-de-trinitate": {
+      "packet": "books/didymus-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-de-trinitate/reviews/audit/tip.review.json"
     }
   }
 }
