@@ -29679,6 +29679,102 @@
       "receipt": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.review.json",
       "section": "frag-rem-mid",
       "payload_sha256": "4a089ebe7b49560cc5e4a33df30772109f3f79e6b60679db9f2dbb5662d1f285"
+    },
+    "work:theodorus-heracleensis-matthew-fragments:u01-open": {
+      "packet": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.packet.json",
+      "receipt": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "33506f8f34ceea7ad7567c59f8623f90449441b64fae252327c7b577e02dcda1"
+    },
+    "work:theodorus-heracleensis-matthew-fragments:u01-rem-early": {
+      "packet": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.packet.json",
+      "receipt": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a80232d4332dadb4ae4dca9589c72737c15bc7b9f700dfa5b60097191abff6c3"
+    },
+    "work:theodorus-heracleensis-matthew-fragments:u01-rem-mid": {
+      "packet": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.packet.json",
+      "receipt": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "80433ad752ac21bced50fcbcbe0c8753eb2a72053cb26b5e719d5a18056d4481"
+    },
+    "work:theodorus-heracleensis-matthew-fragments:u01-rem-close": {
+      "packet": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.packet.json",
+      "receipt": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "6227d5e6c8de7ac489a4083005a8943b5425d365ecf2c30afb0114d7f69eb412"
+    },
+    "work:eusebius-emesa-fragmenta-galatas:u01-open": {
+      "packet": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "fc38421422537ba2deac1533524fcdc2b70edae29840f589c1ee8d7fb5db3e87"
+    },
+    "work:eusebius-emesa-fragmenta-galatas:u01-rem-early": {
+      "packet": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "847202a5cb769e56904fa452001403c6680ee67e81b2f8cc4d7f648c3d89f89e"
+    },
+    "work:eusebius-emesa-fragmenta-galatas:u01-rem-mid": {
+      "packet": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "415d8ed8654390d3529e4f047027115654dcec0fca6f389438931f1e23afbeb0"
+    },
+    "work:eusebius-emesa-fragmenta-galatas:u01-rem-close": {
+      "packet": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "4c5d657cd3f8afbc44dafe0b234054e65e378fc1f55445c2ebf4d645b4821016"
+    },
+    "work:eusebius-emesa-fragmenta-romanos:u01-open": {
+      "packet": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "6ac9bdde362d529426c016ad0a112e8a650213fce4c9755c4be578bbe27020cd"
+    },
+    "work:eusebius-emesa-fragmenta-romanos:u01-rem-early": {
+      "packet": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "9a35b2594d291c1ec16e71da651659b39ffce20d42d3eb48c0380e8d72ce88d7"
+    },
+    "work:eusebius-emesa-fragmenta-romanos:u01-rem-mid": {
+      "packet": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "6484ebec043fc218e0dbf4791ed696eee7c965ec890ccb1aabca31881043f315"
+    },
+    "work:eusebius-emesa-fragmenta-romanos:u01-rem-close": {
+      "packet": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "ae77adb8e1a26e26d91fe9d1e759cf487e230bec6a0f8f77037eb3432b118e8d"
+    },
+    "work:eusebius-emesa-fragmentum-1cor:u01-open": {
+      "packet": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "83f066c7c2cf351ec45adef2eb8f9ce63f41ea613776d83195b572e55636d955"
+    },
+    "work:eusebius-emesa-fragmentum-1cor:u01-rem-early": {
+      "packet": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a680af12e45b17e6af89bb8e21c57298b2baa8041cea3836510b16841015e03a"
+    },
+    "work:eusebius-emesa-fragmentum-1cor:u01-rem-mid": {
+      "packet": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "5907b4359b16b393acadb0d7e2ba548546287e2a1951c5d04fa806b387cfe4a5"
+    },
+    "work:eusebius-emesa-fragmentum-1cor:u01-rem-close": {
+      "packet": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "eae93317b73db0f46f93cb07e993be9c914347c24514d9e90bc4bff60bd30b01"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -30032,6 +30128,22 @@
     "cyril-solutiones-vat-447": {
       "packet": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.packet.json",
       "receipt": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.review.json"
+    },
+    "theodorus-heracleensis-matthew-fragments": {
+      "packet": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.packet.json",
+      "receipt": "books/theodorus-heracleensis-matthew-fragments/reviews/audit/tip.review.json"
+    },
+    "eusebius-emesa-fragmenta-galatas": {
+      "packet": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-galatas/reviews/audit/tip.review.json"
+    },
+    "eusebius-emesa-fragmenta-romanos": {
+      "packet": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmenta-romanos/reviews/audit/tip.review.json"
+    },
+    "eusebius-emesa-fragmentum-1cor": {
+      "packet": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.review.json"
     }
   }
 }
