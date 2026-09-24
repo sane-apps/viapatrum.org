@@ -29031,6 +29031,270 @@
       "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
       "section": "u08-rem-close",
       "payload_sha256": "e55df1ac6e589b6c715c86de6d3f181135b544d38b869d463291acac6432abd9"
+    },
+    "work:eustathius-commentarius-psalmum:frag-open": {
+      "packet": "books/eustathius-commentarius-psalmum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "62d496887970bd8e531a95c9e1ba89b1afe98f69c802d2ea7ffc3339e4ad7ad8"
+    },
+    "work:eustathius-commentarius-psalmum:frag-rem-early": {
+      "packet": "books/eustathius-commentarius-psalmum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "1c57dd27e8c2a2fc29f26c7669ea15d1165694e71c0ff5baeaf6d8be5ccbf988"
+    },
+    "work:eustathius-commentarius-psalmum:frag-rem-mid": {
+      "packet": "books/eustathius-commentarius-psalmum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "8df6ed8ba1c02afda4ec7503ab0566413ab6ea2e50039a40549d43281d0e7775"
+    },
+    "work:eustathius-commentarius-psalmum:frag-rem-close": {
+      "packet": "books/eustathius-commentarius-psalmum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "1d4c52ee3ca8714075bc171cb120811937c8e717fe9d4a27e0e2732d1a4c92b2"
+    },
+    "work:eustathius-commentarius-psalmum-92:frag-open": {
+      "packet": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "c79e265a38108803387f40713f7c5aabd0c4f1addb05ebef8f33993b17ff2725"
+    },
+    "work:eustathius-commentarius-psalmum-92:frag-rem-early": {
+      "packet": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "c4cc7d9e5be19a20e7993cef6dae73848e5b12252b79afe06c6aca8d07ef16eb"
+    },
+    "work:eustathius-commentarius-psalmum-92:frag-rem-mid": {
+      "packet": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "9a06e59007233287fbe4689293edb7eb58dd13838c336de7d721ba24f1345527"
+    },
+    "work:eustathius-commentarius-psalmum-92:frag-rem-close": {
+      "packet": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "da195bc00062386966611e4e716119e1d6e60e45b9adb4cd2f669b3cfdc4dc52"
+    },
+    "work:eustathius-de-fide-contra-arianos:frag-open": {
+      "packet": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "fecd18d0854333c2c6baaa539f7f54ea4ad6fd73a1cd7fb964904169cc057575"
+    },
+    "work:eustathius-de-fide-contra-arianos:frag-rem-early": {
+      "packet": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "cddbfd62dd4065b49b125f5489ca2496ae4820ca600761237a3eb489b53ac189"
+    },
+    "work:eustathius-de-fide-contra-arianos:frag-rem-mid": {
+      "packet": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "11521bd5b2c52967ee7f5b3a15ebafcdddceed6c06624d473738deab4d66a1f7"
+    },
+    "work:eustathius-de-fide-contra-arianos:frag-rem-close": {
+      "packet": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "46109fb88fd992aecfe0fbe914294366eca1bea7cef97206210fc26cc65f32b8"
+    },
+    "work:eustathius-fragmenta-varia:frag-open": {
+      "packet": "books/eustathius-fragmenta-varia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-fragmenta-varia/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "b313efd49141cd11af2b82ab03d8c1bd5b5fd9e74b771979fabeffe2b1a3bbdf"
+    },
+    "work:eustathius-fragmenta-varia:frag-rem-early": {
+      "packet": "books/eustathius-fragmenta-varia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-fragmenta-varia/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "1788fc5352f91ff009d7a417bb978dfb7065f5bdcfce632943a74716fa560b30"
+    },
+    "work:eustathius-fragmenta-varia:frag-rem-mid": {
+      "packet": "books/eustathius-fragmenta-varia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-fragmenta-varia/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "f730438e1896605501f6f7acd8a3196fc9aa65b78a9df7282758e3d555373e56"
+    },
+    "work:eustathius-fragmenta-varia:frag-rem-close": {
+      "packet": "books/eustathius-fragmenta-varia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-fragmenta-varia/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "98574d4e313177293549d2f6ace939d5b9da61b550a6b74112a9e1ab1410a39c"
+    },
+    "work:eustathius-in-ecclesiasten:frag-open": {
+      "packet": "books/eustathius-in-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "ca15c8b9605da0486229ddbbfc08e44b8f18631488371bc4fb16fff6f5fcaa63"
+    },
+    "work:eustathius-in-ecclesiasten:frag-rem-early": {
+      "packet": "books/eustathius-in-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "a2084066de18603899cfd2867f79c3c2df9126bfb8f20c999592171d782424a8"
+    },
+    "work:eustathius-in-ecclesiasten:frag-rem-mid": {
+      "packet": "books/eustathius-in-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "3e2ec025152dc6d3090df58eea04791b26851cc197544f777397140cf8d802a7"
+    },
+    "work:eustathius-in-ecclesiasten:frag-rem-close": {
+      "packet": "books/eustathius-in-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "c8ade2d0598f8b4b09893c495b53067ed895bb7d3a0aa09c269d259763683b16"
+    },
+    "work:eustathius-in-joseph:frag-open": {
+      "packet": "books/eustathius-in-joseph/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-joseph/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "58b4fe8ebf3aabc3d44587827c7cba65ace46c2ea351a8e42cdfb320b19db69b"
+    },
+    "work:eustathius-in-joseph:frag-rem-early": {
+      "packet": "books/eustathius-in-joseph/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-joseph/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "73add46b6ae1d3fd24d92aeb03d58a348c6a59f6e6290d9802d1eb62266a5ffb"
+    },
+    "work:eustathius-in-joseph:frag-rem-mid": {
+      "packet": "books/eustathius-in-joseph/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-joseph/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "7c914c62f7249be40d1382cd09f48f7e3f671405e7848e4d2341baeb19995995"
+    },
+    "work:eustathius-in-joseph:frag-rem-close": {
+      "packet": "books/eustathius-in-joseph/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-joseph/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "5ab209e4f4db7b1942fb1d29fb1dd067924a6723685c327c32f27777e3266948"
+    },
+    "work:eustathius-in-proverbia:frag-open": {
+      "packet": "books/eustathius-in-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-proverbia/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "ac9bfb42989ea11bb0e4493af4ae5162320061e7ec746de4b9d644c2578ca411"
+    },
+    "work:eustathius-in-proverbia:frag-rem-early": {
+      "packet": "books/eustathius-in-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-proverbia/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "220a86e87832485dcef59600ec52d78480342a222894980d698dfc12d86124ec"
+    },
+    "work:eustathius-in-proverbia:frag-rem-mid": {
+      "packet": "books/eustathius-in-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-proverbia/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "0410cbac9c8ba11d22e5fca4cc570ba075abccb3496a2c5cfa4cc43ea0293a1d"
+    },
+    "work:eustathius-in-proverbia:frag-rem-close": {
+      "packet": "books/eustathius-in-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-proverbia/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "3a7d96f6cff53f7b003db9c49b47627112cecef4fcd9cd41ea436f467b03e1c1"
+    },
+    "work:eustathius-oratio-psalmorum-graduum:frag-open": {
+      "packet": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "9c3321d35beaebd1a8b801caccb7a5acc1f8138e6c5cc5dbd07047a6860b367c"
+    },
+    "work:eustathius-oratio-psalmorum-graduum:frag-rem-early": {
+      "packet": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "23769517c3b352fb0cb5464d6282c8a08e1fa3a5adbefa9217b152d106f39bd5"
+    },
+    "work:eustathius-oratio-psalmorum-graduum:frag-rem-mid": {
+      "packet": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "bfc76a5d803ebea89e33ebb7c840c1b37d8be05d5788208988e32f0bd5b9fc0d"
+    },
+    "work:eustathius-oratio-psalmorum-graduum:frag-rem-close": {
+      "packet": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "b55263b53b8a355188f3073926646b56b9b1f805b348013b15311ae5ead455f3"
+    },
+    "work:eustathius-orationes-contra-arianos:frag-open": {
+      "packet": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "cd95e7fbb06aa482e6834aa2ad2c6869f6aa8756b9f4203d1db7515bff29649c"
+    },
+    "work:eustathius-orationes-contra-arianos:frag-rem-early": {
+      "packet": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "9dd76279334ac07c7c6c23ecaa28203e9fd583c706f5fc7cc8d25c611e25eb70"
+    },
+    "work:eustathius-orationes-contra-arianos:frag-rem-mid": {
+      "packet": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "86f854f6f24a5e32c31ffe55f97d024cbfd73e85b4d37acb2aaf75e3fb1366b4"
+    },
+    "work:eustathius-orationes-contra-arianos:frag-rem-close": {
+      "packet": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "da5af9815926b6185eb61c16049787b254b72583ca2dbe4cdeb657d6b4b3c234"
+    },
+    "work:eustathius-de-anima-contra-arianos:u01-open": {
+      "packet": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "3dfc9f6b7d15c801830765c6c3dab5c64b4150f956a757cf146ddb92f2100576"
+    },
+    "work:eustathius-de-anima-contra-arianos:u01-rem-early": {
+      "packet": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "e112756740e4d85eb2e6f89e299d86387dabe595106fcd7f9f9f880ede64b356"
+    },
+    "work:eustathius-de-anima-contra-arianos:u01-rem-mid": {
+      "packet": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "8a604f53651636905f1fa2715d46b51f7cd3cab184342bc573e0f84132c72832"
+    },
+    "work:eustathius-de-anima-contra-arianos:u01-rem-close": {
+      "packet": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "f803a427e1b044aff489728ec51d0185eee82a09b3028ed2d582dc1a068cce9f"
+    },
+    "work:eustathius-de-anima-contra-philosophos:u01-open": {
+      "packet": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "3fde572d4e0a1fb6509df9ed6f7d21d40665e4e39a3e000f0662f23eb1949439"
+    },
+    "work:eustathius-de-anima-contra-philosophos:u01-rem-early": {
+      "packet": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "01bfd623352e0d5b8f5a79525a7a719ac05ed4f8f5a2acbee6d4e7f730178066"
+    },
+    "work:eustathius-de-anima-contra-philosophos:u01-rem-mid": {
+      "packet": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "bc584c7a740899fda14208b6472f4c8e55fa1dc34de87554ec18e82e795321d3"
+    },
+    "work:eustathius-de-anima-contra-philosophos:u01-rem-close": {
+      "packet": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "580bd55b1bd4c8fb20d6b4493fae77f353acbe910d73740566044ba8e14e7612"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29300,6 +29564,50 @@
     "eustathius-hexaemeron": {
       "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
       "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json"
+    },
+    "eustathius-commentarius-psalmum": {
+      "packet": "books/eustathius-commentarius-psalmum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum/reviews/audit/tip.review.json"
+    },
+    "eustathius-commentarius-psalmum-92": {
+      "packet": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-commentarius-psalmum-92/reviews/audit/tip.review.json"
+    },
+    "eustathius-de-fide-contra-arianos": {
+      "packet": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-fide-contra-arianos/reviews/audit/tip.review.json"
+    },
+    "eustathius-fragmenta-varia": {
+      "packet": "books/eustathius-fragmenta-varia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-fragmenta-varia/reviews/audit/tip.review.json"
+    },
+    "eustathius-in-ecclesiasten": {
+      "packet": "books/eustathius-in-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-ecclesiasten/reviews/audit/tip.review.json"
+    },
+    "eustathius-in-joseph": {
+      "packet": "books/eustathius-in-joseph/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-joseph/reviews/audit/tip.review.json"
+    },
+    "eustathius-in-proverbia": {
+      "packet": "books/eustathius-in-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-proverbia/reviews/audit/tip.review.json"
+    },
+    "eustathius-oratio-psalmorum-graduum": {
+      "packet": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-psalmorum-graduum/reviews/audit/tip.review.json"
+    },
+    "eustathius-orationes-contra-arianos": {
+      "packet": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-orationes-contra-arianos/reviews/audit/tip.review.json"
+    },
+    "eustathius-de-anima-contra-arianos": {
+      "packet": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-arianos/reviews/audit/tip.review.json"
+    },
+    "eustathius-de-anima-contra-philosophos": {
+      "packet": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.review.json"
     }
   }
 }
