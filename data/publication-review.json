@@ -28221,6 +28221,126 @@
       "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
       "section": "u02-rem-close",
       "payload_sha256": "992d2f1a387e09e16ff147db3c7c81dfcd9d7728161b2dbf24f54050d28d2f95"
+    },
+    "work:origen-lamentationes-fragments:u01-open": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "7d6e4732985d85d96966e24c4c5a61002ed835d0b0521d0a7a09cb5ca0ef0dce"
+    },
+    "work:origen-lamentationes-fragments:u01-rem-early": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "7e58ed33789aa6229b532116b492259fea14106d3dd75099177b9eef7feaf567"
+    },
+    "work:origen-lamentationes-fragments:u01-rem-mid": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "334a04b7c643ada4feb687a5921e418e077be8988d900251d7cb753a0f0ffeb5"
+    },
+    "work:origen-lamentationes-fragments:u01-rem-close": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "e0a2aae0d7fe2a844ac23769324976833c2b114c2e5550b4b20608724880f295"
+    },
+    "work:origen-lamentationes-fragments:u02-open": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "08c1138bb24ccf34707cee44d58041f99202e327ade62d5a0931deac9c408b69"
+    },
+    "work:origen-lamentationes-fragments:u02-rem-early": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "c3dea51c2e1dd4a048b1b98f6baf8edbe45e5d48f42b0fab3fc16e98942d68db"
+    },
+    "work:origen-lamentationes-fragments:u02-rem-mid": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "d5581208654e67ddbea5690cc042f7647cc0e261d52669c1ada14127b5c8c5e5"
+    },
+    "work:origen-lamentationes-fragments:u02-rem-close": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "25e816ce572560b11421c3dedbf943d8d80422e7d7d9f5748135a47c49a2359d"
+    },
+    "work:origen-lamentationes-fragments:u03-open": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "41a93aba7d2d06918aefd4a840e714d57a4563f95f392bd243c3e3effe7ccfc3"
+    },
+    "work:origen-lamentationes-fragments:u03-rem-early": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "11643d5c2c07694b21e8df2dc6c99bb3c916129e40f563bdbcdf5c2b62bc9a88"
+    },
+    "work:origen-lamentationes-fragments:u03-rem-mid": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "9e7fef341b06d7efe99607386aec97337ef6fb2cb30508b0d768e34ffb30c2ca"
+    },
+    "work:origen-lamentationes-fragments:u03-rem-close": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "f6468a3c0f122abde0c7fe3abd3b53992eda72ff8070e6c6fa807811d4a8aff3"
+    },
+    "work:origen-lamentationes-fragments:u04-open": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "3702431a3d455fed63b6ad87cc3c9069bd9213e6395bbe50ac18f0ee4d2703bf"
+    },
+    "work:origen-lamentationes-fragments:u04-rem-early": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "82b4f5ae5b20f4079893c5a7c64e7fcbb2f0731bff93a3f5897d4e6ef37e2c33"
+    },
+    "work:origen-lamentationes-fragments:u04-rem-mid": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "61a5a5960dfd1cc0572fe8dd6759907364d70b766760949660d00374683b9caa"
+    },
+    "work:origen-lamentationes-fragments:u04-rem-close": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "6a999f41b1843fb56714676cca67a756cc14975e5ace68c4e964ee9a2381960e"
+    },
+    "work:origen-lamentationes-fragments:u05-open": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "21f8d89df7050f254848f9ec4805f97352e5a7838362939fdbf47b269840399c"
+    },
+    "work:origen-lamentationes-fragments:u05-rem-early": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "60d9e7353db75e29b08168f3e9e836b21966193c6cd6cc2149335bd48e1de543"
+    },
+    "work:origen-lamentationes-fragments:u05-rem-mid": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "a1978d2a3ad5d93595679c72ba0a07e38f2437fdf6783ca61ca666a6e537d376"
+    },
+    "work:origen-lamentationes-fragments:u05-rem-close": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "19545ff8524fc50521be54a42918f8cc397842b298489cb77cf2fd50e47812ea"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28438,6 +28558,10 @@
     "origen-proverbs-fragments": {
       "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
       "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json"
+    },
+    "origen-lamentationes-fragments": {
+      "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
+      "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json"
     }
   }
 }
