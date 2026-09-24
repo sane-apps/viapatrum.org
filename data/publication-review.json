@@ -28791,6 +28791,30 @@
       "receipt": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.review.json",
       "section": "frag-rem-close",
       "payload_sha256": "dcdd15fe7d9ae0413fbc9ec8eefa707b37e671bae2428c4351759a1cb4a4b035"
+    },
+    "work:gregory-thaumaturgus-sententiae:frag-open": {
+      "packet": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "16796f37e04303ef2c012178c074cc38e37e40280607b5b50c8d7491942754f8"
+    },
+    "work:gregory-thaumaturgus-sententiae:frag-rem-early": {
+      "packet": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "cdf25497140e9307e77eede762672df0c4426a7018157c846e3bda20249d6505"
+    },
+    "work:gregory-thaumaturgus-sententiae:frag-rem-mid": {
+      "packet": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "ff07d17f17e089489838731ff898d4851ad785ff18ee90decca69d929b5a0442"
+    },
+    "work:gregory-thaumaturgus-sententiae:frag-rem-close": {
+      "packet": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "9399d0052b8f0e41f5ea41c4227472c34f59202b8542169a62e70d947b74467c"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29048,6 +29072,10 @@
     "gregory-thaumaturgus-matthew-fragment": {
       "packet": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.packet.json",
       "receipt": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.review.json"
+    },
+    "gregory-thaumaturgus-sententiae": {
+      "packet": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.review.json"
     }
   }
 }
