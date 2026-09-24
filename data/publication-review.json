@@ -28839,6 +28839,198 @@
       "receipt": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.review.json",
       "section": "frag-rem-close",
       "payload_sha256": "5786a219e2f6b3bf785919d6757dfa70a545bc8965eddd745f783e2696014fec"
+    },
+    "work:eustathius-hexaemeron:u01-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "37edf929d7cb2a59d57aeea6e4be02175e558e27a9c30a02c16a8a2efaca51ad"
+    },
+    "work:eustathius-hexaemeron:u01-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "846e23cb47d0e98778d5563cf5ed948e378e2143f2c153f34d56b8b5af69e2e4"
+    },
+    "work:eustathius-hexaemeron:u01-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "fb0bdd99a4afb5bec939409a5151acd840df9033a471e4975f144c3464055c37"
+    },
+    "work:eustathius-hexaemeron:u01-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "920eda7e0ddb4cdaae30b92de3e00a0dd709d5fe86535f7483eb5c7699eb42db"
+    },
+    "work:eustathius-hexaemeron:u02-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "a18dc3924435722db97bac6caed4bf57b96de6bed6b5edccaee112e1bb0f20d4"
+    },
+    "work:eustathius-hexaemeron:u02-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "4b146b0b2a67c4a2fa1862f386bc21ce56991a8c317bfbbc33f59a4535892a89"
+    },
+    "work:eustathius-hexaemeron:u02-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "deeff20c9887c807c1bae03bf46e7c9c1bf55645aa3e519f36cb6c2107f2c936"
+    },
+    "work:eustathius-hexaemeron:u02-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "2c645ee055cafc775b28eda8515ad161c16d800603d8f954150ad5a3a4c2214d"
+    },
+    "work:eustathius-hexaemeron:u03-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "b1daf15b0ae9b59a84133e7d1e23282a73ea2c1e369aa21541ddc5a62531d694"
+    },
+    "work:eustathius-hexaemeron:u03-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "96239ddfa72310c1848f894b4236c20b2261609c56f3becd48aa9aa49dd7ead5"
+    },
+    "work:eustathius-hexaemeron:u03-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "f86dcc22da10cbd69cc320a7fdf7d3fe22509fb30e10b408d47cb93824dabddc"
+    },
+    "work:eustathius-hexaemeron:u03-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "01d5d3c9a87f5c48d56a3b20df799a7df92d4997934756729cd1b45ab3105a67"
+    },
+    "work:eustathius-hexaemeron:u04-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "299852527069ff38aa9ea1148803edbf8fc2335a11c2cebdb2bbc663ad67c439"
+    },
+    "work:eustathius-hexaemeron:u04-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "ed3e62905415a903653093c1ea7d55560983dfbf2b97cdead677895c3f56c58e"
+    },
+    "work:eustathius-hexaemeron:u04-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "289560871d66c78002362697d8d86ff5a2a9b7ff573ea7b9903e46f58f4a3916"
+    },
+    "work:eustathius-hexaemeron:u04-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "89b5cabd362999e96d15ada0d2ed469b5c7116d533c76e87f762c480142f57b7"
+    },
+    "work:eustathius-hexaemeron:u05-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "8641b235f09b9487c14d9e7b6de88d8d316189a4848f465223fc3add4b525b25"
+    },
+    "work:eustathius-hexaemeron:u05-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "92eabf259515a4de67de51e05e527e16fe78fbc03fda94004e60155a76e286b9"
+    },
+    "work:eustathius-hexaemeron:u05-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "9992fde7bb9ff51ea68310f08ea9e3b024abf19c094de4cf3ba46d87bea84cdf"
+    },
+    "work:eustathius-hexaemeron:u05-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "c2923442965cad0bfb790796b328c93cefca14266a71e3ce1b3c0135173e1f53"
+    },
+    "work:eustathius-hexaemeron:u06-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "dbdc6981ea4855d0609054299b72a62c5ca657174d12daba1770efccac2cb7db"
+    },
+    "work:eustathius-hexaemeron:u06-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "6a6051af64c6f158599fc99ec25fde1d9f766aa8682a00edb5c7b91532ba4cc8"
+    },
+    "work:eustathius-hexaemeron:u06-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "fb410499e2347c6407815337967dc603f745d1bfa095786d063983ba7f5ce088"
+    },
+    "work:eustathius-hexaemeron:u06-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "d13b14b567a5d18cde2596b84607a59aeff7b7f933fbff3453697ed3b9e39d08"
+    },
+    "work:eustathius-hexaemeron:u07-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "5b508b048a4e178b236e6fc1e55d97a43eb3dfe6d66eb840f1ec1989a93b5193"
+    },
+    "work:eustathius-hexaemeron:u07-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "6753cec77873071c752c54b8a2b6535429daee3dc12a0f74d173870de1d18820"
+    },
+    "work:eustathius-hexaemeron:u07-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "c46b63bc81847be9e0452d343bdb6ec3ab12dd4a7fe87067275db2bbef98b4ae"
+    },
+    "work:eustathius-hexaemeron:u07-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "716eb33908cc746d9cd20a48a35df5a8aa168d5dd332d48399797abf99f59753"
+    },
+    "work:eustathius-hexaemeron:u08-open": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "e9a0dd0ef33b0d3d788591e747b036457e5b62e1e441cd9a2df60bb6bf8d26ac"
+    },
+    "work:eustathius-hexaemeron:u08-rem-early": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "f95b845158bf2db6473ad67f739159053d512ef2d9339b970b37252c85cb0525"
+    },
+    "work:eustathius-hexaemeron:u08-rem-mid": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "7fbd69d49f0121d2f41f735bc740b2ca5517680a5d87552b3ee9538b5f0fb900"
+    },
+    "work:eustathius-hexaemeron:u08-rem-close": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "e55df1ac6e589b6c715c86de6d3f181135b544d38b869d463291acac6432abd9"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29104,6 +29296,10 @@
     "eustathius-allocutio-constantinum": {
       "packet": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.packet.json",
       "receipt": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.review.json"
+    },
+    "eustathius-hexaemeron": {
+      "packet": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.packet.json",
+      "receipt": "books/eustathius-hexaemeron/reviews/audit/ehex_tip.review.json"
     }
   }
 }
