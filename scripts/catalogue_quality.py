@@ -203,7 +203,6 @@ EXTENDED_REVIEW_HOLD = {
     'origen-matthew-tomus-15': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
     'origen-matthew-tomus-16': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
     'origen-matthew-tomus-17': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
-    'origen-nt-fragments': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
     'origen-numbers-homily-2': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-numbers-homily-4': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-numbers-homily-5': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
