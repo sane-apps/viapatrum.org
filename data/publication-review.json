@@ -30015,6 +30015,150 @@
       "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
       "section": "u02-rem-close",
       "payload_sha256": "f644d906e73cfe9e40ead4df416091a91874e70c669906ae1b34ff89c5567832"
+    },
+    "work:apollinaris-fragmenta-romanos:u01-open": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "4eb8ba1d5e80e320e7719bf28b4012867817cf8737d631440fdd51402c80cb0a"
+    },
+    "work:apollinaris-fragmenta-romanos:u01-rem-early": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "7172bfe6a84830a126d8f2a5e0463d5bc05f92ccfe0ba22108047b0b9f900efc"
+    },
+    "work:apollinaris-fragmenta-romanos:u01-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "e03e7f2191fbb0092e06384ab80c5b8d0bc00c1f5ef491c902ed255fb0556c63"
+    },
+    "work:apollinaris-fragmenta-romanos:u01-rem-close": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "cfc2ab00c4dcca86d3ddcb048ab44db3084e5f4357d7a5c6312b1b35cb52a437"
+    },
+    "work:apollinaris-fragmenta-romanos:u02-open": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "230ddc0b88c7aabb88aff76aa62f8250f8bc4b0858b58290eb74394ba3e390ea"
+    },
+    "work:apollinaris-fragmenta-romanos:u02-rem-early": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "40154e1e589a0946da130520b42f4bf1c0b029bc28aade0d22c4ac47defa3e04"
+    },
+    "work:apollinaris-fragmenta-romanos:u02-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "3458e86ec61294e285142fcd00c9c48af532805afbf6ed0dc70c426835e797dc"
+    },
+    "work:apollinaris-fragmenta-romanos:u02-rem-close": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "1da31057818288e272366d9fc6147b18cfc6c0ea3afed5fcce5d4d6f12e4daa3"
+    },
+    "work:apollinaris-fragmenta-romanos:u03-open": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "e413557ea5723892ae3370b7fc66347cbb7148203ca072ef80b9cbb22480c83e"
+    },
+    "work:apollinaris-fragmenta-romanos:u03-rem-early": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "efba181704853eb66d13b3c76f728b97db5eb4df7f4b1ab5236d7e56b8681b1e"
+    },
+    "work:apollinaris-fragmenta-romanos:u03-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "7c6bc0830d8aa5d41e9bbe5506a7b086febe59f71f9f8653b855f7941d9b0127"
+    },
+    "work:apollinaris-fragmenta-romanos:u03-rem-close": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "b6733d3b51eb15b91161a1dc4d7d8c2366c69127b038b10ad6352da286afab5c"
+    },
+    "work:apollinaris-fragmenta-romanos:u04-open": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "202f52bcb7dbd4437dedcdc41e56a3118d78d7a0ec60a5a655f132122367ab9d"
+    },
+    "work:apollinaris-fragmenta-romanos:u04-rem-early": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "cf1c5c9147f998b384927c8c94a8a16a2e82b4028835ca3f0a51a958edd51e8f"
+    },
+    "work:apollinaris-fragmenta-romanos:u04-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "036a24b949bcb81674a00e48e5e5268db58dadd9cb9862b2397f5cb05bb7ec66"
+    },
+    "work:apollinaris-fragmenta-romanos:u04-rem-close": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "95d1559f38f27d89c180e3e4872cd73eb7cb638da9e321339d88d0c0178b4c98"
+    },
+    "work:apollinaris-fragmenta-romanos:u05-open": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "2543e3599fd67f31b49069945d6ebd6a2765da22ceb47caf5cf0f60e18c32bb3"
+    },
+    "work:apollinaris-fragmenta-romanos:u05-rem-early": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "2aae828f3e3d0205c94b029dc3feadb236502dfde91eaf4542c9e2cde2f77d8a"
+    },
+    "work:apollinaris-fragmenta-romanos:u05-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "c1b646bb21d3c6849185697fe070ca51c3da55c14b283e4e45b96632c2fc81c8"
+    },
+    "work:apollinaris-fragmenta-romanos:u05-rem-close": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "7e0c042c7e0f81f82267df3dcb5a61e503804d9065bd8166d083a755b43093a3"
+    },
+    "work:diodorus-fragmenta:u01-open": {
+      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "97b30ba75ebbb3976b9219085e2b4c5a115ecf4e14db2b406acb251a6bd77133"
+    },
+    "work:diodorus-fragmenta:u01-rem-early": {
+      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "03d059f898fd93da75b37c28297e48c0b9591c2c548292cadcde97ae6f97f2bf"
+    },
+    "work:diodorus-fragmenta:u01-rem-mid": {
+      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "b0730eecb3ef60cb45d513a8a2d5f823a673cbf3b426ee92b4065fe6e9dace57"
+    },
+    "work:diodorus-fragmenta:u01-rem-close": {
+      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "6f41e08ca8d5e7c0419197cc23a37ef8dd222a1ef4f552c05aa9f275cfdea1e6"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -30404,6 +30548,14 @@
     "cyril-jerusalem-homilia-paralyticum": {
       "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
       "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json"
+    },
+    "apollinaris-fragmenta-romanos": {
+      "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json"
+    },
+    "diodorus-fragmenta": {
+      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json"
     }
   }
 }
