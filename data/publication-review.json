@@ -28533,6 +28533,48 @@
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "matt-scholia",
       "payload_sha256": "4d2ad7e8e29f08c563e3994eabcf751c906af2cae784f224b05d9dab1d676d8f"
+    },
+    "work:origen-letters:africanus-1": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
+      "section": "africanus-1",
+      "payload_sha256": "103dad365c63f253acd18cc44efae310ded32df69028a6219b728a4fd6b350c6"
+    },
+    "work:origen-letters:2": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
+      "section": "2",
+      "payload_sha256": "82b9c391e2dddfcf7ff5fc34bacc695abfbd7a59224474e58a21ba34fedde95d"
+    },
+    "work:origen-letters:6": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
+      "section": "6",
+      "payload_sha256": "2bafd4288aecb2051ad5852c4b3622a29446b0ce491b87ec32de420e7a8eb8cf"
+    },
+    "work:origen-letters:11": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
+      "section": "11",
+      "payload_sha256": "d65c35791a34f99d3a89f8600029e6774e266f2279561b6c0c49169a74a34e94"
+    },
+    "work:origen-letters:gregory-1": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
+      "section": "gregory-1",
+      "payload_sha256": "e827891eaa57c893ca2449b4beb0e20f44c7809153946892dc9c375b9e4e492b"
+    },
+    "work:origen-letters:gregory-2": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
+      "section": "gregory-2",
+      "payload_sha256": "70903ac21b11e1d50dff2c6b476f0dce76d33b268253565f109a7195e24f8e4f"
+    },
+    "work:origen-letters:gregory-close": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
+      "section": "gregory-close",
+      "payload_sha256": "6f5665251a2f7471946fd6976425a9adf841942c2bd57e242d58d9f85df4a893"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28770,6 +28812,10 @@
     "origen-nt-fragments": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json"
+    },
+    "origen-letters": {
+      "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
+      "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json"
     }
   }
 }

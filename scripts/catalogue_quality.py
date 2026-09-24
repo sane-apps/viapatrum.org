@@ -191,7 +191,6 @@ EXTENDED_REVIEW_HOLD = {
     'origen-joshua-homily-5': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-joshua-homily-6': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-judges-homily-1': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
-    'origen-letters': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
     'origen-leviticus-homily-1': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-leviticus-homily-3': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-leviticus-homily-4': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',

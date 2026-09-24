@@ -2924,6 +2924,12 @@ def load_origen_letters() -> list[dict]:
     first_english = bool(meta.get("first_english", True))
     slug = meta.get("slug") or "origen-letters"
     title = meta.get("title") or "Letters (Africanus; Gregory)"
+    letter_sections = _origen_rows(deduped, src_map)
+    for i, sec in enumerate(letter_sections):
+        sec["sort_key"] = (0, i)
+        src = src_map.get(str(sec.get("section")), {})
+        loc = src.get("locus") or src.get("location") or str(sec.get("section"))
+        sec["locus"] = str(loc)
     works.append(
         _pack_work(
             slug=slug,
@@ -2934,7 +2940,7 @@ def load_origen_letters() -> list[dict]:
             status=meta.get("status") or "available",
             edition=meta.get("edition")
             or "PG 11 (Africanus); Philocalia 13 Robinson (Gregory) — Greek",
-            sections=_origen_rows(deduped, src_map),
+            sections=letter_sections,
             blurb=meta.get("blurb")
             or (
                 "Origen’s Letter to Africanus and Letter to Gregory (Greek). "
