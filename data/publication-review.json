@@ -29439,6 +29439,150 @@
       "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
       "section": "u06-rem-close",
       "payload_sha256": "5d95281d810c5f2b9cf521c1f383fe883c15d069fce398b59589e4ed2d72689c"
+    },
+    "work:eustathius-de-melchisedech:u01-open": {
+      "packet": "books/eustathius-de-melchisedech/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-melchisedech/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "2d8437503aaadf3b043d3a93981ebe919852fd730e3e75f253e49ca5e53aaaf9"
+    },
+    "work:eustathius-de-melchisedech:u01-rem-early": {
+      "packet": "books/eustathius-de-melchisedech/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-melchisedech/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "cc5371cb020bd0e68b29913d62f755831beb890b042975e5cf1d998cb23ddd03"
+    },
+    "work:eustathius-de-melchisedech:u01-rem-mid": {
+      "packet": "books/eustathius-de-melchisedech/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-melchisedech/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "a155fd205916c446fdcc6c08f706de4b521637755623dbc874b2b8125004a24a"
+    },
+    "work:eustathius-de-melchisedech:u01-rem-close": {
+      "packet": "books/eustathius-de-melchisedech/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-melchisedech/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "72238a89f887699295928adf1146448b90918b32bf4604acdd5804ee97e79396"
+    },
+    "work:eustathius-homilia-lazarum:u01-open": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "e18af6cb10bcc235c7d23c98ded63dccfeb57098bb7df564e439e6a0942a7f1a"
+    },
+    "work:eustathius-homilia-lazarum:u01-rem-early": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "0426720296ae842c51919e6bc3aab65053c5b2556b413814a491551a928db523"
+    },
+    "work:eustathius-homilia-lazarum:u01-rem-mid": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "1a8ae8b5ffcd29f3acc49b7e395ec6f06410d81566012c0b2a78d7347ac49ecc"
+    },
+    "work:eustathius-homilia-lazarum:u01-rem-close": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "703c7c75e01ae208e6045ab20165d16b39504b5cc278628f2cdf831ec4c02788"
+    },
+    "work:eustathius-homilia-lazarum:u02-open": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "a008bbf833218a7926fd7478c8b62c7e4452637d514aa4fe91bbd59edf5ecf59"
+    },
+    "work:eustathius-homilia-lazarum:u02-rem-early": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "f7245a221649596ccf9ec3c89f5cb0e2a1bba4a2b57a7b5509e44e13364f867b"
+    },
+    "work:eustathius-homilia-lazarum:u02-rem-mid": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "1a4af1d373bdc31819517eb9d2f18e28c6ec03b7966d716a1462fe07d9528a3d"
+    },
+    "work:eustathius-homilia-lazarum:u02-rem-close": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "c0deaf1dd3457ff0a82e24a06ca90856b42dc5933c231e1cd8aeb66357a89c5d"
+    },
+    "work:eustathius-in-genesim-de-creatione:u01-open": {
+      "packet": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "b0754fb573722ec0e96aadc6e3b6d9f983cb5aa82f42df3506decd52ef65c94f"
+    },
+    "work:eustathius-in-genesim-de-creatione:u01-rem-early": {
+      "packet": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "f9b96d5761c8e25888007b59e8a77e426d91d0280bf39cab04f59dbd37ef7338"
+    },
+    "work:eustathius-in-genesim-de-creatione:u01-rem-mid": {
+      "packet": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "af842cafc0b3e1b3a5f127af6b1dfaf58b01968a180ae5eb2f5723143a2f86e2"
+    },
+    "work:eustathius-in-genesim-de-creatione:u01-rem-close": {
+      "packet": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "084ad89273fcc47d04f66136e9391eb62df6eb3fae8a4777fffb95c8e280dfc0"
+    },
+    "work:eustathius-in-inscriptione-titulorum:u01-open": {
+      "packet": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "4771def135b49c52ee2cf6016d68316f2ae8a9c4e7596e286ef4de5cbc0056cc"
+    },
+    "work:eustathius-in-inscriptione-titulorum:u01-rem-early": {
+      "packet": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "e7c2c1a908e937676e140c857ca0871f2c10b688b43b0ddad45405864791305a"
+    },
+    "work:eustathius-in-inscriptione-titulorum:u01-rem-mid": {
+      "packet": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "1d52478990255a3fef54d40d3d0cd7c19afb870c92db4ba2e588f42228665491"
+    },
+    "work:eustathius-in-inscriptione-titulorum:u01-rem-close": {
+      "packet": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "a41c17f7ca8e53fd446f064a230e24b396da426fd529422320847c029666a481"
+    },
+    "work:eustathius-oratio-dominus-creavit:u01-open": {
+      "packet": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "af626b23e6186817a02ffe930e6618e115f76ed4d9cf31ad0de48f1597d4b4f6"
+    },
+    "work:eustathius-oratio-dominus-creavit:u01-rem-early": {
+      "packet": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "f70922b4bd77bb22e24163c09099184144b9f913291fee579da0ff2d0ad7fa5b"
+    },
+    "work:eustathius-oratio-dominus-creavit:u01-rem-mid": {
+      "packet": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "d27b8507b7fac268f434a74c60bec24de605533e2228ec45b0e00fe5733388ff"
+    },
+    "work:eustathius-oratio-dominus-creavit:u01-rem-close": {
+      "packet": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "c0def763167d00ead53dfe810d52f18c8c0ea0f5639c9e17ae132bdcc4954f5b"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29756,6 +29900,26 @@
     "eustathius-engastrimytho": {
       "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
       "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json"
+    },
+    "eustathius-de-melchisedech": {
+      "packet": "books/eustathius-de-melchisedech/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-de-melchisedech/reviews/audit/tip.review.json"
+    },
+    "eustathius-homilia-lazarum": {
+      "packet": "books/eustathius-homilia-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-homilia-lazarum/reviews/audit/tip.review.json"
+    },
+    "eustathius-in-genesim-de-creatione": {
+      "packet": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-genesim-de-creatione/reviews/audit/tip.review.json"
+    },
+    "eustathius-in-inscriptione-titulorum": {
+      "packet": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-in-inscriptione-titulorum/reviews/audit/tip.review.json"
+    },
+    "eustathius-oratio-dominus-creavit": {
+      "packet": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.review.json"
     }
   }
 }
