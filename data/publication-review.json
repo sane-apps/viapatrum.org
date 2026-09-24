@@ -28490,49 +28490,49 @@
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "john-catena-1",
-      "payload_sha256": "37c3d1b122659127e1ed5f0d1189ae28b0cee2747acdab568f6275011f6879ae"
+      "payload_sha256": "69b2ad231e69e8032d9ba4af3e87aeebef5d5b3d1d03d85639dad62363374855"
     },
     "work:origen-nt-fragments:john-catena-2": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "john-catena-2",
-      "payload_sha256": "bc33f3d808e1d2eebed1efc5cea6bf78255a043f3895ae7f25c3c834cb4a0217"
+      "payload_sha256": "19a81ac7468172b079b4ce937684bf7dbe7acfc764164a9669e78161a92f89ff"
     },
     "work:origen-nt-fragments:john-catena-close": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "john-catena-close",
-      "payload_sha256": "42773d9552896c508dbb4f4062bf27958a4ffd0cc67c1f083af917e6427a39e2"
+      "payload_sha256": "4ec04d0104d36f6ec2dc3a113211381e38f0cdc0f1befeafd2c0ca5c4e835eac"
     },
     "work:origen-nt-fragments:john-catena-mid": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "john-catena-mid",
-      "payload_sha256": "682fa64d7a0525ae17a9935f87fb54c09749b89be8d6e1f204cfdcbeac39e474"
+      "payload_sha256": "4dccb10326e03d56e90c3ff7c29ff89aa9091724e4b5d2131944de69c4e7745b"
     },
     "work:origen-nt-fragments:luke-catena-1": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "luke-catena-1",
-      "payload_sha256": "a9f8f52526afc8738e90c09eca669cf00e6291777127ea1c1fb36028ef7951cc"
+      "payload_sha256": "a9c99ee6ad4fea01ba084df85f19bee0d062330bbffed093de3b11cfec7eed33"
     },
     "work:origen-nt-fragments:luke-catena-2": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "luke-catena-2",
-      "payload_sha256": "ce3879e87238aec770386edba33790776633245f30807faa639c9cc5c065e80a"
+      "payload_sha256": "b79fba4244babb57d9d49a94467165ed4db5948efc663f2a40bda15a9e8e1467"
     },
     "work:origen-nt-fragments:luke-scholia-series": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "luke-scholia-series",
-      "payload_sha256": "9102a64e3bf52b0b85d8a4bcc84fe5b44a5ed9ec831da292160630ab8084a7da"
+      "payload_sha256": "5767cddb495fa5785f60b9f37fd920b90b21a03f8bee060020d53d419762223a"
     },
     "work:origen-nt-fragments:matt-scholia": {
       "packet": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.packet.json",
       "receipt": "books/origen-nt-fragments/reviews/audit/ntfrag_tip.review.json",
       "section": "matt-scholia",
-      "payload_sha256": "3adf76405012e0c2ec3e51644b381f2a9646711cf8aa212d8f8b914a92a5ecbc"
+      "payload_sha256": "4d2ad7e8e29f08c563e3994eabcf751c906af2cae784f224b05d9dab1d676d8f"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
