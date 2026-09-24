@@ -28767,6 +28767,30 @@
       "receipt": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "9e7b492dd800fa06dc6abd79a7a64338c452c693943dd5ae3e533b2487ece0c0"
+    },
+    "work:gregory-thaumaturgus-matthew-fragment:frag-open": {
+      "packet": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "fa50edc168564d155a955a7026a54d9c0b72b7afc3ae85332b3ec74e7a949edb"
+    },
+    "work:gregory-thaumaturgus-matthew-fragment:frag-rem-early": {
+      "packet": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "4d5e0c05dc86ad2445ff641a3ffd20a8865519529f8688a6acf51e6d79488afc"
+    },
+    "work:gregory-thaumaturgus-matthew-fragment:frag-rem-mid": {
+      "packet": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "4e21ec97ee36e752f4cf19bcb7b28c3347e0c428cee65a529c114e8982b7a5a6"
+    },
+    "work:gregory-thaumaturgus-matthew-fragment:frag-rem-close": {
+      "packet": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "dcdd15fe7d9ae0413fbc9ec8eefa707b37e671bae2428c4351759a1cb4a4b035"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29020,6 +29044,10 @@
     "gregory-thaumaturgus-jeremiah-fragments": {
       "packet": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.packet.json",
       "receipt": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.review.json"
+    },
+    "gregory-thaumaturgus-matthew-fragment": {
+      "packet": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-matthew-fragment/reviews/audit/gmt_tip.review.json"
     }
   }
 }
