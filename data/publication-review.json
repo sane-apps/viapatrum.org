@@ -29295,6 +29295,150 @@
       "receipt": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "580bd55b1bd4c8fb20d6b4493fae77f353acbe910d73740566044ba8e14e7612"
+    },
+    "work:eustathius-engastrimytho:u01-open": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "87525b7f7ad1bd49fdc0832737cf21c98c1e1753aec0cdd437de0a38b6ff0a60"
+    },
+    "work:eustathius-engastrimytho:u01-rem-early": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "4dc90c6c2ba11995bf63d9c62ac2655811fc3021cbaa39f4a5f72d5943207918"
+    },
+    "work:eustathius-engastrimytho:u01-rem-mid": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "cb1796a3421804fe9eab201b6551effec212316b966ccd31cb06c224211880f1"
+    },
+    "work:eustathius-engastrimytho:u01-rem-close": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "dfee91ac6e17a698ecd97b2f52abaeb83f752c8dcf8f974ed45715a5ea2e6341"
+    },
+    "work:eustathius-engastrimytho:u02-open": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "abd6171d087c07edd511e155f6312eac50971c66f32f16901922a8952811c755"
+    },
+    "work:eustathius-engastrimytho:u02-rem-early": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "f465d8b2a731e5484b00ed25a60313dd9188b907e24eafe92cee3dd436ac3378"
+    },
+    "work:eustathius-engastrimytho:u02-rem-mid": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "8725dd41254686a936d7a312d7c47c2005d53b826762aa449cc0dd4aea012dc8"
+    },
+    "work:eustathius-engastrimytho:u02-rem-close": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "5e0859cf09617e18832539b6a55ef790deab97faad1efc707359cbd02064c656"
+    },
+    "work:eustathius-engastrimytho:u03-open": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "1742c0e0dc1a4152a2ad62664c4caa64bff5e14b7710eafca12e18acdc72f14c"
+    },
+    "work:eustathius-engastrimytho:u03-rem-early": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "bdcab8725b77fcf223e71db8da08d725ef7797d584a39164d8672411c562691c"
+    },
+    "work:eustathius-engastrimytho:u03-rem-mid": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "13d913eeefb0da6c8268325afa305ff34208084cb8eb209158de01a97ba6708d"
+    },
+    "work:eustathius-engastrimytho:u03-rem-close": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "fd3c17a56ad16cb68600b1dfae3b39df3b7cd1413e36b0206a52317eae00c34b"
+    },
+    "work:eustathius-engastrimytho:u04-open": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "997f387b7fdfe49130decde74af7c1c30b91358a203cb66a771ff82936912e3f"
+    },
+    "work:eustathius-engastrimytho:u04-rem-early": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "743ef89fb771fa2828847fd30fe8806af433131eb52387653c4e2fbacd49a859"
+    },
+    "work:eustathius-engastrimytho:u04-rem-mid": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "0022e109f3695f03345b89f97a2c6554a2741155c09bf18fe13a24a5cebfc732"
+    },
+    "work:eustathius-engastrimytho:u04-rem-close": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "2b92cb3006f5d30b0674d56560e5bb60b9be1cde6cda1eddef37fb76766462ca"
+    },
+    "work:eustathius-engastrimytho:u05-open": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "4706cb48da57d1fbd4460a56867649d09ecace2abb7b14c1db93e93d1cb93353"
+    },
+    "work:eustathius-engastrimytho:u05-rem-early": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "5539e74149f355b5cd5b1bf73bb328d60e04cfeac19b8e56843aa2b530e74904"
+    },
+    "work:eustathius-engastrimytho:u05-rem-mid": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "c1888a024d661c1fb0066999529a731d8ed836683a4ccdf250bd79884960c4ed"
+    },
+    "work:eustathius-engastrimytho:u05-rem-close": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "e66eb6ebbd4c5ee0e1504c642c59b304df8da7719515f05bfbfe0160134af4d3"
+    },
+    "work:eustathius-engastrimytho:u06-open": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "bf70fc75dc0227915e0ab56cdf45bcc094499d15090d2561c48624979f1c619d"
+    },
+    "work:eustathius-engastrimytho:u06-rem-early": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "aa1074eaeeea12564ba62e2d52834b42550910632dcd8240e8d2f114eb1f0989"
+    },
+    "work:eustathius-engastrimytho:u06-rem-mid": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "5c8dfc2900d5520d1b36c61fc023d180160bf537caa7e4ee8729d79ad4528997"
+    },
+    "work:eustathius-engastrimytho:u06-rem-close": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "5d95281d810c5f2b9cf521c1f383fe883c15d069fce398b59589e4ed2d72689c"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29608,6 +29752,10 @@
     "eustathius-de-anima-contra-philosophos": {
       "packet": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.packet.json",
       "receipt": "books/eustathius-de-anima-contra-philosophos/reviews/audit/tip.review.json"
+    },
+    "eustathius-engastrimytho": {
+      "packet": "books/eustathius-engastrimytho/reviews/audit/tip.packet.json",
+      "receipt": "books/eustathius-engastrimytho/reviews/audit/tip.review.json"
     }
   }
 }
