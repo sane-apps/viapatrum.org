@@ -27909,6 +27909,102 @@
       "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
       "section": "u06-rem-close",
       "payload_sha256": "ab5279644b90c71d8af48fd8985dd9eed1f09e3c5f125bab3d6e5c865ca9bf79"
+    },
+    "work:origen-psalms-excerpta:u01-open": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "9dc90cd61f94880b75b1dac656138fa13f91e0d678237bb568275d2b0a1c48eb"
+    },
+    "work:origen-psalms-excerpta:u01-rem-early": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "8afb82cee2508ddaabe59e0b84706e7749e86a496bf31a27926659799dce7351"
+    },
+    "work:origen-psalms-excerpta:u01-rem-mid": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "bcb823ad9a3b109fefd46d76f6647c8c8be39219f8b979ca26d8c14eb43fdd96"
+    },
+    "work:origen-psalms-excerpta:u01-rem-close": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "261e4e185df6808430207e729ea8963ec7855d532bd73c404f71888d74389d4f"
+    },
+    "work:origen-psalms-excerpta:u02-open": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "ef43ecdd0ac911fd457b435c5e85af54e6fbb7ea42d3745a3123bb4bb4feed2d"
+    },
+    "work:origen-psalms-excerpta:u02-rem-early": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "7f19fff849ef07de685018da6841d6e798448fcf065c1aad3b38faeda0a20c29"
+    },
+    "work:origen-psalms-excerpta:u02-rem-mid": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "471098a7f3c1f4a100f03e138228a361395bcc0d58f3db31f342a288f19b9a3d"
+    },
+    "work:origen-psalms-excerpta:u02-rem-close": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "6a67e39ed0e5776af142e42e8c4b67266639ab442701c6838982d9715f311d67"
+    },
+    "work:origen-psalms-excerpta:u03-open": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "bf7eb2dcb9a925699e19e1b60e7fe3895e0d7bf2f3fcf6c0f2d7d8e17a6dfe2f"
+    },
+    "work:origen-psalms-excerpta:u03-rem-early": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "e74b4d407277bf94d1046f65adea6e597ed313e6834086e7a8b1e9b7349874bc"
+    },
+    "work:origen-psalms-excerpta:u03-rem-mid": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "63004b7d6bcb9e94550dc420e7afebd1b016fc7ac75031ad8b73427b6f9cccbc"
+    },
+    "work:origen-psalms-excerpta:u03-rem-close": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "110140b1524b060095ec5ff6269b6c299a2424306f1aeef8b067a934ee497cd0"
+    },
+    "work:origen-psalms-excerpta:u04-open": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "993482fff55ba931c39083bbdd9e8c39cc8403efa3e274cb6cd04e4c732def7c"
+    },
+    "work:origen-psalms-excerpta:u04-rem-early": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "838bd58c4be53e507da90fc4c6cfe5b78d7dc8f345c6a6c9f68d5123d4709a35"
+    },
+    "work:origen-psalms-excerpta:u04-rem-mid": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "33e36df248acf9e1f8d35b92e70a388d9a7f2586d4dbb4df9e18543c82b1715d"
+    },
+    "work:origen-psalms-excerpta:u04-rem-close": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "59c3154e25dc8b117cd03a4676ad6eb2da01f20b340ac06cfb309da8d8dade20"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28114,6 +28210,10 @@
     "origen-romans-catena": {
       "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
       "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json"
+    },
+    "origen-psalms-excerpta": {
+      "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
+      "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json"
     }
   }
 }
