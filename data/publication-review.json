@@ -30663,6 +30663,102 @@
       "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
       "section": "u10-rem-close",
       "payload_sha256": "25b5a50384818978d8bfad9189872fefc34b5d440aa02c3aa70e96dae4d29f8f"
+    },
+    "work:diodorus-fragmenta-romanos:u01-open": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "52b5fde19749e8b7d3a04cf8994592c553f8386d025bf8bfc19bc6402b5d1630"
+    },
+    "work:diodorus-fragmenta-romanos:u01-rem-early": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "cc7d9e3884b6636a868a0b9f9ddc46b93b5552f4342da6a68e3e810949ad5b8b"
+    },
+    "work:diodorus-fragmenta-romanos:u01-rem-mid": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "0d9bd9f600010c3dcca52461b5c75816a5e8d59ce4b062956c78cd16e3d0c9a0"
+    },
+    "work:diodorus-fragmenta-romanos:u01-rem-close": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "2576b2f55e22b896bd0612c1ecfa26d3f33d5d353ce2ee5012f875357b27f564"
+    },
+    "work:diodorus-fragmenta-romanos:u02-open": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "16e79f3dfb564300238fd56114b00053e5cbb50a83d507cb2fc1e2ce61ae3353"
+    },
+    "work:diodorus-fragmenta-romanos:u02-rem-early": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "7607621583e035fada53b3dc3c3afc055f1bcf86ad5c97e376dcf56d5d4ee0ac"
+    },
+    "work:diodorus-fragmenta-romanos:u02-rem-mid": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "6ab31505562e0fcf6e4ea64f48d2c7eebe9f99185a3a4b8f580e511825f08785"
+    },
+    "work:diodorus-fragmenta-romanos:u02-rem-close": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "497ab7e50baddce92d8e8736e56756e75917fec10d577ef9acd83817845c2588"
+    },
+    "work:diodorus-fragmenta-romanos:u03-open": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "c6baf998db58b9f0dede0ffa9560b9e076f3461280a0737ec9d48d6b67abfcfe"
+    },
+    "work:diodorus-fragmenta-romanos:u03-rem-early": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "7fd0360e447622ff86e5a2ec1d48412c7a72c305bdf3ee314caee760e478c3f7"
+    },
+    "work:diodorus-fragmenta-romanos:u03-rem-mid": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "15733b0689126e064e809b78433e1c60312224ea00227b15c8463c82e858dac8"
+    },
+    "work:diodorus-fragmenta-romanos:u03-rem-close": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "afbe0f20e84a326758d0ad8a035969970577e212b2cc7f03e1e5c37030390b0c"
+    },
+    "work:diodorus-fragmenta-romanos:u04-open": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "1fdcfa48fc04f72c9aed48aa4d9e9f17245797399995adb8e01af9b17178d853"
+    },
+    "work:diodorus-fragmenta-romanos:u04-rem-early": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "d47e9af3940439bd2e4be7df841871a448699269c0d291b02fff5ae1c2b3f1e8"
+    },
+    "work:diodorus-fragmenta-romanos:u04-rem-mid": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "9d0550702338d24c820a988e4629eebcd3db7d60747aadb32c678221e14f059c"
+    },
+    "work:diodorus-fragmenta-romanos:u04-rem-close": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "3926d5661ba9a7ad115aee9d251edccf29fed83b533835caa114137ccd776b11"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -31072,6 +31168,10 @@
     "apollinaris-fragmenta-psalmos": {
       "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
       "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json"
+    },
+    "diodorus-fragmenta-romanos": {
+      "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json"
     }
   }
 }
