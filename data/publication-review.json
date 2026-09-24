@@ -28173,6 +28173,54 @@
       "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
       "section": "u07-rem-close",
       "payload_sha256": "ea413bfacff4c72c7b0f74dfdd5c4f15978f70923278715805575ab18c4b74dc"
+    },
+    "work:origen-proverbs-fragments:u01-open": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "b0f96cd09fbd5126d0e9916d15b0c2db0ab7e8298dd6d0714e0a98da264850d5"
+    },
+    "work:origen-proverbs-fragments:u01-rem-early": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "2a6ada3518c2105afebbb57193d03e22da4144dad49a05e32c4090806a19e65d"
+    },
+    "work:origen-proverbs-fragments:u01-rem-mid": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "10b8413c7a81dc0f6bbaa65a63f20c05b5aec8424527ed2312ba127bb971ab9d"
+    },
+    "work:origen-proverbs-fragments:u01-rem-close": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9ebbccd892bc51045740434386d354f0fdd0f203eed4fdb31f48c2b8aa3cd120"
+    },
+    "work:origen-proverbs-fragments:u02-open": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "4c437f7feb66e5d5d8668dd70376584514c018bebedfa67d4d68171847ac6f7b"
+    },
+    "work:origen-proverbs-fragments:u02-rem-early": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "f05fa30fe38c91cb77b63c4aeb3ebe6ff47fce3efb95b8a3b353c22f9af58173"
+    },
+    "work:origen-proverbs-fragments:u02-rem-mid": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "a0a90f6522e32308cf523e74aceba3cbf92b62b73ea243c1486af54908b5f8d4"
+    },
+    "work:origen-proverbs-fragments:u02-rem-close": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "992d2f1a387e09e16ff147db3c7c81dfcd9d7728161b2dbf24f54050d28d2f95"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28386,6 +28434,10 @@
     "origen-proverbs-expositio": {
       "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
       "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json"
+    },
+    "origen-proverbs-fragments": {
+      "packet": "books/origen-proverbs-fragments/reviews/audit/provf_tip.packet.json",
+      "receipt": "books/origen-proverbs-fragments/reviews/audit/provf_tip.review.json"
     }
   }
 }
