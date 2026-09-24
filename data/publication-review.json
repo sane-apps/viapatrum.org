@@ -28575,6 +28575,168 @@
       "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json",
       "section": "gregory-close",
       "payload_sha256": "6f5665251a2f7471946fd6976425a9adf841942c2bd57e242d58d9f85df4a893"
+    },
+    "work:origen-philocalia:1": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "1",
+      "payload_sha256": "36ea4a5643692afbf8d44009a091f94501e3030834b4356e5c59886f8d9b2d2e"
+    },
+    "work:origen-philocalia:2": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "2",
+      "payload_sha256": "77bfbbd5ddb93b9b36c9a398b3d8cf2740521adac5859422df68cf12b4a359fe"
+    },
+    "work:origen-philocalia:3": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "3",
+      "payload_sha256": "56d96e97558774eb2d8170da90e5863bef038a5f44cad58e63bac0db7518e1f0"
+    },
+    "work:origen-philocalia:4": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "4",
+      "payload_sha256": "ab51211a31b4b24bcfc70e6da614a95b4c00a85241a5cf02a3a26346e3f885a9"
+    },
+    "work:origen-philocalia:5": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "5",
+      "payload_sha256": "05ae9e526a81fb5301780db6054c398bf58ec3bdd32802b964df753d402d0353"
+    },
+    "work:origen-philocalia:6": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "6",
+      "payload_sha256": "372b68ead4a953691a92053a241c03f09ae70f4a7834e586ff3fb92bf280798e"
+    },
+    "work:origen-philocalia:7": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "7",
+      "payload_sha256": "d73e393c56ea1e2c03bf21d1fcc0d7057adf2a21ca05f0336872cb497ed0e4bc"
+    },
+    "work:origen-philocalia:8": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "8",
+      "payload_sha256": "da4167a4927eb36c17a26a7907fa4443f95934ad48b2afb40e01bb4b371653ed"
+    },
+    "work:origen-philocalia:9": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "9",
+      "payload_sha256": "ca748d062e9ebcc6be89122c13530839698d3e6f28405ede41842d16a22e9c0b"
+    },
+    "work:origen-philocalia:10": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "10",
+      "payload_sha256": "d8032b86fee42ae14363b926b704612104858ad27573e379512ca6144f148599"
+    },
+    "work:origen-philocalia:11": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "11",
+      "payload_sha256": "960e445d74b0bc711a8bdf79cc702946294cde7a6bc928aae40c97837b41dc74"
+    },
+    "work:origen-philocalia:12": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "12",
+      "payload_sha256": "446e0ce3da913d6489375864155da48dc9529f68f48187b13a86bb290973aa26"
+    },
+    "work:origen-philocalia:13": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "13",
+      "payload_sha256": "6420542369ed2efb968c6f918d62da1d8621db8f8e783345095aad04d15cb731"
+    },
+    "work:origen-philocalia:14": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "14",
+      "payload_sha256": "e803974143e00c4966959c22a7fd94b2829d1dae8e6b3e4294dbd7193d4d8168"
+    },
+    "work:origen-philocalia:15": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "15",
+      "payload_sha256": "0d4f12265aa69885c8534615a170d1337d08b19c52449d8cd7060f6ba4aacfbb"
+    },
+    "work:origen-philocalia:16": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "16",
+      "payload_sha256": "ac767e10245b5f76fdc087263c22a485aea9192f19ede095bbe1acfa836d8c0f"
+    },
+    "work:origen-philocalia:17": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "17",
+      "payload_sha256": "1a1002b1ba7370a255c3686ba7bf0828946e786fb4c9070a09202942e5f58b6c"
+    },
+    "work:origen-philocalia:18": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "18",
+      "payload_sha256": "8accec52e44cfa0a9e7c78b63cc57a0900a753361f2e8dc6906341ad1c71f984"
+    },
+    "work:origen-philocalia:19": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "19",
+      "payload_sha256": "e81b78109303971e21e3ad84557202586e8c332c83652a2e7278c34706fa3ecb"
+    },
+    "work:origen-philocalia:20": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "20",
+      "payload_sha256": "80815148334dcf6435272a44c0e84a0cf78a94c3f2125c192539fdbe8cd54de2"
+    },
+    "work:origen-philocalia:21": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "21",
+      "payload_sha256": "cf3f282fe99d53617292e0cf254148bf2dd377379b72488ecf122e414a7c03c3"
+    },
+    "work:origen-philocalia:22": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "22",
+      "payload_sha256": "72a863414fc054b703f4b19a86355949e2d91b7f5c7e4c1d6fb5fda26e816032"
+    },
+    "work:origen-philocalia:23": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "23",
+      "payload_sha256": "597232844b0511df91a573bd8176d15161a0a78f9e92d9f2a2aa267f8926162c"
+    },
+    "work:origen-philocalia:24": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "24",
+      "payload_sha256": "24fdc5dc5b8aa61007f5a8023fe35d31a3a49387f466e30805060ff74d05bb5e"
+    },
+    "work:origen-philocalia:25": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "25",
+      "payload_sha256": "9fd4daba9b61795ee2f252118a8970972e4cbdb0bb164ac31f146e05123d4eda"
+    },
+    "work:origen-philocalia:26": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "26",
+      "payload_sha256": "616df688c63c14a7adac8da43122ed9d7e8940a678de8d3f8ddad0c30733ca4e"
+    },
+    "work:origen-philocalia:27": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
+      "section": "27",
+      "payload_sha256": "b07f6400e35f9ab8d573f0e8bc11d117981957c80587ad835bc5a32dee110225"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28816,6 +28978,10 @@
     "origen-letters": {
       "packet": "books/origen-letters/reviews/audit/letters_tip.packet.json",
       "receipt": "books/origen-letters/reviews/audit/letters_tip.review.json"
+    },
+    "origen-philocalia": {
+      "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
+      "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json"
     }
   }
 }

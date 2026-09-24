@@ -207,7 +207,6 @@ EXTENDED_REVIEW_HOLD = {
     'origen-numbers-homily-5': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-numbers-homily-6': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-numbers-homily-7': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
-    'origen-philocalia': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
     'origen-romans-book-1': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-song-commentary-liber-1': 'Condensed source family: claimed complete books have brief paraphrase-like Greek/Latin sections; exact edition alignment unverified. Song IV has confirmed operational-text contamination.',
     'origen-song-commentary-liber-2': 'Condensed source family: claimed complete books have brief paraphrase-like Greek/Latin sections; exact edition alignment unverified. Song IV has confirmed operational-text contamination.',

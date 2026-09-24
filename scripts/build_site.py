@@ -2753,6 +2753,11 @@ def load_origen_philocalia() -> list[dict]:
     first_english = bool(meta.get("first_english", True))
     slug = meta.get("slug") or "origen-philocalia"
     title = meta.get("title") or "Philocalia"
+    philoc_sections = _origen_rows(deduped, src_map)
+    for sec in philoc_sections:
+        src = src_map.get(str(sec.get("section")), {})
+        loc = src.get("locus") or src.get("location") or str(sec.get("section"))
+        sec["locus"] = str(loc)
     works.append(
         _pack_work(
             slug=slug,
@@ -2762,7 +2767,7 @@ def load_origen_philocalia() -> list[dict]:
             period=meta.get("period") or "c. 360 anthology",
             status=meta.get("status") or "available",
             edition=meta.get("edition") or "J. A. Robinson, Cambridge 1893 — Greek",
-            sections=_origen_rows(deduped, src_map),
+            sections=philoc_sections,
             blurb=meta.get("blurb")
             or (
                 "Origen’s Philocalia (Greek anthology). "
