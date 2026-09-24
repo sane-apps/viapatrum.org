@@ -28815,6 +28815,30 @@
       "receipt": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.review.json",
       "section": "frag-rem-close",
       "payload_sha256": "9399d0052b8f0e41f5ea41c4227472c34f59202b8542169a62e70d947b74467c"
+    },
+    "work:eustathius-allocutio-constantinum:frag-open": {
+      "packet": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.packet.json",
+      "receipt": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "924a0eace0d50527e3a0946b3e9752214e3c62a74ab770c41885f4ce86393b9a"
+    },
+    "work:eustathius-allocutio-constantinum:frag-rem-early": {
+      "packet": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.packet.json",
+      "receipt": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "3e442b59852ced7879f05191004b63496628a12a38927a2d7bff5f8a50250fda"
+    },
+    "work:eustathius-allocutio-constantinum:frag-rem-mid": {
+      "packet": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.packet.json",
+      "receipt": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "aab7bfe24666867d284cfe48f20ce711611e029f2be0ed3cb512b5bd2ea89fd7"
+    },
+    "work:eustathius-allocutio-constantinum:frag-rem-close": {
+      "packet": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.packet.json",
+      "receipt": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "5786a219e2f6b3bf785919d6757dfa70a545bc8965eddd745f783e2696014fec"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29076,6 +29100,10 @@
     "gregory-thaumaturgus-sententiae": {
       "packet": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.packet.json",
       "receipt": "books/gregory-thaumaturgus-sententiae/reviews/audit/gsen_tip.review.json"
+    },
+    "eustathius-allocutio-constantinum": {
+      "packet": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.packet.json",
+      "receipt": "books/eustathius-allocutio-constantinum/reviews/audit/ealc_tip.review.json"
     }
   }
 }
