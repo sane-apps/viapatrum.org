@@ -29583,6 +29583,102 @@
       "receipt": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "c0def763167d00ead53dfe810d52f18c8c0ea0f5639c9e17ae132bdcc4954f5b"
+    },
+    "work:alexander-monachus-inventio-crucis-epitome:u01-open": {
+      "packet": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.packet.json",
+      "receipt": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "9b1f321fdf26a9f62edde564613ef84441619f9b1acc8556c69ff94b179ba436"
+    },
+    "work:alexander-monachus-inventio-crucis-epitome:u01-rem-early": {
+      "packet": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.packet.json",
+      "receipt": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "b4e6dbf38f6d04b37d39a29c91351d062736de1db4a6d5664daf27a16449572f"
+    },
+    "work:alexander-monachus-inventio-crucis-epitome:u01-rem-mid": {
+      "packet": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.packet.json",
+      "receipt": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "2c5d3c931df1c30a0a45e417e274c6833bf37a36d9ec432fe03c2c62a14312be"
+    },
+    "work:alexander-monachus-inventio-crucis-epitome:u01-rem-close": {
+      "packet": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.packet.json",
+      "receipt": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "6056870cc3e3a99b0a33216e7048b375379d6dbf806a3afab0399b92036b0966"
+    },
+    "work:cyril-fragmentum-baruch:frag-open": {
+      "packet": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "5de9050d37c48397f08e540f69c0f286e9e9fea6a9e6b7d4b3e64f06dcf25ed6"
+    },
+    "work:cyril-fragmentum-baruch:frag-rem-close": {
+      "packet": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "6af3db4e27800b73cb8576099597a67fbb41f3ac086b063c9148c750b10864b0"
+    },
+    "work:cyril-fragmentum-baruch:frag-rem-early": {
+      "packet": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "8e92016da7f24b6e57584f95e79678f6a601126a41add201d8d02ba35a0e3a26"
+    },
+    "work:cyril-fragmentum-baruch:frag-rem-mid": {
+      "packet": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "cd3329cb4e09eda5ac8fc30e87f523de7d6d7351c15d7fc1f1746f0b7d4c9c1a"
+    },
+    "work:cyril-fragmentum-proverbia:frag-open": {
+      "packet": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "585e198240d37e6a703d000937dfa3e1e82bf84b23b90277a048ad1080acf47f"
+    },
+    "work:cyril-fragmentum-proverbia:frag-rem-close": {
+      "packet": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "709c1e766a585180af5d85788104ba632ab412651b2eef2676d554aeef6426c7"
+    },
+    "work:cyril-fragmentum-proverbia:frag-rem-early": {
+      "packet": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "e654bcf4cde306e6c28720ae1a4ea34e296007a85fbc1e3d710c28e0e538e156"
+    },
+    "work:cyril-fragmentum-proverbia:frag-rem-mid": {
+      "packet": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "063318ef3e97ae059d493d10043c75c360e5374a989b78f146c7280af556ebdd"
+    },
+    "work:cyril-solutiones-vat-447:frag-open": {
+      "packet": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.packet.json",
+      "receipt": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "72210dcc9bc430d2c7010bc4895ae1b6eaf4d524ba61510ab4b2c007143aeaa3"
+    },
+    "work:cyril-solutiones-vat-447:frag-rem-close": {
+      "packet": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.packet.json",
+      "receipt": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "2c90134f0c0256030597f703ec1ea70387d730d5b92a64a95332f962da6bc7a1"
+    },
+    "work:cyril-solutiones-vat-447:frag-rem-early": {
+      "packet": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.packet.json",
+      "receipt": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "9360f103b9aeb778091c5104bec2b9701363f806e360f83830738d1c52c72cdd"
+    },
+    "work:cyril-solutiones-vat-447:frag-rem-mid": {
+      "packet": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.packet.json",
+      "receipt": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "4a089ebe7b49560cc5e4a33df30772109f3f79e6b60679db9f2dbb5662d1f285"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -29920,6 +30016,22 @@
     "eustathius-oratio-dominus-creavit": {
       "packet": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.packet.json",
       "receipt": "books/eustathius-oratio-dominus-creavit/reviews/audit/tip.review.json"
+    },
+    "alexander-monachus-inventio-crucis-epitome": {
+      "packet": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.packet.json",
+      "receipt": "books/alexander-monachus-inventio-crucis-epitome/reviews/audit/almice_tip.review.json"
+    },
+    "cyril-fragmentum-baruch": {
+      "packet": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-baruch/reviews/audit/fba_tip.review.json"
+    },
+    "cyril-fragmentum-proverbia": {
+      "packet": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.packet.json",
+      "receipt": "books/cyril-alexandria-fragmentum-proverbia/reviews/audit/fpr_tip.review.json"
+    },
+    "cyril-solutiones-vat-447": {
+      "packet": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.packet.json",
+      "receipt": "books/cyril-alexandria-solutiones-vat-447/reviews/audit/sv_tip.review.json"
     }
   }
 }

@@ -872,6 +872,10 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "origen-song-homily-1": "Homilies on the Song of Songs, Homily 1",
     "origen-song-homily-2": "Homilies on the Song of Songs, Homily 2",
     "gregory-thaumaturgus-ecclesiastes-metaphrase": "Paraphrase of Ecclesiastes",
+    "alexander-monachus-inventio-crucis-epitome": "Discovery of the Cross (epitome)",
+    "cyril-fragmentum-baruch": "Fragment on Baruch",
+    "cyril-fragmentum-proverbia": "Fragment on Proverbs",
+    "cyril-solutiones-vat-447": "Solutions, Vat. 447 Fragment",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
@@ -928,6 +932,10 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-apocalypse-scholia-scrap": "Scholia in Apocalypsem",
     "origen-job-selecta": "Selecta in Job",
     "origen-nt-fragments": "NT Catena / Scholia Fragments",
+    "alexander-monachus-inventio-crucis-epitome": "Inventio crucis epitome",
+    "cyril-fragmentum-baruch": "Fragmentum in librum Baruch",
+    "cyril-fragmentum-proverbia": "Fragmentum in Proverbia",
+    "cyril-solutiones-vat-447": "Solutiones (Vat. 447)",
 }
 
 
