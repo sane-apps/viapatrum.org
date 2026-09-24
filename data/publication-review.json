@@ -30159,6 +30159,150 @@
       "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "6f41e08ca8d5e7c0419197cc23a37ef8dd222a1ef4f552c05aa9f275cfdea1e6"
+    },
+    "work:apollinaris-fragmenta-joannem:u01-open": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "e8f899e9851d081774d826a5a09c888511d3eb600f64ee1949e9a97c19088945"
+    },
+    "work:apollinaris-fragmenta-joannem:u01-rem-early": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "ef437463bfbab2e29f3d67df725e53fcb63ef23670440f321c4fa0260d05ab93"
+    },
+    "work:apollinaris-fragmenta-joannem:u01-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "95948a7540b1fd11164a1502c7bbcb441e719cfaecdce90aa439d7379b691a4b"
+    },
+    "work:apollinaris-fragmenta-joannem:u01-rem-close": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "dd2e4e73ccae012bf2d31a91fff3a2ac495eb01f82d38405c01d3470e56a0e22"
+    },
+    "work:apollinaris-fragmenta-joannem:u02-open": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "eca23ced48254b895fcd5ce93ea27f6aed220beac6f19ff925d103f38234a923"
+    },
+    "work:apollinaris-fragmenta-joannem:u02-rem-early": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "644144d07758f429bc1249df5672a128a551efd5799858b4b39939b924adfba2"
+    },
+    "work:apollinaris-fragmenta-joannem:u02-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "fa33506b09f1a61c9c1065fbe18f1aef5fd749b7e879faddfa13c7f8e2d43ce6"
+    },
+    "work:apollinaris-fragmenta-joannem:u02-rem-close": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "a23a40f0eeeb97e6979ae6e7e93cfa5a550dd96aa31a8b06ab72efb17f83cebf"
+    },
+    "work:apollinaris-fragmenta-joannem:u03-open": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "f6facb6b9b29358815466379165233be53ecf6718c0fb795552e2f8a950933b8"
+    },
+    "work:apollinaris-fragmenta-joannem:u03-rem-early": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "ec0a375ec5d304a88768768706d595c320387613526dec26943a562ddc476dc0"
+    },
+    "work:apollinaris-fragmenta-joannem:u03-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "fa930a62aa110574e38e5b6b793e0775a60aa81daa6526aa85604026dd445f04"
+    },
+    "work:apollinaris-fragmenta-joannem:u03-rem-close": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "506eca232b66fb423ee59088a12387ebf9d8a4a3e24c15aa04d8bdb2e43b5df9"
+    },
+    "work:apollinaris-fragmenta-joannem:u04-open": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "22128e0fa61b02e0f6c93ce6b7988c4ced7a8932a826aad381231c684039d1f3"
+    },
+    "work:apollinaris-fragmenta-joannem:u04-rem-early": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "ee39d51245c45e138e41016b1a1a2cb2b548b1fc0915423da07ac4b026dc3821"
+    },
+    "work:apollinaris-fragmenta-joannem:u04-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "bbefe8a753063746c488882c84627c973e361ac0c28d7f15083a6f3237d9f840"
+    },
+    "work:apollinaris-fragmenta-joannem:u04-rem-close": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "d2c54a843f20c25a98a65532bd3ef54e94379bf8ca6ab6bd8b8fc1293baf968d"
+    },
+    "work:apollinaris-fragmenta-joannem:u05-open": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "561132826ce2c30f8e4c450ee87b7b32dd9ea45c497904e7c7a6285a6005eda4"
+    },
+    "work:apollinaris-fragmenta-joannem:u05-rem-early": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "f503b15fd3b650ef8725eae6a7e75138724ce2ee334c1ca94e0fa570694d27e4"
+    },
+    "work:apollinaris-fragmenta-joannem:u05-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "5eee8137cc0e59925c645c9e851a3351adadb484d83df0ee05df4a40ca8a0fbe"
+    },
+    "work:apollinaris-fragmenta-joannem:u05-rem-close": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "88d5a8d6e8f6dd763133d5be4a8b4a556473f103214bf1955c61f879829a7b51"
+    },
+    "work:apollinaris-fragmenta-joannem:u06-open": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "4d67d6e035933c8ebc56a1c560853d1d52def33d70544817eef65e0ff9904068"
+    },
+    "work:apollinaris-fragmenta-joannem:u06-rem-early": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "b3061e80f738533b005fc41a2c30992a70123459791af1fc59fa79ea4a0335d7"
+    },
+    "work:apollinaris-fragmenta-joannem:u06-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "8e65b4f7868c6ee2c12a45143e138659a7f868b092c8e9dec5a039d4589dd6e1"
+    },
+    "work:apollinaris-fragmenta-joannem:u06-rem-close": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "e1c7885be25e636d3754238bdfacb9148b735b8e02a381d94d79c01b09764f55"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -30556,6 +30700,10 @@
     "diodorus-fragmenta": {
       "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
       "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json"
+    },
+    "apollinaris-fragmenta-joannem": {
+      "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.review.json"
     }
   }
 }
