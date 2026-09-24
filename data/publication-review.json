@@ -31215,6 +31215,390 @@
       "receipt": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "76e5b7e34d9ee3d344338431995edcbadc6fa56844f011d82a13cba28484f165"
+    },
+    "work:didymus-commentarii-ecclesiasten:u01-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "857cc4f7234e433d826043cb9145aa5a0fe35e845a117d535dc5884ee7e65244"
+    },
+    "work:didymus-commentarii-ecclesiasten:u01-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "48dbcdef94741c8d4f23ff71c2cc924e4a4c191e406b833cb057ad8dcefd5cda"
+    },
+    "work:didymus-commentarii-ecclesiasten:u01-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "90749fc6575483b2c844d61572cc82b28aa2d5f06ac98ac5b1f5aecbcec36440"
+    },
+    "work:didymus-commentarii-ecclesiasten:u01-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "928b845d5886bcc83a1362dcf41b5de61ad2ccc7d15c21ccc18191f43bb52468"
+    },
+    "work:didymus-commentarii-ecclesiasten:u02-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "faef4553a7a1ea32b5f5646ae2aaf35baba8cd1a51404aee6c696213c8a7a124"
+    },
+    "work:didymus-commentarii-ecclesiasten:u02-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "fc206d31159c89d34233ff31cda9d1288a6d120b26f1c2347dba6643514cf7b8"
+    },
+    "work:didymus-commentarii-ecclesiasten:u02-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "a34fe809fbf399d613a3e7f9b237e9ba8fc0205a552a969bb9ab62686a5f284e"
+    },
+    "work:didymus-commentarii-ecclesiasten:u02-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "c047b7a74f75218bded244d3696ed92e20c82c333e41a2d7152221e999b68f44"
+    },
+    "work:didymus-commentarii-ecclesiasten:u03-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "9864bbd488369a6295ab9c57e871401f38e5495c8de5d2c1e32dd40935dc3e2d"
+    },
+    "work:didymus-commentarii-ecclesiasten:u03-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "2a4ac3c3574d2c9426768974cd6016cd4b76deede36b38e945e9861a7a6ad35e"
+    },
+    "work:didymus-commentarii-ecclesiasten:u03-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "873728d3eea4cf772df217595ce95acc80592ee2c8801f82e4707b0686d6dd02"
+    },
+    "work:didymus-commentarii-ecclesiasten:u03-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "45a486978d926f87c4db264c8e1b5f14d0eb29a7e5adc6eb0925e157c28824a0"
+    },
+    "work:didymus-commentarii-ecclesiasten:u04-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "19ccde7255b008197afb3b3a2f8a16f63226a6817b40cd2a5a8039b2e4ce7bfc"
+    },
+    "work:didymus-commentarii-ecclesiasten:u04-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "9eb22430b7f73206830d14837cda0d79a8e8e608b178d19c88a2c0c3024cc033"
+    },
+    "work:didymus-commentarii-ecclesiasten:u04-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "e2dedcdc0b66161d251622ae8707a0f65ee40a5a5227d79f24e49c943997d2f1"
+    },
+    "work:didymus-commentarii-ecclesiasten:u04-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "5b5a370006d72d8f9886f14a2ce5ad820319c85b2d792a1fb473abb4aa116543"
+    },
+    "work:didymus-commentarii-ecclesiasten:u05-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "37f0c8032cb364e9a09064181bafdd96d900452ca63b83ce9ad8f1b5bf0f1c0f"
+    },
+    "work:didymus-commentarii-ecclesiasten:u05-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "9d1459cd62c4fb4d87ea75b79a6ac5f25be29dcb09d355748670f4f5cf79e4d2"
+    },
+    "work:didymus-commentarii-ecclesiasten:u05-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "c8804b245c500c926a7c56698c503f4acf2523e934bafc3efdbc29ca9dedca31"
+    },
+    "work:didymus-commentarii-ecclesiasten:u05-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "8a209830446bf1e9a9d43aaf5fb67a7108d4f1bd7569b46aa200dfcfbdde9caa"
+    },
+    "work:didymus-commentarii-ecclesiasten:u06-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "6c2ef44e9ab9db692fb85376dfc3b775f7c49e3bae1af2fe8280183bfba1bbb4"
+    },
+    "work:didymus-commentarii-ecclesiasten:u06-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "0bac2c4a6d07e0852632455fac87a01c3f08e89015305e742ab4e99c40b92589"
+    },
+    "work:didymus-commentarii-ecclesiasten:u06-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "edf0b67952ea5f60e6a3b989c6d3f5e85da8b21096e0810fdea6cf807e325630"
+    },
+    "work:didymus-commentarii-ecclesiasten:u06-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "a6a05b14c6f6dc75b719670fe5b3c23818fcace6d75e4ffed2fb0aff210cdaa7"
+    },
+    "work:didymus-commentarii-ecclesiasten:u07-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "877593222a548e27c86cf4cf821a07ba421a9908217fb49d36c247fb551c547f"
+    },
+    "work:didymus-commentarii-ecclesiasten:u07-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "50bd618b7bdfa73cf187144e30d5745150370e2eea931be63140e9d93926fad4"
+    },
+    "work:didymus-commentarii-ecclesiasten:u07-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "45797d57c492de8f0c81721e638354d377031d3ac3d916539ab35ae360579e59"
+    },
+    "work:didymus-commentarii-ecclesiasten:u07-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "61586ca9eeaf46d2727712671b56497154e0d4e82704dde2d577799d5dc19307"
+    },
+    "work:didymus-commentarii-ecclesiasten:u08-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "ff17372a95b524b71533a6de954da6b9153f165a7cd7513faf07f7e5e99029fc"
+    },
+    "work:didymus-commentarii-ecclesiasten:u08-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "6135fcecbf1e75bafd6036c9983d1be39e1d620fd39a357bb67aff8977ae7df0"
+    },
+    "work:didymus-commentarii-ecclesiasten:u08-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "04c99f0fe3c78816a0a236a2e98cb352bd53a55c92c5e6b7f9f6b5ad6ef37e47"
+    },
+    "work:didymus-commentarii-ecclesiasten:u08-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "1fa41facbf2b63110b50a04ad450d0d336a3c214061c2ed80e4b930c593c0558"
+    },
+    "work:didymus-commentarii-ecclesiasten:u09-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "11067488e06ba5a6ccf100b40bb779019a08bd5fde07e1a361350a0b29cea96e"
+    },
+    "work:didymus-commentarii-ecclesiasten:u09-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "3b3031da86716a5c76aafd71a76d1be3a1fd052cd3ac183b86815959c2cf55ef"
+    },
+    "work:didymus-commentarii-ecclesiasten:u09-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "93052389c24ff344a122d47cd9a89dc27fcde33e54470ad2ae9bc4f4e28d6450"
+    },
+    "work:didymus-commentarii-ecclesiasten:u09-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "00ef6ccd750ae578dde01f4c37bb7961d2ba279b8ff327895e6d3c462b9b3c60"
+    },
+    "work:didymus-commentarii-ecclesiasten:u10-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "7ce45d165f4212f713c441646533e4e82b88ee61c18570824922dc65b2fa2c31"
+    },
+    "work:didymus-commentarii-ecclesiasten:u10-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "5b26322fbcd2b57b1402038861496abee79d6b708fb11edc83c12cba68b229fe"
+    },
+    "work:didymus-commentarii-ecclesiasten:u10-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "07270e163556f48720c1eaeefdc287c599833a417c064fcf25ba97a9db8e1a74"
+    },
+    "work:didymus-commentarii-ecclesiasten:u10-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "5139699ef6f7c5cba19d3db1939d970f1622de2361de992b8466bb87fcfa565b"
+    },
+    "work:didymus-commentarii-ecclesiasten:u11-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "e047d689fc3fd609b274fa20d9082192ec163c8ab7131eef373eb0092ab9df92"
+    },
+    "work:didymus-commentarii-ecclesiasten:u11-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "c1f1f9073a4398e95ea984b4325a67f06869dbd949bc7277d4c83ec9edf57151"
+    },
+    "work:didymus-commentarii-ecclesiasten:u11-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "3313fe751691c4689c089027d266eec52656ab658130e7371b5b0f44548624df"
+    },
+    "work:didymus-commentarii-ecclesiasten:u11-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "23a92b1a4365df518f64c00d86bd2f7da96aeb3ff73950b3f43769d00479ed11"
+    },
+    "work:didymus-commentarii-ecclesiasten:u12-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "c856c97dde8770b23bf85e4ea841963a571a37925b5f7f62c24da2ce50b66d6e"
+    },
+    "work:didymus-commentarii-ecclesiasten:u12-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "b1af2359c51b6fcba9cd629b8bfd00ef58fc5c63e47294595f780da620b65179"
+    },
+    "work:didymus-commentarii-ecclesiasten:u12-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "0838c23cf4ab92ea198ce4ebc1211f0b019404cdffe1f45ed80140dc4aba4ef9"
+    },
+    "work:didymus-commentarii-ecclesiasten:u12-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "783de58c62a6dc370e133e8c87673dad5c59709216775b8a6bd4c5818d5102ce"
+    },
+    "work:didymus-commentarii-ecclesiasten:u13-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "53c4b7742555e7cd79a26d56a51ca100aa74c3d06a8b04516ed42547745f47cd"
+    },
+    "work:didymus-commentarii-ecclesiasten:u13-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "417d013f246e7c0e7202aebc208cf4170df235a5446f5f2f8ffdcc3ff5abfd58"
+    },
+    "work:didymus-commentarii-ecclesiasten:u13-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "2828beb7bf28f3a6d33b37af8344c6bdb76d7feda738de2fd81c59e4a346d863"
+    },
+    "work:didymus-commentarii-ecclesiasten:u13-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "42b61b8c2721f17137183f5ebe01fe44b993a7a4d67a35c145e85abd9c0eb0dd"
+    },
+    "work:didymus-commentarii-ecclesiasten:u14-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "063624831668585239d7f6893e0d94be6a883d440e3c6b6ed943be3a48a77df3"
+    },
+    "work:didymus-commentarii-ecclesiasten:u14-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "f5de02ca878343ec664c3c650468593b2582ea6601dc822f62dead95b16e3451"
+    },
+    "work:didymus-commentarii-ecclesiasten:u14-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "e1de4bbd6b98287a4b339e552c56c912756dfa5355dc4e50131df05630612ae5"
+    },
+    "work:didymus-commentarii-ecclesiasten:u14-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "6d7b86e5f7b3ee3382a7f8236803e7fa53a26ad37f5cf52e62e1b4de08af7779"
+    },
+    "work:didymus-commentarii-ecclesiasten:u15-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "2d1d8ebc89ecb23b3605a039d44fd71cfb5b2ef7a5476d65a680e759b9be3a4b"
+    },
+    "work:didymus-commentarii-ecclesiasten:u15-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "b6c3e85865f6208bb357ff245af00b292123e3c7deb95de1880e27561ad98120"
+    },
+    "work:didymus-commentarii-ecclesiasten:u15-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "eb11947ef33b6355f32c4ba03a1e59ca756b7f20f9212ae7977bef77ee878550"
+    },
+    "work:didymus-commentarii-ecclesiasten:u15-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "2872230b35b910af8ec995424498cfa21f859357d745bc1bb96a944a97338ded"
+    },
+    "work:didymus-commentarii-ecclesiasten:u16-open": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "d429e18b9c69a55603de836035968027301dffacf0bbfa222a139c5600598d45"
+    },
+    "work:didymus-commentarii-ecclesiasten:u16-rem-early": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "0f387ca0413ac2f5ac5e9b210e2a94362db2b6818f34a3266e80eb8c543c0e1e"
+    },
+    "work:didymus-commentarii-ecclesiasten:u16-rem-mid": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "2acc33325f185fa2141eaacbc4e2884ac4262753bf74223812cdae43d6bd11e6"
+    },
+    "work:didymus-commentarii-ecclesiasten:u16-rem-close": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "07507337758a55b6ce8ccb2f078ba940a95d089e731849093b2bfe8db3a08b69"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -31680,6 +32064,10 @@
     "amphilochius-oratio-resurrectionem": {
       "packet": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.packet.json",
       "receipt": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.review.json"
+    },
+    "didymus-commentarii-ecclesiasten": {
+      "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json"
     }
   }
 }
