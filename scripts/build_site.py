@@ -3014,8 +3014,6 @@ def load_origen_nt_fragments() -> list[dict]:
     first_english = bool(meta.get("first_english", True))
     slug = meta.get("slug") or "origen-nt-fragments"
     title = meta.get("title") or "NT Catena / Scholia Fragments"
-    if slug not in WORK_TOPICS and meta.get("topics"):
-        WORK_TOPICS[slug] = list(meta["topics"])
     nt_sections = _origen_rows(deduped, src_map)
     for sec in nt_sections:
         src = src_map.get(str(sec.get("section")), {})
@@ -3043,6 +3041,8 @@ def load_origen_nt_fragments() -> list[dict]:
             text_history=_text_history_from_meta(meta),
         )
     )
+    if slug not in WORK_TOPICS and meta.get("topics"):
+        WORK_TOPICS[slug] = list(meta["topics"])
     return works
 
 
@@ -3100,13 +3100,7 @@ def load_origen_pauline_fragments() -> list[dict]:
                             if "oet_banner_gloss" in globals()
                             else note
                         )
-                if not existing.get("related_topics") and meta.get("topics"):
-                    existing["related_topics"] = list(meta["topics"])
-                    if slug not in WORK_TOPICS:
-                        WORK_TOPICS[slug] = list(meta["topics"])
                 continue
-            if slug not in WORK_TOPICS and meta.get("topics"):
-                WORK_TOPICS[slug] = list(meta["topics"])
             works.append(
                 _pack_work(
                     slug=slug,
@@ -3125,6 +3119,8 @@ def load_origen_pauline_fragments() -> list[dict]:
                     text_history=_text_history_from_meta(meta),
                 )
             )
+            if slug not in WORK_TOPICS and meta.get("topics"):
+                WORK_TOPICS[slug] = list(meta["topics"])
     return works
 
 
