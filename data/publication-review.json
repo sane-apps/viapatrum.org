@@ -31599,6 +31599,582 @@
       "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json",
       "section": "u16-rem-close",
       "payload_sha256": "07507337758a55b6ce8ccb2f078ba940a95d089e731849093b2bfe8db3a08b69"
+    },
+    "work:didymus-commentarii-job:u01-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "52a07d95d3479bda1f403d7eb5b030b3eb0d2ed993e4f4b4a3e5d8798897c80b"
+    },
+    "work:didymus-commentarii-job:u01-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "55d19e658fdd7c739d95aaaf9f3c38939cf632f936c52f07be336c4f7e91cece"
+    },
+    "work:didymus-commentarii-job:u01-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "fdb5143d2fa41f946037e4f51d901102309a8eaff2a2fbde174c8efbaf37c747"
+    },
+    "work:didymus-commentarii-job:u01-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "c85e303419c52a65990be60bbe169ba9a5cd22261ed84769086486b93473f681"
+    },
+    "work:didymus-commentarii-job:u02-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "280eb20c05a6881d237e67478d5ac738f0720b85e8c5bc391bf32df776fe6773"
+    },
+    "work:didymus-commentarii-job:u02-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "85244bcaedc64f0f8adfd5aa73a28b230c4caeb0120e839853222b75f49037f8"
+    },
+    "work:didymus-commentarii-job:u02-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "43422f005adf604e9a0558a4939d2d734f87383926e4d788737629c58d6498e7"
+    },
+    "work:didymus-commentarii-job:u02-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "f22f3a5622f2acc2e4abe6d4d269557bcc6a167fdea7c167a6b603927cde2277"
+    },
+    "work:didymus-commentarii-job:u03-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "d692d36dc7cf2502f42f79d4d31342cbfbbb4912a744b7b8f229a661f8c1fe49"
+    },
+    "work:didymus-commentarii-job:u03-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "55ae9cea22955beab370308dc2a7b396fc3c837e46a94ba4178908817eb928ef"
+    },
+    "work:didymus-commentarii-job:u03-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "7a69a937f227f4f6c763e69360e871aed2f804001e0399965509daa30893113a"
+    },
+    "work:didymus-commentarii-job:u03-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "462dd428bb001da1ce16ba0805e3b74ebc812f8e9af40dd86b152e1fa79ab87c"
+    },
+    "work:didymus-commentarii-job:u04-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "ef409a2ad6d5fb251543920e05f6689861fb7cae7beb49978dfc7fe67cf22380"
+    },
+    "work:didymus-commentarii-job:u04-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "b5c3bb7207feb6061661e7091f0caacbd4c4f2ee9ffe31b64f58cebad5c813a7"
+    },
+    "work:didymus-commentarii-job:u04-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "e27f26aec53e312e01bb267314ff5f7bd326135f059b0dcd76aa608dcf16727a"
+    },
+    "work:didymus-commentarii-job:u04-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "14b6b35550b1ec3511498bb860fd1714d91c402f119680029114380f01d13ae3"
+    },
+    "work:didymus-commentarii-job:u05-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "528fae7a85298b90af77c5a701ad1f7c492010fa5902f013baa7cc5f5da909df"
+    },
+    "work:didymus-commentarii-job:u05-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "52fbc1cb420e86e2d49e742b35e44a1a50095db42eb1cb23c4080df96e797e39"
+    },
+    "work:didymus-commentarii-job:u05-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "0a8bb398b62381747e9542fe442fa741e2ed0550f6c93b7ffe295524c9742aad"
+    },
+    "work:didymus-commentarii-job:u05-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "d84d9cbb647c35df74951e6f77541b655bb4c3de0c17fffdf8d3e3223f49198f"
+    },
+    "work:didymus-commentarii-job:u06-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "fa372625f7ea8d50ddd20d6518746b6bb69fdb6d3cd9eff0994563979bcf00b0"
+    },
+    "work:didymus-commentarii-job:u06-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "c269501964af96e886515fbc8ae4f66c7374bea79ea947c2472e08de9a78e212"
+    },
+    "work:didymus-commentarii-job:u06-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "f7b40ed5ed5ccabb0d9ae1fd760b39d985e965df0033c4425af888eb08d2e212"
+    },
+    "work:didymus-commentarii-job:u06-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "14ef85d9a368366d2bec35909f457de75c0035391c108de92c3006224495f677"
+    },
+    "work:didymus-commentarii-job:u07-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "7057d83071e9ef0f755a1b2ea6c75f81f5596c81663f94460828791f19944d87"
+    },
+    "work:didymus-commentarii-job:u07-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "3e29e36ac60b3f8ffc67bbf821d05713ac011da026b7f36ca4b9449fa3af31f3"
+    },
+    "work:didymus-commentarii-job:u07-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "ef1dd6bd89c2d8fd4ec748e5c47a14ad97b1f6926ed9a378a64d193f56ef8034"
+    },
+    "work:didymus-commentarii-job:u07-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "4fe3570dfc03df36dc263f9e7eedacf45cda789b218b53bd17f817e43e0e4a0b"
+    },
+    "work:didymus-commentarii-job:u08-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "0b5ee04517c8a82fd8dca598771f15d891ef760012aceda2989f89ed9c8d6050"
+    },
+    "work:didymus-commentarii-job:u08-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "b3f5cff6cf45de868d9a3b701ee601aea34855c49ab5809733ed921b0744c4bf"
+    },
+    "work:didymus-commentarii-job:u08-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "d75bdb77acb07f685ff551d3e15d6be639b0ce1e361000eb09cffdeb70b052ab"
+    },
+    "work:didymus-commentarii-job:u08-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "3510c70f1a195d5821092e88343abbe61cb454366ad768ec33b96b271b349038"
+    },
+    "work:didymus-commentarii-job:u09-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "13c0d9548a4d1994315dc22e99acfe61bec9d257e42047a95b854d979cab9f27"
+    },
+    "work:didymus-commentarii-job:u09-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "5ac7899e27aa1fc869df2aae4edb2eda785635a9ec3c0dafd1ad216791cc3a9a"
+    },
+    "work:didymus-commentarii-job:u09-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "f3c0f9fb8f8bef35d4f3de0736041e2666dfca5e50bd93df13f89dcd953a5ba6"
+    },
+    "work:didymus-commentarii-job:u09-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "3eea5996652fd95fa1c5531e4f0869f9d1184c50ca463a845cfaba1e57079c9c"
+    },
+    "work:didymus-commentarii-job:u10-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "696abcde578ecb13a964f74dcd0e84ceb8ecc0e4ee86dcc8a1ffacec5e4e7db7"
+    },
+    "work:didymus-commentarii-job:u10-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "720ada56b431e8c565ace171d8e7a82230d18e7d736f20d58a9cd7f631eea9bc"
+    },
+    "work:didymus-commentarii-job:u10-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "8f3699ecd4ec2f3c59f334fffe4f73f1396ccf3c51f9e86e494fcdf44ea31be6"
+    },
+    "work:didymus-commentarii-job:u10-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "1792d3ae2a8185318fb5d2b87460ea38ca69a415622024bb78b38bbff32c6e94"
+    },
+    "work:didymus-commentarii-job:u11-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "2d34cc8add66aa6ed931a172ecc064a10d42007d3f5fbdb116e11fa37e76d58c"
+    },
+    "work:didymus-commentarii-job:u11-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "55e2dc3af9d1f11fb5d09e509d868786cb66515696104ff1db2db8967f2b4f0e"
+    },
+    "work:didymus-commentarii-job:u11-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "54c9ffaf026445709d25a74f4d3c04a1604fc49e8015d52ca3a45586909ae7f2"
+    },
+    "work:didymus-commentarii-job:u11-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "df1f68e5265a662e5b21cdec9f33079795179e447bd93fef29967e256b7154fc"
+    },
+    "work:didymus-commentarii-job:u12-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "5a5de665bab8bca14f485da3ae8c9309c02ce112d2c4bd043503e2f2477e9176"
+    },
+    "work:didymus-commentarii-job:u12-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "0eeb29921fdcae7173ec180b523a2de49680d6d1fb8cf35c33e79fec0099a666"
+    },
+    "work:didymus-commentarii-job:u12-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "f6dd72566f00744d2a35ad2b5be19dae87dadc5261b12a06927a3a63360e2fb7"
+    },
+    "work:didymus-commentarii-job:u12-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "3eebcd5099038ff7f0b6ac48b3c38d77bc0d9d2d9fc679d7c088ff9f9eb4abad"
+    },
+    "work:didymus-commentarii-job:u13-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "336e044f2b0538f60559d2c62168c63d01f79396ed5df8c06587573301868985"
+    },
+    "work:didymus-commentarii-job:u13-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "de7b1f5fa6c7fae4de13514bf4618a7a82e94191a0bb03fc8a214f786cfdae0f"
+    },
+    "work:didymus-commentarii-job:u13-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "2d0f65f1a5bb5ee408b2d560c8d4936b515b5c2a5b23df29959bccb900eb5663"
+    },
+    "work:didymus-commentarii-job:u13-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "4fb1aedf373369285acd8f849eafa968899e5c3cb8a2cda9e09428692ff87737"
+    },
+    "work:didymus-commentarii-job:u14-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "7306ac33ff0ee2045f6854d927340948c3b244bedc534cd245f06db9cdbf99d5"
+    },
+    "work:didymus-commentarii-job:u14-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "5761c1bdbd682d2dfcf0b5345557d020940a49ecbd44f96c8ce7d0429666d280"
+    },
+    "work:didymus-commentarii-job:u14-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "22acd774140a653e3e0ca6c3f2acc2ba401606da3c612d83828730faa19bffd0"
+    },
+    "work:didymus-commentarii-job:u14-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "4305ea0bb645273c673acf9e91bc1a0f1d5eda28162297eaf1d1ed5a05ea6b88"
+    },
+    "work:didymus-commentarii-job:u15-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "cd505469738dfe4078353a041700a9bd2c347de9ff44f85a77bd8fc1d904de01"
+    },
+    "work:didymus-commentarii-job:u15-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "3a219f58b8aa487e31bb80eb6d2ce47751c2feb947ee136ea7c1c2d08df57463"
+    },
+    "work:didymus-commentarii-job:u15-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "598954c094a6d1320b6870e399391a5cf4bcd0f8b2b1739d5db91ecd42c9b200"
+    },
+    "work:didymus-commentarii-job:u15-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "66fee840f707e808b323716f5878a431df176b478d61981ece55aaa4e80efede"
+    },
+    "work:didymus-commentarii-job:u16-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "793113ad588fc9fb3cf930ce87fc6bc2d4f017452f3e74c681df1f483091ed95"
+    },
+    "work:didymus-commentarii-job:u16-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "c22b1a94242be172d41eff3271ccdb69c294ae82b50d726f873a8b69c50d3ac6"
+    },
+    "work:didymus-commentarii-job:u16-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "961c862665a0e9cfc4f36400984ad48ed9bfb8702b26be0647bec4dca626a129"
+    },
+    "work:didymus-commentarii-job:u16-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "34a24f8f15d611c8d4c212cda812d6995ea689bee1eb1911206aea0e5ea758d2"
+    },
+    "work:didymus-commentarii-job:u17-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u17-open",
+      "payload_sha256": "a0bb6896508a5c088c3a3ae778dc1570190b319d22310f879db9c81594cd41cc"
+    },
+    "work:didymus-commentarii-job:u17-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u17-rem-early",
+      "payload_sha256": "034b201565c59ef7ab63b3d1667f75480970b2f49ad1189594716c95bb7067f7"
+    },
+    "work:didymus-commentarii-job:u17-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u17-rem-mid",
+      "payload_sha256": "0f57a2af4df41184aef6d66ec5eeb37a7497ac4b3899c7b132833773884ae364"
+    },
+    "work:didymus-commentarii-job:u17-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u17-rem-close",
+      "payload_sha256": "ffeed586ef62ba8b88c767739bfa794247ef61e28fe5ba2510be10766eb9f6ef"
+    },
+    "work:didymus-commentarii-job:u18-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u18-open",
+      "payload_sha256": "76218af32c7d0b699cf5bd5bea48b519d546dd364b289016f28de137399790b9"
+    },
+    "work:didymus-commentarii-job:u18-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u18-rem-early",
+      "payload_sha256": "0fe54f3e931e6dbed4606a9de1ee68c916421955b259539fc680a21d94a4a180"
+    },
+    "work:didymus-commentarii-job:u18-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u18-rem-mid",
+      "payload_sha256": "e63aa2ba6447bc6eb35ee94abe8daa9e7fef5b27f80f2b48b964b014fd47c3ae"
+    },
+    "work:didymus-commentarii-job:u18-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u18-rem-close",
+      "payload_sha256": "4f10459b643880f3eb9f8be4ecc9c49eb3ff894796b4cef1a2d2b4ca437449c7"
+    },
+    "work:didymus-commentarii-job:u19-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u19-open",
+      "payload_sha256": "8491a29686a1e72b009ba6540af4e825372ebc8992714d42257161843c766692"
+    },
+    "work:didymus-commentarii-job:u19-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u19-rem-early",
+      "payload_sha256": "2c89eb3f750aadde84d29fc628744289f7d4b2f1aefbd0fba8b32681d73e11bf"
+    },
+    "work:didymus-commentarii-job:u19-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u19-rem-mid",
+      "payload_sha256": "ffc35409813cdacc1b1729b890708ed407c1fd5b0e29e5a2170864a8c269dab5"
+    },
+    "work:didymus-commentarii-job:u19-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u19-rem-close",
+      "payload_sha256": "bcdb45e21a6588574447a237cbad9cd5c722eff34e1b1aeb69443f38cbff8f22"
+    },
+    "work:didymus-commentarii-job:u20-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u20-open",
+      "payload_sha256": "1e83773d0eed48d93c27754411782d0cb221ca5ae2f65c3ab73c4b6106445f69"
+    },
+    "work:didymus-commentarii-job:u20-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u20-rem-early",
+      "payload_sha256": "48a61f49755535db5347d6674a475946af5ce1e82da664f939a3f6db9a688377"
+    },
+    "work:didymus-commentarii-job:u20-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u20-rem-mid",
+      "payload_sha256": "058bb29c1eb51c380a1667dc50009f187c1b5bb7cf64cd671cf48f416ab01efb"
+    },
+    "work:didymus-commentarii-job:u20-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u20-rem-close",
+      "payload_sha256": "1e6a07df15a068278dc7c6bb567966b0c23056c182c5f7bcc79b1f78d9a2475c"
+    },
+    "work:didymus-commentarii-job:u21-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u21-open",
+      "payload_sha256": "b00e36a343d521828e5c55cae9681cb9b098f92b1bd862075c6f9fb6251f638f"
+    },
+    "work:didymus-commentarii-job:u21-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u21-rem-early",
+      "payload_sha256": "e5fe3fa33e2d826a8ee0f278beb2410a43cb4145f3f9d93e8f41b8026940e63d"
+    },
+    "work:didymus-commentarii-job:u21-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u21-rem-mid",
+      "payload_sha256": "c52b3c45b886934056a8601fec4d3ad651a88d8b8d7f71183112969d387b3c68"
+    },
+    "work:didymus-commentarii-job:u21-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u21-rem-close",
+      "payload_sha256": "a68a51dd43821e534fde6368826490967d352c27d1857ec1812e204758aa1cff"
+    },
+    "work:didymus-commentarii-job:u22-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u22-open",
+      "payload_sha256": "b72b7b9eac80236118f7ae54269bbc50a3c08e7c5e6bd81adf2274454d7773b3"
+    },
+    "work:didymus-commentarii-job:u22-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u22-rem-early",
+      "payload_sha256": "0d9c43df75a341afbab2bc18b6fdb1ecf22f5fa6dad824ba90845b16187da3a6"
+    },
+    "work:didymus-commentarii-job:u22-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u22-rem-mid",
+      "payload_sha256": "fa98f8c517f3bc4347f9b6737d226e947e9ae5eab38daba844b5795254bb9ae3"
+    },
+    "work:didymus-commentarii-job:u22-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u22-rem-close",
+      "payload_sha256": "8ad36ba330af5a92810bbae0623f5cb0c8ac0ace79804e8695896eb7ff71d6be"
+    },
+    "work:didymus-commentarii-job:u23-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u23-open",
+      "payload_sha256": "54239cb54fec23c691f25cde9708eb87b6424a8ee51e00442097042db664769d"
+    },
+    "work:didymus-commentarii-job:u23-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u23-rem-early",
+      "payload_sha256": "24d0d3aca7a866e205a70f9155b93df1d9e0019fd6d61d2cf02779b2aca783aa"
+    },
+    "work:didymus-commentarii-job:u23-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u23-rem-mid",
+      "payload_sha256": "5c42e8c3bbcefa38c1609f87ffd0a417dcd12e428bf2ca18d1903d56a3ac8183"
+    },
+    "work:didymus-commentarii-job:u23-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u23-rem-close",
+      "payload_sha256": "5f958f9cfd43566f3ea6be903dca1b0eb35189d30f7ed55af6e32f47b05d98d2"
+    },
+    "work:didymus-commentarii-job:u24-open": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u24-open",
+      "payload_sha256": "53a80032bf2fcbe61c8c4b97c5d295dd3a37918f77e38c91c7b116088a6a59cf"
+    },
+    "work:didymus-commentarii-job:u24-rem-early": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u24-rem-early",
+      "payload_sha256": "d605bb669abdfe03cb5371556dd241e13ed2aa6dc8b540144c286fd1c16ed798"
+    },
+    "work:didymus-commentarii-job:u24-rem-mid": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u24-rem-mid",
+      "payload_sha256": "96501f221298358d444d5c9879aa2fb0943785ce0e39993756b66cf327372b95"
+    },
+    "work:didymus-commentarii-job:u24-rem-close": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
+      "section": "u24-rem-close",
+      "payload_sha256": "383ee6f585584871e4fd00a99fde1926f32fe6a26350aac432ad81a18064994d"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -32068,6 +32644,10 @@
     "didymus-commentarii-ecclesiasten": {
       "packet": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.packet.json",
       "receipt": "books/didymus-commentarii-ecclesiasten/reviews/audit/tip.review.json"
+    },
+    "didymus-commentarii-job": {
+      "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json"
     }
   }
 }
