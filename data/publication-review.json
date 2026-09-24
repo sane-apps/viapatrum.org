@@ -28005,6 +28005,174 @@
       "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json",
       "section": "u04-rem-close",
       "payload_sha256": "59c3154e25dc8b117cd03a4676ad6eb2da01f20b340ac06cfb309da8d8dade20"
+    },
+    "work:origen-proverbs-expositio:u01-open": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "eb2c4b861cca7507303328fa387efcb801d24effa774f5adfa5b886247c1cec3"
+    },
+    "work:origen-proverbs-expositio:u01-rem-early": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a32f227948599dcac9171d3da71f5aea53fd2adccb1a07ccfc454505f065f505"
+    },
+    "work:origen-proverbs-expositio:u01-rem-mid": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "a8117514e7b0e1acebed51d98d908f39c49896900ac0f776ee0e763e8cee9e66"
+    },
+    "work:origen-proverbs-expositio:u01-rem-close": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "5ec2fa7f8f73580ee23b11ae9baed6acb1883449fd3c9d920b0ee00b16dabce2"
+    },
+    "work:origen-proverbs-expositio:u02-open": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "7c7d319acdd42fccb2dea1e377594f9f6648ff320b86cb94aff3d1dcfb00bd60"
+    },
+    "work:origen-proverbs-expositio:u02-rem-early": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "d10ab4e46ca3a6f255c421c299aa0a958178c16b252f9ce2294c43a18671c45c"
+    },
+    "work:origen-proverbs-expositio:u02-rem-mid": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "6734022d346329f6f46c12b2f8768aca880cc0f0079ee25752f6fa7cef816302"
+    },
+    "work:origen-proverbs-expositio:u02-rem-close": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "696661a515c693d9e0638eaaf27305d4d7ee388d215eb40d7a7b3d3ffa6b0f88"
+    },
+    "work:origen-proverbs-expositio:u03-open": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "9abb16833333ef3176f485684ef973d60c36786cacc4ebcaab78c04d37347fef"
+    },
+    "work:origen-proverbs-expositio:u03-rem-early": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "270b553fbb4e89aecc2e2903b816e350b57f63d9e36011e4533b0b1ac0f86b61"
+    },
+    "work:origen-proverbs-expositio:u03-rem-mid": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "4afaba149150fa039385993442407db2774e96e6a531e88a5b8fbb121b75433d"
+    },
+    "work:origen-proverbs-expositio:u03-rem-close": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "fb001c3e8c4ac2299abbdb1cb7722b1a6864eab537fad8f6e0ae7af37818d0f5"
+    },
+    "work:origen-proverbs-expositio:u04-open": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "e85c6c66cc35853f2f077ac0bcdf2c0e99d1f6c56ea11ef80be1f1a649f8748d"
+    },
+    "work:origen-proverbs-expositio:u04-rem-early": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "2ed5078bf7daf5dcc06e1dcf7b182318ff7b24b62a7e16b15bdb0b129c72c7e2"
+    },
+    "work:origen-proverbs-expositio:u04-rem-mid": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "daace039c4b62dab7c9e870e9509e0b5de877e3d5a1fd7308b967c166929d393"
+    },
+    "work:origen-proverbs-expositio:u04-rem-close": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "62205ae626dd0d9be6ef0cede0baf19aa21d8a783f5ab84183ff200617b64aaa"
+    },
+    "work:origen-proverbs-expositio:u05-open": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "801d14161c08346a6f1c08b54d82a0e70d00a33b2db9edc83c3cde9e6fcdb948"
+    },
+    "work:origen-proverbs-expositio:u05-rem-early": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "7a5991936456941e77651431c3b0b327c6e20e6ee992896b7faed316eb2ac4f4"
+    },
+    "work:origen-proverbs-expositio:u05-rem-mid": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "f3e3bf95ae25b831419f6a8c764b612b2be5926e2d21cda6beddeca49874ba44"
+    },
+    "work:origen-proverbs-expositio:u05-rem-close": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "47a50e11790c7ac48aa2d1b73f80d78682b9212f827a68cc64bd81dbe38a6245"
+    },
+    "work:origen-proverbs-expositio:u06-open": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "16abd0c07926940925b1ede7bd215f1ba30ca4b020afd8f58753425b21376892"
+    },
+    "work:origen-proverbs-expositio:u06-rem-early": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "a4b0c3959c9d62ec7413025c6c75ebcd8ace7d5fa4717c3f1e1ebfb5b0a907aa"
+    },
+    "work:origen-proverbs-expositio:u06-rem-mid": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "2a8b11f6db6b00f9550ad135c869a83fd5b4bd880b2a758cf3df7066883fd72f"
+    },
+    "work:origen-proverbs-expositio:u06-rem-close": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "516c997d8dbe3551615f7ce995d11eed7f1f2cac67b2370f60ad3211b87555c1"
+    },
+    "work:origen-proverbs-expositio:u07-open": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "1f1b5e04897882e2c31860e86d34c5e1cf00ae80d6865175442fcfc7c8de15dd"
+    },
+    "work:origen-proverbs-expositio:u07-rem-early": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "2b28553d47511d476c8c686160d159a943b79c590ebec0c622dbb14789505a33"
+    },
+    "work:origen-proverbs-expositio:u07-rem-mid": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "f505b33e721bc150352330bed1b78625c84cae8efc66a3c3cded9d446337cb8a"
+    },
+    "work:origen-proverbs-expositio:u07-rem-close": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "ea413bfacff4c72c7b0f74dfdd5c4f15978f70923278715805575ab18c4b74dc"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28214,6 +28382,10 @@
     "origen-psalms-excerpta": {
       "packet": "books/origen-psalms-excerpta/reviews/audit/psex_tip.packet.json",
       "receipt": "books/origen-psalms-excerpta/reviews/audit/psex_tip.review.json"
+    },
+    "origen-proverbs-expositio": {
+      "packet": "books/origen-proverbs-expositio/reviews/audit/prove_tip.packet.json",
+      "receipt": "books/origen-proverbs-expositio/reviews/audit/prove_tip.review.json"
     }
   }
 }
