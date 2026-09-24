@@ -30423,6 +30423,246 @@
       "receipt": "books/apollinaris-fragmenta-matthaeum/reviews/audit/tip.review.json",
       "section": "u05-rem-close",
       "payload_sha256": "ac39e4220511d1501951b6539b7296f830dba858088fa26323c4ac88fc959afa"
+    },
+    "work:apollinaris-fragmenta-psalmos:u01-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "7eea9f19656fd4c81a2cb9ad5318435209970d83d7d64879fc846ba8601a4590"
+    },
+    "work:apollinaris-fragmenta-psalmos:u01-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "b72cf9591edd5599c8cbadd5ca5494e264f4748d566a6cbd169d7472a9c9964c"
+    },
+    "work:apollinaris-fragmenta-psalmos:u01-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "df4c572df575ee1f8c08679a76ee09bb8fe6c97d5d729d264c6a8ef45c66a2b1"
+    },
+    "work:apollinaris-fragmenta-psalmos:u01-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "0b47d9b4fbe8223c93792c7a899315fcb221602a23cbc4bba38528e01239cec8"
+    },
+    "work:apollinaris-fragmenta-psalmos:u02-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "d5e453b62df886fe2a81682449342ddcea2c283a768db8bec70b3446a41ea2c2"
+    },
+    "work:apollinaris-fragmenta-psalmos:u02-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "39629d3943a281578a5a2eceab6de66c9dda3299799c571c758185e31ea786ac"
+    },
+    "work:apollinaris-fragmenta-psalmos:u02-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "74c70fdb399435488e6a667ca09a62b546a508e7b72945afe6a85d823f9af09c"
+    },
+    "work:apollinaris-fragmenta-psalmos:u02-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "fa8db8636367f2f1bf002210b3ad1d99a6bb1884038875581a29ce1858c4e3b8"
+    },
+    "work:apollinaris-fragmenta-psalmos:u03-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "0e76a023a1ed3dc6ba0206652d85a16106c85d7e9e1470be264e27275e4caf4c"
+    },
+    "work:apollinaris-fragmenta-psalmos:u03-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "88f1fc028c0c0a93f4f08b05f3049d4c28ae70328f680d2f78283b0fe56b35be"
+    },
+    "work:apollinaris-fragmenta-psalmos:u03-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "fa74be78e2453ba64b08257e483cecf6a0eb544ce0172f23445e367a9b9f5a17"
+    },
+    "work:apollinaris-fragmenta-psalmos:u03-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "4e0dd616573efa2d35574ec97490663086124d39bcf7eb24d4816979ad44a85d"
+    },
+    "work:apollinaris-fragmenta-psalmos:u04-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "f7a01130b9ccaf32d32a1e8443b1ef067053bc56981c624b0372b10640413317"
+    },
+    "work:apollinaris-fragmenta-psalmos:u04-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "66eb08a5da095b3df1f29bef0d84706133c19668612c410801773c63217199bf"
+    },
+    "work:apollinaris-fragmenta-psalmos:u04-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "0413e19121a848e296484dc5710bb470e261cc54f3bbf043d6f0dbb79a7cbb31"
+    },
+    "work:apollinaris-fragmenta-psalmos:u04-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "4bd20f426838e13ee5d746936f3080a477c817f37879e8782eaf3c34a416e00d"
+    },
+    "work:apollinaris-fragmenta-psalmos:u05-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "ccd586c9018a6a932d06d16dfde99ba5e9569d4776133ace3a10acd33381bcf3"
+    },
+    "work:apollinaris-fragmenta-psalmos:u05-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "734d0757a857af374db1b16dfde11980f8620a3973f95382c54810fcd62a9bfd"
+    },
+    "work:apollinaris-fragmenta-psalmos:u05-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "1900c76d01b66e1bebca6c0094f7bba49c80705bcff709e8741f8249d0e733a8"
+    },
+    "work:apollinaris-fragmenta-psalmos:u05-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "a357bbad566f9f38aeabed298da92ddabfd437472ad461e3c17ad582974addba"
+    },
+    "work:apollinaris-fragmenta-psalmos:u06-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "2570ee89db991a8757cbb740a568e1cd390e8344e980d01c036845d529dc4549"
+    },
+    "work:apollinaris-fragmenta-psalmos:u06-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "2cfdfab4594abf3cd4fb2a0be50c8f04ae61f0bca4961dbebab33ffcde92d3d8"
+    },
+    "work:apollinaris-fragmenta-psalmos:u06-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "459f2bbdb058088518a56687ed9e5852dbf10f830534c031017fe3c0ddffb2b5"
+    },
+    "work:apollinaris-fragmenta-psalmos:u06-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "467eb5ea83ad9333f67f290a9ed7ba57039742aa3c99c767a35d7987849f6167"
+    },
+    "work:apollinaris-fragmenta-psalmos:u07-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "2897b252d0206ca27a8c5d3607adc71c341b46eb5706c950c37ab4d9b9a88a3c"
+    },
+    "work:apollinaris-fragmenta-psalmos:u07-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "b0be9e357ca6098e768a2b255dfe95d097f93191b942d9d00b7663dfbc383a39"
+    },
+    "work:apollinaris-fragmenta-psalmos:u07-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "7f7d4b3cc5a4b50c4c4d0c1b389c1d6e0d3d53db1dc8fe7b087a5f5d19de05e7"
+    },
+    "work:apollinaris-fragmenta-psalmos:u07-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "6406502238b69b3083147159b26ad50eec5fe265f1e7f02776fc29d61aa24f1e"
+    },
+    "work:apollinaris-fragmenta-psalmos:u08-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "14204280aa905248b77cc5b14253deea7bb05986207fc9a407d9fae34075db9a"
+    },
+    "work:apollinaris-fragmenta-psalmos:u08-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "c5b346a17150b39d519ff92be14d50cacac8f0d80c65dc92ab71721d0b05c0de"
+    },
+    "work:apollinaris-fragmenta-psalmos:u08-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "61f13e75afffe23a20cb560e6d6990cc2090a948e2faf8849a04a4dcb0a259c8"
+    },
+    "work:apollinaris-fragmenta-psalmos:u08-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "2ca1dabcb18341ec1595c0d5533276da2bdae271607ff51c29fc117a16b64cf5"
+    },
+    "work:apollinaris-fragmenta-psalmos:u09-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "452b62d4e778c8799b73f0f686a81c6fa0a24f73719877e1c0900434cd261087"
+    },
+    "work:apollinaris-fragmenta-psalmos:u09-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "ab7a76d2fd08e652bc4207ca4358073a2c96dba82ee6b669b948e6abc8215398"
+    },
+    "work:apollinaris-fragmenta-psalmos:u09-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "c75f4d4f062a711c705d583ccac258e0df514619c48fc7c234d6e0f556e07d33"
+    },
+    "work:apollinaris-fragmenta-psalmos:u09-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "d3d75434fcec2c0d645deee24cdd89ed0902f46655f8d8c809a5e84f111b296b"
+    },
+    "work:apollinaris-fragmenta-psalmos:u10-open": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "72dd67ef8cb140c3a197cca39791ecbcfeee04a1756fdf149003cfe1d7f94793"
+    },
+    "work:apollinaris-fragmenta-psalmos:u10-rem-early": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "87574c9b458302728ebaa7933e849dd5702d90c5d621d52fac74dd49f2965012"
+    },
+    "work:apollinaris-fragmenta-psalmos:u10-rem-mid": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "d9aab497ffc976663c102e45d1487dd797c9c3546b3dca7bb5b696de3d47410d"
+    },
+    "work:apollinaris-fragmenta-psalmos:u10-rem-close": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "25b5a50384818978d8bfad9189872fefc34b5d440aa02c3aa70e96dae4d29f8f"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -30828,6 +31068,10 @@
     "apollinaris-fragmenta-matthaeum": {
       "packet": "books/apollinaris-fragmenta-matthaeum/reviews/audit/tip.packet.json",
       "receipt": "books/apollinaris-fragmenta-matthaeum/reviews/audit/tip.review.json"
+    },
+    "apollinaris-fragmenta-psalmos": {
+      "packet": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/apollinaris-fragmenta-psalmos/reviews/audit/tip.review.json"
     }
   }
 }
