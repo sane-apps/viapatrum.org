@@ -33543,6 +33543,942 @@
       "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
       "section": "u56-rem-close",
       "payload_sha256": "202d91d4bc3ae94f78aaf93d15c1ab4852fa5c543fd7beb09a2eb2f54031dede"
+    },
+    "work:didymus-commentarii-zacchariam:u01-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "77ab10d4fede1d69149bcd2e2139da3dec66d22316925724611a9677dc480a0c"
+    },
+    "work:didymus-commentarii-zacchariam:u01-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "f684eacd5133b3bfc1d9e23b2ee30c189d10d315771084ad3853845cb5790b5d"
+    },
+    "work:didymus-commentarii-zacchariam:u01-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "4f428f0398f63228ee8ed537f8edb939b4000f0df544ebcb216e81093c84ee69"
+    },
+    "work:didymus-commentarii-zacchariam:u01-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "34e92acb9dbc01e57a0e956911705ae43f318c984fe3789376faeac51bd285ad"
+    },
+    "work:didymus-commentarii-zacchariam:u02-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "be71aa5d8b002e5252702dfd075e92571731e50b4a4c43231662dfa92cc83c35"
+    },
+    "work:didymus-commentarii-zacchariam:u02-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "7c34b1edfe105c9d523c50ad1831814dc37d26f62f2be1e564ba35f5444139be"
+    },
+    "work:didymus-commentarii-zacchariam:u02-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "4007b5c63c021f626aa06f4671a5ddb8282b7c63d35a0c60c62675759d63ac50"
+    },
+    "work:didymus-commentarii-zacchariam:u02-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "4c24639310b5574b057c9860ad61d6a2f37afe822cb60c390a3eca0d619f3ba6"
+    },
+    "work:didymus-commentarii-zacchariam:u03-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "bbc4a0c938db5cf065c60586a6b783ee646e6ba8d6ff126c01a9a464cb7afddf"
+    },
+    "work:didymus-commentarii-zacchariam:u03-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "fe0b51ff84a55377be7127913947d6fbb9586dde1a2a9a561cfeb2c05ab07a4e"
+    },
+    "work:didymus-commentarii-zacchariam:u03-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "f907ddddab77a4bdf16b49dccaa3cc1f39d4a9e8a0b611e84ee1c1faf6f1726f"
+    },
+    "work:didymus-commentarii-zacchariam:u03-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "798948d2dead90030da34dd122e4c98e21626b08e65b049abde3bb7a579af52a"
+    },
+    "work:didymus-commentarii-zacchariam:u04-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "479d4b692ea7a692884cd0df50b729f1f804be78cad9e2aeaa1bd568e5c3d820"
+    },
+    "work:didymus-commentarii-zacchariam:u04-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "764e27c1fcd89fb1a5c2ee93986d76053cc40386f500911bc7aa44254b1e5f68"
+    },
+    "work:didymus-commentarii-zacchariam:u04-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "a5b845c4436f28b48b975f7c9daffae438a9de4e69691fdbdc9bcbd261cbe403"
+    },
+    "work:didymus-commentarii-zacchariam:u04-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "2ce31143f5d45220b75d21704174b5391c187db8183afda70a5ccbfe3b2e8729"
+    },
+    "work:didymus-commentarii-zacchariam:u05-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "abb611688ac18eea6f2199509adebc2d115b318cc965bb017820a3a72b134110"
+    },
+    "work:didymus-commentarii-zacchariam:u05-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "3b2aca3e173964d0d181304e7becc99b5f2e362b0d926fe799359a5fbe6feab1"
+    },
+    "work:didymus-commentarii-zacchariam:u05-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "92e11c758bb3ffdb435d52c08f0b71ef1c915b1f4a1e57eb27657ac1387eef24"
+    },
+    "work:didymus-commentarii-zacchariam:u05-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "ee095af895e7f6b210c533fa996bfc48f7b03c2c1fabf31c0d957971c1d09c51"
+    },
+    "work:didymus-commentarii-zacchariam:u06-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "ddaf9580f7862fb21322b08767741d96f7ddb6b01196e5eca730297f9e19bb20"
+    },
+    "work:didymus-commentarii-zacchariam:u06-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "44310895901a37b7a92dd8c19a045d86e35a99a3a3d366926e93c65217f890d6"
+    },
+    "work:didymus-commentarii-zacchariam:u06-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "1efaeb73a1f0251aa79da665a06ef3ca9ef6dfef57c72e1cf9bc33620a788021"
+    },
+    "work:didymus-commentarii-zacchariam:u06-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "828935c5252eb4bd4da05c2eb425191dd1d1a57c7dbe0e077d6da5b0fc0b59d8"
+    },
+    "work:didymus-commentarii-zacchariam:u07-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "ed53632c75ef3e92b4bfffb08dac759249856bfc8da8a8dc61276cf417c8bb0e"
+    },
+    "work:didymus-commentarii-zacchariam:u07-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "c571dd30ede0467eef0e1255cb2c131e7e2ccac68b27c66e1e120a1891812d2e"
+    },
+    "work:didymus-commentarii-zacchariam:u07-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "bf385106c945d3a746ab8a1fdbf64fe39cfe23941d692165ff00e3acd77357f2"
+    },
+    "work:didymus-commentarii-zacchariam:u07-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "2692a5bea2433442767a949dade846120d2a58eade9c178237066cd0e570b4a7"
+    },
+    "work:didymus-commentarii-zacchariam:u08-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "c8d6769be5e31f81c2c302775d174b780bcce3142305daba75846dbe1e7650a2"
+    },
+    "work:didymus-commentarii-zacchariam:u08-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "caefc7a81fe2d96583fde768aef1b7acafe56ed874dcf7b2a4f10652c59bc764"
+    },
+    "work:didymus-commentarii-zacchariam:u08-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "df89853565ca130e346fcb3b5438b307e131e8055ef1e08345f999eed25b2734"
+    },
+    "work:didymus-commentarii-zacchariam:u08-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "298179402fbf3386fe1e556e28bf8007a7c56416bcef1c8e2734615b0fff10c5"
+    },
+    "work:didymus-commentarii-zacchariam:u09-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "8f96cb257f15d308e745b4658b43a41eacb27e89418eedd43d026eb4b6872949"
+    },
+    "work:didymus-commentarii-zacchariam:u09-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "90581f431d971d0a87006d16c0510321f4083a4d0a62b83eb38bae74daf981f5"
+    },
+    "work:didymus-commentarii-zacchariam:u09-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "4f4f76cb70e959fa3d0e2e84999bd2a9b32edc4a2f8437825bdb9741bda80ea8"
+    },
+    "work:didymus-commentarii-zacchariam:u09-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "fbd116483de13d7d2ee18ebb91e551d10cefb65f3940bea6173f04045455e726"
+    },
+    "work:didymus-commentarii-zacchariam:u10-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "a6f6fca99e8f4670265f00f6478104431c64bc9dfc834f1a2e37306d2b251862"
+    },
+    "work:didymus-commentarii-zacchariam:u10-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "a63535a17ef83f1493fcb66439f63d157200df6461ca230ffeda10282ba803cc"
+    },
+    "work:didymus-commentarii-zacchariam:u10-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "9d47426f0c3705496257f39981dbbc5eeb72aeb9d969a24f8e81b04a620a2c08"
+    },
+    "work:didymus-commentarii-zacchariam:u10-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "26b7aa9bc1b0e4510d04ea581597df1ba41c9b0426033abcc6e96e878deea4cf"
+    },
+    "work:didymus-commentarii-zacchariam:u11-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "6251f3b07cd4465e70bda3379c5244fe9f0871865cb6cdc0da3042c18bdb4726"
+    },
+    "work:didymus-commentarii-zacchariam:u11-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "f2a058c0d94655661b9b7b8d3a3214346784c8dd33756c9608daffc1c9ed3920"
+    },
+    "work:didymus-commentarii-zacchariam:u11-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "c530c409c2060fdd46f36345f1efe33ea372f08641cdb8790a5467249fc2dcb7"
+    },
+    "work:didymus-commentarii-zacchariam:u11-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "be56eff7ca64548ddf6dac277d8a01b7e165d67262cb74713d940078e9ba79e0"
+    },
+    "work:didymus-commentarii-zacchariam:u12-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "1af11fae4110db444acb2d52800eba7a656296136ad8127058dcebbbd15e343c"
+    },
+    "work:didymus-commentarii-zacchariam:u12-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "1c48cdb8f82408f4dd03166e703a8205eca4b964cb3c98e232522b9ec3cb2cdd"
+    },
+    "work:didymus-commentarii-zacchariam:u12-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "407b291c035a3171e65391117aa270bbe986e62b139f4fe362722451ae670587"
+    },
+    "work:didymus-commentarii-zacchariam:u12-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "24d5d0a41aad6ef1f156a44d4fbee1a79a208126f4e9032948a0ffa571a82e00"
+    },
+    "work:didymus-commentarii-zacchariam:u13-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "4943df4acb6c2181c94c5dc203f135093dde40939e169215ba01e6e3cd8520e7"
+    },
+    "work:didymus-commentarii-zacchariam:u13-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "c91a58da4c37a9df72d877201af788af537a786ae62b0b3f29bf69183f789b75"
+    },
+    "work:didymus-commentarii-zacchariam:u13-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "59c77bcf3fdb1cd81523ff9cd13a89b69d42d350a132bb27c250cf16243d7cd5"
+    },
+    "work:didymus-commentarii-zacchariam:u13-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "97706f5bb9449d680e3534dc6dca47742da943fd889852f7a71e740d6f811dd0"
+    },
+    "work:didymus-commentarii-zacchariam:u14-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "6ee79bb01879a19f29ca947befc1a35072f345cd929c464094dd54b1e14f27d2"
+    },
+    "work:didymus-commentarii-zacchariam:u14-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "cf96c63a7223852f258c32ab008530eacba5dc32bb3d849cbaba8e0ce17334cb"
+    },
+    "work:didymus-commentarii-zacchariam:u14-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "3c1835497bc9237838f63e03af1deeb0eb626ae6bfeff97b88462c6cfb5bab86"
+    },
+    "work:didymus-commentarii-zacchariam:u14-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "f78891f61e7610a44cfdc930eba325bfb8600e6b692e4c060f4bbdd8e7c8cdba"
+    },
+    "work:didymus-commentarii-zacchariam:u15-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "143218f0f753aab754fed3adeda108279c2da9d2aba09e8a5d9afdf75c4a026b"
+    },
+    "work:didymus-commentarii-zacchariam:u15-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "7de8c289e163885920f61f23d6ade38e16a0d406f845f6aedfa6aefe7932439f"
+    },
+    "work:didymus-commentarii-zacchariam:u15-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "5dd39ff0ea2f99a2d8cf3e7afea92607c3dd672d9ef6302bd36a963718076571"
+    },
+    "work:didymus-commentarii-zacchariam:u15-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "9ba0fea7d2f14a39f0fb976aef15f8cb944ee36730246de90ced37fdd44304a4"
+    },
+    "work:didymus-commentarii-zacchariam:u16-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "50954ebed8083cf22bde086a1540ca8a0e80b1ba072cf04f52165dc285664abc"
+    },
+    "work:didymus-commentarii-zacchariam:u16-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "baa3ccc303333cfb803951d4cfa4cf7890c3f383626c2e83d57a2784ec169675"
+    },
+    "work:didymus-commentarii-zacchariam:u16-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "c2194dd867f9bca1db42d384100e1c3e94c64a264edb928b4b333d1a98935edd"
+    },
+    "work:didymus-commentarii-zacchariam:u16-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "f43af8dfa03a8f6d9998f6c480a35a9f19c049a3b64fd0b4e06779c1d1947cbf"
+    },
+    "work:didymus-commentarii-zacchariam:u17-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u17-open",
+      "payload_sha256": "b8d4df71bc37c39ffe35a19122c1b4cc7f2ded3bbe9b985c9d69ad8427847d55"
+    },
+    "work:didymus-commentarii-zacchariam:u17-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u17-rem-early",
+      "payload_sha256": "cd704027b0a9d89077376d3acaa8a1d6e12f0c479b331cfade57761590e8a7e9"
+    },
+    "work:didymus-commentarii-zacchariam:u17-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u17-rem-mid",
+      "payload_sha256": "1f3e84d509a98eea0e3bf957f221a4ea90b021ed588ad08ce8771b0dd16ad76f"
+    },
+    "work:didymus-commentarii-zacchariam:u17-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u17-rem-close",
+      "payload_sha256": "b107e31230b3d8790bee7d5b1c7ce0aca93f95fa398ea9ba2403e0642f8ded4c"
+    },
+    "work:didymus-commentarii-zacchariam:u18-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u18-open",
+      "payload_sha256": "026d64c7fefd6a1cb092ba43130ad1d1d1d9855ceca1414fc27cf4e71a92212a"
+    },
+    "work:didymus-commentarii-zacchariam:u18-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u18-rem-early",
+      "payload_sha256": "2402b27d404874cf732f98acfdf1abc049ee90b97e24fa6a0daf077c27956f7d"
+    },
+    "work:didymus-commentarii-zacchariam:u18-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u18-rem-mid",
+      "payload_sha256": "06994b13ae9f306e8f0a281c95dce6e7b2a5a420ddda825c939b593154196d39"
+    },
+    "work:didymus-commentarii-zacchariam:u18-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u18-rem-close",
+      "payload_sha256": "a45ece35805dde051b4466d9ea53e362a3b60283ee6da7470705cdc6325d48e3"
+    },
+    "work:didymus-commentarii-zacchariam:u19-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u19-open",
+      "payload_sha256": "d4f78172676e32ff0889342c2b6207d82b50e954da2552bd526800f6d9564ab8"
+    },
+    "work:didymus-commentarii-zacchariam:u19-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u19-rem-early",
+      "payload_sha256": "9a824e060b12ab7488e77251b503ed78b185025ca5990b50444a39f1a3882010"
+    },
+    "work:didymus-commentarii-zacchariam:u19-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u19-rem-mid",
+      "payload_sha256": "ac1174dae3518d3812e289f0af4c22f71b9f284d40ed57467bd0be3cb772a723"
+    },
+    "work:didymus-commentarii-zacchariam:u19-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u19-rem-close",
+      "payload_sha256": "24126c95c67855f87c91bc299dcfc631f64c369e1e0588b6726641b09c4e498c"
+    },
+    "work:didymus-commentarii-zacchariam:u20-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u20-open",
+      "payload_sha256": "a21db247f527abdd68206235205922e32aa22fdbd9b30fd600a3caf670e5e253"
+    },
+    "work:didymus-commentarii-zacchariam:u20-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u20-rem-early",
+      "payload_sha256": "321f87316913518ebadd702b57dd0e8dd3de699334184428424bc2b4a577b992"
+    },
+    "work:didymus-commentarii-zacchariam:u20-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u20-rem-mid",
+      "payload_sha256": "578de577713fad0601862313d9e08254988b4905ff12cfad6adcee32c61f7a71"
+    },
+    "work:didymus-commentarii-zacchariam:u20-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u20-rem-close",
+      "payload_sha256": "1a089dfd8f87c202a6ad238af0c707486ccd5bf3feb456627fe6fd3a8a8d44f0"
+    },
+    "work:didymus-commentarii-zacchariam:u21-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u21-open",
+      "payload_sha256": "acb8f924c143d974b63e8a1901810d8c3aa5edf0abf9ecb6e290a03288882c38"
+    },
+    "work:didymus-commentarii-zacchariam:u21-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u21-rem-early",
+      "payload_sha256": "cd27d9e7be606d1f3fcceb64c1ac50db490ade8ab2ed3c1e4dca51504c9d7c62"
+    },
+    "work:didymus-commentarii-zacchariam:u21-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u21-rem-mid",
+      "payload_sha256": "5ca2b13b7f1ca96e26cc95bd2199607c81ccac47a52aa57b4ec5284c72a34c19"
+    },
+    "work:didymus-commentarii-zacchariam:u21-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u21-rem-close",
+      "payload_sha256": "497f6670a1d2eb4532e12b168fa41fbc5d5a0b1557cefd19672577d4c5c8ce4a"
+    },
+    "work:didymus-commentarii-zacchariam:u22-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u22-open",
+      "payload_sha256": "68324d5467d24ace7fa7aad7be293f8410cc46d3b1b39ec4e23d773ddb4fc4a3"
+    },
+    "work:didymus-commentarii-zacchariam:u22-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u22-rem-early",
+      "payload_sha256": "3ba8e94db33f0ebd2fb6fcc5d5656f4d058e412ed44ff75ee18034be9747e7ff"
+    },
+    "work:didymus-commentarii-zacchariam:u22-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u22-rem-mid",
+      "payload_sha256": "1cbf600bf247fca690143dffbb577132f1a0e994fd81b502153abe823e6b01d3"
+    },
+    "work:didymus-commentarii-zacchariam:u22-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u22-rem-close",
+      "payload_sha256": "c4086d0f5cfc28fde68fdd789d8be44ca5618507338d9dbfea53c4b85aaf93d8"
+    },
+    "work:didymus-commentarii-zacchariam:u23-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u23-open",
+      "payload_sha256": "7255329155698df5a2b39361a8c6055a756bdcfd42d2a88274ff74656eab9bc6"
+    },
+    "work:didymus-commentarii-zacchariam:u23-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u23-rem-early",
+      "payload_sha256": "b2ebf6e49849eb4cc60619bef1546f5d85246879d5e604a50eab6b3ae15c2f3e"
+    },
+    "work:didymus-commentarii-zacchariam:u23-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u23-rem-mid",
+      "payload_sha256": "3db04dddc23ec12831f3c2d151ba837b48037957f8cba2416c4fb2a6cb9a2af9"
+    },
+    "work:didymus-commentarii-zacchariam:u23-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u23-rem-close",
+      "payload_sha256": "153fcebd086320acd260b248de502bde8b25ea2d95516bd05f44d0551c9ed6c2"
+    },
+    "work:didymus-commentarii-zacchariam:u24-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u24-open",
+      "payload_sha256": "ce01a959e15f1c21944a5a1caa73997a766bd521526d4448c94a29047da6b634"
+    },
+    "work:didymus-commentarii-zacchariam:u24-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u24-rem-early",
+      "payload_sha256": "b2209cad44145584cb3907cadd1354abfefb4da0a8128ded38a02c2f1b7fdfb5"
+    },
+    "work:didymus-commentarii-zacchariam:u24-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u24-rem-mid",
+      "payload_sha256": "8891bfc573e5d326a2d9dcf971925976ea440317a614f54ee7c3283d22be496f"
+    },
+    "work:didymus-commentarii-zacchariam:u24-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u24-rem-close",
+      "payload_sha256": "81eb23df3bd69dd9aa5c595b9e4d7aae178456a0ef5adc17ecebad9e1179505d"
+    },
+    "work:didymus-commentarii-zacchariam:u25-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u25-open",
+      "payload_sha256": "92659680f9ef0cbb5ff642513c430a26da6916f1f8de30484ae8bea8272ea05c"
+    },
+    "work:didymus-commentarii-zacchariam:u25-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u25-rem-early",
+      "payload_sha256": "ff420d51ecabc51daa0a79ac84c0c74d30a36b7cf378dc8a858081ead4e3f660"
+    },
+    "work:didymus-commentarii-zacchariam:u25-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u25-rem-mid",
+      "payload_sha256": "228628e9f99a693c724ae6cfa7857bfda0638f6da31ca176e439a174c9ad8faa"
+    },
+    "work:didymus-commentarii-zacchariam:u25-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u25-rem-close",
+      "payload_sha256": "eb8f891aebe07a6c2810ca59661cdfd0efd78a3eafb3e3cfb8c0ebba8f3afe31"
+    },
+    "work:didymus-commentarii-zacchariam:u26-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u26-open",
+      "payload_sha256": "ae364f7d3ffec6b9f85aacb60db150ae7610fa8c73f704c3d94883ad87f0fff0"
+    },
+    "work:didymus-commentarii-zacchariam:u26-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u26-rem-early",
+      "payload_sha256": "4958ca34f77fa2063e3735f35d51e39fc5494806da7e1d8bda4e2678cc5a70e4"
+    },
+    "work:didymus-commentarii-zacchariam:u26-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u26-rem-mid",
+      "payload_sha256": "d19fb02d342f242319cd0df3a915b348dcd9e09ac2f4f0528936879eead6cc60"
+    },
+    "work:didymus-commentarii-zacchariam:u26-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u26-rem-close",
+      "payload_sha256": "4dae3d65bd5287ddd1ae41970957ac9b84f418d9a0f02df8b42c45048e671f31"
+    },
+    "work:didymus-commentarii-zacchariam:u27-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u27-open",
+      "payload_sha256": "eba8a7f7e9bb4968559e0c18759cc9eec7dfdf850f551632fe231779929c52e2"
+    },
+    "work:didymus-commentarii-zacchariam:u27-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u27-rem-early",
+      "payload_sha256": "aa6d443fb2fa9ed0a23ef2177e58d5b4add4978708e6a65dddb78b8e81163349"
+    },
+    "work:didymus-commentarii-zacchariam:u27-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u27-rem-mid",
+      "payload_sha256": "b5e8476b984509b9ef4dcfdde6ee74e46114deee5f4fa4b1ca710a032866b5ff"
+    },
+    "work:didymus-commentarii-zacchariam:u27-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u27-rem-close",
+      "payload_sha256": "84a8cd66b470ef0334cbfc4abfc2cb7a42669f612f8c39afa5e5f2298c6f448e"
+    },
+    "work:didymus-commentarii-zacchariam:u28-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u28-open",
+      "payload_sha256": "61ad6a2a2a4504d62df48e39460873758d59c4b09c99e27ec0ac698caacc59fa"
+    },
+    "work:didymus-commentarii-zacchariam:u28-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u28-rem-early",
+      "payload_sha256": "21a377f0bcc564970d1424494bfbd39801448cc8310b9afdf71b557232af0ae6"
+    },
+    "work:didymus-commentarii-zacchariam:u28-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u28-rem-mid",
+      "payload_sha256": "ebd22785868d692860cd4042709c60ffdd824df4a0f7c9dfbfffd33409600732"
+    },
+    "work:didymus-commentarii-zacchariam:u28-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u28-rem-close",
+      "payload_sha256": "12d8af67635f2a0a91455fb313f3643e0420866d28a6dd87f011be3c10572d14"
+    },
+    "work:didymus-commentarii-zacchariam:u29-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u29-open",
+      "payload_sha256": "89602e6d2ccba703e8e8f9ae355e94fe67ca53a4cc913aeb6becdad00b1bb4c5"
+    },
+    "work:didymus-commentarii-zacchariam:u29-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u29-rem-early",
+      "payload_sha256": "302b9981bdd29ea21105459d8e382623e32618538d95ccfd7686de78d4ba6700"
+    },
+    "work:didymus-commentarii-zacchariam:u29-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u29-rem-mid",
+      "payload_sha256": "0e09bb4e5f958c4cf810e8dc123c63259eb5da1281820502e55c8cc099d98026"
+    },
+    "work:didymus-commentarii-zacchariam:u29-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u29-rem-close",
+      "payload_sha256": "425ab901ec3693a810f43d77140a43bc67e68404ccbc092cde71e4301e81e92e"
+    },
+    "work:didymus-commentarii-zacchariam:u30-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u30-open",
+      "payload_sha256": "5473ce0265e8839c11e1f4766be34a8f02a7a4a19449661e3b02dc20f0198ccd"
+    },
+    "work:didymus-commentarii-zacchariam:u30-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u30-rem-early",
+      "payload_sha256": "cef16b65b8c247d5c9286e3c6af473ae93a593490ca554738c26553c51f4ebaf"
+    },
+    "work:didymus-commentarii-zacchariam:u30-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u30-rem-mid",
+      "payload_sha256": "17b7e345b55037d863ce72555d3eda5af5cb44d2359386a180b6a94c2d5cb9e5"
+    },
+    "work:didymus-commentarii-zacchariam:u30-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u30-rem-close",
+      "payload_sha256": "5790da8758690218ff4479d3e55dda92a72d00a74c090fd294747eb14ae055b5"
+    },
+    "work:didymus-commentarii-zacchariam:u31-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u31-open",
+      "payload_sha256": "57a7397093bc6b1e2ade1c930f4d6c1e19f29501a80c36799fe5b2d7cc8b97cd"
+    },
+    "work:didymus-commentarii-zacchariam:u31-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u31-rem-early",
+      "payload_sha256": "bf5d6d04812b6dbceaf661564117fe757dcb4eb26bacfa5675456519fb8f404d"
+    },
+    "work:didymus-commentarii-zacchariam:u31-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u31-rem-mid",
+      "payload_sha256": "6850340096395cd516d45ce817bd43bc545fe18df607a295b79b26c4551117c1"
+    },
+    "work:didymus-commentarii-zacchariam:u31-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u31-rem-close",
+      "payload_sha256": "a7249a0be853cb72db80b0c4c55f221726a575d229a200ab395d10e7fc44c6d0"
+    },
+    "work:didymus-commentarii-zacchariam:u32-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u32-open",
+      "payload_sha256": "9822131eb6af89d69e0ab9863c96a03a13b2caf1c4a7277ab3381491ce17af35"
+    },
+    "work:didymus-commentarii-zacchariam:u32-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u32-rem-early",
+      "payload_sha256": "54bae45272ed322f420e4405ca70f46a78bd95e9210525274c7887e31a01b0ea"
+    },
+    "work:didymus-commentarii-zacchariam:u32-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u32-rem-mid",
+      "payload_sha256": "f5b4432581aef9bef234a1e3ea93734acbd5773c9c38a3174fa585ff181055fc"
+    },
+    "work:didymus-commentarii-zacchariam:u32-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u32-rem-close",
+      "payload_sha256": "ce96e85a92d3ef855680201153aa8388b0b316998d079128f77b74014bbf4511"
+    },
+    "work:didymus-commentarii-zacchariam:u33-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u33-open",
+      "payload_sha256": "4d7c35417b3b39d1fd3602b9fce677b56d4f81d45016e18e0b096b9b3715314f"
+    },
+    "work:didymus-commentarii-zacchariam:u33-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u33-rem-early",
+      "payload_sha256": "46728c7319ccc907f42a26b0e5154c9ed349f3d46c0917e57e939702d5c0b3c0"
+    },
+    "work:didymus-commentarii-zacchariam:u33-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u33-rem-mid",
+      "payload_sha256": "42296c2a25b42a35115cc45c11cd319fe55139e2c7667d1fbec7276a09d56c77"
+    },
+    "work:didymus-commentarii-zacchariam:u33-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u33-rem-close",
+      "payload_sha256": "1790e6406757d4e81dab86eea4a09e0ec09d0e121df87e821ef6d228ad1efbba"
+    },
+    "work:didymus-commentarii-zacchariam:u34-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u34-open",
+      "payload_sha256": "d32e4a4e52d568c112ea56cfffc4318813d80ca390f1cd13669b1adfd640be44"
+    },
+    "work:didymus-commentarii-zacchariam:u34-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u34-rem-early",
+      "payload_sha256": "e2ff32d5d8c43ed4bd913b7a12f321857db1fe84b2f17e07a3bb21a637312459"
+    },
+    "work:didymus-commentarii-zacchariam:u34-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u34-rem-mid",
+      "payload_sha256": "718b45beb21b82144b2a94b3e121203d766ce8173a7902e22bfc42400dd99e3f"
+    },
+    "work:didymus-commentarii-zacchariam:u34-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u34-rem-close",
+      "payload_sha256": "a0d01d76eb91050e7870cfc2ee26912147f0ca5208bdb05fbdf813e0a7136843"
+    },
+    "work:didymus-commentarii-zacchariam:u35-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u35-open",
+      "payload_sha256": "c0f3058387c4ac3b2e1e9b2b31959ef182cce9543b154a973de85ecbe1ed5f22"
+    },
+    "work:didymus-commentarii-zacchariam:u35-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u35-rem-early",
+      "payload_sha256": "b86d78176f47ad462492168cd4bb1d59bada50d78be397bb25fab70325c83d2a"
+    },
+    "work:didymus-commentarii-zacchariam:u35-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u35-rem-mid",
+      "payload_sha256": "ecdbcb50a2e81470088ca4c36fc0f9f1011d69c1b9969e1a52e66cdc860879c4"
+    },
+    "work:didymus-commentarii-zacchariam:u35-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u35-rem-close",
+      "payload_sha256": "36edb65dd8b10f83e9098ee7c12147e4f8c773ed8b7624c5a5d977c4b909019f"
+    },
+    "work:didymus-commentarii-zacchariam:u36-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u36-open",
+      "payload_sha256": "9ff0eeb12345590ec0e92c580ce83f458987e7d9a296b8bcd3f2e754b56f8415"
+    },
+    "work:didymus-commentarii-zacchariam:u36-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u36-rem-early",
+      "payload_sha256": "927e53cb8b5df9862fe451ec258d09ee807170456130a0c5b7b343c26c68ea3f"
+    },
+    "work:didymus-commentarii-zacchariam:u36-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u36-rem-mid",
+      "payload_sha256": "0f0d50c4cdaa21286f25a50812f111e073553495edf12854764602ac8ae44e30"
+    },
+    "work:didymus-commentarii-zacchariam:u36-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u36-rem-close",
+      "payload_sha256": "5150510c726de5f91d1411046e4d837b9bfbde3925ca99c585b248f42e6776ff"
+    },
+    "work:didymus-commentarii-zacchariam:u37-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u37-open",
+      "payload_sha256": "a6b132e62144961894dd89ed8ac9400cb1d77cd458c77b65c6e02c5f1c9d1d66"
+    },
+    "work:didymus-commentarii-zacchariam:u37-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u37-rem-early",
+      "payload_sha256": "f5e546c93c51dc11fec55f0e44250c17b0467b3e3592ef7a8eff5ea1ae57d9b6"
+    },
+    "work:didymus-commentarii-zacchariam:u37-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u37-rem-mid",
+      "payload_sha256": "5d5f8169de79e00cc791558b051d2705ee14b8153c52513cac848a96ad223c5b"
+    },
+    "work:didymus-commentarii-zacchariam:u37-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u37-rem-close",
+      "payload_sha256": "58e71196e8371babf6ead80863b17546ef343980b8b683bee88cd3dacddf11cb"
+    },
+    "work:didymus-commentarii-zacchariam:u38-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u38-open",
+      "payload_sha256": "53144e45e6db8a2b7c1830730a31f814b8a796cff08ff26bcd50a70ce3d60190"
+    },
+    "work:didymus-commentarii-zacchariam:u38-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u38-rem-early",
+      "payload_sha256": "504417fea7fb9535ba2412b12ee7728eebe93b01f884609147431549d56d61b2"
+    },
+    "work:didymus-commentarii-zacchariam:u38-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u38-rem-mid",
+      "payload_sha256": "e7aeea63f6c7acb13b9461d44e1326989c6bcf570b3be2aa65e2978038f4cd21"
+    },
+    "work:didymus-commentarii-zacchariam:u38-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u38-rem-close",
+      "payload_sha256": "e1cc2cce1be02c4d4456fd109b6f3e60f4092572aae0d1801eb80c3da2e89248"
+    },
+    "work:didymus-commentarii-zacchariam:u39-open": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u39-open",
+      "payload_sha256": "7bf038abaf6256a8dcd6c09f3fd8fab7a5f98e0eb7476f6b6e0d441af02c8af2"
+    },
+    "work:didymus-commentarii-zacchariam:u39-rem-early": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u39-rem-early",
+      "payload_sha256": "4d889e8b6420957668204ace6db171f4f69156e09568e8e6d234fea5a0cdea5d"
+    },
+    "work:didymus-commentarii-zacchariam:u39-rem-mid": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u39-rem-mid",
+      "payload_sha256": "ad302c27003d50bf680dd428b673a8b41c20c417f225f455dbb67115dbedfc16"
+    },
+    "work:didymus-commentarii-zacchariam:u39-rem-close": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json",
+      "section": "u39-rem-close",
+      "payload_sha256": "34d1c61324c19487c23c548a28d44eb2b8612ddd4f03f6e17c4bdade5db367c5"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -34024,6 +34960,10 @@
     "didymus-commentarii-psalmos": {
       "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
       "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json"
+    },
+    "didymus-commentarii-zacchariam": {
+      "packet": "books/didymus-commentarii-zacchariam/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-zacchariam/reviews/audit/tip.review.json"
     }
   }
 }
