@@ -27765,6 +27765,150 @@
       "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
       "section": "u04-rem-close",
       "payload_sha256": "b3de6e24b1d2792a7b271a31afd5ead5044da1741d40def7fb8ea2314d9becf5"
+    },
+    "work:origen-romans-catena:u01-open": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "6e9c407e4d9938ec5fbc25138ff825848ad61afc46a900c38581f17e4c271339"
+    },
+    "work:origen-romans-catena:u01-rem-early": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "b112e8d17b77b7eb0ee3a607a2683bebf3e091aa1489d487b420f3f730e4ded6"
+    },
+    "work:origen-romans-catena:u01-rem-mid": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "cbb4e6fcd7098d01c70c988ef9851e8d54fec9b1b9a9c7f07a7fc36271f0c268"
+    },
+    "work:origen-romans-catena:u01-rem-close": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "157d0ad889c9627dc85bc81413e9811fa5f672c0f422fe340891ca40edf92221"
+    },
+    "work:origen-romans-catena:u02-open": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "232e1a1614ffeec1c01a59ccc1259f9904711029597be00ed11b5851efa0c191"
+    },
+    "work:origen-romans-catena:u02-rem-early": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "bcedd54b14caf9a3210caf261d71c237942a4f3efbb193439108dbda9fafd7d5"
+    },
+    "work:origen-romans-catena:u02-rem-mid": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "a7cc0a9635787dc40891e3bf3dd08061f7b5f819253582a2b95f51916d2a7249"
+    },
+    "work:origen-romans-catena:u02-rem-close": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "3608da5bd4dc6da121f65818e8f1ad0eafab7c2c04b3fc6a9b60c377ab54dec9"
+    },
+    "work:origen-romans-catena:u03-open": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "e846513bdd4baad56fa49ac6e763a8103fb3817cd11482bd0f535789fdca6d92"
+    },
+    "work:origen-romans-catena:u03-rem-early": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "6bb85c34c5ae01ac387a238a1c69da2978a23d622ba49379ed4d89332c745043"
+    },
+    "work:origen-romans-catena:u03-rem-mid": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "26c848409578e1e173c71545848582750cc5c04a76df78d6a2fd02095b85d339"
+    },
+    "work:origen-romans-catena:u03-rem-close": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "19f4fb33e6e8ccf0e91deababb7f2432112d8404a24a1c5c267b584e827765c8"
+    },
+    "work:origen-romans-catena:u04-open": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "0f5581c5ba06e884a50dd10837f11c7fdfabb4b9b6a5ce1151acb0269b03f80b"
+    },
+    "work:origen-romans-catena:u04-rem-early": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "9b2c95711cc14c9b95966564ab5347d0ada17059bb485da71f21e68c55e44d85"
+    },
+    "work:origen-romans-catena:u04-rem-mid": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "762488be9495db52f096acce0113f4dd54aa3719b654e5db2d88c49a302c36ac"
+    },
+    "work:origen-romans-catena:u04-rem-close": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "72e2f62a70e3fa7142dd5c413995b98bf8eecc8f4beef264b93f52845a8cb970"
+    },
+    "work:origen-romans-catena:u05-open": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "59d20867268788d18c9e2e55ff8532dedc4e7fe1aeeb9b472ee7df653a385f9d"
+    },
+    "work:origen-romans-catena:u05-rem-early": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "a5f2fd727975aa904d63425130ecb225f5a749392f62e0f4158ac2b2210e3df3"
+    },
+    "work:origen-romans-catena:u05-rem-mid": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "dd9c49951f8618e8dc7e7e8a524559d8437d4de1ba10c44a9cd86b738d7142cf"
+    },
+    "work:origen-romans-catena:u05-rem-close": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "a78b0d59b68b7453d8a2b15855edb657edf12cf46a9bce833bbf71a4d7788113"
+    },
+    "work:origen-romans-catena:u06-open": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "1ae78b15cc0fd825521c206e8e01f00a1c0e8b879f4ece7bb58caf2595f42421"
+    },
+    "work:origen-romans-catena:u06-rem-early": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "741ae334dde0abde1f76b9a7e1cf952b614d2ee7a6a8de61ad9e30f7a2db39d4"
+    },
+    "work:origen-romans-catena:u06-rem-mid": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "cdaffa644f8372b6222a939ee51d39798ddad158842b69e913f7517c5d3fdb2d"
+    },
+    "work:origen-romans-catena:u06-rem-close": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "ab5279644b90c71d8af48fd8985dd9eed1f09e3c5f125bab3d6e5c865ca9bf79"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27966,6 +28110,10 @@
     "origen-job-enarrationes": {
       "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
       "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json"
+    },
+    "origen-romans-catena": {
+      "packet": "books/origen-romans-catena/reviews/audit/romc_tip.packet.json",
+      "receipt": "books/origen-romans-catena/reviews/audit/romc_tip.review.json"
     }
   }
 }

@@ -873,6 +873,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-ruth-scrap": "In Ruth",
     "origen-de-resurrectione-scrap": "De Resurrectione",
     "origen-job-enarrationes": "Enarrationes in Job",
+    "origen-romans-catena": "Commentarii in epistulam ad Romanos (catena Greek)",
 }
 
 
