@@ -28737,6 +28737,12 @@
       "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json",
       "section": "27",
       "payload_sha256": "b07f6400e35f9ab8d573f0e8bc11d117981957c80587ad835bc5a32dee110225"
+    },
+    "work:gregory-thaumaturgus-ouden-eidolon:frag-open": {
+      "packet": "books/gregory-thaumaturgus-ouden-eidolon/reviews/audit/gou_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-ouden-eidolon/reviews/audit/gou_tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "f70dae20cb8b38604fb63fe25f20408e495de246fc3bc0f77d6e0490a1334349"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28982,6 +28988,10 @@
     "origen-philocalia": {
       "packet": "books/origen-philocalia/reviews/audit/philoc_tip.packet.json",
       "receipt": "books/origen-philocalia/reviews/audit/philoc_tip.review.json"
+    },
+    "gregory-thaumaturgus-ouden-eidolon": {
+      "packet": "books/gregory-thaumaturgus-ouden-eidolon/reviews/audit/gou_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-ouden-eidolon/reviews/audit/gou_tip.review.json"
     }
   }
 }
