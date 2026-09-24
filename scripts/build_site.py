@@ -879,6 +879,9 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-proverbs-fragments": "Fragmenta ex commentariis in Proverbia",
     "origen-lamentationes-fragments": "Fragmenta in Lamentationes",
     "origen-job-homilies": "Homiliae in Job",
+    "origen-apocalypse-scholia-scrap": "Scholia in Apocalypsem",
+    "origen-job-selecta": "Selecta in Job",
+    "origen-nt-fragments": "NT Catena / Scholia Fragments",
 }
 
 
