@@ -27669,6 +27669,102 @@
       "receipt": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.review.json",
       "section": "frag-rem-close",
       "payload_sha256": "a8a262ebd16f42b61246bbc2d3c21dcbe41156bb67398c0458ce9b6059d3ec97"
+    },
+    "work:origen-job-enarrationes:u01-open": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "4f8f40c003d0a4b881045330ef6bb3b846a64861ca3d5657fd99ad1f11885962"
+    },
+    "work:origen-job-enarrationes:u01-rem-early": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a3451ebec54159dcfe45e297cbe05ee7b9dcb2ac4ed75fdb3d1cc790ce6c29ca"
+    },
+    "work:origen-job-enarrationes:u01-rem-mid": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "20ae3623ab66faaa16fe4fc10be240b6700562c6b2bd8c9f2366cb4204ddff7b"
+    },
+    "work:origen-job-enarrationes:u01-rem-close": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "ee08b31d6cec6c9c0a7507c32d62e23cc47480e5dea2694677ab940c58ea6173"
+    },
+    "work:origen-job-enarrationes:u02-open": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "ca2479844613a2bfedcef23f8961231f5049a87ccff89063ecf82ca373f70323"
+    },
+    "work:origen-job-enarrationes:u02-rem-early": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "47dedaf9db7474b517e68264c707318da2b91a613e76d0c183bbdabf92396939"
+    },
+    "work:origen-job-enarrationes:u02-rem-mid": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "ad05b1768387cd8d1ae68e0e9d70ba36cdde1cd6bdfd0134686da900098fc098"
+    },
+    "work:origen-job-enarrationes:u02-rem-close": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "3b21e54c5c0769d2b0269fcdaef10466df0bada1ac524b7c64998595de476423"
+    },
+    "work:origen-job-enarrationes:u03-open": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "6b5db006ddda211202f647a970f38eb8c91c7b5e3aa40322d4f0a6bc88489459"
+    },
+    "work:origen-job-enarrationes:u03-rem-early": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "e9d6b51af9dfac6a66dfd0672dc2915be74de11e13545c6beba48f7b8455b59e"
+    },
+    "work:origen-job-enarrationes:u03-rem-mid": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "14edfb97ac864cf078153b33963decf7e96e642b84d27647374303e44a437b1c"
+    },
+    "work:origen-job-enarrationes:u03-rem-close": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "a19d00adc489f2433b8fe2415117fa2e19728acdb6cf97ac82152f46f6107f4c"
+    },
+    "work:origen-job-enarrationes:u04-open": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "7e362f42eceb78f00a19566f93f900afa54bd0b046d62aab7fd1dec3288261ce"
+    },
+    "work:origen-job-enarrationes:u04-rem-early": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "936ce50edf2473d42e4c36b7d310d7ab4989a4ffba302f0910633afb01fd4352"
+    },
+    "work:origen-job-enarrationes:u04-rem-mid": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "f9efc35687b6c9a936cf5e9d726058afb37c0a5ec53a6529fa9a77ffdc6e505e"
+    },
+    "work:origen-job-enarrationes:u04-rem-close": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "b3de6e24b1d2792a7b271a31afd5ead5044da1741d40def7fb8ea2314d9becf5"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -27866,6 +27962,10 @@
     "origen-de-resurrectione-scrap": {
       "packet": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.packet.json",
       "receipt": "books/origen-de-resurrectione-scrap/reviews/audit/res_frag_tip.review.json"
+    },
+    "origen-job-enarrationes": {
+      "packet": "books/origen-job-enarrationes/reviews/audit/jobe_tip.packet.json",
+      "receipt": "books/origen-job-enarrationes/reviews/audit/jobe_tip.review.json"
     }
   }
 }
