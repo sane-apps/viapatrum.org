@@ -32199,6 +32199,1350 @@
       "receipt": "books/didymus-commentarii-octateuchum/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "3a67873971c5f7a3229ee648d32ba965ddb6d0912835b903aeab2ec650117993"
+    },
+    "work:didymus-commentarii-psalmos:u01-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "260c6c8b13e7b390de548f16a44893196240c83f2ced6cef21243e029217b9f3"
+    },
+    "work:didymus-commentarii-psalmos:u01-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "359d3c3a4cd80b4d5ff9a577164b3d90b24c41149a69caf13f4bdc276a18118b"
+    },
+    "work:didymus-commentarii-psalmos:u01-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "dd88a674e35df4175a8ef4f0f1b6b7fc847df12e6d0936ed568ef591ecafb991"
+    },
+    "work:didymus-commentarii-psalmos:u01-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "d4ca4e0735d92d5722627323877ab017c9a56a3363ca4ebcaf6715c2d97136ba"
+    },
+    "work:didymus-commentarii-psalmos:u02-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "7155786370e167a08c2e4631e6d31312e185d9f6fbe7cc9b5f44583518bbe74b"
+    },
+    "work:didymus-commentarii-psalmos:u02-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "7fe73cd709751588a78b0d5ab1e5ae20f2af83ea51e2319cf94f9405f6b942fa"
+    },
+    "work:didymus-commentarii-psalmos:u02-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "146044d2f84c40ce90890455df3c79731b131eb5661802bbd8a44c4dfcc7bcac"
+    },
+    "work:didymus-commentarii-psalmos:u02-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "be45c563aa056234a6e3918a3506b746a0cdcd9e452d5951d2c6a62c12b719b0"
+    },
+    "work:didymus-commentarii-psalmos:u03-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "00768d4190144b68a4f942e9c3104e203f609426f508999bdf9176fee7def754"
+    },
+    "work:didymus-commentarii-psalmos:u03-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "1cac983bc735114257ef2cd6ada7267dc92d6d115c635a6a348e77cd1cb54b6e"
+    },
+    "work:didymus-commentarii-psalmos:u03-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "2b5d3bbb9d555fe4ee2bc19bf03ece83588316c92e1f46bc793a9b5cd2e03404"
+    },
+    "work:didymus-commentarii-psalmos:u03-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "e6d9a9368493864b81d830299385db15125612dc0e47ae78a48afbdf077215c6"
+    },
+    "work:didymus-commentarii-psalmos:u04-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "45f495e24a688fcf32e28cbb4398d55a15b3e23283706a45261fd0754c667b50"
+    },
+    "work:didymus-commentarii-psalmos:u04-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "8e5cac6e8c14caa8667bf00758af79f5866af4ab20cd0037ef6006e62943baea"
+    },
+    "work:didymus-commentarii-psalmos:u04-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "775f3541f9e5e0df9227e705e784934bcf4321883cf37e72590f3ecff8fb2fe4"
+    },
+    "work:didymus-commentarii-psalmos:u04-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "1fa27ea45d739a7f5cadfd9a0c133dc4783f8a7c0932382bdc892fdb812acbcd"
+    },
+    "work:didymus-commentarii-psalmos:u05-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "1ae55d2036eb3e8f122a1797346898d761b82878d809ea27e92c604247c2abda"
+    },
+    "work:didymus-commentarii-psalmos:u05-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "648de690d9d3f55b724834eb4182aa9e9af0b71ac25365c2f0f81a92c7293703"
+    },
+    "work:didymus-commentarii-psalmos:u05-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "118eebe637f617576dbc12fcb0760d0020f119b56f26e8d0ce40eaf119830daa"
+    },
+    "work:didymus-commentarii-psalmos:u05-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "a7528ae9e58a247396131bacbc86f2fe662a9c96a34d5e4e250809f1a3a2eafc"
+    },
+    "work:didymus-commentarii-psalmos:u06-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "723f312d0b5b8c82b0a4ae209277347252cd503f0230f929266c143df016ef48"
+    },
+    "work:didymus-commentarii-psalmos:u06-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "bf556cd1349f4231aafbfc3bcedc6cbedbf9e7988a572e47d2e29b0da5a4bd04"
+    },
+    "work:didymus-commentarii-psalmos:u06-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "b1a9240f88908356235c91d3a2a549a16e4de72708bf9b189bd9593bfc22c33b"
+    },
+    "work:didymus-commentarii-psalmos:u06-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "4c28b0106ca4e1c1a1e1d1fd65fbb767773c40623d005cbadfa7f1febb37beff"
+    },
+    "work:didymus-commentarii-psalmos:u07-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "d2bec41bf6abbc8abd73bd856084dc92a372cc2a11da7fafd5fa848750a3587a"
+    },
+    "work:didymus-commentarii-psalmos:u07-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "4fc140adaed39a4e789792f23c7abdd474616c27f9af5615e21b8a9b77462ffb"
+    },
+    "work:didymus-commentarii-psalmos:u07-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "c295eff7667a75a9bb13a7c60a9964d1fe2d581e1f8e8afea881027abea778c7"
+    },
+    "work:didymus-commentarii-psalmos:u07-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "b556ba68829c0fa50844770e0bd85f99e95b233c86976f59a03175cf12ae135f"
+    },
+    "work:didymus-commentarii-psalmos:u08-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "e33143e77b5fa389203ddd6e3d0b0568862cd3d4d75a9ac9266dcd19e4482f2c"
+    },
+    "work:didymus-commentarii-psalmos:u08-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "f4df32e7c7c5d5db1cf3cf455db5f6bb959640493db1ed553ecfbbe95bc644ea"
+    },
+    "work:didymus-commentarii-psalmos:u08-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "67d107468f290e3fe032c2e02809caf14b8406c81ec87195e140549f67aa08b1"
+    },
+    "work:didymus-commentarii-psalmos:u08-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "96f9b3993753241337690718edfbb7283aff861f913322b15389ca481d28c45c"
+    },
+    "work:didymus-commentarii-psalmos:u09-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "2b09307ef06525654b073634d104efb7b7132d38397f4637f3103c5ff89b9787"
+    },
+    "work:didymus-commentarii-psalmos:u09-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "d986a9aa15c4ada1d65f3962e7926403ed2d618870fcf86d5fa9c829a71b4fb1"
+    },
+    "work:didymus-commentarii-psalmos:u09-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "8db896f34ce0322cb915134fd8311d674102d71a2e0bb9e723b016a4bc07d412"
+    },
+    "work:didymus-commentarii-psalmos:u09-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "ecc321e69f174f71c55cc89bcf96fecf1ea8851ff1c1a4baa62db333eca6b61c"
+    },
+    "work:didymus-commentarii-psalmos:u10-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "b7a23e9d2afa50233c8cf5c38b97c3b566c465d54ef236fa571957f83b99c6f7"
+    },
+    "work:didymus-commentarii-psalmos:u10-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "efe2b112dc058b69f25497fd455048b80fe19b5da5a6b828ea6421641e67875f"
+    },
+    "work:didymus-commentarii-psalmos:u10-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "25535e223ba0614ef5c92771475d99fa802a946acf650cbf1d0dcf7f6105b16a"
+    },
+    "work:didymus-commentarii-psalmos:u10-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "b79e18119aa6da0d1a64ba7624c757318fcd847fbf19a6f42c7787b80eb511db"
+    },
+    "work:didymus-commentarii-psalmos:u11-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "9e6406712535a4244bd60a70cd8465cd3ef23ad4520b26357669a8c3d1bb5cde"
+    },
+    "work:didymus-commentarii-psalmos:u11-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "e8143ed5ea837c209eed374e68439505632bac34af7e1e374895e9d300f5aaff"
+    },
+    "work:didymus-commentarii-psalmos:u11-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "050c4a8f1087eaff82974e385ed0481ef394eeb5de6c56df75cf29b826bbf6b6"
+    },
+    "work:didymus-commentarii-psalmos:u11-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "3458e133ca08e05f678ad71941419197b274349ffdcf608ae987c5e1bdaad26e"
+    },
+    "work:didymus-commentarii-psalmos:u12-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "d379b1ede50bb2abaaf2faafddfd914238439c3cde7b8263b311362b81ea5032"
+    },
+    "work:didymus-commentarii-psalmos:u12-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "249d5b1330cc361a86868b784af854baf21ce2e04c3af8eeaaa9597e44a5591f"
+    },
+    "work:didymus-commentarii-psalmos:u12-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "f0327bef95e11cbd28f4fa217e89596e525f65e49d0d27415a674b7b1751d453"
+    },
+    "work:didymus-commentarii-psalmos:u12-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "a03fac1625ae8c8d4da03c2df41c623922bb40a0d3f278d6edc330d6c69a066f"
+    },
+    "work:didymus-commentarii-psalmos:u13-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "6544070227c416f8022f526ec7e386085828f6132adefddf505f9b5ace7c0bb2"
+    },
+    "work:didymus-commentarii-psalmos:u13-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "95a023c2bd600212a05c6cacb1f5e36c70f80a957ce112f33bbb418b7cfb3be1"
+    },
+    "work:didymus-commentarii-psalmos:u13-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "455f085dbfff9fbbcfb10d9a178236ef6d32186409525e6b0d5ecaaca6319cc4"
+    },
+    "work:didymus-commentarii-psalmos:u13-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "6bd360558cc62c1cf5ae6f4c60035ac77ae2815448ad9e795fdc10f160525569"
+    },
+    "work:didymus-commentarii-psalmos:u14-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "253db58dfea247c925de2b0c9964fb962b3ddd3d151c23ec0aeab943cb3cf9f1"
+    },
+    "work:didymus-commentarii-psalmos:u14-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "974fb3d77d2b64250877e863377ca7415410f9e259397b722183ed0ca42b7f62"
+    },
+    "work:didymus-commentarii-psalmos:u14-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "34e4154cdb4a94eaab73602b04917dc11ed7f9bdda45e337442787858f300205"
+    },
+    "work:didymus-commentarii-psalmos:u14-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "c86ef3f8a7be6abfa895c07e2d7a86def2f7cac0be76dfa6f6398eb3a25e7714"
+    },
+    "work:didymus-commentarii-psalmos:u15-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "69feeaeb3ecc3137914f96b95a56f8467fb121a4ee741bef24b5ba4b9fffda0e"
+    },
+    "work:didymus-commentarii-psalmos:u15-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "88e7fc43ccb29a32a8c32a7f4fd7c06a7f092919fbb24fb18dd1900b1856fc27"
+    },
+    "work:didymus-commentarii-psalmos:u15-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "eaee6f61fb75a12e73bdfc157f6fa22ad3883f2095d415f3197275ab11085946"
+    },
+    "work:didymus-commentarii-psalmos:u15-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "394f717c134c02019a60434bf5e328d812a345d1c37a638654e635af51e27403"
+    },
+    "work:didymus-commentarii-psalmos:u16-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "f82f9a719c1795d956ddeb4c0d8eed017457a645240ebab30d18e3a057507b05"
+    },
+    "work:didymus-commentarii-psalmos:u16-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "87bb6b6b34fe1ef4632a1e7d3feb45704f461e6c2acc5faa91671b34e3e03cbc"
+    },
+    "work:didymus-commentarii-psalmos:u16-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "5bbf6c46781e70bf0a57ff59c484b95cb88dd4cd985b0c19ee2c601be8d509ef"
+    },
+    "work:didymus-commentarii-psalmos:u16-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "6c1bb54e86719169b0c7540484e60a5788c1406e6dd0458dbf6a224c526e5d04"
+    },
+    "work:didymus-commentarii-psalmos:u17-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-open",
+      "payload_sha256": "bed0152b1dde11fd7f8d00312ddd5f52640fa752665e18367571f4dff13c94d3"
+    },
+    "work:didymus-commentarii-psalmos:u17-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-rem-early",
+      "payload_sha256": "7c6ecb548e55e7e289c4516f22b760e43feb235cbf5aba4d7360ce03f0fe5935"
+    },
+    "work:didymus-commentarii-psalmos:u17-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-rem-mid",
+      "payload_sha256": "3355bd6729a0b8daae778d60f59ad104f90bc7a8365f83006fd293798f73c41a"
+    },
+    "work:didymus-commentarii-psalmos:u17-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-rem-close",
+      "payload_sha256": "ab3a505fee7eca1a0538ce0c3ef5261a4fe957e9f861c2e1ebebe3dd4355c054"
+    },
+    "work:didymus-commentarii-psalmos:u18-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-open",
+      "payload_sha256": "e8725e3b4c122e189df69f5ebed40f887e49efbf9e236df62c4766051e713642"
+    },
+    "work:didymus-commentarii-psalmos:u18-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-rem-early",
+      "payload_sha256": "eaabe1bdca82e69cd009a7af77853f7f2efbcd5b42cfdb355cafb16a01c545de"
+    },
+    "work:didymus-commentarii-psalmos:u18-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-rem-mid",
+      "payload_sha256": "35a4b890a5a064f99487ef1a615d99f23ec3dcf2c44ada8f9299dc0f299ce05f"
+    },
+    "work:didymus-commentarii-psalmos:u18-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-rem-close",
+      "payload_sha256": "bd9eda76b669012295a340a389a4d7e2404ecc463b53cfa6f48abfd3afbab962"
+    },
+    "work:didymus-commentarii-psalmos:u19-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-open",
+      "payload_sha256": "fb11bb36ae5381d7886685b2f029b15491e4a8b5c40f3ef4100273718b117471"
+    },
+    "work:didymus-commentarii-psalmos:u19-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-rem-early",
+      "payload_sha256": "5801671a3c189ea8222e1e3b1c827abac4891b70ecd94d47658b57d02e79a192"
+    },
+    "work:didymus-commentarii-psalmos:u19-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-rem-mid",
+      "payload_sha256": "935ae33c4b88bf317f933d7727dbbc311f0f4d96c4895f2a8e72b5cb23a7a2ae"
+    },
+    "work:didymus-commentarii-psalmos:u19-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-rem-close",
+      "payload_sha256": "b7c29a6676aab6e593d6b386f446b0c7a06c254cf016f899b422d1e217e64b6f"
+    },
+    "work:didymus-commentarii-psalmos:u20-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-open",
+      "payload_sha256": "506bde35e54923528c3c2c124029b1187d3abaabcae346da6338bdf4f370e4d8"
+    },
+    "work:didymus-commentarii-psalmos:u20-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-rem-early",
+      "payload_sha256": "fc05e437460dcbe53fd0668ad84c1c9035c58031eaed441d92c22e4d24b7c016"
+    },
+    "work:didymus-commentarii-psalmos:u20-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-rem-mid",
+      "payload_sha256": "9afe01c55ba1413e4796fb2060f02d32cd60edb71ad0ef422a43d3575221fb91"
+    },
+    "work:didymus-commentarii-psalmos:u20-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-rem-close",
+      "payload_sha256": "bc9e74bc703dd1d2e9f5990e05120d5ac5700b1f69f6b89c1f57e68022ec01d1"
+    },
+    "work:didymus-commentarii-psalmos:u21-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-open",
+      "payload_sha256": "f2568c18e4ba74fcff2d3552d109d06c62dde8ac7a88d75b7fc3d23168ee8528"
+    },
+    "work:didymus-commentarii-psalmos:u21-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-rem-early",
+      "payload_sha256": "1903041e5b4b717a7aba815fe24b86e9281eb5a8b3158c72de6f18110ff1c76f"
+    },
+    "work:didymus-commentarii-psalmos:u21-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-rem-mid",
+      "payload_sha256": "1a872e0aecdb75da50b4b20948a0e9637a12de1948f581386dd443178e83299a"
+    },
+    "work:didymus-commentarii-psalmos:u21-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-rem-close",
+      "payload_sha256": "188a604cb5f25bf34b2bd8cc2648e1924b1af9193ac78122033268b2f0196c2a"
+    },
+    "work:didymus-commentarii-psalmos:u22-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-open",
+      "payload_sha256": "aea7a5afb08b20495253fa42189fc35778d3210196a34a4501630ccdabb23604"
+    },
+    "work:didymus-commentarii-psalmos:u22-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-rem-early",
+      "payload_sha256": "061ee43402424f8396d67ada79e396d6664bb5be15a75d107c370e09e22d9a36"
+    },
+    "work:didymus-commentarii-psalmos:u22-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-rem-mid",
+      "payload_sha256": "9a84947afe25ac6d7950398f557582e83f240c6408f19ebed0ee0fc1b4f15673"
+    },
+    "work:didymus-commentarii-psalmos:u22-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-rem-close",
+      "payload_sha256": "98ac9e2cfcec8dce85aee33ae1299daa1dabef46c33989815533d2e0b2b844eb"
+    },
+    "work:didymus-commentarii-psalmos:u23-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-open",
+      "payload_sha256": "5c7b43728dc27d2b41ad4015fa193061a38fce9357501ea9658366617fada69f"
+    },
+    "work:didymus-commentarii-psalmos:u23-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-rem-early",
+      "payload_sha256": "0facecb04c2cd499c384d0235eaa0f53583255fd454921a8234d19ee78ba70f8"
+    },
+    "work:didymus-commentarii-psalmos:u23-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-rem-mid",
+      "payload_sha256": "e41fcf7afa295f60f73540527597413de0233838dd3c778e32402a1e796af6f6"
+    },
+    "work:didymus-commentarii-psalmos:u23-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-rem-close",
+      "payload_sha256": "1873291d1a9c456a68ee8e2d82ff1779890b6f2a13b2204da724fa75d7fd8e58"
+    },
+    "work:didymus-commentarii-psalmos:u24-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-open",
+      "payload_sha256": "1952d1b0465f0142de000c63ca65c3f815f80bb578d3b86f7dcb507eb7405fdd"
+    },
+    "work:didymus-commentarii-psalmos:u24-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-rem-early",
+      "payload_sha256": "2bb12a0a582f90f8bcb8910fa2f5f2e7311dfa91148033d7a45aa503f09fa7d3"
+    },
+    "work:didymus-commentarii-psalmos:u24-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-rem-mid",
+      "payload_sha256": "e4968f069ab1838ffaa11e600679775353aead4abb0a277be9ef998e8e3abbc0"
+    },
+    "work:didymus-commentarii-psalmos:u24-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-rem-close",
+      "payload_sha256": "2041c2bf4701f67bc4af117e0557db32f809e45e000c25bee147c387d0fa3b10"
+    },
+    "work:didymus-commentarii-psalmos:u25-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-open",
+      "payload_sha256": "5c1e71158f0d4a58d79707c857718fb5c722c2eca3ad037fd4f61d20cdee4ed7"
+    },
+    "work:didymus-commentarii-psalmos:u25-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-rem-early",
+      "payload_sha256": "09eb485e01a0f0383ef44ca230449be1b6d0780b9aa3a9f569ace40ee9025581"
+    },
+    "work:didymus-commentarii-psalmos:u25-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-rem-mid",
+      "payload_sha256": "d577825bd68266b73257094a04770b222f9c4098cc2419903d2dab09654beb4b"
+    },
+    "work:didymus-commentarii-psalmos:u25-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-rem-close",
+      "payload_sha256": "468e44c02cf47ae4521667b88a7fbe9210d972c39fbe52bb103a72463b40acbc"
+    },
+    "work:didymus-commentarii-psalmos:u26-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-open",
+      "payload_sha256": "f78df491086a59dea1d8b4800c4bd0d0f52a01bf245220a38c6160f15fc16521"
+    },
+    "work:didymus-commentarii-psalmos:u26-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-rem-early",
+      "payload_sha256": "cad1969fba6ed711643a8081e915504ffcfba2e33863f250db4d635b2bd9ffbb"
+    },
+    "work:didymus-commentarii-psalmos:u26-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-rem-mid",
+      "payload_sha256": "b065ee3a37c827ce7b18759d685c0e7755c476db833ac78a04699db93168a9e9"
+    },
+    "work:didymus-commentarii-psalmos:u26-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-rem-close",
+      "payload_sha256": "282402d371b030105e8111899bd9d83e1c7f9a0189270a587f26a91f08c288b7"
+    },
+    "work:didymus-commentarii-psalmos:u27-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-open",
+      "payload_sha256": "c1bc1bf119ee367e962280f5739cc737147ee37ef8f5ecc5ce8fee29b4c5cef3"
+    },
+    "work:didymus-commentarii-psalmos:u27-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-rem-early",
+      "payload_sha256": "eb6c22240f6333e5a5bf4e6a2e2884b348c23290cc7b8871cc3048a82ac1e160"
+    },
+    "work:didymus-commentarii-psalmos:u27-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-rem-mid",
+      "payload_sha256": "a73807c5ce94401d0eb9c7b5e1e0d77c5da84dfc9e24e39449b4efc5b5f2358d"
+    },
+    "work:didymus-commentarii-psalmos:u27-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-rem-close",
+      "payload_sha256": "71a8421476c6af326e44020cfcd39a5e449781c8b4da4ef09a85e31f5352e7eb"
+    },
+    "work:didymus-commentarii-psalmos:u28-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-open",
+      "payload_sha256": "15b393bc72f23ec745f82f0c86d9ff3ddaa91b5df597559b2c988a96fed4cced"
+    },
+    "work:didymus-commentarii-psalmos:u28-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-rem-early",
+      "payload_sha256": "5933c4252dff2a24b2dea29f222634f2aef5713fc5fe80c702c59cb86d560fdc"
+    },
+    "work:didymus-commentarii-psalmos:u28-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-rem-mid",
+      "payload_sha256": "7cf0903deb4736c85f0b2af9a3893511db691b509dd4e0bae3a227fe9b27d19d"
+    },
+    "work:didymus-commentarii-psalmos:u28-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-rem-close",
+      "payload_sha256": "7b1102d8a49f15ff14e524900d9f8add17a6f753e9098e59847936f0f322798c"
+    },
+    "work:didymus-commentarii-psalmos:u29-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-open",
+      "payload_sha256": "e7d71767072f8422475b2af330e4a2e78197212daef83d7f798fcffbe91647ea"
+    },
+    "work:didymus-commentarii-psalmos:u29-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-rem-early",
+      "payload_sha256": "491d1b0537e0f7fae42cf9695dfbebf2dcc27ba80de93300b74bfdfc5e2309c7"
+    },
+    "work:didymus-commentarii-psalmos:u29-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-rem-mid",
+      "payload_sha256": "39ad3fe3e8d1eafb3de84644de83627203701bc78f364393ec32c7de57840062"
+    },
+    "work:didymus-commentarii-psalmos:u29-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-rem-close",
+      "payload_sha256": "f56dacf99bb2e35585dfe968ad3efe7b5b74f2a8f4155c7557352c1319747326"
+    },
+    "work:didymus-commentarii-psalmos:u30-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-open",
+      "payload_sha256": "9eb2350ed247ce2747c3fa7cbcc621fb877629d422a195d60b112b3bff06e21f"
+    },
+    "work:didymus-commentarii-psalmos:u30-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-rem-early",
+      "payload_sha256": "730bb760ec74c608a4a68e855a3bf1ac4bb420c54eff9825ae0568902133bf92"
+    },
+    "work:didymus-commentarii-psalmos:u30-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-rem-mid",
+      "payload_sha256": "3c1708cc8a06f250b48f02197d94dd768afa9b598faad5d180c44e98c8cb7929"
+    },
+    "work:didymus-commentarii-psalmos:u30-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-rem-close",
+      "payload_sha256": "6268549003ebe4e71de40d415dd5cf45bfdb12f2ab5bffaf204a4b239e2e0baa"
+    },
+    "work:didymus-commentarii-psalmos:u31-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-open",
+      "payload_sha256": "3f9902536c8099ee4edd703a4ea8efab776f813156d8bf4eb352448ed0e60399"
+    },
+    "work:didymus-commentarii-psalmos:u31-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-rem-early",
+      "payload_sha256": "14832cc4536fae7bf744a9b6daef3ac09bea8ad3485be96e96842d2609631af4"
+    },
+    "work:didymus-commentarii-psalmos:u31-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-rem-mid",
+      "payload_sha256": "a8b4b344de4628a1433918c89698ee8694c1ce18cb032bf627a71ae60702b968"
+    },
+    "work:didymus-commentarii-psalmos:u31-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-rem-close",
+      "payload_sha256": "ab08ee54cb9c6fa6952a6c1e13cee0cf2bda7757aac6b180944a1fa444eebf30"
+    },
+    "work:didymus-commentarii-psalmos:u32-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-open",
+      "payload_sha256": "fca5092d384622369d15f42d1c2d99f69b0004cb32d79691705eb627bae88b86"
+    },
+    "work:didymus-commentarii-psalmos:u32-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-rem-early",
+      "payload_sha256": "b825fd0c979955e7f7355404d333e464bdd8248ed04c95a0938ea2249db09625"
+    },
+    "work:didymus-commentarii-psalmos:u32-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-rem-mid",
+      "payload_sha256": "57381bc9325018c83be785b12a9660a87069e660cd28fc6c9a5b4165cc08e564"
+    },
+    "work:didymus-commentarii-psalmos:u32-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-rem-close",
+      "payload_sha256": "2ae513710c4f3a13a5f99ccec746e6078b2498022178719c1d9501f6f9b43943"
+    },
+    "work:didymus-commentarii-psalmos:u33-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-open",
+      "payload_sha256": "ceafb808bd185439fb5ecab204ce5f6b3973c51bb19ec078c0e49f2e90ca263c"
+    },
+    "work:didymus-commentarii-psalmos:u33-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-rem-early",
+      "payload_sha256": "574c2b182f39ceb03543bcfc26524d9923531678c6902f5af0c02788bbe4d4ec"
+    },
+    "work:didymus-commentarii-psalmos:u33-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-rem-mid",
+      "payload_sha256": "f3098c6bc3d937d64c5c2c772fecc147855d9192151efae22c60645268557f5d"
+    },
+    "work:didymus-commentarii-psalmos:u33-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-rem-close",
+      "payload_sha256": "95e9c07f6ffcab4dd4f902710ae208990e2dda94d1e03346adc8c8590e574c78"
+    },
+    "work:didymus-commentarii-psalmos:u34-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-open",
+      "payload_sha256": "0751db9947a9eb58af6d8da959dd7625762729190e2bc2ee5d8f5f7526147f9a"
+    },
+    "work:didymus-commentarii-psalmos:u34-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-rem-early",
+      "payload_sha256": "f44daa15383674062a26c90072c5db1f8fc77b121cec3cd7eb1979a015c405bd"
+    },
+    "work:didymus-commentarii-psalmos:u34-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-rem-mid",
+      "payload_sha256": "6306f584d86aacaf725be2ca82d4a754e21e5a0860338e6690649fe2f32aabd7"
+    },
+    "work:didymus-commentarii-psalmos:u34-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-rem-close",
+      "payload_sha256": "28964a6fd062886bb0eb94a33982ffbf4d0f31ad01ff7eeed5b19c5a69ec4161"
+    },
+    "work:didymus-commentarii-psalmos:u35-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-open",
+      "payload_sha256": "90c19ea4e15af8fbae842a6495cc51ced4ce90d749ed09223c25a9a9289674b6"
+    },
+    "work:didymus-commentarii-psalmos:u35-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-rem-early",
+      "payload_sha256": "6789ef1500ab7578d93440606a3b8c88c3de30d68cdc2ef30106ad23bc224254"
+    },
+    "work:didymus-commentarii-psalmos:u35-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-rem-mid",
+      "payload_sha256": "209a60950988e528acd0b781c30fbf7cf5af7f9ee68f825f72007ec67167e303"
+    },
+    "work:didymus-commentarii-psalmos:u35-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-rem-close",
+      "payload_sha256": "f469f2b39d2534eedab3b55705e123e92ceecac075e300e1b4eb10f9dcd02db6"
+    },
+    "work:didymus-commentarii-psalmos:u36-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-open",
+      "payload_sha256": "afbf5bda708c85f164faa5b854c6c8e34eac809e5192a4195e97945e3d3ebdae"
+    },
+    "work:didymus-commentarii-psalmos:u36-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-rem-early",
+      "payload_sha256": "3eff5b2a34320e68e8472537afc385a9a58219f3d06f7489a049c836c9941e16"
+    },
+    "work:didymus-commentarii-psalmos:u36-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-rem-mid",
+      "payload_sha256": "7ca75974060461f0065f96b6c26ae925f5e9246eb11e57e4934d9671acc80862"
+    },
+    "work:didymus-commentarii-psalmos:u36-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-rem-close",
+      "payload_sha256": "9bf39dc57363d4b4d5c5b225db5e0ba989b7511b53652e3f9b014b5659dfca6d"
+    },
+    "work:didymus-commentarii-psalmos:u37-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-open",
+      "payload_sha256": "3c92753ddc008a1db3d50b5200de9c3e72b00c9ee843b05cadc2c2813427c052"
+    },
+    "work:didymus-commentarii-psalmos:u37-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-rem-early",
+      "payload_sha256": "afec79e5e6b9de011ed650a472564f2e375db18df3cd4129bc00e82cbec39dc9"
+    },
+    "work:didymus-commentarii-psalmos:u37-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-rem-mid",
+      "payload_sha256": "e5f0d657a1f676e55c544e013dcc0678bb6c8f44798e4c4aa924ed5eac32af96"
+    },
+    "work:didymus-commentarii-psalmos:u37-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-rem-close",
+      "payload_sha256": "a52f6b130b076fa20c8101803c27df25ff6aa9cecf718799a5b4e40276669987"
+    },
+    "work:didymus-commentarii-psalmos:u38-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-open",
+      "payload_sha256": "bd1d0ee5d5ac428fa3da649d2ae1b0b74fb414c345da1c537c30bfaac82557e7"
+    },
+    "work:didymus-commentarii-psalmos:u38-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-rem-early",
+      "payload_sha256": "4aff56965104b1131d424bbff97dfed7c0a8f92ea6938b19d2b983e53ef607d5"
+    },
+    "work:didymus-commentarii-psalmos:u38-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-rem-mid",
+      "payload_sha256": "ce3fb96720331d3bfda6ede453b806cbb27d59670e3e4b13ceda8e0ed856dbe8"
+    },
+    "work:didymus-commentarii-psalmos:u38-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-rem-close",
+      "payload_sha256": "e7a6e6de394f08efa338270e660efbc13271db81ddab6c1a1e9f06e3ebfcd92c"
+    },
+    "work:didymus-commentarii-psalmos:u39-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-open",
+      "payload_sha256": "d1fc0013ac354f19d67a698bd7c20ca15ce30864e98adf7b78570fcda9b60864"
+    },
+    "work:didymus-commentarii-psalmos:u39-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-rem-early",
+      "payload_sha256": "0b3a090ff150f9b588d1bd1f727c2db1654fbf2bef2a1f05728227da5b295154"
+    },
+    "work:didymus-commentarii-psalmos:u39-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-rem-mid",
+      "payload_sha256": "c4f4b56466feaafcbb55fa2df7a82c817abf1f96fd3a57de242d4efd6fad5864"
+    },
+    "work:didymus-commentarii-psalmos:u39-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-rem-close",
+      "payload_sha256": "3265b944b69a812b095c3e32fe16d3d462f0c74acc5ebf8a38518125b4ef750f"
+    },
+    "work:didymus-commentarii-psalmos:u40-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-open",
+      "payload_sha256": "0e93224b833c3e3471c213742396f26948b3cd8c0bbe782d9f907df6d86da3b5"
+    },
+    "work:didymus-commentarii-psalmos:u40-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-rem-early",
+      "payload_sha256": "7911044dd4d0ee81742bd47211902c2029052d5828d93baefc6d63f3cb90a129"
+    },
+    "work:didymus-commentarii-psalmos:u40-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-rem-mid",
+      "payload_sha256": "144ecd79fe5359185d11d77dfbe8846f213939ec83531c94582d64d67a1a171a"
+    },
+    "work:didymus-commentarii-psalmos:u40-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-rem-close",
+      "payload_sha256": "055cd057270c23970aeb7d1b586408a5f5b80285147c8b03c7dfa6e4903e8af9"
+    },
+    "work:didymus-commentarii-psalmos:u41-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-open",
+      "payload_sha256": "32e0bdb037da7bffb4526ac7af0292052b51daea1a27170bde3cd0c28d973d25"
+    },
+    "work:didymus-commentarii-psalmos:u41-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-rem-early",
+      "payload_sha256": "2a98a949539e6ff16a71ca453b76c1c4add42187fa5d637be499395c654e5e57"
+    },
+    "work:didymus-commentarii-psalmos:u41-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-rem-mid",
+      "payload_sha256": "d5781ba00762ace185e96244e5e933b568b69af937453c23640f89a2f8ac77a9"
+    },
+    "work:didymus-commentarii-psalmos:u41-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-rem-close",
+      "payload_sha256": "d6703fb793456afe0fc5192ac45f960e2bddf4d6ccf5bf8335ac3ef5afa26b86"
+    },
+    "work:didymus-commentarii-psalmos:u42-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-open",
+      "payload_sha256": "7f2a2fbf7bb9352ae4545fbe5f2cd4d71ed48ce1226af7f5024b21d8a3c4e41a"
+    },
+    "work:didymus-commentarii-psalmos:u42-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-rem-early",
+      "payload_sha256": "58473e303ad25e7b6d8bb55505c1b655594ecabcc78a59dc9c7c8942d6c4630b"
+    },
+    "work:didymus-commentarii-psalmos:u42-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-rem-mid",
+      "payload_sha256": "73ca8acf7d558419a2112fdf6e9b708eca54254a62e5ce892108ad19ae4482ce"
+    },
+    "work:didymus-commentarii-psalmos:u42-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-rem-close",
+      "payload_sha256": "afdc6173bbdb69ac92bb980ab614b44d0e5c0b8bfe1f2148b311fcaf49398377"
+    },
+    "work:didymus-commentarii-psalmos:u43-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-open",
+      "payload_sha256": "990831adc2d37e07334808979ffbb3a650f0d1955f814fd7614c8f9e47c77706"
+    },
+    "work:didymus-commentarii-psalmos:u43-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-rem-early",
+      "payload_sha256": "871bf83aae396f5f8650215fd8f0ba531fb53c17515dad13cdb1a6989b227ed2"
+    },
+    "work:didymus-commentarii-psalmos:u43-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-rem-mid",
+      "payload_sha256": "dd279309a544b565279a39e9b6cec2cb37779420c2bbb345a5ac4e45a0ce3c1f"
+    },
+    "work:didymus-commentarii-psalmos:u43-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-rem-close",
+      "payload_sha256": "8b1d678f707f41945743fb7e651fd86ad919547575bd4a7e95994b881f59defa"
+    },
+    "work:didymus-commentarii-psalmos:u44-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-open",
+      "payload_sha256": "fc9a83f914c5451213a13934eee4b177c22db5df5a2e97eeb54fc3d7f06e03c6"
+    },
+    "work:didymus-commentarii-psalmos:u44-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-rem-early",
+      "payload_sha256": "45114dd24887035c789bbcfbeeec10d5d2c1841385304640a68bbad7ea5f39f5"
+    },
+    "work:didymus-commentarii-psalmos:u44-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-rem-mid",
+      "payload_sha256": "20ac92b147c031eb29327ff01e3ccd8dbb5ef9473747aece3fccf4619e180e8b"
+    },
+    "work:didymus-commentarii-psalmos:u44-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-rem-close",
+      "payload_sha256": "1ba24e0c96f3598acf694f4c059539f77b79b5fec0125fab4a8b8d744d2b26af"
+    },
+    "work:didymus-commentarii-psalmos:u45-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-open",
+      "payload_sha256": "185c4d475480af75da4a8b741a14e3916b5fe6483cfe71cd82439eff947e8ac5"
+    },
+    "work:didymus-commentarii-psalmos:u45-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-rem-early",
+      "payload_sha256": "56bcd3963e819e505089fc8b1c484d399f0a70b32c799407785c790294cacedf"
+    },
+    "work:didymus-commentarii-psalmos:u45-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-rem-mid",
+      "payload_sha256": "e93c991318cde2002199420cd2369bd4e93001688e705c6387debc89670dcd6b"
+    },
+    "work:didymus-commentarii-psalmos:u45-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-rem-close",
+      "payload_sha256": "8dc1ba8fed985095e117155c7e45b4c3fa31006310e0b2f4acbe23c071aef33f"
+    },
+    "work:didymus-commentarii-psalmos:u46-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-open",
+      "payload_sha256": "73cad9b2c0744503830c3b5c8bb3b91ede7cfc986ff4d6227a3d3383419c9e1d"
+    },
+    "work:didymus-commentarii-psalmos:u46-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-rem-early",
+      "payload_sha256": "8141815b6c3ee228307cef341b63dfe67477f143ae479f07a02c26784a952445"
+    },
+    "work:didymus-commentarii-psalmos:u46-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-rem-mid",
+      "payload_sha256": "20837a207be8b114f3830f5acc6d3c8fcdec19447f90328df85820ab6b9df290"
+    },
+    "work:didymus-commentarii-psalmos:u46-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-rem-close",
+      "payload_sha256": "2a0f1bc8f4cb807c3873e1696acae0f08d22e6981411350686752872d67cb2a9"
+    },
+    "work:didymus-commentarii-psalmos:u47-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-open",
+      "payload_sha256": "b19f7a126ddac866c5f32ba3a367bd9c8f13cb79c45bf2b55122034ab3fd74d9"
+    },
+    "work:didymus-commentarii-psalmos:u47-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-rem-early",
+      "payload_sha256": "589793aa06dba1a4db5e95596b23a68d7c8c4af99f5741be05d1c7f09c44c4f2"
+    },
+    "work:didymus-commentarii-psalmos:u47-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-rem-mid",
+      "payload_sha256": "b580bd9163d13fb8ecb4e530a13aba0708b6d1e9a546b753389353c62ffcc669"
+    },
+    "work:didymus-commentarii-psalmos:u47-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-rem-close",
+      "payload_sha256": "b4d2a595e48c0cf3168b33ff2c321cce378b9592dfbf8b9b30c7d419ef0c38f9"
+    },
+    "work:didymus-commentarii-psalmos:u48-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-open",
+      "payload_sha256": "90ee6bbb39e2f70de67ee0b28c68cc34b279c9ab539bc516e04f8d34710fc9a6"
+    },
+    "work:didymus-commentarii-psalmos:u48-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-rem-early",
+      "payload_sha256": "d0cc578f10e9e8073b5210eb395fd69bae1ec7b437074ccff632f9f2ee71c871"
+    },
+    "work:didymus-commentarii-psalmos:u48-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-rem-mid",
+      "payload_sha256": "240b140e41e3c76cbd37a99253e2de6d9cf6cbc032af0f01f1935a499c5c66b1"
+    },
+    "work:didymus-commentarii-psalmos:u48-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-rem-close",
+      "payload_sha256": "202e0ab9b29af9e9b23a3f786e7771135e796eb6d75979ad06e8e71fdf0b3b11"
+    },
+    "work:didymus-commentarii-psalmos:u49-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-open",
+      "payload_sha256": "f2b9b66f190ee7b83cc0a9aba2c439e36e8937269dbb7c569cee3e1fdaa6d5e5"
+    },
+    "work:didymus-commentarii-psalmos:u49-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-rem-early",
+      "payload_sha256": "c3557382c78453760dfdb51fa60544c6ccf14e68f76984ec4b5e79157668b0b9"
+    },
+    "work:didymus-commentarii-psalmos:u49-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-rem-mid",
+      "payload_sha256": "11af9b6aec0e5435a0e8eb02c92076abd3935e9eadf588ea87da4ca78b8216f9"
+    },
+    "work:didymus-commentarii-psalmos:u49-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-rem-close",
+      "payload_sha256": "0c9b5ea153b37e9bdf4fff1f657f8f7e7fd1d58b96e215504de7fc771d646948"
+    },
+    "work:didymus-commentarii-psalmos:u50-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-open",
+      "payload_sha256": "cd053bf789a074d8fe37fcecde2548c37ffd3ea35f5503ad13c44958577da4c7"
+    },
+    "work:didymus-commentarii-psalmos:u50-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-rem-early",
+      "payload_sha256": "04c902a8db91591fd34e36625daecddf74900204490558b0b054f475ef6bbd4a"
+    },
+    "work:didymus-commentarii-psalmos:u50-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-rem-mid",
+      "payload_sha256": "c2cd5fa71a6e7009d8a2a5a8e4e8458123940d8937eead29d16d2e81b5ce1039"
+    },
+    "work:didymus-commentarii-psalmos:u50-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-rem-close",
+      "payload_sha256": "c134525d51922e644c177b2b1204e6196642cbf7aaaec0c5925e096cfa4c7ee2"
+    },
+    "work:didymus-commentarii-psalmos:u51-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-open",
+      "payload_sha256": "8ec2204d14d0665612b67f807a305bff258a92bd218b9b08c2c7fd27ef023047"
+    },
+    "work:didymus-commentarii-psalmos:u51-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-rem-early",
+      "payload_sha256": "23c2662492828d8857c221f95aa9467ced676693eaebdde988b6713f6418abdc"
+    },
+    "work:didymus-commentarii-psalmos:u51-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-rem-mid",
+      "payload_sha256": "11ba0589c2c10422e4674c80cb21c9c9f043f835607c838b9f4a45e312847233"
+    },
+    "work:didymus-commentarii-psalmos:u51-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-rem-close",
+      "payload_sha256": "c96fac664af269f3c79f308c2dec55f79f36760338c96ee4affb850c7fb9d6aa"
+    },
+    "work:didymus-commentarii-psalmos:u52-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-open",
+      "payload_sha256": "e54b442ddf830830d3ff25dd2824f363ffe7794fb5d42f4dfa9778b4fd90bb1d"
+    },
+    "work:didymus-commentarii-psalmos:u52-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-rem-early",
+      "payload_sha256": "ea6e27f3dfa8cdd98fb3be639db29237e63dd238e2b1aedaf320141c6c6a4d21"
+    },
+    "work:didymus-commentarii-psalmos:u52-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-rem-mid",
+      "payload_sha256": "2cdede60c618c2125eddc51cb99e0aee7052226cb23b79039bc0bf4bc067d443"
+    },
+    "work:didymus-commentarii-psalmos:u52-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-rem-close",
+      "payload_sha256": "db30829354b579bda72b498f8a41c6e4fac459f80a5b0c13ded31bcd4a7069be"
+    },
+    "work:didymus-commentarii-psalmos:u53-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-open",
+      "payload_sha256": "08ce948772c768f8c46800b99ea89cb716f4fcf8ede7555b89c45f1083affa75"
+    },
+    "work:didymus-commentarii-psalmos:u53-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-rem-early",
+      "payload_sha256": "12d3d254df30ba78e0090b915367c1b6d8c5590b14a08409ca9aaa034f8f7412"
+    },
+    "work:didymus-commentarii-psalmos:u53-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-rem-mid",
+      "payload_sha256": "7376b8b150f99f79e6dff36740f41f88d8efeccc761c54756227f934451d4e1d"
+    },
+    "work:didymus-commentarii-psalmos:u53-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-rem-close",
+      "payload_sha256": "750f3c711be7c5bcf2dc51348d3305ddd5d0b70ab0e7fb69482a947f978a535e"
+    },
+    "work:didymus-commentarii-psalmos:u54-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-open",
+      "payload_sha256": "0987c89159d66d019485488eb7c96392360f8490ce51e8498603338f4493f67e"
+    },
+    "work:didymus-commentarii-psalmos:u54-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-rem-early",
+      "payload_sha256": "0162eddd2e74cc3ca5eb9e0bfdebb629ab46a4d0a93c39b592318a32860779cb"
+    },
+    "work:didymus-commentarii-psalmos:u54-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-rem-mid",
+      "payload_sha256": "e3db0d67b242d0e5e951aefde6c256f41ad6d319a57ea92867c09ca8c3f63e60"
+    },
+    "work:didymus-commentarii-psalmos:u54-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-rem-close",
+      "payload_sha256": "1373aa0d4ba90001f6b696b6fe9117cda0b5873f3881a50094e568310f99d4c9"
+    },
+    "work:didymus-commentarii-psalmos:u55-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-open",
+      "payload_sha256": "9c18b7da806d64b61e1c7209b5239756f478c4e664cc25150391bf030357e0af"
+    },
+    "work:didymus-commentarii-psalmos:u55-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-rem-early",
+      "payload_sha256": "5e2dec5ddae0118616130f46135713d4dba1cd884faab45c2d0fd3a70c6787f3"
+    },
+    "work:didymus-commentarii-psalmos:u55-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-rem-mid",
+      "payload_sha256": "e5df3ec79d67b96b2a16e712dd6801eed439ab2afbeec4e8f271c80a9338d22c"
+    },
+    "work:didymus-commentarii-psalmos:u55-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-rem-close",
+      "payload_sha256": "67cfb697ae0d959c6fd44f533207c2258857a5b0e3305f2f94aaeef137239216"
+    },
+    "work:didymus-commentarii-psalmos:u56-open": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-open",
+      "payload_sha256": "d5e55631a8b755cb5642dfd997ce9063d19e6faa96db66964dbced431aef3d86"
+    },
+    "work:didymus-commentarii-psalmos:u56-rem-early": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-rem-early",
+      "payload_sha256": "277582a7a44a5fb16e2adba572655e97e85f3935213e5330e3d8f1eb1e8aa52d"
+    },
+    "work:didymus-commentarii-psalmos:u56-rem-mid": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-rem-mid",
+      "payload_sha256": "0894681c64344ec1109f2924e1461599fa64c8715e2c4977d6b157f7bdd89e15"
+    },
+    "work:didymus-commentarii-psalmos:u56-rem-close": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-rem-close",
+      "payload_sha256": "202d91d4bc3ae94f78aaf93d15c1ab4852fa5c543fd7beb09a2eb2f54031dede"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -32676,6 +34020,10 @@
     "didymus-commentarii-octateuchum": {
       "packet": "books/didymus-commentarii-octateuchum/reviews/audit/tip.packet.json",
       "receipt": "books/didymus-commentarii-octateuchum/reviews/audit/tip.review.json"
+    },
+    "didymus-commentarii-psalmos": {
+      "packet": "books/didymus-commentarii-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-psalmos/reviews/audit/tip.review.json"
     }
   }
 }
