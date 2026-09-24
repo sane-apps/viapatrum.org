@@ -30975,6 +30975,246 @@
       "receipt": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "e94006cd6f333f898b1b342b94bffebd013a8022aac462943628735726ddf41a"
+    },
+    "work:amphilochius-in-illud-non-potest:u01-open": {
+      "packet": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "b2ca266bcb9ef08f14c04159506098ffca29466530ea60a1a327a439b78f4bea"
+    },
+    "work:amphilochius-in-illud-non-potest:u01-rem-early": {
+      "packet": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "894fc1dfcd75dc289aebd6fcde25fef36ea81100385ef75ef83bfaa8ee10d8fc"
+    },
+    "work:amphilochius-in-illud-non-potest:u01-rem-mid": {
+      "packet": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "2fc7f2f5eb6d2b88bcaa9605260b04b7d97f3ad6109e7aad8d896c1fe87428c0"
+    },
+    "work:amphilochius-in-illud-non-potest:u01-rem-close": {
+      "packet": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "88dee204659d5ac7ecc0e82f8d895e8e4184c10ee646f7fcef7bf0a2bc975487"
+    },
+    "work:amphilochius-in-illud-pater:u01-open": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "8cfda453a65d8193e6cd8a9d68f465557ea8ede635d2d9c98564fb1ecb6efa68"
+    },
+    "work:amphilochius-in-illud-pater:u01-rem-early": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "660d850679708f5ab43dc4a66d2b4e9cd2372d0c722b1c665a3373b0ac0dccdd"
+    },
+    "work:amphilochius-in-illud-pater:u01-rem-mid": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "c52e722076be7cf672bb677ab14643f7f2734fbd934d25608bce16533b8b8552"
+    },
+    "work:amphilochius-in-illud-pater:u01-rem-close": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "599bd62ad6b95e8d7d100f00642005d237a890da7671fd5dea177edd7a9e5fa3"
+    },
+    "work:amphilochius-in-illud-pater:u02-open": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "c188152b3acac978f89980c39fd14f405168fc5d860a3b5784fc5c5af171b53f"
+    },
+    "work:amphilochius-in-illud-pater:u02-rem-early": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "12d486f04f2cad6a749a037081a2f748c614f0fc0ef1fd8af1ea36759b40ff70"
+    },
+    "work:amphilochius-in-illud-pater:u02-rem-mid": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "42ae8dd2cf153f38e4152d1fd527b19de9d4662d79ccadec6bc1e9d5a79b76dc"
+    },
+    "work:amphilochius-in-illud-pater:u02-rem-close": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "72840595a0a37bc5e52b695b16e8f503f65bec0120ad020319e3704ea497029c"
+    },
+    "work:amphilochius-in-lazarum:u01-open": {
+      "packet": "books/amphilochius-in-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "c39e05496421074cc9031eeb1c6576df8e1c4717210b388bedc38b36842f4b52"
+    },
+    "work:amphilochius-in-lazarum:u01-rem-early": {
+      "packet": "books/amphilochius-in-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "448646c1debee31bf7bf7a1692d8bc9ad22093f726cfad6ad12411dcb5482708"
+    },
+    "work:amphilochius-in-lazarum:u01-rem-mid": {
+      "packet": "books/amphilochius-in-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "325312dcd2a8e4cb476b8f80f4a78b69505deb797d5a66e2db1f2289da8d60d2"
+    },
+    "work:amphilochius-in-lazarum:u01-rem-close": {
+      "packet": "books/amphilochius-in-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-lazarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "5ed427be2d930968c3ad3a4036c0615f0521e7ba6da63de87424247d2a05bd3c"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u01-open": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "26a5196c6c23a6a0a6cc4bd13d486bf040abc567f2807ff6b8b5f6b1277ff713"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u01-rem-early": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "bc4989f013e9cabba2c0148bf155e7efc551a6900dbec15d739f08a04bef75cd"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u01-rem-mid": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "5b67751ef88e8cd7b758a7950d008f00473034814f261d026d703067c3bb17a8"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u01-rem-close": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "66d5105d3e9db5382fde3d2ac087897df72151221dc7e4964aac18b8da9652a4"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u02-open": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "68fe34a73860dd4befa58717dd8e0fe0ccb62ed66b86fa32611785b0ae35390a"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u02-rem-early": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "f6947c401df99367a3aeb71f7e4eda6f73415ff24341d4b094424b83a30df493"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u02-rem-mid": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "4a7003cdd882883dfe0432f5fc1e1e263e10a639872daee146e87cc2c2db6393"
+    },
+    "work:amphilochius-in-mulierem-peccatricem:u02-rem-close": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "323f4bb4f6ec312e1312e9789d9d9e024fd859e0bbe97e8e7c59b089143eed29"
+    },
+    "work:amphilochius-in-natalitia-domini:u01-open": {
+      "packet": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "127faf0aa4d49d7bf986c7689745fae8968cbe73fe3686b50c89e14e505e5973"
+    },
+    "work:amphilochius-in-natalitia-domini:u01-rem-early": {
+      "packet": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "b907215e8cc061d52fe8aa6e6631dc9c94feb11c3b3db9fd8c277e48586a404e"
+    },
+    "work:amphilochius-in-natalitia-domini:u01-rem-mid": {
+      "packet": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "099c9a7c620138baa71ca206fcbb802df1ea9fe23261a17b00eeefda3e0433bc"
+    },
+    "work:amphilochius-in-natalitia-domini:u01-rem-close": {
+      "packet": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "a26f88afa616704f879cb2f7e62bb59424f5ac54952269f3c1edff3cbb54befe"
+    },
+    "work:amphilochius-in-occursum-domini:u01-open": {
+      "packet": "books/amphilochius-in-occursum-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-occursum-domini/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "5274032194fd861dfe6b0158a2860a9c217ad875e628992684c694f76860b343"
+    },
+    "work:amphilochius-in-occursum-domini:u01-rem-early": {
+      "packet": "books/amphilochius-in-occursum-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-occursum-domini/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "cd9de64fd10414f3f7c456d17697bcef51e054cd6e9c310527217ee507a0dbf9"
+    },
+    "work:amphilochius-in-occursum-domini:u01-rem-mid": {
+      "packet": "books/amphilochius-in-occursum-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-occursum-domini/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "0d4167691b7c2cc8499399c48cd3b38b623ac19695f456eddfbf9f841f5f3190"
+    },
+    "work:amphilochius-in-occursum-domini:u01-rem-close": {
+      "packet": "books/amphilochius-in-occursum-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-occursum-domini/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9c0d575a0e853289fa2d96a136e0aff9eaf41875fa3564714d55972e4cd2e281"
+    },
+    "work:amphilochius-in-zacchaeum:u01-open": {
+      "packet": "books/amphilochius-in-zacchaeum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-zacchaeum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "f0cd00cab730319191dbbe26121b920ed1adc88b35099eec2e66c4f9c7d7ac65"
+    },
+    "work:amphilochius-in-zacchaeum:u01-rem-early": {
+      "packet": "books/amphilochius-in-zacchaeum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-zacchaeum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "c2671efe49e6408128a4a056e30190cc2003e8934f8aea8a38a2b70ba5bedd3a"
+    },
+    "work:amphilochius-in-zacchaeum:u01-rem-mid": {
+      "packet": "books/amphilochius-in-zacchaeum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-zacchaeum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "5b55e00c595c05765616d1de3e42e4f5d81ec11f27aa0d0b06dd22a6ed4746d0"
+    },
+    "work:amphilochius-in-zacchaeum:u01-rem-close": {
+      "packet": "books/amphilochius-in-zacchaeum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-zacchaeum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "e326a48cfdd2f418a59025deed5a435417f6278700e0f1c0b1d151dae934523b"
+    },
+    "work:amphilochius-oratio-resurrectionem:u01-open": {
+      "packet": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "0999f3b81cba6ec3a38219d6f7cfe0582797cb097db2ec47df2915f323ba76fa"
+    },
+    "work:amphilochius-oratio-resurrectionem:u01-rem-early": {
+      "packet": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "2a4ac446cafe85965afe88e4b8a0fa7bf9ac8a9cdec20d5c447db455f09ed0e5"
+    },
+    "work:amphilochius-oratio-resurrectionem:u01-rem-mid": {
+      "packet": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "4ab25055042ee90eab4224807a49692bc04ca9f8a6e67f5b247c26ea65b3c11b"
+    },
+    "work:amphilochius-oratio-resurrectionem:u01-rem-close": {
+      "packet": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "76e5b7e34d9ee3d344338431995edcbadc6fa56844f011d82a13cba28484f165"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -31408,6 +31648,38 @@
     "amphilochius-in-sabbati-sancti": {
       "packet": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.packet.json",
       "receipt": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-illud-non-potest": {
+      "packet": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-non-potest/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-illud-pater": {
+      "packet": "books/amphilochius-in-illud-pater/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-illud-pater/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-lazarum": {
+      "packet": "books/amphilochius-in-lazarum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-lazarum/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-mulierem-peccatricem": {
+      "packet": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-mulierem-peccatricem/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-natalitia-domini": {
+      "packet": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-natalitia-domini/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-occursum-domini": {
+      "packet": "books/amphilochius-in-occursum-domini/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-occursum-domini/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-zacchaeum": {
+      "packet": "books/amphilochius-in-zacchaeum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-zacchaeum/reviews/audit/tip.review.json"
+    },
+    "amphilochius-oratio-resurrectionem": {
+      "packet": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-oratio-resurrectionem/reviews/audit/tip.review.json"
     }
   }
 }
