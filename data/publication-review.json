@@ -29775,6 +29775,246 @@
       "receipt": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "eae93317b73db0f46f93cb07e993be9c914347c24514d9e90bc4bff60bd30b01"
+    },
+    "work:marcellus-ancyranus-fragmenta:u01-open": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "aaf4198cb53fbc77b39921ad272d009749acc819e495bcde4809ac8c5cfb17c4"
+    },
+    "work:marcellus-ancyranus-fragmenta:u01-rem-early": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "b3867b816e4959eee54fae9e1f97270b2b23bf70c43e62a0f39c3d3c8d82e723"
+    },
+    "work:marcellus-ancyranus-fragmenta:u01-rem-mid": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "8df7d2fe0e267dd84290c403d25dd49a6f2cbb872a7345a141ccf8bc3936a1eb"
+    },
+    "work:marcellus-ancyranus-fragmenta:u01-rem-close": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9bf4114a0cf46546bc58d027f72dcb6c261909a94d18de99651a72cf822ec538"
+    },
+    "work:marcellus-ancyranus-fragmenta:u02-open": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "e251e42193de1beb3c60b7addfdd814f9eec8f578cd37cb4412754c9a46f8eac"
+    },
+    "work:marcellus-ancyranus-fragmenta:u02-rem-early": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "bed32b1938bafb0cf3064710e400466170b14cf1290f67837e8aac071f004e69"
+    },
+    "work:marcellus-ancyranus-fragmenta:u02-rem-mid": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "ca02d7b95b865d1f0080679cdbf0888de06945b73fecc7e9a6c1236d92f985f5"
+    },
+    "work:marcellus-ancyranus-fragmenta:u02-rem-close": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "eca413065ac9e8313f303527eae45043b2fee9d1c59bda11a2f20d60c901162f"
+    },
+    "work:marcellus-ancyranus-fragmenta:u03-open": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "b6ffdedbb6e8f870e6f29272a13cc377f29359b037e6e88121e1310e71156c90"
+    },
+    "work:marcellus-ancyranus-fragmenta:u03-rem-early": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "9219e479e3a5f2c1f9f6b93dc1083b9852108d62c2e02f41314b3b13af544b3c"
+    },
+    "work:marcellus-ancyranus-fragmenta:u03-rem-mid": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "cfc6018c81ea7ff31abc0f83d68934cab17015a0cad6481292419c1a8b0fe6f3"
+    },
+    "work:marcellus-ancyranus-fragmenta:u03-rem-close": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "318b5d4d7cb53ad34297391eb1b0abbbfbbc7d53e1e754fa55707fc6dd3cc0f8"
+    },
+    "work:marcellus-ancyranus-fragmenta:u04-open": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "fdca2c0f519320f77e2ccbfd3c268ea6e3f6baaf6a9466209b0220d4957771fe"
+    },
+    "work:marcellus-ancyranus-fragmenta:u04-rem-early": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "2761469947ab227fc8fdaf3004b90f13f9ae76d3721e60d3e579b4fbc72f9299"
+    },
+    "work:marcellus-ancyranus-fragmenta:u04-rem-mid": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "36572170a52e382a9214448c3d3ec518b370ec1bb858a1d8e0272622a4a294cd"
+    },
+    "work:marcellus-ancyranus-fragmenta:u04-rem-close": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "b49300ab193462629da1a88e8b056a2d7c288b2f1ba92d13be1dc7575bedd15f"
+    },
+    "work:marcellus-ancyranus-fragmenta:u05-open": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "9f64e8ddda06c4f77c26749c1ec0b095cd955ccae865c947a998d5085eb235b2"
+    },
+    "work:marcellus-ancyranus-fragmenta:u05-rem-early": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "8f38d9eb44d4e6994acc83efd8e569993fa3ef8910f2d81018b09af529c58863"
+    },
+    "work:marcellus-ancyranus-fragmenta:u05-rem-mid": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "7339103a819aa55b2b4b66a9a137f2a2205cb4a151d68ce2728e5ba5b31a8715"
+    },
+    "work:marcellus-ancyranus-fragmenta:u05-rem-close": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "62e8a0215c8852193a1d55dfc9699ee13bb33101d05d0c649158f7095d3954bc"
+    },
+    "work:cyril-jerusalem-epistula-constantium:u01-open": {
+      "packet": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "817d3d5d79d6e1b4eb8217b673a6bd284200b6bdeb83a56d118e84ca9c1fe109"
+    },
+    "work:cyril-jerusalem-epistula-constantium:u01-rem-early": {
+      "packet": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "730c6568b149eec92d7519d28dc9a41d3d316e70c0679460d4357f615ec069a8"
+    },
+    "work:cyril-jerusalem-epistula-constantium:u01-rem-mid": {
+      "packet": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "5db02bdad5c09b4ab60b5ca6e0b3de19597f4cf303e17d25e0bd1c5c302239d0"
+    },
+    "work:cyril-jerusalem-epistula-constantium:u01-rem-close": {
+      "packet": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "f3dbff93b3c2da6b41629bcfd7bf086e47a1eefb51f4ff3b6efd9fdb88a4543b"
+    },
+    "work:cyril-jerusalem-homilia-ego-vado:u01-open": {
+      "packet": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "7134a44a12f5002f252c8e96fb09daf2be59c1f321abe9b29fb7ee28b0946e67"
+    },
+    "work:cyril-jerusalem-homilia-ego-vado:u01-rem-early": {
+      "packet": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a20fcf24698d59fe515fd25a529e1ade282c307c773cf1ef24f5f2153101fc74"
+    },
+    "work:cyril-jerusalem-homilia-ego-vado:u01-rem-mid": {
+      "packet": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "c93ddc521796c807535c9fb5a52d7a8ea57f3949fa0ccc07d565d810302e4307"
+    },
+    "work:cyril-jerusalem-homilia-ego-vado:u01-rem-close": {
+      "packet": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "206397b2eb240a1555ce7079122451bfc7ec764090bc5957f51dc6f5e998d313"
+    },
+    "work:cyril-jerusalem-homilia-occursum:u01-open": {
+      "packet": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "52404ebee3f1a9a73bd8cdb4385be4ef53339c5ebebd1c0641e28a77b9fd0b3a"
+    },
+    "work:cyril-jerusalem-homilia-occursum:u01-rem-early": {
+      "packet": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "2686dd579f8ce3187395f047f482a3dfa889761666e2035144263faf385beb1e"
+    },
+    "work:cyril-jerusalem-homilia-occursum:u01-rem-mid": {
+      "packet": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "b370720dc4741fb52ddc8aca60a07864662f979586fe4d435b0633ac9938234b"
+    },
+    "work:cyril-jerusalem-homilia-occursum:u01-rem-close": {
+      "packet": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "480827ed3d33b85a08bec6b1971fedc45e44ec244a7c76660c73054c41c6896e"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u01-open": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "be52e3389bbc418fb51649c32c20ef8b3a1d6847cbdbebbcfba47ac084289051"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u01-rem-early": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "321aede2720092f5bb4f36a2069f3e81d937d40ce773fa3119d048651da646e4"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u01-rem-mid": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "abbc5eebf3999fb14ba9ae6058b65353f13243656712f5542afc928715cf2ecd"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u01-rem-close": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "083b436a54d9eeec3e6f80e37202fbcfa33796a0a8fe1f4237295410090e8c59"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u02-open": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "41ed34c1e881eba288d7810a16e8639a3aca212d310721d5cc5cade33d9cd1a5"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u02-rem-early": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "d59742cfcc61179406a75d2dc4cf3ec294364ef90d15fea08d346056b96d93e9"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u02-rem-mid": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "fdd131c93d4121df4a53c447ea7f5f25da153d2bfab1b40a3bb62f62e17b6de1"
+    },
+    "work:cyril-jerusalem-homilia-paralyticum:u02-rem-close": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "f644d906e73cfe9e40ead4df416091a91874e70c669906ae1b34ff89c5567832"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -30144,6 +30384,26 @@
     "eusebius-emesa-fragmentum-1cor": {
       "packet": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.packet.json",
       "receipt": "books/eusebius-emesa-fragmentum-1cor/reviews/audit/tip.review.json"
+    },
+    "marcellus-ancyranus-fragmenta": {
+      "packet": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/marcellus-ancyranus-fragmenta/reviews/audit/tip.review.json"
+    },
+    "cyril-jerusalem-epistula-constantium": {
+      "packet": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-epistula-constantium/reviews/audit/tip.review.json"
+    },
+    "cyril-jerusalem-homilia-ego-vado": {
+      "packet": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-ego-vado/reviews/audit/tip.review.json"
+    },
+    "cyril-jerusalem-homilia-occursum": {
+      "packet": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-occursum/reviews/audit/tip.review.json"
+    },
+    "cyril-jerusalem-homilia-paralyticum": {
+      "packet": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-jerusalem-homilia-paralyticum/reviews/audit/tip.review.json"
     }
   }
 }
