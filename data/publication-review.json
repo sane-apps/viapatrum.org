@@ -28743,6 +28743,30 @@
       "receipt": "books/gregory-thaumaturgus-ouden-eidolon/reviews/audit/gou_tip.review.json",
       "section": "frag-open",
       "payload_sha256": "f70dae20cb8b38604fb63fe25f20408e495de246fc3bc0f77d6e0490a1334349"
+    },
+    "work:gregory-thaumaturgus-jeremiah-fragments:u01-open": {
+      "packet": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "66a4ab2eaef277b8b18cf73163a0333a3e4001382d57573aca583675b52002b2"
+    },
+    "work:gregory-thaumaturgus-jeremiah-fragments:u01-rem-early": {
+      "packet": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "63baef63c7229dc3ebb3504cd529822ee4b67f95c58bf1af6c3a0b19066dd88e"
+    },
+    "work:gregory-thaumaturgus-jeremiah-fragments:u01-rem-mid": {
+      "packet": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "82d3288c03c1a40b5fedac407ff800865dbacdb28ce75d234683019813c76f89"
+    },
+    "work:gregory-thaumaturgus-jeremiah-fragments:u01-rem-close": {
+      "packet": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9e7b492dd800fa06dc6abd79a7a64338c452c693943dd5ae3e533b2487ece0c0"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28992,6 +29016,10 @@
     "gregory-thaumaturgus-ouden-eidolon": {
       "packet": "books/gregory-thaumaturgus-ouden-eidolon/reviews/audit/gou_tip.packet.json",
       "receipt": "books/gregory-thaumaturgus-ouden-eidolon/reviews/audit/gou_tip.review.json"
+    },
+    "gregory-thaumaturgus-jeremiah-fragments": {
+      "packet": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.packet.json",
+      "receipt": "books/gregory-thaumaturgus-jeremiah-fragments/reviews/audit/gjer_tip.review.json"
     }
   }
 }
