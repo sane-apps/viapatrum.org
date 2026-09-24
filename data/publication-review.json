@@ -32175,6 +32175,30 @@
       "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json",
       "section": "u24-rem-close",
       "payload_sha256": "383ee6f585584871e4fd00a99fde1926f32fe6a26350aac432ad81a18064994d"
+    },
+    "work:didymus-commentarii-octateuchum:u01-open": {
+      "packet": "books/didymus-commentarii-octateuchum/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-octateuchum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "3613cae828800408d877c039cb5ef44560b6f1e4c32397088906793f56519a1d"
+    },
+    "work:didymus-commentarii-octateuchum:u01-rem-early": {
+      "packet": "books/didymus-commentarii-octateuchum/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-octateuchum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "58254b4b538784a95c103d19f2f45d8b9a4dd308f713cbbb0d20cda609afa0d9"
+    },
+    "work:didymus-commentarii-octateuchum:u01-rem-mid": {
+      "packet": "books/didymus-commentarii-octateuchum/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-octateuchum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "2e0e44c6175a5efbf0a9124b35069744247aa98283612ec2af0da9007fd14063"
+    },
+    "work:didymus-commentarii-octateuchum:u01-rem-close": {
+      "packet": "books/didymus-commentarii-octateuchum/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-octateuchum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "3a67873971c5f7a3229ee648d32ba965ddb6d0912835b903aeab2ec650117993"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -32648,6 +32672,10 @@
     "didymus-commentarii-job": {
       "packet": "books/didymus-commentarii-job/reviews/audit/tip.packet.json",
       "receipt": "books/didymus-commentarii-job/reviews/audit/tip.review.json"
+    },
+    "didymus-commentarii-octateuchum": {
+      "packet": "books/didymus-commentarii-octateuchum/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-commentarii-octateuchum/reviews/audit/tip.review.json"
     }
   }
 }
