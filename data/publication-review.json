@@ -30759,6 +30759,222 @@
       "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json",
       "section": "u04-rem-close",
       "payload_sha256": "3926d5661ba9a7ad115aee9d251edccf29fed83b533835caa114137ccd776b11"
+    },
+    "work:amphilochius-contra-haereticos:u01-open": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "ed07ab5123df912380835ac87eaffb258ca8c2d573908b79dc106242b285930d"
+    },
+    "work:amphilochius-contra-haereticos:u01-rem-early": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "5abbbf3b57bc55820d9215bd75414f3872c44fd7765c015f3ecd6faf11ceb414"
+    },
+    "work:amphilochius-contra-haereticos:u01-rem-mid": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "892afec0dd1e15980e35fe85121d603141825a0ead1dc9fbe53078200ceff056"
+    },
+    "work:amphilochius-contra-haereticos:u01-rem-close": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "2dd62813bd3d196f70bbd183a9c7191db594ec97f10a2983eaeb17de956bf34a"
+    },
+    "work:amphilochius-contra-haereticos:u02-open": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "68b230f9a261f4c9ef8127d23a0ed7bc2280cc51c1361d6524a02d361b0ee586"
+    },
+    "work:amphilochius-contra-haereticos:u02-rem-early": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "5ac902ff47057f00f81f0536323549e6097f552f360af8db1d16c052275bfab7"
+    },
+    "work:amphilochius-contra-haereticos:u02-rem-mid": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "52a1376651107e985b9ea5fbc428429b8142590aceaa3002118c11cc128b31cd"
+    },
+    "work:amphilochius-contra-haereticos:u02-rem-close": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "f32c6541d8932763cb2e6b87c18d40a142ff9cc4bbd9196295b80bd32b80bc83"
+    },
+    "work:amphilochius-contra-haereticos:u03-open": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "314a618020addf69097113d6248f79758e9ccff7b36df1550590846e7f993c2d"
+    },
+    "work:amphilochius-contra-haereticos:u03-rem-early": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "b8f1d73db0e306a09057513848f50070c8677e817787eaab3032b39dd2fc4257"
+    },
+    "work:amphilochius-contra-haereticos:u03-rem-mid": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "33b9fc1c5c95227efb9a188482a456b8547e54ebcf698daf70749f72a25fce07"
+    },
+    "work:amphilochius-contra-haereticos:u03-rem-close": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "e7aa2196b860cb2a62018cce3931678b3227333f8363f691c7e580d14da9e842"
+    },
+    "work:amphilochius-contra-haereticos:u04-open": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "2afa0a715e2b27da9930b8861f053e26332d2a14293d2af13aba83e8d9c663c7"
+    },
+    "work:amphilochius-contra-haereticos:u04-rem-early": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "d2b5ccf358b9f7f6bb4bc0ba0068b25a18557accb4335554df3113ee28e66ba7"
+    },
+    "work:amphilochius-contra-haereticos:u04-rem-mid": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "645b7fca55bd1113ff1736a228d9271f5ff6b8316be42a2c34ad896873cd458b"
+    },
+    "work:amphilochius-contra-haereticos:u04-rem-close": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "b088d9cb7300889d7de2c95956cfb33ffb8cabcbb7095fd3e7b1c9054dbc7848"
+    },
+    "work:amphilochius-contra-haereticos:u05-open": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "876a3990fbc9b155f62ee93b74073ed18f12b5df2a55d4f7b604e3b08fcec0d8"
+    },
+    "work:amphilochius-contra-haereticos:u05-rem-early": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "fe24d89964222dd650da5d03037285c5c8da6d628f9224e6f9df0e04cf69145b"
+    },
+    "work:amphilochius-contra-haereticos:u05-rem-mid": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "76a56de61f1f19fd0ecdef924839b805459e457e72b994a4192e11573223f374"
+    },
+    "work:amphilochius-contra-haereticos:u05-rem-close": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "33d45dcbfc000b171aac7fe43298118324e6c65b0cf11da01a2ade019932584e"
+    },
+    "work:amphilochius-de-recens-baptizatis:u01-open": {
+      "packet": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "537643741f0f9a8168f34345eeaf403d86bdc40586becc1cfd5c9ace50030575"
+    },
+    "work:amphilochius-de-recens-baptizatis:u01-rem-early": {
+      "packet": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "867007e844b243f0e3bae5d049c58bdc90c9465c1117d3a00bc90aaef59176a8"
+    },
+    "work:amphilochius-de-recens-baptizatis:u01-rem-mid": {
+      "packet": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "16423b64c61e09962595f94f90136ef92290560675e08dcf8dcf16f84d90a94f"
+    },
+    "work:amphilochius-de-recens-baptizatis:u01-rem-close": {
+      "packet": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "50582d13884c6a36e5a8ed4ef50d3f7bd2049e56df79819ee19519dcea3e6f09"
+    },
+    "work:amphilochius-epistula-synodalis:u01-open": {
+      "packet": "books/amphilochius-epistula-synodalis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-epistula-synodalis/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "435a55fd48110f7bf0da0fdb72917a333269e30c55d0ec5f43816fd0b9cc8606"
+    },
+    "work:amphilochius-epistula-synodalis:u01-rem-early": {
+      "packet": "books/amphilochius-epistula-synodalis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-epistula-synodalis/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "c22028560cf11b8c371e8bad77af9e4d5d28994f4b2a63c9edb5df58bde02ee7"
+    },
+    "work:amphilochius-epistula-synodalis:u01-rem-mid": {
+      "packet": "books/amphilochius-epistula-synodalis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-epistula-synodalis/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "e1e473440e1e24367b07ca21c89a84b956a7b992999092f822a27e97f0c49a97"
+    },
+    "work:amphilochius-epistula-synodalis:u01-rem-close": {
+      "packet": "books/amphilochius-epistula-synodalis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-epistula-synodalis/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "33c364dbf576f36e5f51164b32daf9245c9dba786e279d18dec299dfab52f89b"
+    },
+    "work:amphilochius-iambi-seleucum:u01-open": {
+      "packet": "books/amphilochius-iambi-seleucum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-iambi-seleucum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "8cc51b1cf92756a40ad07a5735483364b51127e67b08546b151b4d5d941ecab6"
+    },
+    "work:amphilochius-iambi-seleucum:u01-rem-early": {
+      "packet": "books/amphilochius-iambi-seleucum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-iambi-seleucum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "57042de7ecf1094e2b6e50cf58efcdd34092d49c3d32a745ba837dfe6037c999"
+    },
+    "work:amphilochius-iambi-seleucum:u01-rem-mid": {
+      "packet": "books/amphilochius-iambi-seleucum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-iambi-seleucum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "f45e8cf8e276355551e8098501921fa70876fcb8a5b840520a5303137d73df32"
+    },
+    "work:amphilochius-iambi-seleucum:u01-rem-close": {
+      "packet": "books/amphilochius-iambi-seleucum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-iambi-seleucum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9aa8d8ae228cb525236fa90c22a8266775665cfba2d58d9264ecaea2877120bd"
+    },
+    "work:amphilochius-in-sabbati-sancti:u01-open": {
+      "packet": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "0cf7f128ea72c96ccb5eaf85f679a0b9b9d36a9d810e4916c4f9926c01a5b75f"
+    },
+    "work:amphilochius-in-sabbati-sancti:u01-rem-early": {
+      "packet": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a94a0524a5323a1b941f4d9547e9d1c4603b705b55c1b4f4358d6ea9097e9e77"
+    },
+    "work:amphilochius-in-sabbati-sancti:u01-rem-mid": {
+      "packet": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "0ad11781349b26e42f543a6371481ef715788a19530a9928dd5b0c46187386b5"
+    },
+    "work:amphilochius-in-sabbati-sancti:u01-rem-close": {
+      "packet": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "e94006cd6f333f898b1b342b94bffebd013a8022aac462943628735726ddf41a"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -31172,6 +31388,26 @@
     "diodorus-fragmenta-romanos": {
       "packet": "books/diodorus-fragmenta-romanos/reviews/audit/tip.packet.json",
       "receipt": "books/diodorus-fragmenta-romanos/reviews/audit/tip.review.json"
+    },
+    "amphilochius-contra-haereticos": {
+      "packet": "books/amphilochius-contra-haereticos/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-contra-haereticos/reviews/audit/tip.review.json"
+    },
+    "amphilochius-de-recens-baptizatis": {
+      "packet": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-de-recens-baptizatis/reviews/audit/tip.review.json"
+    },
+    "amphilochius-epistula-synodalis": {
+      "packet": "books/amphilochius-epistula-synodalis/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-epistula-synodalis/reviews/audit/tip.review.json"
+    },
+    "amphilochius-iambi-seleucum": {
+      "packet": "books/amphilochius-iambi-seleucum/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-iambi-seleucum/reviews/audit/tip.review.json"
+    },
+    "amphilochius-in-sabbati-sancti": {
+      "packet": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.packet.json",
+      "receipt": "books/amphilochius-in-sabbati-sancti/reviews/audit/tip.review.json"
     }
   }
 }
