@@ -28341,6 +28341,78 @@
       "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json",
       "section": "u05-rem-close",
       "payload_sha256": "19545ff8524fc50521be54a42918f8cc397842b298489cb77cf2fd50e47812ea"
+    },
+    "work:origen-job-homilies:u01-open": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "0faad93244dd173916255b4e83bc9e8d4e5100981d72f001983b1ee7a9152e86"
+    },
+    "work:origen-job-homilies:u01-rem-early": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "d468a09bf7a62aa40b76c097f455406d145222cdf6b9e91b3372340b14cfa39f"
+    },
+    "work:origen-job-homilies:u01-rem-mid": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "61aa170e4c0e123595cebae01ce61d4773b805849666d3cf398cd3cba4c64c5f"
+    },
+    "work:origen-job-homilies:u01-rem-close": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "48fa6d33ff33a05cf2502a3e8a4c70644b25d6a6110cf3f2bbecaa429ff1fb24"
+    },
+    "work:origen-job-homilies:u02-open": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "a08f744d193b3e1b855a4f83146f20303357c140fadc4bb227dd5d054174fe73"
+    },
+    "work:origen-job-homilies:u02-rem-early": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "740a6dff4072049d15f74c77b62072e8670df9f6342ce26ed9c9b9cb43a83726"
+    },
+    "work:origen-job-homilies:u02-rem-mid": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "e215f4b561d82dcaa8a9f3da46b5323c75c20170c58f570cba14c95dea2c69cb"
+    },
+    "work:origen-job-homilies:u02-rem-close": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "2878dddab1e09148283a8cb70ab6a8cc5a3175b90616dd8a2bff8bf3d2790242"
+    },
+    "work:origen-job-homilies:u03-open": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "5e98b8e12003bf648a897061ee47ea490418d5e450e74c74a26c4747cc0d0d52"
+    },
+    "work:origen-job-homilies:u03-rem-early": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "67e70fd2c3843479a4dca3b03631c793291809a497d14f2856c2302c9193cb53"
+    },
+    "work:origen-job-homilies:u03-rem-mid": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "97d177f4ca7d269059e25ab0be4517949d9b0be9fba275e02972c48e5e05a473"
+    },
+    "work:origen-job-homilies:u03-rem-close": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "48714c2c292953376fb631cfceeff6bb4515d6c38b640972fea91e71b09938ab"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -28562,6 +28634,10 @@
     "origen-lamentationes-fragments": {
       "packet": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.packet.json",
       "receipt": "books/origen-lamentationes-fragments/reviews/audit/lam_tip.review.json"
+    },
+    "origen-job-homilies": {
+      "packet": "books/origen-job-homilies/reviews/audit/jobh_tip.packet.json",
+      "receipt": "books/origen-job-homilies/reviews/audit/jobh_tip.review.json"
     }
   }
 }
