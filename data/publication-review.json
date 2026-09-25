@@ -39135,6 +39135,54 @@
       "receipt": "books/severianus-fragmenta-galatas/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "83c2c687570a12696a5d78bf1837c051ccc7386ae6abc533f60e7788f75c14fa"
+    },
+    "work:severianus-fragmenta-hebraeos:u01-open": {
+      "packet": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "5c9df8589c746707f8b823f4687754277a4bcfd364294984f39e59c0fd8bec37"
+    },
+    "work:severianus-fragmenta-hebraeos:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "fcc03b08537da3c54d35d870568ef8e525a481091c69c108c94a138218b6abe7"
+    },
+    "work:severianus-fragmenta-hebraeos:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "c40972d66fcf3be1767504701626b378540f5620cb1ff1511c1abc6cd1e3d06b"
+    },
+    "work:severianus-fragmenta-hebraeos:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "c7c80bbe828314fedd47fabfc223a7d2320b4cd5f44bc6e22063fd3601eb63fc"
+    },
+    "work:severianus-fragmenta-philippenses:u01-open": {
+      "packet": "books/severianus-fragmenta-philippenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-philippenses/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "dff21b172c4cfb45cdc539bdbffde466e255c8fa416f010d232fa87e6b8ca963"
+    },
+    "work:severianus-fragmenta-philippenses:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-philippenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-philippenses/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "3f2c93af8f0c78362b3b3b2470bf5c5af096ffcb87c167156b7437ea5ce8d382"
+    },
+    "work:severianus-fragmenta-philippenses:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-philippenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-philippenses/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "badd5489f1e53972240ec2dbc538560886aaf8171c304cb63229440ee9df8e06"
+    },
+    "work:severianus-fragmenta-philippenses:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-philippenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-philippenses/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9e2bae78273bee2ba7da063835a5551663c7b78a395feed178c232db308c7e19"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -39764,6 +39812,14 @@
     "severianus-fragmenta-galatas": {
       "packet": "books/severianus-fragmenta-galatas/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-fragmenta-galatas/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-hebraeos": {
+      "packet": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-hebraeos/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-philippenses": {
+      "packet": "books/severianus-fragmenta-philippenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-philippenses/reviews/audit/tip.review.json"
     }
   }
 }
