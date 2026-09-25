@@ -37791,6 +37791,54 @@
       "receipt": "books/evagrius-expositio-proverbia/reviews/audit/tip.review.json",
       "section": "u06-rem-close",
       "payload_sha256": "a360ac7bf7a65d424788c60a113b4c5ad4e04383b139f77c67a47228018e718d"
+    },
+    "work:evagrius-gnosticus:u01-open": {
+      "packet": "books/evagrius-gnosticus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-gnosticus/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "be6800d9efd45538ba16630fafc9e565c03d48cb7d4cc2ee77ae80c29af48561"
+    },
+    "work:evagrius-gnosticus:u01-rem-early": {
+      "packet": "books/evagrius-gnosticus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-gnosticus/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "86537938dd99b020d47ca7ac9018d7d37dad3c31251325ec19a54b1efc8c4e04"
+    },
+    "work:evagrius-gnosticus:u01-rem-mid": {
+      "packet": "books/evagrius-gnosticus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-gnosticus/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "6503ab70d9181f71ccbac1fc9ff0448e9d1ba69893d7666f335c8cdfe94b940d"
+    },
+    "work:evagrius-gnosticus:u01-rem-close": {
+      "packet": "books/evagrius-gnosticus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-gnosticus/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "5fb7d914189757926a9b898113669a7c817f21b86bbc49685d017429ea8a8598"
+    },
+    "work:evagrius-institutio-monachos:u01-open": {
+      "packet": "books/evagrius-institutio-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-institutio-monachos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "767eac2d0a02a9d30d5eb287c5cba1af99ec602105dc2d2ecf52ed5ea18041bd"
+    },
+    "work:evagrius-institutio-monachos:u01-rem-early": {
+      "packet": "books/evagrius-institutio-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-institutio-monachos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "71930f8fe8c3377818552e0a89a62a39143fb3c9293c1e0bf617e7b026dbd99d"
+    },
+    "work:evagrius-institutio-monachos:u01-rem-mid": {
+      "packet": "books/evagrius-institutio-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-institutio-monachos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "28580c7980260c2d898862a9af093d3f83d2ed7d6f684549e178dd841aa54ce8"
+    },
+    "work:evagrius-institutio-monachos:u01-rem-close": {
+      "packet": "books/evagrius-institutio-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-institutio-monachos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "1070e13bd538feb51e89829b516a472072a036474ff4a0fcb187636da232426b"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -38348,6 +38396,14 @@
     "evagrius-expositio-proverbia": {
       "packet": "books/evagrius-expositio-proverbia/reviews/audit/tip.packet.json",
       "receipt": "books/evagrius-expositio-proverbia/reviews/audit/tip.review.json"
+    },
+    "evagrius-gnosticus": {
+      "packet": "books/evagrius-gnosticus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-gnosticus/reviews/audit/tip.review.json"
+    },
+    "evagrius-institutio-monachos": {
+      "packet": "books/evagrius-institutio-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-institutio-monachos/reviews/audit/tip.review.json"
     }
   }
 }
