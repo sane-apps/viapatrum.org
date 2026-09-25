@@ -37455,6 +37455,126 @@
       "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
       "section": "u25-rem-close",
       "payload_sha256": "8d17f1e4ddb310abf424ee8937839aedd16e445c33b23a9ef7412314bbb87b90"
+    },
+    "work:evagrius-capitula-xxxiii:u01-open": {
+      "packet": "books/evagrius-capitula-xxxiii/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-capitula-xxxiii/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "bdf58747cf7d96049e7d4cb2d72cc625622df0c6b55ec744c45ac4f121dd2713"
+    },
+    "work:evagrius-capitula-xxxiii:u01-rem-early": {
+      "packet": "books/evagrius-capitula-xxxiii/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-capitula-xxxiii/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "4291aa3084f07f0e8543defc3eefd3fd14010974ca66cde039a8dee661aa690f"
+    },
+    "work:evagrius-capitula-xxxiii:u01-rem-mid": {
+      "packet": "books/evagrius-capitula-xxxiii/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-capitula-xxxiii/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "098c278f1756970499e801027f1a67b6e90d1a312b8efa6611765070eeea1b93"
+    },
+    "work:evagrius-capitula-xxxiii:u01-rem-close": {
+      "packet": "books/evagrius-capitula-xxxiii/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-capitula-xxxiii/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "f295ccd4a28d0775286d2f01f5c2edf8e851355aceb9a3738df224cecef39ac8"
+    },
+    "work:evagrius-de-magistris:u01-open": {
+      "packet": "books/evagrius-de-magistris/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-magistris/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "87bf7e45a37f34755f720649496c4357aa36fd50174468d4aa5f94b4ac9d944f"
+    },
+    "work:evagrius-de-magistris:u01-rem-early": {
+      "packet": "books/evagrius-de-magistris/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-magistris/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "c7b2187ab34f1dc3906663cdf795b3fb899653d84e459f21332547d5af5ae34d"
+    },
+    "work:evagrius-de-magistris:u01-rem-mid": {
+      "packet": "books/evagrius-de-magistris/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-magistris/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "c6843d6429bba4caf3c674bb766af2c568b0af71590d33fce35fd4c0b79678cf"
+    },
+    "work:evagrius-de-magistris:u01-rem-close": {
+      "packet": "books/evagrius-de-magistris/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-magistris/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "457e4bf15ce330608661d34db8fb1e739567705c4b7f4b91ec55dbc35cc946a4"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u01-open": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "59e0d5dd3632f9807c2772b33601e13435cb6c182ad742bf5732796eda8f1c91"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u01-rem-early": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "3497aa98e8594df221d5f8234f36380a33b9f1de0e2035127fb41653f6bfc227"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u01-rem-mid": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "a39322afdbcf072342f326a84e2563dd6de261361bd6fc83a5fa2d643c438b21"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u01-rem-close": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "2220d0188f728f08dfc99788d12ef84c97dabd640958f1817dd7c78abdfc4244"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u02-open": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "71ce63dc4e3f781f2a28de2f4e0dea968043f6059e2021ee9231e2c9d960ce22"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u02-rem-early": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "0bc6816a36fcbb4d85214fcb7764bf1fccd052d59a3a97a92e146464ac0f531a"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u02-rem-mid": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "f15c4d35e430d1c3904ce2125b3ae526346ad4a06d69fb3eb1db3fbab7e608d5"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u02-rem-close": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "14e19bd419b784f330d45376b6e1c2cfe53dabcac94f07f41660c64fdc02d948"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u03-open": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "3ea00f68f6923759a9d027bfbb4b38474e1665c7b516bea2633f419feaf6d12c"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u03-rem-early": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "302e91e2273fe7380bc222fc2340747944fc0ace14412fb9a79a34d2750cfdbc"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u03-rem-mid": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "8bce41b248c47a35aa314cdbb3bee054d0eb79fddf4ae7e35a5d0e77cacd48e5"
+    },
+    "work:evagrius-de-malignis-cogitationibus:u03-rem-close": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "dee8c428697f1da20f300d2241a84aaf4dfba3dcf1fa3bc90657d75ecb082ed9"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -37988,6 +38108,18 @@
     "didymus-in-genesim": {
       "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
       "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json"
+    },
+    "evagrius-capitula-xxxiii": {
+      "packet": "books/evagrius-capitula-xxxiii/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-capitula-xxxiii/reviews/audit/tip.review.json"
+    },
+    "evagrius-de-magistris": {
+      "packet": "books/evagrius-de-magistris/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-magistris/reviews/audit/tip.review.json"
+    },
+    "evagrius-de-malignis-cogitationibus": {
+      "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json"
     }
   }
 }
