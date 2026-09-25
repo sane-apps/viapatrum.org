@@ -38559,6 +38559,486 @@
       "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
       "section": "u02-rem-close",
       "payload_sha256": "fa499cd745e400db0f45e4aa643e2d728f5a290a1dcba4bc169e54465f756ac1"
+    },
+    "work:asterius-homiliae:u01-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "e95d11b1d1096df7e9e3e0d5d71389f76a642ac99ce0f370bc809f5c664ce213"
+    },
+    "work:asterius-homiliae:u01-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "5f5d3f1744cd585cc2fe0bc86e1d9c5322ad390e8a4eaac9fd145fa0a86e6bee"
+    },
+    "work:asterius-homiliae:u01-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "1dfa05083c23b7f886a93e15aab2d14664cd49b5118086e19ae1d59213b880d5"
+    },
+    "work:asterius-homiliae:u01-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "35e600566ee9a258cd72f0b26c76fde11fe55fec43acb60f91ce90fff764e2e2"
+    },
+    "work:asterius-homiliae:u02-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "69aea7d887c6f2926fbbc915beee6bdf7250a3046c6b78327316f97204e413bd"
+    },
+    "work:asterius-homiliae:u02-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "fe67039d6cb1bba64c0fb9a785f16f3b23896040df6d22246abec7b7332b88f3"
+    },
+    "work:asterius-homiliae:u02-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "0b63673263e3c12985b38c3592f40d56f5fff139d2ce5ac09a884019415d2de1"
+    },
+    "work:asterius-homiliae:u02-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "eb63f33051ecf493f4d9f82743ce0e636cf39520c2d6d2806193a9d8cd7e1805"
+    },
+    "work:asterius-homiliae:u03-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "9e7bca60534e9712d7ce1c417b61180b2ecdc1bf478eca0bc549db697dd66cbf"
+    },
+    "work:asterius-homiliae:u03-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "57a84f0e852ac951620c7c5a02e0f0803a00cc274d28269e27685ea7494b2bea"
+    },
+    "work:asterius-homiliae:u03-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "fe69cfa558a349332fd39d7a0a3f752daf1461bec1b74ccc566f391ca5b2eb0d"
+    },
+    "work:asterius-homiliae:u03-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "65ff8f5f8f8251ef412c225baab5d0e11647819bf48eae29ac90f182173fb5a9"
+    },
+    "work:asterius-homiliae:u04-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "ddde50e81c0d426ade761d60150212f0dce69b230cba195c43f5b477fb695ffb"
+    },
+    "work:asterius-homiliae:u04-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "038e1729b52fb595c367e08451b1b00196836302ceae0fd6c176783a3c168d67"
+    },
+    "work:asterius-homiliae:u04-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "28ec488b8e1c5ef338ff2cad35ae3a681081633f27b2b82a94260f2c988882e0"
+    },
+    "work:asterius-homiliae:u04-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "c8fae9896e814cad8f1a724fd75442d749124d6b9250fd01b19eb049905e2527"
+    },
+    "work:asterius-homiliae:u05-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "7ea4229d844100ee48935126494581b53bdc3cc2f562ae2833d612261c834d0f"
+    },
+    "work:asterius-homiliae:u05-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "1e76e005f05bb2d0d232a2d098216be7308eff956bdeb4d619b319f2bf1bc368"
+    },
+    "work:asterius-homiliae:u05-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "97db773f919dd3421e702e7cad63973925dd1e0ebf6520bca01ac9f0f9392be9"
+    },
+    "work:asterius-homiliae:u05-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "76216d76af2c8b19f7020d827a66da047aa44f16a2d8ac19f2221c0420b3ba76"
+    },
+    "work:asterius-homiliae:u06-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "d35613094a5129f9ec0d8ab918ca8b905d42d4761e225257f7bec6ea34bde6cc"
+    },
+    "work:asterius-homiliae:u06-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "d5254ba3fc5c89a493dd52fbe37849329a853ffdefba782a31a0246270708224"
+    },
+    "work:asterius-homiliae:u06-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "0e4fd83e72b2704fde6096241fd6329b584af8fa7a1cb4e32da2b625f0c3189e"
+    },
+    "work:asterius-homiliae:u06-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "754f5120b50bd077b30eb7a70a5891699a8fa150f02bb989bc2b558fd39e88f2"
+    },
+    "work:asterius-homiliae:u07-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "828fa0fb8f1759ca4d39623d7f594690f70876d458c5b4799bd57e0972010346"
+    },
+    "work:asterius-homiliae:u07-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "66a65cdf63b64a27551a2a07974514bb8394deafed56b73d6950bd6d6cb3f194"
+    },
+    "work:asterius-homiliae:u07-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "be8e65f4a3f2efdcd35648b4aa57f595d2b75e210ccf8778e47f9e698258f620"
+    },
+    "work:asterius-homiliae:u07-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "6c94ff103abec87604952cfb1cd91770baed5149314b277bc990f4338565dab5"
+    },
+    "work:asterius-homiliae:u08-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "e400dd958ef7fea477bdc91b29303bef7628fd212c5280a83cc9f67d751efe93"
+    },
+    "work:asterius-homiliae:u08-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "136f6799946c173d271e2357adeda6800725cff7c293bcfa0bee821fdda70e74"
+    },
+    "work:asterius-homiliae:u08-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "1a17a052b66b2dfe91e9643dccc71b127f6ac1b54d3066dc3714f9a50fd4c90b"
+    },
+    "work:asterius-homiliae:u08-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "c81928cc0f5c59b5edff6762ddbaab70976c32836e4fe690630ab42383c70651"
+    },
+    "work:asterius-homiliae:u09-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "1c4b3230e0d196984f18fd647f17e88f5eee8eb083cfffa6d6a55b19ae0a9a78"
+    },
+    "work:asterius-homiliae:u09-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "5fd96decfd7dbf46c9a6c2f56fee367bdf24691f4199751d3c49bb47b2be2c2f"
+    },
+    "work:asterius-homiliae:u09-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "57d562c5eb8a7a09d697f3d46d19464e31b75a967870fb6bb84eed35aa4fde1f"
+    },
+    "work:asterius-homiliae:u09-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "a5415ee36ab523a8c6b4ead7b68798fa00b10ba90ada64ce233eeb9b062910d9"
+    },
+    "work:asterius-homiliae:u10-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "419dc18d913d2ad9398a8f268431d434ffc817cd0512aaedc3cf815ba321a46f"
+    },
+    "work:asterius-homiliae:u10-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "aa5ec49390b5683909b9bd18bfcceb7b01b4151e2ce2e27c622abbba6a145f5d"
+    },
+    "work:asterius-homiliae:u10-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "afcb2b9aa3e23d9c96d391ea7f4dee67db2ab0a8290c61dfd6563419d30ceef5"
+    },
+    "work:asterius-homiliae:u10-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "56538ac83b987edaf6e19b84be0749ca3569e97e56e1bdd68c459acb9f29223f"
+    },
+    "work:asterius-homiliae:u11-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "662e5d79049c6423d5790baf43822f34bbe14158700580fba8493f7cf49360b8"
+    },
+    "work:asterius-homiliae:u11-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "c28dcb3ae8ef80b319a64c17d00bfb0fec2b5eeeeda927746592619cac718bfd"
+    },
+    "work:asterius-homiliae:u11-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "e9b96c10e575e396732da2ebf3a9c341e7dc193fba87c0a3574e68c51d6d4d03"
+    },
+    "work:asterius-homiliae:u11-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "6c3fff74e37cda3fab7c0c9395bb4b4090ba73ec11ab110415f13fffe2a3bfea"
+    },
+    "work:asterius-homiliae:u12-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "01102f9dfd3572d4dee9b926609523deac4329c545323ce72b96f349d255e898"
+    },
+    "work:asterius-homiliae:u12-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "38b7d02e1a1948585d0b3a4e295f330a6b93405199a55a9d3374fefd952ce74a"
+    },
+    "work:asterius-homiliae:u12-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "e3cf14e10702c6e506b02752dc5ce4c5a199fa71474ed42fd3d05b5c7104eba5"
+    },
+    "work:asterius-homiliae:u12-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "4b566bdc25670f93e9f737de617b88b995e6471230351f6517e6d6bc869e4fd9"
+    },
+    "work:asterius-homiliae:u13-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "7f991c5194aa455c538b15e7adc9d04b2ac4e6738fd6600fa4184d7dc797055f"
+    },
+    "work:asterius-homiliae:u13-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "8aaa057f1d954fb4cdfd182f1dbeb17e4b6117d2ced11d4773807be28c8ad53d"
+    },
+    "work:asterius-homiliae:u13-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "9701af5f62b78d5f0a98fac3eed28a94d9ceacf71bc6ea14e1aa4bafc0dc0ade"
+    },
+    "work:asterius-homiliae:u13-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "fd62150326de71dcc82ef0755d738c7e0a66f60ba2ca6bcd0d17e8b8d8a9b5df"
+    },
+    "work:asterius-homiliae:u14-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "0a01089f7e2f2fd4ecebb8c94da94ae68c3374a6835ac784a3ca5bb621986c11"
+    },
+    "work:asterius-homiliae:u14-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "03e45f7b7bce4cc4f8b8cf5b0f586bc9279d84ed1c116e2efa392e96b04d894b"
+    },
+    "work:asterius-homiliae:u14-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "6f1f2100572aa17219ff51672b7b88e817e724ebc090be6cffbaf1e72b2391de"
+    },
+    "work:asterius-homiliae:u14-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "8f4067082f79aae72ef002883da048c769722eb4bfaaf9ea62a7c8d25a109442"
+    },
+    "work:asterius-homiliae:u15-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "5f5ebbdc0df9d826f0d3dd78808c6aa766b7cd61595678eb9dbf49785716adce"
+    },
+    "work:asterius-homiliae:u15-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "0e14d06797c8836dfa8337c1949e877d752e4e0412a33704176cbe5ccdb8121c"
+    },
+    "work:asterius-homiliae:u15-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "cb5a9bb3ec4577bf23f1cec4721b18f0b773d3f5f9071d62d289b114d7b4761f"
+    },
+    "work:asterius-homiliae:u15-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "e94e264c8fe08467ae019a886f55b0a2a39ff3616631828da9a6da84c5bc8223"
+    },
+    "work:asterius-homiliae:u16-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "17cfaa10d1dec82d67ade2b6de36e3bb153b57e9a50b5f8917f0ddd2a5f88ad1"
+    },
+    "work:asterius-homiliae:u16-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "3acee0989c8e8cdd14acc14f73059d80061bb066f05aff5c192e09f437c0c6d1"
+    },
+    "work:asterius-homiliae:u16-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "9701767fc067995a730a2c70b9768dafc39156bd348d6c7d2288dc60cbc0738b"
+    },
+    "work:asterius-homiliae:u16-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "748fb258f8e3d0a0674094432e577e1b72fa8ebdc12948af1c294f88a03a39a5"
+    },
+    "work:asterius-homiliae:u17-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u17-open",
+      "payload_sha256": "9b5840be81a2ac1f23ab5e0092bc7da6220f80283c3ef90e66dca1ba89aad94e"
+    },
+    "work:asterius-homiliae:u17-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u17-rem-early",
+      "payload_sha256": "a5c18ca40a3f78259ba59adf2feb7bed59e3c6e0950f7db3ac69534c99ce595f"
+    },
+    "work:asterius-homiliae:u17-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u17-rem-mid",
+      "payload_sha256": "7b27f3bd08637c4fc92a3ac8850083d00849789552d7b28fc8a0f81ebde4b1d0"
+    },
+    "work:asterius-homiliae:u17-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u17-rem-close",
+      "payload_sha256": "aae0fbf5e687872f84cdd30ef6b77da11475e5487e304d43905bef53ca1bbb37"
+    },
+    "work:asterius-homiliae:u18-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u18-open",
+      "payload_sha256": "057de79515c6fca353db37b8d033cb00dd847a94e3001ceb265338f2abc213e0"
+    },
+    "work:asterius-homiliae:u18-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u18-rem-early",
+      "payload_sha256": "38af7b09b4ae07c6be80e0ba6f143222959f5f203faf30a92dd28c54e458c07e"
+    },
+    "work:asterius-homiliae:u18-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u18-rem-mid",
+      "payload_sha256": "3db6483ced0a91da8cadae7e451022ce31f083c88b2bdc189310c2627af1db57"
+    },
+    "work:asterius-homiliae:u18-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u18-rem-close",
+      "payload_sha256": "2dfaf63c2cbc7f75133223930fe98b8afa4de39ca820b5ae860f41c224250263"
+    },
+    "work:asterius-homiliae:u19-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u19-open",
+      "payload_sha256": "4201b842451a30597ce0f702bf00b3bb78a909af333644a4f458d49c22789463"
+    },
+    "work:asterius-homiliae:u19-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u19-rem-early",
+      "payload_sha256": "7c8a8b2d2bf873152711031a779bad8b27b2840ae7347b3c9d63a62421568afd"
+    },
+    "work:asterius-homiliae:u19-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u19-rem-mid",
+      "payload_sha256": "87f29a57dbfa36a94944c7f158d1c477141a24cd4ec4ebe1b5b2542058623aa7"
+    },
+    "work:asterius-homiliae:u19-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u19-rem-close",
+      "payload_sha256": "b895dc567f2663b27fb795b6635af545f6f4e607dd6288ae4bc0654f65676dfe"
+    },
+    "work:asterius-homiliae:u20-open": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u20-open",
+      "payload_sha256": "45f5fec9fd20f1af24a3287a54eb825f7ea5ff0ef94c9b84031a9cb62c3d75d5"
+    },
+    "work:asterius-homiliae:u20-rem-early": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u20-rem-early",
+      "payload_sha256": "78e6ad560a4ad1df6a849a2d4170cdf3111c0c88cec3808a0c870ff83e143807"
+    },
+    "work:asterius-homiliae:u20-rem-mid": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u20-rem-mid",
+      "payload_sha256": "e435d57607c25ed35387cd5d778068eed75aeb9733c16fe8193048b23dd69395"
+    },
+    "work:asterius-homiliae:u20-rem-close": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
+      "section": "u20-rem-close",
+      "payload_sha256": "18c4c23cde0d98400c5a35c1ff5ce4f2257c7961cb15f5c7097891530217bbaa"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -39172,6 +39652,10 @@
     "severianus-de-tribus-pueris": {
       "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json"
+    },
+    "asterius-homiliae": {
+      "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json"
     }
   }
 }
