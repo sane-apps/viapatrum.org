@@ -39039,6 +39039,54 @@
       "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json",
       "section": "u20-rem-close",
       "payload_sha256": "18c4c23cde0d98400c5a35c1ff5ce4f2257c7961cb15f5c7097891530217bbaa"
+    },
+    "work:severianus-fragmenta-colossenses:u01-open": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "dff427818e2ec2f84ffe4c510b6138cef9a6aee23d1854a599bab92a67fd232f"
+    },
+    "work:severianus-fragmenta-colossenses:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "663c23aa502f3e67b859118b490267dbbafdee982e2ac9df74d2ac747db93da2"
+    },
+    "work:severianus-fragmenta-colossenses:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "f73b4520ef445f197382058d16e8223bffa489422182fe94565c9cd5e7c4dfe5"
+    },
+    "work:severianus-fragmenta-colossenses:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "004f916a7e23e520ebe5be12ede38fb425dba7b803e513f4acdb576bc88f3066"
+    },
+    "work:severianus-fragmenta-colossenses:u02-open": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "88fd30778391637d5131ee02915696466a6c9daeb190eaa4e27ccfa78b40e27b"
+    },
+    "work:severianus-fragmenta-colossenses:u02-rem-early": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "9e3f5d245d94bf8e2adf24c704306ff9add5f4e720822a778a8d3668e2308763"
+    },
+    "work:severianus-fragmenta-colossenses:u02-rem-mid": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "3c22e6cf38abdd1b9d84f8c3dd0db16f14270fd278e92d3397236726b4ffa3a7"
+    },
+    "work:severianus-fragmenta-colossenses:u02-rem-close": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "4814406ba4018f26500259650cfc20cf1a865f8ed2474e465bd89c454596980c"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -39656,6 +39704,10 @@
     "asterius-homiliae": {
       "packet": "books/asterius-homiliae/reviews/audit/tip.packet.json",
       "receipt": "books/asterius-homiliae/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-colossenses": {
+      "packet": "books/severianus-fragmenta-colossenses/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-colossenses/reviews/audit/tip.review.json"
     }
   }
 }
