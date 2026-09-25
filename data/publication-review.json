@@ -35319,6 +35319,2142 @@
       "receipt": "books/didymus-fragmentum-hebraeos/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "f8a22c345d008de798ffa31b97e1fdbbfa0e1bc1bef3dd4f9e0ae56fe44aeb8c"
+    },
+    "work:didymus-fragmenta-psalmos:u01-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "88045277385e57e062f4c0794bb49cde1290f6e44fcfa5151b7e8bb0476f31dc"
+    },
+    "work:didymus-fragmenta-psalmos:u01-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "2f1f0d8913e3add5cb270f153a93c6565cfa353ccecc4ef2330472010eedb9d5"
+    },
+    "work:didymus-fragmenta-psalmos:u01-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "0ab4beddc82366e24dddfce7e4f7388af6c9accb790688e1bdc5508ea4a16d24"
+    },
+    "work:didymus-fragmenta-psalmos:u01-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "7c8cc8c7c42e0e6a72aab18f6f90c7b90ae541596133c6318752b06dbf879797"
+    },
+    "work:didymus-fragmenta-psalmos:u02-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "6418f5cfda297feac2d6d024a173518ced2175e92ae6e715c2307d5b9b906c0d"
+    },
+    "work:didymus-fragmenta-psalmos:u02-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "de6a45c27958cd4fd0e8d1b36db67c8fd5ab5048fbadce61ae346b933ba9023b"
+    },
+    "work:didymus-fragmenta-psalmos:u02-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "3f2c764b786dad7b8340836f79eb8731f323d17db3a01cdef328c3d67105d426"
+    },
+    "work:didymus-fragmenta-psalmos:u02-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "7855378996cd7045b0fdcbb456945585fc6fcb7e4fe34dc66521a2511120f5ad"
+    },
+    "work:didymus-fragmenta-psalmos:u03-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "f2cb1a62375695e44f488d74be8b244dcafdb127685ca9f325597bfd5b3bfc7b"
+    },
+    "work:didymus-fragmenta-psalmos:u03-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "b52ebaab8d6859aa8c3123c2e889d4bcaf7fc5a9d5084df98f2b27321dbe091a"
+    },
+    "work:didymus-fragmenta-psalmos:u03-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "e79cf099757c5480faaee43fdc17d5b5eac1cad523593d6aa462fe111b797b35"
+    },
+    "work:didymus-fragmenta-psalmos:u03-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "85157ed556197c8eab73bb5b148833204bcdafcb0097cc923d66baac543479e1"
+    },
+    "work:didymus-fragmenta-psalmos:u04-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "d620167c95f711af6e126701a24dec9076d207cc795ff3bc7ce66d53ba8c7a25"
+    },
+    "work:didymus-fragmenta-psalmos:u04-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "0016031a213696aaf4d714f956ca1564e044f506132e17ca809b8db83682a647"
+    },
+    "work:didymus-fragmenta-psalmos:u04-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "267afb97b1c3cfd4360dff22712cd67cbc82aa5a99318d9cc8cf82aab3a64638"
+    },
+    "work:didymus-fragmenta-psalmos:u04-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "315e3819679c3a23c3bafc0282bdb6a495885971cb06a217899db158bbce94be"
+    },
+    "work:didymus-fragmenta-psalmos:u05-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "9a916a602505f2c32c1213979edbe91335e73735934a3a5622cf2e9d906ae239"
+    },
+    "work:didymus-fragmenta-psalmos:u05-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "698e3eef260b4de58e9595da903bf54e69510ee8bf885a084fad3587860677c7"
+    },
+    "work:didymus-fragmenta-psalmos:u05-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "e30a7a46f42a30aa6a74b57d1ccae1f939135a71ad9bbb66db3d4d76f328585d"
+    },
+    "work:didymus-fragmenta-psalmos:u05-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "1a0f4487caf0d4d29ee4f98d5644fb85a6d90e2afaa6cc61fe74cc9095694745"
+    },
+    "work:didymus-fragmenta-psalmos:u06-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "dc8aae8f9d02e988265e95e41ed5c3138c580a05f0cb9bc8413bd9ebd734c887"
+    },
+    "work:didymus-fragmenta-psalmos:u06-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "9925574942e80caa4f6620936be5e677b55dc0e3131f374ea884fd8fd115c55d"
+    },
+    "work:didymus-fragmenta-psalmos:u06-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "da13be34b493e5a6d62d2ecdb03fbaf90f202d359f2e4d99be6c0a61606c157c"
+    },
+    "work:didymus-fragmenta-psalmos:u06-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "eb8aefc9521b05589822818f57d66179eee1280fd5bb7a45cb0607d937a735e6"
+    },
+    "work:didymus-fragmenta-psalmos:u07-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "7be9bb2fd3b67798154f12ec25c91647f149d5d31377c6f990bb0b07ce494c80"
+    },
+    "work:didymus-fragmenta-psalmos:u07-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "ebaa601997e2a32b319bcd7e99312839ee7672cd3d696a172927bd427f5442dc"
+    },
+    "work:didymus-fragmenta-psalmos:u07-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "09ac0622aa2d4a77002a75da091464b0d9bc5bf525689a5315757eb0fc1765d5"
+    },
+    "work:didymus-fragmenta-psalmos:u07-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "320c4d4703b389ff9d0999278634525d305abf06e1ebef1c1408f76d825bff60"
+    },
+    "work:didymus-fragmenta-psalmos:u08-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "fae5841c275d6916c14589aff289fad355bc07b776f5bafd1377e93000f47a94"
+    },
+    "work:didymus-fragmenta-psalmos:u08-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "e8b8dd532c3db4a14ae5af13d19db9fc70f8364f655be5feade89ef344a8e8a4"
+    },
+    "work:didymus-fragmenta-psalmos:u08-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "269f446e2a9b08990e34a0de9f441114e09a28e60d63b5f86ec23031ea692f8c"
+    },
+    "work:didymus-fragmenta-psalmos:u08-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "7712d1fa0cec0c60464f1608de79a306f73cfc0a320bfa4dc209200cc5ee8ade"
+    },
+    "work:didymus-fragmenta-psalmos:u09-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "677c8c177611ec2a5f52462328400c86b07faceffaf5806fc9e73e5707f3a0e7"
+    },
+    "work:didymus-fragmenta-psalmos:u09-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "eea45403e5c6ad28fbc780a8c27df9af7ff216f59512ed474a6dc12f24c09fd4"
+    },
+    "work:didymus-fragmenta-psalmos:u09-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "a5cfd8503331900bed620a3efd02e0958b8f9e04d40bf82af8ea36ca2b552598"
+    },
+    "work:didymus-fragmenta-psalmos:u09-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "7339029eaf53520793b59a6a3ecb8306c2c5fa7de80b606cd03fc7b741c2ca63"
+    },
+    "work:didymus-fragmenta-psalmos:u10-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "c1fcff1c7d387387ff5f8c5eb23e95cc77d0c684552a85c296d00591bfa9aa50"
+    },
+    "work:didymus-fragmenta-psalmos:u10-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "dc8cd2144dc55d9af32c64ed11b39b99ea3424e1c46b53e7bff8751f1576d764"
+    },
+    "work:didymus-fragmenta-psalmos:u10-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "c7a5e65ef3b3a8a65a4206e67c721d6f3e4878333a75c435aa86db051f511a2f"
+    },
+    "work:didymus-fragmenta-psalmos:u10-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "bd53ba44926d1a3203338c3266d416b0e16b556a2fe217b623c9c13b9c8b8fcf"
+    },
+    "work:didymus-fragmenta-psalmos:u11-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "8049cbc08a3902b3e764dd0a16434c59ba076765bd735129f89014e60b161515"
+    },
+    "work:didymus-fragmenta-psalmos:u11-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "49e9dc2fbe0b21fb13b6e28c016910a4b906f43e4149b0d9650ede13bd41c6aa"
+    },
+    "work:didymus-fragmenta-psalmos:u11-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "9400853eae3129b4b4f306e27538356550910aeb2ca2a4d8513e6a9431971993"
+    },
+    "work:didymus-fragmenta-psalmos:u11-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "8aca3e74ccc71b8f480bbbacb324fe7dcb65d14bc63d8fb42fff4fbf4af433b6"
+    },
+    "work:didymus-fragmenta-psalmos:u12-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "8f44f4e06052e002449ae9d3fa1f4e4000099d6f4493db3822e1a136370948a2"
+    },
+    "work:didymus-fragmenta-psalmos:u12-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "d6312456aafc348fa20da264c312dd119909000b2db9775b4de794fcf4272af0"
+    },
+    "work:didymus-fragmenta-psalmos:u12-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "736365e7c7c2f5d99817b6a42f143d4df59e6c2a2045662ba804f9080b6ac554"
+    },
+    "work:didymus-fragmenta-psalmos:u12-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "bc123e985665fb1a1291d030c1caf861707b61fd1424d52478d369db0b46d8d1"
+    },
+    "work:didymus-fragmenta-psalmos:u13-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "9b77a25e91b2d8795ccedffd251fae176cfd646cc62fb4d6024b318fea25598b"
+    },
+    "work:didymus-fragmenta-psalmos:u13-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "7a99576e890b6a79ccbbddd75b1eddce107d2f10c6622125e86101cf8ccbf84f"
+    },
+    "work:didymus-fragmenta-psalmos:u13-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "4143702980db117ad5a8890863692c71717385e8dfab181840da273648170bb4"
+    },
+    "work:didymus-fragmenta-psalmos:u13-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "8cbcfdd65588585456462ae3c9b355bd2d78e22dd5528d9f113926cfe94da082"
+    },
+    "work:didymus-fragmenta-psalmos:u14-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "50a874d16312dd5b580e4f6ed736bdb0fdbf895c315140faa10dc78148d86651"
+    },
+    "work:didymus-fragmenta-psalmos:u14-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "b23af75b71100c7cf6ed20ee1e4ddeccbe3d820aa458a1c2594b459b1b996706"
+    },
+    "work:didymus-fragmenta-psalmos:u14-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "bbb818aa43e7318e2de50bcdbc4dad4e7fba4bd351b7a74ccab665a2b353d237"
+    },
+    "work:didymus-fragmenta-psalmos:u14-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "e1d5d92b079a64d3cb54c5835bf2094d2da3a6351ced3f7d57e590e44a0f989b"
+    },
+    "work:didymus-fragmenta-psalmos:u15-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "7daaa3997074bc5fc5506e326f27b10f04b05525dea3f314f794680027bedb88"
+    },
+    "work:didymus-fragmenta-psalmos:u15-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "803a17b16ed7f30ada75c45f6ea57b5d18c23011f842ad5eb30038b4999a582b"
+    },
+    "work:didymus-fragmenta-psalmos:u15-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "20c8f02467f0f5d95163d1fb61cfc6c45066b6be047561b15d1dcb05c21f5c54"
+    },
+    "work:didymus-fragmenta-psalmos:u15-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "19ee21623310c5098cd8a8542355e736b46fbe00eeba1b9c1779e819d5214deb"
+    },
+    "work:didymus-fragmenta-psalmos:u16-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "daac584af9127da27741ae1997367d388e9ccf020d1e152c6e20cab33df8b2fd"
+    },
+    "work:didymus-fragmenta-psalmos:u16-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "a59a31c1cb280b218f7482d92c61913e94f5d3a73cfe13d875a63b2afaa4e957"
+    },
+    "work:didymus-fragmenta-psalmos:u16-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "3b58019e9e83a8ad4938b8faff90176bb765b0a80bceeffb4ce83942b3b1c041"
+    },
+    "work:didymus-fragmenta-psalmos:u16-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "98b115fb839a1102aee51654e0217d2af563373234133d81c1f900334d380832"
+    },
+    "work:didymus-fragmenta-psalmos:u17-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-open",
+      "payload_sha256": "0f963cd7d5de548b2293c936cfe7e0b601267b935e18e6eeb31a729d59bafd4e"
+    },
+    "work:didymus-fragmenta-psalmos:u17-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-rem-early",
+      "payload_sha256": "1de4158fcbd00550f4fc872cdb8e7e99a329580e87a09e1cbbe8ae5bdf4fad2c"
+    },
+    "work:didymus-fragmenta-psalmos:u17-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-rem-mid",
+      "payload_sha256": "69d5d9d2a5a8997b0aa6e18addedb88941b0a425f9452dc25a647f18ea709c9c"
+    },
+    "work:didymus-fragmenta-psalmos:u17-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u17-rem-close",
+      "payload_sha256": "7c800ada456ed60ab3d60b025c193bda7ca55a8c1d23fd7291a079d83498c30f"
+    },
+    "work:didymus-fragmenta-psalmos:u18-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-open",
+      "payload_sha256": "f6d4bc698bafcbe07415872578098834c505eeb5b262deb12d455098c974de3e"
+    },
+    "work:didymus-fragmenta-psalmos:u18-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-rem-early",
+      "payload_sha256": "cbd1191b030b16a0b05dacc7006f24c9746cd012b7d044f89ed32db3ae3623d3"
+    },
+    "work:didymus-fragmenta-psalmos:u18-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-rem-mid",
+      "payload_sha256": "141b5ece126ab49d95c28217405bd6b682271a902c7935d071d47faa1d242226"
+    },
+    "work:didymus-fragmenta-psalmos:u18-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u18-rem-close",
+      "payload_sha256": "fc7774e95af48b2899983d1987f18b08856cb90f9ccb02f3daf28fa354acf2c9"
+    },
+    "work:didymus-fragmenta-psalmos:u19-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-open",
+      "payload_sha256": "42ebb43a0c02238bdd1667d8992d77b866870e1ce6dc498f336d23dbffc522fd"
+    },
+    "work:didymus-fragmenta-psalmos:u19-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-rem-early",
+      "payload_sha256": "e1466630d5163d6337e4e3d5e61f455917a7af17080dc8861273531c659a4271"
+    },
+    "work:didymus-fragmenta-psalmos:u19-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-rem-mid",
+      "payload_sha256": "ff559a4b9ce321e3a62d422f4ce21b9d52e7dd89d00c7bed4bd99f818daaae60"
+    },
+    "work:didymus-fragmenta-psalmos:u19-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u19-rem-close",
+      "payload_sha256": "bda25b97b8b4c754fa06506eb8cd191d45632834da393667bbf541affc5fcfd7"
+    },
+    "work:didymus-fragmenta-psalmos:u20-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-open",
+      "payload_sha256": "ae26e0f63f70264559f580de23f6e757bcbfb85e7cc5f2d4f3fe5bc8cbdbdcd9"
+    },
+    "work:didymus-fragmenta-psalmos:u20-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-rem-early",
+      "payload_sha256": "9b7126220da7bc89496019447bcd66ed51301644a1e281c37ff462ec74638659"
+    },
+    "work:didymus-fragmenta-psalmos:u20-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-rem-mid",
+      "payload_sha256": "09d7d3a621e85d7568817b4541e786188f9f2ec92def023a0e5945cd6408ec0a"
+    },
+    "work:didymus-fragmenta-psalmos:u20-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u20-rem-close",
+      "payload_sha256": "36a7d16c66afd09ff85c73114bd951de72bd54181874b93425ea5bd0bffd1e0f"
+    },
+    "work:didymus-fragmenta-psalmos:u21-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-open",
+      "payload_sha256": "b7d210bde938e0d5c4b2be61de1506c1cd69826c2f0b624bd5e62cc488876394"
+    },
+    "work:didymus-fragmenta-psalmos:u21-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-rem-early",
+      "payload_sha256": "d59e66c9360592d09ef3b4116aa0fa38adca26e6d4d57709420119f8b463b7fa"
+    },
+    "work:didymus-fragmenta-psalmos:u21-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-rem-mid",
+      "payload_sha256": "1eacb7e7672ba36bb91998c148ccd77469643c2980fa60c08680f6296bf786cf"
+    },
+    "work:didymus-fragmenta-psalmos:u21-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u21-rem-close",
+      "payload_sha256": "5338674afc32b280877ab1340bccfd776614a7121980b4b842aa3e264113a5ab"
+    },
+    "work:didymus-fragmenta-psalmos:u22-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-open",
+      "payload_sha256": "1ec5dbaec1281aa67f2f0d2502461ee37ee40eae6fc66ea51bac3c55dde96f08"
+    },
+    "work:didymus-fragmenta-psalmos:u22-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-rem-early",
+      "payload_sha256": "645eceb33dde227af312e80abe1c6a4208ad3cb5aa3bd1e7969d4c021a30d87b"
+    },
+    "work:didymus-fragmenta-psalmos:u22-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-rem-mid",
+      "payload_sha256": "a14cc68d15df245bd1837b3ddfac2f956bd4481cd73d97ad13ef1f57b1782176"
+    },
+    "work:didymus-fragmenta-psalmos:u22-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u22-rem-close",
+      "payload_sha256": "283ddea9c5d83e61cb0b8788a03f4ecc19683031d39041f1a5fc3971e9ff9a90"
+    },
+    "work:didymus-fragmenta-psalmos:u23-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-open",
+      "payload_sha256": "108eaf18260cc80ba2e910b4d127fe37c6d1434989e3ce89d202fa799c0171fa"
+    },
+    "work:didymus-fragmenta-psalmos:u23-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-rem-early",
+      "payload_sha256": "a4636617a0d4a7b4d4a77879335c8505da367a9ce65e7534191453738f2e5831"
+    },
+    "work:didymus-fragmenta-psalmos:u23-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-rem-mid",
+      "payload_sha256": "40d97157cabee39b54aa45dde8dd045717d18810b6c120ffd1624c6b625c164d"
+    },
+    "work:didymus-fragmenta-psalmos:u23-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u23-rem-close",
+      "payload_sha256": "c8e02619c3479298034432484fbf41c6ad89d57f0f4799929c1aabae0f41e5f3"
+    },
+    "work:didymus-fragmenta-psalmos:u24-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-open",
+      "payload_sha256": "d3d0ad792f7ea263f532a7727ce92a69e5146c72a859132a4a05ce45049043eb"
+    },
+    "work:didymus-fragmenta-psalmos:u24-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-rem-early",
+      "payload_sha256": "a2a6cd24e7428225ca6430c7f236838dd49e0cfc8172a0323fc6204a94d1e5c0"
+    },
+    "work:didymus-fragmenta-psalmos:u24-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-rem-mid",
+      "payload_sha256": "1c88d48f54805c5d46f6e3927f16980da7d3fdec8587f0cd3cc37361b47afc97"
+    },
+    "work:didymus-fragmenta-psalmos:u24-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u24-rem-close",
+      "payload_sha256": "7443bdcf063ee84677f1c5f36789023208b8d3af14826c912a94041dfc00c568"
+    },
+    "work:didymus-fragmenta-psalmos:u25-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-open",
+      "payload_sha256": "a46d4dbfcdb30b0ba8c9f5b5a3da0bd7b957cece2302bf085629f9ea8ae23ff2"
+    },
+    "work:didymus-fragmenta-psalmos:u25-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-rem-early",
+      "payload_sha256": "cf1d82c0c2bbf2e0c3b304b44ea8805211adeb0c29ced8ecae63cde516420441"
+    },
+    "work:didymus-fragmenta-psalmos:u25-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-rem-mid",
+      "payload_sha256": "7809a773f17fa310bbbc059133cc56b87c9a62f5866de4051ec80592bc07019f"
+    },
+    "work:didymus-fragmenta-psalmos:u25-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u25-rem-close",
+      "payload_sha256": "52e3909b4086d46f162d3b6a6dade5cf6668dbf6cd8efc0ffa58159ecc55e7ec"
+    },
+    "work:didymus-fragmenta-psalmos:u26-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-open",
+      "payload_sha256": "edc12b56acf61838be75ad669357bc69f9fc37b620cbf5266e96aae825c21a84"
+    },
+    "work:didymus-fragmenta-psalmos:u26-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-rem-early",
+      "payload_sha256": "0184d1a8926371fb4840abb22252fcef93997c6875ed54db940f7e386607aa97"
+    },
+    "work:didymus-fragmenta-psalmos:u26-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-rem-mid",
+      "payload_sha256": "05e90a5079a9b6df9ff6eefbcafc3a1b2843435e048a10bfdba4539076114e50"
+    },
+    "work:didymus-fragmenta-psalmos:u26-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u26-rem-close",
+      "payload_sha256": "2cc594c6cf7804f53cd87a2bfd9d99468a3232f6719d4b34c70f86eb3248a70f"
+    },
+    "work:didymus-fragmenta-psalmos:u27-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-open",
+      "payload_sha256": "fb1cec94352fc33b6b313a43b84b374198774e484eef1b76b96b8db861c7d73b"
+    },
+    "work:didymus-fragmenta-psalmos:u27-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-rem-early",
+      "payload_sha256": "de13588d06e7e69d13f13711f913456d6e4334e585da1aa15a8b4c1e5d21d315"
+    },
+    "work:didymus-fragmenta-psalmos:u27-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-rem-mid",
+      "payload_sha256": "7333a72f3118e16d136f4c314fbb4cae4ab50337cc87c69af08188a95a67b61d"
+    },
+    "work:didymus-fragmenta-psalmos:u27-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u27-rem-close",
+      "payload_sha256": "800f1cd58fd0da5e4fc20ae8e9b01b8b7685f71d5019a5cd4e0834b05ab3311b"
+    },
+    "work:didymus-fragmenta-psalmos:u28-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-open",
+      "payload_sha256": "e5679d02c3e1d3feadd84de2f5a92ab0644c48560ae5e036edcf7e0df7057915"
+    },
+    "work:didymus-fragmenta-psalmos:u28-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-rem-early",
+      "payload_sha256": "d541808066b7e19f7b712acdbdd80aff08a1ad8049b0524cc79fae410b614f5c"
+    },
+    "work:didymus-fragmenta-psalmos:u28-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-rem-mid",
+      "payload_sha256": "deda091f77d86b6d1ec2e50ddc440a6838cdc87f89b90b952eee04589b55d9a7"
+    },
+    "work:didymus-fragmenta-psalmos:u28-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u28-rem-close",
+      "payload_sha256": "e9606ddce62a6584198948610b4033a1bbf96147d93df4ebfb440683dfad292e"
+    },
+    "work:didymus-fragmenta-psalmos:u29-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-open",
+      "payload_sha256": "411eb8bbd9537db4d8c4e00ac02a74e7b54133affbd3d5b18f5e92468c3de8ce"
+    },
+    "work:didymus-fragmenta-psalmos:u29-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-rem-early",
+      "payload_sha256": "e287ab6a72862c4fc3377c4dcd603d5ad090852ab166416254c497399a2e0218"
+    },
+    "work:didymus-fragmenta-psalmos:u29-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-rem-mid",
+      "payload_sha256": "03feb2bc0350e93bb8b07038f1e359f262eb80a812939354ce86a07df63107f7"
+    },
+    "work:didymus-fragmenta-psalmos:u29-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u29-rem-close",
+      "payload_sha256": "8156c3c9df347b07b708c43d2491cf1b4a6e1fc8c605cceb428915981a6b311a"
+    },
+    "work:didymus-fragmenta-psalmos:u30-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-open",
+      "payload_sha256": "9088dde1b4c57a438507d3deb4490248308919078a55fd01cd5175b881a94d76"
+    },
+    "work:didymus-fragmenta-psalmos:u30-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-rem-early",
+      "payload_sha256": "5cd9edf9e9aa60800cddc83d9dae786060ee032fe728ef45289866cdc505432d"
+    },
+    "work:didymus-fragmenta-psalmos:u30-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-rem-mid",
+      "payload_sha256": "cb336c98f4a364e200046fdf8f22a36eed2a9dddb7ce97a30dee8c35ba6fd8ee"
+    },
+    "work:didymus-fragmenta-psalmos:u30-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u30-rem-close",
+      "payload_sha256": "c6ea253af1bdec50b489e8c1320a00693d69d088e3f11226e519f29d44e21637"
+    },
+    "work:didymus-fragmenta-psalmos:u31-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-open",
+      "payload_sha256": "878cac8632649938651c8596f3f7a55207bc0e3016ec5d5f6c5221de47dd04c0"
+    },
+    "work:didymus-fragmenta-psalmos:u31-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-rem-early",
+      "payload_sha256": "b34ba060f3a6009c430327199e88d219576ac4b9f252569280e99769109ceb03"
+    },
+    "work:didymus-fragmenta-psalmos:u31-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-rem-mid",
+      "payload_sha256": "9c296b244b617e85119ee76e959bb909ef05880ab13e3be6bd6e10085a24ef2b"
+    },
+    "work:didymus-fragmenta-psalmos:u31-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u31-rem-close",
+      "payload_sha256": "e82acf93a83471598f02a7410bcb9dca1c8631cd56714b203052db42b2bfa225"
+    },
+    "work:didymus-fragmenta-psalmos:u32-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-open",
+      "payload_sha256": "e913403c042d62a621f9b3b0b3ba17672fa1088fae063259ace97522c8ce3b77"
+    },
+    "work:didymus-fragmenta-psalmos:u32-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-rem-early",
+      "payload_sha256": "aafda581dd98d81d255ec0e523ca4d470bd860ad01f5010f130c90126303fc81"
+    },
+    "work:didymus-fragmenta-psalmos:u32-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-rem-mid",
+      "payload_sha256": "acd1ea755c5052901d683ae26734bd5a450ae8b32ef6c9dc397644c5f17faa28"
+    },
+    "work:didymus-fragmenta-psalmos:u32-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u32-rem-close",
+      "payload_sha256": "db1fb7cfa0715da93b7cce7e813d8a77412b556c6e6aa907efc8e36178ef3c44"
+    },
+    "work:didymus-fragmenta-psalmos:u33-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-open",
+      "payload_sha256": "247780b10077febda15dc4af4e4e8d1222e0d94bb9dc3291f270b1db3afd8ab4"
+    },
+    "work:didymus-fragmenta-psalmos:u33-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-rem-early",
+      "payload_sha256": "b235573ae349d80c7992909e144aec110fb489036a5a83d0247b122c5c006d0c"
+    },
+    "work:didymus-fragmenta-psalmos:u33-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-rem-mid",
+      "payload_sha256": "e0dc3061f4facf4a22c76c5fb28df9bc9ee664eff56e4415cae91e37452f535c"
+    },
+    "work:didymus-fragmenta-psalmos:u33-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u33-rem-close",
+      "payload_sha256": "820dede5c7eaec9fc52514b7b868dced9bdbb924ae195de816a04cd70fbdf048"
+    },
+    "work:didymus-fragmenta-psalmos:u34-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-open",
+      "payload_sha256": "e068ec4a831c29eb80d6b4d063d83e36b2597cc7006e188124d16ff637cb19d8"
+    },
+    "work:didymus-fragmenta-psalmos:u34-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-rem-early",
+      "payload_sha256": "5ec1f850527aee9180726547caa68723b5e5d92010a513039f09b0de1193d4ea"
+    },
+    "work:didymus-fragmenta-psalmos:u34-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-rem-mid",
+      "payload_sha256": "1a5424c8d1d086d2d4feccb9f58bdff96af2ccdb05ae53afe36272d326ff8234"
+    },
+    "work:didymus-fragmenta-psalmos:u34-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u34-rem-close",
+      "payload_sha256": "6525a4dfb04c60ca1a68ed3c7cf1800f6261aca74a51ffc5da7c61cf4fafba2f"
+    },
+    "work:didymus-fragmenta-psalmos:u35-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-open",
+      "payload_sha256": "287af19fefc7e6ff3d385d2f77daee073381510995bed74cb4f1f7db66117ea6"
+    },
+    "work:didymus-fragmenta-psalmos:u35-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-rem-early",
+      "payload_sha256": "a3f1e535f6279a6ad58351fdc823b37177dd7c3d645c5a67a4fd5b35292035ce"
+    },
+    "work:didymus-fragmenta-psalmos:u35-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-rem-mid",
+      "payload_sha256": "1fbfb053821d1c0715ade09b3da69164ab0551f60bd5cf52860f99eaf015df44"
+    },
+    "work:didymus-fragmenta-psalmos:u35-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u35-rem-close",
+      "payload_sha256": "90f8f26fd569c51ee6fb62cfae5a40a7c645e95652cbac4c6b8229f7fefbd994"
+    },
+    "work:didymus-fragmenta-psalmos:u36-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-open",
+      "payload_sha256": "5502dad4355cab9d665410244386c7c9f7983831173646816c6f525571760b99"
+    },
+    "work:didymus-fragmenta-psalmos:u36-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-rem-early",
+      "payload_sha256": "11eb14d117b4c7635b3b4633e7aff745c4efc8f1ef1bdccf49412ca265be08c9"
+    },
+    "work:didymus-fragmenta-psalmos:u36-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-rem-mid",
+      "payload_sha256": "a6eb0c457605e1f91f2220568409e934914c2d2bd631bcfa9d27f477e09a247e"
+    },
+    "work:didymus-fragmenta-psalmos:u36-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u36-rem-close",
+      "payload_sha256": "5e799e14ec89b2178a5a3cc6c1f1f8bdf328ac7c84d4cd0a7765adb771a08ee9"
+    },
+    "work:didymus-fragmenta-psalmos:u37-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-open",
+      "payload_sha256": "4ee2ed989a7501699e0c84d8641b0c470491d327b93d32add042092157bcbd81"
+    },
+    "work:didymus-fragmenta-psalmos:u37-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-rem-early",
+      "payload_sha256": "e1a70fcb70cfd04e816359b2e5f1e9f675cd4fa2ea7e6c70d431b6e4c9c1b0b2"
+    },
+    "work:didymus-fragmenta-psalmos:u37-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-rem-mid",
+      "payload_sha256": "a71e28df9eb471a45fd810e583cf1f90130ba9f977dca8867757ab843bcee888"
+    },
+    "work:didymus-fragmenta-psalmos:u37-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u37-rem-close",
+      "payload_sha256": "da4b77851919280882c5088ced8d933e9a713221d03d4b5bffefc142fe8d41ce"
+    },
+    "work:didymus-fragmenta-psalmos:u38-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-open",
+      "payload_sha256": "87f5886f74ab80f9de4e24a222b60ef29a850411900e34a0725e13a48ae2f90a"
+    },
+    "work:didymus-fragmenta-psalmos:u38-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-rem-early",
+      "payload_sha256": "b9dd79b6405b919f215203458ec2c147fb8ccb6ddf85872319a7a5695af0f74f"
+    },
+    "work:didymus-fragmenta-psalmos:u38-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-rem-mid",
+      "payload_sha256": "252a7d6c16bc4641f85ef4ff6336aff035e3045c4d196a161236912e188d504c"
+    },
+    "work:didymus-fragmenta-psalmos:u38-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u38-rem-close",
+      "payload_sha256": "5fad770390871f161634aa394ce99a7181c59dca613417ef8627c417c0f68ee0"
+    },
+    "work:didymus-fragmenta-psalmos:u39-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-open",
+      "payload_sha256": "8a574d413283f68fe1efcaed715216a9adfc330499cef36b9c72d5ec3c7ad0f7"
+    },
+    "work:didymus-fragmenta-psalmos:u39-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-rem-early",
+      "payload_sha256": "c497db4407b23ffa4e5b0ec27e6780058baabeb9a5fea750c421e58032b10ec1"
+    },
+    "work:didymus-fragmenta-psalmos:u39-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-rem-mid",
+      "payload_sha256": "202387b4fe63c8b1f192ddf953fb95c1e688d6a34f17ed9d474e778a1ba1e2bf"
+    },
+    "work:didymus-fragmenta-psalmos:u39-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u39-rem-close",
+      "payload_sha256": "f9da87001c176e6828040e2591b11822689c37662a6e8a9bb5fc30d3dbab0907"
+    },
+    "work:didymus-fragmenta-psalmos:u40-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-open",
+      "payload_sha256": "bc9a834fc5f5901e0d1bd1f9d4747e4c27ce7afa6d019c41cc6ce093deb7e867"
+    },
+    "work:didymus-fragmenta-psalmos:u40-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-rem-early",
+      "payload_sha256": "37bca5e2c8c95790d16e576ae59b969d7ac9de7d5abab44de09689f81ee66154"
+    },
+    "work:didymus-fragmenta-psalmos:u40-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-rem-mid",
+      "payload_sha256": "36ea5969f76b0c149b690083275057165439411c3324a94f11915c4bef72e3c6"
+    },
+    "work:didymus-fragmenta-psalmos:u40-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u40-rem-close",
+      "payload_sha256": "7a5e174dd850a1a80044879a791198a6c555f754b2cc8fec58aaa754a3d29d9c"
+    },
+    "work:didymus-fragmenta-psalmos:u41-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-open",
+      "payload_sha256": "7b85f0356adba35128b7d825f723576ad21f508ef953edced6e4bf4165286c68"
+    },
+    "work:didymus-fragmenta-psalmos:u41-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-rem-early",
+      "payload_sha256": "20961f481bd99f1845c8174f9d5effa716059e90225857bb3211f13f25f2f319"
+    },
+    "work:didymus-fragmenta-psalmos:u41-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-rem-mid",
+      "payload_sha256": "e6f2b1838853ee13d8a6236c31fbd6e3d1e35d1bf1a3e5415e814d21d1bac386"
+    },
+    "work:didymus-fragmenta-psalmos:u41-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u41-rem-close",
+      "payload_sha256": "8170976e5c58848d9edb236484417f2f3bde97eddf3bc0acc336e62eaf1bb5ab"
+    },
+    "work:didymus-fragmenta-psalmos:u42-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-open",
+      "payload_sha256": "7e27fc785a97f21a33542de2c1b98ab93647f191098ca51f2242835d8faf2edc"
+    },
+    "work:didymus-fragmenta-psalmos:u42-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-rem-early",
+      "payload_sha256": "70a1fa801c55221efd4470d33df2b0a71a63b7c4ed605fe15492816f97f7abcf"
+    },
+    "work:didymus-fragmenta-psalmos:u42-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-rem-mid",
+      "payload_sha256": "814583ef9d02b39fd77b472f7ffbbd96e177dd811bedae2c7606a055c3da6492"
+    },
+    "work:didymus-fragmenta-psalmos:u42-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u42-rem-close",
+      "payload_sha256": "0042baee2ff976eee143632bed081cb9778a7a45448ad4d4990802569d52bb78"
+    },
+    "work:didymus-fragmenta-psalmos:u43-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-open",
+      "payload_sha256": "ccb8356a2212581a0807b45777a36c2e5e6b5602b36382bfdd0c185b6089c28d"
+    },
+    "work:didymus-fragmenta-psalmos:u43-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-rem-early",
+      "payload_sha256": "eaba46ae6551c0d7c00005a01656a6250291112a0f6333c21682a60e89b3f636"
+    },
+    "work:didymus-fragmenta-psalmos:u43-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-rem-mid",
+      "payload_sha256": "3b96d187071be7628f4ca900075a6d42b40f6bfc23b1c26aa88da77032098e5d"
+    },
+    "work:didymus-fragmenta-psalmos:u43-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u43-rem-close",
+      "payload_sha256": "956c8dfe6e78031a6d6fedb765aa468ac600794e25103093abe84a7382f568b2"
+    },
+    "work:didymus-fragmenta-psalmos:u44-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-open",
+      "payload_sha256": "2826541640fb52553b1e9f6bad0270074b22c43c6c497ed71e0224c8cb97fe24"
+    },
+    "work:didymus-fragmenta-psalmos:u44-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-rem-early",
+      "payload_sha256": "fa09ff74200ade0f991964ed1420e43cd76b5af33dd27ddfa9e2cb263500f8a2"
+    },
+    "work:didymus-fragmenta-psalmos:u44-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-rem-mid",
+      "payload_sha256": "65b0611093ef529e914100b2f6519215a6faf9ebe5a82159d12c5c8761c652cb"
+    },
+    "work:didymus-fragmenta-psalmos:u44-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u44-rem-close",
+      "payload_sha256": "0f01e48eb395630897f1995e0bb9da769fc70f0bbc7a8f3167ce2c8b9c07d27c"
+    },
+    "work:didymus-fragmenta-psalmos:u45-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-open",
+      "payload_sha256": "9711ccbdde07adb28eef145042fa31b987fe601247e6517f21928baeaeadae9f"
+    },
+    "work:didymus-fragmenta-psalmos:u45-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-rem-early",
+      "payload_sha256": "01d0def8ebb16ca634091705e172654c2dfe3bcf5e7bc54921824850d6740ba1"
+    },
+    "work:didymus-fragmenta-psalmos:u45-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-rem-mid",
+      "payload_sha256": "3e306cfba5726fbebc18a3243c23428ec5a0ac5e292e4c15d0b5057123e6636f"
+    },
+    "work:didymus-fragmenta-psalmos:u45-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u45-rem-close",
+      "payload_sha256": "3505b5f33ce879934d02bbb5ed74960ce38315466720066417f9680b996e57bd"
+    },
+    "work:didymus-fragmenta-psalmos:u46-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-open",
+      "payload_sha256": "23444c3c5d58bc766d248997ec14c9bb86cb66eba962640a8435a7372dce1792"
+    },
+    "work:didymus-fragmenta-psalmos:u46-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-rem-early",
+      "payload_sha256": "766c792ebafb02ac68e44f564c3d88d25948992bcb1660f68d4c8ab76815983f"
+    },
+    "work:didymus-fragmenta-psalmos:u46-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-rem-mid",
+      "payload_sha256": "0729c40ecd3bdb386db36832892a6570d80ed7fd98485e6958ebd50e9feb3c60"
+    },
+    "work:didymus-fragmenta-psalmos:u46-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u46-rem-close",
+      "payload_sha256": "9d051f57f4e3f19b18c98cece33192d6685261e8b8be39b668834587c1138ba0"
+    },
+    "work:didymus-fragmenta-psalmos:u47-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-open",
+      "payload_sha256": "2ad6615f224b31e6664dc5f5c6cdb30e82c3a0efc27ee9f3a59e96efff0711a2"
+    },
+    "work:didymus-fragmenta-psalmos:u47-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-rem-early",
+      "payload_sha256": "5e268fd66a150026a4404531e10d8d5ac10abcd3fc1e225939c3498007b1b326"
+    },
+    "work:didymus-fragmenta-psalmos:u47-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-rem-mid",
+      "payload_sha256": "898daf8d51ecd7928c913e5bdea0c2291982d45f85a71e89188b09706844cc53"
+    },
+    "work:didymus-fragmenta-psalmos:u47-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u47-rem-close",
+      "payload_sha256": "37f14e126ec4260560c9e539d4c5e147b76fb8cdf41b2384b9bcee333cd2829c"
+    },
+    "work:didymus-fragmenta-psalmos:u48-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-open",
+      "payload_sha256": "222264cc2f8feb9995e84a37e89e656313fa2c931fc4ab045f34cfba5b417298"
+    },
+    "work:didymus-fragmenta-psalmos:u48-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-rem-early",
+      "payload_sha256": "9f725e74a4abdb3709d8d37fc1133eafa8c4cc0d552c894882ed0a3918369f8c"
+    },
+    "work:didymus-fragmenta-psalmos:u48-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-rem-mid",
+      "payload_sha256": "83ca3d8f3ca53464d9db45c14f1d5b2b7694b2dc3beafdc91623ebf77d06e4f4"
+    },
+    "work:didymus-fragmenta-psalmos:u48-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u48-rem-close",
+      "payload_sha256": "9fa4119c3dd640b87725ebbe1f98eef645e0b89752d92798ed17bf04c5caa2ef"
+    },
+    "work:didymus-fragmenta-psalmos:u49-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-open",
+      "payload_sha256": "77268f33ee62cc1e994bd23ee3150991d4503665cecb8a0b3bef831d34fed8f5"
+    },
+    "work:didymus-fragmenta-psalmos:u49-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-rem-early",
+      "payload_sha256": "9fa0818e66056e692845a34a811fe5d363385fdbac4307944df98fb7f5d894a8"
+    },
+    "work:didymus-fragmenta-psalmos:u49-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-rem-mid",
+      "payload_sha256": "9d56c70e8c3c8ec1e3ef2a5ab0878856b4899c849250d46734fd70aef0bcb9b6"
+    },
+    "work:didymus-fragmenta-psalmos:u49-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u49-rem-close",
+      "payload_sha256": "baab0be87e1a51b08258a1813fac6b68073b53b98c786a7b29d1ddcd135b62af"
+    },
+    "work:didymus-fragmenta-psalmos:u50-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-open",
+      "payload_sha256": "36e0eaf3f8becf15829eacb0d65b930d69b469d6c813cabda85ee00352438dfe"
+    },
+    "work:didymus-fragmenta-psalmos:u50-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-rem-early",
+      "payload_sha256": "24a87e49b62f3d4982b8bd87f1aa8955b8ffc148e9d3bed5c908ce7cb8eb9cac"
+    },
+    "work:didymus-fragmenta-psalmos:u50-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-rem-mid",
+      "payload_sha256": "5c1fd81ed140192e5975c3f2360fee887283dba031d469c53f53d03049e2166f"
+    },
+    "work:didymus-fragmenta-psalmos:u50-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u50-rem-close",
+      "payload_sha256": "3c991122c4b1a4c925fb24ee1104548d2f4913f027cd079c4f914be6d8724dc0"
+    },
+    "work:didymus-fragmenta-psalmos:u51-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-open",
+      "payload_sha256": "1d13217258ef19777c1aa7938cc95781f8033d2f408536512fa09f474f02cbea"
+    },
+    "work:didymus-fragmenta-psalmos:u51-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-rem-early",
+      "payload_sha256": "412286fd522f3a2de3f1d0529af32451985c72f440694eb8378e71c70b8bf590"
+    },
+    "work:didymus-fragmenta-psalmos:u51-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-rem-mid",
+      "payload_sha256": "c3bd6b05ca7a81227d3a689d7621ca558a353aa92b97fbaedc295b0015d34385"
+    },
+    "work:didymus-fragmenta-psalmos:u51-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u51-rem-close",
+      "payload_sha256": "332c2ff7960e40e2d17ab94f3a7235aa89f39ec644266f481b68cfee938ac00e"
+    },
+    "work:didymus-fragmenta-psalmos:u52-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-open",
+      "payload_sha256": "f81b08c182015aa36d648a010f48ba1b63fb84c3c29d89da827b2b59ad56df75"
+    },
+    "work:didymus-fragmenta-psalmos:u52-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-rem-early",
+      "payload_sha256": "ae28e29645df3c8333b7f11f649121a140529e1619cefd63228b9f278871e281"
+    },
+    "work:didymus-fragmenta-psalmos:u52-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-rem-mid",
+      "payload_sha256": "d10bd3a100c307aa8359a5e6788a0e273d44f64bd9efdb49320b617802c7a85f"
+    },
+    "work:didymus-fragmenta-psalmos:u52-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u52-rem-close",
+      "payload_sha256": "d468292ea0bfd426ec3813b5066d2814490b64384e2f04f5c9210eed8c5a3c83"
+    },
+    "work:didymus-fragmenta-psalmos:u53-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-open",
+      "payload_sha256": "07664dacb077286a816aa1423c146c10a890961dffc24064b91ab891554064dd"
+    },
+    "work:didymus-fragmenta-psalmos:u53-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-rem-early",
+      "payload_sha256": "b8d978353a274ca4065714310138a81820d942bd4cb40eba40630fb564857ce7"
+    },
+    "work:didymus-fragmenta-psalmos:u53-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-rem-mid",
+      "payload_sha256": "6e9efbb7a74b89b7b1499092356e43f24ba6270978d8066ff63d66a72fa95fda"
+    },
+    "work:didymus-fragmenta-psalmos:u53-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u53-rem-close",
+      "payload_sha256": "45502ff65de0122791c883d22992c3eea88ce09311a3c0a8e361908e448f5fff"
+    },
+    "work:didymus-fragmenta-psalmos:u54-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-open",
+      "payload_sha256": "16b28fc28d235cfbc603d61d795df6d04da7021f72ec2aa6717f94a67613c0fc"
+    },
+    "work:didymus-fragmenta-psalmos:u54-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-rem-early",
+      "payload_sha256": "34b00ab7856114e8b3c7e5834d828decae6e3b8b10c64d49a1434e0b63e23302"
+    },
+    "work:didymus-fragmenta-psalmos:u54-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-rem-mid",
+      "payload_sha256": "43acf5a9e63028be21a139c6ff837308d7c1873f8af6c904d93bf3d0e7ace772"
+    },
+    "work:didymus-fragmenta-psalmos:u54-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u54-rem-close",
+      "payload_sha256": "0da53b002a410f6a4427a1ee6c8f30e12e5a00ed1b6036f7a2a4bf5f5b7c7596"
+    },
+    "work:didymus-fragmenta-psalmos:u55-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-open",
+      "payload_sha256": "053fea48a51600fca6ed8490f233e19ce4ae28381b849383c6ffdf4c4348c9c9"
+    },
+    "work:didymus-fragmenta-psalmos:u55-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-rem-early",
+      "payload_sha256": "3d88a5456de92be6ef0124a10a9d7331397fbfdcc45b80e1e5a5aad798e5f34f"
+    },
+    "work:didymus-fragmenta-psalmos:u55-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-rem-mid",
+      "payload_sha256": "c6688a870aaea0cc62518f09403afff12f850ae5feeb3881a31247d25aa4f9ef"
+    },
+    "work:didymus-fragmenta-psalmos:u55-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u55-rem-close",
+      "payload_sha256": "b3c9c9a90115f94ccad57544696bdaa2c85867bef3df3ab4fd5832e4085cd69b"
+    },
+    "work:didymus-fragmenta-psalmos:u56-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-open",
+      "payload_sha256": "3b56715d8a6cdb3fc2f2f61dd68f2081bc5652323a1d6ec0f0a5209b6b4dbb21"
+    },
+    "work:didymus-fragmenta-psalmos:u56-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-rem-early",
+      "payload_sha256": "25610293f3c27743b91647b37ea52052f828f0467879a2d3a92bb52998ee177f"
+    },
+    "work:didymus-fragmenta-psalmos:u56-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-rem-mid",
+      "payload_sha256": "46fd8c371c7aeefc08cc09bec9ed55d9dfce8350be7199a0f1cd61e84b8d2b1f"
+    },
+    "work:didymus-fragmenta-psalmos:u56-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u56-rem-close",
+      "payload_sha256": "a7f7eb5e8900d7717979f8895c440b872cab5830e784e98505f10aedef062361"
+    },
+    "work:didymus-fragmenta-psalmos:u57-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u57-open",
+      "payload_sha256": "494ab83aa3df6739c6f218cff3c83b08e864c096abddcfcc64244a17f9623947"
+    },
+    "work:didymus-fragmenta-psalmos:u57-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u57-rem-early",
+      "payload_sha256": "31ca1ef1e0e7ca010d42f12d10ba002e28196e994e8b266fcb4035a43ad46163"
+    },
+    "work:didymus-fragmenta-psalmos:u57-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u57-rem-mid",
+      "payload_sha256": "763491da2eb3a25f03bc1f9b319ae7159077b935894ffe0aa298e5300bf19b87"
+    },
+    "work:didymus-fragmenta-psalmos:u57-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u57-rem-close",
+      "payload_sha256": "c0d821568e758721e24f2a73cb8b48557e8d3031c2d87a0aabe73c8e4f150071"
+    },
+    "work:didymus-fragmenta-psalmos:u58-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u58-open",
+      "payload_sha256": "9df5a5a979afed5ed541d63a682ddc106ecb3dcc38561dd271d141a0d27cdff1"
+    },
+    "work:didymus-fragmenta-psalmos:u58-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u58-rem-early",
+      "payload_sha256": "0caf481ceaf66bb33244c8bd22bfe87bc31afdc9be06288328969507f29fb411"
+    },
+    "work:didymus-fragmenta-psalmos:u58-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u58-rem-mid",
+      "payload_sha256": "f1a257616588962fd48f159fba85adcba2089abc86b7e10356ee87fcde78e30a"
+    },
+    "work:didymus-fragmenta-psalmos:u58-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u58-rem-close",
+      "payload_sha256": "6b01ffed09397e37e7a1ad19b038c341f7b45254786c9957fb7f49042199e6cb"
+    },
+    "work:didymus-fragmenta-psalmos:u59-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u59-open",
+      "payload_sha256": "edea1860c41ade70a588b35f44ee618c75dc224158553cee1c00a4c89e444bef"
+    },
+    "work:didymus-fragmenta-psalmos:u59-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u59-rem-early",
+      "payload_sha256": "16a67b5a1efd4c63c1b292fbfe18b0706f5a6715c3a3f8d26f8cf1530210576f"
+    },
+    "work:didymus-fragmenta-psalmos:u59-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u59-rem-mid",
+      "payload_sha256": "05fa28b2ed8febf9e5fd5e94447a269af30fca85c9ddc077cde521ca43b2abc7"
+    },
+    "work:didymus-fragmenta-psalmos:u59-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u59-rem-close",
+      "payload_sha256": "46995325ae780ada5635fbb38945c1c9a11017c822e2ed436c22ccb63415520e"
+    },
+    "work:didymus-fragmenta-psalmos:u60-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u60-open",
+      "payload_sha256": "2858e3dfbae50d3ce53971d135c1a3b1f71480aa8d7df80d4001427882ca2217"
+    },
+    "work:didymus-fragmenta-psalmos:u60-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u60-rem-early",
+      "payload_sha256": "1f20d872ca0554d93a48fa9377f47bf33d8ea4687d9928b1db37427a09af0c88"
+    },
+    "work:didymus-fragmenta-psalmos:u60-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u60-rem-mid",
+      "payload_sha256": "085f6dcd0ca24234b93a95c013e7945db1acf02c4a570097dc2b99dd0b1698f3"
+    },
+    "work:didymus-fragmenta-psalmos:u60-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u60-rem-close",
+      "payload_sha256": "d53179655eeba74d0cdb99cac83add69ceb16268496517071f9915d5262a84cc"
+    },
+    "work:didymus-fragmenta-psalmos:u61-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u61-open",
+      "payload_sha256": "885a341c95510cceb3da0ae7c81fae05df1126ef642e657f1d7f16d2c3376856"
+    },
+    "work:didymus-fragmenta-psalmos:u61-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u61-rem-early",
+      "payload_sha256": "73f3b81bc8f449d4e3dfd9a1697c0767043e1ea312151f675d5e07c3f736e871"
+    },
+    "work:didymus-fragmenta-psalmos:u61-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u61-rem-mid",
+      "payload_sha256": "1419e8614f375ac37d9d88167307205e31d1baf6668cc22c7056acf76189fecc"
+    },
+    "work:didymus-fragmenta-psalmos:u61-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u61-rem-close",
+      "payload_sha256": "bc4261bb148e681c0345553d2aab976ea4f4f1394bc719d2ed3b70e877948657"
+    },
+    "work:didymus-fragmenta-psalmos:u62-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u62-open",
+      "payload_sha256": "0225090b3932e93e8ed735ae6dda39ada383f9b9447faff78eef7050b60e1e80"
+    },
+    "work:didymus-fragmenta-psalmos:u62-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u62-rem-early",
+      "payload_sha256": "feec429bb7722631621e0df32f1099d969bc61aefe9194877307c964be8f8705"
+    },
+    "work:didymus-fragmenta-psalmos:u62-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u62-rem-mid",
+      "payload_sha256": "3cdbd0b10df3aa62376bd3c0ba4d0f3c4a6b4038ab1c9342c019443cf762a7df"
+    },
+    "work:didymus-fragmenta-psalmos:u62-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u62-rem-close",
+      "payload_sha256": "745ec4360fb104ae2f6afac695bb37e1ef60fd9b3fc443fdc1fa23c8a537a1f5"
+    },
+    "work:didymus-fragmenta-psalmos:u63-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u63-open",
+      "payload_sha256": "041a1677c41a9d7fdb4697fc7183e6258a9936f3f88570861fc8679ff31e87ec"
+    },
+    "work:didymus-fragmenta-psalmos:u63-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u63-rem-early",
+      "payload_sha256": "7e9a129474bb5fa8b39f337a6dd3fc165dc11b265d68447096ab4c43a44868b3"
+    },
+    "work:didymus-fragmenta-psalmos:u63-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u63-rem-mid",
+      "payload_sha256": "2f80dc862ffed215128c077c24f4b085b163138614b7b058f8b9a5ccd156043a"
+    },
+    "work:didymus-fragmenta-psalmos:u63-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u63-rem-close",
+      "payload_sha256": "ca088e4e13f82f51fc24b7e41f15cdfa3a85133ad5ec4f1019f0a10731149b8e"
+    },
+    "work:didymus-fragmenta-psalmos:u64-open": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u64-open",
+      "payload_sha256": "6a69242fbb745cfe492fe36588fc9831155bf15b5a586a6e6ea56983b3f73445"
+    },
+    "work:didymus-fragmenta-psalmos:u64-rem-early": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u64-rem-early",
+      "payload_sha256": "f853fe9e36c1e29b59e15fc6fc1bc690fa4e448a792dc39eb537c08dccc9f150"
+    },
+    "work:didymus-fragmenta-psalmos:u64-rem-mid": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u64-rem-mid",
+      "payload_sha256": "b80719d611ff61fed842b2b08a2930e3851bae12873d2f6223d6c43f7c346fca"
+    },
+    "work:didymus-fragmenta-psalmos:u64-rem-close": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json",
+      "section": "u64-rem-close",
+      "payload_sha256": "5c7edd317b3ed7bb045a40d660a258478817407cf044a85c7f1aecd236148567"
+    },
+    "work:didymus-in-genesim:u01-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "f3341b98310f877091e9def7b9fc49abd34cc9a1004448542c74d7684efc8b98"
+    },
+    "work:didymus-in-genesim:u01-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "f0b44eaf8f0c1c6d138a00504a1e965b0394869c17884e9ba1f1299a7ed308e1"
+    },
+    "work:didymus-in-genesim:u01-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "d5ce17d03b9747186ed4d78013e62dbb514e3a1ad350ffdc4f8428ab8b6c134d"
+    },
+    "work:didymus-in-genesim:u01-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "de6458f8a44059902ff915f4d4afba71d0bff0749b2e2e0653756c4580b13c25"
+    },
+    "work:didymus-in-genesim:u02-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "4a8cbf135e0ccfe026cfe7ac41bc9e567de2680ffda218b77383e02d9b4e6966"
+    },
+    "work:didymus-in-genesim:u02-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "c0b5cf35162cdc7328f241364abf312bef5a3a1edeacdc8501b23a41521656e9"
+    },
+    "work:didymus-in-genesim:u02-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "c71dfa39c480f2a22173cac6134035e7d6e694e9ac652c46e7b80569539ca8a5"
+    },
+    "work:didymus-in-genesim:u02-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "fe1d14c582afa3f0e68e02a7fad71ccefd56ceff84f3fc3018eb74a7d9a8a425"
+    },
+    "work:didymus-in-genesim:u03-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "e615085337d2768619ab8a9fdad6fb2a8624a11d9d37e7a65dae63216645abc4"
+    },
+    "work:didymus-in-genesim:u03-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "9447c2231682ce2da6583defac0c730eb2a27564e70fc38f59a02b45b956b895"
+    },
+    "work:didymus-in-genesim:u03-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "85b43c2e275abd2384e3e33ad351ea1e3113de6a06509f08d9ec7885c9179a78"
+    },
+    "work:didymus-in-genesim:u03-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "1d69dc135df672d7fcbd5cfaf7089b36c51bc8ef5bb52b54f72c6cd036a041d6"
+    },
+    "work:didymus-in-genesim:u04-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "22671730b7ee9e9488b9577727283a2db9dd708db17ccff3cc8a858fac5bceab"
+    },
+    "work:didymus-in-genesim:u04-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "ba67ad97f803e420f030cdb5aa376367eef7bf3c8d557746519c776bc33c9450"
+    },
+    "work:didymus-in-genesim:u04-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "58ee10eb3372f9271aaf6b5b9950e48b70945edd878439f6b9cc9203a68a0b35"
+    },
+    "work:didymus-in-genesim:u04-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "db62a8208ca3cc284d3c1f0c3ea8cc3ce8f0fadc8ee8238ed4c00d910d5e4b3b"
+    },
+    "work:didymus-in-genesim:u05-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "7045939772906cb0bc9ec8e4b651496b372544b74a5aa58c9654605d2129bb7b"
+    },
+    "work:didymus-in-genesim:u05-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "1474a44ccbe4830c73d98382efc06b70182c9211c648e4975deca917c4d1094d"
+    },
+    "work:didymus-in-genesim:u05-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "af542ab4e59231657a29b6c72b2448864a93677285b7e6ebcffe0fc1ec2e00cd"
+    },
+    "work:didymus-in-genesim:u05-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "b218b70eb2e109778296c57bf303da419f6e088da35f71b136cbc7902dd1010d"
+    },
+    "work:didymus-in-genesim:u06-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "6a622a4da508a7ef3e730747cd0b12992d18f7cbd45d6476576d96c71dba5382"
+    },
+    "work:didymus-in-genesim:u06-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "ffe6ea1717b91acb592787ff7818fa7ecd54206d1991253612167296b15d03bc"
+    },
+    "work:didymus-in-genesim:u06-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "36c1ca79acf623d0218a452d566d7c0539b1a9f7c07e625dbff5efc9b25f5b47"
+    },
+    "work:didymus-in-genesim:u06-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "71bf455380da216e51c5b5aefc769b94ebe2570137dbe1f217d7260d1ba7446b"
+    },
+    "work:didymus-in-genesim:u07-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "255fd69236b4882f5a3e35ff91a1d4880645f2d8a8fe878ef6f5d1d679e96905"
+    },
+    "work:didymus-in-genesim:u07-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "58a89be09f053055adc8a73cf7aa086ead0a58f31ee768f168ba89771f676238"
+    },
+    "work:didymus-in-genesim:u07-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "3dd785034583c3802accbfa82575dc88d8998bf5979acc91950febd650adcd1e"
+    },
+    "work:didymus-in-genesim:u07-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "308c0c92cfcbdf4d10974df865dc74ea46c1e611e6ada64ea3cb5014cf3d1ae0"
+    },
+    "work:didymus-in-genesim:u08-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u08-open",
+      "payload_sha256": "2c08cc50de0244cd9c54c1ea473aa33269f46326cd0145670af8ca6ec986421c"
+    },
+    "work:didymus-in-genesim:u08-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u08-rem-early",
+      "payload_sha256": "9cc815bc11fa2e9ff155ec62de489dc5045c66bbea43f3a15ee9f786f5527a6c"
+    },
+    "work:didymus-in-genesim:u08-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u08-rem-mid",
+      "payload_sha256": "a374d5f64b9a489d9af292cb5e9325a648eae4938127b2693b1fb7e9c5b5c6ec"
+    },
+    "work:didymus-in-genesim:u08-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u08-rem-close",
+      "payload_sha256": "f8ea34006f73c33fe34baa572b8d9aaab4a23ca98fe82f6c909de758e3147b21"
+    },
+    "work:didymus-in-genesim:u09-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u09-open",
+      "payload_sha256": "f6f43defaac9ba85c287eda3c7c907a8a0de06bf63af22e290440f24b87c562b"
+    },
+    "work:didymus-in-genesim:u09-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u09-rem-early",
+      "payload_sha256": "db9ad9b32b3db04dca8cb94e0ab284328b28f44a17ea69731b2ead13075063a0"
+    },
+    "work:didymus-in-genesim:u09-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u09-rem-mid",
+      "payload_sha256": "b7a08bd5432c7debae1f5605d44aff0a7bae359fd2946ec177b5b188388157f6"
+    },
+    "work:didymus-in-genesim:u09-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u09-rem-close",
+      "payload_sha256": "d28941a260eb10fe057d6884b19a4f082e72e8b97ad972bb15f915ad2b35fff1"
+    },
+    "work:didymus-in-genesim:u10-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u10-open",
+      "payload_sha256": "44d7ce6d1f6356a021e8ab4d25286b49462c38fd6838709624b8c47fd2e5ec96"
+    },
+    "work:didymus-in-genesim:u10-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u10-rem-early",
+      "payload_sha256": "0e98c48cd687033338ada0dd17397468149fda0524929fea4c89420d4a89641e"
+    },
+    "work:didymus-in-genesim:u10-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u10-rem-mid",
+      "payload_sha256": "d664b0237b3f946708a47d71fca10b23af48aa620c77df4829a751b4f0171059"
+    },
+    "work:didymus-in-genesim:u10-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u10-rem-close",
+      "payload_sha256": "813a8b050440417f7cf4ff5a20b759d87742ec05454ad28aa5309a8f33a9a4c7"
+    },
+    "work:didymus-in-genesim:u11-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u11-open",
+      "payload_sha256": "602f592d0a7dc74f4ee63e00e586f70f6b295aa46b92845adc95d236e31ed014"
+    },
+    "work:didymus-in-genesim:u11-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u11-rem-early",
+      "payload_sha256": "52290182accbaa05982eb56f50cbb078474981e62dbf95cf71b56e58a06532dc"
+    },
+    "work:didymus-in-genesim:u11-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u11-rem-mid",
+      "payload_sha256": "45d1254c48f6c548e4768e4bc3c23ef5180eb7771c5d244e59f68d70b459d7f0"
+    },
+    "work:didymus-in-genesim:u11-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u11-rem-close",
+      "payload_sha256": "6cb25eae8bf4f40c2cbad800794ddd416d403cd93ed3cdc0f8b7229bfa309a66"
+    },
+    "work:didymus-in-genesim:u12-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u12-open",
+      "payload_sha256": "b536f04bac17daf65581d30a1c34b00788a0507ef244bbedcb0e1b888e346506"
+    },
+    "work:didymus-in-genesim:u12-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u12-rem-early",
+      "payload_sha256": "1bb57c1f9679e7de9ec164a864df9ae8b37db3437d2d33f984356133e0a84ead"
+    },
+    "work:didymus-in-genesim:u12-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u12-rem-mid",
+      "payload_sha256": "ae762b355f01bfc5d1b12e6d4e54ac5ff9474eee30c8523e7238fa4667c028d1"
+    },
+    "work:didymus-in-genesim:u12-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u12-rem-close",
+      "payload_sha256": "639b1cc27f397181e1b60194e8ac552b81f5a89cf3d1337a4b2d008ab2c70c77"
+    },
+    "work:didymus-in-genesim:u13-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u13-open",
+      "payload_sha256": "e6dce3bb777f2d20851b9ffdceeb0e3a61c788cab0d8d4afca7445051b173ae9"
+    },
+    "work:didymus-in-genesim:u13-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u13-rem-early",
+      "payload_sha256": "7dc85121a71c928a2a34d1ca693e92f957b64ac2634f1034e283fe38632fabef"
+    },
+    "work:didymus-in-genesim:u13-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u13-rem-mid",
+      "payload_sha256": "8f075b46e3e311e4c5ac0095923af330e8f6384c4a332b58faff7a80114f6c6f"
+    },
+    "work:didymus-in-genesim:u13-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u13-rem-close",
+      "payload_sha256": "c3366bbab0111b3679d45583056b1ccd48526e13992863c0c743e6b8863215ee"
+    },
+    "work:didymus-in-genesim:u14-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u14-open",
+      "payload_sha256": "2d197f889b5c700a04ccdc35a11e4755ae7aabe08629043f257eb557c4cae848"
+    },
+    "work:didymus-in-genesim:u14-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u14-rem-early",
+      "payload_sha256": "97de4e114db62ab2844666fae1b70b2fec1b7bb67f774f6808d3ec059db458e1"
+    },
+    "work:didymus-in-genesim:u14-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u14-rem-mid",
+      "payload_sha256": "aa89c0b5833d5135d4bdc74e75f7c8de31c4f9a23e767b821c41b18ff60f905f"
+    },
+    "work:didymus-in-genesim:u14-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u14-rem-close",
+      "payload_sha256": "4a6c98f5858a13ef76267d5f51456869b7e70b31c4786670c111c15008575e9d"
+    },
+    "work:didymus-in-genesim:u15-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u15-open",
+      "payload_sha256": "90e73bdf240c99c9cca981bb1ee7c3243dd7f30cf78a168dc6098fb36c518113"
+    },
+    "work:didymus-in-genesim:u15-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u15-rem-early",
+      "payload_sha256": "cd5a96be4f378165e6f3cdb56fbf4857753d41b086f587abb7888c99c6b5f29f"
+    },
+    "work:didymus-in-genesim:u15-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u15-rem-mid",
+      "payload_sha256": "74a49beb18534168904cc407d6856f7ba989c44b0b9a335fa66af45313a27b5b"
+    },
+    "work:didymus-in-genesim:u15-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u15-rem-close",
+      "payload_sha256": "4239882f3353d9e53a080c4243100c1cc14824dc2a7b90e25d53ec26086a25f3"
+    },
+    "work:didymus-in-genesim:u16-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u16-open",
+      "payload_sha256": "b8876aa518d907dcc5466bca6c67003ff9fb8ace09819c717c509ed0ab46f2e8"
+    },
+    "work:didymus-in-genesim:u16-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u16-rem-early",
+      "payload_sha256": "26aa48a0bef3d858452f483bfcc6eea5e8f9cc06be183adcda47d27d1d732917"
+    },
+    "work:didymus-in-genesim:u16-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u16-rem-mid",
+      "payload_sha256": "4182f2d129b2f08d19e2b4096d562eeb843a02529dc2071a2110a226ed137923"
+    },
+    "work:didymus-in-genesim:u16-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u16-rem-close",
+      "payload_sha256": "2bba6178b87e4295f4b11cc42b6043469fada9033cdc55396f562e2d4eeb2def"
+    },
+    "work:didymus-in-genesim:u17-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u17-open",
+      "payload_sha256": "832f9a77bb099b27dc31a0eda5515c7b4319408e6354627baa7c1e6e4679418c"
+    },
+    "work:didymus-in-genesim:u17-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u17-rem-early",
+      "payload_sha256": "13ce238cc849e5379da286ad029a20405c9b2829ad267d60eb6edd366250642c"
+    },
+    "work:didymus-in-genesim:u17-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u17-rem-mid",
+      "payload_sha256": "060d8bbffa09c8dbb590fa1a9e1405214be8c94736896d9d3f3b59d3e393ba86"
+    },
+    "work:didymus-in-genesim:u17-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u17-rem-close",
+      "payload_sha256": "61bebae78a2df9bcbb8f4b7bd4ddf3c9b8dcf2c199b9e05bfa93c0a24b05a2ec"
+    },
+    "work:didymus-in-genesim:u18-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u18-open",
+      "payload_sha256": "f2555b1d1c95845647d003b610d218392dd0eb87c45434dece314fb83ebf0908"
+    },
+    "work:didymus-in-genesim:u18-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u18-rem-early",
+      "payload_sha256": "6f86aa1be07d71cd64d9d8e541d105dd187f8e6be3671f5f2fb424c274330b9c"
+    },
+    "work:didymus-in-genesim:u18-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u18-rem-mid",
+      "payload_sha256": "13204e39a5cff755345dff9d58e0c2b7b8cd6dece49aeec77b5ae6b8e6c4c443"
+    },
+    "work:didymus-in-genesim:u18-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u18-rem-close",
+      "payload_sha256": "c6de3cdf99d01f674998561b93be4962fa7b3c7d096154e188e35b33c679510c"
+    },
+    "work:didymus-in-genesim:u19-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u19-open",
+      "payload_sha256": "744ffc3924704e8a72c619a6f446ed0f3e90761ed1391b9f92cd759a1dc66da2"
+    },
+    "work:didymus-in-genesim:u19-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u19-rem-early",
+      "payload_sha256": "4bbf98414ebb6b4e029fc5810322447ad77141864cba522a20cc465aa8c7c176"
+    },
+    "work:didymus-in-genesim:u19-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u19-rem-mid",
+      "payload_sha256": "8cdc9efeab59e9f6fdb700da79064baf58c9b8fec56bdabc6d94618b0c312c7a"
+    },
+    "work:didymus-in-genesim:u19-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u19-rem-close",
+      "payload_sha256": "176e5792df84e3c5307b8933b2f296afe1f3b97cda76181464fd456ac97f5e5b"
+    },
+    "work:didymus-in-genesim:u20-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u20-open",
+      "payload_sha256": "8bcf8b6e751b7e336634e8599e128fe5bc581cc793a82c520bcb385fe4e753d9"
+    },
+    "work:didymus-in-genesim:u20-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u20-rem-early",
+      "payload_sha256": "d3f24b29caf5d7bfb66254ccf2c2404f9c2569dd191aeb4380d1afa843aed8c5"
+    },
+    "work:didymus-in-genesim:u20-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u20-rem-mid",
+      "payload_sha256": "bd3aa728e07094de60cf03a56abb7ebc979d549adc5c333665cf5a1fad738dc3"
+    },
+    "work:didymus-in-genesim:u20-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u20-rem-close",
+      "payload_sha256": "39dbe12bbf9d2d63a261ac8b6166f4fb0720ec2805022e72f2e3a38354ec0134"
+    },
+    "work:didymus-in-genesim:u21-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u21-open",
+      "payload_sha256": "c3e857ae84e29cb7c5dee302ab12f82549fcf4ffea6e749a9e919cb87bf4f864"
+    },
+    "work:didymus-in-genesim:u21-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u21-rem-early",
+      "payload_sha256": "28c7bb9133b411728b1f89614e4f8bcf6329372b8b3268e09b11e210efdf3121"
+    },
+    "work:didymus-in-genesim:u21-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u21-rem-mid",
+      "payload_sha256": "9bfe039e524c5543a29af62bf7f9861aaf3cdfd5d1d89861908d35c9ecaed7a1"
+    },
+    "work:didymus-in-genesim:u21-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u21-rem-close",
+      "payload_sha256": "ad6b009b9c394e2ae528a7a612509af73f081f5e6450f70be51dc8c1be57f990"
+    },
+    "work:didymus-in-genesim:u22-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u22-open",
+      "payload_sha256": "dc58bb90cef487f771e9c40a52569e6318f9666a734f859bd3599f0ff7906900"
+    },
+    "work:didymus-in-genesim:u22-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u22-rem-early",
+      "payload_sha256": "9bca7fb7c4e87c31c88cf6d19de1ddb04e8bd91c67faf7d534f6ec1bfa660139"
+    },
+    "work:didymus-in-genesim:u22-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u22-rem-mid",
+      "payload_sha256": "a79787312b06d4046e37e25956ecdbd5f9092212de0aeaa292746fdc284adf57"
+    },
+    "work:didymus-in-genesim:u22-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u22-rem-close",
+      "payload_sha256": "d8f33611ee1d24478fc2fe8532cfe01290f4c9f3b18b8d28f6b6bfe563ac6379"
+    },
+    "work:didymus-in-genesim:u23-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u23-open",
+      "payload_sha256": "429b9ea322f3f9f76150d1defba8c2e6b3858215a91ae79a5385868f62665a2a"
+    },
+    "work:didymus-in-genesim:u23-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u23-rem-early",
+      "payload_sha256": "315fcdc147c8a43f0030630bd6576dac4f4512d82dc8c333fcac638c59a882f3"
+    },
+    "work:didymus-in-genesim:u23-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u23-rem-mid",
+      "payload_sha256": "564b4f4506b7ec975b3854776aca630d5b7defb39a489083cebf35a9ae10c91e"
+    },
+    "work:didymus-in-genesim:u23-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u23-rem-close",
+      "payload_sha256": "23f51e4e3f68828b6117deb392d5d358a99f33394737d4bba07938fd8bad33b8"
+    },
+    "work:didymus-in-genesim:u24-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u24-open",
+      "payload_sha256": "9c13989e50eeef28bcc592cb5d6af84c7aa1fb86f7cd0eae189fe1683f0b1177"
+    },
+    "work:didymus-in-genesim:u24-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u24-rem-early",
+      "payload_sha256": "ccb19c54b37e069a346a82a9baf5b7bb9a6b447f456b65885e8af92b1ad173e8"
+    },
+    "work:didymus-in-genesim:u24-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u24-rem-mid",
+      "payload_sha256": "9abc1251189ed2ec1e564f124ead07387d0d47ab47c710acd411d823cccdb3e9"
+    },
+    "work:didymus-in-genesim:u24-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u24-rem-close",
+      "payload_sha256": "36028cd8a602bbb43d715a792e559b4b5c05430ace7f6fe44712ab9dfe2a9d72"
+    },
+    "work:didymus-in-genesim:u25-open": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u25-open",
+      "payload_sha256": "07f00ba985b71d12ebe3ff5eb3e4ecb7a5033a70fc6c2782fd16d00476f8e62b"
+    },
+    "work:didymus-in-genesim:u25-rem-early": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u25-rem-early",
+      "payload_sha256": "a0683bfe86aeb0c1bb2dabe83ca6bcadc5aef15a0664b00bd776b86c16b5d462"
+    },
+    "work:didymus-in-genesim:u25-rem-mid": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u25-rem-mid",
+      "payload_sha256": "a5f01bd3c653d865cc76bac2ef235899a9aed186ea07542f985742ff2b895982"
+    },
+    "work:didymus-in-genesim:u25-rem-close": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u25-rem-close",
+      "payload_sha256": "8d17f1e4ddb310abf424ee8937839aedd16e445c33b23a9ef7412314bbb87b90"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -35844,6 +37980,14 @@
     "didymus-fragmentum-hebraeos": {
       "packet": "books/didymus-fragmentum-hebraeos/reviews/audit/tip.packet.json",
       "receipt": "books/didymus-fragmentum-hebraeos/reviews/audit/tip.review.json"
+    },
+    "didymus-fragmenta-psalmos": {
+      "packet": "books/didymus-fragmenta-psalmos/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-fragmenta-psalmos/reviews/audit/tip.review.json"
+    },
+    "didymus-in-genesim": {
+      "packet": "books/didymus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/didymus-in-genesim/reviews/audit/tip.review.json"
     }
   }
 }
