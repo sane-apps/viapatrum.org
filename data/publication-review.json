@@ -37575,6 +37575,78 @@
       "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json",
       "section": "u03-rem-close",
       "payload_sha256": "dee8c428697f1da20f300d2241a84aaf4dfba3dcf1fa3bc90657d75ecb082ed9"
+    },
+    "work:evagrius-de-octo-spiritibus:u01-open": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "f300037d55b59408724665831c11828e4ce4954b0253960f41e2046abd542cdb"
+    },
+    "work:evagrius-de-octo-spiritibus:u01-rem-early": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "8fa5f9a1d70f18bb85b00c5ec714feb8d924157aa6fe682e95e9af8a01aeef5a"
+    },
+    "work:evagrius-de-octo-spiritibus:u01-rem-mid": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "e6b77bc3ec6dfe79283d148001fa7069bbacf785430b722397a654f22482d4d1"
+    },
+    "work:evagrius-de-octo-spiritibus:u01-rem-close": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "b5aa94616b4e5cf2d78d4bb82e01228444872e016fdf9bac5b437f5c63429a81"
+    },
+    "work:evagrius-de-octo-spiritibus:u02-open": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "57f78576dfc3c6b822f09db4d493164e86e68362326d3166843150c8004e9b3a"
+    },
+    "work:evagrius-de-octo-spiritibus:u02-rem-early": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "62718b6a56d3e36908d47a67f6928002c46486963075cb5cd1d73d51a50dffe3"
+    },
+    "work:evagrius-de-octo-spiritibus:u02-rem-mid": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "fa82ba2fe902e66a142caebc18cce8eaeaaa98f3d8159a931e956e2bed0a88db"
+    },
+    "work:evagrius-de-octo-spiritibus:u02-rem-close": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "9c646964b5c633d9b770531b51ca7bd7b92d6cf513c2bd56357179b440bbbdf8"
+    },
+    "work:evagrius-de-vitiis:u01-open": {
+      "packet": "books/evagrius-de-vitiis/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-vitiis/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "330acaeb199afb3fb4ef00c3f504383f7343a3a6f4dafd1645dc472504d1cb7d"
+    },
+    "work:evagrius-de-vitiis:u01-rem-early": {
+      "packet": "books/evagrius-de-vitiis/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-vitiis/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "103b30e52c4ad1cfcc383ec613209f0e56c38772041cb4f635da048797b3ae3f"
+    },
+    "work:evagrius-de-vitiis:u01-rem-mid": {
+      "packet": "books/evagrius-de-vitiis/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-vitiis/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "0558f8630ccfe6ab8cdbf8605a17e99dad0ad889a2ce646b1e10d6d117455c4e"
+    },
+    "work:evagrius-de-vitiis:u01-rem-close": {
+      "packet": "books/evagrius-de-vitiis/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-vitiis/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "51aedb950e192ba51eaf6f46073e6ee430ef0f4d7abb22b191c0f9f8d0ba14a4"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -38120,6 +38192,14 @@
     "evagrius-de-malignis-cogitationibus": {
       "packet": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.packet.json",
       "receipt": "books/evagrius-de-malignis-cogitationibus/reviews/audit/tip.review.json"
+    },
+    "evagrius-de-octo-spiritibus": {
+      "packet": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-octo-spiritibus/reviews/audit/tip.review.json"
+    },
+    "evagrius-de-vitiis": {
+      "packet": "books/evagrius-de-vitiis/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-de-vitiis/reviews/audit/tip.review.json"
     }
   }
 }
