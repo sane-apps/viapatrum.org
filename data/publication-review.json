@@ -38511,6 +38511,54 @@
       "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
       "section": "u03-rem-close",
       "payload_sha256": "6672571916e019b629a126e2d240c5173ec75502f6a261b25ab3c3f04842a6e0"
+    },
+    "work:severianus-de-tribus-pueris:u01-open": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "6a4fb8b304cd4d8626d3fdd6f9fa03ff4185e92ad82cd730ee291561246733e6"
+    },
+    "work:severianus-de-tribus-pueris:u01-rem-early": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "967bc821997fdfad719b70b4b7c2276149becbb33b737ec47122ad7dc203ca91"
+    },
+    "work:severianus-de-tribus-pueris:u01-rem-mid": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "60fbfde7714cd1955260f9fc352dc2c1c0b36f00635290d44b5cea1326916290"
+    },
+    "work:severianus-de-tribus-pueris:u01-rem-close": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "b7f85c7b637117cd14c958627a4293e4fdf47881dd8d72c2ab1a2a8d03e2ea36"
+    },
+    "work:severianus-de-tribus-pueris:u02-open": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "035ac123448895e833a25b952232d072685783f7a0848f518b7f73de4da4306f"
+    },
+    "work:severianus-de-tribus-pueris:u02-rem-early": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "fbae6c63528e9b72f44344756d21fb1b36c5b5e42e25e0c51038ded86a749466"
+    },
+    "work:severianus-de-tribus-pueris:u02-rem-mid": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "e83aaa0c98c355bab27056c8f3f7c5d5b46c9ad005ed31fd2d1c323155f0cfb6"
+    },
+    "work:severianus-de-tribus-pueris:u02-rem-close": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "fa499cd745e400db0f45e4aa643e2d728f5a290a1dcba4bc169e54465f756ac1"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -39120,6 +39168,10 @@
     "severianus-de-caeco-nato": {
       "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json"
+    },
+    "severianus-de-tribus-pueris": {
+      "packet": "books/severianus-de-tribus-pueris/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-tribus-pueris/reviews/audit/tip.review.json"
     }
   }
 }
