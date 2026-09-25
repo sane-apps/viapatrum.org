@@ -37839,6 +37839,510 @@
       "receipt": "books/evagrius-institutio-monachos/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "1070e13bd538feb51e89829b516a472072a036474ff4a0fcb187636da232426b"
+    },
+    "work:evagrius-practicus:u01-open": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "9aa8132c71eec3828864b49b7333dc0fe53cf92f68cd77e128354c322a378e06"
+    },
+    "work:evagrius-practicus:u01-rem-early": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "7f1906cf912096e450fc49edc22e42902ee843aea018400b5bab1329d05fa5af"
+    },
+    "work:evagrius-practicus:u01-rem-mid": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "a3e804b8ec9fb691ca0e15045c49695540f27f39b6312b8cae66ca27eeeb3746"
+    },
+    "work:evagrius-practicus:u01-rem-close": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "6f665b927040b68149152264cd0eaed966a9762fef4f7d0e2dd520361a452f0f"
+    },
+    "work:evagrius-practicus:u02-open": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "61d5927af6c5214fcab7f61289c3b2fa5e4ad66cf414f8ba97504ec21c02fb7e"
+    },
+    "work:evagrius-practicus:u02-rem-early": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "56955f6ab5efd31b6b8cb6d08c2083048fdf13f09ce888c02dad6832a3d7b949"
+    },
+    "work:evagrius-practicus:u02-rem-mid": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "d7a7f851e58936d7a7f8ead07c5591fe7761295484face7b336d7f7fc1bcd0d7"
+    },
+    "work:evagrius-practicus:u02-rem-close": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "cc57702cc9cfc8b8fcfc674e0a3e2c12eb256b512ed8dce3145f98542ecb9dce"
+    },
+    "work:evagrius-practicus:u03-open": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "c75727bda4b9c57de09b090caf3667bf717212aa62d1e75ea049c78d03dd7e10"
+    },
+    "work:evagrius-practicus:u03-rem-early": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "2f21c1ba353157093e1f479f7c56a2021e854a03b799d5665e3b6489e5dd80dd"
+    },
+    "work:evagrius-practicus:u03-rem-mid": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "e639241131d6bfc51f8e87211666c7f9b8e0e70f0d67261ccc09c9da5b9a5678"
+    },
+    "work:evagrius-practicus:u03-rem-close": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "db50113b9d45dc84cb4eeee01f24fd86dd43ad9dade285e05c465cb4420ab3b9"
+    },
+    "work:evagrius-rerum-monachalium:u01-open": {
+      "packet": "books/evagrius-rerum-monachalium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-rerum-monachalium/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "47c0cc25a2e4f1bb2306587ebea709a7ca9e0f7dc73848ae80fd3e3fa8e01765"
+    },
+    "work:evagrius-rerum-monachalium:u01-rem-early": {
+      "packet": "books/evagrius-rerum-monachalium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-rerum-monachalium/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "e0f7bee7d6a8aa3b3a18377fa43ef17068e972135373aefe4c1e6420aebff3fa"
+    },
+    "work:evagrius-rerum-monachalium:u01-rem-mid": {
+      "packet": "books/evagrius-rerum-monachalium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-rerum-monachalium/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "531196bdce4bb3438be7dc758793e7e07386c46b34ca397afd74440af08501ca"
+    },
+    "work:evagrius-rerum-monachalium:u01-rem-close": {
+      "packet": "books/evagrius-rerum-monachalium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-rerum-monachalium/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "dbbe71b7f83e774607a8a0d7aaa5e3d00f8fd195a4780760b338f573358edb9a"
+    },
+    "work:evagrius-scholia-ecclesiasten:u01-open": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "391c5daa3501396f59b4971fc3ad82b678d1a974744124312df6aab2d7ecc323"
+    },
+    "work:evagrius-scholia-ecclesiasten:u01-rem-early": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "e6cd995a79591344339673e6174d4b553f4a91e7b66381df334c4ad8afb2bb04"
+    },
+    "work:evagrius-scholia-ecclesiasten:u01-rem-mid": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "443c7f1692e84928f8fb8c5837914ebaf839148700c8479b32c23d8b0faaf172"
+    },
+    "work:evagrius-scholia-ecclesiasten:u01-rem-close": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "985e186f97222e9ca7f5f34bdb28ccaa2a566590aad6d8a691051c13f35b6704"
+    },
+    "work:evagrius-scholia-ecclesiasten:u02-open": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "ccb76c077f9c6952f729a8fd2b8c5aea311598f2f7819601b0a53351dbab061f"
+    },
+    "work:evagrius-scholia-ecclesiasten:u02-rem-early": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "7a4519e8ed6b9cfbef861b7184aff7e65132a73d0eababf0625fb51a185e1228"
+    },
+    "work:evagrius-scholia-ecclesiasten:u02-rem-mid": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "464ffb34d0dd77d25121a3b1d98102cee2c39c8b70a8018ccfecf94238b216ed"
+    },
+    "work:evagrius-scholia-ecclesiasten:u02-rem-close": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "8b0a64fadc96db34aadec2b098eabf4fe04f26097580987cee870abbc1b64fe3"
+    },
+    "work:evagrius-scholia-ecclesiasten:u03-open": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "622de67c6dd53160c2e1f1fd18a15905027b61bf782002e21668de8de09079b5"
+    },
+    "work:evagrius-scholia-ecclesiasten:u03-rem-early": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "f0fb01cb648fff1352881ab9ce46a5461f97f6a2522a67b603db8e7463498b86"
+    },
+    "work:evagrius-scholia-ecclesiasten:u03-rem-mid": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "0a820b9b8f0cc17a589d9fd9467b710e9a2900fca156180aef69e35070daa9e6"
+    },
+    "work:evagrius-scholia-ecclesiasten:u03-rem-close": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "185b978e07b89a01fa9852359acd06f6462451d3e619f131bd60382e71489a59"
+    },
+    "work:evagrius-scholia-proverbia:u01-open": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "c28913c9a6c45609f28d9d0b68157a59b603e972dadbb1917077149f290fbf65"
+    },
+    "work:evagrius-scholia-proverbia:u01-rem-early": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "ac7e21ed43e263d314d8bccc37ec4e9320ce0da0f07124feb047716580ea8800"
+    },
+    "work:evagrius-scholia-proverbia:u01-rem-mid": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "b6c6d547e4bfd354611b2eecb82acd248e476deb48cc7f83732503451de726d4"
+    },
+    "work:evagrius-scholia-proverbia:u01-rem-close": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "d19707b8a53232cee5d1fcabccc0fb88f1aa6a22d4753c29a63191e02a8536a9"
+    },
+    "work:evagrius-scholia-proverbia:u02-open": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "194c4690f624589a4bade8281b0843afbd3f150fd9f13f73241af09c68912c4f"
+    },
+    "work:evagrius-scholia-proverbia:u02-rem-early": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "baec3b60a9e5e5c7a9a5537fe04e20428220d07d2c1264a64470e36f0cf639f0"
+    },
+    "work:evagrius-scholia-proverbia:u02-rem-mid": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "8910c988b17b233f39d4942749e99f08b020f167d0605420ced9f4648e53cba2"
+    },
+    "work:evagrius-scholia-proverbia:u02-rem-close": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "cb51fe5de4496fc2a196c432fdd1ee7963f1566805a131521e3f9ce4f2fbdc40"
+    },
+    "work:evagrius-scholia-proverbia:u03-open": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "32ca86ee8c73e22b077bd65eade7c0feba78481ab1bbe445ba71b54f52633452"
+    },
+    "work:evagrius-scholia-proverbia:u03-rem-early": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "df3f669cf4d63c3650bed222e5fc74de30e5b468cf616cb16f8826e622145ee6"
+    },
+    "work:evagrius-scholia-proverbia:u03-rem-mid": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "c4eda78a675a1989bda2cbd18d23e5144a81618a2bfe9c11f7fc53f60fe0477d"
+    },
+    "work:evagrius-scholia-proverbia:u03-rem-close": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "85f793d84f9a281a06f84bfb0c2ba8c539ac0bbecbf3a17e66c2941af19e0c65"
+    },
+    "work:evagrius-scholia-proverbia:u04-open": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "17289960d089f9418913170b6c2dee8e9eb7a6ce3e11199d85eb8f52b8a75e7e"
+    },
+    "work:evagrius-scholia-proverbia:u04-rem-early": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "0b188a5998ddcb15801442e77e4b2e91d90bce3f163331223a68aa117e99d6b1"
+    },
+    "work:evagrius-scholia-proverbia:u04-rem-mid": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "e4574095d591c76cb4e632bde17d35cbc40eff72181b4059bf286dbc57df7bbe"
+    },
+    "work:evagrius-scholia-proverbia:u04-rem-close": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "7a91174d09a5e6b3cd7310c3f332dffac07f6a09f29e7e49875386a11c310bc4"
+    },
+    "work:evagrius-scholia-proverbia:u05-open": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "b3b47aead11dcda07b4c3d699c93e1fda861dff3cf80a8a4cc706896c27af796"
+    },
+    "work:evagrius-scholia-proverbia:u05-rem-early": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "0849bf3b5a40baec7553d2c920b4a1e4dd44c4df49e0d36124258212134f0e8b"
+    },
+    "work:evagrius-scholia-proverbia:u05-rem-mid": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "555ae545d4649293dcef6ed46591de85944dbc31c3cfb302dbe2c20caa3e5d9d"
+    },
+    "work:evagrius-scholia-proverbia:u05-rem-close": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "c290ed0ceb5ead178a80fdad6042e85fa753400a8df3013030309976fed6e6d8"
+    },
+    "work:evagrius-scholia-proverbia:u06-open": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "5fc1f40a06640b33482183d16d980a22e525cbc03447effb5c285afaf3846fd2"
+    },
+    "work:evagrius-scholia-proverbia:u06-rem-early": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "b61e7a33d7fc5ac6941b4749025ddf0a934ffa21b6d4ff23399596e948f7cb84"
+    },
+    "work:evagrius-scholia-proverbia:u06-rem-mid": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "f88fb1d51c2d5f9438b714c41f841f45372667c2e238ee7623f3c767abfc27f4"
+    },
+    "work:evagrius-scholia-proverbia:u06-rem-close": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "f94d1dda788f6c27f5d96edc5f3a4b0f49b431e0907e8a67ecd748a654a5eb5f"
+    },
+    "work:evagrius-scholia-proverbia:u07-open": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u07-open",
+      "payload_sha256": "3a3dfc00876a42884dc27d193f37dd1c4da4a122ee4a58197bcf17f91874311e"
+    },
+    "work:evagrius-scholia-proverbia:u07-rem-early": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u07-rem-early",
+      "payload_sha256": "df6030291da367b3eefe0b35cfd009b7eef65241e3ac0287e82731034f31b990"
+    },
+    "work:evagrius-scholia-proverbia:u07-rem-mid": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u07-rem-mid",
+      "payload_sha256": "17fc401d58dc9f1fe76ca179e3bba93bd15cda2844279cf887e73590dfaaa937"
+    },
+    "work:evagrius-scholia-proverbia:u07-rem-close": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json",
+      "section": "u07-rem-close",
+      "payload_sha256": "713616e11c87763454a766818fb19cb971721c181ae10e774a6c252145430f91"
+    },
+    "work:evagrius-sententiae-monachos:u01-open": {
+      "packet": "books/evagrius-sententiae-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-monachos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "7d2480a868707826ad9e88f758f64c183d2b64c6e702a1343dd6912c5adc7b3e"
+    },
+    "work:evagrius-sententiae-monachos:u01-rem-early": {
+      "packet": "books/evagrius-sententiae-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-monachos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "29f49bc83f4cfa039a54ec81795ead1bd13858af93aef51c9e006b60381affaf"
+    },
+    "work:evagrius-sententiae-monachos:u01-rem-mid": {
+      "packet": "books/evagrius-sententiae-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-monachos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "b9e689a3a352f6ad9a90d068f7b99d8b26d1860bc86d89c6691783e084b1953b"
+    },
+    "work:evagrius-sententiae-monachos:u01-rem-close": {
+      "packet": "books/evagrius-sententiae-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-monachos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "d8ca72dd366bef2db0b5c94d5db0def40143abf397ffe7582e5f8b4fc88d0c5f"
+    },
+    "work:evagrius-sententiae-virginem:u01-open": {
+      "packet": "books/evagrius-sententiae-virginem/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-virginem/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "f8742ea81610d3994d486da2ea5929054a88122b14bafff81399fb01792fe3a4"
+    },
+    "work:evagrius-sententiae-virginem:u01-rem-early": {
+      "packet": "books/evagrius-sententiae-virginem/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-virginem/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "08f3f04d1ebab72c3bb7098a9f5dba2faa0d2962ab7494ec818d944d2f87bf05"
+    },
+    "work:evagrius-sententiae-virginem:u01-rem-mid": {
+      "packet": "books/evagrius-sententiae-virginem/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-virginem/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "54e6210d532afb067362a47698805a4566b8db0fb86b4e0020b91ee8f9500115"
+    },
+    "work:evagrius-sententiae-virginem:u01-rem-close": {
+      "packet": "books/evagrius-sententiae-virginem/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-virginem/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "18477d8adb2bc20f9cc094bd68b00a67508f4cd24ae7a36e8db91c8918e08eca"
+    },
+    "work:evagrius-spiritales-sententiae:u01-open": {
+      "packet": "books/evagrius-spiritales-sententiae/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-spiritales-sententiae/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "d5351d65c090124457e1f8e9ac21db1f5cb96e42e5de00c44f07b3c73768c499"
+    },
+    "work:evagrius-spiritales-sententiae:u01-rem-early": {
+      "packet": "books/evagrius-spiritales-sententiae/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-spiritales-sententiae/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "68cebc679e2298ef9475e4fe4b881df260f6d64dbeafd8652a16d7d6973030e4"
+    },
+    "work:evagrius-spiritales-sententiae:u01-rem-mid": {
+      "packet": "books/evagrius-spiritales-sententiae/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-spiritales-sententiae/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "8c1b1a2c885a512e4b20bfae48c3a87150a7b213faa8b247b222caedd3c58ded"
+    },
+    "work:evagrius-spiritales-sententiae:u01-rem-close": {
+      "packet": "books/evagrius-spiritales-sententiae/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-spiritales-sententiae/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "c2a5a7baeffb7e4f72c9b3b3df51db51f3a625848a23399aeb02b6c8c98021de"
+    },
+    "work:evagrius-ad-eulogium:u01-open": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "56411d8a5017125c9be9bd908cecaa7d603f526936754e3818ee7830b7ea39cd"
+    },
+    "work:evagrius-ad-eulogium:u01-rem-early": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "fa42d258f3bb4f99eb5da7931302ad4a5cba1a10dd0142a5653f51f626054a63"
+    },
+    "work:evagrius-ad-eulogium:u01-rem-mid": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "20516334d0b4acdf29123f0963099b70adadfbbb2bfd612781395f4b9b137bb7"
+    },
+    "work:evagrius-ad-eulogium:u01-rem-close": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "610e0a45c8c8e619bcc6029e9df0459f2cc4bbc80c382769ec27b71728bb5919"
+    },
+    "work:evagrius-ad-eulogium:u02-open": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "28c976a399d9195a5bea9309d268398d91e430dded8e13b0c94f8e73b2891682"
+    },
+    "work:evagrius-ad-eulogium:u02-rem-early": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "e73bd880ee57be5e0079715fcd25c7df0a858d39f18da0a7fbcec1be957bd684"
+    },
+    "work:evagrius-ad-eulogium:u02-rem-mid": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "7b1d81501e69b0a7c109159a90ef13c6e62c403fbacad15201bac1779076ed4f"
+    },
+    "work:evagrius-ad-eulogium:u02-rem-close": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "1500fc3ee915eb56d21076ae84cd951afa03c67780093a507fa830ff440babeb"
+    },
+    "work:evagrius-ad-eulogium:u03-open": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "ac9a409d8ac47bbf46f6414b9ea367225094190662af6cf15ee4f58def8c8193"
+    },
+    "work:evagrius-ad-eulogium:u03-rem-early": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "ea6f38dda4baabe2f1a89557657012b04d3b4be8e67d1c57b3a155436950d6f9"
+    },
+    "work:evagrius-ad-eulogium:u03-rem-mid": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "b41210338b4339803e8552d84b7ddb492a06f5698f91cc97d22bb2b39cd6be34"
+    },
+    "work:evagrius-ad-eulogium:u03-rem-close": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "86a6f83dfe29ddb84f7ecd3e2511dcaa9bea18026eb8d5bb32847169a05a0102"
+    },
+    "work:evagrius-ad-eulogium:u04-open": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "ce79125cd4b44f343c1b0f8cb4f02ad76d7834234a916bf48944ea2b53ac5c2e"
+    },
+    "work:evagrius-ad-eulogium:u04-rem-early": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "74676ff65bb3994c90762303b2752b6c20fd623aa5e145cfeed62b938ed54348"
+    },
+    "work:evagrius-ad-eulogium:u04-rem-mid": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "69f54d75c21902baa1dd6c4f895eb6e53e47827d0448fbbc8136f29023cfc8e4"
+    },
+    "work:evagrius-ad-eulogium:u04-rem-close": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "f0e3d7f784deea2da1f917a89e9bc3d78c1b989e517c675e926e80cb756ef51a"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -38404,6 +38908,38 @@
     "evagrius-institutio-monachos": {
       "packet": "books/evagrius-institutio-monachos/reviews/audit/tip.packet.json",
       "receipt": "books/evagrius-institutio-monachos/reviews/audit/tip.review.json"
+    },
+    "evagrius-practicus": {
+      "packet": "books/evagrius-practicus/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-practicus/reviews/audit/tip.review.json"
+    },
+    "evagrius-rerum-monachalium": {
+      "packet": "books/evagrius-rerum-monachalium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-rerum-monachalium/reviews/audit/tip.review.json"
+    },
+    "evagrius-scholia-ecclesiasten": {
+      "packet": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-ecclesiasten/reviews/audit/tip.review.json"
+    },
+    "evagrius-scholia-proverbia": {
+      "packet": "books/evagrius-scholia-proverbia/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-scholia-proverbia/reviews/audit/tip.review.json"
+    },
+    "evagrius-sententiae-monachos": {
+      "packet": "books/evagrius-sententiae-monachos/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-monachos/reviews/audit/tip.review.json"
+    },
+    "evagrius-sententiae-virginem": {
+      "packet": "books/evagrius-sententiae-virginem/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-sententiae-virginem/reviews/audit/tip.review.json"
+    },
+    "evagrius-spiritales-sententiae": {
+      "packet": "books/evagrius-spiritales-sententiae/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-spiritales-sententiae/reviews/audit/tip.review.json"
+    },
+    "evagrius-ad-eulogium": {
+      "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
+      "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json"
     }
   }
 }
