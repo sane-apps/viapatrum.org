@@ -38343,6 +38343,30 @@
       "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json",
       "section": "u04-rem-close",
       "payload_sha256": "f0e3d7f784deea2da1f917a89e9bc3d78c1b989e517c675e926e80cb756ef51a"
+    },
+    "work:asterius-homilia-9:u01-open": {
+      "packet": "books/asterius-homilia-9/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homilia-9/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "baa95602e7a8965b2d2d87099fd249467b1c6e73715335627eedd73e1e451618"
+    },
+    "work:asterius-homilia-9:u01-rem-early": {
+      "packet": "books/asterius-homilia-9/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homilia-9/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a1590b02ad8ff9db8ec2156fc53e3b88d75b3ce544fc39bc97db800cc20b76fb"
+    },
+    "work:asterius-homilia-9:u01-rem-mid": {
+      "packet": "books/asterius-homilia-9/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homilia-9/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "0d049772e741e70d36f205638df88a950a76013c7b667d873517d778849382a9"
+    },
+    "work:asterius-homilia-9:u01-rem-close": {
+      "packet": "books/asterius-homilia-9/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homilia-9/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "8573fe7e79c6a9e41aee8b34bc44596f6f0c9746f9d36b42bec22151d335754f"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -38940,6 +38964,10 @@
     "evagrius-ad-eulogium": {
       "packet": "books/evagrius-ad-eulogium/reviews/audit/tip.packet.json",
       "receipt": "books/evagrius-ad-eulogium/reviews/audit/tip.review.json"
+    },
+    "asterius-homilia-9": {
+      "packet": "books/asterius-homilia-9/reviews/audit/tip.packet.json",
+      "receipt": "books/asterius-homilia-9/reviews/audit/tip.review.json"
     }
   }
 }
