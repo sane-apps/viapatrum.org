@@ -38439,6 +38439,78 @@
       "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
       "section": "u03-rem-close",
       "payload_sha256": "09c8d3d9089c92c360815ebf100b401850f8427f31dc38249ac5b68df9eab80f"
+    },
+    "work:severianus-de-caeco-nato:u01-open": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "ad9f9b3499ee3d53905c7e7bc110e3e5656029fc59ea12a51e891d6b0382a969"
+    },
+    "work:severianus-de-caeco-nato:u01-rem-early": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "bfbdc9363082ac46f948b284132f0cab5e3d7028bd67180e524b31ecaee9c52c"
+    },
+    "work:severianus-de-caeco-nato:u01-rem-mid": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "7f064af313b1114671b36e38e4f01b38d3bc09a99f8c5c5da3c7213615551907"
+    },
+    "work:severianus-de-caeco-nato:u01-rem-close": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "ffec307d055ae5f145614d9baff8557e686ac9c7425dabb20b2a18696c4231a5"
+    },
+    "work:severianus-de-caeco-nato:u02-open": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "3518ab2f305ec40e5650ee6660576f84f416847588c2b6856002d20d149b1afa"
+    },
+    "work:severianus-de-caeco-nato:u02-rem-early": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "6ce36111833ca81d9a9707a19f8ad1c3fc47d72eac21c664a1e78d19124eebba"
+    },
+    "work:severianus-de-caeco-nato:u02-rem-mid": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "612fb016a1153fc3af7dbf5cb75dcf894f4b2f887799d9947e562f559000f512"
+    },
+    "work:severianus-de-caeco-nato:u02-rem-close": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "d2095981521841b688fe2f80a3830a24f9c8e88ee411e5ea171c1272ff1c46a2"
+    },
+    "work:severianus-de-caeco-nato:u03-open": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "e811868a728dc16bd49c2ff36a7d94941d4774d14f9adce56fa938859d0a1905"
+    },
+    "work:severianus-de-caeco-nato:u03-rem-early": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "b8bd43c6731e4b954156ffefbcb17366bf130aff49dcb7241bffbeda304ebe7b"
+    },
+    "work:severianus-de-caeco-nato:u03-rem-mid": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "f07c8a25b42d6a5e838da0db58c3625e469a47ff41e7be9f8a648c3be4249f57"
+    },
+    "work:severianus-de-caeco-nato:u03-rem-close": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "6672571916e019b629a126e2d240c5173ec75502f6a261b25ab3c3f04842a6e0"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -39044,6 +39116,10 @@
     "severianus-de-caeco-zacchaeo": {
       "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json"
+    },
+    "severianus-de-caeco-nato": {
+      "packet": "books/severianus-de-caeco-nato/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-nato/reviews/audit/tip.review.json"
     }
   }
 }
