@@ -39111,6 +39111,30 @@
       "receipt": "books/severianus-fragmenta-ephesios/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "f95b1b65cc89e52f5b05193180eebc2cd502e304e12c3b4368be5530ce1fa9cb"
+    },
+    "work:severianus-fragmenta-galatas:u01-open": {
+      "packet": "books/severianus-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "2d6186ad7732fba5671ee4bb0decac173e5f2eb9f42df17fed6997ece90ad1a9"
+    },
+    "work:severianus-fragmenta-galatas:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "1cad67b447e210bb1843c46832fc6035f4e639af27b0bf33cb4c5a1db214dc71"
+    },
+    "work:severianus-fragmenta-galatas:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "93939a27b41ecfa6b5eaf5003c067b061f3081012f04df9a660ee44f36ea73ed"
+    },
+    "work:severianus-fragmenta-galatas:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-galatas/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "83c2c687570a12696a5d78bf1837c051ccc7386ae6abc533f60e7788f75c14fa"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -39736,6 +39760,10 @@
     "severianus-fragmenta-ephesios": {
       "packet": "books/severianus-fragmenta-ephesios/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-fragmenta-ephesios/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-galatas": {
+      "packet": "books/severianus-fragmenta-galatas/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-galatas/reviews/audit/tip.review.json"
     }
   }
 }
