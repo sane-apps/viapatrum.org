@@ -38367,6 +38367,78 @@
       "receipt": "books/asterius-homilia-9/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "8573fe7e79c6a9e41aee8b34bc44596f6f0c9746f9d36b42bec22151d335754f"
+    },
+    "work:severianus-de-caeco-zacchaeo:u01-open": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "c10bd398114d46eca92297ec9de80cc9a48858fe7ce094d60435d9e19de216b9"
+    },
+    "work:severianus-de-caeco-zacchaeo:u01-rem-early": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "32618a032d04cada644e2ca23db59290e06f6570744077de2f14c41eef4c81b4"
+    },
+    "work:severianus-de-caeco-zacchaeo:u01-rem-mid": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "68195df7a93c8510cd1b5eee3a3a8907a087447fc6daaf11ffdd822413491c69"
+    },
+    "work:severianus-de-caeco-zacchaeo:u01-rem-close": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "789ac83ca59000356e2f5171b7f9ef994ee536ad482b5455674c51ecdfff0bfe"
+    },
+    "work:severianus-de-caeco-zacchaeo:u02-open": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "d68cc40058600422835e5856e79193e579aa4bca7fa8ab14fa30b3c8191c71e1"
+    },
+    "work:severianus-de-caeco-zacchaeo:u02-rem-early": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "ef5c18110937dd59969f63dab211da59e5f36989792d852c5edc1ec178eeea75"
+    },
+    "work:severianus-de-caeco-zacchaeo:u02-rem-mid": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "d20900b33df8abdc56338557155539712421edf9cddcdcb5ed644b02a7242e5f"
+    },
+    "work:severianus-de-caeco-zacchaeo:u02-rem-close": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "b014a5cb84b37c77907103867ec7ae680d88e24ac58d71f54e09bbcd6487cf35"
+    },
+    "work:severianus-de-caeco-zacchaeo:u03-open": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "804625360b9c001e64c4c69394a0bb685b3530a2a41771352948bd31244ad411"
+    },
+    "work:severianus-de-caeco-zacchaeo:u03-rem-early": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "0aee3111f27370618b69efe07219072ec875c6e251b499b0fd6f9efc0116f394"
+    },
+    "work:severianus-de-caeco-zacchaeo:u03-rem-mid": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "0441b031127cbedf0c4361209ea47648760eb1f5151ae721764706abf7e49d18"
+    },
+    "work:severianus-de-caeco-zacchaeo:u03-rem-close": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "09c8d3d9089c92c360815ebf100b401850f8427f31dc38249ac5b68df9eab80f"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -38968,6 +39040,10 @@
     "asterius-homilia-9": {
       "packet": "books/asterius-homilia-9/reviews/audit/tip.packet.json",
       "receipt": "books/asterius-homilia-9/reviews/audit/tip.review.json"
+    },
+    "severianus-de-caeco-zacchaeo": {
+      "packet": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-de-caeco-zacchaeo/reviews/audit/tip.review.json"
     }
   }
 }
