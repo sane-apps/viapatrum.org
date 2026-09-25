@@ -283,7 +283,7 @@ for slug, filenames in {
 LATIN_H1 = re.compile(
     r"^(De|In|Contra|Adversus|Pro|Ex|Fragmenta|Fragmentum|Commentarii|"
     r"Homilia|Homiliae|Epistula|Epistulae|Oratio|Orationes|Sermo|Tractatus|"
-    r"Liber|Tomus|Capitula|Scholia|Catena|Refutatio|Demonstratio|"
+    r"Liber|Tomus|Capitula|Scholia(?!\s+on\b)|Catena|Refutatio|Demonstratio|"
     r"Bibliotheca|Panarion|Ancoratus|Anacephalaeosis|Chronicon|Chronographia|"
     r"Historiae|Vita|Passio|Martyrium|Encomium|Laudatio|Apologia)\b")
 for _page in sorted((site.DIST / "works").glob("*/index.html")):
