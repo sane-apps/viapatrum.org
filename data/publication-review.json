@@ -39735,6 +39735,78 @@
       "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
       "section": "u05-rem-close",
       "payload_sha256": "b5899588fe584b546658f144059b7ff1d7779df57aeb0ce257ab4ec9e4d83f79"
+    },
+    "work:epiphanius-anaphora-graeca:u01-open": {
+      "packet": "books/epiphanius-anaphora-graeca/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-anaphora-graeca/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "558547f01d812efa830ca5294dbb57fd0dd419276f1d50621f74669013147672"
+    },
+    "work:epiphanius-anaphora-graeca:u01-rem-early": {
+      "packet": "books/epiphanius-anaphora-graeca/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-anaphora-graeca/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "7b07efbd482932c6c67a506f2023ab1eca12b5a634f3f92cb926b0fffafa6156"
+    },
+    "work:epiphanius-anaphora-graeca:u01-rem-mid": {
+      "packet": "books/epiphanius-anaphora-graeca/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-anaphora-graeca/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "46efa18cd16ac6381e6e693ecc7907679036014553b1b5fdf45aad6e9197ef21"
+    },
+    "work:epiphanius-anaphora-graeca:u01-rem-close": {
+      "packet": "books/epiphanius-anaphora-graeca/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-anaphora-graeca/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "232f1462822f1e828b380cc62647213cb8d79dcfa5526d5e0564dfaa75595a0c"
+    },
+    "work:epiphanius-apophthegmata:u01-open": {
+      "packet": "books/epiphanius-apophthegmata/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-apophthegmata/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "73b07b8453e293700a1a2cba0d82214d7b23bc37cba4a36d5ffe2804c9639141"
+    },
+    "work:epiphanius-apophthegmata:u01-rem-early": {
+      "packet": "books/epiphanius-apophthegmata/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-apophthegmata/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "7b0f604f551ba501755a67d3dc2ea4ae1cbca5c506a11122edf26bea5cee8c0e"
+    },
+    "work:epiphanius-apophthegmata:u01-rem-mid": {
+      "packet": "books/epiphanius-apophthegmata/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-apophthegmata/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "68361272d1cc18447693715911a7d888c9a41f3ae6b7b56ede17b6f015dfa11f"
+    },
+    "work:epiphanius-apophthegmata:u01-rem-close": {
+      "packet": "books/epiphanius-apophthegmata/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-apophthegmata/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "5ead478cc53586111a8aec656697a2d82e9bcb0fd718b7e02aa29e30c3072507"
+    },
+    "work:epiphanius-appendices-ad-indices-apostolorum-discipulorumque:u01-open": {
+      "packet": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "eb1d94dd68d7f904694e66df3915241252bff97d1a8897f6d7c048fca9a4f454"
+    },
+    "work:epiphanius-appendices-ad-indices-apostolorum-discipulorumque:u01-rem-early": {
+      "packet": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "bc0aeba9a79f6ac2352c85046b1f154593b806483405852d0ece591335ea9960"
+    },
+    "work:epiphanius-appendices-ad-indices-apostolorum-discipulorumque:u01-rem-mid": {
+      "packet": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "8c743610b1a66b85630ff780ddae191e911087fce1e20f2862cb069db14260f3"
+    },
+    "work:epiphanius-appendices-ad-indices-apostolorum-discipulorumque:u01-rem-close": {
+      "packet": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9809443eb062c0f662eb2fcc869f76dce94d1b79e688b57864dfc86cc4bd405f"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40416,6 +40488,18 @@
     "severianus-in-job": {
       "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-in-job/reviews/audit/tip.review.json"
+    },
+    "epiphanius-anaphora-graeca": {
+      "packet": "books/epiphanius-anaphora-graeca/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-anaphora-graeca/reviews/audit/tip.review.json"
+    },
+    "epiphanius-apophthegmata": {
+      "packet": "books/epiphanius-apophthegmata/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-apophthegmata/reviews/audit/tip.review.json"
+    },
+    "epiphanius-appendices-ad-indices-apostolorum-discipulorumque": {
+      "packet": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.review.json"
     }
   }
 }
