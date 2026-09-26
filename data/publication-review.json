@@ -39807,6 +39807,150 @@
       "receipt": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "9809443eb062c0f662eb2fcc869f76dce94d1b79e688b57864dfc86cc4bd405f"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u01-open": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "063f2a0d803881c9ad86eeee2b9a75eee1de9508bb9782eb7dda21af38ad401a"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u01-rem-early": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "2e2cc572a85a412b2bb81f039f4d37bb50fde3e878c79a6dbf5748ffece9a06a"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u01-rem-mid": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "00cd097403ed8025cfae538a7a2077c035c507e1f4ecdca0496ba2b7a3ee3765"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u01-rem-close": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "b2ea298bcbc0ec2c84457b23eec6ce53d07647e1f7cd35bce838b967159cea01"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u02-open": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "18dd456e7eeb46497015b41f588e64638549e7c12bd17ca6bdf1fe5daf381060"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u02-rem-early": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "8d76a14df8af90e58f3a2896049efb715e4101567c9dbbaef02f10b5560da4e2"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u02-rem-mid": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "274f1a9b0fb01e3dce4ef8884f9c9e6a0f30327087280ac13d2c7a8878578308"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu:u02-rem-close": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "f5a0b8fde485d6197a8209e749d43ecbd49e018bf21c5fb01470af1edab2df97"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu-recensio-altera:u01-open": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "a3cfa96e21d8c4873c3173624dfc54ce2f2937c7b6cfea219392805bdc8bde8f"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu-recensio-altera:u01-rem-early": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "3696e535dc7ca5e477966803e72b0d6e504c09cf0636feee57a2d55212cc279b"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu-recensio-altera:u01-rem-mid": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "38124ba3036d00cacd22c728981cbcef41b5eed87c1c609c23aa135a87c45815"
+    },
+    "work:epiphanius-de-prophetarum-vita-et-obitu-recensio-altera:u01-rem-close": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "e80a1a0849c47264a20290bde9d88a2b2a3508c2dbf310a253ff905606a8be03"
+    },
+    "work:epiphanius-de-xii-gemmis:u01-open": {
+      "packet": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "db5ad4d0b473ff0bcd9f486b321ba5f68dc1f1d584157e4654314a89098afa6a"
+    },
+    "work:epiphanius-de-xii-gemmis:u01-rem-early": {
+      "packet": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "d53ccc7af992f7ee17614d960a8532c9f7bf7f1b68fc44bfee03e4fab2e7d709"
+    },
+    "work:epiphanius-de-xii-gemmis:u01-rem-mid": {
+      "packet": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "e27206dc402ac1a480018ecab87820a767b5a438ee143d4345369a114c0173dc"
+    },
+    "work:epiphanius-de-xii-gemmis:u01-rem-close": {
+      "packet": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "b7bd1f6fcfaa6d1b6f434fbdfff47dd00541f5ad893a2fdc17b89024c7a5c8d0"
+    },
+    "work:epiphanius-de-xii-gemmis-fragmenta:u01-open": {
+      "packet": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "6ec1930acba55cf08c1af556dc11fac86deab30b8a3252580aa6a901570e3ede"
+    },
+    "work:epiphanius-de-xii-gemmis-fragmenta:u01-rem-early": {
+      "packet": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "f8b6e41532e530087a6e056968eb1d6e8d76bacb7e67e980fbd7212fbadec744"
+    },
+    "work:epiphanius-de-xii-gemmis-fragmenta:u01-rem-mid": {
+      "packet": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "4c4d3c0f882f284856ca6fbb4649a8331eaa81baeead2468d5588857afa684f3"
+    },
+    "work:epiphanius-de-xii-gemmis-fragmenta:u01-rem-close": {
+      "packet": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "9ac49af5c02c3bf7bffdac879ef64deb88ca82597604714a9040154f45253b6a"
+    },
+    "work:epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum:u01-open": {
+      "packet": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "aa98e15994b32d9f98501e4c16753b49a4e0d496bc19d209f1c3e27711172c5c"
+    },
+    "work:epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum:u01-rem-early": {
+      "packet": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "ce50a6820170da3211dad1ae697c0bc4418968f1be0722bcd258f16b07ac20e7"
+    },
+    "work:epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum:u01-rem-mid": {
+      "packet": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "4f6344ddbe1c6c18f8da35b9d3536588faa226310e23d7eed49fef360e1ea639"
+    },
+    "work:epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum:u01-rem-close": {
+      "packet": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "2642c6a219c09b48adde3bac2aad4000625fa4d4218b3bcb90efb5c05bdd951a"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40500,6 +40644,26 @@
     "epiphanius-appendices-ad-indices-apostolorum-discipulorumque": {
       "packet": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-appendices-ad-indices-apostolorum-discipulorumque/reviews/audit/tip.review.json"
+    },
+    "epiphanius-de-prophetarum-vita-et-obitu": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu/reviews/audit/tip.review.json"
+    },
+    "epiphanius-de-prophetarum-vita-et-obitu-recensio-altera": {
+      "packet": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-prophetarum-vita-et-obitu-recensio-altera/reviews/audit/tip.review.json"
+    },
+    "epiphanius-de-xii-gemmis": {
+      "packet": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis/reviews/audit/tip.review.json"
+    },
+    "epiphanius-de-xii-gemmis-fragmenta": {
+      "packet": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-xii-gemmis-fragmenta/reviews/audit/tip.review.json"
+    },
+    "epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum": {
+      "packet": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.review.json"
     }
   }
 }
