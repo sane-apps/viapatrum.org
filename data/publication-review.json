@@ -39351,6 +39351,54 @@
       "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
       "section": "u02-rem-close",
       "payload_sha256": "a9b06474b73dad9e4ead62bde7028bcc1dd86720bd1783fdaa61a005e8d2bc77"
+    },
+    "work:severianus-fragmenta-2thess:u01-open": {
+      "packet": "books/severianus-fragmenta-2thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2thess/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "4af8ec394bb34a64fb17b5ef1396d5d64114dfbee7ba1736d89e629666d898bd"
+    },
+    "work:severianus-fragmenta-2thess:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-2thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2thess/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "dec37d40992a7368200b75fca6113e9b519e2adb65f450c492396a3638d37a99"
+    },
+    "work:severianus-fragmenta-2thess:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-2thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2thess/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "83ab2d446ea4ce1c8146423aa579800896dd5ccd6a838c3c1fe327ceda832eb5"
+    },
+    "work:severianus-fragmenta-2thess:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-2thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2thess/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "e033ef81dccfc92f1ee5ab82e5eb8c3afd9f5d2cce714e72299952b78e2aaa59"
+    },
+    "work:severianus-fragmenta-2tim:u01-open": {
+      "packet": "books/severianus-fragmenta-2tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2tim/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "9cadf1a8b90a89215ffecbd37f56db3c7950fac6cdc59264ca0397de110aeecc"
+    },
+    "work:severianus-fragmenta-2tim:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-2tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2tim/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "5bd5755a533f97a7e8602a8371bc0677085d9264dee144b00262a1693201ddd9"
+    },
+    "work:severianus-fragmenta-2tim:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-2tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2tim/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "3ced53bbe1f6975d03f4275590953315135ba6745181edbc4ce60efd8884d82d"
+    },
+    "work:severianus-fragmenta-2tim:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-2tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2tim/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "fe2f49332ce0f654222e0f473382bc1d2a4067cd0295651d1fb5427348ae581f"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40008,6 +40056,14 @@
     "severianus-fragmenta-2cor": {
       "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-2thess": {
+      "packet": "books/severianus-fragmenta-2thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2thess/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-2tim": {
+      "packet": "books/severianus-fragmenta-2tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2tim/reviews/audit/tip.review.json"
     }
   }
 }
