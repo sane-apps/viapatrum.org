@@ -39615,6 +39615,126 @@
       "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
       "section": "u06-rem-close",
       "payload_sha256": "f355c1abe27d8f39c03b94c838ab515f178ecf3e4e27dca7702105ecaf20793f"
+    },
+    "work:severianus-in-job:u01-open": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "dc2d175e6e74f112f89bd4cc3353fd1bfdbc53f7e7e7bd109c219cd24c01fac8"
+    },
+    "work:severianus-in-job:u01-rem-early": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "78976c7d1f431c5d88d403553f1cf381b619b4231700cdf62248b37605695654"
+    },
+    "work:severianus-in-job:u01-rem-mid": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "07844b930569393c6dfd8587b0cd81e2b8d9f0f750328d08b82344c232b1a914"
+    },
+    "work:severianus-in-job:u01-rem-close": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "a3dfff0a6dd51ccc7e232fd36dbfd1dd7d669b57b81976d68e90ec7f7dcab427"
+    },
+    "work:severianus-in-job:u02-open": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "8f85588ff505870aa7efc76589a68c42b976cd0b1295c4c1cb1020ec67d1fbb4"
+    },
+    "work:severianus-in-job:u02-rem-early": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "dc0b2d5c5d3756f117b4af1e22182fc99dea5ce6b814491935e6516f36c79596"
+    },
+    "work:severianus-in-job:u02-rem-mid": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "75ac600eaa76929f55b64fe6853603f10d4018287dd21945cd50e980277cce25"
+    },
+    "work:severianus-in-job:u02-rem-close": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "a08a679e83aece443056297fc7882ec725befb50745df7b7fdda9d5393339544"
+    },
+    "work:severianus-in-job:u03-open": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "76e23da1d4f1a58bcebb70d9a3af2de100e5d82b6560bed3d8d392ea1b0460ab"
+    },
+    "work:severianus-in-job:u03-rem-early": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "3876beca530e5728de238e8b030a346ce52d84c80220340cbf921bfa85e88cbd"
+    },
+    "work:severianus-in-job:u03-rem-mid": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "b8858a8e0fac8b75af336bfd4f359f7b1db6259f87df975cfebf8a8a626a4fb1"
+    },
+    "work:severianus-in-job:u03-rem-close": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "552e61f7fc06e560d497b1d3dfa902fef27613c202f278302a58841880741efa"
+    },
+    "work:severianus-in-job:u04-open": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "69a21686f975f749672b337bd17e41b69f202dec706b48117e88567545b3c914"
+    },
+    "work:severianus-in-job:u04-rem-early": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "3b62d82b68ed127e5b209fb66fdb2dd257762f5e1c9b974516b2fd4bdaa3d92b"
+    },
+    "work:severianus-in-job:u04-rem-mid": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "1fb70a0a77fbaf87f0c503b9b1af952e335fe9074cba4009976c6bc6ba45e81a"
+    },
+    "work:severianus-in-job:u04-rem-close": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "bd7944a4717006360a7a0760118d6745bcb2423fd97714c4dc765d9d23c3864e"
+    },
+    "work:severianus-in-job:u05-open": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "16bfe43b7151c160d05f320d009f3befedb6b7eb4cdc0c30579c5eceb72b1f14"
+    },
+    "work:severianus-in-job:u05-rem-early": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "31bfe2721ad278e9c29c7db78f6dccdee7aa33737e4f58f73cd14733f7b6f15b"
+    },
+    "work:severianus-in-job:u05-rem-mid": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "00963393c84cc053a2b6de68d4525679d01c633e4ca4fe86e67e9f674fab7fb2"
+    },
+    "work:severianus-in-job:u05-rem-close": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "b5899588fe584b546658f144059b7ff1d7779df57aeb0ce257ab4ec9e4d83f79"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40292,6 +40412,10 @@
     "severianus-in-1cor": {
       "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json"
+    },
+    "severianus-in-job": {
+      "packet": "books/severianus-in-job/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-job/reviews/audit/tip.review.json"
     }
   }
 }
