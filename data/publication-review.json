@@ -39471,6 +39471,150 @@
       "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
       "section": "u02-rem-close",
       "payload_sha256": "27985629d3acaa2b30375e328fd18bb71504b313242a08ceb5d950cc5812bcfb"
+    },
+    "work:severianus-in-1cor:u01-open": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "d0a474889a33b392c2baa55d9e5f5b2e9a528f01b7e1c944ed0a78259bfa29cc"
+    },
+    "work:severianus-in-1cor:u01-rem-early": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "030e551efa155bb77e2b9622864b3137306ec1b2c2aa9e2743be12f9f3937b8d"
+    },
+    "work:severianus-in-1cor:u01-rem-mid": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "fa65396ba5d819085bde241fbeeb613b13478d9bf77895f19cfd9960e7311c9a"
+    },
+    "work:severianus-in-1cor:u01-rem-close": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "0ca153fbe4cd84a4f3c7368d09913c1cccdeee0a8dc75c0a2d882836aa7f8db5"
+    },
+    "work:severianus-in-1cor:u02-open": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "65533ded804dc4951083c024d4332070ee6d32e40c2dfc01acad6d81c7486f09"
+    },
+    "work:severianus-in-1cor:u02-rem-early": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "8124c3e36b3c566aa31bc5264bba29dab26d75f7a7c7219bd24633ea000725c6"
+    },
+    "work:severianus-in-1cor:u02-rem-mid": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "2a72ba964f412384d4644b0b42f08573e4c87dfd48aac969cbde103714e7b70a"
+    },
+    "work:severianus-in-1cor:u02-rem-close": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "9d1cfcaf7d3ba0fe8aa05e7184cc3bb5a4d2e22074bd49016fc1e4b69daab3f0"
+    },
+    "work:severianus-in-1cor:u03-open": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "2b091f88db7317a77a9836ae8db8be2cfb3a2061e78e21abcbc6f9f8499537d6"
+    },
+    "work:severianus-in-1cor:u03-rem-early": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "7ab8ea8d753fe33cfedc18e3a01f936f5595d070ca479c5e8e5de309a190d731"
+    },
+    "work:severianus-in-1cor:u03-rem-mid": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "3819ff7ab8a90fb47cfe2233c90681a2ca310f6ef4023ae06bc592fdf2ee5d9a"
+    },
+    "work:severianus-in-1cor:u03-rem-close": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "c18874b96429adccd7dfc3ea0d74eed557e4b6f6ae2d3468c19e4025428a427e"
+    },
+    "work:severianus-in-1cor:u04-open": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u04-open",
+      "payload_sha256": "dc29fcd184e9a7d42789874c37e03136ed4284a41524a96f7ddeee082a7edbea"
+    },
+    "work:severianus-in-1cor:u04-rem-early": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u04-rem-early",
+      "payload_sha256": "4bd25b20e12f9ca0a29189f8201940c836c93670990f5b67a2e3257c6bc48562"
+    },
+    "work:severianus-in-1cor:u04-rem-mid": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u04-rem-mid",
+      "payload_sha256": "9d196b34347fe421fa5ccdc07ff75107fcb5ce369d01822e32f41daf5022cf39"
+    },
+    "work:severianus-in-1cor:u04-rem-close": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u04-rem-close",
+      "payload_sha256": "2aec086709969eb21381f40a904174c772a39be728cc00a3183bd0e6114a832d"
+    },
+    "work:severianus-in-1cor:u05-open": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u05-open",
+      "payload_sha256": "83e1677f28ff1b3aff5486a118fa3c0dc6363154ff959298a758ea354ab93fc5"
+    },
+    "work:severianus-in-1cor:u05-rem-early": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u05-rem-early",
+      "payload_sha256": "c88f6bab3da216af344cfcfbf72612c733c00ccfed580147a89838cbff1f1e19"
+    },
+    "work:severianus-in-1cor:u05-rem-mid": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u05-rem-mid",
+      "payload_sha256": "1964ce223f55cc04f7995d03162bc316e8a023b8c1507d15b11c4baad6590a17"
+    },
+    "work:severianus-in-1cor:u05-rem-close": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u05-rem-close",
+      "payload_sha256": "458e0dbbfffbfc4b8955effcf0376cf016082dee2f5079ad7659994f374d40c2"
+    },
+    "work:severianus-in-1cor:u06-open": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u06-open",
+      "payload_sha256": "a36adf8a13350d9e1308c5cffde07d8f41806b0e425ca5d5eb2296569df10ecc"
+    },
+    "work:severianus-in-1cor:u06-rem-early": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u06-rem-early",
+      "payload_sha256": "82835c7970d3ea2e64a6b6aa00007e1cb9f1593b84e66d5bb86f7a9ed799ab33"
+    },
+    "work:severianus-in-1cor:u06-rem-mid": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u06-rem-mid",
+      "payload_sha256": "685b1ceb997078423a85086778932ce6f8feea999c008100ca60b1c88aa8f1dc"
+    },
+    "work:severianus-in-1cor:u06-rem-close": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json",
+      "section": "u06-rem-close",
+      "payload_sha256": "f355c1abe27d8f39c03b94c838ab515f178ecf3e4e27dca7702105ecaf20793f"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40144,6 +40288,10 @@
     "severianus-in-illud-quando": {
       "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json"
+    },
+    "severianus-in-1cor": {
+      "packet": "books/severianus-in-1cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-1cor/reviews/audit/tip.review.json"
     }
   }
 }
