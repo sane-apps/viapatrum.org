@@ -39399,6 +39399,78 @@
       "receipt": "books/severianus-fragmenta-2tim/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "fe2f49332ce0f654222e0f473382bc1d2a4067cd0295651d1fb5427348ae581f"
+    },
+    "work:severianus-in-genesim:u01-open": {
+      "packet": "books/severianus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "08aafe3133d59b261e00253ebfa655f13985eedfd004c8b1a64e1365efa45bfd"
+    },
+    "work:severianus-in-genesim:u01-rem-early": {
+      "packet": "books/severianus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "1951cf730fec810e27ead195e5243e923aa56247ba9f1e4e635904c3e849ea0b"
+    },
+    "work:severianus-in-genesim:u01-rem-mid": {
+      "packet": "books/severianus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "ee3f4b8d55a4f74cdac9eab9a62c7adf92b9d9efcf03a18a731747134ca53c34"
+    },
+    "work:severianus-in-genesim:u01-rem-close": {
+      "packet": "books/severianus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-genesim/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "61e68db6a2477eb8c560bdb382e5b4dac4d43305633ca660d84bec4cdcd00066"
+    },
+    "work:severianus-in-illud-quando:u01-open": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "765db219b62af7a1c7dada7765f69760848bd22581e09f0fd9f9eb4254c45613"
+    },
+    "work:severianus-in-illud-quando:u01-rem-early": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "a8222c83020ea721bb47943126e444e81b14b3d78bb4852b9901ed6f6432d1ed"
+    },
+    "work:severianus-in-illud-quando:u01-rem-mid": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "a3ba59ce5a135e013e5d402cf755d68a36694b00750e9b753a4843454cd70563"
+    },
+    "work:severianus-in-illud-quando:u01-rem-close": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "fdf6095c2d85c13e899b936991e132950aa025e87aeabfb4361282297c962343"
+    },
+    "work:severianus-in-illud-quando:u02-open": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "4e619b421f2b452f9a7906f6bcedbf1dd59dfb94f364eccf9b7cade491d142cb"
+    },
+    "work:severianus-in-illud-quando:u02-rem-early": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "964c85f7618f262b3f0847e4e228c56f399510429f0e0c0f0b8845371995f720"
+    },
+    "work:severianus-in-illud-quando:u02-rem-mid": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "a43ff5cc912904a2deec842f3628f153c7f2bbc7b5e0b8e8b48a4b78745aaf65"
+    },
+    "work:severianus-in-illud-quando:u02-rem-close": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "27985629d3acaa2b30375e328fd18bb71504b313242a08ceb5d950cc5812bcfb"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40064,6 +40136,14 @@
     "severianus-fragmenta-2tim": {
       "packet": "books/severianus-fragmenta-2tim/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-fragmenta-2tim/reviews/audit/tip.review.json"
+    },
+    "severianus-in-genesim": {
+      "packet": "books/severianus-in-genesim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-genesim/reviews/audit/tip.review.json"
+    },
+    "severianus-in-illud-quando": {
+      "packet": "books/severianus-in-illud-quando/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-in-illud-quando/reviews/audit/tip.review.json"
     }
   }
 }
