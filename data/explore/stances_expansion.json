@@ -2016,5 +2016,2466 @@
     "stance": "denies",
     "year": 305,
     "note": "If after death we are nothing, virtue looks foolish — that persuasion is the error."
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:tertullian_de_anima_46",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_10",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_11",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_12",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:tertullian_marcion_1_13",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_14",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_16",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_18",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_2",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_3",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_4",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_5",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_6",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_7",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_8",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_1_9",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:tertullian_marcion_2_1",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_2_12",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_2_16",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_2_2",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:tertullian_marcion_2_22",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_2_24",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_2_26",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_2_28",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_4_25",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_4_26",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:tertullian_marcion_4_27",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:tertullian_marcion_4_33",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:tertullian_marcion_4_36",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 187
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "note": "Caecilius' pagan objection; reports Christian 'no altars, no temples' as accusation.",
+    "ref": "excerpt:minucius_octavius_10",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:minucius_octavius_19",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_2",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:minucius_octavius_20",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_21",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_22",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_23",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_24",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_25",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_27",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:minucius_octavius_3",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:minucius_octavius_30",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:minucius_octavius_31",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:minucius_octavius_32",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "note": "Caecilius' pagan speech for ancestral cults.",
+    "ref": "excerpt:minucius_octavius_6",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "note": "Caecilius' pagan speech for auguries and shrines.",
+    "ref": "excerpt:minucius_octavius_7",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "note": "Caecilius' pagan speech; consensus on immortal gods.",
+    "ref": "excerpt:minucius_octavius_8",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 200
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:commodian_carmen_1_40",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:commodian_carmen_361_400",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:commodian_carmen_41_80",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_10",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_11",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_12",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_13",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_14",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_16",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_17",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_18",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_19",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_2",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_20",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_3",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_4",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_5",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:commodian_instr_58",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:commodian_instr_59",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_7",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_8",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:commodian_instr_9",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:novatian_trinitate_3",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:novatian_trinitate_6",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:novatian_trinitate_7",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 250
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:victorinus_fabrica_luminaries",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 270
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:victorinus_fabrica_parasceve_sabbath",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 270
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:victorinus_fabrica_tetras",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 270
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_10",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_11",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_12",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_13",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_14",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_15",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_16",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_17",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_18",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_1_19",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_20",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_21",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_22",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_23",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_1_3",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_1_4",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_1_5",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_6",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_1_7",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_1_8",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_1_9",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_2_1",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_2_13",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_2_14",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_2_15",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_2_16",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_2_2",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_2_3",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_2_4",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_2_5",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_2_6",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_2_8",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_2_9",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_4_1",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_4_3",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_5_10",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_5_20",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_5_4",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_5_5",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_5_7",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_5_8",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_5_9",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_6_1",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_6_2",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:lactantius_inst_6_20",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_6_25",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_6_9",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "worship-spirit-virtue",
+    "ref": "excerpt:lactantius_inst_7_4",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:lactantius_inst_7_6",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 287
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:arnobius_nations_2_3",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:arnobius_nations_2_60",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:arnobius_nations_2_67",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:arnobius_nations_2_68",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:arnobius_nations_2_69",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:arnobius_nations_2_70",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "many-gods-worthy",
+    "ref": "excerpt:arnobius_nations_2_71",
+    "stance": "denies",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:arnobius_nations_2_72",
+    "stance": "affirms",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "claim_id": "one-god-only",
+    "ref": "excerpt:arnobius_nations_2_73",
+    "stance": "qualified",
+    "topic": "true-worship",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:ignatius_smyrnaeans_6",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 110
+  },
+  {
+    "ref": "excerpt:origen_princ_pref",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 225
+  },
+  {
+    "ref": "excerpt:diognetus_5",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 150
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_14",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_15",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_21",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_13",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_22",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_12",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_16",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_17",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_5",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_10",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_11",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_12",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_13",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_14",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_17",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:tertullian_paenitentia_7",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 203
+  },
+  {
+    "ref": "excerpt:tertullian_paenitentia_8",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 203
+  },
+  {
+    "ref": "excerpt:tertullian_paenitentia_10",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 203
+  },
+  {
+    "ref": "excerpt:tertullian_paenitentia_11",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 203
+  },
+  {
+    "ref": "excerpt:minucius_octavius_37",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 200
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_15",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_16",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_18",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_19",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_6_23",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:tertullian_marcion_5_2",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 208
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_5",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_8",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_11",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:commodian_instr_24",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_48",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_52",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_47",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_23",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_56",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_62",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_46",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_57",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_29",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_36",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_60",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_30",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_49",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_55",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_31",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_64",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_66",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_67",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_68",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_instr_22",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:tertullian_paenitentia_5",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 203
+  },
+  {
+    "ref": "excerpt:minucius_octavius_39",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 200
+  },
+  {
+    "ref": "excerpt:commodian_carmen_201_240",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:commodian_carmen_581_620",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:novatian_trinitate_9",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:novatian_trinitate_27",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:novatian_trinitate_30",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 250
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_4",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_6",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_7",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_9",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_56",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_51",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_76",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_58",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_57",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_59",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:arnobius_nations_2_10",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 300
+  },
+  {
+    "ref": "excerpt:minucius_octavius_1",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 200
+  },
+  {
+    "ref": "excerpt:minucius_octavius_4",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 200
+  },
+  {
+    "ref": "excerpt:minucius_octavius_14",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 200
+  },
+  {
+    "ref": "excerpt:minucius_octavius_15",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 200
+  },
+  {
+    "ref": "excerpt:lactantius_inst_1_1",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_27",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_28",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_10",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_29",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_14",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_26",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_3",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_30",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_1",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_1_2",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_11",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_20",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_2_7",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_5",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_21",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_4",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_23",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_24",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_8",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_17",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_6",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_15",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_2_19",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_2",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_7",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_16",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_22",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_3_25",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_4_4",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_4_30",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_4_2",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_4_5",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_3",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_7_3",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:lactantius_inst_5_2",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 310
+  },
+  {
+    "ref": "excerpt:tertullian_marcion_4_28",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 208
+  },
+  {
+    "ref": "excerpt:tertullian_marcion_4_16",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 208
+  },
+  {
+    "ref": "excerpt:tertullian_marcion_4_15",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "qualified",
+    "year": 208
+  },
+  {
+    "ref": "excerpt:tertullian_marcion_4_18",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 208
+  },
+  {
+    "ref": "excerpt:tertullian_marcion_4_23",
+    "topic": "faith-and-obedience",
+    "claim_id": "faith-with-obedience",
+    "stance": "affirms",
+    "year": 208
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:victorinus_creation",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 270
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:clement_strom_2_19_image_likeness",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 200
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:diognetus_10_image",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 150
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:barnabas_6_image",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 100
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:tatian_oratio_7_image",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 165
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_27",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 211
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_4",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 211
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_19",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 211
+  },
+  {
+    "claim_id": "christ-is-image",
+    "ref": "excerpt:novatian_trinitate_28",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 250
+  },
+  {
+    "claim_id": "christ-is-image",
+    "ref": "excerpt:novatian_trinitate_18",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 250
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_51",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_1",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_14",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_10",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_5",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_6",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_8",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_12",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_15",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_13",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:tertullian_de_anima_23",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_36",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_24",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_45",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:tertullian_de_anima_44",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 210
+  },
+  {
+    "claim_id": "christ-is-image",
+    "ref": "excerpt:commodian_carmen_81_120",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 250
+  },
+  {
+    "claim_id": "christ-is-image",
+    "ref": "excerpt:novatian_trinitate_26",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 250
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:novatian_trinitate_2",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 250
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:novatian_trinitate_5",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 250
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_15",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_37",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_45",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:arnobius_nations_2_16",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_26",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_24",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_47",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_39",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_27",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_22",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:arnobius_nations_2_25",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_18",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_28",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_41",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_17",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_42",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_48",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:arnobius_nations_2_38",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_43",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_52",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_21",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_40",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_23",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_20",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "soul-from-god",
+    "ref": "excerpt:arnobius_nations_2_49",
+    "stance": "denies",
+    "topic": "image-likeness",
+    "year": 300
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:lactantius_inst_2_18",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 310
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:lactantius_inst_2_11",
+    "stance": "affirms",
+    "topic": "image-likeness",
+    "year": 310
+  },
+  {
+    "claim_id": "made-in-image",
+    "ref": "excerpt:lactantius_inst_2_10",
+    "stance": "qualified",
+    "topic": "image-likeness",
+    "year": 310
+  },
+  {
+    "claim_id": "creators-image",
+    "ref": "excerpt:tertullian_marcion_5_8",
+    "stance": "affirms",
+    "topic": "image-and-likeness",
+    "year": 208
+  },
+  {
+    "claim_id": "image-can-fail",
+    "ref": "excerpt:tertullian_marcion_2_9",
+    "stance": "affirms",
+    "topic": "image-and-likeness",
+    "year": 208
+  },
+  {
+    "claim_id": "mission-foretold",
+    "ref": "excerpt:tertullian_marcion_3_22",
+    "stance": "affirms",
+    "topic": "apostolic-mission",
+    "year": 208
+  },
+  {
+    "claim_id": "mission-foretold",
+    "ref": "excerpt:tertullian_marcion_4_13",
+    "stance": "affirms",
+    "topic": "apostolic-mission",
+    "year": 208
+  },
+  {
+    "claim_id": "stranger-mission",
+    "ref": "excerpt:tertullian_marcion_4_24",
+    "stance": "denies",
+    "topic": "apostolic-mission",
+    "year": 208
+  },
+  {
+    "claim_id": "churches-keep",
+    "ref": "excerpt:tertullian_marcion_1_1",
+    "stance": "qualified",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "marcion-restores",
+    "ref": "excerpt:tertullian_marcion_1_19",
+    "stance": "denies",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "rule-prior",
+    "ref": "excerpt:tertullian_marcion_1_21",
+    "stance": "affirms",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "rule-prior",
+    "ref": "excerpt:tertullian_marcion_3_1",
+    "stance": "affirms",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "rule-prior",
+    "ref": "excerpt:tertullian_marcion_3_2",
+    "stance": "qualified",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "churches-keep",
+    "ref": "excerpt:tertullian_marcion_3_5",
+    "stance": "qualified",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "churches-keep",
+    "ref": "excerpt:tertullian_marcion_4_2",
+    "stance": "affirms",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "marcion-restores",
+    "ref": "excerpt:tertullian_marcion_4_3",
+    "stance": "denies",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "rule-prior",
+    "ref": "excerpt:tertullian_marcion_4_4",
+    "stance": "affirms",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "churches-keep",
+    "ref": "excerpt:tertullian_marcion_4_5",
+    "stance": "affirms",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "rule-prior",
+    "ref": "excerpt:tertullian_marcion_5_1",
+    "stance": "affirms",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "rule-prior",
+    "ref": "excerpt:tertullian_marcion_5_19",
+    "stance": "affirms",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "marcion-restores",
+    "ref": "excerpt:tertullian_marcion_5_21",
+    "stance": "denies",
+    "topic": "apostolic-tradition",
+    "year": 208
+  },
+  {
+    "claim_id": "suffered-as-written",
+    "ref": "excerpt:tertullian_marcion_3_17",
+    "stance": "affirms",
+    "topic": "atonement-and-recapitulation",
+    "year": 208
+  },
+  {
+    "claim_id": "suffered-as-written",
+    "ref": "excerpt:tertullian_marcion_4_42",
+    "stance": "affirms",
+    "topic": "atonement-and-recapitulation",
+    "year": 208
+  },
+  {
+    "claim_id": "all-recapitulated",
+    "ref": "excerpt:tertullian_marcion_5_17",
+    "stance": "affirms",
+    "topic": "atonement-and-recapitulation",
+    "year": 208
+  },
+  {
+    "claim_id": "truth-asks-hearing",
+    "ref": "excerpt:lactantius_inst_5_1",
+    "stance": "affirms",
+    "topic": "grace-and-human-response",
+    "year": 305
+  },
+  {
+    "claim_id": "evil-from-contempt",
+    "ref": "excerpt:lactantius_inst_5_6",
+    "stance": "affirms",
+    "topic": "grace-and-human-response",
+    "year": 305
+  },
+  {
+    "claim_id": "restorer-of-dead",
+    "ref": "excerpt:tertullian_marcion_3_24",
+    "stance": "affirms",
+    "topic": "hope-and-resurrection",
+    "year": 208
+  },
+  {
+    "claim_id": "bodies-rise",
+    "ref": "excerpt:tertullian_marcion_5_10",
+    "stance": "affirms",
+    "topic": "hope-and-resurrection",
+    "year": 208
+  },
+  {
+    "claim_id": "bodies-rise",
+    "ref": "excerpt:tertullian_marcion_5_9",
+    "stance": "affirms",
+    "topic": "hope-and-resurrection",
+    "year": 208
+  },
+  {
+    "claim_id": "marcion-two-gods",
+    "ref": "excerpt:tertullian_marcion_1_20",
+    "stance": "denies",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "law-good",
+    "ref": "excerpt:tertullian_marcion_2_18",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "law-good",
+    "ref": "excerpt:tertullian_marcion_2_19",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "law-good",
+    "ref": "excerpt:tertullian_marcion_2_21",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "newness-promised",
+    "ref": "excerpt:tertullian_marcion_4_1",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "newness-promised",
+    "ref": "excerpt:tertullian_marcion_4_11",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "marcion-two-gods",
+    "ref": "excerpt:tertullian_marcion_4_12",
+    "stance": "denies",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "newness-promised",
+    "ref": "excerpt:tertullian_marcion_4_17",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "newness-promised",
+    "ref": "excerpt:tertullian_marcion_4_22",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "law-good",
+    "ref": "excerpt:tertullian_marcion_4_30",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "marcion-two-gods",
+    "ref": "excerpt:tertullian_marcion_4_34",
+    "stance": "denies",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "marcion-two-gods",
+    "ref": "excerpt:tertullian_marcion_4_6",
+    "stance": "denies",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "newness-promised",
+    "ref": "excerpt:tertullian_marcion_4_9",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "newness-promised",
+    "ref": "excerpt:tertullian_marcion_5_3",
+    "stance": "affirms",
+    "topic": "law-and-gospel",
+    "year": 208
+  },
+  {
+    "claim_id": "stranger-no-care",
+    "ref": "excerpt:tertullian_marcion_1_15",
+    "stance": "affirms",
+    "topic": "providence-and-care",
+    "year": 208
+  },
+  {
+    "claim_id": "eternal-goodness",
+    "ref": "excerpt:tertullian_marcion_2_3",
+    "stance": "affirms",
+    "topic": "providence-and-care",
+    "year": 208
+  },
+  {
+    "claim_id": "stranger-no-care",
+    "ref": "excerpt:tertullian_marcion_3_4",
+    "stance": "affirms",
+    "topic": "providence-and-care",
+    "year": 208
+  },
+  {
+    "claim_id": "creator-provides",
+    "ref": "excerpt:tertullian_marcion_4_29",
+    "stance": "affirms",
+    "topic": "providence-and-care",
+    "year": 208
+  },
+  {
+    "claim_id": "mission-runs-on-care",
+    "ref": "excerpt:tertullian_marcion_4_21",
+    "stance": "affirms",
+    "topic": "providence-and-mission",
+    "year": 208
+  },
+  {
+    "claim_id": "one-christ-preached",
+    "ref": "excerpt:tertullian_marcion_5_20",
+    "stance": "affirms",
+    "topic": "unity-of-christ",
+    "year": 208
   }
 ]

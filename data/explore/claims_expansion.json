@@ -784,5 +784,201 @@
         "short": "Final judgment"
       }
     ]
+  },
+  {
+    "topic": "true-worship",
+    "title": "True Worship",
+    "claims": [
+      {
+        "id": "one-god-only",
+        "label": "One God alone is to be worshiped",
+        "short": "One God only"
+      },
+      {
+        "id": "worship-spirit-virtue",
+        "label": "True worship is a pure mind and just life; God needs no temples, images, or victims",
+        "short": "Spirit and virtue"
+      },
+      {
+        "id": "many-gods-worthy",
+        "label": "Many gods, images, or the dead deserve divine worship",
+        "short": "Many gods worthy"
+      }
+    ]
+  },
+  {
+    "topic": "image-and-likeness",
+    "title": "Image and Likeness",
+    "claims": [
+      {
+        "id": "creators-image",
+        "label": "The human being is the Creator's image, headed by the Creator's Christ",
+        "short": "Creator's image"
+      },
+      {
+        "id": "image-can-fail",
+        "label": "The imaged soul can sin without the offense reaching God's Spirit",
+        "short": "Image can fail"
+      }
+    ]
+  },
+  {
+    "topic": "apostolic-mission",
+    "title": "Apostolic Mission",
+    "claims": [
+      {
+        "id": "mission-foretold",
+        "label": "The apostles' mission to the nations was foretold by the prophets",
+        "short": "Mission foretold"
+      },
+      {
+        "id": "stranger-mission",
+        "label": "The apostles preached a stranger god unknown to the prophets",
+        "short": "Stranger mission"
+      }
+    ]
+  },
+  {
+    "topic": "apostolic-tradition",
+    "title": "Apostolic Tradition",
+    "claims": [
+      {
+        "id": "rule-prior",
+        "label": "The apostolic rule in the churches predates every heresy",
+        "short": "Prior rule"
+      },
+      {
+        "id": "churches-keep",
+        "label": "The apostolic churches keep the apostles' gospel intact",
+        "short": "Churches keep it"
+      },
+      {
+        "id": "marcion-restores",
+        "label": "Marcion restored a gospel the apostles had corrupted",
+        "short": "Marcion restores"
+      }
+    ]
+  },
+  {
+    "topic": "atonement-and-recapitulation",
+    "title": "Atonement and Recapitulation",
+    "claims": [
+      {
+        "id": "suffered-as-written",
+        "label": "Christ suffered and healed as Isaiah wrote",
+        "short": "Suffered as written"
+      },
+      {
+        "id": "all-recapitulated",
+        "label": "All things are recapitulated in Christ by the God of the beginning",
+        "short": "All recapitulated"
+      }
+    ]
+  },
+  {
+    "topic": "grace-and-human-response",
+    "title": "Grace and Human Response",
+    "claims": [
+      {
+        "id": "truth-asks-hearing",
+        "label": "Truth is offered to all and asks a fair hearing, not prejudgment",
+        "short": "Truth asks hearing"
+      },
+      {
+        "id": "evil-from-contempt",
+        "label": "Evils flow from contempt of God hardened into habit",
+        "short": "Contempt hardens"
+      }
+    ]
+  },
+  {
+    "topic": "hope-and-resurrection",
+    "title": "Hope and Resurrection",
+    "claims": [
+      {
+        "id": "bodies-rise",
+        "label": "The dead rise in their bodies, not as souls only",
+        "short": "Bodies rise"
+      },
+      {
+        "id": "restorer-of-dead",
+        "label": "The Creator restores what wrath removed, even to the dead",
+        "short": "Restores the dead"
+      }
+    ]
+  },
+  {
+    "topic": "law-and-gospel",
+    "title": "Law and Gospel",
+    "claims": [
+      {
+        "id": "law-good",
+        "label": "The law's hard precepts restrain evil and train virtue",
+        "short": "Law is good"
+      },
+      {
+        "id": "newness-promised",
+        "label": "The gospel's newness was arranged and promised by the Creator",
+        "short": "Newness promised"
+      },
+      {
+        "id": "marcion-two-gods",
+        "label": "Law and gospel diversity proves two gods",
+        "short": "Two gods"
+      }
+    ]
+  },
+  {
+    "topic": "providence-and-care",
+    "title": "Providence and Care",
+    "claims": [
+      {
+        "id": "eternal-goodness",
+        "label": "The Creator's goodness is eternal, not sudden or provoked",
+        "short": "Eternal goodness"
+      },
+      {
+        "id": "creator-provides",
+        "label": "The Creator feeds and clothes his creatures and forbids anxious care",
+        "short": "Creator provides"
+      },
+      {
+        "id": "stranger-no-care",
+        "label": "Marcion's late, worldless god shows no governing care",
+        "short": "Stranger shows none"
+      }
+    ]
+  },
+  {
+    "topic": "providence-and-mission",
+    "title": "Providence and Mission",
+    "claims": [
+      {
+        "id": "mission-runs-on-care",
+        "label": "The bare mission runs on the Creator's feeding and wages",
+        "short": "Mission fed by God"
+      },
+      {
+        "id": "mission-bears-judgment",
+        "label": "The mission's dust-testimony threatens the Creator's judgment",
+        "short": "Dust threatens judgment"
+      }
+    ]
+  },
+  {
+    "topic": "unity-of-christ",
+    "title": "Unity of Christ",
+    "claims": [
+      {
+        "id": "one-christ-preached",
+        "label": "Amid varied motives, one Christ is proclaimed",
+        "short": "One Christ"
+      },
+      {
+        "id": "rivalry-no-rival",
+        "label": "Missionary rivalry does not make a second Christ",
+        "short": "No second Christ"
+      }
+    ]
   }
 ]

@@ -81,6 +81,21 @@
         "id": "image-destroyed",
         "label": "The image is destroyed so nature itself is evil",
         "short": "Image lost"
+      },
+      {
+        "id": "made-in-image",
+        "label": "The human being is made in God’s image by God",
+        "short": "Made in image"
+      },
+      {
+        "id": "soul-from-god",
+        "label": "The soul comes from God’s breath, simple and endowed from the start",
+        "short": "Soul from God"
+      },
+      {
+        "id": "christ-is-image",
+        "label": "Christ the Son is the image of the invisible God",
+        "short": "Christ is image"
       }
     ]
   },
