@@ -3857,6 +3857,8 @@ def layout(
     styles: list[str] | None = None,
     scripts: list[str] | None = None,
     body_class: str = "",
+    og_image: str = "",
+    og_type: str = "website",
 ) -> str:
     crumbs = ""
     if crumb:
@@ -3873,6 +3875,40 @@ def layout(
 
     extra_css = "".join(f'<link rel="stylesheet" href="{escape(h)}?v={ASSET_VER}">\n' for h in styles or [])
     extra_js = "".join(f'<script src="{escape(h)}?v={ASSET_VER}" defer></script>\n' for h in scripts or [])
+    card = og_image or {
+        "topics": "topics",
+        "works": "works",
+        "explore": "explore",
+        "authors": "authors",
+        "contribute": "help",
+        "about": "about",
+    }.get(active, "home")
+    full_title = f"{title} · {SITE_NAME}"
+    desc = description if len(description) <= 200 else description[:197].rstrip() + "..."
+    img = f"https://fathers.saneapps.com/assets/og/{card}.png"
+    share_url = "https://fathers.saneapps.com/__ROUTE__"
+    alt = f"{title} on {SITE_NAME}"
+    social = (
+        f'<meta property="og:type" content="{escape(og_type)}">\n'
+        f'<meta property="og:site_name" content="{escape(SITE_NAME)}">\n'
+        f'<meta property="og:locale" content="en_US">\n'
+        f'<meta property="og:title" content="{escape(full_title)}">\n'
+        f'<meta property="og:description" content="{escape(desc)}">\n'
+        f'<meta property="og:url" content="{share_url}">\n'
+        f'<meta property="og:image" content="{img}">\n'
+        f'<meta property="og:image:secure_url" content="{img}">\n'
+        f'<meta property="og:image:type" content="image/png">\n'
+        f'<meta property="og:image:width" content="1200">\n'
+        f'<meta property="og:image:height" content="630">\n'
+        f'<meta property="og:image:alt" content="{escape(alt)}">\n'
+        f'<meta name="twitter:card" content="summary_large_image">\n'
+        f'<meta name="twitter:site" content="@MrSaneApps">\n'
+        f'<meta name="twitter:title" content="{escape(full_title)}">\n'
+        f'<meta name="twitter:description" content="{escape(desc)}">\n'
+        f'<meta name="twitter:url" content="{share_url}">\n'
+        f'<meta name="twitter:image" content="{img}">\n'
+        f'<meta name="twitter:image:alt" content="{escape(alt)}">\n'
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -3883,8 +3919,8 @@ def layout(
 <meta name="supported-color-schemes" content="light">
 <meta name="theme-color" content="#f7f3ea">
 <title>{escape(title)} · {SITE_NAME}</title>
-<meta name="description" content="{escape(description)}">
-<link rel="canonical" href="https://fathers.saneapps.com/">
+<meta name="description" content="{escape(desc)}">
+{social}<link rel="canonical" href="https://fathers.saneapps.com/__ROUTE__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;550;650&display=swap" rel="stylesheet">
@@ -3927,8 +3963,8 @@ def write(path: Path, html: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.suffix == ".html" and path.is_relative_to(DIST):
         route = "/" + path.relative_to(DIST).as_posix().removesuffix("index.html")
-        html = html.replace('<link rel="canonical" href="https://fathers.saneapps.com/">',
-                            f'<link rel="canonical" href="https://fathers.saneapps.com{escape(route)}">')
+        html = html.replace("https://fathers.saneapps.com/__ROUTE__",
+                            f"https://fathers.saneapps.com{escape(route)}")
     path.write_text(html, encoding="utf-8")
 
 
@@ -4008,7 +4044,7 @@ def build() -> None:
     DIST.mkdir(parents=True)
     shutil.copytree(ASSETS, DIST / "assets")
     (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
-    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse works</a> or <a href="/topics/">browse topics</a>.</p></section>').replace("</head>", '<meta name="robots" content="noindex"></head>'))
+    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse works</a> or <a href="/topics/">browse topics</a>.</p></section>', description="This page is not in the Fathers library. Browse works or topics.").replace("</head>", '<meta name="robots" content="noindex"></head>'))
 
     explore_topic_ids = {c["topic"] for c in load_explore_raw()["claims"] if c.get("topic")}
 
@@ -4194,7 +4230,15 @@ def build() -> None:
   <p><a href="/topics/">Browse all topics →</a></p>
 </section>
 """
-    write(DIST / "index.html", layout("Home", home, active=""))
+    write(
+        DIST / "index.html",
+        layout(
+            "Home",
+            home,
+            active="",
+            description="Teaching by topic, and whole treatises chapter by chapter. Ante-Nicene voices first.",
+        ),
+    )
 
     # --- Topics index ---
     locus_blocks = []
@@ -4228,7 +4272,13 @@ def build() -> None:
 """
     write(
         DIST / "topics" / "index.html",
-        layout("Topics", topics_body, crumb=[("Home", "/"), ("Topics", "")], active="topics"),
+        layout(
+            "Topics",
+            topics_body,
+            crumb=[("Home", "/"), ("Topics", "")],
+            active="topics",
+            description="What the early writers taught, mapped by topic, with the passages and related works.",
+        ),
     )
 
     # --- Topic pages + excerpt pages ---
@@ -4312,6 +4362,7 @@ def build() -> None:
                     ],
                     active="topics",
                     description=strip_logos_markup((eng_list(x.get("english")) or [""])[0])[:160],
+                    og_type="article",
                 ),
             )
             search_index.append(
@@ -4371,6 +4422,7 @@ def build() -> None:
                 tbody,
                 crumb=[("Home", "/"), ("Topics", "/topics/"), (meta["title"], "")],
                 active="topics",
+                description=f"{meta['title']}. {meta.get('locus_title') or 'Teaching in this library'}.",
             ),
         )
 
@@ -4391,6 +4443,7 @@ def build() -> None:
                 {related_panel("Related works", related_works)}""",
                 crumb=[("Home", "/"), ("Topics", "/topics/"), (meta["title"], "")],
                 active="topics",
+                description=f"{meta['title']}. {meta.get('locus_title') or 'Teaching in this library'}.",
             ),
         )
 
@@ -4789,6 +4842,7 @@ def build() -> None:
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=w.get("blurb") or SITE_TAG,
+                    og_type="article",
                 ),
             )
             for i, (g, bslug) in enumerate(zip(w["groups"], book_slugs)):
@@ -4840,6 +4894,7 @@ def build() -> None:
                         ],
                         active="works",
                         description=w.get("blurb") or SITE_TAG,
+                        og_type="article",
                     ),
                 )
         else:
@@ -4857,6 +4912,7 @@ def build() -> None:
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=w.get("blurb") or SITE_TAG,
+                    og_type="article",
                 ),
             )
 
@@ -4922,6 +4978,7 @@ def build() -> None:
                     ],
                     active="works",
                     description=strip_logos_markup((s["english"] or [""])[0])[:160],
+                    og_type="article",
                 ),
             )
             search_index.append(
@@ -5000,6 +5057,7 @@ def build() -> None:
                 <h2>Topical excerpts</h2>{ot_lis or "<p>None linked yet.</p>"}""",
                 crumb=[("Home", "/"), ("Authors", "/authors/"), (display, "")],
                 active="authors",
+                description=f"{display}. Whole works and topical excerpts in this library.",
             ),
         )
         dates = author_dates_display(display, slug)
@@ -5038,6 +5096,7 @@ def build() -> None:
             <p class="intro">Compare with <a href="/authors/julian-of-eclanum/">Julian of Eclanum</a> and the ante-Nicene topic map.</p>""",
             crumb=[("Home", "/"), ("Authors", "/authors/"), ("Augustine", "")],
             active="authors",
+            description="Augustine of Hippo. Topical excerpts and contrast cards in this library.",
         ),
     )
     hubs_done.add("augustine-of-hippo")
@@ -5109,6 +5168,7 @@ def build() -> None:
                 f"<h1>{escape(author)}</h1>{''.join(blocks)}",
                 crumb=[("Home", "/"), ("Authors", "/authors/"), (author, "")],
                 active="authors",
+                description=f"{author}. Whole works and topical excerpts in this library.",
             ),
         )
 
@@ -5130,6 +5190,7 @@ def build() -> None:
             f"<ul class='card-list'>{''.join(author_links)}</ul>",
             crumb=[("Home", "/"), ("Authors", "")],
             active="authors",
+            description="Writers in this library, earliest first. Whole works and topical excerpts, with dates in BC and AD.",
         ),
     )
 
@@ -5151,29 +5212,31 @@ def build() -> None:
     )
     explore_body = f"""
 <div class="explore" data-explore>
-  <section class="explore-paths" id="explore-paths" aria-label="Curated paths">
-    <header class="explore-paths-head">
-      <h1>Explore</h1>
-      <p class="intro">Curated paths for the questions people actually ask — doctrine timelines, controversies, scripture trails, era bands, and short reading sequences. Open a path, then use the timeline below for the stance map.</p>
-      {progress_strip}
-    </header>
-    <div class="explore-path-grid" id="explore-path-grid"><p class="empty">Loading paths…</p></div>
-  </section>
+  <header class="explore-head">
+    <h1>Explore</h1>
+    {progress_strip}
+    <p class="intro explore-sub">What each early writer taught, claim by claim — with the passages to prove it.</p>
+  </header>
   <div class="explore-chrome">
-    <h2 class="explore-timeline-title">Topic timeline</h2>
-    <a class="explore-home" href="/">← Library</a>
+    <label class="field field-search"><span>Search</span><input id="explore-q" type="search" placeholder="Writer, work, or words…" autocomplete="off"></label>
     <label class="field field-topic"><span>Topic</span><select id="explore-topic"></select></label>
+    <div class="explore-seg" role="group" aria-label="View">
+      <button type="button" id="view-timeline">Timeline</button>
+      <button type="button" id="view-table">Table</button>
+      <button type="button" id="view-consensus">Consensus</button>
+    </div>
     <button type="button" class="explore-filters-toggle" id="explore-filters-toggle" aria-expanded="false">Filters</button>
     <label class="field field-extra"><span>Era</span><select id="explore-era"></select></label>
     <label class="field field-extra"><span>Author</span><select id="explore-author"></select></label>
     <label class="field field-extra"><span>Compare</span><select id="explore-compare-add"></select></label>
     <div class="explore-chips" id="explore-chips"></div>
     <p class="intro" id="explore-summary" aria-live="polite"></p>
-    <div class="explore-seg" role="group" aria-label="Scale">
+    <div class="explore-seg" id="explore-scale-seg" role="group" aria-label="Scale">
       <button type="button" id="zoom-century">Centuries</button>
       <button type="button" id="zoom-year">Years</button>
     </div>
   </div>
+  <p class="explore-legend" id="explore-legend"><span><i class="dot-affirms">●</i> affirms the row</span><span><i class="dot-partly">◐</i> partly</span><span><i class="dot-denies">✕</i> denies the row</span><span class="legend-note">Each color is one writer. Click a mark to read the passage.</span></p>
   <aside id="explore-tip" class="explore-tip" data-open="0" hidden>
     <strong class="tip-title"></strong>
     <span class="tip-body" id="explore-tip-body"></span>
@@ -5195,7 +5258,7 @@ def build() -> None:
             "Explore",
             explore_body,
             active="explore",
-            description="Curated doctrinal paths and a timeline of how Fathers line up on a claim across time",
+            description="What each early writer taught, claim by claim: timeline, verdict table, and consensus views with the passages to prove it",
             styles=["/assets/explore.css"],
             scripts=["/assets/explore.js"],
             body_class="explore-mode",
@@ -5266,6 +5329,7 @@ def build() -> None:
             <p>If it helps you, you can <a href="{SPONSORS}">support the work on GitHub Sponsors</a>.</p>""",
             crumb=[("Home", "/"), ("About", "")],
             active="about",
+            description="A free public library of early Christian writing: a topic map, whole works, and how writers line up over time.",
         ),
     )
 
@@ -5315,7 +5379,7 @@ def build() -> None:
 
             <p>Short summary: <a href="/about/">About</a>. Corrections and help: <a href="/contribute/">Help</a>.</p>""",
             crumb=[("Home", "/"), ("Methodology", "")],
-            active="about",
+            og_image="methodology",
             description="How Fathers makes English: sources, two passes, Original English Translation, and what stays off the reading page",
         ),
     )

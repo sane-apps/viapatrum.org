@@ -28,6 +28,11 @@
         "id": "inherited-guilt",
         "label": "Guilt or damning sin is inherited by birth",
         "short": "Inherited guilt"
+      },
+      {
+        "id": "death-destroyed",
+        "label": "Death is destroyed in Christ",
+        "short": "Death destroyed"
       }
     ]
   },

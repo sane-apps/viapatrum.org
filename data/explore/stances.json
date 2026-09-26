@@ -73,7 +73,7 @@
     "ref": "excerpt:lactantius_inst_2_17",
     "topic": "free-will",
     "claim_id": "will-capable",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 305
   },
   {
@@ -112,26 +112,11 @@
     "year": 180
   },
   {
-    "ref": "excerpt:clement_strom_1_17",
-    "topic": "grace-and-assistance",
-    "claim_id": "grace-assists",
-    "stance": "qualified",
-    "year": 200,
-    "note": "Rejects making God the cause of sin by mere non-prevention."
-  },
-  {
     "ref": "excerpt:origen_princ_3_1_6",
     "topic": "grace-and-assistance",
     "claim_id": "grace-assists",
     "stance": "affirms",
     "year": 225
-  },
-  {
-    "ref": "excerpt:ignatius_smyrnaeans_6",
-    "topic": "faith-and-obedience",
-    "claim_id": "faith-with-obedience",
-    "stance": "affirms",
-    "year": 110
   },
   {
     "ref": "excerpt:hermas_mand_1",
@@ -141,32 +126,11 @@
     "year": 140
   },
   {
-    "ref": "excerpt:diognetus_5",
-    "topic": "faith-and-obedience",
-    "claim_id": "faith-with-obedience",
-    "stance": "affirms",
-    "year": 150
-  },
-  {
     "ref": "excerpt:irenaeus_ah_4_37_5",
     "topic": "faith-and-obedience",
     "claim_id": "faith-with-obedience",
     "stance": "affirms",
     "year": 180
-  },
-  {
-    "ref": "excerpt:origen_princ_pref",
-    "topic": "faith-and-obedience",
-    "claim_id": "faith-with-obedience",
-    "stance": "affirms",
-    "year": 225
-  },
-  {
-    "ref": "excerpt:victorinus_creation",
-    "topic": "image-likeness",
-    "claim_id": "image-retained",
-    "stance": "affirms",
-    "year": 270
   },
   {
     "ref": "work:julian-letter-to-rome/1-2-4",
@@ -309,14 +273,6 @@
     "year": 208
   },
   {
-    "ref": "excerpt:tertullian_marc_5_8_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "qualified",
-    "year": 208,
-    "note": "Catalogues gifts; love ranked above them."
-  },
-  {
     "ref": "excerpt:ignatius_smyrnaeans_greeting_gifts",
     "topic": "gifts-and-order",
     "claim_id": "charismata-continue",
@@ -343,7 +299,7 @@
     "ref": "excerpt:justin_dialogue_82_gifts",
     "topic": "gifts-and-order",
     "claim_id": "prophecy-tested",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 160,
     "note": "Guard against false prophets/teachers."
   },
@@ -354,14 +310,6 @@
     "stance": "affirms",
     "year": 160,
     "note": "Men and women hold Spirit-gifts."
-  },
-  {
-    "ref": "excerpt:justin_dialogue_87_gifts_transfer",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 160,
-    "note": "Prophetic powers rest in Christ; transfer from Israel’s old order."
   },
   {
     "ref": "excerpt:clement_stromata_1cor12_gifts",
@@ -414,7 +362,7 @@
     "ref": "excerpt:novatian_trinity_29_gifts",
     "topic": "gifts-and-order",
     "claim_id": "gifts-with-office",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 250
   },
   {
@@ -426,17 +374,10 @@
     "note": "Prophecy and powers without righteousness do not save."
   },
   {
-    "ref": "excerpt:origen_celsum_healings_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 248
-  },
-  {
     "ref": "excerpt:irenaeus_ah_4_20_gifts",
     "topic": "gifts-and-order",
     "claim_id": "charismata-continue",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 180
   },
   {
@@ -507,7 +448,7 @@
     "ref": "excerpt:chrysostom_1cor_hom29_gifts_then_now",
     "topic": "gifts-and-order",
     "claim_id": "charismata-continue",
-    "stance": "qualified",
+    "stance": "denies",
     "year": 390,
     "note": "Describes past commonality; questions present absence."
   },
@@ -515,7 +456,7 @@
     "ref": "excerpt:chrysostom_1cor_hom29_discernment",
     "topic": "gifts-and-order",
     "claim_id": "prophecy-tested",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 390,
     "note": "Discerning of spirits vs pagan mantic frenzy."
   },
@@ -528,28 +469,12 @@
     "note": "Reports Montanus claimed as Paraclete with Priscilla and Maximilla."
   },
   {
-    "ref": "excerpt:eusebius_he_5_17_ecstasy_vs_prophets",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 325,
-    "note": "Lists living NT prophetic succession beyond the Montanist circle."
-  },
-  {
     "ref": "excerpt:hippolytus_ref_8_25_montanus",
     "topic": "gifts-and-order",
     "claim_id": "paraclete-monopoly",
     "stance": "denies",
     "year": 220,
     "note": "Montanus/Priscilla/Maximilla as prophet circle above Gospels."
-  },
-  {
-    "ref": "excerpt:basil_dss_gifts_distribution",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "affirms",
-    "year": 375,
-    "note": "1 Cor 12 order: apostles–prophets–teachers–powers–tongues by Spirit."
   },
   {
     "ref": "excerpt:basil_dss_gifts_distribution",
@@ -592,36 +517,12 @@
     "note": "Apostolic-fame signs vs quieter contemporary miracles."
   },
   {
-    "ref": "excerpt:cyril_catech_16_simon_gift",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "affirms",
-    "year": 350,
-    "note": "Spirit-gift is κοινωνία, not sellable authority."
-  },
-  {
     "ref": "excerpt:cyril_catech_16_manes_paraclete",
     "topic": "gifts-and-order",
     "claim_id": "paraclete-monopoly",
     "stance": "denies",
     "year": 350,
     "note": "Manes cannot claim the Paraclete already given at Pentecost."
-  },
-  {
-    "ref": "excerpt:cyril_catech_16_manes_paraclete",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 350,
-    "note": "Apostles were already full of the Spirit; hand-laying conferred the gift."
-  },
-  {
-    "ref": "excerpt:gregory_dialogi_2_17_greater_miracle",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "affirms",
-    "year": 594,
-    "note": "Pastoral word/prayer ranked above spectacular raising of the dead."
   },
   {
     "ref": "excerpt:gregory_dialogi_1_26_mena_sign",
@@ -656,34 +557,10 @@
     "note": "Spirit given now; sign migrated to the worldwide church’s languages."
   },
   {
-    "ref": "excerpt:augustine_sermo_267_tongues_sign",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "affirms",
-    "year": 416,
-    "note": "Diverse operations in one body; cut-off heretic loses the Spirit."
-  },
-  {
-    "ref": "excerpt:ignatius_polycarp_2_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "affirms",
-    "year": 110,
-    "note": "Bishop charged to lack nothing and abound in every charism while shepherding."
-  },
-  {
-    "ref": "excerpt:clement_strom_2_19_image_likeness",
-    "topic": "image-likeness",
-    "claim_id": "image-retained",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Image/likeness realized as imitation of God in the knower; not a destroyed nature."
-  },
-  {
     "ref": "excerpt:barnabas_11_baptism_new_birth",
     "topic": "baptism-and-new-birth",
     "claim_id": "baptism-regenerates",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 100,
     "note": "Descent into water full of sins; ascent bearing fruit, fear, and hope in Jesus by the Spirit."
   },
@@ -691,7 +568,7 @@
     "ref": "excerpt:diognetus_10_2_universal_call",
     "topic": "universal-call",
     "claim_id": "call-and-refusal",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 150,
     "note": "God loved humankind, made the world for them, and sent the Son; kingdom promised to those who love him."
   },
@@ -723,17 +600,9 @@
     "ref": "excerpt:irenaeus_ah_1_10_1_recap",
     "topic": "atonement-recapitulation",
     "claim_id": "recap-adam",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 180,
     "note": "Rule of faith: the Son’s return sums up all things and raises all flesh."
-  },
-  {
-    "ref": "excerpt:diognetus_10_image",
-    "topic": "image-likeness",
-    "claim_id": "image-retained",
-    "stance": "affirms",
-    "year": 150,
-    "note": "God formed humans from his own image and sent the Son to them."
   },
   {
     "ref": "excerpt:irenaeus_ah_3_18_7",
@@ -744,34 +613,18 @@
     "note": "God recapitulates Adam’s ancient fashioning to destroy sin, empty death, and vivify man."
   },
   {
-    "ref": "excerpt:didache_7_baptism",
-    "topic": "baptism-and-new-birth",
-    "claim_id": "baptism-regenerates",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Triune baptism in living water after teaching; fasting before the washing."
-  },
-  {
     "ref": "excerpt:justin_1apol_40_call",
     "topic": "universal-call",
     "claim_id": "call-and-refusal",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 155,
     "note": "God calls everyone to repentance before the day of judgment."
-  },
-  {
-    "ref": "excerpt:barnabas_6_image",
-    "topic": "image-likeness",
-    "claim_id": "image-retained",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Forgiveness remakes us; Gen 1:26 image/likeness spoken to the Son as a second formation."
   },
   {
     "ref": "excerpt:didache_16_judgment",
     "topic": "reward-and-judgment",
     "claim_id": "deeds-judged",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 100,
     "note": "Fire of testing; those who endure are saved; Lord comes on the clouds."
   },
@@ -795,7 +648,7 @@
     "ref": "excerpt:hermas_sim_9_16_seal",
     "topic": "baptism-and-new-birth",
     "claim_id": "baptism-regenerates",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 140,
     "note": "The seal is the water: dead go down, living come up into the kingdom."
   },
@@ -816,18 +669,10 @@
     "note": "Teaching of godliness is a gift; faith itself is grace."
   },
   {
-    "ref": "excerpt:tatian_oratio_7_image",
-    "topic": "image-likeness",
-    "claim_id": "image-retained",
-    "stance": "affirms",
-    "year": 165,
-    "note": "The heavenly Word made the human an image of immortality."
-  },
-  {
     "ref": "excerpt:clement_strom_1_11_51_call",
     "topic": "universal-call",
     "claim_id": "call-and-refusal",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 200,
     "note": "The Word’s proclamation calls whoever wills; crowning is for whoever can."
   },
@@ -854,14 +699,6 @@
     "stance": "affirms",
     "year": 177,
     "note": "Christians choose a mild life because they will give account to the great Judge; even mythic judges cannot escape God’s judgment."
-  },
-  {
-    "ref": "excerpt:methodius_creatis_faith_call",
-    "topic": "universal-call",
-    "claim_id": "call-and-refusal",
-    "stance": "affirms",
-    "year": 290,
-    "note": "Apostolic preaching set the gospel before all Greeks and unbelievers; faith in Christ and freedom from impiety followed — so pearls-before-pigs cannot mean the church never preached to outsiders."
   },
   {
     "ref": "excerpt:hippolytus_ref_10_34",

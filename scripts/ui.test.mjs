@@ -148,6 +148,88 @@ test('home has favicon and a deduped feed without repeated author', ()=>{
   dom.window.close();
 });
 
+function mountExplore(url, html, data) {
+  const dom=new JSDOM(html,{url,runScripts:'outside-only',pretendToBeVisual:true});
+  const w=dom.window;
+  w.fetch=async()=>({ok:true,json:async()=>data});
+  w.matchMedia=()=>({matches:false});
+  w.ResizeObserver=class { observe() {} disconnect() {} };
+  w.HTMLElement.prototype.scrollIntoView=()=>{};
+  w.eval(readFileSync(new URL('../assets/explore.js',import.meta.url),'utf8'));
+  return dom;
+}
+const exploreHtml=()=>readFileSync(new URL('../dist/explore/index.html',import.meta.url),'utf8');
+const exploreData=()=>JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
+
+test('explore table states each writer verdict: Ignatius says No to appearance-only',async()=>{
+  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism&view=table',exploreHtml(),exploreData());
+  await settle();await settle();
+  const doc=dom.window.document;
+  assert.ok(doc.querySelector('.verdict-table'));
+  const heads=[...doc.querySelectorAll('.verdict-table thead th')].map(th=>th.textContent.trim());
+  assert.deepEqual(heads,['Writer','Truly born','Only appeared']);
+  const row=[...doc.querySelectorAll('.verdict-table tbody tr')].find(tr=>tr.querySelector('th').textContent.includes('Ignatius'));
+  assert.ok(row);
+  const cells=[...row.querySelectorAll('td')];
+  assert.match(cells[0].textContent,/^Yes · 4/);
+  assert.match(cells[1].textContent,/^No · 2/);
+  assert.equal(cells[1].querySelector('button').getAttribute('data-claim'),'dokew');
+  cells[1].querySelector('button').click();await settle();
+  assert.match(doc.querySelector('#explore-drawer').textContent,/teaches NO/);
+  dom.window.close();
+});
+
+test('explore timeline draws denials as X marks with plain-words tooltips',async()=>{
+  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism',exploreHtml(),exploreData());
+  await settle();await settle();
+  const doc=dom.window.document;
+  const deny=doc.querySelector('.explore-point[data-stance="denies"]');
+  assert.ok(deny);
+  assert.equal(deny.querySelectorAll('line').length,2);
+  assert.ok(doc.querySelector('.explore-point[data-stance="affirms"] circle'));
+  const tip=doc.querySelector('#explore-tooltip');
+  deny.dispatchEvent(new dom.window.MouseEvent('pointerenter',{clientX:100,clientY:100}));
+  assert.equal(tip.classList.contains('is-on'),true);
+  assert.match(tip.textContent,/DENIES/);
+  assert.match(tip.textContent,/Only appeared/);
+  dom.window.close();
+});
+
+test('explore timeline places one excerpt once per claim lane',async()=>{
+  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism',exploreHtml(),exploreData());
+  await settle();await settle();
+  const doc=dom.window.document;
+  const twins=[...doc.querySelectorAll('.explore-point')].filter(g=>(g.getAttribute('data-id')||'').startsWith('excerpt:ignatius_smyrn_2_true|'));
+  assert.equal(twins.length,2);
+  const stances=twins.map(g=>g.getAttribute('data-stance')).sort();
+  assert.deepEqual(stances,['denies','qualified']);
+  const cys=twins.map(g=>parseFloat(g.querySelector('circle').getAttribute('cy')));
+  assert.ok(Math.abs(cys[0]-cys[1])>40,'same-id marks share a lane');
+  dom.window.close();
+});
+
+test('explore consensus charts one line per claim',async()=>{
+  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism&view=consensus',exploreHtml(),exploreData());
+  await settle();await settle();
+  const doc=dom.window.document;
+  const lines=[...doc.querySelectorAll('.consensus-line')].map(g=>g.getAttribute('data-claim')).sort();
+  assert.deepEqual(lines,['dokew','truly-born-suffered']);
+  dom.window.close();
+});
+
+test('explore search narrows positions to matching writers',async()=>{
+  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism',exploreHtml(),exploreData());
+  await settle();await settle();
+  const doc=dom.window.document;
+  const q=doc.querySelector('#explore-q');assert.ok(q);
+  q.value='novatian';q.dispatchEvent(new dom.window.Event('input'));await settle();
+  assert.match(doc.querySelector('#explore-summary').textContent,/^1 positions/);
+  assert.equal(doc.querySelectorAll('.explore-point').length,1);
+  q.value='';q.dispatchEvent(new dom.window.Event('input'));await settle();
+  assert.match(doc.querySelector('#explore-summary').textContent,/^8 positions/);
+  dom.window.close();
+});
+
 test('favicon files ship in dist', ()=>{
   assert.ok(readFileSync(new URL('../dist/favicon.ico',import.meta.url)).length>100);
   assert.match(readFileSync(new URL('../dist/assets/favicon.svg',import.meta.url),'utf8'),/<svg/);

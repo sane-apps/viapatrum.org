@@ -132,7 +132,7 @@
     "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_13_old-and-new",
     "topic": "old-and-new",
     "claim_id": "new-from-same",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 100,
     "note": "The covenant sworn to the fathers now belongs to this people."
   },
@@ -140,7 +140,7 @@
     "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_14_old-and-new",
     "topic": "old-and-new",
     "claim_id": "new-from-same",
-    "stance": "qualified",
+    "stance": "affirms",
     "year": 100,
     "note": "The testament was given; Israel was not worthy to receive it."
   },
@@ -306,7 +306,7 @@
     "ref": "excerpt:clement_of_alexandri_stromata_7_hermeneutics",
     "topic": "hermeneutics-types",
     "claim_id": "philosophy-prep",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 200
   },
   {
@@ -426,7 +426,7 @@
     "ref": "excerpt:irenaeus_against_heresies_iv_33_spirit-sanct",
     "topic": "spirit-sanctifies",
     "claim_id": "spirit-dwells",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 180,
     "note": "A spiritual disciple receiving the Spirit of God."
   },
@@ -492,14 +492,6 @@
     "note": "Against the claim that eternal fire is a bugbear."
   },
   {
-    "ref": "excerpt:irenaeus_against_heresies_5_30_judgment-secon",
-    "topic": "judgment-second-coming",
-    "claim_id": "lord-comes",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Antichrist's reign and death before the end."
-  },
-  {
     "ref": "excerpt:irenaeus_against_heresies_against_heresies_v_judgment-secon",
     "topic": "judgment-second-coming",
     "claim_id": "lord-comes",
@@ -546,7 +538,7 @@
     "ref": "excerpt:hermas_shepherd_mandates_mand_4_sexual-marriag",
     "topic": "sexual-marriage",
     "claim_id": "marriage-good",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 140,
     "note": "Remember your own wife."
   },
@@ -554,7 +546,7 @@
     "ref": "excerpt:clement_of_alexandri_stromata_23_sexual-marriag",
     "topic": "sexual-marriage",
     "claim_id": "marriage-good",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 200,
     "note": "Marriage is the first conjunction for legitimate children; not everyone always."
   },
@@ -577,7 +569,7 @@
     "ref": "excerpt:tertullian_on_monogamy_1_sexual-marriag",
     "topic": "sexual-marriage",
     "claim_id": "second-marriage-refused",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 217,
     "note": "Montanist-era rigor: not even once vs not only once."
   },
@@ -606,7 +598,7 @@
     "ref": "excerpt:tertullian_to_the_martyrs_3_martyrdom-witn",
     "topic": "martyrdom-witness",
     "claim_id": "confession-witness",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 197,
     "note": "Called to the warfare of the living God."
   },
@@ -674,7 +666,7 @@
     "ref": "excerpt:clement_of_alexandri_stromata_20_apologetic-met",
     "topic": "apologetic-method",
     "claim_id": "philosophy-prep",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 200,
     "note": "Philosophy contributes to the comprehension of truth."
   },
@@ -708,13 +700,6 @@
     "stance": "affirms",
     "year": 140,
     "note": "Elm and vine: rich man helped by the prayer of the poor."
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_similitudes_sim_10_wealth-alms",
-    "topic": "wealth-alms",
-    "claim_id": "alms-required",
-    "stance": "affirms",
-    "year": 140
   },
   {
     "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_19_wealth-alms",
@@ -791,14 +776,6 @@
     "stance": "affirms",
     "year": 211,
     "note": "Military garland as idolatry."
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_68_civil-authorit",
-    "topic": "civil-authority",
-    "claim_id": "pray-for-rulers",
-    "stance": "qualified",
-    "year": 155,
-    "note": "Honour what is reasonable; do not decree death against the innocent."
   },
   {
     "ref": "excerpt:didache_didache_7_spirit-and-b",
@@ -898,35 +875,12 @@
     "year": 177
   },
   {
-    "ref": "excerpt:tatian_addr_10_gods",
-    "topic": "against-idols",
-    "claim_id": "idols-dead-matter",
-    "stance": "affirms",
-    "year": 165,
-    "note": "Gods of the poets are metamorphosed men and beasts."
-  },
-  {
     "ref": "excerpt:athenagoras_plea_17_idols",
     "topic": "against-idols",
     "claim_id": "idols-dead-matter",
     "stance": "affirms",
     "year": 177,
     "note": "Names of the gods and their images are of recent date."
-  },
-  {
-    "ref": "excerpt:theophilus_autol_2_35",
-    "topic": "against-idols",
-    "claim_id": "idols-dead-matter",
-    "stance": "affirms",
-    "year": 180,
-    "note": "The divine law forbids worshiping idols and the elements."
-  },
-  {
-    "ref": "excerpt:tert_marc_2_22_images",
-    "topic": "against-idols",
-    "claim_id": "idols-dead-matter",
-    "stance": "affirms",
-    "year": 207
   },
   {
     "ref": "excerpt:didache_11",
@@ -953,7 +907,7 @@
     "ref": "excerpt:ignatius_smyrnaeans_2",
     "topic": "heresy-schism",
     "claim_id": "flee-false-doctrine",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 110
   },
   {
@@ -1035,7 +989,7 @@
     "ref": "excerpt:commodian_instructions_xliv_millennium-deb",
     "topic": "millennium-debate",
     "claim_id": "earthly-thousand",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 250,
     "note": "City from heaven in the first resurrection."
   },
@@ -1093,14 +1047,6 @@
     "stance": "affirms",
     "year": 210,
     "note": "Lazarus and the rich man; souls detained in Hades until judgment."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_6_heaven-hell-in",
-    "topic": "heaven-hell-intermediate",
-    "claim_id": "hades-real",
-    "stance": "affirms",
-    "year": 200,
-    "note": "The Lord preached the Gospel to those in Hades."
   },
   {
     "ref": "excerpt:irenaeus_against_heresies_5_36_heaven-hell-in",
@@ -1193,7 +1139,7 @@
     "ref": "excerpt:ignatius_eph_18_cross",
     "topic": "passion-resurrection",
     "claim_id": "truly-suffered",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 110
   },
   {
@@ -1215,7 +1161,7 @@
     "ref": "excerpt:justin_1apol_13_worship",
     "topic": "one-god-creator",
     "claim_id": "one-maker",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 155
   },
   {
@@ -1239,14 +1185,6 @@
     "claim_id": "one-maker",
     "stance": "affirms",
     "year": 165
-  },
-  {
-    "ref": "excerpt:ignatius_magn_8_word",
-    "topic": "father-son-spirit",
-    "claim_id": "triad-named",
-    "stance": "qualified",
-    "year": 110,
-    "note": "One God revealed through Jesus Christ his Son, the Word."
   },
   {
     "ref": "excerpt:didache_7_triad",
@@ -1304,21 +1242,21 @@
     "ref": "excerpt:athenagoras_plea_10_attrs",
     "topic": "attributes-providence",
     "claim_id": "uncreated-good",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 177
   },
   {
     "ref": "excerpt:theophilus_autol_1_3_nature",
     "topic": "attributes-providence",
     "claim_id": "uncreated-good",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 180
   },
   {
     "ref": "excerpt:theophilus_autol_1_5_works",
     "topic": "attributes-providence",
     "claim_id": "uncreated-good",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 180,
     "note": "God perceived through providence and works."
   },
@@ -1334,7 +1272,7 @@
     "ref": "excerpt:athenagoras_plea_12_reason",
     "topic": "attributes-providence",
     "claim_id": "uncreated-good",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 177,
     "note": "A God presides over the human race; we shall give an account."
   },
@@ -1407,7 +1345,7 @@
     "ref": "excerpt:diognetus_7_send",
     "topic": "incarnation-word-flesh",
     "claim_id": "word-became-flesh",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 150
   },
   {
@@ -1450,14 +1388,14 @@
     "ref": "excerpt:cyprian_de_unitate_7",
     "topic": "one-church",
     "claim_id": "one-church-unity",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 251
   },
   {
     "ref": "excerpt:cyprian_de_unitate_23",
     "topic": "one-church",
     "claim_id": "one-church-unity",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 251,
     "note": "Rejoicing Mother enclosing the one body; leaders of schisms who will not return."
   },
@@ -1584,7 +1522,7 @@
     "ref": "excerpt:ignatius_trall_9_mary",
     "topic": "virgin-birth",
     "claim_id": "born-of-virgin",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 110,
     "note": "Of David's family, of Mary, truly born."
   },
@@ -1592,7 +1530,7 @@
     "ref": "excerpt:ignatius_philadelphians_8",
     "topic": "discipline-penance",
     "claim_id": "further-repentance",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 110,
     "note": "To all who repent the Lord grants forgiveness, if they turn to the unity of God and the bishop."
   },
@@ -1645,7 +1583,7 @@
     "ref": "excerpt:didache_9",
     "topic": "eucharist-thanksgiving",
     "claim_id": "church-oblation",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 100,
     "note": "Thanksgiving over cup and broken bread."
   },
@@ -1736,7 +1674,7 @@
     "ref": "excerpt:irenaeus_ah_3_4_1",
     "topic": "apostolic-succession",
     "claim_id": "bishops-from-apostles",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 180
   },
   {
@@ -1754,13 +1692,6 @@
     "stance": "affirms",
     "year": 200,
     "note": "Let them produce the original records of their churches."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_1_1",
-    "topic": "apostolic-succession",
-    "claim_id": "bishops-from-apostles",
-    "stance": "affirms",
-    "year": 180
   },
   {
     "ref": "excerpt:didache_8",
@@ -1863,14 +1794,14 @@
     "ref": "excerpt:ignatius_smyrn_2_true",
     "topic": "against-docetism",
     "claim_id": "truly-born-suffered",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 110
   },
   {
     "ref": "excerpt:ignatius_smyrn_3_body",
     "topic": "against-docetism",
     "claim_id": "truly-born-suffered",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 110
   },
   {
@@ -1920,7 +1851,7 @@
     "ref": "excerpt:diognetus_9",
     "topic": "salvation-by-christ",
     "claim_id": "by-sons-blood",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 150,
     "note": "He gave his own Son as a ransom."
   },
@@ -1931,14 +1862,6 @@
     "stance": "denies",
     "year": 150,
     "note": "Not because we were already righteous."
-  },
-  {
-    "ref": "excerpt:ignatius_ephesians_20",
-    "topic": "salvation-by-christ",
-    "claim_id": "by-sons-blood",
-    "stance": "affirms",
-    "year": 110,
-    "note": "The new man, Jesus Christ — his suffering and resurrection."
   },
   {
     "ref": "excerpt:irenaeus_ah_3_18_1",
@@ -1960,7 +1883,7 @@
     "ref": "excerpt:justin_1apol_61",
     "topic": "baptism-and-new-birth",
     "claim_id": "baptism-regenerates",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 155
   },
   {
@@ -2004,7 +1927,7 @@
     "ref": "excerpt:barnabas_19",
     "topic": "two-ways",
     "claim_id": "way-is-love",
-    "stance": "affirms",
+    "stance": "qualified",
     "year": 100
   },
   {
@@ -2037,14 +1960,6 @@
     "stance": "denies",
     "year": 260,
     "note": "Reports atomists who put a random void in place of providence."
-  },
-  {
-    "ref": "excerpt:methodius_freewill_2",
-    "topic": "fate-and-foreknowledge",
-    "claim_id": "choice-not-fate",
-    "stance": "qualified",
-    "year": 300,
-    "note": "If God could remove evil qualities of matter and would not, he would seem their cause — argument against making God author of leftover evil."
   },
   {
     "ref": "excerpt:irenaeus_ah_4_37_4",

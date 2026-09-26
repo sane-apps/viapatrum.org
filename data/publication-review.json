@@ -39183,6 +39183,174 @@
       "receipt": "books/severianus-fragmenta-philippenses/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "9e2bae78273bee2ba7da063835a5551663c7b78a395feed178c232db308c7e19"
+    },
+    "work:severianus-fragmenta-romanos:u01-open": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "9960ca589025b992ece120098c8523e45baad96c8826db231aebc9ce4c5401c0"
+    },
+    "work:severianus-fragmenta-romanos:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "671b1fa38f37f23f48cc13d840e9071e35831315f9a3cfa7a2b38f18e073eb72"
+    },
+    "work:severianus-fragmenta-romanos:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "ac820b6814a5fa40269055881bf4372b7b9938fa00397255a220013915702eb9"
+    },
+    "work:severianus-fragmenta-romanos:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "d54cb02e3f64b5cf229d7ead04a9f7ede5abba88e7a5936374628fc304fd9e5d"
+    },
+    "work:severianus-fragmenta-romanos:u02-open": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "d86d1c66e34c0a5eda1a7af947ec4471f8c3106a310a2c31fec5e4169344409f"
+    },
+    "work:severianus-fragmenta-romanos:u02-rem-early": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "d867b63b209bfba241d58ddc43be1e3a489a1b1622861e56b09dd20380fae703"
+    },
+    "work:severianus-fragmenta-romanos:u02-rem-mid": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "74b5f1b4d9fcb11ff41e8d547d617f8b0f7a2d8a14a3d54751099cf2106e4587"
+    },
+    "work:severianus-fragmenta-romanos:u02-rem-close": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "8ad196ee0d9fa25d239c1d4d5684ee88ae5267bd5b66b499bb17aed2773a9d68"
+    },
+    "work:severianus-fragmenta-titum:u01-open": {
+      "packet": "books/severianus-fragmenta-titum/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-titum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "4fc4590f05fc19220688983c4137e261bfe82332b388b894f24dd27b36816c5d"
+    },
+    "work:severianus-fragmenta-titum:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-titum/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-titum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "0dae49566087057de4b09386f9e07e25ddfa3a81bfc12ba2f78f700414e35be0"
+    },
+    "work:severianus-fragmenta-titum:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-titum/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-titum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "674d924a74dfbd2a86d0c30318fb436e40b13dc2eb1d0323b1efee1f5098aeee"
+    },
+    "work:severianus-fragmenta-titum:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-titum/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-titum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "2b0893e17833a28f31ee4fd6df26f4b11eae69c5ceaacaf0a68bc3eda17ca09c"
+    },
+    "work:severianus-fragmenta-1thess:u01-open": {
+      "packet": "books/severianus-fragmenta-1thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1thess/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "3ffe7f285d1f0b5a7aa8580afad187033cdedef567ef0e4e4036afa1b415e0b9"
+    },
+    "work:severianus-fragmenta-1thess:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-1thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1thess/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "4cdef1980162953595f7bb88420d5523780a3b87ebc91d9487b6007e7b6c746f"
+    },
+    "work:severianus-fragmenta-1thess:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-1thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1thess/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "066d4189738706518ad4cc97a3df100b12cc71a44d15d5eafc9b8e4761eb1579"
+    },
+    "work:severianus-fragmenta-1thess:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-1thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1thess/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "8513a4380e6cd7c36e9f15af5c7b05a78ffa957d25a55c2d8d9ab7ce8040aded"
+    },
+    "work:severianus-fragmenta-1tim:u01-open": {
+      "packet": "books/severianus-fragmenta-1tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1tim/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "56abe0481e9c7df89f0139d5a779f31f2a66bd3547c0c8a99a7c9b9723f91a62"
+    },
+    "work:severianus-fragmenta-1tim:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-1tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1tim/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "4a569d1b69919ca6621252b365eb80f6bd2fad8f50b08b558fc44c794a4f2fc2"
+    },
+    "work:severianus-fragmenta-1tim:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-1tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1tim/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "a4f4cd21e608ab2fadd7fefc228ac055b4a7127adc1748384e9558ea024873c1"
+    },
+    "work:severianus-fragmenta-1tim:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-1tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1tim/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "fd405851b3d8d84ff3df243fbbcb5b4df0d3923e88c8f46bef5f79fe0b65f4de"
+    },
+    "work:severianus-fragmenta-2cor:u01-open": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "bce9e3160ddde4b99f8795f964eb6063a6fcd0788ad27f4245f96561b664eedf"
+    },
+    "work:severianus-fragmenta-2cor:u01-rem-early": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "ee68c3e9b5f2390593460e02f99cb712c1acccd3085300ef406febe4d390f4c6"
+    },
+    "work:severianus-fragmenta-2cor:u01-rem-mid": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "6d926bc308c837a5af6df2b3e292c7aad5d6e05a59c097b1921625d4fe154ac8"
+    },
+    "work:severianus-fragmenta-2cor:u01-rem-close": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "1c5265cf820de246fe18bcc180c9da2831c9a18cb8db4f38fdc82570088ceb9e"
+    },
+    "work:severianus-fragmenta-2cor:u02-open": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "117a80d5f299e484a29b82ed3138818a1b4baf0d0ffa9d446be9d970aeab74ae"
+    },
+    "work:severianus-fragmenta-2cor:u02-rem-early": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "b6842e6e5b2f9d4a1a879380c77db7b6b4281cec7f5fc47a6cc1f0ed5ebee125"
+    },
+    "work:severianus-fragmenta-2cor:u02-rem-mid": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "3c1216a3c0407d27deefd96d0a3385330a06a099a7d7bc5fb98ebcdc9f6d7a58"
+    },
+    "work:severianus-fragmenta-2cor:u02-rem-close": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "a9b06474b73dad9e4ead62bde7028bcc1dd86720bd1783fdaa61a005e8d2bc77"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -39820,6 +39988,26 @@
     "severianus-fragmenta-philippenses": {
       "packet": "books/severianus-fragmenta-philippenses/reviews/audit/tip.packet.json",
       "receipt": "books/severianus-fragmenta-philippenses/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-romanos": {
+      "packet": "books/severianus-fragmenta-romanos/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-romanos/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-titum": {
+      "packet": "books/severianus-fragmenta-titum/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-titum/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-1thess": {
+      "packet": "books/severianus-fragmenta-1thess/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1thess/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-1tim": {
+      "packet": "books/severianus-fragmenta-1tim/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-1tim/reviews/audit/tip.review.json"
+    },
+    "severianus-fragmenta-2cor": {
+      "packet": "books/severianus-fragmenta-2cor/reviews/audit/tip.packet.json",
+      "receipt": "books/severianus-fragmenta-2cor/reviews/audit/tip.review.json"
     }
   }
 }

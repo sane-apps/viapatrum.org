@@ -676,6 +676,11 @@
         "id": "by-our-worth",
         "label": "We were saved because we were already righteous",
         "short": "By our worth"
+      },
+      {
+        "id": "salvation-in-christ",
+        "label": "Salvation is in Christ alone",
+        "short": "In Christ alone"
       }
     ]
   },
@@ -772,6 +777,11 @@
         "id": "death-ends-all",
         "label": "After death we are nothing, so virtue is foolish",
         "short": "Death ends all"
+      },
+      {
+        "id": "final-judgment",
+        "label": "The living and the dead face a final judgment",
+        "short": "Final judgment"
       }
     ]
   }
