@@ -982,6 +982,10 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "cyril-fragmentum-baruch": "Fragment on Baruch",
     "cyril-fragmentum-proverbia": "Fragment on Proverbs",
     "cyril-solutiones-vat-447": "Solutions, Vat. 447 Fragment",
+    "cyril-epistula-theodosium": "Letter to Theodosius",
+    "cyril-ad-xystum": "Letter to Xystus Bishop of Rome",
+    "cyril-de-synagogae-defectu": "On the Falling Away of the Synagogue",
+    "cyril-ad-carthaginiense": "Letter to the Council of Carthage",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
@@ -1146,6 +1150,10 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "cyril-fragmentum-baruch": "Fragmentum in librum Baruch",
     "cyril-fragmentum-proverbia": "Fragmentum in Proverbia",
     "cyril-solutiones-vat-447": "Solutiones (Vat. 447)",
+    "cyril-epistula-theodosium": "Epistula ad Theodosium",
+    "cyril-ad-xystum": "Ad Xystum episcopum Romae",
+    "cyril-de-synagogae-defectu": "De synagogae defectu",
+    "cyril-ad-carthaginiense": "Ad Carthaginiense concilium",
 }
 
 

@@ -40372,6 +40372,66 @@
       "section": "u01-rem-close",
       "payload_sha256": "95fc01c940e5521dd70b10dfac2438d1df47e4cb584b31d4ed04da1e5ee959a9"
     },
+    "work:cyril-ad-carthaginiense:ep-open": {
+      "packet": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.review.json",
+      "section": "ep-open",
+      "payload_sha256": "e4fd4120a7b80887aee7432f8aa17bcfe2fbf2aa505767bb50c43021fe23feda"
+    },
+    "work:cyril-ad-carthaginiense:ep-rem-close": {
+      "packet": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.review.json",
+      "section": "ep-rem-close",
+      "payload_sha256": "3cbc4da5eee9679697d13b64c9f5a66ab86ae8623d8a948a98060a642c9444f9"
+    },
+    "work:cyril-ad-carthaginiense:ep-rem-early": {
+      "packet": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.review.json",
+      "section": "ep-rem-early",
+      "payload_sha256": "14b9b673c3bc03a130ac4738a620c04159d72f313c40b4e8f191ae812683d21f"
+    },
+    "work:cyril-ad-carthaginiense:ep-rem-mid": {
+      "packet": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.review.json",
+      "section": "ep-rem-mid",
+      "payload_sha256": "5d969d80e45913f421fd81157115d34439c43652bc93259e30ab55451606f754"
+    },
+    "work:cyril-ad-xystum:ep-open": {
+      "packet": "books/cyril-alexandria-ad-xystum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-ad-xystum/reviews/audit/tip.review.json",
+      "section": "ep-open",
+      "payload_sha256": "ca12ac96dbda7583d3f961c0fa20b7ed9db0866bb957ed984171dc875de902ce"
+    },
+    "work:cyril-de-synagogae-defectu:frag-open": {
+      "packet": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.review.json",
+      "section": "frag-open",
+      "payload_sha256": "4e853fd3b7d2ccfdad9ecc14a1052e6ef9eb50bc5c7ddea6391c27d6a0a0e39f"
+    },
+    "work:cyril-de-synagogae-defectu:frag-rem-close": {
+      "packet": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.review.json",
+      "section": "frag-rem-close",
+      "payload_sha256": "43894b934fb1adfe62f34d3851870e2750d2368f7c9ae4c5ef1b1e67f726fee4"
+    },
+    "work:cyril-de-synagogae-defectu:frag-rem-early": {
+      "packet": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.review.json",
+      "section": "frag-rem-early",
+      "payload_sha256": "9a4dc7b38a1f1f3a64bbfd3648fd7a852badf3c934c7dd7a3aed96571c75d08f"
+    },
+    "work:cyril-de-synagogae-defectu:frag-rem-mid": {
+      "packet": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.review.json",
+      "section": "frag-rem-mid",
+      "payload_sha256": "5f7e40535676f1384f0b90b629ff8158c775d882f6b2b98d4879d5f8f33e71a2"
+    },
+    "work:cyril-epistula-theodosium:ep-open": {
+      "packet": "books/cyril-alexandria-epistula-theodosium/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-epistula-theodosium/reviews/audit/tip.review.json",
+      "section": "ep-open",
+      "payload_sha256": "9eff7b7a28c516a27034e25edf076c8593ef48c1a9c6be79eb02ed59c3785f16"
+    },
     "work:cyril-adoration-2:5": {
       "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration2.packet.json",
       "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration2.review.json",
