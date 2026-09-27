@@ -39951,6 +39951,102 @@
       "receipt": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "2642c6a219c09b48adde3bac2aad4000625fa4d4218b3bcb90efb5c05bdd951a"
+    },
+    "work:epiphanius-epistula-ad-eusebium:u01-open": {
+      "packet": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "8b564a8952c46929fd365eee34af57cffbd9d9f9d58eb5a2d09d336264889ef3"
+    },
+    "work:epiphanius-epistula-ad-eusebium:u01-rem-early": {
+      "packet": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "53bd61ac7eea0ded1da9edd00b052adc10cb89c23becf08c72e138b2283ed9b2"
+    },
+    "work:epiphanius-epistula-ad-eusebium:u01-rem-mid": {
+      "packet": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "02a6d1dc5439ae3aae4d6131c5e259f3c0cd29653902d25cf14b2343123d2b8f"
+    },
+    "work:epiphanius-epistula-ad-eusebium:u01-rem-close": {
+      "packet": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "c4b6c81da2be9fcd46c171a4a8c6005a6f1847a83b556b3a0cf2c5c965ae9a38"
+    },
+    "work:epiphanius-epistula-ad-joannem-hierosolymitanum:u01-open": {
+      "packet": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "537b180b2d399701216a7ce44193bed09d749ad14a0d98e154b835ef333fa697"
+    },
+    "work:epiphanius-epistula-ad-joannem-hierosolymitanum:u01-rem-early": {
+      "packet": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "9b93d3c743654156587938fd793cc9a3c69926cd9b2cc5499b8398033b2642c6"
+    },
+    "work:epiphanius-epistula-ad-joannem-hierosolymitanum:u01-rem-mid": {
+      "packet": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "b395579ae41098d726190cdc805675dae195b0c38af2ef36bb58c76a8c3c1491"
+    },
+    "work:epiphanius-epistula-ad-joannem-hierosolymitanum:u01-rem-close": {
+      "packet": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "25612806b1ad2d62584c902fa1dc6882de1be35938c931ddb5ad0a5a8d434f4c"
+    },
+    "work:epiphanius-epistula-ad-theodosium-imperatorem:u01-open": {
+      "packet": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "73bb4fdc98841fcc57599cbda0b312de1d3e890e9ffa1dccef44ab306f9d5b5a"
+    },
+    "work:epiphanius-epistula-ad-theodosium-imperatorem:u01-rem-early": {
+      "packet": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "d08847d14e66d529b3514c84aa17e034cab36d6632f25d7e89b41f55ad6ff5a9"
+    },
+    "work:epiphanius-epistula-ad-theodosium-imperatorem:u01-rem-mid": {
+      "packet": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "7b8df1d6c98e9fdb04ca1b0417e9af2b4ee4f495c0dadfa54772f338a84310c7"
+    },
+    "work:epiphanius-epistula-ad-theodosium-imperatorem:u01-rem-close": {
+      "packet": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "1dd98f6efd70f067e725e5f5cf5677e724df73c8fbb90cfec6cf14fe5eff95ad"
+    },
+    "work:epiphanius-homilia-in-assumptionem-christi:u01-open": {
+      "packet": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "b11570a86997775d9af683456d3f93568006a9e9fd45353abb48e1316db803b1"
+    },
+    "work:epiphanius-homilia-in-assumptionem-christi:u01-rem-early": {
+      "packet": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "6c6eed4a42fa7beb19269f38fbfe371beb622dc4997d80f912b5210e6f3bde32"
+    },
+    "work:epiphanius-homilia-in-assumptionem-christi:u01-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "7bf7f9176143993dc60b81f24aca85f61ef8aa6b275f002756e7d940bf7536fc"
+    },
+    "work:epiphanius-homilia-in-assumptionem-christi:u01-rem-close": {
+      "packet": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "d52a56bc5f881bfd322c09cf5d440b62cb8dfde2edd5a5cc535b44a008fd46e6"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40664,6 +40760,22 @@
     "epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum": {
       "packet": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum/reviews/audit/tip.review.json"
+    },
+    "epiphanius-epistula-ad-eusebium": {
+      "packet": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-eusebium/reviews/audit/tip.review.json"
+    },
+    "epiphanius-epistula-ad-joannem-hierosolymitanum": {
+      "packet": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-joannem-hierosolymitanum/reviews/audit/tip.review.json"
+    },
+    "epiphanius-epistula-ad-theodosium-imperatorem": {
+      "packet": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-epistula-ad-theodosium-imperatorem/reviews/audit/tip.review.json"
+    },
+    "epiphanius-homilia-in-assumptionem-christi": {
+      "packet": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.review.json"
     }
   }
 }
