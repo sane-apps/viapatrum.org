@@ -40203,6 +40203,54 @@
       "receipt": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "159ac55f412b1f669a2354ae0826884c38adb19a23780b4a6b80778d2c7bf054"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u01-open": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "b5be9262b2670a63bf0cec807605cda904672f6b30aed9f46c6e9d7cd2b1918b"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u01-rem-early": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "0ce134eb747222ed05f493201360fbad95a6d117cf69ad67ec7ee5f4d12a1038"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u01-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "08a8058d9b61f8a1713489afa0ac6ccc66a89a529550d57fc9554d45a4b245d4"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u01-rem-close": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "122f0b5a336b3c8671e229d872e799e24c437830c3701ef3d1cbb6894e8b65c2"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u02-open": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "8f6b658df156bd3d56402822e9757caad7b9c4f77a4df4f562369a850600b2d2"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u02-rem-early": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "0c0ad88b638bef9357389832657f1e18305763c0b45b890985440517a3f32a42"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u02-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "6d6637e9e97ce4d5bec113436b6ff87f5bc4464a66ad8de8572b545589a5bbdd"
+    },
+    "work:epiphanius-homilia-in-laudes-mariae-deiparae:u02-rem-close": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "a7ab434dbfdaab4dd9163865e81a9ec763048e39b871be27383c1ae977ab37cb"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40952,6 +41000,10 @@
     "epiphanius-homilia-in-festo-palmarum": {
       "packet": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.review.json"
+    },
+    "epiphanius-homilia-in-laudes-mariae-deiparae": {
+      "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json"
     }
   }
 }
