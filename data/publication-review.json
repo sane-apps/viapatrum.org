@@ -6854,7 +6854,7 @@
       "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
       "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
       "section": "32",
-      "payload_sha256": "c210df92d6fa096a443cfbc90160178f24c02b997dac1c8d316828c338d6932b"
+      "payload_sha256": "31f1ac078cd2977cd61441f97b74387beb922d98f4041a87591cb62b16110d7b"
     },
     "work:cyril-recta-fide-arcadia:33": {
       "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
@@ -7016,7 +7016,7 @@
       "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
       "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
       "section": "89",
-      "payload_sha256": "2f5ea172eb0d770b9fcd262fd6dbf97144ca62c3d6bd040553be2f4d08d2d712"
+      "payload_sha256": "221b29e16ed85eed51ab41fe7467a32f0706555dd3576902c6749460ff85d6e6"
     },
     "work:cyril-recta-fide-arcadia:90": {
       "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
@@ -7046,7 +7046,7 @@
       "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
       "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.review.json",
       "section": "96",
-      "payload_sha256": "5f2f73bc6f99ebbafa873231d73c7de870930d80111ea50d94d6716fb269c456"
+      "payload_sha256": "1706aebeb0d1971a6f9201e3aace02e6d5edc33513b71ad58eddffe6dd894816"
     },
     "work:cyril-recta-fide-arcadia:97": {
       "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/arcadia_closeout4.packet.json",
@@ -40371,6 +40371,240 @@
       "receipt": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "95fc01c940e5521dd70b10dfac2438d1df47e4cb584b31d4ed04da1e5ee959a9"
+    },
+    "work:cyril-adoration-2:5": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration2.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration2.review.json",
+      "section": "5",
+      "payload_sha256": "df2ac96a2e54787ec7f6d448a7f8c1dc909ad192f92d71fd54f89aec825b27e6"
+    },
+    "work:cyril-adoration-4:12": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration4.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration4.review.json",
+      "section": "12",
+      "payload_sha256": "fa62bd72514683a5c628a526ffde87ffbf60db6409a2039d3640393b1bbb068f"
+    },
+    "work:cyril-adoration-8:17": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration8.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration8.review.json",
+      "section": "17",
+      "payload_sha256": "ab07be5404c27a07a9f1f1b0eda77fd663e42416286a4d55d198ef116f170313"
+    },
+    "work:cyril-adoration-12:9": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration12.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration12.review.json",
+      "section": "9",
+      "payload_sha256": "8cdc8c4524f7b63eb277441616720d8eeff9adf2d32e7a66ac5ff6e540b7a036"
+    },
+    "work:cyril-adoration-12:27": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration12.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration12.review.json",
+      "section": "27",
+      "payload_sha256": "6526b680eabe45745ef9d06c6305dbbd6d36c2fcc2900ef629e25d42269ca31c"
+    },
+    "work:cyril-adoration-13:17": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration13.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration13.review.json",
+      "section": "17",
+      "payload_sha256": "eb2c558d6afd1f593a67897b27828b8ff544a251276c0359338d12817db5b637"
+    },
+    "work:cyril-adoration-14:12": {
+      "packet": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration14.packet.json",
+      "receipt": "books/cyril-alexandria-adoration-1/reviews/audit/tip-adoration14.review.json",
+      "section": "12",
+      "payload_sha256": "ca1aece77ec1ed6e041f612259ea7258d54e82dc48bb1516bdad35b36a116252"
+    },
+    "work:cyril-recta-fide-arcadia:44": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/tip.review.json",
+      "section": "44",
+      "payload_sha256": "b08157d2d9f17747d7765cd6cbb13d6f8388e501152a703dd07edb2a8b6901b4"
+    },
+    "work:cyril-recta-fide-arcadia:66": {
+      "packet": "books/cyril-alexandria-recta-fide-court/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-recta-fide-court/reviews/audit/tip.review.json",
+      "section": "66",
+      "payload_sha256": "ec8c81a82ce7d3499b1386c5283f90194d76b72af290b69c8805c585984149f7"
+    },
+    "work:julian-to-florus:2.205": {
+      "packet": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-2.packet.json",
+      "receipt": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-2.review.json",
+      "section": "205",
+      "payload_sha256": "8750c63003d50c52f9bdb4cf7d42ec207efe8005410e44998a3be544a4cfdc8d"
+    },
+    "work:julian-to-florus:3.38": {
+      "packet": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-3.packet.json",
+      "receipt": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-3.review.json",
+      "section": "38",
+      "payload_sha256": "c6824e8360415ce4c56322b1edd3a17a6bf322d8283677cab76927f2ac12296a"
+    },
+    "work:julian-to-florus:6.25": {
+      "packet": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-6.packet.json",
+      "receipt": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-6.review.json",
+      "section": "25",
+      "payload_sha256": "6f80591694a5408e97ee1579174abdbf8746960d4d5bcff62b7904cec9353cdd"
+    },
+    "work:julian-to-florus:6.27": {
+      "packet": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-6.packet.json",
+      "receipt": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-6.review.json",
+      "section": "27",
+      "payload_sha256": "a219822f926aaba45d1a1c71fc07c4b03a8050e6ecbb8437c50d21e87a4f0f23"
+    },
+    "work:julian-to-florus:6.32": {
+      "packet": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-6.packet.json",
+      "receipt": "books/julian-of-eclanum/reviews/audit/tip-ad-florum-6.review.json",
+      "section": "32",
+      "payload_sha256": "4fbc52a84bca8700f73941939e1c0999ff3107c0fc8c84ae30f8315315525d55"
+    },
+    "work:origen-on-prayer:27": {
+      "packet": "books/origen-prayer-martyrdom/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-prayer-martyrdom/reviews/audit/tip.review.json",
+      "section": "27",
+      "payload_sha256": "4a79a573320e991a9c565adf29e9421ec7542556c390e5c176bd1c0fc2932a98"
+    },
+    "work:origen-homilies-jeremiah:1.12": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "1.12",
+      "payload_sha256": "164201748df9e2a83c9be040409ab15911ddf879509c753c4648baa94bf5be65"
+    },
+    "work:origen-homilies-jeremiah:1.13": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "1.13",
+      "payload_sha256": "75345e8c12ada9ef2b6973583d01df1d667b90b31293ed0a134ddd8826454ee3"
+    },
+    "work:origen-homilies-jeremiah:2.2": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "2.2",
+      "payload_sha256": "e3ae86406a0b993b1559db13589d2c8cf054e4b8380ebb83f9a2a45633e6947b"
+    },
+    "work:origen-homilies-jeremiah:5.1": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "5.1",
+      "payload_sha256": "48ac251481922b6a108cc1a4487abe69a75bf5d4f27d5990f77bc02e2ee76c04"
+    },
+    "work:origen-homilies-jeremiah:5.2": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "5.2",
+      "payload_sha256": "c7b95b1d3e8a8a89433190ba0f2db03c6df77cbe35212a3cab390d40b9a3f08b"
+    },
+    "work:origen-homilies-jeremiah:5.13": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "5.13",
+      "payload_sha256": "be0952b69d16f6dfdc0719ef11085340e6a2fbdf36676e37b407bd72f12d6e78"
+    },
+    "work:origen-homilies-jeremiah:5.16": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "5.16",
+      "payload_sha256": "6e4efd7e9fa82043fcd835fb81d5f9ff8a37e97803f82b22f8046c02857b5915"
+    },
+    "work:origen-homilies-jeremiah:8.4": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "8.4",
+      "payload_sha256": "e252339202c5b2fe83f928e345d4713872b34a78e58e95a564fe0eaa3cb3d725"
+    },
+    "work:origen-homilies-jeremiah:8.5": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "8.5",
+      "payload_sha256": "7b810f2e3f1fd623f856f195a1cf65342a3d734176e85995e32a0d3b61c30b3a"
+    },
+    "work:origen-homilies-jeremiah:9.3": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "9.3",
+      "payload_sha256": "eb0fe72707729349740b5b5d632940d644d70b581c6abecc6757d18a45a90e43"
+    },
+    "work:origen-homilies-jeremiah:10.1": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "10.1",
+      "payload_sha256": "fa8a5f3b5842e19a2fdd64ad464c222aaf11dd4decd126445599fc650d27fa91"
+    },
+    "work:origen-homilies-jeremiah:10.7": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "10.7",
+      "payload_sha256": "dfcbacb9d127c2a79727762ee2d01c6244622a8b1a6b79b3d133a72300f6638d"
+    },
+    "work:origen-homilies-jeremiah:11.4": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "11.4",
+      "payload_sha256": "5a32a3a4a861193f6aeab69cb404f773d3fb321c362e12493db8712cb06947de"
+    },
+    "work:origen-homilies-jeremiah:12.10": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "12.10",
+      "payload_sha256": "4ce4024b4eceb76a0bf6488dbc59c10434570535b4d7f272e6a19afc534412a8"
+    },
+    "work:origen-homilies-jeremiah:12.12": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "12.12",
+      "payload_sha256": "0bbefc9fd8bb68967aebcb7d68a5938af388c9e4b4686d8c1d06406c6ae7cb41"
+    },
+    "work:origen-homilies-jeremiah:12.2": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "12.2",
+      "payload_sha256": "35f9f451ba56b809c884dddd4f661888029c8b17856de0c2e796fd27394ad494"
+    },
+    "work:origen-homilies-jeremiah:14.12": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "14.12",
+      "payload_sha256": "77c9e76e48213daade6a0617ced436c9eafbd782ef17a71c9a67d4c40a46dfd8"
+    },
+    "work:origen-homilies-jeremiah:14.14": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "14.14",
+      "payload_sha256": "f3070dd53efafc0daeda28b9efbd920bb63a9134136b5e97df48fddda569717e"
+    },
+    "work:origen-homilies-jeremiah:14.16": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "14.16",
+      "payload_sha256": "2637b90bcdaf3beb13e471516ebe792671fee40f41a765663cf2b7806fbdbad5"
+    },
+    "work:origen-homilies-jeremiah:14.18": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "14.18",
+      "payload_sha256": "fed3f8d4d53d11ca3b5c10ac0bdc3a078c9ea3f25896a1d4dc9b26af420c4212"
+    },
+    "work:origen-homilies-jeremiah:16.4": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "16.4",
+      "payload_sha256": "ba4dbacaf72eb75f84f946385876625831bf3cb6e131e6f8deff11b468a8e390"
+    },
+    "work:origen-homilies-jeremiah:17.4": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "17.4",
+      "payload_sha256": "e822d06b2df613828cd56197bcdbc1ced0267021d2b9002bf968085aa957281f"
+    },
+    "work:origen-homilies-jeremiah:17.6": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "17.6",
+      "payload_sha256": "8e2c9de428961034fb84a551c706d20d0d69b8523bbae7e457bb444fe6d1cfac"
+    },
+    "work:origen-homilies-jeremiah:20.4": {
+      "packet": "books/origen-jeremiah-samuel/reviews/audit/tip.packet.json",
+      "receipt": "books/origen-jeremiah-samuel/reviews/audit/tip.review.json",
+      "section": "20.4",
+      "payload_sha256": "428a6ef8040ee37cdbf3358f54aeba290b668aff8ef81bf15853f54d4a541c7c"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
