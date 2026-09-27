@@ -776,7 +776,7 @@ def display_section(value) -> str:
 
 def _section_sort_key(sec: str):
     if sec == "proem":
-        return (0, 0, 0)
+        return (0, 0, 0, "")
     # Route separators do not change edition numbering. Equal loci retain
     # source order, including separate fragments sharing the same citation.
     parts = re.split(r"[.-]", re.sub(r"-collective-\d+$", "", sec))
@@ -785,10 +785,18 @@ def _section_sort_key(sec: str):
         try:
             nums.append(int(p))
         except ValueError:
-            return (2, sec, 0)
-    while len(nums) < 3:
-        nums.append(0)
-    return (1, nums[0], nums[1], nums[2])
+            break
+    else:
+        while len(nums) < 3:
+            nums.append(0)
+        return (1, nums[0], nums[1], nums[2])
+    # Tip progression suites read open < rem-early < rem-mid < rem-close;
+    # plain alphabetical order would print the close passage second.
+    m = re.fullmatch(r"(.*)-(open|rem-early|rem-mid|rem-close)", sec)
+    if m:
+        rank = {"open": 0, "rem-early": 1, "rem-mid": 2, "rem-close": 3}[m.group(2)]
+        return (2, m.group(1), rank, sec)
+    return (2, sec, 9, "")
 
 
 def _source_rows(raw) -> list[dict]:
