@@ -41434,6 +41434,22 @@
     "epiphanius-notitiae-episcopatuum": {
       "packet": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.review.json"
+    },
+    "cyril-epistula-theodosium": {
+      "packet": "books/cyril-alexandria-epistula-theodosium/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-epistula-theodosium/reviews/audit/tip.review.json"
+    },
+    "cyril-ad-xystum": {
+      "packet": "books/cyril-alexandria-ad-xystum/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-ad-xystum/reviews/audit/tip.review.json"
+    },
+    "cyril-de-synagogae-defectu": {
+      "packet": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-de-synagogae-defectu/reviews/audit/tip.review.json"
+    },
+    "cyril-ad-carthaginiense": {
+      "packet": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.packet.json",
+      "receipt": "books/cyril-alexandria-ad-carthaginiense/reviews/audit/tip.review.json"
     }
   }
 }
