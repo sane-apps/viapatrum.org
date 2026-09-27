@@ -826,6 +826,8 @@ _CPG_TITLE = re.compile(r"^CPG\s+\d+", re.I)
 _TIP_TITLE_SUFFIX = re.compile(r"\s*\([^)]*\btip\b[^)]*\)\s*$", re.I)
 _DENSE_EDITION_MARK = re.compile(r"\b(?:ESTC|Wing|IA|EEBO|STC)\b", re.I)
 
+# The English line is what a reader types. No Latin or Greek name in it.
+# The traditional name stays on PUBLIC_LATIN_SUBTITLES only.
 # Render-only English H1 / crumb / card titles. Reviewed identity (meta title) stays
 # Latin when that is the locked work name — publication gates bind on identity.
 # Add future Reformed tips (Baron / Saumur / Frankfurt) here as they ship.
@@ -843,7 +845,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "epiphanius-de-mensuris": "On Weights and Measures",
     "nemesius-de-natura-hominis": "On the Nature of Man",
     "serapion-antioch-fragmenta": "Fragments",
-    "africanus-cesti": "The Cesti",
+    "africanus-cesti": "Miscellanies",
     "photius-bibliotheca": "The Library",
     "ammonius-fragmenta-joannem": "Fragments on John",
     "gregory-thaumaturgus-ouden-eidolon": "That There Is No Idol in the World",
@@ -851,7 +853,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "gregory-thaumaturgus-matthew-fragment": "Fragment on Matthew",
     "gregory-thaumaturgus-sententiae": "Sentences",
     "eustathius-allocutio-constantinum": "Address to Emperor Constantine",
-    "eustathius-hexaemeron": "Commentary on the Hexaemeron",
+    "eustathius-hexaemeron": "Commentary on the Six Days of Creation",
     "eustathius-engastrimytho": "On the Belly-Speaker against Origen",
     "eustathius-oratio-dominus-creavit": "Oration on “The Lord Created Me”",
     "eusebius-emesa-fragmentum-1cor": "Fragment on 1 Corinthians",
@@ -862,7 +864,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "amphilochius-oratio-resurrectionem": "Oration on the Resurrection of the Lord",
     "didymus-commentarii-ecclesiasten": "Commentary on Ecclesiastes",
     "didymus-commentarii-job": "Commentary on Job",
-    "didymus-commentarii-octateuchum": "Commentary on the Octateuch",
+    "didymus-commentarii-octateuchum": "Commentary on Genesis through Ruth",
     "didymus-commentarii-psalmos": "Commentary on the Psalms",
     "didymus-commentarii-zacchariam": "Commentary on Zechariah",
     "didymus-de-trinitate": "On the Trinity",
@@ -872,7 +874,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "didymus-fragmenta-joannem": "Fragments on John",
     "didymus-fragmenta-2cor": "Fragments on 2 Corinthians",
     "didymus-fragmenta-1cor": "Fragments on 1 Corinthians",
-    "didymus-enarratio-catholicas": "Enarration on the Catholic Epistles",
+    "didymus-enarratio-catholicas": "Notes on the Catholic Epistles",
     "didymus-dialexis-montanistae": "Dialogue with a Montanist",
     "didymus-contra-manichaeos": "Against the Manichees",
     "didymus-fragmenta-psalmos": "Fragments on the Psalms",
@@ -885,10 +887,10 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "evagrius-expositio-proverbia": "Exposition on Proverbs",
     "evagrius-gnosticus": "The Gnostic",
     "evagrius-institutio-monachos": "Instruction to Monks",
-    "evagrius-practicus": "The Praktikos",
+    "evagrius-practicus": "The Practice",
     "evagrius-rerum-monachalium": "Reasons of the Monastic Life",
-    "evagrius-scholia-ecclesiasten": "Scholia on Ecclesiastes",
-    "evagrius-scholia-proverbia": "Scholia on Proverbs",
+    "evagrius-scholia-ecclesiasten": "Notes on Ecclesiastes",
+    "evagrius-scholia-proverbia": "Notes on Proverbs",
     "evagrius-sententiae-monachos": "Sentences to Monks",
     "evagrius-sententiae-virginem": "Sentences to a Virgin",
     "evagrius-spiritales-sententiae": "Spiritual Sentences",
@@ -914,11 +916,11 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "severianus-in-illud-quando": "On the Words, When He Subjects All Things",
     "severianus-in-1cor": "Fragments on 1 Corinthians",
     "severianus-in-job": "Sermons on Job",
-    "epiphanius-anaphora-graeca": "Greek Anaphora",
+    "epiphanius-anaphora-graeca": "The Eucharistic Prayer",
     "epiphanius-apophthegmata": "Sayings",
     "epiphanius-appendices-ad-indices-apostolorum-discipulorumque": "Appendices to the Lists of the Apostles and Disciples",
     "epiphanius-de-prophetarum-vita-et-obitu": "On the Lives and Deaths of the Prophets",
-    "epiphanius-de-prophetarum-vita-et-obitu-recensio-altera": "On the Lives and Deaths of the Prophets, Another Recension",
+    "epiphanius-de-prophetarum-vita-et-obitu-recensio-altera": "On the Lives and Deaths of the Prophets, Another Version",
     "epiphanius-de-xii-gemmis": "On the Twelve Gems",
     "epiphanius-de-xii-gemmis-fragmenta": "Fragments on the Twelve Gems",
     "epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum": "The Seventy-Two Prophets and Prophetesses",
@@ -929,7 +931,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "amphilochius-in-lazarum": "On Lazarus",
     "amphilochius-in-illud-pater": "On “Father”",
     "amphilochius-in-illud-non-potest": "On “It Is Not Possible”",
-    "amphilochius-iambi-seleucum": "Iambics to Seleucus",
+    "amphilochius-iambi-seleucum": "Verses to Seleucus",
     "amphilochius-epistula-synodalis": "Synodical Letter",
     "amphilochius-de-recens-baptizatis": "On the Newly Baptized",
     "amphilochius-contra-haereticos": "Against the Heretics",
