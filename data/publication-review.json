@@ -40299,6 +40299,78 @@
       "receipt": "books/epiphanius-index-discipulorum/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "f58210f3fe3561c520a6dbddb89cc7ecb2c2d9b6c8e64c0efb18dc0d073b278a"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u01-open": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "bf79b5864d8c292672fc25af582ed10f90966b0fd8d23e7caa7c22605467c61d"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u01-rem-early": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "bdcd01dc575c57ca6be2dd68d0672bdba78edba550ca918eea6774a3e2d73a44"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u01-rem-mid": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "f453a6ab6c3ec737bab66ff5ec227a65cfec99c74573559eba80f33b749a46ae"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u01-rem-close": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "97683b4d17d91a5edb29f916dfe59a2b0f675b9bd2a5a5a07ad9d3904aea9d37"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u02-open": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "dbb5a8d7695eebd9ee33d374c2c761fe3be6a816ffc15f753312c772aca07897"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u02-rem-early": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "2a097afbe3e54a31db62e7ffed6f13dc94ed72f8231d6acfdf89eacd0189eafd"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u02-rem-mid": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "c16804b4d5cbe1a7500d8fbf3b8d87fe172683e377a9a1a6722c42484127432a"
+    },
+    "work:epiphanius-liturgia-praesanctificatorum:u02-rem-close": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "c6333d7f7859daf7835d3b2515a353ae836c93e073f05737b843334081862d5a"
+    },
+    "work:epiphanius-notitiae-episcopatuum:u01-open": {
+      "packet": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "3a2bb69f6217e9a2a01fe30d1803e634f0158ec5b59456a43d55fd6029bb9513"
+    },
+    "work:epiphanius-notitiae-episcopatuum:u01-rem-early": {
+      "packet": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "0ad161dabc60d092cfa71d99562c95123eaedc1b3f26d603d53e6bb43c70aa29"
+    },
+    "work:epiphanius-notitiae-episcopatuum:u01-rem-mid": {
+      "packet": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "a2a8f7ebeb0692805a6e0f1cf91324a691e944b16ba322372bf66ea0a57fa61b"
+    },
+    "work:epiphanius-notitiae-episcopatuum:u01-rem-close": {
+      "packet": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "95fc01c940e5521dd70b10dfac2438d1df47e4cb584b31d4ed04da1e5ee959a9"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -41060,6 +41132,14 @@
     "epiphanius-index-discipulorum": {
       "packet": "books/epiphanius-index-discipulorum/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-index-discipulorum/reviews/audit/tip.review.json"
+    },
+    "epiphanius-liturgia-praesanctificatorum": {
+      "packet": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-liturgia-praesanctificatorum/reviews/audit/tip.review.json"
+    },
+    "epiphanius-notitiae-episcopatuum": {
+      "packet": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-notitiae-episcopatuum/reviews/audit/tip.review.json"
     }
   }
 }
