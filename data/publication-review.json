@@ -40059,6 +40059,150 @@
       "receipt": "books/epiphanius-de-trinitate/reviews/audit/tip.review.json",
       "section": "u01-open",
       "payload_sha256": "639d018293f464a213195bf4842ae628c88ca8470f029e503ec75e35d7e95bb4"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u01-open": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "25726639bec765965468324fee404ef4347609c8891624c601e85fe48f2525f3"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u01-rem-early": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "732f182fb225132f59941cff46b77259860d022e5688fdbf701f4573ebe944fa"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u01-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "de50046b4085a353467d940d69aa6d4bb76c7f165490aac8b4c83e57a74b557a"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u01-rem-close": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "b625e3654f3074a4d08a99ca404a93a6ed5ccf9319e11338bc71c9aa0f19f7c1"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u02-open": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "a532f5169abb262a6d7428e540499c3b0fbb9202bd6eed04c0e51cc235a85ac9"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u02-rem-early": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "ca772d55babad9dfe4e14324b743cbebd4dec5d0c7432885e92fd4b5bb3f8a71"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u02-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "2d5fe728a80dde3d88b88a73970e7fb731ecd084256eeb4d4deac8608bca4ce5"
+    },
+    "work:epiphanius-homilia-in-christi-resurrectionem:u02-rem-close": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "0e1539569651d219363ee418b54fc6e41382a585a9eb2692dcb2a2e44d24abe0"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u01-open": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "472923a8cf7da4f0b00443da620e3de153fc455dea665863acdc6343f58b844f"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u01-rem-early": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "c2572ae9600135e170d6130ba708341946f11cf5d6647c60fea42e63f16235b2"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u01-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "4730fd7ca7e654628e406e3a7d2d099e0de05a0dafffc480547240761a235e6e"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u01-rem-close": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "feceb8d9b55180ab63272ca72702ef2ceec75f74d78fd9c3d7a1900d6be3fa98"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u02-open": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u02-open",
+      "payload_sha256": "6680e4145dcfd6cfc996192a30d72ad429088a6f68764ec3bde51709c048842b"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u02-rem-early": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u02-rem-early",
+      "payload_sha256": "1cd7d37fdbde45e98905bf40106381f53ae8e36d4d3e64ecbce35fb7bcdc0e40"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u02-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u02-rem-mid",
+      "payload_sha256": "efb8496d04b706f31e5fc3e36d1c98966b9fc721ddeece8aa34f9a7ff987db0f"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u02-rem-close": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u02-rem-close",
+      "payload_sha256": "2793715a195bdf986e645ba6364b3786c0d0f1dc7165bdc483c822696822719e"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u03-open": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u03-open",
+      "payload_sha256": "c16223b51aca26323fbd61d943e066422912a5b4513369828946169e04d0c744"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u03-rem-early": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u03-rem-early",
+      "payload_sha256": "dda14fbf3f0720924dcd3190697bc2f4aab19f3384c9eed2f0d10c02d50d1728"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u03-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u03-rem-mid",
+      "payload_sha256": "7e7ed1713c2248a85d6ca2ccfd5fe1f3f0cfe9f46f5ccc2dac2e31a0164a3e61"
+    },
+    "work:epiphanius-homilia-in-divini-corporis-sepulturam:u03-rem-close": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json",
+      "section": "u03-rem-close",
+      "payload_sha256": "aca810cb6380d4dd1d1d1a6950ae93a0bbce311551cc3ca9579f7b1c859e6257"
+    },
+    "work:epiphanius-homilia-in-festo-palmarum:u01-open": {
+      "packet": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "2866b543e94a8a1c9d1782202cddd47b3ae8da45dcc0f74ed4e8c56dc6c1ee3e"
+    },
+    "work:epiphanius-homilia-in-festo-palmarum:u01-rem-early": {
+      "packet": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "f1ff7456f2674fd8e74c242eb79d8a568528b7c8b81ab24a7295b3de16c825be"
+    },
+    "work:epiphanius-homilia-in-festo-palmarum:u01-rem-mid": {
+      "packet": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "d1a60e7dddc5a61542560bf061529565f4cd9dc11476114de4f1b48c7013eb32"
+    },
+    "work:epiphanius-homilia-in-festo-palmarum:u01-rem-close": {
+      "packet": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "159ac55f412b1f669a2354ae0826884c38adb19a23780b4a6b80778d2c7bf054"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40796,6 +40940,18 @@
     "epiphanius-de-trinitate": {
       "packet": "books/epiphanius-de-trinitate/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-de-trinitate/reviews/audit/tip.review.json"
+    },
+    "epiphanius-homilia-in-christi-resurrectionem": {
+      "packet": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-christi-resurrectionem/reviews/audit/tip.review.json"
+    },
+    "epiphanius-homilia-in-divini-corporis-sepulturam": {
+      "packet": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-divini-corporis-sepulturam/reviews/audit/tip.review.json"
+    },
+    "epiphanius-homilia-in-festo-palmarum": {
+      "packet": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-homilia-in-festo-palmarum/reviews/audit/tip.review.json"
     }
   }
 }
