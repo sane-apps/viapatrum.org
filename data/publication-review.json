@@ -40251,6 +40251,54 @@
       "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json",
       "section": "u02-rem-close",
       "payload_sha256": "a7ab434dbfdaab4dd9163865e81a9ec763048e39b871be27383c1ae977ab37cb"
+    },
+    "work:epiphanius-index-apostolorum:u01-open": {
+      "packet": "books/epiphanius-index-apostolorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-apostolorum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "3e278d0e5d916825c092c0a18a8defb5812455d958f1d123a06af91d44a919b3"
+    },
+    "work:epiphanius-index-apostolorum:u01-rem-early": {
+      "packet": "books/epiphanius-index-apostolorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-apostolorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "d3fde6808d787dbf0c5441a7dd7a8f8c354c3369fcd4ee9e41385c12e0f1121a"
+    },
+    "work:epiphanius-index-apostolorum:u01-rem-mid": {
+      "packet": "books/epiphanius-index-apostolorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-apostolorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "83718873ec47057948f5b3882c225a5ba06465ba8682e5776032b76ecf2b7575"
+    },
+    "work:epiphanius-index-apostolorum:u01-rem-close": {
+      "packet": "books/epiphanius-index-apostolorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-apostolorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "f9b7ef39090c91170424bf72dbddb523339d9d990ab5eeaa7246838e442b7df4"
+    },
+    "work:epiphanius-index-discipulorum:u01-open": {
+      "packet": "books/epiphanius-index-discipulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-discipulorum/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "f5fe6c43b4c9eea5f8f4f9ed91e2a04e5e772b0a2c7b4a965272ed309e2de9f8"
+    },
+    "work:epiphanius-index-discipulorum:u01-rem-early": {
+      "packet": "books/epiphanius-index-discipulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-discipulorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-early",
+      "payload_sha256": "7be8db09073bd8b7ac38fcc2f1d47f7e5c9aa95ca2e55496d3319fc6abbd82e1"
+    },
+    "work:epiphanius-index-discipulorum:u01-rem-mid": {
+      "packet": "books/epiphanius-index-discipulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-discipulorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-mid",
+      "payload_sha256": "8c04d8c04111b903cb04dcbacac5f22f43849900c26f0055e4da5783f7d4dbbd"
+    },
+    "work:epiphanius-index-discipulorum:u01-rem-close": {
+      "packet": "books/epiphanius-index-discipulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-discipulorum/reviews/audit/tip.review.json",
+      "section": "u01-rem-close",
+      "payload_sha256": "f58210f3fe3561c520a6dbddb89cc7ecb2c2d9b6c8e64c0efb18dc0d073b278a"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -41004,6 +41052,14 @@
     "epiphanius-homilia-in-laudes-mariae-deiparae": {
       "packet": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-homilia-in-laudes-mariae-deiparae/reviews/audit/tip.review.json"
+    },
+    "epiphanius-index-apostolorum": {
+      "packet": "books/epiphanius-index-apostolorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-apostolorum/reviews/audit/tip.review.json"
+    },
+    "epiphanius-index-discipulorum": {
+      "packet": "books/epiphanius-index-discipulorum/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-index-discipulorum/reviews/audit/tip.review.json"
     }
   }
 }
