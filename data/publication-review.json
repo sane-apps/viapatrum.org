@@ -40047,6 +40047,18 @@
       "receipt": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "d52a56bc5f881bfd322c09cf5d440b62cb8dfde2edd5a5cc535b44a008fd46e6"
+    },
+    "work:epiphanius-de-fide:u01-open": {
+      "packet": "books/epiphanius-de-fide/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-fide/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "bbfd37bff50fc5fd6d3dea394baece115608f7344197932980cc58216b2ddaad"
+    },
+    "work:epiphanius-de-trinitate:u01-open": {
+      "packet": "books/epiphanius-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-trinitate/reviews/audit/tip.review.json",
+      "section": "u01-open",
+      "payload_sha256": "639d018293f464a213195bf4842ae628c88ca8470f029e503ec75e35d7e95bb4"
     }
   },
   "legacy_identity_correction": "Nine pre-existing collective-letter fragments shared loci/HTML ids; distinct existing fragment_id suffixes now preserve each unchanged passage. This is an identity repair, not semantic review.",
@@ -40776,6 +40788,14 @@
     "epiphanius-homilia-in-assumptionem-christi": {
       "packet": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.packet.json",
       "receipt": "books/epiphanius-homilia-in-assumptionem-christi/reviews/audit/tip.review.json"
+    },
+    "epiphanius-de-fide": {
+      "packet": "books/epiphanius-de-fide/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-fide/reviews/audit/tip.review.json"
+    },
+    "epiphanius-de-trinitate": {
+      "packet": "books/epiphanius-de-trinitate/reviews/audit/tip.packet.json",
+      "receipt": "books/epiphanius-de-trinitate/reviews/audit/tip.review.json"
     }
   }
 }
