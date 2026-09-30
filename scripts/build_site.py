@@ -1400,6 +1400,8 @@ def scrub_worksheet_note(text: str) -> str:
         flags=re.I,
     )
     t = re.sub(r"~?\s*\bPHYS\b", "", t, flags=re.I)
+    t = re.sub(r"\bdensify\b", "", t, flags=re.I)
+    t = re.sub(r"\bCOMPLETE\b", "", t)
     t = re.sub(r"\(\s*\)", "", t)
     t = re.sub(r"\btoward\s*([.!?])", r"\1", t)
     t = re.sub(r"([.!?])\s*:\s*", r"\1 ", t)
@@ -1450,7 +1452,7 @@ def text_history_html(th: dict | None) -> str:
     method = scrub_worksheet_note(str(th.get("method") or "")).strip()
     if method:
         bits.append(f'<p class="intro">{escape(method)}</p>')
-    identifiers = str(th.get("identifiers") or "").strip()
+    identifiers = scrub_worksheet_note(str(th.get("identifiers") or "")).strip()
     if identifiers:
         bits.append(
             f'<p class="intro fine">Catalogue &amp; scope</p>'
@@ -1464,10 +1466,10 @@ def text_history_html(th: dict | None) -> str:
                 continue
             role_key = str(wtn.get("role") or "").strip()
             role = WITNESS_ROLE_LABEL.get(role_key, role_key.replace("-", " ").title())
-            name = str(wtn.get("name") or "").strip()
+            name = scrub_worksheet_note(str(wtn.get("name") or "")).strip()
             if not name:
                 continue
-            cov = str(wtn.get("coverage") or "").strip()
+            cov = scrub_worksheet_note(str(wtn.get("coverage") or "")).strip()
             lang = str(wtn.get("language") or "").strip()
             url = str(wtn.get("url") or "").strip()
             label = escape(name)
@@ -1533,7 +1535,7 @@ def _pack_work(
     is_first = slug in FIRST_ENGLISH_NOTES and slug not in NEVER_OET_SLUGS
     note = FIRST_ENGLISH_NOTES.get(slug, "") if is_first else ""
     # Legacy blurbs conflate a new rendering / absence from ANF with first English.
-    blurb = re.sub(r"[^.!?]*(?:Original English Translation|no previous|new OET)[^.!?]*[.!?]?", "", blurb, flags=re.I).strip()
+    blurb = re.sub(r"[^.!?]*(?:Original English Translation|no previous|new OET|SERIES CLOSEOUT)[^.!?]*[.!?]?", "", blurb, flags=re.I).strip()
     blurb = scrub_worksheet_note(blurb).strip()
     # Keep reviewed identity (title/edition/text_history) intact for publication
     # gates. Public H1 / hero softening happens only at render.
@@ -3451,7 +3453,12 @@ def load_origen_pauline_fragments() -> list[dict]:
                         seen.add(str(sec.get("section")))
                 existing["section_count"] = len(existing["sections"])
                 if meta.get("blurb"):
-                    existing["blurb"] = scrub_worksheet_note(str(meta["blurb"])).strip()
+                    existing["blurb"] = scrub_worksheet_note(re.sub(
+                        r"[^.!?]*(?:Original English Translation|no previous|new OET|SERIES CLOSEOUT)[^.!?]*[.!?]?",
+                        "",
+                        str(meta["blurb"]),
+                        flags=re.I,
+                    )).strip()
                 if meta.get("first_english_note"):
                     existing["first_english_note"] = meta["first_english_note"]
                     note = (meta.get("first_english_note") or "").strip()
@@ -5053,6 +5060,8 @@ def build() -> None:
             f'<p class="latin-title">{escape(latin_sub)}</p>' if latin_sub else ""
         )
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
+        edition_short = scrub_worksheet_note(edition_short)
+        edition_ids = scrub_worksheet_note(edition_ids)
         th_for_about = dict(w.get("text_history") or {})
         if edition_ids and not str(th_for_about.get("identifiers") or "").strip():
             th_for_about["identifiers"] = edition_ids
