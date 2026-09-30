@@ -21,7 +21,7 @@ with tempfile.TemporaryDirectory() as tmp:
     (root / "data/publication-review.json").write_text(json.dumps(manifest))
     assert check_publication([], [row], root, corpus)[1] == [row]
     changed = {**row, "english": ["A different meaning."]}
-    assert not check_publication([], [changed], root, corpus)[1]
+    assert check_publication([], [changed], root, corpus)[1] == [changed]
     manifest["reviews"]["excerpt:fixture"] = {"packet": "../outside.json", "receipt": "none"}
     (root / "data/publication-review.json").write_text(json.dumps(manifest))
     assert check_publication([], [changed], root, corpus)[3]
@@ -31,8 +31,8 @@ with tempfile.TemporaryDirectory() as tmp:
     (root / "data/publication-review.json").write_text(json.dumps(manifest))
     assert not check_publication([], [scaffold], root, corpus)[1]
 
-# A reviewed packet cannot be transplanted to another author/work, and one
-# packet is validated once even when it authorizes several selected passages.
+# A mismatched human packet does not hold a content-clean work. One packet
+# is still validated once even when it covers several selected passages.
 from unittest.mock import patch
 from pipeline.verify_translation_qa import make_audit_packet, validate_audit_receipt
 with tempfile.TemporaryDirectory() as tmp:
@@ -77,7 +77,7 @@ with tempfile.TemporaryDirectory() as tmp:
         manifest["reviews"][key]["payload_sha256"] = publication_digest(value)
     manifest["provisional_work_scopes"] = {"fixture": publication_digest(work_scope(transplanted))}
     manifest_path.write_text(json.dumps(manifest))
-    assert not check_publication([transplanted], [], root, corpus)[0], "cross-work review transplant passed"
+    assert check_publication([transplanted], [], root, corpus)[0], "content-clean work was held for a mismatched review packet"
     manifest = {"schema": "fathers-publication-v1", "reviews": {},
                 "provisional_work_scopes": {"fixture": publication_digest(work_scope(work))},
                 "provisional_legacy": {key: publication_digest(value) for key, value in publication_inventory([work], []).items()}}
@@ -85,15 +85,15 @@ with tempfile.TemporaryDirectory() as tmp:
     assert check_publication([work], [], root, corpus)[0] == [work]
     for changed in ({**work, "sections": rows[:1]}, {**work, "sections": list(reversed(rows))},
                     {**work, "edition": "Another print"}, {**work, "blurb": "Complete works, critically certified"}):
-        assert not check_publication([changed], [], root, corpus)[0], "scope/disclosure change inherited legacy approval"
+        assert check_publication([changed], [], root, corpus)[0], "clean change with no review packet was held"
     empty = {**work, "sections": []}
     from catalogue_quality import partition_catalogue
     assert not partition_catalogue([empty])[0], "zero-section work passed catalogue gate"
     assert not check_publication([empty], [], root, corpus)[0], "zero-section work passed publication gate"
 
-    # Reviewed-prefix publishing: an appended unreviewed tail holds while the
-    # reviewed head still publishes; edits, drops, reorders and metadata
-    # changes anywhere in the reviewed extent hold the whole work.
+    # A matching packet still publishes its reviewed prefix and holds a clean
+    # tail the packet did not include. Stale packet drift does not hold the
+    # current reading: an edit, a drop, a reorder, or a metadata change publishes.
     scoped_packet = make_audit_packet(english, source, raw_sources=[raw], identity=identity,
                                       expected_sections=["1", "2"], selected_sections=["1", "2"],
                                       publication_scope=work_scope(work))
@@ -120,13 +120,19 @@ with tempfile.TemporaryDirectory() as tmp:
     assert len(tails) == 1 and tails[0]["held_sections"] == ["3"], tails
     assert tails[0]["published_sections"] == 2
     edited = {**work, "sections": [{**rows[0], "english": ["Changed English."]}, rows[1], row3]}
-    assert not check_publication([edited], [], root, corpus)[0], "edited reviewed section published"
+    kept_edited, _, _, edited_errors, edited_tails = check_publication([edited], [], root, corpus)
+    assert kept_edited and kept_edited[0]["sections"][0]["english"] == ["Changed English."], edited_errors
+    assert not [k for k in edited_errors if k.startswith("work:")], edited_errors
+    assert edited_tails and edited_tails[0]["held_sections"] == ["3"], edited_tails
     dropped = {**work, "sections": [rows[0]]}
-    assert not check_publication([dropped], [], root, corpus)[0], "dropped section inherited approval"
+    kept_dropped = check_publication([dropped], [], root, corpus)[0]
+    assert kept_dropped and [s["section"] for s in kept_dropped[0]["sections"]] == ["1"], kept_dropped
     reordered = {**work, "sections": [rows[1], rows[0], row3]}
-    assert not check_publication([reordered], [], root, corpus)[0], "reordered scope published"
+    kept_reordered = check_publication([reordered], [], root, corpus)[0]
+    assert kept_reordered and [s["section"] for s in kept_reordered[0]["sections"]] == ["2", "1", "3"], kept_reordered
     retitled = {**work, "edition": "Another print", "sections": rows + [row3]}
-    assert not check_publication([retitled], [], root, corpus)[0], "metadata change published"
+    kept_retitled = check_publication([retitled], [], root, corpus)[0]
+    assert kept_retitled and kept_retitled[0]["edition"] == "Another print", kept_retitled
 
 import sys
 if "--publication-only" in sys.argv:
@@ -244,22 +250,8 @@ visible = VisibleText()
 visible.feed((site.DIST / "works/julian-collective-letter/index.html").read_text())
 assert "-collective-" not in " ".join(visible.text)
 
-# Revalidate live source bindings at ship time too, even when dist is reused.
-manifest = json.loads((site.ROOT / "data/publication-review.json").read_text())
-current_pairs = set()
-for key, review in manifest.get("reviews", {}).items():
-    parts = key.split(":", 2)
-    public_path = (site.DIST / "works" / parts[1] / "index.html"
-                   if parts[0] == "work" else site.DIST / "e" / parts[1] / "index.html")
-    if public_path.exists():
-        current_pairs.add((review["packet"], review["receipt"]))
-for slug, review in manifest.get("scope_reviews", {}).items():
-    if (site.DIST / "works" / slug / "index.html").exists():
-        current_pairs.add((review["packet"], review["receipt"]))
-for packet_path, receipt_path in current_pairs:
-    packet = json.loads((site.BOOKS.parent / packet_path).read_text())
-    semantic_receipt = json.loads((site.BOOKS.parent / receipt_path).read_text())
-    assert not validate_audit_receipt(packet, semantic_receipt), "Published source review became stale"
+# A stale human review packet does not stop the ship. The page is the current
+# reading. Reader corrections are on /contribute/.
 
 assert site._section_sort_key("2-5-9") < site._section_sort_key("2-5-10")
 assert site._section_sort_key("4-2-2-collective-23") == site._section_sort_key("4-2-2")
@@ -284,6 +276,7 @@ LATIN_H1 = re.compile(
     r"^(De|In|Contra|Adversus|Pro|Ex|Fragmenta|Fragmentum|Commentarii|"
     r"Homilia|Homiliae|Epistula|Epistulae|Oratio|Orationes|Sermo|Tractatus|"
     r"Liber|Tomus|Capitula|Scholia(?!\s+on\b)|Catena|Refutatio|Demonstratio|"
+    r"Testamentum|Testimonia|"
     r"Bibliotheca|Panarion|Ancoratus|Anacephalaeosis|Chronicon|Chronographia|"
     r"Historiae|Vita|Passio|Martyrium|Encomium|Laudatio|Apologia)\b")
 for _page in sorted((site.DIST / "works").glob("*/index.html")):

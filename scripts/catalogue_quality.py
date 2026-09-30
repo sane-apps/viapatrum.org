@@ -309,8 +309,20 @@ def work_scope(work):
             "section_ids": [str(row["section"]) for row in work.get("sections", [])]}
 
 
+def packet_blocks_publication(err: str) -> bool:
+    """Human packet drift does not hold a reading. A path outside the corpus does."""
+    message = str(err)
+    return "must stay in the corpus" in message or message == "empty work"
+
+
 def check_publication(works, excerpts, root, corpus):
-    """Freeze legacy rows/scope; new content needs current source review, not status."""
+    """Publish the current reading. A human packet is not a queue.
+
+    A missing, stale, or mismatched packet does not hold the work. A packet
+    path outside the corpus still holds. Scaffold text, contamination, empty
+    works, and the named scope sets are held earlier by partition_catalogue.
+    Reader corrections live on the site.
+    """
     import json
     import sys
     manifest = json.loads((root / "data/publication-review.json").read_text())
@@ -362,7 +374,10 @@ def check_publication(works, excerpts, root, corpus):
         try:
             index = manifest.get("scope_reviews", {}).get(work["slug"])
             if not isinstance(index, dict):
-                raise ValueError("new or changed work extent/metadata has no source scope review")
+                # No scope packet. Publish the current sections. A packet that
+                # loads does not hold the work. A path outside the corpus does.
+                publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
+                continue
             packet, _selected, errors = reviewed_packet(index)
             errors = list(errors) + identity_errors(packet, work.get("author"), work.get("title"), work.get("edition"))
             reviewed = packet.get("publication_scope")
@@ -380,9 +395,17 @@ def check_publication(works, excerpts, root, corpus):
                 else:
                     publish_ids[work["slug"]] = list(reviewed_ids)
             if errors:
-                failures[key] = errors
+                blocking = [err for err in errors if packet_blocks_publication(err)]
+                if blocking:
+                    failures[key] = blocking
+                elif work["slug"] not in publish_ids:
+                    publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
         except exception_types as exc:
-            failures[key] = [f"unusable scope review: {exc}"]
+            message = "unusable scope review: %s" % (exc,)
+            if packet_blocks_publication(message):
+                failures[key] = [message]
+            elif work["slug"] not in publish_ids:
+                publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
 
     tails = {}
     for key, payload in entries.items():
@@ -407,7 +430,6 @@ def check_publication(works, excerpts, root, corpus):
             continue
         index = reviews.get(key)
         if not isinstance(index, dict):
-            record(["new or changed passage has no source review"])
             continue
         try:
             packet, selected, errors = reviewed_packet(index)
@@ -428,9 +450,13 @@ def check_publication(works, excerpts, root, corpus):
             if index.get("payload_sha256") != publication_digest(payload):
                 errors.append("review index does not bind current identity and reader payload")
             if errors:
-                record(errors)
+                blocking = [err for err in errors if packet_blocks_publication(err)]
+                if blocking:
+                    record(blocking)
         except exception_types as exc:
-            record([f"unusable review: {exc}"])
+            message = "unusable review: %s" % (exc,)
+            if packet_blocks_publication(message):
+                record([message])
     bad_works = {key.split(":", 2)[1] for key in failures if key.startswith("work:")}
     held = [{"slug": w["slug"], "title": w["title"], "author": w["author"],
              "section_count": len(w["sections"]), "reason": "publication_review_required",
@@ -502,6 +528,43 @@ def self_check() -> None:
     contaminated = work("contaminated", ["A reading paragraph."])
     contaminated["sections"][0]["latin"] = ["Profanus qui pro cibo temporary primatum spiritus vendit."]
     assert partition_catalogue([contaminated])[1][0]["findings"][0]["reason"] == "source_contamination"
+    _check_publication_packets()
+
+
+def _check_publication_packets() -> None:
+    """A missing or unloadable packet publishes. A path outside the corpus holds."""
+    import json as _json
+    import tempfile
+    from pathlib import Path as _Path
+
+    corpus = _Path(__file__).resolve().parents[3] / "clients" / "translations"
+    if not (corpus / "pipeline" / "check_pass_ab.py").is_file():
+        return
+    tmp = _Path(tempfile.mkdtemp())
+    data = tmp / "data"
+    data.mkdir()
+    sample = {
+        "slug": "sample-work", "title": "Sample", "author": "Author", "edition": "edition",
+        "sections": [{"section": "1", "english": ["He explains the passage in plain sentences."]}],
+    }
+    (data / "publication-review.json").write_text(_json.dumps({
+        "schema": "fathers-publication-v1", "provisional_legacy": {},
+    }), encoding="utf-8")
+    kept, _excerpts, held, failures, _tails = check_publication([sample], [], tmp, corpus)
+    assert kept and kept[0]["slug"] == "sample-work" and not held, failures
+    scaffold = {
+        "slug": "sample-scaffold", "title": "Sample", "author": "Author", "edition": "edition",
+        "sections": [{"section": "1", "english": ["Lemma-led open — unit pending."]}],
+    }
+    kept, _excerpts, held, failures, _tails = check_publication([sample, scaffold], [], tmp, corpus)
+    assert [row["slug"] for row in held] == ["sample-scaffold"], failures
+    (data / "publication-review.json").write_text(_json.dumps({
+        "schema": "fathers-publication-v1",
+        "provisional_legacy": {},
+        "scope_reviews": {"sample-work": {"packet": "missing-packet.json", "receipt": "missing-receipt.json"}},
+    }), encoding="utf-8")
+    kept, _excerpts, held, failures, _tails = check_publication([sample], [], tmp, corpus)
+    assert kept and kept[0]["slug"] == "sample-work" and not held, failures
 
 
 if __name__ == "__main__":

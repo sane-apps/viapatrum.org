@@ -48,6 +48,20 @@ function verifyReview(root=process.cwd(), out=path.join(root,"outputs/ui-review"
  }
  return r;
 }
+function verifyAutomated(root=process.cwd(), out=path.join(root,"outputs/ui-review"),dist=path.join(root,"dist")) {
+ const r=JSON.parse(fs.readFileSync(path.join(out,"browser-receipt.json"),"utf8"));
+ assert.equal(r.schema,2,"Old browser receipt schema");
+ assert.equal(r.status,"passed","Browser checks did not pass");
+ assert.deepEqual(r.artifact,artifact(root,dist),"Build or browser checks changed after review");
+ assert.deepEqual([...r.completed_checks].sort(),[...REQUIRED_CHECKS].sort(),"Incomplete browser checks");
+ assert.deepEqual([...r.screenshots.map(s=>s.path)].sort(),[...REQUIRED_SHOTS].sort(),"Missing/duplicate visual states");
+ assert.equal(r.errors.length,0,"Browser exceptions recorded");
+ for(const s of r.screenshots) {
+  assert.equal(s.sha256,sha(fs.readFileSync(path.join(out,s.path))),"Screenshot changed: "+s.path);
+  assert.equal(s.geometry.failures.length,0,"Layout errors: "+s.path);
+ }
+ return r;
+}
 async function geometry(page) {
  return page.evaluate(()=>{
   const failures=[], limitations=[];
@@ -295,10 +309,13 @@ async function run(base,out) {
  finally {await browser.close();fs.writeFileSync(path.join(out,"browser-receipt.json"),JSON.stringify(receipt,null,2));}
 
 }
-module.exports={artifact,verifyReview,REQUIRED_SHOTS,REQUIRED_CHECKS};
+module.exports={artifact,verifyReview,verifyAutomated,REQUIRED_SHOTS,REQUIRED_CHECKS};
 if(require.main===module) {
  if(process.argv[2]==="--verify-review") {
   try {const r=verifyReview(process.cwd(),path.join(process.cwd(),"outputs/ui-review"),process.argv[3]||path.join(process.cwd(),"dist"));console.log("Visual review matches build "+r.artifact.sha256);}
+  catch(error){console.error("BLOCKED: "+error.message);process.exitCode=1;}
+ } else if(process.argv[2]==="--verify-automated") {
+  try {const r=verifyAutomated(process.cwd(),path.join(process.cwd(),"outputs/ui-review"),process.argv[3]||path.join(process.cwd(),"dist"));console.log("Automated checks match build "+r.artifact.sha256);}
   catch(error){console.error("BLOCKED: "+error.message);process.exitCode=1;}
  } else run(process.argv[2]||"http://127.0.0.1:48765",process.argv[3]||"outputs/ui-review").catch(error=>{console.error(error);process.exitCode=1});
 }

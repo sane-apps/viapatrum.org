@@ -8,6 +8,7 @@ import concurrent.futures
 import hashlib
 import json
 import sys
+import time
 from urllib.request import HTTPError, Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1] / 'dist'
@@ -99,10 +100,23 @@ def live_origin(origin):
         return row
     with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
         rows = list(pool.map(fetch, paths))
+    failed = [r for r in rows if not r.get("ok")]
+    # Custom domain bytes can lag the Pages deployment. Retry the misses only.
+    for attempt in range(1, 19):
+        if not failed:
+            break
+        time.sleep(10)
+        again = {}
+        for row in failed:
+            if "path" not in row:
+                continue
+            again[row["path"]] = fetch(row["path"])
+        rows = [again.get(row.get("path"), row) if not row.get("ok") else row for row in rows]
+        failed = [r for r in rows if not r.get("ok")]
+        print("live retry %d failed %d" % (attempt, len(failed)), flush=True)
     receipt["checks"] = rows
     (root / "outputs/catalogue-live.json").write_text(json.dumps(receipt, indent=2) + "\n")
-    failed = [r for r in rows if not r.get("ok")]
-    print(json.dumps({"origin": origin, "checked": len(rows), "held": len(held), "failed": len(failed)}))
+    print(json.dumps({"origin": origin, "checked": len(rows), "held": len(held), "failed": len(failed)}), flush=True)
     if failed:
         for row in failed[:20]:
             print(json.dumps(row), file=sys.stderr)

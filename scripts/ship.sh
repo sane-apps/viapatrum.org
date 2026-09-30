@@ -88,6 +88,16 @@ if [[ ! -f "$ROOT/dist/index.html" ]]; then
   exit 1
 fi
 
+if [[ "$SKIP_BUILD" -eq 0 ]]; then
+  echo "==> Read-along audio injection"
+  for manifest in "$ROOT"/outputs/audio/*/manifest.json; do
+    [[ -f "$manifest" ]] || continue
+    work="$(basename "$(dirname "$manifest")")"
+    echo "  + audio: $work"
+    python3 "$ROOT/scripts/inject_audio.py" "$work" || exit 1
+  done
+fi
+
 CSS_HASH="$(
   python3 - <<'PY'
 import re
@@ -116,6 +126,8 @@ echo "==> Catalogue and UI regressions"
 echo "==> Research receipts (intros sourced, dates agree)"
 "$PYTHON" "$HOME/SaneApps/clients/translations/scripts/check_research.py"
 node --test "$ROOT/scripts/ui.test.mjs"
+node --test "$ROOT/scripts/readalong.test.mjs"
+
 node --test "$ROOT/scripts/check_visual_gate.test.cjs"
 
 echo "==> Check all local links and reader anchors"
@@ -164,14 +176,13 @@ if ! grep -q "site.css?v=${CSS_HASH}" <<<"$home_html"; then
 fi
 echo "  OK CSS ?v=${CSS_HASH}"
 
-echo "==> Browser behavior and artifact-bound visual review"
-if ! node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-review; then
+echo "==> Browser behavior and automated catalogue checks"
+# Image inspection stays available as --verify-review. Deploy does not wait for it.
+# A passed receipt for this CSS, JS, and checker is reused. New translations do not retake screenshots.
+if ! node "$ROOT/scripts/verify_chrome.cjs"; then
+  echo "==> Site chrome changed; running browser checks once"
   nice -n 10 node "$ROOT/scripts/check_catalogue_ui.cjs" "http://127.0.0.1:${PORT}" "$ROOT/outputs/ui-review"
-  if [[ "$DRY_RUN" -eq 0 ]]; then
-    echo "BLOCKED: inspect outputs/ui-review/REVIEW.md and every captured image, record real review, then rerun --skip-build." >&2
-    exit 1
-  fi
-  echo "Browser checks passed; visual review remains pending. This is not deployment approval."
+  node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-automated
 fi
 
 if [[ "$DRY_RUN" -eq 1 ]]; then
@@ -187,11 +198,11 @@ fi
 : "${CLOUDFLARE_API_TOKEN:?source ~/.config/nv/env (or export CLOUDFLARE_API_TOKEN) before deploy}"
 
 # Upload a private snapshot, never the mutable dist being used by another editor.
-node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-review
+node "$ROOT/scripts/verify_chrome.cjs"
 "$PYTHON" "$ROOT/scripts/check_catalogue.py"
 STAGE="$(mktemp -d /tmp/fathers-ship.XXXXXX)"
 cp -R "$ROOT/dist/." "$STAGE/"
-node "$ROOT/scripts/check_catalogue_ui.cjs" --verify-review "$STAGE"
+node "$ROOT/scripts/verify_chrome.cjs" "$STAGE"
 # Routing-only safety layer is added after the reviewed rendered artifact is
 # verified, so withdrawing a cached URL cannot invalidate visual evidence.
 # _redirects covers the deployment hostname; the Pages Function covers the

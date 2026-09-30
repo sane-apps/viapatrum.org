@@ -1,2020 +1,3310 @@
 [
-  {
-    "ref": "excerpt:ignatius_of_antioch_to_the_smyrnaeans_3_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 110,
-    "note": "After the resurrection he was still possessed of flesh."
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_19_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:tatian_address_to_the_greeks_6_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 165,
-    "note": "Resurrection of bodies once, not Stoic cycles."
-  },
-  {
-    "ref": "excerpt:athenagoras_on_the_resurrection_of_t_11_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:athenagoras_on_the_resurrection_of_t_23_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "soul-only-recompense",
-    "stance": "denies",
-    "year": 177,
-    "note": "Unjust to recompense souls alone for deeds of the whole man."
-  },
-  {
-    "ref": "excerpt:athenagoras_on_the_resurrection_of_t_25_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "same-identity",
-    "stance": "affirms",
-    "year": 177,
-    "note": "The same soul obtains the same body only by resurrection."
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_for_the_christians_36_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_6_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Salvation of body and soul together."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_31_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_32_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 180,
-    "note": "In that flesh the saints receive the fruits of their labours."
-  },
-  {
-    "ref": "excerpt:theophilus_of_antioc_to_autolycus_13_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:tertullian_on_the_flesh_of_christ_1_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "soul-only-recompense",
-    "stance": "denies",
-    "year": 208,
-    "note": "Against those who deny the resurrection has any relation to the flesh."
-  },
-  {
-    "ref": "excerpt:tertullian_on_the_resurrection_of_t_i_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 208
-  },
-  {
-    "ref": "excerpt:tertullian_on_the_resurrection_of_t_ii_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 208
-  },
-  {
-    "ref": "excerpt:tertullian_on_the_resurrection_of_t_lxiii_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "same-identity",
-    "stance": "affirms",
-    "year": 208,
-    "note": "The flesh rises wholly, in its own identity."
-  },
-  {
-    "ref": "excerpt:minucius_felix_octavius_34_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "soul-only-recompense",
-    "stance": "denies",
-    "year": 200,
-    "note": "Pythagoras and Plato: souls alone abide and pass into new bodies — a misrepresentation of the truth."
-  },
-  {
-    "ref": "excerpt:origen_on_first_principles_10_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 230,
-    "note": "What died was a body; heretics who mock the church's creed are answered."
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_13_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "new-from-same",
-    "stance": "qualified",
-    "year": 100,
-    "note": "The covenant sworn to the fathers now belongs to this people."
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_14_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "new-from-same",
-    "stance": "affirms",
-    "year": 100,
-    "note": "The testament was given; Israel was not worthy to receive it."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iii_11_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "one-god-both",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iii_11_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "two-gods-split",
-    "stance": "denies",
-    "year": 180,
-    "note": "Against Marcion: the world was made by the Word."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iv_9_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "new-from-same",
-    "stance": "affirms",
-    "year": 180,
-    "note": "New and old from one treasure, one God."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iv_11_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "one-god-both",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iv_20_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "one-god-both",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:tertullian_prescription_against_her_30_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "two-gods-split",
-    "stance": "denies",
-    "year": 200,
-    "note": "Marcion separated the New Testament from the Old."
-  },
-  {
-    "ref": "excerpt:tertullian_against_marcion_2_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "two-gods-split",
-    "stance": "denies",
-    "year": 207,
-    "note": "Marcion introduces two Gods."
-  },
-  {
-    "ref": "excerpt:tertullian_against_marcion_3_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "one-god-both",
-    "stance": "affirms",
-    "year": 207,
-    "note": "God is not God if he is not one."
-  },
-  {
-    "ref": "excerpt:tertullian_against_marcion_20_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "two-gods-split",
-    "stance": "denies",
-    "year": 207,
-    "note": "Marcion claims to restore, not innovate, a split of law and gospel."
-  },
-  {
-    "ref": "excerpt:tertullian_against_marcion_21_old-and-new",
-    "topic": "old-and-new",
-    "claim_id": "new-from-same",
-    "stance": "affirms",
-    "year": 207,
-    "note": "Faith in the Creator continues; the old law comes to an end."
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_7_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_8_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_10_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Food laws read as moral types."
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_11_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_12_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_40_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Passover lamb a type of Christ."
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_41_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_91_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_111_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_ii_8_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "gnostic-shadows",
-    "stance": "denies",
-    "year": 180,
-    "note": "If below is a shadow of above, the things above would have bodies."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_5_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "philosophy-prep",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Before the Lord, philosophy was necessary to the Greeks for righteousness."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_7_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "philosophy-prep",
-    "stance": "qualified",
-    "year": 200
-  },
-  {
-    "ref": "excerpt:tertullian_against_marcion_18_hermeneutics",
-    "topic": "hermeneutics-types",
-    "claim_id": "ot-types-christ",
-    "stance": "affirms",
-    "year": 207,
-    "note": "The cross was predicted of the Creator's Christ."
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_mandates_mand_11_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "prophets-tried",
-    "stance": "affirms",
-    "year": 140,
-    "note": "Two kinds of spirit; prophets tried by their works."
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_33_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "spirit-spoke-prophets",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_36_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "spirit-spoke-prophets",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Utterances spoken by the Divine Word who moves the prophets."
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_36_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "human-only-oracles",
-    "stance": "denies",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_7_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "spirit-spoke-prophets",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_44_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "spirit-spoke-prophets",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_for_the_christians_7_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "spirit-spoke-prophets",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_for_the_christians_9_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "spirit-spoke-prophets",
-    "stance": "affirms",
-    "year": 177,
-    "note": "Voices of the prophets confirm the arguments."
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_for_the_christians_10_spirit-proph",
-    "topic": "spirit-prophecy",
-    "claim_id": "spirit-spoke-prophets",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_mandates_mand_5_spirit-sanct",
-    "topic": "spirit-sanctifies",
-    "claim_id": "spirit-dwells",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_mandates_mand_5_spirit-sanct",
-    "topic": "spirit-sanctifies",
-    "claim_id": "spirit-grieved",
-    "stance": "affirms",
-    "year": 140,
-    "note": "If you are patient, the Holy Spirit that dwells in you will be pure."
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_mandates_mand_10_spirit-sanct",
-    "topic": "spirit-sanctifies",
-    "claim_id": "spirit-grieved",
-    "stance": "affirms",
-    "year": 140,
-    "note": "Do not grieve the Spirit of God which is in us."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_v_8_spirit-sanct",
-    "topic": "spirit-sanctifies",
-    "claim_id": "spirit-dwells",
-    "stance": "affirms",
-    "year": 180,
-    "note": "We now receive a portion of His Spirit, an earnest toward perfection."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_v_6_spirit-sanct",
-    "topic": "spirit-sanctifies",
-    "claim_id": "spirit-dwells",
-    "stance": "affirms",
-    "year": 180,
-    "note": "By the Son and the Holy Spirit man was made in the likeness of God."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iv_33_spirit-sanct",
-    "topic": "spirit-sanctifies",
-    "claim_id": "spirit-dwells",
-    "stance": "qualified",
-    "year": 180,
-    "note": "A spiritual disciple receiving the Spirit of God."
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_16_spirit-sanct",
-    "topic": "spirit-sanctifies",
-    "claim_id": "spirit-dwells",
-    "stance": "affirms",
-    "year": 100,
-    "note": "The heart as a temple."
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_31_scripture-in",
-    "topic": "scripture-inspiration",
-    "claim_id": "prophetic-spirit-wrote",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_7_scripture-in",
-    "topic": "scripture-inspiration",
-    "claim_id": "prophetic-spirit-wrote",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_for_the_christians_9_scripture-in",
-    "topic": "scripture-inspiration",
-    "claim_id": "prophetic-spirit-wrote",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iii_1_scripture-in",
-    "topic": "scripture-inspiration",
-    "claim_id": "apostles-in-writing",
-    "stance": "affirms",
-    "year": 180,
-    "note": "The Gospel handed down in the Scriptures as ground and pillar of faith."
-  },
-  {
-    "ref": "excerpt:theophilus_of_antioc_to_autolycus_8_scripture-in",
-    "topic": "scripture-inspiration",
-    "claim_id": "poets-equal",
-    "stance": "denies",
-    "year": 180,
-    "note": "Authors and poets composed fables; they did not exhibit God."
-  },
-  {
-    "ref": "excerpt:didache_didache_16_judgment-secon",
-    "topic": "judgment-second-coming",
-    "claim_id": "lord-comes",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Watch; you know not the hour in which our Lord comes."
-  },
-  {
-    "ref": "excerpt:justin_martyr_second_apology_9_judgment-secon",
-    "topic": "judgment-second-coming",
-    "claim_id": "eternal-fire",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Against the claim that eternal fire is a bugbear."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_against_heresies_v_judgment-secon",
-    "topic": "judgment-second-coming",
-    "claim_id": "lord-comes",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_35_judgment-secon",
-    "topic": "judgment-second-coming",
-    "claim_id": "lord-comes",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Fulfilment after Antichrist and the resurrection."
-  },
-  {
-    "ref": "excerpt:didache_didache_2_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "fornication-forbidden",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:didache_didache_3_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "fornication-forbidden",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_19_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "fornication-forbidden",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_mandates_mand_4_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "fornication-forbidden",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_mandates_mand_4_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "marriage-good",
-    "stance": "qualified",
-    "year": 140,
-    "note": "Remember your own wife."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_23_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "marriage-good",
-    "stance": "qualified",
-    "year": 200,
-    "note": "Marriage is the first conjunction for legitimate children; not everyone always."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_paedagogus_12_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "marriage-good",
-    "stance": "affirms",
-    "year": 200
-  },
-  {
-    "ref": "excerpt:tertullian_on_monogamy_1_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "marriage-good",
-    "stance": "qualified",
-    "year": 217,
-    "note": "Heretics do away with marriages; 'psychics' accumulate them."
-  },
-  {
-    "ref": "excerpt:tertullian_on_monogamy_1_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "second-marriage-refused",
-    "stance": "qualified",
-    "year": 217,
-    "note": "Montanist-era rigor: not even once vs not only once."
-  },
-  {
-    "ref": "excerpt:tertullian_on_exhortation_to_chasti_1_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "second-marriage-refused",
-    "stance": "affirms",
-    "year": 204
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_for_the_christians_32_sexual-marriag",
-    "topic": "sexual-marriage",
-    "claim_id": "fornication-forbidden",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:tertullian_to_the_martyrs_1_martyrdom-witn",
-    "topic": "martyrdom-witness",
-    "claim_id": "confession-witness",
-    "stance": "affirms",
-    "year": 197
-  },
-  {
-    "ref": "excerpt:tertullian_to_the_martyrs_3_martyrdom-witn",
-    "topic": "martyrdom-witness",
-    "claim_id": "confession-witness",
-    "stance": "qualified",
-    "year": 197,
-    "note": "Called to the warfare of the living God."
-  },
-  {
-    "ref": "excerpt:tertullian_apology_50_martyrdom-witn",
-    "topic": "martyrdom-witness",
-    "claim_id": "confession-witness",
-    "stance": "affirms",
-    "year": 197,
-    "note": "Called to suffer as a soldier longs for war."
-  },
-  {
-    "ref": "excerpt:tertullian_apology_50_martyrdom-witn",
-    "topic": "martyrdom-witness",
-    "claim_id": "suffer-willingly-only",
-    "stance": "denies",
-    "year": 197,
-    "note": "Pagan taunt: you should be grateful for the sufferings you want. Tertullian: no one suffers willingly, though the soldier longs for war."
-  },
-  {
-    "ref": "excerpt:minucius_felix_octavius_37_martyrdom-witn",
-    "topic": "martyrdom-witness",
-    "claim_id": "confession-witness",
-    "stance": "affirms",
-    "year": 200
-  },
-  {
-    "ref": "excerpt:minucius_felix_octavius_34_resurrection-b",
-    "topic": "resurrection-body",
-    "claim_id": "flesh-rises",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Man can be re-formed; every body is reserved for God."
-  },
-  {
-    "ref": "excerpt:passion_of_perpetua__passion_of_perpetua_and__1_martyrdom-witn",
-    "topic": "martyrdom-witness",
-    "claim_id": "confession-witness",
-    "stance": "affirms",
-    "year": 203
-  },
-  {
-    "ref": "excerpt:passion_of_perpetua__passion_of_perpetua_and__2_martyrdom-witn",
-    "topic": "martyrdom-witness",
-    "claim_id": "confession-witness",
-    "stance": "affirms",
-    "year": 203
-  },
-  {
-    "ref": "excerpt:tertullian_apology_21_apologetic-met",
-    "topic": "apologetic-method",
-    "claim_id": "prophecy-proof",
-    "stance": "affirms",
-    "year": 197,
-    "note": "Religion supported by the oldest Jewish writings."
-  },
-  {
-    "ref": "excerpt:tertullian_an_answer_to_the_jews_9_apologetic-met",
-    "topic": "apologetic-method",
-    "claim_id": "prophecy-proof",
-    "stance": "affirms",
-    "year": 200
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_20_apologetic-met",
-    "topic": "apologetic-method",
-    "claim_id": "philosophy-prep",
-    "stance": "qualified",
-    "year": 200,
-    "note": "Philosophy contributes to the comprehension of truth."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_21_apologetic-met",
-    "topic": "apologetic-method",
-    "claim_id": "prophecy-proof",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Hebrew wisdom older than the Greeks."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_17_apologetic-met",
-    "topic": "apologetic-method",
-    "claim_id": "philosophy-prep",
-    "stance": "qualified",
-    "year": 200,
-    "note": "Greek philosophers name God but do not know Him."
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_similitudes_sim_1_wealth-alms",
-    "topic": "wealth-alms",
-    "claim_id": "no-abiding-city",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:hermas_shepherd_similitudes_sim_2_wealth-alms",
-    "topic": "wealth-alms",
-    "claim_id": "rich-and-poor-need",
-    "stance": "affirms",
-    "year": 140,
-    "note": "Elm and vine: rich man helped by the prayer of the poor."
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_19_wealth-alms",
-    "topic": "wealth-alms",
-    "claim_id": "alms-required",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:tertullian_apology_39_wealth-alms",
-    "topic": "wealth-alms",
-    "claim_id": "alms-required",
-    "stance": "affirms",
-    "year": 197
-  },
-  {
-    "ref": "excerpt:cyprian_of_carthage_treatises_on_works_and_a_on_works_and_alms_wealth-alms",
-    "topic": "wealth-alms",
-    "claim_id": "alms-required",
-    "stance": "affirms",
-    "year": 250
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_paedagogus_6_wealth-alms",
-    "topic": "wealth-alms",
-    "claim_id": "alms-required",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Riches are to be partaken of rationally, bestowed lovingly."
-  },
-  {
-    "ref": "excerpt:tertullian_apology_30_civil-authorit",
-    "topic": "civil-authority",
-    "claim_id": "pray-for-rulers",
-    "stance": "affirms",
-    "year": 197,
-    "note": "Prayer for the safety of princes to the living God."
-  },
-  {
-    "ref": "excerpt:tertullian_apology_33_civil-authorit",
-    "topic": "civil-authority",
-    "claim_id": "pray-for-rulers",
-    "stance": "affirms",
-    "year": 197,
-    "note": "Caesar is more ours than yours; our God appointed him."
-  },
-  {
-    "ref": "excerpt:tertullian_apology_34_civil-authorit",
-    "topic": "civil-authority",
-    "claim_id": "caesar-not-lord",
-    "stance": "affirms",
-    "year": 197,
-    "note": "Will not call him Lord as in God's place."
-  },
-  {
-    "ref": "excerpt:tertullian_de_corona_1_civil-authorit",
-    "topic": "civil-authority",
-    "claim_id": "no-idol-camp",
-    "stance": "affirms",
-    "year": 211,
-    "note": "Soldier of God refuses the laurel crown."
-  },
-  {
-    "ref": "excerpt:tertullian_de_corona_11_civil-authorit",
-    "topic": "civil-authority",
-    "claim_id": "no-idol-camp",
-    "stance": "affirms",
-    "year": 211
-  },
-  {
-    "ref": "excerpt:tertullian_de_corona_12_civil-authorit",
-    "topic": "civil-authority",
-    "claim_id": "no-idol-camp",
-    "stance": "affirms",
-    "year": 211,
-    "note": "Military garland as idolatry."
-  },
-  {
-    "ref": "excerpt:didache_didache_7_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "baptize-triad",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_11_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "water-regenerates",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Water of baptism foreshadowed."
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_61_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "water-regenerates",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_paedagogus_6_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "water-regenerates",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Regeneration; we were illuminated."
-  },
-  {
-    "ref": "excerpt:tertullian_against_praxeas_4_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "spirit-with-water",
-    "stance": "affirms",
-    "year": 213,
-    "note": "On Baptism material under this id: Spirit hovered over the waters."
-  },
-  {
-    "ref": "excerpt:tertullian_against_praxeas_8_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "spirit-with-water",
-    "stance": "affirms",
-    "year": 213,
-    "note": "Hand laid, invoking the Holy Spirit."
-  },
-  {
-    "ref": "excerpt:tertullian_against_praxeas_12_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "water-regenerates",
-    "stance": "affirms",
-    "year": 213,
-    "note": "Without baptism, salvation attainable by none."
-  },
-  {
-    "ref": "excerpt:tertullian_against_praxeas_13_spirit-and-b",
-    "topic": "spirit-and-baptism",
-    "claim_id": "faith-without-baptism",
-    "stance": "denies",
-    "year": 213,
-    "note": "Against: baptism is not necessary for those to whom faith is sufficient."
-  },
-  {
-    "ref": "excerpt:justin_1apol_9_idols",
-    "topic": "against-idols",
-    "claim_id": "idols-dead-matter",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:diognetus_2_idols",
-    "topic": "against-idols",
-    "claim_id": "idols-dead-matter",
-    "stance": "affirms",
-    "year": 150
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_15_idols",
-    "topic": "against-idols",
-    "claim_id": "idols-dead-matter",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_26_demons",
-    "topic": "against-idols",
-    "claim_id": "demons-behind",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_8_poly",
-    "topic": "against-idols",
-    "claim_id": "many-gods-from-start",
-    "stance": "denies",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_17_idols",
-    "topic": "against-idols",
-    "claim_id": "idols-dead-matter",
-    "stance": "affirms",
-    "year": 177,
-    "note": "Names of the gods and their images are of recent date."
-  },
-  {
-    "ref": "excerpt:didache_11",
-    "topic": "heresy-schism",
-    "claim_id": "flee-false-doctrine",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:ignatius_trallians_6",
-    "topic": "heresy-schism",
-    "claim_id": "flee-false-doctrine",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_philadelphians_2",
-    "topic": "heresy-schism",
-    "claim_id": "flee-false-doctrine",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrnaeans_2",
-    "topic": "heresy-schism",
-    "claim_id": "flee-false-doctrine",
-    "stance": "qualified",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_33_8",
-    "topic": "heresy-schism",
-    "claim_id": "schism-cuts-body",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:tertullian_prescription_37",
-    "topic": "heresy-schism",
-    "claim_id": "flee-false-doctrine",
-    "stance": "affirms",
-    "year": 200
-  },
-  {
-    "ref": "excerpt:cyprian_de_unitate_8",
-    "topic": "heresy-schism",
-    "claim_id": "schism-cuts-body",
-    "stance": "affirms",
-    "year": 251,
-    "note": "Dare not rend the garment of the Lord — the Church of Christ."
-  },
-  {
-    "ref": "excerpt:cyprian_ep69_3",
-    "topic": "heresy-schism",
-    "claim_id": "heretic-baptism",
-    "stance": "denies",
-    "year": 255,
-    "note": "To admit they have truly baptized is to approve heretic baptism; he who is without cannot give the Spirit."
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_15_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "qualified",
-    "year": 100,
-    "note": "Six thousand years of the world; a day is a thousand years — sabbath pattern, not yet a Jerusalem reign."
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_80_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Justin admits a thousand years in rebuilt Jerusalem; also notes many true Christians think otherwise."
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_81_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_33_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_35_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Cannot be understood allegorically of celestial blessings."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_35_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "not-bald-earthly",
-    "stance": "denies",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:commodian_instructions_xliv_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "qualified",
-    "year": 250,
-    "note": "City from heaven in the first resurrection."
-  },
-  {
-    "ref": "excerpt:lactantius_divine_institutes_7_24_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "affirms",
-    "year": 304,
-    "note": "The Son will be engaged among men a thousand years."
-  },
-  {
-    "ref": "excerpt:lactantius_divine_institutes_7_26_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "affirms",
-    "year": 304
-  },
-  {
-    "ref": "excerpt:dionysius_of_alexand_fragments_i_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "not-bald-earthly",
-    "stance": "affirms",
-    "year": 250,
-    "note": "Nepos' temporal earthly reign examined; Revelation not according to the bald literal sense; Cerinthus' carnal kingdom refused."
-  },
-  {
-    "ref": "excerpt:dionysius_of_alexand_fragments_i_millennium-deb",
-    "topic": "millennium-debate",
-    "claim_id": "earthly-thousand",
-    "stance": "denies",
-    "year": 250,
-    "note": "Against a temporal reign of Christ upon the earth as Nepos' readers pressed it."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_31_heaven-hell-in",
-    "topic": "heaven-hell-intermediate",
-    "claim_id": "souls-wait",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Souls of the disciples remain in the invisible place until the resurrection."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_31_heaven-hell-in",
-    "topic": "heaven-hell-intermediate",
-    "claim_id": "immediate-above",
-    "stance": "denies",
-    "year": 180,
-    "note": "Against the claim that the just pass immediately above the heavens."
-  },
-  {
-    "ref": "excerpt:tertullian_a_treatise_on_the_soul_7_heaven-hell-in",
-    "topic": "heaven-hell-intermediate",
-    "claim_id": "hades-real",
-    "stance": "affirms",
-    "year": 210,
-    "note": "Lazarus and the rich man; souls detained in Hades until judgment."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_5_36_heaven-hell-in",
-    "topic": "heaven-hell-intermediate",
-    "claim_id": "souls-wait",
-    "stance": "qualified",
-    "year": 180,
-    "note": "Graded places: heaven, paradise, the city — after the end, not a simple immediate flight."
-  },
-  {
-    "ref": "excerpt:didache_didache_1_love-neighbor-",
-    "topic": "love-neighbor-enemy",
-    "claim_id": "love-neighbor",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:didache_didache_1_love-neighbor-",
-    "topic": "love-neighbor-enemy",
-    "claim_id": "love-enemies",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_19_love-neighbor-",
-    "topic": "love-neighbor-enemy",
-    "claim_id": "love-neighbor",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_15_love-neighbor-",
-    "topic": "love-neighbor-enemy",
-    "claim_id": "love-enemies",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Pray for your enemies, and love them that hate you."
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_for_the_christians_11_love-neighbor-",
-    "topic": "love-neighbor-enemy",
-    "claim_id": "love-enemies",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_96_love-neighbor-",
-    "topic": "love-neighbor-enemy",
-    "claim_id": "love-enemies",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:tertullian_against_marcion_16_love-neighbor-",
-    "topic": "love-neighbor-enemy",
-    "claim_id": "love-enemies",
-    "stance": "affirms",
-    "year": 207,
-    "note": "Love your enemies — the Creator's old injunction."
-  },
-  {
-    "ref": "excerpt:barnabas_5_passion",
-    "topic": "passion-resurrection",
-    "claim_id": "truly-suffered",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_2_passion",
-    "topic": "passion-resurrection",
-    "claim_id": "truly-suffered",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_2_passion",
-    "topic": "passion-resurrection",
-    "claim_id": "seemed-only",
-    "stance": "denies",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_3_res",
-    "topic": "passion-resurrection",
-    "claim_id": "rose-in-flesh",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_eph_18_cross",
-    "topic": "passion-resurrection",
-    "claim_id": "truly-suffered",
-    "stance": "qualified",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_1_passion",
-    "topic": "passion-resurrection",
-    "claim_id": "truly-suffered",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:hermas_mand1_one_god",
-    "topic": "one-god-creator",
-    "claim_id": "one-maker",
-    "stance": "affirms",
-    "year": 100,
-    "note": "One God who made all things out of nothing."
-  },
-  {
-    "ref": "excerpt:justin_1apol_13_worship",
-    "topic": "one-god-creator",
-    "claim_id": "one-maker",
-    "stance": "qualified",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_1apol_58_creator",
-    "topic": "one-god-creator",
-    "claim_id": "another-creator",
-    "stance": "denies",
-    "year": 155,
-    "note": "Marcion preaches another god besides the Creator."
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_4_one",
-    "topic": "one-god-creator",
-    "claim_id": "one-maker",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:tatian_addr_4_one",
-    "topic": "one-god-creator",
-    "claim_id": "one-maker",
-    "stance": "affirms",
-    "year": 165
-  },
-  {
-    "ref": "excerpt:didache_7_triad",
-    "topic": "father-son-spirit",
-    "claim_id": "triad-named",
-    "stance": "affirms",
-    "year": 120
-  },
-  {
-    "ref": "excerpt:justin_1apol_6_triad",
-    "topic": "father-son-spirit",
-    "claim_id": "triad-named",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_10_triad",
-    "topic": "father-son-spirit",
-    "claim_id": "triad-named",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:novatian_trin_29_spirit",
-    "topic": "father-son-spirit",
-    "claim_id": "triad-named",
-    "stance": "affirms",
-    "year": 250,
-    "note": "Believe also on the Holy Spirit."
-  },
-  {
-    "ref": "excerpt:novatian_trin_30_triad",
-    "topic": "father-son-spirit",
-    "claim_id": "two-gods",
-    "stance": "denies",
-    "year": 250,
-    "note": "Scripture does not set forth two Gods."
-  },
-  {
-    "ref": "excerpt:novatian_trin_9_son",
-    "topic": "father-son-spirit",
-    "claim_id": "son-distinct",
-    "stance": "affirms",
-    "year": 250
-  },
-  {
-    "ref": "excerpt:justin_1apol_10_serve",
-    "topic": "attributes-providence",
-    "claim_id": "god-needs-gifts",
-    "stance": "denies",
-    "year": 155,
-    "note": "God does not need material offerings."
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_10_attrs",
-    "topic": "attributes-providence",
-    "claim_id": "uncreated-good",
-    "stance": "qualified",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:theophilus_autol_1_3_nature",
-    "topic": "attributes-providence",
-    "claim_id": "uncreated-good",
-    "stance": "qualified",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:theophilus_autol_1_5_works",
-    "topic": "attributes-providence",
-    "claim_id": "uncreated-good",
-    "stance": "qualified",
-    "year": 180,
-    "note": "God perceived through providence and works."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_37_prov",
-    "topic": "attributes-providence",
-    "claim_id": "providence-with-liberty",
-    "stance": "affirms",
-    "year": 180,
-    "note": "God made man a free agent from the beginning."
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_12_reason",
-    "topic": "attributes-providence",
-    "claim_id": "uncreated-good",
-    "stance": "qualified",
-    "year": 177,
-    "note": "A God presides over the human race; we shall give an account."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_i_10_canon-rule-o",
-    "topic": "canon-rule-of-truth",
-    "claim_id": "church-rule",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iii_1_canon-rule-o",
-    "topic": "canon-rule-of-truth",
-    "claim_id": "scripture-plus-tradition",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iii_2_canon-rule-o",
-    "topic": "canon-rule-of-truth",
-    "claim_id": "secret-over-scripture",
-    "stance": "denies",
-    "year": 180,
-    "note": "Heretics, confuted from the Scriptures, accuse them and appeal to a hidden tradition."
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iii_4_canon-rule-o",
-    "topic": "canon-rule-of-truth",
-    "claim_id": "church-rule",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_against_heresies_iii_11_canon-rule-o",
-    "topic": "canon-rule-of-truth",
-    "claim_id": "scripture-plus-tradition",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:barnabas_5_flesh",
-    "topic": "incarnation-word-flesh",
-    "claim_id": "word-became-flesh",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:ignatius_eph_7_incarn",
-    "topic": "incarnation-word-flesh",
-    "claim_id": "word-became-flesh",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_trall_9_flesh",
-    "topic": "incarnation-word-flesh",
-    "claim_id": "word-became-flesh",
-    "stance": "affirms",
-    "year": 110,
-    "note": "Truly born, ate and drank, truly crucified."
-  },
-  {
-    "ref": "excerpt:ignatius_trall_9_flesh",
-    "topic": "incarnation-word-flesh",
-    "claim_id": "appearance-only",
-    "stance": "denies",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:diognetus_7_send",
-    "topic": "incarnation-word-flesh",
-    "claim_id": "word-became-flesh",
-    "stance": "qualified",
-    "year": 150
-  },
-  {
-    "ref": "excerpt:justin_1apol_21_sons",
-    "topic": "incarnation-word-flesh",
-    "claim_id": "word-became-flesh",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:ignatius_ephesians_5",
-    "topic": "one-church",
-    "claim_id": "one-church-unity",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_magnesians_7",
-    "topic": "one-church",
-    "claim_id": "one-church-unity",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_philadelphians_3",
-    "topic": "one-church",
-    "claim_id": "one-church-unity",
-    "stance": "affirms",
-    "year": 110,
-    "note": "As many as are of God are also with the bishop."
-  },
-  {
-    "ref": "excerpt:cyprian_de_unitate_5",
-    "topic": "one-church",
-    "claim_id": "one-episcopate",
-    "stance": "affirms",
-    "year": 251
-  },
-  {
-    "ref": "excerpt:cyprian_de_unitate_7",
-    "topic": "one-church",
-    "claim_id": "one-church-unity",
-    "stance": "qualified",
-    "year": 251
-  },
-  {
-    "ref": "excerpt:cyprian_de_unitate_23",
-    "topic": "one-church",
-    "claim_id": "one-church-unity",
-    "stance": "qualified",
-    "year": 251,
-    "note": "Rejoicing Mother enclosing the one body; leaders of schisms who will not return."
-  },
-  {
-    "ref": "excerpt:cyprian_ep69_2",
-    "topic": "one-church",
-    "claim_id": "outside-no-mother",
-    "stance": "affirms",
-    "year": 255,
-    "note": "Remission of sins is not granted except in the Church."
-  },
-  {
-    "ref": "excerpt:didache_15",
-    "topic": "bishops-presbyters",
-    "claim_id": "appoint-bishops-deacons",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Appoint bishops and deacons; they render the service of prophets and teachers."
-  },
-  {
-    "ref": "excerpt:ignatius_ephesians_4",
-    "topic": "bishops-presbyters",
-    "claim_id": "bishop-presbyters-deacons",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_magnesians_6",
-    "topic": "bishops-presbyters",
-    "claim_id": "bishop-presbyters-deacons",
-    "stance": "affirms",
-    "year": 110,
-    "note": "Bishop in the place of God, presbyters as the assembly of the apostles."
-  },
-  {
-    "ref": "excerpt:ignatius_trallians_2",
-    "topic": "bishops-presbyters",
-    "claim_id": "nothing-without-bishop",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_trallians_3",
-    "topic": "bishops-presbyters",
-    "claim_id": "bishop-presbyters-deacons",
-    "stance": "affirms",
-    "year": 110,
-    "note": "Apart from these there is no church."
-  },
-  {
-    "ref": "excerpt:ignatius_smyrnaeans_8",
-    "topic": "bishops-presbyters",
-    "claim_id": "nothing-without-bishop",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrnaeans_9",
-    "topic": "bishops-presbyters",
-    "claim_id": "nothing-without-bishop",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_71_lxx-and-form",
-    "topic": "lxx-and-form",
-    "claim_id": "seventy-form",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_martyr_dialogue_with_trypho_71_lxx-and-form",
-    "topic": "lxx-and-form",
-    "claim_id": "hebrew-corrects-lxx",
-    "stance": "denies",
-    "year": 155,
-    "note": "Jewish teachers refuse the seventy and attempt to frame another."
-  },
-  {
-    "ref": "excerpt:clement_of_alexandri_stromata_22_lxx-and-form",
-    "topic": "lxx-and-form",
-    "claim_id": "seventy-form",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Law and prophets translated by seventy elders for Ptolemy."
-  },
-  {
-    "ref": "excerpt:justin_martyr_first_apology_31_lxx-and-form",
-    "topic": "lxx-and-form",
-    "claim_id": "seventy-form",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:ignatius_eph_19_mysteries",
-    "topic": "virgin-birth",
-    "claim_id": "born-of-virgin",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_1_virgin",
-    "topic": "virgin-birth",
-    "claim_id": "born-of-virgin",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:justin_1apol_33_virgin",
-    "topic": "virgin-birth",
-    "claim_id": "born-of-virgin",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:origen_cels_1_32_virgin",
-    "topic": "virgin-birth",
-    "claim_id": "ordinary-generation",
-    "stance": "denies",
-    "year": 248,
-    "note": "Against Celsus/the Jew: Panthera and adultery story."
-  },
-  {
-    "ref": "excerpt:ignatius_trall_9_mary",
-    "topic": "virgin-birth",
-    "claim_id": "born-of-virgin",
-    "stance": "qualified",
-    "year": 110,
-    "note": "Of David's family, of Mary, truly born."
-  },
-  {
-    "ref": "excerpt:ignatius_philadelphians_8",
-    "topic": "discipline-penance",
-    "claim_id": "further-repentance",
-    "stance": "qualified",
-    "year": 110,
-    "note": "To all who repent the Lord grants forgiveness, if they turn to the unity of God and the bishop."
-  },
-  {
-    "ref": "excerpt:hermas_mand_4",
-    "topic": "discipline-penance",
-    "claim_id": "further-repentance",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:tertullian_paenitentia_7",
-    "topic": "discipline-penance",
-    "claim_id": "further-repentance",
-    "stance": "qualified",
-    "year": 203,
-    "note": "A second, last hope of repentance — not a licence to sin again."
-  },
-  {
-    "ref": "excerpt:tertullian_paenitentia_9",
-    "topic": "discipline-penance",
-    "claim_id": "public-exomologesis",
-    "stance": "affirms",
-    "year": 203
-  },
-  {
-    "ref": "excerpt:cyprian_lapsi_15",
-    "topic": "discipline-penance",
-    "claim_id": "hasty-peace",
-    "stance": "denies",
-    "year": 251,
-    "note": "Communion relaxed to the heedless under the title of mercy."
-  },
-  {
-    "ref": "excerpt:cyprian_lapsi_16",
-    "topic": "discipline-penance",
-    "claim_id": "hasty-peace",
-    "stance": "denies",
-    "year": 251,
-    "note": "Before confession and the priest's hand, violence is done to his body and blood."
-  },
-  {
-    "ref": "excerpt:cyprian_lapsi_35",
-    "topic": "discipline-penance",
-    "claim_id": "further-repentance",
-    "stance": "affirms",
-    "year": 251
-  },
-  {
-    "ref": "excerpt:didache_9",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "church-oblation",
-    "stance": "qualified",
-    "year": 100,
-    "note": "Thanksgiving over cup and broken bread."
-  },
-  {
-    "ref": "excerpt:didache_9",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "baptized-only",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:didache_14",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "church-oblation",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Lord's day sacrifice, after confession."
-  },
-  {
-    "ref": "excerpt:ignatius_philadelphians_4",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "eucharist-is-flesh",
-    "stance": "affirms",
-    "year": 110,
-    "note": "One Eucharist, one flesh, one cup."
-  },
-  {
-    "ref": "excerpt:ignatius_smyrnaeans_7",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "eucharist-is-flesh",
-    "stance": "affirms",
-    "year": 110,
-    "note": "They abstain because they confess not the Eucharist to be the flesh."
-  },
-  {
-    "ref": "excerpt:justin_1apol_66",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "eucharist-is-flesh",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Not as common bread; the food is the flesh and blood of Jesus."
-  },
-  {
-    "ref": "excerpt:justin_1apol_66",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "baptized-only",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_5_2_2",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "eucharist-is-flesh",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Cup the communion of his blood; bread of his body."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_18_eucharist",
-    "topic": "eucharist-thanksgiving",
-    "claim_id": "church-oblation",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_3_1",
-    "topic": "apostolic-succession",
-    "claim_id": "bishops-from-apostles",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_3_2",
-    "topic": "apostolic-succession",
-    "claim_id": "unauthorized-meetings",
-    "stance": "denies",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_3_3",
-    "topic": "apostolic-succession",
-    "claim_id": "bishops-from-apostles",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Linus, Anacletus, Clement."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_4_1",
-    "topic": "apostolic-succession",
-    "claim_id": "bishops-from-apostles",
-    "stance": "qualified",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:tertullian_prescription_21",
-    "topic": "apostolic-succession",
-    "claim_id": "show-the-roll",
-    "stance": "affirms",
-    "year": 200,
-    "note": "No others as preachers than those whom Christ appointed."
-  },
-  {
-    "ref": "excerpt:tertullian_prescription_32",
-    "topic": "apostolic-succession",
-    "claim_id": "show-the-roll",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Let them produce the original records of their churches."
-  },
-  {
-    "ref": "excerpt:didache_8",
-    "topic": "liturgy-prayer",
-    "claim_id": "set-prayer",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:ignatius_ephesians_13",
-    "topic": "liturgy-prayer",
-    "claim_id": "lords-day",
-    "stance": "qualified",
-    "year": 110,
-    "note": "Come together often to give thanks — assembly, not yet named Sunday."
-  },
-  {
-    "ref": "excerpt:ignatius_magnesians_9",
-    "topic": "liturgy-prayer",
-    "claim_id": "lords-day",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_magnesians_9",
-    "topic": "liturgy-prayer",
-    "claim_id": "keep-sabbath",
-    "stance": "denies",
-    "year": 110,
-    "note": "No longer observing the Sabbath, but the Lord's Day."
-  },
-  {
-    "ref": "excerpt:justin_1apol_67",
-    "topic": "liturgy-prayer",
-    "claim_id": "lords-day",
-    "stance": "affirms",
-    "year": 155,
-    "note": "On the day called Sunday."
-  },
-  {
-    "ref": "excerpt:melito_reliquiae_two_natures",
-    "topic": "two-natures-seed",
-    "claim_id": "god-and-man",
-    "stance": "affirms",
-    "year": 170,
-    "note": "God and at the same time a perfect human being; two substances."
-  },
-  {
-    "ref": "excerpt:ignatius_eph_7_doctor",
-    "topic": "two-natures-seed",
-    "claim_id": "god-and-man",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_18_natures",
-    "topic": "two-natures-seed",
-    "claim_id": "god-and-man",
-    "stance": "affirms",
-    "year": 180,
-    "note": "The Word united to his workmanship, a man liable to suffering."
-  },
-  {
-    "ref": "excerpt:novatian_trin_11_godman",
-    "topic": "two-natures-seed",
-    "claim_id": "god-and-man",
-    "stance": "affirms",
-    "year": 250
-  },
-  {
-    "ref": "excerpt:novatian_trin_11_godman",
-    "topic": "two-natures-seed",
-    "claim_id": "man-only",
-    "stance": "denies",
-    "year": 250
-  },
-  {
-    "ref": "excerpt:novatian_trin_23_heresies",
-    "topic": "two-natures-seed",
-    "claim_id": "god-without-flesh",
-    "stance": "denies",
-    "year": 250,
-    "note": "Some thought him God the Father; others God without the flesh."
-  },
-  {
-    "ref": "excerpt:diognetus_7_godman",
-    "topic": "two-natures-seed",
-    "claim_id": "god-and-man",
-    "stance": "affirms",
-    "year": 150
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_2_true",
-    "topic": "against-docetism",
-    "claim_id": "dokew",
-    "stance": "denies",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_2_true",
-    "topic": "against-docetism",
-    "claim_id": "truly-born-suffered",
-    "stance": "qualified",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_3_body",
-    "topic": "against-docetism",
-    "claim_id": "truly-born-suffered",
-    "stance": "qualified",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_trall_9_truly",
-    "topic": "against-docetism",
-    "claim_id": "truly-born-suffered",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:ignatius_trall_10_dokew",
-    "topic": "against-docetism",
-    "claim_id": "dokew",
-    "stance": "denies",
-    "year": 110,
-    "note": "If he suffered only in appearance, why am I in bonds?"
-  },
-  {
-    "ref": "excerpt:ignatius_smyrn_7_eucharist",
-    "topic": "against-docetism",
-    "claim_id": "truly-born-suffered",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_18_docet",
-    "topic": "against-docetism",
-    "claim_id": "truly-born-suffered",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:novatian_trin_10_flesh",
-    "topic": "against-docetism",
-    "claim_id": "truly-born-suffered",
-    "stance": "affirms",
-    "year": 250
-  },
-  {
-    "ref": "excerpt:barnabas_5",
-    "topic": "salvation-by-christ",
-    "claim_id": "by-sons-blood",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:diognetus_9",
-    "topic": "salvation-by-christ",
-    "claim_id": "by-sons-blood",
-    "stance": "qualified",
-    "year": 150,
-    "note": "He gave his own Son as a ransom."
-  },
-  {
-    "ref": "excerpt:diognetus_9",
-    "topic": "salvation-by-christ",
-    "claim_id": "by-our-worth",
-    "stance": "denies",
-    "year": 150,
-    "note": "Not because we were already righteous."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_18_1",
-    "topic": "atonement-recapitulation",
-    "claim_id": "flesh-for-flesh",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Soul for soul and flesh for flesh."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_5_21_1",
-    "topic": "atonement-recapitulation",
-    "claim_id": "recap-adam",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Summing up all things, he crushed the one who in Adam had led us captive."
-  },
-  {
-    "ref": "excerpt:justin_1apol_61",
-    "topic": "baptism-and-new-birth",
-    "claim_id": "baptism-regenerates",
-    "stance": "qualified",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_1apol_61",
-    "topic": "baptism-and-new-birth",
-    "claim_id": "faith-then-water",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Persuaded and taught, then brought to the water."
-  },
-  {
-    "ref": "excerpt:clement_instructor_1_6",
-    "topic": "baptism-and-new-birth",
-    "claim_id": "baptism-regenerates",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Regenerated, illuminated: to know God."
-  },
-  {
-    "ref": "excerpt:didache_1",
-    "topic": "two-ways",
-    "claim_id": "two-ways",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:didache_1",
-    "topic": "two-ways",
-    "claim_id": "way-is-love",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_19",
-    "topic": "two-ways",
-    "claim_id": "two-ways",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:barnabas_19",
-    "topic": "two-ways",
-    "claim_id": "way-is-love",
-    "stance": "qualified",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:commodian_instr_1",
-    "topic": "two-ways",
-    "claim_id": "two-ways",
-    "stance": "affirms",
-    "year": 250,
-    "note": "The way to the one who wanders."
-  },
-  {
-    "ref": "excerpt:justin_2apol_7",
-    "topic": "fate-and-foreknowledge",
-    "claim_id": "choice-not-fate",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:justin_2apol_7",
-    "topic": "fate-and-foreknowledge",
-    "claim_id": "atoms-chance",
-    "stance": "denies",
-    "year": 155,
-    "note": "Against Stoic fate's necessity."
-  },
-  {
-    "ref": "excerpt:dionysius_alex_nature",
-    "topic": "fate-and-foreknowledge",
-    "claim_id": "atoms-chance",
-    "stance": "denies",
-    "year": 260,
-    "note": "Reports atomists who put a random void in place of providence."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_37_4",
-    "topic": "universal-call",
-    "claim_id": "call-and-refusal",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Those who do not work the good receive judgment because they were able to work it."
-  },
-  {
-    "ref": "excerpt:origen_celsus_8_72",
-    "topic": "universal-call",
-    "claim_id": "all-healed",
-    "stance": "affirms",
-    "year": 248,
-    "note": "The whole rational nature will one day come under the Word; the Word is stronger than every evil of the soul."
-  },
-  {
-    "ref": "excerpt:origen_celsus_8_72",
-    "topic": "universal-call",
-    "claim_id": "call-and-refusal",
-    "stance": "qualified",
-    "year": 248,
-    "note": "Each uses bare power of choice and comes to be in what he chose — yet the end is the removal of evil."
-  },
-  {
-    "ref": "excerpt:justin_1apol_28",
-    "topic": "reward-and-judgment",
-    "claim_id": "deeds-judged",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Satan and those who follow him punished without end; delay because of the human race."
-  },
-  {
-    "ref": "excerpt:minucius_octavius_36",
-    "topic": "reward-and-judgment",
-    "claim_id": "deeds-judged",
-    "stance": "affirms",
-    "year": 200,
-    "note": "The mind is still free; a person's acts, not status, are judged."
-  },
-  {
-    "ref": "excerpt:arnobius_nations_2_29",
-    "topic": "reward-and-judgment",
-    "claim_id": "deeds-judged",
-    "stance": "affirms",
-    "year": 300,
-    "note": "Christ opens the fountain to all; scorn is under your own decision."
-  },
-  {
-    "ref": "excerpt:lactantius_inst_5_18",
-    "topic": "reward-and-judgment",
-    "claim_id": "death-ends-all",
-    "stance": "denies",
-    "year": 305,
-    "note": "If after death we are nothing, virtue looks foolish — that persuasion is the error."
+ {
+  "ref": "excerpt:ignatius_of_antioch_to_the_smyrnaeans_3_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 110,
+  "note": "After the resurrection he was still possessed of flesh.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
   }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_19_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tatian_address_to_the_greeks_6_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 165,
+  "note": "Resurrection of bodies once, not Stoic cycles.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_on_the_resurrection_of_t_11_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_on_the_resurrection_of_t_23_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "soul-only-recompense",
+  "stance": "denies",
+  "year": 177,
+  "note": "Unjust to recompense souls alone for deeds of the whole man.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_on_the_resurrection_of_t_25_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "same-identity",
+  "stance": "affirms",
+  "year": 177,
+  "note": "The same soul obtains the same body only by resurrection.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_for_the_christians_36_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_6_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Salvation of body and soul together.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_31_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_32_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 180,
+  "note": "In that flesh the saints receive the fruits of their labours.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:theophilus_of_antioc_to_autolycus_13_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_on_the_flesh_of_christ_1_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "soul-only-recompense",
+  "stance": "denies",
+  "year": 208,
+  "note": "Against those who deny the resurrection has any relation to the flesh.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_on_the_resurrection_of_t_i_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 208,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_on_the_resurrection_of_t_ii_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 208,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_on_the_resurrection_of_t_lxiii_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "same-identity",
+  "stance": "affirms",
+  "year": 208,
+  "note": "The flesh rises wholly, in its own identity.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:minucius_felix_octavius_34_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "soul-only-recompense",
+  "stance": "denies",
+  "year": 200,
+  "note": "Pythagoras and Plato: souls alone abide and pass into new bodies — a misrepresentation of the truth.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:origen_on_first_principles_10_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 230,
+  "note": "What died was a body; heretics who mock the church's creed are answered.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_13_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "new-from-same",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Barnabas argues the covenant passes to Christians from the same Scriptures and the same God: Jacob over Esau, Ephraim over Manasseh. He never divides old and new between two gods.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_14_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "new-from-same",
+  "stance": "affirms",
+  "year": 100,
+  "note": "The testament was given; Israel was not worthy to receive it.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iii_11_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "one-god-both",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iii_11_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "two-gods-split",
+  "stance": "denies",
+  "year": 180,
+  "note": "Against Marcion: the world was made by the Word.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iv_9_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "new-from-same",
+  "stance": "affirms",
+  "year": 180,
+  "note": "New and old from one treasure, one God.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iv_11_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "one-god-both",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iv_20_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "one-god-both",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_prescription_against_her_30_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "two-gods-split",
+  "stance": "denies",
+  "year": 200,
+  "note": "Marcion separated the New Testament from the Old.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_marcion_2_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "two-gods-split",
+  "stance": "denies",
+  "year": 207,
+  "note": "Marcion introduces two Gods.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_marcion_3_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "one-god-both",
+  "stance": "affirms",
+  "year": 207,
+  "note": "God is not God if he is not one.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_marcion_20_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "two-gods-split",
+  "stance": "denies",
+  "year": 207,
+  "note": "Marcion claims to restore, not innovate, a split of law and gospel.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_marcion_21_old-and-new",
+  "topic": "old-and-new",
+  "claim_id": "new-from-same",
+  "stance": "affirms",
+  "year": 207,
+  "note": "Faith in the Creator continues; the old law comes to an end.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_7_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_8_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_10_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Food laws read spiritually, of men and morals: the type-method, with Christ-types in chapters 7 to 9.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_11_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_12_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_40_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Passover lamb a type of Christ.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_41_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_91_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_111_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_ii_8_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "gnostic-shadows",
+  "stance": "denies",
+  "year": 180,
+  "note": "If below is a shadow of above, the things above would have bodies.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_stromata_5_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "philosophy-prep",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Before the Lord, philosophy was necessary to the Greeks for righteousness.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_stromata_7_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "philosophy-prep",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Philosophy come down from God, sown by the one husbandman across the ages: preparatory rain, not the harvest, which is Christ.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_marcion_18_hermeneutics",
+  "topic": "hermeneutics-types",
+  "claim_id": "ot-types-christ",
+  "stance": "affirms",
+  "year": 207,
+  "note": "The cross was predicted of the Creator's Christ.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_mandates_mand_11_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "prophets-tried",
+  "stance": "affirms",
+  "year": 140,
+  "note": "Two kinds of spirit; prophets tried by their works.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_33_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "spirit-spoke-prophets",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_36_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "spirit-spoke-prophets",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Utterances spoken by the Divine Word who moves the prophets.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_36_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "human-only-oracles",
+  "stance": "denies",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_7_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "spirit-spoke-prophets",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_44_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "spirit-spoke-prophets",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_for_the_christians_7_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "spirit-spoke-prophets",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_for_the_christians_9_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "spirit-spoke-prophets",
+  "stance": "affirms",
+  "year": 177,
+  "note": "Voices of the prophets confirm the arguments.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_for_the_christians_10_spirit-proph",
+  "topic": "spirit-prophecy",
+  "claim_id": "spirit-spoke-prophets",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_mandates_mand_5_spirit-sanct",
+  "topic": "spirit-sanctifies",
+  "claim_id": "spirit-dwells",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "The Holy Spirit dwelling in the patient man, pure and glad, serving God: indwelling unto holiness."
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_mandates_mand_5_spirit-sanct",
+  "topic": "spirit-sanctifies",
+  "claim_id": "spirit-grieved",
+  "stance": "affirms",
+  "year": 140,
+  "note": "If you are patient, the Holy Spirit that dwells in you will be pure.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_mandates_mand_10_spirit-sanct",
+  "topic": "spirit-sanctifies",
+  "claim_id": "spirit-grieved",
+  "stance": "affirms",
+  "year": 140,
+  "note": "Do not grieve the Spirit of God which is in us.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_v_8_spirit-sanct",
+  "topic": "spirit-sanctifies",
+  "claim_id": "spirit-dwells",
+  "stance": "affirms",
+  "year": 180,
+  "note": "We now receive a portion of His Spirit, an earnest toward perfection.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_v_6_spirit-sanct",
+  "topic": "spirit-sanctifies",
+  "claim_id": "spirit-dwells",
+  "stance": "affirms",
+  "year": 180,
+  "note": "By the Son and the Holy Spirit man was made in the likeness of God.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iv_33_spirit-sanct",
+  "topic": "spirit-sanctifies",
+  "claim_id": "spirit-dwells",
+  "stance": "affirms",
+  "year": 180,
+  "note": "The spiritual disciple, truly receiving the Spirit of God, judges all things rightly: indwelling that sanctifies perception and life.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_16_spirit-sanct",
+  "topic": "spirit-sanctifies",
+  "claim_id": "spirit-dwells",
+  "stance": "affirms",
+  "year": 100,
+  "note": "The heart as a temple.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_31_scripture-in",
+  "topic": "scripture-inspiration",
+  "claim_id": "prophetic-spirit-wrote",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_7_scripture-in",
+  "topic": "scripture-inspiration",
+  "claim_id": "prophetic-spirit-wrote",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_for_the_christians_9_scripture-in",
+  "topic": "scripture-inspiration",
+  "claim_id": "prophetic-spirit-wrote",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iii_1_scripture-in",
+  "topic": "scripture-inspiration",
+  "claim_id": "apostles-in-writing",
+  "stance": "affirms",
+  "year": 180,
+  "note": "The Gospel handed down in the Scriptures as ground and pillar of faith.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:theophilus_of_antioc_to_autolycus_8_scripture-in",
+  "topic": "scripture-inspiration",
+  "claim_id": "poets-equal",
+  "stance": "denies",
+  "year": 180,
+  "note": "Authors and poets composed fables; they did not exhibit God.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_didache_16_judgment-secon",
+  "topic": "judgment-second-coming",
+  "claim_id": "lord-comes",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Watch, for you know not the hour our Lord comes: the coming with signs and trial.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_second_apology_9_judgment-secon",
+  "topic": "judgment-second-coming",
+  "claim_id": "eternal-fire",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Against the claim that eternal fire is a bugbear.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_against_heresies_v_judgment-secon",
+  "topic": "judgment-second-coming",
+  "claim_id": "lord-comes",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_35_judgment-secon",
+  "topic": "judgment-second-coming",
+  "claim_id": "lord-comes",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Fulfilment after Antichrist and the resurrection.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_didache_2_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "fornication-forbidden",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_didache_3_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "fornication-forbidden",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_19_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "fornication-forbidden",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_mandates_mand_4_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "fornication-forbidden",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_mandates_mand_4_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "marriage-good",
+  "stance": "affirms",
+  "year": 140,
+  "note": "Hermas binds husband to wife in lifelong fidelity: remember your own wife and you will never sin. Marriage as the good norm, adultery the breach.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_stromata_23_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "marriage-good",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Marriage ordered to children and household, fitting in time and person. The whole third book of the Stromata defends marriage against the encratites.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_paedagogus_12_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "marriage-good",
+  "stance": "affirms",
+  "year": 200,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_on_monogamy_1_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "marriage-good",
+  "stance": "affirms",
+  "year": 217,
+  "note": "We admit one marriage, just as we do one God: marriage honored as the law of the Creator, continence its crown.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_on_monogamy_1_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "second-marriage-refused",
+  "stance": "affirms",
+  "year": 217,
+  "note": "Montanist-period Tertullian in 217 refuses second marriage outright. Note the change: in To His Wife around 203 he had still permitted widows to remarry only in the Lord.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_on_exhortation_to_chasti_1_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "second-marriage-refused",
+  "stance": "affirms",
+  "year": 204,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_for_the_christians_32_sexual-marriag",
+  "topic": "sexual-marriage",
+  "claim_id": "fornication-forbidden",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_to_the_martyrs_1_martyrdom-witn",
+  "topic": "martyrdom-witness",
+  "claim_id": "confession-witness",
+  "stance": "affirms",
+  "year": 197,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_to_the_martyrs_3_martyrdom-witn",
+  "topic": "martyrdom-witness",
+  "claim_id": "confession-witness",
+  "stance": "affirms",
+  "year": 197,
+  "note": "Christians are called to the warfare of the living God; prison is the training camp for the struggle crowned with eternal life.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_apology_50_martyrdom-witn",
+  "topic": "martyrdom-witness",
+  "claim_id": "confession-witness",
+  "stance": "affirms",
+  "year": 197,
+  "note": "Called to suffer as a soldier longs for war.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_apology_50_martyrdom-witn",
+  "topic": "martyrdom-witness",
+  "claim_id": "suffer-willingly-only",
+  "stance": "denies",
+  "year": 197,
+  "note": "No one suffers willingly, yet Christians battle willingly as soldiers: the complaint caricature refused.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:minucius_felix_octavius_37_martyrdom-witn",
+  "topic": "martyrdom-witness",
+  "claim_id": "confession-witness",
+  "stance": "affirms",
+  "year": 200,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:minucius_felix_octavius_34_resurrection-b",
+  "topic": "resurrection-body",
+  "claim_id": "flesh-rises",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Man can be re-formed; every body is reserved for God.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:passion_of_perpetua__passion_of_perpetua_and__1_martyrdom-witn",
+  "topic": "martyrdom-witness",
+  "claim_id": "confession-witness",
+  "stance": "affirms",
+  "year": 203,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Perpetua confesses before her father, a Christian as a vessel is a vessel: confession unto martyrdom."
+ },
+ {
+  "ref": "excerpt:tertullian_apology_21_apologetic-met",
+  "topic": "apologetic-method",
+  "claim_id": "prophecy-proof",
+  "stance": "affirms",
+  "year": 197,
+  "note": "Religion supported by the oldest Jewish writings.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_an_answer_to_the_jews_9_apologetic-met",
+  "topic": "apologetic-method",
+  "claim_id": "prophecy-proof",
+  "stance": "affirms",
+  "year": 200,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_stromata_20_apologetic-met",
+  "topic": "apologetic-method",
+  "claim_id": "philosophy-prep",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Philosophy a co-operator and joint cause in the search for truth: contributory, while discovery itself is by the Son.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_stromata_21_apologetic-met",
+  "topic": "apologetic-method",
+  "claim_id": "prophecy-proof",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Hebrew wisdom older than the Greeks.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_stromata_17_apologetic-met",
+  "topic": "apologetic-method",
+  "claim_id": "philosophy-prep",
+  "stance": "qualified",
+  "year": 200,
+  "note": "Genuinely mixed, hence the half mark: philosophers catch only a spark from Scripture and seek the probable, not the true. Clement affirms preparation in Stromata 1.5 and stresses its strict limits here.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_similitudes_sim_1_wealth-alms",
+  "topic": "wealth-alms",
+  "claim_id": "no-abiding-city",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_shepherd_similitudes_sim_2_wealth-alms",
+  "topic": "wealth-alms",
+  "claim_id": "rich-and-poor-need",
+  "stance": "affirms",
+  "year": 140,
+  "note": "Elm and vine: rich man helped by the prayer of the poor.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_19_wealth-alms",
+  "topic": "wealth-alms",
+  "claim_id": "alms-required",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_apology_39_wealth-alms",
+  "topic": "wealth-alms",
+  "claim_id": "alms-required",
+  "stance": "affirms",
+  "year": 197,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_of_carthage_treatises_on_works_and_a_on_works_and_alms_wealth-alms",
+  "topic": "wealth-alms",
+  "claim_id": "alms-required",
+  "stance": "affirms",
+  "year": 250,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_paedagogus_6_wealth-alms",
+  "topic": "wealth-alms",
+  "claim_id": "alms-required",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Riches are to be partaken of rationally, bestowed lovingly.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_apology_30_civil-authorit",
+  "topic": "civil-authority",
+  "claim_id": "pray-for-rulers",
+  "stance": "affirms",
+  "year": 197,
+  "note": "Prayer for the safety of princes to the living God.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_apology_33_civil-authorit",
+  "topic": "civil-authority",
+  "claim_id": "pray-for-rulers",
+  "stance": "affirms",
+  "year": 197,
+  "note": "Caesar is more ours than yours; our God appointed him.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_apology_34_civil-authorit",
+  "topic": "civil-authority",
+  "claim_id": "caesar-not-lord",
+  "stance": "affirms",
+  "year": 197,
+  "note": "Will not call him Lord as in God's place.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_de_corona_1_civil-authorit",
+  "topic": "civil-authority",
+  "claim_id": "no-idol-camp",
+  "stance": "affirms",
+  "year": 211,
+  "note": "Soldier of God refuses the laurel crown.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_de_corona_11_civil-authorit",
+  "topic": "civil-authority",
+  "claim_id": "no-idol-camp",
+  "stance": "affirms",
+  "year": 211,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_de_corona_12_civil-authorit",
+  "topic": "civil-authority",
+  "claim_id": "no-idol-camp",
+  "stance": "affirms",
+  "year": 211,
+  "note": "Military garland as idolatry.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_didache_7_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "baptize-triad",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_11_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "water-regenerates",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Water of baptism foreshadowed.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_61_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "water-regenerates",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_paedagogus_6_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "water-regenerates",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Regeneration; we were illuminated.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_praxeas_4_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "spirit-with-water",
+  "stance": "affirms",
+  "year": 213,
+  "note": "On Baptism material under this id: Spirit hovered over the waters.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_praxeas_8_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "spirit-with-water",
+  "stance": "affirms",
+  "year": 213,
+  "note": "Hand laid, invoking the Holy Spirit.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_praxeas_12_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "water-regenerates",
+  "stance": "affirms",
+  "year": 213,
+  "note": "The water-birth rule upheld from John 3:5 while resolving the case of the apostles.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_praxeas_13_spirit-and-b",
+  "topic": "spirit-and-baptism",
+  "claim_id": "faith-without-baptism",
+  "stance": "denies",
+  "year": 213,
+  "note": "Against: baptism is not necessary for those to whom faith is sufficient.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_9_idols",
+  "topic": "against-idols",
+  "claim_id": "idols-dead-matter",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:diognetus_2_idols",
+  "topic": "against-idols",
+  "claim_id": "idols-dead-matter",
+  "stance": "affirms",
+  "year": 150,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_15_idols",
+  "topic": "against-idols",
+  "claim_id": "idols-dead-matter",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_26_demons",
+  "topic": "against-idols",
+  "claim_id": "demons-behind",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_8_poly",
+  "topic": "against-idols",
+  "claim_id": "many-gods-from-start",
+  "stance": "denies",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_17_idols",
+  "topic": "against-idols",
+  "claim_id": "idols-dead-matter",
+  "stance": "affirms",
+  "year": 177,
+  "note": "Names of the gods and their images are of recent date.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_11",
+  "topic": "heresy-schism",
+  "claim_id": "flee-false-doctrine",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Another doctrine to destruction: hear him not. False prophets known by overstay and greed."
+ },
+ {
+  "ref": "excerpt:ignatius_trallians_6",
+  "topic": "heresy-schism",
+  "claim_id": "flee-false-doctrine",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_philadelphians_2",
+  "topic": "heresy-schism",
+  "claim_id": "flee-false-doctrine",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrnaeans_2",
+  "topic": "heresy-schism",
+  "claim_id": "flee-false-doctrine",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Ignatius names the docetists unbelievers and pronounces their end. The standing Ignatian command, as in Smyrnaeans 4 and Ephesians 7, is to flee such teaching.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_33_8",
+  "topic": "heresy-schism",
+  "claim_id": "schism-cuts-body",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_prescription_37",
+  "topic": "heresy-schism",
+  "claim_id": "flee-false-doctrine",
+  "stance": "affirms",
+  "year": 200,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_de_unitate_8",
+  "topic": "heresy-schism",
+  "claim_id": "schism-cuts-body",
+  "stance": "affirms",
+  "year": 251,
+  "note": "Dare not rend the garment of the Lord — the Church of Christ.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_ep69_3",
+  "topic": "heresy-schism",
+  "claim_id": "heretic-baptism",
+  "stance": "denies",
+  "year": 255,
+  "note": "To admit they have truly baptized is to approve heretic baptism; he who is without cannot give the Spirit.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_15_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Six thousand years of labor, then the Son destroys the wicked and truly rests on the seventh day: the classic early chiliast week.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_80_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Justin admits a thousand years in rebuilt Jerusalem; also notes many true Christians think otherwise.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_81_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_33_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_35_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Cannot be understood allegorically of celestial blessings.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_35_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "not-bald-earthly",
+  "stance": "denies",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:commodian_instructions_xliv_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 250,
+  "note": "First resurrection, the city descending, the martyrs living and marrying for a thousand years until God destroys all evils. Explicit.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:lactantius_divine_institutes_7_24_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 304,
+  "note": "The Son will be engaged among men a thousand years.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:lactantius_divine_institutes_7_26_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "affirms",
+  "year": 304,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:dionysius_of_alexand_fragments_i_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "not-bald-earthly",
+  "stance": "affirms",
+  "year": 250,
+  "note": "Nepos' temporal earthly reign examined; Revelation not according to the bald literal sense; Cerinthus' carnal kingdom refused.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:dionysius_of_alexand_fragments_i_millennium-deb",
+  "topic": "millennium-debate",
+  "claim_id": "earthly-thousand",
+  "stance": "denies",
+  "year": 250,
+  "note": "Against a temporal reign of Christ upon the earth as Nepos' readers pressed it.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_31_heaven-hell-in",
+  "topic": "heaven-hell-intermediate",
+  "claim_id": "souls-wait",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Souls of the disciples remain in the invisible place until the resurrection.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_31_heaven-hell-in",
+  "topic": "heaven-hell-intermediate",
+  "claim_id": "immediate-above",
+  "stance": "denies",
+  "year": 180,
+  "note": "Against the claim that the just pass immediately above the heavens.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_a_treatise_on_the_soul_7_heaven-hell-in",
+  "topic": "heaven-hell-intermediate",
+  "claim_id": "hades-real",
+  "stance": "affirms",
+  "year": 210,
+  "note": "Lazarus and the rich man; souls detained in Hades until judgment.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_5_36_heaven-hell-in",
+  "topic": "heaven-hell-intermediate",
+  "claim_id": "souls-wait",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Various mansions for the saints according to the rank allotted, in a renewed creation: allotted places now, resurrection glory then. Book 5 chapter 31 states the waiting outright.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:didache_didache_1_love-neighbor-",
+  "topic": "love-neighbor-enemy",
+  "claim_id": "love-neighbor",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_didache_1_love-neighbor-",
+  "topic": "love-neighbor-enemy",
+  "claim_id": "love-enemies",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_epistle_epistle_of_barnabas_19_love-neighbor-",
+  "topic": "love-neighbor-enemy",
+  "claim_id": "love-neighbor",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_15_love-neighbor-",
+  "topic": "love-neighbor-enemy",
+  "claim_id": "love-enemies",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Pray for your enemies, and love them that hate you.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_for_the_christians_11_love-neighbor-",
+  "topic": "love-neighbor-enemy",
+  "claim_id": "love-enemies",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_96_love-neighbor-",
+  "topic": "love-neighbor-enemy",
+  "claim_id": "love-enemies",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_against_marcion_16_love-neighbor-",
+  "topic": "love-neighbor-enemy",
+  "claim_id": "love-enemies",
+  "stance": "affirms",
+  "year": 207,
+  "note": "Love your enemies — the Creator's old injunction.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_5_passion",
+  "topic": "passion-resurrection",
+  "claim_id": "truly-suffered",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_2_passion",
+  "topic": "passion-resurrection",
+  "claim_id": "truly-suffered",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_2_passion",
+  "topic": "passion-resurrection",
+  "claim_id": "seemed-only",
+  "stance": "denies",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_3_res",
+  "topic": "passion-resurrection",
+  "claim_id": "rose-in-flesh",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_eph_18_cross",
+  "topic": "passion-resurrection",
+  "claim_id": "truly-suffered",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Conceived by Mary of the seed of David, born, baptized, that by His passion He might purify the water: real birth issuing in real passion.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_1_passion",
+  "topic": "passion-resurrection",
+  "claim_id": "truly-suffered",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_mand1_one_god",
+  "topic": "one-god-creator",
+  "claim_id": "one-maker",
+  "stance": "affirms",
+  "year": 100,
+  "note": "One God who made all things out of nothing.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_13_worship",
+  "topic": "one-god-creator",
+  "claim_id": "one-maker",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Christians worship the Maker of this universe: one God over all, with the Son second and the prophetic Spirit third. Nothing here divides creation between gods.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_58_creator",
+  "topic": "one-god-creator",
+  "claim_id": "another-creator",
+  "stance": "denies",
+  "year": 155,
+  "note": "Marcion preaches another god besides the Creator.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_4_one",
+  "topic": "one-god-creator",
+  "claim_id": "one-maker",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tatian_addr_4_one",
+  "topic": "one-god-creator",
+  "claim_id": "one-maker",
+  "stance": "affirms",
+  "year": 165,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_7_triad",
+  "topic": "father-son-spirit",
+  "claim_id": "triad-named",
+  "stance": "affirms",
+  "year": 120,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_6_triad",
+  "topic": "father-son-spirit",
+  "claim_id": "triad-named",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_10_triad",
+  "topic": "father-son-spirit",
+  "claim_id": "triad-named",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trin_29_spirit",
+  "topic": "father-son-spirit",
+  "claim_id": "triad-named",
+  "stance": "affirms",
+  "year": 250,
+  "note": "Believe also on the Holy Spirit.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trin_30_triad",
+  "topic": "father-son-spirit",
+  "claim_id": "two-gods",
+  "stance": "denies",
+  "year": 250,
+  "note": "Scripture does not set forth two Gods.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trin_9_son",
+  "topic": "father-son-spirit",
+  "claim_id": "son-distinct",
+  "stance": "affirms",
+  "year": 250,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_10_serve",
+  "topic": "attributes-providence",
+  "claim_id": "god-needs-gifts",
+  "stance": "denies",
+  "year": 155,
+  "note": "God does not need material offerings.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_10_attrs",
+  "topic": "attributes-providence",
+  "claim_id": "uncreated-good",
+  "stance": "affirms",
+  "year": 177,
+  "note": "Explicit: one God, uncreated and eternal, by whose Logos the universe was created, ordered, and kept in being.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:theophilus_autol_1_3_nature",
+  "topic": "attributes-providence",
+  "claim_id": "uncreated-good",
+  "stance": "affirms",
+  "year": 180,
+  "note": "God ineffable yet knowable as good, kind, and merciful: Father of all things as being from Him, the uncreated source.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:theophilus_autol_1_5_works",
+  "topic": "attributes-providence",
+  "claim_id": "uncreated-good",
+  "stance": "affirms",
+  "year": 180,
+  "note": "The pilot known by the course of the ship: God beheld and perceived through His providence and works. The uncreated good God of chapters 1.3 to 1.4, known here through works.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_37_prov",
+  "topic": "attributes-providence",
+  "claim_id": "providence-with-liberty",
+  "stance": "affirms",
+  "year": 180,
+  "note": "God made man a free agent from the beginning.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_12_reason",
+  "topic": "attributes-providence",
+  "claim_id": "uncreated-good",
+  "stance": "affirms",
+  "year": 177,
+  "note": "Athenagoras grounds the Christian life in God, who made us and the world: the great Judge who rewards the meek life. The good Maker presupposed throughout.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_i_10_canon-rule-o",
+  "topic": "canon-rule-of-truth",
+  "claim_id": "church-rule",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iii_1_canon-rule-o",
+  "topic": "canon-rule-of-truth",
+  "claim_id": "scripture-plus-tradition",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iii_2_canon-rule-o",
+  "topic": "canon-rule-of-truth",
+  "claim_id": "secret-over-scripture",
+  "stance": "denies",
+  "year": 180,
+  "note": "Heretics, confuted from the Scriptures, accuse them and appeal to a hidden tradition.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iii_4_canon-rule-o",
+  "topic": "canon-rule-of-truth",
+  "claim_id": "church-rule",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Truth banked with the Church; disputes settled by the most ancient churches and the handed-down tradition."
+ },
+ {
+  "ref": "excerpt:irenaeus_against_heresies_iii_11_canon-rule-o",
+  "topic": "canon-rule-of-truth",
+  "claim_id": "scripture-plus-tradition",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_5_flesh",
+  "topic": "incarnation-word-flesh",
+  "claim_id": "word-became-flesh",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_eph_7_incarn",
+  "topic": "incarnation-word-flesh",
+  "claim_id": "word-became-flesh",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_trall_9_flesh",
+  "topic": "incarnation-word-flesh",
+  "claim_id": "word-became-flesh",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Truly born, ate and drank, truly crucified.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_trall_9_flesh",
+  "topic": "incarnation-word-flesh",
+  "claim_id": "appearance-only",
+  "stance": "denies",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:diognetus_7_send",
+  "topic": "incarnation-word-flesh",
+  "claim_id": "word-became-flesh",
+  "stance": "affirms",
+  "year": 150,
+  "note": "God sent no servant or angel but the very Creator himself, placed among men and established in hearts: a real sending, not an appearance.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_21_sons",
+  "topic": "incarnation-word-flesh",
+  "claim_id": "word-became-flesh",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "The Word produced without sexual union, crucified, dead, risen, ascended: true incarnation argued openly."
+ },
+ {
+  "ref": "excerpt:ignatius_ephesians_5",
+  "topic": "one-church",
+  "claim_id": "one-church-unity",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_magnesians_7",
+  "topic": "one-church",
+  "claim_id": "one-church-unity",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_philadelphians_3",
+  "topic": "one-church",
+  "claim_id": "one-church-unity",
+  "stance": "affirms",
+  "year": 110,
+  "note": "As many as are of God are also with the bishop.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_de_unitate_5",
+  "topic": "one-church",
+  "claim_id": "one-episcopate",
+  "stance": "affirms",
+  "year": 251,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_de_unitate_7",
+  "topic": "one-church",
+  "claim_id": "one-church-unity",
+  "stance": "affirms",
+  "year": 251,
+  "note": "The seamless coat: unity not to be at all rent. He cannot possess the garment of Christ who parts and divides the Church.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_de_unitate_23",
+  "topic": "one-church",
+  "claim_id": "one-church-unity",
+  "stance": "affirms",
+  "year": 251,
+  "note": "Cyprian pleads for the one body of a people at agreement and commands flight from schism-makers: unity kept by separation from dividers.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_ep69_2",
+  "topic": "one-church",
+  "claim_id": "outside-no-mother",
+  "stance": "affirms",
+  "year": 255,
+  "note": "Remission of sins is not granted except in the Church.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_15",
+  "topic": "bishops-presbyters",
+  "claim_id": "appoint-bishops-deacons",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Appoint bishops and deacons; they render the service of prophets and teachers.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_ephesians_4",
+  "topic": "bishops-presbyters",
+  "claim_id": "bishop-presbyters-deacons",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_magnesians_6",
+  "topic": "bishops-presbyters",
+  "claim_id": "bishop-presbyters-deacons",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Bishop in the place of God, presbyters as the assembly of the apostles.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_trallians_2",
+  "topic": "bishops-presbyters",
+  "claim_id": "nothing-without-bishop",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_trallians_3",
+  "topic": "bishops-presbyters",
+  "claim_id": "bishop-presbyters-deacons",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Apart from these there is no church.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrnaeans_8",
+  "topic": "bishops-presbyters",
+  "claim_id": "nothing-without-bishop",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrnaeans_9",
+  "topic": "bishops-presbyters",
+  "claim_id": "nothing-without-bishop",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_71_lxx-and-form",
+  "topic": "lxx-and-form",
+  "claim_id": "seventy-form",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Justin refuses reliance on teachers who reject the seventy and discard readings: later revision may not overrule the apostolic Greek."
+ },
+ {
+  "ref": "excerpt:justin_martyr_dialogue_with_trypho_71_lxx-and-form",
+  "topic": "lxx-and-form",
+  "claim_id": "hebrew-corrects-lxx",
+  "stance": "denies",
+  "year": 155,
+  "note": "Justin refuses reliance on teachers who reject the seventy and discard readings: later revision may not overrule the apostolic Greek.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:clement_of_alexandri_stromata_22_lxx-and-form",
+  "topic": "lxx-and-form",
+  "claim_id": "seventy-form",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Law and prophets translated by seventy elders for Ptolemy.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_martyr_first_apology_31_lxx-and-form",
+  "topic": "lxx-and-form",
+  "claim_id": "seventy-form",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "31 opens the prophecy-proof section: Hebrew prophets preserved, the Greek translation made, and the chapters following argue from that Greek text."
+ },
+ {
+  "ref": "excerpt:ignatius_eph_19_mysteries",
+  "topic": "virgin-birth",
+  "claim_id": "born-of-virgin",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_1_virgin",
+  "topic": "virgin-birth",
+  "claim_id": "born-of-virgin",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_33_virgin",
+  "topic": "virgin-birth",
+  "claim_id": "born-of-virgin",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:origen_cels_1_32_virgin",
+  "topic": "virgin-birth",
+  "claim_id": "ordinary-generation",
+  "stance": "denies",
+  "year": 248,
+  "note": "Against Celsus/the Jew: Panthera and adultery story.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_trall_9_mary",
+  "topic": "virgin-birth",
+  "claim_id": "born-of-virgin",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Of Mary, truly born, against deniers of the flesh. Ignatius states the virginal conception outright in Ephesians 18 to 19. Ephesians 18 to 19 states the conception by the Holy Ghost outright.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_philadelphians_8",
+  "topic": "discipline-penance",
+  "claim_id": "further-repentance",
+  "stance": "affirms",
+  "year": 110,
+  "note": "To all them that repent, the Lord grants forgiveness, if they turn in penitence to the unity of God: return granted, conditioned on unity.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:hermas_mand_4",
+  "topic": "discipline-penance",
+  "claim_id": "further-repentance",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "The penitent adulteress must be taken back, but not frequently: there is but one repentance to the servants of God. Granted once, narrowly, in so many words."
+ },
+ {
+  "ref": "excerpt:tertullian_paenitentia_7",
+  "topic": "discipline-penance",
+  "claim_id": "further-repentance",
+  "stance": "affirms",
+  "year": 203,
+  "note": "A second hope, already the last: second repentance real but narrow, never a license, since there is an end of escaping for the one who has no end of offending. Note that his later Montanist On Modesty would narrow church pardon further still.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_paenitentia_9",
+  "topic": "discipline-penance",
+  "claim_id": "public-exomologesis",
+  "stance": "affirms",
+  "year": 203,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_lapsi_15",
+  "topic": "discipline-penance",
+  "claim_id": "hasty-peace",
+  "stance": "denies",
+  "year": 251,
+  "note": "Communion relaxed to the heedless under the title of mercy.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_lapsi_16",
+  "topic": "discipline-penance",
+  "claim_id": "hasty-peace",
+  "stance": "denies",
+  "year": 251,
+  "note": "Before confession and the priest's hand, violence is done to his body and blood.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_lapsi_35",
+  "topic": "discipline-penance",
+  "claim_id": "further-repentance",
+  "stance": "affirms",
+  "year": 251,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Deep wound, long treatment; repentance not less than the sin. Mercy hoped, pardon not instant."
+ },
+ {
+  "ref": "excerpt:didache_9",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "church-oblation",
+  "stance": "affirms",
+  "year": 100,
+  "note": "The ordered thanksgiving over cup and bread, fenced to the baptized, praying the gathering of the church: the oblation that Didache 14 then calls a pure sacrifice, filed alongside.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:didache_9",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "baptized-only",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_14",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "church-oblation",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Gathered thanksgiving that your sacrifice may be pure, citing the pure sacrifice: the oblation named as such.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_philadelphians_4",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "eucharist-is-flesh",
+  "stance": "affirms",
+  "year": 110,
+  "note": "One Eucharist, one flesh, one cup.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrnaeans_7",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "eucharist-is-flesh",
+  "stance": "affirms",
+  "year": 110,
+  "note": "They abstain because they confess not the Eucharist to be the flesh.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_66",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "eucharist-is-flesh",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Not as common bread; the food is the flesh and blood of Jesus.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_66",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "baptized-only",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "None may partake but the believer washed unto remission and regeneration: the fence explicit."
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_5_2_2",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "eucharist-is-flesh",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Cup the communion of his blood; bread of his body.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_18_eucharist",
+  "topic": "eucharist-thanksgiving",
+  "claim_id": "church-oblation",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_3_1",
+  "topic": "apostolic-succession",
+  "claim_id": "bishops-from-apostles",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_3_2",
+  "topic": "apostolic-succession",
+  "claim_id": "unauthorized-meetings",
+  "stance": "denies",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_3_3",
+  "topic": "apostolic-succession",
+  "claim_id": "bishops-from-apostles",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Linus, Anacletus, Clement.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_4_1",
+  "topic": "apostolic-succession",
+  "claim_id": "bishops-from-apostles",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Truth drawn from the Church where the apostles banked it; disputes settled by the most ancient churches and the tradition handed to those to whom they committed the churches.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_prescription_21",
+  "topic": "apostolic-succession",
+  "claim_id": "show-the-roll",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Doctrine proved by the apostolic churches themselves, founded in person: show the roll or be refused.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_prescription_32",
+  "topic": "apostolic-succession",
+  "claim_id": "show-the-roll",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Let them produce the original records of their churches.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_8",
+  "topic": "liturgy-prayer",
+  "claim_id": "set-prayer",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_magnesians_9",
+  "topic": "liturgy-prayer",
+  "claim_id": "lords-day",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "No longer observing the Sabbath, but living in the observance of the Lord Day, on which our life sprang up again: the explicit Lord-Day text."
+ },
+ {
+  "ref": "excerpt:ignatius_magnesians_9",
+  "topic": "liturgy-prayer",
+  "claim_id": "keep-sabbath",
+  "stance": "denies",
+  "year": 110,
+  "note": "No longer observing the Sabbath, but the Lord's Day.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_67",
+  "topic": "liturgy-prayer",
+  "claim_id": "lords-day",
+  "stance": "affirms",
+  "year": 155,
+  "note": "On the day called Sunday.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:melito_reliquiae_two_natures",
+  "topic": "two-natures-seed",
+  "claim_id": "god-and-man",
+  "stance": "affirms",
+  "year": 170,
+  "note": "God and at the same time a perfect human being; two substances.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_eph_7_doctor",
+  "topic": "two-natures-seed",
+  "claim_id": "god-and-man",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_18_natures",
+  "topic": "two-natures-seed",
+  "claim_id": "god-and-man",
+  "stance": "affirms",
+  "year": 180,
+  "note": "The Word united to his workmanship, a man liable to suffering.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trin_11_godman",
+  "topic": "two-natures-seed",
+  "claim_id": "god-and-man",
+  "stance": "affirms",
+  "year": 250,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trin_11_godman",
+  "topic": "two-natures-seed",
+  "claim_id": "man-only",
+  "stance": "denies",
+  "year": 250,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trin_23_heresies",
+  "topic": "two-natures-seed",
+  "claim_id": "god-without-flesh",
+  "stance": "denies",
+  "year": 250,
+  "note": "Some thought him God the Father; others God without the flesh.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:diognetus_7_godman",
+  "topic": "two-natures-seed",
+  "claim_id": "god-and-man",
+  "stance": "affirms",
+  "year": 150,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_2_true",
+  "topic": "against-docetism",
+  "claim_id": "dokew",
+  "stance": "denies",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_2_true",
+  "topic": "against-docetism",
+  "claim_id": "truly-born-suffered",
+  "stance": "affirms",
+  "year": 110,
+  "note": "He suffered truly, not as certain unbelievers maintain that He only seemed to suffer: with true resurrection.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_3_body",
+  "topic": "against-docetism",
+  "claim_id": "truly-born-suffered",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Flesh after resurrection: handled by the company of Peter, eating and drinking with them. Not an incorporeal spirit. Same letter, chapter 2, supplies suffered truly and truly raised.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_trall_9_truly",
+  "topic": "against-docetism",
+  "claim_id": "truly-born-suffered",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_trall_10_dokew",
+  "topic": "against-docetism",
+  "claim_id": "dokew",
+  "stance": "denies",
+  "year": 110,
+  "note": "If he suffered only in appearance, why am I in bonds?",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrn_7_eucharist",
+  "topic": "against-docetism",
+  "claim_id": "truly-born-suffered",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "The Eucharist is the flesh that suffered for sins and was raised: passion revealed, resurrection proved."
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_18_docet",
+  "topic": "against-docetism",
+  "claim_id": "truly-born-suffered",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trin_10_flesh",
+  "topic": "against-docetism",
+  "claim_id": "truly-born-suffered",
+  "stance": "affirms",
+  "year": 250,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_5",
+  "topic": "salvation-by-christ",
+  "claim_id": "by-sons-blood",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:diognetus_9",
+  "topic": "salvation-by-christ",
+  "claim_id": "by-sons-blood",
+  "stance": "affirms",
+  "year": 150,
+  "note": "He gave his own Son as a ransom for us: the holy for the lawless, the just for the unjust. Rescue by the Son given over to death.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:diognetus_9",
+  "topic": "salvation-by-christ",
+  "claim_id": "by-our-worth",
+  "stance": "denies",
+  "year": 150,
+  "note": "Not because we were already righteous.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_18_1",
+  "topic": "atonement-recapitulation",
+  "claim_id": "flesh-for-flesh",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Soul for soul and flesh for flesh.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_5_21_1",
+  "topic": "atonement-recapitulation",
+  "claim_id": "recap-adam",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Summing up all things, he crushed the one who in Adam had led us captive.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_61",
+  "topic": "baptism-and-new-birth",
+  "claim_id": "baptism-regenerates",
+  "stance": "affirms",
+  "year": 155,
+  "note": "In the manner of regeneration they are regenerated, in the water, in the triune name: the word itself, twice.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_61",
+  "topic": "baptism-and-new-birth",
+  "claim_id": "faith-then-water",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Persuaded and taught, then brought to the water.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_instructor_1_6",
+  "topic": "baptism-and-new-birth",
+  "claim_id": "baptism-regenerates",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Regenerated, illuminated: to know God.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_1",
+  "topic": "two-ways",
+  "claim_id": "two-ways",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_1",
+  "topic": "two-ways",
+  "claim_id": "way-is-love",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_19",
+  "topic": "two-ways",
+  "claim_id": "two-ways",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_19",
+  "topic": "two-ways",
+  "claim_id": "way-is-love",
+  "stance": "affirms",
+  "year": 100,
+  "note": "You shall love the one who made you heads the way of light, with singleness of heart and the commandments of the Lord: love of God first, neighbor-love following in the chapter.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:commodian_instr_1",
+  "topic": "two-ways",
+  "claim_id": "two-ways",
+  "stance": "affirms",
+  "year": 250,
+  "note": "His own turn from wandering shrines to the Law, against the perishing crowd: the two paths in one life.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_2apol_7",
+  "topic": "fate-and-foreknowledge",
+  "claim_id": "choice-not-fate",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_2apol_7",
+  "topic": "fate-and-foreknowledge",
+  "claim_id": "atoms-chance",
+  "stance": "denies",
+  "year": 155,
+  "note": "Against Stoic fate's necessity.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:dionysius_alex_nature",
+  "topic": "fate-and-foreknowledge",
+  "claim_id": "atoms-chance",
+  "stance": "denies",
+  "year": 260,
+  "note": "Reports atomists who put a random void in place of providence.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_37_4",
+  "topic": "universal-call",
+  "claim_id": "call-and-refusal",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Those who do not work the good receive judgment because they were able to work it.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:origen_celsus_8_72",
+  "topic": "universal-call",
+  "claim_id": "all-healed",
+  "stance": "affirms",
+  "year": 248,
+  "note": "The whole rational nature will one day come under the Word; the Word is stronger than every evil of the soul.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_28",
+  "topic": "reward-and-judgment",
+  "claim_id": "deeds-judged",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Satan and those who follow him punished without end; delay because of the human race.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:minucius_octavius_36",
+  "topic": "reward-and-judgment",
+  "claim_id": "deeds-judged",
+  "stance": "affirms",
+  "year": 200,
+  "note": "The mind is still free; a person's acts, not status, are judged.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:arnobius_nations_2_29",
+  "topic": "reward-and-judgment",
+  "claim_id": "deeds-judged",
+  "stance": "affirms",
+  "year": 300,
+  "note": "Christ opens the fountain to all; scorn is under your own decision.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:lactantius_inst_5_18",
+  "topic": "reward-and-judgment",
+  "claim_id": "death-ends-all",
+  "stance": "denies",
+  "year": 305,
+  "note": "If after death we are nothing, virtue looks foolish — that persuasion is the error.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "topic": "virgin-birth",
+  "claim_id": "born-of-virgin",
+  "ref": "excerpt:ignatius_eph_18_cross",
+  "stance": "affirms",
+  "year": 110,
+  "note": "Conceived by Mary of the seed of David, but by the Holy Ghost: the virginal conception stated outright.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ }
 ]

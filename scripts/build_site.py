@@ -916,6 +916,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "severianus-fragmenta-philippenses": "Fragments on Philippians",
     "severianus-fragmenta-romanos": "Fragments on Romans",
     "severianus-fragmenta-titum": "Fragments on Titus",
+    "severianus-fragmentum-philemonem": "Fragment on the Letter to Philemon",
     "severianus-fragmenta-1thess": "Fragments on 1 Thessalonians",
     "severianus-fragmenta-1tim": "Fragments on 1 Timothy",
     "severianus-fragmenta-2cor": "Fragments on 2 Corinthians",
@@ -946,6 +947,15 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "epiphanius-index-discipulorum": "List of the Disciples",
     "epiphanius-liturgia-praesanctificatorum": "Liturgy of the Presanctified Gifts",
     "epiphanius-notitiae-episcopatuum": "List of the Bishoprics",
+    "epiphanius-fragmenta-precationis-et-exorcismi": "Fragments of a Prayer and an Exorcism",
+    "epiphanius-testamentum-ad-cives": "Testament to the Citizens",
+    "epiphanius-testimonia-ex-divinis-et-sacris-scripturis": "Testimonies from the Divine and Sacred Scriptures",
+    "epiphanius-tractatus-contra-eos-qui-imagines-faciunt": "Treatise against Those Who Make Images",
+    "epiphanius-tractatus-de-numerorum-mysteriis": "Treatise on the Mysteries of Numbers",
+    "hesychius-homilia-i-hypapante": "Homily I on the Presentation",
+    "hesychius-homilia-ii-hypapante": "Homily II on the Presentation",
+    "hesychius-homilia-ii-lazarum": "Homily II on Saint Lazarus",
+    "hesychius-homilia-i-maria-deipara": "Homily I on Saint Mary the Mother of God",
     "amphilochius-in-zacchaeum": "On Zacchaeus",
     "amphilochius-in-occursum-domini": "On the Meeting of the Lord",
     "amphilochius-in-natalitia-domini": "On the Nativity of the Lord",
@@ -1244,11 +1254,11 @@ def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     h1 = public_reader_title(title, slug=slug)
     mapped = PUBLIC_LATIN_SUBTITLES.get(slug or "", "").strip()
     if mapped:
-        return "" if mapped.lower() == h1.lower() else mapped
+        return "" if mapped.lower() == h1.lower() else scrub_worksheet_note(mapped).strip()
     if slug in PUBLIC_ENGLISH_TITLES:
         raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
         if raw and raw.lower() != h1.lower():
-            return raw
+            return scrub_worksheet_note(raw).strip()
     return ""
 
 
@@ -1373,12 +1383,69 @@ WITNESS_ROLE_LABEL = {
 }
 
 
+
+def scrub_worksheet_note(text: str) -> str:
+    """Drop folio page-locks and densify status from a public note."""
+    if not text or not re.search(r"\bdensify\s+complete\b|\bPHYS\b", text, re.I):
+        return text
+    t = re.sub(r"\([^)]*\bPHYS\b[^)]*\)", "", text, flags=re.I)
+    t = re.sub(r"\bdensify\s+complete\b", "", t, flags=re.I)
+    t = re.sub(
+        r"(?:~+\s*)?(?:mid[\s-]*)?\bPHYS\s*~?\s*(?:mid[\s-]*)?\d+"
+        r"(?:\s*[–—-]\s*(?:mid[\s-]*)?~?\s*\d+)?",
+        "",
+        t,
+        flags=re.I,
+    )
+    t = re.sub(r"~?\s*\bPHYS\b", "", t, flags=re.I)
+    t = re.sub(r"\(\s*\)", "", t)
+    t = re.sub(r"\btoward\s*([.!?])", r"\1", t)
+    t = re.sub(r"([.!?])\s*:\s*", r"\1 ", t)
+    t = re.sub(r"\s+([,.;:!?])", r"\1", t)
+    t = re.sub(r"\(\s+", "(", t)
+    t = re.sub(r"\s+\)", ")", t)
+    t = re.sub(r"\s{2,}", " ", t)
+    t = re.sub(r"\s+\.", ".", t)
+    t = re.sub(r"(?:\.\s*){2,}", ". ", t)
+    return t.strip(" \t;")
+
+
+_WORKSHEET_BRACKET = re.compile(
+    r"\[[^\]]*(?:PHYS|\bCOMPLETE\b|densify)[^\]]*\]",
+    re.I,
+)
+
+
+def public_source_text(text: str) -> str:
+    """Hide a worksheet bracket or page-lock in a displayed source paragraph."""
+    if not isinstance(text, str) or not text:
+        return ""
+    cleaned = _WORKSHEET_BRACKET.sub("", text)
+    cleaned = scrub_worksheet_note(cleaned)
+    if cleaned == text:
+        return text
+    cleaned = re.sub(r"\(\s*\)", "", cleaned)
+    cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" \t;")
+    return cleaned
+
+
+def shown_source(parts) -> list[str]:
+    out = []
+    for part in parts or []:
+        if not isinstance(part, str):
+            continue
+        cleaned = public_source_text(part).strip()
+        if cleaned:
+            out.append(cleaned)
+    return out
+
+
 def text_history_html(th: dict | None) -> str:
     """Collapsed About block: copy-text, checks, and real joins only."""
     if not isinstance(th, dict) or not th:
         return ""
     bits: list[str] = []
-    method = str(th.get("method") or "").strip()
+    method = scrub_worksheet_note(str(th.get("method") or "")).strip()
     if method:
         bits.append(f'<p class="intro">{escape(method)}</p>')
     identifiers = str(th.get("identifiers") or "").strip()
@@ -1420,7 +1487,7 @@ def text_history_html(th: dict | None) -> str:
         for j in joins:
             if not isinstance(j, dict):
                 continue
-            note = str(j.get("note") or "").strip()
+            note = scrub_worksheet_note(str(j.get("note") or "")).strip()
             if not note:
                 continue
             where = str(j.get("where") or "").strip()
@@ -1465,6 +1532,7 @@ def _pack_work(
     note = FIRST_ENGLISH_NOTES.get(slug, "") if is_first else ""
     # Legacy blurbs conflate a new rendering / absence from ANF with first English.
     blurb = re.sub(r"[^.!?]*(?:Original English Translation|no previous|new OET)[^.!?]*[.!?]?", "", blurb, flags=re.I).strip()
+    blurb = scrub_worksheet_note(blurb).strip()
     # Keep reviewed identity (title/edition/text_history) intact for publication
     # gates. Public H1 / hero softening happens only at render.
     return {
@@ -3381,7 +3449,7 @@ def load_origen_pauline_fragments() -> list[dict]:
                         seen.add(str(sec.get("section")))
                 existing["section_count"] = len(existing["sections"])
                 if meta.get("blurb"):
-                    existing["blurb"] = meta["blurb"]
+                    existing["blurb"] = scrub_worksheet_note(str(meta["blurb"])).strip()
                 if meta.get("first_english_note"):
                     existing["first_english_note"] = meta["first_english_note"]
                     note = (meta.get("first_english_note") or "").strip()
@@ -4048,6 +4116,267 @@ _ROMAN_NUMERALS = {
 }
 
 
+# Public names for the ten areas. topics.yml keeps the syllabus headings.
+LOCUS_PUBLIC_TITLES = {
+    "bibliology": "Holy Scripture",
+    "theology-proper": "God",
+    "christology": "Christ",
+    "pneumatology": "The Holy Spirit",
+    "anthropology": "The Human Being",
+    "soteriology": "Salvation",
+    "ecclesiology": "The Church",
+    "sacraments": "Baptism and the Table",
+    "eschatology": "The Last Things",
+    "ethics": "How to Live",
+}
+
+_LIBRARY_CHROME = ("Fathers Bible Library", "Home > Fathers of the Church")
+
+
+def public_locus_title(locus_id: str, fallback: str = "") -> str:
+    """Reader-facing area name. Unknown ids keep the stored title."""
+    return LOCUS_PUBLIC_TITLES.get(locus_id or "", fallback or locus_id or "")
+
+
+def strip_source_chrome(text: str) -> str:
+    """Drop a pasted library-site menu from the front of a passage.
+
+    A few Irenaeus extracts begin with the source site's search bar and
+    breadcrumb, then the real sentence after the last 'Chapter N)' label.
+    """
+    if not text or not any(mark in text for mark in _LIBRARY_CHROME):
+        return text or ""
+    matches = list(re.finditer(r"Chapter\s+\d+\)\s+", text))
+    if not matches:
+        return ""
+    return text[matches[-1].end():].strip()
+
+
+def excerpt_paragraphs(x: dict) -> list[str]:
+    """English paragraphs with source-site chrome removed and repeats dropped."""
+    out: list[str] = []
+    seen: set[str] = set()
+    for para in eng_list(x.get("english")):
+        cleaned = strip_source_chrome(para).strip()
+        if not cleaned:
+            continue
+        key = cleaned[:180]
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(cleaned)
+    return out
+
+
+_LEAD_STOP = set(
+    """
+    a an the of and or to in on for with by from that this these those who whom
+    which what when where how as at be is are was were been being it its his her
+    their our your not but if then than so into over under before after also only
+    all any no nor we you they he she him them do did does done have has had would
+    can could should may might must about there just more most some own same such
+    other upon against because while unto shall hath thee thou thy thine ye yet
+    per each every both very than into
+    """.split()
+)
+# Ordinary words. A hit on these does not mean the sentence answers the topic.
+_LEAD_NEVER = set(
+    """
+    true holy made word life live lives human being last things faith will god
+    lord christ jesus birth body soul good evil church spirit father divine
+    nature natures man men people person heaven earth time world power call
+    """.split()
+)
+# Notes under the topic titles use these in passing. They must not steer a quote.
+_LEAD_MODERN_BAN = set(
+    """
+    later before still reported language carefully system without together
+    debate streams private formulas seed slogans hearers return subject
+    present other about there these those shall every under again first
+    marks mark pastoral secret teachers
+    """.split()
+)
+# Titles whose own words never appear in the sentence that answers them.
+_LEAD_HINTS = {
+    "two-natures-seed": ("flesh", "passible", "impassible", "mary"),
+}
+_LEAD_IRREGULAR = {
+    "created": "creator",
+    "creation": "creator",
+    "inspired": "inspiration",
+    "inspiring": "inspiration",
+}
+
+
+def _lead_root(word: str) -> str:
+    w = _LEAD_IRREGULAR.get(word, word)
+    if w.endswith("ies") and len(w) > 6:
+        w = w[:-3] + "y"
+    elif len(w) > 5 and w.endswith("s"):
+        w = w[:-1]
+    return w[:6]
+
+
+def topic_keywords(meta: dict | None) -> list[str]:
+    """Words that locate the sentence a topic card should open on."""
+    meta = meta or {}
+    title = [
+        w
+        for w in re.findall(r"[a-z]{4,}", (meta.get("title") or "").lower())
+        if w not in _LEAD_STOP and w not in _LEAD_NEVER
+    ]
+    modern = [
+        w
+        for w in re.findall(r"[a-z]{8,}", (meta.get("modern_relevance") or "").lower())
+        if w not in _LEAD_STOP and w not in _LEAD_NEVER and w not in _LEAD_MODERN_BAN
+    ]
+    out: list[str] = []
+    seen: set[str] = set()
+    for w in title + modern + list(_LEAD_HINTS.get(meta.get("id") or "", ())):
+        if w not in seen:
+            seen.add(w)
+            out.append(w)
+    return out
+
+
+def _lead_sentences(text: str) -> list[str]:
+    t = re.sub(r"\s+", " ", text).strip()
+    t = re.sub(r"\s+([.!?])", r"\1", t)
+    parts = re.split(r"(?<=[.!?])\s+(?=[A-Z\"“‘'(\[])", t)
+    return [p.strip() for p in parts if p.strip()]
+
+
+def _lead_heading(sentence: str) -> bool:
+    words = re.findall(r"[A-Za-z']+", sentence)
+    if not 4 <= len(words) <= 18:
+        return False
+    caps = sum(1 for w in words if w[:1].isupper())
+    return caps / len(words) >= 0.62
+
+
+def _lead_hit(sentence: str, keywords: list[str]) -> bool:
+    tokens = set(re.findall(r"[a-z]{4,}", sentence.lower()))
+    for token in tokens:
+        for keyword in keywords:
+            if token == keyword or token.startswith(keyword):
+                return True
+            if len(token) >= 6 and len(keyword) >= 6 and _lead_root(token) == _lead_root(keyword):
+                return True
+    return False
+
+
+def topic_lead_text(
+    x: dict, limit: int = 320, keywords: list[str] | None = None
+) -> str:
+    """Short passage for a topic card. The full text stays on the excerpt page.
+
+    A card opens on the first sentence that answers the topic when the
+    paragraph begins with a preamble. It does not keep a warning or a chapter
+    title and cut the point off.
+    """
+    paras = excerpt_paragraphs(x)
+    if not paras:
+        return ""
+    sentences: list[str] = []
+    for para in paras[:2]:
+        sentences.extend(_lead_sentences(para))
+    if not sentences:
+        return ""
+    while len(sentences) > 1 and _lead_heading(sentences[0]):
+        sentences.pop(0)
+    start = 0
+    keys = keywords or []
+    if keys and not _lead_hit(sentences[0], keys):
+        for i, sentence in enumerate(sentences[:6]):
+            if i and _lead_hit(sentence, keys):
+                start = i
+                break
+        if start > 0 and len(sentences[start]) < 90:
+            start -= 1
+    text = " ".join(sentences[start : start + 3])
+    text = re.sub(r"\s+([,.;:!?])", r"\1", text)
+    return soft_snippet(text, limit)
+
+
+def _passage_year(x: dict) -> int:
+    year = year_from_period(x.get("period"))
+    return year if year is not None else 9999
+
+
+def _excerpt_is_stanced(x: dict, stanced: set[str]) -> bool:
+    eid = x.get("id") or ""
+    if eid in stanced:
+        return True
+    return eid.split("--", 1)[0] in stanced
+
+
+def century_number(year: int | None) -> int | None:
+    if year is None or year <= 0:
+        return None
+    return (year + 99) // 100
+
+
+def century_label(n: int) -> str:
+    if 10 <= n % 100 <= 20:
+        suffix = "th"
+    else:
+        suffix = {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
+    return f"{n}{suffix}"
+
+
+def century_strip_html(rows: list[dict]) -> str:
+    counts: dict[int, int] = {}
+    for x in rows:
+        n = century_number(year_from_period(x.get("period")))
+        if n is None:
+            continue
+        counts[n] = counts.get(n, 0) + 1
+    if not counts:
+        return ""
+    items = []
+    for n in sorted(counts):
+        word = "passage" if counts[n] == 1 else "passages"
+        items.append(
+            f'<li><span class="yr">{century_label(n)} century</span>'
+            f'<span class="n">{counts[n]} {word}</span></li>'
+        )
+    return (
+        '<ol class="century-strip" aria-label="Passages by century">'
+        + "".join(items)
+        + "</ol>"
+    )
+
+
+def topic_card_html(x: dict, keywords: list[str] | None = None) -> str:
+    """One answering passage: citation, a short quote, Greek when we have it."""
+    author = x.get("author") or "Unknown"
+    dates = author_dates_display(author) or format_bc_ad(x.get("period") or "")
+    lead = topic_lead_text(x, keywords=keywords)
+    quote = (
+        f'<blockquote class="topic-lead"><p>{escape(lead)}</p></blockquote>'
+        if lead
+        else ""
+    )
+    greek = ""
+    greek_paras = shown_source(
+        p.strip() for p in eng_list(x.get("greek")) if isinstance(p, str) and p.strip()
+    )
+    if greek_paras:
+        greek = (
+            '<details class="src-lead"><summary>Greek</summary>'
+            f'<p class="src">{escape(soft_snippet(greek_paras[0], 280))}</p></details>'
+        )
+    return f"""<article class="excerpt topic-card" id="{escape(x['id'])}">
+<header>
+<h2><a href="/e/{escape(x['id'])}/">{escape(x.get('citation') or x['id'])}</a></h2>
+<p class="meta">{escape(author)} · {escape(dates)} · {escape(x.get('work') or '')}</p>
+</header>
+{quote}
+<p class="topic-more"><a href="/e/{escape(x['id'])}/">Read this passage</a></p>
+{greek}
+</article>"""
+
+
 def _home_citation(x: dict) -> str:
     """Home feed subline without the redundant leading author name."""
     cit = x.get("citation") or x["id"]
@@ -4069,18 +4398,64 @@ def _home_feed_key(x: dict) -> tuple[str, str]:
     return (author, " ".join(norm))
 
 
-def _home_feed(excerpts: list[dict], n: int = 8) -> list[dict]:
-    """First n excerpts in source order, deduped by normalized citation."""
-    picked: list[dict] = []
-    seen: set[tuple[str, str]] = set()
+def _home_feed(
+    excerpts: list[dict],
+    topic_meta: dict[str, dict],
+    loci: list[dict],
+    stanced_by_topic: dict[str, set[str]],
+    n: int = 8,
+) -> list[dict]:
+    """One passage from each area, earliest reviewed line first, up to n topics."""
+    by_topic: dict[str, list[dict]] = {}
     for x in excerpts:
-        key = _home_feed_key(x)
-        if key in seen:
-            continue
-        seen.add(key)
-        picked.append(x)
+        by_topic.setdefault(x.get("topic") or "", []).append(x)
+    picked: list[dict] = []
+    seen_keys: set[tuple[str, str]] = set()
+    seen_topics: set[str] = set()
+
+    def consider(topic_id: str) -> None:
+        if len(picked) >= n or not topic_id or topic_id in seen_topics:
+            return
+        if topic_meta and topic_id not in topic_meta:
+            return
+        rows = by_topic.get(topic_id) or []
+        if not rows:
+            return
+        stanced = stanced_by_topic.get(topic_id) or set()
+        ranked = sorted(
+            rows,
+            key=lambda x: (
+                0 if _excerpt_is_stanced(x, stanced) else 1,
+                _passage_year(x),
+                x.get("id") or "",
+            ),
+        )
+        for x in ranked:
+            lead = topic_lead_text(x, keywords=topic_keywords(topic_meta.get(topic_id) or {}))
+            if len(lead.split()) < 12:
+                continue
+            key = _home_feed_key(x)
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+            seen_topics.add(topic_id)
+            picked.append(x)
+            return
+
+    for locus in loci:
         if len(picked) >= n:
             break
+        for topic in locus.get("topics") or []:
+            before = len(picked)
+            consider(topic.get("id") or "")
+            if len(picked) > before:
+                break
+    if len(picked) < n:
+        for locus in loci:
+            for topic in locus.get("topics") or []:
+                consider(topic.get("id") or "")
+                if len(picked) >= n:
+                    return picked
     return picked
 
 
@@ -4116,11 +4491,34 @@ def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
+    # Spotlight indexing a fresh dist is enough to push this 8 GB Mini
+    # into a memory warning. The marker has to be rewritten after rmtree.
+    (DIST / ".metadata_never_index").write_text("")
     shutil.copytree(ASSETS, DIST / "assets")
     (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
     write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse works</a> or <a href="/topics/">browse topics</a>.</p></section>', description="This page is not in the Fathers library. Browse works or topics.").replace("</head>", '<meta name="robots" content="noindex"></head>'))
 
-    explore_topic_ids = {c["topic"] for c in load_explore_raw()["claims"] if c.get("topic")}
+    explore = load_explore_raw()
+    explore_topic_ids = {c["topic"] for c in explore["claims"] if c.get("topic")}
+    stanced_by_topic: dict[str, set[str]] = {}
+    for stance in explore["stances"]:
+        if not isinstance(stance, dict):
+            continue
+        ref = stance.get("ref") or ""
+        if not str(ref).startswith("excerpt:"):
+            continue
+        stanced_by_topic.setdefault(stance.get("topic") or "", set()).add(
+            str(ref).split(":", 1)[1]
+        )
+    paths_for_topic: dict[str, dict] = {}
+    for path in _json_load(EXPLORE_DATA / "paths.json", []):
+        if not isinstance(path, dict):
+            continue
+        if path.get("status") not in (None, "", "live"):
+            continue
+        primary = path.get("explore_topic") or ""
+        if primary and primary not in paths_for_topic:
+            paths_for_topic[primary] = path
 
     tax = load_topics_taxonomy()
     excerpts = load_topic_excerpts()
@@ -4230,7 +4628,7 @@ def build() -> None:
                 "id": t["id"],
                 "title": t["title"],
                 "locus_id": locus["id"],
-                "locus_title": locus["title"],
+                "locus_title": public_locus_title(locus["id"], locus.get("title") or ""),
                 "development": t.get("development") or "",
                 "heresies": t.get("heresies") or [],
                 "modern_relevance": t.get("modern_relevance") or "",
@@ -4262,10 +4660,16 @@ def build() -> None:
 
     # --- Home ---
     sample_cards = []
-    for x in _home_feed(excerpts):
+    for x in _home_feed(
+        excerpts, topic_meta, tax.get("loci") or [], stanced_by_topic
+    ):
+        home_meta = topic_meta.get(x.get("topic") or "") or {}
+        topic_name = home_meta.get("title") or ""
         sample_cards.append(
             f"""<li><a href="/e/{escape(x['id'])}/"><strong>{escape(x.get('author') or '')}</strong>
-            <span>{escape(_home_citation(x))}</span></a></li>"""
+            <span>{escape(_home_citation(x))}</span>
+            <span class="lead">{escape(topic_lead_text(x, keywords=topic_keywords(home_meta)))}</span>
+            <span class="c">{escape(topic_name)}</span></a></li>"""
         )
     first_works = [w for w in works if w.get("first_english")]
     other_works = [w for w in works if not w.get("first_english")]
@@ -4288,7 +4692,7 @@ def build() -> None:
 <section class="split">
   <div>
     <h2>Topics</h2>
-    <p>What did they teach about God, Christ, will, church, last things? {len(excerpts)} excerpts across the map.</p>
+    <p>What did they teach about God, Christ, will, church, last things? {len(excerpts)} passages across the map.</p>
     <a href="/topics/">Open the map →</a>
   </div>
   <div>
@@ -4316,32 +4720,32 @@ def build() -> None:
 
     # --- Topics index ---
     locus_blocks = []
-    loci_sorted = sorted(tax.get("loci", []), key=lambda loc: alpha_key(loc.get("title")))
-    for locus in loci_sorted:
+    for locus in tax.get("loci", []):
         rows = []
-        topics_sorted = sorted(locus.get("topics", []), key=lambda t: alpha_key(t.get("title")))
-        for t in topics_sorted:
+        for t in locus.get("topics", []):
             n = len(by_topic.get(t["id"], []))
             if n == 0 and t["id"] not in topic_to_works:
                 continue
             extra = ""
             if t["id"] in topic_to_works:
                 extra = f" · {len(topic_to_works[t['id']])} related work{'s' if len(topic_to_works[t['id']])!=1 else ''}"
+            word = "passage" if n == 1 else "passages"
             rows.append(
                 f'<li data-count="{n}"><a href="/topics/{escape(t["id"])}/">'
                 f'<span class="t">{escape(t["title"])}</span>'
-                f'<span class="c">{n} excerpts{extra}</span></a></li>'
+                f'<span class="c">{n} {word}{extra}</span></a></li>'
             )
         if not rows:
             continue
         locus_blocks.append(
             f'<section class="locus" id="{escape(locus["id"])}">'
-            f'<h2>{escape(locus["title"])}</h2><ul class="topic-list">{"".join(rows)}</ul></section>'
+            f'<h2>{escape(public_locus_title(locus["id"], locus.get("title") or ""))}</h2>'
+            f'<ul class="topic-list">{"".join(rows)}</ul></section>'
         )
 
     topics_body = f"""
 <h1>Topics</h1>
-<p class="intro">Map of teaching from the books in this library, listed alphabetically within each area. Related whole works appear on each topic page. Later writers are labeled where they enter. English is newly prepared for study — not a complete critical edition. <a href="/explore/">See curated paths and positions over time →</a></p>
+<p class="intro">What they taught, from Scripture and God through the last things. Each topic opens with a short passage, and the full passage is one click away. Later writers are labeled where they enter. The English is a new reading for study, not a finished critical edition. <a href="/explore/">Paths and positions over time</a></p>
 {''.join(locus_blocks)}
 """
     write(
@@ -4363,40 +4767,36 @@ def build() -> None:
             for s in topic_to_works.get(tid, [])
             if s in works_by_slug
         ]
-        rel_html = related_panel("Related works", related_works)
-        items_html = []
-        current_author = None
+        rel_html = related_panel("The books", related_works)
+        stanced = stanced_by_topic.get(tid, set())
+        matched = [x for x in rows if _excerpt_is_stanced(x, stanced)]
+        # A reviewed set of four or more leads the page. The rest stay
+        # linked, without pasting chapters that were never checked for this topic.
+        if len(matched) >= 4:
+            primary = matched
+            rest = [x for x in rows if not _excerpt_is_stanced(x, stanced)]
+        else:
+            primary = list(rows)
+            rest = []
+        primary.sort(key=lambda r: (_passage_year(r), r.get("author") or "", r.get("id") or ""))
+        rest.sort(key=lambda r: (_passage_year(r), r.get("author") or "", r.get("id") or ""))
+        items_html = [topic_card_html(x, topic_keywords(meta)) for x in primary]
         for x in rows:
-            paras = "".join(f"<p>{render_reader_html(p)}</p>" for p in eng_list(x.get("english")))
-            author = x.get("author") or "Unknown"
-            if author != current_author:
-                if current_author is not None:
-                    items_html.append("</section>")
-                dates = author_dates_display(author) or format_bc_ad(x.get("period") or "")
-                items_html.append(
-                    f'<section class="author-group" id="{escape(slugify(author))}">'
-                    f"<h2>{escape(author)}"
-                    f'<span class="meta">{escape(dates)}</span></h2>'
-                )
-                current_author = author
-            items_html.append(
-                f"""<article class="excerpt" id="{escape(x['id'])}">
-                <header><a href="/e/{escape(x['id'])}/"><h2>{escape(x.get('citation') or x['id'])}</h2></a>
-                <p class="meta">{escape(author)} · {escape(format_bc_ad(x.get('period') or ''))} · {escape(x.get('work') or '')}</p></header>
-                <div class="body">{paras}</div>
-                </article>"""
-            )
+            paras_list = excerpt_paragraphs(x)
+            paras = "".join(f"<p>{render_reader_html(p)}</p>" for p in paras_list)
             src_block = ""
             if x.get("greek"):
-                g = eng_list(x["greek"])
-                src_block += "<details><summary>Greek</summary>" + "".join(
-                    f"<p class='src'>{escape(p)}</p>" for p in g
-                ) + "</details>"
+                g = shown_source(eng_list(x["greek"]))
+                if g:
+                    src_block += "<details><summary>Greek</summary>" + "".join(
+                        f"<p class='src'>{escape(p)}</p>" for p in g
+                    ) + "</details>"
             if x.get("latin"):
-                la = eng_list(x["latin"])
-                src_block += "<details><summary>Latin</summary>" + "".join(
-                    f"<p class='src'>{escape(p)}</p>" for p in la
-                ) + "</details>"
+                la = shown_source(eng_list(x["latin"]))
+                if la:
+                    src_block += "<details><summary>Latin</summary>" + "".join(
+                        f"<p class='src'>{escape(p)}</p>" for p in la
+                    ) + "</details>"
             al = (x.get("author") or "").lower()
             author_slug = slugify(x.get("author") or "unknown")
             if "origen" in al:
@@ -4435,7 +4835,7 @@ def build() -> None:
                         ("Excerpt", ""),
                     ],
                     active="topics",
-                    description=strip_logos_markup((eng_list(x.get("english")) or [""])[0])[:160],
+                    description=strip_logos_markup((paras_list or [""])[0])[:160],
                     og_type="article",
                 ),
             )
@@ -4448,46 +4848,70 @@ def build() -> None:
                     "href": f"/e/{x['id']}/",
                     "topic": tid,
                     "verified": False,  # Legacy confidence flags are not current review evidence.
-                    "text": strip_logos_markup(" ".join(eng_list(x.get("english")))),
+                    "text": strip_logos_markup(" ".join(paras_list)),
                 }
             )
-        if current_author is not None:
-            items_html.append("</section>")
 
-        explore_link = ""
-        if tid in explore_topic_ids:
-            explore_link = (
+        filed_html = ""
+        if rest:
+            filed_items = []
+            for x in rest:
+                author = x.get("author") or ""
+                dates = author_dates_display(author) or format_bc_ad(x.get("period") or "")
+                filed_items.append(
+                    f'<li><a href="/e/{escape(x["id"])}/">{escape(x.get("citation") or x["id"])}</a>'
+                    f' <span class="c">{escape(author)} · {escape(dates)}</span></li>'
+                )
+            filed_html = (
+                f'<details class="filed-more"><summary>Other passages filed here ({len(rest)})</summary>'
+                f'<ul class="topic-list">{"".join(filed_items)}</ul></details>'
+            )
+        path = paths_for_topic.get(tid)
+        path_html = ""
+        if path:
+            path_html = (
+                f'<aside class="path-note"><h2>{escape(path.get("title") or "")}</h2>'
+                f'<p>{escape(path.get("summary") or "")}</p>'
+                f'<p><a href="/explore/?topic={escape(tid)}">Open this path</a></p></aside>'
+            )
+        elif tid in explore_topic_ids:
+            path_html = (
                 f'<p class="intro"><a href="/explore/?topic={escape(tid)}">'
-                f"See how this topic lines up over time →</a></p>"
+                f"See how this topic lines up over time</a></p>"
             )
         lead = next((str(x.get("topic_lead")).strip() for x in rows if x.get("topic_lead")), "")
         relevance = (meta.get("modern_relevance") or "").strip()
         intro = lead or relevance
         intro_html = f'<p class="intro">{escape(intro)}</p>' if intro else ""
-        meta_bits = [escape(meta.get("locus_title") or ""), f"{len(rows)} excerpts"]
+        count_label = f"{len(primary)} passage" if len(primary) == 1 else f"{len(primary)} passages"
+        if rest:
+            count_label += f" · {len(rest)} more on file"
+        meta_bits = [escape(meta.get("locus_title") or ""), count_label]
         dev = meta.get("development") or ""
         if dev == "consensus":
             meta_bits.append("Broad agreement in this library")
         elif dev == "debate":
-            meta_bits.append("Marked debate — read the differences")
+            meta_bits.append("Marked debate. Read the differences")
         heresies = [_plain_tag(h) for h in (meta.get("heresies") or []) if h]
         if heresies:
             meta_bits.append("Against: " + ", ".join(heresies))
-        years = [year_from_period(x.get("period")) for x in rows]
+        years = [year_from_period(x.get("period")) for x in primary]
         years = [y for y in years if y is not None]
         era_html = ""
         if any(y >= 325 for y in years):
             era_html = (
                 '<p class="banner">This topic includes Nicene and later writers '
-                "alongside earlier voices. Dates sit on each excerpt.</p>"
+                "alongside earlier voices. Dates sit on each passage.</p>"
             )
         tbody = f"""
 <h1>{escape(meta['title'])}</h1>
 <p class="meta">{" · ".join(meta_bits)}</p>
 {era_html}{intro_html}
-{explore_link}
-{rel_html}
+{century_strip_html(primary)}
+{path_html}
 {''.join(items_html)}
+{filed_html}
+{rel_html}
 """
         write(
             DIST / "topics" / tid / "index.html",
@@ -4513,7 +4937,7 @@ def build() -> None:
             layout(
                 meta["title"],
                 f"""<h1>{escape(meta['title'])}</h1>
-                <p class="intro">{escape(meta.get('locus_title') or '')} · topical excerpts still growing.</p>
+                <p class="intro">{escape(meta.get('locus_title') or '')} · passages for this topic are still growing.</p>
                 {related_panel("Related works", related_works)}""",
                 crumb=[("Home", "/"), ("Topics", "/topics/"), (meta["title"], "")],
                 active="topics",
@@ -4805,11 +5229,11 @@ def build() -> None:
                 if s.get("greek"):
                     if len(secs) > 1:
                         gk.append(f'<p class="src-sec">§{escape(display_section(sid))}</p>')
-                    gk += [f"<p class='src'>{escape(p)}</p>" for p in s["greek"]]
+                    gk += [f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["greek"])]
                 if s.get("latin"):
                     if len(secs) > 1:
                         la.append(f'<p class="src-sec">§{escape(display_section(sid))}</p>')
-                    la += [f"<p class='src'>{escape(p)}</p>" for p in s["latin"]]
+                    la += [f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["latin"])]
                 if s.get("source_url"):
                     wit.append(f'<a href="{escape(s["source_url"])}" rel="noopener">§{escape(display_section(sid))}</a>')
             src_block = ""
@@ -4996,11 +5420,11 @@ def build() -> None:
             src_block = ""
             if s.get("greek"):
                 src_block += "<details><summary>Greek</summary>" + "".join(
-                    f"<p class='src'>{escape(p)}</p>" for p in s["greek"]
+                    f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["greek"])
                 ) + "</details>"
             if s.get("latin"):
                 src_block += "<details><summary>Latin</summary>" + "".join(
-                    f"<p class='src'>{escape(p)}</p>" for p in s["latin"]
+                    f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["latin"])
                 ) + "</details>"
             if not src_block and not s.get("source_url"):
                 # Only when we truly have no source text online.

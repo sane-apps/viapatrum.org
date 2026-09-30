@@ -202,7 +202,7 @@ test('explore timeline places one excerpt once per claim lane',async()=>{
   const twins=[...doc.querySelectorAll('.explore-point')].filter(g=>(g.getAttribute('data-id')||'').startsWith('excerpt:ignatius_smyrn_2_true|'));
   assert.equal(twins.length,2);
   const stances=twins.map(g=>g.getAttribute('data-stance')).sort();
-  assert.deepEqual(stances,['denies','qualified']);
+  assert.deepEqual(stances,['affirms','denies']); // 2026-09-28: smyrn_2 re-rated affirms on author context (stance review)
   const cys=twins.map(g=>parseFloat(g.querySelector('circle').getAttribute('cy')));
   assert.ok(Math.abs(cys[0]-cys[1])>40,'same-id marks share a lane');
   dom.window.close();

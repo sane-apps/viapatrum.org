@@ -1,711 +1,1154 @@
 [
-  {
-    "ref": "excerpt:hermas_mand_12",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:justin_1apol_43",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 155
-  },
-  {
-    "ref": "excerpt:tatian_address_7",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 165
-  },
-  {
-    "ref": "excerpt:athenagoras_plea_24",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 177
-  },
-  {
-    "ref": "excerpt:theophilus_autolycus_2_27",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_37_1",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:clement_strom_2_15",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 200
-  },
-  {
-    "ref": "excerpt:tertullian_marcion_2_5",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 208
-  },
-  {
-    "ref": "excerpt:origen_princ_3_1_1",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 225
-  },
-  {
-    "ref": "excerpt:methodius_freewill_1",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 300
-  },
-  {
-    "ref": "excerpt:lactantius_inst_2_17",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "qualified",
-    "year": 305
-  },
-  {
-    "ref": "excerpt:hermas_sim_6",
-    "topic": "sin-and-death",
-    "claim_id": "personal-disobedience",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:tatian_address_11",
-    "topic": "sin-and-death",
-    "claim_id": "personal-disobedience",
-    "stance": "affirms",
-    "year": 165
-  },
-  {
-    "ref": "excerpt:theophilus_autolycus_2_25",
-    "topic": "sin-and-death",
-    "claim_id": "personal-disobedience",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:tertullian_repentance_2",
-    "topic": "sin-and-death",
-    "claim_id": "personal-disobedience",
-    "stance": "affirms",
-    "year": 203
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_39",
-    "topic": "grace-and-assistance",
-    "claim_id": "grace-assists",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:origen_princ_3_1_6",
-    "topic": "grace-and-assistance",
-    "claim_id": "grace-assists",
-    "stance": "affirms",
-    "year": 225
-  },
-  {
-    "ref": "excerpt:hermas_mand_1",
-    "topic": "faith-and-obedience",
-    "claim_id": "faith-with-obedience",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_37_5",
-    "topic": "faith-and-obedience",
-    "claim_id": "faith-with-obedience",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "work:julian-letter-to-rome/1-2-4",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 419,
-    "note": "Attacks the claim that free will was lost in Adam."
-  },
-  {
-    "ref": "work:julian-letter-to-rome/1-2-4",
-    "topic": "sin-and-death",
-    "claim_id": "inherited-guilt",
-    "stance": "denies",
-    "year": 419
-  },
-  {
-    "ref": "work:julian-to-florus/1.61",
-    "topic": "sin-and-death",
-    "claim_id": "inherited-guilt",
-    "stance": "denies",
-    "year": 420
-  },
-  {
-    "ref": "work:julian-to-florus/1.63",
-    "topic": "sin-and-death",
-    "claim_id": "inherited-guilt",
-    "stance": "denies",
-    "year": 420
-  },
-  {
-    "ref": "work:julian-to-florus/1.48",
-    "topic": "sin-and-death",
-    "claim_id": "personal-disobedience",
-    "stance": "affirms",
-    "year": 420
-  },
-  {
-    "ref": "work:julian-turbantius-fragments/4-8-47",
-    "topic": "free-will",
-    "claim_id": "will-capable",
-    "stance": "affirms",
-    "year": 418,
-    "note": "Reports the dilemma used against praising both grace and free will."
-  },
-  {
-    "ref": "work:julian-turbantius-fragments/2-9-31",
-    "topic": "sin-and-death",
-    "claim_id": "inherited-guilt",
-    "stance": "denies",
-    "year": 418
-  },
-  {
-    "ref": "work:julian-collective-letter/2-1-1",
-    "topic": "grace-and-assistance",
-    "claim_id": "grace-assists",
-    "stance": "qualified",
-    "year": 419,
-    "note": "Collective letter: every creature of God is good; rejects Manichaean nature-evil."
-  },
-  {
-    "ref": "excerpt:didache_11_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:didache_13_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 100,
-    "note": "True prophets supported as living ministry."
-  },
-  {
-    "ref": "excerpt:didache_15_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "affirms",
-    "year": 100
-  },
-  {
-    "ref": "excerpt:hermas_mand_11_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "affirms",
-    "year": 140
-  },
-  {
-    "ref": "excerpt:justin_1apol_6_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 155,
-    "note": "Worship includes the prophetic Spirit."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_2_32_4_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_5_6_1_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_11_9_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "paraclete-monopoly",
-    "stance": "denies",
-    "year": 180,
-    "note": "Against emptying the church of prophecy while claiming the Spirit for a circle."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_26_5_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "affirms",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_5_8_1_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 180,
-    "note": "Present gifts as pledge of fuller grace."
-  },
-  {
-    "ref": "excerpt:tertullian_marc_5_8_gifts_order",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 208
-  },
-  {
-    "ref": "excerpt:ignatius_smyrnaeans_greeting_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 110
-  },
-  {
-    "ref": "excerpt:justin_dialogue_39_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 160,
-    "note": "Gifts after Ascension: healing, foreknowledge, teaching."
-  },
-  {
-    "ref": "excerpt:justin_dialogue_82_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 160,
-    "note": "Prophetic gifts still present; false teachers also."
-  },
-  {
-    "ref": "excerpt:justin_dialogue_82_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "qualified",
-    "year": 160,
-    "note": "Guard against false prophets/teachers."
-  },
-  {
-    "ref": "excerpt:justin_dialogue_88_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 160,
-    "note": "Men and women hold Spirit-gifts."
-  },
-  {
-    "ref": "excerpt:clement_stromata_1cor12_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 200
-  },
-  {
-    "ref": "excerpt:clement_stromata_1cor12_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Perfection by appointed gift without denying common virtues."
-  },
-  {
-    "ref": "excerpt:tertullian_de_anima_9_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 210,
-    "note": "Living revelation-gifts in assembled worship."
-  },
-  {
-    "ref": "excerpt:tertullian_de_anima_9_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "affirms",
-    "year": 210,
-    "note": "Visions carefully recorded so they may be tested."
-  },
-  {
-    "ref": "excerpt:tertullian_de_anima_9_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "paraclete-monopoly",
-    "stance": "qualified",
-    "year": 210,
-    "note": "Montanist-era New Prophecy context — labeled debate."
-  },
-  {
-    "ref": "excerpt:novatian_trinity_29_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 250,
-    "note": "Spirit appoints prophets, tongues, healings, governances."
-  },
-  {
-    "ref": "excerpt:novatian_trinity_29_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "gifts-with-office",
-    "stance": "qualified",
-    "year": 250
-  },
-  {
-    "ref": "excerpt:cyprian_unitate_15_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "affirms",
-    "year": 251,
-    "note": "Prophecy and powers without righteousness do not save."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_4_20_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "qualified",
-    "year": 180
-  },
-  {
-    "ref": "excerpt:eusebius_he_justin_gifts_continue",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 325,
-    "note": "Reports Justin: prophetic gifts shone until his day."
-  },
-  {
-    "ref": "excerpt:eusebius_he_5_3_gifts_montanus",
-    "topic": "gifts-and-order",
-    "claim_id": "paraclete-monopoly",
-    "stance": "denies",
-    "year": 325,
-    "note": "Gifts still in churches; Montanist prophecy claims disputed."
-  },
-  {
-    "ref": "excerpt:eusebius_he_5_3_gifts_montanus",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 325,
-    "note": "Marvelous works of the divine gift still performed."
-  },
-  {
-    "ref": "excerpt:didache_12_apostles_order",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Stay-limit and money-test for itinerant apostles."
-  },
-  {
-    "ref": "excerpt:eusebius_he_5_7_irenaeus_gifts",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 325,
-    "note": "Quotes Irenaeus: innumerable gifts still throughout the world."
-  },
-  {
-    "ref": "excerpt:eusebius_he_5_17_ecstasy_vs_prophets",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "affirms",
-    "year": 325,
-    "note": "True prophets (Agabus, Philip’s daughters, Ammia) vs ecstatic false prophecy."
-  },
-  {
-    "ref": "excerpt:eusebius_he_5_17_ecstasy_vs_prophets",
-    "topic": "gifts-and-order",
-    "claim_id": "paraclete-monopoly",
-    "stance": "denies",
-    "year": 325,
-    "note": "Anonymous anti-Montanist: ecstasy marks the false prophet."
-  },
-  {
-    "ref": "excerpt:chrysostom_1cor_hom29_gifts_then_now",
-    "topic": "gifts-and-order",
-    "claim_id": "signs-then-not-now",
-    "stance": "affirms",
-    "year": 390,
-    "note": "Landmark: after baptism they spoke in tongues then; why not now?"
-  },
-  {
-    "ref": "excerpt:chrysostom_1cor_hom29_gifts_then_now",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "denies",
-    "year": 390,
-    "note": "Describes past commonality; questions present absence."
-  },
-  {
-    "ref": "excerpt:chrysostom_1cor_hom29_discernment",
-    "topic": "gifts-and-order",
-    "claim_id": "prophecy-tested",
-    "stance": "qualified",
-    "year": 390,
-    "note": "Discerning of spirits vs pagan mantic frenzy."
-  },
-  {
-    "ref": "excerpt:eusebius_he_5_14_montanus_women",
-    "topic": "gifts-and-order",
-    "claim_id": "paraclete-monopoly",
-    "stance": "denies",
-    "year": 325,
-    "note": "Reports Montanus claimed as Paraclete with Priscilla and Maximilla."
-  },
-  {
-    "ref": "excerpt:hippolytus_ref_8_25_montanus",
-    "topic": "gifts-and-order",
-    "claim_id": "paraclete-monopoly",
-    "stance": "denies",
-    "year": 220,
-    "note": "Montanus/Priscilla/Maximilla as prophet circle above Gospels."
-  },
-  {
-    "ref": "excerpt:basil_dss_gifts_distribution",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 375,
-    "note": "Spirit still distributes gifts and ministries."
-  },
-  {
-    "ref": "excerpt:augustine_retract_1_miracles_tongues",
-    "topic": "gifts-and-order",
-    "claim_id": "signs-then-not-now",
-    "stance": "affirms",
-    "year": 427,
-    "note": "Baptismal tongues / Acts-shadow healings ceased."
-  },
-  {
-    "ref": "excerpt:augustine_retract_1_miracles_tongues",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "qualified",
-    "year": 427,
-    "note": "Other miracles in Christ’s name still many; do not read total cessation."
-  },
-  {
-    "ref": "excerpt:augustine_civ_dei_22_8_miracles",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 426,
-    "note": "Miracles do not cease when the world has believed."
-  },
-  {
-    "ref": "excerpt:augustine_civ_dei_22_8_miracles",
-    "topic": "gifts-and-order",
-    "claim_id": "signs-then-not-now",
-    "stance": "qualified",
-    "year": 426,
-    "note": "Apostolic-fame signs vs quieter contemporary miracles."
-  },
-  {
-    "ref": "excerpt:cyril_catech_16_manes_paraclete",
-    "topic": "gifts-and-order",
-    "claim_id": "paraclete-monopoly",
-    "stance": "denies",
-    "year": 350,
-    "note": "Manes cannot claim the Paraclete already given at Pentecost."
-  },
-  {
-    "ref": "excerpt:gregory_dialogi_1_26_mena_sign",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "affirms",
-    "year": 594,
-    "note": "Living miraculous signs still narrated in Gregory’s day."
-  },
-  {
-    "ref": "excerpt:gregory_dialogi_2_17_greater_miracle",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "qualified",
-    "year": 594,
-    "note": "Miracles continue, but conversion is the greater miracle."
-  },
-  {
-    "ref": "excerpt:augustine_sermo_267_tongues_sign",
-    "topic": "gifts-and-order",
-    "claim_id": "signs-then-not-now",
-    "stance": "affirms",
-    "year": 416,
-    "note": "Individual all-nations tongues fulfilled; Spirit still given."
-  },
-  {
-    "ref": "excerpt:augustine_sermo_267_tongues_sign",
-    "topic": "gifts-and-order",
-    "claim_id": "charismata-continue",
-    "stance": "qualified",
-    "year": 416,
-    "note": "Spirit given now; sign migrated to the worldwide church’s languages."
-  },
-  {
-    "ref": "excerpt:barnabas_11_baptism_new_birth",
-    "topic": "baptism-and-new-birth",
-    "claim_id": "baptism-regenerates",
-    "stance": "qualified",
-    "year": 100,
-    "note": "Descent into water full of sins; ascent bearing fruit, fear, and hope in Jesus by the Spirit."
-  },
-  {
-    "ref": "excerpt:diognetus_10_2_universal_call",
-    "topic": "universal-call",
-    "claim_id": "call-and-refusal",
-    "stance": "qualified",
-    "year": 150,
-    "note": "God loved humankind, made the world for them, and sent the Son; kingdom promised to those who love him."
-  },
-  {
-    "ref": "excerpt:clement_strom_3_7_57_grace",
-    "topic": "grace-and-assistance",
-    "claim_id": "grace-assists",
-    "stance": "affirms",
-    "year": 200,
-    "note": "True Christian self-control is received only by God’s grace, asked for — grace assists the will beyond pagan endurance."
-  },
-  {
-    "ref": "excerpt:barnabas_18_two_ways",
-    "topic": "two-ways",
-    "claim_id": "two-ways",
-    "stance": "affirms",
-    "year": 100,
-    "note": "Two ways of light and darkness, under God’s angels or Satan’s."
-  },
-  {
-    "ref": "excerpt:tatian_oratio_9_fate",
-    "topic": "fate-and-foreknowledge",
-    "claim_id": "choice-not-fate",
-    "stance": "affirms",
-    "year": 165,
-    "note": "Christians above fate; refuse the demonic lawgivers of destiny."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_1_10_1_recap",
-    "topic": "atonement-recapitulation",
-    "claim_id": "recap-adam",
-    "stance": "qualified",
-    "year": 180,
-    "note": "Rule of faith: the Son’s return sums up all things and raises all flesh."
-  },
-  {
-    "ref": "excerpt:irenaeus_ah_3_18_7",
-    "topic": "atonement-recapitulation",
-    "claim_id": "recap-adam",
-    "stance": "affirms",
-    "year": 180,
-    "note": "God recapitulates Adam’s ancient fashioning to destroy sin, empty death, and vivify man."
-  },
-  {
-    "ref": "excerpt:justin_1apol_40_call",
-    "topic": "universal-call",
-    "claim_id": "call-and-refusal",
-    "stance": "qualified",
-    "year": 155,
-    "note": "God calls everyone to repentance before the day of judgment."
-  },
-  {
-    "ref": "excerpt:didache_16_judgment",
-    "topic": "reward-and-judgment",
-    "claim_id": "deeds-judged",
-    "stance": "qualified",
-    "year": 100,
-    "note": "Fire of testing; those who endure are saved; Lord comes on the clouds."
-  },
-  {
-    "ref": "excerpt:hermas_mand_6_two_angels",
-    "topic": "two-ways",
-    "claim_id": "two-ways",
-    "stance": "affirms",
-    "year": 140,
-    "note": "Two angels with the person: righteousness and wickedness, known by their works."
-  },
-  {
-    "ref": "excerpt:barnabas_5_destroy_death",
-    "topic": "sin-and-death",
-    "claim_id": "death-destroyed",
-    "stance": "affirms",
-    "year": 100,
-    "note": "He endured in flesh to abolish death and show the resurrection."
-  },
-  {
-    "ref": "excerpt:hermas_sim_9_16_seal",
-    "topic": "baptism-and-new-birth",
-    "claim_id": "baptism-regenerates",
-    "stance": "qualified",
-    "year": 140,
-    "note": "The seal is the water: dead go down, living come up into the kingdom."
-  },
-  {
-    "ref": "excerpt:tatian_oratio_7_fate",
-    "topic": "fate-and-foreknowledge",
-    "claim_id": "choice-not-fate",
-    "stance": "affirms",
-    "year": 165,
-    "note": "The Word foretells outcomes by free choosers’ judgment, not by fate."
-  },
-  {
-    "ref": "excerpt:clement_strom_1_7_38_grace",
-    "topic": "grace-and-assistance",
-    "claim_id": "grace-assists",
-    "stance": "affirms",
-    "year": 200,
-    "note": "Teaching of godliness is a gift; faith itself is grace."
-  },
-  {
-    "ref": "excerpt:clement_strom_1_11_51_call",
-    "topic": "universal-call",
-    "claim_id": "call-and-refusal",
-    "stance": "qualified",
-    "year": 200,
-    "note": "The Word’s proclamation calls whoever wills; crowning is for whoever can."
-  },
-  {
-    "ref": "excerpt:ignatius_ephesians_7_physician",
-    "topic": "salvation-by-christ",
-    "claim_id": "salvation-in-christ",
-    "stance": "affirms",
-    "year": 110,
-    "note": "One physician: God in a human, true life in death — Jesus Christ our Lord."
-  },
-  {
-    "ref": "excerpt:methodius_symposium_word_dragon",
-    "topic": "salvation-by-christ",
-    "claim_id": "salvation-in-christ",
-    "stance": "affirms",
-    "year": 290,
-    "note": "Word becomes human; born and descends to master the dragon in the flesh."
-  },
-  {
-    "ref": "excerpt:athenagoras_legatio_12_judge",
-    "topic": "reward-and-judgment",
-    "claim_id": "final-judgment",
-    "stance": "affirms",
-    "year": 177,
-    "note": "Christians choose a mild life because they will give account to the great Judge; even mythic judges cannot escape God’s judgment."
-  },
-  {
-    "ref": "excerpt:hippolytus_ref_10_34",
-    "topic": "salvation-by-christ",
-    "claim_id": "salvation-in-christ",
-    "stance": "affirms",
-    "year": 225,
-    "note": "Christ is God over all: washes sin from humans, makes the old human new, and promises co-heirship with God."
+ {
+  "ref": "excerpt:hermas_mand_12",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Keep them if you set it before yourself that they can be kept: ability tracks the set will. Commandments easy to the willing heart."
+ },
+ {
+  "ref": "excerpt:justin_1apol_43",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 155,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Rewards by worth of deeds; the same man turning to opposites proves power by free deliberate choice. The classic anti-fate argument."
+ },
+ {
+  "ref": "excerpt:tatian_address_7",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 165,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Evil completed by freedom of deliberate choice; the wicked wicked through himself, by the self-determining power given from God."
+ },
+ {
+  "ref": "excerpt:athenagoras_plea_24",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 177,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Virtue and vice by own choice in men and angels alike: honor and punishment presuppose power."
+ },
+ {
+  "ref": "excerpt:theophilus_autolycus_2_27",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "God made man free and self-determining; the one who wants to can procure eternal life. Obedience unto life as disobedience unto death."
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_37_1",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "The ancient law of human liberty: counsel, not force. Power of choice in man as in angels, so obedience merits the good."
+ },
+ {
+  "ref": "excerpt:clement_strom_2_15",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 200,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "In our power to present ourselves for training and obey; refusal wrongs our own soul."
+ },
+ {
+  "ref": "excerpt:tertullian_marcion_2_5",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 208,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Law proves liberty: no law binds one lacking owed obedience in his own power. Full freedom toward either side."
+ },
+ {
+  "ref": "excerpt:origen_princ_3_1_1",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 225,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Rational beings judge impressions and choose; praise and blame track the use of reason, not outside causes."
+ },
+ {
+  "ref": "excerpt:methodius_freewill_1",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 300,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "The first man made self-determining, the race inheriting the same freedom: authority to obey whatever he wills."
+ },
+ {
+  "ref": "excerpt:lactantius_inst_2_17",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 305,
+  "note": "Lactantius argues God permits error and impiety so that judgment stays just, which is meaningful only if people genuinely could choose otherwise. His wider work, notably On the Wrath of God, defends human free will outright.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
   }
+ },
+ {
+  "ref": "excerpt:hermas_sim_6",
+  "topic": "sin-and-death",
+  "claim_id": "personal-disobedience",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Servants ruined as they forget commandments and walk in deceits: personal turning, personal ruin."
+ },
+ {
+  "ref": "excerpt:tatian_address_11",
+  "topic": "sin-and-death",
+  "claim_id": "personal-disobedience",
+  "stance": "affirms",
+  "year": 165,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Not made to die: we die through ourselves. Self-determining power ruined us, and the ruined can refuse again."
+ },
+ {
+  "ref": "excerpt:theophilus_autolycus_2_25",
+  "topic": "sin-and-death",
+  "claim_id": "personal-disobedience",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "The tree not evil; disobedience evil. Adam the child overreached, and disobedience brought death."
+ },
+ {
+  "ref": "excerpt:tertullian_repentance_2",
+  "topic": "sin-and-death",
+  "claim_id": "personal-disobedience",
+  "stance": "affirms",
+  "year": 203,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Rashness from Adam brings condemnation and death, yet repentance stands open and covenanted. Note the other side: On the Soul 40 to 41 teaches a transmitted taint too, and both Tertullian rows sit on the timeline."
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_39",
+  "topic": "grace-and-assistance",
+  "claim_id": "grace-assists",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Hand him faith and subjection, and receive his perfecting art. Man offers, God completes: assistance, not coercion."
+ },
+ {
+  "ref": "excerpt:origen_princ_3_1_6",
+  "topic": "grace-and-assistance",
+  "claim_id": "grace-assists",
+  "stance": "affirms",
+  "year": 225,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Building and watching still ours, yet vain without the Lord who completes. Willing and running need the mercy that crowns them."
+ },
+ {
+  "ref": "excerpt:hermas_mand_1",
+  "topic": "faith-and-obedience",
+  "claim_id": "faith-with-obedience",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Believe God is one, trust and fear him, practice self-control, and live to God: faith kept in obedience."
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_37_5",
+  "topic": "faith-and-obedience",
+  "claim_id": "faith-with-obedience",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Counsel, works, and faith alike preserve free decision: according to your faith be it done to you."
+ },
+ {
+  "ref": "work:julian-letter-to-rome/1-2-4",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 419,
+  "note": "Caution: Julian here quotes the view he attacks, branding its holders Manichaeans. His affirmation lies in the refutation: a lost will forcing all to sin is the error he rejects.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "work:julian-letter-to-rome/1-2-4",
+  "topic": "sin-and-death",
+  "claim_id": "inherited-guilt",
+  "stance": "denies",
+  "year": 419,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Caution: opponent-quotation. Julian cites the lost-will, flesh-necessity doctrine to condemn it as Manichaean impiety, not to profess it."
+ },
+ {
+  "ref": "work:julian-to-florus/1.61",
+  "topic": "sin-and-death",
+  "claim_id": "inherited-guilt",
+  "stance": "denies",
+  "year": 420,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "His own argument: if sin were inborn from the first birth it could neither condemn marriage justly nor ever be removed from infants."
+ },
+ {
+  "ref": "work:julian-to-florus/1.63",
+  "topic": "sin-and-death",
+  "claim_id": "inherited-guilt",
+  "stance": "denies",
+  "year": 420,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Reductio: sin inherited through nature makes nature itself diabolical and forfeits the image of God."
+ },
+ {
+  "ref": "work:julian-to-florus/1.48",
+  "topic": "sin-and-death",
+  "claim_id": "personal-disobedience",
+  "stance": "affirms",
+  "year": 420,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "No sin without will, no will without developed freedom: infants without reason have no sin whatsoever."
+ },
+ {
+  "ref": "work:julian-turbantius-fragments/4-8-47",
+  "topic": "free-will",
+  "claim_id": "will-capable",
+  "stance": "affirms",
+  "year": 418,
+  "note": "Julian frames the dilemma both sides press, grace or will, and promises the ungodliness exposed: he defends will and grace together, denying neither.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "work:julian-turbantius-fragments/2-9-31",
+  "topic": "sin-and-death",
+  "claim_id": "inherited-guilt",
+  "stance": "denies",
+  "year": 418,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Five syllogisms against birth-sin, preserved in Augustine recap of the Julian side: Creator, marriage, baptism, justice, and capable nature each exclude it."
+ },
+ {
+  "ref": "work:julian-to-florus/1.53",
+  "topic": "grace-and-assistance",
+  "claim_id": "grace-assists",
+  "stance": "affirms",
+  "year": 420,
+  "note": "Re-pointed 2026-09-28: the old section stated only the letter purpose and said nothing about grace. Julian here confesses grace necessary and healing, working according to the capacity of those who approach: aid to an acting will, his constant position against Augustine.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:didache_11_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_13_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 100,
+  "note": "True prophets settling and supported with firstfruits: the ministry present in the churches.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:didache_15_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "gifts-with-office",
+  "stance": "affirms",
+  "year": 100,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hermas_mand_11_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 140,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_6_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Worship includes the prophetic Spirit.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_2_32_4_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_5_6_1_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_11_9_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "paraclete-monopoly",
+  "stance": "denies",
+  "year": 180,
+  "note": "Against emptying the church of prophecy while claiming the Spirit for a circle.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_26_5_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "gifts-with-office",
+  "stance": "affirms",
+  "year": 180,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "Apostles, prophets, teachers placed in the church with succession and sound life: gifts and order together."
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_5_8_1_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 180,
+  "note": "Now receiving a portion of the Spirit, the pledge crying Abba: present operation toward perfection.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_marc_5_8_gifts_order",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 208,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_smyrnaeans_greeting_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 110,
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  },
+  "note": "A greeting formula, but explicit in content: the Smyrna church shown mercy in every gift, lacking none."
+ },
+ {
+  "ref": "excerpt:justin_dialogue_39_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 160,
+  "note": "Gifts after Ascension: healing, foreknowledge, teaching.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_dialogue_82_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 160,
+  "note": "Prophetic gifts still present; false teachers also.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_dialogue_82_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 160,
+  "note": "Justin pairs present prophetic gifts among Christians with the command to guard against false teachers: continuation plus the duty to test, which the rest of the Dialogue practices.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:justin_dialogue_88_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 160,
+  "note": "Men and women hold Spirit-gifts.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_stromata_1cor12_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 200,
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_stromata_1cor12_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "gifts-with-office",
+  "stance": "affirms",
+  "year": 200,
+  "note": "The 1 Corinthians 12 distribution expounded: prophets, righteous, martyrs each appointed and succeeding.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_de_anima_9_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 210,
+  "note": "Living revelation-gifts in assembled worship.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_de_anima_9_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 210,
+  "note": "Visions reported and carefully recorded so that they may even be tested: the testing duty explicit.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tertullian_de_anima_9_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "paraclete-monopoly",
+  "stance": "denies",
+  "year": 210,
+  "note": "Tertullian prophetess exercises her gift inside the church assembly, and her visions are carefully recorded so that they may even be tested: the opposite of an untested monopoly held by a separate circle.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trinity_29_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 250,
+  "note": "Spirit appoints prophets, tongues, healings, governances.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:novatian_trinity_29_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "gifts-with-office",
+  "stance": "affirms",
+  "year": 250,
+  "note": "Novatian lists the one Spirit appointing prophets, training teachers, and governing the church through officers and gifts together: ministry shared, not split.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:cyprian_unitate_15_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 251,
+  "note": "Prophecy and powers without righteousness do not save.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_4_20_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 180,
+  "note": "This passage recalls the Spirit poured out in every kind of gift; Irenaeus states the present-day point outright in Against Heresies 2.32.4, with the dead raised, healings, and tongues in his own time, filed alongside.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:eusebius_he_justin_gifts_continue",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 325,
+  "note": "Reports Justin: prophetic gifts shone until his day.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:eusebius_he_5_3_gifts_montanus",
+  "topic": "gifts-and-order",
+  "claim_id": "paraclete-monopoly",
+  "stance": "denies",
+  "year": 325,
+  "note": "Lyons renders cautious orthodox judgment on Montanist claims while gifts continue in various churches: no monopoly granted.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:eusebius_he_5_3_gifts_montanus",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 325,
+  "note": "Marvelous works of the divine gift still performed.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:didache_12_apostles_order",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Stay-limits and the money test for traveling apostles: textbook testing criteria.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:eusebius_he_5_7_irenaeus_gifts",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 325,
+  "note": "Quotes Irenaeus: innumerable gifts still throughout the world.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:eusebius_he_5_17_ecstasy_vs_prophets",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 325,
+  "note": "True prophets listed against ecstatic license: no prophet, old or new, borne away involuntarily.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:eusebius_he_5_17_ecstasy_vs_prophets",
+  "topic": "gifts-and-order",
+  "claim_id": "paraclete-monopoly",
+  "stance": "denies",
+  "year": 325,
+  "note": "Anonymous anti-Montanist: ecstasy marks the false prophet.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:chrysostom_1cor_hom29_gifts_then_now",
+  "topic": "gifts-and-order",
+  "claim_id": "signs-then-not-now",
+  "stance": "affirms",
+  "year": 390,
+  "note": "Landmark: after baptism they spoke in tongues then; why not now?",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:chrysostom_1cor_hom29_gifts_then_now",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "denies",
+  "year": 390,
+  "note": "Describes past commonality; questions present absence.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:chrysostom_1cor_hom29_discernment",
+  "topic": "gifts-and-order",
+  "claim_id": "prophecy-tested",
+  "stance": "affirms",
+  "year": 390,
+  "note": "Chrysostom gives explicit tests: discernings of spirits, the fulfilled outcome, the sober self-control of the prophet against the frenzy of the diviner. A manual for testing prophecy.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:eusebius_he_5_14_montanus_women",
+  "topic": "gifts-and-order",
+  "claim_id": "paraclete-monopoly",
+  "stance": "denies",
+  "year": 325,
+  "note": "Montanus-as-Paraclete boasters called venomous reptiles creeping through Asia: the monopoly claim condemned.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:hippolytus_ref_8_25_montanus",
+  "topic": "gifts-and-order",
+  "claim_id": "paraclete-monopoly",
+  "stance": "denies",
+  "year": 220,
+  "note": "Montanus, Priscilla, Maximilla named as a heresy going astray above the Gospels: the circle rejected.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:basil_dss_gifts_distribution",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 375,
+  "note": "Spirit still distributes gifts and ministries.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:augustine_retract_1_miracles_tongues",
+  "topic": "gifts-and-order",
+  "claim_id": "signs-then-not-now",
+  "stance": "affirms",
+  "year": 427,
+  "note": "Baptismal tongues / Acts-shadow healings ceased.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:augustine_retract_1_miracles_tongues",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 427,
+  "note": "Late Augustine in 427 corrects his own earlier remark: baptismal tongues and shadow-healings ceased, but miracles in the name of Christ continue, so many even in these times that they cannot be numbered. His early view changed; this is the retraction.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:augustine_civ_dei_22_8_miracles",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 426,
+  "note": "Miracles do not cease when the world has believed.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:augustine_civ_dei_22_8_miracles",
+  "topic": "gifts-and-order",
+  "claim_id": "signs-then-not-now",
+  "stance": "affirms",
+  "year": 426,
+  "note": "Augustine holds both halves: miracles converted the world then, and they continue now though obscure and local. The chapter goes on to catalogue dozens he accepts as recent.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:cyril_catech_16_manes_paraclete",
+  "topic": "gifts-and-order",
+  "claim_id": "paraclete-monopoly",
+  "stance": "denies",
+  "year": 350,
+  "note": "Manes cannot claim the Paraclete already given at Pentecost.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:gregory_dialogi_1_26_mena_sign",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 594,
+  "note": "Living miraculous signs still narrated in Gregory’s day.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:gregory_dialogi_2_17_greater_miracle",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 594,
+  "note": "Gregory ranks conversion above raising the dead, but the Dialogues as a whole report contemporary Italian miracles as fact: continuation assumed on every page.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:augustine_sermo_267_tongues_sign",
+  "topic": "gifts-and-order",
+  "claim_id": "signs-then-not-now",
+  "stance": "affirms",
+  "year": 416,
+  "note": "Individual all-nations tongues fulfilled; Spirit still given.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:augustine_sermo_267_tongues_sign",
+  "topic": "gifts-and-order",
+  "claim_id": "charismata-continue",
+  "stance": "affirms",
+  "year": 416,
+  "note": "Tongues as the founding sign is fulfilled in the worldwide church, yet Augustine insists the Spirit is given even now, and in some saints he works miracles.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_11_baptism_new_birth",
+  "topic": "baptism-and-new-birth",
+  "claim_id": "baptism-regenerates",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Going down loaded with sins and dirt and coming up fruitful in the Spirit is washing-and-renewal language; Barnabas joins it to prior hope in the cross, not to bare ritual.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:diognetus_10_2_universal_call",
+  "topic": "universal-call",
+  "claim_id": "call-and-refusal",
+  "stance": "affirms",
+  "year": 150,
+  "note": "The divine love, the world made for mankind, the Son sent, the kingdom promised: universal in scope, given to those who have loved him. Gift offered, reception answering.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:clement_strom_3_7_57_grace",
+  "topic": "grace-and-assistance",
+  "claim_id": "grace-assists",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Continence even of desiring comes only by the grace of God, and the asking is ours: Ask, and it will be given.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_18_two_ways",
+  "topic": "two-ways",
+  "claim_id": "two-ways",
+  "stance": "affirms",
+  "year": 100,
+  "note": "Two ways, light and darkness, with angels over each: the doctrine stated outright.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tatian_oratio_9_fate",
+  "topic": "fate-and-foreknowledge",
+  "claim_id": "choice-not-fate",
+  "stance": "affirms",
+  "year": 165,
+  "note": "Christians above fate; refuse the demonic lawgivers of destiny.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_1_10_1_recap",
+  "topic": "atonement-recapitulation",
+  "claim_id": "recap-adam",
+  "stance": "affirms",
+  "year": 180,
+  "note": "The rule of faith itself: Christ comes to sum up all things again and raise all flesh. The seed of the Adam-Christ recapitulation developed across Books 3 to 5.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:irenaeus_ah_3_18_7",
+  "topic": "atonement-recapitulation",
+  "claim_id": "recap-adam",
+  "stance": "affirms",
+  "year": 180,
+  "note": "God recapitulates Adam’s ancient fashioning to destroy sin, empty death, and vivify man.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:justin_1apol_40_call",
+  "topic": "universal-call",
+  "claim_id": "call-and-refusal",
+  "stance": "affirms",
+  "year": 155,
+  "note": "Explicit: God calls everyone to repentance before the day of judgment comes. Universal call with judgment for refusal, the constant position of Justin.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:didache_16_judgment",
+  "topic": "reward-and-judgment",
+  "claim_id": "deeds-judged",
+  "stance": "affirms",
+  "year": 100,
+  "note": "The judgment scene vindicates those who hold out against those who stumble: the Two Ways logic of the whole Didache, where acts and not status decide the outcome.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:hermas_mand_6_two_angels",
+  "topic": "two-ways",
+  "claim_id": "two-ways",
+  "stance": "affirms",
+  "year": 140,
+  "note": "Two angels with man, righteousness and wickedness, known by their workings: the two paths within.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:barnabas_5_destroy_death",
+  "topic": "sin-and-death",
+  "claim_id": "death-destroyed",
+  "stance": "affirms",
+  "year": 100,
+  "note": "He endured to abolish death and show the rising, preparing a new people: death destroyed in Christ.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:hermas_sim_9_16_seal",
+  "topic": "baptism-and-new-birth",
+  "claim_id": "baptism-regenerates",
+  "stance": "affirms",
+  "year": 140,
+  "note": "Explicit: before the seal man is dead; the seal is the water, the dead go down and come up living, to enter the kingdom.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:tatian_oratio_7_fate",
+  "topic": "fate-and-foreknowledge",
+  "claim_id": "choice-not-fate",
+  "stance": "affirms",
+  "year": 165,
+  "note": "The Word foretells outcomes by free choosers’ judgment, not by fate.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:clement_strom_1_7_38_grace",
+  "topic": "grace-and-assistance",
+  "claim_id": "grace-assists",
+  "stance": "affirms",
+  "year": 200,
+  "note": "Faith itself is grace, and doing the will opens knowledge of the will: gift received in act.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:clement_strom_1_11_51_call",
+  "topic": "universal-call",
+  "claim_id": "call-and-refusal",
+  "stance": "affirms",
+  "year": 200,
+  "note": "The herald-call of the Word goes out to whoever is willing and crowns whoever is able: universal offer, willing response, the standing view of Clement on free assent.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:ignatius_ephesians_7_physician",
+  "topic": "salvation-by-christ",
+  "claim_id": "salvation-in-christ",
+  "stance": "affirms",
+  "year": 110,
+  "note": "One Physician, God in a human, true life in death: healing and salvation in Christ the one Lord.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:methodius_symposium_word_dragon",
+  "topic": "salvation-by-christ",
+  "claim_id": "salvation-in-christ",
+  "stance": "affirms",
+  "year": 290,
+  "note": "The Word born and come down to master the dragon rushing against the flesh: the saving work is the incarnate Christ alone.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "ref": "excerpt:athenagoras_legatio_12_judge",
+  "topic": "reward-and-judgment",
+  "claim_id": "final-judgment",
+  "stance": "affirms",
+  "year": 177,
+  "note": "Christians choose a mild life because they will give account to the great Judge; even mythic judges cannot escape God’s judgment.",
+  "review": {
+   "by": "legacy",
+   "at": "2026-09-28",
+   "why": "Filed before the 2026-09-28 stance-review gate; not yet re-verified against full author context."
+  }
+ },
+ {
+  "ref": "excerpt:hippolytus_ref_10_34",
+  "topic": "salvation-by-christ",
+  "claim_id": "salvation-in-christ",
+  "stance": "affirms",
+  "year": 225,
+  "note": "Christ over all washing sin away and making the old human new: renewal in Christ alone.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ },
+ {
+  "topic": "sin-and-death",
+  "claim_id": "inherited-guilt",
+  "ref": "excerpt:tertullian_de_anima_41",
+  "stance": "affirms",
+  "year": 211,
+  "note": "Evil of the soul first from the fault of origin; corruption of nature as another nature, overshadowing but never extinguishing the divine good. The traducian counterpart to his stress on the will.",
+  "review": {
+   "by": "muse",
+   "at": "2026-09-28"
+  }
+ }
 ]
