@@ -956,6 +956,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "hesychius-homilia-ii-hypapante": "Homily II on the Presentation",
     "hesychius-homilia-ii-lazarum": "Homily II on Saint Lazarus",
     "hesychius-homilia-ii-longinum": "Homily II on Saint Longinus the Centurion",
+    "theophilus-alex-fragmenta-matthaeum": "Fragments on Matthew",
     "hesychius-homilia-i-maria-deipara": "Homily I on Saint Mary the Mother of God",
     "amphilochius-in-zacchaeum": "On Zacchaeus",
     "amphilochius-in-occursum-domini": "On the Meeting of the Lord",
