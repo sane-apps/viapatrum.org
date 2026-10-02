@@ -26,6 +26,6 @@ people can see and play it. Any redesign must keep both entry points:
 ```
 
 Entry URLs: `/` and `/play` redirect to `/daily`; `/leopards` is the
-chapter. Do not link `.html` paths (Pages serves `/x` for `x.html`).
+chapter; `/village` is the older 3D village. Do not link `.html` paths (Pages serves `/x` for `x.html`).
 The game's "Read the whole work" links point at `https://viapatrum.org/works/...`
 so work URLs (`/works/<slug>/<section>/`) must keep resolving.
