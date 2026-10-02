@@ -6,7 +6,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
 PAGES_PROJECT="fathers-site"
-PUBLIC_ORIGIN="https://fathers.saneapps.com"
+PUBLIC_ORIGIN="https://viapatrum.org"
 PYTHON="${FATHERS_BUILD_PYTHON:-$HOME/SaneApps/clients/translations/.venv/bin/python}"
 SMOKE_PATHS=(
   "/"

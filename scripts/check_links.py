@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import unquote, urlsplit
 import concurrent.futures
 import hashlib
+import re
 import json
 import sys
 import time
@@ -91,6 +92,8 @@ def live_origin(origin):
             headers = dict(exc.headers.items())
         except Exception as exc:
             return {"path": path, "error": str(exc)}
+        # Cloudflare Web Analytics injects its beacon into some HTML responses.
+        body = re.sub(rb"<!-- Cloudflare Pages Analytics -->|<script[^>]*static\.cloudflareinsights\.com/beacon[^>]*></script>(<!-- Cloudflare Pages Analytics -->)?\n?", b"", body)
         row = {"path": path, "status": status, "sha256": hashlib.sha256(body).hexdigest(),
                "cache": headers.get("cf-cache-status"), "age": headers.get("age")}
         if path.startswith("/works/") and path.endswith("/") and path not in ("/works/",):

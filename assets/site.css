@@ -2534,3 +2534,11 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
   .site-nav { flex-wrap: wrap; overflow-x: visible; gap: 0 1rem; }
   .site-nav a { min-height: 40px; }
 }
+
+.bx-tr { flex-wrap: wrap; }
+.bx-tr-credit { font-size: 0.8rem; color: var(--ink-soft); margin: 0.6rem 0 0; max-width: 46rem; }
+
+/* Eight translations: separate pills that wrap cleanly on small screens. */
+.bx-tr { border: 0; overflow: visible; gap: 0.3rem; }
+.bx-tr button { border: 1px solid var(--rule); border-radius: 999px; }
+.bx-tr button + button { border-left: 1px solid var(--rule); }

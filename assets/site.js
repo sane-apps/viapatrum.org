@@ -121,13 +121,34 @@
     const useTr = async (key) => {
       if (!text) return;
       try {
+        const btn = trButtons.find((b) => b.dataset.tr === key);
         if (key === "bsb") paint(original);
-        else {
+        else if (btn && btn.dataset.remote) {
+          const r = await fetch(`https://bolls.life/get-text/${btn.dataset.remote}/${text.dataset.booknum}/${text.dataset.chap}/`);
+          if (!r.ok) throw new Error("missing");
+          const rows = await r.json();
+          paint(
+            rows.map((x) => [
+              x.verse,
+              String(x.text || "")
+                .replace(/<sup>[\s\S]*?<\/sup>/g, "")
+                .replace(/<[^>]+>/g, "")
+                .replace(/[\u24d0-\u24e9]/g, "")
+                .replace(/\s+/g, " ")
+                .trim(),
+            ])
+          );
+        } else {
           const r = await fetch(`/data/bible/${key}/${text.dataset.book}/${text.dataset.chap}.json`);
           if (!r.ok) throw new Error("missing");
           paint(await r.json());
         }
         trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
+        const credit = bx.querySelector(".bx-tr-credit");
+        if (credit) {
+          credit.textContent = (btn && btn.dataset.credit) || "";
+          credit.hidden = !credit.textContent;
+        }
         try {
           localStorage.setItem("vp-bible", key);
         } catch {

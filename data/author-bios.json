@@ -218,5 +218,120 @@
     "name": "Eustathius of Antioch",
     "dates": "c. 320–337 AD",
     "bio": "Bishop of Antioch at the Council of Nicaea in 325 and a firm opponent of Arius. He was deposed a few years later and died in exile."
+  },
+  "alexander-of-alexandria": {
+    "name": "Alexander of Alexandria",
+    "dates": "",
+    "bio": "Bishop of Alexandria from about 312 and the first to condemn Arius. He took his deacon Athanasius to the Council of Nicaea in 325 and died a few years later."
+  },
+  "asterius-of-amasea": {
+    "name": "Asterius of Amasea",
+    "dates": "c. 375–405 AD",
+    "bio": "Bishop of Amasea in Pontus around 400 and a vivid preacher. His sermon describing a painting of the martyr Euphemia was read out at the Second Council of Nicaea in 787."
+  },
+  "augustine-of-hippo": {
+    "name": "Augustine of Hippo",
+    "dates": "354–430 AD",
+    "bio": "Bishop of Hippo in North Africa from 395 and author of the Confessions and the City of God. His late teaching on grace and the will, set out against Pelagius and Julian of Eclanum, shaped the Western church. Here he appears mainly in summaries until his works are added."
+  },
+  "basil-of-caesarea": {
+    "name": "Basil of Caesarea",
+    "dates": "c. 330–379 AD",
+    "bio": "Bishop of Caesarea in Cappadocia from 370 and, with his brother Gregory of Nyssa and his friend Gregory of Nazianzus, one of the Cappadocian Fathers. He wrote On the Holy Spirit, shaped Eastern monastic life, and built a great house of care for the poor."
+  },
+  "diodorus-of-tarsus": {
+    "name": "Diodorus of Tarsus",
+    "dates": "c. 330–c. 390 AD",
+    "bio": "Teacher at Antioch and bishop of Tarsus from 378, a leader of the Antiochene way of reading Scripture in its plain historical sense. John Chrysostom and Theodore of Mopsuestia were his students. He was later blamed for Nestorius, so his works survive only in pieces."
+  },
+  "dionysius-of-alexandria": {
+    "name": "Dionysius of Alexandria",
+    "dates": "d. c. 265 AD",
+    "bio": "A student of Origen who led the catechetical school and became bishop of Alexandria around 248. He lived through the Decian and Valerian persecutions, and many of his letters survive in Eusebius's History."
+  },
+  "eusebius-of-caesarea": {
+    "name": "Eusebius of Caesarea",
+    "dates": "c. 260–c. 339 AD",
+    "bio": "Bishop of Caesarea in Palestine and the father of church history. His Ecclesiastical History preserves many earlier writers who would otherwise be lost. He admired Origen and took part in the Council of Nicaea in 325."
+  },
+  "eusebius-of-emesa": {
+    "name": "Eusebius of Emesa",
+    "dates": "c. 300–c. 359 AD",
+    "bio": "Bishop of Emesa in Syria in the mid fourth century, educated at Edessa and Alexandria. He read Scripture closely and historically, and his sermons survive mostly in Latin translation."
+  },
+  "firmilian-of-caesarea": {
+    "name": "Firmilian of Caesarea",
+    "dates": "d. c. 269 AD",
+    "bio": "Bishop of Caesarea in Cappadocia in the mid third century and a friend of Origen. His letter to Cyprian, arguing that baptism by heretics is not true baptism, survives among Cyprian's letters."
+  },
+  "gregory-the-great": {
+    "name": "Gregory the Great",
+    "dates": "c. 540–604 AD",
+    "bio": "Bishop of Rome from 590 to 604. His Pastoral Rule, his Moralia on Job and his Dialogues were read throughout the Middle Ages, and he sent the mission that brought the faith to the English."
+  },
+  "john-chrysostom": {
+    "name": "John Chrysostom",
+    "dates": "c. 349–407 AD",
+    "bio": "Preacher at Antioch and archbishop of Constantinople from 398, called Chrysostom, golden-mouthed, for his sermons. His homilies on the books of Scripture are among the most read in the Church. He died in exile in 407."
+  },
+  "macarius-the-egyptian": {
+    "name": "Macarius the Egyptian",
+    "dates": "fl. 4th/5th c. AD",
+    "bio": "The Spiritual Homilies have long gone under the name of Macarius, a monk of the Egyptian desert at Scetis. Many scholars now think they come from a Syrian monastic teacher of the late fourth century. They speak of grace dwelling in the heart and the soul's struggle with sin."
+  },
+  "marcellus-of-ancyra": {
+    "name": "Marcellus of Ancyra",
+    "dates": "c. 280–c. 374 AD",
+    "bio": "Bishop of Ancyra and a fierce opponent of the Arians at and after Nicaea. His own teaching that the Son's reign would one day end was rejected, and the creed's words 'of his kingdom there shall be no end' answer it."
+  },
+  "passion-of-perpetua-and-felicity": {
+    "name": "Passion of Perpetua and Felicity",
+    "dates": "",
+    "bio": "The account of the martyrdom of Perpetua, a young mother of good family, and Felicity, an enslaved woman, at Carthage in 203. It includes Perpetua's own prison diary, one of the earliest writings by a Christian woman."
+  },
+  "philostorgius": {
+    "name": "Philostorgius",
+    "dates": "c. 368–c. 439 AD",
+    "bio": "A church historian of the early fifth century who wrote from the side of Eunomius, an opponent of Nicaea. His History survives mainly in the summary made by Photius."
+  },
+  "photius-of-constantinople": {
+    "name": "Photius of Constantinople",
+    "dates": "c. 810–c. 893 AD",
+    "bio": "Patriarch of Constantinople in the ninth century and one of the great scholars of Byzantium. His Bibliotheca summarises hundreds of books, many of which are otherwise lost."
+  },
+  "severianus-of-gabala": {
+    "name": "Severianus of Gabala",
+    "dates": "fl. c. 400 AD",
+    "bio": "Bishop of Gabala in Syria and a popular preacher at Constantinople around 400, where he became a rival of John Chrysostom. Many of his sermons survive under Chrysostom's name."
+  },
+  "theodore-of-heraclea": {
+    "name": "Theodore of Heraclea",
+    "dates": "c. 335–355 AD",
+    "bio": "Bishop of Heraclea in Thrace in the mid fourth century, on the side opposed to Nicaea. He wrote commentaries on Scripture that survive in fragments in the later chains of comments called catenas."
+  },
+  "theophilus-of-alexandria": {
+    "name": "Theophilus of Alexandria",
+    "dates": "c. 345–412 AD",
+    "bio": "Bishop of Alexandria from 385 to 412 and uncle of Cyril. He destroyed the temple of Serapis, turned against the followers of Origen, and led the synod that deposed John Chrysostom in 403."
+  },
+  "victorinus-of-pettau": {
+    "name": "Victorinus of Pettau",
+    "dates": "d. c. 304 AD",
+    "bio": "Bishop of Poetovio, now Ptuj in Slovenia, who died a martyr around 304. He is the earliest Latin interpreter of Scripture whose work survives, including a commentary on Revelation."
+  },
+  "alexander-monachus": {
+    "name": "Alexander the Monk",
+    "dates": "",
+    "bio": "A monk of Cyprus, probably of the sixth century, who wrote on the finding of the true Cross and in praise of the apostle Barnabas."
+  },
+  "ammonius-of-alexandria": {
+    "name": "Ammonius of Alexandria",
+    "dates": "c. 5th cent. AD",
+    "bio": "A presbyter of Alexandria of the fifth or sixth century whose comments on John and other books survive in the catenas."
+  },
+  "hesychius-of-jerusalem": {
+    "name": "Hesychius of Jerusalem",
+    "dates": "c. 412–450 AD",
+    "bio": "A presbyter and teacher at Jerusalem who died after 450. He wrote short, careful notes and sermons on many books of Scripture."
   }
 }

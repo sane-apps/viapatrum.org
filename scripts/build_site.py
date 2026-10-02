@@ -4892,6 +4892,9 @@ def prev_next_nav(
     return '<nav class="section-nav" aria-label="Chapter">' + "".join(parts) + "</nav>"
 
 
+# Pages whose canonical points elsewhere (duplicate passages); kept out of the sitemap.
+NONCANONICAL_ROUTES: set[str] = set()
+
 OG_INDEX: dict[str, str] = _json_load(ASSETS / "og" / "index.json", {}) if (ASSETS / "og" / "index.json").exists() else {}
 
 
@@ -4949,6 +4952,7 @@ def layout(
     og_type: str = "website",
     jsonld: list[dict] | None = None,
     robots: str = "",
+    canonical: str = "",
 ) -> str:
     crumbs = ""
     if crumb:
@@ -5011,14 +5015,14 @@ def layout(
 <script>try{{var vpT=localStorage.getItem("vp-theme");if(vpT==="dark"||vpT==="light")document.documentElement.dataset.theme=vpT}}catch(e){{}}</script>
 <title>{escape(full_title)}</title>
 <meta name="description" content="{escape(desc)}">
-{social}<link rel="canonical" href="{SITE_ORIGIN}/__ROUTE__">
+{social}<link rel="canonical" href="{SITE_ORIGIN}{canonical or "/__ROUTE__"}">
 {f'<meta name="robots" content="{escape(robots)}">' if robots else ""}
 <link rel="manifest" href="/site.webmanifest">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {jsonld_html(crumb, jsonld)}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;550;650;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/literata-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/source-sans-3-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fonts.css?v={ASSET_VER}">
 <link rel="stylesheet" href="/assets/site.css?v={ASSET_VER}">
 <link rel="icon" href="/assets/favicon.svg?v={ASSET_VER}" type="image/svg+xml">
 <link rel="alternate icon" href="/favicon.ico" sizes="any">
@@ -6368,6 +6372,22 @@ def build() -> None:
         points_by_topic[_pt.get("topic") or ""].append(_pt)
     claims_by_topic = {t["id"]: t for t in explore_index["topics"]}
 
+    # The same passage filed under several questions: one main page, the rest
+    # point to it (canonical) and stay out of the sitemap.
+    excerpt_primary: dict[str, str] = {}
+    _groups: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for _x in excerpts:
+        _txt = re.sub(r"\W+", " ", strip_logos_markup(" ".join(excerpt_paragraphs(_x))).lower()).strip()[:400]
+        if len(_txt) > 80:
+            _groups[((_x.get("author") or "").lower(), _txt)].append(_x["id"])
+    for _ids in _groups.values():
+        if len(_ids) > 1:
+            _main = sorted(_ids, key=lambda i: (len(i), i))[0]
+            for _i in _ids:
+                if _i != _main:
+                    excerpt_primary[_i] = _main
+                    NONCANONICAL_ROUTES.add(f"/e/{_i}/")
+
     # --- Topic pages + excerpt pages ---
     for tid, rows in by_topic.items():
         meta = topic_meta.get(tid, {"title": tid, "locus_title": "Topics", "locus_id": ""})
@@ -6457,6 +6477,7 @@ def build() -> None:
                     active="topics",
                     description=f"{e_author} on {meta['title'].lower()}: " + strip_logos_markup((paras_list or [""])[0]),
                     og_type="article",
+                    canonical=f"/e/{excerpt_primary[x['id']]}/" if x["id"] in excerpt_primary else "",
                     jsonld=[{
                         "@type": "Quotation",
                         "name": f"{e_author}, {e_cite}",
@@ -7281,10 +7302,26 @@ def build() -> None:
             + "</a></li>"
         )
 
+    # Licensed translations are not stored here: the reader's browser loads
+    # them from bolls.life when chosen, and the publisher's notice is shown.
+    remote_bibles = {
+        "esv": ("ESV", "English Standard Version",
+                "Scripture quotations marked ESV are from the ESV\u00ae Bible (The Holy Bible, English Standard Version\u00ae), \u00a9 2001 by Crossway, a publishing ministry of Good News Publishers."),
+        "niv": ("NIV2011", "New International Version",
+                "Scripture quotations marked NIV are from THE HOLY BIBLE, NEW INTERNATIONAL VERSION\u00ae, NIV\u00ae Copyright \u00a9 1973, 1978, 1984, 2011 by Biblica, Inc.\u00ae"),
+        "csb": ("CSB17", "Christian Standard Bible",
+                "Scripture quotations marked CSB are from the Christian Standard Bible\u00ae, Copyright \u00a9 2017 by Holman Bible Publishers. Christian Standard Bible\u00ae and CSB\u00ae are federally registered trademarks of Holman Bible Publishers."),
+        "nasb": ("NASB", "New American Standard Bible (1995)",
+                 "Scripture quotations marked NASB are from the New American Standard Bible\u00ae, Copyright \u00a9 1960, 1971, 1977, 1995 by The Lockman Foundation."),
+    }
     tr_buttons = "".join(
         f'<button type="button" data-tr="{k}" aria-pressed="{"true" if k == "bsb" else "false"}" '
-        f'title="{escape(v["name"])}">{escape(v["short"])}</button>'
+        f'title="{escape(v["name"])}" data-credit="{escape(v["license"] if k == "net" else "")}">{escape(v["short"])}</button>'
         for k, v in bibles.items()
+    ) + "".join(
+        f'<button type="button" data-tr="{k}" data-remote="{code}" aria-pressed="false" '
+        f'title="{escape(name)}" data-credit="{escape(credit + " Text provided by bolls.life.")}">{k.upper()}</button>'
+        for k, (code, name, credit) in remote_bibles.items()
     )
     tr_credit = " · ".join(f"{escape(v['name'])} ({escape(v['short'])}): {escape(v['license'])}" for v in bibles.values())
 
@@ -7411,7 +7448,7 @@ def build() -> None:
                 + "</nav>"
             )
             text_html = (
-                f'<div class="bx-text" lang="en" data-book="{bslug}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
+                f'<div class="bx-text" lang="en" data-book="{bslug}" data-booknum="{BIBLE_ORDER.index(book) + 1}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
                 if spans else '<div class="bx-text"><p class="desk-hint">This chapter\'s text is not loaded.</p></div>'
             )
             lede = (
@@ -7436,6 +7473,7 @@ def build() -> None:
   <h1>{escape(book_name(book))} {c} <span class="bx-h-sub">with the Church Fathers</span></h1>
   <p class="lede">{lede}</p>
   <div class="bx-tools"><div class="bx-tr" role="group" aria-label="Bible translation">{tr_buttons}</div>{nav}</div>
+  <p class="bx-tr-credit" aria-live="polite" hidden></p>
 </header>
 <div class="bx-grid">
 {text_html}
@@ -8000,6 +8038,12 @@ def build() -> None:
 /assets/og/*
   Cache-Control: public, max-age=86400
 
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/fonts.css
+  Cache-Control: public, max-age=31536000, immutable
+
 https://:project.pages.dev/*
   X-Robots-Tag: noindex
 
@@ -8051,6 +8095,11 @@ https://:version.:project.pages.dev/*
         if p.name != "404.html" and not p.relative_to(DIST).as_posix().startswith("assets/")
     )
     groups: dict[str, list[str]] = defaultdict(list)
+    noindex_routes = set(NONCANONICAL_ROUTES)
+    for page in DIST.rglob("index.html"):
+        if '<meta name="robots" content="noindex' in page.read_text(encoding="utf-8")[:6000]:
+            noindex_routes.add("/" + page.relative_to(DIST).as_posix().removesuffix("index.html"))
+    urls = [u for u in urls if u not in noindex_routes]
     for u in urls:
         head = u.strip("/").split("/", 1)[0] or "pages"
         groups[head if head in {"works", "e", "scripture", "topics", "authors"} else "pages"].append(u)
