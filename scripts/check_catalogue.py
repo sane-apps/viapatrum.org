@@ -251,11 +251,20 @@ print(json.dumps({"status": "passed", "authors": len(page.rows), "works": work_t
 assert site.display_section("4-2-2-collective-23") == "4.2.2"
 assert site.display_section("1.27") == "1.27"
 class VisibleText(HTMLParser):
+    """Text a reader sees: skips script/style (JSON-LD carries real URLs)."""
     def __init__(self):
         super().__init__()
         self.text = []
+        self.hidden = 0
+    def handle_starttag(self, tag, attrs):
+        if tag in ("script", "style"):
+            self.hidden += 1
+    def handle_endtag(self, tag):
+        if tag in ("script", "style") and self.hidden:
+            self.hidden -= 1
     def handle_data(self, data):
-        self.text.append(data)
+        if not self.hidden:
+            self.text.append(data)
 visible = VisibleText()
 visible.feed((site.DIST / "works/julian-collective-letter/index.html").read_text())
 assert "-collective-" not in " ".join(visible.text)

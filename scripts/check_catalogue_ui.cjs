@@ -10,7 +10,7 @@ const REQUIRED_SHOTS = [
  ...[1440,1024,768,390].flatMap(w=>["author-"+w,"author-group-"+w]),
  "author-alpha-1440","author-alpha-390","search-390","empty-390","keyboard-focus-1440",
  "reader-1440","reader-390","mobile-menu-390","index-error-390","index-recovered-390",
- ...["home","author-hub","topic","explore"].flatMap(n=>[n+"-1440",n+"-390"]),
+ ...["home","author-hub","topic","explore","scripture","scripture-verse"].flatMap(n=>[n+"-1440",n+"-390"]),
  "unavailable-390","about-390","methodology-390","help-390","julian-bible-1440","julian-source-390"
 ].map(n=>n+".png");
 const REQUIRED_CHECKS=["sort","filters","search","keyboard","menu","contents","index-retry","templates","source-details","geometry"];
@@ -268,13 +268,23 @@ async function run(base,out) {
   const authorHref=await page.locator("#works-list > li.author-entry a.author-link").filter({hasText:/works/}).first().getAttribute("href")
     || await page.locator("#works-list > li.author-entry").first().getAttribute("data-author-href");
   assert(authorHref,"Missing author hub href");
-  const templates=[["home","/"],["author-hub",authorHref],["topic","/topics/free-will/"],["explore","/explore/?topic=free-will"]];
+  const templates=[["home","/"],["author-hub",authorHref],["topic","/topics/free-will/"],["explore","/explore/"],["scripture","/scripture/romans/8/"],["scripture-verse","/scripture/genesis/1/#v26"]];
   for(const [label,url] of templates) {
    const response=await visit(base+url,{waitUntil:"networkidle",timeout:30000});
    assert.equal(response.status(),200,label+" returned HTTP "+response.status());
    await page.locator("h1").first().waitFor();
-   if(label==="explore")await page.locator(".explore-point").first().waitFor();
-   for(const width of [1440,390]) {await page.evaluate(()=>scrollTo(0,0));await shot(label,width);}
+   if(label==="explore")await page.locator(".ot-card .tl-pt").first().waitFor();
+   if(label==="topic")await page.locator("#over-time .tl-pt").first().waitFor();
+   if(label==="scripture-verse"){
+    // The verse desk must open from the hash and name the verse.
+    await page.locator('.bx-desk .desk-verse[data-for="26"]:not([hidden])').waitFor();
+    assert.match(await page.locator('.desk-verse[data-for="26"] h2').textContent(),/Genesis 1:26/);
+   }
+   for(const width of [1440,390]) {
+    if(label==="scripture-verse")await page.locator(".v.is-on").first().evaluate(e=>e.scrollIntoView({block:"center"}));
+    else await page.evaluate(()=>scrollTo(0,0));
+    await shot(label,width);
+   }
   }
   for(const label of ["about","methodology","help"]) {
    await visit(base+"/"+(label==="help"?"contribute":label)+"/",{waitUntil:"networkidle"});

@@ -33,11 +33,9 @@
   }
 
   // Home: the day's passage. The page ships one at rest; swap in today's.
-  const dailyData = document.querySelector("#vp-daily-data");
   const dailyCard = document.querySelector("[data-daily]");
-  if (dailyData && dailyCard) {
-    try {
-      const rows = JSON.parse(dailyData.textContent || "[]");
+  if (dailyCard) {
+    fetch("/data/daily.json").then((r) => (r.ok ? r.json() : [])).then((rows) => {
       if (rows.length) {
         const now = new Date();
         const day = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
@@ -55,10 +53,138 @@
         const read = dailyCard.querySelector(".vp-daily-h");
         if (read) read.setAttribute("href", r.h);
       }
-    } catch {
+    }).catch(() => {
       /* keep the passage the page shipped with */
+    });
+  }
+
+  // Scripture reader: select a verse to open what the Fathers said about it.
+  const bx = document.querySelector("[data-bx]");
+  if (bx) {
+    const desk = bx.querySelector(".bx-desk");
+    const home = desk && desk.querySelector('[data-for="chapter"]');
+    const sections = desk ? Array.from(desk.querySelectorAll(".desk-verse")) : [];
+    const text = bx.querySelector(".bx-text");
+    const show = (v, opts = {}) => {
+      if (!desk) return;
+      const target = v ? sections.find((sec) => sec.dataset.for === String(v)) : null;
+      sections.forEach((sec) => (sec.hidden = sec !== target));
+      if (home) home.hidden = !!target;
+      desk.classList.toggle("is-verse", !!target);
+      bx.querySelectorAll(".v.is-on").forEach((el) => el.classList.remove("is-on"));
+      if (target) {
+        const verse = bx.querySelector(`.v[data-v="${v}"]`);
+        if (verse) verse.classList.add("is-on");
+        desk.scrollTop = 0;
+        if (opts.push !== false) history.replaceState(null, "", `#v${v}`);
+        if (opts.focus) target.querySelector("h2")?.setAttribute("tabindex", "-1"), target.querySelector("h2")?.focus({ preventScroll: true });
+      } else if (opts.push !== false) {
+        history.replaceState(null, "", location.pathname + location.search);
+      }
+    };
+    bx.addEventListener("click", (e) => {
+      const verse = e.target.closest(".v.cited");
+      if (verse) return show(verse.dataset.v);
+      const jump = e.target.closest(".desk-jump");
+      if (jump) {
+        const el = bx.querySelector(`.v[data-v="${jump.dataset.v}"]`);
+        if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
+        return show(jump.dataset.v);
+      }
+      if (e.target.closest(".desk-back, .desk-close")) show(null);
+    });
+    bx.addEventListener("keydown", (e) => {
+      const verse = e.target.closest(".v.cited");
+      if (verse && (e.key === "Enter" || e.key === " ")) {
+        e.preventDefault();
+        show(verse.dataset.v, { focus: true });
+      }
+      if (e.key === "Escape") show(null);
+    });
+    const fromHash = () => {
+      const m = location.hash.match(/^#v(\d+)/);
+      if (m) show(m[1], { push: false });
+    };
+    fromHash();
+    window.addEventListener("hashchange", fromHash);
+
+    // Translation switch: BSB ships in the page; others load per chapter.
+    const trButtons = Array.from(bx.querySelectorAll("[data-tr]"));
+    const original = text ? Array.from(text.querySelectorAll(".v")).map((el) => [el.dataset.v, el.querySelector(".vt").textContent]) : [];
+    const paint = (rows) => {
+      const map = new Map(rows.map(([v, t]) => [String(v), t]));
+      text.querySelectorAll(".v").forEach((el) => {
+        const t = map.get(el.dataset.v);
+        if (t) el.querySelector(".vt").textContent = t;
+      });
+    };
+    const useTr = async (key) => {
+      if (!text) return;
+      try {
+        if (key === "bsb") paint(original);
+        else {
+          const r = await fetch(`/data/bible/${key}/${text.dataset.book}/${text.dataset.chap}.json`);
+          if (!r.ok) throw new Error("missing");
+          paint(await r.json());
+        }
+        trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
+        try {
+          localStorage.setItem("vp-bible", key);
+        } catch {
+          /* remembered for this page only */
+        }
+      } catch {
+        trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === "bsb" ? "true" : "false"));
+      }
+    };
+    trButtons.forEach((b) => b.addEventListener("click", () => useTr(b.dataset.tr)));
+    try {
+      const saved = localStorage.getItem("vp-bible");
+      if (saved && saved !== "bsb" && trButtons.some((b) => b.dataset.tr === saved)) useTr(saved);
+    } catch {
+      /* default translation */
     }
   }
+
+  // Reader source panels: Greek/Latin load when opened (one file per work).
+  const srcCache = new Map();
+  document.addEventListener(
+    "toggle",
+    async (e) => {
+      const d = e.target;
+      if (!(d instanceof HTMLDetailsElement) || !d.open || !d.classList.contains("src-lazy") || d.dataset.loaded) return;
+      const body = d.querySelector(".src-body");
+      try {
+        const url = d.dataset.src;
+        if (!srcCache.has(url)) srcCache.set(url, fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(r.status))));
+        const data = await srcCache.get(url);
+        const kind = d.dataset.kind;
+        const pairs = (d.dataset.secs || "").split(",").filter(Boolean).map((x) => x.split("|"));
+        const frag = document.createDocumentFragment();
+        for (const [sid, shown] of pairs) {
+          const paras = (data[sid] && data[sid][kind]) || [];
+          if (!paras.length) continue;
+          if (pairs.length > 1) {
+            const m = document.createElement("p");
+            m.className = "src-sec";
+            m.textContent = "\u00a7" + shown;
+            frag.appendChild(m);
+          }
+          for (const t of paras) {
+            const p = document.createElement("p");
+            p.className = "src";
+            p.textContent = t;
+            frag.appendChild(p);
+          }
+        }
+        body.replaceChildren(frag);
+        d.dataset.loaded = "1";
+      } catch {
+        /* keep the links to each section page */
+      }
+    },
+    true
+  );
 
   const q = document.querySelector("#q");
   const results = document.querySelector("#results");
@@ -170,6 +296,8 @@
         li.hidden = false;
         list.appendChild(li);
       });
+      const empty = browse.querySelector("#works-empty");
+      if (empty) empty.hidden = !(term.length >= 2 && visible.length === 0);
       if (status) {
         const sortLabel = sort === "author" ? "author name" : "era (earliest first)";
         status.textContent = `${visible.length} of ${authorCount} authors · ${workCount} works · sorted by ${sortLabel}`;

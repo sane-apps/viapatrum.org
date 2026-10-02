@@ -214,7 +214,9 @@ node "$ROOT/scripts/verify_chrome.cjs" "$STAGE"
 import json, pathlib, sys
 stage = pathlib.Path(sys.argv[1])
 held = json.loads(pathlib.Path(sys.argv[2]).read_text())["held_works"]
-(stage / "_redirects").write_text("".join(f"/works/{w['slug']}/ /404.html 404\n" for w in held), encoding="utf-8")
+# Keep the builder's own 301 rules (old URLs, host-free paths) and add the holds.
+built = (stage / "_redirects").read_text(encoding="utf-8") if (stage / "_redirects").exists() else ""
+(stage / "_redirects").write_text(built + "".join(f"/works/{w['slug']}/ /404.html 404\n" for w in held), encoding="utf-8")
 PY
 test -s "$STAGE/_redirects"
 "$PYTHON" "$ROOT/scripts/generate_works_gate.py" --stage "$STAGE" --functions-dir "$ROOT/functions"

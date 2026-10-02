@@ -75,47 +75,6 @@ test('author catalog prefetches the passage index for find-as-you-type',async()=
   await settle();assert.equal(calls,1);query(dom,'numbering');await settle();assert.equal(calls,1);dom.window.close();
 });
 
-test('timeline tooltip stays inside canvas and does not cover touch selections', async()=>{
-  const html=readFileSync(new URL('../dist/explore/index.html',import.meta.url),'utf8');
-  const data=JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
-  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/explore/?topic=free-will',runScripts:'outside-only',pretendToBeVisual:true});
-  const w=dom.window,doc=w.document;
-  w.fetch=async()=>({ok:true,json:async()=>data});
-  w.matchMedia=()=>({matches:false});
-  w.ResizeObserver=class { observe() {} disconnect() {} };
-  w.HTMLElement.prototype.scrollIntoView=()=>{};
-  const canvas=doc.querySelector('#explore-canvas'),tip=doc.querySelector('#explore-tooltip');
-  canvas.getBoundingClientRect=()=>({left:0,top:0,width:390,height:420,bottom:420});
-  tip.getBoundingClientRect=()=>({width:256,height:100});
-  w.eval(readFileSync(new URL('../assets/explore.js',import.meta.url),'utf8'));await settle();await settle();
-  const point=doc.querySelector('.explore-point');assert.ok(point);
-  const touch=new w.MouseEvent('pointerenter',{clientX:389,clientY:419});Object.defineProperty(touch,'pointerType',{value:'touch'});
-  point.dispatchEvent(touch);assert.equal(tip.classList.contains('is-on'),false);
-  point.dispatchEvent(new w.MouseEvent('pointerenter',{clientX:389,clientY:419}));
-  assert.equal(tip.classList.contains('is-on'),true);
-  assert.ok(parseFloat(tip.style.left)>=8 && parseFloat(tip.style.left)+256<=382);
-  assert.ok(parseFloat(tip.style.top)>=8 && parseFloat(tip.style.top)+100<=412);
-  point.dispatchEvent(new w.MouseEvent('click'));assert.equal(tip.classList.contains('is-on'),false);
-  dom.window.close();
-});
-
-test('explore summary counts positions for the topic', async()=>{
-  const html=readFileSync(new URL('../dist/explore/index.html',import.meta.url),'utf8');
-  const data=JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
-  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/explore/?topic=free-will',runScripts:'outside-only',pretendToBeVisual:true});
-  const w=dom.window,doc=w.document;
-  w.fetch=async()=>({ok:true,json:async()=>data});
-  w.matchMedia=()=>({matches:false});
-  w.ResizeObserver=class { observe() {} disconnect() {} };
-  w.HTMLElement.prototype.scrollIntoView=()=>{};
-  w.eval(readFileSync(new URL('../assets/explore.js',import.meta.url),'utf8'));await settle();await settle();
-  const s=doc.querySelector('#explore-summary');assert.ok(s);
-  assert.match(s.textContent,/positions/);
-  assert.match(s.textContent,/writers/);
-  assert.match(s.textContent,/affirms/);
-  dom.window.close();
-});
-
 test('library progress line on About matches pipeline counts', ()=>{
   const html=readFileSync(new URL('../dist/about/index.html',import.meta.url),'utf8');
   const q=JSON.parse(readFileSync(new URL('../outputs/catalogue-quality.json',import.meta.url),'utf8'));
@@ -138,7 +97,7 @@ test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
   const card=doc.querySelector('[data-daily]');
   assert.ok(card,'today passage card');
   assert.ok(card.querySelector('.vp-daily-q').textContent.split(/\s+/).length>=14);
-  const pool=JSON.parse(doc.querySelector('#vp-daily-data').textContent);
+  const pool=JSON.parse(readFileSync(new URL('../dist/data/daily.json',import.meta.url),'utf8'));
   assert.ok(pool.length>=30,'daily pool too small: '+pool.length);
   const roman={i:'1',ii:'2',iii:'3',iv:'4',v:'5',vi:'6',vii:'7',viii:'8',ix:'9',x:'10'};
   const seen=new Set();
@@ -154,86 +113,46 @@ test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
   dom.window.close();
 });
 
-function mountExplore(url, html, data) {
-  const dom=new JSDOM(html,{url,runScripts:'outside-only',pretendToBeVisual:true});
-  const w=dom.window;
-  w.fetch=async()=>({ok:true,json:async()=>data});
-  w.matchMedia=()=>({matches:false});
-  w.ResizeObserver=class { observe() {} disconnect() {} };
-  w.HTMLElement.prototype.scrollIntoView=()=>{};
-  w.eval(readFileSync(new URL('../assets/explore.js',import.meta.url),'utf8'));
-  return dom;
-}
-const exploreHtml=()=>readFileSync(new URL('../dist/explore/index.html',import.meta.url),'utf8');
-const exploreData=()=>JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
+const page=(p)=>new JSDOM(readFileSync(new URL('../dist/'+p,import.meta.url),'utf8'),{url:'https://viapatrum.org/'+p.replace(/index\.html$/,'')}).window.document;
 
-test('explore table states each writer verdict: Ignatius says No to appearance-only',async()=>{
-  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism&view=table',exploreHtml(),exploreData());
-  await settle();await settle();
-  const doc=dom.window.document;
-  assert.ok(doc.querySelector('.verdict-table'));
-  const heads=[...doc.querySelectorAll('.verdict-table thead th')].map(th=>th.textContent.trim());
-  assert.deepEqual(heads,['Writer','Truly born','Only appeared']);
-  const row=[...doc.querySelectorAll('.verdict-table tbody tr')].find(tr=>tr.querySelector('th').textContent.includes('Ignatius'));
-  assert.ok(row);
-  const cells=[...row.querySelectorAll('td')];
-  assert.match(cells[0].textContent,/^Yes · 4/);
-  assert.match(cells[1].textContent,/^No · 2/);
-  assert.equal(cells[1].querySelector('button').getAttribute('data-claim'),'dokew');
-  cells[1].querySelector('button').click();await settle();
-  assert.match(doc.querySelector('#explore-drawer').textContent,/teaches NO/);
-  dom.window.close();
+test('question page timeline: one row per claim, stance marks link to passages', ()=>{
+  const doc=page('topics/against-docetism/index.html');
+  const rows=[...doc.querySelectorAll('#over-time .tl-row')];
+  assert.equal(rows.length,2);
+  const appeared=rows.find(r=>/only in appearance/i.test(r.querySelector('.tl-claim-text').textContent));
+  assert.ok(appeared,'rival claim row present');
+  const denies=appeared.querySelectorAll('.tl-pt.denies');
+  assert.ok(denies.length>=1,'a writer rejects appearance-only');
+  assert.match(denies[0].textContent,/Ignatius/);
+  for(const m of denies){
+    assert.match(m.getAttribute('aria-label'),/rejects this/);
+    const href=m.getAttribute('href');
+    assert.ok(href&&(href.startsWith('#')?doc.getElementById(href.slice(1)):href.startsWith('/e/')),'mark links to its passage: '+href);
+  }
+  assert.match(appeared.querySelector('.tl-tally').textContent,/reject/);
 });
 
-test('explore timeline draws denials as X marks with plain-words tooltips',async()=>{
-  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism',exploreHtml(),exploreData());
-  await settle();await settle();
-  const doc=dom.window.document;
-  const deny=doc.querySelector('.explore-point[data-stance="denies"]');
-  assert.ok(deny);
-  assert.equal(deny.querySelectorAll('line').length,2);
-  assert.ok(doc.querySelector('.explore-point[data-stance="affirms"] circle'));
-  const tip=doc.querySelector('#explore-tooltip');
-  deny.dispatchEvent(new dom.window.MouseEvent('pointerenter',{clientX:100,clientY:100}));
-  assert.equal(tip.classList.contains('is-on'),true);
-  assert.match(tip.textContent,/DENIES/);
-  assert.match(tip.textContent,/Only appeared/);
-  dom.window.close();
+test('free will: later turn sits in time order and the summary voice is labeled', ()=>{
+  const doc=page('topics/free-will/index.html');
+  assert.ok(doc.querySelector('#over-time .tl-turn'),'turn line on the timeline');
+  assert.ok(doc.querySelector('.tl-pt.contrast'),'Augustine summary mark');
+  const voices=[...doc.querySelector('.voices').children].filter(e=>e.tagName!=='H2');
+  const turn=voices.findIndex(e=>e.querySelector&&e.querySelector('#turn')||e.id==='turn');
+  assert.ok(turn>0,'turn placed among voices, not first');
+  assert.match(doc.querySelector('.contrast-card .meta').textContent,/not yet in this library/);
 });
 
-test('explore timeline places one excerpt once per claim lane',async()=>{
-  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism',exploreHtml(),exploreData());
-  await settle();await settle();
-  const doc=dom.window.document;
-  const twins=[...doc.querySelectorAll('.explore-point')].filter(g=>(g.getAttribute('data-id')||'').startsWith('excerpt:ignatius_smyrn_2_true|'));
-  assert.equal(twins.length,2);
-  const stances=twins.map(g=>g.getAttribute('data-stance')).sort();
-  assert.deepEqual(stances,['affirms','denies']); // 2026-09-28: smyrn_2 re-rated affirms on author context (stance review)
-  const cys=twins.map(g=>parseFloat(g.querySelector('circle').getAttribute('cy')));
-  assert.ok(Math.abs(cys[0]-cys[1])>40,'same-id marks share a lane');
-  dom.window.close();
-});
-
-test('explore consensus charts one line per claim',async()=>{
-  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism&view=consensus',exploreHtml(),exploreData());
-  await settle();await settle();
-  const doc=dom.window.document;
-  const lines=[...doc.querySelectorAll('.consensus-line')].map(g=>g.getAttribute('data-claim')).sort();
-  assert.deepEqual(lines,['dokew','truly-born-suffered']);
-  dom.window.close();
-});
-
-test('explore search narrows positions to matching writers',async()=>{
-  const dom=mountExplore('https://fathers.saneapps.com/explore/?topic=against-docetism',exploreHtml(),exploreData());
-  await settle();await settle();
-  const doc=dom.window.document;
-  const q=doc.querySelector('#explore-q');assert.ok(q);
-  q.value='novatian';q.dispatchEvent(new dom.window.Event('input'));await settle();
-  assert.match(doc.querySelector('#explore-summary').textContent,/^1 positions/);
-  assert.equal(doc.querySelectorAll('.explore-point').length,1);
-  q.value='';q.dispatchEvent(new dom.window.Event('input'));await settle();
-  assert.match(doc.querySelector('#explore-summary').textContent,/^8 positions/);
-  dom.window.close();
+test('over time overview: every question with stances gets a card and a mini timeline', ()=>{
+  const doc=page('explore/index.html');
+  const data=JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
+  const withPoints=new Set(data.points.map(p=>p.topic));
+  const cards=doc.querySelectorAll('.ot-card');
+  assert.equal(cards.length,data.topics.filter(t=>withPoints.has(t.id)).length);
+  for(const c of cards){
+    assert.ok(c.querySelector('.tl-lane'),'mini timeline in '+c.id);
+    assert.match(c.querySelector('h3 a').getAttribute('href'),/^\/topics\/[a-z0-9-]+\/#over-time$/);
+  }
+  assert.ok(!doc.querySelector('script[src*="explore.js"]'),'old chart script retired');
 });
 
 test('favicon files ship in dist', ()=>{

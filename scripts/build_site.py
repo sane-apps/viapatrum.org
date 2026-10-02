@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Build fathers.saneapps.com static site from translations books."""
+"""Build the Via Patrum site (viapatrum.org) from the translations books."""
 from __future__ import annotations
 
+import gzip
 import json
 import re
 import shutil
@@ -154,6 +155,7 @@ WESLEY_BOOK = BOOKS / "john-wesley-sermons"
 EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
 SITE_NAME = "Via Patrum"
+SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
 SITE_TAG = "The early Church in its own words: every Father, every work, in faithful modern English. Free."
 BASE = ""
 
@@ -411,7 +413,28 @@ def _canon_book(raw: str) -> str:
     return _BIBLE_CANON.get(key, raw.strip().rstrip("."))
 
 
+# (book, chapter) pairs that have a /scripture/ page. Filled by build() before
+# any page renders, so in-text references can stay inside the library.
+SCRIPTURE_CHAPTERS: set[tuple[str, int]] = set()
+SCRIPTURE_VERSES: set[tuple[str, int, str]] = set()
+
+
+def scripture_page_href(search: str) -> str | None:
+    m = re.match(r"^(.+?) (\d+)(?::(\d+))?", (search or "").strip())
+    if not m or (m.group(1), int(m.group(2))) not in SCRIPTURE_CHAPTERS:
+        return None
+    book = {"Psalm": "Psalms"}.get(m.group(1), m.group(1))
+    tail = f"#v{m.group(3)}" if m.group(3) and (m.group(1), int(m.group(2)), m.group(3)) in SCRIPTURE_VERSES else ""
+    return f"/scripture/{slugify(book)}/{int(m.group(2))}/{tail}"
+
+
 def _bible_anchor(display: str, search: str) -> str:
+    local = scripture_page_href(search)
+    if local:
+        return (
+            f'<a class="bible-ref" href="{escape(local)}" '
+            f'title="What the Fathers said on {escape(search)}">{escape(display)}</a>'
+        )
     href = (
         "https://www.biblegateway.com/passage/?search="
         f"{quote_plus(search)}&version=NRSVUE"
@@ -1127,10 +1150,6 @@ def build_explore_index(
     raw = load_explore_raw()
     by_excerpt = {x["id"]: x for x in excerpts if x.get("id")}
     works_by_slug = {w["slug"]: w for w in works}
-    # One writer, one page: the two Diognetus spellings were two author hubs.
-    for _x in excerpts:
-        if (_x.get("author") or "").strip() == "Anonymous (Diognetus)":
-            _x["author"] = "Mathetes (Epistle to Diognetus)"
     section_lookup: dict[str, dict] = {}
     for w in works:
         for s in w["sections"]:
@@ -2196,6 +2215,7 @@ def text_history_html(th: dict | None) -> str:
     if method:
         bits.append(f'<p class="intro">{escape(method)}</p>')
     identifiers = scrub_worksheet_note(str(th.get("identifiers") or "")).strip()
+    identifiers = re.sub(r"\s*\b(?:tip|densify)\b", "", identifiers, flags=re.I).strip(" ;,")
     if identifiers:
         bits.append(
             f'<p class="intro fine">Catalogue &amp; scope</p>'
@@ -4872,6 +4892,49 @@ def prev_next_nav(
     return '<nav class="section-nav" aria-label="Chapter">' + "".join(parts) + "</nav>"
 
 
+OG_INDEX: dict[str, str] = _json_load(ASSETS / "og" / "index.json", {}) if (ASSETS / "og" / "index.json").exists() else {}
+
+
+def meta_description(text: str, limit: int = 158) -> str:
+    """A search snippet that ends cleanly: at a sentence end, else a word, with an ellipsis."""
+    t = re.sub(r"\s+", " ", strip_logos_markup(str(text or ""))).strip()
+    if len(t) <= limit:
+        return t
+    cut = t[:limit]
+    ends = [cut.rfind(x) for x in (". ", "? ", "! ")]
+    end = max(ends)
+    if end >= 70:
+        return cut[: end + 1]
+    return cut.rsplit(" ", 1)[0].rstrip(",;:—– ") + "…"
+
+
+def jsonld_html(crumb: list[tuple[str, str]] | None, extra: list[dict] | None) -> str:
+    """BreadcrumbList from the page crumbs plus any page-type objects."""
+    graph: list[dict] = []
+    if crumb and len(crumb) > 1:
+        items = []
+        for i, (label, href) in enumerate(crumb, 1):
+            item = {"@type": "ListItem", "position": i, "name": label}
+            item["item"] = f"{SITE_ORIGIN}{href}" if href else f"{SITE_ORIGIN}/__ROUTE__"
+            items.append(item)
+        graph.append({"@type": "BreadcrumbList", "itemListElement": items})
+    graph.extend(extra or [])
+    if not graph:
+        return ""
+    data = {"@context": "https://schema.org", "@graph": graph}
+    return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+VIA_PATRUM_ORG = {
+    "@type": "Organization",
+    "@id": f"{SITE_ORIGIN}/#org",
+    "name": "Via Patrum",
+    "url": f"{SITE_ORIGIN}/",
+    "logo": f"{SITE_ORIGIN}/assets/icons/icon-512.png",
+    "sameAs": ["https://github.com/sane-apps/translations"],
+}
+
+
 def layout(
     title: str,
     body: str,
@@ -4884,6 +4947,8 @@ def layout(
     body_class: str = "",
     og_image: str = "",
     og_type: str = "website",
+    jsonld: list[dict] | None = None,
+    robots: str = "",
 ) -> str:
     crumbs = ""
     if crumb:
@@ -4909,9 +4974,9 @@ def layout(
         "about": "about",
     }.get(active, "home")
     full_title = f"{SITE_NAME} · The early Church in its own words" if title == "Home" else f"{title} · {SITE_NAME}"
-    desc = description if len(description) <= 200 else description[:197].rstrip() + "..."
-    img = f"https://fathers.saneapps.com/assets/og/{card}.png"
-    share_url = "https://fathers.saneapps.com/__ROUTE__"
+    desc = meta_description(description)
+    img = f"{SITE_ORIGIN}/assets/og/{card}.png"
+    share_url = f"{SITE_ORIGIN}/__ROUTE__"
     alt = f"{title} on {SITE_NAME}"
     social = (
         f'<meta property="og:type" content="{escape(og_type)}">\n'
@@ -4941,12 +5006,16 @@ def layout(
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#f3eee3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f8f6f0" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#15120e" media="(prefers-color-scheme: dark)">
 <script>try{{var vpT=localStorage.getItem("vp-theme");if(vpT==="dark"||vpT==="light")document.documentElement.dataset.theme=vpT}}catch(e){{}}</script>
 <title>{escape(full_title)}</title>
 <meta name="description" content="{escape(desc)}">
-{social}<link rel="canonical" href="https://fathers.saneapps.com/__ROUTE__">
+{social}<link rel="canonical" href="{SITE_ORIGIN}/__ROUTE__">
+{f'<meta name="robots" content="{escape(robots)}">' if robots else ""}
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+{jsonld_html(crumb, jsonld)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;550;650;700&display=swap" rel="stylesheet">
@@ -4962,8 +5031,10 @@ def layout(
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <a href="/topics/"{nav_cls("topics")}>Questions</a>
+      <a href="/scripture/"{nav_cls("scripture")}>Scripture</a>
       <a href="/authors/"{nav_cls("authors")}>Fathers</a>
       <a href="/works/"{nav_cls("works")}>Works</a>
+      <a href="/listen/"{nav_cls("listen")}>Listen</a>
       <a href="/explore/"{nav_cls("explore")}>Over time</a>
       <a href="https://play.viapatrum.org/">Play</a>
     </nav>
@@ -4988,7 +5059,7 @@ def layout(
     </div>
     <nav aria-label="Read">
       <h2>Read</h2>
-      <ul><li><a href="/topics/">Questions</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/explore/">Over time</a></li></ul>
+      <ul><li><a href="/topics/">Questions</a></li><li><a href="/scripture/">Scripture</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/listen/">Listen</a></li><li><a href="/explore/">Over time</a></li></ul>
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
@@ -5007,12 +5078,34 @@ def layout(
 """
 
 
+def _og_card_for(route: str) -> str | None:
+    """Per-page share card from assets/og/index.json, falling back by path."""
+    hit = OG_INDEX.get(route)
+    if hit:
+        return hit
+    parts = [p for p in route.split("/") if p]
+    if len(parts) >= 2 and parts[0] == "works":
+        return OG_INDEX.get(f"/works/{parts[1]}/")
+    if len(parts) >= 2 and parts[0] == "scripture":
+        return OG_INDEX.get(f"/scripture/{parts[1]}/")
+    return None
+
+
 def write(path: Path, html: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.suffix == ".html" and path.is_relative_to(DIST):
         route = "/" + path.relative_to(DIST).as_posix().removesuffix("index.html")
-        html = html.replace("https://fathers.saneapps.com/__ROUTE__",
-                            f"https://fathers.saneapps.com{escape(route)}")
+        html = html.replace(f"{SITE_ORIGIN}/__ROUTE__", f"{SITE_ORIGIN}{escape(route)}")
+        if path.name == "404.html":
+            # An error page has no address of its own to claim.
+            html = re.sub(r'\n?<(?:link rel="canonical"|meta property="og:url"|meta name="twitter:url")[^>]*>', "", html)
+        card = _og_card_for(route)
+        if card:
+            html = re.sub(
+                r'(<meta (?:property|name)="(?:og:image|og:image:secure_url|twitter:image)" content=")[^"]*(")',
+                lambda m: m.group(1) + SITE_ORIGIN + escape(card) + m.group(2),
+                html,
+            )
     path.write_text(html, encoding="utf-8")
 
 
@@ -5368,12 +5461,12 @@ def _home_feed(
 
 
 def _favicon_ico_bytes() -> bytes:
-    """32x32 site mark (gold cross on parchment) as a dependency-free ICO."""
+    """32x32 site mark (rubric cross on vellum) as a dependency-free ICO."""
     import struct
 
     S = 32
-    parchment = (247, 243, 234)
-    gold = (74, 55, 20)
+    parchment = (255, 254, 250)
+    gold = (163, 38, 27)  # rubric red, matching assets/favicon.svg
 
     def ink(px: int, py: int) -> tuple[int, int, int]:
         edge = px < 2 or py < 2 or px >= S - 2 or py >= S - 2
@@ -5465,6 +5558,249 @@ def load_wesley_sermons() -> list[dict]:
     return works
 
 
+# --- Over time: claim timelines (static HTML, no chart script) -------------
+# Every question shows where each writer stood on each claim, on one shared
+# scale from the apostles to Chalcedon. Marks are HTML so they stay crisp at
+# any width, follow the theme, and can be read by search engines.
+TL_START, TL_END = 40, 470
+TL_ERAS = (
+    (40, 150, "Apostolic Fathers", "Apostolic"),
+    (150, 325, "Before Nicaea", "Pre-Nicene"),
+    (325, 470, "Nicaea and after", "Nicene"),
+)
+STANCE_WORD = {"affirms": "teaches", "denies": "rejects", "qualified": "partly holds"}
+
+
+def tl_pct(year: int | float) -> float:
+    y = min(max(float(year), TL_START), TL_END)
+    return round((y - TL_START) / (TL_END - TL_START) * 100, 2)
+
+
+def tl_backdrop_html(*, labels: bool) -> str:
+    bands = "".join(
+        f'<span class="tl-era{" alt" if i % 2 else ""}" style="left:{tl_pct(a)}%;width:{round(tl_pct(b) - tl_pct(a), 2)}%">'
+        + (f'<span class="tl-era-name"><span class="full">{escape(name)}</span><span class="short">{escape(short)}</span></span>' if labels else "")
+        + "</span>"
+        for i, (a, b, name, short) in enumerate(TL_ERAS)
+    )
+    nicaea = f'<span class="tl-mark-line" style="left:{tl_pct(325)}%" aria-hidden="true"></span>'
+    return f'<div class="tl-back" aria-hidden="true">{bands}{nicaea}</div>'
+
+
+def tl_axis_html() -> str:
+    ticks = "".join(
+        f'<span class="tl-tick" style="left:{tl_pct(y)}%">{y if y != 100 else "100 AD"}</span>'
+        for y in (100, 200, 300, 400)
+    )
+    return (
+        f'<div class="tl-axis" aria-hidden="true">{ticks}'
+        f'<span class="tl-tick tl-tick-nicaea" style="left:{tl_pct(325)}%">Nicaea 325</span></div>'
+    )
+
+
+def tl_short_name(name: str, others: set[str]) -> str:
+    """'Ignatius' for Ignatius of Antioch unless another writer shares 'Ignatius'."""
+    full = display_author(name)
+    special = {"Justin Martyr": "Justin", "Letter to Diognetus": "Diognetus", "The Didache": "Didache",
+               "Minucius Felix": "Minucius", "Augustine of Hippo": "Augustine"}
+    if full in special:
+        return special[full]
+    head = full.split(" of ")[0].strip()
+    clash = sum(1 for o in others if display_author(o).split(" of ")[0].strip() == head)
+    return full if clash > 1 else head
+
+
+def tl_marks_html(points: list[dict], anchor_for, *, labels: bool = True, lane_px: int = 960) -> tuple[str, dict, int]:
+    """Positioned marks for one claim lane. With labels, one named marker per
+    writer and stance (×n when a writer has several passages), packed into
+    rows so names never collide on a ~960px lane."""
+    tally = {"affirms": 0, "denies": 0, "qualified": 0}
+    groups: dict[tuple, list[dict]] = {}
+    for p in points:
+        if not p.get("year"):
+            continue
+        stance = p.get("stance") if p.get("stance") in STANCE_WORD else "affirms"
+        tally[stance] += 1
+        key = (p.get("author_slug") or p.get("author"), stance, p.get("kind") == "contrast") if labels else (p.get("id"), stance, False)
+        groups.setdefault(key, []).append(p)
+    names = {p.get("author") or "" for p in points}
+    rows_end: list[float] = []
+    marks = []
+    for (_, stance, is_contrast), ps in sorted(groups.items(), key=lambda kv: (min(q["year"] for q in kv[1]), str(kv[0][0]))):
+        ps.sort(key=lambda q: q["year"])
+        first = ps[0]
+        x = tl_pct(first["year"])
+        who = display_author(first.get("author") or "")
+        short = tl_short_name(first.get("author") or "", names)
+        n = len(ps)
+        text = short + (f" ×{n}" if n > 1 else "")
+        if first["year"] > TL_END:
+            text += f" ({first['year']})"
+        width = ((len(text) * 7.0 + 26) / lane_px * 100) if labels else 2.4
+        # Near the right edge the name sits left of its mark.
+        flip = labels and x + width > 100
+        lo, hi = (x - width, x) if flip else (x, x + width)
+        row = 0
+        while row < len(rows_end) and rows_end[row] > lo - (0.6 if labels else 0):
+            row += 1
+        if row == len(rows_end):
+            rows_end.append(0.0)
+        rows_end[row] = hi
+        dates = author_dates_display(first.get("author") or "", first.get("author_slug")) or (first.get("period") or "")
+        label = f"{who} ({dates}) {STANCE_WORD[stance]} this" + (f", in {n} passages" if n > 1 else "")
+        if is_contrast:
+            label += ". Summary only; his works are not yet in the library"
+        href = anchor_for(first)
+        tag = "a" if href else "span"
+        href_attr = f' href="{escape(href)}"' if href else ""
+        kind = "contrast" if is_contrast else stance
+        name_html = f'<span class="nm">{escape(text)}</span>' if labels else ""
+        marks.append(
+            f'<{tag} class="tl-pt {kind}{" named" if labels else ""}{" flip" if flip else ""}"{href_attr} style="left:{x}%;--row:{row}" '
+            f'aria-label="{escape(label)}" title="{escape(label)}"><span class="dot" aria-hidden="true"></span>{name_html}</{tag}>'
+        )
+    return "".join(marks), tally, max(0, len(rows_end) - 1)
+
+
+def tl_verdict_html(topic: dict, points: list[dict], turn: dict | None) -> str:
+    """One plain sentence that says what the timeline shows."""
+    claims = topic.get("claims") or []
+    if not claims:
+        return ""
+    main = claims[0]
+    cps = [p for p in points if p.get("claim_id") == main.get("id") and p.get("kind") != "contrast"]
+    teach = {p.get("author_slug") for p in cps if p.get("stance") in ("affirms", "qualified")}
+    reject = {p.get("author_slug") for p in cps if p.get("stance") == "denies"}
+    writers = {p.get("author_slug") for p in points if p.get("kind") != "contrast"}
+    if not teach and not reject:
+        return ""
+    label = (main.get("label") or "").rstrip(".")
+    parts = [f"{len(teach)} of the {len(writers)} writers here teach: \u201c{escape(label)}.\u201d"]
+    if reject:
+        parts.append(f"{len(reject)} reject it.")
+    rivals = [c for c in claims[1:] if any(p.get("claim_id") == c.get("id") and p.get("stance") == "denies" for p in points)]
+    if rivals:
+        r = rivals[0].get("label", "").rstrip(".")
+        parts.append(f"They answer a rival view: “{escape(r)}.”")
+    contrast = sorted((p for p in points if p.get("kind") == "contrast"), key=lambda p: p.get("year") or 9999)
+    if contrast:
+        c = contrast[0]
+        parts.append(
+            f'The turn comes with <a href="#turn">{escape(display_author(c.get("author") or ""))}, c. {c.get("year")}</a>.'
+        )
+    elif turn and turn.get("title"):
+        parts.append(f'<a href="#turn">{escape(turn["title"])}</a>.')
+    return f'<p class="tl-verdict">{" ".join(parts)}</p>'
+
+
+def tl_tally_html(tally: dict) -> str:
+    bits = []
+    if tally["affirms"]:
+        bits.append(f'<span class="t-aff">{tally["affirms"]} teach</span>')
+    if tally["qualified"]:
+        bits.append(f'<span class="t-part">{tally["qualified"]} partly</span>')
+    if tally["denies"]:
+        bits.append(f'<span class="t-den">{tally["denies"]} reject</span>')
+    return " · ".join(bits) or '<span class="t-none">no marks yet</span>'
+
+
+def tl_turn_year(points: list[dict]) -> int | None:
+    years = sorted(p["year"] for p in points if p.get("kind") == "contrast" and p.get("year"))
+    return years[0] if years else None
+
+
+def tl_claims_html(topic: dict, points: list[dict], anchor_for, *, compact: bool = False,
+                   turn: dict | None = None) -> str:
+    """One row per claim: the claim as a sentence, its tally, and the marks."""
+    rows = []
+    claims = topic.get("claims") or []
+    if compact:
+        claims = claims[:1]
+    turn_year = tl_turn_year(points) if turn else None
+    for c in claims:
+        cps = [p for p in points if p.get("claim_id") == c.get("id")]
+        marks, tally, stack = tl_marks_html(cps, anchor_for, labels=True, lane_px=520 if compact else 960)
+        if not cps and compact:
+            continue
+        turn_line = (
+            f'<span class="tl-turn" style="left:{tl_pct(turn_year)}%" aria-hidden="true"></span>'
+            if turn_year
+            else ""
+        )
+        rows.append(
+            f'<div class="tl-row">'
+            f'<p class="tl-claim"><span class="tl-claim-text">{escape(c.get("label") or c.get("short") or "")}</span>'
+            f'<span class="tl-tally">{tl_tally_html(tally)}</span></p>'
+            f'<div class="tl-lane" style="--rows:{stack + 1}">{tl_backdrop_html(labels=False)}{turn_line}{marks}</div>'
+            f"</div>"
+        )
+    if not rows:
+        return ""
+    legend = (
+        ""
+        if compact
+        else '<p class="tl-legend"><span class="tl-key affirms"></span>teaches it '
+        '<span class="tl-key qualified"></span>partly '
+        '<span class="tl-key denies"></span>rejects it '
+        '<span class="tl-key contrast"></span>later writer, summary only</p>'
+    )
+    era_strip = "" if compact else f'<div class="tl-eras">{tl_backdrop_html(labels=True)}</div>'
+    verdict = "" if compact else tl_verdict_html(topic, points, turn)
+    return (
+        f'{verdict}<div class="tl{" tl-compact" if compact else ""}">'
+        f"{legend}{era_strip}{''.join(rows)}{tl_axis_html()}</div>"
+    )
+
+
+# --- Scripture: every passage that cites a book and chapter ----------------
+BIBLE_ORDER = [
+    "Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth",
+    "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra",
+    "Nehemiah", "Esther", "Job", "Psalm", "Proverbs", "Ecclesiastes", "Song of Solomon",
+    "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos",
+    "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah",
+    "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians",
+    "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians",
+    "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James",
+    "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation",
+]
+BIBLE_PUBLIC = {"Psalm": "Psalms"}
+NT_START = BIBLE_ORDER.index("Matthew")
+
+
+def scripture_snippet(text: str, start: int, end: int, limit: int = 240) -> str:
+    """The sentence around a citation, with the citation itself removed."""
+    left = max(text.rfind(". ", 0, start), text.rfind("? ", 0, start), text.rfind("! ", 0, start))
+    left = 0 if left < 0 else left + 2
+    right_hits = [i for i in (text.find(". ", end), text.find("? ", end), text.find("! ", end)) if i >= 0]
+    right = min(right_hits) + 1 if right_hits else len(text)
+    sent = (text[left:start] + text[end:right]).replace("()", "").replace("( )", "")
+    sent = re.sub(r"\s+", " ", sent)
+    sent = re.sub(r"\s+([,.;:!?])", r"\1", sent)
+    sent = re.sub(r"([,;:])(?:\s*[,;:])+", r"\1", sent).strip(" ;,")
+    if len(sent) > limit:
+        sent = sent[: limit - 1].rsplit(" ", 1)[0] + "…"
+    return sent
+
+
+def person_page_meta(slug: str, name: str, *, works: int, passages: int) -> tuple[str, str, list[dict]]:
+    """Title, description and ProfilePage schema for a Father's page."""
+    shown = display_author(name)
+    dates = author_dates_display(name, slug)
+    bio = str((AUTHOR_BIOS.get(slug) or {}).get("bio") or "").strip()
+    title = f"{shown} ({dates})" if dates else shown
+    bits = []
+    if works:
+        bits.append(f"{works} work{'s' if works != 1 else ''} to read")
+    if passages:
+        bits.append(f"{passages} passage{'s' if passages != 1 else ''} by question")
+    desc = f"{shown}{', ' + dates if dates else ''}: {' and '.join(bits) or 'writings'} in new English, free. {bio}"
+    person = {"@type": "Person", "name": shown, "url": f"{SITE_ORIGIN}/authors/{slug}/"}
+    if bio:
+        person["description"] = bio
+    return title, desc, [{"@type": "ProfilePage", "mainEntity": person}]
+
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -5474,7 +5810,24 @@ def build() -> None:
     (DIST / ".metadata_never_index").write_text("")
     shutil.copytree(ASSETS, DIST / "assets")
     (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
-    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse the works</a>, <a href="/authors/">meet the Fathers</a>, or <a href="/topics/">pick a question</a>.</p></section>', description="This page is not in the Via Patrum library.").replace("</head>", '<meta name="robots" content="noindex"></head>'))
+    for _icon in ("apple-touch-icon.png",):
+        if (ASSETS / "icons" / _icon).exists():
+            shutil.copy(ASSETS / "icons" / _icon, DIST / _icon)
+    (DIST / "site.webmanifest").write_text(json.dumps({
+        "name": "Via Patrum",
+        "short_name": "Via Patrum",
+        "description": "The early Church in its own words, in faithful modern English.",
+        "start_url": "/",
+        "display": "standalone",
+        "background_color": "#f8f6f0",
+        "theme_color": "#f8f6f0",
+        "icons": [
+            {"src": "/assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+            {"src": "/assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+            {"src": "/assets/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
+        ],
+    }, indent=2), encoding="utf-8")
+    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse the works</a>, <a href="/authors/">meet the Fathers</a>, or <a href="/topics/">pick a question</a>.</p></section>', description="This page is not in the Via Patrum library.", robots="noindex"))
 
     explore = load_explore_raw()
     explore_topic_ids = {c["topic"] for c in explore["claims"] if c.get("topic")}
@@ -5636,6 +5989,10 @@ def build() -> None:
                     "corpus_translated_sections": corpus_translated_sections},
                    ensure_ascii=False, indent=2), encoding="utf-8")
     works_by_slug = {w["slug"]: w for w in works}
+    # One writer, one page: the two Diognetus spellings were two author hubs.
+    for _x in excerpts:
+        if (_x.get("author") or "").strip() == "Anonymous (Diognetus)":
+            _x["author"] = "Mathetes (Epistle to Diognetus)"
 
     by_topic: dict[str, list[dict]] = defaultdict(list)
     by_author: dict[str, list[dict]] = defaultdict(list)
@@ -5821,7 +6178,8 @@ def build() -> None:
     n_questions = sum(1 for t in topic_meta if by_topic.get(t) or t in topic_to_works)
     n_fathers = len(road)
     n_audio = sum(1 for w in works if w.get("has_audio"))
-    daily_json = json.dumps(daily[:400], ensure_ascii=False).replace("</", "<\\/")
+    (DIST / "data").mkdir(exist_ok=True)
+    (DIST / "data" / "daily.json").write_text(json.dumps(daily[:400], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     home = f"""
 <div class="vp-home">
@@ -5839,8 +6197,9 @@ def build() -> None:
 
 <nav class="vp-doors" aria-label="Ways into the library">
   <a href="/topics/"><h2>Questions</h2><p>{n_questions} questions the early Church answered, from Scripture and God to the last things.</p><span class="go">Browse the questions →</span></a>
+  <a href="/scripture/"><h2>Scripture</h2><p>Pick a book and chapter of the Bible. See every Father who comments on it.</p><span class="go">Open the Bible →</span></a>
   <a href="/authors/"><h2>Fathers</h2><p>{n_fathers} writers in date order, from Clement of Rome onward, with what each one wrote.</p><span class="go">Meet the Fathers →</span></a>
-  <a href="/works/"><h2>Works</h2><p>{len(works)} works to read straight through{f", {n_audio} of them with audio" if n_audio else ""}.</p><span class="go">Open the library →</span></a>
+  <a href="/listen/"><h2>Listen</h2><p>{n_audio} works read aloud, with the text following the voice.</p><span class="go">Start listening →</span></a>
 </nav>
 
 <section class="vp-today" aria-label="Today">
@@ -5875,7 +6234,6 @@ def build() -> None:
 </section>
 </div>
 </div>
-<script type="application/json" id="vp-daily-data">{daily_json}</script>
 """
     write(
         DIST / "index.html",
@@ -5883,6 +6241,22 @@ def build() -> None:
             "Home",
             home,
             active="",
+            jsonld=[
+                VIA_PATRUM_ORG,
+                {
+                    "@type": "WebSite",
+                    "@id": f"{SITE_ORIGIN}/#site",
+                    "name": "Via Patrum",
+                    "url": f"{SITE_ORIGIN}/",
+                    "publisher": {"@id": f"{SITE_ORIGIN}/#org"},
+                    "inLanguage": "en",
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": f"{SITE_ORIGIN}/works/?q={{search_term_string}}",
+                        "query-input": "required name=search_term_string",
+                    },
+                },
+            ],
             description="Read the early Church in its own words: every Father, every work, in faithful modern English. Free for the whole world.",
         ),
     )
@@ -5929,6 +6303,71 @@ def build() -> None:
         ),
     )
 
+    # --- Scripture: book → chapter → every Father who cites it ------------
+    sc_entries: dict[tuple[str, int], list[dict]] = defaultdict(list)
+    sc_seen: set[tuple] = set()
+
+    def sc_collect(text: str, *, who: str, author: str, year: int, title: str, href: str) -> None:
+        for start, end, _display, search in _scripture_matches(text):
+            m = re.match(r"^(.+?) (\d+)(?::([\d,\-–a-z ]+))?$", search.strip())
+            if not m or m.group(1) not in BIBLE_ORDER:
+                continue
+            book, chap = m.group(1), int(m.group(2))
+            verse = (m.group(3) or "").strip()
+            key = (href, book, chap, verse)
+            if key in sc_seen:
+                continue
+            sc_seen.add(key)
+            sc_entries[(book, chap)].append({
+                "verse": verse, "who": who, "author": author, "year": year,
+                "title": title, "href": href, "snippet": scripture_snippet(text, start, end),
+            })
+
+    for w in works:
+        pub = public_reader_title(w["title"], slug=w["slug"])
+        ords = section_ordinals(w["sections"])
+        wy = work_chrono_year(w)
+        for sec in w["sections"]:
+            sc_collect(
+                strip_logos_markup(" ".join(sec.get("english") or [])),
+                who=display_author(w["author"]), author=w["author"], year=wy,
+                title=f"{pub} §{shown_section(sec['section'], ords)}",
+                href=f"/works/{w['slug']}/{sec['section']}/",
+            )
+    for x in excerpts:
+        sc_collect(
+            strip_logos_markup(" ".join(excerpt_paragraphs(x))),
+            who=display_author(x.get("author") or ""), author=x.get("author") or "",
+            year=_passage_year(x),
+            title=public_citation(x.get("citation") or x["id"], x.get("work") or ""),
+            href=f"/e/{x['id']}/",
+        )
+
+    SCRIPTURE_CHAPTERS.clear()
+    SCRIPTURE_CHAPTERS.update(sc_entries.keys())
+    bibles: dict[str, dict] = {}
+    for _key in ("bsb", "net", "web", "kjv"):
+        _path = ROOT / "data" / "bibles" / f"{_key}.json.gz"
+        if _path.exists():
+            bibles[_key] = json.loads(gzip.decompress(_path.read_bytes()))
+    base_bible = bibles.get("bsb") or {"books": {}, "short": "", "name": "", "license": ""}
+    for _book, _chaps in base_bible["books"].items():
+        if _book in BIBLE_ORDER:
+            SCRIPTURE_CHAPTERS.update((_book, int(_c)) for _c in _chaps)
+    SCRIPTURE_VERSES.clear()
+    for (_b, _c), _rows in sc_entries.items():
+        _have = {str(v) for v, _t in (base_bible["books"].get(_b) or {}).get(str(_c), [])}
+        for _r in _rows:
+            _n = re.findall(r"\d+", _r["verse"])
+            if _n and _n[0] in _have:
+                SCRIPTURE_VERSES.add((_b, _c, _n[0]))
+
+    explore_index = build_explore_index(excerpts, works, topic_meta)
+    points_by_topic: dict[str, list[dict]] = defaultdict(list)
+    for _pt in explore_index["points"]:
+        points_by_topic[_pt.get("topic") or ""].append(_pt)
+    claims_by_topic = {t["id"]: t for t in explore_index["topics"]}
+
     # --- Topic pages + excerpt pages ---
     for tid, rows in by_topic.items():
         meta = topic_meta.get(tid, {"title": tid, "locus_title": "Topics", "locus_id": ""})
@@ -5958,13 +6397,13 @@ def build() -> None:
             if x.get("greek"):
                 g = shown_source(eng_list(x["greek"]))
                 if g:
-                    src_block += "<details><summary>Greek</summary>" + "".join(
+                    src_block += "<details lang=\"grc\"><summary>Greek</summary>" + "".join(
                         f"<p class='src'>{escape(p)}</p>" for p in g
                     ) + "</details>"
             if x.get("latin"):
                 la = shown_source(eng_list(x["latin"]))
                 if la:
-                    src_block += "<details><summary>Latin</summary>" + "".join(
+                    src_block += "<details lang=\"la\"><summary>Latin</summary>" + "".join(
                         f"<p class='src'>{escape(p)}</p>" for p in la
                     ) + "</details>"
             al = (x.get("author") or "").lower()
@@ -6007,7 +6446,7 @@ def build() -> None:
             write(
                 DIST / "e" / x["id"] / "index.html",
                 layout(
-                    f"{e_author}, {e_cite}",
+                    f"{e_author} on {meta['title']}: {e_cite}",
                     ebody,
                     crumb=[
                         ("Home", "/"),
@@ -6016,8 +6455,18 @@ def build() -> None:
                         ("Excerpt", ""),
                     ],
                     active="topics",
-                    description=strip_logos_markup((paras_list or [""])[0])[:160],
+                    description=f"{e_author} on {meta['title'].lower()}: " + strip_logos_markup((paras_list or [""])[0]),
                     og_type="article",
+                    jsonld=[{
+                        "@type": "Quotation",
+                        "name": f"{e_author}, {e_cite}",
+                        "text": meta_description(" ".join(paras_list), 300),
+                        "creator": {"@type": "Person", "name": e_author,
+                                    "url": f"{SITE_ORIGIN}/authors/{author_hub_slug(x.get('author'))}/"},
+                        "about": meta["title"],
+                        "inLanguage": "en",
+                        "isPartOf": {"@type": "CreativeWork", "name": x.get("work") or e_cite},
+                    }],
                 ),
             )
             search_index.append(
@@ -6054,13 +6503,10 @@ def build() -> None:
             path_html = (
                 f'<aside class="path-note"><h2>{escape(path.get("title") or "")}</h2>'
                 f'<p>{escape(path.get("summary") or "")}</p>'
-                f'<p><a href="/explore/?topic={escape(tid)}">Open this path</a></p></aside>'
+                f'<p><a href="#over-time">See where they stood</a></p></aside>'
             )
         elif tid in explore_topic_ids:
-            path_html = (
-                f'<p class="intro"><a href="/explore/?topic={escape(tid)}">'
-                f"See how this topic lines up over time</a></p>"
-            )
+            path_html = ""
         lead = next((str(x.get("topic_lead")).strip() for x in rows if x.get("topic_lead")), "")
         relevance = (meta.get("modern_relevance") or "").strip()
         intro = lead or relevance
@@ -6086,33 +6532,105 @@ def build() -> None:
                 "alongside earlier voices. Dates sit on each passage.</p>"
             )
         _turn = rupture_for.get(tid)
+        tp = points_by_topic.get(tid) or []
+        on_page = {x["id"] for x in primary}
+        route_of = {}
+        for x in rows:
+            route_of.setdefault(x["id"], x["id"])
+            route_of.setdefault(x["id"].split("--", 1)[0], x["id"])
+
+        def anchor_for(pt: dict) -> str | None:
+            if pt.get("kind") == "excerpt":
+                rid = route_of.get(str(pt.get("ref") or "").split(":", 1)[-1])
+                if not rid:
+                    return pt.get("href")
+                return f"#{rid}" if rid in on_page else f"/e/{rid}/"
+            if pt.get("kind") == "contrast":
+                return "#turn"
+            return pt.get("href")
+
+        timeline = (
+            tl_claims_html(claims_by_topic[tid], tp, anchor_for, turn=_turn)
+            if tid in claims_by_topic and tp
+            else ""
+        )
+        timeline_html = (
+            f'<section class="over-time" id="over-time" aria-labelledby="over-time-h">'
+            f'<h2 id="over-time-h">Where they stood</h2>'
+            f'<p class="tl-intro">Each row is one claim. Each name is a writer, placed at the date of the passage. '
+            f"Select a name to read what they said.</p>{timeline}</section>"
+            if timeline
+            else century_strip_html(primary)
+        )
+        # Later writers summarised here (not yet in the library) join the voices.
+        contrast_cards = []
+        for pt in tp:
+            if pt.get("kind") != "contrast" or not pt.get("summary"):
+                continue
+            short = (claims_by_topic.get(tid, {}).get("claims") or [])
+            cl = next((c for c in short if c.get("id") == pt.get("claim_id")), {})
+            verb = STANCE_WORD.get(pt.get("stance") or "", "teaches").capitalize()
+            contrast_cards.append(
+                f'<article class="excerpt topic-card contrast-card">'
+                f'<header><h2>{escape(display_author(pt.get("author") or ""))}'
+                f' <span class="stance-chip {escape(pt.get("stance") or "affirms")}">{escape(verb)}: {escape(cl.get("short") or "")}</span></h2>'
+                f'<p class="meta">{escape(pt.get("period") or "")} · summary; his works are not yet in this library</p></header>'
+                f'<blockquote class="topic-lead"><p>{escape(pt.get("summary") or "")}</p></blockquote></article>'
+            )
         turn_html = (
-            f'<aside class="turn-note"><h2>{escape(_turn.get("title") or "A later turn")}</h2>'
-            f'<p>{escape(_turn.get("body") or "")}</p>'
-            f'<p><a href="/explore/?topic={escape(tid)}">See it over time →</a></p></aside>'
+            f'<aside class="turn-note" id="turn"><p class="eyebrow">A later turn</p>'
+            f'<h2>{escape(_turn.get("title") or "A later turn")}</h2>'
+            f'<p>{escape(_turn.get("body") or "")}</p></aside>'
             if _turn and _turn.get("body")
             else ""
         )
+        # Put the turn where it happens in time, not after everyone.
+        turn_year = tl_turn_year(tp)
+        voices: list[str] = []
+        placed_turn = False
+        for x, card in zip(primary, items_html):
+            if turn_html and not placed_turn and turn_year and _passage_year(x) >= turn_year:
+                voices.append(turn_html + "".join(contrast_cards))
+                placed_turn = True
+            voices.append(card)
+        if not placed_turn:
+            voices.append(turn_html + "".join(contrast_cards))
         tbody = f"""
 <p class="eyebrow">{escape(meta.get("locus_title") or "Questions")}</p>
 <h1>{escape(meta['title'])}</h1>
 <p class="meta">{" · ".join(meta_bits)}</p>
 {era_html}{intro_html}
-{century_strip_html(primary)}
+{timeline_html}
 {path_html}
-{''.join(items_html)}
-{turn_html}
+<section class="voices" aria-label="What each writer said">
+<h2 class="voices-h">What each writer said, earliest first</h2>
+{''.join(voices)}
+</section>
 {filed_html}
 {rel_html}
 """
         write(
             DIST / "topics" / tid / "index.html",
             layout(
-                meta["title"],
+                f"{meta['title']}: what the Church Fathers said",
                 tbody,
                 crumb=[("Home", "/"), ("Questions", "/topics/"), (meta["title"], "")],
                 active="topics",
-                description=f"{meta['title']}. {meta.get('locus_title') or 'Teaching in this library'}.",
+                description=(
+                    f"What the early Church Fathers taught on {meta['title'].lower()}: "
+                    f"{len(primary) + len(rest)} passages, earliest first. {intro}"
+                ),
+                jsonld=[{
+                    "@type": "CollectionPage",
+                    "name": f"{meta['title']}: what the Church Fathers said",
+                    "about": meta["title"],
+                    "isPartOf": {"@id": f"{SITE_ORIGIN}/#site"},
+                    "hasPart": [
+                        {"@type": "Quotation", "url": f"{SITE_ORIGIN}/e/{x['id']}/",
+                         "creator": {"@type": "Person", "name": display_author(x.get("author") or "")}}
+                        for x in primary[:40]
+                    ],
+                }],
             ),
         )
 
@@ -6133,6 +6651,7 @@ def build() -> None:
                 {related_panel("Related works", related_works)}""",
                 crumb=[("Home", "/"), ("Questions", "/topics/"), (meta["title"], "")],
                 active="topics",
+                robots="noindex,follow",
                 description=f"{meta['title']}. {meta.get('locus_title') or 'Teaching in this library'}.",
             ),
         )
@@ -6179,6 +6698,7 @@ def build() -> None:
 </div>
 <p class="works-hint meta" id="works-status" aria-live="polite">{author_n} authors · {len(works)} works · sorted by era (earliest first)</p>
 <ul id="works-list" class="card-list works-list author-catalog">{works_list}</ul>
+<p id="works-empty" class="works-empty" hidden>No writer or title matches that. Passages that contain your words are listed below when there are any; you can also try <a href="/topics/">Questions</a> or <a href="/scripture/">Scripture</a>.</p>
 <section id="passage-hits" class="passage-hits" hidden>
   <h2>Passages &amp; topics</h2>
   <p class="intro fine">Matches beyond the author list — excerpts and sections.</p>
@@ -6244,6 +6764,28 @@ def build() -> None:
         latin_html = (
             f'<p class="latin-title">{escape(latin_sub)}</p>' if latin_sub else ""
         )
+        w_author = display_author(w["author"])
+        w_lang = "grc" if any(s.get("greek") for s in w["sections"]) else ("la" if any(s.get("latin") for s in w["sections"]) else "")
+        work_ld = {
+            "@type": "Book",
+            "@id": f"{SITE_ORIGIN}/works/{w['slug']}/#book",
+            "name": pub_title,
+            "url": f"{SITE_ORIGIN}/works/{w['slug']}/",
+            "author": {"@type": "Person", "name": w_author,
+                       "url": f"{SITE_ORIGIN}/authors/{canonical_author_slug(w.get('author_slug'), w.get('author'))}/"},
+            "inLanguage": "en",
+            "isAccessibleForFree": True,
+            "publisher": {"@id": f"{SITE_ORIGIN}/#org"},
+            "description": public_blurb(w.get("blurb") or "") or None,
+        }
+        if latin_sub or w_lang:
+            work_ld["translationOfWork"] = {"@type": "CreativeWork", "name": latin_sub or pub_title,
+                                            **({"inLanguage": w_lang} if w_lang else {})}
+        work_ld = {k: v for k, v in work_ld.items() if v is not None}
+        work_desc = (
+            public_blurb(w.get("blurb") or "")
+            or f"Read {pub_title} by {w_author} in new English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
+        )
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
         edition_short = scrub_worksheet_note(edition_short)
         edition_ids = scrub_worksheet_note(edition_ids)
@@ -6284,6 +6826,7 @@ def build() -> None:
 
         # --- continuous reader: whole work (or one book) on a single page ---
         ordinals = section_ordinals(w["sections"])
+        src_json: dict[str, dict] = defaultdict(dict)
 
         def display_head(s: dict) -> str:
             """Editorial thought title, or '' if the head is only a locus label."""
@@ -6422,24 +6965,34 @@ def build() -> None:
                 scholar = (s.get("scholar_label") or "").strip()
                 if scholar:
                     paras.append(f'<p class="meta scholar">{scripture_html(clean_reader_notation(scholar))}</p>')
-            gk, la, wit = [], [], []
+            # Source text loads when a reader opens the panel (per-work JSON),
+            # so long works stay light. Each section's cite page keeps it inline.
+            wit = []
+            g_ids = [str(s["section"]) for s in secs if s.get("greek")]
+            l_ids = [str(s["section"]) for s in secs if s.get("latin")]
             for s in secs:
                 sid = str(s["section"])
                 if s.get("greek"):
-                    if len(secs) > 1:
-                        gk.append(f'<p class="src-sec">§{escape(shown_section(sid, ordinals))}</p>')
-                    gk += [f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["greek"])]
+                    src_json[sid]["g"] = shown_source(s["greek"])
                 if s.get("latin"):
-                    if len(secs) > 1:
-                        la.append(f'<p class="src-sec">§{escape(shown_section(sid, ordinals))}</p>')
-                    la += [f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["latin"])]
+                    src_json[sid]["l"] = shown_source(s["latin"])
                 if s.get("source_url"):
                     wit.append(f'<a href="{escape(s["source_url"])}" rel="noopener">§{escape(shown_section(sid, ordinals))}</a>')
-            src_block = ""
-            if gk:
-                src_block += f'<details><summary>Greek · {escape(rng)}</summary>{"".join(gk)}</details>'
-            if la:
-                src_block += f'<details><summary>Latin · {escape(rng)}</summary>{"".join(la)}</details>'
+
+            def lazy(kind: str, ids: list[str], label: str, lang: str) -> str:
+                if not ids:
+                    return ""
+                marks = ",".join(f"{sid}|{shown_section(sid, ordinals)}" for sid in ids)
+                links = " ".join(
+                    f'<a href="/works/{escape(w["slug"])}/{escape(sid)}/">§{escape(shown_section(sid, ordinals))}</a>' for sid in ids
+                )
+                return (
+                    f'<details class="src-lazy" lang="{lang}" data-src="/data/src/{escape(w["slug"])}.json" '
+                    f'data-kind="{kind}" data-secs="{escape(marks)}"><summary>{label} · {escape(rng)}</summary>'
+                    f'<div class="src-body"><p class="src-note">The {label} is on each section page: {links}</p></div></details>'
+                )
+
+            src_block = lazy("g", g_ids, "Greek", "grc") + lazy("l", l_ids, "Latin", "la")
             src_block += source_witness_html(secs, ordinals, ranged=rng)
             witness = (
                 f'<p class="meta">Latin source witness: {" · ".join(wit)}</p>' if wit else ""
@@ -6530,7 +7083,7 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    pub_title,
+                    f"{pub_title} by {w_author}",
                     f"""{work_header}
                     {work_intro_html(w["slug"])}
                     {author_link}{rel_topics}
@@ -6539,8 +7092,9 @@ def build() -> None:
                     {''.join(overview_toc)}""",
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
-                    description=public_blurb(w.get("blurb") or "") or SITE_TAG,
+                    description=work_desc,
                     og_type="article",
+                    jsonld=[work_ld],
                 ),
             )
             for i, (g, bslug) in enumerate(zip(w["groups"], book_slugs)):
@@ -6578,7 +7132,7 @@ def build() -> None:
                 write(
                     DIST / "works" / w["slug"] / bslug / "index.html",
                     layout(
-                        f"{pub_title} — {g['title']}",
+                        f"{pub_title}, {g['title']}, by {w_author}",
                         reader_page(
                             f"{bnav}<div class=\"reader\">{blocks}</div>{bnav}",
                             contents_html=contents_details(secs, label=f"{g['title']} contents"),
@@ -6591,8 +7145,11 @@ def build() -> None:
                             (g["title"], ""),
                         ],
                         active="works",
-                        description=public_blurb(w.get("blurb") or "") or SITE_TAG,
+                        description=f"{g['title']} of {pub_title} by {w_author}. " + work_desc,
                         og_type="article",
+                        jsonld=[{"@type": "Chapter", "name": f"{pub_title}, {g['title']}",
+                                 "url": f"{SITE_ORIGIN}/works/{w['slug']}/{bslug}/",
+                                 "isPartOf": {"@id": work_ld["@id"]}}, work_ld],
                     ),
                 )
         else:
@@ -6602,28 +7159,33 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    pub_title,
+                    f"{pub_title} by {w_author}",
                     reader_page(
                         f'<div class="reader">{blocks}</div>',
                         contents_html=contents_details(w["sections"]),
                     ),
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
-                    description=public_blurb(w.get("blurb") or "") or SITE_TAG,
+                    description=work_desc,
                     og_type="article",
+                    jsonld=[work_ld],
                 ),
             )
 
+        if src_json:
+            _src_dest = DIST / "data" / "src" / f"{w['slug']}.json"
+            _src_dest.parent.mkdir(parents=True, exist_ok=True)
+            _src_dest.write_text(json.dumps(src_json, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         for idx, s in enumerate(w["sections"]):
             paras = "".join(f"<p>{render_reader_html(p)}</p>" for p in s["english"])
             # Same pattern as excerpt pages: English body, then language panels at the bottom.
             src_block = ""
             if s.get("greek"):
-                src_block += "<details><summary>Greek</summary>" + "".join(
+                src_block += "<details lang=\"grc\"><summary>Greek</summary>" + "".join(
                     f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["greek"])
                 ) + "</details>"
             if s.get("latin"):
-                src_block += "<details><summary>Latin</summary>" + "".join(
+                src_block += "<details lang=\"la\"><summary>Latin</summary>" + "".join(
                     f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["latin"])
                 ) + "</details>"
             src_block += source_witness_html([s], ordinals)
@@ -6656,7 +7218,7 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / str(s["section"]) / "index.html",
                 layout(
-                    f"{pub_title} §{shown_section(s['section'], ordinals)}",
+                    f"{pub_title} §{shown_section(s['section'], ordinals)}, {w_author}",
                     f"""<article class="work-section">
                     {nav}
                     <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(pub_title)}</a> · §{escape(shown_section(s['section'], ordinals))}</p>
@@ -6676,8 +7238,12 @@ def build() -> None:
                         (f"§{shown_section(s['section'], ordinals)}", ""),
                     ],
                     active="works",
-                    description=strip_logos_markup((s["english"] or [""])[0])[:160],
+                    description=f"{w_author}, {pub_title} §{shown_section(s['section'], ordinals)}: " + strip_logos_markup((s["english"] or [""])[0]),
                     og_type="article",
+                    jsonld=[{"@type": "Chapter",
+                             "name": f"{pub_title} §{shown_section(s['section'], ordinals)}",
+                             "url": f"{SITE_ORIGIN}/works/{w['slug']}/{s['section']}/",
+                             "isPartOf": {"@id": work_ld["@id"], "@type": "Book", "name": pub_title}}],
                 ),
             )
             search_index.append(
@@ -6691,6 +7257,286 @@ def build() -> None:
                     "text": strip_logos_markup(" ".join(s["english"])),
                 }
             )
+
+    def verse_key(v: str) -> tuple:
+        nums = re.findall(r"\d+", v)
+        return (int(nums[0]) if nums else 0, v)
+
+    sc_books: dict[str, dict] = {}
+    for (book, chap), rows in sc_entries.items():
+        b = sc_books.setdefault(book, {"chapters": {}, "refs": 0, "writers": set()})
+        b["chapters"][chap] = rows
+        b["refs"] += len(rows)
+        b["writers"].update(r["author"] for r in rows)
+
+    def book_name(book: str) -> str:
+        return BIBLE_PUBLIC.get(book, book)
+
+    def sc_item(r: dict) -> str:
+        dates = author_dates_display(r["author"]) or ""
+        return (
+            f'<li><a href="{escape(r["href"])}"><span class="who">{escape(r["who"])}</span>'
+            f'<span class="where">{escape(dates)}{" · " if dates else ""}{escape(r["title"])}</span>'
+            + (f'<span class="snip">{escape(r["snippet"])}</span>' if r["snippet"] else "")
+            + "</a></li>"
+        )
+
+    tr_buttons = "".join(
+        f'<button type="button" data-tr="{k}" aria-pressed="{"true" if k == "bsb" else "false"}" '
+        f'title="{escape(v["name"])}">{escape(v["short"])}</button>'
+        for k, v in bibles.items()
+    )
+    tr_credit = " · ".join(f"{escape(v['name'])} ({escape(v['short'])}): {escape(v['license'])}" for v in bibles.values())
+
+    for book in BIBLE_ORDER:
+        text_chaps = base_bible["books"].get(book) or {}
+        b = sc_books.get(book, {"chapters": {}, "refs": 0, "writers": set()})
+        if not text_chaps and not b["chapters"]:
+            continue
+        bslug = slugify(book_name(book))
+        all_chaps = sorted({int(c) for c in text_chaps} | set(b["chapters"]))
+        most = max([len(b["chapters"].get(c, [])) for c in all_chaps] + [1])
+        chip_html = "".join(
+            f'<a class="sc-chap{" quiet" if not b["chapters"].get(c) else ""}" href="/scripture/{bslug}/{c}/" '
+            f'style="--w:{round(len(b["chapters"].get(c, [])) / most, 2)}">'
+            f'<span class="n">{c}</span><span class="c">{len(b["chapters"].get(c, [])) or ""}</span></a>'
+            for c in all_chaps
+        )
+        vcount: dict[tuple[int, str], int] = defaultdict(int)
+        for c, rows in b["chapters"].items():
+            for r in rows:
+                if r["verse"]:
+                    vcount[(c, r["verse"])] += 1
+        top = sorted(vcount.items(), key=lambda kv: (-kv[1], kv[0]))[:6]
+        top_items = []
+        for (c, v), n in top:
+            first_v = (re.findall(r"\d+", v) or ["whole"])[0]
+            anchor = f"#v{first_v}" if (book, c, first_v) in SCRIPTURE_VERSES else ""
+            top_items.append(
+                f'<li><a href="/scripture/{bslug}/{c}/{escape(anchor)}">{escape(book_name(book))} {c}:{escape(v)}</a>'
+                f' <span class="c">{n} passages</span></li>'
+            )
+        top_html = "".join(top_items)
+        lede = (
+            f"{b['refs']:,} passages by {len(b['writers'])} writers cite {escape(book_name(book))}. "
+            "Open a chapter to read it with the Fathers beside it."
+            if b["refs"]
+            else f"Read {escape(book_name(book))} chapter by chapter. No passage in the library cites it yet."
+        )
+        write(
+            DIST / "scripture" / bslug / "index.html",
+            layout(
+                f"{book_name(book)} in the Church Fathers",
+                f"""<p class="eyebrow"><a href="/scripture/">Scripture</a></p>
+<h1>{escape(book_name(book))} in the Church Fathers</h1>
+<p class="lede">{lede}</p>
+<div class="sc-chaps">{chip_html}</div>
+{f'<h2>Most cited</h2><ul class="sc-top">{top_html}</ul>' if top_html else ''}""",
+                crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), "")],
+                active="scripture",
+                description=(
+                    f"What the early Church Fathers said about {book_name(book)}: {b['refs']} passages by {len(b['writers'])} writers, chapter by chapter, in new English."
+                    if b["refs"] else f"Read {book_name(book)} with the early Church Fathers beside it."
+                ),
+                og_image="scripture",
+            ),
+        )
+        for i, c in enumerate(all_chaps):
+            rows = b["chapters"].get(c, [])
+            by_first: dict[str, list[dict]] = defaultdict(list)
+            whole: list[dict] = []
+            for r in rows:
+                nums = re.findall(r"\d+", r["verse"])
+                if nums:
+                    by_first[nums[0]].append(r)
+                else:
+                    whole.append(r)
+            verses = text_chaps.get(str(c)) or []
+            vmax = max([len(v) for v in by_first.values()] + [1])
+            spans = []
+            for vnum, vtext in verses:
+                hits = by_first.get(str(vnum), [])
+                if hits:
+                    spans.append(
+                        f'<span class="v cited" id="v{vnum}" data-v="{vnum}" tabindex="0" role="button" '
+                        f'aria-controls="desk" aria-label="Verse {vnum}: {len(hits)} passage{"s" if len(hits) != 1 else ""} in the Fathers" '
+                        f'style="--heat:{round(0.25 + 0.75 * len(hits) / vmax, 2)}"><sup>{vnum}</sup><span class="vt">{escape(vtext)}</span></span> '
+                    )
+                else:
+                    spans.append(f'<span class="v" id="v{vnum}" data-v="{vnum}"><sup>{vnum}</sup><span class="vt">{escape(vtext)}</span></span> ')
+            # Verses cited but missing from the base text (versification differences).
+            extra = [v for v in by_first if not any(str(vn) == v for vn, _ in verses)]
+            desk_sections = []
+            for v in sorted(by_first, key=lambda x: int(x)):
+                items = "".join(sc_item(r) for r in sorted(by_first[v], key=lambda r: (r["year"], r["who"])))
+                n = len(by_first[v])
+                desk_sections.append(
+                    f'<section class="desk-verse" data-for="{escape(v)}" hidden>'
+                    f'<p class="eyebrow">Verse</p><h2>{escape(book_name(book))} {c}:{escape(v)}</h2>'
+                    f'<p class="desk-count">{n} passage{"s" if n != 1 else ""} in the Fathers, earliest first</p>'
+                    f'<ul class="sc-list">{items}</ul>'
+                    f'<button type="button" class="desk-back">Back to the chapter</button></section>'
+                )
+            cited_verses = sorted(by_first, key=lambda v: -len(by_first[v]))[:8]
+            bars = "".join(
+                f'<li><button type="button" class="desk-jump" data-v="{escape(v)}">'
+                f'<span class="ref">{escape(book_name(book))} {c}:{escape(v)}</span>'
+                f'<span class="bar" style="--w:{round(len(by_first[v]) / vmax, 2)}"></span>'
+                f'<span class="n">{len(by_first[v])}</span></button></li>'
+                for v in cited_verses
+            )
+            writers = {r["author"] for r in rows}
+            summary = (
+                f'<div class="desk-stats"><p><b>{len(rows)}</b> passage{"s" if len(rows) != 1 else ""}</p>'
+                f'<p><b>{len(by_first)}</b> of {len(verses) or "?"} verses cited</p>'
+                f'<p><b>{len(writers)}</b> writer{"s" if len(writers) != 1 else ""}</p></div>'
+                if rows else '<p class="desk-count">No passage in the library cites this chapter yet.</p>'
+            )
+            desk_home = (
+                f'<section class="desk-home" data-for="chapter"><p class="eyebrow">This chapter in the Fathers</p>'
+                f'<h2>{escape(book_name(book))} {c}</h2>{summary}'
+                + (f'<h3>Most cited verses</h3><ul class="desk-bars">{bars}</ul>' if bars else "")
+                + (f'<h3>On the chapter as a whole</h3><ul class="sc-list">{"".join(sc_item(r) for r in sorted(whole, key=lambda r: (r["year"], r["who"])))}</ul>' if whole else "")
+                + (f'<p class="desk-hint">Select a marked verse to see who cites it.</p>' if bars else "")
+                + (f'<p class="desk-hint">Also cited: verse{"s" if len(extra) > 1 else ""} {escape(", ".join(sorted(extra, key=int)))} (numbered differently in this translation).</p>' if extra else "")
+                + "</section>"
+            )
+            prev_c = all_chaps[i - 1] if i else None
+            next_c = all_chaps[i + 1] if i + 1 < len(all_chaps) else None
+            nav = (
+                '<nav class="section-nav" aria-label="Chapters">'
+                + (f'<a class="pn prev" href="/scripture/{bslug}/{prev_c}/">← Chapter {prev_c}</a>' if prev_c else '<span class="pn prev"></span>')
+                + f'<a class="pn toc" href="/scripture/{bslug}/">All of {escape(book_name(book))}</a>'
+                + (f'<a class="pn next" href="/scripture/{bslug}/{next_c}/">Chapter {next_c} →</a>' if next_c else '<span class="pn next"></span>')
+                + "</nav>"
+            )
+            text_html = (
+                f'<div class="bx-text" lang="en" data-book="{bslug}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
+                if spans else '<div class="bx-text"><p class="desk-hint">This chapter\'s text is not loaded.</p></div>'
+            )
+            lede = (
+                f"{len(rows)} passage{'s' if len(rows) != 1 else ''} by {len(writers)} writer{'s' if len(writers) != 1 else ''} comment on this chapter. Marked verses are the ones they cite; select one to read what they said."
+                if rows else "No passage in the library cites this chapter yet."
+            )
+            for key, tb in bibles.items():
+                if key == "bsb":
+                    continue
+                tv = (tb["books"].get(book) or {}).get(str(c))
+                if tv:
+                    tdest = DIST / "data" / "bible" / key / bslug / f"{c}.json"
+                    tdest.parent.mkdir(parents=True, exist_ok=True)
+                    tdest.write_text(json.dumps(tv, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+            write(
+                DIST / "scripture" / bslug / str(c) / "index.html",
+                layout(
+                    f"{book_name(book)} {c} in the Church Fathers",
+                    f"""<div class="bx" data-bx>
+<header class="bx-head">
+  <p class="eyebrow"><a href="/scripture/{bslug}/">{escape(book_name(book))}</a></p>
+  <h1>{escape(book_name(book))} {c} <span class="bx-h-sub">with the Church Fathers</span></h1>
+  <p class="lede">{lede}</p>
+  <div class="bx-tools"><div class="bx-tr" role="group" aria-label="Bible translation">{tr_buttons}</div>{nav}</div>
+</header>
+<div class="bx-grid">
+{text_html}
+<aside class="bx-desk" id="desk" aria-label="What the Fathers said" aria-live="polite">
+<button type="button" class="desk-close" aria-label="Close">×</button>
+{desk_home}{''.join(desk_sections)}
+</aside>
+</div>
+{nav}
+<p class="intro fine bx-credit">Bible text: {tr_credit}. Fathers' passages are our new English; the snippets show the sentence around each citation.</p>
+</div>""",
+                    crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), f"/scripture/{bslug}/"), (f"Chapter {c}", "")],
+                    active="scripture",
+                    description=(
+                        f"{book_name(book)} {c} with the early Church Fathers beside it: {len(rows)} passages by {len(writers)} writers, verse by verse, in new English."
+                        if rows else f"Read {book_name(book)} {c} in the Berean Standard Bible, with the early Church Fathers beside it."
+                    ),
+                    og_image="scripture",
+                    og_type="article",
+                    robots="" if rows else "noindex,follow",
+                    jsonld=[{
+                        "@type": "WebPage",
+                        "name": f"{book_name(book)} {c} in the Church Fathers",
+                        "about": {"@type": "Chapter", "name": f"{book_name(book)} {c}", "position": str(c),
+                                  "isPartOf": {"@type": "Book", "name": book_name(book)}},
+                        "citation": [
+                            {"@type": "Quotation", "creator": {"@type": "Person", "name": r["who"]}, "url": f"{SITE_ORIGIN}{r['href']}"}
+                            for r in rows[:40]
+                        ],
+                    }] if rows else None,
+                ),
+            )
+
+    def sc_shelf(books: list[str]) -> str:
+        cells = []
+        for book in books:
+            b = sc_books.get(book) or {"refs": 0, "chapters": {}}
+            if not b["refs"] and not (base_bible["books"].get(book)):
+                continue
+            cells.append(
+                f'<a class="sc-book" href="/scripture/{slugify(book_name(book))}/">'
+                f'<span class="t">{escape(book_name(book))}</span>'
+                f'<span class="c">{b["refs"]:,} passages · {len(base_bible["books"].get(book) or b["chapters"])} chapters</span></a>'
+            )
+        return "".join(cells)
+
+    sc_total = sum(b["refs"] for b in sc_books.values())
+    write(
+        DIST / "scripture" / "index.html",
+        layout(
+            "The Bible in the Church Fathers, book by book",
+            f"""<p class="eyebrow">Scripture</p>
+<h1>The Bible, through the Fathers' eyes</h1>
+<p class="lede">Pick a book and a chapter to see every passage in this library that cites it: {sc_total:,} references across {len(sc_books)} books, earliest writers first.</p>
+<h2>Old Testament</h2>
+<div class="sc-books">{sc_shelf(BIBLE_ORDER[:NT_START])}</div>
+<h2>New Testament</h2>
+<div class="sc-books">{sc_shelf(BIBLE_ORDER[NT_START:])}</div>
+<p class="intro fine">References are found in the English of each passage. Psalm numbers follow the passage, which sometimes uses the Greek numbering.</p>""",
+            crumb=[("Home", "/"), ("Scripture", "")],
+            active="scripture",
+            description=f"Every book of the Bible as the early Church Fathers read it: {sc_total:,} references across {len(sc_books)} books, chapter by chapter, in new English.",
+            og_image="scripture",
+        ),
+    )
+
+    # --- Listen: every work with read-along audio ------------------------
+    listen_by_author: dict[str, list[dict]] = defaultdict(list)
+    for w in works:
+        if w.get("has_audio"):
+            listen_by_author[canonical_author_slug(w.get("author_slug"), w.get("author"))].append(w)
+    listen_groups = []
+    for a_slug, ws in sorted(listen_by_author.items(), key=lambda kv: (author_sort_year(kv[1][0]["author"], None, kv[0]), kv[0])):
+        ws.sort(key=lambda w: alpha_key(public_reader_title(w["title"], slug=w["slug"])))
+        name = display_author(ws[0]["author"])
+        lis = "".join(
+            f'<li><a href="/works/{escape(w["slug"])}/"><span class="t">{escape(public_reader_title(w["title"], slug=w["slug"]))}</span>'
+            f'<span class="c">{w["section_count"]} sections</span></a></li>'
+            for w in ws
+        )
+        dates = author_dates_display(ws[0]["author"], a_slug)
+        listen_groups.append(
+            f'<section class="ls-group"><h2><a href="/authors/{escape(a_slug)}/">{escape(name)}</a>'
+            f'{f" <span class=author-dates>{escape(dates)}</span>" if dates else ""}</h2>'
+            f'<ul class="ls-list">{lis}</ul></section>'
+        )
+    n_listen = sum(len(v) for v in listen_by_author.values())
+    write(
+        DIST / "listen" / "index.html",
+        layout(
+            "Listen to the Church Fathers: free audio in modern English",
+            f"""<p class="eyebrow">Listen</p>
+<h1>Hear the Fathers read aloud</h1>
+<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.</p>
+<div class="ls-groups">{''.join(listen_groups)}</div>""",
+            crumb=[("Home", "/"), ("Listen", "")],
+            active="listen",
+            description=f"{n_listen} early Christian works with read-along audio in new English: press Play and the text follows the voice.",
+            og_image="listen",
+        ),
+    )
 
     # --- Authors ---
     author_links = []
@@ -6770,10 +7616,11 @@ def build() -> None:
             if ot_lis
             else ""
         )
+        p_title, p_desc, p_ld = person_page_meta(slug, display, works=len(ww), passages=len(ot))
         write(
             DIST / "authors" / slug / "index.html",
             layout(
-                display_author(display),
+                p_title,
                 f"""<div class="fa-page">
                 {head}
                 <div class="fa-shelf">{shelf_html or "<p>Whole works are on the way.</p>"}
@@ -6782,7 +7629,8 @@ def build() -> None:
                 {passages_html}""",
                 crumb=[("Home", "/"), ("Fathers", "/authors/"), (display, "")],
                 active="authors",
-                description=f"{display_author(display)}: life, works and passages in the Via Patrum library.",
+                description=p_desc,
+                jsonld=p_ld,
             ),
         )
         dates = author_dates_display(display, slug)
@@ -6833,24 +7681,8 @@ def build() -> None:
         ),
     )
     # Old slug kept as a redirect so existing links don't break.
-    write(
-        DIST / "authors" / "augustine" / "index.html",
-        '<!DOCTYPE html><meta charset="utf-8">'
-        '<meta http-equiv="refresh" content="0; url=/authors/augustine-of-hippo/">'
-        '<link rel="canonical" href="https://fathers.saneapps.com/authors/augustine-of-hippo/">'
-        '<title>Augustine of Hippo</title>'
-        '<p><a href="/authors/augustine-of-hippo/">Augustine of Hippo has moved.</a></p>',
-    )
 
     # The two Diognetus spellings now share one page.
-    write(
-        DIST / "authors" / "anonymous-diognetus" / "index.html",
-        '<!DOCTYPE html><meta charset="utf-8">'
-        '<meta http-equiv="refresh" content="0; url=/authors/mathetes-epistle-to-diognetus/">'
-        '<link rel="canonical" href="https://fathers.saneapps.com/authors/mathetes-epistle-to-diognetus/">'
-        '<title>Letter to Diognetus</title>'
-        '<p><a href="/authors/mathetes-epistle-to-diognetus/">Letter to Diognetus has moved.</a></p>',
-    )
     hubs_done.add("anonymous-diognetus")
 
     # Every loaded work must have an author destination, including newly added
@@ -6902,16 +7734,18 @@ def build() -> None:
             sl, author, n_works=0, n_passages=n,
             n_questions=sum(1 for k in grouped if k in topic_meta), start=None,
         )
+        p_title, p_desc, p_ld = person_page_meta(sl, author, works=0, passages=n)
         write(
             DIST / "authors" / sl / "index.html",
             layout(
-                display_author(author),
+                p_title,
                 f"""<div class="fa-page">{head}
                 <div class="fa-shelf"><h2><span>Passages by question</span><span>{n}</span></h2><div class="fa-qs">{''.join(blocks)}</div>
                 <p class="intro fine">Whole works by {escape(display_author(author))} are on the way.</p></div></div>""",
                 crumb=[("Home", "/"), ("Fathers", "/authors/"), (author, "")],
                 active="authors",
-                description=f"{display_author(author)}: life and passages in the Via Patrum library.",
+                description=p_desc,
+                jsonld=p_ld,
             ),
         )
 
@@ -6943,76 +7777,78 @@ def build() -> None:
         json.dumps(search_index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
 
-    explore_index = build_explore_index(excerpts, works, topic_meta)
     (DIST / "data" / "explore-index.json").write_text(
         json.dumps(explore_index, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
-    progress_strip = ""
+    # --- Over time: every question at a glance ---------------------------
+    ot_groups = []
+    for locus in tax.get("loci", []):
+        cards = []
+        for t in locus.get("topics", []):
+            tid = t["id"]
+            tp = points_by_topic.get(tid) or []
+            tc = claims_by_topic.get(tid)
+            if not tc or not tp:
+                continue
+            first_claim = (tc.get("claims") or [{}])[0]
+            writers = {p.get("author_slug") for p in tp if p.get("kind") != "contrast"}
+            turned = bool(rupture_for.get(tid)) or any(p.get("kind") == "contrast" for p in tp)
+            rejects = sum(1 for p in tp if p.get("stance") == "denies")
+
+            def ot_anchor(pt: dict, _tid: str = tid) -> str:
+                return f"/topics/{_tid}/#over-time"
+
+            badge = '<span class="ot-badge turn">A later turn</span>' if turned else ""
+            cards.append(
+                f'<article class="ot-card" id="{escape(tid)}">'
+                f'<h3><a href="/topics/{escape(tid)}/#over-time">{escape(t["title"])}</a></h3>'
+                f'<p class="ot-claim">{escape(first_claim.get("label") or "")}</p>'
+                f"{tl_claims_html(tc, tp, ot_anchor, compact=True, turn=rupture_for.get(tid))}"
+                f'<p class="ot-meta">{badge}<a href="/topics/{escape(tid)}/#over-time">'
+                f'{len(writers)} writer{"s" if len(writers) != 1 else ""} on {len(tc.get("claims") or [])} claims →</a></p>'
+                f"</article>"
+            )
+        if cards:
+            ot_groups.append(
+                f'<section class="ot-group" id="g-{escape(locus["id"])}">'
+                f'<h2>{escape(public_locus_title(locus["id"], locus.get("title") or ""))}</h2>'
+                f'<div class="ot-grid">{"".join(cards)}</div></section>'
+            )
+    ot_nav = "".join(
+        f'<a href="#g-{escape(locus["id"])}">{escape(public_locus_title(locus["id"], locus.get("title") or ""))}</a>'
+        for locus in tax.get("loci", [])
+        if any(claims_by_topic.get(t["id"]) and points_by_topic.get(t["id"]) for t in locus.get("topics", []))
+    )
     explore_body = f"""
-<div class="explore" data-explore>
-  <header class="explore-head">
-    <p class="eyebrow">Over time</p>
-    <h1>How the answers line up over time</h1>
-    {progress_strip}
-    <p class="intro explore-sub">What each early writer taught, claim by claim — with the passages to prove it.</p>
-  </header>
-  <div class="explore-chrome">
-    <label class="field field-search"><span>Search</span><input id="explore-q" type="search" placeholder="Writer, work, or words…" autocomplete="off"></label>
-    <label class="field field-topic"><span>Topic</span><select id="explore-topic"></select></label>
-    <div class="explore-seg" role="group" aria-label="View">
-      <button type="button" id="view-timeline">Timeline</button>
-      <button type="button" id="view-table">Table</button>
-      <button type="button" id="view-consensus">Consensus</button>
-    </div>
-    <button type="button" class="explore-filters-toggle" id="explore-filters-toggle" aria-expanded="false">Filters</button>
-    <label class="field field-extra"><span>Era</span><select id="explore-era"></select></label>
-    <label class="field field-extra"><span>Author</span><select id="explore-author"></select></label>
-    <label class="field field-extra"><span>Compare</span><select id="explore-compare-add"></select></label>
-    <div class="explore-chips" id="explore-chips"></div>
-    <p class="intro" id="explore-summary" aria-live="polite"></p>
-    <div class="explore-seg" id="explore-scale-seg" role="group" aria-label="Scale">
-      <button type="button" id="zoom-century">Centuries</button>
-      <button type="button" id="zoom-year">Years</button>
-    </div>
-  </div>
-  <p class="explore-legend" id="explore-legend"><span><i class="dot-affirms">●</i> affirms the row</span><span><i class="dot-partly">◐</i> partly</span><span><i class="dot-denies">✕</i> denies the row</span><span class="legend-note">Each color is one writer. Click a mark to read the passage.</span></p>
-  <aside id="explore-tip" class="explore-tip" data-open="0" hidden>
-    <strong class="tip-title"></strong>
-    <span class="tip-body" id="explore-tip-body"></span>
-    <button type="button" id="explore-tip-toggle">Show note</button>
-  </aside>
-  <div class="explore-stage">
-    <div class="explore-canvas" id="explore-canvas">
-      <div class="explore-tooltip" id="explore-tooltip"></div>
-    </div>
-    <aside class="explore-drawer" id="explore-drawer">
-      <p class="empty">Loading…</p>
-    </aside>
-  </div>
-</div>
+<header class="ot-head">
+  <p class="eyebrow">Over time</p>
+  <h1>How the answers line up over time</h1>
+  <p class="intro">For every question, the main claim and where each writer stood on it, from the apostles to the councils. Open a question to see every claim, every writer, and the passages.</p>
+  <p class="tl-legend"><span class="tl-key affirms"></span>teaches it <span class="tl-key qualified"></span>partly <span class="tl-key denies"></span>rejects it <span class="tl-key contrast"></span>later writer, summary only</p>
+  <nav class="ot-nav" aria-label="Question groups">{ot_nav}</nav>
+</header>
+{''.join(ot_groups)}
+<p class="intro fine">The marks are our reading of each passage, for study. They are not a ranking of who was right.</p>
+<script>
+  // Old links (/explore/?topic=…) open the question's timeline.
+  (function () {{
+    var t = new URLSearchParams(location.search).get("topic");
+    if (t && /^[a-z0-9-]+$/.test(t)) location.replace("/topics/" + t + "/#over-time");
+  }})();
+</script>
 """
     write(
         DIST / "explore" / "index.html",
         layout(
-            "Over time",
+            "What the Church Fathers taught, over time",
             explore_body,
+            crumb=[("Home", "/"), ("Over time", "")],
             active="explore",
-            description="What each early writer taught, claim by claim: timeline, verdict table, and consensus views with the passages to prove it",
-            styles=["/assets/explore.css"],
-            scripts=["/assets/explore.js"],
-            body_class="explore-mode",
+            description="Every question the early Church answered, with where each writer stood over time, from the apostles to the councils, and the passages behind each mark.",
         ),
     )
 
-    write(
-        DIST / "search" / "index.html",
-        '<!DOCTYPE html><meta charset="utf-8">'
-        '<meta http-equiv="refresh" content="0; url=/works/">'
-        '<link rel="canonical" href="https://fathers.saneapps.com/works/">'
-        '<title>Find works</title>'
-        '<p>Search now lives on <a href="/works/">Works</a> — find, filter, and sort in one place.</p>',
-    )
     write(
         DIST / "contribute" / "index.html",
         layout(
@@ -7064,7 +7900,7 @@ def build() -> None:
                 <p class="n">7</p>
                 <h2>Spread the word</h2>
                 <p>YouTube and X channels are launching soon. Until then, a link is the best help: send the library to someone who studies.</p>
-                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%20%E2%80%94%20the%20complete%20Church%20Fathers%2C%20free%20for%20the%20world&url=https%3A%2F%2Ffathers.saneapps.com%2F" rel="noopener">Share on X</a></p>
+                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%20%E2%80%94%20the%20complete%20Church%20Fathers%2C%20free%20for%20the%20world&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
               </li>
             </ol>""",
             crumb=[("Home", "/"), ("Help us", "")],
@@ -7151,23 +7987,87 @@ def build() -> None:
         """/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+/assets/site.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/site.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/readalong.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/og/*
+  Cache-Control: public, max-age=86400
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
 """,
         encoding="utf-8",
     )
     (DIST / "robots.txt").write_text(
-        "User-agent: *\nAllow: /\nSitemap: https://fathers.saneapps.com/sitemap.xml\n",
+        f"User-agent: *\nAllow: /\nSitemap: {SITE_ORIGIN}/sitemap.xml\n",
         encoding="utf-8",
     )
+    # Every page gets its own title: where two pages still share one, the later
+    # ones add the opening words of their own description.
+    title_re = re.compile(r"<title>(.*?)</title>")
+    seen_titles: dict[str, list[Path]] = defaultdict(list)
+    for page in sorted(DIST.rglob("index.html")):
+        if page.relative_to(DIST).as_posix().startswith("assets/"):
+            continue
+        m = title_re.search(page.read_text(encoding="utf-8")[:4000])
+        if m:
+            seen_titles[m.group(1)].append(page)
+    for title, pages in seen_titles.items():
+        if len(pages) < 2:
+            continue
+        for page in pages[1:]:
+            html = page.read_text(encoding="utf-8")
+            dm = re.search(r'<meta name="description" content="([^"]*)"', html)
+            words = (dm.group(1) if dm else "").split(":", 1)[-1].split()
+            tag = " ".join(words[:6]).rstrip(",.;:") + "\u2026" if words else page.parent.name
+            base = title.replace(f" · {SITE_NAME}", "")
+            new = f"{base}: \u201c{escape(tag)}\u201d · {SITE_NAME}"
+            html = html.replace(f"<title>{title}</title>", f"<title>{new}</title>", 1)
+            html = html.replace(f'content="{title}"', f'content="{new}"')
+            page.write_text(html, encoding="utf-8")
+
+    # Old addresses answer with a real 301 instead of a meta-refresh page.
+    (DIST / "_redirects").write_text(
+        "/search/ /works/ 301\n"
+        "/search /works/ 301\n"
+        "/authors/augustine/ /authors/augustine-of-hippo/ 301\n"
+        "/authors/anonymous-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n",
+        encoding="utf-8",
+    )
+    # One sitemap per section, joined by an index, all on the canonical host.
     urls = sorted(
         "/" + p.relative_to(DIST).as_posix().removesuffix("index.html")
         for p in DIST.rglob("*.html")
-        if p.name != "404.html"
+        if p.name != "404.html" and not p.relative_to(DIST).as_posix().startswith("assets/")
     )
+    groups: dict[str, list[str]] = defaultdict(list)
+    for u in urls:
+        head = u.strip("/").split("/", 1)[0] or "pages"
+        groups[head if head in {"works", "e", "scripture", "topics", "authors"} else "pages"].append(u)
+    names = {"e": "passages"}
+    for g, us in groups.items():
+        (DIST / f"sitemap-{names.get(g, g)}.xml").write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc></url>\n" for u in us)
+            + "</urlset>\n",
+            encoding="utf-8",
+        )
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <url><loc>https://fathers.saneapps.com{escape(u)}</loc></url>\n" for u in urls)
-        + "</urlset>\n",
+        '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc></sitemap>\n" for g in sorted(groups))
+        + "</sitemapindex>\n",
         encoding="utf-8",
     )
 
