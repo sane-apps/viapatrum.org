@@ -153,8 +153,8 @@ MACARIUS_BOOK = BOOKS / "macarius-spiritual-homilies"
 WESLEY_BOOK = BOOKS / "john-wesley-sermons"
 EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
-SITE_NAME = "Fathers"
-SITE_TAG = "Fathers reading — topics and whole works"
+SITE_NAME = "Via Patrum"
+SITE_TAG = "The early Church in its own words: every Father, every work, in faithful modern English. Free."
 BASE = ""
 
 # Work ↔ topic cross-refs (topic ids from ante-nicene-topics/topics.yml).
@@ -953,6 +953,120 @@ def canonical_author_slug(slug: str | None, author: str | None = None) -> str:
     return aliased
 
 
+# Excerpt corpora spell some writers several ways. One public name each.
+AUTHOR_DISPLAY = {
+    "Origen": "Origen of Alexandria",
+    "Irenaeus": "Irenaeus of Lyons",
+    "Cyprian": "Cyprian of Carthage",
+    "Hermas": "Hermas",
+    "Shepherd of Hermas": "Hermas",
+    "Mathetes (Epistle to Diognetus)": "Letter to Diognetus",
+    "Anonymous (Diognetus)": "Letter to Diognetus",
+    "Barnabas (Epistle)": "Barnabas",
+    "Didache": "The Didache",
+}
+
+
+def display_author(name: str | None) -> str:
+    n = str(name or "").strip()
+    return AUTHOR_DISPLAY.get(n, n)
+
+
+def author_hub_slug(name: str | None) -> str:
+    """The /authors/<slug>/ page an excerpt author lands on (mirrors the hub writer)."""
+    al = str(name or "").lower()
+    if "origen" in al:
+        return "origen"
+    if "julian" in al:
+        return "julian-of-eclanum"
+    if "cyril of alexandria" in al:
+        return "cyril-of-alexandria"
+    return slugify(name or "unknown")
+
+
+# Public citation line for a topical passage: work title in plain English,
+# then the place. No author prefix (the author is shown beside it), no
+# edition chatter, one numbering style.
+_CITE_LATIN = (
+    (r"\bContra Celsum\b", "Against Celsus"),
+    (r"\bDe Principiis\b", "On First Principles"),
+    (r"\bAdversus Haereses\b", "Against Heresies"),
+    (r"\bInstructiones\b", "Instructions"),
+    (r"\bCarmen de Duobus Populis\b", "Poem on the Two Peoples"),
+    (r"\bPaedagogus\b", "The Instructor"),
+    (r"\bDe Corona\b", "On the Crown"),
+    (r"\bDe Fuga in Persecutione\b", "On Flight in Persecution"),
+    (r"\bScorpiace\b", "Antidote for the Scorpion's Sting"),
+    (r"\bStromata\b", "Miscellanies"),
+)
+_CITE_DROP = (
+    r"\s*\((?:local HTML|ANF misc|Reliquiae Sacrae)[^)]*\)",
+    r"\s*Translat(?:ion|ed) from (?:the )?(?:Greek|Latin)(?: of Rufinus)?",
+    r"\s*\((?:St\.\s*)?(?:Arnobius|Hippolytus|Tertullian|Irenaeus|Cyprian|Origen|Victorinus)\)?\s*$",
+    r",?\s*\((?:St\.\s*)?(?:Arnobius|Hippolytus|Tertullian|Irenaeus|Cyprian|Origen|Victorinus)\b[^)]*\)",
+)
+_ROMAN_TAIL = re.compile(r"\b([IVXLC]{1,7})\b(?=(?:\.\d+)*\s*$)")
+
+
+def _roman_to_int(r: str) -> int | None:
+    vals = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
+    total, prev = 0, 0
+    for ch in reversed(r):
+        v = vals.get(ch)
+        if v is None:
+            return None
+        total = total - v if v < prev else total + v
+        prev = max(prev, v)
+    return total or None
+
+
+def public_citation(cit: str, work: str = "") -> str:
+    c = re.sub(r"\s+", " ", str(cit or "")).strip()
+    if not c:
+        return c
+    # Drop a leading author (any spelling) before the em dash.
+    if " — " in c:
+        head, rest = c.split(" — ", 1)
+        if not re.search(r"\d", head) and len(head) < 48 and rest.strip():
+            c = rest.strip()
+    c = re.sub(r"^(?:Treatises|Epistles?)\s+—\s+", "", c)
+    for pat in _CITE_DROP:
+        c = re.sub(pat, "", c)
+    for pat, rep in _CITE_LATIN:
+        c = re.sub(pat, rep, c)
+    # "Against the Nations Against the Heathen" and "X X" echoes.
+    c = re.sub(r"^Against the Nations Against the Heathen", "Against the Nations", c)
+    words = c.split(" ")
+    bare = [w.strip(",.;:") for w in words]
+    for n in range(len(words) // 2, 1, -1):
+        for i in range(0, len(words) - 2 * n + 1):
+            if bare[i:i + n] == bare[i + n:i + 2 * n]:
+                words = words[:i] + words[i + n:]
+                bare = bare[:i] + bare[i + n:]
+                break
+    c = " ".join(words)
+    # "(Chapter 32. Christ predicted by Moses)" → "32".
+    c = re.sub(r"\s*\((?:Chapter|ch\.?)\s*(\d+)\b[^)]*\)?", r" \1", c)
+    c = re.sub(r"\bMandates Mand\.?\s*(\d+)", r"Mandate \1", c)
+    c = re.sub(r"\bSimilitudes (?:Sim|Mand)\.?\s*(\d+)", r"Parable \1", c)
+    c = re.sub(r"^Shepherd\s+—\s+", "Shepherd, ", c)
+    c = re.sub(r"\bSimilitude\b", "Parable", c)
+    c = re.sub(r"^Shepherd \(Mandates\) ", "Shepherd, ", c)
+    if re.match(r"^(?:Mandate|Parable|Vision)\b", c):
+        c = "Shepherd, " + c
+    m = _ROMAN_TAIL.search(c)
+    if m and not re.search(r"\bBook\s+$", c[:m.start()]):
+        n = _roman_to_int(m.group(1))
+        if n:
+            c = c[:m.start()] + str(n) + c[m.end():]
+    c = re.sub(r"\s+([,.;:])", r"\1", c).strip(" ,;—-")
+    c = re.sub(r"\s{2,}", " ", c)
+    # A bare place ("5.1") needs its work name back.
+    if re.fullmatch(r"[\d.:\-–]+", c) and work:
+        c = f"{public_citation(work)} {c}"
+    return c
+
+
 def author_record(name: str | None) -> dict:
     """Resolve Authors.json even when the display name is longer (e.g. Origen of Alexandria)."""
     if not name:
@@ -1013,6 +1127,10 @@ def build_explore_index(
     raw = load_explore_raw()
     by_excerpt = {x["id"]: x for x in excerpts if x.get("id")}
     works_by_slug = {w["slug"]: w for w in works}
+    # One writer, one page: the two Diognetus spellings were two author hubs.
+    for _x in excerpts:
+        if (_x.get("author") or "").strip() == "Anonymous (Diognetus)":
+            _x["author"] = "Mathetes (Epistle to Diognetus)"
     section_lookup: dict[str, dict] = {}
     for w in works:
         for s in w["sections"]:
@@ -1707,7 +1825,9 @@ def work_intro_html(slug: str) -> str:
     try:
         sys.path.insert(0, str(BOOKS.parent))
         from pipeline.book_frontmatter import render_intro_html
-        return render_intro_html(str(BOOKS / book))
+        out = render_intro_html(str(BOOKS / book))
+        # Build-room scope words ("tip densify") never reach readers.
+        return re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out)
     except (ImportError, ValueError, OSError):
         return ""
 
@@ -1743,6 +1863,8 @@ def clean_hero_edition(short: str, ids: str, latin_sub: str) -> tuple[str, str]:
         short = re.sub(r"\s*\(?khazarzar\)?", "", short, flags=re.I).strip(" .;")
         if "khazarzar" not in ids.lower():
             ids = (ids + "; Khazarzar scan").strip(" ;") if ids else "Khazarzar scan"
+    # Build-room scope words never belong in the reader's source line.
+    short = re.sub(r"\s*;\s*(?:tip|densify)\b[^;]*", "", short, flags=re.I).strip(" .;")
     if latin_sub:
         norm = latin_sub.strip(" .;").lower()
         segs = [s.strip() for s in re.split(r"\s*;\s*", short)]
@@ -1977,6 +2099,10 @@ _BLURB_SCAFFOLD_RES = [
     (re.compile(r"\btip\s+densify\s+of\b"), ""),
     (re.compile(r"\bTip of the locked\b"), ""),
     (re.compile(r"\bTip covers\b"), "It covers"),
+    # Pipeline pass names and page-scope notes are not reader information.
+    (re.compile(r"\bThis page publishes the Pass [AB] English for ([^.]*)\."), r"This page has \1."),
+    (re.compile(r"\bPass [AB](?:\s*[≠=]\s*[AB])?\s+English\b"), "English"),
+    (re.compile(r"\s*\bSERIES\b on this page:[^.]*(?:\([^)]*\))?\.?"), ""),
 ]
 
 _WORKSHEET_LEFT_I = re.compile(
@@ -2047,12 +2173,26 @@ def shown_source(parts) -> list[str]:
     return out
 
 
+_METHOD_BUILDROOM = re.compile(
+    r"\bOET\b|tip slices?|\bPass [AB]\b|\b[a-z]+_\*|densify|\bslices?\b|Archive OCR|\bOCR\b",
+)
+
+
+def public_method(text: str) -> str:
+    """Keep the plain sentences of a method note; drop build-room ones."""
+    t = scrub_worksheet_note(str(text or "")).strip()
+    if not t:
+        return ""
+    keep = [x for x in re.split(r"(?<=[.!?])\s+", t) if x and not _METHOD_BUILDROOM.search(x)]
+    return " ".join(keep).strip()
+
+
 def text_history_html(th: dict | None) -> str:
     """Collapsed About block: copy-text, checks, and real joins only."""
     if not isinstance(th, dict) or not th:
         return ""
     bits: list[str] = []
-    method = scrub_worksheet_note(str(th.get("method") or "")).strip()
+    method = public_method(str(th.get("method") or ""))
     if method:
         bits.append(f'<p class="intro">{escape(method)}</p>')
     identifiers = scrub_worksheet_note(str(th.get("identifiers") or "")).strip()
@@ -2227,9 +2367,19 @@ def _is_tautological_blurb(blurb: str) -> bool:
     return all(len(side.split()) <= 6 for side in m.groups())
 
 
+_CATALOGUE_STUB = re.compile(
+    r"\((?:catena\s+)?(?:Greek|Latin)[^)]*\)\.?\s*$"
+    r"|^[^.]{0,60},\s+(?:in|ex|de|ad|fragment\w*|homili\w*|commentari\w*|enarration\w*"
+    r"|selecta|scholia|excerpta|expositio)\b",
+    re.I,
+)
+
+
 def work_teaser_html(w: dict, max_chars: int = 170) -> str:
     """One-to-two-line invitation under a work title in listings. Never empty."""
     blurb = public_blurb(w.get("blurb") or "")
+    if _CATALOGUE_STUB.search(blurb):
+        blurb = ""
     if len(blurb) > max_chars:
         cut = blurb[:max_chars].rsplit(". ", 1)
         blurb = (cut[0] + ".") if len(cut) == 2 and len(cut[0]) > 60 else blurb[:max_chars].rsplit(" ", 1)[0] + "…"
@@ -2311,12 +2461,95 @@ def author_works_list_html(ww: list[dict]) -> str:
                 f'<li><a href="/works/{escape(w["slug"])}/">'
                 f'<span class="work-title">{escape(public_reader_title(w["title"], slug=w["slug"]))}</span>'
                 f' {section_count_html(w["section_count"])}'
+                f'{"<span class='au-mark'>listen</span>" if w.get("has_audio") else ""}'
                 f'{work_teaser_html(w)}</a></li>'
             ),
         )
         for w in singles
     ]
     return "".join(html for _, html in sorted(series_blocks + single_blocks, key=lambda t: t[0]))
+
+
+WORK_KIND_ORDER = ("Treatises and other works", "Sermons and addresses", "Commentaries and notes", "Letters")
+_KIND_LETTER = re.compile(r"\bletters?\b|\bepistles?\b|\bepistula", re.I)
+_KIND_SERMON = re.compile(r"homil|sermon|\boration\b|\baddress\b|discourse|panegyric", re.I)
+_KIND_NOTES = re.compile(
+    r"commentar|fragment|\bnotes on\b|excerpts? on|selections? on|exposition|scholia|catena"
+    r"|questions on|answers on|\bon (?:the )?(?:psalms|proverbs|job|genesis|exodus|matthew|john|luke|romans)\b",
+    re.I,
+)
+
+
+def work_kind(w: dict) -> str:
+    t = public_reader_title(w.get("title") or "", slug=w.get("slug") or "")
+    if _KIND_SERMON.search(t):
+        return "Sermons and addresses"
+    if _KIND_NOTES.search(t):
+        return "Commentaries and notes"
+    if _KIND_LETTER.search(t):
+        return "Letters"
+    return "Treatises and other works"
+
+
+START_HERE = {"origen": "origen-on-prayer"}
+
+
+def start_here_work(slug: str, ww: list[dict]) -> dict | None:
+    if not ww:
+        return None
+    by_slug = {w["slug"]: w for w in ww}
+    if START_HERE.get(slug) in by_slug:
+        return by_slug[START_HERE[slug]]
+    def rank(w: dict) -> tuple:
+        return (
+            0 if w.get("status") != "in_progress" else 1,
+            0 if work_kind(w) == "Treatises and other works" else 1,
+            0 if w.get("has_audio") else 1,
+            -min(w["section_count"], 60),
+            w["slug"],
+        )
+    return sorted(ww, key=rank)[0]
+
+
+def father_head_html(slug: str, display: str, *, n_works: int, n_passages: int, n_questions: int,
+                     start: dict | None) -> str:
+    bio_rec = AUTHOR_BIOS.get(slug) or {}
+    bio = str(bio_rec.get("bio") or "").strip()
+    dates = author_dates_display(display, slug)
+    facts = []
+    if n_works:
+        facts.append(("Works here", f"{n_works} to read straight through"))
+    if n_passages:
+        q = f" on {n_questions} question{'s' if n_questions != 1 else ''}" if n_questions else ""
+        facts.append(("Passages", f"{n_passages}{q}"))
+    facts_html = "".join(f"<dt>{escape(k)}</dt><dd>{escape(v)}</dd>" for k, v in facts)
+    start_html = ""
+    if start:
+        teaser = public_blurb(start.get("blurb") or "")
+        if _CATALOGUE_STUB.search(teaser) or _is_tautological_blurb(teaser):
+            teaser = ""
+        if len(teaser) > 150:
+            teaser = teaser[:150].rsplit(" ", 1)[0] + "…"
+        bits = [teaser] if teaser else []
+        bits.append(f"{start['section_count']} sections")
+        if start.get("has_audio"):
+            bits.append("with audio")
+        start_html = (
+            f'<a class="fa-start" href="/works/{escape(start["slug"])}/">'
+            f'<span class="eyebrow">Start here</span>'
+            f'<span class="t">{escape(public_reader_title(start["title"], slug=start["slug"]))}</span>'
+            f'<span class="s">{escape(" · ".join(bits))}</span></a>'
+        )
+    return (
+        f'<header class="fa-head">'
+        f'<p class="eyebrow">Fathers</p>'
+        f"<h1>{escape(display_author(display))}</h1>"
+        + (f'<p class="fa-dates author-dates">{escape(dates)}</p>' if dates else "")
+        + (f'<p class="fa-bio">{escape(bio)}</p>' if bio else "")
+        + (f'<dl class="fa-facts">{facts_html}</dl>' if facts_html else "")
+        + start_html
+        + "</header>"
+    )
 
 
 def author_catalog_html(works: list[dict]) -> str:
@@ -4675,7 +4908,7 @@ def layout(
         "contribute": "help",
         "about": "about",
     }.get(active, "home")
-    full_title = f"{title} · {SITE_NAME}"
+    full_title = f"{SITE_NAME} · The early Church in its own words" if title == "Home" else f"{title} · {SITE_NAME}"
     desc = description if len(description) <= 200 else description[:197].rstrip() + "..."
     img = f"https://fathers.saneapps.com/assets/og/{card}.png"
     share_url = "https://fathers.saneapps.com/__ROUTE__"
@@ -4707,15 +4940,16 @@ def layout(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light only">
-<meta name="supported-color-schemes" content="light">
-<meta name="theme-color" content="#0a0e2b">
-<title>{escape(title)} · {SITE_NAME}</title>
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f3eee3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15120e" media="(prefers-color-scheme: dark)">
+<script>try{{var vpT=localStorage.getItem("vp-theme");if(vpT==="dark"||vpT==="light")document.documentElement.dataset.theme=vpT}}catch(e){{}}</script>
+<title>{escape(full_title)}</title>
 <meta name="description" content="{escape(desc)}">
 {social}<link rel="canonical" href="https://fathers.saneapps.com/__ROUTE__">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Source+Sans+3:wght@400;550;650&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Source+Sans+3:wght@400;550;650;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css?v={ASSET_VER}">
 <link rel="icon" href="/assets/favicon.svg?v={ASSET_VER}" type="image/svg+xml">
 <link rel="alternate icon" href="/favicon.ico" sizes="any">
@@ -4724,18 +4958,22 @@ def layout(
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="/">{SITE_NAME}<small>Via Patrum</small></a>
+    <a class="brand" href="/" aria-label="Via Patrum home">Via <span class="brand-p">Patrum</span></a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="/topics/"{nav_cls("topics")}>Topics</a>
+      <a href="/topics/"{nav_cls("topics")}>Questions</a>
+      <a href="/authors/"{nav_cls("authors")}>Fathers</a>
       <a href="/works/"{nav_cls("works")}>Works</a>
-      <a href="/explore/"{nav_cls("explore")}>Explore</a>
-      <a href="/authors/"{nav_cls("authors")}>Authors</a>
+      <a href="/explore/"{nav_cls("explore")}>Over time</a>
       <a href="https://play.viapatrum.org/">Play</a>
-      <a href="/contribute/"{nav_cls("contribute")}>Help</a>
-      <a href="/about/"{nav_cls("about")}>About</a>
-      <a class="support" href="{SPONSORS}" rel="noopener">Support</a>
     </nav>
+    <div class="header-tools">
+      <form class="header-search" action="/works/" method="get" role="search">
+        <label class="vh" for="site-q">Search the library</label>
+        <input id="site-q" name="q" type="search" placeholder="Search…" autocomplete="off">
+      </form>
+      <button type="button" class="theme-toggle" aria-label="Switch light or dark reading" title="Light or dark">☾</button>
+    </div>
   </div>
 </header>
 {crumbs}
@@ -4743,8 +4981,25 @@ def layout(
 {body}
 </main>
 <footer class="site-footer">
-  <p>Free public library · <a href="/about/">About</a> · <a href="/methodology/">Methodology</a> · <a href="{SPONSORS}">Support on GitHub Sponsors</a></p>
-  <p class="fine">Ancient texts · new English for study · not a complete critical edition</p>
+  <div class="footer-inner">
+    <div>
+      <p class="footer-mark">Via <span>Patrum</span></p>
+      <p>The early Church in its own words, in faithful modern English. Free for the whole world.</p>
+    </div>
+    <nav aria-label="Read">
+      <h2>Read</h2>
+      <ul><li><a href="/topics/">Questions</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/explore/">Over time</a></li></ul>
+    </nav>
+    <nav aria-label="About the library">
+      <h2>About</h2>
+      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help translate</a></li></ul>
+    </nav>
+    <nav aria-label="Support">
+      <h2>Support</h2>
+      <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li><li><a href="https://play.viapatrum.org/">Play the Fathers game</a></li></ul>
+    </nav>
+  </div>
+  <p class="footer-fine">New English from the Greek and Latin, made with AI help and checked against the sources. A study library, not a critical edition.</p>
 </footer>
 <script src="/assets/site.js?v={ASSET_VER}" defer></script>
 {extra_js}</body>
@@ -4998,10 +5253,12 @@ def century_strip_html(rows: list[dict]) -> str:
     )
 
 
-def topic_card_html(x: dict, keywords: list[str] | None = None) -> str:
+def topic_card_html(x: dict, keywords: list[str] | None = None, stance: str = "") -> str:
     """One answering passage: citation, a short quote, Greek when we have it."""
     author = x.get("author") or "Unknown"
     dates = author_dates_display(author) or format_bc_ad(x.get("period") or "")
+    author = display_author(author)
+    cite = public_citation(x.get("citation") or x["id"], x.get("work") or "")
     lead = topic_lead_text(x, keywords=keywords)
     quote = (
         f'<blockquote class="topic-lead"><p>{escape(lead)}</p></blockquote>'
@@ -5019,8 +5276,8 @@ def topic_card_html(x: dict, keywords: list[str] | None = None) -> str:
         )
     return f"""<article class="excerpt topic-card" id="{escape(x['id'])}">
 <header>
-<h2><a href="/e/{escape(x['id'])}/">{escape(x.get('citation') or x['id'])}</a></h2>
-<p class="meta">{escape(author)} · {escape(dates)} · {escape(x.get('work') or '')}</p>
+<h2><a href="/e/{escape(x['id'])}/">{escape(author)}</a>{stance}</h2>
+<p class="meta">{escape(dates)} · {escape(cite)}</p>
 </header>
 {quote}
 <p class="topic-more"><a href="/e/{escape(x['id'])}/">Read this passage</a></p>
@@ -5217,7 +5474,7 @@ def build() -> None:
     (DIST / ".metadata_never_index").write_text("")
     shutil.copytree(ASSETS, DIST / "assets")
     (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
-    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse works</a> or <a href="/topics/">browse topics</a>.</p></section>', description="This page is not in the Fathers library. Browse works or topics.").replace("</head>", '<meta name="robots" content="noindex"></head>'))
+    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><p><a href="/works/">Browse the works</a>, <a href="/authors/">meet the Fathers</a>, or <a href="/topics/">pick a question</a>.</p></section>', description="This page is not in the Via Patrum library.").replace("</head>", '<meta name="robots" content="noindex"></head>'))
 
     explore = load_explore_raw()
     explore_topic_ids = {c["topic"] for c in explore["claims"] if c.get("topic")}
@@ -5231,6 +5488,39 @@ def build() -> None:
         stanced_by_topic.setdefault(stance.get("topic") or "", set()).add(
             str(ref).split(":", 1)[1]
         )
+    # Stance per (topic, excerpt) for the chips on question pages.
+    claim_short: dict[tuple[str, str], str] = {}
+    for _block in explore["claims"]:
+        if isinstance(_block, dict):
+            for _c in _block.get("claims") or []:
+                claim_short[(_block.get("topic") or "", _c.get("id") or "")] = (
+                    _c.get("short") or _c.get("label") or ""
+                )
+    stance_for: dict[tuple[str, str], tuple[str, str]] = {}
+    for _st in explore["stances"]:
+        if not isinstance(_st, dict):
+            continue
+        _ref = str(_st.get("ref") or "")
+        if _ref.startswith("excerpt:"):
+            stance_for.setdefault(
+                (_st.get("topic") or "", _ref.split(":", 1)[1]),
+                (_st.get("stance") or "", _st.get("claim_id") or ""),
+            )
+    rupture_for = {
+        r.get("topic"): r for r in explore["ruptures"] if isinstance(r, dict) and r.get("topic")
+    }
+
+    def stance_chip(tid: str, eid: str) -> str:
+        hit = stance_for.get((tid, eid)) or stance_for.get((tid, eid.split("--", 1)[0]))
+        if not hit:
+            return ""
+        st, cid = hit
+        verb = {"affirms": "Teaches", "denies": "Rejects", "qualified": "Partly"}.get(st)
+        short = claim_short.get((tid, cid), "")
+        if not verb or not short:
+            return ""
+        return f' <span class="stance-chip {escape(st)}">{escape(verb)}: {escape(short)}</span>'
+
     paths_for_topic: dict[str, dict] = {}
     for path in _json_load(EXPLORE_DATA / "paths.json", []):
         if not isinstance(path, dict):
@@ -5388,39 +5678,192 @@ def build() -> None:
     search_index: list[dict] = []
 
     # --- Home ---
-    sample_cards = []
-    for x in _home_feed(
-        excerpts, topic_meta, tax.get("loci") or [], stanced_by_topic
-    ):
-        home_meta = topic_meta.get(x.get("topic") or "") or {}
-        topic_name = home_meta.get("title") or ""
-        sample_cards.append(
-            f"""<li><a href="/e/{escape(x['id'])}/"><strong>{escape(x.get('author') or '')}</strong>
-            <span>{escape(_home_citation(x))}</span>
-            <span class="lead">{escape(topic_lead_text(x, keywords=topic_keywords(home_meta)))}</span>
-            <span class="c">{escape(topic_name)}</span></a></li>"""
+    # Works with read-along audio: a manifest whose book slug is the page slug.
+    # Conservative on purpose: never mark audio that may not play.
+    audio_slugs: set[str] = set()
+    for _m in (ROOT / "outputs/audio").glob("*/manifest.json"):
+        try:
+            audio_slugs.add(str(json.loads(_m.read_text(encoding="utf-8")).get("work") or _m.parent.name))
+        except (OSError, ValueError):
+            audio_slugs.add(_m.parent.name)
+    for _w in works:
+        _w["has_audio"] = _w["slug"] in audio_slugs
+
+    # Today's passage: reviewed (stanced) passages with a real sentence to quote.
+    # The page renders one at rest; site.js swaps in the day's pick.
+    daily: list[dict] = []
+    daily_seen: set[tuple[str, str]] = set()
+    for _tid, _rows in by_topic.items():
+        _meta = topic_meta.get(_tid)
+        if not _meta:
+            continue
+        _stanced = stanced_by_topic.get(_tid) or set()
+        for _x in _rows:
+            if not _excerpt_is_stanced(_x, _stanced):
+                continue
+            if str(_x.get("confidence") or "") == "seed_anf":
+                continue  # today's passage is always our own new English
+            _lead = topic_lead_text(_x, keywords=topic_keywords(_meta))
+            _words = len(_lead.split())
+            if _words < 14 or _words > 70:
+                continue
+            _author = display_author(_x.get("author") or "")
+            _cite = public_citation(_home_citation(_x), _x.get("work") or "")
+            _toks = re.findall(r"[a-z0-9]+", f"{_author} {_cite}".lower())
+            _key = (" ".join(str(_ROMAN_NUMERALS.get(t, t)) for t in _toks), "")
+            if _key in daily_seen or _home_feed_key(_x) in daily_seen:
+                continue
+            daily_seen.add(_key)
+            daily_seen.add(_home_feed_key(_x))
+            daily.append({
+                "q": _lead,
+                "a": _author,
+                "d": author_dates_display(_x.get("author") or "") or format_bc_ad(_x.get("period") or ""),
+                "c": _cite,
+                "h": f"/e/{_x['id']}/",
+                "t": _meta["title"],
+                "th": f"/topics/{_tid}/",
+            })
+    daily.sort(key=lambda r: (r["t"], r["a"], r["c"]))
+    first_daily = daily[0] if daily else None
+
+    def daily_card(r: dict | None) -> str:
+        if not r:
+            return ""
+        return (
+            f'<div class="vp-today-card" data-daily>'
+            f'<p class="eyebrow">Today · <a class="vp-daily-topic" href="{escape(r["th"])}">{escape(r["t"])}</a></p>'
+            f'<blockquote class="vp-quote"><p>&ldquo;<span class="vp-daily-q">{escape(r["q"])}</span>&rdquo;</p></blockquote>'
+            f'<p class="vp-who"><strong class="vp-daily-a">{escape(r["a"])}</strong>'
+            f' · <span class="vp-daily-d">{escape(r["d"])}</span> · <span class="vp-daily-c">{escape(r["c"])}</span></p>'
+            f'<div class="vp-actions"><a class="btn primary vp-daily-h" href="{escape(r["h"])}">Read the passage</a>'
+            f'<a class="btn vp-daily-th" href="{escape(r["th"])}">What the others said</a></div>'
+            f"</div>"
         )
-    first_works = [w for w in works if w.get("first_english")]
-    other_works = [w for w in works if not w.get("first_english")]
-    first_cards = "".join(work_card_html(w) for w in first_works[:6])
-    priority_section = (f'<section><h2>{ORIGINAL_ENGLISH_LABEL}</h2><ul class="card-list">{first_cards}</ul></section>' if first_works else "")
-    other_cards = "".join(work_card_html(w) for w in other_works[:4])
+
+    # Start-here shelf: new English first, then works you can also hear.
+    # Hand-picked doors in first; then whole treatises a newcomer can finish.
+    SHELF_FIRST = [
+        "origen-on-prayer", "origen-exhortation-to-martyrdom", "origen-dialogue-heraclides",
+        "origen-on-pascha", "cyril-adoration-1", "julian-to-florus",
+    ]
+
+    def _shelf_rank(w: dict) -> tuple:
+        title = public_reader_title(w["title"], slug=w["slug"])
+        return (
+            SHELF_FIRST.index(w["slug"]) if w["slug"] in SHELF_FIRST else 99,
+            0 if work_kind(w) == "Treatises and other works" else 1,
+            1 if re.match(r"(?:Fragments?|From the|Notes|Excerpts|Selections)\b", title) else 0,
+            0 if w.get("has_audio") else 1,
+            0 if w["section_count"] >= 20 else 1,
+            work_chrono_year(w),
+            w["slug"],
+        )
+
+    shelf_seen_authors: dict[str, int] = defaultdict(int)
+    shelf: list[dict] = []
+    for w in sorted(works, key=_shelf_rank):
+        if w.get("status") == "in_progress" or w["section_count"] < 10:
+            continue
+        a_slug = canonical_author_slug(w.get("author_slug"), w.get("author"))
+        if shelf_seen_authors[a_slug] >= 2:
+            continue
+        shelf_seen_authors[a_slug] += 1
+        shelf.append(w)
+        if len(shelf) >= 6:
+            break
+    shelf_items = []
+    for w in shelf:
+        au = '<span class="au-mark">listen</span>' if w.get("has_audio") else ""
+        shelf_items.append(
+            f'<li><a href="/works/{escape(w["slug"])}/">'
+            f'<span class="t">{escape(public_reader_title(w["title"], slug=w["slug"]))}</span>'
+            f'<span class="s">{escape(display_author(w["author"]))} · {escape(format_bc_ad(w["period"]))}</span>'
+            f"{au}</a></li>"
+        )
+
+    # The road: writers in date order. Red marks a Father with whole works here.
+    road: dict[str, dict] = {}
+    for w in works:
+        a_slug = canonical_author_slug(w.get("author_slug"), w.get("author"))
+        r = road.setdefault(a_slug, {"slug": a_slug, "name": display_author(w["author"]), "works": 0, "ex": 0})
+        r["works"] += 1
+    for a_name, rows in by_author.items():
+        a_slug = author_hub_slug(a_name)
+        r = road.setdefault(a_slug, {"slug": a_slug, "name": display_author(a_name), "works": 0, "ex": 0})
+        r["ex"] += len(rows)
+    road_rows = [r for r in road.values() if r["works"] or r["ex"] >= 12]
+    for r in road_rows:
+        r["year"] = author_sort_year(r["name"], None, r["slug"])
+    road_rows.sort(key=lambda r: (r["year"], alpha_key(r["name"])))
+    road_items = "".join(
+        f'<li class="{"has-works" if r["works"] else "excerpts-only"}"><a href="/authors/{escape(r["slug"])}/">'
+        f'<span class="dot" aria-hidden="true"></span><span class="n">{escape(r["name"])}</span>'
+        f'<span class="d">{escape(author_dates_display(r["name"], r["slug"]) or "")}</span></a></li>'
+        for r in road_rows
+        if r["year"] < 9000
+    )
+
+    chips = [
+        ("free will", "/topics/free-will/"),
+        ("the Trinity", "/topics/father-son-spirit/"),
+        ("baptism", "/topics/baptism-and-new-birth/"),
+        ("the Eucharist", "/topics/eucharist-thanksgiving/"),
+        ("martyrdom", "/topics/martyrdom-witness/"),
+        ("wealth and alms", "/topics/wealth-alms/"),
+        ("the resurrection", "/topics/resurrection-body/"),
+    ]
+    chip_html = "".join(
+        f'<li><a href="{escape(h)}">{escape(lbl)}</a></li>'
+        for lbl, h in chips
+        if h.strip("/").split("/")[-1] in topic_meta
+    )
+    n_questions = sum(1 for t in topic_meta if by_topic.get(t) or t in topic_to_works)
+    n_fathers = len(road)
+    n_audio = sum(1 for w in works if w.get("has_audio"))
+    daily_json = json.dumps(daily[:400], ensure_ascii=False).replace("</", "<\\/")
 
     home = f"""
-<section class="hero">
-  <p class="eyebrow">Public library · donation supported</p>
-  <h1>The Fathers, readable</h1>
-  <p class="lede">Teaching by topic, and whole treatises chapter by chapter. Ante-Nicene voices first; later writers are labeled when they appear. Translation sources and notes are listed with each work.</p>
-  <div class="hero-actions">
-    <a class="btn primary" href="/topics/">Browse topics</a>
-    <a class="btn" href="/works/">Browse works</a>
-    <a class="btn" href="/explore/?topic=free-will">Explore over time</a>
+<div class="vp-home">
+<section class="vp-hero">
+  <p class="eyebrow">Free for the whole world</p>
+  <h1>Read the early Church in its own words</h1>
+  <p class="vp-sub">Every Father, every work, in faithful modern English. Read it, hear it, and follow any passage to everything connected to it.</p>
+  <form class="vp-ask" action="/works/" method="get" role="search">
+    <label class="vh" for="home-q">Ask what the Fathers said about…</label>
+    <input id="home-q" name="q" type="search" placeholder="Ask what the Fathers said about…" autocomplete="off">
+    <button type="submit">Search</button>
+  </form>
+  <ul class="vp-chips" aria-label="Popular questions">{chip_html}</ul>
+</section>
+
+<nav class="vp-doors" aria-label="Ways into the library">
+  <a href="/topics/"><h2>Questions</h2><p>{n_questions} questions the early Church answered, from Scripture and God to the last things.</p><span class="go">Browse the questions →</span></a>
+  <a href="/authors/"><h2>Fathers</h2><p>{n_fathers} writers in date order, from Clement of Rome onward, with what each one wrote.</p><span class="go">Meet the Fathers →</span></a>
+  <a href="/works/"><h2>Works</h2><p>{len(works)} works to read straight through{f", {n_audio} of them with audio" if n_audio else ""}.</p><span class="go">Open the library →</span></a>
+</nav>
+
+<section class="vp-today" aria-label="Today">
+  <div>{daily_card(first_daily)}</div>
+  <div class="vp-shelf">
+    <h2 class="vp-section-label">Start with these</h2>
+    <ol>{''.join(shelf_items)}</ol>
+    <p class="vp-more"><a href="/works/">All {len(works)} works →</a></p>
   </div>
 </section>
-<section class="mission">
-  <h2>Via Patrum — the Way of the Fathers</h2>
-  <p class="lede">&ldquo;Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.&rdquo; — Jeremiah 6:16</p>
-  <p>Two thousand years of Christian writing, most of it untranslated, out of print, or locked behind paywalls. We are putting all of it — every Father, every work — into faithful modern English, then into audio, video, and print. Free for the whole world, forever.</p>
+
+<section aria-label="The road of the Fathers">
+  <h2 class="vp-section-label">The road of the Fathers</h2>
+  <div class="vp-road-wrap"><ol class="vp-road">{road_items}</ol></div>
+  <p class="vp-road-note"><span class="dot-key" aria-hidden="true"></span>Whole works to read · other marks have passages under Questions.</p>
+</section>
+
+<div class="vp-two">
+<section class="vp-mission">
+  <h2>Via Patrum, the Way of the Fathers</h2>
+  <p class="vp-verse">&ldquo;Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.&rdquo; Jeremiah 6:16</p>
+  <p>Two thousand years of Christian writing, most of it untranslated, out of print, or behind paywalls. We are putting all of it, every Father and every work, into faithful modern English, then into audio and print. Free for the whole world, forever.</p>
+  <p><a href="/about/">About the library</a> · <a href="/methodology/">How we translate</a></p>
 </section>
 <section class="play-promo">
   <h2>Play</h2>
@@ -5430,25 +5873,9 @@ def build() -> None:
     <a class="btn" href="https://play.viapatrum.org/leopards">Play Ten Leopards</a>
   </div>
 </section>
-{priority_section}
-<section class="split">
-  <div>
-    <h2>Topics</h2>
-    <p>What did they teach about God, Christ, will, church, last things? {len(excerpts)} passages across the map.</p>
-    <a href="/topics/">Open the map →</a>
-  </div>
-  <div>
-    <h2>Works</h2>
-    <p>{len(works)} treatises online · {sum(w['section_count'] for w in works)} sections. Cross-linked to related topics.</p>
-    <ul class="card-list">{other_cards}</ul>
-    <p><a href="/works/">All works →</a></p>
-  </div>
-</section>
-<section>
-  <h2>From the topics</h2>
-  <ul class="card-list">{''.join(sample_cards)}</ul>
-  <p><a href="/topics/">Browse all topics →</a></p>
-</section>
+</div>
+</div>
+<script type="application/json" id="vp-daily-data">{daily_json}</script>
 """
     write(
         DIST / "index.html",
@@ -5456,7 +5883,7 @@ def build() -> None:
             "Home",
             home,
             active="",
-            description="Teaching by topic, and whole treatises chapter by chapter. Ante-Nicene voices first.",
+            description="Read the early Church in its own words: every Father, every work, in faithful modern English. Free for the whole world.",
         ),
     )
 
@@ -5486,16 +5913,17 @@ def build() -> None:
         )
 
     topics_body = f"""
-<h1>Topics</h1>
-<p class="intro">What they taught, from Scripture and God through the last things. Each topic opens with a short passage, and the full passage is one click away. Later writers are labeled where they enter. The English is a new reading for study, not a finished critical edition. <a href="/explore/">Paths and positions over time</a></p>
+<p class="eyebrow">Questions</p>
+<h1>What did the early Church teach?</h1>
+<p class="intro">Pick a question. Each one gathers the Fathers who answered it, earliest first, with a short quote from each and the full passage one click away. Later writers are labeled where they enter. <a href="/explore/">See how the answers line up over time →</a></p>
 {''.join(locus_blocks)}
 """
     write(
         DIST / "topics" / "index.html",
         layout(
-            "Topics",
+            "Questions",
             topics_body,
-            crumb=[("Home", "/"), ("Topics", "")],
+            crumb=[("Home", "/"), ("Questions", "")],
             active="topics",
             description="What the early writers taught, mapped by topic, with the passages and related works.",
         ),
@@ -5522,7 +5950,7 @@ def build() -> None:
             rest = []
         primary.sort(key=lambda r: (_passage_year(r), r.get("author") or "", r.get("id") or ""))
         rest.sort(key=lambda r: (_passage_year(r), r.get("author") or "", r.get("id") or ""))
-        items_html = [topic_card_html(x, topic_keywords(meta)) for x in primary]
+        items_html = [topic_card_html(x, topic_keywords(meta), stance_chip(tid, x["id"])) for x in primary]
         for x in rows:
             paras_list = excerpt_paragraphs(x)
             paras = "".join(f"<p>{render_reader_html(p)}</p>" for p in paras_list)
@@ -5555,10 +5983,21 @@ def build() -> None:
                 ]
                 + related_works[:4],
             )
+            e_cite = public_citation(x.get("citation") or x["id"], x.get("work") or "")
+            e_author = display_author(x.get("author") or "")
+            e_dates = author_dates_display(x.get("author") or "") or format_bc_ad(x.get("period") or "")
+            e_older = (
+                '<p class="meta older-source">English from the <em>Ante-Nicene Fathers</em> '
+                "(1885–1896), public domain. A new translation from the original is on the way.</p>"
+                if str(x.get("confidence") or "") == "seed_anf"
+                else ""
+            )
             ebody = f"""
 <article class="excerpt-page">
-  <h1>{escape(x.get('citation') or x['id'])}</h1>
-  <p class="meta">{escape(x.get('author') or '')} · {escape(x.get('work') or '')} · {escape(x.get('period') or '')}</p>
+  <p class="eyebrow"><a href="/topics/{escape(tid)}/">{escape(meta['title'])}</a></p>
+  <h1>{escape(e_author)}, {escape(e_cite)}</h1>
+  <p class="meta"><a href="/authors/{escape(author_hub_slug(x.get('author')))}/">{escape(e_author)}</a> · {escape(e_dates)}</p>
+  {e_older}
   <div class="body">{paras}</div>
   {src_block}
   {cross}
@@ -5568,11 +6007,11 @@ def build() -> None:
             write(
                 DIST / "e" / x["id"] / "index.html",
                 layout(
-                    x.get("citation") or x["id"],
+                    f"{e_author}, {e_cite}",
                     ebody,
                     crumb=[
                         ("Home", "/"),
-                        ("Topics", "/topics/"),
+                        ("Questions", "/topics/"),
                         (meta["title"], f"/topics/{tid}/"),
                         ("Excerpt", ""),
                     ],
@@ -5585,8 +6024,8 @@ def build() -> None:
                 {
                     "kind": "excerpt",
                     "id": x["id"],
-                    "title": x.get("citation") or x["id"],
-                    "author": x.get("author"),
+                    "title": f"{display_author(x.get('author'))}, {public_citation(x.get('citation') or x['id'], x.get('work') or '')}",
+                    "author": display_author(x.get("author")),
                     "href": f"/e/{x['id']}/",
                     "topic": tid,
                     "verified": False,  # Legacy confidence flags are not current review evidence.
@@ -5601,8 +6040,9 @@ def build() -> None:
                 author = x.get("author") or ""
                 dates = author_dates_display(author) or format_bc_ad(x.get("period") or "")
                 filed_items.append(
-                    f'<li><a href="/e/{escape(x["id"])}/">{escape(x.get("citation") or x["id"])}</a>'
-                    f' <span class="c">{escape(author)} · {escape(dates)}</span></li>'
+                    f'<li><a href="/e/{escape(x["id"])}/">'
+                    f'<span class="t">{escape(display_author(author))}, {escape(public_citation(x.get("citation") or x["id"], x.get("work") or ""))}</span>'
+                    f'<span class="c">{escape(dates)}</span></a></li>'
                 )
             filed_html = (
                 f'<details class="filed-more"><summary>Other passages filed here ({len(rest)})</summary>'
@@ -5627,8 +6067,8 @@ def build() -> None:
         intro_html = f'<p class="intro">{escape(intro)}</p>' if intro else ""
         count_label = f"{len(primary)} passage" if len(primary) == 1 else f"{len(primary)} passages"
         if rest:
-            count_label += f" · {len(rest)} more on file"
-        meta_bits = [escape(meta.get("locus_title") or ""), count_label]
+            count_label += f" · {len(rest)} more listed below"
+        meta_bits = [count_label]
         dev = meta.get("development") or ""
         if dev == "consensus":
             meta_bits.append("Broad agreement in this library")
@@ -5645,13 +6085,23 @@ def build() -> None:
                 '<p class="banner">This topic includes Nicene and later writers '
                 "alongside earlier voices. Dates sit on each passage.</p>"
             )
+        _turn = rupture_for.get(tid)
+        turn_html = (
+            f'<aside class="turn-note"><h2>{escape(_turn.get("title") or "A later turn")}</h2>'
+            f'<p>{escape(_turn.get("body") or "")}</p>'
+            f'<p><a href="/explore/?topic={escape(tid)}">See it over time →</a></p></aside>'
+            if _turn and _turn.get("body")
+            else ""
+        )
         tbody = f"""
+<p class="eyebrow">{escape(meta.get("locus_title") or "Questions")}</p>
 <h1>{escape(meta['title'])}</h1>
 <p class="meta">{" · ".join(meta_bits)}</p>
 {era_html}{intro_html}
 {century_strip_html(primary)}
 {path_html}
 {''.join(items_html)}
+{turn_html}
 {filed_html}
 {rel_html}
 """
@@ -5660,7 +6110,7 @@ def build() -> None:
             layout(
                 meta["title"],
                 tbody,
-                crumb=[("Home", "/"), ("Topics", "/topics/"), (meta["title"], "")],
+                crumb=[("Home", "/"), ("Questions", "/topics/"), (meta["title"], "")],
                 active="topics",
                 description=f"{meta['title']}. {meta.get('locus_title') or 'Teaching in this library'}.",
             ),
@@ -5681,7 +6131,7 @@ def build() -> None:
                 f"""<h1>{escape(meta['title'])}</h1>
                 <p class="intro">{escape(meta.get('locus_title') or '')} · passages for this topic are still growing.</p>
                 {related_panel("Related works", related_works)}""",
-                crumb=[("Home", "/"), ("Topics", "/topics/"), (meta["title"], "")],
+                crumb=[("Home", "/"), ("Questions", "/topics/"), (meta["title"], "")],
                 active="topics",
                 description=f"{meta['title']}. {meta.get('locus_title') or 'Teaching in this library'}.",
             ),
@@ -5707,11 +6157,12 @@ def build() -> None:
         layout(
             "Works",
             f"""<div class="works-browse" data-works-browse data-work-count="{len(works)}" data-author-count="{author_n}">
-<h1>Works</h1>
-<p class="intro">Browse by author. Open an author with several treatises to see the shelf; a single work opens the reader directly.</p>
+<p class="eyebrow">Works</p>
+<h1>The library</h1>
+<p class="intro">Every work you can read straight through, grouped by writer, earliest first. Search finds titles, writers, and words inside the passages.</p>
 <div class="works-chrome">
   <label class="works-find"><span class="vh">Find in library</span>
-    <input type="search" id="works-q" class="search-input" placeholder="Find author, title, topic…" autocomplete="off">
+    <input type="search" id="works-q" class="search-input" placeholder="Search titles, writers, or words…" autocomplete="off">
   </label>
   <div class="works-sort" role="group" aria-label="Sort authors">
     <button type="button" data-sort="chrono" aria-pressed="true">Chronology</button>
@@ -5742,7 +6193,7 @@ def build() -> None:
 </div>""",
             crumb=[("Home", "/"), ("Works", "")],
             active="works",
-            description="Browse Fathers treatises by author — multi-work shelves on the author page",
+            description="Every work in the Via Patrum library, by writer and date, to read straight through.",
         ),
     )
 
@@ -6270,10 +6721,15 @@ def build() -> None:
         ):
             ttitle = (topic_meta.get(tkey) or {}).get("title") or tkey
             lis = "".join(
-                f'<li><a href="/e/{escape(x["id"])}/">{escape(x.get("citation") or x["id"])}</a></li>'
+                f'<li><a href="/e/{escape(x["id"])}/">{escape(public_citation(x.get("citation") or x["id"], x.get("work") or ""))}</a></li>'
                 for x in xs[:80]
             )
-            ot_blocks.append(f"<h3>{escape(ttitle)}</h3><ul class='card-list'>{lis}</ul>")
+            ot_blocks.append(
+                f'<details class="fa-q"><summary><span class="t">{escape(ttitle)}</span>'
+                f'<span class="c">{len(xs)} passage{"s" if len(xs) != 1 else ""}</span></summary>'
+                f"<ul class='card-list'>{lis}</ul>"
+                f'<p class="fa-q-more"><a href="/topics/{escape(tkey)}/">Everyone on {escape(ttitle)} →</a></p></details>'
+            )
         ot_lis = "".join(ot_blocks)
         topic_set = []
         for w in ww:
@@ -6294,26 +6750,47 @@ def build() -> None:
                 ("Where Julian meets earlier writers", "/explore/?topic=free-will&author=julian-of-eclanum"),
             )
         explore_ul = related_panel("Over time", explore_bits)
+        kinds: dict[str, list[dict]] = defaultdict(list)
+        for _w in ww:
+            kinds[work_kind(_w)].append(_w)
+        shelf_html = "".join(
+            f'<h2><span>{escape(k)}</span><span>{len(kinds[k])}</span></h2>'
+            f'<ul class="card-list author-works">{author_works_list_html(kinds[k])}</ul>'
+            for k in WORK_KIND_ORDER
+            if kinds.get(k)
+        )
+        head = father_head_html(
+            slug, display,
+            n_works=len(ww), n_passages=len(ot),
+            n_questions=sum(1 for k in ot_by_topic if k in topic_meta),
+            start=start_here_work(slug, ww),
+        )
+        passages_html = (
+            f'<section class="fa-more"><h2>What {escape(display_author(display))} said on the questions</h2><div class="fa-qs">{ot_lis}</div></section>'
+            if ot_lis
+            else ""
+        )
         write(
             DIST / "authors" / slug / "index.html",
             layout(
-                display,
-                f"""<h1>{escape(display)}</h1>
-                {f'<p class="meta author-dates">{escape(author_dates_display(display, slug))}</p>' if author_dates_display(display, slug) else ""}
-                <h2>Works</h2><ul class="card-list author-works">{ow or "<li>None yet.</li>"}</ul>
-                {topics_ul}{explore_ul}
-                <h2>Topical excerpts</h2>{ot_lis or "<p>None linked yet.</p>"}""",
-                crumb=[("Home", "/"), ("Authors", "/authors/"), (display, "")],
+                display_author(display),
+                f"""<div class="fa-page">
+                {head}
+                <div class="fa-shelf">{shelf_html or "<p>Whole works are on the way.</p>"}
+                {topics_ul}{explore_ul}</div>
+                </div>
+                {passages_html}""",
+                crumb=[("Home", "/"), ("Fathers", "/authors/"), (display, "")],
                 active="authors",
-                description=f"{display}. Whole works and topical excerpts in this library.",
+                description=f"{display_author(display)}: life, works and passages in the Via Patrum library.",
             ),
         )
         dates = author_dates_display(display, slug)
         dates_html = f'<span class="author-dates">{escape(dates)}</span>' if dates else ""
         author_links.append(
-            f'<li><a href="/authors/{escape(slug)}/"><strong>{escape(display)}</strong>'
+            f'<li><a href="/authors/{escape(slug)}/"><strong>{escape(display_author(display))}</strong>'
             f'{dates_html}'
-            f'<span>{len(ww)} work{"s" if len(ww)!=1 else ""} · {len(ot)} topical</span></a></li>'
+            f'<span>{len(ww)} work{"s" if len(ww)!=1 else ""} · {len(ot)} passage{"s" if len(ot)!=1 else ""}</span></a></li>'
         )
 
     write_author_hub("origen", "Origen of Alexandria", "origen")
@@ -6342,7 +6819,7 @@ def build() -> None:
             </ul></aside>
             <h2>Topical excerpts</h2><ul class="card-list">{aug_lis or "<li>None linked yet.</li>"}</ul>
             <p class="intro">Compare with <a href="/authors/julian-of-eclanum/">Julian of Eclanum</a> and the ante-Nicene topic map.</p>""",
-            crumb=[("Home", "/"), ("Authors", "/authors/"), ("Augustine", "")],
+            crumb=[("Home", "/"), ("Fathers", "/authors/"), ("Augustine", "")],
             active="authors",
             description="Augustine of Hippo. Topical excerpts and contrast cards in this library.",
         ),
@@ -6365,6 +6842,17 @@ def build() -> None:
         '<p><a href="/authors/augustine-of-hippo/">Augustine of Hippo has moved.</a></p>',
     )
 
+    # The two Diognetus spellings now share one page.
+    write(
+        DIST / "authors" / "anonymous-diognetus" / "index.html",
+        '<!DOCTYPE html><meta charset="utf-8">'
+        '<meta http-equiv="refresh" content="0; url=/authors/mathetes-epistle-to-diognetus/">'
+        '<link rel="canonical" href="https://fathers.saneapps.com/authors/mathetes-epistle-to-diognetus/">'
+        '<title>Letter to Diognetus</title>'
+        '<p><a href="/authors/mathetes-epistle-to-diognetus/">Letter to Diognetus has moved.</a></p>',
+    )
+    hubs_done.add("anonymous-diognetus")
+
     # Every loaded work must have an author destination, including newly added
     # writers that are absent from the topical-excerpt corpus.
     for work in works:
@@ -6382,9 +6870,9 @@ def build() -> None:
         _dates = author_dates_display(author, sl)
         _dates_html = f'<span class="author-dates">{escape(_dates)}</span>' if _dates else ""
         author_links.append(
-            f'<li><a href="/authors/{escape(sl)}/"><strong>{escape(author)}</strong>'
+            f'<li><a href="/authors/{escape(sl)}/"><strong>{escape(display_author(author))}</strong>'
             f'{_dates_html}'
-            f'<span>{n} topical excerpts</span></a></li>'
+            f'<span>{n} passage{"s" if n != 1 else ""}</span></a></li>'
         )
         rows = by_author[author]
         dates = author_dates_display(author, sl)
@@ -6392,31 +6880,38 @@ def build() -> None:
         for x in rows:
             grouped[x.get("topic") or "unknown"].append(x)
         blocks = []
-        if dates:
-            blocks.append(f'<p class="meta">{escape(dates)}</p>')
         for tkey, xs in sorted(
             grouped.items(),
             key=lambda kv: alpha_key((topic_meta.get(kv[0], {}) or {}).get("title") or kv[0]),
         ):
             ttitle = (topic_meta.get(tkey) or {}).get("title") or tkey
             lis = "".join(
-                f'<li><a href="/e/{escape(x["id"])}/">{escape(x.get("citation") or x["id"])}</a></li>'
+                f'<li><a href="/e/{escape(x["id"])}/">{escape(public_citation(x.get("citation") or x["id"], x.get("work") or ""))}</a></li>'
                 for x in xs[:80]
             )
             explore = ""
             if tkey in explore_topic_ids:
                 explore = f' <a href="/explore/?topic={escape(tkey)}">Explore</a>'
             blocks.append(
-                f"<h2>{escape(ttitle)}{explore}</h2><ul class='card-list'>{lis}</ul>"
+                f'<details class="fa-q"><summary><span class="t">{escape(ttitle)}</span>'
+                f'<span class="c">{len(xs)} passage{"s" if len(xs) != 1 else ""}</span></summary>'
+                f"<ul class='card-list'>{lis}</ul>"
+                f'<p class="fa-q-more"><a href="/topics/{escape(tkey)}/">Everyone on {escape(ttitle)} →</a></p></details>'
             )
+        head = father_head_html(
+            sl, author, n_works=0, n_passages=n,
+            n_questions=sum(1 for k in grouped if k in topic_meta), start=None,
+        )
         write(
             DIST / "authors" / sl / "index.html",
             layout(
-                author,
-                f"<h1>{escape(author)}</h1>{''.join(blocks)}",
-                crumb=[("Home", "/"), ("Authors", "/authors/"), (author, "")],
+                display_author(author),
+                f"""<div class="fa-page">{head}
+                <div class="fa-shelf"><h2><span>Passages by question</span><span>{n}</span></h2><div class="fa-qs">{''.join(blocks)}</div>
+                <p class="intro fine">Whole works by {escape(display_author(author))} are on the way.</p></div></div>""",
+                crumb=[("Home", "/"), ("Fathers", "/authors/"), (author, "")],
                 active="authors",
-                description=f"{author}. Whole works and topical excerpts in this library.",
+                description=f"{display_author(author)}: life and passages in the Via Patrum library.",
             ),
         )
 
@@ -6432,11 +6927,11 @@ def build() -> None:
     write(
         DIST / "authors" / "index.html",
         layout(
-            "Authors",
-            f"<h1>Authors</h1>"
-            f"<p class=\"intro\">Writers in this library, earliest first — whole works and topical excerpts. Dates use BC and AD.</p>"
+            "Fathers",
+            f"<p class=\"eyebrow\">Fathers</p><h1>The writers, in order</h1>"
+            f"<p class=\"intro\">Every writer in the library, earliest first. Open one to read who they were and what they wrote.</p>"
             f"<ul class='card-list'>{''.join(author_links)}</ul>",
-            crumb=[("Home", "/"), ("Authors", "")],
+            crumb=[("Home", "/"), ("Fathers", "")],
             active="authors",
             description="Writers in this library, earliest first. Whole works and topical excerpts, with dates in BC and AD.",
         ),
@@ -6453,15 +6948,12 @@ def build() -> None:
         json.dumps(explore_index, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
-    progress_strip = (
-        f'<p class="intro" id="explore-progress">{len(works)} works live · '
-        f"{corpus_translated_sections} of {corpus_total_sections} sections translated · "
-        f"{len(held_works)} held for review</p>"
-    )
+    progress_strip = ""
     explore_body = f"""
 <div class="explore" data-explore>
   <header class="explore-head">
-    <h1>Explore</h1>
+    <p class="eyebrow">Over time</p>
+    <h1>How the answers line up over time</h1>
     {progress_strip}
     <p class="intro explore-sub">What each early writer taught, claim by claim — with the passages to prove it.</p>
   </header>
@@ -6503,7 +6995,7 @@ def build() -> None:
     write(
         DIST / "explore" / "index.html",
         layout(
-            "Explore",
+            "Over time",
             explore_body,
             active="explore",
             description="What each early writer taught, claim by claim: timeline, verdict table, and consensus views with the passages to prove it",
@@ -6525,7 +7017,7 @@ def build() -> None:
         DIST / "contribute" / "index.html",
         layout(
             "Help us",
-            f"""<h1>Help us</h1>
+            f"""<p class="eyebrow">Help translate</p><h1>Help us</h1>
             <p class="intro">This library is free. If you want to help it keep growing, pick one of these. None of them is required to read.</p>
 
             <ol class="help-list">
@@ -6544,9 +7036,11 @@ def build() -> None:
               <li class="help-option" id="ai">
                 <p class="n">3</p>
                 <h2>Point an AI at a slice</h2>
-                <p>Copy this into your AI. Change YourName to your name.</p>
-                <p><button type="button" class="btn primary" data-copy="#ai-prompt">Copy prompt</button></p>
+                <p>If you use an AI coding assistant, it can translate one small slice of a book for review. Copy the starting instructions into it and change YourName to your name.</p>
+                <p><button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> <a class="btn" href="https://github.com/sane-apps/translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>
+                <details class="ai-prompt-box"><summary>Show the instructions</summary>
                 <pre id="ai-prompt"><code>{escape((BOOKS.parent / "docs/START_HERE.md").read_text())}</code></pre>
+                </details>
               </li>
               <li class="help-option" id="corrections">
                 <p class="n">4</p>
@@ -6583,31 +7077,34 @@ def build() -> None:
         DIST / "about" / "index.html",
         layout(
             "About",
-            f"""<h1>About</h1>
-            <p>Fathers is a free public library: a <strong>topic map</strong> of ante-Nicene teaching, <strong>whole works</strong> in edition order, and an <strong>Explore</strong> timeline that shows how writers line up on a claim across time.</p>
-            <p>The catalog is always moving. New treatises and topic excerpts land as they are finished; status and era labels live on each work page, not as a fixed inventory here. Authors not yet loaded as whole works may appear first as contrast cards on Explore.</p>
-            <p>These are English translations for study. Translation provenance belongs in <strong>About this text</strong> on each work. Earlier English editions may also exist; a new rendering is not a claim to be the first.</p>
-            <p>How the English is made — two passes, source locking, witnesses, and what stays off the reading page — is on the <a href="/methodology/">methodology</a> page.</p>
-            <p>This is not a complete scholarly edition. Where Greek or Latin is loaded, open it under the reading text.</p>
-            <p>Each whole work names the print it follows. Any checks against other Greek or Latin prints should be recorded with the work. The reading English follows that copy-text. Where a stretch is missing there and is supplied from another witness, it is marked. Open <strong>About this text</strong> on a work for the list.</p>
-            <p>Explore stance tags are editorial readings for study — not rankings of who was right. Start with <a href="/explore/?topic=free-will">Free will over time</a>.</p>
-            <p>Want to help finish a text? See <a href="/contribute/">Help</a>.</p>
-            <p>If it helps you, you can <a href="{SPONSORS}">support the work on GitHub Sponsors</a>.</p>""",
+            f"""<p class="eyebrow">About</p>
+            <h1>About Via Patrum</h1>
+            <p class="lede">Via Patrum means “the way of the Fathers.” It is a free library of early Christian writing in faithful modern English, for anyone who wants to read the early Church in its own words.</p>
+            <h2>What is here</h2>
+            <p><strong>Questions</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Over time</strong> shows where writers agree and where a later turn comes.</p>
+            <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
+            <h2>How the English is made</h2>
+            <p>The English is new, translated from the Greek and Latin with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Questions still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
+            <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
+            <h2>Reading the “Over time” marks</h2>
+            <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/explore/?topic=free-will">free will over time</a>.</p>
+            <h2>Help and support</h2>
+            <p>Want to help finish a text? See <a href="/contribute/">Help translate</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
             crumb=[("Home", "/"), ("About", "")],
             active="about",
-            description="A free public library of early Christian writing: a topic map, whole works, and how writers line up over time.",
+            description="Via Patrum is a free library of early Christian writing in faithful modern English: questions, Fathers, whole works, and how they line up over time.",
         ),
     )
 
     write(
         DIST / "methodology" / "index.html",
         layout(
-            "Methodology",
-            f"""<h1>Methodology</h1>
+            "How we translate",
+            f"""<p class="eyebrow">For scholars</p><h1>How we translate</h1>
             <p class="lede">How this library makes English, and how to trust a page.</p>
 
             <h2>Why this exists</h2>
-            <p>Fathers is a free public library for study: teaching by topic, whole works in edition order, and an Explore timeline. It is not a complete critical edition. The aim is readable English that stays honest about its sources.</p>
+            <p>Via Patrum is a free public library for study: teaching by question, whole works in edition order, and a view of how writers line up over time. It is not a complete critical edition. The aim is readable English that stays honest about its sources.</p>
 
             <h2>What you will find</h2>
             <p><strong>Topics</strong> answer “what did they teach about X?” <strong>Works</strong> let you read a treatise straight through. <strong>Explore</strong> shows how writers line up on a claim across time. The catalog is always moving — new treatises and excerpts land as they finish. Status and era labels live on each work page. The works catalogue shows the current reading selection.</p>
@@ -6644,9 +7141,9 @@ def build() -> None:
             </ul>
 
             <p>Short summary: <a href="/about/">About</a>. Corrections and help: <a href="/contribute/">Help</a>.</p>""",
-            crumb=[("Home", "/"), ("Methodology", "")],
+            crumb=[("Home", "/"), ("How we translate", "")],
             og_image="methodology",
-            description="How Fathers makes English: sources, two passes, Original English Translation, and what stays off the reading page",
+            description="How Via Patrum makes English: sources, two passes, Original English Translation, and what stays off the reading page",
         ),
     )
 

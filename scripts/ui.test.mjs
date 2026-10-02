@@ -116,35 +116,41 @@ test('explore summary counts positions for the topic', async()=>{
   dom.window.close();
 });
 
-test('explore progress strip matches pipeline counts', ()=>{
-  const html=readFileSync(new URL('../dist/explore/index.html',import.meta.url),'utf8');
+test('library progress line on About matches pipeline counts', ()=>{
+  const html=readFileSync(new URL('../dist/about/index.html',import.meta.url),'utf8');
   const q=JSON.parse(readFileSync(new URL('../outputs/catalogue-quality.json',import.meta.url),'utf8'));
-  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/explore/',runScripts:'outside-only',pretendToBeVisual:true});
+  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/about/'});
   const s=dom.window.document.querySelector('#explore-progress');assert.ok(s);
   assert.match(s.textContent,new RegExp(`${q.published_works} works live`));
-  assert.match(s.textContent,new RegExp(`${q.corpus_translated_sections} of ${q.corpus_total_sections} sections translated`));
+  const fmt=n=>Number(n).toLocaleString("en-US");
+  assert.match(s.textContent,new RegExp(`${fmt(q.corpus_translated_sections)} of ${fmt(q.corpus_total_sections)} sections translated`));
   assert.match(s.textContent,new RegExp(`${q.held_works.length} held for review`));
   dom.window.close();
 });
 
-test('home has favicon and a deduped feed without repeated author', ()=>{
+test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
   const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
   const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/'});
   const doc=dom.window.document;
   assert.ok(doc.querySelector('link[rel="icon"]'),'favicon link present');
   assert.match(doc.querySelector('link[rel="icon"]').getAttribute('href'),/\/assets\/favicon\.svg/);
-  const section=[...doc.querySelectorAll('section h2')].find(h=>h.textContent.includes('From the topics')).parentElement;
-  const feed=[...section.querySelectorAll('li')];
-  assert.equal(feed.length,8);
+  assert.match(doc.title,/^Via Patrum/);
+  const card=doc.querySelector('[data-daily]');
+  assert.ok(card,'today passage card');
+  assert.ok(card.querySelector('.vp-daily-q').textContent.split(/\s+/).length>=14);
+  const pool=JSON.parse(doc.querySelector('#vp-daily-data').textContent);
+  assert.ok(pool.length>=30,'daily pool too small: '+pool.length);
   const roman={i:'1',ii:'2',iii:'3',iv:'4',v:'5',vi:'6',vii:'7',viii:'8',ix:'9',x:'10'};
   const seen=new Set();
-  for(const li of feed){
-    const strong=li.querySelector('strong').textContent.trim();
-    const span=li.querySelector('span').textContent.trim();
-    assert.ok(!span.startsWith(strong+' — ')&&!span.startsWith(strong+' - '),'subline repeats author: '+span);
-    const key=(strong+' '+span).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(t=>roman[t]||t).join(' ');
-    assert.ok(!seen.has(key),'duplicate feed entry: '+span); seen.add(key);
+  for(const r of pool){
+    assert.ok(!r.c.startsWith(r.a+' — '),'citation repeats author: '+r.c);
+    const key=(r.a+' '+r.c).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(t=>roman[t]||t).join(' ');
+    assert.ok(!seen.has(key),'duplicate daily entry: '+r.c); seen.add(key);
   }
+  assert.ok(doc.querySelectorAll('.vp-road li').length>=10,'road of the Fathers');
+  const play=doc.querySelector('.play-promo');
+  assert.ok(play&&play.querySelector('a[href="https://play.viapatrum.org/daily"]'),'Play section kept');
+  assert.ok(doc.querySelector('#site-nav a[href="https://play.viapatrum.org/"]'),'Play nav kept');
   dom.window.close();
 });
 

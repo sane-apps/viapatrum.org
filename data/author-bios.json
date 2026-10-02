@@ -53,5 +53,170 @@
     "name": "John Wesley",
     "dates": "1703–1791",
     "bio": "Anglican priest and preacher. These sermons are a plain-English reading. Salvation by Faith keeps the 1872 text beside the reading. The later sermons keep the 1771 text beside the reading, so the argument and the scripture can be checked."
+  },
+  "origen": {
+    "name": "Origen of Alexandria",
+    "dates": "c. 185–c. 254 AD",
+    "bio": "Teacher at Alexandria and later Caesarea, and the first great Christian scholar of the Bible. He wrote commentaries, sermons and treatises on nearly every book of Scripture and compiled the Hexapla, a six-column Old Testament. He was tortured in the Decian persecution and died soon after."
+  },
+  "irenaeus": {
+    "name": "Irenaeus of Lyons",
+    "dates": "c. 130–c. 202 AD",
+    "bio": "Bishop of Lyon in Gaul, who as a young man heard Polycarp of Smyrna. His Against Heresies answers the Gnostic teachers with the rule of faith and the succession of bishops. His theme of recapitulation sees Christ undoing Adam's fall by living through every stage of human life."
+  },
+  "cyril-of-alexandria": {
+    "name": "Cyril of Alexandria",
+    "dates": "c. 376–444 AD",
+    "bio": "Bishop of Alexandria from 412. He led the case against Nestorius at the Council of Ephesus in 431, defending the title Mother of God and the single person of Christ, and wrote long commentaries on both Testaments."
+  },
+  "julian-of-eclanum": {
+    "name": "Julian of Eclanum",
+    "dates": "c. 386–c. 455 AD",
+    "bio": "Bishop of Eclanum in southern Italy and the sharpest opponent of Augustine's late teaching on grace and original sin. Deposed for refusing to condemn Pelagius, he argued that human nature remains good and the will free. Much of his writing survives only inside Augustine's replies."
+  },
+  "didymus-the-blind": {
+    "name": "Didymus the Blind",
+    "dates": "c. 313–c. 398 AD",
+    "bio": "Blind from early childhood, he taught at Alexandria for decades; Jerome and Rufinus studied with him. He followed Origen in reading Scripture and was condemned with him in 553, so many of his works survive only in fragments."
+  },
+  "justin-martyr": {
+    "name": "Justin Martyr",
+    "dates": "c. 100–c. 165 AD",
+    "bio": "A philosopher from Samaria who became a Christian and taught in Rome. His two Apologies and his Dialogue with Trypho defend the faith to emperors and to a Jewish teacher. He was beheaded in Rome around 165."
+  },
+  "tertullian": {
+    "name": "Tertullian",
+    "dates": "c. 155–c. 220 AD",
+    "bio": "A writer of Carthage and the first major Christian author in Latin. He coined much of the Latin vocabulary of theology, including the word trinitas, and wrote sharply against Marcion, Praxeas and pagan Rome. Later in life he joined the strict New Prophecy movement."
+  },
+  "clement-of-alexandria": {
+    "name": "Clement of Alexandria",
+    "dates": "c. 150–c. 215 AD",
+    "bio": "Teacher at Alexandria before Origen. His Exhortation, Instructor and Miscellanies present Christ as the true teacher and draw freely on Greek philosophy, which he saw as a preparation for the gospel."
+  },
+  "ignatius-of-antioch": {
+    "name": "Ignatius of Antioch",
+    "dates": "d. c. 110 AD",
+    "bio": "Bishop of Antioch, taken to Rome under guard to die in the arena around 110. On the way he wrote seven letters to churches, urging unity around the bishop and insisting that Christ truly took flesh, suffered and rose."
+  },
+  "clement-of-rome": {
+    "name": "Clement of Rome",
+    "dates": "fl. c. 96 AD",
+    "bio": "A leader of the church at Rome near the end of the first century. His letter to the Corinthians, written about 96, calls a divided church back to peace and order. It is among the oldest Christian writings outside the New Testament."
+  },
+  "cyprian": {
+    "name": "Cyprian of Carthage",
+    "dates": "c. 200–258 AD",
+    "bio": "Bishop of Carthage from about 248 and a martyr in 258. He led his church through the Decian persecution, wrote On the Unity of the Church, and argued over how to receive Christians who had lapsed under persecution."
+  },
+  "lactantius": {
+    "name": "Lactantius",
+    "dates": "c. 250–c. 325 AD",
+    "bio": "A teacher of Latin rhetoric who became tutor to Constantine's son Crispus. His Divine Institutes is the first attempt at a full Latin account of the Christian faith, written for educated pagans."
+  },
+  "hermas": {
+    "name": "Hermas",
+    "dates": "fl. c. 140 AD",
+    "bio": "A Christian of Rome whose Shepherd records visions, commands and parables about repentance. It was widely read in the second century, and some churches treated it as Scripture."
+  },
+  "athenagoras": {
+    "name": "Athenagoras",
+    "dates": "fl. c. 177 AD",
+    "bio": "An Athenian philosopher who addressed his Plea for the Christians to Marcus Aurelius and Commodus around 177, answering charges of atheism, cannibalism and incest. He also wrote On the Resurrection of the Dead."
+  },
+  "theophilus-of-antioch": {
+    "name": "Theophilus of Antioch",
+    "dates": "fl. c. 180 AD",
+    "bio": "Bishop of Antioch whose three books To Autolycus defend the faith to a pagan friend. He is the first known writer to call God, his Word and his Wisdom a triad."
+  },
+  "novatian": {
+    "name": "Novatian",
+    "dates": "fl. c. 250 AD",
+    "bio": "A Roman presbyter and the first Roman theologian to write in Latin. His On the Trinity was careful and influential. After the Decian persecution he refused to readmit the lapsed and led a rival church."
+  },
+  "hippolytus": {
+    "name": "Hippolytus",
+    "dates": "c. 170–c. 235 AD",
+    "bio": "A presbyter at Rome in the early third century who wrote in Greek. His Refutation of All Heresies traces heresies to Greek philosophy. He clashed with the bishops of Rome and died in exile in Sardinia."
+  },
+  "arnobius": {
+    "name": "Arnobius",
+    "dates": "fl. c. 300 AD",
+    "bio": "A teacher of rhetoric at Sicca in North Africa who became a Christian around 300 and wrote Against the Nations, a sharp attack on pagan religion. Lactantius was his student."
+  },
+  "minucius-felix": {
+    "name": "Minucius Felix",
+    "dates": "fl. c. 200 AD",
+    "bio": "A Roman lawyer whose Octavius is a dialogue in which a Christian answers a pagan friend's objections on a walk by the sea at Ostia."
+  },
+  "polycarp-of-smyrna": {
+    "name": "Polycarp of Smyrna",
+    "dates": "",
+    "bio": "Bishop of Smyrna, said to have known the apostle John. His letter to the Philippians survives, and the account of his martyrdom around 155 is the oldest Christian martyr story outside the New Testament."
+  },
+  "gregory-thaumaturgus": {
+    "name": "Gregory Thaumaturgus",
+    "dates": "c. 213–c. 270 AD",
+    "bio": "Gregory the Wonderworker, a student of Origen at Caesarea who became bishop of Neocaesarea in Pontus. His farewell address to Origen gives a rare picture of how Origen taught."
+  },
+  "methodius-of-olympus": {
+    "name": "Methodius of Olympus",
+    "dates": "d. c. 311 AD",
+    "bio": "A bishop in Lycia who wrote the Banquet, a dialogue in praise of virginity modeled on Plato, and works on free will and the resurrection that answer Origen. Tradition says he died a martyr around 311."
+  },
+  "cyril-of-jerusalem": {
+    "name": "Cyril of Jerusalem",
+    "dates": "c. 313–386 AD",
+    "bio": "Bishop of Jerusalem in the later fourth century. His Catechetical Lectures, given to people preparing for baptism, explain the creed and the sacraments."
+  },
+  "tatian": {
+    "name": "Tatian",
+    "dates": "fl. c. 165 AD",
+    "bio": "A Syrian student of Justin. His Address to the Greeks attacks Greek culture, and his Diatessaron wove the four Gospels into one account. He later led the strict Encratite movement."
+  },
+  "melito-of-sardis": {
+    "name": "Melito of Sardis",
+    "dates": "d. c. 180 AD",
+    "bio": "Bishop of Sardis in Asia Minor. His Easter sermon On Pascha reads the Passover as a picture of Christ."
+  },
+  "didache": {
+    "name": "The Didache",
+    "dates": "fl. c. 100 AD",
+    "bio": "A short early Christian manual, probably from around 100, on the two ways of life and death, baptism, fasting, the Eucharist and church leaders."
+  },
+  "barnabas": {
+    "name": "Barnabas",
+    "dates": "fl. c. 100 AD",
+    "bio": "A letter from about 100, traditionally linked to Paul's companion Barnabas, that reads the Old Testament as pointing to Christ."
+  },
+  "mathetes-epistle-to-diognetus": {
+    "name": "Letter to Diognetus",
+    "dates": "",
+    "bio": "An anonymous letter to an inquirer named Diognetus, probably from the second century, known for describing Christians as the soul of the world."
+  },
+  "commodian": {
+    "name": "Commodian",
+    "dates": "fl. c. 250 AD",
+    "bio": "A Latin Christian poet, probably of the third century, whose verse Instructions and Poem on the Two Peoples call pagans and Christians to repentance."
+  },
+  "evagrius-ponticus": {
+    "name": "Evagrius Ponticus",
+    "dates": "c. 345–399 AD",
+    "bio": "A preacher at Constantinople who became a monk in the Egyptian desert. His short sayings on prayer and on the eight evil thoughts shaped Christian teaching on the spiritual life."
+  },
+  "amphilochius-of-iconium": {
+    "name": "Amphilochius of Iconium",
+    "dates": "c. 340–c. 395 AD",
+    "bio": "Bishop of Iconium from 373, a cousin of Gregory of Nazianzus and a friend of Basil. He defended the full divinity of the Holy Spirit."
+  },
+  "apollinaris-of-laodicea": {
+    "name": "Apollinaris of Laodicea",
+    "dates": "c. 310–c. 390 AD",
+    "bio": "Bishop of Laodicea in Syria and a strong defender of Nicaea, whose teaching that Christ had no human mind was condemned in 381."
+  },
+  "eustathius-of-antioch": {
+    "name": "Eustathius of Antioch",
+    "dates": "c. 320–337 AD",
+    "bio": "Bishop of Antioch at the Council of Nicaea in 325 and a firm opponent of Arius. He was deposed a few years later and died in exile."
   }
 }

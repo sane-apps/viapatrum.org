@@ -8,6 +8,58 @@
     });
   }
 
+  // Night reading: follow the system until the reader picks; remember the pick.
+  const themeBtn = document.querySelector(".theme-toggle");
+  if (themeBtn) {
+    const root = document.documentElement;
+    const isDark = () =>
+      root.dataset.theme === "dark" ||
+      (!root.dataset.theme && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    const paint = () => {
+      themeBtn.textContent = isDark() ? "☀" : "☾";
+      themeBtn.setAttribute("aria-pressed", isDark() ? "true" : "false");
+    };
+    themeBtn.addEventListener("click", () => {
+      const next = isDark() ? "light" : "dark";
+      root.dataset.theme = next;
+      try {
+        localStorage.setItem("vp-theme", next);
+      } catch {
+        /* private mode: the choice lasts for this page only */
+      }
+      paint();
+    });
+    paint();
+  }
+
+  // Home: the day's passage. The page ships one at rest; swap in today's.
+  const dailyData = document.querySelector("#vp-daily-data");
+  const dailyCard = document.querySelector("[data-daily]");
+  if (dailyData && dailyCard) {
+    try {
+      const rows = JSON.parse(dailyData.textContent || "[]");
+      if (rows.length) {
+        const now = new Date();
+        const day = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 86400000);
+        const r = rows[day % rows.length];
+        const set = (sel, text) => {
+          const el = dailyCard.querySelector(sel);
+          if (el) el.textContent = text;
+        };
+        set(".vp-daily-q", r.q);
+        set(".vp-daily-a", r.a);
+        set(".vp-daily-d", r.d);
+        set(".vp-daily-c", r.c);
+        set(".vp-daily-topic", r.t);
+        dailyCard.querySelectorAll(".vp-daily-topic, .vp-daily-th").forEach((a) => a.setAttribute("href", r.th));
+        const read = dailyCard.querySelector(".vp-daily-h");
+        if (read) read.setAttribute("href", r.h);
+      }
+    } catch {
+      /* keep the passage the page shipped with */
+    }
+  }
+
   const q = document.querySelector("#q");
   const results = document.querySelector("#results");
   if (q && results) {
@@ -164,7 +216,16 @@
         apply();
       });
     });
-    if (q) q.addEventListener("input", () => apply());
+    if (q) {
+      q.addEventListener("input", () => apply());
+      // Header and home search land here as /works/?q=…
+      try {
+        const term = new URLSearchParams(window.location.search).get("q");
+        if (term) q.value = term;
+      } catch {
+        /* no query string */
+      }
+    }
 
     fetch("/data/search-index.json")
       .then((r) => r.json())

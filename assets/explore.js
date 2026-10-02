@@ -38,11 +38,12 @@
   let pointsCache = [];
   let animateNextDraw = true; // entrance animation only on data/filter changes, not resizes
 
-  const LANE = ["#1f5c45", "#9a6b2f", "#4a5568", "#6b3a4a"];
+  const BASE_LANE = ["#1f5c45", "#9a6b2f", "#4a5568", "#6b3a4a"];
+  const LANE = BASE_LANE.slice();
 
   // One color per writer. Dark, saturated inks that stay distinct on the cream
   // stage; ordered so writers close in time get strongly different hues.
-  const AUTHOR_COLORS = [
+  const BASE_AUTHOR_COLORS = [
     "#146650", // deep green
     "#a63d2f", // brick
     "#2f5b9e", // cobalt
@@ -61,7 +62,32 @@
     "#41586b", // slate
     "#8c5a86", // plum
   ];
+  const AUTHOR_COLORS = BASE_AUTHOR_COLORS.slice();
   let authorColorCache = { topic: null, map: {} };
+
+  // Night reading: the same inks, lifted toward the page so they read on a
+  // dark stage. Re-applied on every draw so a theme switch repaints.
+  const isDark = () => {
+    const t = document.documentElement.dataset.theme;
+    if (t === "dark") return true;
+    if (t === "light") return false;
+    return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  };
+  const lift = (hex) => {
+    const n = parseInt(hex.slice(1), 16);
+    const mix = (c) => Math.round(c + (255 - c) * 0.42);
+    const r = mix((n >> 16) & 255), g = mix((n >> 8) & 255), b = mix(n & 255);
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  };
+  let paletteDark = null;
+  function syncPalette() {
+    const d = isDark();
+    if (d === paletteDark) return;
+    paletteDark = d;
+    LANE.splice(0, LANE.length, ...BASE_LANE.map((c) => (d ? lift(c) : c)));
+    AUTHOR_COLORS.splice(0, AUTHOR_COLORS.length, ...BASE_AUTHOR_COLORS.map((c) => (d ? lift(c) : c)));
+    authorColorCache = { topic: null, map: {} };
+  }
 
   function authorColors(topicId) {
     if (authorColorCache.topic === topicId) return authorColorCache.map;
@@ -177,7 +203,7 @@
         const dates = a && a.dates ? a.dates : "";
         const label = dates ? `${name} (${dates})` : name;
         const c = aColors[slug] || "#1f5c45";
-        return `<span class="explore-chip" style="color:${c};border-color:color-mix(in srgb, ${c} 45%, transparent);background:color-mix(in srgb, ${c} 10%, #fff)">${esc(label)} <button type="button" data-remove="${escAttr(slug)}" aria-label="Remove ${escAttr(name)}">×</button></span>`;
+        return `<span class="explore-chip" style="color:${c};border-color:color-mix(in srgb, ${c} 45%, transparent);background:color-mix(in srgb, ${c} 10%, var(--leaf))">${esc(label)} <button type="button" data-remove="${escAttr(slug)}" aria-label="Remove ${escAttr(name)}">×</button></span>`;
       })
       .join("");
   }
@@ -350,6 +376,7 @@
   }
 
   function render(updateTip = true) {
+    syncPalette();
     const topic = topicMeta();
     const points = filteredPoints();
     pointsCache = points;
@@ -481,7 +508,7 @@
     ticks.forEach((t) => {
       const x = xScale(t);
       const major = t % 100 === 0;
-      html += `<line x1="${x}" x2="${x}" y1="${padT}" y2="${H - padB}" stroke="#d5cbb6" stroke-opacity="${major ? 0.9 : 0.35}" stroke-dasharray="${major ? "0" : "3 5"}"/>`;
+      html += `<line x1="${x}" x2="${x}" y1="${padT}" y2="${H - padB}" stroke="var(--rule)" stroke-opacity="${major ? 0.9 : 0.35}" stroke-dasharray="${major ? "0" : "3 5"}"/>`;
       if (major || (y1 - y0 < 220 && t % 50 === 0)) {
         lastTickX = x;
         html += `<text x="${x}" y="${H - 16}" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Source Sans 3, system-ui, sans-serif">${t}</text>`;
@@ -491,8 +518,8 @@
 
     if (ruptureYear) {
       const rx = xScale(ruptureYear);
-      html += `<line x1="${rx}" x2="${rx}" y1="${padT - 8}" y2="${H - padB + 4}" stroke="#8a6a2f" stroke-width="2" stroke-dasharray="5 6" stroke-opacity="0.85"/>`;
-      html += `<text x="${Math.min(rx + 6, W - padR)}" text-anchor="${rx > W - 100 ? "end" : "start"}" y="${padT - 14}" font-size="${compact ? 10 : 11}" fill="#6b5224" font-weight="650" font-family="Source Sans 3, system-ui, sans-serif">${compact ? "break →" : "later break →"}</text>`;
+      html += `<line x1="${rx}" x2="${rx}" y1="${padT - 8}" y2="${H - padB + 4}" stroke="var(--gold)" stroke-width="2" stroke-dasharray="5 6" stroke-opacity="0.85"/>`;
+      html += `<text x="${Math.min(rx + 6, W - padR)}" text-anchor="${rx > W - 100 ? "end" : "start"}" y="${padT - 14}" font-size="${compact ? 10 : 11}" fill="var(--gold)" font-weight="650" font-family="Source Sans 3, system-ui, sans-serif">${compact ? "break →" : "later break →"}</text>`;
     }
 
     // Soft river through the first claim lane: passages that teach it (not denials).
@@ -521,7 +548,7 @@
       const x = placed.x;
       const y = placed.y;
       const ci = claimIndex[p.claim_id] ?? 0;
-      const color = p.kind === "contrast" ? "#8a6a2f" : aColors[p.author_slug] || LANE[ci % LANE.length];
+      const color = p.kind === "contrast" ? "var(--gold)" : aColors[p.author_slug] || LANE[ci % LANE.length];
       const stance = p.stance || "affirms";
       const isContrast = p.kind === "contrast";
       const isBucket = p.kind === "bucket";
@@ -544,12 +571,12 @@
       if (isContrast) {
         const s = placed.rad;
         html += `${head}
-          <rect class="diamond" x="${x - s}" y="${y - s}" width="${s * 2}" height="${s * 2}" transform="rotate(45 ${x} ${y})" fill="${color}" stroke="#fff" stroke-width="${dotStroke}" filter="url(#soft)"/>
+          <rect class="diamond" x="${x - s}" y="${y - s}" width="${s * 2}" height="${s * 2}" transform="rotate(45 ${x} ${y})" fill="${color}" stroke="var(--stage)" stroke-width="${dotStroke}" filter="url(#soft)"/>
         </g>`;
       } else if (isBucket) {
         const r = placed.rad;
         html += `${head}
-          <circle cx="${x}" cy="${y}" r="${r}" fill="${color}" stroke="#fff" stroke-width="2" filter="url(#soft)"/>
+          <circle cx="${x}" cy="${y}" r="${r}" fill="${color}" stroke="var(--stage)" stroke-width="2" filter="url(#soft)"/>
           <text x="${x}" y="${y + 4}" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">${p.count}</text>
         </g>`;
       } else if (isDeny) {
@@ -562,11 +589,11 @@
         </g>`;
       } else if (isPartly) {
         html += `${head}
-          <circle cx="${x}" cy="${y}" r="${placed.rad}" fill="${color}" fill-opacity="0.35" stroke="#fff" stroke-width="${dotStroke}" filter="url(#soft)"/>
+          <circle cx="${x}" cy="${y}" r="${placed.rad}" fill="${color}" fill-opacity="0.35" stroke="var(--stage)" stroke-width="${dotStroke}" filter="url(#soft)"/>
         </g>`;
       } else {
         html += `${head}
-          <circle cx="${x}" cy="${y}" r="${placed.rad}" fill="${color}" stroke="#fff" stroke-width="${dotStroke}" filter="url(#soft)"/>
+          <circle cx="${x}" cy="${y}" r="${placed.rad}" fill="${color}" stroke="var(--stage)" stroke-width="${dotStroke}" filter="url(#soft)"/>
         </g>`;
       }
     });
@@ -684,7 +711,7 @@
 
     let html = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Agreement over time">`;
     [["100% agree", 1], ["50% \u2014 split", 0.5], ["0% \u2014 all reject", 0]].forEach(([lab, s]) => {
-      html += `<line x1="${padL}" x2="${W - padR}" y1="${y(s)}" y2="${y(s)}" stroke="#d5cbb6" stroke-opacity="${s === 0.5 ? 0.5 : 0.9}" stroke-dasharray="${s === 0.5 ? "3 5" : "0"}"/>`;
+      html += `<line x1="${padL}" x2="${W - padR}" y1="${y(s)}" y2="${y(s)}" stroke="var(--rule)" stroke-opacity="${s === 0.5 ? 0.5 : 0.9}" stroke-dasharray="${s === 0.5 ? "3 5" : "0"}"/>`;
       html += `<text x="${padL - 8}" y="${y(s) + 4}" text-anchor="end" font-size="11" fill="var(--ink)" font-family="Source Sans 3, system-ui, sans-serif">${esc(lab)}</text>`;
     });
     const step = buckets.length > 12 ? 2 : 1;
@@ -713,7 +740,7 @@
       }
       pts.forEach(([b, e]) => {
         const pct = Math.round((e.sum / e.n) * 100);
-        html += `<circle cx="${x(b)}" cy="${y(e.sum / e.n)}" r="5" fill="${color}" stroke="#fff" stroke-width="2"><title>${esc(shortClaim(c))} \u00b7 ${b}s: ${pct}% agree (${e.n} passage${e.n === 1 ? "" : "s"})</title></circle>`;
+        html += `<circle cx="${x(b)}" cy="${y(e.sum / e.n)}" r="5" fill="${color}" stroke="var(--stage)" stroke-width="2"><title>${esc(shortClaim(c))} \u00b7 ${b}s: ${pct}% agree (${e.n} passage${e.n === 1 ? "" : "s"})</title></circle>`;
       });
       html += `</g>`;
     });
@@ -776,7 +803,7 @@
       </ul></div>
       <div class="lane-key"><h3 class="drawer-label">Writers, earliest first</h3><ul>${authorKeys}</ul></div>
       <div class="lane-key"><h3 class="drawer-label">Rows (claims)</h3><ul>${claimKeys}
-      <li><i class="diamond" style="background:#8a6a2f"></i><span>Diamond — contrast card (full works forthcoming)</span></li>
+      <li><i class="diamond" style="background:var(--gold)"></i><span>Diamond — contrast card (full works forthcoming)</span></li>
       </ul></div>`;
   }
 
@@ -1007,6 +1034,16 @@
     fitStage();
     render(false);
   });
+  // Repaint the chart when the reader switches light or dark.
+  const repaintTheme = () => {
+    if (data) render(false);
+  };
+  try {
+    new MutationObserver(repaintTheme).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", repaintTheme);
+  } catch {
+    /* older browsers keep the first palette */
+  }
   window.addEventListener("resize", () => {
     fitStage();
     if (data) render(false);
