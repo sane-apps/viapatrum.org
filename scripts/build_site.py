@@ -4090,6 +4090,7 @@ def layout(
       <a href="/works/"{nav_cls("works")}>Works</a>
       <a href="/explore/"{nav_cls("explore")}>Explore</a>
       <a href="/authors/"{nav_cls("authors")}>Authors</a>
+      <a href="https://play.viapatrum.org/">Play</a>
       <a href="/contribute/"{nav_cls("contribute")}>Help</a>
       <a href="/about/"{nav_cls("about")}>About</a>
       <a class="support" href="{SPONSORS}" rel="noopener">Support</a>
