@@ -4,11 +4,20 @@ import { readFileSync } from 'node:fs';
 import { JSDOM } from 'jsdom';
 
 const script = readFileSync(new URL('../assets/readalong.js', import.meta.url), 'utf8');
+// Salvation by Faith, part 2. The Zacchaeus cite used to be the fixture, but
+// that recording no longer matches the page, so the ship correctly leaves it
+// without a player. This part has a player and matching sentences.
 const page = readFileSync(
-  new URL('../dist/works/amphilochius-in-zacchaeum/u01-open/index.html', import.meta.url), 'utf8');
+  new URL('../dist/works/john-wesley-salvation-by-faith/2/index.html', import.meta.url), 'utf8');
+// Cite pages load the FULL stem manifest with book-relative indices
+// (the box's data-manifest), not the per-section slice. Feed the test
+// exactly what the page loads.
+const boxManifest = page.match(/data-manifest="([^"]+)"/)[1];
 const manifest = JSON.parse(readFileSync(
-  new URL('../dist/assets/audio/amphilochius-in-zacchaeum/aiz_u01_open_english.json', import.meta.url),
+  new URL('../dist' + boxManifest, import.meta.url),
   'utf8'));
+const BOX_START = parseInt(page.match(/data-start="(\d+)"/)[1], 10);
+const BOX_END = parseInt(page.match(/data-end="(\d+)"/)[1], 10);
 
 const settle = () => new Promise((resolve) => setImmediate(resolve));
 async function flush(n = 10) { for (let i = 0; i < n; i++) await settle(); }
@@ -36,7 +45,7 @@ function fakeAudioClass() {
 async function mount() {
   const { FakeAudio, instances } = fakeAudioClass();
   const dom = new JSDOM(page, {
-    url: 'https://fathers.saneapps.com/works/amphilochius-in-zacchaeum/u01-open/',
+    url: 'https://fathers.saneapps.com/works/john-wesley-salvation-by-faith/2/',
     runScripts: 'outside-only',
     pretendToBeVisual: true,
   });
@@ -70,10 +79,10 @@ test('play starts tracking at the audible sentence', async () => {
     click(dom, '.rdl-play');
     assert.equal(audio.played, true);
     audio.fire('play');
-    audio.currentTime = manifest.sentences[2].s + 0.05;
+    audio.currentTime = manifest.sentences[BOX_START].s + 0.05;
     audio.fire('timeupdate');
     await flush(3);
-    assert.deepEqual(highlighted(dom), ['2']);
+    assert.deepEqual(highlighted(dom), [String(BOX_START)]);
   } finally { dom.window.close(); }
 });
 
@@ -81,12 +90,12 @@ test('clicking a sentence seeks there and plays it', async () => {
   const { dom, audio } = await mount();
   try {
     audio.fire('loadedmetadata');
-    const span = dom.window.document.querySelector('.rdl[data-i="5"]');
+    const span = dom.window.document.querySelector(`.rdl[data-i="${BOX_START + 5}"]`);
     span.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true }));
     await flush(3);
-    assert.ok(Math.abs(audio.currentTime - (manifest.sentences[5].s + 0.01)) < 1e-9);
+    assert.ok(Math.abs(audio.currentTime - (manifest.sentences[BOX_START + 5].s + 0.01)) < 1e-9);
     assert.equal(audio.played, true);
-    assert.deepEqual(highlighted(dom), ['5']);
+    assert.deepEqual(highlighted(dom), [String(BOX_START + 5)]);
   } finally { dom.window.close(); }
 });
 
@@ -106,7 +115,7 @@ test('side buttons skip a paragraph per press', async () => {
     assert.deepEqual(highlighted(dom), [secondStart]);
     click(dom, '.rdl-prev');
     await flush(3);
-    assert.ok(Math.abs(audio.currentTime - (manifest.sentences[0].s + 0.01)) < 1e-9);
+    assert.ok(Math.abs(audio.currentTime - (manifest.sentences[BOX_START].s + 0.01)) < 1e-9);
   } finally { dom.window.close(); }
 });
 
@@ -115,15 +124,15 @@ test('reaching the end clears the highlight and rewinds', async () => {
   try {
     click(dom, '.rdl-play');
     audio.fire('play');
-    audio.currentTime = manifest.sentences[1].s + 0.05;
+    audio.currentTime = manifest.sentences[BOX_START + 1].s + 0.05;
     audio.fire('timeupdate');
     await flush(3);
-    assert.deepEqual(highlighted(dom), ['1']);
-    audio.currentTime = manifest.sentences[manifest.sentences.length - 1].e;
+    assert.deepEqual(highlighted(dom), [String(BOX_START + 1)]);
+    audio.currentTime = manifest.sentences[BOX_END].e;
     audio.fire('timeupdate');
     await flush(3);
     assert.deepEqual(highlighted(dom), []);
-    assert.equal(audio.currentTime, manifest.sentences[0].s);
+    assert.equal(audio.currentTime, manifest.sentences[BOX_START].s);
     assert.equal(audio.paused, true);
   } finally { dom.window.close(); }
 });

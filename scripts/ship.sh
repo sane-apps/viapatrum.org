@@ -135,7 +135,10 @@ echo "==> Check all local links and reader anchors"
 
 echo "==> Smoke local dist"
 PORT=48765
-nice -n 10 python3 -m http.server "$PORT" --bind 127.0.0.1 --directory "$ROOT/dist" >/tmp/fathers-ship-http.log 2>&1 &
+# Range-capable preview: plain http.server ignores Range, so Chromium media
+# elements hold audio connections open and networkidle checks time out.
+# Production (Pages) serves 206; serve_dist.py matches it. (2026-10-01)
+nice -n 10 python3 "$ROOT/scripts/serve_dist.py" "$PORT" "$ROOT/dist" >/tmp/fathers-ship-http.log 2>&1 &
 HTTP_PID=$!
 STAGE=""
 cleanup() {
