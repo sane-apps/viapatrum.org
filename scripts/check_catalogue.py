@@ -205,6 +205,16 @@ page.feed(works_html)
 receipt = json.loads((site.ROOT / "outputs/catalogue-quality.json").read_text())
 assert page.has_author_catalog, "Works page missing author-catalog class"
 assert "Book 1" not in works_html, "Works catalogue still shows Book 1 sprawl"
+_ws = re.search(
+    r"densify|\btip\b|\blocked\b|staging|Latin column|Greek OCR|_meta\b|private study"
+    r"|starts PHYS|next PHYS|new OET|SERIES CLOSEOUT|folio|sigla|obelus|pinax",
+    works_html, re.I)
+_ws_caps = re.search(
+    r"\bPHYS\b|\bOCR\b|\bCOMPLETE\b|\bCLOSEOUT\b|\bFINIS\b|\bTODO\b"
+    r"|FOUND PHYS|NOT FOUND|Liber [IVX]+\b|Exercitatio|\bPG \d|\bANF \d"
+    r"|Salmond|Crombie|Walford|Routh|Bidez|Vossius|Wither|Migne",
+    works_html)
+assert not _ws and not _ws_caps, "Works catalogue shows worksheet scaffolding"
 assert len(page.rows) > 0, "No author-entry rows on Works"
 work_total = sum(int(r.get("data-works") or "0") for r in page.rows)
 assert work_total == receipt["published_works"], (work_total, receipt["published_works"])

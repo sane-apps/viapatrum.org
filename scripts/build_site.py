@@ -150,6 +150,7 @@ ORIGEN_MATTHEW_LATER_BOOK = BOOKS / "origen-matthew-later"
 JULIAN_BOOK = BOOKS / "julian-of-eclanum"
 NEMESIUS_BOOK = BOOKS / "nemesius-de-natura-hominis"
 MACARIUS_BOOK = BOOKS / "macarius-spiritual-homilies"
+WESLEY_BOOK = BOOKS / "john-wesley-sermons"
 EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
 SITE_NAME = "Fathers"
@@ -248,6 +249,436 @@ _LOGOS_BIBLE_RE = re.compile(
 _LOGOS_ANY_RE = re.compile(r"\[\[[^\]]*\]\]")
 
 
+# Longer names first so "1 John" wins over "John" and "Ephesians" over "Eph".
+_BIBLE_BOOKS: tuple[tuple[str, str], ...] = (
+    ("1 Chronicles", "1 Chronicles"),
+    ("2 Chronicles", "2 Chronicles"),
+    ("1 Corinthians", "1 Corinthians"),
+    ("2 Corinthians", "2 Corinthians"),
+    ("1 Thessalonians", "1 Thessalonians"),
+    ("2 Thessalonians", "2 Thessalonians"),
+    ("1 Timothy", "1 Timothy"),
+    ("2 Timothy", "2 Timothy"),
+    ("1 Samuel", "1 Samuel"),
+    ("2 Samuel", "2 Samuel"),
+    ("1 Kings", "1 Kings"),
+    ("2 Kings", "2 Kings"),
+    ("1 Peter", "1 Peter"),
+    ("2 Peter", "2 Peter"),
+    ("1 John", "1 John"),
+    ("2 John", "2 John"),
+    ("3 John", "3 John"),
+    ("Song of Solomon", "Song of Solomon"),
+    ("Song of Songs", "Song of Solomon"),
+    ("Lamentations", "Lamentations"),
+    ("Ecclesiastes", "Ecclesiastes"),
+    ("Deuteronomy", "Deuteronomy"),
+    ("Philippians", "Philippians"),
+    ("Colossians", "Colossians"),
+    ("Revelation", "Revelation"),
+    ("Leviticus", "Leviticus"),
+    ("Nehemiah", "Nehemiah"),
+    ("Habakkuk", "Habakkuk"),
+    ("Zephaniah", "Zephaniah"),
+    ("Zechariah", "Zechariah"),
+    ("Philemon", "Philemon"),
+    ("Galatians", "Galatians"),
+    ("Ephesians", "Ephesians"),
+    ("Proverbs", "Proverbs"),
+    ("Jeremiah", "Jeremiah"),
+    ("Ezekiel", "Ezekiel"),
+    ("Obadiah", "Obadiah"),
+    ("Malachi", "Malachi"),
+    ("Matthew", "Matthew"),
+    ("Hebrews", "Hebrews"),
+    ("Genesis", "Genesis"),
+    ("Exodus", "Exodus"),
+    ("Numbers", "Numbers"),
+    ("Joshua", "Joshua"),
+    ("Judges", "Judges"),
+    ("Esther", "Esther"),
+    ("Psalms", "Psalm"),
+    ("Psalm", "Psalm"),
+    ("Isaiah", "Isaiah"),
+    ("Daniel", "Daniel"),
+    ("Hosea", "Hosea"),
+    ("Amos", "Amos"),
+    ("Jonah", "Jonah"),
+    ("Micah", "Micah"),
+    ("Nahum", "Nahum"),
+    ("Haggai", "Haggai"),
+    ("Mark", "Mark"),
+    ("Luke", "Luke"),
+    ("John", "John"),
+    ("Acts", "Acts"),
+    ("Romans", "Romans"),
+    ("Titus", "Titus"),
+    ("James", "James"),
+    ("Jude", "Jude"),
+    ("Ruth", "Ruth"),
+    ("Ezra", "Ezra"),
+    ("Job", "Job"),
+    ("Joel", "Joel"),
+    ("1 Chr", "1 Chronicles"),
+    ("2 Chr", "2 Chronicles"),
+    ("1 Cor", "1 Corinthians"),
+    ("2 Cor", "2 Corinthians"),
+    ("1 Thess", "1 Thessalonians"),
+    ("2 Thess", "2 Thessalonians"),
+    ("1 Thes", "1 Thessalonians"),
+    ("2 Thes", "2 Thessalonians"),
+    ("1 Tim", "1 Timothy"),
+    ("2 Tim", "2 Timothy"),
+    ("1 Sam", "1 Samuel"),
+    ("2 Sam", "2 Samuel"),
+    ("1 Kgs", "1 Kings"),
+    ("2 Kgs", "2 Kings"),
+    ("1 Pet", "1 Peter"),
+    ("2 Pet", "2 Peter"),
+    ("1 Jn", "1 John"),
+    ("2 Jn", "2 John"),
+    ("3 Jn", "3 John"),
+    ("1 Ki", "1 Kings"),
+    ("2 Ki", "2 Kings"),
+    ("Rev", "Revelation"),
+    ("Deut", "Deuteronomy"),
+    ("Eccl", "Ecclesiastes"),
+    ("Lam", "Lamentations"),
+    ("Phil", "Philippians"),
+    ("Col", "Colossians"),
+    ("Prov", "Proverbs"),
+    ("Isa", "Isaiah"),
+    ("Jer", "Jeremiah"),
+    ("Ezek", "Ezekiel"),
+    ("Dan", "Daniel"),
+    ("Hos", "Hosea"),
+    ("Obad", "Obadiah"),
+    ("Mic", "Micah"),
+    ("Nah", "Nahum"),
+    ("Hab", "Habakkuk"),
+    ("Zeph", "Zephaniah"),
+    ("Hag", "Haggai"),
+    ("Zech", "Zechariah"),
+    ("Mal", "Malachi"),
+    ("Matt", "Matthew"),
+    ("Rom", "Romans"),
+    ("Gal", "Galatians"),
+    ("Eph", "Ephesians"),
+    ("Phlm", "Philemon"),
+    ("Heb", "Hebrews"),
+    ("Jas", "James"),
+    ("Gen", "Genesis"),
+    ("Exod", "Exodus"),
+    ("Lev", "Leviticus"),
+    ("Num", "Numbers"),
+    ("Josh", "Joshua"),
+    ("Judg", "Judges"),
+    ("Neh", "Nehemiah"),
+    ("Est", "Esther"),
+    ("Pss", "Psalm"),
+    ("Ps", "Psalm"),
+    ("Mt", "Matthew"),
+    ("Mk", "Mark"),
+    ("Lk", "Luke"),
+    ("Jn", "John"),
+    ("Ex", "Exodus"),
+)
+_BIBLE_CANON = {alias.lower(): canon for alias, canon in _BIBLE_BOOKS}
+_SCRIPTURE_RE = re.compile(
+    r"(?<![A-Za-z])"
+    r"(?P<book>"
+    + "|".join(
+        re.escape(alias).replace(r"\ ", r"\s+") + r"\.?"
+        for alias, _canon in sorted(_BIBLE_BOOKS, key=lambda item: len(item[0]), reverse=True)
+    )
+    + r")"
+    r"\s+"
+    r"(?P<verse>\d{1,3}[a-z]?(?:\s*[:.]\s*\d{1,3}[a-z]?(?:\s*[–\-]\s*(?:\d{1,3}\s*[:.]\s*)?\d{1,3}[a-z]?)?(?:\s*,\s*\d{1,3}[a-z]?(?:\s*[–\-]\s*\d{1,3}[a-z]?)?)*)?(?:\s*,\s*\d{1,3}[a-z]?)*(?:\s*ff\.?)?)"
+    r"(?![A-Za-z0-9])",
+    re.IGNORECASE,
+)
+_STATUS_NOTE_RE = re.compile(
+    r"\[\s*((?:the\s+)?text\s+(?:ends abruptly|cuts off|breaks off|is incomplete|ends here))[^\]]*\]?",
+    re.IGNORECASE,
+)
+_SIGIL_RE = re.compile(r"\[\s*([A-Za-z])\s*\]")
+_SUPPLIED_RE = re.compile(r"\[([^\[\]]{1,48})\]")
+_TIP_SECTION_RE = re.compile(r".+-(?:open|rem-early|rem-mid|rem-close)\Z")
+
+
+def _canon_book(raw: str) -> str:
+    key = re.sub(r"\s+", " ", raw).strip().rstrip(".").lower()
+    return _BIBLE_CANON.get(key, raw.strip().rstrip("."))
+
+
+def _bible_anchor(display: str, search: str) -> str:
+    href = (
+        "https://www.biblegateway.com/passage/?search="
+        f"{quote_plus(search)}&version=NRSVUE"
+    )
+    return (
+        f'<a class="bible-ref" href="{escape(href)}" rel="noopener noreferrer" '
+        f'title="{escape(search)}">{escape(display)}</a>'
+    )
+
+
+_SPOKEN_BOOKS = (
+    ("First Corinthians", "1 Corinthians"),
+    ("Second Corinthians", "2 Corinthians"),
+    ("First Thessalonians", "1 Thessalonians"),
+    ("Second Thessalonians", "2 Thessalonians"),
+    ("First Chronicles", "1 Chronicles"),
+    ("Second Chronicles", "2 Chronicles"),
+    ("First Timothy", "1 Timothy"),
+    ("Second Timothy", "2 Timothy"),
+    ("First Samuel", "1 Samuel"),
+    ("Second Samuel", "2 Samuel"),
+    ("First Kings", "1 Kings"),
+    ("Second Kings", "2 Kings"),
+    ("First Peter", "1 Peter"),
+    ("Second Peter", "2 Peter"),
+    ("First John", "1 John"),
+    ("Second John", "2 John"),
+    ("Third John", "3 John"),
+    ("Song of Songs", "Song of Songs"),
+    ("Song of Solomon", "Song of Songs"),
+    ("Revelation", "Revelation"),
+    ("Deuteronomy", "Deuteronomy"),
+    ("Ecclesiastes", "Ecclesiastes"),
+    ("Lamentations", "Lamentations"),
+    ("Colossians", "Colossians"),
+    ("Philippians", "Philippians"),
+    ("Thessalonians", "1 Thessalonians"),
+    ("Corinthians", "1 Corinthians"),
+    ("Ephesians", "Ephesians"),
+    ("Galatians", "Galatians"),
+    ("Habakkuk", "Habakkuk"),
+    ("Zephaniah", "Zephaniah"),
+    ("Zechariah", "Zechariah"),
+    ("Nehemiah", "Nehemiah"),
+    ("Leviticus", "Leviticus"),
+    ("Numbers", "Numbers"),
+    ("Ezekiel", "Ezekiel"),
+    ("Obadiah", "Obadiah"),
+    ("Malachi", "Malachi"),
+    ("Matthew", "Matthew"),
+    ("Hebrews", "Hebrews"),
+    ("Philemon", "Philemon"),
+    ("Genesis", "Genesis"),
+    ("Exodus", "Exodus"),
+    ("Joshua", "Joshua"),
+    ("Judges", "Judges"),
+    ("Proverbs", "Proverbs"),
+    ("Isaiah", "Isaiah"),
+    ("Jeremiah", "Jeremiah"),
+    ("Daniel", "Daniel"),
+    ("Hosea", "Hosea"),
+    ("Joel", "Joel"),
+    ("Amos", "Amos"),
+    ("Jonah", "Jonah"),
+    ("Micah", "Micah"),
+    ("Nahum", "Nahum"),
+    ("Haggai", "Haggai"),
+    ("Romans", "Romans"),
+    ("Titus", "Titus"),
+    ("James", "James"),
+    ("Jude", "Jude"),
+    ("Psalms", "Psalms"),
+    ("Psalm", "Psalms"),
+    ("Mark", "Mark"),
+    ("Luke", "Luke"),
+    ("John", "John"),
+    ("Acts", "Acts"),
+    ("Job", "Job"),
+    ("Ruth", "Ruth"),
+    ("Ezra", "Ezra"),
+    ("Esther", "Esther"),
+)
+_SPOKEN_CANON = {name.lower(): canon for name, canon in _SPOKEN_BOOKS}
+_SPOKEN_NUM = (
+    r"(?:(?:twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety)"
+    r"-(?:one|two|three|four|five|six|seven|eight|nine)"
+    r"|nineteen|eighteen|seventeen|sixteen|fifteen|fourteen|thirteen|twelve|eleven"
+    r"|twenty|thirty|forty|fifty|sixty|seventy|eighty|ninety"
+    r"|ten|nine|eight|seven|six|five|four|three|two|one)"
+)
+_SPOKEN_SCRIPTURE_RE = re.compile(
+    r"(?<![A-Za-z])(?P<book>"
+    + "|".join(
+        re.escape(name)
+        for name, _canon in sorted(_SPOKEN_BOOKS, key=lambda item: len(item[0]), reverse=True)
+    )
+    + r"),?\s+chapter\s+(?P<chap>" + _SPOKEN_NUM + r")"
+    + r"(?:,?\s+verses?\s+(?P<verse>" + _SPOKEN_NUM
+    + r"(?:(?:\s*,\s*and|\s+and|\s*,|\s+through)\s+" + _SPOKEN_NUM + r")*))?"
+    + r"(?![A-Za-z])",
+    re.IGNORECASE,
+)
+_SPOKEN_UNDER_20 = {
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7,
+    "eight": 8, "nine": 9, "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13,
+    "fourteen": 14, "fifteen": 15, "sixteen": 16, "seventeen": 17, "eighteen": 18,
+    "nineteen": 19,
+}
+_SPOKEN_TENS = {
+    "twenty": 20, "thirty": 30, "forty": 40, "fifty": 50,
+    "sixty": 60, "seventy": 70, "eighty": 80, "ninety": 90,
+}
+
+
+def _spoken_int(raw: str | None) -> int | None:
+    if not raw:
+        return None
+    parts = raw.lower().replace("-", " ").split()
+    if len(parts) == 1 and parts[0] in _SPOKEN_UNDER_20:
+        return _SPOKEN_UNDER_20[parts[0]]
+    if len(parts) == 1 and parts[0] in _SPOKEN_TENS:
+        return _SPOKEN_TENS[parts[0]]
+    if (
+        len(parts) == 2
+        and parts[0] in _SPOKEN_TENS
+        and parts[1] in _SPOKEN_UNDER_20
+        and _SPOKEN_UNDER_20[parts[1]] < 10
+    ):
+        return _SPOKEN_TENS[parts[0]] + _SPOKEN_UNDER_20[parts[1]]
+    return None
+
+
+def _spoken_verse_list(raw: str | None) -> list[int] | None:
+    if not raw:
+        return None
+    parts = re.split(r"\s*(?:,\s*and|,|and|through)\s*", raw.strip(), flags=re.IGNORECASE)
+    numbers = [_spoken_int(part) for part in parts if part]
+    if not numbers or any(number is None for number in numbers):
+        return None
+    return numbers
+
+
+def _spoken_search(book: str, chapter: int, verses: list[int] | None) -> str:
+    if not verses:
+        return f"{book} {chapter}"
+    if len(verses) == 1:
+        return f"{book} {chapter}:{verses[0]}"
+    if verses == list(range(verses[0], verses[-1] + 1)):
+        return f"{book} {chapter}:{verses[0]}-{verses[-1]}"
+    return f"{book} {chapter}:" + ",".join(str(number) for number in verses)
+
+
+def _scripture_matches(text: str) -> list[tuple[int, int, str, str]]:
+    """All citation spans: (start, end, display, bible-search). Shared by links + spans."""
+    found: list[tuple[int, int, str, str]] = []
+    for match in _SPOKEN_SCRIPTURE_RE.finditer(text):
+        chapter = _spoken_int(match.group("chap"))
+        verses = _spoken_verse_list(match.group("verse"))
+        if chapter is None or (match.group("verse") and not verses):
+            continue
+        book = _SPOKEN_CANON[match.group("book").lower()]
+        search = _spoken_search(book, chapter, verses)
+        found.append((match.start(), match.end(), match.group(0).strip(), search))
+    occupied = [(start, end) for start, end, _display, _search in found]
+    for match in _SCRIPTURE_RE.finditer(text):
+        start, end = match.start(), match.end()
+        if any(not (end <= left or start >= right) for left, right in occupied):
+            continue
+        book = re.sub(r"\s+", " ", match.group("book")).strip()
+        verse = re.sub(r"\s+", " ", match.group("verse")).strip()
+        display = re.sub(r"\s+", " ", match.group(0)).strip()
+        search_verse = verse.replace("–", "-").replace(".", ":")
+        search_verse = re.sub(r"\s*ff\.?$", "", search_verse, flags=re.IGNORECASE)
+        search_verse = re.sub(r"(\d)[a-zA-Z](?![a-zA-Z])", r"\1", search_verse)
+        search_verse = re.sub(r"\s+", "", search_verse)
+        found.append((start, end, display, f"{_canon_book(book)} {search_verse}"))
+    found.sort()
+    return found
+
+
+def scripture_html(text: str) -> str:
+    """Escape prose and link chapter:verse citations the way Logos tags already link.
+
+    Spoken cites stay visible as words ("Ephesians, chapter two, verse eight")
+    and still open Bible Gateway. "verses seven and eight" stays those words
+    and opens the verse span.
+    """
+    if not text:
+        return ""
+    parts: list[str] = []
+    pos = 0
+    for start, end, display, search in _scripture_matches(text):
+        wrapped = start > 0 and text[start - 1] == "(" and end < len(text) and text[end] == ")"
+        gap_end = start - 1 if wrapped else start
+        if gap_end < pos:
+            gap_end = pos
+        parts.append(escape(text[pos:gap_end]))
+        anchor = _bible_anchor(display, search)
+        parts.append(f"({anchor})" if wrapped else anchor)
+        pos = end + 1 if wrapped else end
+    parts.append(escape(text[pos:]))
+    return "".join(parts)
+
+
+def scripture_spans(text: str) -> str:
+    """Citations as styled spans (no anchors) for use inside TOC links."""
+    if not text:
+        return ""
+    parts: list[str] = []
+    pos = 0
+    for start, end, display, search in _scripture_matches(text):
+        parts.append(escape(text[pos:start]))
+        parts.append(f'<span class="bible-cite" title="{escape(search)}">{escape(display)}</span>')
+        pos = end
+    parts.append(escape(text[pos:]))
+    return "".join(parts)
+
+
+def clean_reader_notation(text: str) -> str:
+    """Drop manuscript sigla and leftover brackets. Keep the words they supplied."""
+    if not text:
+        return ""
+
+    def status(m: re.Match[str]) -> str:
+        words = re.sub(r"\s+", " ", m.group(1)).strip()
+        sentence = words[:1].upper() + words[1:]
+        if not sentence.endswith("."):
+            sentence += "."
+        return ". " + sentence
+
+    def unwrap(m: re.Match[str]) -> str:
+        inner = m.group(1).strip()
+        if _SCRIPTURE_RE.search(inner):
+            return inner
+        if re.fullmatch(r"[A-Za-z][A-Za-z'’\- ]{0,47}", inner) and 1 <= len(inner.split()) <= 6:
+            return inner
+        return m.group(0)
+
+    text = _STATUS_NOTE_RE.sub(status, text)
+    text = _SIGIL_RE.sub("", text)
+    text = _SUPPLIED_RE.sub(unwrap, text)
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    text = re.sub(r" +([,.;:?!])", r"\1", text)
+    text = re.sub(r"\.\s+\.\s+", ". ", text)
+    text = re.sub(r"^\s*\.\s+", "", text)
+    return text
+
+
+def section_ordinals(sections) -> dict[str, str]:
+    """Plain 1, 2, 3 for machine tip ids. Edition loci stay dotted."""
+    out: dict[str, str] = {}
+    n = 0
+    for s in sections or []:
+        sid = str(s.get("section") if isinstance(s, dict) else s)
+        if _TIP_SECTION_RE.fullmatch(sid) and display_section(sid) == sid:
+            n += 1
+            out[sid] = str(n)
+    return out
+
+
+def shown_section(sid, ordinals=None) -> str:
+    sid = str(sid)
+    if ordinals and sid in ordinals:
+        return ordinals[sid]
+    return display_section(sid)
+
+
 def strip_logos_markup(text: str) -> str:
     """Plain text for cards/snippets: keep Bible display labels, drop other [[…]]."""
     if not text:
@@ -261,17 +692,18 @@ def strip_logos_markup(text: str) -> str:
 
     out = _LOGOS_BIBLE_RE.sub(_bible, text)
     out = _LOGOS_ANY_RE.sub("", out)
+    out = clean_reader_notation(out)
     return re.sub(r"\s+", " ", out).strip()
 
 
 def render_reader_html(text: str) -> str:
-    """HTML-escape reader prose; turn Logos Bible tags into real links."""
+    """HTML-escape reader prose; turn Logos tags and plain citations into real links."""
     if not text:
         return ""
     parts: list[str] = []
     pos = 0
     for m in _LOGOS_BIBLE_RE.finditer(text):
-        parts.append(escape(text[pos : m.start()]))
+        parts.append(scripture_html(clean_reader_notation(text[pos : m.start()])))
         display = (m.group(1) or "").strip()
         target = (m.group(2) or "").strip()
         placeholder = (
@@ -301,9 +733,9 @@ def render_reader_html(text: str) -> str:
     rest_parts: list[str] = []
     rpos = 0
     for m in _LOGOS_ANY_RE.finditer(rest):
-        rest_parts.append(escape(rest[rpos : m.start()]))
+        rest_parts.append(scripture_html(clean_reader_notation(rest[rpos : m.start()])))
         rpos = m.end()
-    rest_parts.append(escape(rest[rpos:]))
+    rest_parts.append(scripture_html(clean_reader_notation(rest[rpos:])))
     parts.append("".join(rest_parts))
     return "".join(parts)
 
@@ -832,7 +1264,14 @@ _CPG_TITLE = re.compile(r"^CPG\s+\d+", re.I)
 
 
 _TIP_TITLE_SUFFIX = re.compile(r"\s*\([^)]*\btip\b[^)]*\)\s*$", re.I)
-_DENSE_EDITION_MARK = re.compile(r"\b(?:ESTC|Wing|IA|EEBO|STC)\b", re.I)
+_DENSE_EDITION_MARK = re.compile(
+    r"\b(?:ESTC|Wing|IA|EEBO|STC|VD17|SLUB|Google Books|ONB|Densify|Partial|Not whole|remain\w*)\b", re.I
+)
+_SCOPE_LADEN_MARK = re.compile(
+    r"\b(GAR|PLAC|TIP|PHYS|Densify|VD17|SLUB|ONB|ESTC|Wing|EEBO|STC|Google Books)\b"
+    r"|→|reatus-only|before PLAC|through Man|partial:",
+    re.I,
+)
 
 # The English line is what a reader types. No Latin or Greek name in it.
 # The traditional name stays on PUBLIC_LATIN_SUBTITLES only.
@@ -857,7 +1296,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "africanus-cesti": "Miscellanies",
     "photius-bibliotheca": "The Library",
     "ammonius-fragmenta-joannem": "Fragments on John",
-    "gregory-thaumaturgus-ouden-eidolon": "That There Is No Idol in the World",
+    "gregory-thaumaturgus-ouden-eidolon": "That There is No Idol in the World",
     "gregory-thaumaturgus-jeremiah-fragments": "Fragments on Jeremiah",
     "gregory-thaumaturgus-matthew-fragment": "Fragment on Matthew",
     "gregory-thaumaturgus-sententiae": "Sentences",
@@ -952,12 +1391,22 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "epiphanius-testimonia-ex-divinis-et-sacris-scripturis": "Testimonies from the Divine and Sacred Scriptures",
     "epiphanius-tractatus-contra-eos-qui-imagines-faciunt": "Treatise against Those Who Make Images",
     "epiphanius-tractatus-de-numerorum-mysteriis": "Treatise on the Mysteries of Numbers",
+    "hesychius-in-antonium": "On Saint Antony",
+    "hesychius-in-lucam": "On Saint Luke",
+    "hesychius-in-petrum-paulum": "On Saints Peter and Paul",
+    "hesychius-in-procopium": "On Saint Procopius",
+    "hesychius-in-conceptionem-praecursoris": "On the Conception of the Venerable Forerunner",
     "hesychius-homilia-i-hypapante": "Homily I on the Presentation",
     "hesychius-homilia-ii-hypapante": "Homily II on the Presentation",
+    "hesychius-homilia-i-lazarum": "Homily I on Saint Lazarus",
     "hesychius-homilia-ii-lazarum": "Homily II on Saint Lazarus",
     "hesychius-homilia-ii-longinum": "Homily II on Saint Longinus the Centurion",
+    "hesychius-homilia-i-longinum": "Homily I on Saint Longinus the Centurion",
     "theophilus-alex-fragmenta-matthaeum": "Fragments on Matthew",
+    "theophilus-alex-fragmenta-joannem": "Fragments on John",
     "hesychius-homilia-i-maria-deipara": "Homily I on Saint Mary the Mother of God",
+    "hesychius-homilia-ii-maria-deipara": "Homily II on Saint Mary the Mother of God",
+    "hesychius-homilia-jejunio": "Homily on Fasting",
     "amphilochius-in-zacchaeum": "On Zacchaeus",
     "amphilochius-in-occursum-domini": "On the Meeting of the Lord",
     "amphilochius-in-natalitia-domini": "On the Nativity of the Lord",
@@ -995,15 +1444,21 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "eustathius-de-fide-contra-arianos": "On Faith against the Arians",
     "eustathius-commentarius-psalmum-92": "Commentary on Psalm 92",
     "eustathius-commentarius-psalmum": "Commentary on a Psalm",
-    "origen-song-homily-1": "Homilies on the Song of Songs, Homily 1",
-    "origen-song-homily-2": "Homilies on the Song of Songs, Homily 2",
+    "origen-song-homily-1": "Homilies on the Song of Songs, Homily I",
+    "origen-song-homily-2": "Homilies on the Song of Songs, Homily II",
+    "origen-song-commentary-liber-4": "Commentary on the Song of Songs, Book IV",
+    "origen-nt-fragments": "Fragments on the New Testament",
+    "origen-job-enarrationes": "Notes on Job",
+    "origen-romans-catena": "Commentary on Romans (Greek)",
+    "origen-regnorum-fragments": "Fragments on 1 Samuel",
+    "cyril-matthew-fragments": "Fragments on Matthew",
     "gregory-thaumaturgus-ecclesiastes-metaphrase": "Paraphrase of Ecclesiastes",
-    "alexander-monachus-inventio-crucis-epitome": "Discovery of the Cross (epitome)",
+    "alexander-monachus-inventio-crucis-epitome": "Discovery of the Cross (Epitome)",
     "cyril-fragmentum-baruch": "Fragment on Baruch",
     "cyril-fragmentum-proverbia": "Fragment on Proverbs",
-    "cyril-solutiones-vat-447": "Solutions, Vat. 447 Fragment",
+    "cyril-solutiones-vat-447": "Solutions Fragment (Vat. 447)",
     "cyril-epistula-theodosium": "Letter to Theodosius",
-    "cyril-ad-xystum": "Letter to Xystus Bishop of Rome",
+    "cyril-ad-xystum": "Letter to Sixtus, Bishop of Rome",
     "cyril-de-synagogae-defectu": "On the Falling Away of the Synagogue",
     "cyril-ad-carthaginiense": "Letter to the Council of Carthage",
 }
@@ -1030,7 +1485,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "eustathius-hexaemeron": "Commentarius in hexaemeron",
     "eustathius-engastrimytho": "De engastrimytho contra Origenem",
     "eustathius-oratio-dominus-creavit": "Oratio in illud Dominus creavit me",
-    "eusebius-emesa-fragmentum-1cor": "Fragmentum in 1 Corinthios",
+    "eusebius-emesa-fragmentum-1cor": "Fragmentum in epistulam i ad Corinthios",
     "cyril-jerusalem-homilia-paralyticum": "Homilia in paralyticum juxta piscinam jacentem",
     "diodorus-fragmenta": "Fragmenta",
     "diodorus-fragmenta-romanos": "Fragmenta in epistulam ad Romanos",
@@ -1046,8 +1501,8 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "didymus-fragmenta-romanos": "Fragmenta in Romanos",
     "didymus-fragmenta-proverbia": "Fragmenta in Proverbia",
     "didymus-fragmenta-joannem": "Fragmenta in Joannem",
-    "didymus-fragmenta-2cor": "Fragmenta in 2 Corinthios",
-    "didymus-fragmenta-1cor": "Fragmenta in 1 Corinthios",
+    "didymus-fragmenta-2cor": "Fragmenta in epistulam ii ad Corinthios",
+    "didymus-fragmenta-1cor": "Fragmenta in epistulam i ad Corinthios",
     "didymus-enarratio-catholicas": "Enarratio in epistulas catholicas",
     "didymus-dialexis-montanistae": "Dialexis Montanistae",
     "didymus-contra-manichaeos": "Contra Manichaeos",
@@ -1157,7 +1612,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-ruth-scrap": "In Ruth",
     "origen-de-resurrectione-scrap": "De Resurrectione",
     "origen-job-enarrationes": "Enarrationes in Job",
-    "origen-romans-catena": "Commentarii in epistulam ad Romanos (catena Greek)",
+    "origen-romans-catena": "Commentarii in epistulam ad Romanos",
     "origen-psalms-excerpta": "Excerpta in Psalmos",
     "origen-proverbs-expositio": "Expositio in Proverbia",
     "origen-proverbs-fragments": "Fragmenta ex commentariis in Proverbia",
@@ -1165,7 +1620,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-job-homilies": "Homiliae in Job",
     "origen-apocalypse-scholia-scrap": "Scholia in Apocalypsem",
     "origen-job-selecta": "Selecta in Job",
-    "origen-nt-fragments": "NT Catena / Scholia Fragments",
+    "origen-nt-fragments": "Scholia in Novum Testamentum",
     "alexander-monachus-inventio-crucis-epitome": "Inventio crucis epitome",
     "cyril-fragmentum-baruch": "Fragmentum in librum Baruch",
     "cyril-fragmentum-proverbia": "Fragmentum in Proverbia",
@@ -1174,6 +1629,22 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "cyril-ad-xystum": "Ad Xystum episcopum Romae",
     "cyril-de-synagogae-defectu": "De synagogae defectu",
     "cyril-ad-carthaginiense": "Ad Carthaginiense concilium",
+    "davenant-dissertationes-duae": "Dissertationes duae",
+    "cyril-recta-fide-arcadia": "De recta fide ad Arcadiam",
+    "cyril-recta-fide-pulcheria": "De recta fide ad Pulcheriam",
+    "cyril-epistula-photium": "Epistula ad Photium",
+    "cyril-matthew-fragments": "Fragmenta in Matthaeum",
+    "cyril-adoration-1": "Περὶ προσκυνήσεως",
+    "gregory-thaumaturgus-de-fide-xii": "Duodecim capita de fide",
+    "gregory-thaumaturgus-ad-tatianum-de-anima": "Ad Tatianum de anima",
+    "gregory-thaumaturgus-in-annuntiationem": "In annuntiationem",
+    "gregory-thaumaturgus-sermo-in-omnes-sanctos": "Sermo in omnes sanctos",
+    "gregory-thaumaturgus-panegyricus": "Panegyricus in Origenem",
+    "gregory-thaumaturgus-epistula-canonica": "Epistula canonica",
+    "macarius-spiritual-homilies": "Homiliae spirituales",
+    "philostorgius-he": "Historia ecclesiastica",
+    "origen-regnorum-fragments": "Fragmenta in Regnorum",
+    "origen-song-commentary-liber-4": "Commentarius in Canticum IV",
 }
 
 
@@ -1260,8 +1731,25 @@ def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     if slug in PUBLIC_ENGLISH_TITLES:
         raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
         if raw and raw.lower() != h1.lower():
+            if _SCOPE_LADEN_MARK.search(raw):
+                return ""
             return scrub_worksheet_note(raw).strip()
     return ""
+
+
+def clean_hero_edition(short: str, ids: str, latin_sub: str) -> tuple[str, str]:
+    """Hero keeps the imprint (PG N); vendor tags move to About; subtitle echoes drop."""
+    if re.search(r"khazarzar", short, re.I):
+        short = re.sub(r"\s*\(?khazarzar\)?", "", short, flags=re.I).strip(" .;")
+        if "khazarzar" not in ids.lower():
+            ids = (ids + "; Khazarzar scan").strip(" ;") if ids else "Khazarzar scan"
+    if latin_sub:
+        norm = latin_sub.strip(" .;").lower()
+        segs = [s.strip() for s in re.split(r"\s*;\s*", short)]
+        kept = [s for s in segs if s.lower() != norm]
+        if kept and kept != segs:
+            short = "; ".join(kept).strip(" .;")
+    return short, ids
 
 
 def split_edition_for_reader(edition: str) -> tuple[str, str]:
@@ -1329,6 +1817,32 @@ ORIGINAL_ENGLISH_INTRO = (
 NEVER_OET_SLUGS = frozenset(
     {
         "irenaeus-demonstration",  # Robinson 1920 / Wilson
+        "john-wesley-salvation-by-faith",  # Wesley already wrote it in English
+        "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-vi",
+        "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-v",
+        "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-iv",
+        "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-iii",
+        "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-ii",
+        "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-i",
+        "john-wesley-the-lord-our-righteousness",
+        "john-wesley-the-great-privilege-of-those-that-are-born-of-god",
+        "john-wesley-the-marks-of-the-new-birth",
+        "john-wesley-the-circumcision-of-the-heart",
+        "john-wesley-the-means-of-grace",
+        "john-wesley-the-great-assize",
+        "john-wesley-the-repentance-of-believers",
+        "john-wesley-on-sin-in-believers",
+        "john-wesley-the-witness-of-our-own-spirit",
+        "john-wesley-the-witness-of-the-spirit-discourse-ii",
+        "john-wesley-the-witness-of-the-spirit-discourse-i",
+        "john-wesley-the-spirit-of-bondage-and-of-adoption",
+        "john-wesley-the-first-fruits-of-the-spirit",
+        "john-wesley-the-kingdom-of-god-is-at-hand",
+        "john-wesley-the-righteousness-of-faith",
+        "john-wesley-justification-by-faith",
+        "john-wesley-scriptural-christianity",
+        "john-wesley-awake-thou-that-sleepest",
+        "john-wesley-the-almost-christian",
     }
 )
 # Gloss only — do not start with the OET label (banner already prints it).
@@ -1431,6 +1945,95 @@ def public_source_text(text: str) -> str:
     cleaned = re.sub(r"\(\s*\)", "", cleaned)
     cleaned = re.sub(r"\s{2,}", " ", cleaned).strip(" \t;")
     return cleaned
+
+
+def _strip_densify_head(m: "re.Match") -> str:
+    nxt = m.group(1)
+    return (nxt[0].upper() + nxt[1:]) if nxt else ""
+
+
+_BLURB_SCAFFOLD_RES = [
+    # Build-room status heads with page-locks: drop the head, keep the topics.
+    (re.compile(r"[Dd]ensify\s+COMPLETE\b[^:]{0,120}:\s*([A-Za-z]?)"), _strip_densify_head),
+    (re.compile(r"[Dd]ensify\s+COMPLETE\s*(?:PHYS\b[^.]*\.?)?\.?\s*"), ""),
+    (re.compile(r"\bComplete\s+Cap\.\s*\d+\s+densify\s*:\s*([A-Za-z]?)"), _strip_densify_head),
+    # Trailing scope/status tails.
+    (re.compile(r"\s*Complete on this page:[^.]*\.\s*"), ""),
+    (re.compile(r"\s*[—–-]\s*Cap\.\s*\d+\s+close\.?.*$"), ""),
+    (re.compile(r"\s*Cap\.\s*\d+\s+(?:close|starts|next)\b.*$"), ""),
+    (re.compile(r"\s*Cap\.\s*\d+\s+[A-Z][A-Za-z]*\s+PHYS\b.*$"), ""),
+    (re.compile(r"\s*Liber\s+[IVX]+\s+(?:NOT FOUND|FOUND|CLOSED|CLOSEOUT|next\b).*$"), ""),
+    (re.compile(r"\s*\bFINIS\b\.?.*$"), ""),
+    # Leftover provenance chatter (whole site is new English; "private study"
+    # is a license leftover, not reader information).
+    (re.compile(r"\bNew English for private study\.?\s*"), ""),
+    (re.compile(r"\bNew English from locked Greek\.?\s*"), ""),
+    (re.compile(r";\s*[^;.]*?(?:\bANF\b|PD English)\s+exists\.?"), ""),
+    # Edition cues collapse to plain language.
+    (re.compile(r"\bfrom the \d{4} \w+ Latin\b"), "from the Latin"),
+    (re.compile(r"\bfrom the \d{4} Latin column\b"), "from the Latin"),
+    (re.compile(r"\bfrom [^.]*?Greek OCR\b"), "from the Greek"),
+    (re.compile(r"\bfrom locked [^.]*?Greek\b"), "from the Greek"),
+    (re.compile(r"\btip\s+densify\s+of\b"), ""),
+    (re.compile(r"\bTip of the locked\b"), ""),
+    (re.compile(r"\bTip covers\b"), "It covers"),
+]
+
+_WORKSHEET_LEFT_I = re.compile(
+    r"densify|\btip\b|\blocked\b|\block\b|staging|Latin column|Greek OCR"
+    r"|_meta|_packet|folio|sigla|obelus|pinax|Cap\.\s*(?:\d+|[IVXLCDM]+)\b"
+    r"|\bCapita\b|Canon\s+(?:\d+|[IVXLCDM]+)|Sermo\s+(?:\d+|[IVXLCDM]+)"
+    r"|Art\.\s*(?:\d+|[IVXLCDM]+)|Haer\.|next PHYS|starts PHYS|new OET"
+    r"|SERIES CLOSEOUT|private study",
+    re.I,
+)
+_WORKSHEET_LEFT_CS = re.compile(
+    r"\bPHYS\b|\bOCR\b|\bCOMPLETE\b|\bCLOSEOUT\b|\bFINIS\b|\bTODO\b"
+    r"|FOUND PHYS|NOT FOUND|Liber [IVX]+\b|Exercitatio|\bPG \d|\bANF \d"
+    r"|\bBook \d|Salmond|Crombie|Walford|Routh|Bidez|Vossius|Wither|Migne"
+    r"|MGR\b|Eusebius HE|\bHE \d|mid[-\s~]*(?:PHYS|\d{3,})"
+)
+
+
+def public_blurb(raw: str) -> str:
+    """Reader-safe blurb, or "" when the source is build-room scaffolding.
+
+    Callers must fall back to generic reader copy on "" — never emit the raw
+    note. (Worksheet blurbs are being rewritten at the source in
+    clients/translations metas; this is the backstop, 2026-10-01.)
+    """
+    t = (raw or "").strip()
+    for rx, rep in _BLURB_SCAFFOLD_RES:
+        t = rx.sub(rep, t)
+    t = re.sub(r"\(\s*\)", "", t)
+    t = re.sub(r"\s{2,}", " ", t)
+    t = re.sub(r"^[\s,;:\-–—]+", "", t)
+    t = t.strip(" \t;—–-,")
+    if not t or _WORKSHEET_LEFT_I.search(t) or _WORKSHEET_LEFT_CS.search(t):
+        return ""
+    return t
+
+
+def source_witness_html(sections, ordinals, *, ranged: str = "") -> str:
+    """1872 (or other English) check text. Never label it Greek or Latin."""
+    grouped: dict[str, list[str]] = {}
+    multi = len(sections) > 1
+    for section in sections:
+        paragraphs = shown_source(eng_list(section.get("witness")))
+        if not paragraphs:
+            continue
+        label = str(section.get("witness_label") or "Source text").strip() or "Source text"
+        bits = grouped.setdefault(label, [])
+        if multi:
+            bits.append(
+                f'<p class="src-sec">§{escape(shown_section(str(section["section"]), ordinals))}</p>'
+            )
+        bits.extend(f"<p class='src'>{escape(paragraph)}</p>" for paragraph in paragraphs)
+    blocks = []
+    for label, bits in grouped.items():
+        summary = f"{label} · {ranged}" if ranged else label
+        blocks.append(f"<details><summary>{escape(summary)}</summary>{''.join(bits)}</details>")
+    return "".join(blocks)
 
 
 def shown_source(parts) -> list[str]:
@@ -1566,7 +2169,7 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
     pub = public_reader_title(w.get("title") or "", slug=w.get("slug") or "")
     latin = public_reader_latin_subtitle(w.get("title") or "", slug=w.get("slug") or "")
     blob = " ".join([pub, latin, w.get("title") or "", w.get("author") or "",
-                     w.get("period") or "", w.get("blurb") or "", topics]).casefold()
+                     w.get("period") or "", public_blurb(w.get("blurb") or ""), topics]).casefold()
     count = w["section_count"]
     bits = [f"{count} section{'' if count == 1 else 's'}"]
     if w["status"] == "in_progress":
@@ -1605,6 +2208,39 @@ def series_base_and_part(title: str) -> tuple[str, int | None]:
     if token.isdigit():
         return base, int(token)
     return base, _ROMAN.get(token.casefold())
+
+
+_TAUTOLOGY_RE = None
+
+def _is_tautological_blurb(blurb: str) -> bool:
+    """True when the blurb only restates author + title ('Evagrius Ponticus — Scholia on Proverbs.')."""
+    global _TAUTOLOGY_RE
+    if _TAUTOLOGY_RE is None:
+        import re as _re
+        _TAUTOLOGY_RE = _re.compile(r"^(.{3,60})\s+\u2014\s+(.{3,60})\.?$")
+    t = (blurb or "").strip()
+    if len(t) >= 80:
+        return False
+    m = _TAUTOLOGY_RE.match(t)
+    if not m:
+        return False
+    return all(len(side.split()) <= 6 for side in m.groups())
+
+
+def work_teaser_html(w: dict, max_chars: int = 170) -> str:
+    """One-to-two-line invitation under a work title in listings. Never empty."""
+    blurb = public_blurb(w.get("blurb") or "")
+    if len(blurb) > max_chars:
+        cut = blurb[:max_chars].rsplit(". ", 1)
+        blurb = (cut[0] + ".") if len(cut) == 2 and len(cut[0]) > 60 else blurb[:max_chars].rsplit(" ", 1)[0] + "…"
+    if not blurb or _is_tautological_blurb(blurb):
+        blurb = "New English translation, free to read."
+    return f'<span class="work-teaser">{escape(blurb)}</span>'
+
+
+def section_count_html(n: int) -> str:
+    """Labeled count — bare (24) explains nothing."""
+    return f'<span class="work-count">{n} section{"s" if n != 1 else ""}</span>'
 
 
 def author_works_list_html(ww: list[dict]) -> str:
@@ -1652,8 +2288,9 @@ def author_works_list_html(ww: list[dict]) -> str:
         total = sum(m["section_count"] for m in members)
         lis = "".join(
             f'<li><a href="/works/{escape(m["slug"])}/">'
-            f'{escape(public_reader_title(m["title"], slug=m["slug"]))}'
-            f' <span class="meta">({m["section_count"]})</span></a></li>'
+            f'<span class="work-title">{escape(public_reader_title(m["title"], slug=m["slug"]))}</span>'
+            f' {section_count_html(m["section_count"])}'
+            f'{work_teaser_html(m)}</a></li>'
             for _, m in parts
         )
         series_blocks.append(
@@ -1662,7 +2299,7 @@ def author_works_list_html(ww: list[dict]) -> str:
                 (
                     f'<li class="work-series"><details>'
                     f'<summary><span class="work-series-title">{escape(base)}</span>'
-                    f' <span class="meta">({escape(span)} · {total})</span></summary>'
+                    f' <span class="meta">({escape(span)} · {total} sections)</span></summary>'
                     f'<ul class="series-parts">{lis}</ul></details></li>'
                 ),
             )
@@ -1672,8 +2309,9 @@ def author_works_list_html(ww: list[dict]) -> str:
             alpha_key(public_reader_title(w.get("title") or "", slug=w.get("slug") or "")),
             (
                 f'<li><a href="/works/{escape(w["slug"])}/">'
-                f'{escape(public_reader_title(w["title"], slug=w["slug"]))}'
-                f' <span class="meta">({w["section_count"]})</span></a></li>'
+                f'<span class="work-title">{escape(public_reader_title(w["title"], slug=w["slug"]))}</span>'
+                f' {section_count_html(w["section_count"])}'
+                f'{work_teaser_html(w)}</a></li>'
             ),
         )
         for w in singles
@@ -1709,7 +2347,7 @@ def author_catalog_html(works: list[dict]) -> str:
             public_reader_title(w.get("title") or "", slug=w.get("slug") or "") for w in ww_sorted
         )
         blob = " ".join(
-            [author, period, titles, topics] + [w.get("blurb") or "" for w in ww_sorted]
+            [author, period, titles, topics] + [public_blurb(w.get("blurb") or "") for w in ww_sorted]
         ).casefold()
         if n == 1:
             w0 = ww_sorted[0]
@@ -1734,6 +2372,7 @@ def author_catalog_html(works: list[dict]) -> str:
             f' data-oet="{int(oet)}" data-blob="{escape(blob)}"'
             f' data-works="{n}"'
         )
+        teaser = work_teaser_html(ww_sorted[0]) if n == 1 else ""
         rows.append(
             (
                 year,
@@ -1744,6 +2383,7 @@ def author_catalog_html(works: list[dict]) -> str:
                     f'<strong class="author-name">{escape(author)}</strong>'
                     f'<span class="author-sub">{escape(line2)}</span>'
                     f'<span class="author-meta">{" · ".join(escape(b) for b in bits if b)}</span>'
+                    f"{teaser}"
                     f"</a></li>"
                 ),
             )
@@ -1812,7 +2452,7 @@ def load_origen_works() -> list[dict]:
             status="available",
             edition="Koetschau GCS (1899)",
             sections=rows(gebet_en, gebet_src),
-            blurb="Origen’s treatise on prayer. Open the Greek under each section.",
+            blurb="Origen on how and why Christians pray: standing, kneeling, asking, and the Lord’s Prayer line by line.",
             text_history={
                 "method": (
                     "English follows Paul Koetschau, Origenes Werke II (GCS, 1899). "
@@ -1845,7 +2485,7 @@ def load_origen_works() -> list[dict]:
             status="available",
             edition="Koetschau GCS (1899)",
             sections=rows(mart_en, mart_src),
-            blurb="Written for Ambrose and Protoctetus. Open the Greek under each section.",
+            blurb="Written to imprisoned friends: why martyrdom is the highest prayer, and how not to fear it.",
             text_history={
                 "method": (
                     "English follows Paul Koetschau, Origenes Werke I (GCS, 1899). "
@@ -1983,7 +2623,7 @@ def load_origen_book2() -> list[dict]:
                 edition="Witte’s 1993 edition of the Greek",
                 sections=_origen_rows(pas_en, pas_src),
                 blurb=(
-                    "Origen on the Passover. Damaged lines are marked as gaps, not filled in."
+                    "Origen on the Passover: what the feast means, and how Christians should keep it."
                 ),
                 text_history={
                     "method": (
@@ -3280,7 +3920,7 @@ def load_origen_letters() -> list[dict]:
         meta = _json_load(trans / "letters_open_meta.json", {})
     first_english = bool(meta.get("first_english", True))
     slug = meta.get("slug") or "origen-letters"
-    title = meta.get("title") or "Letters (Africanus; Gregory)"
+    title = meta.get("title") or "Letters"
     letter_sections = _origen_rows(deduped, src_map)
     for i, sec in enumerate(letter_sections):
         sec["sort_key"] = (0, i)
@@ -3728,7 +4368,7 @@ def load_julian_works() -> list[dict]:
     works.append(
         _pack_work(
             slug="julian-letter-to-rome",
-            title="Letter to Rome (fragments)",
+            title="Letter to Rome (Fragments)",
             author="Julian of Eclanum",
             author_slug="julian-of-eclanum",
             period="c. 418–420",
@@ -3782,7 +4422,7 @@ def load_julian_works() -> list[dict]:
     works.append(
         _pack_work(
             slug="julian-collective-letter",
-            title="Collective letter to Thessalonica",
+            title="Collective Letter to Thessalonica",
             author="Julian of Eclanum",
             author_slug="julian-of-eclanum",
             period="c. 418–420",
@@ -3976,11 +4616,12 @@ def prev_next_nav(
     work_slug: str, sections: list[dict], idx: int, contents_href: str | None = None
 ) -> str:
     parts = []
+    ordinals = section_ordinals(sections)
     if idx > 0:
         prev = sections[idx - 1]
         parts.append(
             f'<a class="pn prev" href="/works/{escape(work_slug)}/{escape(str(prev["section"]))}/">'
-            f'← §{escape(display_section(prev["section"]))}</a>'
+            f'← §{escape(shown_section(prev["section"], ordinals))}</a>'
         )
     else:
         parts.append('<span class="pn prev"></span>')
@@ -3991,7 +4632,7 @@ def prev_next_nav(
         nxt = sections[idx + 1]
         parts.append(
             f'<a class="pn next" href="/works/{escape(work_slug)}/{escape(str(nxt["section"]))}/">'
-            f'§{escape(display_section(nxt["section"]))} →</a>'
+            f'§{escape(shown_section(nxt["section"], ordinals))} →</a>'
         )
     else:
         parts.append('<span class="pn next"></span>')
@@ -4068,7 +4709,7 @@ def layout(
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light only">
 <meta name="supported-color-schemes" content="light">
-<meta name="theme-color" content="#f7f3ea">
+<meta name="theme-color" content="#0a0e2b">
 <title>{escape(title)} · {SITE_NAME}</title>
 <meta name="description" content="{escape(desc)}">
 {social}<link rel="canonical" href="https://fathers.saneapps.com/__ROUTE__">
@@ -4083,7 +4724,7 @@ def layout(
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="/">{SITE_NAME}</a>
+    <a class="brand" href="/">{SITE_NAME}<small>Via Patrum</small></a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <a href="/topics/"{nav_cls("topics")}>Topics</a>
@@ -4497,6 +5138,76 @@ def _favicon_ico_bytes() -> bytes:
     )
 
 
+def load_wesley_sermons() -> list[dict]:
+    """Wesley sermons: a modern reading, with the 1872 text beside it.
+
+    One translations file is one sermon. Later sermons use the same files.
+    This is not a first English translation, and it is not Greek or Latin.
+    """
+    works: list[dict] = []
+    trans = WESLEY_BOOK / "translations"
+    if not trans.is_dir():
+        return works
+    for en_path in sorted(trans.glob("sermon_*_english.json")):
+        stem = en_path.name[: -len("_english.json")]
+        rows = json.loads(en_path.read_text(encoding="utf-8"))
+        if not isinstance(rows, list) or not rows:
+            continue
+        src_rows = _json_load(trans / f"{stem}_source.json", [])
+        src_map = {
+            str(item.get("section")): item
+            for item in src_rows
+            if isinstance(item, dict)
+        }
+        meta = _json_load(trans / f"{stem}_meta.json", {})
+        slug = str(meta.get("slug") or f"john-wesley-{stem.replace('_', '-')}")
+        if slug not in WORK_TOPICS and meta.get("topics"):
+            WORK_TOPICS[slug] = list(meta["topics"])
+        sections = []
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            sec = str(row.get("section"))
+            src = src_map.get(sec, {})
+            title = str(row.get("title") or "").strip()
+            sections.append(
+                {
+                    "section": sec,
+                    "head": title or f"Part {sec}",
+                    "english": eng_list(row.get("english")),
+                    "greek": [],
+                    "latin": [],
+                    "witness": eng_list(src.get("witness")),
+                    "witness_label": str(
+                        src.get("witness_label")
+                        or meta.get("witness_label")
+                        or "1872 text"
+                    ),
+                    "source_url": None,
+                    "supplied_from": "",
+                    "scholar_label": "",
+                    "sort_key": None,
+                }
+            )
+        works.append(
+            _pack_work(
+                slug=slug,
+                title=str(meta.get("title") or stem.replace("_", " ").title()),
+                author="John Wesley",
+                author_slug="john-wesley",
+                period=str(meta.get("period") or "1738"),
+                status=str(meta.get("status") or "available"),
+                edition=str(meta.get("edition") or "1872 edition"),
+                sections=sections,
+                blurb=str(meta.get("blurb") or ""),
+                era_note=str(meta.get("era_note") or ""),
+                first_english=False,
+                text_history=meta.get("text_history") if isinstance(meta.get("text_history"), dict) else {},
+            )
+        )
+    return works
+
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -4560,7 +5271,15 @@ def build() -> None:
         + load_julian_works()
         + load_nemesius_works()
         + load_macarius_works()
+        + load_wesley_sermons()
     )
+    # SOP source-identity gate (2026-10-02): VOID works (translator fed the
+    # wrong source, or English with no source) never publish. Withhold by
+    # setting the work meta status to "withheld" with a withhold_note.
+    withheld = sorted({w["slug"] for w in works if w.get("status") == "withheld"})
+    if withheld:
+        print(f"withheld works (not published): {', '.join(withheld)}")
+    works = [w for w in works if w.get("status") != "withheld"]
     # Several source batches can extend one work. Previously each batch rewrote
     # the reader, leaving earlier citation pages linking to missing anchors.
     merged_works: dict[str, dict] = {}
@@ -4696,6 +5415,19 @@ def build() -> None:
     <a class="btn primary" href="/topics/">Browse topics</a>
     <a class="btn" href="/works/">Browse works</a>
     <a class="btn" href="/explore/?topic=free-will">Explore over time</a>
+  </div>
+</section>
+<section class="mission">
+  <h2>Via Patrum — the Way of the Fathers</h2>
+  <p class="lede">&ldquo;Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.&rdquo; — Jeremiah 6:16</p>
+  <p>Two thousand years of Christian writing, most of it untranslated, out of print, or locked behind paywalls. We are putting all of it — every Father, every work — into faithful modern English, then into audio, video, and print. Free for the whole world, forever.</p>
+</section>
+<section class="play-promo">
+  <h2>Play</h2>
+  <p><strong>Fragment of the Day:</strong> restore one torn line from the Fathers each day, in our own new English. <strong>Ten Leopards:</strong> it is AD 110, and you carry Ignatius's letters past the guards on his road to Rome.</p>
+  <div class="hero-actions">
+    <a class="btn primary" href="https://play.viapatrum.org/daily">Today's fragment</a>
+    <a class="btn" href="https://play.viapatrum.org/leopards">Play Ten Leopards</a>
   </div>
 </section>
 {priority_section}
@@ -5038,7 +5770,8 @@ def build() -> None:
                 f'<p class="banner first-english">'
                 f"<strong>{escape(ORIGINAL_ENGLISH_LABEL)}.</strong> {escape(detail)}</p>"
             )
-        blurb = f"<p class='intro'>{escape(w['blurb'])}</p>" if w.get("blurb") else ""
+        intro_text = public_blurb(w.get("blurb") or "") or "New English, free to read. Open any section below."
+        blurb = f"<p class='intro'>{escape(intro_text)}</p>"
         has_greek = any(s.get("greek") for s in w["sections"])
         has_latin = any(s.get("latin") for s in w["sections"])
         has_latin_link = any(s.get("source_url") for s in w["sections"])
@@ -5063,6 +5796,7 @@ def build() -> None:
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
         edition_short = scrub_worksheet_note(edition_short)
         edition_ids = scrub_worksheet_note(edition_ids)
+        edition_short, edition_ids = clean_hero_edition(edition_short, edition_ids, latin_sub)
         th_for_about = dict(w.get("text_history") or {})
         if edition_ids and not str(th_for_about.get("identifiers") or "").strip():
             th_for_about["identifiers"] = edition_ids
@@ -5098,6 +5832,8 @@ def build() -> None:
         )
 
         # --- continuous reader: whole work (or one book) on a single page ---
+        ordinals = section_ordinals(w["sections"])
+
         def display_head(s: dict) -> str:
             """Editorial thought title, or '' if the head is only a locus label."""
             sid = str(s["section"])
@@ -5183,7 +5919,7 @@ def build() -> None:
 
         def chunk_label(ch: dict) -> str:
             secs = ch["secs"]
-            first, last = display_section(secs[0]["section"]), display_section(secs[-1]["section"])
+            first, last = shown_section(secs[0]["section"], ordinals), shown_section(secs[-1]["section"], ordinals)
             rng = first if len(secs) == 1 else f"{first}–{last}"
             if ch["head"]:
                 return f"{rng}  {ch['head']}"
@@ -5193,11 +5929,11 @@ def build() -> None:
 
         def chunk_block(ch: dict) -> str:
             secs = ch["secs"]
-            first, last = display_section(secs[0]["section"]), display_section(secs[-1]["section"])
+            first, last = shown_section(secs[0]["section"], ordinals), shown_section(secs[-1]["section"], ordinals)
             rng = f"§{first}" if len(secs) == 1 else f"§§{first}–{last}"
             if ch["head"]:
                 heading = (
-                    f'<h2 class="reader-head"><span class="reader-title">{escape(ch["head"])}</span>'
+                    f'<h2 class="reader-head"><span class="reader-title">{scripture_html(clean_reader_notation(ch["head"]))}</span>'
                     f'<span class="range">{escape(rng)}</span></h2>'
                 )
             else:
@@ -5205,7 +5941,7 @@ def build() -> None:
                 snip = untitled_snip(ch, limit=110)
                 if snip:
                     heading = (
-                        f'<h2 class="reader-head"><span class="reader-title">{escape(snip)}</span>'
+                        f'<h2 class="reader-head"><span class="reader-title">{scripture_html(clean_reader_notation(snip))}</span>'
                         f'<span class="range">{escape(rng)}</span></h2>'
                     )
                 else:
@@ -5229,30 +5965,31 @@ def build() -> None:
                     if i == 0:
                         marker = (
                             f'<a class="vnum" id="s{escape(sid)}" href="/works/{escape(w["slug"])}/{escape(sid)}/" '
-                            f'title="Section {escape(display_section(sid))} — page for citing and sharing">{escape(display_section(sid))}</a>'
+                            f'title="Section {escape(shown_section(sid, ordinals))} — page for citing and sharing">{escape(shown_section(sid, ordinals))}</a>'
                         )
                     paras.append(f"<p>{marker}{render_reader_html(p)}</p>")
                 scholar = (s.get("scholar_label") or "").strip()
                 if scholar:
-                    paras.append(f'<p class="meta scholar">{escape(scholar)}</p>')
+                    paras.append(f'<p class="meta scholar">{scripture_html(clean_reader_notation(scholar))}</p>')
             gk, la, wit = [], [], []
             for s in secs:
                 sid = str(s["section"])
                 if s.get("greek"):
                     if len(secs) > 1:
-                        gk.append(f'<p class="src-sec">§{escape(display_section(sid))}</p>')
+                        gk.append(f'<p class="src-sec">§{escape(shown_section(sid, ordinals))}</p>')
                     gk += [f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["greek"])]
                 if s.get("latin"):
                     if len(secs) > 1:
-                        la.append(f'<p class="src-sec">§{escape(display_section(sid))}</p>')
+                        la.append(f'<p class="src-sec">§{escape(shown_section(sid, ordinals))}</p>')
                     la += [f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["latin"])]
                 if s.get("source_url"):
-                    wit.append(f'<a href="{escape(s["source_url"])}" rel="noopener">§{escape(display_section(sid))}</a>')
+                    wit.append(f'<a href="{escape(s["source_url"])}" rel="noopener">§{escape(shown_section(sid, ordinals))}</a>')
             src_block = ""
             if gk:
                 src_block += f'<details><summary>Greek · {escape(rng)}</summary>{"".join(gk)}</details>'
             if la:
                 src_block += f'<details><summary>Latin · {escape(rng)}</summary>{"".join(la)}</details>'
+            src_block += source_witness_html(secs, ordinals, ranged=rng)
             witness = (
                 f'<p class="meta">Latin source witness: {" · ".join(wit)}</p>' if wit else ""
             )
@@ -5267,12 +6004,12 @@ def build() -> None:
             for ch in chunks:
                 first = str(ch["secs"][0]["section"])
                 last = str(ch["secs"][-1]["section"])
-                num = display_section(first) if len(ch["secs"]) == 1 else f"{display_section(first)}–{display_section(last)}"
+                num = shown_section(first, ordinals) if len(ch["secs"]) == 1 else f"{shown_section(first, ordinals)}–{shown_section(last, ordinals)}"
                 label = ch["head"] or chunk_label(ch).split("  ", 1)[-1]
                 out.append(
                     f'<li><a href="{href_prefix}#s{escape(first)}">'
                     f'<span class="num">{escape(num)}</span>'
-                    f'<span class="toc-label">{escape(label)}</span></a></li>'
+                    f'<span class="toc-label">{scripture_spans(clean_reader_notation(label))}</span></a></li>'
                 )
             return "".join(out)
 
@@ -5297,7 +6034,7 @@ def build() -> None:
 
         def reader_page(main: str, *, contents_html: str, mast_extra: str = "", mast: str | None = None) -> str:
             """Slim title; rail holds Contents + meta; reading column starts at once."""
-            intro = work_intro_html(w["slug"]) if mast is None else ""
+            intro = work_intro_html(w["slug"])
             return (
                 f"{mast if mast is not None else work_mast}{mast_extra}"
                 f"{intro}"
@@ -5351,7 +6088,7 @@ def build() -> None:
                     {''.join(overview_toc)}""",
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
-                    description=w.get("blurb") or SITE_TAG,
+                    description=public_blurb(w.get("blurb") or "") or SITE_TAG,
                     og_type="article",
                 ),
             )
@@ -5383,7 +6120,7 @@ def build() -> None:
                     f"<header class=\"reader-mast\">"
                     f"<h1>{escape(pub_title)} <span class=\"h1-book\">— {escape(g['title'])}</span></h1>"
                     f"{latin_html}"
-                    f"<p class=\"meta\">{escape(w['author'])} · {escape(w['period'])} · "
+                    f"<p class=\"meta\">{escape(w['author'])} · {escape(format_bc_ad(w['period']))} · "
                     f"{escape(edition_short or w['edition'])}{book_prior}</p>"
                     f"</header>"
                 )
@@ -5403,7 +6140,7 @@ def build() -> None:
                             (g["title"], ""),
                         ],
                         active="works",
-                        description=w.get("blurb") or SITE_TAG,
+                        description=public_blurb(w.get("blurb") or "") or SITE_TAG,
                         og_type="article",
                     ),
                 )
@@ -5421,7 +6158,7 @@ def build() -> None:
                     ),
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
-                    description=w.get("blurb") or SITE_TAG,
+                    description=public_blurb(w.get("blurb") or "") or SITE_TAG,
                     og_type="article",
                 ),
             )
@@ -5438,6 +6175,7 @@ def build() -> None:
                 src_block += "<details><summary>Latin</summary>" + "".join(
                     f"<p class='src'>{escape(p)}</p>" for p in shown_source(s["latin"])
                 ) + "</details>"
+            src_block += source_witness_html([s], ordinals)
             if not src_block and not s.get("source_url"):
                 # Only when we truly have no source text online.
                 src_block = (
@@ -5467,10 +6205,10 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / str(s["section"]) / "index.html",
                 layout(
-                    f"{pub_title} §{display_section(s['section'])}",
+                    f"{pub_title} §{shown_section(s['section'], ordinals)}",
                     f"""<article class="work-section">
                     {nav}
-                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(pub_title)}</a> · §{escape(display_section(s['section']))}</p>
+                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(pub_title)}</a> · §{escape(shown_section(s['section'], ordinals))}</p>
                     {kind}
                     <h1>{escape(str(s['head']))}</h1>
                     {supplied_html}
@@ -5484,7 +6222,7 @@ def build() -> None:
                         ("Home", "/"),
                         ("Works", "/works/"),
                         (pub_title, f"/works/{w['slug']}/"),
-                        (f"§{display_section(s['section'])}", ""),
+                        (f"§{shown_section(s['section'], ordinals)}", ""),
                     ],
                     active="works",
                     description=strip_logos_markup((s["english"] or [""])[0])[:160],
@@ -5495,7 +6233,7 @@ def build() -> None:
                 {
                     "kind": "work",
                     "id": f"{w['slug']}-{s['section']}",
-                    "title": f"{pub_title} §{display_section(s['section'])}: {s['head']}",
+                    "title": f"{pub_title} §{shown_section(s['section'], ordinals)}: {s['head']}",
                     "author": w["author"],
                     "href": f"/works/{w['slug']}/{s['section']}/",
                     "verified": False,
@@ -5816,10 +6554,28 @@ def build() -> None:
                 <p>If you read the original language and a line of English looks wrong, send a short note. Name the work, the section, and what you think it should say.</p>
                 <p><a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml">Submit a correction</a></p>
               </li>
+              <li class="help-option" id="code">
+                <p class="n">5</p>
+                <h2>Star and build</h2>
+                <p>The library and its translations are built in the open. Star the repos, open issues, send pull requests.</p>
+                <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations repo</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website repo</a></p>
+              </li>
+              <li class="help-option" id="sponsor-book">
+                <p class="n">6</p>
+                <h2>Sponsor a book</h2>
+                <p>Fund a work&apos;s translation and audiobook and it goes to the front of the queue, with credit to you. Name the book in your gift note, or nominate it first.</p>
+                <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Sponsor a book</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Nominate a book</a></p>
+              </li>
+              <li class="help-option" id="spread">
+                <p class="n">7</p>
+                <h2>Spread the word</h2>
+                <p>YouTube and X channels are launching soon. Until then, a link is the best help: send the library to someone who studies.</p>
+                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%20%E2%80%94%20the%20complete%20Church%20Fathers%2C%20free%20for%20the%20world&url=https%3A%2F%2Ffathers.saneapps.com%2F" rel="noopener">Share on X</a></p>
+              </li>
             </ol>""",
             crumb=[("Home", "/"), ("Help us", "")],
             active="contribute",
-            description="Donate, buy a Mac app, point an AI at a slice, or submit a Greek or Latin correction",
+            description="Donate, point an AI at a slice, submit a correction, star the repos, sponsor a book, or spread the word",
         ),
     )
 
@@ -5901,7 +6657,38 @@ def build() -> None:
 """,
         encoding="utf-8",
     )
-    (DIST / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8")
+    (DIST / "robots.txt").write_text(
+        "User-agent: *\nAllow: /\nSitemap: https://fathers.saneapps.com/sitemap.xml\n",
+        encoding="utf-8",
+    )
+    urls = sorted(
+        "/" + p.relative_to(DIST).as_posix().removesuffix("index.html")
+        for p in DIST.rglob("*.html")
+        if p.name != "404.html"
+    )
+    (DIST / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(f"  <url><loc>https://fathers.saneapps.com{escape(u)}</loc></url>\n" for u in urls)
+        + "</urlset>\n",
+        encoding="utf-8",
+    )
+
+    audio_manifests = sorted((ROOT / "outputs/audio").glob("*/manifest.json"))
+    audio_hit = False
+    if audio_manifests:
+        for i, p in enumerate((DIST / "works").rglob("*.html")):
+            if i >= 60:
+                break
+            if "rdl-player" in p.read_text(encoding="utf-8")[:60000]:
+                audio_hit = True
+                break
+    if audio_manifests and not audio_hit:
+        print(
+            f"WARNING: {len(audio_manifests)} audio manifests but no injected players sampled — "
+            "bare build; run ship.sh for read-along injection.",
+            file=sys.stderr,
+        )
 
     print(
         json.dumps(
@@ -5911,6 +6698,8 @@ def build() -> None:
                 "work_sections": sum(w["section_count"] for w in works),
                 "search_docs": len(search_index),
                 "explore_points": len(explore_index["points"]),
+                "audio_manifests": len(audio_manifests),
+                "audio_sample_hit": audio_hit,
                 "dist": str(DIST),
             }
         )

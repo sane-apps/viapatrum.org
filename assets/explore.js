@@ -266,7 +266,28 @@
     return [...buckets.values()];
   }
 
-  function fitStage() {
+  function narrowExplore() {
+    return window.matchMedia("(max-width: 960px)").matches;
+  }
+
+  // A zero rect (jsdom) falls back to 420. A real short box stays short.
+  function canvasSize() {
+    const rect = els.canvas.getBoundingClientRect();
+    const W = Math.max(320, Math.floor(rect.width) || 320);
+    const measured = Math.floor(rect.height);
+    const H = measured >= 80 ? measured : 420;
+    return { W, H };
+  }
+
+  function fitStage(lanes) {
+    const stage = root.querySelector(".explore-stage");
+    if (!stage) return;
+    if (narrowExplore()) {
+      stage.style.height = "auto";
+      return;
+    }
+    const n = Math.max(lanes || 1, 1);
+    const chartH = 96 + n * 128;
     const header = document.querySelector(".site-header");
     const head = root.querySelector(".explore-head");
     const chrome = root.querySelector(".explore-chrome");
@@ -278,8 +299,32 @@
       (chrome ? chrome.getBoundingClientRect().height : 56) +
       (legend && !legend.hidden ? legend.getBoundingClientRect().height : 0) +
       (tip && !tip.hidden ? tip.getBoundingClientRect().height : 0);
-    const stage = root.querySelector(".explore-stage");
-    if (stage) stage.style.height = `${Math.max(280, window.innerHeight - used)}px`;
+    const room = Math.max(440, window.innerHeight - used);
+    stage.style.height = `${Math.max(room, chartH)}px`;
+  }
+
+  function yearUnit(W, H, padR, lastTickX) {
+    if (lastTickX > W - padR - 72) return "";
+    return `<text x="${W - padR}" y="${H - 16}" text-anchor="end" font-size="11" fill="var(--ink)" opacity="0.55" font-family="Source Sans 3, system-ui, sans-serif">years AD</text>`;
+  }
+
+  function prepareCanvas(kind, lanes) {
+    const narrow = narrowExplore();
+    els.canvas.classList.toggle("is-scroll", kind === "table");
+    if (!narrow) {
+      els.canvas.style.height = "";
+      return;
+    }
+    if (kind === "table") {
+      els.canvas.style.height = "auto";
+      return;
+    }
+    if (kind === "consensus") {
+      els.canvas.style.height = "22rem";
+      return;
+    }
+    const wanted = Math.min(720, 96 + Math.max(lanes || 1, 1) * 104);
+    els.canvas.style.height = `${wanted}px`;
   }
 
   function renderSummary(points) {
@@ -320,17 +365,21 @@
         els.tip.hidden = true;
       }
     }
-    fitStage();
+    const laneCount = (topic.claims || []).length;
+    fitStage(laneCount);
     renderSummary(points);
     syncView();
     clearCanvas();
     if (view === "table") {
+      prepareCanvas("table", laneCount);
       displayCache = points;
       drawTable(topic, points);
     } else if (view === "consensus") {
+      prepareCanvas("consensus", laneCount);
       displayCache = points;
       drawConsensus(topic, points);
     } else {
+      prepareCanvas("timeline", laneCount);
       const display = zoom === "century" ? aggregateByCentury(points) : points;
       displayCache = display;
       drawSvg(topic, display, points);
@@ -341,15 +390,17 @@
   function drawSvg(topic, display, rawPoints) {
     const claims = topic.claims || [];
     const claimIndex = Object.fromEntries(claims.map((c, i) => [c.id, i]));
-    const rect = els.canvas.getBoundingClientRect();
-    const W = Math.max(320, Math.floor(rect.width) || 900);
-    const H = Math.max(280, Math.min(Math.floor(rect.height) || 420, window.innerHeight));
+    const box = canvasSize();
+    const W = box.W;
     const padL = 16;
     const padR = 28;
     const padT = 52;
     const padB = 44;
-    const laneH = (H - padT - padB) / Math.max(claims.length, 1);
+    const nLanes = Math.max(claims.length, 1);
     const compact = W < 640;
+    const laneCap = compact ? 104 : 128;
+    const laneH = Math.min(Math.max(box.H - padT - padB, laneCap) / nLanes, laneCap);
+    const H = Math.round(padT + nLanes * laneH + padB);
     const rDot = compact ? 7 : 10;
     const dotStroke = compact ? 1.8 : 2.5;
     // Reserve room at the top of each lane for its label so dots never cover it.
@@ -381,7 +432,8 @@
     const aColors = authorColors(topic.id);
 
     // Resolve overlaps: nudge same-lane neighbors vertically (mini beeswarm).
-    const maxOff = Math.max(0, (laneH - labelZone) / 2 - rDot - 3);
+    const maxDown = Math.max(0, (laneH - labelZone) / 2 - rDot - 4);
+    const maxUp = Math.min(maxDown, 12);
     const lanesPlaced = new Map();
     const pos = new Map();
     const orderedPts = [...display].sort((a, b) => (a.year || 0) - (b.year || 0));
@@ -396,7 +448,8 @@
       if (!lanesPlaced.has(p.claim_id)) lanesPlaced.set(p.claim_id, []);
       const placed = lanesPlaced.get(p.claim_id);
       let off = 0;
-      for (const cand of [0, ...Array.from({length: Math.floor(maxOff)}, (_, i) => i + 1).flatMap(n => [n, -n])]) {
+      for (const cand of [0, ...Array.from({length: Math.floor(maxDown)}, (_, i) => i + 1).flatMap(n => [n, -n])]) {
+        if (cand > maxDown || cand < -maxUp) continue;
         const collides = placed.some(
           (q) => Math.hypot(q.x - x, q.off - cand) < q.rad + rad + 2
         );
@@ -407,7 +460,7 @@
       pos.set(pointKey(p), { x, y: laneY(p.claim_id) + off, rad });
     }
 
-    let html = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Topic timeline">`;
+    let html = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Topic timeline">`;
     html += `<defs>
       <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
         <feGaussianBlur stdDeviation="1.2" result="b"/>
@@ -424,15 +477,17 @@
       html += `<line x1="${padL}" x2="${W - padR}" y1="${midY}" y2="${midY}" stroke="${color}" stroke-opacity="0.25" stroke-width="1.5"/>`;
     });
 
+    let lastTickX = 0;
     ticks.forEach((t) => {
       const x = xScale(t);
       const major = t % 100 === 0;
       html += `<line x1="${x}" x2="${x}" y1="${padT}" y2="${H - padB}" stroke="#d5cbb6" stroke-opacity="${major ? 0.9 : 0.35}" stroke-dasharray="${major ? "0" : "3 5"}"/>`;
       if (major || (y1 - y0 < 220 && t % 50 === 0)) {
+        lastTickX = x;
         html += `<text x="${x}" y="${H - 16}" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Source Sans 3, system-ui, sans-serif">${t}</text>`;
       }
     });
-    html += `<text x="${W - padR}" y="${H - 16}" text-anchor="end" font-size="11" fill="var(--ink)" opacity="0.55" font-family="Source Sans 3, system-ui, sans-serif">years AD</text>`;
+    html += yearUnit(W, H, padR, lastTickX);
 
     if (ruptureYear) {
       const rx = xScale(ruptureYear);
@@ -613,9 +668,9 @@
       els.drawer.innerHTML = "<p class='empty'>No dated passages under these filters.</p>";
       return;
     }
-    const rect = els.canvas.getBoundingClientRect();
-    const W = Math.max(320, Math.floor(rect.width) || 900);
-    const H = Math.max(280, Math.min(Math.floor(rect.height) || 420, window.innerHeight));
+    const box = canvasSize();
+    const W = box.W;
+    const H = box.H;
     const perRow = W < 560 ? 1 : W < 900 ? 2 : 4;
     const rowsLegend = Math.ceil(claims.length / perRow);
     const padL = 112;
@@ -627,17 +682,19 @@
     const x = (b) => padL + ((b + 25 - b0) / ((b1 - b0) || 1)) * (W - padL - padR);
     const y = (s) => padT + (1 - s) * (H - padT - padB);
 
-    let html = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="Agreement over time">`;
+    let html = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Agreement over time">`;
     [["100% agree", 1], ["50% \u2014 split", 0.5], ["0% \u2014 all reject", 0]].forEach(([lab, s]) => {
       html += `<line x1="${padL}" x2="${W - padR}" y1="${y(s)}" y2="${y(s)}" stroke="#d5cbb6" stroke-opacity="${s === 0.5 ? 0.5 : 0.9}" stroke-dasharray="${s === 0.5 ? "3 5" : "0"}"/>`;
       html += `<text x="${padL - 8}" y="${y(s) + 4}" text-anchor="end" font-size="11" fill="var(--ink)" font-family="Source Sans 3, system-ui, sans-serif">${esc(lab)}</text>`;
     });
     const step = buckets.length > 12 ? 2 : 1;
+    let lastTickX = 0;
     buckets.forEach((b, i) => {
       if (i % step && i !== buckets.length - 1) return;
+      lastTickX = x(b);
       html += `<text x="${x(b)}" y="${H - 16}" text-anchor="middle" font-size="12" fill="var(--ink)" font-family="Source Sans 3, system-ui, sans-serif">${b}s</text>`;
     });
-    html += `<text x="${W - padR}" y="${H - 16}" text-anchor="end" font-size="11" fill="var(--ink)" opacity="0.55" font-family="Source Sans 3, system-ui, sans-serif">years AD</text>`;
+    html += yearUnit(W, H, padR, lastTickX);
     claims.forEach((c, i) => {
       const color = LANE[i % LANE.length];
       const lx = padL + (i % perRow) * Math.floor((W - padL - padR) / perRow);

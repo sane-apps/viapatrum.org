@@ -2,17 +2,21 @@
 """Inject the read-along player into built work pages (post-build step).
 
 Usage: python3 scripts/inject_audio.py <work-slug>
-Reads outputs/audio/<work>/manifest.json, copies mp3s + per-passage manifests
-into dist/assets/audio/<work>/, wraps body sentences in tracking spans, and
-adds the player bar. Fails loudly on any sentence misalignment. Inline
-markup (citation links, spans) is preserved inside the tracking spans.
+
+Reads outputs/audio/<work>/manifest.json. The work slug is the translations
+book, which is not always the public page slug. Each matching passage gets a
+Play bar on the continuous reader (the page people actually read) and on the
+cite page. A file over 25 MiB is cut per passage. A passage whose text has
+drifted is skipped, and the rest of the book still attaches.
 """
 from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 
@@ -23,8 +27,19 @@ from speak_text import read_text
 ROOT = Path(__file__).resolve().parent.parent
 BOOKS = Path.home() / "SaneApps/clients/translations/books"
 
+
+def _asset_version() -> str:
+    """Same hash build_site.py stamps on site.css/js (audit N-C2)."""
+    import hashlib
+
+    h = hashlib.md5()
+    for p in sorted((ROOT / "assets").glob("*")):
+        if p.is_file():
+            h.update(p.read_bytes())
+    return h.hexdigest()[:10]
+
 PLAYER_CSS = """
-<style>.rdl-player{display:flex;align-items:center;gap:.6rem;margin:.9rem 0 .3rem;padding:.55rem .8rem;border:1px solid #d8d2c4;border-radius:.6rem;background:#faf7f0}.rdl-play,.rdl-prev,.rdl-next{border:1px solid #8a8272;background:#fff;border-radius:.45rem;padding:.3rem .8rem;cursor:pointer;font:inherit}.rdl-prev,.rdl-next{padding:.3rem .55rem}.rdl-bar{flex:1;height:.55rem;background:#e5e0d2;border-radius:.3rem;cursor:pointer}.rdl-fill{height:100%;width:0;background:#8a6d3b;border-radius:.3rem}.rdl-time{font-size:.85rem;color:#555;white-space:nowrap}.rdl-hint{font-size:.85rem;color:#555;margin:0 0 .9rem}.rdl{border-radius:.2rem;cursor:pointer}.rdl:hover{background:#efe6cf}.rdl-on{background:#f5e6bd}</style>
+<style>.rdl-player{display:flex;align-items:center;gap:.6rem;margin:.9rem 0 .3rem;padding:.55rem .8rem;border:1px solid var(--rule);border-radius:.6rem;background:var(--paper-2)}.rdl-play{border:1px solid var(--navy);background:var(--navy);color:var(--cream);border-radius:.45rem;padding:.3rem .8rem;cursor:pointer;font:inherit;font-weight:650}.rdl-prev,.rdl-next{border:1px solid var(--gold);background:var(--paper);color:var(--gold-deep);border-radius:.45rem;padding:.3rem .55rem;cursor:pointer;font:inherit}.rdl-bar{flex:1;height:.55rem;background:var(--rule);border-radius:.3rem;cursor:pointer}.rdl-fill{height:100%;width:0;background:var(--navy);border-radius:.3rem}.rdl-time{font-size:.85rem;color:var(--ink-soft);white-space:nowrap}.rdl-hint{font-size:.85rem;color:var(--ink-soft);margin:0 0 .9rem}.rdl{border-radius:.2rem;cursor:pointer}.rdl:hover{background:#efe6cf}.rdl-on{background:#f5e6bd;box-shadow:inset 3px 0 0 var(--gold-bright)}</style>
 """
 
 PLAYER_HTML = """
@@ -38,6 +53,7 @@ PLAYER_HTML = """
 <div class="rdl-hint">Click or tap any sentence to jump there. The side buttons skip a paragraph.</div>
 """
 
+LIMIT = 25 * 1024 * 1024
 TAG_RE = re.compile(r"<[^>]*>")
 ENTITY_RE = re.compile(r"&(#[0-9]+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);")
 VOID_TAGS = {"area", "base", "br", "col", "embed", "hr", "img", "input",
@@ -48,22 +64,52 @@ def norm(text: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
-def section_ranges(work: str) -> dict:
-    """Map section id -> (passage stem, first sentence idx, last sentence idx)."""
-    book = BOOKS / work
-    ranges = {}
-    for eng_file in sorted((book / "translations").glob("*_english.json")):
+def section_candidates(work: str) -> dict:
+    """Map section id -> every (stem, first, last) that claims it.
+
+    A later tip file must not hide the English the page was built from.
+    The page text picks the winner.
+    """
+    folder = BOOKS / work / "translations"
+    found = {}
+    if not folder.is_dir():
+        return found
+    for eng_file in sorted(folder.glob("*_english.json")):
         rows = json.loads(eng_file.read_text(encoding="utf-8"))
         rows = rows if isinstance(rows, list) else rows.get("sections", [])
         idx = 0
         for row in rows:
             sec = str(row.get("section"))
             n = 0
-            for para in row.get("english", []):
+            for para in row.get("english", []) or []:
                 n += len(split_sentences(read_text(para)))
-            ranges[sec] = (eng_file.stem, idx, idx + n - 1)
+            if n <= 0:
+                continue
+            found.setdefault(sec, []).append((eng_file.stem, idx, idx + n - 1))
             idx += n
-    return ranges
+    return found
+
+
+def _window(passages: dict, stem: str, first: int, last: int):
+    rows = (passages.get(stem) or {}).get("sentences") or []
+    if stem not in passages or last < first or last >= len(rows):
+        return None
+    return rows, rows[first:last + 1]
+
+
+def matching_choices(opts, passages: dict, plain: str) -> list:
+    """Recordings of this section whose words are the cite page's words."""
+    found = []
+    if not plain:
+        return found
+    for stem, first, last in opts:
+        got = _window(passages, stem, first, last)
+        if not got:
+            continue
+        full, window = got
+        if _expected_plain(window) == plain:
+            found.append((stem, first, last, window, full))
+    return found
 
 
 def text_pairs(text: str) -> list[tuple[str, str]]:
@@ -213,96 +259,450 @@ def work_state(built: bool, held: bool) -> str:
     return "fail"
 
 
+def _body_plain(page: Path) -> str:
+    html_text = page.read_text(encoding="utf-8", errors="replace")
+    match = re.search(r'<div class="body">(.*?)</div>', html_text, re.S)
+    if not match:
+        return ""
+    paras = re.findall(r"<p(?:\s[^>]*)?>(.*?)</p>", match.group(1), re.S)
+    bits = [norm(TAG_RE.sub("", para)) for para in paras]
+    return norm(" ".join(bit for bit in bits if bit))
+
+
+def _expected_plain(sentences: list[dict]) -> str:
+    return norm(" ".join(row["t"] for row in sentences))
+
+
+def locate_sites(book: str, cands: dict, manifest: dict) -> dict:
+    """Map a public work slug to the section candidates this recording may cover.
+
+    A book folder that is also a public slug is used directly. When one book
+    is several public works, those works share section ids. Attach each
+    recording to the one cite page whose words match it. Skip a recording
+    only when those same words match more than one page.
+    """
+    works = ROOT / "dist/works"
+    direct = works / book
+    if direct.is_dir():
+        return {book: cands}
+    passages = manifest.get("passages") or {}
+    if not works.is_dir():
+        return {}
+    site_names = sorted(p.name for p in works.iterdir() if p.is_dir())
+    found = {}
+    for sec, opts in cands.items():
+        if "/" in sec or sec in ("", ".", ".."):
+            continue
+        owners = {}
+        chosen = []
+        for site in site_names:
+            page = works / site / sec / "index.html"
+            if not page.is_file():
+                continue
+            hits = matching_choices(opts, passages, _body_plain(page))
+            if not hits:
+                continue
+            keys = []
+            for stem, first, last, _window, _full in hits:
+                key = (stem, first, last)
+                owners.setdefault(key, []).append(site)
+                keys.append(key)
+            chosen.append((site, keys))
+        for key, sites in owners.items():
+            if len(sites) > 1:
+                print("skip %s %s: recording matches %d works" % (book, sec, len(sites)))
+        for site, keys in chosen:
+            unique = [key for key in keys if len(owners[key]) == 1]
+            if unique:
+                found.setdefault(site, {})[sec] = unique
+    return found
+
+
+def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
+    """Fallback router when dist section ids don't match book ids.
+
+    Multi-file works build scoped ids (1.1, 2-1-1) while the book uses
+    plain numbers, so the id-first pass finds no pages. Route by exact
+    page-text match instead. Only runs when id-first yields zero sites,
+    so books that already inject are unaffected.
+    """
+    works = ROOT / "dist/works"
+    passages = manifest.get("passages") or {}
+    win_index: dict[str, list] = {}
+    for sec, opts in cands.items():
+        for stem, first, last in opts:
+            got = _window(passages, stem, first, last)
+            if got:
+                win_index.setdefault(_expected_plain(got[1]), []).append((stem, first, last))
+    found: dict = {}
+    owners: dict = {}
+    chosen: list = []
+    for site_dir in sorted(works.iterdir()):
+        if not site_dir.is_dir():
+            continue
+        site = site_dir.name
+        for sub in sorted(site_dir.iterdir()):
+            page = sub / "index.html"
+            if not page.is_file():
+                continue
+            keys = win_index.get(_body_plain(page))
+            if not keys:
+                continue
+            for key in keys:
+                owners.setdefault(key, []).append((site, sub.name))
+                chosen.append((site, sub.name, key))
+    for key, pages in owners.items():
+        if len(pages) > 1:
+            print("skip %s %s: recording matches %d pages" % (book, key[0], len(pages)))
+    for site, dist_sec, key in chosen:
+        if len(owners[key]) != 1:
+            continue
+        site_map = found.setdefault(site, {})
+        if dist_sec in site_map:
+            print("skip %s %s: two recordings match one page" % (site, dist_sec))
+            continue
+        site_map[dist_sec] = [key]
+    return found
+
+
+def _tool(name: str) -> str:
+    found = shutil.which(name)
+    if found:
+        return found
+    for folder in ("/opt/homebrew/bin", "/usr/local/bin", "/usr/bin"):
+        cand = str(Path(folder) / name)
+        if Path(cand).is_file():
+            return cand
+    raise RuntimeError("%s missing" % name)
+
+
+def _free_bytes() -> int:
+    st = os.statvfs(str(ROOT))
+    return st.f_bavail * st.f_frsize
+
+
+def ensure_slices(src: Path, jobs: list) -> None:
+    """Cut every passage of one mp3 from a single decode.
+
+    Accurate -ss on the mp3 would re-read a multi-hour file once per passage.
+    """
+    pending = []
+    seen = set()
+    for cache, t0, t1 in jobs:
+        key = str(cache)
+        if key in seen:
+            continue
+        seen.add(key)
+        if t1 <= t0:
+            continue
+        if cache.is_file() and cache.stat().st_size > 0 and cache.stat().st_mtime >= src.stat().st_mtime:
+            continue
+        pending.append((cache, t0, t1))
+    if not pending:
+        return
+    # A 64 kbps hour becomes about 170 MB of 24 kHz wav. Leave room for the site build.
+    if _free_bytes() < 8 * 1024 * 1024 * 1024:
+        print("skip slices %s: less than 8 GB free" % src.name)
+        return
+    wav = src.parent / "slices" / (src.stem + ".wav")
+    wav.parent.mkdir(parents=True, exist_ok=True)
+    ffmpeg = _tool("ffmpeg")
+    nice = _tool("nice")
+    print("slicing %s into %d passages" % (src.name, len(pending)), flush=True)
+    try:
+        subprocess.run(
+            [nice, "-n", "10", ffmpeg, "-v", "error", "-y", "-i", str(src),
+             "-ac", "1", "-ar", "24000", str(wav)],
+            check=True,
+        )
+        for n, (cache, t0, t1) in enumerate(pending, 1):
+            part = cache.with_suffix(".part.mp3")
+            subprocess.run(
+                [nice, "-n", "10", ffmpeg, "-v", "error", "-y",
+                 "-ss", "%.3f" % t0, "-to", "%.3f" % t1, "-i", str(wav),
+                 "-c:a", "libmp3lame", "-b:a", "64k", str(part)],
+                check=True,
+            )
+            if not part.is_file() or part.stat().st_size == 0:
+                if part.is_file():
+                    part.unlink()
+                continue
+            os.replace(part, cache)
+            if n % 25 == 0:
+                print("  sliced %d/%d of %s" % (n, len(pending), src.name), flush=True)
+    finally:
+        if wav.is_file():
+            wav.unlink()
+
+
+def _safe_sec(sec: str) -> str:
+    if "/" in sec or sec in ("", ".", "..") or "\\" in sec:
+        return ""
+    return sec
+
+
+def publish_passage(site: str, sec: str, plan: dict):
+    """Copy one passage into dist. Returns reader url, rows, and cite-page args."""
+    src = plan["src"]
+    stem = plan["stem"]
+    window = plan["window"]
+    full = plan["full"]
+    assets = ROOT / "dist/assets/audio" / site
+    assets.mkdir(parents=True, exist_ok=True)
+    if src.stat().st_size <= LIMIT:
+        dest = assets / (stem + ".mp3")
+        if not dest.is_file() or dest.stat().st_size != src.stat().st_size:
+            shutil.copyfile(src, dest)
+        audio_url = "/assets/audio/%s/%s.mp3" % (site, stem)
+        (assets / (stem + ".json")).write_text(json.dumps({
+            "audio": audio_url,
+            "sentences": full,
+        }))
+        (assets / ("%s.json" % sec)).write_text(json.dumps({
+            "audio": audio_url,
+            "sentences": window,
+        }))
+        reader_url = "/assets/audio/%s/%s.json" % (site, sec)
+        cite_url = "/assets/audio/%s/%s.json" % (site, stem)
+        texts = [row["t"] for row in window]
+        return reader_url, window, cite_url, texts, plan["first"], plan["last"]
+    cache = plan.get("cache")
+    if not cache or not cache.is_file() or cache.stat().st_size == 0 or cache.stat().st_size > LIMIT:
+        print("skip %s %s: cut file missing or over 25 MiB" % (site, sec))
+        return None
+    dest = assets / ("%s.mp3" % sec)
+    shutil.copyfile(cache, dest)
+    t0 = plan["t0"]
+    local = [{
+        "t": row["t"],
+        "s": round(float(row["s"]) - t0, 3),
+        "e": round(float(row["e"]) - t0, 3),
+    } for row in window]
+    (assets / ("%s.json" % sec)).write_text(json.dumps({
+        "audio": "/assets/audio/%s/%s.mp3" % (site, sec),
+        "sentences": local,
+    }))
+    url = "/assets/audio/%s/%s.json" % (site, sec)
+    texts = [row["t"] for row in local]
+    return url, local, url, texts, 0, max(0, len(local) - 1)
+
+
+def _inject_cite(page: Path, texts: list[str], manifest_url: str,
+                 start: int, end: int) -> int:
+    """Put the player on a cite page. Returns the number of tracked sentences."""
+    page_html = page.read_text(encoding="utf-8")
+    if 'class="rdl-player"' in page_html:
+        return 0
+    match = re.search(r'(<div class="body">)(.*?)(</div>)', page_html, re.S)
+    if not match:
+        raise AssertionError("no body div in %s" % page)
+    state = {"idx": 0, "n": 0}
+
+    def wrap_para(pm: "re.Match") -> str:
+        para = pm.group(2)
+        where = "%s para %d" % (page, state["n"])
+        sentences = split_sentences(norm(TAG_RE.sub("", para)))
+        expected = texts[state["idx"]:state["idx"] + len(sentences)]
+        if len(expected) != len(sentences) or norm(TAG_RE.sub("", para)) != norm(" ".join(expected)):
+            raise AssertionError("sentence drift in %s" % where)
+        wrapped = wrap_sentences(para, sentences, expected, start + state["idx"], where)
+        state["idx"] += len(sentences)
+        state["n"] += 1
+        return pm.group(1) + wrapped + "</p>"
+
+    new_body, n_para = re.subn(
+        r"(<p(?:\s[^>]*)?>)(.*?)(</p>)", wrap_para, match.group(2), flags=re.S)
+    if not n_para or state["idx"] != len(texts):
+        raise AssertionError("span count %d != %d in %s" % (state["idx"], len(texts), page))
+    player = PLAYER_CSS + PLAYER_HTML.format(
+        manifest=manifest_url, start=start, end=end)
+    script = f'<script src="/assets/readalong.js?v={_asset_version()}" defer></script>'
+    new_html = page_html[:match.start()] + '<div class="body">' + new_body + "</div>" + page_html[match.end():]
+    new_html = re.sub(r"(</h1>)", r"\1" + player, new_html, count=1)
+    if "readalong.js" not in new_html:
+        new_html = new_html.replace("</body>", script + "</body>")
+    page.write_text(new_html, encoding="utf-8")
+    return state["idx"]
+
+
+def _wrap_reader_chunk(body: str, texts: list[str], manifest_url: str, where: str) -> str:
+    pieces = re.split(r"(<p(?:\s[^>]*)?>.*?</p>)", body, flags=re.S)
+    idx = 0
+    out = []
+    for piece in pieces:
+        if not piece.startswith("<p"):
+            out.append(piece)
+            continue
+        matched = re.match(r"(<p(?:\s[^>]*)?>)(.*)</p>$", piece, re.S)
+        if not matched or matched.group(1) != "<p>":
+            out.append(piece)
+            continue
+        inner = matched.group(2)
+        anchor = ""
+        vnum = re.match(r'(<a class="vnum"[^>]*>.*?</a>)', inner, re.S)
+        if vnum:
+            anchor = vnum.group(1)
+            inner = inner[vnum.end():]
+        plain = norm(TAG_RE.sub("", inner))
+        sentences = split_sentences(plain) if plain else []
+        if not sentences:
+            out.append(piece)
+            continue
+        expected = texts[idx:idx + len(sentences)]
+        if len(expected) != len(sentences) or plain != norm(" ".join(expected)):
+            raise AssertionError("sentence drift in %s" % where)
+        wrapped = wrap_sentences(inner, sentences, expected, idx, where)
+        idx += len(sentences)
+        out.append("<p>" + anchor + wrapped + "</p>")
+    if idx != len(texts):
+        raise AssertionError("span count %d != %d in %s" % (idx, len(texts), where))
+    player = PLAYER_HTML.format(manifest=manifest_url, start=0, end=max(0, len(texts) - 1))
+    return '<div class="rdl-scope">' + player + "".join(out) + "</div>"
+
+
+def _inject_reader(page: Path, ready: dict) -> int:
+    """ready: section id -> (manifest url, sentence texts)."""
+    html_text = page.read_text(encoding="utf-8")
+    if 'class="reader-sec"' not in html_text:
+        return 0
+    inserted = 0
+
+    def repl_sec(match: "re.Match") -> str:
+        nonlocal inserted
+        block = match.group(0)
+        inner = block[len('<section class="reader-sec">'):-len("</section>")]
+        marks = list(re.finditer(r'<p><a class="vnum" id="s([^"]+)"', inner))
+        if not marks:
+            return block
+        parts = [inner[:marks[0].start()]]
+        for i, mark in enumerate(marks):
+            sec = mark.group(1)
+            start = mark.start()
+            stop = marks[i + 1].start() if i + 1 < len(marks) else len(inner)
+            chunk = inner[start:stop]
+            cut = len(chunk)
+            for extra in (re.search(r"<details\b", chunk), re.search(r'<p class="meta">', chunk)):
+                if extra:
+                    cut = min(cut, extra.start())
+            body, tail = chunk[:cut], chunk[cut:]
+            info = ready.get(sec)
+            if not info or 'class="rdl"' in body:
+                parts.append(chunk)
+                continue
+            url, texts = info
+            try:
+                parts.append(_wrap_reader_chunk(body, texts, url, "%s #%s" % (page.name, sec)) + tail)
+            except AssertionError as exc:
+                print("skip reader %s %s: %s" % (page, sec, exc))
+                parts.append(chunk)
+                continue
+            inserted += 1
+        return '<section class="reader-sec">' + "".join(parts) + "</section>"
+
+    new_html = re.sub(r'<section class="reader-sec">.*?</section>', repl_sec, html_text, flags=re.S)
+    if inserted:
+        if "rdl-player{" not in new_html:
+            new_html = new_html.replace('<div class="reader">', PLAYER_CSS + '<div class="reader">', 1)
+        if "readalong.js" not in new_html:
+            new_html = new_html.replace(
+                "</body>", f'<script src="/assets/readalong.js?v={_asset_version()}" defer></script></body>', 1)
+        page.write_text(new_html, encoding="utf-8")
+    return inserted
+
+
 def inject_work(work: str) -> None:
     manifest_path = ROOT / "outputs/audio" / work / "manifest.json"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-    work_dir = ROOT / "dist/works" / work
-    if not work_dir.is_dir():
+    cands = section_candidates(work)
+    if not cands:
+        print("SKIP %s: no English section map, audio kept" % work)
+        return
+    sites = locate_sites(work, cands, manifest)
+    if not sites:
+        print("note %s: no id-matched pages, trying text-first routing" % work)
+        sites = locate_sites_text_first(work, cands, manifest)
+    if not sites:
         print("SKIP %s: not on this site, audio kept" % work)
         return
-    ranges = section_ranges(work)
-    assets = ROOT / "dist/assets/audio" / work
-    assets.mkdir(parents=True, exist_ok=True)
-    # Player script (also copied by full builds; ensure present for pilot runs).
-    shutil.copyfile(ROOT / "assets/readalong.js", ROOT / "dist/assets/readalong.js")
-    # Per-passage player manifests + audio.
-    skipped_stems = set()
-    for stem, passage in manifest["passages"].items():
-        src_mp3 = ROOT / "outputs/audio" / work / (stem + ".mp3")
-        assert src_mp3.exists(), "missing audio %s" % src_mp3
-        if src_mp3.stat().st_size > 25 * 1024 * 1024:
-            for extra in (assets / (stem + ".mp3"), assets / (stem + ".json")):
-                if extra.exists():
-                    extra.unlink()
-            print("skip %s: %s is over the 25 MiB site limit" % (work, src_mp3.name))
-            skipped_stems.add(stem)
-            continue
-        shutil.copyfile(src_mp3, assets / (stem + ".mp3"))
-        player_manifest = {"audio": "/assets/audio/%s/%s.mp3" % (work, stem),
-                           "sentences": passage["sentences"]}
-        (assets / (stem + ".json")).write_text(json.dumps(player_manifest))
-    work_dir = ROOT / "dist/works" / work
-    state = work_state(work_dir.is_dir(), work in held_works())
-    if state != "inject":
-        print("SKIP %s: not on this site, audio kept" % work)
-        return
-    total_spans = 0
-    try:
-        for sec, (stem, first, last) in sorted(ranges.items()):
-            page = work_dir / sec / "index.html"
-            assert page.exists(), "missing page %s" % page
-            if stem not in manifest["passages"] or stem in skipped_stems:
-                print("skip %s: no audio for %s" % (sec, stem))
+    dist_js = ROOT / "dist/assets/readalong.js"
+    dist_js.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(ROOT / "assets/readalong.js", dist_js)
+    passages = manifest.get("passages") or {}
+    for site, site_cands in sorted(sites.items()):
+        plans = []
+        missed = []
+        slice_jobs = {}
+        for sec, opts in sorted(site_cands.items(), key=lambda item: item[0]):
+            if not _safe_sec(sec):
+                print("skip %s %s: bad section id" % (site, sec))
+                missed.append(sec)
                 continue
-            page_html = page.read_text(encoding="utf-8")
-            m = re.search(r'(<div class="body">)(.*?)(</div>)', page_html, re.S)
-            assert m, "no body div in %s" % page
-            body = m.group(2)
-            passage = manifest["passages"][stem]["sentences"]
-            state = {"idx": first, "n": 0}
-
-            def wrap_para(pm: "re.Match") -> str:
-                para = pm.group(2)
-                where = "%s para %d" % (page, state["n"])
-                sentences = split_sentences(norm(TAG_RE.sub("", para)))
-                expected = [s["t"] for s in passage[state["idx"]:state["idx"] + len(sentences)]]
-                assert len(expected) == len(sentences), "manifest short in %s" % where
-                assert norm(TAG_RE.sub("", para)) == norm(" ".join(expected)), \
-                    "sentence drift in %s" % where
-                wrapped = wrap_sentences(para, sentences, expected, state["idx"], where)
-                state["idx"] += len(sentences)
-                state["n"] += 1
-                return pm.group(1) + wrapped + "</p>"
-
-            new_body_inner, n_para = re.subn(r"(<p(?:\s[^>]*)?>)(.*?)(</p>)", wrap_para,
-                                             body, flags=re.S)
-            assert n_para, "no paragraphs in %s" % page
-            idx = state["idx"]
-            assert idx - 1 == last, "span count %d != manifest end %d in %s" % (idx - 1, last, page)
-            total_spans += idx - first
-            new_body = '<div class="body">' + new_body_inner + "</div>"
-            player = (PLAYER_CSS + PLAYER_HTML.format(
-                manifest="/assets/audio/%s/%s.json" % (work, stem), start=first, end=last))
-            script = '<script src="/assets/readalong.js" defer></script>'
-            new_html = page_html[:m.start()] + new_body + page_html[m.end():]
-            assert "</body>" in new_html
-            # Player bar right after the section heading.
-            new_html = re.sub(r"(</h1>)", r"\1" + player, new_html, count=1)
-            new_html = new_html.replace("</body>", script + "</body>")
-            page.write_text(new_html, encoding="utf-8")
-            print("injected %s [%d-%d]" % (sec, first, last))
-    except AssertionError as exc:
-        print("skip %s: audio does not match the page (%s)" % (work, exc))
-        return
-    # Work index: Listen entry point only when a passage actually matched.
-    if total_spans:
-        index = work_dir / "index.html"
-        index_html = index.read_text(encoding="utf-8")
-        first_sec = next(iter(ranges))
-        listen = ('<p><a class="rdl-listen" href="/works/%s/%s/">\u25b6 Listen with read-along</a></p>' % (work, first_sec))
-        index_html = re.sub(r"(</h1>)", r"\1" + listen, index_html, count=1)
-        index.write_text(index_html, encoding="utf-8")
-    print("work %s: %d tracked sentences" % (work, total_spans))
+            page = ROOT / "dist/works" / site / sec / "index.html"
+            if not page.is_file():
+                print("skip %s %s: no cite page" % (site, sec))
+                missed.append(sec)
+                continue
+            choices = matching_choices(opts, passages, _body_plain(page))
+            if not choices:
+                print("skip %s %s: audio does not match the page" % (site, sec))
+                missed.append(sec)
+                continue
+            stem, first, last, window, full = choices[0]
+            src = ROOT / "outputs/audio" / work / (stem + ".mp3")
+            if not src.is_file():
+                print("skip %s %s: no audio for %s" % (site, sec, stem))
+                missed.append(sec)
+                continue
+            plan = {
+                "sec": sec,
+                "page": page,
+                "stem": stem,
+                "first": first,
+                "last": last,
+                "window": window,
+                "full": full,
+                "src": src,
+            }
+            if src.stat().st_size > LIMIT:
+                t0 = float(window[0]["s"])
+                t1 = float(window[-1]["e"])
+                cache = src.parent / "slices" / ("%s_%s_%d_%d.mp3" % (
+                    stem, sec, int(round(t0 * 1000)), int(round(t1 * 1000))))
+                plan["cache"] = cache
+                plan["t0"] = t0
+                plan["t1"] = t1
+                slice_jobs.setdefault(src, []).append((cache, t0, t1))
+            plans.append(plan)
+        for src, jobs in slice_jobs.items():
+            try:
+                ensure_slices(src, jobs)
+            except (OSError, RuntimeError, subprocess.CalledProcessError) as exc:
+                print("skip slices %s: %s" % (src.name, exc))
+        ready = {}
+        tracked = 0
+        for plan in plans:
+            sec = plan["sec"]
+            published = publish_passage(site, sec, plan)
+            if not published:
+                missed.append(sec)
+                continue
+            url, local_rows, cite_url, cite_texts, cite_start, cite_end = published
+            try:
+                tracked += _inject_cite(plan["page"], cite_texts, cite_url, cite_start, cite_end)
+            except AssertionError as exc:
+                print("skip %s %s: %s" % (site, sec, exc))
+                missed.append(sec)
+                continue
+            ready[sec] = (url, [row["t"] for row in local_rows])
+        reader_hits = 0
+        work_dir = ROOT / "dist/works" / site
+        for reader in work_dir.rglob("index.html"):
+            text = reader.read_text(encoding="utf-8", errors="replace")
+            if 'class="reader-sec"' not in text:
+                continue
+            reader_hits += _inject_reader(reader, ready)
+        print("work %s: %d tracked sentences, %d reader passages, %d unmatched" % (
+            site, tracked, reader_hits, len(missed)), flush=True)
 
 
 def main(argv: list[str]) -> int:

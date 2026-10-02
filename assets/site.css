@@ -9,6 +9,11 @@
   --rule: #c9bfa8;
   --gold: #6e5420;
   --gold-deep: #4a3714;
+  --navy: #0a0e2b;
+  --navy-2: #151b45;
+  --gold-bright: #c9a227;
+  --gold-soft: #e3c96b;
+  --cream: #f7f3ea;
   --verified: #1f5c45;
   --reading: #4a3a24;
   --font-display: "Fraunces", Georgia, serif;
@@ -59,9 +64,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: color-mix(in srgb, var(--paper) 96%, #fff);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--rule);
+  background: var(--navy);
+  border-bottom: 2px solid var(--gold-bright);
 }
 .header-inner {
   max-width: var(--max);
@@ -76,9 +80,19 @@ body {
   font-family: var(--font-display);
   font-weight: 650;
   font-size: 1.35rem;
-  color: var(--ink);
+  color: var(--gold-bright);
   text-decoration: none;
   letter-spacing: -0.02em;
+}
+.brand small {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 550;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cream);
+  opacity: 0.85;
 }
 .site-nav {
   display: flex;
@@ -87,27 +101,29 @@ body {
   align-items: center;
 }
 .site-nav a {
-  color: var(--ink-soft);
+  color: var(--cream);
   text-decoration: none;
   font-weight: 550;
   font-size: 0.95rem;
 }
-.site-nav a:hover,
-.site-nav a.is-active { color: var(--ink); }
+.site-nav a:hover { color: var(--gold-soft); }
+.site-nav a.is-active { color: var(--gold-bright); }
 .site-nav .support {
-  color: var(--gold-deep);
-  border: 1px solid var(--gold);
+  color: var(--navy);
+  background: var(--gold-bright);
+  border: 1px solid var(--gold-bright);
   padding: 0.25rem 0.65rem;
   border-radius: 999px;
 }
+.site-nav .support:hover { color: var(--navy); }
 .nav-toggle {
   display: none;
   font: inherit;
   background: transparent;
-  border: 1px solid var(--rule);
+  border: 1px solid var(--gold-bright);
   padding: 0.35rem 0.7rem;
   border-radius: 0.4rem;
-  color: var(--ink);
+  color: var(--cream);
 }
 
 .crumbs {
@@ -162,11 +178,28 @@ body {
   font-weight: 650;
 }
 .btn.primary {
-  background: var(--ink);
-  color: var(--paper);
-  border-color: var(--ink);
+  background: var(--navy);
+  color: var(--cream);
+  border-color: var(--navy);
 }
 .btn:hover { transform: translateY(-1px); }
+
+/* Via Patrum mission panel: navy field, gold heading, cream text. */
+.mission {
+  background: var(--navy);
+  border-top: 2px solid var(--gold-bright);
+  border-bottom: 2px solid var(--gold-bright);
+  border-radius: 0.6rem;
+  padding: 1.75rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+.mission h2 {
+  color: var(--gold-bright);
+  margin-top: 0;
+}
+.mission .lede { color: var(--cream); }
+.mission p { color: var(--cream); }
+.mission p:last-child { margin-bottom: 0; }
 
 .split {
   display: grid;
@@ -275,6 +308,26 @@ body {
 .card-list span, .topic-list .c, .meta {
   color: var(--ink-soft);
   font-size: 0.92rem;
+}
+/* Work teasers: every listing row carries its own 1–2 line invitation. */
+.work-teaser {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-top: 0.15rem;
+}
+.work-count {
+  color: var(--gold-deep);
+  font-size: 0.85rem;
+  font-weight: 550;
+  white-space: nowrap;
+}
+.author-works .work-title { font-weight: 650; font-size: 1.05rem; }
+/* TOC citations: styled text with tooltip (anchors cannot nest inside the row link). */
+.bible-cite {
+  text-decoration: underline dotted;
+  text-underline-offset: 0.18em;
 }
 .toc li a {
   position: relative;
@@ -1312,13 +1365,14 @@ details.toc-group .toc {
 }
 
 .site-footer {
-  border-top: 1px solid var(--rule);
+  background: var(--navy);
+  border-top: 2px solid var(--gold-bright);
   padding: 2rem 1.25rem;
   text-align: center;
-  color: var(--ink-soft);
+  color: var(--cream);
   font-size: 0.95rem;
 }
-.site-footer a { color: var(--gold-deep); }
+.site-footer a { color: var(--gold-soft); }
 .fine { font-size: 0.85rem; }
 
 @media (max-width: 800px) {
@@ -1336,15 +1390,21 @@ details.toc-group .toc {
   }
   .site-nav.is-open { display: flex; }
   .header-inner { flex-wrap: wrap; }
-  /* Opaque chrome on phones — no translucent wash over body text. */
+  /* Navy chrome holds on phones — solid, no translucent wash. */
   .site-header {
-    background: var(--paper);
+    background: var(--navy);
     backdrop-filter: none;
   }
+  .site-nav a { color: var(--cream); }
+  .site-nav a.is-active { color: var(--gold-bright); }
+  .site-nav .support {
+    color: var(--navy);
+    background: var(--gold-bright);
+  }
+  .brand { color: var(--gold-bright); }
   .eyebrow,
   .help-option .n,
-  .crumbs a,
-  .site-nav .support {
+  .crumbs a {
     color: var(--gold-deep);
   }
   .lede,
@@ -1354,7 +1414,6 @@ details.toc-group .toc {
   .topic-list .c {
     color: var(--ink-soft);
   }
-  .brand,
   .main > h1,
   .hero h1,
   .help-option h2,
@@ -1366,9 +1425,11 @@ details.toc-group .toc {
     background-color: transparent;
   }
   .btn.primary {
-    background-color: var(--ink);
-    color: var(--paper);
+    background-color: var(--navy);
+    color: var(--cream);
   }
+  .mission h2 { color: var(--gold-bright); }
+  .mission .lede, .mission p { color: var(--cream); }
 }
 
 @media (prefers-reduced-motion: reduce) {
