@@ -1,3 +1,8 @@
+# SESSION HANDOFF — 2026-09-30
+
+## Explore layout, live
+Phone Timeline was a stamp. Fixed in assets/explore.js and assets/explore.css and shipped. SHIP OK. Public https://fathers.saneapps.com with CSS ?v=d6ce8d931c. Pages https://da931a3c.fathers-site.pages.dev. Live phone Free Will Timeline is 390 by 304 and full width. Shot: /tmp/fathers-live-phone-timeline.png. Procopius H1 is On Saint Procopius. The layout files and that title line are still uncommitted.
+
 # SESSION HANDOFF — 2026-09-24 04:58 UTC
 
 ## Shipped
@@ -972,3 +977,157 @@ Shared work guards remain active because other Mini work continues. Do not stop 
 - Added: anima_41 inherited-guilt affirms (traducian balance), eph_18 born-of-virgin affirms (explicit virginal conception). Soteriology cluster (28 rows) fully hand-audited, 0 changes; opponent-quotation rows (letter-to-rome, turbantius) and augustine-recap row now carry caution notes.
 - Final: 361 rows, 311 affirms / 49 denies / 1 deliberate qualified; 118 human-reviewed with public notes; 243 legacy (all Jev-screened, unflagged-or-noise). Rating rule + audit-tools rule added to SOP and memory.
 - Verified: stance test 9/9, ship.sh --dry-run green. Uncommitted.
+
+## 2026-10-01 (muse — julian audio routing fix, resume after restart)
+- Root cause: dist uses scoped section ids (julian-to-florus/1.1, collective-letter/2-1-1) while book uses plain numbers, so inject_audio id-first routing found zero pages ("not on this site").
+- Fix: scripts/inject_audio.py gains locate_sites_text_first fallback (exact page-text routing). Runs ONLY when id-first yields zero sites; all working books unaffected. Routing verified: 1,123 julian pages across 5 works.
+- Running: inject julian-of-eclanum (nohup, log /tmp/inject-julian.log). ad_florum_1..6 mp3s are 42-70MB so ~850 per-passage slices; expect ~30-45 min.
+- origen-prayer-martyrdom: still silent. Zero pages match any recording even by text (reordered/edited after Sep 29 render). Needs re-render decision; NOT auto-fixed. See chat for probe receipts.
+- Note: both Air and Mini rebooted ~10:40; /tmp artifacts were rebuilt from session logs.
+
+## 2026-10-01 11:15 (muse — julian done, origen chained, Wesley audiobook scan)
+- julian inject COMPLETE: 5 works, ~6,140 tracked sentences, 1,123 reader passages, 0 unmatched. Verified players + 1,664 audio files in dist.
+- origen restem RUNNING (Kokoro bm_daniel, same voice), chain armed: /tmp/chain-origen.sh waits for restem then injects (log /tmp/chain-origen.log). NEXT after chain: review log, run ./scripts/ship.sh --skip-build.
+- Wesley website audit: 44/44 works live (200), 44/44 audio, 1,692/1,692 section players, author hub 44/44, catalogue covers all 44, no unfinished badges. Website Wesley COMPLETE pending ship above (no Wesley changes in this ship).
+- Wesley audiobook: 44 sermon mp3s, 23.4h, 44.1kHz/mono/192k already. Loudness sample: -25 LUFS / -5dB peak (needs +gain to ACX -23..-18 RMS, -3 peak). Full scan running: outputs/audiobook/loudness.txt.
+
+## 2026-10-01 12:25 (muse — voice split found, dual re-render launched)
+- VOICE VERDICT: sermons 1-24 are ElevenLabs "Elliott" (0.5s gap signature), 25-44 Kokoro bm_daniel (0.0 gaps). Owner remembered right.
+- Re-render 1-24 with Kokoro bm_daniel for one consistent audiobook voice. Air: sermons 1-12 (launchctl com.saneapps.wesley-air-rerender, log outputs/audio/render-wesley-01-12.log). Mini: 13-24 (nohup, outputs/audio/render-wesley-13-24.log). ETA ~3h dual.
+- AFTER both halves: copy Air mp3s + merge Air manifest passages 1-12 into Mini manifest, re-run inject_audio.py john-wesley-sermons (new timings -> re-cut slices), then ship.sh --skip-build (carries julian + origen + wesley re-inject in ONE ship).
+- ElevenLabs commercial terms (for the record): paid plans own output, no attribution; free tier non-commercial. Verify the 1-24 generating account was paid before any sale of mixed-voice files (moot once Kokoro re-render lands).
+
+## 2026-10-01 13:05 (muse — description fixed, SOP matrix, gates)
+- Description audit: old text had 2 errors — claimed all 44 carry 1771 check text (sermon 1 carries 1872; swept all 44 witness labels, zero exceptions) and attached the Charles-preached clause to two sermons (only Awake). Rewrote book.yml description + new logos_blurb (text-only); pb_sync + DOCX builder prefer logos_blurb. Charles-in-sermon-3 opener VERIFIED accurate (Julian Apr 4 1742 = Sunday; Wellcome 1742 imprint corroborates).
+- Logos v3 rebuilt + uploaded (accurate description, intro, cover). Cover verified in DB (136KB blob).
+- SOPs: new translations/docs/CONTENT_SOPS.md (5 content types: web works, Logos, audiobooks, hub articles, social). Mechanical gates added: fathers scripts/check_audiobook.py (voice+format uniformity — FAILS Wesley now as designed, will pass post-render); logos_build warns on missing cover/intro.
+- Audiobook note: Kokoro mp3s are 24kHz, Elliott 44.1kHz — mastering must upsample Kokoro to 44.1k.
+- Air render PATH fix: launchctl jobs need explicit homebrew PATH + ffprobe preflight (morning script had it, mine didn't). Resubmitted, rendering.
+
+## 2026-10-01 13:15 (muse — engine benchmark, Air on MLX)
+- Air benchmark (20 real sentences, 77 chars avg, 5 warmup discarded): mlx 144 sent/min, torch/cpu 107, torch/mps 65. MPS is SLOWER than CPU for per-sentence Kokoro (kernel overhead); MLX 1.35x CPU.
+- Air re-render switched to KOKORO_ENGINE=mlx (sermon_03 DONE in 2m41s, verified 24kHz mono like torch path). Mini stays torch CPU (no mlx-audio installed; MPS slower; don't touch the stable venv for 1.35x).
+- Future engine rule: Air MLX, Mini torch CPU, never torch MPS for Kokoro sentences.
+
+## 2026-10-01 14:00 (muse — Mini MLX staged, cost doc saved)
+- Mini render half COMPLETE (13-24 all DONE). mlx-audio installed clean in Mini Kokoro venv; benchmark: mlx 93 sent/min, torch/cpu 69, torch/mps 44. Engine rule updated: MLX on both machines, never MPS.
+- Cost research saved: fathers docs/GPU_RENDER_COSTS.md (local/cloud/managed economics + verdict: local for steady state, Modal pilot for bulk).
+- Air half: through sermon 9, ~3 left. Next: transfer Air mp3s + manifest merge into audiobook tree, check_audiobook gate, master.
+
+## 2026-10-01 15:21 (muse — Wesley audiobook MASTER COMPLETE)
+- Kokoro re-render 1-24 done both halves; manifest merged; check_audiobook gate green.
+- Master: john-wesley-sermons.m4b 1341.3 MB (44 sermons + credits), all tracks 44.1kHz/mono/192k, RMS ~-20 peak ~-3.3. Log outputs/audiobook/master-wesley.log. Cover outputs/audiobook/cover-3000.jpg.
+- Website keeps Elliott voice files already live (sunk cost); book is all-Kokoro bm_daniel. ACX note: human-narration-clone rule blocks paid-ACX sale; free/giveaway or other channels only (owner chose: research other distribution).
+
+## 2026-10-01 16:30 (muse — CF bulk TTS render launched, 215 books)
+- Cloudflare Aura-2 voices chosen by owner ear-test: odysseus/orion/apollo good, zeus rejected (scary). Varied by author; stereo OK; expressive OK.
+- scripts/cf_tts.py + scripts/cf_bulk.py (new, untracked). Relaunched 8 workers after 16-worker failures. Log outputs/audio/cf-bulk.log. Free-grant economics: bulk fits in free credits.
+- CF API lesson re-learned: study API docs first; earlier "flaky" verdicts were caller error.
+
+## 2026-10-01 17:20 (muse — VIA PATRUM brand + domain live)
+- Project name: VIA PATRUM ("Way of the Fathers", cf. Jer 6:16). X banner outputs/brand/via-patrum-x-banner.png (navy+gold; owner loves it, site should use more of it).
+- Owner purchased viapatrum.org on Cloudflare; apex+www serve the site (200, verified Mini + Air). Vision doc updated (translations/docs/VISION_DEMOCRATIZE_CHRISTIAN_HISTORY.md): no-music rule, app phase, website bar (dark/light, a11y, SEO cards, X card).
+- Contribute + mission/about restyle built into dist (navy/gold, landing about section, contribute rewrite).
+
+## 2026-10-01 18:33 (muse — Air reboot crash, recovery 18:45)
+- Air rebooted; agent session died on model transport timeout. Mini never rebooted: cf_bulk survived (now [111/215]), overnight pipeline alive, Logos idle.
+- ship.sh (contrib+mission) FAILED 18:43 at 28663/28808 files: wrangler UND_ERR_HEADERS_TIMEOUT (Starlink jitter + 28k-file upload). Build stage cleaned by trap; relaunched 18:45 with --skip-build (log outputs/ship-contrib-mission-2.log, gates green). ETA ~19:15.
+- Air wifi came back degraded after reboot (-64dBm, gw ping 141ms avg/417 spikes, mass retrx); wifi toggle fixed (-49dBm, gw 2.6ms). MCP ssh tunnel (com.saneapps.agentmemory-tunnel) survived; ports 37911/37913/37917 open.
+- /tmp audit: all Air /tmp work has durable copies (cf_bulk/cf_tts/check_audiobook/GPU_COSTS on Mini; CONTENT_SOPS + VISION in translations/docs; banner/cover in outputs). Nothing lost.
+- STILL OPEN after ship lands: verify viapatrum.org + fathers.saneapps.com serve new build; dark/light mode; blind-user a11y pass; per-section SEO cards; style audit; CF prose/accuracy audit of published works (deferred); native app sketch.
+
+## 2026-10-01 19:00 (muse — contrib+mission ship LANDED)
+- Retry with --skip-build went green: SHIP OK, live catalogue 397 checked / 0 failed, CSS ?v=7eccb2231b.
+- Verified live from Air: fathers.saneapps.com + viapatrum.org, / and /contribute/, all 200 with new CSS hash, ~0.25s.
+- CF bulk render continuing in background ([114/215] at ship time).
+
+## 2026-10-01 21:30 (muse — rebrand ship saga + blurb backstop + SOP hooks; ship #4 running)
+- REBRAND (navy #0a0e2b + gold #c9a227 from X banner): header/footer/mission/buttons/favicon + teasers + "N sections" counts + work intros + author dates + verse-link upgrades + 16 audit fixes. Files (Mini canonical): scripts/build_site.py, scripts/inject_audio.py, scripts/verse_link_test.py (NEW), scripts/blurb_gate_test.py (NEW), scripts/serve_dist.py (NEW), scripts/check_catalogue.py (gate assert added), scripts/prose_audit.py + scripts/cf_tts.py (SOP receipt wiring), assets/site.css, assets/readalong.js, assets/favicon.svg, data/author-dates.json. Air source copies: outputs/rebrand-work/ (+/tmp/metafix/* for metas/gate). Backup of pre-rebrand scripts: outputs/rebrand-work/backup-prev/.
+- SHIP #1 FAILED catalogue gate "Book 1 sprawl": my teaser surfaced raw worksheet blurbs ("tip densify ... from Bidez 1913 Greek OCR"). Fixed 2 layers: (1) rewrote 18 meta blurbs at source in clients/translations (16 tip-densify + le-blanc + baron; each file verified 2-line blurb-only diff); (2) build_site.public_blurb() backstop — strips scaffolding (Densify/PHYS/CLOSEOUT/edition cues), falls back to generic copy when unusable; wired into teaser/intro/SEO x3/search-blob x2. check_catalogue.py asserts no worksheet markers on works page. Tests: blurb 17/17, verse 7/7, readalong 5/5.
+- SHIP #2 FAILED Latin-H1 gate: fresh hesychius-homilia-i-longinum data landed 20:52 mid-day (translation pipeline still writing). Added title-table entry "Homily I on Saint Longinus the Centurion" (mirrors Homily II); scanned all work H1s, only offender.
+- SHIP #3 FAILED browser networkidle 10s on julian-to-florus/1.27: readalong.js sets audio.src on load; python http.server ignores Range so Brave holds the media connection open forever (proven via request trace; curl instant). NOT a product bug. Fix: scripts/serve_dist.py (Range-capable preview server, 206 verified, IDLE-OK); ship.sh now uses it. Latent issue my CSS change exposed (chrome re-check).
+- SHIP #4 launched 21:2x (log outputs/ship-rebrand.log). AFTER IT LANDS: verify viapatrum.org + fathers.saneapps.com new CSS ?v= (not 7eccb2231b), desktop + 375px screenshots via Mini Brave, audio spot-check.
+- PROSE AUDIT 70B COMPLETE: outputs/prose-audit/bulk-70b.json — 2500 calls, 281 works, 0 partial, 2 errors. Next: triage flagged passages, Phase-2 rewrites (human review first). Qwen3-30b FIXED for Phase 2: schema has NO thinking flag; /no_think prompt suffix required (plain smoke FAILS content:null, /no_think PASSES). prose_audit.py appends /no_think for qwen3 automatically; 2-call pilot flagged real issues cleanly.
+- CF BULK TTS: 169/215 then KeyError 'Paul the Silentiary' — book.yml author renamed mid-run (pipeline still writing), speaker dict lookup crashed. FIX APPLIED 21:35 (speaker_for deterministic fallback in cf_bulk.py) + relaunched w/ Aura receipt (3.1h TTL); 47 books re-queued incl re-voice churn from author-list shifts. Relaunch MUST export SANE_LLM_API_RECEIPT=<aura receipt> (scripts now enforce it!) + source ~/.config/nv/env. Aura smoked receipt: infra/SaneProcess/outputs/llm-api-research/*aura-2-en.json (4h TTL from ~20:39 EDT; re-mint via gate --smoke if expired).
+- SOP HOOK (owner-mandated, infra/SaneProcess): every CF/NVIDIA call now needs a SMOKED receipt. Mint: ruby scripts/llm_api_research_gate.rb --provider cf --model '<exact-id>' --smoke --kwargs '{...}' [--kind tts] [--smoke-prompt ...]. Run with SANE_LLM_API_RECEIPT=<receipt>. Details in SaneProcess SESSION_HANDOFF + LLM_VENDOR_API_SOP.md.
+- STILL OPEN: live verify (above); triage bulk-70b; Qwen Phase-2; dark/light mode; blind-user a11y pass; per-section SEO cards; style audit; native app sketch; deferred scholarship (print-vs-floruit, Julian ranges, Theodorus PG86a, bare Oecumenius/Philostorgius epithets).
+
+## 21:45 EDT - Phase 2 (Qwen rewrites) launched
+- Triage of bulk-70b.json: 162/281 works flagged, 1875 passages; fluency<=3 = 391 passages (53 twos, 338 threes); top cats archaic-stiff 2192, stray-sigil 414, garbled 372, stray-number 197.
+- Built scripts/prose_rewrite.py (Qwen, suggestions ONLY, resume-safe, require_llm_receipt). Fixed own bug: cf_call hardcoded audit SYSTEM; added system= kwarg to prose_audit.cf_call.
+- Fresh Qwen receipt outputs/llm-api-research/20261002T013351Z (expires 05:33Z). Pilot 2/2 good. Full batch pid 71968, 389 queued, workers 4, out outputs/prose-audit/rewrites-qwen.json. NOTHING auto-applied; human review gates application.
+
+## 22:05 EDT - Ship #4 VERIFIED LIVE + Phase 2 done + blurb gap found
+- SHIP OK. fathers.saneapps.com + viapatrum.org 200, CSS 47d3aa06bf (was 7eccb2231b). Navy/gold confirmed on live screenshots desktop 1440 + mobile 390 (home + Evagrius author). Mobile stacks clean, no overlap.
+- Audio verified live: 8621/11031 work pages carry rdl-player; manifest 200 (8936b); mp3 206 audio/mpeg ID3, Range OK. NOTE: CF bot filter 403s python-urllib default UA; curl/browser UA fine. Always set UA in probes.
+- Phase 2 COMPLETE: 390/391 passages, Qwen. 1 holdout (didymus-in-genesim@21, twice-unparseable, kept as manual review; Phase-1 flag retained). cf_call now takes system= and max_tokens= (4000 for rewrites).
+- NEW GAP: 87 books carry tautological "Author - Title." meta blurbs (my gap probe found them via <=40ch, wrong reason, right books). Built scripts/blurb_draft.py; 29 drafted+reviewed (4 fixed by hand, 3 need title check - see next), 68 drafting now. Accuracy catches: 19th-century Didymus, medieval Cosmas, fundraising Julian - all flagged before writing.
+- NEXT: review 68, write approved blurbs to ALL passage metas per book, extend blurb gate to reject tautology, rebuild + ship #5.
+
+## 22:25 EDT - 97 blurbs reviewed, ship #5 launched
+- Reviewed all 97 drafts: kept 60, hand-fixed 37 (19th-c Didymus, medieval Cosmas, fundraising Julian, Palm Sunday = return, Holy Saturday = resurrection, 2 grammar errors, rest vague/filler). Dropped cosmas (not assembled) + julian (already substantive) from meta writes.
+- 542 metas rewritten (indent-2 clean 2-line diffs), 274 substantive kept, 3 hardcoded improved (On Prayer, Exhortation, On Pascha). Dialogue w/ Heraclides kept as-is (good).
+- Backstop: _is_tautological_blurb in work_teaser_html + 3 tests; blurb gate 20/20 green.
+- Ship #5 pid 96715 building (outputs/ship-blurbs.log). TTS at 31/47 alongside.
+- NEXT: verify ship #5 live (Evagrius page teasers), then Phase-2 application review + fluency-4 batch decision.
+
+## 22:15 EDT - SOP role boundary now enforced (see infra handoff)
+CF = translate only, mechanical: purpose-bound receipts, call-site checks, blurb_draft retired. 5 verified blurb corrections applied (18 metas + exhortation hardcoded); exhortation edit missed ship #5 build, rides ship #6.
+
+## 22:50 EDT - TTS 47/47, 1051 prose fixes applied, ship #6 launched
+- Ship #5 VERIFIED live: Evagrius page 16/16 real teasers, 0 tautology.
+- TTS retry: 5/5 recovered (receipt had expired mid-run), 47/47 voiced.
+- Cross-verifier built (scripts/verify_rewrites.py, Llama judges Qwen vs Greek/Latin witness, binary verdicts): 400 calls 0 errors, agreed 1153 / disagreed 649 (36% strict).
+- Applier built (scripts/apply_rewrites.py, exact+casefold+nopunct cascade, multi-occurrence-identical rule, noop filter): APPLIED 1051 edits / 354 files, 64 manual queue. Diffs surgical, indent-2 clean.
+- Ship #6 pid 25634 building (outputs/ship-prose.log): prose + exhortation blurb + 5 books audio.
+- Phase 2b (fluency-4 suggestions) running background; next round = verify + apply 4s.
+- NEXT: verify ship #6 live, then 4s round, then dark/light + a11y + SEO cards.
+
+## 23:05 EDT - Ship #6 VERIFIED live, round-2 verify launched
+- Ship #6 SHIP OK + live: cesti fix present/old gone, exhortation blurb live.
+- Wesley audiobook MASTER COMPLETE (m4b 1.34GB, 44 sermons + credits, loudness OK).
+- Phase 2b done: 1866/1871 suggestions (5 stubborn -> manual queue, incl didymus holdout).
+- Round-2 verify pid 42755: 1466 queued, 8 workers (~1.5h). Then apply + ship #7.
+- NEXT: round-2 apply/ship, manual queues (64 + 649 + 5), dark/light + a11y + SEO cards.
+
+## 23:20 EDT - Disagreement triage: mostly artificial, regen chain launched
+- 199 "disagreements" were accepted deletions misfiled by my bookkeeping -> recovered free (reclassify). Applier gained deletion support + token-boundary matching + nopunct fix.
+- 1230 suggestion keys went STALE (round-2 drafted pre-application, round-1 then edited the text) -> invalidated, regen+verify chain pid 46723 running (~1.5h). Verify file now agreed=660 disagreed=182 (genuine).
+- Genuine disputes get adjudication round (defend-or-concede) after chain; pennies on grant.
+- NOTE: my launches are NOT shell-guard gated (Muse has no PreToolUse hooks); in-script require + --llm-api-receipt flags are the enforcement. Receipts valid: Qwen 05:33Z, Llama 06:19Z.
+- NEXT: chain completes -> apply round-2 -> ship #7 -> adjudicate remainder -> manual queue.
+
+## 23:35 EDT - Staleness guards shipped + tested; chain in verify phase
+- chunk_hash in prose_audit; rewrite records, verify skips stale w/o inference, apply refuses stale. classify_verdicts extracted.
+- Tests: verify_rewrites_test 8/8, apply_rewrites_test 8/8, blurb 20/20, guard 16/16 both hosts.
+- Applier: partition rule (drop already-fixed occurrences) + dup skip + boundary + deletion.
+- Re-quote round: 8/8 located but 7 echoed stale wording (matcher will filter); feedback script /tmp/feedback_requote.py RUNS ONLY after chain verify done.
+- Chain: regen done (1859 suggestions, 37 errors), verify phase running (~40 min).
+- NEXT: feedback -> dry-run -> apply round-2 -> ship #7 -> adjudicate genuine disputes -> manual queue.
+
+## 23:45 EDT - Verify capped at 2500, finishing 589; feedback hardened
+- Chain verify hit max-calls (2500) with 589 keys unverified. Verify-4 pid 63310 running (~25 min).
+- Feedback script now asserts no live verify process (pgrep) instead of log line.
+- NEXT: verify-4 done -> feedback -> dry-run -> apply round-2 -> ship #7.
+
+## 00:06 EDT 2026-10-02 - Claude: Ignatius ANF cleanup shipping (ship #7-claude)
+- Owner asked Claude to replace ANF seed English in topic excerpts, starting with Ignatius. 45 Ignatius topic excerpts now source_verified (fresh from Lake Greek; Grok 4.7 + Nemotron Super cross-check), committed in translations 3ff24dcf7 and pushed. Touched topic files: bibliology_pneumatology, ecclesiology_sacraments, eschatology_ethics, theology_christology (other agents' uncommitted edits kept in working tree, not committed).
+- Your round-2 prose applier: my changed excerpts will read as STALE to chunk_hash (by design); expect those keys to be skipped, not errors.
+- ignatius_polycarp_{1,5,6} are really Polycarp, To the Philippians; re-attribution lands when their re-check passes.
+- This ship builds from the current working tree (= your ship #6 state + these topic changes). No site code touched.
+- Game: websites/fathers-village deploys to its own Pages project `fathers-village` (not fathers-site).
+
+## 00:15 EDT - Round-2 applied (2557 total), ship #7 launched
+- Re-quote recovered 275 spans; feedback refreshed 221 (142 already-done noise).
+- Reviewed all 13 top-up: ACCEPTED 4 strict-local typo fixes, VETOED 4 mismatched/expansion (incl cesti@54 cross-recipe corruption!), guards caught 31 unrelated + 13 long-deletion.
+- LESSON: feedback-swapped (quote, rewrite) pairs are UNVERIFIED - sound loop is requote -> re-verify -> apply. This batch hand-verified at small scale instead.
+- Applier: plausibility guards (ratio<0.4, long deletion) + --exclude-keys. Tests green.
+- Ship #7 (outputs/ship-prose2.log): round-2 1502 + top-up 4. Human queue: 941 disagreements + ~240 manuals + 5 stubborn.
+- NEXT: verify ship #7, adjudication round design for genuine disputes, dark/light + a11y + SEO.
+
+## 00:55 EDT 2026-10-02 - Claude: Ignatius batch 2 shipping
+- All 68 Ignatius topic excerpts now source_verified (translations 3500b3531, pushed). Batch 2 adds Trallians 3 fix, Polycarp re-attribution (ignatius_polycarp_{1,5,6} -> Polycarp of Smyrna, To the Philippians), and the rest. Your last ship predated this integration, so I'm shipping now from the working tree (your build_site.py/functions edits included as-is).
+
+## 01:20 EDT 2026-10-02 - Claude: Play link + home Play section
+- Owner asked for a link to the game on the site. Nav gains "Play" -> https://play.viapatrum.org/ (committed 11ed069). Home gains a "Play" section after the Via Patrum mission (working tree only, since the mission section itself is still uncommitted). Game = Pages project fathers-village, custom domain play.viapatrum.org (CNAME play -> fathers-village.pages.dev, proxied).
+- Ignatius batch 2 verified live on viapatrum.org (Trallians 3 fixed; Polycarp re-attributed).
