@@ -64,6 +64,15 @@ def norm(text: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
+def match_key(text: str) -> str:
+    """Words for matching a recording to its page.
+
+    The site unwraps editorial brackets ("[are]" shows as "are") while the
+    recording's text keeps them, so brackets alone must not cost a Play bar.
+    """
+    return norm(text.replace("[", "").replace("]", ""))
+
+
 def section_candidates(work: str) -> dict:
     """Map section id -> every (stem, first, last) that claims it.
 
@@ -99,17 +108,21 @@ def _window(passages: dict, stem: str, first: int, last: int):
 
 def matching_choices(opts, passages: dict, plain: str) -> list:
     """Recordings of this section whose words are the cite page's words."""
-    found = []
+    exact, loose = [], []
     if not plain:
-        return found
+        return exact
     for stem, first, last in opts:
         got = _window(passages, stem, first, last)
         if not got:
             continue
         full, window = got
-        if _expected_plain(window) == plain:
-            found.append((stem, first, last, window, full))
-    return found
+        said = _expected_plain(window)
+        if said == plain:
+            exact.append((stem, first, last, window, full))
+        elif match_key(said) == match_key(plain):
+            loose.append((stem, first, last, window, full))
+    # Exact words win; brackets-only differences are the fallback.
+    return exact or loose
 
 
 def text_pairs(text: str) -> list[tuple[str, str]]:
@@ -201,7 +214,7 @@ def wrap_sentences(inner: str, sentences: list[str], expected: list[str],
     deferred: list[str] = []
     cursor = 0
     for j, sent in enumerate(sentences):
-        assert sent == norm(expected[j]), "sentence drift in %s [%d]" % (where, j)
+        assert match_key(sent) == match_key(expected[j]), "sentence drift in %s [%d]" % (where, j)
         k = plain.find(sent, cursor)
         assert k >= 0, "sentence not found in %s [%d]" % (where, j)
         assert not plain[cursor:k].strip(), "gap not spaces in %s [%d]" % (where, j)
@@ -329,11 +342,14 @@ def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
     works = ROOT / "dist/works"
     passages = manifest.get("passages") or {}
     win_index: dict[str, list] = {}
+    loose_index: dict[str, list] = {}
     for sec, opts in cands.items():
         for stem, first, last in opts:
             got = _window(passages, stem, first, last)
             if got:
-                win_index.setdefault(_expected_plain(got[1]), []).append((stem, first, last))
+                said = _expected_plain(got[1])
+                win_index.setdefault(said, []).append((stem, first, last))
+                loose_index.setdefault(match_key(said), []).append((stem, first, last))
     found: dict = {}
     owners: dict = {}
     chosen: list = []
@@ -345,7 +361,8 @@ def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
             page = sub / "index.html"
             if not page.is_file():
                 continue
-            keys = win_index.get(_body_plain(page))
+            plain = _body_plain(page)
+            keys = win_index.get(plain) or loose_index.get(match_key(plain))
             if not keys:
                 continue
             for key in keys:
@@ -503,7 +520,7 @@ def _inject_cite(page: Path, texts: list[str], manifest_url: str,
         where = "%s para %d" % (page, state["n"])
         sentences = split_sentences(norm(TAG_RE.sub("", para)))
         expected = texts[state["idx"]:state["idx"] + len(sentences)]
-        if len(expected) != len(sentences) or norm(TAG_RE.sub("", para)) != norm(" ".join(expected)):
+        if len(expected) != len(sentences) or match_key(TAG_RE.sub("", para)) != match_key(" ".join(expected)):
             raise AssertionError("sentence drift in %s" % where)
         wrapped = wrap_sentences(para, sentences, expected, start + state["idx"], where)
         state["idx"] += len(sentences)
@@ -549,7 +566,7 @@ def _wrap_reader_chunk(body: str, texts: list[str], manifest_url: str, where: st
             out.append(piece)
             continue
         expected = texts[idx:idx + len(sentences)]
-        if len(expected) != len(sentences) or plain != norm(" ".join(expected)):
+        if len(expected) != len(sentences) or match_key(plain) != match_key(" ".join(expected)):
             raise AssertionError("sentence drift in %s" % where)
         wrapped = wrap_sentences(inner, sentences, expected, idx, where)
         idx += len(sentences)

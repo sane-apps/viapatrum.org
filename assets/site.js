@@ -146,7 +146,8 @@
         trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
         const credit = bx.querySelector(".bx-tr-credit");
         if (credit) {
-          credit.textContent = (btn && btn.dataset.credit) || "";
+          // Hosted versions are credited in the note below; loaded ones need their own notice.
+          credit.textContent = (btn && btn.dataset.remote && btn.dataset.credit) || "";
           credit.hidden = !credit.textContent;
         }
         try {

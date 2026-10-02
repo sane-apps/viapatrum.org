@@ -428,6 +428,51 @@ def scripture_page_href(search: str) -> str | None:
     return f"/scripture/{slugify(book)}/{int(m.group(2))}/{tail}"
 
 
+def flagged_wrong_citations(min_conf: float = 0.8) -> dict[tuple[str, str], set[tuple[str, int, str]]]:
+    """Citations the translations citation sweep judged wrong: (book slug, section) -> {(book, chap, verse)}.
+
+    A wrongly filed reference must not list a passage under a verse it does not
+    quote. Text stays as written until the citation is corrected at the source.
+    """
+    path = BOOKS.parent / "outputs" / "jev-cite-sweep-20260925.jsonl"
+    out: dict[tuple[str, str], set[tuple[str, int, str]]] = defaultdict(set)
+    if not path.exists():
+        return out
+    for line in path.read_text(encoding="utf-8").splitlines():
+        try:
+            row = json.loads(line)
+        except ValueError:
+            continue
+        if not str(row.get("stratum", "")).startswith("POS") or row.get("choice") != "contradicts":
+            continue
+        if float(row.get("confidence") or 0) < min_conf:
+            continue
+        m = re.match(r"^(.+?) (\d+):(\d+)", str(row.get("display") or ""))
+        if m:
+            book = {"Psalms": "Psalm"}.get(m.group(1), m.group(1))
+            out[(str(row.get("book")), str(row.get("section")))].add((book, int(m.group(2)), m.group(3)))
+    return out
+
+
+def section_scripture_links(paragraphs: list[str], limit: int = 8, flagged: set | None = None) -> list[tuple[str, str]]:
+    """Verses a section actually cites, in reading order, linked to the Scripture reader."""
+    out: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for para in paragraphs or []:
+        for _start, _end, _display, search in _scripture_matches(strip_logos_markup(para)):
+            m = re.match(r"^(.+?) (\d+):(\d+)", search)
+            if flagged and m and (m.group(1), int(m.group(2)), m.group(3)) in flagged:
+                continue
+            href = scripture_page_href(search)
+            label = search.replace("-", "–")
+            if href and label not in seen:
+                seen.add(label)
+                out.append((label, href))
+                if len(out) >= limit:
+                    return out
+    return out
+
+
 def _bible_anchor(display: str, search: str) -> str:
     local = scripture_page_href(search)
     if local:
@@ -1828,14 +1873,32 @@ WORK_BOOK_PREFIXES: tuple[tuple[str, str], ...] = (
 )
 
 
-def work_intro_html(slug: str) -> str:
-    """Shared book intro for a site work page; "" when unmapped."""
+_TRANSLATION_NOTE_RE = re.compile(r'<p class="translation-note">.*?</p>', re.S)
+
+
+def split_translation_note(intro: str) -> tuple[str, str]:
+    """(intro without the licence/AI note, the note) so the note can sit at the page foot."""
+    notes = _TRANSLATION_NOTE_RE.findall(intro or "")
+    return _TRANSLATION_NOTE_RE.sub("", intro or ""), "".join(notes)
+
+
+def disclosure_html(note: str) -> str:
+    return f'<footer class="work-disclosure">{note}</footer>' if note else ""
+
+
+def work_book(slug: str) -> str | None:
+    """Translations book folder behind a site work slug, or None when unmapped."""
     book = WORK_BOOK_INTRO.get(slug or "")
     if book is None:
         for prefix, candidate in WORK_BOOK_PREFIXES:
             if (slug or "").startswith(prefix):
-                book = candidate
-                break
+                return candidate
+    return book
+
+
+def work_intro_html(slug: str) -> str:
+    """Shared book intro for a site work page; "" when unmapped."""
+    book = work_book(slug)
     if book is None:
         return ""
     intro_path = BOOKS / book / "intro.md"
@@ -6310,14 +6373,19 @@ def build() -> None:
     # --- Scripture: book → chapter → every Father who cites it ------------
     sc_entries: dict[tuple[str, int], list[dict]] = defaultdict(list)
     sc_seen: set[tuple] = set()
+    wrong_cites = flagged_wrong_citations()
 
-    def sc_collect(text: str, *, who: str, author: str, year: int, title: str, href: str) -> None:
+    def sc_collect(text: str, *, who: str, author: str, year: int, title: str, href: str,
+                   flagged: set | None = None) -> None:
         for start, end, _display, search in _scripture_matches(text):
             m = re.match(r"^(.+?) (\d+)(?::([\d,\-–a-z ]+))?$", search.strip())
             if not m or m.group(1) not in BIBLE_ORDER:
                 continue
             book, chap = m.group(1), int(m.group(2))
             verse = (m.group(3) or "").strip()
+            first = (re.findall(r"\d+", verse) or [""])[0]
+            if flagged and (book, chap, first) in flagged:
+                continue
             key = (href, book, chap, verse)
             if key in sc_seen:
                 continue
@@ -6337,6 +6405,7 @@ def build() -> None:
                 who=display_author(w["author"]), author=w["author"], year=wy,
                 title=f"{pub} §{shown_section(sec['section'], ords)}",
                 href=f"/works/{w['slug']}/{sec['section']}/",
+                flagged=wrong_cites.get((work_book(w["slug"]) or w["slug"], str(sec["section"]))),
             )
     for x in excerpts:
         sc_collect(
@@ -6426,21 +6495,19 @@ def build() -> None:
                     src_block += "<details lang=\"la\"><summary>Latin</summary>" + "".join(
                         f"<p class='src'>{escape(p)}</p>" for p in la
                     ) + "</details>"
-            al = (x.get("author") or "").lower()
-            author_slug = slugify(x.get("author") or "unknown")
-            if "origen" in al:
-                author_slug = "origen"
-            elif "julian" in al:
-                author_slug = "julian-of-eclanum"
-            elif "cyril of alexandria" in al:
-                author_slug = "cyril-of-alexandria"
             cross = related_panel(
                 "Also see",
                 [
                     (meta["title"] + " (topic)", f"/topics/{tid}/"),
-                    (x.get("author") or "Author", f"/authors/{author_slug}/"),
+                    (display_author(x.get("author") or "") or "Author", f"/authors/{author_hub_slug(x.get('author'))}/"),
                 ]
-                + related_works[:4],
+                + section_scripture_links(paras_list, 5)
+                + [
+                    (public_reader_title(works_by_slug[ws]["title"], slug=ws), f"/works/{ws}/")
+                    for ws in topic_to_works.get(tid, [])
+                    if ws in works_by_slug
+                    and display_author(works_by_slug[ws].get("author") or "") == display_author(x.get("author") or "")
+                ][:3],
             )
             e_cite = public_citation(x.get("citation") or x["id"], x.get("work") or "")
             e_author = display_author(x.get("author") or "")
@@ -7059,7 +7126,7 @@ def build() -> None:
 
         def reader_page(main: str, *, contents_html: str, mast_extra: str = "", mast: str | None = None) -> str:
             """Slim title; rail holds Contents + meta; reading column starts at once."""
-            intro = work_intro_html(w["slug"])
+            intro, note = split_translation_note(work_intro_html(w["slug"]))
             return (
                 f"{mast if mast is not None else work_mast}{mast_extra}"
                 f"{intro}"
@@ -7071,6 +7138,7 @@ def build() -> None:
                 f"</aside>"
                 f'<div class="reader-main">{main}</div>'
                 f"</div>"
+                f"{disclosure_html(note)}"
                 f"{back_to_top}"
             )
 
@@ -7101,16 +7169,18 @@ def build() -> None:
                     f'<a href="/works/{escape(w["slug"])}/{escape(bslug)}/" onclick="event.stopPropagation()">read</a></span></summary>'
                     f'<ol class="toc">{lis}</ol></details>'
                 )
+            ov_intro, ov_note = split_translation_note(work_intro_html(w["slug"]))
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
                     f"{pub_title} by {w_author}",
                     f"""{work_header}
-                    {work_intro_html(w["slug"])}
+                    {ov_intro}
                     {author_link}{rel_topics}
                     <p class="intro">Each book reads on one continuous page:</p>
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
-                    {''.join(overview_toc)}""",
+                    {''.join(overview_toc)}
+                    {disclosure_html(ov_note)}""",
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=work_desc,
@@ -7233,23 +7303,25 @@ def build() -> None:
                 contents_href=sec_contents_href.get(str(s["section"])),
             )
             cross = related_panel(
-                "Cross-references",
-                [(w["author"], f"/authors/{w['author_slug']}/")] + topic_links[:5],
+                "Scripture in this section",
+                section_scripture_links(s["english"], flagged=wrong_cites.get((work_book(w["slug"]) or w["slug"], str(s["section"])))),
             )
+            cross += related_panel("Questions this work addresses", topic_links[:5])
             write(
                 DIST / "works" / w["slug"] / str(s["section"]) / "index.html",
                 layout(
                     f"{pub_title} §{shown_section(s['section'], ordinals)}, {w_author}",
                     f"""<article class="work-section">
                     {nav}
-                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(pub_title)}</a> · §{escape(shown_section(s['section'], ordinals))}</p>
+                    <p class="meta"><a href="/works/{escape(w['slug'])}/">{escape(pub_title)}</a> · §{escape(shown_section(s['section'], ordinals))} · <a href="/authors/{escape(w['author_slug'])}/">{escape(w_author)}</a></p>
                     {kind}
                     <h1>{escape(str(s['head']))}</h1>
                     {supplied_html}
-                    <div class="body">{paras}</div>
-                    {source}{src_block}
-                    {rail_about}
-                    {cross}
+                    <div class="sec-layout">
+                    <div class="sec-main"><div class="body">{paras}</div>
+                    {source}{src_block}</div>
+                    <aside class="sec-rail">{cross}{rail_about}</aside>
+                    </div>
                     {nav}
                     </article>""",
                     crumb=[
@@ -7473,7 +7545,6 @@ def build() -> None:
   <h1>{escape(book_name(book))} {c} <span class="bx-h-sub">with the Church Fathers</span></h1>
   <p class="lede">{lede}</p>
   <div class="bx-tools"><div class="bx-tr" role="group" aria-label="Bible translation">{tr_buttons}</div>{nav}</div>
-  <p class="bx-tr-credit" aria-live="polite" hidden></p>
 </header>
 <div class="bx-grid">
 {text_html}
@@ -7483,6 +7554,7 @@ def build() -> None:
 </aside>
 </div>
 {nav}
+<p class="bx-tr-credit" aria-live="polite" hidden></p>
 <p class="intro fine bx-credit">Bible text: {tr_credit}. Fathers' passages are our new English; the snippets show the sentence around each citation.</p>
 </div>""",
                     crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), f"/scripture/{bslug}/"), (f"Chapter {c}", "")],

@@ -73,9 +73,12 @@ def live_origin(origin):
     expected["/data/search-index.json"] = hashlib.sha256((root / "dist/data/search-index.json").read_bytes()).hexdigest()
     css = next((p for p in (root / "dist/assets").glob("site.css")), None)
     js = next((p for p in (root / "dist/assets").glob("site.js")), None)
+    # Fetch the versioned URL pages actually load; the bare path can sit in the edge cache.
+    home = (root / "dist/index.html").read_text(encoding="utf-8")
     for asset in (css, js):
         if asset:
-            paths.append("/assets/" + asset.name)
+            ver = re.search(r"/assets/" + re.escape(asset.name) + r"\?v=([0-9a-f]+)", home)
+            paths.append("/assets/" + asset.name + (f"?v={ver.group(1)}" if ver else ""))
             expected[paths[-1]] = hashlib.sha256(asset.read_bytes()).hexdigest()
     paths.extend("/works/" + w["slug"] + "/" for w in held)
     receipt["held"] = len(held)

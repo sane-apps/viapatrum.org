@@ -246,6 +246,24 @@ for tail in receipt.get("held_tail_sections", []):
                        for row in index), f"held tail section remained searchable: {slug} {section}"
         assert not (site.DIST / "works" / slug / str(section) / "index.html").exists(), \
             f"held tail section remained public: {slug} {section}"
+# Bible references in reader English use the standard form ("Zechariah 3:8-9"),
+# never an old edition's Latin abbreviation with a Roman chapter ("Zach. III, 8-9").
+_ROMAN_REF = re.compile(
+    r"(?<![A-Za-z])(?:Gen|Ex|Exod|Lev|Num|Deut|Jos|Judic|Reg|Par|Esd|Ps|Prov|Eccl|Cant|Is|Isa|Jer|Ezech|Dan"
+    r"|Os|Joel|Am|Mich|Hab|Soph|Agg|Zach|Mal|Matth|Marc|Luc|Joan|Act|Rom|Cor|Gal|Eph|Phil|Col|Thess"
+    r"|Tim|Tit|Hebr|Jac|Petr|Jud|Apoc)\.\s+[IVXLC]{1,7},\s*\d")
+_body = re.compile(r'<div class="body">(.*?)</div>', re.S)
+_roman_hits = []
+for _page in sorted((site.DIST / "works").glob("*/*/index.html")):
+    _m = _body.search(_page.read_text(encoding="utf-8"))
+    if _m and _ROMAN_REF.search(re.sub(r"<[^>]+>", "", _m.group(1))):
+        _roman_hits.append(_page.parent.relative_to(site.DIST).as_posix())
+assert not _roman_hits, "Roman-numeral Bible references in reader text: %s" % _roman_hits[:5]
+# Worksheet notes ("lock" is the translators' word for a damaged passage) never reach readers.
+_LOCK_NOTE = re.compile(r"\[[^\]]{0,40}\block\b[^\]]{0,60}\]|\block (?:marks|unrestored)\b", re.I)
+_lock_hits = [p.parent.name for p in sorted((site.DIST / "works").glob("*/index.html"))
+              if _LOCK_NOTE.search(re.sub(r"<[^>]+>", "", p.read_text(encoding="utf-8")))]
+assert not _lock_hits, "Worksheet lock notes in reader text: %s" % _lock_hits[:5]
 print(json.dumps({"status": "passed", "authors": len(page.rows), "works": work_total, "held": len(held)}))
 
 assert site.display_section("4-2-2-collective-23") == "4.2.2"

@@ -255,6 +255,15 @@ def render_stems(work: str, stems: list[str]) -> int:
         print("restem deferred: audio next already running", flush=True)
         return 0
     try:
+        return _render_stems_locked(work, stems)
+    finally:
+        import os
+        os.close(lock_fd)
+
+
+def _render_stems_locked(work: str, stems: list[str]) -> int:
+    """render_stems body; the caller holds the narrator lock."""
+    if True:
         folder = BOOKS / work / "translations"
         files = []
         for stem in stems:
@@ -281,9 +290,43 @@ def render_stems(work: str, stems: list[str]) -> int:
                     eng_file, pipeline, cpu_fallback, mlx, tmpdir, work, manifest)
                 _write_manifest(work, manifest, total_sentences)
         return 0
-    finally:
-        import os
-        os.close(lock_fd)
+
+
+def stale_stems(work: str) -> list[str]:
+    """English files to re-read because their page moved on.
+
+    A passage whose recording no longer matches its page gets no Play bar
+    (inject_audio skips it). Return each English file whose current words
+    are that page's words, so a re-read makes the audio attach again.
+    """
+    import inject_audio as ia
+    pages = ROOT / "dist" / "works" / work
+    manifest_path = OUT / work / "manifest.json"
+    folder = BOOKS / work / "translations"
+    if not pages.is_dir() or not manifest_path.is_file() or not folder.is_dir():
+        return []
+    passages = json.loads(manifest_path.read_text(encoding="utf-8")).get("passages") or {}
+    texts: dict[tuple[str, str], str] = {}
+    for eng_file in sorted(folder.glob("*_english.json")):
+        rows = json.loads(eng_file.read_text(encoding="utf-8"))
+        rows = rows if isinstance(rows, list) else rows.get("sections", [])
+        for row in rows:
+            sents = []
+            for para in row.get("english", []) or []:
+                sents.extend(split_sentences(read_text(para)))
+            texts[(eng_file.stem, str(row.get("section")))] = ia.norm(" ".join(sents))
+    stale = set()
+    for sec, opts in ia.section_candidates(work).items():
+        page = pages / sec / "index.html"
+        if not ia._safe_sec(sec) or not page.is_file():
+            continue
+        plain = ia._body_plain(page)
+        if not plain or SCAFFOLD.search(plain) or ia.matching_choices(opts, passages, plain):
+            continue
+        for stem, _first, _last in opts:
+            if ia.match_key(texts.get((stem, sec), "")) == ia.match_key(plain):
+                stale.add(stem)
+    return sorted(stale)
 
 
 SCAFFOLD = re.compile(
@@ -392,6 +435,13 @@ def render_next() -> int:
     if not published.is_dir():
         print("no site build to narrate", flush=True)
         return 0
+    # Pages that lost their Play bar come first: the text changed after
+    # recording, so re-read just those English files.
+    for manifest_path in sorted(OUT.glob("*/manifest.json")):
+        stems = stale_stems(manifest_path.parent.name)
+        if stems:
+            print("restem %s: %s" % (manifest_path.parent.name, " ".join(stems)), flush=True)
+            return _render_stems_locked(manifest_path.parent.name, stems)
     candidates = []
     for work_dir in published.iterdir():
         if not work_dir.is_dir():
