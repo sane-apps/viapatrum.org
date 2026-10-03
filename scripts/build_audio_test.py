@@ -232,5 +232,82 @@ class ReuseTests(unittest.TestCase):
                                    second[k]["e"] - second[k]["s"], delta=0.08)
 
 
+class NextItemOrderTests(unittest.TestCase):
+    """Narration order (efficiency sweep 2026-10-03): stale before new,
+    certified works first, running works last, fewest sentences first."""
+
+    def _setup(self, tmp, queue, stale, books):
+        import json as _json
+        from pathlib import Path as _P
+        tmp = _P(tmp)
+        (tmp / "dist" / "works").mkdir(parents=True)
+        q = tmp / "queue.json"
+        q.write_text(_json.dumps({k: {"result": v} for k, v in queue.items()}))
+        for work, (n_sent, voice) in stale.items():
+            (tmp / "out" / work).mkdir(parents=True)
+            (tmp / "out" / work / "manifest.json").write_text(_json.dumps(
+                {"voice": voice, "passages": {work + "_english": {}}}))
+            tr = tmp / "books" / work / "translations"
+            tr.mkdir(parents=True)
+            (tr / (work + "_english.json")).write_text(_json.dumps(
+                [{"section": "1", "english": [" ".join("Sentence %d here." % i for i in range(n_sent))]}]))
+        for work in books:
+            (tmp / "dist" / "works" / work).mkdir()
+        return tmp, q
+
+    def _run(self, queue, stale, books=(), words=None):
+        import tempfile as _tf
+        from unittest import mock
+        import build_audio as ba
+        calls = []
+        with _tf.TemporaryDirectory() as tmp:
+            tmp, q = self._setup(tmp, queue, stale, books)
+            with mock.patch.object(ba, "ROOT", tmp), \
+                 mock.patch.object(ba, "OUT", tmp / "out"), \
+                 mock.patch.object(ba, "BOOKS", tmp / "books"), \
+                 mock.patch.object(ba, "QUEUE", q), \
+                 mock.patch.object(ba, "_voice_name", lambda: "v1"), \
+                 mock.patch.object(ba, "stale_stems", lambda w: [w + "_english"] if w in stale else []), \
+                 mock.patch.object(ba, "_work_words", lambda w: ((words or {}).get(w, 100), False)), \
+                 mock.patch.object(ba, "render_book", lambda w: calls.append(("book", w))), \
+                 mock.patch.object(ba, "_render_stems_locked", lambda w, s: calls.append(("stems", w))), \
+                 mock.patch.object(ba, "_quote_voice_item", lambda: "idle"):
+                what = ba._next_item()
+        return what, calls
+
+    def test_certified_before_other_before_running(self):
+        stale = {"a-running": (1, "v1"), "b-other": (2, "v1"), "c-cert": (9, "v1")}
+        queue = {"a-running": "running", "b-other": "held", "c-cert": "certified"}
+        self.assertEqual(self._run(queue, stale), ("stale", [("stems", "c-cert")]))
+        del stale["c-cert"]
+        self.assertEqual(self._run(queue, stale), ("stale", [("stems", "b-other")]))
+
+    def test_unlisted_work_sits_between_certified_and_running(self):
+        stale = {"a-running": (1, "v1"), "z-unlisted": (50, "v1")}
+        self.assertEqual(self._run({"a-running": "running"}, stale)[1], [("stems", "z-unlisted")])
+
+    def test_fewest_sentences_first_within_tier(self):
+        stale = {"a-big": (12, "v1"), "b-small": (3, "v1")}
+        queue = {"a-big": "certified", "b-small": "certified"}
+        self.assertEqual(self._run(queue, stale)[1], [("stems", "b-small")])
+
+    def test_revoice_still_rereads_whole_book(self):
+        stale = {"old-voice": (2, "v0")}
+        self.assertEqual(self._run({"old-voice": "certified"}, stale)[1], [("book", "old-voice")])
+
+    def test_new_books_certified_first(self):
+        queue = {"short-running": "running", "long-cert": "certified"}
+        what, calls = self._run(queue, {}, books=("short-running", "long-cert"),
+                                words={"short-running": 50, "long-cert": 4000})
+        self.assertEqual((what, calls), ("book", [("book", "long-cert")]))
+
+    def test_missing_queue_keeps_old_order(self):
+        import build_audio as ba
+        from pathlib import Path as _P
+        from unittest import mock
+        with mock.patch.object(ba, "QUEUE", _P("/nonexistent/queue.json")):
+            self.assertEqual(ba._queue_tiers(), {})
+
+
 if __name__ == "__main__":
     unittest.main()

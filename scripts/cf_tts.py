@@ -10,6 +10,7 @@ Env: CLOUDFLARE_API_TOKEN (required), CF_TTS_MODEL, CF_TTS_SPEAKER,
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 import subprocess
@@ -114,6 +115,89 @@ def render_all(says: list[str], wav_paths: list[Path],
             if i and i % 25 == 0:
                 print("  cf_tts sentence %d/%d" % (i, len(says)), flush=True)
 
+
+# --- Narrator Worker (KOKORO_ENGINE=cf-worker, 2026-10-03) -------------------
+# Cloudflare speaks, joins and stores the mp3 itself (workers/viapatrum-narrator);
+# the Mini sends text and gets back an R2 key plus sentence timings. No audio
+# crosses the Mini's uplink. Unchanged sentences come from the Worker's PCM cache.
+# No endpoint or extra secret: the job goes to the private R2 bucket, {id} goes
+# on the Queue, and the result is read back from R2, all with CLOUDFLARE_API_TOKEN.
+NARRATOR_BUCKET = "viapatrum-narrator-work"
+NARRATOR_QUEUE = os.environ.get("NARRATOR_QUEUE", "viapatrum-narration")
+NARRATOR_WAIT = int(os.environ.get("NARRATOR_WAIT", "14400"))  # seconds per passage
+_QUEUE_ID: list[str] = []
+
+
+def _cf_api(method: str, path: str, data: bytes | None = None, ctype: str = "application/json",
+            missing_ok: bool = False) -> bytes | None:
+    """One Cloudflare REST call with retries. None for a 404 when missing_ok."""
+    import urllib.error
+    url = "https://api.cloudflare.com/client/v4/accounts/%s%s" % (ACCT, path)
+    for attempt in range(6):
+        req = urllib.request.Request(url, data=data, method=method, headers={
+            "Authorization": "Bearer " + _token(), "Content-Type": ctype})
+        try:
+            with urllib.request.urlopen(req, timeout=120) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code == 404 and missing_ok:
+                return None
+            if e.code in (429, 500, 502, 503, 504):
+                time.sleep(min(60, 5 * 2 ** attempt))
+                continue
+            raise RuntimeError("cf %s %s: HTTP %d %s" % (method, path, e.code, e.read()[:300]))
+        except (urllib.error.URLError, TimeoutError, ConnectionError):
+            time.sleep(min(60, 5 * 2 ** attempt))
+    raise RuntimeError("cf %s %s: retries exhausted" % (method, path))
+
+
+def _queue_id() -> str:
+    if not _QUEUE_ID:
+        for q in json.loads(_cf_api("GET", "/queues?per_page=100"))["result"]:
+            if q.get("queue_name") == NARRATOR_QUEUE:
+                _QUEUE_ID.append(q["queue_id"])
+                break
+        else:
+            raise RuntimeError("queue %s not found" % NARRATOR_QUEUE)
+    return _QUEUE_ID[0]
+
+
+def _work_object(key: str) -> dict | None:
+    blob = _cf_api("GET", "/r2/buckets/%s/objects/%s" % (NARRATOR_BUCKET, key), missing_ok=True)
+    return json.loads(blob) if blob is not None else None
+
+
+def narrate_passage(work: str, stem: str, sentences: list[dict], voice: str, quote_voice: str) -> dict:
+    """sentences: [{"text"} or {"text", "parts": [{"text", "quote"}]}], already
+    speakable. Returns the Worker result: key, bytes, sentences [{s, e}]."""
+    require_llm_receipt([MODEL], purpose="tts-render")  # the Worker calls Aura-2 for us
+    body = {"work": work, "stem": stem, "sentences": sentences,
+            "voice": voice, "quote_voice": quote_voice or voice}
+    if os.environ.get("NARRATOR_SEGMENT_SECONDS"):  # tests: force several segments
+        body["segment_seconds"] = int(os.environ["NARRATOR_SEGMENT_SECONDS"])
+    blob = json.dumps(body, ensure_ascii=False, sort_keys=True).encode()
+    job_id = "j" + hashlib.sha256(blob).hexdigest()[:40]
+    result = _work_object("results/%s.json" % job_id)
+    if result is None:
+        _cf_api("PUT", "/r2/buckets/%s/objects/jobs/%s.json" % (NARRATOR_BUCKET, job_id), blob)
+        _cf_api("POST", "/queues/%s/messages" % _queue_id(),
+                json.dumps({"body": {"id": job_id}, "content_type": "json"}).encode())
+    deadline = time.time() + NARRATOR_WAIT
+    wait = 3
+    while result is None:
+        failed = _work_object("errors/%s.json" % job_id)
+        if failed is not None:
+            raise RuntimeError("narrator job %s failed: %s" % (job_id, failed.get("error")))
+        if time.time() > deadline:
+            raise RuntimeError("narrator job %s: no result after %d s" % (job_id, NARRATOR_WAIT))
+        time.sleep(wait)
+        wait = min(30, wait + 3)
+        result = _work_object("results/%s.json" % job_id)
+    if len(result.get("sentences") or []) != len(sentences):
+        raise RuntimeError("narrator job %s: %d timings for %d sentences"
+                           % (job_id, len(result.get("sentences") or []), len(sentences)))
+    result["job"] = job_id
+    return result
 
 if __name__ == "__main__":
     # Smoke: python3 scripts/cf_tts.py "Hello world." /tmp/smoke.wav [speaker]

@@ -1,0 +1,1 @@
+{"name":"viapatrum-narrator","private":true,"type":"module","dependencies":{"@breezystack/lamejs":"1.2.7"},"devDependencies":{"wrangler":"^4"}}

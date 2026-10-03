@@ -5139,6 +5139,7 @@ def layout(
       <a href="/works/"{nav_cls("works")}>Works</a>
       <a href="/listen/"{nav_cls("listen")}>Listen</a>
       <a href="/explore/"{nav_cls("explore")}>Timeline</a>
+      <a href="/beliefs/"{nav_cls("beliefs")}>Beliefs</a>
       <a href="https://play.viapatrum.org/">Play</a>
     </nav>
     <div class="header-tools">
@@ -5162,7 +5163,7 @@ def layout(
     </div>
     <nav aria-label="Read">
       <h2>Read</h2>
-      <ul><li><a href="/topics/">Questions</a></li><li><a href="/scripture/">Scripture</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/listen/">Listen</a></li><li><a href="/explore/">Timeline</a></li></ul>
+      <ul><li><a href="/topics/">Questions</a></li><li><a href="/scripture/">Scripture</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/listen/">Listen</a></li><li><a href="/explore/">Timeline</a></li><li><a href="/beliefs/">Beliefs</a></li></ul>
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
@@ -5181,6 +5182,21 @@ def layout(
 """
 
 
+_OG_VER: dict[str, str] = {}
+
+
+def _og_versioned(card: str) -> str:
+    """Card path plus ?v=<content hash>. X, Facebook and iMessage cache a share
+    image by its address; a changed card under the same name kept showing the
+    old design for days (owner 2026-10-03). The hash changes only when the
+    image does, so unchanged cards keep their cache."""
+    if card not in _OG_VER:
+        import hashlib
+        f = ROOT / card.lstrip("/")
+        _OG_VER[card] = hashlib.sha1(f.read_bytes()).hexdigest()[:10] if f.is_file() else ""
+    return card + ("?v=" + _OG_VER[card] if _OG_VER[card] else "")
+
+
 def _og_card_for(route: str) -> str | None:
     """Per-page share card from assets/og/index.json, falling back by path."""
     hit = OG_INDEX.get(route)
@@ -5194,6 +5210,12 @@ def _og_card_for(route: str) -> str | None:
     return None
 
 
+def _og_default_in(html: str) -> str | None:
+    """The section card the page head already names, e.g. /assets/og/works.png."""
+    m = re.search(r'<meta property="og:image" content="' + re.escape(SITE_ORIGIN) + r'(/assets/og/[^"?]+)"', html)
+    return m.group(1) if m else None
+
+
 def write(path: Path, html: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     if path.suffix == ".html" and path.is_relative_to(DIST):
@@ -5202,8 +5224,9 @@ def write(path: Path, html: str) -> None:
         if path.name == "404.html":
             # An error page has no address of its own to claim.
             html = re.sub(r'\n?<(?:link rel="canonical"|meta property="og:url"|meta name="twitter:url")[^>]*>', "", html)
-        card = _og_card_for(route)
+        card = _og_card_for(route) or _og_default_in(html)
         if card:
+            card = _og_versioned(card)
             html = re.sub(
                 r'(<meta (?:property|name)="(?:og:image|og:image:secure_url|twitter:image)" content=")[^"]*(")',
                 lambda m: m.group(1) + SITE_ORIGIN + escape(card) + m.group(2),
@@ -7936,6 +7959,14 @@ def build() -> None:
     (DIST / "data" / "search-index.json").write_text(
         json.dumps(search_index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
+    # Cloudflare Pages rejects files over 25 MiB; stop at 24 MiB so a ship
+    # never fails at upload. Fix: shard data/search-index.json (and teach the
+    # search page to load the shards), do not raise this limit.
+    _search_bytes = (DIST / "data" / "search-index.json").stat().st_size
+    assert _search_bytes < 24 * 1024 * 1024, (
+        f"data/search-index.json is {_search_bytes / 1048576:.1f} MiB (limit 24 MiB, "
+        f"Pages max 25 MiB): shard the search index before building again"
+    )
 
     (DIST / "data" / "explore-index.json").write_text(
         json.dumps(explore_index, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -8172,6 +8203,11 @@ def build() -> None:
             description="How Via Patrum makes English: sources, two passes, Original English Translation, and what stays off the reading page",
         ),
     )
+
+    # Beliefs map (owner 2026-10-03): where each dividing belief first appears.
+    import beliefs_page
+    n_beliefs = beliefs_page.build(DIST, ROOT / "data" / "explore" / "doctrine_map.json", layout, write)
+    print(f"beliefs: {n_beliefs} questions", flush=True)
 
     (DIST / "_headers").write_text(
         """/*

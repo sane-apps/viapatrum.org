@@ -310,7 +310,7 @@ for slug, filenames in {
 # Latin lives only in the secondary subtitle line. Held works are unaffected
 # until the day they publish, when this gate forces the English title then.
 LATIN_H1 = re.compile(
-    r"^(De|In|Contra|Adversus|Pro|Ex|Fragmenta|Fragmentum|Commentarii|"
+    r"^(De|In(?!\s+(?:Praise|the|Defen[cs]e|Honou?r|Memory|Answer|Reply|Response)\b)|Contra|Adversus|Pro|Ex|Fragmenta|Fragmentum|Commentarii|"
     r"Homilia|Homiliae|Epistula|Epistulae|Oratio|Orationes|Sermo|Tractatus|"
     r"Liber|Tomus|Capitula|Scholia(?!\s+on\b)|Catena|Refutatio|Demonstratio|"
     r"Testamentum|Testimonia|"

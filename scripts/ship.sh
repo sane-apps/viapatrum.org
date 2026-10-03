@@ -82,6 +82,13 @@ if [[ "$SKIP_BUILD" -eq 0 ]]; then
   # Semantic search: export live passages, publish the key->link map, push changed docs.
   "$PYTHON" "$ROOT/scripts/search_sync.py" export && cp "$ROOT/outputs/search-docs/meta.json" "$ROOT/dist/data/search-meta.json"
   nice -n 10 "$PYTHON" "$ROOT/scripts/search_sync.py" upload || echo "WARN: search upload incomplete (next ship retries)"
+  # Share cards (owner 2026-10-03: every page gets a card in the site's own look):
+  # draw cards for new works, writers and excerpts from the fresh build, copy
+  # them in, then point each page at its card with ?v=<hash> so X and iMessage
+  # drop old cached images.
+  PATH="/opt/homebrew/opt/node@24/bin:$PATH" nice -n 10 node "$ROOT/scripts/make_og_cards.cjs" || echo "WARN: share cards not redrawn"
+  rsync -a "$ROOT/assets/og/" "$ROOT/dist/assets/og/"
+  "$PYTHON" "$ROOT/scripts/og_apply.py"
 else
   echo "(skipped — using existing dist/)"
 fi
@@ -93,12 +100,19 @@ fi
 
 if [[ "$SKIP_BUILD" -eq 0 ]]; then
   echo "==> Read-along audio injection"
+  # Audio lives on R2 (audio.viapatrum.org), not in the Pages deploy: ships
+  # carry pages only (2026-10-03: 6 GB of mp3 at 0.8 MB/s made ships take hours).
+  export AUDIO_BASE="https://audio.viapatrum.org"
+  rm -f "$ROOT/outputs/audio-r2-pending.jsonl"
+  find "$ROOT/dist/assets/audio" -name "*.mp3" -delete 2>/dev/null || true
   for manifest in "$ROOT"/outputs/audio/*/manifest.json; do
     [[ -f "$manifest" ]] || continue
     work="$(basename "$(dirname "$manifest")")"
     echo "  + audio: $work"
     python3 "$ROOT/scripts/inject_audio.py" "$work" || exit 1
   done
+  echo "==> Audio to R2"
+  python3 "$ROOT/scripts/audio_r2.py" sync "$ROOT/outputs/audio-r2-pending.jsonl" || { echo "BLOCKED: audio not on R2; pages would point at missing files" >&2; exit 1; }
 fi
 
 CSS_HASH="$(

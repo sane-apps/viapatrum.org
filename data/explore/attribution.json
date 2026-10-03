@@ -1,0 +1,355 @@
+{
+ "source": "Claude audit of the beliefs map, 2026-10-03",
+ "books": {
+  "epiphanius-homilia-in-laudes-mariae-deiparae": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: the homilies in PG 43 are later works transmitted under his name."
+  },
+  "epiphanius-homilia-in-assumptionem-christi": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: the homilies in PG 43 are later works transmitted under his name."
+  },
+  "epiphanius-homilia-in-christi-resurrectionem": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: the homilies in PG 43 are later works transmitted under his name."
+  },
+  "epiphanius-homilia-in-divini-corporis-sepulturam": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: the homilies in PG 43 are later works transmitted under his name."
+  },
+  "epiphanius-homilia-in-festo-palmarum": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: the homilies in PG 43 are later works transmitted under his name."
+  },
+  "epiphanius-liturgia-praesanctificatorum": {
+   "status": "spurious",
+   "note": "A later Byzantine liturgy, not by Epiphanius."
+  },
+  "epiphanius-index-discipulorum": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: Byzantine lists (the Notitiae use later titles such as Patriarch)."
+  },
+  "epiphanius-index-apostolorum": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: Byzantine lists (the Notitiae use later titles such as Patriarch)."
+  },
+  "epiphanius-notitiae-episcopatuum": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: Byzantine lists (the Notitiae use later titles such as Patriarch)."
+  },
+  "epiphanius-appendices-ad-indices-apostolorum-discipulorumque": {
+   "status": "spurious",
+   "note": "Pseudo-Epiphanius: Byzantine lists (the Notitiae use later titles such as Patriarch)."
+  },
+  "eustathius-hexaemeron": {
+   "status": "spurious",
+   "note": "Pseudo-Eustathius: not by Eustathius of Antioch."
+  },
+  "gregory-thaumaturgus-sermo-in-omnes-sanctos": {
+   "status": "spurious",
+   "note": "Generally held to be spurious; the 270 date is unsafe."
+  },
+  "epiphanius-anaphora-graeca": {
+   "status": "doubtful",
+   "note": "Authorship and date of this anaphora are uncertain."
+  },
+  "epiphanius-testamentum-ad-cives": {
+   "status": "doubtful",
+   "note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
+  },
+  "epiphanius-epistula-ad-theodosium-imperatorem": {
+   "status": "doubtful",
+   "note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
+  },
+  "epiphanius-tractatus-contra-eos-qui-imagines-faciunt": {
+   "status": "doubtful",
+   "note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
+  },
+  "epiphanius-testimonia-ex-divinis-et-sacris-scripturis": {
+   "status": "doubtful",
+   "note": "Attribution to Epiphanius is doubtful."
+  },
+  "didymus-de-trinitate": {
+   "status": "doubtful",
+   "note": "Attribution of De Trinitate to Didymus is disputed."
+  },
+  "severianus-de-caeco-nato": {
+   "status": "doubtful",
+   "note": "Transmitted among Chrysostom's spurious works; ascription to Severian is a modern proposal."
+  },
+  "amphilochius-contra-haereticos": {
+   "status": "doubtful",
+   "note": "Ascription to Amphilochius is debated."
+  },
+  "severianus-de-caeco-zacchaeo": {
+   "status": "doubtful",
+   "note": "Transmitted among Chrysostom's spurious works; given to Severian only by modern attribution."
+  },
+  "cyril-alexandria-dialogus-nestorio": {
+   "status": "doubtful",
+   "note": "Widely doubted as Cyril's; some lines are given to Nestorius."
+  },
+  "cyril-alexandria-fragmenta-1-corinthios": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "didymus-fragmenta-psalmos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-ezechielem": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-2tim": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-acta-catholicas": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "diodorus-fragmenta-romanos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "gennadius-fragmenta-hebraeos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "apollinaris-fragmenta-romanos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-colossenses": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-romanos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "didymus-fragmenta-2cor": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-canticum": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-1thess": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-lucam-fragmenta": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "apollinaris-fragmenta-matthaeum": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "gennadius-fragmenta-romanos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "eusebius-emesa-fragmenta-romanos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "apollinaris-fragmenta-joannem": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-hebraeos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "didymus-fragmentum-hebraeos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-numeros": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "gennadius-fragmentum-2thess": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-ephesios": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "gennadius-fragmenta-galatas": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "apollinaris-fragmenta-psalmos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "eusebius-emesa-fragmenta-galatas": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-matthew-fragments": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-philippenses": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-regum": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "eusebius-emesa-fragmentum-1cor": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "didymus-fragmenta-romanos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-danielem": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "didymus-fragmenta-proverbia": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmentum-proverbia": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "gennadius-fragmenta-corinthios": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-hebraeos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-2thess": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-romanos": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-jeremiam": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "didymus-fragmenta-1cor": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-galatas": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "ammonius-fragmenta-joannem": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmentum-baruch": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmentum-psalmum": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-2-corinthios": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-titum": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "didymus-fragmenta-joannem": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-1tim": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "cyril-alexandria-fragmenta-cyri-joannis": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "severianus-fragmenta-2cor": {
+   "status": "catena",
+   "note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+  },
+  "irenaeus-demonstration": {
+   "work_year": 180
+  },
+  "origen-heraclides-pascha": {
+   "work_year": 245
+  },
+  "julian-of-eclanum": {
+   "work_year": 418
+  }
+ },
+ "passages": {
+  "a62c57ccc661a57e": {
+   "author": "Apollinaris of Laodicea (quoted as Athanasius)",
+   "work_year": 363,
+   "note": "Cyril quotes this as Athanasius; it is Apollinaris' creed to Jovian."
+  },
+  "6ef185eebda7cbed": {
+   "author": "Apollinaris of Laodicea (quoted as Athanasius)",
+   "work_year": 363,
+   "note": "Cyril quotes this as Athanasius; it is Apollinaris' creed to Jovian."
+  },
+  "fb28955b5790a7f2": {
+   "author": "Apollinaris of Laodicea (quoted as Athanasius)",
+   "work_year": 363,
+   "note": "Cyril quotes this as Athanasius; it is Apollinaris' creed to Jovian."
+  },
+  "70cab5571f219284": {
+   "author": "Nestorius (as quoted)",
+   "work_year": 431,
+   "status": "doubtful",
+   "note": "Nestorius' words, quoted in a dialogue whose ascription to Cyril is doubted."
+  },
+  "bc5ffffe06ccdc67": {
+   "author": "Antiochus of Ptolemais (quoted by Cyril)",
+   "work_year": 408
+  },
+  "e5dac4a64fc8e3d9": {
+   "author": "Severian of Gabala (quoted by Cyril)",
+   "work_year": 408
+  },
+  "af945fd6af3c1d80": {
+   "author": "Ammonius of Adrianople (quoted by Cyril)",
+   "work_year": 431
+  },
+  "6166a396ff6e26d5": {
+   "author": "John Chrysostom (quoted by Cyril)",
+   "work_year": 407,
+   "status": "doubtful",
+   "note": "Quoted by Cyril as Chrysostom; the ascription still needs checking."
+  },
+  "52c7c68c9fdde8b1": {
+   "author": "Origen (catena heading)",
+   "work_year": 254,
+   "status": "catena",
+   "note": "Filed under Didymus, but the catena heads it 'Of Origen'."
+  },
+  "dd9e49e8b0a21ebb": {
+   "author": "Athanasius (catena heading)",
+   "work_year": 373,
+   "status": "catena",
+   "note": "Filed under Origen but headed 'Of Athanasius' in the catena."
+  }
+ }
+}

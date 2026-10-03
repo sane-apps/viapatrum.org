@@ -1,0 +1,23 @@
+#!/bin/bash
+# Narration on Cloudflare (owner 2026-10-03: "we have cloudflare path", not the
+# Mini CPU). launchd com.saneapps.fathers-audio-next runs this every 15 min;
+# build_audio.py --drain holds the narrator lock, so runs never overlap, and
+# re-reads every stale or missing file back to back (Aura-2 voice "orion";
+# works in an older voice are re-read in full, never mixed).
+set -u
+export PATH="/opt/homebrew/opt/node@24/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+set -a; source "$HOME/.config/nv/env" >/dev/null 2>&1; set +a
+export KOKORO_ENGINE=cf CF_TTS_WORKERS=12
+# Bible quotations read by a second voice (owner approved 2026-10-03).
+export CF_TTS_QUOTE_VOICE=arcas
+# Vendor SOP: cf_tts needs a smoked receipt (< 4 h); refresh after 3 h.
+RECEIPTS="$HOME/SaneApps/infra/SaneProcess/outputs/llm-api-research"
+R=$(ls -t "$RECEIPTS"/*-cf-_cf_deepgram_aura-2-en.json 2>/dev/null | head -1)
+if [ -z "$R" ] || [ $(( $(date +%s) - $(stat -f %m "$R") )) -ge 10800 ]; then
+  timeout 300 ruby "$HOME/SaneApps/infra/SaneProcess/scripts/llm_api_research_gate.rb" --provider cf \
+    --model @cf/deepgram/aura-2-en --kind tts --purpose tts-render --notes "build_audio --drain via cf_tts" --smoke >/dev/null 2>&1
+  R=$(ls -t "$RECEIPTS"/*-cf-_cf_deepgram_aura-2-en.json 2>/dev/null | head -1)
+fi
+export SANE_LLM_API_RECEIPT="$R"
+cd "$HOME/SaneApps/websites/fathers.saneapps.com" || exit 1
+exec /usr/bin/nice -n 10 "$HOME/Models/kokoro/.venv/bin/python" scripts/build_audio.py --drain

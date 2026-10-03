@@ -1,0 +1,37 @@
+{
+  // Via Patrum narration on Cloudflare. See src/index.js for the job format.
+  // No public route: jobs arrive on the Queue, results are read from R2.
+  "name": "viapatrum-narrator",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "account_id": "2c267ab06352ba2522114c3081a8c5fa",
+  "workers_dev": false,
+  "preview_urls": false,
+  "limits": { "cpu_ms": 300000 },
+  "ai": { "binding": "AI" },
+  "r2_buckets": [
+    // Public mp3s, served at https://audio.viapatrum.org
+    { "binding": "AUDIO", "bucket_name": "viapatrum-audio" },
+    // Private: job inputs, PCM sentence cache, results, errors, carry-over tails
+    { "binding": "WORK", "bucket_name": "viapatrum-narrator-work" }
+  ],
+  "queues": {
+    "consumers": [
+      {
+        "queue": "viapatrum-narration",
+        // The consumer only starts Workflows, so a batch is cheap; 10 messages
+        // or 5 s keeps a new job's wait short.
+        "max_batch_size": 10,
+        "max_batch_timeout": 5,
+        // A retry only happens when R2 or the Workflow API failed to answer;
+        // the slow, flaky work (Aura, encoding) retries inside the Workflow.
+        "max_retries": 10,
+        "dead_letter_queue": "viapatrum-narration-dlq"
+      }
+    ]
+  },
+  "workflows": [
+    { "name": "viapatrum-narrate", "binding": "NARRATE", "class_name": "Narrate" }
+  ],
+  "observability": { "enabled": true }
+}

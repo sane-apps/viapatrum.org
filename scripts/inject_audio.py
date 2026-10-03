@@ -508,6 +508,37 @@ def _safe_sec(sec: str) -> str:
     return sec
 
 
+# R2 audio (2026-10-03): with AUDIO_BASE set (ship.sh sets it), mp3s are not
+# copied into dist; manifests point at AUDIO_BASE/<content-hashed key> and the
+# file is listed for scripts/audio_r2.py to upload before the deploy.
+AUDIO_BASE = os.environ.get("AUDIO_BASE", "").rstrip("/")
+R2_PENDING = ROOT / "outputs" / "audio-r2-pending.jsonl"
+
+
+def _audio_ref(src: Path, site: str, name: str, assets: Path) -> str:
+    """URL the page uses for one mp3; copies into dist only without AUDIO_BASE."""
+    if AUDIO_BASE:
+        from audio_r2 import file_key
+        key = file_key(src, site, name)
+        with open(R2_PENDING, "a") as fh:
+            fh.write(json.dumps({"src": str(src), "key": key}) + "\n")
+        return f"{AUDIO_BASE}/{key}"
+    dest = assets / (name + ".mp3")
+    if not dest.is_file() or dest.stat().st_size != src.stat().st_size:
+        shutil.copyfile(src, dest)
+    return "/assets/audio/%s/%s.mp3" % (site, name)
+
+
+def _r2_ref(entry: dict) -> str:
+    """URL of narrator Worker audio, already on R2. Listed (key and size, no
+    src) so audio_r2.py checks it is reachable before a ship deploys."""
+    key = entry["r2_key"]
+    if AUDIO_BASE:
+        with open(R2_PENDING, "a") as fh:
+            fh.write(json.dumps({"key": key, "size": int(entry.get("bytes") or 0)}) + "\n")
+    return "%s/%s" % (AUDIO_BASE or "https://audio.viapatrum.org", key)
+
+
 def publish_passage(site: str, sec: str, plan: dict):
     """Copy one passage into dist. Returns reader url, rows, and cite-page args."""
     src = plan["src"]
@@ -516,11 +547,9 @@ def publish_passage(site: str, sec: str, plan: dict):
     full = plan["full"]
     assets = ROOT / "dist/assets/audio" / site
     assets.mkdir(parents=True, exist_ok=True)
-    if src.stat().st_size <= LIMIT:
-        dest = assets / (stem + ".mp3")
-        if not dest.is_file() or dest.stat().st_size != src.stat().st_size:
-            shutil.copyfile(src, dest)
-        audio_url = "/assets/audio/%s/%s.mp3" % (site, stem)
+    r2 = plan.get("r2")
+    if r2 or src.stat().st_size <= LIMIT:
+        audio_url = _r2_ref(r2) if r2 else _audio_ref(src, site, stem, assets)
         (assets / (stem + ".json")).write_text(json.dumps({
             "audio": audio_url,
             "sentences": full,
@@ -537,8 +566,7 @@ def publish_passage(site: str, sec: str, plan: dict):
     if not cache or not cache.is_file() or cache.stat().st_size == 0 or cache.stat().st_size > LIMIT:
         print("skip %s %s: cut file missing or over 25 MiB" % (site, sec))
         return None
-    dest = assets / ("%s.mp3" % sec)
-    shutil.copyfile(cache, dest)
+    cut_url = _audio_ref(cache, site, sec, assets)
     t0 = plan["t0"]
     local = [{
         "t": row["t"],
@@ -546,7 +574,7 @@ def publish_passage(site: str, sec: str, plan: dict):
         "e": round(float(row["e"]) - t0, 3),
     } for row in window]
     (assets / ("%s.json" % sec)).write_text(json.dumps({
-        "audio": "/assets/audio/%s/%s.mp3" % (site, sec),
+        "audio": cut_url,
         "sentences": local,
     }))
     url = "/assets/audio/%s/%s.json" % (site, sec)
@@ -677,9 +705,75 @@ def _inject_reader(page: Path, ready: dict) -> int:
     return inserted
 
 
+# Negative cache (2026-10-03): a manifest that matched no page is skipped
+# without re-routing while nothing routing reads has changed: the manifest,
+# the book's English files, this code, and the body text of every dist page.
+NOATTACH_CACHE = ROOT / "outputs" / "audio-noattach-cache.json"
+_CODE_FILES = ("inject_audio.py", "build_audio.py", "speak_text.py")
+
+
+def noattach_fingerprint(work: str, manifest_bytes: bytes) -> str | None:
+    """Hash of every input that decides 'no page matches'. None if unknowable."""
+    import hashlib
+
+    works = ROOT / "dist/works"
+    if not works.is_dir():
+        return None
+    h = hashlib.sha256()
+    here = Path(__file__).resolve().parent
+    for name in _CODE_FILES:
+        f = here / name
+        h.update(name.encode() + b"\0" + (f.read_bytes() if f.is_file() else b"") + b"\0")
+    h.update(b"manifest\0" + manifest_bytes + b"\0")
+    folder = BOOKS / work / "translations"
+    if folder.is_dir():
+        for eng in sorted(folder.glob("*_english.json")):
+            h.update(eng.name.encode() + b"\0" + eng.read_bytes() + b"\0")
+    # locate_sites reads works/<site>/<sec>/index.html and text-first reads
+    # every works/<site>/<sub>/index.html: hash the body text of all of them.
+    for site_dir in sorted(works.iterdir()):
+        if not site_dir.is_dir():
+            continue
+        h.update(b"site\0" + site_dir.name.encode() + b"\0")
+        for sub in sorted(site_dir.iterdir()):
+            page = sub / "index.html"
+            if not page.is_file():
+                continue
+            plain = _cached_plain(page)
+            h.update(sub.name.encode() + b"\0" + hashlib.sha256(plain.encode()).digest())
+    return h.hexdigest()
+
+
+def _load_noattach() -> dict:
+    try:
+        return json.loads(NOATTACH_CACHE.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _store_noattach(work: str, fp: str | None) -> None:
+    data = _load_noattach()
+    if fp is None:
+        if work not in data:
+            return
+        data.pop(work)
+    else:
+        data[work] = fp
+    tmp = NOATTACH_CACHE.with_suffix(".tmp%d" % os.getpid())
+    tmp.write_text(json.dumps(data, indent=0, sort_keys=True), encoding="utf-8")
+    tmp.replace(NOATTACH_CACHE)
+
+
 def inject_work(work: str) -> None:
     manifest_path = ROOT / "outputs/audio" / work / "manifest.json"
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest_bytes = manifest_path.read_bytes()
+    manifest = json.loads(manifest_bytes.decode("utf-8"))
+    # A direct public slug always routes; only other works can be negative.
+    direct = (ROOT / "dist/works" / work).is_dir()
+    cached = None if direct else _load_noattach().get(work)
+    if cached and cached == noattach_fingerprint(work, manifest_bytes):
+        print("SKIP %s: not on this site (unchanged since last check), audio kept" % work)
+        return
     cands = section_candidates(work)
     if not cands:
         print("SKIP %s: no English section map, audio kept" % work)
@@ -690,7 +784,11 @@ def inject_work(work: str) -> None:
         sites = locate_sites_text_first(work, cands, manifest)
     if not sites:
         print("SKIP %s: not on this site, audio kept" % work)
+        if not direct:
+            _store_noattach(work, noattach_fingerprint(work, manifest_bytes))
         return
+    if cached:
+        _store_noattach(work, None)
     dist_js = ROOT / "dist/assets/readalong.js"
     dist_js.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(ROOT / "assets/readalong.js", dist_js)
@@ -716,7 +814,9 @@ def inject_work(work: str) -> None:
                 continue
             stem, first, last, window, full = choices[0]
             src = ROOT / "outputs/audio" / work / (stem + ".mp3")
-            if not src.is_file():
+            # Narrator Worker audio (cf-worker) lives on R2 only, never on disk.
+            r2 = passages.get(stem) if (passages.get(stem) or {}).get("r2_key") else None
+            if not r2 and not src.is_file():
                 print("skip %s %s: no audio for %s" % (site, sec, stem))
                 missed.append(sec)
                 continue
@@ -729,8 +829,9 @@ def inject_work(work: str) -> None:
                 "window": window,
                 "full": full,
                 "src": src,
+                "r2": r2,
             }
-            if src.stat().st_size > LIMIT:
+            if not r2 and src.stat().st_size > LIMIT:
                 t0 = float(window[0]["s"])
                 t1 = float(window[-1]["e"])
                 cache = src.parent / "slices" / ("%s_%s_%d_%d.mp3" % (

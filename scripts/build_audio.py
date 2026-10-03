@@ -13,6 +13,7 @@ build copies it into dist/).
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 import sys
@@ -24,6 +25,10 @@ BOOKS = Path.home() / "SaneApps/clients/translations/books"
 OUT = ROOT / "outputs" / "audio"
 
 VOICE = "bm_daniel"
+# "cf": Workers AI speaks, the Mini joins and uploads. "cf-worker": the
+# viapatrum-narrator Worker speaks, joins and writes the mp3 to R2 itself.
+CF_ENGINES = ("cf", "cf-worker")
+AUDIO_PUBLIC = os.environ.get("AUDIO_BASE", "https://audio.viapatrum.org").rstrip("/")
 LANG = "b"
 SPEED = 1.0
 MP3_BITRATE = "64k"
@@ -31,15 +36,15 @@ MP3_BITRATE = "64k"
 
 def _voice_name() -> str:
     import os
-    if os.environ.get("KOKORO_ENGINE") == "cf":
+    if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
         return "aura-2-" + os.environ.get("CF_TTS_SPEAKER", "orion")
     return VOICE
 
 
 def _mp3_bitrate() -> str:
     import os
-    if os.environ.get("KOKORO_ENGINE") == "cf":
-        return "192k"
+    if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
+        return "128k"  # owner 2026-10-03: 128 kbps narration
     return MP3_BITRATE
 # Over this length a sentence may split once more, at clause marks only.
 LONG_SENTENCE = 400
@@ -117,12 +122,23 @@ def sentence_offsets(wavs: list[Path]) -> list[tuple[float, float]]:
 from speak_text import read_text, speak_text
 
 
+_ENGINE = None
+
+
 def _load_engine():
+    """Cached: the Kokoro model is ~1.5 GB; load it once per process."""
+    global _ENGINE
+    if _ENGINE is None:
+        _ENGINE = _load_engine_uncached()
+    return _ENGINE
+
+
+def _load_engine_uncached():
     """One Kokoro voice. torch on CPU unless the environment says otherwise."""
     import os
     engine = os.environ.get("KOKORO_ENGINE", "torch")
     device = os.environ.get("KOKORO_DEVICE", "cpu")
-    if engine == "cf":
+    if engine in CF_ENGINES:
         return None, None, None
     if engine == "mlx":
         from mlx_audio.tts import load as mlx_load
@@ -150,6 +166,16 @@ def reuse_plan(old: list[dict], new: list[str]) -> dict[int, tuple[float, float]
     return plan
 
 
+def _join_wavs(parts: list[Path], wav: Path) -> None:
+    """One sentence from its parts (narrator and quotation voices), 24 kHz mono."""
+    cmd = ["ffmpeg", "-v", "error", "-y"]
+    for part in parts:
+        cmd += ["-i", str(part)]
+    cmd += ["-filter_complex", "".join("[%d:a]" % k for k in range(len(parts)))
+            + "concat=n=%d:v=0:a=1[a]" % len(parts), "-map", "[a]", "-ar", "24000", "-ac", "1", str(wav)]
+    subprocess.run(cmd, check=True)
+
+
 def _cut_wav(mp3: Path, start: float, end: float, wav: Path) -> None:
     """Decode one sentence span of an existing recording to a 24 kHz wav."""
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(mp3),
@@ -167,7 +193,7 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
     corrected sentences are spoken again (text fix -> audio fix).
     """
     import os as _os
-    cf_mode = _os.environ.get("KOKORO_ENGINE") == "cf"
+    cf_mode = _os.environ.get("KOKORO_ENGINE") in CF_ENGINES
     if not cf_mode:
         import soundfile as sf
         import torch
@@ -175,13 +201,35 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
     rows = json.loads(eng_file.read_text(encoding="utf-8"))
     rows = rows if isinstance(rows, list) else rows.get("sections", [])
     sentences: list[str] = []
+    source_para: list[str] = []  # raw paragraph per sentence: its links mark quotations
     for row in rows:
         for para in row.get("english", []) or []:
-            sentences.extend(split_sentences(read_text(para)))
+            got = split_sentences(read_text(para))
+            sentences.extend(got)
+            source_para.extend([para] * len(got))
     old_mp3 = OUT / work / (eng_file.stem + ".mp3")
+    # Bible quotations in a second voice (owner 2026-10-03: Orion narrates,
+    # Arcas reads Scripture). Only words that match the cited verse count.
+    quote_voice = _os.environ.get("CF_TTS_QUOTE_VOICE", "") if cf_mode else ""
+    parts_of: dict[int, list] = {}
+    if quote_voice:
+        from scripture_quotes import quote_parts
+        for i, sentence in enumerate(sentences):
+            parts = quote_parts(sentence, source_para[i])
+            if any(q for _, q in parts):
+                parts_of[i] = parts
+    sig = {i: " | ".join(t for t, q in parts if q) for i, parts in parts_of.items()}
+    if _os.environ.get("KOKORO_ENGINE") == "cf-worker":
+        return _render_via_worker(eng_file, work, manifest, sentences, parts_of, sig, quote_voice)
     plan: dict[int, tuple[float, float]] = {}
     if prev and prev_voice == _voice_name() and old_mp3.is_file():
-        plan = reuse_plan(prev.get("sentences") or [], sentences)
+        if quote_voice:
+            # A sentence is reused only when its quoted parts are unchanged too;
+            # recordings made before this have none, so quotations are re-spoken.
+            old = [dict(x, t=str(x.get("t", "")) + "\x00" + str(x.get("q", ""))) for x in prev.get("sentences") or []]
+            plan = reuse_plan(old, [t + "\x00" + sig.get(i, "") for i, t in enumerate(sentences)])
+        else:
+            plan = reuse_plan(prev.get("sentences") or [], sentences)
     wavs = [tmpdir / ("%s_%04d.wav" % (eng_file.stem, i)) for i in range(len(sentences))]
     for i, (start, end) in plan.items():
         _cut_wav(old_mp3, start, end, wavs[i])
@@ -191,11 +239,26 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
               % (eng_file.stem, len(plan), len(todo), len(sentences)), flush=True)
     if cf_mode:
         from cf_tts import render_all, SPEAKER as CF_SPEAKER
-        print("  %s cf_tts %d sentences (%s)"
-              % (eng_file.stem, len(todo), CF_SPEAKER), flush=True)
-        if todo:
-            render_all([speak_text(sentences[i]) for i in todo],
-                       [wavs[i] for i in todo], CF_SPEAKER)
+        mixed = [i for i in todo if i in parts_of]
+        print("  %s cf_tts %d sentences (%s%s)"
+              % (eng_file.stem, len(todo), CF_SPEAKER,
+                 ", %d with quotations in %s" % (len(mixed), quote_voice) if quote_voice else ""), flush=True)
+        plain = [i for i in todo if i not in parts_of]
+        if plain:
+            render_all([speak_text(sentences[i]) for i in plain],
+                       [wavs[i] for i in plain], CF_SPEAKER)
+        jobs: dict[str, list] = {}
+        pieces: dict[int, list] = {}
+        for i in mixed:
+            pieces[i] = []
+            for k, (text, is_quote) in enumerate(parts_of[i]):
+                w = tmpdir / ("%s_%04d_%d.wav" % (eng_file.stem, i, k))
+                jobs.setdefault(quote_voice if is_quote else CF_SPEAKER, []).append((speak_text(text), w))
+                pieces[i].append(w)
+        for speaker, job in jobs.items():
+            render_all([t for t, _ in job], [w for _, w in job], speaker)
+        for i, parts in pieces.items():
+            _join_wavs(parts, wavs[i])
     for n, i in enumerate([] if cf_mode else todo):
         sentence = sentences[i]
         if n and n % 25 == 0:
@@ -230,20 +293,61 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
     manifest["passages"][eng_file.stem] = {
         "audio": "assets/audio/%s/%s.mp3" % (work, eng_file.stem),
         "voice": _voice_name(),
-        "sentences": [{"t": s, "s": a, "e": b}
-                      for s, (a, b) in zip(sentences, offsets)],
+        "quote_voice": quote_voice or None,
+        "sentences": [dict({"t": s, "s": a, "e": b}, **({"q": sig[i]} if i in sig else {}))
+                      for i, (s, (a, b)) in enumerate(zip(sentences, offsets))],
     }
     print("rendered %s: %d sentences -> %s" % (eng_file.stem, len(sentences), mp3.name), flush=True)
+    _audit(work, eng_file.stem, len(sentences), len(plan), len(todo))
+    return len(sentences)
+
+
+def _audit(work: str, stem: str, total: int, reused: int, spoken: int) -> None:
     try:
         if not (BOOKS / work).is_dir():
             raise LookupError("not a library book (tests)")
         sys.path.insert(0, str(BOOKS.parent / "scripts"))
         import audit_log
         audit_log.record(work, "audio", "Audio %s: %d sentences (%d reused, %d spoken)"
-                         % (eng_file.stem, len(sentences), len(plan), len(todo)),
+                         % (stem, total, reused, spoken),
                          ref="outputs/audio/%s/manifest.json" % work)
     except Exception:
         pass  # the log must never stop narration
+
+
+def _render_via_worker(eng_file: Path, work: str, manifest: dict, sentences: list[str],
+                       parts_of: dict, sig: dict, quote_voice: str) -> int:
+    """KOKORO_ENGINE=cf-worker: the viapatrum-narrator Worker speaks, joins and
+    stores the mp3 on R2, and returns its key and sentence timings. Nothing is
+    downloaded or uploaded here. The Worker caches each spoken sentence, so a
+    corrected passage re-speaks only the sentences that changed."""
+    if not sentences:
+        return 0
+    from cf_tts import narrate_passage, SPEAKER as CF_SPEAKER
+    job = []
+    for i, sentence in enumerate(sentences):
+        if i in parts_of:
+            job.append({"text": speak_text(sentence),
+                        "parts": [{"text": speak_text(t), "quote": bool(q)} for t, q in parts_of[i]]})
+        else:
+            job.append({"text": speak_text(sentence)})
+    print("  %s cf-worker %d sentences (%s%s)"
+          % (eng_file.stem, len(sentences), CF_SPEAKER,
+             ", %d with quotations in %s" % (len(parts_of), quote_voice) if quote_voice else ""), flush=True)
+    result = narrate_passage(work, eng_file.stem, job, CF_SPEAKER, quote_voice)
+    manifest["passages"][eng_file.stem] = {
+        "audio": "%s/%s" % (AUDIO_PUBLIC, result["key"]),
+        "r2_key": result["key"],
+        "bytes": result["bytes"],
+        "voice": _voice_name(),
+        "quote_voice": quote_voice or None,
+        "sentences": [dict({"t": s, "s": r["s"], "e": r["e"]}, **({"q": sig[i]} if i in sig else {}))
+                      for i, (s, r) in enumerate(zip(sentences, result["sentences"]))],
+    }
+    units, spoken = int(result.get("units", 0)), int(result.get("spoken", 0))
+    print("rendered %s: %d sentences -> %s (%d of %d parts spoken, rest cached)"
+          % (eng_file.stem, len(sentences), result["key"], spoken, units), flush=True)
+    _audit(work, eng_file.stem, len(sentences), units - spoken, spoken)
     return len(sentences)
 
 
@@ -532,7 +636,158 @@ def render_next() -> int:
     return 0
 
 
+QUEUE = BOOKS.parent / "outputs" / "work-pipeline" / "queue.json"
+
+
+def _queue_tiers() -> dict[str, int]:
+    """Work slug -> narration tier from the translation queue.
+    0 certified (its text is final), 2 still running (its text will change
+    again, so audio now is likely read twice). Works not listed are tier 1."""
+    try:
+        rows = json.loads(QUEUE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    tiers = {}
+    for slug, row in (rows.items() if isinstance(rows, dict) else ()):
+        result = (row or {}).get("result") if isinstance(row, dict) else None
+        tiers[slug] = 0 if result == "certified" else 2 if result == "running" else 1
+    return tiers
+
+
+def _sentence_count(work: str, stems=None) -> int:
+    """Sentences the narrator would speak for these English files (all when None)."""
+    folder = BOOKS / work / "translations"
+    total = 0
+    for eng_file in sorted(folder.glob("*_english.json")) if folder.is_dir() else ():
+        if stems is not None and eng_file.stem not in stems:
+            continue
+        try:
+            rows = json.loads(eng_file.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        rows = rows if isinstance(rows, list) else rows.get("sections", [])
+        for row in rows:
+            for para in row.get("english", []) or []:
+                total += len(split_sentences(read_text(para)))
+    return total
+
+
+def _next_item() -> str:
+    """One unit of work under the held lock: 'stale', 'book' or 'idle'.
+
+    Order (efficiency sweep 2026-10-03): stale stems before new books;
+    certified works first, works still in the translation pipeline last;
+    fewest sentences first inside a tier, so cheap fixes clear quickly."""
+    published = ROOT / "dist" / "works"
+    if not published.is_dir():
+        return "idle"
+    tiers = _queue_tiers()
+    stale = []
+    for manifest_path in sorted(OUT.glob("*/manifest.json")):
+        stems = stale_stems(manifest_path.parent.name)
+        if not stems:
+            continue
+        work = manifest_path.parent.name
+        manifest = json.loads(manifest_path.read_text())
+        voices = {e.get("voice") or manifest.get("voice")
+                  for e in (manifest.get("passages") or {}).values()}
+        revoice = bool(voices - {_voice_name()})
+        size = _sentence_count(work, None if revoice else set(stems))
+        stale.append((tiers.get(work, 1), size, work, stems, voices, revoice))
+    if stale:
+        _tier, _size, work, stems, voices, revoice = min(stale, key=lambda s: s[:3])
+        if revoice:
+            # One narrator per work: an older voice is re-read in full
+            # rather than mixed with the current one (owner 2026-10-03).
+            print("revoice %s (%s -> %s)" % (work, ",".join(sorted(v for v in voices if v)), _voice_name()), flush=True)
+            render_book(work)
+        else:
+            print("restem %s: %s" % (work, " ".join(stems)), flush=True)
+            _render_stems_locked(work, stems)
+        return "stale"
+    candidates = []
+    for work_dir in published.iterdir():
+        if not work_dir.is_dir() or (OUT / work_dir.name / "manifest.json").is_file():
+            continue
+        words, scaffold = _work_words(work_dir.name)
+        if scaffold or words < 40 or words > MAX_WORDS:
+            continue
+        candidates.append((tiers.get(work_dir.name, 1), words, work_dir.name))
+    if not candidates:
+        return _quote_voice_item()
+    _tier, words, slug = sorted(candidates)[0]
+    print("next audiobook: %s (%d words)" % (slug, words), flush=True)
+    render_book(slug)
+    return "book"
+
+
+def _quote_voice_item() -> str:
+    """Re-read works recorded before Bible quotations had their own voice.
+    Same narrator: only quotation sentences are spoken again. An older
+    narrator: the whole work is re-read so one book never mixes narrators."""
+    import os
+    qv = os.environ.get("CF_TTS_QUOTE_VOICE", "")
+    if not qv or os.environ.get("KOKORO_ENGINE") not in CF_ENGINES:
+        return "idle"
+    for manifest_path in sorted(OUT.glob("*/manifest.json")):
+        work = manifest_path.parent.name
+        if not (BOOKS / work / "translations").is_dir():
+            continue
+        m = json.loads(manifest_path.read_text(encoding="utf-8"))
+        passages = m.get("passages") or {}
+        behind = [k for k, v in passages.items() if v.get("quote_voice") != qv]
+        if not behind:
+            continue
+        voices = {v.get("voice") or m.get("voice") for v in passages.values()}
+        if voices - {_voice_name()}:
+            print("revoice %s for quotation voice" % work, flush=True)
+            render_book(work)
+        else:
+            print("quotation voice %s: %s" % (work, " ".join(behind)), flush=True)
+            _render_stems_locked(work, behind)
+        return "quotes"
+    return "idle"
+
+
+def drain(budget_s: int = 3 * 3600) -> int:
+    """Render stale and missing audio back to back until none is left or the
+    budget runs out (owner 2026-10-03: audio for all missing or corrected
+    sections). Waits out ships and memory spikes instead of skipping 15 min."""
+    import os
+    import time
+    lock_fd = _hold_next_lock()
+    if lock_fd is None:
+        print("audio drain: another narrator holds the lock", flush=True)
+        return 0
+    t0, done = time.time(), {"stale": 0, "book": 0, "quotes": 0}
+    try:
+        while time.time() - t0 < budget_s:
+            level, heat, shipping = _pressure_level(), _memory_heat(), _ship_busy()
+            if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
+                # Cloudflare does the speaking: Mini memory is not at stake, so
+                # only wait while a ship is rebuilding the pages audio is matched
+                # against (2026-10-03: a 4-hour ship had paused all narration).
+                level, heat = 0, 0
+                shipping = shipping and not (ROOT / "dist" / "works").is_dir()
+            if level >= 2 or heat >= 30 or shipping:
+                print("audio drain waiting: level %s heat %s ship %s" % (level, heat, shipping), flush=True)
+                time.sleep(60)
+                continue
+            what = _next_item()
+            if what == "idle":
+                print("audio drain: nothing left to read", flush=True)
+                break
+            done[what] += 1
+    finally:
+        os.close(lock_fd)
+    print("audio drain: %d stale files re-read, %d new audiobooks, %d works given the quotation voice, %.0f min"
+          % (done["stale"], done["book"], done["quotes"], (time.time() - t0) / 60), flush=True)
+    return 0
+
+
 def main(argv: list[str]) -> int:
+    if len(argv) == 2 and argv[1] == "--drain":
+        return drain()
     if len(argv) == 2 and argv[1] == "--next":
         return render_next()
     if len(argv) >= 4 and argv[1] == "--stems":

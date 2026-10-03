@@ -1,0 +1,1712 @@
+[
+  {
+    "id": "papal-primacy",
+    "name": "Papal primacy",
+    "traditions": [
+      "catholic"
+    ],
+    "rejected_by": [
+      "orthodox",
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "First Vatican Council, Pastor Aeternus, ch. 1 (1870)",
+        "quote": "a primacy of jurisdiction over the whole church of God was immediately and directly promised to the blessed apostle Peter and conferred on him by Christ the lord.",
+        "url": "https://www.papalencyclicals.net/councils/ecum20.htm"
+      },
+      {
+        "source": "First Vatican Council, Pastor Aeternus, ch. 2 (1870)",
+        "quote": "Therefore whoever succeeds to the chair of Peter obtains by the institution of Christ himself, the primacy of Peter over the whole church.",
+        "url": "https://www.papalencyclicals.net/councils/ecum20.htm"
+      },
+      {
+        "source": "Council of Florence, Laetentur Caeli (1439)",
+        "quote": "the holy apostolic see and the Roman pontiff holds the primacy over the whole world and the Roman pontiff is the successor of blessed Peter prince of the apostles",
+        "url": "https://www.papalencyclicals.net/councils/ecum17.htm"
+      }
+    ],
+    "proposition": "The bishop of Rome, as successor of Peter, holds by Christ's institution a primacy of jurisdiction over the whole Church, not only a primacy of honor.",
+    "elements": [
+      "Christ gave Peter a primacy among the apostles that included authority, not only honor",
+      "This primacy passes to Peter's successors in the see of Rome",
+      "The Roman bishop's authority extends over the whole Church, not only his own region",
+      "Other churches and bishops must agree with, or may be judged by, the Roman see"
+    ],
+    "precursors": [
+      "Peter as first or leader among the apostles",
+      "Rome as a church of special apostolic standing because Peter and Paul taught and died there",
+      "Communion with Rome as a mark of sound faith",
+      "Appeals or letters sent to the Roman bishop from other regions",
+      "Rome having the first place of honor among the great sees"
+    ],
+    "incompatible": [
+      "All bishops are equal in authority and none may judge another",
+      "The Roman bishop's rank comes only from the city's civil importance",
+      "The rock of Matthew 16 is Peter's faith or confession only, with no office passed to successors",
+      "A council may overrule or depose the Roman bishop as a superior authority"
+    ],
+    "queries": [
+      "chair of Peter",
+      "successor of Peter",
+      "the church of the Romans presides",
+      "Rome presides in love",
+      "Peter the rock on which the church is built",
+      "the apostolic see",
+      "appeal to the bishop of Rome",
+      "keys of the kingdom given to Peter",
+      "first among the apostles",
+      "bishop of Rome judges other bishops"
+    ],
+    "first_defined": "Council of Florence, Laetentur Caeli (1439); defined in full at the First Vatican Council, Pastor Aeternus (1870)"
+  },
+  {
+    "id": "papal-infallibility",
+    "name": "Papal infallibility",
+    "traditions": [
+      "catholic"
+    ],
+    "rejected_by": [
+      "orthodox",
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "First Vatican Council, Pastor Aeternus, ch. 4 (1870)",
+        "quote": "when the Roman pontiff speaks EX CATHEDRA, that is, when, in the exercise of his office as shepherd and teacher of all Christians, in virtue of his supreme apostolic authority, he defines a doctrine concerning faith or morals to be held by the whole church, he possesses ... that infallibility which the divine Redeemer willed his church to enjoy",
+        "url": "https://www.papalencyclicals.net/councils/ecum20.htm"
+      },
+      {
+        "source": "First Vatican Council, Pastor Aeternus, ch. 4 (1870)",
+        "quote": "such definitions of the Roman pontiff are of themselves, and not by the consent of the church, irreformable.",
+        "url": "https://www.papalencyclicals.net/councils/ecum20.htm"
+      }
+    ],
+    "proposition": "When the bishop of Rome solemnly defines a doctrine of faith or morals for the whole Church, he is protected from error, and such a definition does not depend on the later consent of the Church.",
+    "elements": [
+      "The Roman see or its bishop cannot err in faith when teaching the whole Church",
+      "This protection applies to solemn definitions, not to every statement",
+      "Such definitions are binding without needing confirmation by a council or by the churches"
+    ],
+    "precursors": [
+      "The Roman church has kept the apostolic faith without falling into doctrinal error",
+      "Rome's judgment cited as settling a doctrinal dispute",
+      "The Church as a whole cannot fail or be overcome by error",
+      "Peter's faith will not fail (Luke 22:32) applied to Rome"
+    ],
+    "incompatible": [
+      "A bishop of Rome taught error in faith and was rightly condemned for it",
+      "Rome's doctrinal decisions are binding only when received by a council or by the other churches",
+      "No single bishop, including Rome's, can settle a question of faith for the whole Church"
+    ],
+    "queries": [
+      "the Roman church has never erred",
+      "Rome has spoken the case is closed",
+      "the faith of Peter will not fail",
+      "the apostolic see kept the faith unstained",
+      "decision of the bishop of Rome on doctrine",
+      "a pope condemned for heresy",
+      "a council judging the bishop of Rome",
+      "confirmation of a council by Rome"
+    ],
+    "first_defined": "First Vatican Council, Pastor Aeternus, ch. 4 (18 July 1870)"
+  },
+  {
+    "id": "immaculate-conception",
+    "name": "Immaculate Conception of Mary",
+    "traditions": [
+      "catholic"
+    ],
+    "rejected_by": [],
+    "defined": [
+      {
+        "source": "Pius IX, Ineffabilis Deus (1854)",
+        "quote": "the most Blessed Virgin Mary, in the first instance of her conception, by a singular grace and privilege granted by Almighty God, in view of the merits of Jesus Christ, the Savior of the human race, was preserved free from all stain of original sin",
+        "url": "https://www.papalencyclicals.net/pius09/p9ineff.htm"
+      }
+    ],
+    "proposition": "Mary was preserved from original sin from the first moment of her conception, by a unique grace given in view of Christ's merits.",
+    "elements": [
+      "Mary was without original sin, not only without personal sin",
+      "This freedom from original sin began at her conception, not at a later cleansing",
+      "It was a grace that depended on Christ's redemption"
+    ],
+    "precursors": [
+      "Mary as wholly holy, pure, or spotless",
+      "Mary as the new Eve, contrasted with Eve's disobedience",
+      "Mary never committed personal sin",
+      "Mary as the pure dwelling or temple prepared for the Word"
+    ],
+    "incompatible": [
+      "Mary was conceived in original sin like all other people",
+      "Mary was cleansed of sin only at the Annunciation or at some later time",
+      "Mary committed personal sins or faults, such as doubt or vanity",
+      "Christ alone of all human beings was conceived without sin"
+    ],
+    "queries": [
+      "Mary all holy and spotless",
+      "the virgin free from every stain",
+      "Mary the new Eve",
+      "Mary never sinned",
+      "Mary conceived without sin",
+      "Mary's doubt at the cross",
+      "Christ alone was born without sin",
+      "Mary cleansed by the Holy Spirit",
+      "the pure temple of the Word"
+    ],
+    "first_defined": "Pius IX, Ineffabilis Deus (8 December 1854)",
+    "notes": "No council of another tradition has formally condemned this doctrine (most of their confessions predate 1854), so rejected_by is empty; Orthodox and Protestant writers widely reject it."
+  },
+  {
+    "id": "assumption-of-mary",
+    "name": "Assumption of Mary",
+    "traditions": [
+      "catholic"
+    ],
+    "rejected_by": [],
+    "defined": [
+      {
+        "source": "Pius XII, Munificentissimus Deus, 44 (1950)",
+        "quote": "that the Immaculate Mother of God, the ever Virgin Mary, having completed the course of her earthly life, was assumed body and soul into heavenly glory.",
+        "url": "https://www.vatican.va/content/pius-xii/en/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html"
+      }
+    ],
+    "proposition": "At the end of her earthly life, Mary was taken up body and soul into heavenly glory.",
+    "elements": [
+      "Mary's earthly life came to an end (by death or otherwise)",
+      "Her body did not remain on earth or decay",
+      "She was taken, body and soul, into heaven"
+    ],
+    "precursors": [
+      "Mary's death or 'falling asleep' (Dormition) told as a special event",
+      "Mary's body was kept from decay because it bore Christ",
+      "Mary's tomb found empty",
+      "Mary's exalted place in heaven"
+    ],
+    "incompatible": [
+      "Mary's body lies buried and awaits the general resurrection like others",
+      "No one knows how Mary's life ended and nothing should be claimed",
+      "Mary's relics or body are venerated at a known grave"
+    ],
+    "queries": [
+      "death of the virgin Mary",
+      "falling asleep of the Mother of God",
+      "Mary's body taken up into heaven",
+      "Mary's tomb found empty",
+      "Mary's body did not see corruption",
+      "end of Mary's life",
+      "Mary assumed into heaven",
+      "Mary died a martyr"
+    ],
+    "first_defined": "Pius XII, Munificentissimus Deus (1 November 1950)",
+    "notes": "The Orthodox celebrate the Dormition and generally hold that Mary was taken bodily to heaven, but have not defined it as dogma; Protestant confessions do not address it formally."
+  },
+  {
+    "id": "purgatory",
+    "name": "Purgatory",
+    "traditions": [
+      "catholic"
+    ],
+    "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 25, Decree concerning Purgatory (1563)",
+        "quote": "there is a Purgatory, and that the souls there detained are helped by the suffrages of the faithful, but principally by the acceptable sacrifice of the altar",
+        "url": "https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm"
+      },
+      {
+        "source": "Catechism of the Catholic Church, 1030",
+        "quote": "All who die in God's grace and friendship, but still imperfectly purified, are indeed assured of their eternal salvation; but after death they undergo purification, so as to achieve the holiness necessary to enter the joy of heaven.",
+        "url": "https://www.vatican.va/archive/ENG0015/__P2N.HTM"
+      }
+    ],
+    "proposition": "Some who die in God's grace are not yet fully purified and undergo a purification after death, during which the prayers and offerings of the living help them.",
+    "elements": [
+      "Some of the saved need purification after death before entering heaven",
+      "This purification involves a temporary punishment or cleansing (often described as fire)",
+      "Prayers, alms and the Eucharist offered by the living help the dead",
+      "This state is distinct from, and temporary unlike, the punishment of the damned"
+    ],
+    "precursors": [
+      "Prayer for the dead, and offering the Eucharist for them",
+      "A cleansing fire after death (e.g. readings of 1 Corinthians 3:15)",
+      "Sins forgiven in the age to come (Matthew 12:32)",
+      "An intermediate state of souls before the final judgment"
+    ],
+    "incompatible": [
+      "At death every soul goes directly to final rest or final punishment with no cleansing between",
+      "Prayers for the dead cannot help them",
+      "Nothing remains to be purged in anyone who dies in faith"
+    ],
+    "queries": [
+      "prayer for the dead",
+      "offering for those who have fallen asleep",
+      "purifying fire after death",
+      "saved yet so as through fire",
+      "sins forgiven in the world to come",
+      "souls cleansed after death",
+      "the Eucharist offered for the departed",
+      "commemoration of the dead at the altar",
+      "light punishment after death"
+    ],
+    "first_defined": "Council of Lyon II (1274) and Council of Florence (1439); Council of Trent, Session 25 (1563)",
+    "notes": "The Orthodox pray for the dead and the Synod of Jerusalem (1672, Decree 18) speaks of release from Hades through prayers and the Eucharist, but Orthodox theologians reject the Latin account of purgatorial satisfaction; Orthodoxy is left out of rejected_by because no Orthodox council condemns it by name."
+  },
+  {
+    "id": "transubstantiation",
+    "name": "Transubstantiation",
+    "traditions": [
+      "catholic"
+    ],
+    "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 13, Canon 2 (1551)",
+        "quote": "that wonderful and singular conversion of the whole substance of the bread into the Body, and of the whole substance of the wine into the Blood-the species Only of the bread and wine remaining-which conversion indeed the Catholic Church most aptly calls Transubstantiation",
+        "url": "https://www.papalencyclicals.net/councils/trent/thirteenth-session.htm"
+      },
+      {
+        "source": "Council of Trent, Session 13, ch. 1 (1551)",
+        "quote": "He be, in many other places, sacramentally present to us in his own substance, by a manner of existing, which, though we can scarcely express it in words",
+        "url": "https://www.papalencyclicals.net/councils/trent/thirteenth-session.htm"
+      },
+      {
+        "source": "Catechism of the Catholic Church, 1376 (quoting Trent)",
+        "quote": "by the consecration of the bread and wine there takes place a change of the whole substance of the bread into the substance of the body of Christ our Lord",
+        "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM"
+      }
+    ],
+    "proposition": "At the consecration the whole substance of the bread and wine is converted into the substance of Christ's body and blood, while the appearances (species), meaning everything the senses or any physical test can detect, remain unchanged; so the change is not a physical or chemical one.",
+    "elements": [
+      "The underlying substance of the bread and wine is converted into the substance of Christ's body and blood",
+      "No substance of bread or wine remains after the consecration",
+      "The appearances (species) of bread and wine remain: everything the senses can test is unchanged",
+      "Christ is present 'substantially', not locally or physically as a body occupies space"
+    ],
+    "precursors": [
+      "The bread and wine truly become the body and blood of Christ (realist change language)",
+      "The Eucharist is the flesh and blood of Christ",
+      "The bread and wine are changed, transformed or 'made' the body and blood by the word or the Spirit",
+      "What looks and tastes like bread is not bread to faith",
+      "A change of the nature of the elements, contrasted with how they appear"
+    ],
+    "incompatible": [
+      "The bread remains bread after consecration, with Christ present alongside or in it",
+      "The bread and wine are only figures, signs or symbols of the body and blood",
+      "Christ's body is in heaven and is received only spiritually by faith",
+      "The bread and wine are changed in their physical appearance or matter"
+    ],
+    "queries": [
+      "the bread becomes the body of Christ",
+      "bread changed into the body",
+      "it is not bread though it seems bread",
+      "the elements are transformed",
+      "figure of his body",
+      "symbol of the body and blood",
+      "the word changes the bread",
+      "consecration of the bread and wine",
+      "flesh of Christ in the Eucharist"
+    ],
+    "grading_rules": [
+      "Realist language ('becomes', 'is changed into', 'is the body') without the substance/appearance distinction is at most precursor here."
+    ],
+    "first_defined": "Fourth Lateran Council (1215) used the term; Council of Trent, Session 13 (1551) defined it",
+    "notes": "The shared belief that the gifts truly become Christ's body and blood is graded under 'eucharistic-change'; this entry tests only the Latin explanation by substance and appearances. The Orthodox Synod of Jerusalem (1672, Decree 17) used 'transubstantiated', and Philaret's Longer Catechism (q. 340) keeps the word while denying that it defines the manner of the change; so Orthodoxy is in neither list."
+  },
+  {
+    "id": "eucharistic-change",
+    "name": "Real change of the bread and wine",
+    "traditions": [
+      "catholic",
+      "orthodox"
+    ],
+    "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Longer Catechism of St Philaret of Moscow, q. 340 (1830s)",
+        "quote": "the word transubstantiation is not to be taken to define the manner in which the bread and wine are changed into the Body and Blood of the Lord; for this none can understand but God",
+        "url": "http://www.pravoslavieto.com/docs/eng/Orthodox_Catechism_of_Philaret.htm"
+      },
+      {
+        "source": "Divine Liturgy of St John Chrysostom, Epiclesis",
+        "quote": "And make this bread the precious Body of Your Christ. ... And that which is in this cup the precious Blood of Your Christ. ... Changing them by Your Holy Spirit.",
+        "url": "https://www.ewtn.com/catholicism/library/divine-liturgy-of-st-john-chrysostom-11120"
+      },
+      {
+        "source": "Catechism of the Catholic Church, 1375",
+        "quote": "It is by the conversion of the bread and wine into Christ's body and blood that Christ becomes present in this sacrament.",
+        "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM"
+      }
+    ],
+    "proposition": "At the consecration the bread and wine truly become, by God's action, the body and blood of Christ, so that they are no longer simply bread and wine, without any claim about how the change happens.",
+    "elements": [
+      "The bread and wine are changed (become, are made) into Christ's body and blood",
+      "The change is real, not only a change in meaning or use",
+      "God (by the Spirit or by Christ's word) brings about the change at the consecration",
+      "After the change the gifts are no longer simply bread and wine"
+    ],
+    "precursors": [
+      "The Eucharist is called the flesh and blood of Christ",
+      "The gifts are 'no longer common bread' after the prayer of thanksgiving",
+      "Calling down the Spirit or the Word on the offered gifts"
+    ],
+    "incompatible": [
+      "The bread and wine remain unchanged in their nature, with Christ's body present together with them",
+      "The bread and wine are only figures, signs or symbols of the body and blood",
+      "Christ's body is in heaven and is received only spiritually by faith",
+      "The change is only in the use or meaning of the bread, not in what it is"
+    ],
+    "queries": [
+      "the bread becomes the body of Christ",
+      "changed into the body and blood",
+      "no longer common bread",
+      "send down your Spirit upon these gifts",
+      "the Word makes the bread his body",
+      "the elements are transformed",
+      "figure of his body",
+      "symbol of the body and blood",
+      "the nature of the bread is changed"
+    ],
+    "grading_rules": [
+      "Realist language ('becomes', 'is changed into', 'is made') counts as explicit here; no account of the manner is required.",
+      "'This is my body' or 'the body of Christ' with no word of change or becoming is at most partial."
+    ],
+    "first_defined": "Not defined as a separate dogma; the change is prayed for in the eastern epiclesis and stated by the Fourth Lateran Council (1215), the Council of Trent (1551) and the Synod of Jerusalem (1672)",
+    "notes": "Kept apart from 'transubstantiation' so the belief Catholics and Orthodox share is not tied to the Latin explanation. Lutherans are in rejected_by because the Formula of Concord (Solid Declaration VII.35) speaks of 'the unchanged essence of the bread', though they affirm the true body is present (see 'sacramental-union'). Anglican Article XXVIII rejects 'the change of the substance of Bread and Wine'."
+  },
+  {
+    "id": "sacramental-union",
+    "name": "Sacramental union (Lutheran real presence)",
+    "traditions": [
+      "lutheran"
+    ],
+    "rejected_by": [
+      "catholic",
+      "reformed",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Augsburg Confession, Article X (1530)",
+        "quote": "Of the Supper of the Lord they teach that the Body and Blood of Christ are truly present, and are distributed to those who eat the Supper of the Lord",
+        "url": "https://bookofconcord.org/augsburg-confession/"
+      },
+      {
+        "source": "Formula of Concord, Epitome VII.6 (1577)",
+        "quote": "We believe, teach, and confess that in the Holy Supper the body and blood of Christ are truly and essentially present, and are truly distributed and received with the bread and wine.",
+        "url": "https://bookofconcord.org/formula-of-concord-epitome/"
+      },
+      {
+        "source": "Formula of Concord, Solid Declaration VII.35 (1577)",
+        "quote": "under the bread, with the bread, in the bread [the body of Christ is present and offered], are employed, is that by means of them the papistical transubstantiation may be rejected and the sacramental union of the unchanged essence of the bread and of the body of Christ indicated",
+        "url": "https://bookofconcord.org/formula-of-concord-solid-declaration/the-holy-supper/"
+      }
+    ],
+    "proposition": "In the Lord's Supper Christ's true body and blood are present in, with and under the bread and wine, which remain bread and wine, and are received by the mouth by all who eat, worthy or unworthy.",
+    "elements": [
+      "Christ's true body and blood are present in the Supper, not only symbolized or received by faith",
+      "The bread and wine remain bread and wine in their essence (no change of substance)",
+      "Body and bread are joined in a sacramental union, so that the bread can be called the body",
+      "The body is received orally, even by unworthy communicants"
+    ],
+    "precursors": [
+      "The Eucharist is called the flesh and blood of Christ",
+      "The Eucharist consists of two realities, an earthly and a heavenly",
+      "The bread keeps its nature after consecration, compared to Christ's human nature kept in the Incarnation",
+      "Unworthy communicants also receive the body, to their judgment"
+    ],
+    "incompatible": [
+      "The bread and wine are changed so that no bread or wine remains",
+      "The bread and wine are only figures, signs or symbols of the body and blood",
+      "Christ's body is in heaven and is received only spiritually by faith; the unworthy receive only bread"
+    ],
+    "queries": [
+      "two realities earthly and heavenly",
+      "the nature of bread remains",
+      "bread and body like the two natures of Christ",
+      "the body of Christ received with the bread",
+      "the unworthy eat the body to judgment",
+      "this is my body",
+      "figure of his body",
+      "the bread becomes the body of Christ"
+    ],
+    "grading_rules": [
+      "A passage counts as explicit only if it holds both that the true body is present and that the bread remains bread.",
+      "Realist language alone ('is the body', 'becomes the body') is at most precursor here."
+    ],
+    "first_defined": "Augsburg Confession, Article X (1530); Formula of Concord, Article VII (1577)",
+    "notes": "Lutherans reject the label 'consubstantiation', which outsiders often use for this view, so the entry uses their own term. The Orthodox are left out of rejected_by because no Orthodox council condemns it by name, though the Synod of Jerusalem (Decree 17) rejects Lutheran 'impanation'. Anglican Article XXVIII is left out because Anglican views vary."
+  },
+  {
+    "id": "indulgences",
+    "name": "Indulgences",
+    "traditions": [
+      "catholic"
+    ],
+    "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 25, Decree concerning Indulgences (1563)",
+        "quote": "the power of conferring Indulgences was granted by Christ to the Church; and she has, even in the most ancient times, used the said power",
+        "url": "https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm"
+      },
+      {
+        "source": "Catechism of the Catholic Church, 1471",
+        "quote": "An indulgence is a remission before God of the temporal punishment due to sins whose guilt has already been forgiven",
+        "url": "https://www.vatican.va/archive/ENG0015/__P4G.HTM"
+      }
+    ],
+    "proposition": "The Church has authority to grant remission of temporal punishment still owed for sins already forgiven, drawing on the merits of Christ and the saints.",
+    "elements": [
+      "After guilt is forgiven, some temporal punishment for sin may remain",
+      "The Church can remit that punishment by its authority",
+      "The remission draws on a treasury of the merits of Christ and the saints",
+      "Such remission can be applied to the living and (by way of prayer) to the dead"
+    ],
+    "precursors": [
+      "Penances imposed for sin could be shortened or relaxed by the bishop",
+      "Martyrs and confessors interceding for lapsed Christians to be restored early",
+      "Satisfaction for sins after baptism through fasting, alms and penance",
+      "The merits or prayers of the saints helping other believers"
+    ],
+    "incompatible": [
+      "Once God forgives sin no punishment of any kind remains",
+      "No person or church can lessen the penalty God assigns",
+      "The merits of the saints cannot benefit anyone else"
+    ],
+    "queries": [
+      "relaxing the penance of the lapsed",
+      "letters of peace from the martyrs",
+      "shortening the time of penance",
+      "satisfaction for sins after baptism",
+      "the bishop remits the penance",
+      "merits of the martyrs for sinners",
+      "temporal punishment for sin",
+      "readmitting the fallen to communion"
+    ],
+    "first_defined": "Clement VI, Unigenitus (1343); Council of Trent, Session 25 (1563)"
+  },
+  {
+    "id": "icon-veneration",
+    "name": "Veneration of icons",
+    "traditions": [
+      "orthodox",
+      "catholic"
+    ],
+    "rejected_by": [
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Second Council of Nicaea, Definition (787)",
+        "quote": "Certainly this is not the full adoration {latria} in accordance with our faith, which is properly paid only to the divine nature",
+        "url": "https://www.papalencyclicals.net/councils/ecum07.htm"
+      },
+      {
+        "source": "Second Council of Nicaea, Definition (787)",
+        "quote": "the honour paid to an image traverses it, reaching the model, and he who venerates the image, venerates the person represented in that image.",
+        "url": "https://www.papalencyclicals.net/councils/ecum07.htm"
+      },
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Question 4 (1672)",
+        "quote": "the honor paid to the Icon is not at all divided or at all different from [the honor paid to the one who] is portrayed",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      }
+    ],
+    "proposition": "Images of Christ, Mary, angels and saints should be set up and given honor (such as a kiss, bowing, incense or lights), an honor that passes to the person depicted and is distinct from the worship due to God alone.",
+    "elements": [
+      "Images of Christ and the saints may rightly be made and displayed in churches",
+      "These images should be honored with outward signs (kissing, bowing, lights, incense)",
+      "The honor given to an image passes to the person it depicts",
+      "This honor differs from the worship (latria) given to God alone"
+    ],
+    "precursors": [
+      "The Incarnation makes the invisible God visible",
+      "Honor given to an image of the emperor passes to the emperor",
+      "Pictures or symbols painted in churches or catacombs for teaching",
+      "Veneration of the cross, relics or the Gospel book"
+    ],
+    "incompatible": [
+      "It is wrong to paint images of Christ or the saints",
+      "Images must not be set up in churches",
+      "Bowing to or honoring any image is idolatry"
+    ],
+    "queries": [
+      "image of Christ",
+      "pictures painted on church walls",
+      "honor to the image passes to the original",
+      "image of the emperor",
+      "worship of images is idolatry",
+      "bowing before the cross",
+      "the invisible God made visible",
+      "kissing the holy images",
+      "likeness of the saints"
+    ],
+    "first_defined": "Second Council of Nicaea (787); reaffirmed at the 'Triumph of Orthodoxy' (843)",
+    "notes": "Catholics also accept Nicaea II. Lutheran confessions keep images but do not require their veneration, so Lutherans are in neither list. Article XXII of the Thirty-Nine Articles rejects the 'Romish' worship of images."
+  },
+  {
+    "id": "procession-from-the-father",
+    "name": "Procession of the Spirit from the Father (against the Filioque)",
+    "traditions": [
+      "orthodox"
+    ],
+    "rejected_by": [
+      "catholic"
+    ],
+    "defined": [
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 1 (1672)",
+        "quote": "the Holy Spirit proceeding from the Father, and consubstantial with the Father and the Son.",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+        "source": "Encyclical of the Eastern Patriarchs, 5 (1848)",
+        "quote": "The new doctrine, that \"the Holy Ghost proceedeth from the Father and the Son,\" is contrary to the memorable declaration of our LORD",
+        "url": "http://orthodoxinfo.com/ecumenism/encyc_1848.aspx"
+      },
+      {
+        "source": "Encyclical of the Eastern Patriarchs, 5.i (1848)",
+        "quote": "This novel opinion destroys the oneness from the One cause, and the diverse origin of the Persons of the Blessed Trinity",
+        "url": "http://orthodoxinfo.com/ecumenism/encyc_1848.aspx"
+      }
+    ],
+    "proposition": "The Holy Spirit takes his eternal origin from the Father alone as the single source and cause in the Trinity, and does not proceed eternally from the Son as well.",
+    "elements": [
+      "The Father is the one source or cause of both Son and Spirit",
+      "The Spirit's eternal procession is from the Father",
+      "The Son is not a co-source of the Spirit's eternal being",
+      "Nothing should be added to the Creed's 'who proceeds from the Father'"
+    ],
+    "precursors": [
+      "The Father as the one source (monarchy) of the Godhead",
+      "John 15:26 quoted as 'who proceeds from the Father' without mention of the Son",
+      "The Spirit is sent into the world by the Son (temporal mission) as distinct from eternal origin"
+    ],
+    "incompatible": [
+      "The Spirit proceeds from the Father and the Son",
+      "The Spirit has his being from the Son as well as from the Father",
+      "Father and Son are together one principle of the Spirit"
+    ],
+    "queries": [
+      "the Spirit proceeds from the Father",
+      "the Father the one source of the Godhead",
+      "the Father alone is cause",
+      "the Spirit is from the Father and the Son",
+      "the Spirit proceeds through the Son",
+      "the Spirit receives from the Son",
+      "one principle of the Godhead",
+      "the Spirit of the Son",
+      "the Spirit is sent by the Son"
+    ],
+    "first_defined": "No single conciliar definition; stated against the Latin addition by Photius (9th c.) and formally in the Encyclical of the Eastern Patriarchs (1848)",
+    "notes": "Hard case: early 'from the Father through the Son' language is claimed by both sides, so graders should mark it 'precursor' for neither or both, never 'explicit' or 'against'. Lutheran, Reformed and Anglican confessions also hold the Filioque, but only Rome has formally defined it against the East.",
+    "grading_rules": [
+      "The phrase 'from the Father through the Son' is at most precursor here, never explicit and never against."
+    ]
+  },
+  {
+    "id": "filioque",
+    "name": "Filioque (procession of the Spirit from the Father and the Son)",
+    "traditions": [
+      "catholic",
+      "lutheran",
+      "reformed",
+      "anglican"
+    ],
+    "rejected_by": [
+      "orthodox"
+    ],
+    "defined": [
+      {
+        "source": "Council of Florence, Laetentur Caeli (1439)",
+        "quote": "the holy Spirit is eternally from the Father and the Son, and has his essence and his subsistent being from the Father together with the Son, and proceeds from both eternally as from one principle and a single spiration.",
+        "url": "https://www.papalencyclicals.net/councils/ecum17.htm"
+      },
+      {
+        "source": "Westminster Confession of Faith, 2.3 (1646)",
+        "quote": "the Holy Ghost eternally proceeding from the Father and the Son.",
+        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+        "source": "Thirty-Nine Articles, Article V (1571)",
+        "quote": "The Holy Ghost, proceeding from the Father and the Son, is of one substance, majesty, and glory, with the Father and the Son, very and eternal God.",
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      }
+    ],
+    "proposition": "The Holy Spirit proceeds eternally from both the Father and the Son, as from one principle.",
+    "elements": [
+      "The Spirit's eternal procession (not only his sending into the world) is from the Son as well as the Father",
+      "Father and Son act as one principle in the Spirit's procession",
+      "The Son has this from the Father"
+    ],
+    "precursors": [
+      "The Spirit proceeds from the Father through the Son",
+      "The Spirit is called 'the Spirit of the Son' or 'of Christ'",
+      "The Spirit receives from the Son (John 16:14)",
+      "The Spirit is the bond of love between Father and Son"
+    ],
+    "incompatible": [
+      "The Spirit proceeds from the Father alone",
+      "The Father is the only cause of the Spirit's being",
+      "The Son has no part in the eternal origin of the Spirit"
+    ],
+    "queries": [
+      "the Spirit proceeds from the Father and the Son",
+      "the Spirit proceeds from both",
+      "the Spirit of the Son",
+      "the Spirit receives from the Son",
+      "through the Son the Spirit",
+      "bond of love between Father and Son",
+      "one principle of the Spirit",
+      "the Father alone is cause of the Spirit"
+    ],
+    "first_defined": "Third Council of Toledo (589, local); Council of Lyon II (1274) and Council of Florence (1439) for the Catholic Church",
+    "grading_rules": [
+      "The phrase 'from the Father through the Son' is at most precursor here, never explicit and never against."
+    ]
+  },
+  {
+    "id": "essence-energies",
+    "name": "Distinction between God's essence and energies",
+    "traditions": [
+      "orthodox"
+    ],
+    "rejected_by": [],
+    "defined": [
+      {
+        "source": "Metropolitan Hierotheos of Nafpaktos, on the Council of Constantinople of 1351 (2021)",
+        "quote": "The essence of God is uncreated and the energy of God is uncreated. The Three Persons of the Holy Trinity have the same divine essence, while we participate in the energy of God.",
+        "url": "https://www.johnsanidopoulos.com/2021/09/homilies-on-ecumenical-synods-ninth.html"
+      }
+    ],
+    "proposition": "God's essence is wholly beyond participation, while God's uncreated energies (operations) are truly God and are what creatures share in, without dividing God's simplicity.",
+    "elements": [
+      "God's essence cannot be known or shared by any creature",
+      "God's energies or operations are uncreated, not created effects",
+      "Creatures truly share in God through the energies (deification)",
+      "Distinguishing essence and energies does not divide God"
+    ],
+    "precursors": [
+      "We know God from his works or operations, not from his essence",
+      "God's essence is unknowable and unnamable",
+      "The saints become partakers of the divine nature (2 Peter 1:4)",
+      "The light seen at the Transfiguration as divine glory"
+    ],
+    "incompatible": [
+      "The blessed in heaven see God's very essence",
+      "Whatever is in God is simply God's essence with no real distinction",
+      "Grace given to creatures is a created gift only"
+    ],
+    "queries": [
+      "we know God from his operations",
+      "the essence of God is unknowable",
+      "partakers of the divine nature",
+      "the energies of God",
+      "the light of the Transfiguration",
+      "no one has seen God's essence",
+      "God is known by his works not his nature",
+      "becoming god by grace"
+    ],
+    "first_defined": "Councils of Constantinople (1341, 1347, 1351), whose decisions were added to the Synodikon of Orthodoxy",
+    "notes": "No official English text of the 1351 Tome or the Synodikon anathemas could be fetched; the quote is an Orthodox bishop's summary, not the council's words. Catholics have not formally condemned the distinction, so rejected_by is empty."
+  },
+  {
+    "id": "perpetual-virginity",
+    "name": "Perpetual virginity of Mary",
+    "traditions": [
+      "catholic",
+      "orthodox"
+    ],
+    "rejected_by": [],
+    "defined": [
+      {
+        "source": "Catechism of the Catholic Church, 499",
+        "quote": "The deepening of faith in the virginal motherhood led the Church to confess Mary's real and perpetual virginity even in the act of giving birth to the Son of God made man.",
+        "url": "https://www.vatican.va/archive/ENG0015/__P1K.HTM"
+      },
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 7 (1672)",
+        "quote": "being conceived of the Holy Spirit, in the womb of the ever-virgin Mary",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      }
+    ],
+    "proposition": "Mary remained a virgin before, during and after the birth of Jesus for her whole life, and had no other children.",
+    "elements": [
+      "Mary conceived Jesus as a virgin",
+      "Her virginity was kept in giving birth",
+      "She remained a virgin after Jesus' birth and bore no other children",
+      "The 'brothers of the Lord' were not Mary's sons"
+    ],
+    "precursors": [
+      "The virginal conception of Jesus",
+      "Mary called 'the Virgin' as a standing title",
+      "The 'brothers of the Lord' explained as Joseph's children or as cousins",
+      "Mary as a model for consecrated virgins"
+    ],
+    "incompatible": [
+      "After Jesus' birth Mary and Joseph had children together",
+      "The brothers of the Lord were Mary's own sons",
+      "Mary lived as a married woman with Joseph after Jesus' birth"
+    ],
+    "queries": [
+      "Mary ever virgin",
+      "the brothers of the Lord",
+      "Mary remained a virgin after giving birth",
+      "the virgin conceived and the virgin bore",
+      "Joseph's sons from a former wife",
+      "the closed gate of Ezekiel",
+      "Mary had other children",
+      "virgin in giving birth"
+    ],
+    "first_defined": "'Ever-virgin' used at the Second Council of Constantinople (553); Lateran Synod (649)",
+    "notes": "Luther and early Reformers held this belief and no major Protestant confession formally rejects it, so rejected_by is empty; many modern Protestants reject it in practice."
+  },
+  {
+    "id": "theotokos",
+    "name": "Mary as Mother of God (Theotokos)",
+    "traditions": [
+      "catholic",
+      "orthodox"
+    ],
+    "rejected_by": [],
+    "defined": [
+      {
+        "source": "Council of Ephesus, Cyril's First Anathema (431)",
+        "quote": "If anyone does not confess that Emmanuel is God in truth, and therefore that the holy virgin is the mother of God",
+        "url": "https://www.papalencyclicals.net/councils/ecum03.htm"
+      },
+      {
+        "source": "Council of Chalcedon, Definition of Faith (451)",
+        "quote": "in the last days the same for us and for our salvation from Mary, the virgin God-bearer as regards his humanity",
+        "url": "https://www.papalencyclicals.net/councils/ecum04.htm"
+      },
+      {
+        "source": "Catechism of the Catholic Church, 495",
+        "quote": "Hence the Church confesses that Mary is truly \"Mother of God\" (Theotokos).",
+        "url": "https://www.vatican.va/archive/ENG0015/__P1K.HTM"
+      }
+    ],
+    "proposition": "Because the one born of Mary is God the Word made flesh, Mary is rightly called Mother of God (Theotokos), not only mother of Christ's humanity.",
+    "elements": [
+      "The child born of Mary is one person, God the Word",
+      "Therefore Mary may be called Mother of God or God-bearer",
+      "The title is about Christ's identity, not about Mary being the source of his divinity"
+    ],
+    "precursors": [
+      "God was born of Mary / God was carried in Mary's womb",
+      "Mary as mother of the Lord (Luke 1:43)",
+      "Christ is one person, God and man, from Mary"
+    ],
+    "incompatible": [
+      "Mary should be called mother of Christ, not Mother of God",
+      "Mary bore only the man in whom God dwelt",
+      "God cannot be said to have been born"
+    ],
+    "queries": [
+      "Mother of God",
+      "God-bearer",
+      "God was born of a virgin",
+      "God carried in the womb of Mary",
+      "mother of Christ not of God",
+      "the Word born of the virgin",
+      "the mother of my Lord",
+      "Mary bore God in the flesh"
+    ],
+    "first_defined": "Council of Ephesus (431); confirmed at the Council of Chalcedon (451)",
+    "notes": "The title stands in the Chalcedonian Definition, which Lutheran, Reformed and Anglican confessions also receive; it is distinctive of Catholics and Orthodox mainly in devotional use. No tradition formally rejects it."
+  },
+  {
+    "id": "invocation-of-saints",
+    "name": "Invocation of the saints",
+    "traditions": [
+      "catholic",
+      "orthodox"
+    ],
+    "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 25, On the invocation of saints (1563)",
+        "quote": "the saints, who reign together with Christ, offer up their own prayers to God for men; that it is good and useful suppliantly to invoke them, and to have recourse to their prayers, aid, (and) help",
+        "url": "https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm"
+      },
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 8 (1672)",
+        "quote": "Notwithstanding, in [our] prayers and supplications unto Him, we say the Saints are intercessors, and, above all, the undefiled Mother of the very God the Word",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      }
+    ],
+    "proposition": "The saints in heaven pray for the living, and it is right for Christians to address the saints directly and ask for their prayers.",
+    "elements": [
+      "The departed saints are aware of and pray for those on earth",
+      "Christians may directly address departed saints",
+      "Asking saints for their prayers does not detract from Christ as the one mediator"
+    ],
+    "precursors": [
+      "The martyrs and departed saints pray for the Church",
+      "Remembering the saints at the Eucharist",
+      "Gathering at martyrs' tombs for their feast days",
+      "Asking living Christians to pray for one another"
+    ],
+    "incompatible": [
+      "Prayer must be addressed to God alone, never to a departed saint",
+      "The dead know nothing of what happens on earth",
+      "Calling on the saints takes honor from Christ the one mediator"
+    ],
+    "queries": [
+      "pray for us holy martyr",
+      "the martyrs intercede for us",
+      "remember us in your prayers blessed one",
+      "the saints pray for the living",
+      "do the dead know what happens here",
+      "prayer at the tomb of the martyr",
+      "pray to God alone",
+      "the saints as intercessors",
+      "feast of the martyr"
+    ],
+    "first_defined": "Second Council of Nicaea (787) assumes it; Council of Trent, Session 25 (1563); Synod of Jerusalem (1672)"
+  },
+  {
+    "id": "eucharistic-sacrifice",
+    "name": "The Eucharist as a sacrifice",
+    "traditions": [
+      "catholic",
+      "orthodox"
+    ],
+    "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 22, Canon 1 (1562)",
+        "quote": "If any one saith, that in the mass a true and proper sacriflce is not offered to God; or, that to be offered is nothing else but that Christ is given us to eat; let him be anathema.",
+        "url": "https://www.papalencyclicals.net/councils/trent/twenty-second-session.htm"
+      },
+      {
+        "source": "Catechism of the Catholic Church, 1367",
+        "quote": "The sacrifice of Christ and the sacrifice of the Eucharist are one single sacrifice",
+        "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM"
+      },
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 17 (1672)",
+        "quote": "it is a true and propitiatory Sacrifice offered for all Orthodox, living and dead",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      }
+    ],
+    "proposition": "In the Eucharist the Church offers to God a true sacrifice, one with Christ's sacrifice on the cross, which benefits the living and the dead.",
+    "elements": [
+      "The Eucharist is a sacrifice offered to God, not only a meal received",
+      "It is the same sacrifice as the cross, offered without bloodshed",
+      "It is offered by priests for the living and the dead and obtains mercy (propitiatory)"
+    ],
+    "precursors": [
+      "The Eucharist as the 'pure offering' of Malachi 1:11",
+      "The Eucharist called an offering, oblation or sacrifice of praise",
+      "The bishop or presbyter as one who 'offers the gifts'",
+      "The altar language used of the Lord's table"
+    ],
+    "incompatible": [
+      "In the Supper nothing is offered to God except praise and thanksgiving",
+      "Christ's sacrifice was once for all and is not offered again in any form",
+      "The Supper is only a remembrance of a past sacrifice"
+    ],
+    "queries": [
+      "the pure sacrifice of Malachi",
+      "offering the gifts",
+      "the unbloody sacrifice",
+      "offered for the dead",
+      "sacrifice of praise and thanksgiving",
+      "the altar of the church",
+      "the priest offers the body of Christ",
+      "the one sacrifice once for all",
+      "the Eucharist our sacrifice"
+    ],
+    "first_defined": "Council of Trent, Session 22 (1562); Synod of Jerusalem (1672)",
+    "notes": "Hard case: many early writers use 'sacrifice' and 'offering' for the Eucharist, and Protestants accept a 'sacrifice of praise'; graders should count only a sacrifice offered to God for sins or for the dead as 'explicit'.",
+    "grading_rules": [
+      "Calling the Eucharist an offering, sacrifice or thanksgiving is precursor; explicit needs a sacrifice offered to God for sins, or for the living and the dead."
+    ]
+  },
+  {
+    "id": "seven-sacraments",
+    "name": "Seven sacraments",
+    "traditions": [
+      "catholic",
+      "orthodox"
+    ],
+    "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 7, Canon 1 on the Sacraments (1547)",
+        "quote": "If any one saith, that the sacraments of the New Law were not all instituted by Jesus Christ, our Lord; or, that they are more, or less, than seven, to wit, Baptism, Confirmation, the Eucharist, Penance, Extreme Unction, Order, and Matrimony",
+        "url": "https://www.papalencyclicals.net/councils/trent/seventh-session.htm"
+      },
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 15 (1672)",
+        "quote": "We believe that there are in the Church Evangelical Mysteries [ i.e., Sacraments of the Gospel Dispensation], and that they are seven.",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      }
+    ],
+    "proposition": "Christ instituted exactly seven sacraments: baptism, confirmation (chrismation), Eucharist, penance, anointing of the sick, holy orders and marriage.",
+    "elements": [
+      "There is a defined class of sacraments (mysteries) instituted by Christ",
+      "Confirmation, penance, anointing, orders and marriage are sacraments alongside baptism and the Eucharist",
+      "The number is exactly seven"
+    ],
+    "precursors": [
+      "Anointing with chrism after baptism",
+      "Laying on of hands to ordain clergy",
+      "Anointing of the sick by presbyters (James 5:14)",
+      "Public penance and reconciliation by the bishop",
+      "Marriage called a mystery (Ephesians 5:32)"
+    ],
+    "incompatible": [
+      "Christ instituted only two sacraments, baptism and the Lord's Supper",
+      "Marriage, orders or anointing are good rites but not sacraments"
+    ],
+    "queries": [
+      "anointing with chrism after baptism",
+      "laying on of hands for the Spirit",
+      "anointing of the sick with oil",
+      "reconciliation of penitents",
+      "marriage a great mystery",
+      "ordination by the bishop",
+      "the mysteries of the church",
+      "two sacraments baptism and eucharist"
+    ],
+    "first_defined": "Council of Lyon II (1274); Council of Florence (1439); Council of Trent, Session 7 (1547)",
+    "notes": "No early writer lists exactly seven; the list dates from the 12th century (Peter Lombard). Expect mostly 'precursor' results, which is the honest outcome.",
+    "grading_rules": [
+      "Naming or honouring individual rites is precursor; explicit needs a fixed list of seven sacraments."
+    ]
+  },
+  {
+    "id": "sola-scriptura",
+    "name": "Scripture alone as final authority (sola scriptura)",
+    "traditions": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox"
+    ],
+    "defined": [
+      {
+        "source": "Formula of Concord, Epitome, Rule and Norm, 1 (1577)",
+        "quote": "the sole rule and standard according to which all dogmas together with [all] teachers should be estimated and judged are the prophetic and apostolic Scriptures of the Old and of the New Testament alone",
+        "url": "https://bookofconcord.org/formula-of-concord-epitome/"
+      },
+      {
+        "source": "Westminster Confession of Faith, 1.10 (1646)",
+        "quote": "The supreme judge by which all controversies of religion are to be determined, and all decrees of councils, opinions of ancient writers, doctrines of men, and private spirits, are to be examined, and in whose sentence we are to rest, can be no other but the Holy Spirit speaking in the Scripture.",
+        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+        "source": "Thirty-Nine Articles, Article VI (1571)",
+        "quote": "Holy Scripture containeth all things necessary to salvation: so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man, that it should be believed as an article of the Faith",
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      }
+    ],
+    "proposition": "Scripture is the only infallible rule of faith; councils, fathers and traditions are to be judged by it, and nothing not taught in or provable from Scripture may be required as necessary belief.",
+    "elements": [
+      "Scripture contains all that is necessary for salvation",
+      "Nothing may be required as an article of faith unless it can be proved from Scripture",
+      "Scripture is the final judge over councils, fathers and church traditions",
+      "Unwritten apostolic traditions are not a second, equal source of doctrine"
+    ],
+    "precursors": [
+      "Scripture is sufficient for teaching the faith",
+      "Doctrine must be proved from the Scriptures",
+      "Even a bishop's or council's teaching is to be tested by Scripture",
+      "Heretics are refuted from Scripture"
+    ],
+    "incompatible": [
+      "Some necessary doctrines are known only from unwritten apostolic tradition",
+      "Scripture and tradition are to be received with equal reverence",
+      "The Church's tradition or a council judges the meaning of Scripture with final authority"
+    ],
+    "queries": [
+      "the scriptures are sufficient",
+      "prove it from the scriptures",
+      "unwritten tradition of the apostles",
+      "do not believe me unless I prove it from scripture",
+      "the rule of faith",
+      "the canon of truth",
+      "tradition handed down without writing",
+      "we have the scriptures what need of more",
+      "councils must be judged by scripture"
+    ],
+    "first_defined": "Formula of Concord (1577); Thirty-Nine Articles (1563/1571); Westminster Confession (1646)",
+    "notes": "Hard case: early writers often call Scripture sufficient and also appeal to unwritten tradition and the 'rule of faith'. Graders must not treat praise of Scripture alone as 'explicit'; the doctrine's distinctive claim is that Scripture is the only final norm.",
+    "grading_rules": [
+      "Praise of Scripture as true, holy or sufficient is not explicit by itself; explicit needs Scripture set as the only binding rule. An appeal to unwritten tradition as binding counts as against."
+    ]
+  },
+  {
+    "id": "sola-fide",
+    "name": "Justification by faith alone (sola fide)",
+    "traditions": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox"
+    ],
+    "defined": [
+      {
+        "source": "Augsburg Confession, Article IV (1530)",
+        "quote": "men cannot be justified before God by their own strength, merits, or works, but are freely justified for Christ's sake, through faith",
+        "url": "https://bookofconcord.org/augsburg-confession/"
+      },
+      {
+        "source": "Thirty-Nine Articles, Article XI (1571)",
+        "quote": "We are accounted righteous before God, only for the merit of our Lord and Saviour Jesus Christ by Faith, and not for our own works or deservings: Wherefore, that we are justified by Faith only is a most wholesome Doctrine",
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      }
+    ],
+    "proposition": "A person is justified (declared righteous) before God through faith alone, apart from any works, though such faith then produces good works.",
+    "elements": [
+      "Justification is received through faith, not earned by works",
+      "Faith is the only means by which justification is received (no works joined to it as a cause)",
+      "Good works follow justification as its fruit, not as its ground"
+    ],
+    "precursors": [
+      "We are saved by faith, not by works (Paul's language repeated)",
+      "Justified by faith alone, used of the thief on the cross or of Abraham",
+      "Salvation is a free gift of grace",
+      "Works of the Law do not justify"
+    ],
+    "incompatible": [
+      "We are justified by faith and works together",
+      "Faith without love does not justify",
+      "Justification increases through good works"
+    ],
+    "queries": [
+      "justified by faith alone",
+      "saved by faith not by works",
+      "faith without works is dead",
+      "the thief on the cross was saved by faith",
+      "Abraham believed and it was counted as righteousness",
+      "free gift of grace",
+      "justified by works",
+      "faith working through love"
+    ],
+    "first_defined": "Augsburg Confession, Article IV (1530); Thirty-Nine Articles, Article XI (1563/1571)",
+    "notes": "Hard case: some early writers use the words 'faith alone' (sola fide) in contexts that may mean faith without the ritual Law, not the Reformation sense. Graders should check the meaning, not only the phrase. Trent (Session 6, Canon 9) and the Synod of Jerusalem (Decree 13) formally reject it.",
+    "grading_rules": [
+      "Judge the meaning, not the words: 'faith alone' used against works of the Mosaic law, or meaning faith as the start of salvation, is at most partial."
+    ]
+  },
+  {
+    "id": "imputed-righteousness",
+    "name": "Imputed righteousness",
+    "traditions": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox"
+    ],
+    "defined": [
+      {
+        "source": "Formula of Concord, Epitome, III.2 (1577)",
+        "quote": "that God forgives us our sins out of pure grace, without any work, merit, or worthiness of ours preceding, present, or following, that He presents and imputes to us the righteousness of Christ's obedience",
+        "url": "https://bookofconcord.org/formula-of-concord-epitome/"
+      },
+      {
+        "source": "Westminster Confession of Faith, 11.1 (1646)",
+        "quote": "not by infusing righteousness into them, but by pardoning their sins, and by accounting and accepting their persons as righteous",
+        "url": "https://www.opc.org/wcf.html"
+      }
+    ],
+    "proposition": "In justification God counts Christ's own righteousness as belonging to the believer, so that the believer is declared righteous on that basis, not because of a righteousness worked within him.",
+    "elements": [
+      "Justification is a declaration (legal verdict), not a process of inner renewal",
+      "The ground of the verdict is Christ's righteousness credited to the believer",
+      "Inner renewal (sanctification) follows but is not the basis of being justified"
+    ],
+    "precursors": [
+      "A 'sweet exchange': Christ takes our sin and we receive his righteousness",
+      "Faith reckoned as righteousness (Romans 4)",
+      "Sins not counted against the sinner",
+      "Justify used in a legal sense, to declare righteous"
+    ],
+    "incompatible": [
+      "To be justified is to be made righteous inwardly by grace poured into the heart",
+      "Our righteousness before God is the love the Spirit works in us"
+    ],
+    "queries": [
+      "the sweet exchange",
+      "his righteousness counted as ours",
+      "sins not reckoned",
+      "faith counted as righteousness",
+      "made righteous by the Spirit within",
+      "justify means to declare righteous",
+      "clothed in the righteousness of Christ",
+      "Christ became sin for us"
+    ],
+    "first_defined": "Formula of Concord (1577); Westminster Confession, 11.1 (1646)",
+    "notes": "Trent (Session 6, Canon 11) rejects justification 'by the sole imputation of the justice of Christ'."
+  },
+  {
+    "id": "double-predestination",
+    "name": "Double predestination",
+    "traditions": [
+      "reformed"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox",
+      "lutheran"
+    ],
+    "defined": [
+      {
+        "source": "Westminster Confession of Faith, 3.3 (1646)",
+        "quote": "By the decree of God, for the manifestation of his glory, some men and angels are predestinated unto everlasting life; and others foreordained to everlasting death.",
+        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+        "source": "Westminster Confession of Faith, 3.7 (1646)",
+        "quote": "The rest of mankind God was pleased, according to the unsearchable counsel of his own will, whereby he extendeth or withholdeth mercy, as he pleaseth, for the glory of his sovereign power over his creatures, to pass by",
+        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+        "source": "Canons of Dort, First Head, Article 15 (1619)",
+        "quote": "not all people have been chosen but that some have not been chosen or have been passed by in God's eternal election",
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort"
+      }
+    ],
+    "proposition": "Before creation God, by his free decree and not because of foreseen faith or works, chose some people for eternal life and passed by the rest, leaving them to just condemnation for their sins.",
+    "elements": [
+      "God's choice of the elect is unconditional, not based on foreseen faith or merit",
+      "God also decreed to pass by the non-elect",
+      "The non-elect are condemned for their own sins",
+      "The number of the elect is fixed"
+    ],
+    "precursors": [
+      "Election by grace, not by works",
+      "God gives perseverance only to some, for reasons hidden in his will",
+      "A fixed number of the predestined",
+      "The 'mass of perdition' from which God freely saves some"
+    ],
+    "incompatible": [
+      "God predestines people because he foresees their faith or merits",
+      "God wills all people to be saved and gives all sufficient grace",
+      "No one is passed over by God; each decides his own end"
+    ],
+    "queries": [
+      "predestined to eternal life",
+      "the number of the elect",
+      "mass of perdition",
+      "vessels of wrath",
+      "God foresaw who would believe",
+      "God wills all to be saved",
+      "election not by works but by grace",
+      "gift of perseverance",
+      "Jacob I loved Esau I hated"
+    ],
+    "first_defined": "Synod of Dort (1619); Westminster Confession (1646)",
+    "notes": "The Second London Baptist Confession (1689, ch. 3) holds a similar view, so Particular (Reformed) Baptists share it. Formula of Concord, Epitome XI.4 limits predestination to 'the godly, beloved children of God'."
+  },
+  {
+    "id": "spiritual-presence",
+    "name": "Spiritual real presence in the Lord's Supper",
+    "traditions": [
+      "reformed",
+      "anglican"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox",
+      "lutheran"
+    ],
+    "defined": [
+      {
+        "source": "Westminster Confession of Faith, 29.7 (1646)",
+        "quote": "the body and blood of Christ being then, not corporally or carnally, in, with, or under the bread and wine; yet, as really, but spiritually, present to the faith of believers in that ordinance",
+        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+        "source": "Thirty-Nine Articles, Article XXVIII (1571)",
+        "quote": "The Body of Christ is given, taken, and eaten, in the Supper, only after an heavenly and spiritual manner. And the mean whereby the Body of Christ is received and eaten in the Supper is Faith.",
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      },
+      {
+        "source": "Second London Baptist Confession, 30.7 (1689)",
+        "quote": "spiritually receive, and feed upon Christ crucified, and all the benefits of his death",
+        "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter30.htm"
+      }
+    ],
+    "proposition": "In the Lord's Supper believers truly receive Christ's body and blood, but spiritually, by faith, not because Christ's body is physically in or under the bread.",
+    "elements": [
+      "Believers truly receive Christ and his benefits in the Supper",
+      "Christ's body is not physically in, with, or under the bread",
+      "The means of receiving is faith, by the Spirit",
+      "Unbelievers receive only the outward signs"
+    ],
+    "precursors": [
+      "Eating Christ's flesh means believing in him (John 6 read spiritually)",
+      "Lift up your hearts: Christ is received above, in heaven",
+      "The bread called a figure or sign of the body while still giving grace",
+      "The wicked do not truly eat Christ's body"
+    ],
+    "incompatible": [
+      "The bread itself becomes or contains Christ's body, which even unbelievers receive",
+      "The Supper is only a reminder and no one receives Christ in it"
+    ],
+    "queries": [
+      "to believe is to eat",
+      "eat the flesh of Christ by faith",
+      "lift up your hearts",
+      "figure of the body",
+      "the wicked do not eat the body of Christ",
+      "spiritual food of the soul",
+      "the body of Christ is in heaven",
+      "sign and the thing signified"
+    ],
+    "first_defined": "Consensus Tigurinus (1549); Thirty-Nine Articles (1563/1571); Westminster Confession (1646)",
+    "notes": "Kept separate from the memorial view because the Reformed and Anglican texts say believers truly receive Christ, which the memorial view does not claim. The 1689 Baptist Confession also holds this view."
+  },
+  {
+    "id": "memorial-supper",
+    "name": "The Lord's Supper as a memorial",
+    "traditions": [
+      "baptist"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox",
+      "lutheran"
+    ],
+    "defined": [
+      {
+        "source": "Huldrych Zwingli, Sixty-Seven Articles, Article 18 (1523)",
+        "quote": "the mass is not a sacrifice, but is a remembrance of the sacrifice and assurance of the salvation which Christ has given us.",
+        "url": "https://christianhistoryinstitute.org/study/module/zwinglis-sixty-seven-articles"
+      },
+      {
+        "source": "Baptist Faith and Message, Article VII (2000)",
+        "quote": "The Lord's Supper is a symbolic act of obedience whereby members of the church, through partaking of the bread and the fruit of the vine, memorialize the death of the Redeemer and anticipate His second coming.",
+        "url": "https://bfm.sbc.net/bfm2000/"
+      }
+    ],
+    "proposition": "The Lord's Supper is a symbolic act in which believers remember Christ's death; the bread and wine represent his body and blood and are not a means by which his body is present or received.",
+    "elements": [
+      "The Supper's main purpose is remembrance of Christ's death",
+      "The bread and wine are symbols or signs of the body and blood",
+      "No presence of Christ's body is tied to the elements"
+    ],
+    "precursors": [
+      "Do this in remembrance of me, stressed as the Supper's purpose",
+      "The bread called a figure or symbol of the body",
+      "The Supper as a thanksgiving and a pledge of unity"
+    ],
+    "incompatible": [
+      "The bread becomes or truly is Christ's body",
+      "In the Supper believers truly receive Christ's body and blood",
+      "The Supper is a sacrifice offered to God"
+    ],
+    "queries": [
+      "in remembrance of me",
+      "figure of his body",
+      "symbol of the body and blood",
+      "memorial of the Lord's death",
+      "the bread is a sign",
+      "thanksgiving meal of the brethren",
+      "the bread becomes the body",
+      "the medicine of immortality"
+    ],
+    "first_defined": "Zwingli, Sixty-Seven Articles (1523); Baptist Faith and Message (1925, revised 2000)",
+    "notes": "Zwinglian and modern Baptist memorialism merged into one entry because their texts make the same claim. Not all Baptists hold it: the 1689 Confession teaches spiritual presence. The Reformed and Anglican confessions also reject a 'bare memorial', but are left out of rejected_by because they do not condemn it by name."
+  },
+  {
+    "id": "believers-baptism",
+    "name": "Believer's baptism only",
+    "traditions": [
+      "baptist"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox",
+      "lutheran",
+      "reformed",
+      "anglican"
+    ],
+    "defined": [
+      {
+        "source": "Second London Baptist Confession, 29.2 (1689)",
+        "quote": "Those who do actually profess repentance towards God, faith in, and obedience to, our Lord Jesus Christ, are the only proper subjects of this ordinance.",
+        "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter29.htm"
+      },
+      {
+        "source": "Baptist Faith and Message, Article VII (2000)",
+        "quote": "Christian baptism is the immersion of a believer in water in the name of the Father, the Son, and the Holy Spirit.",
+        "url": "https://bfm.sbc.net/bfm2000/"
+      }
+    ],
+    "proposition": "Only those who personally profess repentance and faith should be baptized, so infants are not proper subjects of baptism.",
+    "elements": [
+      "Baptism should follow a personal profession of faith",
+      "Infants, who cannot profess faith, should not be baptized",
+      "Immersion is the proper mode (held by most who hold this view)"
+    ],
+    "precursors": [
+      "Instruction and fasting before baptism (catechumenate)",
+      "Baptism described as a pledge or confession made by the candidate",
+      "Delaying baptism, including of children, until they can understand",
+      "Baptism by going down into the water"
+    ],
+    "incompatible": [
+      "Infants should be baptized",
+      "Little children are to be brought to baptism, with others answering for them",
+      "Baptism of infants comes from the apostles"
+    ],
+    "queries": [
+      "delay of baptism",
+      "let them come when they can know Christ",
+      "the catechumens are taught before baptism",
+      "baptize the little ones",
+      "those who answer for the children",
+      "baptism of infants from the apostles",
+      "go down into the water",
+      "confess faith before baptism"
+    ],
+    "first_defined": "Schleitheim Confession (1527, Anabaptist); First London Baptist Confession (1644); Second London Confession (1689)"
+  },
+  {
+    "id": "congregational-church",
+    "name": "Gathered, self-governing congregation",
+    "traditions": [
+      "baptist"
+    ],
+    "rejected_by": [
+      "catholic",
+      "orthodox"
+    ],
+    "defined": [
+      {
+        "source": "Second London Baptist Confession, 26.7 (1689)",
+        "quote": "To each of these churches thus gathered, according to his mind declared in his word, he hath given all that power and authority, which is in any way needful for their carrying on that order in worship and discipline",
+        "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter26.htm"
+      },
+      {
+        "source": "Baptist Faith and Message, Article VI (2000)",
+        "quote": "A New Testament church of the Lord Jesus Christ is an autonomous local congregation of baptized believers, associated by covenant in the faith and fellowship of the gospel",
+        "url": "https://bfm.sbc.net/bfm2000/"
+      }
+    ],
+    "proposition": "Each local congregation of professing believers holds full authority from Christ to govern itself, choose its own officers and exercise discipline, without a higher church authority over it.",
+    "elements": [
+      "The church is made up of professing believers who have joined by consent (gathered)",
+      "Each local congregation holds full authority from Christ",
+      "The congregation chooses its own officers by common vote",
+      "No bishop or synod has authority over the local church"
+    ],
+    "precursors": [
+      "The whole congregation chooses or approves its clergy",
+      "The church as a gathered community of saints, separate from the world",
+      "Discipline exercised by the gathered church (Matthew 18)",
+      "Local churches as each complete, with their own presbyters"
+    ],
+    "incompatible": [
+      "The bishop alone holds authority over the local church",
+      "Nothing may be done in the church without the bishop",
+      "A synod or council of bishops can rule over local churches"
+    ],
+    "queries": [
+      "chosen by the vote of the people",
+      "the whole church elected",
+      "nothing without the bishop",
+      "the church gathered together",
+      "the assembly of the saints",
+      "discipline by the whole church",
+      "each church with its presbyters",
+      "the people chose their bishop"
+    ],
+    "first_defined": "Cambridge Platform (1648, Congregationalist); Second London Baptist Confession, ch. 26 (1689)",
+    "notes": "Hard case: early 'election by the people' fits several church orders, so it is only a precursor. Reformed and Anglican churches also differ from it (presbyterian and episcopal government) but do not condemn it by name.",
+    "grading_rules": [
+      "Election of clergy by the people, or the people's consent, is precursor only; explicit needs each local congregation to govern itself without authority above it."
+    ]
+  },
+  {
+    "id": "infant-baptism",
+    "name": "Infant baptism",
+    "traditions": [
+      "catholic",
+      "orthodox",
+      "lutheran",
+      "reformed",
+      "anglican"
+    ],
+    "rejected_by": [
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Catechism of the Catholic Church, 1250",
+        "quote": "Born with a fallen human nature and tainted by original sin, children also have need of the new birth in Baptism",
+        "url": "https://www.vatican.va/archive/ENG0015/__P3K.HTM"
+      },
+      {
+        "source": "Augsburg Confession, Article IX (1530)",
+        "quote": "children are to be baptized who, being offered to God through Baptism are received into God's grace.",
+        "url": "https://bookofconcord.org/augsburg-confession/"
+      },
+      {
+        "source": "Westminster Confession of Faith, 28.4 (1646)",
+        "quote": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized.",
+        "url": "https://www.opc.org/wcf.html"
+      }
+    ],
+    "proposition": "Infants of Christian parents should be baptized, and are properly received into the Church by baptism before they can profess faith themselves.",
+    "elements": [
+      "Infants may and should be baptized",
+      "Their baptism is valid without their own profession of faith",
+      "Baptism benefits infants (by forgiveness, grace or covenant membership)"
+    ],
+    "precursors": [
+      "Whole households baptized",
+      "Baptism as the new circumcision",
+      "Children brought to Christ and blessed",
+      "Infants share in original sin and need cleansing"
+    ],
+    "incompatible": [
+      "Baptism should be delayed until a person can believe",
+      "Infants have no need of baptism",
+      "Only those who confess faith may be baptized"
+    ],
+    "queries": [
+      "baptize infants",
+      "little children baptized",
+      "baptism of children from the apostles",
+      "whole household was baptized",
+      "baptism the circumcision of Christ",
+      "do not delay the baptism of infants",
+      "sponsors answer for the child",
+      "infants cleansed of original sin"
+    ],
+    "first_defined": "Council of Carthage (418) condemned denial of infant baptism for forgiveness; Augsburg Confession (1530); Council of Trent (1547); Westminster Confession (1646)"
+  },
+  {
+    "id": "apostolic-succession",
+    "name": "Apostolic succession of bishops",
+    "traditions": [
+      "catholic",
+      "orthodox",
+      "anglican"
+    ],
+    "rejected_by": [
+      "reformed",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Catechism of the Catholic Church, 77",
+        "quote": "In order that the full and living Gospel might always be preserved in the Church the apostles left bishops as their successors. They gave them their own position of teaching authority.",
+        "url": "https://www.vatican.va/archive/ENG0015/__PK.HTM"
+      },
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 10 (1672)",
+        "quote": "he, as a successor of the Apostles, having received in continued succession by the imposition of hands and the invocation of the All-holy Spirit the grace that is given him of the Lord of binding and loosing",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+        "source": "Book of Common Prayer, Preface to the Ordinal (1662)",
+        "quote": "It is evident unto all men diligently reading holy Scripture and ancient Authors, that from the Apostles' time there have been these Orders of Ministers in Christ's Church; Bishops, Priests, and Deacons.",
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/form-and-manner-making-ordaining"
+      }
+    ],
+    "proposition": "Bishops are successors of the apostles through an unbroken line of ordination by laying on of hands, and this succession is needed for a church's ministry to be fully valid.",
+    "elements": [
+      "The apostles appointed bishops as their successors",
+      "The succession passes by ordination with laying on of hands, in an unbroken line",
+      "The threefold ministry of bishops, presbyters and deacons comes from the apostles",
+      "Succession guards the apostolic teaching and the validity of the sacraments"
+    ],
+    "precursors": [
+      "Lists of bishops going back to the apostles",
+      "Appeal to churches founded by apostles as guardians of true teaching",
+      "Bishops, presbyters and deacons as distinct offices",
+      "Ordination by the laying on of hands"
+    ],
+    "incompatible": [
+      "Bishops and presbyters are the same office",
+      "A congregation can ordain its own ministers without a bishop",
+      "True succession is of doctrine only, not of persons"
+    ],
+    "queries": [
+      "succession of bishops from the apostles",
+      "list of the bishops of Rome",
+      "the apostles appointed bishops",
+      "bishop presbyter and deacon",
+      "laying on of hands ordination",
+      "churches founded by apostles",
+      "bishop and presbyter are the same",
+      "succession of the apostolic doctrine"
+    ],
+    "first_defined": "Not a single defined dogma; affirmed by the Council of Trent, Session 23 (1563), the Anglican Ordinal (1550/1662), and the Synod of Jerusalem, Decree 10 (1672)",
+    "notes": "Lutheran churches vary (Scandinavian Lutherans kept episcopal succession; others did not) and their confessions do not require it, so Lutherans are in neither list."
+  },
+  {
+    "id": "canon-of-scripture",
+    "name": "A closed canon of Scripture",
+    "traditions": [
+      "most"
+    ],
+    "rejected_by": [],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 4, Decree on the Canonical Scriptures (1546)",
+        "quote": "receives and venerates with an equal affection of piety, and reverence, all the books both of the Old and of the New Testament",
+        "url": "https://www.papalencyclicals.net/councils/trent/fourth-session.htm"
+      },
+      {
+        "source": "Westminster Confession of Faith, 1.2-1.3 (1646)",
+        "quote": "All which are given by inspiration of God to be the rule of faith and life.",
+        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+        "source": "Thirty-Nine Articles, Article VI (1571)",
+        "quote": "In the name of the holy Scripture we do understand those Canonical Books of the Old and New Testament, of whose authority was never any doubt in the Church.",
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      }
+    ],
+    "proposition": "The Church holds a fixed list of inspired books as Scripture, including the 27 books of the New Testament, distinct from all other Christian writings.",
+    "elements": [
+      "There is a defined list of books recognized as Scripture",
+      "The New Testament comprises the four Gospels, Acts, the letters and Revelation (27 books)",
+      "Other Christian writings, however respected, are not Scripture"
+    ],
+    "precursors": [
+      "Four Gospels and only four",
+      "Lists of 'acknowledged' and 'disputed' books",
+      "Books read publicly in church versus books for private reading",
+      "Rejection of particular gospels or writings as spurious"
+    ],
+    "incompatible": [
+      "Writings such as the Shepherd of Hermas or 1 Clement are Scripture",
+      "A New Testament book such as Revelation, Hebrews or 2 Peter is not Scripture"
+    ],
+    "queries": [
+      "the four gospels and no more",
+      "books acknowledged by all",
+      "disputed books",
+      "the books of the New Testament",
+      "read in the churches",
+      "the canon of scripture",
+      "the Shepherd is not among the scriptures",
+      "spurious gospels"
+    ],
+    "first_defined": "Athanasius's Festal Letter 39 (367) gives the 27-book New Testament; local councils of Hippo (393) and Carthage (397); Trent (1546), Article VI (1563), Westminster (1646)",
+    "notes": "Canons differ: all major traditions share the 27-book New Testament, but the Old Testament differs (see 'deuterocanonical-books'). Ethiopian and other Oriental churches use wider canons. Graders should grade New Testament statements here and Old Testament ones there."
+  },
+  {
+    "id": "deuterocanonical-books",
+    "name": "Deuterocanonical books as Scripture",
+    "traditions": [
+      "catholic",
+      "orthodox"
+    ],
+    "rejected_by": [
+      "reformed",
+      "baptist"
+    ],
+    "defined": [
+      {
+        "source": "Council of Trent, Session 4, Decree on the Canonical Scriptures (1546)",
+        "quote": "Tobias, Judith, Esther, Job, the Davidical Psalter, consisting of a hundred and fifty psalms; the Proverbs, Ecclesiastes, the Canticle of Canticles, Wisdom, Ecclesiasticus",
+        "url": "https://www.papalencyclicals.net/councils/trent/fourth-session.htm"
+      },
+      {
+        "source": "Confession of Dositheus (Synod of Jerusalem), Question 3 (1672)",
+        "quote": "For we judge these also to be with the other genuine Books of Divine Scripture genuine parts of Scripture.",
+        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+        "source": "Westminster Confession of Faith, 1.3 (1646)",
+        "quote": "The books commonly called Apocrypha, not being of divine inspiration, are no part of the canon of the Scripture",
+        "url": "https://www.opc.org/wcf.html"
+      }
+    ],
+    "proposition": "Books such as Tobit, Judith, Wisdom, Sirach, Baruch and 1-2 Maccabees belong to the Old Testament as inspired Scripture, on the same footing as the other books.",
+    "elements": [
+      "These books are inspired Scripture",
+      "They may be used to establish doctrine",
+      "They stand on the same level as the books of the Hebrew canon"
+    ],
+    "precursors": [
+      "Quoting Wisdom, Sirach, Tobit or Maccabees with 'Scripture says'",
+      "These books read publicly in church",
+      "These books included in early lists or codices of Scripture"
+    ],
+    "incompatible": [
+      "The Old Testament is limited to the books of the Hebrew canon",
+      "These books are useful for reading but not for proving doctrine",
+      "Wisdom, Sirach, Tobit or Judith are not in the canon"
+    ],
+    "queries": [
+      "as it is written in Wisdom",
+      "the book of Tobit",
+      "Sirach says",
+      "Maccabees",
+      "books outside the canon read to catechumens",
+      "the twenty-two books of the Hebrews",
+      "Judith",
+      "Baruch the prophet",
+      "apocrypha"
+    ],
+    "first_defined": "Councils of Hippo (393) and Carthage (397), local; Council of Florence (1442); Council of Trent (1546); Synod of Jerusalem (1672)",
+    "notes": "Anglican Article VI and Lutheran practice keep these books for reading 'for example of life' but 'not to establish any doctrine', a middle position; so Anglicans and Lutherans are in neither list. Writers such as Jerome reject them as canon while others such as Augustine accept them, so expect mixed results."
+  }
+]

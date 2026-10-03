@@ -7,6 +7,7 @@
 //   assets/og/works/<slug>.png     one per work (book pages share the work card)
 //   assets/og/authors/<slug>.png   one per Father
 //   assets/og/topics/<id>.png      one per question
+//   assets/og/e/<slug>.png         one per excerpt page (topic, writer, opening line)
 //   assets/og/index.json           page path -> card path
 //
 // Re-runnable: a card is redrawn only when its text or this script changed
@@ -177,6 +178,38 @@ function topicCards() {
   return out;
 }
 
+// One card per excerpt page (/e/<slug>/): its topic, the writer, the passage's
+// opening sentence and the work it comes from. Before 2026-10-03 all 1,925
+// shared one generic card.
+function excerptCards() {
+  const out = [];
+  for (const slug of dirs('e')) {
+    const html = read(path.join(DIST, 'e', slug, 'index.html'));
+    if (!html) continue;
+    const art = first(html, /<article class="excerpt-page">([\s\S]*?)<\/article>/) || '';
+    const work = text(first(art, /<h1[^>]*>([\s\S]*?)<\/h1>/) || '');
+    const topic = text(first(art, /<p class="eyebrow">([\s\S]*?)<\/p>/) || '') || 'From the Fathers';
+    const meta = text(first(art, /<p class="meta">([\s\S]*?)<\/p>/) || '');
+    const [author, dates] = meta.split(' · ');
+    // Drop section numbers ("10.1."); start the quote on a whole sentence.
+    const body = [...art.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => text(m[1]).replace(/^(?:\d+\.)+\d*\s*/, ''))
+      .filter(Boolean).join(' ');
+    const sentences = (body.match(/[^.!?]+[.!?]+[”"’]?/g) || []).map(x => x.trim());
+    const starts = x => /^[“"‘]?[A-Z]/.test(x);
+    const quote = sentences.find(x => starts(x) && x.length >= 50 && x.length <= 150)
+      || sentences.find(x => starts(x) && x.length >= 50) || '';
+    if (!work || !author || !quote) continue;
+    // The title already names the writer: "Arnobius, Against the Nations" -> "Against the Nations".
+    const workName = work.startsWith(author) ? work.slice(author.length).replace(/^[,:\s]+/, '') : work;
+    out.push({
+      kind: 'excerpt', slug, file: `e/${slug}`, pages: [`/e/${slug}/`],
+      data: { kind: 'topic', eyebrow: topic, title: author, quote: trimTo(quote, 140),
+              cite: [workName, dates].filter(Boolean).join(' · ') },
+    });
+  }
+  return out;
+}
+
 // Per-book Scripture cards appear once dist/scripture/<book>/ is built; until then there are none.
 function scriptureCards() {
   const out = [];
@@ -317,7 +350,7 @@ async function main() {
   if (!works.length || !authors.length || !topics.length) {
     throw new Error(`dist/ looks incomplete (works ${works.length}, authors ${authors.length}, topics ${topics.length}); build the site first`);
   }
-  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards()];
+  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards(), ...excerptCards()];
   const all = cards;
   if (ONLY) cards = cards.filter(c => ONLY.has(c.kind));
   if (SLUGS) cards = cards.filter(c => SLUGS.has(c.slug));
