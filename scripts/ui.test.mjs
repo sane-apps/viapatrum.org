@@ -77,13 +77,13 @@ test('author catalog prefetches the passage index for find-as-you-type',async()=
 
 test('library progress line on About matches pipeline counts', ()=>{
   const html=readFileSync(new URL('../dist/about/index.html',import.meta.url),'utf8');
-  const q=JSON.parse(readFileSync(new URL('../outputs/catalogue-quality.json',import.meta.url),'utf8'));
+  const q=JSON.parse(readFileSync(new URL('../dist/data/progress.json',import.meta.url),'utf8'));
   const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/about/'});
   const s=dom.window.document.querySelector('#explore-progress');assert.ok(s);
   assert.match(s.textContent,new RegExp(`${q.published_works} works live`));
   const fmt=n=>Number(n).toLocaleString("en-US");
   assert.match(s.textContent,new RegExp(`${fmt(q.corpus_translated_sections)} of ${fmt(q.corpus_total_sections)} sections translated`));
-  assert.match(s.textContent,new RegExp(`${q.held_works.length} held for review`));
+  assert.match(s.textContent,new RegExp(`${q.held_works} held for review`));
   dom.window.close();
 });
 

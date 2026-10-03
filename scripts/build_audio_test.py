@@ -173,5 +173,64 @@ class InjectorWrapTests(unittest.TestCase):
         self.assertGreater(len(held), 100)
 
 
+class ReuseTests(unittest.TestCase):
+    """A text correction re-reads only the corrected sentence (owner 2026-10-02)."""
+
+    def test_plan_keeps_unchanged_sentences(self):
+        from build_audio import reuse_plan
+        old = [{"t": "One.", "s": 0.0, "e": 1.0}, {"t": "Two wrong.", "s": 1.0, "e": 2.0},
+               {"t": "Three.", "s": 2.0, "e": 3.0}]
+        plan = reuse_plan(old, ["One.", "Two right.", "Three.", "Four."])
+        self.assertEqual(plan, {0: (0.0, 1.0), 2: (2.0, 3.0)})
+
+    def test_correction_rerenders_one_sentence(self):
+        import json as _json
+        import tempfile as _tf
+        from pathlib import Path as _P
+        from unittest import mock
+        try:
+            import numpy as np
+            import soundfile  # noqa: F401
+        except ImportError:
+            self.skipTest("needs the Kokoro venv (numpy, soundfile)")
+        import build_audio as ba
+
+        spoken = []
+
+        class FakeVoice:
+            def generate(self, text, **_kw):
+                spoken.append(text)
+                seconds = 0.4 + 0.01 * len(text)
+                yield mock.Mock(audio=np.sin(np.linspace(0, 400, int(24000 * seconds))) * 0.1)
+
+        with _tf.TemporaryDirectory() as tmp:
+            tmp = _P(tmp)
+            eng = tmp / "w_english.json"
+            def write(second):
+                eng.write_text(_json.dumps([{"section": "1", "english": [
+                    "The first sentence stays. " + second + " The third sentence stays."]}]))
+            with mock.patch.object(ba, "OUT", tmp / "out"):
+                (tmp / "out" / "w").mkdir(parents=True)
+                manifest = {"work": "w", "passages": {}}
+                write("The second has a typo herre.")
+                ba._render_english_file(eng, None, None, FakeVoice(), tmp, "w", manifest)
+                first = manifest["passages"]["w_english"]["sentences"]
+                self.assertEqual(len(spoken), 3)
+                spoken.clear()
+                write("The second is now right.")
+                prev = manifest["passages"]["w_english"]
+                manifest2 = {"work": "w", "passages": {}}
+                ba._render_english_file(eng, None, None, FakeVoice(), tmp, "w", manifest2,
+                                        prev, prev["voice"])
+                second = manifest2["passages"]["w_english"]["sentences"]
+        self.assertEqual(len(spoken), 1)
+        self.assertIn("now right", spoken[0])
+        self.assertEqual([s["t"] for s in second][1], "The second is now right.")
+        # Kept sentences keep their length (mp3 frame tolerance).
+        for k in (0, 2):
+            self.assertAlmostEqual(first[k]["e"] - first[k]["s"],
+                                   second[k]["e"] - second[k]["s"], delta=0.08)
+
+
 if __name__ == "__main__":
     unittest.main()

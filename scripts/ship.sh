@@ -79,6 +79,9 @@ fi
 echo "==> Build"
 if [[ "$SKIP_BUILD" -eq 0 ]]; then
   nice -n 10 "$PYTHON" "$ROOT/scripts/build_site.py"
+  # Semantic search: export live passages, publish the key->link map, push changed docs.
+  "$PYTHON" "$ROOT/scripts/search_sync.py" export && cp "$ROOT/outputs/search-docs/meta.json" "$ROOT/dist/data/search-meta.json"
+  nice -n 10 "$PYTHON" "$ROOT/scripts/search_sync.py" upload || echo "WARN: search upload incomplete (next ship retries)"
 else
   echo "(skipped — using existing dist/)"
 fi
@@ -144,7 +147,10 @@ STAGE=""
 cleanup() {
   kill "$HTTP_PID" 2>/dev/null || true
   wait "$HTTP_PID" 2>/dev/null || true
-  [[ -z "$STAGE" ]] || trash "$STAGE"
+  # The stage is a disposable ~3.5 GB copy of dist that every ship recreates.
+  # Sending it to the Trash filled the Mini disk twice on 2026-10-03 (268 MB
+  # free), so delete it outright, and only when it is our own mktemp path.
+  case "$STAGE" in /tmp/fathers-ship.?*) rm -rf -- "$STAGE" ;; esac
   exec 9>&-
 }
 trap cleanup EXIT
@@ -294,6 +300,7 @@ echo "==> Verify live catalogue bytes and withdrawn routes"
 
 echo
 echo "SHIP OK"
+python3 -c 'import sys; sys.path.insert(0, "'"$HOME"'/SaneApps/clients/translations/scripts"); import audit_log; audit_log.record("*", "shipped", "Site deployed to viapatrum.org", ref="scripts/ship.sh")' >/dev/null 2>&1 || true
 echo "  CSS ?v=${CSS_HASH}"
 echo "  Public: ${PUBLIC_ORIGIN}"
 [[ -n "${PAGES_URL:-}" ]] && echo "  Pages:  ${PAGES_URL}"

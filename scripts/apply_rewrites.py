@@ -97,7 +97,16 @@ def find_spans(raw, quote):
 def apply_spans(el, spans, rw):
     """Replace spans (raw offsets) with rw, latest-first. Empty rw deletes the
     span and collapses leftover whitespace."""
-    for st, en in sorted(spans, reverse=True):
+    # Each span once, never overlapping: replacing the same offsets twice
+    # repeated rewrite tails ("created.apable of being created.") or ate the
+    # following words (2026-10-02 damage).
+    kept, last_start = [], None
+    for st, en in sorted(set(spans), reverse=True):
+        if last_start is not None and en > last_start:
+            continue
+        kept.append((st, en))
+        last_start = st
+    for st, en in kept:
         el = el[:st] + rw + el[en:]
     if not rw.strip():
         el = re.sub(r" {2,}", " ", el).strip()
@@ -178,8 +187,9 @@ def main():
                 continue
             # gather candidate (file, rowidx, elemidx, raw, spans) across chunk files
             cands = []
-            for s in chunk:
-                f = s["file"]
+            # A chunk is up to 3 sections that often share one file: scan
+            # each file once, or every span is collected (and applied) 2-3x.
+            for f in dict.fromkeys(s["file"] for s in chunk):
                 if f not in cache:
                     raw = open(f, "rb").read()
                     cache[f] = json.loads(raw)

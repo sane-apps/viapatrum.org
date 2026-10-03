@@ -272,6 +272,42 @@
     const q = browse.querySelector("#works-q");
     const passageHits = browse.querySelector("#passage-hits");
     const passageResults = browse.querySelector("#passage-results");
+    const meaningHits = browse.querySelector("#meaning-hits");
+    const meaningResults = browse.querySelector("#meaning-results");
+    let meaningTimer = 0;
+    let meaningSeq = 0;
+    // Semantic search (/api/search, Cloudflare AI Search): debounced, latest
+    // answer wins, hidden on error so exact-word results still stand alone.
+    const meaningSearch = (term) => {
+      if (!meaningHits || !meaningResults) return;
+      clearTimeout(meaningTimer);
+      if (term.length < 3) {
+        meaningHits.hidden = true;
+        meaningResults.innerHTML = "";
+        return;
+      }
+      meaningTimer = setTimeout(() => {
+        const seq = ++meaningSeq;
+        fetch(`/api/search?q=${encodeURIComponent(term)}&n=20`)
+          .then((r) => (r.ok ? r.json() : { results: [] }))
+          .then((data) => {
+            if (seq !== meaningSeq) return;
+            const rows = (data && data.results) || [];
+            meaningHits.hidden = rows.length === 0;
+            meaningResults.innerHTML = rows
+              .map(
+                (h) =>
+                  `<li><a href="${escapeHtml(h.href)}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
+                    h.author || ""
+                  )}</span><em class="meaning-snippet">${escapeHtml(h.snippet || "")}</em></a></li>`
+              )
+              .join("");
+          })
+          .catch(() => {
+            if (seq === meaningSeq) meaningHits.hidden = true;
+          });
+      }, 350);
+    };
     const workCount = Number(browse.getAttribute("data-work-count") || "0");
     const authorCount = Number(browse.getAttribute("data-author-count") || "0");
     let sort = "chrono";
@@ -318,6 +354,7 @@
         li.hidden = false;
         list.appendChild(li);
       });
+      meaningSearch(term);
       const empty = browse.querySelector("#works-empty");
       if (empty) empty.hidden = !(term.length >= 2 && visible.length === 0);
       if (status) {

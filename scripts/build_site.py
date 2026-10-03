@@ -1478,13 +1478,19 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "africanus-cesti": "Miscellanies",
     "photius-bibliotheca": "The Library",
     "ammonius-fragmenta-joannem": "Fragments on John",
+    "john-damascus-fragmenta-in-lucam": "Fragments on Luke",
+    "oecumenius-fragmenta-titum": "Fragments on Titus",
+    "oecumenius-fragmentum-philemonem": "Fragment on Philemon",
+    "olympiodorus-contra-severum": "Against Severus of Antioch",
+    "photius-fragmentum-2tim": "Fragment on 2 Timothy",
+    "photius-fragmentum-philemonem": "Fragment on Philemon",
     "gregory-thaumaturgus-ouden-eidolon": "That There is No Idol in the World",
     "gregory-thaumaturgus-jeremiah-fragments": "Fragments on Jeremiah",
     "gregory-thaumaturgus-matthew-fragment": "Fragment on Matthew",
     "gregory-thaumaturgus-sententiae": "Sentences",
     "eustathius-allocutio-constantinum": "Address to Emperor Constantine",
     "eustathius-hexaemeron": "Commentary on the Six Days of Creation",
-    "eustathius-engastrimytho": "On the Belly-Speaker against Origen",
+    "eustathius-engastrimytho": "On the Witch of Endor, Against Origen",
     "eustathius-oratio-dominus-creavit": "Oration on “The Lord Created Me”",
     "eusebius-emesa-fragmentum-1cor": "Fragment on 1 Corinthians",
     "cyril-jerusalem-homilia-paralyticum": "Homily on the Paralytic",
@@ -1659,6 +1665,12 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "africanus-cesti": "Κεστοί",
     "photius-bibliotheca": "Bibliotheca (Myriobiblon)",
     "ammonius-fragmenta-joannem": "Fragmenta in Joannem",
+    "john-damascus-fragmenta-in-lucam": "Fragmenta in Lucam",
+    "oecumenius-fragmenta-titum": "Fragmenta in epistulam ad Titum",
+    "oecumenius-fragmentum-philemonem": "Fragmentum in epistulam ad Philemonem",
+    "olympiodorus-contra-severum": "Contra Severum Antiochenum",
+    "photius-fragmentum-2tim": "Fragmentum in epistulam ii ad Timotheum",
+    "photius-fragmentum-philemonem": "Fragmentum in epistulam ad Philemonem",
     "gregory-thaumaturgus-ouden-eidolon": "Eis to ouden eidolon en kosmo",
     "gregory-thaumaturgus-jeremiah-fragments": "Fragmenta in Jeremiam",
     "gregory-thaumaturgus-matthew-fragment": "Fragmentum in evangelium Matthaei",
@@ -1914,9 +1926,33 @@ def work_intro_html(slug: str) -> str:
         return ""
 
 
+_BRIEF_TITLES: dict[str, str] = {}
+
+
+def brief_english_title(slug: str) -> str:
+    """English title from the certified work brief (work_pipeline writes
+    books/<book>/work_brief.json "title_en"); "" when none. Lets newly
+    certified works ship with a plain-English H1 without a hand-kept map."""
+    if slug not in _BRIEF_TITLES:
+        title = ""
+        book = (slug if (BOOKS / (slug or "_")).is_dir() else work_book(slug)) or ""
+        path = BOOKS / book / "work_brief.json" if book else None
+        if path and path.is_file():
+            try:
+                title = str(json.loads(path.read_text(encoding="utf-8")).get("title_en") or "").strip()
+            except (OSError, ValueError):
+                title = ""
+        _BRIEF_TITLES[slug] = title
+    return _BRIEF_TITLES[slug]
+
+
+def english_title_for(slug: str) -> str:
+    return PUBLIC_ENGLISH_TITLES.get(slug or "", "").strip() or brief_english_title(slug or "")
+
+
 def public_reader_title(title: str, *, slug: str = "") -> str:
-    """Public H1 / card / crumb: English-first when mapped; drop tip parentheticals."""
-    eng = PUBLIC_ENGLISH_TITLES.get(slug or "", "").strip()
+    """Public H1 / card / crumb: English-first when mapped (or from the work brief); drop tip parentheticals."""
+    eng = english_title_for(slug)
     if eng:
         return eng
     raw = (title or "").strip()
@@ -1930,7 +1966,7 @@ def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     mapped = PUBLIC_LATIN_SUBTITLES.get(slug or "", "").strip()
     if mapped:
         return "" if mapped.lower() == h1.lower() else scrub_worksheet_note(mapped).strip()
-    if slug in PUBLIC_ENGLISH_TITLES:
+    if english_title_for(slug):
         raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
         if raw and raw.lower() != h1.lower():
             if _SCOPE_LADEN_MARK.search(raw):
@@ -5102,7 +5138,7 @@ def layout(
       <a href="/authors/"{nav_cls("authors")}>Fathers</a>
       <a href="/works/"{nav_cls("works")}>Works</a>
       <a href="/listen/"{nav_cls("listen")}>Listen</a>
-      <a href="/explore/"{nav_cls("explore")}>Over time</a>
+      <a href="/explore/"{nav_cls("explore")}>Timeline</a>
       <a href="https://play.viapatrum.org/">Play</a>
     </nav>
     <div class="header-tools">
@@ -5126,7 +5162,7 @@ def layout(
     </div>
     <nav aria-label="Read">
       <h2>Read</h2>
-      <ul><li><a href="/topics/">Questions</a></li><li><a href="/scripture/">Scripture</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/listen/">Listen</a></li><li><a href="/explore/">Over time</a></li></ul>
+      <ul><li><a href="/topics/">Questions</a></li><li><a href="/scripture/">Scripture</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/listen/">Listen</a></li><li><a href="/explore/">Timeline</a></li></ul>
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
@@ -5868,6 +5904,9 @@ def person_page_meta(slug: str, name: str, *, works: int, passages: int) -> tupl
     return title, desc, [{"@type": "ProfilePage", "mainEntity": person}]
 
 
+
+PROGRESS_SNAPSHOT: dict = {}
+
 def build() -> None:
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -6055,6 +6094,12 @@ def build() -> None:
                     "corpus_total_sections": corpus_total_sections,
                     "corpus_translated_sections": corpus_translated_sections},
                    ensure_ascii=False, indent=2), encoding="utf-8")
+    # The same counts, frozen into this build's output (dist/data/progress.json):
+    # checks compare the About page with the build that made it, not with a
+    # shared file another build may rewrite mid-ship (2026-10-02 false failure).
+    PROGRESS_SNAPSHOT.update({"published_works": len(works), "held_works": len(held_works),
+                              "corpus_total_sections": corpus_total_sections,
+                              "corpus_translated_sections": corpus_translated_sections})
     works_by_slug = {w["slug"]: w for w in works}
     # One writer, one page: the two Diognetus spellings were two author hubs.
     for _x in excerpts:
@@ -6785,6 +6830,11 @@ def build() -> None:
   </div>
 </div>
 <p class="works-hint meta" id="works-status" aria-live="polite">{author_n} authors · {len(works)} works · sorted by era (earliest first)</p>
+<section id="meaning-hits" class="passage-hits meaning-hits" hidden>
+  <h2>By meaning</h2>
+  <p class="meta">Passages about what you asked, even where the Fathers use other words.</p>
+  <ol id="meaning-results" class="card-list" aria-live="polite"></ol>
+</section>
 <ul id="works-list" class="card-list works-list author-catalog">{works_list}</ul>
 <p id="works-empty" class="works-empty" hidden>No writer or title matches that. Passages that contain your words are listed below when there are any; you can also try <a href="/topics/">Questions</a> or <a href="/scripture/">Scripture</a>.</p>
 <section id="passage-hits" class="passage-hits" hidden>
@@ -7705,7 +7755,7 @@ def build() -> None:
                 0,
                 ("Where Julian meets earlier writers", "/explore/?topic=free-will&author=julian-of-eclanum"),
             )
-        explore_ul = related_panel("Over time", explore_bits)
+        explore_ul = related_panel("Timeline", explore_bits)
         kinds: dict[str, list[dict]] = defaultdict(list)
         for _w in ww:
             kinds[work_kind(_w)].append(_w)
@@ -7769,7 +7819,7 @@ def build() -> None:
             "Augustine of Hippo",
             f"""<h1>Augustine of Hippo</h1>
             <p class="banner">Topical excerpts and contrast cards for now — full Augustine works are not yet in this library. Use Explore to place his late teaching beside earlier writers.</p>
-            <aside class="related"><h2>Over time</h2><ul>
+            <aside class="related"><h2>Timeline</h2><ul>
             <li><a href="/explore/?topic=free-will&amp;author=augustine-of-hippo">Free will</a></li>
             <li><a href="/explore/?topic=sin-and-death&amp;author=augustine-of-hippo">Sin and death</a></li>
             <li><a href="/explore/?topic=grace-and-assistance&amp;author=augustine-of-hippo">Grace</a></li>
@@ -7891,6 +7941,12 @@ def build() -> None:
         json.dumps(explore_index, ensure_ascii=False, indent=2), encoding="utf-8"
     )
 
+    # Via Patrum app: same published works, excerpts and Scripture index (docs/APP_DATA.md).
+    import app_export
+    print("app export:", app_export.write(
+        DIST, ROOT, sys.modules[__name__], works=works, by_topic=by_topic, topic_meta=topic_meta,
+        tax=tax, sc_entries=sc_entries, wrong_cites=wrong_cites))
+
     # --- Over time: every question at a glance ---------------------------
     ot_groups = []
     for locus in tax.get("loci", []):
@@ -7932,7 +7988,7 @@ def build() -> None:
     )
     explore_body = f"""
 <header class="ot-head">
-  <p class="eyebrow">Over time</p>
+  <p class="eyebrow">Timeline</p>
   <h1>How the answers line up over time</h1>
   <p class="intro">For every question, the main claim and where each writer stood on it, from the apostles to the councils. Open a question to see every claim, every writer, and the passages.</p>
   <p class="tl-legend"><span class="tl-key affirms"></span>teaches it <span class="tl-key qualified"></span>partly <span class="tl-key denies"></span>rejects it <span class="tl-key contrast"></span>later writer, summary only</p>
@@ -7953,7 +8009,7 @@ def build() -> None:
         layout(
             "What the Church Fathers taught, over time",
             explore_body,
-            crumb=[("Home", "/"), ("Over time", "")],
+            crumb=[("Home", "/"), ("Timeline", "")],
             active="explore",
             description="Every question the early Church answered, with where each writer stood over time, from the apostles to the councils, and the passages behind each mark.",
         ),
@@ -8019,6 +8075,8 @@ def build() -> None:
         ),
     )
 
+    (DIST / "data").mkdir(parents=True, exist_ok=True)
+    (DIST / "data" / "progress.json").write_text(json.dumps(PROGRESS_SNAPSHOT), encoding="utf-8")
     write(
         DIST / "about" / "index.html",
         layout(
@@ -8027,18 +8085,40 @@ def build() -> None:
             <h1>About Via Patrum</h1>
             <p class="lede">Via Patrum means “the way of the Fathers.” It is a free library of early Christian writing in faithful modern English, for anyone who wants to read the early Church in its own words.</p>
             <h2>What is here</h2>
-            <p><strong>Questions</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Over time</strong> shows where writers agree and where a later turn comes.</p>
+            <p><strong>Questions</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Timeline</strong> shows where writers agree and where a later turn comes.</p>
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
             <h2>How the English is made</h2>
             <p>The English is new, translated from the Greek and Latin with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Questions still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
             <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
-            <h2>Reading the “Over time” marks</h2>
+            <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/explore/?topic=free-will">free will over time</a>.</p>
             <h2>Help and support</h2>
             <p>Want to help finish a text? See <a href="/contribute/">Help translate</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
             crumb=[("Home", "/"), ("About", "")],
             active="about",
             description="Via Patrum is a free library of early Christian writing in faithful modern English: questions, Fathers, whole works, and how they line up over time.",
+        ),
+    )
+
+    # App Store requires a privacy policy URL for the Via Patrum app (docs/APP_DATA.md).
+    write(
+        DIST / "privacy" / "index.html",
+        layout(
+            "Privacy",
+            """<p class="eyebrow">Privacy</p>
+            <h1>Privacy</h1>
+            <p class="lede">Via Patrum does not collect personal data, on this website or in the Via Patrum app for iPhone and iPad.</p>
+            <h2>The app</h2>
+            <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
+            <h2>This website</h2>
+            <p>The website uses no cookies and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <h2>Links you choose to open</h2>
+            <p>Links to GitHub (to report a translation mistake) or to netbible.org open those sites, which have their own privacy policies.</p>
+            <h2>Questions</h2>
+            <p>Email <a href="mailto:hi@saneapps.com">hi@saneapps.com</a>.</p>""",
+            crumb=[("Home", "/"), ("Privacy", "")],
+            active="about",
+            description="Via Patrum collects no personal data, on the website or in the iPhone and iPad app.",
         ),
     )
 

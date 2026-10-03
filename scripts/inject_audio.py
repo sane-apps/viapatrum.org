@@ -312,7 +312,7 @@ def locate_sites(book: str, cands: dict, manifest: dict) -> dict:
             page = works / site / sec / "index.html"
             if not page.is_file():
                 continue
-            hits = matching_choices(opts, passages, _body_plain(page))
+            hits = matching_choices(opts, passages, _cached_plain(page))
             if not hits:
                 continue
             keys = []
@@ -329,6 +329,56 @@ def locate_sites(book: str, cands: dict, manifest: dict) -> dict:
             if unique:
                 found.setdefault(site, {})[sec] = unique
     return found
+
+
+_PLAIN_CACHE: dict | None = None
+_PLAIN_DIRTY = False
+
+
+def _cached_plain(page) -> str:
+    """_body_plain with a cross-process disk cache keyed by (mtime, size)."""
+    global _PLAIN_CACHE, _PLAIN_DIRTY
+    cache_path = ROOT / "outputs/.page-plain-cache.json"
+    if _PLAIN_CACHE is None:
+        try:
+            _PLAIN_CACHE = {k: tuple(v) for k, v in json.loads(cache_path.read_text(encoding="utf-8")).items()}
+        except Exception:
+            _PLAIN_CACHE = {}
+        import atexit
+        atexit.register(_save_plain_cache)
+    st = page.stat()
+    key = str(page)
+    hit = _PLAIN_CACHE.get(key)
+    if hit and hit[0] == st.st_mtime_ns and hit[1] == st.st_size:
+        return hit[2]
+    plain = _body_plain(page)
+    _PLAIN_CACHE[key] = (st.st_mtime_ns, st.st_size, plain)
+    _PLAIN_DIRTY = True
+    return plain
+
+
+def _cached_key(page, plain: str) -> str:
+    """match_key(plain), cached next to the page text."""
+    global _PLAIN_DIRTY
+    key = str(page)
+    hit = _PLAIN_CACHE.get(key) if _PLAIN_CACHE is not None else None
+    if hit and len(hit) > 3:
+        return hit[3]
+    k = match_key(plain)
+    if hit:
+        _PLAIN_CACHE[key] = (hit[0], hit[1], hit[2], k)
+        _PLAIN_DIRTY = True
+    return k
+
+
+def _save_plain_cache() -> None:
+    import os
+    if not _PLAIN_DIRTY or _PLAIN_CACHE is None:
+        return
+    cache_path = ROOT / "outputs/.page-plain-cache.json"
+    tmp = cache_path.with_suffix(".tmp%d" % os.getpid())
+    tmp.write_text(json.dumps(_PLAIN_CACHE, ensure_ascii=False), encoding="utf-8")
+    tmp.replace(cache_path)
 
 
 def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
@@ -361,8 +411,8 @@ def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
             page = sub / "index.html"
             if not page.is_file():
                 continue
-            plain = _body_plain(page)
-            keys = win_index.get(plain) or loose_index.get(match_key(plain))
+            plain = _cached_plain(page)
+            keys = win_index.get(plain) or loose_index.get(_cached_key(page, plain))
             if not keys:
                 continue
             for key in keys:

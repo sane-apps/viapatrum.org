@@ -74,7 +74,7 @@ function sectionCards() {
     ['topics', ['/topics/'], 'Questions', 'What did the early Church teach?', 'Each question answered in the writers’ own words, with the passages to read.'],
     ['authors', ['/authors/'], 'Fathers', 'The writers, in order', 'Every writer in the library, earliest first, with dates and works.'],
     ['works', ['/works/'], 'Works', 'The library', 'Whole works in faithful modern English, to read straight through.'],
-    ['explore', ['/explore/'], 'Over time', 'How the answers line up over time', 'What each early writer taught, claim by claim, century by century.'],
+    ['explore', ['/explore/'], 'Timeline', 'How the answers line up over time', 'What each early writer taught, claim by claim, century by century.'],
     ['about', ['/about/'], 'About', 'About Via Patrum', 'A free library of early Christian writing in faithful modern English.'],
     ['methodology', ['/methodology/'], 'For scholars', 'How we translate', 'Sources, two passes, and what stays off the reading page.'],
     ['help', ['/contribute/', '/help/'], 'Help translate', 'Help us', 'Donate, correct a passage, sponsor a book, or spread the word.'],

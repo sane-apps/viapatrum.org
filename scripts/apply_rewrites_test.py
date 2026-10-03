@@ -53,5 +53,23 @@ class ApplySpansTest(unittest.TestCase):
             "a Y b Y c")
 
 
+
+class DuplicateSpanTests(unittest.TestCase):
+    """Same span collected twice must apply once (2026-10-02 stutter/eat bug)."""
+
+    def test_longer_rewrite_no_stutter(self):
+        el = "first party: creatable man. Next."
+        st = el.index("creatable man.")
+        span = (st, st + len("creatable man."))
+        out = apply_spans(el, [span, span, span], "human beings capable of being created.")
+        self.assertEqual(out, "first party: human beings capable of being created. Next.")
+
+    def test_shorter_rewrite_eats_nothing(self):
+        el = "he said thus and so. The rest stays."
+        st = el.index("thus and so.")
+        span = (st, st + len("thus and so."))
+        out = apply_spans(el, [span, span], "so.")
+        self.assertEqual(out, "he said so. The rest stays.")
+
 if __name__ == "__main__":
     unittest.main()

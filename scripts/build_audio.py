@@ -133,9 +133,39 @@ def _load_engine():
     return pipeline, fallback, None
 
 
+def reuse_plan(old: list[dict], new: list[str]) -> dict[int, tuple[float, float]]:
+    """New sentence index -> (start, end) of the identical sentence already
+    recorded. Text-matched in reading order, so a corrected sentence is the
+    only one read again; everything around it keeps its recording."""
+    import difflib
+    old_texts = [str(s.get("t", "")) for s in old]
+    plan: dict[int, tuple[float, float]] = {}
+    matcher = difflib.SequenceMatcher(None, old_texts, new, autojunk=False)
+    for a, b, size in matcher.get_matching_blocks():
+        for k in range(size):
+            seg = old[a + k]
+            start, end = float(seg.get("s", 0)), float(seg.get("e", 0))
+            if end > start:
+                plan[b + k] = (start, end)
+    return plan
+
+
+def _cut_wav(mp3: Path, start: float, end: float, wav: Path) -> None:
+    """Decode one sentence span of an existing recording to a 24 kHz wav."""
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(mp3),
+                    "-ss", "%.3f" % start, "-t", "%.3f" % (end - start),
+                    "-ar", "24000", "-ac", "1", str(wav)], check=True)
+
+
 def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Path,
-                         work: str, manifest: dict) -> int:
-    """Render one English file into the manifest. Returns the sentence count."""
+                         work: str, manifest: dict, prev: dict | None = None,
+                         prev_voice: str | None = None) -> int:
+    """Render one English file into the manifest. Returns the sentence count.
+
+    prev is this file's earlier manifest entry. When it was read in the same
+    voice, unchanged sentences are cut from the old mp3 and only new or
+    corrected sentences are spoken again (text fix -> audio fix).
+    """
     import os as _os
     cf_mode = _os.environ.get("KOKORO_ENGINE") == "cf"
     if not cf_mode:
@@ -148,19 +178,29 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
     for row in rows:
         for para in row.get("english", []) or []:
             sentences.extend(split_sentences(read_text(para)))
-    wavs = []
+    old_mp3 = OUT / work / (eng_file.stem + ".mp3")
+    plan: dict[int, tuple[float, float]] = {}
+    if prev and prev_voice == _voice_name() and old_mp3.is_file():
+        plan = reuse_plan(prev.get("sentences") or [], sentences)
+    wavs = [tmpdir / ("%s_%04d.wav" % (eng_file.stem, i)) for i in range(len(sentences))]
+    for i, (start, end) in plan.items():
+        _cut_wav(old_mp3, start, end, wavs[i])
+    todo = [i for i in range(len(sentences)) if i not in plan]
+    if plan:
+        print("  %s reuse %d, speak %d of %d sentences"
+              % (eng_file.stem, len(plan), len(todo), len(sentences)), flush=True)
     if cf_mode:
         from cf_tts import render_all, SPEAKER as CF_SPEAKER
         print("  %s cf_tts %d sentences (%s)"
-              % (eng_file.stem, len(sentences), CF_SPEAKER), flush=True)
-        paths = [tmpdir / ("%s_%04d.wav" % (eng_file.stem, i))
-                 for i in range(len(sentences))]
-        render_all([speak_text(s) for s in sentences], paths, CF_SPEAKER)
-        wavs.extend(paths)
-    for i, sentence in enumerate([] if cf_mode else sentences):
-        if i and i % 25 == 0:
-            print("  %s sentence %d/%d" % (eng_file.stem, i, len(sentences)), flush=True)
-        wav = tmpdir / ("%s_%04d.wav" % (eng_file.stem, i))
+              % (eng_file.stem, len(todo), CF_SPEAKER), flush=True)
+        if todo:
+            render_all([speak_text(sentences[i]) for i in todo],
+                       [wavs[i] for i in todo], CF_SPEAKER)
+    for n, i in enumerate([] if cf_mode else todo):
+        sentence = sentences[i]
+        if n and n % 25 == 0:
+            print("  %s sentence %d/%d" % (eng_file.stem, n, len(todo)), flush=True)
+        wav = wavs[i]
         if mlx is not None:
             parts = []
             say = speak_text(sentence)
@@ -169,7 +209,6 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
             clip = np.concatenate(parts)
             assert np.isfinite(clip).all(), "non-finite mlx audio at sentence %d" % i
             sf.write(str(wav), clip, 24000)
-            wavs.append(wav)
             continue
         audios = []
         say = speak_text(sentence)
@@ -181,7 +220,6 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
             audios = [a for _, _, a in cpu_fallback(say, voice=VOICE, speed=SPEED)]
             clip = torch.cat(audios)
         sf.write(str(wav), clip.numpy(), 24000)
-        wavs.append(wav)
     offsets = sentence_offsets(wavs)
     concat_list = tmpdir / (eng_file.stem + ".txt")
     concat_list.write_text("".join("file '%s'\n" % w for w in wavs))
@@ -191,10 +229,21 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
                     _mp3_bitrate(), str(mp3)], check=True)
     manifest["passages"][eng_file.stem] = {
         "audio": "assets/audio/%s/%s.mp3" % (work, eng_file.stem),
+        "voice": _voice_name(),
         "sentences": [{"t": s, "s": a, "e": b}
                       for s, (a, b) in zip(sentences, offsets)],
     }
     print("rendered %s: %d sentences -> %s" % (eng_file.stem, len(sentences), mp3.name), flush=True)
+    try:
+        if not (BOOKS / work).is_dir():
+            raise LookupError("not a library book (tests)")
+        sys.path.insert(0, str(BOOKS.parent / "scripts"))
+        import audit_log
+        audit_log.record(work, "audio", "Audio %s: %d sentences (%d reused, %d spoken)"
+                         % (eng_file.stem, len(sentences), len(plan), len(todo)),
+                         ref="outputs/audio/%s/manifest.json" % work)
+    except Exception:
+        pass  # the log must never stop narration
     return len(sentences)
 
 
@@ -212,15 +261,28 @@ def render_book(work: str) -> dict:
     work_out = OUT / work
     work_out.mkdir(parents=True, exist_ok=True)
     pipeline, cpu_fallback, mlx = _load_engine()
+    old = _old_manifest(work)
     manifest = {"work": work, "voice": _voice_name(), "passages": {}}
     total_sentences = 0
     with tempfile.TemporaryDirectory(prefix="fathers-audio-") as tmp:
         tmpdir = Path(tmp)
         for eng_file in english_files:
+            prev = old["passages"].get(eng_file.stem)
             total_sentences += _render_english_file(
-                eng_file, pipeline, cpu_fallback, mlx, tmpdir, work, manifest)
+                eng_file, pipeline, cpu_fallback, mlx, tmpdir, work, manifest,
+                prev, (prev or {}).get("voice") or old.get("voice"))
     _write_manifest(work, manifest, total_sentences)
     return manifest
+
+
+def _old_manifest(work: str) -> dict:
+    path = OUT / work / "manifest.json"
+    try:
+        old = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        old = {}
+    old.setdefault("passages", {})
+    return old
 
 
 def _hold_next_lock():
@@ -279,15 +341,22 @@ def _render_stems_locked(work: str, stems: list[str]) -> int:
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         else:
             manifest = {"work": work, "voice": _voice_name(), "passages": {}}
-        manifest["voice"] = _voice_name()
         manifest.setdefault("passages", {})
+        old_voice = manifest.get("voice")
+        # Untouched passages keep the voice they were read in.
+        for entry in manifest["passages"].values():
+            if old_voice:
+                entry.setdefault("voice", old_voice)
+        manifest["voice"] = _voice_name()
         pipeline, cpu_fallback, mlx = _load_engine()
         total_sentences = 0
         with tempfile.TemporaryDirectory(prefix="fathers-audio-") as tmp:
             tmpdir = Path(tmp)
             for eng_file in files:
+                prev = manifest["passages"].get(eng_file.stem)
                 total_sentences += _render_english_file(
-                    eng_file, pipeline, cpu_fallback, mlx, tmpdir, work, manifest)
+                    eng_file, pipeline, cpu_fallback, mlx, tmpdir, work, manifest,
+                    prev, (prev or {}).get("voice") or old_voice)
                 _write_manifest(work, manifest, total_sentences)
         return 0
 
