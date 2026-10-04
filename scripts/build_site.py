@@ -124,6 +124,42 @@ OTHER_RANK1_TIP_BOOKS = sorted(
     | set(BOOKS.glob("placeus-*"))
     | set(BOOKS.glob("strimesius-*"))
 )
+
+
+def _certified_books() -> set:
+    """Books the translation lanes certified: a work_pipeline receipt whose hashes
+    still match the source and English (work_pipeline.certified). They publish
+    through the tip loader with no hand-kept glob: on 2026-10-04 ten certified
+    early works (Martyrdom of Polycarp, Diognetus, Athenagoras, Tertullian ...)
+    were missing from the site because nobody had added their names above."""
+    try:
+        sys.path.insert(0, str(BOOKS.parent / "scripts"))
+        import work_pipeline as _wp
+    except Exception as e:  # the site still builds; say why nothing was added
+        print(f"certified books: work_pipeline unavailable ({type(e).__name__}: {e}); none added")
+        return set()
+    # Books another loader already reads stay with that loader (a second copy
+    # with different metadata breaks the build: "Conflicting authors").
+    import fnmatch
+    src = Path(__file__).read_text(encoding="utf-8")
+    named = set(re.findall(r'BOOKS\s*/\s*"([^"]+)"', src))
+    patterns = re.findall(r'BOOKS\.glob\("([^"/]+)"\)', src)
+    out = set()
+    for rec in sorted(BOOKS.glob("*/reviews/work_receipt.json")):
+        book = rec.parent.parent
+        if book.name in named or any(fnmatch.fnmatch(book.name, pat) for pat in patterns):
+            continue
+        try:
+            if _wp.certified(book.name):
+                out.add(book)
+        except Exception as e:
+            print(f"certified books: {book.name} skipped ({type(e).__name__}: {e})")
+    print(f"certified books: {len(out)} with a current receipt and no other loader")
+    return out
+
+
+_ALREADY_TIP = set(ORIGEN_PAULINE_FRAGMENT_BOOKS) | set(EUSTATHIUS_TIP_BOOKS) | set(EVAGRIUS_TIP_BOOKS) | set(GREGORY_THAUM_TIP_BOOKS)
+OTHER_RANK1_TIP_BOOKS = sorted(set(OTHER_RANK1_TIP_BOOKS) | (_certified_books() - _ALREADY_TIP))
 TIP_FRAGMENT_BOOKS = (
     ORIGEN_PAULINE_FRAGMENT_BOOKS
     + EUSTATHIUS_TIP_BOOKS
