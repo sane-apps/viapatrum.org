@@ -357,6 +357,7 @@ def _write_manifest(work: str, manifest: dict, total_sentences: int) -> None:
     print("manifest: %d passages, %d sentences" % (len(manifest["passages"]), total_sentences), flush=True)
 
 
+
 def render_book(work: str) -> dict:
     book = BOOKS / work
     english_files = sorted((book / "translations").glob("*_english.json"))
@@ -700,8 +701,12 @@ def _next_item() -> str:
         print("next audiobook: %s (%d words)" % (slug, words), flush=True)
         render_book(slug)
         return "book"
+    # Changed text is re-recorded only with AUDIO_RESTEM=1 for now: in
+    # cf-worker mode a changed file is spoken again in full, and the owner's
+    # rule is to re-record only the changed lines (2026-10-03).
     stale = []
-    for manifest_path in sorted(OUT.glob("*/manifest.json")):
+    restem = os.environ.get("AUDIO_RESTEM") == "1"
+    for manifest_path in sorted(OUT.glob("*/manifest.json")) if restem else ():
         stems = stale_stems(manifest_path.parent.name)
         if not stems:
             continue

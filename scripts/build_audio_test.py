@@ -255,11 +255,16 @@ class NextItemOrderTests(unittest.TestCase):
             (tmp / "dist" / "works" / work).mkdir()
         return tmp, q
 
-    def _run(self, queue, stale, books=(), words=None):
+    def _run(self, queue, stale, books=(), words=None, restem=True):
+        import os as _os
         import tempfile as _tf
         from unittest import mock
         import build_audio as ba
         calls = []
+        if restem:
+            _os.environ["AUDIO_RESTEM"] = "1"
+        else:
+            _os.environ.pop("AUDIO_RESTEM", None)
         with _tf.TemporaryDirectory() as tmp:
             tmp, q = self._setup(tmp, queue, stale, books)
             with mock.patch.object(ba, "ROOT", tmp), \
@@ -273,6 +278,7 @@ class NextItemOrderTests(unittest.TestCase):
                  mock.patch.object(ba, "_render_stems_locked", lambda w, s: calls.append(("stems", w))), \
                  mock.patch.object(ba, "_quote_voice_item", lambda: "idle"):
                 what = ba._next_item()
+        _os.environ.pop("AUDIO_RESTEM", None)
         return what, calls
 
     def test_certified_before_other_before_running(self):
@@ -300,6 +306,10 @@ class NextItemOrderTests(unittest.TestCase):
         what, calls = self._run({"changed": "certified"}, stale, books=("no-audio",))
         self.assertEqual((what, calls), ("book", [("book", "no-audio")]))
 
+
+    def test_changed_text_waits_without_restem(self):
+        stale = {"changed": (2, "v1")}
+        self.assertEqual(self._run({"changed": "certified"}, stale, restem=False), ("idle", []))
 
     def test_new_books_certified_first(self):
         queue = {"short-running": "running", "long-cert": "certified"}
