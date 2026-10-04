@@ -4544,7 +4544,8 @@ def load_origen_pauline_fragments() -> list[dict]:
                         (AUTHOR_DATES.get(author_slug) or (f"c. {_book_year(folder)}" if _book_year(folder) else ""))
                         if folder in _CERTIFIED else "") or "c. 200–340",
                     status=meta.get("status") or "available",
-                    edition=(_short_edition(folder) if folder in _CERTIFIED else "") or meta.get("edition") or "PG (Khazarzar)",
+                    edition=meta.get("edition_short") or (_short_edition(folder) if folder in _CERTIFIED else "")
+                    or meta.get("edition") or "PG (Khazarzar)",
                     sections=sections,
                     blurb=meta.get("blurb")
                     or f"{author} Greek fragments. SERIES CLOSEOUT.",
