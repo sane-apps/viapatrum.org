@@ -701,17 +701,24 @@ def _next_item() -> str:
         print("next audiobook: %s (%d words)" % (slug, words), flush=True)
         render_book(slug)
         return "book"
-    # Changed text is re-recorded only with AUDIO_RESTEM=1 for now: in
-    # cf-worker mode a changed file is spoken again in full, and the owner's
-    # rule is to re-record only the changed lines (2026-10-03).
+    # Changed text: re-record only files recorded in the current voice. The
+    # narrator Worker caches every spoken sentence, so only the changed
+    # sentences are spoken again (owner 2026-10-03: re-record only the changed
+    # lines). A file in an older voice has nothing cached and would be re-voiced
+    # in full, so it waits for the owner (AUDIO_RESTEM_OLD_VOICE=1).
     stale = []
-    restem = os.environ.get("AUDIO_RESTEM") == "1"
-    for manifest_path in sorted(OUT.glob("*/manifest.json")) if restem else ():
+    old_ok = os.environ.get("AUDIO_RESTEM_OLD_VOICE") == "1"
+    for manifest_path in sorted(OUT.glob("*/manifest.json")):
         stems = stale_stems(manifest_path.parent.name)
         if not stems:
             continue
         work = manifest_path.parent.name
-        stale.append((tiers.get(work, 1), _sentence_count(work, set(stems)), work, stems))
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        passages = manifest.get("passages") or {}
+        stems = [st for st in stems if old_ok
+                 or ((passages.get(st) or {}).get("voice") or manifest.get("voice")) == _voice_name()]
+        if stems:
+            stale.append((tiers.get(work, 1), _sentence_count(work, set(stems)), work, stems))
     if stale:
         _tier, _size, work, stems = min(stale, key=lambda s: s[:3])
         print("restem %s: %s" % (work, " ".join(stems)), flush=True)

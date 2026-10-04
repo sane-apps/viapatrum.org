@@ -297,19 +297,24 @@ class NextItemOrderTests(unittest.TestCase):
         queue = {"a-big": "certified", "b-small": "certified"}
         self.assertEqual(self._run(queue, stale)[1], [("stems", "b-small")])
 
-    def test_older_voice_rerecords_only_changed_files(self):
+    def test_older_voice_changed_text_waits(self):
         stale = {"old-voice": (2, "v0")}
-        self.assertEqual(self._run({"old-voice": "certified"}, stale)[1], [("stems", "old-voice")])
+        self.assertEqual(self._run({"old-voice": "certified"}, stale), ("idle", []))
+
+    def test_older_voice_changed_text_with_owner_flag(self):
+        import os as _os
+        stale = {"old-voice": (2, "v0")}
+        _os.environ["AUDIO_RESTEM_OLD_VOICE"] = "1"
+        try:
+            self.assertEqual(self._run({"old-voice": "certified"}, stale)[1], [("stems", "old-voice")])
+        finally:
+            _os.environ.pop("AUDIO_RESTEM_OLD_VOICE", None)
 
     def test_works_without_audio_before_changed_text(self):
         stale = {"changed": (2, "v1")}
         what, calls = self._run({"changed": "certified"}, stale, books=("no-audio",))
         self.assertEqual((what, calls), ("book", [("book", "no-audio")]))
 
-
-    def test_changed_text_waits_without_restem(self):
-        stale = {"changed": (2, "v1")}
-        self.assertEqual(self._run({"changed": "certified"}, stale, restem=False), ("idle", []))
 
     def test_new_books_certified_first(self):
         queue = {"short-running": "running", "long-cert": "certified"}
