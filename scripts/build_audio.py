@@ -673,38 +673,20 @@ def _sentence_count(work: str, stems=None) -> int:
 
 
 def _next_item() -> str:
-    """One unit of work under the held lock: 'stale', 'book' or 'idle'.
+    """One unit of work under the held lock: 'book', 'stale' or 'idle'.
 
-    Order (efficiency sweep 2026-10-03): stale stems before new books;
-    certified works first, works still in the translation pipeline last;
-    fewest sentences first inside a tier, so cheap fixes clear quickly."""
+    Owner 2026-10-03 (evening): volume first. Every published work must have
+    audio, so works with no audio come first (certified works first, fewest
+    words first). Finished audiobooks are never re-read for a voice change:
+    a work is re-recorded only where its text changed, and only those English
+    files. Re-reading old works for the quotation voice runs only when
+    AUDIO_REREAD_OLD=1. (The re-voicing rule this replaces spent about $140 on
+    Oct 3 without adding one new audiobook.)"""
+    import os
     published = ROOT / "dist" / "works"
     if not published.is_dir():
         return "idle"
     tiers = _queue_tiers()
-    stale = []
-    for manifest_path in sorted(OUT.glob("*/manifest.json")):
-        stems = stale_stems(manifest_path.parent.name)
-        if not stems:
-            continue
-        work = manifest_path.parent.name
-        manifest = json.loads(manifest_path.read_text())
-        voices = {e.get("voice") or manifest.get("voice")
-                  for e in (manifest.get("passages") or {}).values()}
-        revoice = bool(voices - {_voice_name()})
-        size = _sentence_count(work, None if revoice else set(stems))
-        stale.append((tiers.get(work, 1), size, work, stems, voices, revoice))
-    if stale:
-        _tier, _size, work, stems, voices, revoice = min(stale, key=lambda s: s[:3])
-        if revoice:
-            # One narrator per work: an older voice is re-read in full
-            # rather than mixed with the current one (owner 2026-10-03).
-            print("revoice %s (%s -> %s)" % (work, ",".join(sorted(v for v in voices if v)), _voice_name()), flush=True)
-            render_book(work)
-        else:
-            print("restem %s: %s" % (work, " ".join(stems)), flush=True)
-            _render_stems_locked(work, stems)
-        return "stale"
     candidates = []
     for work_dir in published.iterdir():
         if not work_dir.is_dir() or (OUT / work_dir.name / "manifest.json").is_file():
@@ -713,12 +695,26 @@ def _next_item() -> str:
         if scaffold or words < 40 or words > MAX_WORDS:
             continue
         candidates.append((tiers.get(work_dir.name, 1), words, work_dir.name))
-    if not candidates:
+    if candidates:
+        _tier, words, slug = sorted(candidates)[0]
+        print("next audiobook: %s (%d words)" % (slug, words), flush=True)
+        render_book(slug)
+        return "book"
+    stale = []
+    for manifest_path in sorted(OUT.glob("*/manifest.json")):
+        stems = stale_stems(manifest_path.parent.name)
+        if not stems:
+            continue
+        work = manifest_path.parent.name
+        stale.append((tiers.get(work, 1), _sentence_count(work, set(stems)), work, stems))
+    if stale:
+        _tier, _size, work, stems = min(stale, key=lambda s: s[:3])
+        print("restem %s: %s" % (work, " ".join(stems)), flush=True)
+        _render_stems_locked(work, stems)
+        return "stale"
+    if os.environ.get("AUDIO_REREAD_OLD") == "1":
         return _quote_voice_item()
-    _tier, words, slug = sorted(candidates)[0]
-    print("next audiobook: %s (%d words)" % (slug, words), flush=True)
-    render_book(slug)
-    return "book"
+    return "idle"
 
 
 def _quote_voice_item() -> str:

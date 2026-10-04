@@ -291,9 +291,15 @@ class NextItemOrderTests(unittest.TestCase):
         queue = {"a-big": "certified", "b-small": "certified"}
         self.assertEqual(self._run(queue, stale)[1], [("stems", "b-small")])
 
-    def test_revoice_still_rereads_whole_book(self):
+    def test_older_voice_rerecords_only_changed_files(self):
         stale = {"old-voice": (2, "v0")}
-        self.assertEqual(self._run({"old-voice": "certified"}, stale)[1], [("book", "old-voice")])
+        self.assertEqual(self._run({"old-voice": "certified"}, stale)[1], [("stems", "old-voice")])
+
+    def test_works_without_audio_before_changed_text(self):
+        stale = {"changed": (2, "v1")}
+        what, calls = self._run({"changed": "certified"}, stale, books=("no-audio",))
+        self.assertEqual((what, calls), ("book", [("book", "no-audio")]))
+
 
     def test_new_books_certified_first(self):
         queue = {"short-running": "running", "long-cert": "certified"}
