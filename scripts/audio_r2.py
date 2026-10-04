@@ -117,6 +117,11 @@ def plan_checks(sizes: dict, ledger: dict, uploaded: set, sample: int = RECHECK_
 def _put(token: str, src: Path, key: str) -> bool:
     url = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/r2/buckets/{BUCKET}/objects/{key}"
     data = src.read_bytes()
+    want = key.rsplit(".", 2)[-2] if key.count(".") >= 2 else ""
+    if want and hashlib.sha256(data).hexdigest()[:len(want)] != want:
+        print(f"  REFUSED {key}: the local file changed after its key was made "
+              f"(re-run inject_audio for this work)", flush=True)
+        return False
     for attempt in range(4):
         req = urllib.request.Request(url, data=data, method="PUT",
                                      headers={"Authorization": f"Bearer {token}", "Content-Type": "audio/mpeg"})
