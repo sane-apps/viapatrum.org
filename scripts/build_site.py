@@ -158,8 +158,40 @@ def _certified_books() -> set:
     return out
 
 
+def _book_year(folder: Path) -> str:
+    m = re.search(r'^year:\s*"?(\d{2,4})"?\s*$', (folder / "book.yml").read_text(encoding="utf-8"), re.M) \
+        if (folder / "book.yml").exists() else None
+    return m.group(1) if m else ""
+
+
+def _short_edition(folder: Path) -> str:
+    """'Lake, vol. 2 (1917)' from the TEI copy-text's biblStruct, like the hand
+    kept 'Koetschau GCS (1899)'; '' when there is no TEI to read."""
+    for xml in sorted((folder / "sources").glob("*.xml")):
+        head = xml.read_text(encoding="utf-8", errors="replace")[:20000]
+        bib = re.search(r"<sourceDesc>(.*?)</sourceDesc>", head, re.S)
+        if not bib:
+            continue
+        b = bib.group(1)
+        ed = re.search(r"<editor[^>]*>(.*?)</editor>", b, re.S)
+        year = re.search(r"<date[^>]*>(\d{4})", b)
+        vol = re.search(r'<biblScope unit="volume">([^<]+)</biblScope>', b)
+        if not (ed and year):
+            continue
+        name = re.sub(r"<[^>]+>", " ", ed.group(1)).split()
+        if not name:
+            continue
+        out = name[-1]
+        if vol:
+            out += f", vol. {vol.group(1).strip()}"
+        return f"{out} ({year.group(1)})"
+    return ""
+
+
+_CERTIFIED = set()  # filled below; these books get period/edition from book.yml + TEI
 _ALREADY_TIP = set(ORIGEN_PAULINE_FRAGMENT_BOOKS) | set(EUSTATHIUS_TIP_BOOKS) | set(EVAGRIUS_TIP_BOOKS) | set(GREGORY_THAUM_TIP_BOOKS)
-OTHER_RANK1_TIP_BOOKS = sorted(set(OTHER_RANK1_TIP_BOOKS) | (_certified_books() - _ALREADY_TIP))
+_CERTIFIED = _certified_books() - _ALREADY_TIP
+OTHER_RANK1_TIP_BOOKS = sorted(set(OTHER_RANK1_TIP_BOOKS) | _CERTIFIED)
 TIP_FRAGMENT_BOOKS = (
     ORIGEN_PAULINE_FRAGMENT_BOOKS
     + EUSTATHIUS_TIP_BOOKS
@@ -1041,6 +1073,9 @@ def alpha_key(s: str | None) -> str:
 # Prefer one hub slug when tip metas disagree with dedicated loaders.
 AUTHOR_SLUG_ALIASES = {
     "origen-of-alexandria": "origen",
+    # Certified books name authors in full; join the existing author pages.
+    "irenaeus-of-lyons": "irenaeus",
+    "anonymous-epistle-to-diognetus": "mathetes-epistle-to-diognetus",
 }
 
 
@@ -4503,9 +4538,13 @@ def load_origen_pauline_fragments() -> list[dict]:
                     title=title,
                     author=author,
                     author_slug=author_slug,
-                    period=meta.get("period") or "c. 200–340",
+                    # Certified books: the author's dates when known (always true),
+                    # else the book's year; the old default is wrong for most.
+                    period=meta.get("period") or (
+                        (AUTHOR_DATES.get(author_slug) or (f"c. {_book_year(folder)}" if _book_year(folder) else ""))
+                        if folder in _CERTIFIED else "") or "c. 200–340",
                     status=meta.get("status") or "available",
-                    edition=meta.get("edition") or "PG (Khazarzar)",
+                    edition=(_short_edition(folder) if folder in _CERTIFIED else "") or meta.get("edition") or "PG (Khazarzar)",
                     sections=sections,
                     blurb=meta.get("blurb")
                     or f"{author} Greek fragments. SERIES CLOSEOUT.",
@@ -8309,7 +8348,9 @@ https://:version.:project.pages.dev/*
         "/search/ /works/ 301\n"
         "/search /works/ 301\n"
         "/authors/augustine/ /authors/augustine-of-hippo/ 301\n"
-        "/authors/anonymous-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n",
+        "/authors/anonymous-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n"
+        "/authors/anonymous-epistle-to-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n"
+        "/authors/irenaeus-of-lyons/ /authors/irenaeus/ 301\n",
         encoding="utf-8",
     )
     # One sitemap per section, joined by an index, all on the canonical host.
