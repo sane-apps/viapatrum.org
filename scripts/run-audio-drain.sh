@@ -7,9 +7,12 @@
 set -u
 export PATH="/opt/homebrew/opt/node@24/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
 set -a; source "$HOME/.config/nv/env" >/dev/null 2>&1; set +a
-export KOKORO_ENGINE=cf CF_TTS_WORKERS=12
+export KOKORO_ENGINE=cf-worker CF_TTS_WORKERS=12  # 2026-10-03: narration runs in the viapatrum-narrator Worker, mp3s go straight to R2
 # Bible quotations read by a second voice (owner approved 2026-10-03).
 export CF_TTS_QUOTE_VOICE=arcas
+# Owner approved 2026-10-03 (about 96 dollars): re-record changed text in the 39 works
+# recorded in the old local voice; those files have no Worker sentence cache.
+export AUDIO_RESTEM_OLD_VOICE=1
 # Vendor SOP: cf_tts needs a smoked receipt (< 4 h); refresh after 3 h.
 RECEIPTS="$HOME/SaneApps/infra/SaneProcess/outputs/llm-api-research"
 R=$(ls -t "$RECEIPTS"/*-cf-_cf_deepgram_aura-2-en.json 2>/dev/null | head -1)
