@@ -70,7 +70,12 @@ def match_key(text: str) -> str:
     The site unwraps editorial brackets ("[are]" shows as "are") while the
     recording's text keeps them, so brackets alone must not cost a Play bar.
     """
-    return norm(text.replace("[", "").replace("]", ""))
+    text = text.replace("[", "").replace("]", "").replace("…", "...")
+    # Spacing before punctuation is not wording: the page shows "corruption..."
+    # where the recorded text has "corruption ..." (2026-10-05, Placeus 293).
+    # A sentence split can leave the previous period at the start of a
+    # recorded span (". 1. By the same..."); a period is not spoken.
+    return norm(re.sub(r"\s+(?=[.,;:!?])", "", text)).lstrip(".,;: ")
 
 
 def section_candidates(work: str) -> dict:

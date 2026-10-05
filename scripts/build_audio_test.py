@@ -330,5 +330,23 @@ class NextItemOrderTests(unittest.TestCase):
             self.assertEqual(ba._queue_tiers(), {})
 
 
+
+class MatchKeyTests(unittest.TestCase):
+    """2026-10-05: Placeus sections lost their Play bar over spacing, not words."""
+
+    def test_spacing_before_punctuation_and_ellipsis(self):
+        import inject_audio as ia
+        self.assertEqual(ia.match_key("freed from that corruption ... and all infants"),
+                         ia.match_key("freed from that corruption... and all infants"))
+        self.assertEqual(ia.match_key("corruption… and"), ia.match_key("corruption ... and"))
+
+    def test_leading_period_from_a_split(self):
+        import inject_audio as ia
+        self.assertEqual(ia.match_key(". 1. By the same subtlety"), ia.match_key("1. By the same subtlety"))
+
+    def test_different_words_still_differ(self):
+        import inject_audio as ia
+        self.assertNotEqual(ia.match_key("he went home"), ia.match_key("she went home"))
+
 if __name__ == "__main__":
     unittest.main()
