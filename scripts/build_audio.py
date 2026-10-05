@@ -178,8 +178,12 @@ def _join_wavs(parts: list[Path], wav: Path) -> None:
 
 def _cut_wav(mp3: Path, start: float, end: float, wav: Path) -> None:
     """Decode one sentence span of an existing recording to a 24 kHz wav."""
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(mp3),
-                    "-ss", "%.3f" % start, "-t", "%.3f" % (end - start),
+    # Seek before -i: ffmpeg jumps to the sentence instead of decoding the
+    # whole file up to it (2026-10-05: 0.5 s vs 15 s per cut at the end of an
+    # 11 h recording). Measured against the old form: max difference 1 of
+    # 32768 in the first ~50 ms (decoder warm-up), inaudible.
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", "%.3f" % start, "-i", str(mp3),
+                    "-t", "%.3f" % (end - start),
                     "-ar", "24000", "-ac", "1", str(wav)], check=True)
 
 
