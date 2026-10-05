@@ -348,5 +348,24 @@ class MatchKeyTests(unittest.TestCase):
         import inject_audio as ia
         self.assertNotEqual(ia.match_key("he went home"), ia.match_key("she went home"))
 
+
+class SlugMapTests(unittest.TestCase):
+    """2026-10-05: renamed works (site slug != book folder) were never narrated or re-checked."""
+
+    def test_site_slug_maps_to_book_and_back(self):
+        import json, tempfile
+        from pathlib import Path
+        from unittest import mock
+        import build_audio as B
+        with tempfile.TemporaryDirectory() as d:
+            books, root = Path(d) / "books", Path(d) / "site"
+            (books / "cyril-alexandria-ad-xystum" / "translations").mkdir(parents=True)
+            (books / "cyril-alexandria-ad-xystum" / "translations" / "ax_meta.json").write_text(json.dumps({"slug": "cyril-ad-xystum"}))
+            (root / "dist" / "works" / "cyril-ad-xystum").mkdir(parents=True)
+            with mock.patch.object(B, "BOOKS", books), mock.patch.object(B, "ROOT", root), mock.patch.object(B, "_SLUGS", None):
+                self.assertEqual(B.book_for_site("cyril-ad-xystum"), "cyril-alexandria-ad-xystum")
+                self.assertEqual([p.name for p in B.site_dirs_for("cyril-alexandria-ad-xystum")], ["cyril-ad-xystum"])
+                self.assertEqual(B.book_for_site("unknown-work"), "unknown-work", "unmapped slugs keep the old behaviour")
+
 if __name__ == "__main__":
     unittest.main()

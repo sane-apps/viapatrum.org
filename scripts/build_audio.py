@@ -478,10 +478,10 @@ def stale_stems(work: str) -> list[str]:
     are that page's words, so a re-read makes the audio attach again.
     """
     import inject_audio as ia
-    pages = ROOT / "dist" / "works" / work
+    site_dirs = site_dirs_for(work)
     manifest_path = OUT / work / "manifest.json"
     folder = BOOKS / work / "translations"
-    if not pages.is_dir() or not manifest_path.is_file() or not folder.is_dir():
+    if not site_dirs or not manifest_path.is_file() or not folder.is_dir():
         return []
     passages = json.loads(manifest_path.read_text(encoding="utf-8")).get("passages") or {}
     texts: dict[tuple[str, str], str] = {}
@@ -495,8 +495,8 @@ def stale_stems(work: str) -> list[str]:
             texts[(eng_file.stem, str(row.get("section")))] = ia.norm(" ".join(sents))
     stale = set()
     for sec, opts in ia.section_candidates(work).items():
-        page = pages / sec / "index.html"
-        if not ia._safe_sec(sec) or not page.is_file():
+        page = next((d / sec / "index.html" for d in site_dirs if (d / sec / "index.html").is_file()), None)
+        if not ia._safe_sec(sec) or page is None:
             continue
         plain = ia._body_plain(page)
         if not plain or SCAFFOLD.search(plain) or ia.matching_choices(opts, passages, plain):
@@ -511,8 +511,53 @@ SCAFFOLD = re.compile(
     r"Lemma-led|Rem (?:early|mid|CLOSEOUT)|PLACEHOLDER|translation pending",
     re.I,
 )
-# 64 kbps mp3 of about 40 minutes. Pages refuses a file over 25 MiB.
-MAX_WORDS = 5000
+# Audio lives on R2 since 2026-10-03 (the old cap came from Pages' 25 MiB file
+# limit) and the narrator Worker encodes in ~20-minute segments. Owner
+# 2026-10-05: every certified work gets full audio; the longest is ~17.6k words.
+MAX_WORDS = 25000
+
+
+_SLUGS: dict | None = None
+
+
+def _slug_maps() -> tuple[dict, dict]:
+    """(site slug -> book, book -> site slugs) from each English file's meta
+    "slug" (the site's tip loader names pages the same way). A book folder that
+    is itself a site slug maps to itself."""
+    global _SLUGS
+    if _SLUGS is None:
+        site_book: dict[str, set] = {}
+        book_sites: dict[str, set] = {}
+        for meta in BOOKS.glob("*/translations/*_meta.json"):
+            try:
+                slug = json.loads(meta.read_text(encoding="utf-8")).get("slug")
+            except (OSError, ValueError, AttributeError):
+                continue
+            book = meta.parent.parent.name
+            if slug and slug != book:
+                site_book.setdefault(slug, set()).add(book)
+                book_sites.setdefault(book, set()).add(slug)
+        _SLUGS = {"site": site_book, "book": book_sites}
+    return _SLUGS["site"], _SLUGS["book"]
+
+
+def book_for_site(site: str) -> str | None:
+    """The book folder a public work slug is built from (2026-10-05: renamed
+    works such as cyril-ad-xystum <- cyril-alexandria-ad-xystum were never
+    narrated because their site slug is not a book folder)."""
+    if (BOOKS / site / "translations").is_dir():
+        return site
+    books = _slug_maps()[0].get(site) or set()
+    # No unique book: keep the old behaviour (the site slug itself; unknown
+    # slugs count 0 words and are skipped).
+    return next(iter(books)) if len(books) == 1 else site
+
+
+def site_dirs_for(work: str) -> list:
+    """Public page folders of a book: its own slug, else the slugs its meta names."""
+    works = ROOT / "dist" / "works"
+    names = ([work] if (works / work).is_dir() else []) + sorted(_slug_maps()[1].get(work) or [])
+    return [works / s for s in names if (works / s).is_dir()]
 
 
 def _work_words(work: str) -> tuple[int, bool]:
@@ -624,8 +669,8 @@ def render_next() -> int:
     for work_dir in published.iterdir():
         if not work_dir.is_dir():
             continue
-        slug = work_dir.name
-        if (OUT / slug / "manifest.json").is_file():
+        slug = book_for_site(work_dir.name)
+        if not slug or (OUT / slug / "manifest.json").is_file():
             continue
         words, scaffold = _work_words(slug)
         if scaffold or words < 40 or words > MAX_WORDS:
@@ -694,12 +739,13 @@ def _next_item() -> str:
     tiers = _queue_tiers()
     candidates = []
     for work_dir in published.iterdir():
-        if not work_dir.is_dir() or (OUT / work_dir.name / "manifest.json").is_file():
+        book = book_for_site(work_dir.name) if work_dir.is_dir() else None
+        if not book or (OUT / book / "manifest.json").is_file():
             continue
-        words, scaffold = _work_words(work_dir.name)
+        words, scaffold = _work_words(book)
         if scaffold or words < 40 or words > MAX_WORDS:
             continue
-        candidates.append((tiers.get(work_dir.name, 1), words, work_dir.name))
+        candidates.append((tiers.get(work_dir.name, 1), words, book))
     if candidates:
         _tier, words, slug = sorted(candidates)[0]
         print("next audiobook: %s (%d words)" % (slug, words), flush=True)
