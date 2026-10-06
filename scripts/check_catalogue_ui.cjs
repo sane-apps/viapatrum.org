@@ -291,7 +291,7 @@ async function run(base,out) {
   }
   for(const label of ["about","methodology","help"]) {
    await visit(base+"/"+(label==="help"?"contribute":label)+"/",{waitUntil:"networkidle"});
-   if(label==="methodology")await page.locator("h2").filter({hasText:"Review status"}).evaluate(e=>scrollTo(0,e.getBoundingClientRect().top+scrollY-100));
+   if(label==="methodology")await page.locator("h2").filter({hasText:"How it is checked"}).evaluate(e=>scrollTo(0,e.getBoundingClientRect().top+scrollY-100));
    if(label==="help")await page.locator("#ai-prompt code").evaluate(e=>{
     const node=e.firstChild,start=node.textContent.indexOf("Check exact author/work/source");
     if(start<0)throw new Error("Source evidence instruction missing");
