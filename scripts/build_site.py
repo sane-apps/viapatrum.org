@@ -1882,6 +1882,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
 PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     # Traditional names where the meta title only repeated the English (2026-10-06).
     "origen-homily-1samuel-28": "De engastrimytho",
+    "anonymous-antimontanist": "Ad Avircium Marcellum contra Cataphrygas",
     "athenagoras-resurrection": "De resurrectione mortuorum",
     "clement-alexandria-rich-man": "Quis dives salvetur",
     "tertullian-on-patience": "De patientia",
