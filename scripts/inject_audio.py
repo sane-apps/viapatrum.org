@@ -2,6 +2,7 @@
 """Inject the read-along player into built work pages (post-build step).
 
 Usage: python3 scripts/inject_audio.py <work-slug>
+       python3 scripts/inject_audio.py --all   (every outputs/audio/*/manifest.json, one process)
 
 Reads outputs/audio/<work>/manifest.json. The work slug is the translations
 book, which is not always the public page slug. Each matching passage gets a
@@ -11,6 +12,8 @@ drifted is skipped, and the rest of the book still attaches.
 """
 from __future__ import annotations
 
+import functools
+import hashlib
 import html
 import json
 import os
@@ -28,26 +31,48 @@ ROOT = Path(__file__).resolve().parent.parent
 BOOKS = Path.home() / "SaneApps/clients/translations/books"
 
 
-def _asset_version() -> str:
-    """Same hash build_site.py stamps on site.css/js (audit N-C2)."""
-    import hashlib
+def _dist() -> Path:
+    """The built site to inject into. FATHERS_DIST matches build_site.py."""
+    env = os.environ.get("FATHERS_DIST")
+    return Path(env) if env else ROOT / "dist"
 
+
+# Run state (R2 upload list, caches). INJECT_STATE_DIR keeps test runs out of
+# the ship's files; ship.sh reads outputs/audio-r2-pending.jsonl.
+STATE = Path(os.environ["INJECT_STATE_DIR"]) if os.environ.get("INJECT_STATE_DIR") else ROOT / "outputs"
+
+_ASSET_VERSION: str | None = None
+
+
+def _asset_version() -> str:
+    """Same hash build_site.py stamps on site.css/js (audit N-C2).
+
+    Computed once per process: it reads every asset, and a long work used to
+    pay that on each cite page.
+    """
+    global _ASSET_VERSION
+    if _ASSET_VERSION:
+        return _ASSET_VERSION
     h = hashlib.md5()
     for p in sorted((ROOT / "assets").glob("*")):
         if p.is_file():
             h.update(p.read_bytes())
-    return h.hexdigest()[:10]
+    _ASSET_VERSION = h.hexdigest()[:10]
+    return _ASSET_VERSION
 
 PLAYER_CSS = """
-<style>.rdl-player{display:flex;align-items:center;gap:.6rem;margin:.9rem 0 .3rem;padding:.55rem .8rem;border:1px solid var(--rule);border-radius:.6rem;background:var(--paper-2)}.rdl-play{border:1px solid var(--navy);background:var(--navy);color:var(--cream);border-radius:.45rem;padding:.3rem .8rem;cursor:pointer;font:inherit;font-weight:650}.rdl-prev,.rdl-next{border:1px solid var(--gold);background:var(--paper);color:var(--gold-deep);border-radius:.45rem;padding:.3rem .55rem;cursor:pointer;font:inherit}.rdl-bar{flex:1;height:.55rem;background:var(--rule);border-radius:.3rem;cursor:pointer}.rdl-fill{height:100%;width:0;background:var(--navy);border-radius:.3rem}.rdl-time{font-size:.85rem;color:var(--ink-soft);white-space:nowrap}.rdl-hint{font-size:.85rem;color:var(--ink-soft);margin:0 0 .9rem}.rdl{border-radius:.2rem;cursor:pointer}.rdl:hover{background:#efe6cf}.rdl-on{background:#f5e6bd;box-shadow:inset 3px 0 0 var(--gold-bright)}</style>
+<style>.rdl-player{display:flex;align-items:center;gap:.6rem;margin:.9rem 0 .3rem;padding:.55rem .8rem;border:1px solid var(--rule);border-radius:.6rem;background:var(--paper-2)}.rdl-play{border:1px solid var(--navy);background:var(--navy);color:var(--cream);border-radius:.45rem;padding:.3rem .8rem;cursor:pointer;font:inherit;font-weight:650}.rdl-prev,.rdl-next{border:1px solid var(--gold);background:var(--paper);color:var(--gold-deep);border-radius:.45rem;padding:.3rem .55rem;cursor:pointer;font:inherit}.rdl-bar{flex:1;height:.55rem;background:var(--rule);border-radius:.3rem;cursor:pointer}.rdl-bar:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}.rdl-fill{height:100%;width:0;background:var(--navy);border-radius:.3rem}.rdl-time{font-size:.85rem;color:var(--ink-soft);white-space:nowrap}.rdl-hint{font-size:.85rem;color:var(--ink-soft);margin:0 0 .9rem}.rdl{border-radius:.2rem;cursor:pointer}.rdl:hover{background:#efe6cf}.rdl-on{background:#f5e6bd;box-shadow:inset 3px 0 0 var(--gold-bright)}</style>
 """
 
+# data-audio/data-t0/data-dur let the player show its length and start in the
+# tap without fetching anything at page load (audit: 155 manifests + 155 mp3
+# range requests on one long reader before anyone pressed Play).
 PLAYER_HTML = """
-<div class="rdl-player" data-manifest="{manifest}" data-start="{start}" data-end="{end}">
+<div class="rdl-player" data-manifest="{manifest}" data-start="{start}" data-end="{end}" data-audio="{audio}" data-t0="{t0}" data-dur="{dur}">
 <button class="rdl-prev" type="button" title="Back one paragraph" aria-label="Back one paragraph">\u23ee</button>
 <button class="rdl-play" type="button">\u25b6 Play</button>
 <button class="rdl-next" type="button" title="Skip one paragraph" aria-label="Skip one paragraph">\u23ed</button>
-<div class="rdl-bar" role="slider" aria-label="Seek"><div class="rdl-fill"></div></div>
+<div class="rdl-bar" role="slider" tabindex="0" aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="rdl-fill"></div></div>
 <span class="rdl-time"></span>
 </div>
 <div class="rdl-hint">Click or tap any sentence to jump there. The side buttons skip a paragraph.</div>
@@ -64,6 +89,7 @@ def norm(text: str) -> str:
     return re.sub(r"\s+", " ", html.unescape(text)).strip()
 
 
+@functools.lru_cache(maxsize=1 << 16)
 def match_key(text: str) -> str:
     """Words for matching a recording to its page.
 
@@ -111,6 +137,24 @@ def _window(passages: dict, stem: str, first: int, last: int):
     return rows, rows[first:last + 1]
 
 
+_SAID: dict = {}
+_SAID_OWNER: list = [None]
+
+
+def _said(passages: dict, stem: str, first: int, last: int, window: list) -> str:
+    """_expected_plain(window), memoized per manifest: one work checks the same
+    window against many pages. Keyed on the passages object itself (held, so
+    its id cannot be reused by another work's manifest)."""
+    if _SAID_OWNER[0] is not passages:
+        _SAID.clear()
+        _SAID_OWNER[0] = passages
+    key = (stem, first, last)
+    said = _SAID.get(key)
+    if said is None:
+        said = _SAID[key] = _expected_plain(window)
+    return said
+
+
 def matching_choices(opts, passages: dict, plain: str) -> list:
     """Recordings of this section whose words are the cite page's words."""
     exact, loose = [], []
@@ -121,7 +165,7 @@ def matching_choices(opts, passages: dict, plain: str) -> list:
         if not got:
             continue
         full, window = got
-        said = _expected_plain(window)
+        said = _said(passages, stem, first, last, window)
         if said == plain:
             exact.append((stem, first, last, window, full))
         elif match_key(said) == match_key(plain):
@@ -144,6 +188,10 @@ def text_pairs(text: str) -> list[tuple[str, str]]:
     return pairs
 
 
+_FEED_RE = re.compile(
+    r"(?P<ws>\s+)|(?P<ent>&(?:#[0-9]+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);)|(?P<run>[^\s&]+|&)")
+
+
 def plain_stream(inner: str) -> tuple[str, list[str], dict[int, list[str]]]:
     """Normalize para inner HTML to plain chars with raw mapping.
 
@@ -158,18 +206,36 @@ def plain_stream(inner: str) -> tuple[str, list[str], dict[int, list[str]]]:
     last_ch: str | None = None
 
     def feed(text: str) -> None:
+        # Same result as walking text_pairs() one char at a time, but runs of
+        # plain characters are copied in one step (this loop was most of the
+        # inject time).
         nonlocal pending_space, last_ch
-        for ch, raw in text_pairs(text):
-            if ch.isspace():
+        for m in _FEED_RE.finditer(text):
+            if m.group("ws"):
                 pending_space = True
                 continue
+            ent = m.group("ent")
+            if ent:
+                ch = html.unescape(ent)
+                if ch.isspace():
+                    pending_space = True
+                    continue
+                if pending_space and last_ch is not None:
+                    chars.append(" ")
+                    raws.append(" ")
+                pending_space = False
+                chars.append(ch)
+                raws.append(ent)
+                last_ch = ch
+                continue
+            run = m.group("run")
             if pending_space and last_ch is not None:
                 chars.append(" ")
                 raws.append(" ")
             pending_space = False
-            chars.append(ch)
-            raws.append(raw)
-            last_ch = ch
+            chars.extend(run)
+            raws.extend(run)
+            last_ch = run[-1]
 
     pos = 0
     for m in TAG_RE.finditer(inner):
@@ -205,11 +271,13 @@ def _track(stack: list[tuple[str, str]], tag: str) -> None:
 
 
 def wrap_sentences(inner: str, sentences: list[str], expected: list[str],
-                   start_idx: int, where: str) -> str:
+                   start_idx: int, where: str, indices: list[int] | None = None) -> str:
     """Wrap sentences in tracking spans, preserving inline tags.
 
     sentences: split of this paragraph's plain text. expected: the matching
-    manifest texts. Raises AssertionError on any misalignment.
+    manifest texts. indices: data-i per span when it is not start_idx + j
+    (a punctuation-only recorded row shares its neighbour's span).
+    Raises AssertionError on any misalignment.
     """
     plain, raws, tags_before = plain_stream(inner)
     assert plain == norm(TAG_RE.sub("", inner)), "stream diverged in %s" % where
@@ -250,7 +318,8 @@ def wrap_sentences(inner: str, sentences: list[str], expected: list[str],
                 deferred.append(t)
         for name, _ in reversed(stack):
             pieces.append("</%s>" % name)
-        out.append('<span class="rdl" data-i="%d">%s</span>' % (start_idx + j, "".join(pieces)))
+        idx = indices[j] if indices is not None else start_idx + j
+        out.append('<span class="rdl" data-i="%d">%s</span>' % (idx, "".join(pieces)))
         cursor = b
     if not sentences:
         for t in tags_before.get(0, []):
@@ -260,9 +329,118 @@ def wrap_sentences(inner: str, sentences: list[str], expected: list[str],
     return " ".join(out)
 
 
+def _fold_rows(rows: list[str]) -> list[tuple[str, int]]:
+    """(text, row offset) per span. A punctuation-only row (a lone '.') is not
+    words on the page: it joins the row before it, or the row after it when
+    it comes first."""
+    out: list[tuple[str, int]] = []
+    lead: list[str] = []
+    for j, text in enumerate(rows):
+        if not match_key(text):
+            if out:
+                out[-1] = (out[-1][0] + " " + text, out[-1][1])
+            else:
+                lead.append(text)
+            continue
+        if lead:
+            text = " ".join(lead + [text])
+            lead = []
+        out.append((text, j))
+    return out if not lead else []
+
+
+def map_rows(plain: str, rows: list[str], where: str) -> list[str]:
+    """Cut a paragraph's page text into one piece per recorded row.
+
+    The page and the recording can split the same words differently: the
+    recording keeps editorial brackets ("naked. [Mt 10:10] 'Nor sandals.'" is
+    one sentence there, two on the page), and the long-sentence cut lands
+    elsewhere when brackets change the length. Each piece starts and ends at
+    a space, and its words are that row's words.
+    """
+    cuts = [m.start() for m in re.finditer(" ", plain)] + [len(plain)]
+    pieces: list[str] = []
+    cursor = 0
+    for j, row in enumerate(rows):
+        want = match_key(row)
+        last = j == len(rows) - 1
+        found = None
+        for c in cuts:
+            if c <= cursor:
+                continue
+            if last and c != len(plain):
+                continue
+            got = match_key(plain[cursor:c])
+            if got == want:
+                found = c
+                break
+            if len(got) > len(want) + 16:
+                break
+        if found is None:
+            raise AssertionError("sentence drift in %s [%d]" % (where, j))
+        pieces.append(plain[cursor:found])
+        cursor = found + 1
+    if cursor < len(plain):
+        raise AssertionError("sentence drift in %s (text left over)" % where)
+    return pieces
+
+
+def plan_para(plain: str, texts: list[str], idx: int, where: str):
+    """Which recorded rows are this paragraph, and how they lie on its text.
+
+    Returns (rows used, page sentences, expected texts, data-i offsets or None).
+    The page's own split is used whenever it lines up row for row, so
+    sections that already worked keep the same spans. Otherwise the rows are
+    mapped onto the page text. The paragraph's words must equal the rows'
+    words either way.
+    """
+    sentences = split_sentences(plain) if plain else []
+    n = len(sentences)
+    expected = texts[idx:idx + n]
+    want = match_key(plain)
+    if len(expected) == n and want == match_key(" ".join(expected)) and all(
+            match_key(a) == match_key(b) for a, b in zip(sentences, expected)):
+        return n, sentences, expected, None
+    used = None
+    for m in range(1, len(texts) - idx + 1):
+        got = match_key(" ".join(texts[idx:idx + m]))
+        if got == want:
+            used = m
+            break
+        if len(got) > len(want):
+            break
+    if used is None:
+        raise AssertionError("sentence drift in %s" % where)
+    folded = _fold_rows(texts[idx:idx + used])
+    if not folded:
+        raise AssertionError("sentence drift in %s (no words)" % where)
+    pieces = map_rows(plain, [t for t, _ in folded], where)
+    return used, pieces, [t for t, _ in folded], [off for _, off in folded]
+
+
+def rows_left(texts: list[str], idx: int) -> int:
+    """Recorded rows not yet placed, not counting trailing punctuation-only rows."""
+    end = len(texts)
+    while end > idx and not match_key(texts[end - 1]):
+        end -= 1
+    return end - idx
+
+
+def _catalogue_receipt() -> Path:
+    """The quality receipt of the build being injected.
+
+    build_site.py writes it next to the build (dist -> dist.catalogue-quality.json)
+    so a test build cannot change what a ship reads. Older builds only wrote
+    outputs/catalogue-quality.json.
+    """
+    dist = _dist()
+    own = dist.parent / (dist.name + ".catalogue-quality.json")
+    return own if own.is_file() else ROOT / "outputs/catalogue-quality.json"
+
+
 def held_works() -> set:
     """Slugs the just-completed build held back (no pages)."""
-    path = ROOT / "outputs/catalogue-quality.json"
+    path = _catalogue_receipt()
     assert path.exists(), "cannot verify hold state, %s missing" % path
     data = json.loads(path.read_text(encoding="utf-8"))
     return {w["slug"] for w in data.get("held_works", [])}
@@ -278,7 +456,10 @@ def work_state(built: bool, held: bool) -> str:
 
 
 def _body_plain(page: Path) -> str:
-    html_text = page.read_text(encoding="utf-8", errors="replace")
+    return _plain_of_html(page.read_text(encoding="utf-8", errors="replace"))
+
+
+def _plain_of_html(html_text: str) -> str:
     match = re.search(r'<div class="body">(.*?)</div>', html_text, re.S)
     if not match:
         return ""
@@ -299,24 +480,21 @@ def locate_sites(book: str, cands: dict, manifest: dict) -> dict:
     recording to the one cite page whose words match it. Skip a recording
     only when those same words match more than one page.
     """
-    works = ROOT / "dist/works"
+    works = _dist() / "works"
     direct = works / book
     if direct.is_dir():
         return {book: cands}
     passages = manifest.get("passages") or {}
     if not works.is_dir():
         return {}
-    site_names = sorted(p.name for p in works.iterdir() if p.is_dir())
     found = {}
     for sec, opts in cands.items():
         if "/" in sec or sec in ("", ".", ".."):
             continue
         owners = {}
         chosen = []
-        for site in site_names:
+        for site in _sites_with_section(works, sec):
             page = works / site / sec / "index.html"
-            if not page.is_file():
-                continue
             hits = matching_choices(opts, passages, _cached_plain(page))
             if not hits:
                 continue
@@ -336,29 +514,52 @@ def locate_sites(book: str, cands: dict, manifest: dict) -> dict:
     return found
 
 
+# Page text cache. On disk: path -> (blake2b of the page bytes, plain[, key]).
+# A full build rewrites every page, so (mtime, size) never hit after one; the
+# bytes of an unchanged page are the same, so the hash does. In memory:
+# path -> (mtime_ns, size, plain), valid inside one process, so a page is read
+# and parsed once per run (inject_work and locate_sites share it).
 _PLAIN_CACHE: dict | None = None
 _PLAIN_DIRTY = False
+_PLAIN_MEMO: dict = {}
+_PLAIN_SEEN: set = set()
+# --all: one run over a dist whose pages do not appear or change text, so the
+# page lists can be memoized, and cache entries the run never read are gone.
+_ALL_MODE = False
+_RUN_MEMO: dict = {}
+
+
+def _plain_cache_path() -> Path:
+    return STATE / ".page-plain-cache.json"
 
 
 def _cached_plain(page) -> str:
-    """_body_plain with a cross-process disk cache keyed by (mtime, size)."""
+    """_body_plain, cached in memory and on disk (keyed by the page's bytes)."""
     global _PLAIN_CACHE, _PLAIN_DIRTY
-    cache_path = ROOT / "outputs/.page-plain-cache.json"
+    st = page.stat()
+    key = str(page)
+    memo = _PLAIN_MEMO.get(key)
+    if memo and memo[0] == st.st_mtime_ns and memo[1] == st.st_size:
+        return memo[2]
     if _PLAIN_CACHE is None:
         try:
-            _PLAIN_CACHE = {k: tuple(v) for k, v in json.loads(cache_path.read_text(encoding="utf-8")).items()}
+            _PLAIN_CACHE = {k: tuple(v) for k, v in json.loads(
+                _plain_cache_path().read_text(encoding="utf-8")).items()}
         except Exception:
             _PLAIN_CACHE = {}
         import atexit
         atexit.register(_save_plain_cache)
-    st = page.stat()
-    key = str(page)
+    data = page.read_bytes()
+    digest = hashlib.blake2b(data, digest_size=16).hexdigest()
     hit = _PLAIN_CACHE.get(key)
-    if hit and hit[0] == st.st_mtime_ns and hit[1] == st.st_size:
-        return hit[2]
-    plain = _body_plain(page)
-    _PLAIN_CACHE[key] = (st.st_mtime_ns, st.st_size, plain)
-    _PLAIN_DIRTY = True
+    if hit and hit[0] == digest:
+        plain = hit[1]
+    else:
+        plain = _plain_of_html(data.decode("utf-8", errors="replace"))
+        _PLAIN_CACHE[key] = (digest, plain)
+        _PLAIN_DIRTY = True
+    _PLAIN_SEEN.add(key)
+    _PLAIN_MEMO[key] = (st.st_mtime_ns, st.st_size, plain)
     return plain
 
 
@@ -367,23 +568,28 @@ def _cached_key(page, plain: str) -> str:
     global _PLAIN_DIRTY
     key = str(page)
     hit = _PLAIN_CACHE.get(key) if _PLAIN_CACHE is not None else None
-    if hit and len(hit) > 3:
-        return hit[3]
+    if hit and len(hit) > 2 and hit[1] == plain:
+        return hit[2]
     k = match_key(plain)
-    if hit:
-        _PLAIN_CACHE[key] = (hit[0], hit[1], hit[2], k)
+    if hit and hit[1] == plain:
+        _PLAIN_CACHE[key] = (hit[0], hit[1], k)
         _PLAIN_DIRTY = True
     return k
 
 
 def _save_plain_cache() -> None:
-    import os
+    global _PLAIN_DIRTY
     if not _PLAIN_DIRTY or _PLAIN_CACHE is None:
         return
-    cache_path = ROOT / "outputs/.page-plain-cache.json"
+    data = _PLAIN_CACHE
+    if _ALL_MODE and _PLAIN_SEEN:
+        data = {k: v for k, v in _PLAIN_CACHE.items() if k in _PLAIN_SEEN}
+    cache_path = _plain_cache_path()
+    cache_path.parent.mkdir(parents=True, exist_ok=True)
     tmp = cache_path.with_suffix(".tmp%d" % os.getpid())
-    tmp.write_text(json.dumps(_PLAIN_CACHE, ensure_ascii=False), encoding="utf-8")
+    tmp.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     tmp.replace(cache_path)
+    _PLAIN_DIRTY = False
 
 
 def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
@@ -394,7 +600,7 @@ def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
     page-text match instead. Only runs when id-first yields zero sites,
     so books that already inject are unaffected.
     """
-    works = ROOT / "dist/works"
+    works = _dist() / "works"
     passages = manifest.get("passages") or {}
     win_index: dict[str, list] = {}
     loose_index: dict[str, list] = {}
@@ -517,7 +723,7 @@ def _safe_sec(sec: str) -> str:
 # copied into dist; manifests point at AUDIO_BASE/<content-hashed key> and the
 # file is listed for scripts/audio_r2.py to upload before the deploy.
 AUDIO_BASE = os.environ.get("AUDIO_BASE", "").rstrip("/")
-R2_PENDING = ROOT / "outputs" / "audio-r2-pending.jsonl"
+R2_PENDING = STATE / "audio-r2-pending.jsonl"
 
 
 def _audio_ref(src: Path, site: str, name: str, assets: Path) -> str:
@@ -544,13 +750,28 @@ def _r2_ref(entry: dict) -> str:
     return "%s/%s" % (AUDIO_BASE or "https://audio.viapatrum.org", key)
 
 
+def player_attrs(audio_url: str, rows: list[dict]) -> dict:
+    """data-audio, data-t0 (where the passage starts in the mp3) and data-dur."""
+    if not rows:
+        return {"audio": audio_url, "t0": "0", "dur": "0"}
+    t0 = float(rows[0]["s"])
+    dur = max(0.0, float(rows[-1]["e"]) - t0)
+    return {"audio": audio_url, "t0": "%g" % round(t0, 3), "dur": "%g" % round(dur, 3)}
+
+
+def player_html(manifest_url: str, start: int, end: int, attrs: dict) -> str:
+    return PLAYER_HTML.format(
+        manifest=html.escape(manifest_url, quote=True), start=start, end=end,
+        audio=html.escape(attrs["audio"], quote=True), t0=attrs["t0"], dur=attrs["dur"])
+
+
 def publish_passage(site: str, sec: str, plan: dict):
     """Copy one passage into dist. Returns reader url, rows, and cite-page args."""
     src = plan["src"]
     stem = plan["stem"]
     window = plan["window"]
     full = plan["full"]
-    assets = ROOT / "dist/assets/audio" / site
+    assets = _dist() / "assets/audio" / site
     assets.mkdir(parents=True, exist_ok=True)
     r2 = plan.get("r2")
     if r2 or src.stat().st_size <= LIMIT:
@@ -566,7 +787,8 @@ def publish_passage(site: str, sec: str, plan: dict):
         reader_url = "/assets/audio/%s/%s.json" % (site, sec)
         cite_url = "/assets/audio/%s/%s.json" % (site, stem)
         texts = [row["t"] for row in window]
-        return reader_url, window, cite_url, texts, plan["first"], plan["last"]
+        return reader_url, window, cite_url, texts, plan["first"], plan["last"], \
+            player_attrs(audio_url, window)
     cache = plan.get("cache")
     if not cache or not cache.is_file() or cache.stat().st_size == 0 or cache.stat().st_size > LIMIT:
         print("skip %s %s: cut file missing or over 25 MiB" % (site, sec))
@@ -584,11 +806,11 @@ def publish_passage(site: str, sec: str, plan: dict):
     }))
     url = "/assets/audio/%s/%s.json" % (site, sec)
     texts = [row["t"] for row in local]
-    return url, local, url, texts, 0, max(0, len(local) - 1)
+    return url, local, url, texts, 0, max(0, len(local) - 1), player_attrs(cut_url, local)
 
 
 def _inject_cite(page: Path, texts: list[str], manifest_url: str,
-                 start: int, end: int) -> int:
+                 start: int, end: int, attrs: dict) -> int:
     """Put the player on a cite page. Returns the number of tracked sentences."""
     page_html = page.read_text(encoding="utf-8")
     if 'class="rdl-player"' in page_html:
@@ -601,31 +823,34 @@ def _inject_cite(page: Path, texts: list[str], manifest_url: str,
     def wrap_para(pm: "re.Match") -> str:
         para = pm.group(2)
         where = "%s para %d" % (page, state["n"])
-        sentences = split_sentences(norm(TAG_RE.sub("", para)))
-        expected = texts[state["idx"]:state["idx"] + len(sentences)]
-        if len(expected) != len(sentences) or match_key(TAG_RE.sub("", para)) != match_key(" ".join(expected)):
-            raise AssertionError("sentence drift in %s" % where)
-        wrapped = wrap_sentences(para, sentences, expected, start + state["idx"], where)
-        state["idx"] += len(sentences)
+        base = state["idx"]
+        used, sentences, expected, offsets = plan_para(
+            norm(TAG_RE.sub("", para)), texts, base, where)
+        indices = None if offsets is None else [start + base + off for off in offsets]
+        wrapped = wrap_sentences(para, sentences, expected, start + base, where, indices)
+        state["idx"] += used
         state["n"] += 1
         return pm.group(1) + wrapped + "</p>"
 
     new_body, n_para = re.subn(
         r"(<p(?:\s[^>]*)?>)(.*?)(</p>)", wrap_para, match.group(2), flags=re.S)
-    if not n_para or state["idx"] != len(texts):
+    if not n_para or rows_left(texts, state["idx"]):
         raise AssertionError("span count %d != %d in %s" % (state["idx"], len(texts), page))
-    player = PLAYER_CSS + PLAYER_HTML.format(
-        manifest=manifest_url, start=start, end=end)
+    player = PLAYER_CSS + player_html(manifest_url, start, end, attrs)
     script = f'<script src="/assets/readalong.js?v={_asset_version()}" defer></script>'
     new_html = page_html[:match.start()] + '<div class="body">' + new_body + "</div>" + page_html[match.end():]
-    new_html = re.sub(r"(</h1>)", r"\1" + player, new_html, count=1)
+    # Plain string insert: re.sub re-parsed the player HTML as a template per page.
+    h1 = new_html.find("</h1>")
+    if h1 >= 0:
+        new_html = new_html[:h1 + 5] + player + new_html[h1 + 5:]
     if "readalong.js" not in new_html:
         new_html = new_html.replace("</body>", script + "</body>")
     page.write_text(new_html, encoding="utf-8")
     return state["idx"]
 
 
-def _wrap_reader_chunk(body: str, texts: list[str], manifest_url: str, where: str) -> str:
+def _wrap_reader_chunk(body: str, texts: list[str], manifest_url: str, where: str,
+                       attrs: dict) -> str:
     pieces = re.split(r"(<p(?:\s[^>]*)?>.*?</p>)", body, flags=re.S)
     idx = 0
     out = []
@@ -644,24 +869,22 @@ def _wrap_reader_chunk(body: str, texts: list[str], manifest_url: str, where: st
             anchor = vnum.group(1)
             inner = inner[vnum.end():]
         plain = norm(TAG_RE.sub("", inner))
-        sentences = split_sentences(plain) if plain else []
-        if not sentences:
+        if not plain:
             out.append(piece)
             continue
-        expected = texts[idx:idx + len(sentences)]
-        if len(expected) != len(sentences) or match_key(plain) != match_key(" ".join(expected)):
-            raise AssertionError("sentence drift in %s" % where)
-        wrapped = wrap_sentences(inner, sentences, expected, idx, where)
-        idx += len(sentences)
+        used, sentences, expected, offsets = plan_para(plain, texts, idx, where)
+        indices = None if offsets is None else [idx + off for off in offsets]
+        wrapped = wrap_sentences(inner, sentences, expected, idx, where, indices)
+        idx += used
         out.append("<p>" + anchor + wrapped + "</p>")
-    if idx != len(texts):
+    if rows_left(texts, idx):
         raise AssertionError("span count %d != %d in %s" % (idx, len(texts), where))
-    player = PLAYER_HTML.format(manifest=manifest_url, start=0, end=max(0, len(texts) - 1))
+    player = player_html(manifest_url, 0, max(0, len(texts) - 1), attrs)
     return '<div class="rdl-scope">' + player + "".join(out) + "</div>"
 
 
 def _inject_reader(page: Path, ready: dict) -> int:
-    """ready: section id -> (manifest url, sentence texts)."""
+    """ready: section id -> (manifest url, sentence texts, player attrs)."""
     html_text = page.read_text(encoding="utf-8")
     if 'class="reader-sec"' not in html_text:
         return 0
@@ -689,9 +912,9 @@ def _inject_reader(page: Path, ready: dict) -> int:
             if not info or 'class="rdl"' in body:
                 parts.append(chunk)
                 continue
-            url, texts = info
+            url, texts, attrs = info
             try:
-                parts.append(_wrap_reader_chunk(body, texts, url, "%s #%s" % (page.name, sec)) + tail)
+                parts.append(_wrap_reader_chunk(body, texts, url, "%s #%s" % (page.name, sec), attrs) + tail)
             except AssertionError as exc:
                 print("skip reader %s %s: %s" % (page, sec, exc))
                 parts.append(chunk)
@@ -713,15 +936,13 @@ def _inject_reader(page: Path, ready: dict) -> int:
 # Negative cache (2026-10-03): a manifest that matched no page is skipped
 # without re-routing while nothing routing reads has changed: the manifest,
 # the book's English files, this code, and the body text of every dist page.
-NOATTACH_CACHE = ROOT / "outputs" / "audio-noattach-cache.json"
+NOATTACH_CACHE = STATE / "audio-noattach-cache.json"
 _CODE_FILES = ("inject_audio.py", "build_audio.py", "speak_text.py")
 
 
 def noattach_fingerprint(work: str, manifest_bytes: bytes) -> str | None:
     """Hash of every input that decides 'no page matches'. None if unknowable."""
-    import hashlib
-
-    works = ROOT / "dist/works"
+    works = _dist() / "works"
     if not works.is_dir():
         return None
     h = hashlib.sha256()
@@ -736,17 +957,52 @@ def noattach_fingerprint(work: str, manifest_bytes: bytes) -> str | None:
             h.update(eng.name.encode() + b"\0" + eng.read_bytes() + b"\0")
     # locate_sites reads works/<site>/<sec>/index.html and text-first reads
     # every works/<site>/<sub>/index.html: hash the body text of all of them.
+    h.update(_pages_blob(works))
+    return h.hexdigest()
+
+
+def _pages_blob(works: Path) -> bytes:
+    """Body-text digest of every work page, as noattach_fingerprint feeds it.
+
+    Under --all it is built once: injecting only adds tags, so no page's text
+    changes during the run (wrap_sentences asserts that).
+    """
+    if _ALL_MODE and _RUN_MEMO.get(("blob", str(works))) is not None:
+        return _RUN_MEMO[("blob", str(works))]
+    parts = []
     for site_dir in sorted(works.iterdir()):
         if not site_dir.is_dir():
             continue
-        h.update(b"site\0" + site_dir.name.encode() + b"\0")
+        parts.append(b"site\0" + site_dir.name.encode() + b"\0")
         for sub in sorted(site_dir.iterdir()):
             page = sub / "index.html"
             if not page.is_file():
                 continue
             plain = _cached_plain(page)
-            h.update(sub.name.encode() + b"\0" + hashlib.sha256(plain.encode()).digest())
-    return h.hexdigest()
+            parts.append(sub.name.encode() + b"\0" + hashlib.sha256(plain.encode()).digest())
+    blob = b"".join(parts)
+    if _ALL_MODE:
+        _RUN_MEMO[("blob", str(works))] = blob
+    return blob
+
+
+def _sites_with_section(works: Path, sec: str) -> list[str]:
+    """Public works that have a cite page for this section id, sorted."""
+    if not _ALL_MODE:
+        site_names = sorted(p.name for p in works.iterdir() if p.is_dir())
+        return [site for site in site_names if (works / site / sec / "index.html").is_file()]
+    key = ("sections", str(works))
+    index = _RUN_MEMO.get(key)
+    if index is None:
+        index = {}
+        for site_dir in sorted(works.iterdir()):
+            if not site_dir.is_dir():
+                continue
+            for sub in sorted(site_dir.iterdir()):
+                if (sub / "index.html").is_file():
+                    index.setdefault(sub.name, []).append(site_dir.name)
+        _RUN_MEMO[key] = index
+    return index.get(sec, [])
 
 
 def _load_noattach() -> dict:
@@ -774,7 +1030,7 @@ def inject_work(work: str) -> None:
     manifest_bytes = manifest_path.read_bytes()
     manifest = json.loads(manifest_bytes.decode("utf-8"))
     # A direct public slug always routes; only other works can be negative.
-    direct = (ROOT / "dist/works" / work).is_dir()
+    direct = (_dist() / "works" / work).is_dir()
     cached = None if direct else _load_noattach().get(work)
     if cached and cached == noattach_fingerprint(work, manifest_bytes):
         print("SKIP %s: not on this site (unchanged since last check), audio kept" % work)
@@ -794,7 +1050,7 @@ def inject_work(work: str) -> None:
         return
     if cached:
         _store_noattach(work, None)
-    dist_js = ROOT / "dist/assets/readalong.js"
+    dist_js = _dist() / "assets/readalong.js"
     dist_js.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(ROOT / "assets/readalong.js", dist_js)
     passages = manifest.get("passages") or {}
@@ -807,12 +1063,13 @@ def inject_work(work: str) -> None:
                 print("skip %s %s: bad section id" % (site, sec))
                 missed.append(sec)
                 continue
-            page = ROOT / "dist/works" / site / sec / "index.html"
+            page = _dist() / "works" / site / sec / "index.html"
             if not page.is_file():
                 print("skip %s %s: no cite page" % (site, sec))
                 missed.append(sec)
                 continue
-            choices = matching_choices(opts, passages, _body_plain(page))
+            # Same text locate_sites read; parsed once per run.
+            choices = matching_choices(opts, passages, _cached_plain(page))
             if not choices:
                 print("skip %s %s: audio does not match the page" % (site, sec))
                 missed.append(sec)
@@ -859,16 +1116,16 @@ def inject_work(work: str) -> None:
             if not published:
                 missed.append(sec)
                 continue
-            url, local_rows, cite_url, cite_texts, cite_start, cite_end = published
+            url, local_rows, cite_url, cite_texts, cite_start, cite_end, attrs = published
             try:
-                tracked += _inject_cite(plan["page"], cite_texts, cite_url, cite_start, cite_end)
+                tracked += _inject_cite(plan["page"], cite_texts, cite_url, cite_start, cite_end, attrs)
             except AssertionError as exc:
                 print("skip %s %s: %s" % (site, sec, exc))
                 missed.append(sec)
                 continue
-            ready[sec] = (url, [row["t"] for row in local_rows])
+            ready[sec] = (url, [row["t"] for row in local_rows], attrs)
         reader_hits = 0
-        work_dir = ROOT / "dist/works" / site
+        work_dir = _dist() / "works" / site
         for reader in work_dir.rglob("index.html"):
             text = reader.read_text(encoding="utf-8", errors="replace")
             if 'class="reader-sec"' not in text:
@@ -878,9 +1135,39 @@ def inject_work(work: str) -> None:
             site, tracked, reader_hits, len(missed)), flush=True)
 
 
+def inject_all() -> int:
+    """Every manifest, in the order ship.sh used, in one process.
+
+    460 separate processes each loaded and rewrote the 30 MB page cache
+    (about 4 of a ship's 9 minutes). Works can share a site, so this stays
+    sequential. A failing work is reported and the rest still run; the exit
+    code is 1 if any failed, as the old loop stopped the ship.
+    """
+    global _ALL_MODE
+    _ALL_MODE = True
+    failed = []
+    for manifest in sorted((ROOT / "outputs/audio").glob("*/manifest.json")):
+        work = manifest.parent.name
+        print("  + audio: %s" % work, flush=True)
+        try:
+            inject_work(work)
+        except Exception as exc:  # report every broken work, then fail the run
+            import traceback
+            traceback.print_exc()
+            print("FAIL %s: %s" % (work, exc), flush=True)
+            failed.append(work)
+    _save_plain_cache()
+    if failed:
+        print("inject failed for %d works: %s" % (len(failed), " ".join(failed)), file=sys.stderr)
+        return 1
+    return 0
+
+
 def main(argv: list[str]) -> int:
-    if len(argv) != 2:
-        print("usage: inject_audio.py <work-slug>", file=sys.stderr)
+    if len(argv) == 2 and argv[1] == "--all":
+        return inject_all()
+    if len(argv) != 2 or argv[1].startswith("-"):
+        print("usage: inject_audio.py <work-slug> | --all", file=sys.stderr)
         return 2
     inject_work(argv[1])
     return 0

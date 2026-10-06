@@ -24,7 +24,8 @@ def _dump(path: Path, data) -> None:
 
 
 def _paragraph(b: ModuleType, raw: str, flagged: set | None) -> dict | None:
-    text = b.strip_logos_markup(raw)
+    # Same words as the reader page (docs/APP_DATA.md): sigla and worksheet status dropped.
+    text = b.clean_reader_notation(b.strip_logos_markup(raw)).strip()
     if not text:
         return None
     refs = []
@@ -75,7 +76,7 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
             paras = [p for p in (_paragraph(b, raw, flagged) for raw in s.get("english") or []) if p]
             if not paras:
                 continue
-            row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": str(s.get("head") or ""), "p": paras}
+            row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": b.public_head(str(s.get("head") or "")), "p": paras}
             if (s.get("supplied_from") or "").strip():
                 row["supplied"] = s["supplied_from"].strip()
             sections.append(row)

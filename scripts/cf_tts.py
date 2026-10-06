@@ -124,8 +124,43 @@ def render_all(says: list[str], wav_paths: list[Path],
 # on the Queue, and the result is read back from R2, all with CLOUDFLARE_API_TOKEN.
 NARRATOR_BUCKET = "viapatrum-narrator-work"
 NARRATOR_QUEUE = os.environ.get("NARRATOR_QUEUE", "viapatrum-narration")
-NARRATOR_WAIT = int(os.environ.get("NARRATOR_WAIT", "14400"))  # seconds per passage
+# Seconds to wait for one passage: a base plus 2 s per sentence (2026-10-06:
+# the old flat 4 h let one lost job hold the whole drain; the longest passage,
+# 751 sentences, took 740 s).
+NARRATOR_WAIT = int(os.environ.get("NARRATOR_WAIT", "1800"))
+NARRATOR_WAIT_PER_SENTENCE = 2
+# An error file that was already there when a job was resubmitted is the old
+# run's. The Worker deletes it when it picks the job up (5 s queue batches),
+# so after this grace the same error is a new failure.
+STALE_ERROR_GRACE = 120
+# Polling: results/ every round, errors/ every ERROR_EVERY rounds per job, the
+# wait between rounds growing by POLL_STEP up to POLL_MAX seconds.
+POLL_STEP = 5
+POLL_MAX = int(os.environ.get("NARRATOR_POLL_MAX", "60"))
+ERROR_EVERY = 3
+# Cloudflare allows 1,200 REST calls per 5 minutes per user, across every
+# token and job (developers.cloudflare.com/fundamentals/api/reference/limits,
+# checked 2026-10-06), and a breach blocks the account for 5 minutes. This
+# process keeps to half of that.
+CF_API_BUDGET = int(os.environ.get("CF_API_BUDGET", "600"))
+CF_API_WINDOW = 300
+_CALLS: list[float] = []
 _QUEUE_ID: list[str] = []
+
+
+def _pace() -> None:
+    """Wait until one more REST call keeps this process under CF_API_BUDGET."""
+    now = time.time()
+    while _CALLS and _CALLS[0] <= now - CF_API_WINDOW:
+        _CALLS.pop(0)
+    if len(_CALLS) >= CF_API_BUDGET:
+        pause = _CALLS[0] + CF_API_WINDOW - now + 0.1
+        print("cf_tts: %d REST calls in 5 min, pausing %.0f s" % (len(_CALLS), pause), flush=True)
+        time.sleep(max(0.1, pause))
+        now = time.time()
+        while _CALLS and _CALLS[0] <= now - CF_API_WINDOW:
+            _CALLS.pop(0)
+    _CALLS.append(now)
 
 
 def _cf_api(method: str, path: str, data: bytes | None = None, ctype: str = "application/json",
@@ -134,6 +169,7 @@ def _cf_api(method: str, path: str, data: bytes | None = None, ctype: str = "app
     import urllib.error
     url = "https://api.cloudflare.com/client/v4/accounts/%s%s" % (ACCT, path)
     for attempt in range(6):
+        _pace()
         req = urllib.request.Request(url, data=data, method=method, headers={
             "Authorization": "Bearer " + _token(), "Content-Type": ctype})
         try:
@@ -167,9 +203,16 @@ def _work_object(key: str) -> dict | None:
     return json.loads(blob) if blob is not None else None
 
 
-def narrate_passage(work: str, stem: str, sentences: list[dict], voice: str, quote_voice: str) -> dict:
-    """sentences: [{"text"} or {"text", "parts": [{"text", "quote"}]}], already
-    speakable. Returns the Worker result: key, bytes, sentences [{s, e}]."""
+def passage_wait(n_sentences: int) -> int:
+    return NARRATOR_WAIT + NARRATOR_WAIT_PER_SENTENCE * max(0, int(n_sentences))
+
+
+def submit_passage(work: str, stem: str, sentences: list[dict], voice: str, quote_voice: str) -> dict:
+    """Send one passage to the narrator Worker without waiting for it.
+
+    sentences: [{"text"} or {"text", "parts": [{"text", "quote"}]}], already
+    speakable. Returns a handle for collect_passages. The job id is a hash of
+    the job, so a rerun of the same text finds the finished result."""
     require_llm_receipt([MODEL], purpose="tts-render")  # the Worker calls Aura-2 for us
     body = {"work": work, "stem": stem, "sentences": sentences,
             "voice": voice, "quote_voice": quote_voice or voice}
@@ -177,27 +220,88 @@ def narrate_passage(work: str, stem: str, sentences: list[dict], voice: str, quo
         body["segment_seconds"] = int(os.environ["NARRATOR_SEGMENT_SECONDS"])
     blob = json.dumps(body, ensure_ascii=False, sort_keys=True).encode()
     job_id = "j" + hashlib.sha256(blob).hexdigest()[:40]
-    result = _work_object("results/%s.json" % job_id)
-    if result is None:
+    handle = {"id": job_id, "n": len(sentences), "result": None, "old_error": None}
+    handle["result"] = _work_object("results/%s.json" % job_id)
+    if handle["result"] is None:
+        # A failed earlier run left errors/<id>.json. Remove it first so the
+        # first poll does not read the old failure; if R2 refuses the delete,
+        # ignore that same error for STALE_ERROR_GRACE seconds instead.
+        old = _work_object("errors/%s.json" % job_id)
+        if old is not None:
+            try:
+                _cf_api("DELETE", "/r2/buckets/%s/objects/errors/%s.json" % (NARRATOR_BUCKET, job_id),
+                        missing_ok=True)
+            except RuntimeError:
+                handle["old_error"] = old
         _cf_api("PUT", "/r2/buckets/%s/objects/jobs/%s.json" % (NARRATOR_BUCKET, job_id), blob)
         _cf_api("POST", "/queues/%s/messages" % _queue_id(),
                 json.dumps({"body": {"id": job_id}, "content_type": "json"}).encode())
-    deadline = time.time() + NARRATOR_WAIT
-    wait = 3
-    while result is None:
-        failed = _work_object("errors/%s.json" % job_id)
-        if failed is not None:
-            raise RuntimeError("narrator job %s failed: %s" % (job_id, failed.get("error")))
-        if time.time() > deadline:
-            raise RuntimeError("narrator job %s: no result after %d s" % (job_id, NARRATOR_WAIT))
-        time.sleep(wait)
-        wait = min(30, wait + 3)
-        result = _work_object("results/%s.json" % job_id)
-    if len(result.get("sentences") or []) != len(sentences):
+    handle["t0"] = time.time()
+    handle["deadline"] = handle["t0"] + passage_wait(len(sentences))
+    return handle
+
+
+def _finish(handle: dict, result: dict) -> dict:
+    if len(result.get("sentences") or []) != handle["n"]:
         raise RuntimeError("narrator job %s: %d timings for %d sentences"
-                           % (job_id, len(result.get("sentences") or []), len(sentences)))
-    result["job"] = job_id
+                           % (handle["id"], len(result.get("sentences") or []), handle["n"]))
+    result["job"] = handle["id"]
     return result
+
+
+def collect_passages(handles: list[dict], sleep=None):
+    """Yield (handle, result) or (handle, error) as each submitted job ends,
+    polling all of them together. One failed job does not stop the others.
+    Each round reads results/ for every job, and errors/ only every
+    ERROR_EVERY rounds or at the deadline (2026-10-06: two GETs per job per
+    round came near the account-wide REST limit with 200+ jobs out)."""
+    sleep = sleep or time.sleep
+    pending = []
+    for h in handles:
+        if h.get("result") is not None:
+            try:
+                got = _finish(h, h["result"])
+            except RuntimeError as e:
+                got = e
+            yield h, got
+        else:
+            pending.append(h)
+    wait, rounds = 0, 0
+    while pending:
+        wait = min(POLL_MAX, wait + POLL_STEP)
+        sleep(wait)
+        rounds += 1
+        still = []
+        for h in pending:
+            try:
+                result = _work_object("results/%s.json" % h["id"])
+                if result is not None:
+                    yield h, _finish(h, result)
+                    continue
+                late = time.time() > h["deadline"]
+                failed = _work_object("errors/%s.json" % h["id"]) if late or rounds % ERROR_EVERY == 0 else None
+                if failed is not None and not (failed == h.get("old_error")
+                                               and time.time() < h["t0"] + STALE_ERROR_GRACE):
+                    raise RuntimeError("narrator job %s failed: %s" % (h["id"], failed.get("error")))
+                if late:
+                    raise RuntimeError("narrator job %s: no result after %d s"
+                                       % (h["id"], passage_wait(h["n"])))
+            except Exception as e:  # one bad job must not stop the others
+                yield h, e
+                continue
+            still.append(h)
+        pending = still
+
+
+def narrate_passage(work: str, stem: str, sentences: list[dict], voice: str, quote_voice: str) -> dict:
+    """One passage, waiting for it. Returns the Worker result: key, bytes,
+    sentences [{s, e}], job."""
+    handle = submit_passage(work, stem, sentences, voice, quote_voice)
+    for _h, got in collect_passages([handle]):
+        if isinstance(got, Exception):
+            raise got
+        return got
+    raise RuntimeError("narrator job %s: no result" % handle["id"])
 
 if __name__ == "__main__":
     # Smoke: python3 scripts/cf_tts.py "Hello world." /tmp/smoke.wav [speaker]

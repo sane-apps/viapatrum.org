@@ -29,6 +29,8 @@ function fakeAudioClass() {
       this.src = '';
       this.preload = '';
       this.currentTime = 0;
+      this.readyState = 0;
+      this.muted = false;
       this.paused = true;
       this.played = false;
       this.listeners = {};
@@ -49,12 +51,18 @@ async function mount() {
     runScripts: 'outside-only',
     pretendToBeVisual: true,
   });
+  const fetches = [];
   dom.window.Audio = FakeAudio;
-  dom.window.fetch = async () => ({ ok: true, json: async () => manifest });
+  dom.window.fetch = async (url) => { fetches.push(url); return { ok: true, json: async () => manifest }; };
   dom.window.eval(script);
   await flush();
-  assert.equal(instances.length, 1);
-  return { dom, audio: instances[0] };
+  return { dom, instances, fetches };
+}
+
+// The mp3's length is known: a seek asked for before that lands now.
+function metadata(audio) {
+  audio.readyState = 1;
+  audio.fire('loadedmetadata');
 }
 
 const highlighted = (dom) =>
@@ -62,21 +70,37 @@ const highlighted = (dom) =>
 const click = (dom, sel) =>
   dom.window.document.querySelector(sel).dispatchEvent(
     new dom.window.MouseEvent('click', { bubbles: true }));
+const key = (dom, sel, k) =>
+  dom.window.document.querySelector(sel).dispatchEvent(
+    new dom.window.KeyboardEvent('keydown', { key: k, bubbles: true }));
 
-test('no sentence is highlighted before the user presses play', async () => {
-  const { dom, audio } = await mount();
+test('nothing loads before the reader taps (audit 2026-10-06)', async () => {
+  const { dom, instances, fetches } = await mount();
   try {
-    audio.fire('loadedmetadata');
-    audio.fire('timeupdate');
-    await flush(3);
+    assert.equal(instances.length, 0, 'no audio element at load');
+    assert.equal(fetches.length, 0, 'no manifest fetch at load');
     assert.deepEqual(highlighted(dom), []);
+    const dur = page.match(/data-dur="([\d.]+)"/);
+    if (dur) assert.match(dom.window.document.querySelector('.rdl-time').textContent, /^0:00 \/ \d+:\d\d$/);
   } finally { dom.window.close(); }
 });
 
-test('play starts tracking at the audible sentence', async () => {
-  const { dom, audio } = await mount();
+test('play starts the audio inside the tap and tracks the audible sentence', async () => {
+  const { dom, instances, fetches } = await mount();
   try {
     click(dom, '.rdl-play');
+    assert.equal(instances.length, 1);
+    const audio = instances[0];
+    const dataAudio = page.match(/data-audio="([^"]+)"/);
+    if (dataAudio) {
+      // iOS: play() must run in the tap itself, before the manifest arrives.
+      assert.equal(audio.played, true);
+      assert.ok(audio.src.startsWith(dataAudio[1].replace(/&amp;/g, '&')));
+    }
+    await flush();
+    assert.equal(fetches.length >= 1, true);
+    metadata(audio);
+    assert.ok(Math.abs(audio.currentTime - manifest.sentences[BOX_START].s) < 0.01);
     assert.equal(audio.played, true);
     audio.fire('play');
     audio.currentTime = manifest.sentences[BOX_START].s + 0.05;
@@ -87,26 +111,30 @@ test('play starts tracking at the audible sentence', async () => {
 });
 
 test('clicking a sentence seeks there and plays it', async () => {
-  const { dom, audio } = await mount();
+  const { dom, instances } = await mount();
   try {
-    audio.fire('loadedmetadata');
     const span = dom.window.document.querySelector(`.rdl[data-i="${BOX_START + 5}"]`);
     span.dispatchEvent(new dom.window.MouseEvent('click', { bubbles: true }));
-    await flush(3);
+    const audio = instances[0];
+    await flush();
+    metadata(audio);
     assert.ok(Math.abs(audio.currentTime - (manifest.sentences[BOX_START + 5].s + 0.01)) < 1e-9);
     assert.equal(audio.played, true);
+    assert.equal(audio.muted, false, 'unmuted once the sentence start is known');
     assert.deepEqual(highlighted(dom), [String(BOX_START + 5)]);
   } finally { dom.window.close(); }
 });
 
 test('side buttons skip a paragraph per press', async () => {
-  const { dom, audio } = await mount();
+  const { dom, instances } = await mount();
   try {
     const spans = [...dom.window.document.querySelectorAll('.rdl')];
     const firstPara = spans[0].parentNode;
     const secondStart = spans.find((s) => s.parentNode !== firstPara).getAttribute('data-i');
-    audio.fire('loadedmetadata');
     click(dom, '.rdl-play');
+    const audio = instances[0];
+    await flush();
+    metadata(audio);
     audio.fire('play');
     click(dom, '.rdl-next');
     await flush(3);
@@ -120,9 +148,12 @@ test('side buttons skip a paragraph per press', async () => {
 });
 
 test('reaching the end clears the highlight and rewinds', async () => {
-  const { dom, audio } = await mount();
+  const { dom, instances } = await mount();
   try {
     click(dom, '.rdl-play');
+    const audio = instances[0];
+    await flush();
+    metadata(audio);
     audio.fire('play');
     audio.currentTime = manifest.sentences[BOX_START + 1].s + 0.05;
     audio.fire('timeupdate');
@@ -134,5 +165,31 @@ test('reaching the end clears the highlight and rewinds', async () => {
     assert.deepEqual(highlighted(dom), []);
     assert.equal(audio.currentTime, manifest.sentences[BOX_START].s);
     assert.equal(audio.paused, true);
+  } finally { dom.window.close(); }
+});
+
+test('the seek bar works from the keyboard', async (t) => {
+  // Pages injected before 2026-10-06 carry no data-dur: no length to seek in before play.
+  if (!/data-dur="/.test(page)) return t.skip('page injected before data-dur');
+  const { dom, instances, fetches } = await mount();
+  try {
+    const bar = dom.window.document.querySelector('.rdl-bar');
+    if (page.includes('tabindex="0" aria-label="Seek"')) assert.equal(bar.getAttribute('tabindex'), '0');
+    key(dom, '.rdl-bar', 'ArrowRight');
+    key(dom, '.rdl-bar', 'ArrowRight');
+    // Before play: the spot moves, nothing is fetched.
+    assert.match(bar.getAttribute('aria-valuetext'), /^0:10 of /);
+    assert.equal(fetches.length, 0);
+    assert.equal(instances.length, 0);
+    click(dom, '.rdl-play');
+    const audio = instances[0];
+    await flush();
+    metadata(audio);
+    assert.ok(Math.abs(audio.currentTime - (manifest.sentences[BOX_START].s + 10)) < 0.01, 'starts at the chosen spot');
+    audio.fire('play');
+    key(dom, '.rdl-bar', 'ArrowLeft');
+    assert.ok(Math.abs(audio.currentTime - (manifest.sentences[BOX_START].s + 5)) < 0.01);
+    key(dom, '.rdl-bar', 'Home');
+    assert.ok(Math.abs(audio.currentTime - manifest.sentences[BOX_START].s) < 0.01);
   } finally { dom.window.close(); }
 });

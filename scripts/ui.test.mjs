@@ -146,13 +146,26 @@ test('over time overview: every question with stances gets a card and a mini tim
   const doc=page('explore/index.html');
   const data=JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
   const withPoints=new Set(data.points.map(p=>p.topic));
-  const cards=doc.querySelectorAll('.ot-card');
+  const cards=doc.querySelectorAll('.ot-card:not(.ot-belief)');
   assert.equal(cards.length,data.topics.filter(t=>withPoints.has(t.id)).length);
   for(const c of cards){
     assert.ok(c.querySelector('.tl-lane'),'mini timeline in '+c.id);
     assert.match(c.querySelector('h3 a').getAttribute('href'),/^\/topics\/[a-z0-9-]+\/#over-time$/);
   }
   assert.ok(!doc.querySelector('script[src*="explore.js"]'),'old chart script retired');
+});
+
+test('beliefs live on the Timeline: a card per dividing question, no Beliefs tab (owner 2026-10-05)', ()=>{
+  const doc=page('explore/index.html');
+  const qs=JSON.parse(readFileSync(new URL('../data/explore/doctrine_map.json',import.meta.url),'utf8')).questions;
+  const cards=doc.querySelectorAll('.ot-card.ot-belief');
+  assert.equal(cards.length,qs.length);
+  for(const c of cards){
+    assert.equal(c.querySelector('h3 a').getAttribute('href'),'/explore/'+c.id+'/');
+    assert.ok(readFileSync(new URL('../dist/explore/'+c.id+'/index.html',import.meta.url),'utf8').includes('class="tl tl-pos"'),'lanes on '+c.id);
+  }
+  assert.ok(!doc.querySelector('a[href^="/beliefs"]'),'no Beliefs link');
+  assert.match(readFileSync(new URL('../dist/_redirects',import.meta.url),'utf8'),/^\/beliefs\/:id\/ \/explore\/:id\/ 301$/m);
 });
 
 test('favicon files ship in dist', ()=>{
@@ -174,4 +187,72 @@ test('link hover system ships in built CSS', ()=>{
   assert.match(css,/prefers-reduced-motion/,'reduced-motion handling missing');
   assert.ok(!/purple|indigo|violet/i.test(css),'forbidden hue in CSS');
   assert.ok(!/scale\(/.test(css),'scale transform in CSS');
+});
+
+test('library pass: /downloads/ and Keep this book link only uploaded files (owner 2026-10-05)', ()=>{
+  let names;
+  try { names=JSON.parse(readFileSync(new URL('../dist/data/library-files.json',import.meta.url),'utf8')); } catch { return; } // no uploads yet: page not built
+  const keys=Object.keys(names);
+  assert.ok(keys.length>0,'library-files.json lists uploaded files');
+  const doc=page('downloads/index.html');
+  const links=[...doc.querySelectorAll('a.dl-f, a.dl-b, a.keep-f')].map(a=>a.getAttribute('href'));
+  assert.ok(links.length>0);
+  for(const h of links){ assert.match(h,/^\/dl\//); assert.ok(names[h.slice(4)],'linked file is uploaded: '+h); }
+  assert.match(doc.querySelector('[data-buy]')?.getAttribute('href')||'',/^https:\/\/saneapps\.lemonsqueezy\.com\/checkout\/buy\//);
+  assert.ok(doc.querySelector('script[src^="/assets/downloads.js"]'));
+  assert.match(readFileSync(new URL('./generate_works_gate.py',import.meta.url),'utf8'),/"\/dl\/\*"/,'/dl/* is routed to functions');
+});
+
+test('scripture: only real chapters get pages; Greek Psalm numbers are refiled (audit 2026-10-06)', async ()=>{
+  const { readdirSync, existsSync } = await import('node:fs');
+  const { gunzipSync } = await import('node:zlib');
+  const bsb=JSON.parse(gunzipSync(readFileSync(new URL('../data/bibles/bsb.json.gz',import.meta.url))).toString('utf8'));
+  const slug=(b)=>(b==='Psalm'?'Psalms':b).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const count={}; for(const [b,cs] of Object.entries(bsb.books)) count[slug(b)]=Object.keys(cs).length;
+  const extra=new Set(['daniel/13','daniel/14','psalms/151']);
+  const root=new URL('../dist/scripture/',import.meta.url);
+  const over=[];
+  for(const b of readdirSync(root)){ if(!count[b]) continue;
+    for(const n of readdirSync(new URL(b+'/',root))) if(/^\d+$/.test(n)&&+n>count[b]&&!extra.has(b+'/'+n)) over.push(b+'/'+n); }
+  assert.deepEqual(over,[],'no chapter page past the BSB count');
+  const sm=readFileSync(new URL('../dist/sitemap-scripture.xml',import.meta.url),'utf8');
+  const bad=[...sm.matchAll(/\/scripture\/([^/]+)\/(\d+)\//g)].filter(m=>count[m[1]]&&+m[2]>count[m[1]]&&!extra.has(m[1]+'/'+m[2]));
+  assert.equal(bad.length,0,'sitemap has no missing chapters');
+  const desk=(p)=>[...page(p).querySelectorAll('.sc-list li')].map(li=>li.textContent);
+  const ashamed=(t)=>/Fragments on the Psalms §216/.test(t)&&/not be ashamed/.test(t);
+  assert.ok(!desk('scripture/psalms/118/index.html').some(ashamed),'Didymus on Greek Psalm 118:6 left our Psalm 118');
+  assert.ok(desk('scripture/psalms/119/index.html').some(ashamed),'and sits on Psalm 119');
+  assert.ok(desk('scripture/psalms/22/index.html').some(t=>/Against Marcion 3\.19/.test(t)),'Tertullian on Psalm 22');
+  assert.ok(desk('scripture/psalms/110/index.html').some(t=>/Divine Institutes 4\.14/.test(t)),'Lactantius on Psalm 110');
+  // A cite with no verse moves chapter only: it stays "on the chapter as a whole".
+  const sec=(p,sel)=>[...page(p).querySelectorAll(sel+' .sc-list li')].map(li=>li.textContent);
+  assert.ok(sec('scripture/psalms/22/index.html','.desk-home').some(t=>/Against Marcion 3\.19/.test(t)),'Tertullian 3.19 on Psalm 22 as a whole');
+  assert.ok(sec('scripture/psalms/110/index.html','.desk-home').some(t=>/Divine Institutes 4\.14/.test(t)),'Lactantius 4.14 on Psalm 110 as a whole');
+  // Greek verse numbers count the title: Greek 17:40 is our 18:39.
+  assert.ok(sec('scripture/psalms/18/index.html','.desk-verse[data-for="39"]').some(t=>/shackled all who rise up/.test(t)),'Greek 17:40 on our 18:39');
+  // Greek 115:1 is our 116:10, so Greek 115:2 is our 116:11.
+  assert.ok(sec('scripture/psalms/116/index.html','.desk-verse[data-for="11"]').some(t=>/empty and a vapor/.test(t)),'Greek 115:2 on our 116:11');
+  // "LXX/Vulgate Psalms 13:1" beside "Psalm 14:1" is the same verse: not listed on our Psalm 13.
+  assert.ok(!desk('scripture/psalms/13/index.html').some(t=>/To Florus §3\.9/.test(t)),'LXX-labelled cite left our Psalm 13');
+  assert.match(page('scripture/psalms/114/index.html').querySelector('.bx-psalm-note').textContent,/their Psalm\s114 is our Psalm\s116\b/);
+  assert.match(page('scripture/psalms/113/index.html').querySelector('.bx-psalm-note').textContent,/their Psalm\s113 is our Psalms\s114 and 115\b/);
+  assert.ok(!/numbered differently/.test(page('scripture/daniel/13/index.html').body.textContent),'Susanna is not "numbered differently"');
+  assert.ok(existsSync(new URL('../dist/scripture/daniel/13/index.html',import.meta.url)),'Susanna keeps its page');
+});
+
+test('authors: dates on every row but known gaps, no "0 passages", Augustine on the standard hub (audit 2026-10-06)', ()=>{
+  const doc=page('authors/index.html');
+  const rows=[...doc.querySelectorAll('.card-list > li > a')];
+  // Georgius Peccator waits for dating research (his hymn is also counted as Synesius' Hymn 10).
+  const undated=rows.filter(a=>!a.querySelector('.author-dates')).map(a=>a.getAttribute('href'));
+  assert.deepEqual(undated.filter(h=>h!=='/authors/georgius-peccator/'),[]);
+  assert.ok(!rows.some(a=>/\b0 (passages|works)\b/.test(a.textContent)));
+  const aug=page('authors/augustine-of-hippo/index.html');
+  assert.ok(aug.querySelector('.fa-head .author-dates'),'Augustine hub shows dates');
+  assert.ok(aug.querySelector('.fa-head .fa-bio'),'and the bio');
+  assert.ok(!/Explore/.test(aug.body.textContent),'no leftover Explore wording');
+  // A letter is not a person: no "fl.", and the hub copy reads as a text.
+  const dio=page('authors/mathetes-epistle-to-diognetus/index.html');
+  assert.doesNotMatch(dio.querySelector('.fa-head .author-dates')?.textContent||'',/\bfl\./);
+  assert.ok(!/What Letter to Diognetus said/.test(dio.body.textContent));
 });

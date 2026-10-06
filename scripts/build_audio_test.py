@@ -349,6 +349,121 @@ class MatchKeyTests(unittest.TestCase):
         self.assertNotEqual(ia.match_key("he went home"), ia.match_key("she went home"))
 
 
+class DriftMapTests(unittest.TestCase):
+    """2026-10-06 audit: 73 sections lost their Play bar because the recording
+    keeps editorial brackets and so splits sentences differently from the page.
+    The rows are mapped onto the page text instead (no re-recording)."""
+
+    # apollinaris-fragmenta-matthaeum u01-rem-close, first paragraph (cite page HTML).
+    PARA = ("Having left Joseph in the hands of Egypt, he went out naked. "
+            '<a class="bible-ref" href="/scripture/matthew/10/#v10" title="What the Fathers said on Matthew 10:10">Mt 10:10</a> '
+            "&#x27;Nor sandals.&#x27; It is not fitting for an apostle in journeys to carry death, but to walk with "
+            "life following the one saying, &#x27;I am the way,&#x27; and to step out of a holy land wearing nothing; "
+            "for they are not &#x27;paths of serpent upon rock,&#x27; "
+            '<a class="bible-ref" href="/scripture/matthew/10/#v10" title="What the Fathers said on Matthew 10:10">Mt 10:10</a> '
+            "and perhaps not of any other beast.")
+    ROWS = ["Having left Joseph in the hands of Egypt, he went out naked. [Mt 10:10] 'Nor sandals.'",
+            "It is not fitting for an apostle in journeys to carry death, but to walk with life following the "
+            "one saying, 'I am the way,' and to step out of a holy land wearing nothing; for they are not "
+            "'paths of serpent upon rock,' [Mt 10:10] and perhaps not of any other beast.",
+            "For as much as you have the Savior lighting your darkness and guarding 'your entrance and your exit,' "
+            "[Mt 10:10] you have no need of sandals."]
+
+    def test_apollinaris_bracket_split_maps(self):
+        import inject_audio as ia
+        plain = ia.norm(ia.TAG_RE.sub("", self.PARA))
+        # The page splits the first row in two; the old count check skipped it.
+        self.assertEqual(len(split_sentences(plain)), 3)
+        used, sents, expected, offsets = ia.plan_para(plain, self.ROWS, 0, "test")
+        self.assertEqual(used, 2)
+        self.assertEqual(offsets, [0, 1])
+        self.assertTrue(sents[0].endswith("'Nor sandals.'"))
+        wrapped = ia.wrap_sentences(self.PARA, sents, expected, 0, "test", [o + 67 for o in offsets])
+        self.assertEqual(re.findall(r'data-i="(\d+)"', wrapped), ["67", "68"])
+        self.assertEqual(ia.norm(ia.TAG_RE.sub("", wrapped)), plain)
+        self.assertEqual(wrapped.count('class="bible-ref"'), 2)
+
+    def test_cite_page_gets_player(self):
+        import tempfile
+        from pathlib import Path
+        import inject_audio as ia
+        page_html = ('<html><body><h1>Fragments</h1><div class="body"><p>' + self.PARA + "</p><p>"
+                     "For as much as you have the Savior lighting your darkness and guarding "
+                     "&#x27;your entrance and your exit,&#x27; Mt 10:10 you have no need of sandals."
+                     "</p></div></body></html>")
+        with tempfile.TemporaryDirectory() as d:
+            page = Path(d) / "index.html"
+            page.write_text(page_html, encoding="utf-8")
+            attrs = {"audio": "https://audio.example/a.mp3", "t0": "120.5", "dur": "41.2"}
+            n = ia._inject_cite(page, self.ROWS, "/assets/audio/w/s.json", 67, 69, attrs)
+            out = page.read_text(encoding="utf-8")
+        self.assertEqual(n, 3)
+        self.assertEqual(re.findall(r'data-i="(\d+)"', out), ["67", "68", "69"])
+        self.assertIn('data-audio="https://audio.example/a.mp3"', out)
+        self.assertIn('data-dur="41.2"', out)
+        self.assertIn('tabindex="0"', out)
+        self.assertIn('aria-valuenow="0"', out)
+
+    def test_lone_period_row_folds_into_previous(self):
+        import inject_audio as ia
+        plain = "He finished the work. Then he rested."
+        rows = ["He finished the work", ".", "Then he rested."]
+        used, sents, expected, offsets = ia.plan_para(plain, rows, 0, "test")
+        self.assertEqual(used, 3)
+        self.assertEqual(sents, ["He finished the work.", "Then he rested."])
+        self.assertEqual(offsets, [0, 2])
+
+    def test_paragraph_words_must_still_match(self):
+        import inject_audio as ia
+        with self.assertRaises(AssertionError):
+            ia.plan_para("He went out naked. Mt 10:10 'Nor boots.'",
+                         ["He went out naked. [Mt 10:10] 'Nor sandals.'"], 0, "test")
+
+    def test_matching_split_keeps_old_spans(self):
+        import inject_audio as ia
+        plain = "Zacchaeus climbed the tree. Jesus saw him."
+        used, sents, _exp, offsets = ia.plan_para(plain, ["Zacchaeus climbed the tree.", "Jesus saw him."], 0, "t")
+        self.assertEqual((used, offsets), (2, None))
+        self.assertEqual(sents, split_sentences(plain))
+
+
+class InjectAllTests(unittest.TestCase):
+    def test_plain_cache_keys_on_page_bytes(self):
+        import os
+        import tempfile
+        from pathlib import Path
+        from unittest import mock
+        import inject_audio as ia
+        with tempfile.TemporaryDirectory() as d:
+            page = Path(d) / "index.html"
+            page.write_text('<div class="body"><p>Some text.</p></div>')
+            with mock.patch.object(ia, "_PLAIN_CACHE", {}), mock.patch.object(ia, "_PLAIN_MEMO", {}), \
+                    mock.patch.object(ia, "_plain_of_html", wraps=ia._plain_of_html) as parse:
+                self.assertEqual(ia._cached_plain(page), "Some text.")
+                # A rebuild rewrites the same bytes with a new mtime: no re-parse.
+                page.write_text('<div class="body"><p>Some text.</p></div>')
+                os.utime(page, ns=(10**18, 10**18))
+                ia._PLAIN_MEMO.clear()
+                self.assertEqual(ia._cached_plain(page), "Some text.")
+                self.assertEqual(parse.call_count, 1)
+
+    def test_receipt_next_to_build_wins(self):
+        import os
+        import tempfile
+        from pathlib import Path
+        from unittest import mock
+        import inject_audio as ia
+        with tempfile.TemporaryDirectory() as d:
+            dist = Path(d) / "dist"
+            dist.mkdir()
+            with mock.patch.dict(os.environ, {"FATHERS_DIST": str(dist)}):
+                self.assertEqual(ia._catalogue_receipt(), ia.ROOT / "outputs/catalogue-quality.json")
+                own = Path(d) / "dist.catalogue-quality.json"
+                own.write_text('{"held_works": [{"slug": "x"}]}')
+                self.assertEqual(ia._catalogue_receipt(), own)
+                self.assertEqual(ia.held_works(), {"x"})
+
+
 class SlugMapTests(unittest.TestCase):
     """2026-10-05: renamed works (site slug != book folder) were never narrated or re-checked."""
 

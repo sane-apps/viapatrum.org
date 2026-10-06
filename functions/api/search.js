@@ -28,6 +28,17 @@ function json(body, status = 200, extra = {}) {
   });
 }
 
+// Stored titles can end in a bare locus ("To Florus §1.1: To Florus 1.1").
+// Strip the tail only when its number repeats the § number (or is "Unit N"),
+// so real headings like "§81: ... Psalm 43" stay. No re-embedding needed.
+const LOCUS_TAIL = /^(.*?§([\d.\-]+)): (?:[A-Za-z ]+ )?\2$/;
+const UNIT_TAIL = /^(.*?§[\d.\-]+): Unit [\d.\-]+$/;
+function cleanTitle(title) {
+  const t = String(title || "");
+  const m = t.match(LOCUS_TAIL) || t.match(UNIT_TAIL);
+  return m ? m[1] : t;
+}
+
 function snippet(text, doc, max = 320) {
   // Chunks start with "<title> (<writer>): " (search_sync.py); drop that exact prefix.
   let t = String(text || "");
@@ -78,7 +89,7 @@ export async function onRequest(context) {
       const work = workSlug || `e:${doc.title}`;
       perWork.set(work, (perWork.get(work) || 0) + 1);
       if (perWork.get(work) > (workSlug ? 2 : 1)) continue;
-      seen.set(key, { title: doc.title, author: doc.author, href: doc.href, kind: doc.kind, score, snippet: snippet(m.metadata.t, doc) });
+      seen.set(key, { title: cleanTitle(doc.title), author: doc.author, href: doc.href, kind: doc.kind, score, snippet: snippet(m.metadata.t, doc) });
       if (seen.size >= n) break;
     }
     return json({ query: q, results: [...seen.values()] }, 200, { "cache-control": "public, max-age=300" });

@@ -1,0 +1,97 @@
+/* Via Patrum EPUB style. Reader settings win: no fixed widths, no page
+   colours, body text takes the reader's colour. Only the small section
+   numbers carry a mid gold that reads on white, sepia and black. */
+@font-face { font-family: "Literata"; font-style: normal; font-weight: normal; src: url(../fonts/Literata-Regular.ttf); }
+@font-face { font-family: "Literata"; font-style: italic; font-weight: normal; src: url(../fonts/Literata-Italic.ttf); }
+@font-face { font-family: "Cormorant Garamond"; font-style: normal; font-weight: bold; src: url(../fonts/CormorantGaramond-SemiBold.ttf); }
+
+body {
+  font-family: "Literata", Georgia, serif;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -epub-hyphens: auto;
+}
+p {
+  margin: 0;
+  text-indent: 1.3em;
+  text-align: justify;
+  widows: 2;
+  orphans: 2;
+}
+p.first, h2 + p, h3 + p, p.supplied + p { text-indent: 0; }
+a { color: inherit; }
+[lang="he"] { font-family: serif; }
+
+h1, h2, h3, .tp-house, .tp-author, .co-title { font-variant-numeric: lining-nums; }
+
+/* Title page */
+.titlepage { text-align: center; padding-top: 12%; page-break-before: always; }
+.titlepage p { text-indent: 0; text-align: center; }
+.tp-house { font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold; letter-spacing: 0.32em; font-size: 0.8em; text-transform: uppercase; margin-bottom: 3em; }
+h1.tp-title { font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold; font-size: 2.2em; line-height: 1.12; margin: 0 0 0.5em; hyphens: none; -webkit-hyphens: none; }
+.tp-sub { font-style: italic; font-size: 1.05em; margin-bottom: 0.4em; hyphens: none; -webkit-hyphens: none; }
+.tp-orn { font-size: 0.6em; margin: 1.6em 0; }
+.tp-author { font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold; font-size: 1.15em; letter-spacing: 0.12em; text-transform: uppercase; }
+.tp-dates { font-style: italic; font-size: 0.9em; margin-top: 0.2em; }
+.tp-site { font-size: 0.75em; letter-spacing: 0.1em; margin-top: 4em; }
+
+/* Copyright page */
+.colophon { font-size: 0.82em; line-height: 1.45; padding-top: 8%; page-break-before: always; }
+.colophon p { text-indent: 0; text-align: left; }
+.co-title { font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold; font-size: 1.3em; }
+.co-sub { font-style: italic; }
+.co-gap { height: 1em; }
+.co-note { margin-bottom: 0.6em; }
+.co-small { font-size: 0.85em; margin-top: 0.6em; }
+
+/* Front matter */
+.fm-head, .navpage h2 {
+  font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold;
+  font-size: 1.6em; text-align: center; margin: 1.5em 0 1.2em; page-break-before: always;
+}
+.fm-sub {
+  font-size: 0.8em; font-weight: normal; letter-spacing: 0.14em; text-transform: uppercase;
+  text-align: center; margin: 1.8em 0 0.8em;
+}
+.about p.fm-p { text-indent: 0; margin-bottom: 0.7em; text-align: left; }
+.about p.banner { text-indent: 0; font-style: italic; margin: 0 1.5em 1em; text-align: center; }
+.bio-name { font-variant: small-caps; letter-spacing: 0.03em; }
+ul.witnesses { margin: 0 0 0.8em; padding-left: 1.2em; }
+ul.witnesses li { margin-bottom: 0.35em; }
+.role { font-variant: small-caps; letter-spacing: 0.04em; }
+.extra { font-size: 0.88em; }
+
+/* Contents */
+nav#toc ol { list-style: none; margin: 0; padding-left: 0; }
+nav#toc ol ol { padding-left: 1.2em; margin: 0.2em 0 0.6em; }
+nav#toc li { margin: 0.25em 0; line-height: 1.35; }
+nav#toc a { text-decoration: none; }
+nav#landmarks { display: none; }
+
+/* Text */
+h2.opening, h2.part {
+  font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold;
+  font-size: 1.9em; line-height: 1.15; text-align: center;
+  margin: 2.5em 0 1.6em; page-break-before: always; hyphens: none; -webkit-hyphens: none;
+}
+h3.ph {
+  font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold;
+  font-size: 1.3em; line-height: 1.25; text-align: center;
+  margin: 2em 0.5em 0.9em; page-break-after: avoid; hyphens: none; -webkit-hyphens: none;
+}
+h3.ph .range {
+  display: block; font-family: "Literata", Georgia, serif; font-weight: normal;
+  font-size: 0.55em; letter-spacing: 0.12em; margin-top: 0.35em;
+}
+h3.ph-range {
+  font-family: "Literata", Georgia, serif; font-weight: normal;
+  font-size: 0.75em; letter-spacing: 0.14em; margin: 2em 0 0.9em;
+}
+span.sn {
+  font-size: 0.68em; vertical-align: 0.4em; line-height: 0;
+  color: #9a7621; margin-right: 0.3em; font-variant-numeric: lining-nums;
+}
+p.supplied { text-indent: 0; font-style: italic; font-size: 0.9em; margin: 0 0 0.8em; text-align: left; }

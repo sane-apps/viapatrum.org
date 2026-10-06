@@ -1,13 +1,25 @@
 {
- "generated": "2026-10-03",
+ "generated": "2026-10-05",
  "searched": {
+  "2": [
+   "Acts of the Martyrs",
+   "Anonymous (Epistle to Diognetus)",
+   "Athenagoras",
+   "Church of Smyrna",
+   "Dionysius of Corinth",
+   "Minucius Felix",
+   "Polycarp of Smyrna",
+   "Polycrates of Ephesus"
+  ],
   "3": [
+   "Clement of Alexandria",
    "Gregory Thaumaturgus",
    "Irenaeus of Lyons",
    "Julius Africanus",
    "Origen (anthology by Basil & Gregory)",
    "Origen of Alexandria",
-   "Serapion of Antioch"
+   "Serapion of Antioch",
+   "Tertullian"
   ],
   "4": [
    "Amphilochius of Iconium",
@@ -92,7 +104,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 8
+     "excludes": 6
     },
     {
      "id": "spiritual-presence",
@@ -130,7 +142,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 2
+     "excludes": 1
     },
     {
      "id": "sacramental-union",
@@ -161,7 +173,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 2
+     "excludes": 1
     },
     {
      "id": "eucharistic-change",
@@ -198,46 +210,46 @@
      "first_defined": "Prayed in the eastern epiclesis; stated by the Synod of Jerusalem (1672) and, for Catholics, Lateran IV (1215) and Trent (1551)",
      "first_states": null,
      "first_uncertain": {
-      "year": 403,
-      "author": "Epiphanius of Salamis",
-      "book": "epiphanius-anaphora-graeca",
-      "file": "epi00_u01_rem_english",
-      "section": "u01-rem-close",
-      "text": "May this bread, having been transformed, become the body of Christ: a divine body, a body of salvation for souls and bodies. And that which has been mixed in this cup, the same blood of Christ—the blood of a new covenant—is a salvation to us, so that we all may partake in the mysteries of your saints in the newness of the Spirit and not in the oldness of the letter.",
+      "year": 444,
+      "author": "Cyril of Alexandria",
+      "book": "cyril-alexandria-matthew-fragments",
+      "file": "matthew_fragments_english",
+      "section": "259",
+      "text": "The Lord gives thanks when he takes the cup — that is, in the form of prayer he converses with God the Father, declaring him as it were sharer and co-approver of the life-giving blessing that will be given to us, and at the same time giving us a pattern first to give thanks and thus to break the bread and distribute it. That is why we too, setting what was said before God’s face, beg intently that it be remolded for us into the spiritual blessing, so that by partaking of them we may be sanctified bodily and spiritually. He said demonstratively, “This is my body” (Matthew 26:26–28) and “This is my blood,” so that you may not think what appears is a mere type, but that through some ineffable energy of the God who can do all things what has been brought forward is truly changed into the body and blood of Christ — of which, when we partake, we take in Christ’s life-giving and sanctifying pow",
       "positions": {
        "memorial": {
         "verdict": "excludes",
-        "quote": "this bread, having been transformed, become the body of Christ",
+        "quote": "through some ineffable energy of the God who can do all things what has been brought forward is truly changed into the body and blood of Christ",
         "agreement": "3/3",
-        "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. 'May this bread, having been transformed, become the body of Christ' (Greek: ἄρτος οὗτος μετατραπεὶς γένηται σῶμα Χριστοῦ) says the bread becomes the body, not a mere reminder.",
+        "audited": "'Truly changed into the body and blood of Christ' (μεταποιεῖσθαι εἰς σῶμα καὶ αἷμα Χριστοῦ κατὰ τὸ ἀληθές), and 'that you may not think what appears is a mere type', rule out a sign only.",
         "reviewed": true
        },
        "spiritual-presence": {
         "verdict": "excludes",
-        "quote": "May this bread, having been transformed, become the body of Christ",
+        "quote": "we take in Christ's life-giving and sanctifying power...mingled in us...through his holy flesh and precious blood",
         "agreement": "2/3",
-        "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. The bread itself is to 'become the body of Christ' (μετατραπεὶς γένηται σῶμα Χριστοῦ), which rules out a body received only by faith and not in the bread.",
+        "audited": "What is set forth is 'truly changed into the body and blood of Christ' and is seen as 'flesh and blood lying before us on the holy tables', so the body is in what is received, not only by faith; the grader's quote was not the deciding line.",
         "reviewed": true
        },
        "sacramental-union": {
         "verdict": "excludes",
-        "quote": "May this bread, having been transformed, become the body of Christ",
-        "agreement": "2/3",
-        "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. 'Having been transformed (μετατραπείς), become the body of Christ' says the bread is turned into the body, the opposite of the bread keeping its nature.",
+        "quote": "what has been brought forward is truly changed into the body and blood of Christ",
+        "agreement": "3/3",
+        "audited": "'What has been brought forward is truly changed (μεταποιεῖσθαι) into the body and blood' denies that the offerings stay what they were.",
         "reviewed": true
        },
        "eucharistic-change": {
         "verdict": "states",
-        "quote": "this bread, having been transformed, become the body of Christ",
+        "quote": "what has been brought forward is truly changed into the body and blood of Christ",
         "agreement": "3/3",
-        "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. 'May this bread, having been transformed, become the body of Christ' is the change mark; the Greek μετατραπεὶς γένηται matches the English exactly. No manner is given.",
+        "audited": "'Through some ineffable energy of God... what has been brought forward is truly changed into the body and blood of Christ'; the Greek μεταποιεῖσθαι... κατὰ τὸ ἀληθές is faithfully rendered, and 'ineffable' leaves the manner undefined.",
         "reviewed": true
        }
       },
-      "attribution": "doubtful",
-      "attribution_note": "Authorship and date of this anaphora are uncertain."
+      "attribution": "catena",
+      "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
      },
-     "states": 2,
+     "states": 1,
      "excludes": 0
     },
     {
@@ -292,65 +304,6 @@
      },
      "attribution": "catena",
      "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
-    },
-    {
-     "year": 403,
-     "author": "Epiphanius of Salamis",
-     "book": "epiphanius-anaphora-graeca",
-     "file": "epi00_u01_rem_english",
-     "section": "u01-rem-close",
-     "text": "May this bread, having been transformed, become the body of Christ: a divine body, a body of salvation for souls and bodies. And that which has been mixed in this cup, the same blood of Christ—the blood of a new covenant—is a salvation to us, so that we all may partake in the mysteries of your saints in the newness of the Spirit and not in the oldness of the letter.",
-     "positions": {
-      "memorial": {
-       "verdict": "excludes",
-       "quote": "this bread, having been transformed, become the body of Christ",
-       "agreement": "3/3",
-       "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. 'May this bread, having been transformed, become the body of Christ' (Greek: ἄρτος οὗτος μετατραπεὶς γένηται σῶμα Χριστοῦ) says the bread becomes the body, not a mere reminder.",
-       "reviewed": true
-      },
-      "spiritual-presence": {
-       "verdict": "excludes",
-       "quote": "May this bread, having been transformed, become the body of Christ",
-       "agreement": "2/3",
-       "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. The bread itself is to 'become the body of Christ' (μετατραπεὶς γένηται σῶμα Χριστοῦ), which rules out a body received only by faith and not in the bread.",
-       "reviewed": true
-      },
-      "sacramental-union": {
-       "verdict": "excludes",
-       "quote": "May this bread, having been transformed, become the body of Christ",
-       "agreement": "2/3",
-       "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. 'Having been transformed (μετατραπείς), become the body of Christ' says the bread is turned into the body, the opposite of the bread keeping its nature.",
-       "reviewed": true
-      },
-      "eucharistic-change": {
-       "verdict": "states",
-       "quote": "this bread, having been transformed, become the body of Christ",
-       "agreement": "3/3",
-       "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. 'May this bread, having been transformed, become the body of Christ' is the change mark; the Greek μετατραπεὶς γένηται matches the English exactly. No manner is given.",
-       "reviewed": true
-      }
-     },
-     "attribution": "doubtful",
-     "attribution_note": "Authorship and date of this anaphora are uncertain."
-    },
-    {
-     "year": 403,
-     "author": "Epiphanius of Salamis",
-     "book": "epiphanius-anaphora-graeca",
-     "file": "epi00_u01_rem_english",
-     "section": "u01-rem-mid",
-     "text": "Having said to the apostles: Take, eat; this is my body, which is being broken for you for the forgiveness of sins. Likewise, after the supper, having taken a cup and mixing it from two elements, from the fruit of the vine and from water, he sealed the cup of immortality and gave it to his disciples, saying: Drink from it, all of you; this is my blood of the new covenant, which is being poured out for you and for many for the forgiveness of sins.",
-     "positions": {
-      "memorial": {
-       "verdict": "excludes",
-       "quote": "this is my body, which is being broken for you for the forgiveness of sins",
-       "agreement": "2/3",
-       "audited": "ATTRIBUTION: the Greek 'Anaphora of Epiphanius' is of uncertain authorship and date; the 403 date is the bishop's, not the text's. The anaphora recites 'Take, eat; this is my body' (τοῦτό ἐστι τὸ σῶμά μου) over the bread; the question's shared ground says this excludes memorial and decides nothing else.",
-       "reviewed": true
-      }
-     },
-     "attribution": "doubtful",
-     "attribution_note": "Authorship and date of this anaphora are uncertain."
     },
     {
      "year": 444,
@@ -505,7 +458,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 4
+     "excludes": 3
     },
     {
      "id": "sacrifice-of-praise",
@@ -630,25 +583,6 @@
        "quote": "The offering is always made to God Almighty through Jesus Christ, as offering his divinity to the Father.",
        "agreement": "2/2",
        "audited": "Kept. In a liturgical setting (bishops, presbyters, people) Origen says 'the offering is always made to God Almighty through Jesus Christ' (Greek Ἀεὶ προσφορὰ γίνεται Θεῷ παντοκράτορι διὰ Ἰησοῦ Χριστοῦ), calling the eucharistic prosphora an offering to God; the English is faithful. The year given is Origen's death; the Dialogue dates c. 245.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 444,
-     "author": "Cyril of Alexandria",
-     "book": "cyril-alexandria-adoration-1",
-     "file": "adoration12_english",
-     "section": "28",
-     "text": "Cyril: …and the still catechumen, and having set up-with the perfect the praise, departs from the still more mystical, and is barred from the sacrifice upon Christ. In this way well the law was pre-voicing the economy, and ordered the sacrifice of the praise to be made upon leavened breads, and in unleavened flatbreads. Each of the named, as I at least think, under-signaling a form of life; for the leavened bread will be a type of life and living not yet cleansed through the holy baptism, nor indeed altogether released from worldly uncleanness; and unleavened flatbread, of the already wiped in Christ through faith, of the perfect, I say, to whom also all-divine Paul was addressing, saying: ‘So that we may feast, not in old leaven, nor in leaven of badness and wickedness, but in unleavened of sincerity and truth.’ (1 Corinthians 5:7–8) And again: ‘Clean out then the old leaven, in order t",
-     "positions": {
-      "no-sacrifice": {
-       "verdict": "excludes",
-       "quote": "ordered the sacrifice of the praise to be made upon leavened breads",
-       "agreement": "2/3",
-       "audited": "Kept. The catechumen joins the praise but 'departs from the still more mystical, and is barred from the sacrifice upon Christ' (Greek θυσίας εἴργεται τῆς ἐπὶ Χριστῷ); the rite catechumens are barred from is the Eucharist, and it is called a sacrifice.",
        "reviewed": true
       }
      },
@@ -919,7 +853,7 @@
       "attribution_note": "Cyril quotes this as Athanasius; it is Apollinaris' creed to Jovian."
      },
      "first_uncertain": null,
-     "states": 22,
+     "states": 19,
      "excludes": 1
     },
     {
@@ -965,7 +899,7 @@
       "attribution_note": "Nestorius' words, quoted in a dialogue whose ascription to Cyril is doubted."
      },
      "states": 1,
-     "excludes": 21
+     "excludes": 18
     }
    ],
    "passages": [
@@ -1020,32 +954,6 @@
      },
      "attribution": null,
      "attribution_note": "Cyril quotes this as Athanasius; it is Apollinaris' creed to Jovian."
-    },
-    {
-     "year": 395,
-     "author": "Amphilochius of Iconium",
-     "book": "amphilochius-in-natalitia-domini",
-     "file": "aind_u01_rem_english",
-     "section": "u01-rem-mid",
-     "text": "O Mary, O Mary, who has possessed the firstborn Creator of all things! O humanity, who has made the eternal Word of God bodily present and has been honored in this place by the heavenly and noetic powers! For Christ was not worthy to be formed into the likenesses of the archangels, nor even into the unchangeable images of the principalities, powers, and authorities, but into you, who were drawn into a turn and associated with irrational animals. For those who are healthy have no need of a physician, but she who is seized by frequent and such a disease has found a physician such that it is a greater happiness of health to have escaped the sickness. But where now is the hostile and senseless, the wandering and riotous dragon, promising to lift his own throne to the height? Therefore, brothers, called to the participation in the heavenly calling of blessedness, called to the adoption of God",
-     "positions": {
-      "theotokos": {
-       "verdict": "states",
-       "quote": "O Mary, who has possessed the firstborn Creator of all things! O humanity, who has made the eternal Word of God bodily present",
-       "agreement": "2/2",
-       "audited": "'O Mary, who has possessed the firstborn Creator of all things'. The Greek (ἡ τὸν τῶν ἁπάντων δημιουργὸν πρωτότοκον κεκτημένη) means she has the Creator of all as her firstborn son, so God was born of her. The English 'the firstborn Creator' undersells this; the original is stronger.",
-       "reviewed": true
-      },
-      "christotokos": {
-       "verdict": "excludes",
-       "quote": "O Mary, who has possessed the firstborn Creator of all things! O humanity, who has made the eternal Word of God bodily present",
-       "agreement": "2/2",
-       "audited": "Saying Mary has 'the Creator of all things' as her firstborn (τὸν τῶν ἁπάντων δημιουργὸν πρωτότοκον) says God was born of her, which rules out mother-of-Christ-only.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
     },
     {
      "year": 398,
@@ -1195,32 +1103,6 @@
      },
      "attribution": "doubtful",
      "attribution_note": "Nestorius' words, quoted in a dialogue whose ascription to Cyril is doubted."
-    },
-    {
-     "year": 444,
-     "author": "Cyril of Alexandria",
-     "book": "cyril-alexandria-fragmenta-acta-catholicas",
-     "file": "fac_u02_rem_english",
-     "section": "u02-rem-early",
-     "text": "This statement shows the manifest confession, namely the exaltation, and the phrase 'You are my Son' establishes His eternal nature, while the phrase 'I have today begotten you' reveals His birth according to the flesh, which He willingly underwent through the Holy Virgin, and by which He is also named Theotokos.",
-     "positions": {
-      "theotokos": {
-       "verdict": "states",
-       "quote": "by which He is also named Theotokos",
-       "agreement": "2/2",
-       "audited": "'by which He is also named Theotokos'. TRANSLATION: the Greek is 'ταύτῃ τοι καὶ θεότοκος ὠνόμασται', meaning the holy Virgin, through whom he was born in the flesh, is for this reason named Theotokos. 'He' is wrong; it should be 'she'. ATTRIBUTION: catena fragment; same text as the Psalm fragment b0c5e1ecd5244d19.",
-       "reviewed": true
-      },
-      "christotokos": {
-       "verdict": "excludes",
-       "quote": "by which He is also named Theotokos",
-       "agreement": "2/2",
-       "audited": "Greek 'ταύτῃ τοι καὶ θεότοκος ὠνόμασται' names the Virgin Theotokos, which excludes mother-of-Christ-only. The English 'He is named' is a mistranslation.",
-       "reviewed": true
-      }
-     },
-     "attribution": "catena",
-     "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
     },
     {
      "year": 444,
@@ -1523,32 +1405,6 @@
     {
      "year": 450,
      "author": "Hesychius of Jerusalem",
-     "book": "hesychius-homilia-i-hypapante",
-     "file": "hhih_u01_open_english",
-     "section": "u01-open",
-     "text": "However, just as we have heard of the woman's transgressions, we must also learn of her achievements, for the Theotokos introduced virginity to life, carried God in her womb, and gave birth to Him in the flesh, renewing our race.",
-     "positions": {
-      "theotokos": {
-       "verdict": "states",
-       "quote": "the Theotokos introduced virginity to life, carried God in her womb, and gave birth to Him in the flesh",
-       "agreement": "2/2",
-       "audited": "'the Theotokos ... carried God in her womb, and gave birth to Him in the flesh'. Both title and claim are stated.",
-       "reviewed": true
-      },
-      "christotokos": {
-       "verdict": "excludes",
-       "quote": "the Theotokos introduced virginity to life, carried God in her womb, and gave birth to Him in the flesh",
-       "agreement": "2/2",
-       "audited": "'carried God in her womb, and gave birth to Him in the flesh' says God was born of her.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 450,
-     "author": "Hesychius of Jerusalem",
      "book": "hesychius-homilia-i-maria-deipara",
      "file": "hhim_u01_open_english",
      "section": "u01-open",
@@ -1638,7 +1494,7 @@
       "attribution_note": null
      },
      "first_uncertain": null,
-     "states": 2,
+     "states": 1,
      "excludes": 0
     },
     {
@@ -1653,7 +1509,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 2
+     "excludes": 1
     }
    ],
    "passages": [
@@ -1677,32 +1533,6 @@
        "quote": "For others have not come to be after him, and she has remained a virgin.",
        "agreement": "2/2",
        "audited": "'Others have not come to be after him, and she has remained a virgin' denies other children of Mary.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 450,
-     "author": "Hesychius of Jerusalem",
-     "book": "hesychius-homilia-i-maria-deipara",
-     "file": "hhim_u01_rem_english",
-     "section": "u01-rem-early",
-     "text": "The Virgin Mary kept her breasts untouched and nursed a child without knowing the child's father. She became a mother without becoming a bride, a remarkable and unprecedented event. A son was being raised, and yet, a father was not found. The field was bearing fruit, but the fruit had no farmer to tend to it. The beast gave birth, but it did not receive seed. A river was flowing, and its source was closed from everywhere, signifying that Mary had become a mother without suffering the things that mothers normally experience. She gave birth like a woman, but she was not corrupted like a woman. Her pregnancy was according to the law of nature, as she waited for the appointed time of childbirth. However, her conception was contrary to the law of nature. You introduced the king, with the doors closed, but again you led him out. For neither when he was being conceived nor when he was being bor",
-     "positions": {
-      "ever-virgin": {
-       "verdict": "states",
-       "quote": "The Virgin Mary kept her breasts untouched and nursed a child without knowing the child's father. She became a mother without becoming a bride... For neither when he was being conceived nor when he was being born did the king of glory open the doors of your womb or loosen the bonds of your virginity.",
-       "agreement": "2/2",
-       "audited": "The sealed fountain is glossed as 'no marital branch' drawing from her spring (Greek κλάδος γαμικὸς τὴν σὴν ...), i.e. no married union. Borderline: most of the passage is virginity in birth, and English 'you have remained untouched' adds 'remained' to the aorist οὐχ ἥψατο.",
-       "reviewed": true
-      },
-      "other-children": {
-       "verdict": "excludes",
-       "quote": "For neither when he was being conceived nor when he was being born did the king of glory open the doors of your womb or loosen the bonds of your virginity. The bridegroom has called you 'a garden enclosed' and 'a fountain sealed', for you have remained untouched by the forces of corruption and decay.",
-       "agreement": "2/2",
-       "audited": "The sealed fountain from which no marital use drew rules out Mary bearing children to Joseph. Borderline for the same reason as ever-virgin.",
        "reviewed": true
       }
      },
@@ -1899,7 +1729,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 5
+     "excludes": 2
     },
     {
      "id": "pray-but-not-invoked",
@@ -1929,7 +1759,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 2
+     "excludes": 0
     },
     {
      "id": "invocation",
@@ -1959,41 +1789,9 @@
      "statement": "Departed saints pray for the living, and it is right to address them directly and ask for their prayers.",
      "mark": "The passage addresses a departed saint directly (such as 'pray for us') or teaches that Christians should ask departed saints for their prayers.",
      "first_defined": "Council of Trent, Session 25 (1563); Synod of Jerusalem (1672)",
-     "first_states": {
-      "year": 405,
-      "author": "Asterius of Amasea",
-      "book": "asterius-homiliae",
-      "file": "ahom_u14_rem_english",
-      "section": "u14-rem-early",
-      "text": "Thus a father or mother, taking up a sick child and embracing it, runs to seek medicine and doctors, but turns to unskilled help; and coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering for those who suffer and are sick. With boldness, use your voice for fellow-servants. Even if you left our life behind, you know the sufferings of humanity; you yourself once pleaded before becoming a martyr. When you sought, you received; now having received, grant. Ask for your own benefit in the form of old age. May we be healed of our infirmity as the world is healed by Christ.'",
-      "positions": {
-       "commemoration-only": {
-        "verdict": "excludes",
-        "quote": "coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering for those who suffer and are sick.'",
-        "agreement": "2/2",
-        "audited": "The mother addresses the martyr: 'Having suffered for Christ, intercede (πρέσβευσον) for suffering and disease', a direct request to a departed saint, presented approvingly by Asterius.",
-        "reviewed": true
-       },
-       "pray-but-not-invoked": {
-        "verdict": "excludes",
-        "quote": "coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering... With boldness, use your voice for fellow-servants.'",
-        "agreement": "2/2",
-        "audited": "A departed martyr is directly asked: 'πρέσβευσον... χρῆσον λόγον τοῖς ὁμοδούλοις' ('intercede... speak for your fellow servants').",
-        "reviewed": true
-       },
-       "invocation": {
-        "verdict": "states",
-        "quote": "coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering for those who suffer and are sick. With boldness, use your voice for fellow-servants.'",
-        "agreement": "2/2",
-        "audited": "Direct address to a martyr: 'Παθὼν διὰ Χριστὸν πρέσβευσον ὑπὲρ πάθους καὶ νόσου' ('you who suffered for Christ, intercede for suffering and sickness'). The English 'Intercede through Christ's suffering' and 'the same cries used toward the Mediator' mistranslate: the Greek calls the martyr the go-between (πρὸς τὸν μεσίτην).",
-        "reviewed": true
-       }
-      },
-      "attribution": null,
-      "attribution_note": null
-     },
+     "first_states": null,
      "first_uncertain": null,
-     "states": 2,
+     "states": 0,
      "excludes": 0
     }
    ],
@@ -2022,39 +1820,6 @@
      "author": "Asterius of Amasea",
      "book": "asterius-homiliae",
      "file": "ahom_u14_rem_english",
-     "section": "u14-rem-early",
-     "text": "Thus a father or mother, taking up a sick child and embracing it, runs to seek medicine and doctors, but turns to unskilled help; and coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering for those who suffer and are sick. With boldness, use your voice for fellow-servants. Even if you left our life behind, you know the sufferings of humanity; you yourself once pleaded before becoming a martyr. When you sought, you received; now having received, grant. Ask for your own benefit in the form of old age. May we be healed of our infirmity as the world is healed by Christ.'",
-     "positions": {
-      "commemoration-only": {
-       "verdict": "excludes",
-       "quote": "coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering for those who suffer and are sick.'",
-       "agreement": "2/2",
-       "audited": "The mother addresses the martyr: 'Having suffered for Christ, intercede (πρέσβευσον) for suffering and disease', a direct request to a departed saint, presented approvingly by Asterius.",
-       "reviewed": true
-      },
-      "pray-but-not-invoked": {
-       "verdict": "excludes",
-       "quote": "coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering... With boldness, use your voice for fellow-servants.'",
-       "agreement": "2/2",
-       "audited": "A departed martyr is directly asked: 'πρέσβευσον... χρῆσον λόγον τοῖς ὁμοδούλοις' ('intercede... speak for your fellow servants').",
-       "reviewed": true
-      },
-      "invocation": {
-       "verdict": "states",
-       "quote": "coming to one of the martyrs, she presents her petition to the Lord with the same cries used toward the Mediator: 'Intercede through Christ's suffering for those who suffer and are sick. With boldness, use your voice for fellow-servants.'",
-       "agreement": "2/2",
-       "audited": "Direct address to a martyr: 'Παθὼν διὰ Χριστὸν πρέσβευσον ὑπὲρ πάθους καὶ νόσου' ('you who suffered for Christ, intercede for suffering and sickness'). The English 'Intercede through Christ's suffering' and 'the same cries used toward the Mediator' mistranslate: the Greek calls the martyr the go-between (πρὸς τὸν μεσίτην).",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 405,
-     "author": "Asterius of Amasea",
-     "book": "asterius-homiliae",
-     "file": "ahom_u14_rem_english",
      "section": "u14-rem-mid",
      "text": "For our prayer is not sufficient to move God in the time of necessity or misfortune, for our plea is not a persuasion, but a remembrance of sins; therefore we fly to the fellow-servants who are loved by the Lord, so that they might heal our defects through their own achievements. What then is the charge, that while honoring martyrs we ourselves strive to please God? What accusation is there in flying to protectors? Let us examine also these things, if the accuser cleanses the charge. And how [can it be said], that you do not honor myriads of dead men, but worship them as gods?",
      "positions": {
@@ -2063,58 +1828,6 @@
        "quote": "we fly to the fellow-servants who are loved by the Lord, so that they might heal our defects through their own achievements",
        "agreement": "2/3",
        "audited": "'We flee to the fellow-servants loved by the Lord, so that they might heal our faults by their own achievements' and 'we enjoy their patronage before God' (Greek προσφεύγομεν, προστασίας... πρὸς Θεόν) is seeking help from departed martyrs.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 405,
-     "author": "Asterius of Amasea",
-     "book": "asterius-homiliae",
-     "file": "ahom_u15_rem_english",
-     "section": "u15-rem-mid",
-     "text": "The martyrs are not respected even for the greatness of the miracles. Instead, people call them many-maned, and their tombs and their resting places are named as such, and they cleanse themselves as if rubbing against a contagion, not even mentioning that God-breathed saying praised by every mouth: 'Precious in the sight of the Lord is the death of His saints' (Psalm 116:15). Therefore, let us pray to God, and let us entreat the martyrs to revile the Lord in common, so that a spirit of compunction may be given to those acting under the error of heresy, and the division may be loosed like a mediator or a barrier, so that all may come together in brotherly unity in Christ Jesus our Lord, to whom belongs the glory forever. Amen.",
-     "positions": {
-      "commemoration-only": {
-       "verdict": "excludes",
-       "quote": "let us entreat the martyrs to revile the Lord in common",
-       "agreement": "2/3",
-       "audited": "'Let us entreat the martyrs (παρακαλέσωμεν δὲ μάρτυρας) to implore our common Master' asks departed martyrs to pray.",
-       "reviewed": true
-      },
-      "pray-but-not-invoked": {
-       "verdict": "excludes",
-       "quote": "let us entreat the martyrs to revile the Lord in common",
-       "agreement": "2/3",
-       "audited": "Christians are told to 'entreat the martyrs' (παρακαλέσωμεν δὲ μάρτυρας), the request this position forbids.",
-       "reviewed": true
-      },
-      "invocation": {
-       "verdict": "states",
-       "quote": "let us entreat the martyrs to revile the Lord in common",
-       "agreement": "2/3",
-       "audited": "'Let us pray to God, and let us entreat the martyrs to implore our common Master' (παρακαλέσωμεν δὲ μάρτυρας τὸν κοινὸν δυσωπῆσαι Δεσπότην) teaches asking the martyrs for prayer. The English 'revile the Lord in common' is a serious mistranslation of δυσωπῆσαι ('implore').",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 450,
-     "author": "Hesychius of Jerusalem",
-     "book": "hesychius-homilia-i-longinum",
-     "file": "hhilo_u02_rem_english",
-     "section": "u02-rem-mid",
-     "text": "It should be believed that he is truly the holy Longinus, the centurion who confessed Christ on the cross, by whose intercession and consolation we are all preserved, both those who read and those who hear, in Christ.",
-     "positions": {
-      "commemoration-only": {
-       "verdict": "excludes",
-       "quote": "by whose intercession and consolation we are all preserved",
-       "agreement": "3/3",
-       "audited": "'Holy Longinus... by whose intercession (πρεσβείᾳ) we are all preserved' says a departed saint intercedes for the living. The Greek is a wish ('may we be preserved', διαφυλαχθείημεν).",
        "reviewed": true
       }
      },
@@ -3017,7 +2730,7 @@
       "attribution_note": null
      },
      "first_uncertain": null,
-     "states": 24,
+     "states": 22,
      "excludes": 0
     },
     {
@@ -3081,7 +2794,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 26
+     "excludes": 24
     }
    ],
    "passages": [
@@ -3157,32 +2870,6 @@
        "quote": "forgiveness through baptism",
        "agreement": "2/3",
        "audited": "ATTRIBUTION: catena fragment; the ascription to this author rests on the catena lemma and is not secure. 'ἡ διὰ βαπτίσματος ἄφεσις' (forgiveness through baptism) makes baptism the means of forgiveness, which rules out a bare picture.",
-       "reviewed": true
-      }
-     },
-     "attribution": "catena",
-     "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
-    },
-    {
-     "year": 390,
-     "author": "Apollinaris of Laodicea",
-     "book": "apollinaris-fragmenta-joannem",
-     "file": "apofj_u01_rem_english",
-     "section": "u01-rem-early",
-     "text": "The Lord, placing rebirth before the true concept, brings it back to him by grace (John 3:5), which is accomplished through the ministry of water for the body.",
-     "positions": {
-      "regeneration": {
-       "verdict": "states",
-       "quote": "rebirth... is accomplished through the ministry of water for the body",
-       "agreement": "3/3",
-       "audited": "ATTRIBUTION: catena fragment; the ascription to this author rests on the catena lemma and is not secure. Greek: 'τῇ χάριτι τὴν ἀναγέννησιν ἀνατιθείς, ἥτις ἐπιτελεῖται δι' ὑπουργίας μὲν ὕδατος τὸ σῶμα' (ascribing rebirth to grace, which is accomplished through the ministry of water for the body). The English 'placing rebirth before the true concept' garbles the first clause, but the deciding words are faithful.",
-       "reviewed": true
-      },
-      "ordinance-symbol": {
-       "verdict": "excludes",
-       "quote": "rebirth... is accomplished through the ministry of water",
-       "agreement": "3/3",
-       "audited": "Rebirth 'is accomplished through the ministry of water' (ἐπιτελεῖται δι' ὑπουργίας ὕδατος): water is an instrument of rebirth, not a picture of it.",
        "reviewed": true
       }
      },
@@ -3523,32 +3210,6 @@
     {
      "year": 444,
      "author": "Cyril of Alexandria",
-     "book": "cyril-alexandria-isaiah",
-     "file": "isaiah_logos2_rem_english",
-     "section": "logos2-rem-close",
-     "text": "We approach the grace of holy baptism, which sanctifies us and gives us the power to remove sins and be reborn spiritually, conforming us to Christ. This baptism also gives us a bold entrance into the kingdom of heaven, as Jesus said, 'Unless one is born of water and spirit, they cannot enter the kingdom of God.' The Jews, however, lack this gift, for they do not have the power of bread, which is the life-giving power in Christ, nor do they have the power of water, which is necessary for spiritual rebirth.",
-     "positions": {
-      "regeneration": {
-       "verdict": "states",
-       "quote": "sanctifies us and gives us the power to remove sins and be reborn spiritually...necessary for spiritual rebirth",
-       "agreement": "2/2",
-       "audited": "Greek: 'ὕδατος τὴν ἰσχὺν εἶναι λέγοντες ἁμαρτιῶν ἀπόθεσιν, ἀναγέννησιν τὴν πνευματικὴν' (saying the power of the water is the putting-off of sins, spiritual rebirth). Fidelity: the English 'which is necessary for spiritual rebirth' is not in the Greek, which says 'they do not have the power of water; for sin remains among them unwashed'.",
-       "reviewed": true
-      },
-      "ordinance-symbol": {
-       "verdict": "excludes",
-       "quote": "gives us the power to remove sins and be reborn spiritually",
-       "agreement": "2/2",
-       "audited": "'the power of the water is the putting-off of sins, spiritual rebirth' is the exact exclusion.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 444,
-     "author": "Cyril of Alexandria",
      "book": "cyril-alexandria-adoration-1",
      "file": "adoration6_english",
      "section": "4",
@@ -3807,41 +3468,9 @@
      "statement": "Bishops, distinct from and above presbyters, succeed the apostles through an unbroken line of ordination, and govern the churches.",
      "mark": "The passage places one bishop over presbyters and deacons as successor of the apostles, or traces bishops in a line from the apostles.",
      "first_defined": "Not a single dogma; Council of Trent, Session 23 (1563); Anglican Ordinal (1550/1662); Synod of Jerusalem (1672)",
-     "first_states": {
-      "year": 444,
-      "author": "Cyril of Alexandria",
-      "book": "cyril-alexandria-adoration-1",
-      "file": "adoration13_english",
-      "section": "3",
-      "text": "Cyril: …Levites have been distributed as somehow coworkers and as it were helpers for the sacred-workers, for they will keep his watches—clear that of Aaron—and all the vessels of the tent of the witness, and the keepings of the sons of Israel. And unto these is the manner of their coworking. And he sets upon the tent both Aaron and the sons with him, and ‘They will keep,’ (Numbers 3:14–17) he says, ‘their own priesthood and all according to the altar, and the inward of the veil,’ (Hebrews 3:6) that is the unspeakable and more mystical things, and as many as it is custom for those sitting-near the divine altar to do; and purely as unto Christ is the type, whom the Father set upon his house, of which house we are. And not unclearly would those priesting-with Aaron mark the holy and admirable chorus of the holy apostles, as it were coworking and co-liturgizing with Christ. For they have be",
-      "positions": {
-       "episcopal-succession": {
-        "verdict": "states",
-        "quote": "For to bishops, as those allotted then to lead, and indeed to those managing upon the middle rank—presbyters I mean—the altar has been entrusted",
-        "agreement": "2/3",
-        "audited": "'To bishops, as those allotted to lead, and to those administering the lesser rank, presbyters', then deacons: one bishop over presbyters and deacons, foreshadowed in the Law. Greek ἐπισκόποις ... καθηγεῖσθαι ... τὴν μείω τάξιν checked; English 'middle rank' understates μείω ('lesser'). Succession from the apostles is not explicit, so this is borderline.",
-        "reviewed": true
-       },
-       "presbyterian": {
-        "verdict": "excludes",
-        "quote": "For to bishops, as those allotted then to lead, and indeed to those managing upon the middle rank—presbyters I mean—the altar has been entrusted...",
-        "agreement": "2/3",
-        "audited": "Bishops 'allotted to lead' over presbyters of 'the lesser rank', as an order foreshadowed by God in the Law (τὴν ἐν νόμῳ προανατύπωσιν): a bishop above presbyters by divine ordering.",
-        "reviewed": true
-       },
-       "congregational": {
-        "verdict": "excludes",
-        "quote": "For to bishops, as those allotted then to lead, and indeed to those managing upon the middle rank—presbyters I mean—the altar has been entrusted",
-        "agreement": "3/3",
-        "audited": "The church's order puts bishops 'allotted to lead' over presbyters, deacons and the people; deacons keep 'the keepings of the people'. A bishop governs the congregation.",
-        "reviewed": true
-       }
-      },
-      "attribution": null,
-      "attribution_note": null
-     },
+     "first_states": null,
      "first_uncertain": null,
-     "states": 1,
+     "states": 0,
      "excludes": 0
     },
     {
@@ -3872,7 +3501,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 1
+     "excludes": 0
     },
     {
      "id": "congregational",
@@ -3902,44 +3531,10 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 1
+     "excludes": 0
     }
    ],
-   "passages": [
-    {
-     "year": 444,
-     "author": "Cyril of Alexandria",
-     "book": "cyril-alexandria-adoration-1",
-     "file": "adoration13_english",
-     "section": "3",
-     "text": "Cyril: …Levites have been distributed as somehow coworkers and as it were helpers for the sacred-workers, for they will keep his watches—clear that of Aaron—and all the vessels of the tent of the witness, and the keepings of the sons of Israel. And unto these is the manner of their coworking. And he sets upon the tent both Aaron and the sons with him, and ‘They will keep,’ (Numbers 3:14–17) he says, ‘their own priesthood and all according to the altar, and the inward of the veil,’ (Hebrews 3:6) that is the unspeakable and more mystical things, and as many as it is custom for those sitting-near the divine altar to do; and purely as unto Christ is the type, whom the Father set upon his house, of which house we are. And not unclearly would those priesting-with Aaron mark the holy and admirable chorus of the holy apostles, as it were coworking and co-liturgizing with Christ. For they have be",
-     "positions": {
-      "episcopal-succession": {
-       "verdict": "states",
-       "quote": "For to bishops, as those allotted then to lead, and indeed to those managing upon the middle rank—presbyters I mean—the altar has been entrusted",
-       "agreement": "2/3",
-       "audited": "'To bishops, as those allotted to lead, and to those administering the lesser rank, presbyters', then deacons: one bishop over presbyters and deacons, foreshadowed in the Law. Greek ἐπισκόποις ... καθηγεῖσθαι ... τὴν μείω τάξιν checked; English 'middle rank' understates μείω ('lesser'). Succession from the apostles is not explicit, so this is borderline.",
-       "reviewed": true
-      },
-      "presbyterian": {
-       "verdict": "excludes",
-       "quote": "For to bishops, as those allotted then to lead, and indeed to those managing upon the middle rank—presbyters I mean—the altar has been entrusted...",
-       "agreement": "2/3",
-       "audited": "Bishops 'allotted to lead' over presbyters of 'the lesser rank', as an order foreshadowed by God in the Law (τὴν ἐν νόμῳ προανατύπωσιν): a bishop above presbyters by divine ordering.",
-       "reviewed": true
-      },
-      "congregational": {
-       "verdict": "excludes",
-       "quote": "For to bishops, as those allotted then to lead, and indeed to those managing upon the middle rank—presbyters I mean—the altar has been entrusted",
-       "agreement": "3/3",
-       "audited": "The church's order puts bishops 'allotted to lead' over presbyters, deacons and the people; deacons keep 'the keepings of the people'. A bishop governs the congregation.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    }
-   ],
+   "passages": [],
    "on_question": 61
   },
   {
@@ -3982,7 +3577,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 3
+     "excludes": 2
     },
     {
      "id": "permitted-not-venerated",
@@ -4136,25 +3731,6 @@
      },
      "attribution": "doubtful",
      "attribution_note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
-    },
-    {
-     "year": 403,
-     "author": "Epiphanius of Salamis",
-     "book": "epiphanius-epistula-ad-theodosium-imperatorem",
-     "file": "epi12_u01_open_english",
-     "section": "u01-open",
-     "text": "I have heard that some claim to depict even the incomprehensible Son of God, yet I have no memory of seeing anything of the kind. Which of the ancient fathers of Christ, having painted an icon, ever placed it in a church or in a private house, or upon the lintels of doors? Which of the ancient bishops [painted] Christ?",
-     "positions": {
-      "venerated": {
-       "verdict": "excludes",
-       "quote": "Which of the ancient fathers of Christ, having painted an icon, ever placed it in a church or in a private house, or upon the lintels of doors?",
-       "agreement": "3/3",
-       "audited": "Kept, borderline. 'Which of the ancient fathers ... having painted an image of Christ placed it in a church or in a private house?' denies any precedent for church images of Christ, in a letter asking the emperor whether 'it is fitting to have God painted with colors'. TRANSLATION: 'upon the lintels of doors' renders ἐν βήλοις θυρῶν, which means door curtains. ATTRIBUTION: the letter survives through iconoclast citation; authenticity disputed.",
-       "reviewed": true
-      }
-     },
-     "attribution": "doubtful",
-     "attribution_note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
     }
    ],
    "on_question": 48
@@ -4223,7 +3799,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 7
+     "excludes": 3
     },
     {
      "id": "foreknowledge",
@@ -4248,22 +3824,22 @@
       "year": 254,
       "author": "Origen of Alexandria",
       "book": "origen-romans-catena",
-      "file": "romc_u01_open_english",
-      "section": "u01-open",
-      "text": "We must not confuse the order of divine action: it is not that God first predestines and then calls, but that His foreknowledge precedes and undergirds both. The psalm’s words about sinners alienated from the womb are not to be read as a denial of human responsibility, but as a description of a condition that, from birth, inclines toward falsehood—yet even then, the capacity for choice remains, however dim. To imagine that infants could speak lies in unison at birth is to misunderstand both language and moral agency. But when we read Paul’s own words in Galatians, we see that his separation from the womb was not a mere natural endowment, but a divine act aimed at revealing Christ in him—thus grounding the apostolic calling in God’s purpose, not human merit. This is why we affirm that all things work together for good for those who love God, not because they earned it, but because they we",
+      "file": "romc_u01_rem_english",
+      "section": "u01-rem-early",
+      "text": "If someone insists these events could not have taken place, we respond that they might not have occurred, but it does not follow that if something is incapable of happening, it must either happen or fail to happen; events unfold not solely by necessity, but also as contingent possibilities, including the possibility of non-occurrence. The examination of what is possible engages both logical analysis and reflective insight, enabling one who turns inward to perceive the subtlety of arguments and grasp how even fortuitous occurrences do not obstruct the potential for something to be actual in multiple ways—one of many possibilities becoming real, not by compulsion. God foreknew that events would unfold not through necessity but as free possibilities, and the declaration that they would occur is not speculative guesswork but genuine foreknowledge. Let no one suppose we have remained silent o",
       "positions": {
        "double": {
         "verdict": "excludes",
-        "quote": "If we reverse this order and make predestination the first cause, we open the door to those who would blame God for injustice, as if He arbitrarily chose some and rejected others.",
+        "quote": "those whom he foreknew, he also predestined",
         "agreement": "2/2",
-        "audited": "Predestination is placed under foreknowledge of 'hearts inclined toward virtue', which grounds it in something foreseen in the person. Greek check: the English is a loose paraphrase; 'as if He arbitrarily chose some and rejected others' is not in the Greek, which targets those who bring in people 'saved by constitution and nature' (ἐκ κατασκευῆς καὶ φύσεως σωζομένους). The exclusion holds on the Greek of the following lines, not on that sentence.",
+        "audited": "Origen says the cause of the purpose and of the foreknowledge lies in what is in our power, so election is not independent of the person. The grader's quote (bare Rom 8:29) did not support the verdict; the deciding words are given here.",
         "reviewed": true
        },
        "foreknowledge": {
         "verdict": "states",
-        "quote": "God's foreknowledge is not the cause of what comes to be, but the reflection of His knowledge of what will be, grounded in His eternal understanding of hearts inclined toward virtue or alienation.",
+        "quote": "those whom he foreknew, he also predestined",
         "agreement": "2/2",
-        "audited": "'Foreknowledge precedes and undergirds' predestination, grounded in God's knowledge of 'hearts inclined toward virtue'. The Greek supports this (ἀνωτέρω δέ ἐστι τοῦ προορισμοῦ ἡ πρόγνωσις), but this English is an inflated paraphrase; cite b261abd049f379f3 for the exact words.",
+        "audited": "'He makes clear that the cause of the purpose and of the foreknowledge comes from what is in our power' (τὴν ἐκ τοῦ ἐφ' ἡμῖν αἰτίαν παρίστησι τῆς προθέσεως καὶ τῆς προγνώσεως). The grader's quote, the bare 'those whom he foreknew, he also predestined', is shared ground; the verdict holds only on these words. Greek checked.",
         "reviewed": true
        }
       },
@@ -4271,89 +3847,11 @@
       "attribution_note": null
      },
      "first_uncertain": null,
-     "states": 7,
+     "states": 3,
      "excludes": 2
     }
    ],
    "passages": [
-    {
-     "year": 254,
-     "author": "Origen (catena heading)",
-     "book": "didymus-enarratio-catholicas",
-     "file": "dec_u01_rem_english",
-     "section": "u01-rem-early",
-     "text": "9 Originating from the interpretation into 'according to the foreknowledge of God.' For God, having foreseen the faith and the works of men having been perfected in them through the evangelical teaching, foreknowingly chose them in Christ before the foundation of the world, having then predestined them to be sons through the participation of the spirit of sonship; for foreknowledge is to be regarded as nothing other than a vision of things to come, which is no longer foreknowledge, but is knowledge toward the existence of those having been foreseen; even so, according to foreknowledge, they were chosen, as Peter writes (1 Pet 1:2), but not now is the favor being made to them; thus he casts aside the myth concerning natures and the thought contained within.",
-     "positions": {
-      "double": {
-       "verdict": "excludes",
-       "quote": "God, having foreseen the faith and the works of men having been perfected in them through the evangelical teaching, foreknowingly chose them",
-       "agreement": "3/3",
-       "audited": "Election rests on foreseen faith and conduct: 'having foreseen the faith and conduct (Προεωρακὼς... τὴν πίστιν καὶ πρᾶξιν)... he chose them'. That rules out a choice made without regard to anything foreseen.",
-       "reviewed": true
-      },
-      "foreknowledge": {
-       "verdict": "states",
-       "quote": "God, having foreseen the faith and the works of men having been perfected in them through the evangelical teaching, foreknowingly chose them in Christ before the foundation of the world, having then predestined them",
-       "agreement": "3/3",
-       "audited": "'Having foreseen the faith and conduct of men... he chose them in Christ before the foundation of the world, then predestining them' (Προεωρακὼς γὰρ ὁ θεὸς τὴν πίστιν καὶ πρᾶξιν... ἐξελέξατο αὐτούς... προορίσας). Greek checked: faithful. ATTRIBUTION: the catena heads this 'Ὠριγένους ἐκ τῆς ἑρμηνείας' (Origen's, from his commentary); the English mistranslates 'Ὠριγένους' as 'Originating', so it is Origen, not Didymus, and the year should not be 398.",
-       "reviewed": true
-      }
-     },
-     "attribution": "catena",
-     "attribution_note": "Filed under Didymus, but the catena heads it 'Of Origen'."
-    },
-    {
-     "year": 254,
-     "author": "Origen of Alexandria",
-     "book": "origen-romans-catena",
-     "file": "romc_u01_open_english",
-     "section": "u01-open",
-     "text": "We must not confuse the order of divine action: it is not that God first predestines and then calls, but that His foreknowledge precedes and undergirds both. The psalm’s words about sinners alienated from the womb are not to be read as a denial of human responsibility, but as a description of a condition that, from birth, inclines toward falsehood—yet even then, the capacity for choice remains, however dim. To imagine that infants could speak lies in unison at birth is to misunderstand both language and moral agency. But when we read Paul’s own words in Galatians, we see that his separation from the womb was not a mere natural endowment, but a divine act aimed at revealing Christ in him—thus grounding the apostolic calling in God’s purpose, not human merit. This is why we affirm that all things work together for good for those who love God, not because they earned it, but because they we",
-     "positions": {
-      "double": {
-       "verdict": "excludes",
-       "quote": "If we reverse this order and make predestination the first cause, we open the door to those who would blame God for injustice, as if He arbitrarily chose some and rejected others.",
-       "agreement": "2/2",
-       "audited": "Predestination is placed under foreknowledge of 'hearts inclined toward virtue', which grounds it in something foreseen in the person. Greek check: the English is a loose paraphrase; 'as if He arbitrarily chose some and rejected others' is not in the Greek, which targets those who bring in people 'saved by constitution and nature' (ἐκ κατασκευῆς καὶ φύσεως σωζομένους). The exclusion holds on the Greek of the following lines, not on that sentence.",
-       "reviewed": true
-      },
-      "foreknowledge": {
-       "verdict": "states",
-       "quote": "God's foreknowledge is not the cause of what comes to be, but the reflection of His knowledge of what will be, grounded in His eternal understanding of hearts inclined toward virtue or alienation.",
-       "agreement": "2/2",
-       "audited": "'Foreknowledge precedes and undergirds' predestination, grounded in God's knowledge of 'hearts inclined toward virtue'. The Greek supports this (ἀνωτέρω δέ ἐστι τοῦ προορισμοῦ ἡ πρόγνωσις), but this English is an inflated paraphrase; cite b261abd049f379f3 for the exact words.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 254,
-     "author": "Origen of Alexandria",
-     "book": "origen-romans-catena",
-     "file": "romc_u01_open_english",
-     "section": "u01-open",
-     "text": "od, for those called according to purpose; whom He foreknew, He also predestined to be conformed to the image of His Son, so that He might be the firstborn among many brothers; and whom He predestined, He also called; and whom He called, He also justified; and whom He justified, He also glorified. Therefore, let us follow the sequence of what has been said: God justifies because He called beforehand; He would not justify those He did not call; and He calls because He predestined beforehand; He would not call those He did not predestine; and it is to Him that the beginning of the call and justification belongs, not predestination. For if predestination were the starting point of what follows, those who advance the strange argument of nature would easily prevail. But above predestination lies foreknowledge: for whom He foreknew, He declares, He also predestined to be conformed to the image",
-     "positions": {
-      "double": {
-       "verdict": "excludes",
-       "quote": "having considered the inclination of these things in us toward security and impulse after that inclination, and as they will surrender themselves wholly to living according to virtue, He foreknew them",
-       "agreement": "2/2",
-       "audited": "God predestines those he foreknew would give themselves to virtue, so election depends on something foreseen in the person, which rules out an unconditional decree.",
-       "reviewed": true
-      },
-      "foreknowledge": {
-       "verdict": "states",
-       "quote": "having considered the inclination of these things in us toward security and impulse after that inclination, and as they will surrender themselves wholly to living according to virtue, He foreknew them",
-       "agreement": "2/2",
-       "audited": "'Having considered the inclination of what is in our power in certain people toward piety... and that they will give themselves wholly to living by virtue, He foreknew them... and whom He so foreknew, He predestined' (κατανοήσας ῥοπὴν τοῦ ἐφ' ἡμῖν τῶνδέ τινων ἐπὶ εὐσέβειαν... καὶ οὓς οὕτω προέγνω, προώρισεν). Greek checked (Philocalia 25 text, Romans catena). TRANSLATION: the English 'toward security' mistranslates εὐσέβειαν ('piety').",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
     {
      "year": 254,
      "author": "Origen of Alexandria",
@@ -4476,32 +3974,6 @@
        "quote": "the known thing makes the knowledge, which does not receive the knowing from us",
        "agreement": "2/3",
        "audited": "'What kind of justice is this of foreknowledge, if we take these things to happen according to foreknowledge?' (Greek checked) begins Didymus' rejection of the foreknowledge account, completed in d57e3d085a87fe48 ('How then does foreknowledge have room?').",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
-    },
-    {
-     "year": 405,
-     "author": "Asterius of Amasea",
-     "book": "asterius-homiliae",
-     "file": "ahom_u09_open_english",
-     "section": "u09-open",
-     "text": "For even if you do not believe, God is able from these stones to raise up children for Abraham, that is, to gather to Christ a remnant people from among the nations and the uncircumcised, upon which Abraham received the promise when God said to him, 'All the nations will be blessed in you' (Genesis 12:3). By secret foreknowledge, seeing the future, God completed the leader of the faith so that all those destined to believe later would be appointed as children in order.",
-     "positions": {
-      "double": {
-       "verdict": "excludes",
-       "quote": "By secret foreknowledge, ... all those destined to believe later would be appointed as children in order.",
-       "agreement": "2/3",
-       "audited": "God allotted to Abraham as children those he foresaw 'would later believe', grounding the allotment in foreseen faith.",
-       "reviewed": true
-      },
-      "foreknowledge": {
-       "verdict": "states",
-       "quote": "By secret foreknowledge, seeing the future, God completed the leader of the faith so that all those destined to believe later would be appointed as children in order.",
-       "agreement": "3/3",
-       "audited": "'Seeing the future by ineffable foreknowledge, God allotted to the founder of faith all who would later believe, into the rank of children' (Τῇ ἀπορρήτῳ προγνώσει βλέπων... πάντας τοὺς εἰς ὕστερον πιστεύειν μέλλοντας εἰς τάξιν ἀπεκλήρωσε τέκνων). Borderline: it is an allotment as Abraham's children, not 'predestination' by name. TRANSLATION: the English 'completed the leader of the faith' mistranslates ἀπεκλήρωσε ('allotted').",
        "reviewed": true
       }
      },

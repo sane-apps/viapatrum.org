@@ -1,10 +1,13 @@
 """Speech-text normalization for audiobook rendering (imported into build_audio).
 
 Two views of every sentence:
-- read_text: display words (matches the site reader) for alignment + manifest.
+- read_text: display words for alignment + manifest. These are the page's
+  words by design: both come from reader_text.read_text (P14, 2026-10-06).
 - speak_text: expanded words (citations, abbreviations) actually sent to TTS.
 """
 import re
+
+import reader_text
 
 BIBLE_BOOKS = {
     "gen": "Genesis", "genesis": "Genesis",
@@ -87,7 +90,13 @@ def _expand_ref(m: "re.Match") -> str:
 
 
 def read_text(text: str) -> str:
-    """Display words: strip link markup and editorial brackets."""
+    """Display words: the reader page's words for one paragraph."""
+    return reader_text.read_text(text)
+
+
+def legacy_read_text(text: str) -> str:
+    """The pre-2026-10-06 cleaner (link markup and every '<' '>' dropped).
+    Only for callers whose cache keys hang on the old words (doctrine_map)."""
     text = BRACKET_RE.sub(lambda m: m.group(1), text)
     text = text.replace("<", "").replace(">", "")
     return re.sub(r"\s+", " ", text).strip()
@@ -106,5 +115,7 @@ def speak_text(text: str) -> str:
     text = re.sub(r"\bAD\b", "A D", text)
     text = re.sub(r"\bBC\b", "B C", text)
     text = re.sub(r"\bc\.(?=\s*\d)", "circa", text)
+    # A lone "<" or ">" is a word on the page ("certainty < knowledge").
+    text = text.replace(" < ", " less than ").replace(" > ", " more than ")
     text = text.replace(":", ",")
     return re.sub(r"\s+", " ", text).strip()

@@ -171,7 +171,12 @@ assert (
     < site.author_sort_year("Julius Africanus", slug="julius-africanus")
 )
 assert site.work_era({"author": "Unlisted writer", "period": "c. 6th cent."}) == "Post-Nicene"
-assert site.work_era({"author": "Unlisted writer", "period": "c. 5th cent."}) == "Unknown"
+# A century period files under its middle year, never "Unknown" (no chip reaches it).
+assert site.work_era({"author": "Unlisted writer", "period": "c. 5th cent."}) == "Nicene"
+assert site.work_era({"author": "Polycarp of Smyrna", "author_slug": "polycarp-of-smyrna", "period": "c. 155"}) == "Apostolic"
+assert site.work_era({"author": "Unlisted writer", "period": "c. 880"}) == "Byzantine"
+assert site.work_era({"author": "Unlisted writer", "period": "1636"}) == "Reformation"
+assert site.era_band(120) == "Apostolic"  # Explore points keep the old year bands
 assert site.year_from_period("date uncertain") is None
 work = site._pack_work(slug="unsubstantiated", title="A <work>", author="A & B",
     author_slug="a-b", period="c. 6th cent.", status="in_progress", edition="Test",
@@ -202,7 +207,12 @@ class Catalogue(HTMLParser):
 page = Catalogue()
 works_html = (site.DIST / "works/index.html").read_text()
 page.feed(works_html)
-receipt = json.loads((site.ROOT / "outputs/catalogue-quality.json").read_text())
+# The receipt that belongs to this dist (build_site writes it next to DIST);
+# the shared outputs/ copy only for an old build that predates that.
+_receipt_path = site.DIST.parent / f"{site.DIST.name}.catalogue-quality.json"
+if not _receipt_path.exists():
+    _receipt_path = site.ROOT / "outputs/catalogue-quality.json"
+receipt = json.loads(_receipt_path.read_text())
 assert page.has_author_catalog, "Works page missing author-catalog class"
 assert "Book 1" not in works_html, "Works catalogue still shows Book 1 sprawl"
 _ws = re.search(
@@ -322,3 +332,190 @@ for _page in sorted((site.DIST / "works").glob("*/index.html")):
     _title = re.sub(r"<[^>]+>", "", _h1.group(1)).strip()
     assert not LATIN_H1.match(_title), \
         "Latin-primary H1 on /works/%s/: %s" % (_page.parent.name, _title)
+
+# Made-up teaser lines (2026-10-06 audit). A loader once filled missing blurbs
+# with "<Author> Greek fragments. SERIES CLOSEOUT.", which put "Tertullian Greek
+# fragments." on complete Latin works. Fail only on that exact stub for the
+# page's own writer, so an honest "Surviving Greek fragments." still ships.
+import html as _html
+_DESC = re.compile(r'<meta name="description" content="([^"]*)"')
+_LD_AUTHOR = re.compile(r'"author": \{"@type": "Person", "name": "([^"]+)"')
+_stub_hits = []
+for _page in sorted((site.DIST / "works").glob("*/index.html")):
+    _s = _page.read_text(encoding="utf-8")
+    _m = _DESC.search(_s)
+    _d = _html.unescape(_m.group(1)) if _m else ""
+    _a = _LD_AUTHOR.search(_s)
+    _author = _html.unescape(_a.group(1)) if _a else ""
+    if "SERIES CLOSEOUT" in _d or (_author and _d in (f"{_author} Greek fragments.", f"{_author} Latin fragments.")):
+        _stub_hits.append(_page.parent.name)
+assert not _stub_hits, "Placeholder '<Author> Greek fragments.' blurb on: %s" % _stub_hits[:8]
+assert site._CATALOGUE_STUB.search("Tertullian Greek fragments.")
+assert not site._CATALOGUE_STUB.search("Surviving Greek fragments.")
+
+# Warn (not fail) on certified books with no blurb: the page then uses the
+# intro.md or work-brief line, or a neutral sentence. A real blurb is better.
+_no_blurb = []
+for _folder in sorted(site._CERTIFIED):
+    _metas = [json.loads(_p.read_text(encoding="utf-8")) for _p in (_folder / "translations").glob("*_meta.json")]
+    if _metas and not any((_m.get("work_blurb") or _m.get("blurb") or "").strip() for _m in _metas):
+        _no_blurb.append(_folder.name)
+if _no_blurb:
+    print(json.dumps({"warn": "certified books with no meta blurb", "books": _no_blurb}))
+
+# Unit checks for the display helpers behind the gates below (2026-10-06).
+_w = {"slug": "x", "title": "T"}
+assert site.display_head({"section": "1", "head": "Ask, seek, knock — GREGORY CLOSEOUT SERIES CLOSEOUT"}, _w) == "Ask, seek, knock"
+assert site.display_head({"section": "1", "head": "Expositio in Proverbia Unit 1 opening"}, _w) == ""
+assert site.display_head({"section": "1", "head": "Unit 7 rem early — armor as Christ"}, _w) == "armor as Christ"
+assert site.display_head({"section": "1", "head": "John catena rem CLOSEOUT: passion"}, _w) == "John catena: passion"
+assert "PLAC" not in site.display_head({"section": "1", "head": "Man. Post. Cap. IX: PLAC — Apostle never said"},
+                                       {"slug": "placeus-de-imputatione", "title": "T"})
+assert "Christ</a>. Yet" in site.render_reader_html("fullness of [[Christ >> Bible:Ephesians 4:13]]. Yet every judgment")
+assert site.clean_reader_notation("he said, [the text breaks off]") == "he said. The text breaks off."
+assert site.section_ordinals(["gregory-1", "gregory-close"]) == {"gregory-1": "1", "gregory-close": "2"}
+assert site.section_ordinals(["praef", "1", "epilogus_alius"]) == {"praef": "Preface", "epilogus_alius": "Second epilogue"}
+assert "Scapula" in site._fallback_blurb(site.BOOKS / "tertullian-to-scapula", "Tertullian: To Scapula", "Tertullian")
+
+# Build-room labels in headings and search titles, words glued to a Bible
+# link ("Christ</a>Yet"), and raw section ids: none may reach readers.
+_LABEL = re.compile(r"CLOSEOUT|\bUnit \d+\b|\brem (?:early|mid|close)\b")
+_GLUE = re.compile(r'class="bible-ref"[^>]*>[^<]*</a>[A-Za-z]')
+_RAW_ID = re.compile(r"§(?:[a-z]+-)+(?:\d+|close|mid|open)\b|§(?:praef|proem|epilogus\w*)\b")
+_label_hits, _glue_hits, _id_hits = [], [], []
+for _page in sorted((site.DIST / "works").glob("*/*/index.html")) + sorted((site.DIST / "works").glob("*/index.html")):
+    _s = _page.read_text(encoding="utf-8")
+    _rel = _page.parent.relative_to(site.DIST).as_posix()
+    if _GLUE.search(_s):
+        _glue_hits.append(_rel)
+    _heads = re.findall(r"<h[12][^>]*>(.*?)</h[12]>", _s, re.S) + re.findall(r"<title>(.*?)</title>", _s, re.S)
+    if any(_LABEL.search(re.sub(r"<[^>]+>", "", _h)) for _h in _heads):
+        _label_hits.append(_rel)
+    if _RAW_ID.search(re.sub(r"<[^>]+>", " ", _s.split("<main", 1)[-1])):
+        _id_hits.append(_rel)
+_search_label_hits = [row.get("title", "") for row in index if _LABEL.search(row.get("title", ""))]
+assert not _label_hits, "Build-room labels in headings: %s" % _label_hits[:5]
+assert not _search_label_hits, "Build-room labels in search titles: %s" % _search_label_hits[:5]
+assert not _glue_hits, "Words glued to a Bible link: %s" % _glue_hits[:5]
+assert not _id_hits, "Raw section ids shown to readers: %s" % _id_hits[:5]
+assert not [t for t in (row.get("title", "") for row in index) if t.endswith(":")], "search title ends in ':'"
+
+# Part-only works say so on their page (2026-10-06: the one-paragraph Panarion
+# looked like the whole book). Any book meta with "scope" must show it.
+_scoped = {}
+for _p in site.BOOKS.glob("*/translations/*_meta.json"):
+    try:
+        _m = json.loads(_p.read_text(encoding="utf-8"))
+    except ValueError:
+        continue
+    if isinstance(_m, dict) and _m.get("scope") and _m.get("slug"):
+        _scoped[_m["slug"]] = _m["scope"]
+_unshown = [slug for slug in _scoped if (site.DIST / "works" / slug / "index.html").exists()
+            and "Part only:" not in (site.DIST / "works" / slug / "index.html").read_text(encoding="utf-8")]
+assert not _unshown, "scope set but not shown: %s" % _unshown[:5]
+# A book that calls itself complete must have every source section in English.
+_sources = json.loads((site.DIST / "data/work-sources.json").read_text())
+assert not _sources["unresolved"], "published works with no book folder: %s" % _sources["unresolved"][:5]
+_short = []
+for _slug, _src in _sources["works"].items():
+    _yml = site.BOOKS / _src["book"] / "book.yml"
+    _scope = re.search(r'^scope:\s*"?(.*?)"?\s*$', _yml.read_text(encoding="utf-8"), re.M) if _yml.exists() else None
+    if _slug in _scoped or not _scope or not _scope.group(1).lower().startswith("complete"):
+        continue
+    _en = _src_n = 0
+    for _stem in _src["stems"]:
+        _tr = site.BOOKS / _src["book"] / "translations"
+        _e, _so = _tr / f"{_stem}.json", _tr / f"{_stem[:-len('_english')]}_source.json"
+        if _e.exists() and _so.exists():
+            _en += len([r for r in json.loads(_e.read_text(encoding="utf-8")) if not isinstance(r, dict) or r.get("english")])
+            _src_n += len(site._source_rows(json.loads(_so.read_text(encoding="utf-8"))))
+    if _src_n and _en < _src_n:
+        _short.append(f"{_slug} {_en}/{_src_n}")
+assert not _short, "book.yml says complete but sections are missing: %s" % _short[:5]
+print(json.dumps({"status": "passed", "check": "reader text hygiene", "part_only_works": len(_scoped)}))
+
+# Works reader polish (2026-10-06 audit, P12): slim mast, English titles in
+# every public line, no workroom text in the reading column.
+assert site.mast_edition_label("De imputatione primi peccati Adami (Salmurii: Apud Ioannem Lesnerium, 1661)") == "Saumur 1661"
+assert site.mast_edition_label("Klostermann, Origenes Werke III (GCS 6, 1901)") == "Klostermann (1901)"
+assert site.mast_edition_label("PG 10; Cesti fragmenta extract of books 7, 2, 3, 4, 8, 9, and 13)") == "PG 10"
+assert site.mast_edition_label("First1KGreek TEI — John/Luke catena") == ""
+assert site.clean_reader_notation("he said [text is garbled/gapped] and") == "he said [The text is damaged here.] and"
+assert site.clean_reader_notation("[Here T has a gap of about 100 letters.]") == "[The text is damaged here.]"
+assert site.shown_source(["κατὰ τὸνἸησοῦν 77.288 καὶ"]) == ["κατὰ τὸν Ἰησοῦν ‹77.288› καὶ"]
+# Latin text that quotes a Greek word keeps every line; catena loci stay.
+assert site.shown_source(["Hinc ansam arripit.\n\nSed nescio quid τὸ ἀντίτυπον."], "l") == [
+    "Hinc ansam arripit.\n\nSed nescio quid τὸ ἀντίτυπον."]
+assert site.shown_source(["Hinc ansam arripit.\n\nSed nescio quid τὸ ἀντίτυπον."])[0].startswith("Hinc")
+assert site.shown_source(["Fragmenta in epistulam ad Philemonem (in catenis)\nPhm\nτοῦ Παύλου"], "g") == ["Phm\nτοῦ Παύλου"]
+assert site.clean_reader_notation("[Here T is illegible; the editors conjecture mockery of prayers.]") == (
+    "[The text is damaged here; the editors conjecture mockery of prayers.]")
+assert site.shown_source(["absit \\'a seruo"]) == ["absit 'a seruo"]
+assert site.public_head("Liber IV recapitulation") == "Book 4 recapitulation"
+assert site.public_head("Scripture locked and sealed (Philoc. 2)") == "Scripture locked and sealed"
+assert site.work_teaser_html({"blurb": ""}) == "", "filler teaser line came back"
+_MAST = re.compile(r'<header class="reader-mast"[^>]*>.*?<p class="meta">(.*?)</p>', re.S)
+_SUB = re.compile(r'<h1>(.*?)</h1>\s*<p class="latin-title">(.*?)</p>', re.S)
+_TOC = re.compile(r'<span class="toc-label">(.*?)</span></a>', re.S)
+_RULE1 = re.compile(r"\b(?:Anaphora|Apophthegmata|Hexaemeron|Praktikos|Cesti|Scholia|Enarration|Octateuch"
+                    r"|Recension|Philocalia|Philoc\.|Liber\s+[IVX]+|Homilia\s+[IVX]+|Sermo\s+[IVX]+)\b")
+_H1_PAREN = re.compile(r"\((?:Greek|Latin|\d|Vat\.)")
+_IMPRINT = re.compile(r"typography of|In Leipzig|\bYear 18\d\d\b|Apud |Salmurii|Sancti patris")
+_WORKROOM = re.compile(r"This is a listening version|placeholders\]|\[text (?:is )?(?:garbled|corrupt)|\[Here T\b|Densify")
+_plain = lambda h: _html.unescape(re.sub(r"<[^>]+>", "", h)).strip()
+_mast_long, _mast_latin, _echo, _toc_hits, _h1_hits, _imprint_hits, _workroom_hits = [], [], [], [], [], [], []
+_mast_form, _latin_english, _scope_hidden = [], [], []
+_LATIN_ENGLISH = re.compile(r"\((?:the|a|an|on|of)\b|\b(?:the|and|of|Homily|Sermon|Letter|Fragments)\b")
+_SCOPE_SENT = re.compile(r"This (?:volume|book) (?:holds|gathers|contains|opens)\b")
+for _page in sorted((site.DIST / "works").glob("*/index.html")) + sorted((site.DIST / "works").glob("*/book-*/index.html")):
+    _s = _page.read_text(encoding="utf-8")
+    _rel = _page.parent.relative_to(site.DIST).as_posix()
+    _m = _MAST.search(_s)
+    if _m:
+        _meta = _plain(_m.group(1))
+        if len(_meta) > 90:
+            _mast_long.append(f"{_rel} ({len(_meta)})")
+        if _IMPRINT.search(_meta):
+            _mast_latin.append(_rel)
+        if ") (" in _meta or "?" in _meta or "cent." in _meta:
+            _mast_form.append(f"{_rel}: {_meta}")
+    _lt = re.search(r'<p class="latin-title">(.*?)</p>', _s, re.S)
+    if _lt and _LATIN_ENGLISH.search(_plain(_lt.group(1))):
+        _latin_english.append(f"{_rel}: {_plain(_lt.group(1))}")
+    # A part-only work says so above the text: Part only in the mast, or the
+    # intro's scope sentence as the lede.
+    _top = _s.split('<div class="reader-layout">', 1)[0]
+    if "/book-" not in _rel and _SCOPE_SENT.search(_html.unescape(_s)) and "Part only" not in _plain(_top) \
+            and not _SCOPE_SENT.search(_plain(_top)):
+        _scope_hidden.append(_rel)
+    _sm = _SUB.search(_s)
+    if _sm and site._same_title_words(_plain(_sm.group(2)), _plain(_sm.group(1))):
+        _echo.append(_rel)
+    _h1 = re.search(r"<h1>(.*?)</h1>", _s, re.S)
+    if _h1 and (_H1_PAREN.search(_plain(_h1.group(1))) or _RULE1.search(_plain(_h1.group(1)))):
+        _h1_hits.append(_rel)
+    if any(_RULE1.search(_plain(t)) for t in _TOC.findall(_s)):
+        _toc_hits.append(_rel)
+    _body = _s.split('<div class="reader-main">', 1)[-1] if '<div class="reader-main">' in _s else ""
+    _body = re.sub(r"<details.*?</details>", "", _body, flags=re.S)
+    if _IMPRINT.search(_plain(_body)):
+        _imprint_hits.append(_rel)
+    if _WORKROOM.search(_plain(_body)) or 'class="range">§§' in _s:
+        _workroom_hits.append(_rel)
+_search_rule1 = [row.get("title", "") for row in index if _RULE1.search(row.get("title", ""))]
+assert not _mast_long, "mast meta over 90 characters: %s" % _mast_long[:5]
+assert not _mast_latin, "Latin imprint words in the mast: %s" % _mast_latin[:5]
+assert not _echo, "subtitle repeats the English H1: %s" % _echo[:5]
+assert not _h1_hits, "H1 with (Greek)/(Latin)/shelfmark or a rule-1 word: %s" % _h1_hits[:5]
+assert not _toc_hits, "rule-1 word in Contents labels: %s" % _toc_hits[:5]
+assert not _search_rule1, "rule-1 word in search titles: %s" % _search_rule1[:5]
+assert not _imprint_hits, "printer's imprint in reader text: %s" % _imprint_hits[:5]
+assert not _workroom_hits, "workroom text in reader text: %s" % _workroom_hits[:5]
+assert not _mast_form, "mast with ') (', '?' or 'cent.': %s" % _mast_form[:5]
+assert not _latin_english, "English in the Latin subtitle slot: %s" % _latin_english[:5]
+assert not _scope_hidden, "part-only work hides its scope in About: %s" % _scope_hidden[:5]
+_placeus = site.DIST / "data" / "src" / "placeus-de-imputatione.json"
+if _placeus.exists():
+    assert "Hinc ansam arripit" in " ".join(json.loads(_placeus.read_text(encoding="utf-8"))["28"].get("l") or []), \
+        "Placeus §28 Latin lost its opening paragraph"
+print(json.dumps({"status": "passed", "check": "reader polish (P12)"}))

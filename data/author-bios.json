@@ -1,57 +1,57 @@
 {
   "ludwig-crocius": {
     "name": "Ludwig Crocius",
-    "dates": "1586–1655",
+    "dates": "1586–1655 AD",
     "bio": "Bremen Reformed pastor and professor at the Gymnasium Illustre. A Dort delegate for Bremen, he stood for Melanchthonian irenicism and moderate orthodoxy rather than high Calvinist strictness, and his Syntagma sacrae theologiae (1636) is the chief systematic statement of that Bremen school."
   },
   "louis-le-blanc-de-beaulieu": {
     "name": "Louis Le Blanc de Beaulieu",
-    "dates": "1614–1675",
+    "dates": "1614–1675 AD",
     "bio": "Reformed professor of theology at the Academy of Sedan. His Theological Theses map Protestant and Roman Catholic positions with unusual clarity and restraint; John Owen praised his moderation on justification. Distinctive for irenic comparison without surrendering Reformed confession."
   },
   "john-davenant": {
     "name": "John Davenant",
-    "dates": "1572–1641",
+    "dates": "1572–1641 AD",
     "bio": "Lady Margaret Professor at Cambridge, later Bishop of Salisbury, and a British delegate at the Synod of Dort. He defended Reformed predestination while arguing a broad sufficiency of Christ's death for all—an English moderate-orthodox line often linked with later hypothetical universalism."
   },
   "robert-baron": {
     "name": "Robert Baron",
-    "dates": "c. 1596–1639",
+    "dates": "c. 1596–1639 AD",
     "bio": "Reformed philosophy professor at St Salvator's College, St Andrews. Philosophia theologiae ancillans treats philosophy as the handmaid of theology: scholastic metaphysics ordered to Reformed doctrinal ends, not free-standing speculation."
   },
   "josue-de-la-place": {
     "name": "Josué de la Place (Placeus)",
-    "dates": "1596–1655",
+    "dates": "1596–1655 AD",
     "bio": "Reformed professor at the Academy of Saumur. Best known for denying the immediate imputation of Adam's first sin, teaching mediate imputation instead—a signature Saumur position contested by stricter Reformed orthodoxy and later condemned in some synodical debates."
   },
   "epiphanius-of-salamis": {
     "name": "Epiphanius of Salamis",
-    "dates": "c. 310/320–403",
+    "dates": "c. 310/320–403 AD",
     "bio": "Bishop of Salamis (Constantia) on Cyprus. Best known for the Panarion (Medicine Chest), a vast catalogue of heresies, with the Ancoratus as a shorter doctrinal anchor for the churches. A fierce defender of Nicene orthodoxy and monastic discipline."
   },
   "nemesius-of-emesa": {
     "name": "Nemesius of Emesa",
-    "dates": "fl. c. 390",
+    "dates": "fl. c. 390 AD",
     "bio": "Bishop of Emesa (Homs) writing near the end of the fourth century. On the Nature of Man joins Christian doctrine to Greek philosophical psychology—soul, body, providence, and free will—in a synthesis widely read in East and West."
   },
   "julius-africanus": {
     "name": "Julius Africanus",
-    "dates": "c. 160–c. 240",
+    "dates": "c. 160–c. 240 AD",
     "bio": "Sextus Julius Africanus, Christian chronographer and encyclopedist of the early third century. His Chronographiai ordered world history to the Incarnation; the Cesti (Embroidered Girdles) is a learned miscellany of military, medical, and technical lore of which only fragments survive."
   },
   "serapion-of-antioch": {
     "name": "Serapion of Antioch",
-    "dates": "fl. c. 190–211",
+    "dates": "fl. c. 190–211 AD",
     "bio": "Bishop of Antioch around the turn of the third century. Surviving fragments show a churchman guarding apostolic teaching, including caution about which gospels the churches should read."
   },
   "samuel-strimesius": {
     "name": "Samuel Strimesius",
-    "dates": "1648–1730",
+    "dates": "1648–1730 AD",
     "bio": "Reformed doctor of theology and primary preacher in the church and university at Frankfurt an der Oder (Viadrina). He labored for ecclesiastical peace among Evangelicals, weighing Lutheran–Reformed controversies by Scripture, and wrote irenic Latin works including Ingenua in Controversias Evangelicorum (1708) and Ingenua in Arminianismum Inquisitio (1703). Distinctive as a Frankfurt (Oder) faculty voice that distinguishes fundamental consensus from less-than-fundamental dissent rather than recycling only the stricter Genevan or Puritan lines."
   },
   "john-wesley": {
     "name": "John Wesley",
-    "dates": "1703–1791",
+    "dates": "1703–1791 AD",
     "bio": "Anglican priest and preacher. These sermons are a plain-English reading. Salvation by Faith keeps the 1872 text beside the reading. The later sermons keep the 1771 text beside the reading, so the argument and the scripture can be checked."
   },
   "origen": {
@@ -151,7 +151,7 @@
   },
   "polycarp-of-smyrna": {
     "name": "Polycarp of Smyrna",
-    "dates": "",
+    "dates": "fl. c. 155 AD",
     "bio": "Bishop of Smyrna, said to have known the apostle John. His letter to the Philippians survives, and the account of his martyrdom around 155 is the oldest Christian martyr story outside the New Testament."
   },
   "gregory-thaumaturgus": {
@@ -181,7 +181,7 @@
   },
   "didache": {
     "name": "The Didache",
-    "dates": "fl. c. 100 AD",
+    "dates": "c. 100 AD",
     "bio": "A short early Christian manual, probably from around 100, on the two ways of life and death, baptism, fasting, the Eucharist and church leaders."
   },
   "barnabas": {
@@ -191,7 +191,7 @@
   },
   "mathetes-epistle-to-diognetus": {
     "name": "Letter to Diognetus",
-    "dates": "",
+    "dates": "c. 150 AD",
     "bio": "An anonymous letter to an inquirer named Diognetus, probably from the second century, known for describing Christians as the soul of the world."
   },
   "commodian": {
@@ -221,7 +221,7 @@
   },
   "alexander-of-alexandria": {
     "name": "Alexander of Alexandria",
-    "dates": "",
+    "dates": "d. 328 AD",
     "bio": "Bishop of Alexandria from about 312 and the first to condemn Arius. He took his deacon Athanasius to the Council of Nicaea in 325 and died a few years later."
   },
   "asterius-of-amasea": {
@@ -232,7 +232,13 @@
   "augustine-of-hippo": {
     "name": "Augustine of Hippo",
     "dates": "354–430 AD",
-    "bio": "Bishop of Hippo in North Africa from 395 and author of the Confessions and the City of God. His late teaching on grace and the will, set out against Pelagius and Julian of Eclanum, shaped the Western church. Here he appears mainly in summaries until his works are added."
+    "bio": "Bishop of Hippo in North Africa from 395 and author of the Confessions and the City of God. His late teaching on grace and the will, set out against Pelagius and Julian of Eclanum, shaped the Western church. Here he appears in a few short passages until his works are added.",
+    "see_also": [
+      [
+        "Julian of Eclanum, who argued against him",
+        "/authors/julian-of-eclanum/"
+      ]
+    ]
   },
   "basil-of-caesarea": {
     "name": "Basil of Caesarea",
@@ -276,7 +282,7 @@
   },
   "macarius-the-egyptian": {
     "name": "Macarius the Egyptian",
-    "dates": "fl. 4th/5th c. AD",
+    "dates": "fl. 4th–5th century AD",
     "bio": "The Spiritual Homilies have long gone under the name of Macarius, a monk of the Egyptian desert at Scetis. Many scholars now think they come from a Syrian monastic teacher of the late fourth century. They speak of grace dwelling in the heart and the soul's struggle with sin."
   },
   "marcellus-of-ancyra": {
@@ -286,7 +292,7 @@
   },
   "passion-of-perpetua-and-felicity": {
     "name": "Passion of Perpetua and Felicity",
-    "dates": "",
+    "dates": "c. 203 AD",
     "bio": "The account of the martyrdom of Perpetua, a young mother of good family, and Felicity, an enslaved woman, at Carthage in 203. It includes Perpetua's own prison diary, one of the earliest writings by a Christian woman."
   },
   "philostorgius": {
@@ -307,7 +313,7 @@
   "theodore-of-heraclea": {
     "name": "Theodore of Heraclea",
     "dates": "c. 335–355 AD",
-    "bio": "Bishop of Heraclea in Thrace in the mid fourth century, on the side opposed to Nicaea. He wrote commentaries on Scripture that survive in fragments in the later chains of comments called catenas."
+    "bio": "Bishop of Heraclea in Thrace in the mid fourth century, on the side opposed to Nicaea. He wrote commentaries on Scripture that survive in fragments in later Bible commentary chains."
   },
   "theophilus-of-alexandria": {
     "name": "Theophilus of Alexandria",
@@ -321,17 +327,76 @@
   },
   "alexander-monachus": {
     "name": "Alexander the Monk",
-    "dates": "",
+    "dates": "fl. 6th century AD",
     "bio": "A monk of Cyprus, probably of the sixth century, who wrote on the finding of the true Cross and in praise of the apostle Barnabas."
   },
   "ammonius-of-alexandria": {
     "name": "Ammonius of Alexandria",
-    "dates": "c. 5th cent. AD",
-    "bio": "A presbyter of Alexandria of the fifth or sixth century whose comments on John and other books survive in the catenas."
+    "dates": "fl. 5th century AD",
+    "bio": "A presbyter of Alexandria of the fifth or sixth century whose comments on John and other books survive in the Bible commentary chains."
   },
   "hesychius-of-jerusalem": {
     "name": "Hesychius of Jerusalem",
     "dates": "c. 412–450 AD",
     "bio": "A presbyter and teacher at Jerusalem who died after 450. He wrote short, careful notes and sermons on many books of Scripture."
+  },
+  "church-of-smyrna": {
+    "name": "Church of Smyrna",
+    "dates": "c. 156 AD",
+    "bio": "The church of Smyrna (now Izmir) in Asia Minor. Its letter to the church at Philomelium tells how its bishop Polycarp was put to death about 155, the earliest Christian account of a martyrdom outside the New Testament."
+  },
+  "dionysius-of-corinth": {
+    "name": "Dionysius of Corinth",
+    "dates": "fl. c. 171 AD",
+    "bio": "Bishop of Corinth about 170 who wrote open letters to churches from Rome to Crete. Eusebius kept pieces of them, including the note that Clement's letter to the Corinthians was still read aloud in church there."
+  },
+  "pseudo-cyprian": {
+    "name": "Pseudo-Cyprian",
+    "dates": "3rd century AD",
+    "bio": "Name for writers whose works came down under the name of Cyprian of Carthage. The piece here is a Latin cover letter by an unknown Celsus to a bishop Vigilius, for his lost translation of the Dialogue of Jason and Papiscus, an early debate between a Christian and a Jew."
+  },
+  "gennadius-of-constantinople": {
+    "name": "Gennadius of Constantinople",
+    "dates": "d. 471 AD",
+    "bio": "Patriarch of Constantinople from 458 to 471. Earlier he had written against Cyril of Alexandria's Twelve Chapters; as patriarch he worked to raise the standard of the clergy. His notes on Paul's letters survive in Bible commentary chains."
+  },
+  "procopius-of-gaza": {
+    "name": "Procopius of Gaza",
+    "dates": "c. 465/475–c. 528 AD",
+    "bio": "Teacher of rhetoric at Gaza around 500 and a leading Christian scholar of that school. He gathered earlier writers' comments into running commentaries on the Old Testament, and he wrote letters and a reply to the pagan philosopher Proclus."
+  },
+  "olympiodorus-of-alexandria": {
+    "name": "Olympiodorus of Alexandria",
+    "dates": "fl. early 6th century AD",
+    "bio": "Deacon of the church of Alexandria in the early 6th century. His comments on Job, Ecclesiastes and the prophets survive in Bible commentary chains; he also wrote against Severus of Antioch."
+  },
+  "john-of-damascus": {
+    "name": "John of Damascus",
+    "dates": "c. 645/675–749 AD",
+    "bio": "Monk and priest near Jerusalem who left a career at the court of Damascus. He defended the use of icons when the emperors banned them, and his Fount of Knowledge sums up the Greek Fathers' teaching in one ordered book."
+  },
+  "arethas-of-caesarea": {
+    "name": "Arethas of Caesarea",
+    "dates": "c. 860–c. 932 AD",
+    "bio": "Archbishop of Caesarea in Cappadocia and a leading Byzantine scholar. He had copies made of Plato, Euclid and the early Christian apologists, wrote notes in their margins, and wrote a commentary on Revelation; he also wrote short poems."
+  },
+  "acts-of-the-martyrs": {
+    "name": "Acts of the Martyrs",
+    "dates": "c. 165 AD",
+    "bio": "Name for the early accounts of martyrs' trials and deaths that the churches kept and read. The one here records the trial of Justin and six companions before Rusticus, prefect of Rome, about 165."
+  },
+  "georgius-peccator": {
+    "name": "Georgius Peccator",
+    "bio": "Known only by the name the poem gives, \"George the sinner\". The same short prayer to Christ is also counted as the last of the hymns of Synesius of Cyrene (c. 410) and is printed with them in Migne's Greek Fathers, volume 66. When George lived is not known."
+  },
+  "oecumenius": {
+    "name": "Oecumenius",
+    "dates": "fl. 6th century AD",
+    "bio": "Greek writer of the 6th century and author of the earliest full Greek commentary on Revelation. Notes on Paul's letters under his name survive in Bible commentary chains."
+  },
+  "polycrates-of-ephesus": {
+    "name": "Polycrates of Ephesus",
+    "dates": "fl. c. 190 AD",
+    "bio": "Bishop of Ephesus. About 190 he wrote for the bishops of Asia to Victor of Rome, defending their custom of keeping Pascha on the 14th day of the month and naming the apostles John and Philip, buried in Asia, as its source. Eusebius kept the letter."
   }
 }

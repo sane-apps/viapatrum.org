@@ -15,9 +15,20 @@
     const isDark = () =>
       root.dataset.theme === "dark" ||
       (!root.dataset.theme && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    // Browser bar colour follows a manual pick (the page ships one meta per system theme).
+    const PAPER = { light: "#f8f6f0", dark: "#15120e" };
+    const barColour = () => {
+      const picked = root.dataset.theme;
+      if (picked !== "light" && picked !== "dark") return;
+      document.querySelectorAll('meta[name="theme-color"]').forEach((m) => m.setAttribute("content", PAPER[picked]));
+    };
     const paint = () => {
-      themeBtn.textContent = isDark() ? "☀" : "☾";
-      themeBtn.setAttribute("aria-pressed", isDark() ? "true" : "false");
+      const dark = isDark();
+      themeBtn.textContent = dark ? "☀" : "☾";
+      themeBtn.removeAttribute("aria-pressed");
+      themeBtn.setAttribute("aria-label", dark ? "Use light reading" : "Use dark reading");
+      themeBtn.setAttribute("title", dark ? "Use light reading" : "Use dark reading");
+      barColour();
     };
     themeBtn.addEventListener("click", () => {
       const next = isDark() ? "light" : "dark";
@@ -29,6 +40,10 @@
       }
       paint();
     });
+    if (window.matchMedia) {
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (mq.addEventListener) mq.addEventListener("change", paint);
+    }
     paint();
   }
 
@@ -111,22 +126,51 @@
     // Translation switch: BSB ships in the page; others load per chapter.
     const trButtons = Array.from(bx.querySelectorAll("[data-tr]"));
     const original = text ? Array.from(text.querySelectorAll(".v")).map((el) => [el.dataset.v, el.querySelector(".vt").textContent]) : [];
+    const originalMap = new Map(original);
+    // Start from the BSB each time so no verse keeps a third version's words.
     const paint = (rows) => {
       const map = new Map(rows.map(([v, t]) => [String(v), t]));
       text.querySelectorAll(".v").forEach((el) => {
-        const t = map.get(el.dataset.v);
+        const t = map.get(el.dataset.v) || originalMap.get(el.dataset.v);
         if (t) el.querySelector(".vt").textContent = t;
       });
     };
+    // Latest click wins: a slow earlier fetch must not repaint over a later pick.
+    let trSeq = 0;
+    const credit = bx.querySelector(".bx-tr-credit");
+    // A failed load is said next to the pills, where the reader is looking.
+    let trNote = null;
+    const noteTr = (msg) => {
+      if (!trNote && msg) {
+        const tools = bx.querySelector(".bx-tools") || (trButtons[0] && trButtons[0].parentElement);
+        if (!tools) return;
+        trNote = document.createElement("p");
+        trNote.className = "bx-tr-credit bx-tr-note";
+        trNote.setAttribute("role", "status");
+        tools.insertAdjacentElement("afterend", trNote);
+      }
+      if (trNote) {
+        trNote.textContent = msg || "";
+        trNote.hidden = !msg;
+      }
+    };
+    const press = (key) => trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
     const useTr = async (key) => {
       if (!text) return;
+      const my = ++trSeq;
+      const btn = trButtons.find((b) => b.dataset.tr === key);
+      press(key);
+      noteTr("");
+      if (key === "bsb") delete bx.dataset.loading;
+      else bx.dataset.loading = key;
       try {
-        const btn = trButtons.find((b) => b.dataset.tr === key);
         if (key === "bsb") paint(original);
         else if (btn && btn.dataset.remote) {
           const r = await fetch(`https://bolls.life/get-text/${btn.dataset.remote}/${text.dataset.booknum}/${text.dataset.chap}/`);
+          if (my !== trSeq) return;
           if (!r.ok) throw new Error("missing");
           const rows = await r.json();
+          if (my !== trSeq) return;
           paint(
             rows.map((x) => [
               x.verse,
@@ -140,11 +184,13 @@
           );
         } else {
           const r = await fetch(`/data/bible/${key}/${text.dataset.book}/${text.dataset.chap}.json`);
+          if (my !== trSeq) return;
           if (!r.ok) throw new Error("missing");
-          paint(await r.json());
+          const rows = await r.json();
+          if (my !== trSeq) return;
+          paint(rows);
         }
-        trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
-        const credit = bx.querySelector(".bx-tr-credit");
+        delete bx.dataset.loading;
         if (credit) {
           // Hosted versions are credited in the note below; loaded ones need their own notice.
           credit.textContent = (btn && btn.dataset.remote && btn.dataset.credit) || "";
@@ -156,7 +202,15 @@
           /* remembered for this page only */
         }
       } catch {
-        trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === "bsb" ? "true" : "false"));
+        if (my !== trSeq) return;
+        delete bx.dataset.loading;
+        paint(original);
+        press("bsb");
+        if (credit) {
+          credit.textContent = "";
+          credit.hidden = true;
+        }
+        noteTr(`Could not load ${(btn && btn.textContent.trim()) || key.toUpperCase()}. Showing BSB.`);
       }
     };
     trButtons.forEach((b) => b.addEventListener("click", () => useTr(b.dataset.tr)));
@@ -208,45 +262,6 @@
     true
   );
 
-  const q = document.querySelector("#q");
-  const results = document.querySelector("#results");
-  if (q && results) {
-    let index = [];
-    fetch("/data/search-index.json")
-      .then((r) => r.json())
-      .then((data) => {
-        index = data;
-        if (q.value) render(q.value);
-      })
-      .catch(() => {
-        results.innerHTML = "<li>Search index unavailable.</li>";
-      });
-
-    const render = (term) => {
-      const t = term.trim().toLowerCase();
-      if (t.length < 2) {
-        results.innerHTML = "";
-        return;
-      }
-      const hits = [];
-      for (const row of index) {
-        const blob = `${row.title} ${row.author || ""} ${row.text || ""}`.toLowerCase();
-        if (blob.includes(t)) hits.push(row);
-        if (hits.length >= 40) break;
-      }
-      results.innerHTML = hits
-        .map(
-          (h) =>
-            `<li><a href="${h.href}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
-              h.author || h.kind
-            )}</span></a></li>`
-        )
-        .join("");
-    };
-
-    q.addEventListener("input", () => render(q.value));
-  }
-
   document.querySelectorAll("[data-copy]").forEach((btn) => {
     btn.addEventListener("click", async () => {
       const el = document.querySelector(btn.getAttribute("data-copy") || "");
@@ -270,29 +285,155 @@
     const list = browse.querySelector("#works-list");
     const status = browse.querySelector("#works-status");
     const q = browse.querySelector("#works-q");
+    const empty = browse.querySelector("#works-empty");
+    const emptyHtml = empty ? empty.innerHTML : "";
     const passageHits = browse.querySelector("#passage-hits");
     const passageResults = browse.querySelector("#passage-results");
     const meaningHits = browse.querySelector("#meaning-hits");
     const meaningResults = browse.querySelector("#meaning-results");
     let meaningTimer = 0;
     let meaningSeq = 0;
-    // Semantic search (/api/search, Cloudflare AI Search): debounced, latest
-    // answer wins, hidden on error so exact-word results still stand alone.
+    let meaningCount = 0;
+    let meaningPending = false;
+    const workCount = Number(browse.getAttribute("data-work-count") || "0");
+    const authorCount = Number(browse.getAttribute("data-author-count") || "0");
+    let sort = "chrono";
+    let filter = "all";
+    // Passage index: loaded on the first search only (it is several MB).
+    let searchIndex = null;
+    let indexFailed = false;
+    let indexPromise = null;
+    let failedTerm = "";
+    let passageCount = 0;
+    // The term the passage list was last built for; until it equals the
+    // typed term (debounce, index loading), the status says "Searching…".
+    let passageTerm = null;
+    let lastTerm = "";
+    let lastShown = "";
+
+    const items = () => Array.from(list.querySelectorAll(":scope > li.author-entry"));
+    const inFilter = (li, f) => {
+      if (f === "all") return true;
+      if (f === "oet") return li.getAttribute("data-oet") === "1";
+      return (li.getAttribute("data-era") || "").split(/\s+/).includes(f);
+    };
+    const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+
+    // Shards listed in data/search/manifest.json, read in order; the single
+    // data/search-index.json is the fallback. Each row's search text is
+    // lowercased once here, not on every keystroke.
+    const readJson = (url) => fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))));
+    const shardUrls = (manifest) => {
+      const raw = Array.isArray(manifest) ? manifest : manifest && (manifest.shards || manifest.files);
+      if (!Array.isArray(raw) || !raw.length) return null;
+      const urls = raw.map((s) => (typeof s === "string" ? s : s && (s.file || s.path || s.href || s.url)));
+      if (!urls.every((u) => typeof u === "string" && u)) return null;
+      return urls.map((u) => (u.startsWith("/") ? u : `/data/search/${u}`));
+    };
+    const loadIndex = () => {
+      if (!indexPromise) {
+        indexPromise = (async () => {
+          let rows = null;
+          try {
+            const urls = shardUrls(await readJson("/data/search/manifest.json"));
+            if (urls) {
+              // Fetch in parallel; concat in manifest order.
+              const parts = await Promise.all(urls.map(readJson));
+              if (!parts.every(Array.isArray)) throw new Error("bad shard");
+              rows = [].concat(...parts);
+            }
+          } catch {
+            rows = null;
+          }
+          if (!rows) rows = await readJson("/data/search-index.json");
+          if (!Array.isArray(rows)) throw new Error("bad index");
+          for (const row of rows) {
+            row._b = `${row.title || ""} ${row.author || ""} ${row.text || ""}`.toLowerCase();
+            delete row.text;
+          }
+          searchIndex = rows;
+          indexFailed = false;
+        })().catch(() => {
+          // Keep the failure for the status line; the next new term retries.
+          indexFailed = true;
+          failedTerm = lastTerm;
+          searchIndex = [];
+          indexPromise = null;
+        });
+        indexPromise.then(() => {
+          if (lastTerm.length >= 2) apply();
+        });
+      }
+      return indexPromise;
+    };
+
+    const writeStatus = (term, visible) => {
+      if (!status) return;
+      if (term.length < 2) {
+        const sortLabel = sort === "author" ? "author name" : "era (earliest first)";
+        const lead = filter === "all" ? `${authorCount} authors` : `${visible.length} of ${authorCount} authors`;
+        status.textContent = `${lead} · ${workCount} works · sorted by ${sortLabel}`;
+        return;
+      }
+      const authors = visible.length ? ` · ${plural(visible.length, "writer", "writers")} by name or title` : "";
+      if (!searchIndex || passageTerm !== term) status.textContent = "Searching…";
+      else if (indexFailed) status.textContent = `Word search did not load. Try again later.${authors}`;
+      else if (passageCount) {
+        const shown = passageCount > 40 ? " (first 40 listed)" : "";
+        status.textContent = `${plural(passageCount, "passage matches", "passages match")} “${lastShown}”${shown}${authors}`;
+      }
+      else status.textContent = `No passages match “${lastShown}”${authors}`;
+    };
+
+    // The empty note shows only when nothing at all is listed.
+    const updateEmpty = (term, visible) => {
+      if (!empty) return;
+      const searching = term.length >= 2;
+      let show = false;
+      if (visible.length === 0) {
+        if (!searching) show = true;
+        // Not when word search failed: "nothing matches" is not known then.
+        else
+          show =
+            !!searchIndex &&
+            !indexFailed &&
+            passageTerm === term &&
+            passageCount === 0 &&
+            meaningCount === 0 &&
+            !meaningPending;
+      }
+      if (show && !searching) empty.textContent = "No writers in this group yet.";
+      else if (show)
+        empty.innerHTML = `Nothing in the library matches “${escapeHtml(lastShown)}”. You can also try <a href="/topics/">Questions</a> or <a href="/scripture/">Scripture</a>.`;
+      else if (empty.innerHTML !== emptyHtml) empty.innerHTML = emptyHtml;
+      empty.hidden = !show;
+    };
+
+    // Semantic search (/api/search): debounced, latest answer wins, hidden
+    // on error so exact-word results still stand alone.
     const meaningSearch = (term) => {
       if (!meaningHits || !meaningResults) return;
       clearTimeout(meaningTimer);
       if (term.length < 3) {
+        ++meaningSeq;
+        meaningCount = 0;
+        meaningPending = false;
         meaningHits.hidden = true;
         meaningResults.innerHTML = "";
         return;
       }
+      meaningPending = true;
+      // Bump on scheduling, so an answer already in flight for an older
+      // term is dropped.
+      const seq = ++meaningSeq;
       meaningTimer = setTimeout(() => {
-        const seq = ++meaningSeq;
         fetch(`/api/search?q=${encodeURIComponent(term)}&n=20`)
           .then((r) => (r.ok ? r.json() : { results: [] }))
           .then((data) => {
             if (seq !== meaningSeq) return;
             const rows = (data && data.results) || [];
+            meaningPending = false;
+            meaningCount = rows.length;
             meaningHits.hidden = rows.length === 0;
             meaningResults.innerHTML = rows
               .map(
@@ -302,29 +443,39 @@
                   )}</span><em class="meaning-snippet">${escapeHtml(h.snippet || "")}</em></a></li>`
               )
               .join("");
+            refresh();
           })
           .catch(() => {
-            if (seq === meaningSeq) meaningHits.hidden = true;
+            if (seq !== meaningSeq) return;
+            meaningPending = false;
+            meaningCount = 0;
+            meaningHits.hidden = true;
+            refresh();
           });
       }, 350);
     };
-    const workCount = Number(browse.getAttribute("data-work-count") || "0");
-    const authorCount = Number(browse.getAttribute("data-author-count") || "0");
-    let sort = "chrono";
-    let filter = "all";
-    let searchIndex = null;
 
-    const items = () => Array.from(list.querySelectorAll(":scope > li.author-entry"));
+    let lastVisible = [];
+    const refresh = () => {
+      writeStatus(lastTerm, lastVisible);
+      updateEmpty(lastTerm, lastVisible);
+    };
 
-    const apply = () => {
+    // scan=false filters the writer list only (cheap, on every keystroke);
+    // the passage scan runs on the debounced call.
+    const apply = (scan = true) => {
       const term = (q && q.value ? q.value : "").trim().toLowerCase();
+      const termChanged = term !== lastTerm;
+      lastTerm = term;
+      lastShown = (q && q.value ? q.value : "").trim();
+      const searching = term.length >= 2;
+      browse.classList.toggle("searching", searching);
+      // After a failed load, the next new term (debounced) tries once more.
+      if (scan && searching && indexFailed && !indexPromise && term !== failedTerm) searchIndex = null;
+      if (searching && !searchIndex) loadIndex();
       let visible = items().filter((li) => {
-        if (filter === "oet" && li.getAttribute("data-oet") !== "1") return false;
-        if (filter !== "all" && filter !== "oet") {
-          const eras = (li.getAttribute("data-era") || "").split(/\s+/);
-          if (!eras.includes(filter)) return false;
-        }
-        if (term.length >= 2) {
+        if (!inFilter(li, filter)) return false;
+        if (searching) {
           const blob = li.getAttribute("data-blob") || "";
           if (!blob.includes(term)) return false;
         }
@@ -347,33 +498,38 @@
           { sensitivity: "base" }
         );
       });
-      items().forEach((li) => {
-        li.hidden = true;
+      // Touch only rows that change, and move rows only when the order
+      // changes, so a focused row keeps focus when a later pass runs.
+      const all = items();
+      const shown = new Set(visible);
+      all.forEach((li) => {
+        const hide = !shown.has(li);
+        if (li.hidden !== hide) li.hidden = hide;
       });
-      visible.forEach((li) => {
-        li.hidden = false;
-        list.appendChild(li);
-      });
-      meaningSearch(term);
-      const empty = browse.querySelector("#works-empty");
-      if (empty) empty.hidden = !(term.length >= 2 && visible.length === 0);
-      if (status) {
-        const sortLabel = sort === "author" ? "author name" : "era (earliest first)";
-        status.textContent = `${visible.length} of ${authorCount} authors · ${workCount} works · sorted by ${sortLabel}`;
-      }
+      const inDom = all.filter((li) => shown.has(li));
+      if (!inDom.every((li, i) => li === visible[i])) visible.forEach((li) => list.appendChild(li));
+      if (termChanged) meaningSearch(term);
+      if (scan && passageTerm !== term) scanPassages(term, searching);
+      lastVisible = visible;
+      refresh();
+    };
+
+    const scanPassages = (term, searching) => {
+      passageCount = 0;
+      passageTerm = !searching || searchIndex ? term : null;
       if (passageHits && passageResults) {
-        if (term.length >= 2 && searchIndex) {
+        if (searching && searchIndex) {
           const hits = [];
           for (const row of searchIndex) {
-            const blob = `${row.title || ""} ${row.author || ""} ${row.text || ""}`.toLowerCase();
-            if (blob.includes(term)) hits.push(row);
-            if (hits.length >= 40) break;
+            if (!row._b.includes(term)) continue;
+            passageCount++;
+            if (hits.length < 40) hits.push(row);
           }
           passageHits.hidden = hits.length === 0;
           passageResults.innerHTML = hits
             .map(
               (h) =>
-                `<li><a href="${h.href}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
+                `<li><a href="${escapeHtml(h.href)}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
                   h.author || h.kind || ""
                 )}</span></a></li>`
             )
@@ -384,6 +540,16 @@
         }
       }
     };
+
+    // Era chips with nothing in them are hidden (build count, else the list).
+    browse.querySelectorAll("[data-filter]").forEach((btn) => {
+      const f = btn.getAttribute("data-filter") || "all";
+      if (f === "all") return;
+      const n = btn.hasAttribute("data-count")
+        ? Number(btn.getAttribute("data-count"))
+        : items().filter((li) => inFilter(li, f)).length;
+      if (!n) btn.hidden = true;
+    });
 
     browse.querySelectorAll("[data-sort]").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -404,7 +570,12 @@
       });
     });
     if (q) {
-      q.addEventListener("input", () => apply());
+      let inputTimer = 0;
+      q.addEventListener("input", () => {
+        clearTimeout(inputTimer);
+        apply(false);
+        inputTimer = setTimeout(apply, 150);
+      });
       // Header and home search land here as /works/?q=…
       try {
         const term = new URLSearchParams(window.location.search).get("q");
@@ -413,16 +584,6 @@
         /* no query string */
       }
     }
-
-    fetch("/data/search-index.json")
-      .then((r) => r.json())
-      .then((data) => {
-        searchIndex = data;
-        if (q && q.value) apply();
-      })
-      .catch(() => {
-        searchIndex = [];
-      });
 
     apply();
   }

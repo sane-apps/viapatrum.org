@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Nightly Fathers end-to-end: full site dry-run (build + all gates +
-# browser checks), receipt to outputs/e2e/LATEST.json. Never deploys.
+# browser checks), receipt to outputs/e2e/LATEST.json. Never deploys, and the
+# dry-run no longer touches production search, R2 audio or the repo functions/.
 # Skips while a ship holds the release lock. Preserves a recorded
 # visual review (dry-run recapture would otherwise wipe it).
 set -u
@@ -28,7 +29,7 @@ PY
 then
   : # lock free
 else
-  echo '{"rc": 99, "skip": "ship in flight"}"' > "$OUT/LATEST.json"
+  echo '{"rc": 99, "skip": "ship in flight"}' > "$OUT/LATEST.json"
   echo "ship in flight, skip"
   exit 0
 fi
@@ -44,7 +45,13 @@ fi
 
 LOG="$(mktemp /tmp/fathers-e2e.XXXXXX)"
 set +e
-nice -n 10 /bin/bash ./scripts/ship.sh --dry-run >"$LOG" 2>&1
+# Bounded (CPU rule): a dry-run takes 10-25 min; 2 h means it is stuck.
+TIMEOUT_BIN="$(command -v timeout || command -v gtimeout || true)"
+if [[ -n "$TIMEOUT_BIN" ]]; then
+  nice -n 10 "$TIMEOUT_BIN" 7200 /bin/bash ./scripts/ship.sh --dry-run >"$LOG" 2>&1
+else
+  nice -n 10 /bin/bash ./scripts/ship.sh --dry-run >"$LOG" 2>&1
+fi
 RC=$?
 set -e
 

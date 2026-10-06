@@ -34,7 +34,7 @@ Do not regress: tip-suffix strip, ESTC/identifiers in About, publication gate + 
 - Cross-refs: keep `WORK_TOPICS` in `scripts/build_site.py` in sync with `docs/IA.md` and `topics.yml`. Every new work needs topic links + author hub.
 - No “Verified only” filter or confidence badges on Topics. Put a short translation-confidence note on each **work** intro.
 - Julian (and any post-Nicene corpus) must show an era banner — do not silently call the whole site ante-Nicene only.
-- Donate: GitHub Sponsors `MrSaneApps`. No paywall.
+- Donate: GitHub Sponsors `MrSaneApps`. Reading and listening on the site stay free, and so does the app. Downloads (Logos Word files, EPUB, PDF, audiobook files) are one $50 unlock via Lemon Squeezy (owner 2026-10-05). Beliefs live inside the Timeline (`/explore/`), never as their own tab.
 - Deploy to Cloudflare Pages `fathers-site`; hostname `fathers.saneapps.com`.
 - Withdrawn works: never rely on missing assets alone. `ship.sh` regenerates a `/works/*` Pages Function allowlist (`scripts/generate_works_gate.py`) so custom-domain preservation cache cannot resurrect held URLs.
 - Prefer `./scripts/ship.sh` (build → smoke → deploy → print CSS `?v=`).

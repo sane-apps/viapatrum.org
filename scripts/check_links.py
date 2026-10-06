@@ -8,6 +8,7 @@ import concurrent.futures
 import hashlib
 import re
 import json
+import argparse
 import sys
 import time
 from urllib.request import HTTPError, Request, urlopen
@@ -30,9 +31,24 @@ class Page(HTMLParser):
             if href:
                 self.links.append(href)
 
+def default_quality(root):
+    """The build's own quality receipt (dist -> dist.catalogue-quality.json),
+    or the shared outputs/ copy that older builds wrote."""
+    own = root.parent / (root.name + ".catalogue-quality.json")
+    return own if own.is_file() else Path(__file__).resolve().parents[1] / "outputs/catalogue-quality.json"
+
+
 def main():
-    if len(sys.argv) == 3 and sys.argv[1] == "--live":
-        live_origin(sys.argv[2].rstrip("/"))
+    global ROOT
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--live", metavar="ORIGIN", help="check the deployed site at ORIGIN instead of local links")
+    parser.add_argument("--root", type=Path, default=ROOT, help="built site to check or compare against (default dist/)")
+    parser.add_argument("--quality", type=Path, default=None,
+                        help="catalogue-quality receipt with held_works (default: the one next to --root)")
+    args = parser.parse_args()
+    ROOT = args.root.resolve()
+    if args.live:
+        live_origin(args.live.rstrip("/"), ROOT, args.quality or default_quality(ROOT))
         return
     pages = {}
     for path in ROOT.rglob('*.html'):
@@ -41,6 +57,9 @@ def main():
         pages[path.resolve()] = page
     errors = Counter()
     checked = 0
+    # /dl/<key> is served from R2 by functions/dl; it must name an uploaded file.
+    lib_path = ROOT / 'data' / 'library-files.json'
+    library = json.loads(lib_path.read_text()) if lib_path.is_file() else {}
     for path, page in pages.items():
         for duplicate in page.duplicates:
             errors[f'Duplicate id {path.relative_to(ROOT)}#{duplicate}'] += 1
@@ -49,6 +68,10 @@ def main():
             if url.scheme or url.netloc:
                 continue
             checked += 1
+            if url.path.startswith('/dl/'):
+                if url.path[4:] not in library:
+                    errors[f'Paid download not uploaded {url.path}'] += 1
+                continue
             target = (ROOT / url.path.lstrip('/') if url.path.startswith('/') else path.parent / url.path).resolve() if url.path else path
             if target.is_dir():
                 target /= 'index.html'
@@ -62,19 +85,24 @@ def main():
     if not pages or errors:
         raise SystemExit(1)
 
-def live_origin(origin):
-    """Bounded production check: current bytes and every withheld work URL."""
+def live_origin(origin, site, quality):
+    """Bounded production check: current bytes and every withheld work URL.
+
+    site is the folder that was uploaded (ship.sh passes its stage), and
+    quality is that build's receipt, so a test build run during the ship
+    cannot change what this compares against.
+    """
     root = Path(__file__).resolve().parents[1]
-    receipt = {"origin": origin, "checks": [], "held": 0}
-    held = json.loads((root / "outputs/catalogue-quality.json").read_text())["held_works"]
+    receipt = {"origin": origin, "site": str(site), "quality": str(quality), "checks": [], "held": 0}
+    held = json.loads(Path(quality).read_text())["held_works"]
     paths = ["/", "/works/", "/data/search-index.json"]
-    expected = {p: hashlib.sha256((root / "dist" / p.lstrip("/") / ("index.html" if p.endswith("/") else "")).read_bytes()).hexdigest()
+    expected = {p: hashlib.sha256((site / p.lstrip("/") / ("index.html" if p.endswith("/") else "")).read_bytes()).hexdigest()
                 for p in paths if p != "/data/search-index.json"}
-    expected["/data/search-index.json"] = hashlib.sha256((root / "dist/data/search-index.json").read_bytes()).hexdigest()
-    css = next((p for p in (root / "dist/assets").glob("site.css")), None)
-    js = next((p for p in (root / "dist/assets").glob("site.js")), None)
+    expected["/data/search-index.json"] = hashlib.sha256((site / "data/search-index.json").read_bytes()).hexdigest()
+    css = next((p for p in (site / "assets").glob("site.css")), None)
+    js = next((p for p in (site / "assets").glob("site.js")), None)
     # Fetch the versioned URL pages actually load; the bare path can sit in the edge cache.
-    home = (root / "dist/index.html").read_text(encoding="utf-8")
+    home = (site / "index.html").read_text(encoding="utf-8")
     for asset in (css, js):
         if asset:
             ver = re.search(r"/assets/" + re.escape(asset.name) + r"\?v=([0-9a-f]+)", home)

@@ -1,40 +1,49 @@
-/* Beliefs pages: one row per position on a 50-800 axis. Colors come from the
-   site tokens (--affirm states, --deny rules out), so both themes follow. */
-.bhead { display: grid; gap: 0.75rem; margin-bottom: 1.5rem; }
-.bfilter { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+/* Beliefs on the Timeline: lanes use the site's .tl-* rules; this adds the
+   church filter, position labels on cards, and the question page sections.
+   Colors come from the site tokens, so both themes follow. */
+.bfilter { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.9rem; }
+.bfilter-label { font: 600 0.88rem var(--font-body); color: var(--ink); margin-right: 0.2rem; }
 .bchip { font: 600 0.85rem/1 var(--font-body); padding: 0.45rem 0.75rem; border-radius: 999px;
   border: 1px solid var(--rule); background: var(--leaf); color: var(--ink); cursor: pointer; }
 .bchip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .bchip:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
-.blegend { font: 0.85rem var(--font-body); color: var(--ink-soft); display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
-.blegend .bm { position: static; display: inline-block; transform: none; margin-right: 0.15rem; }
-.bq { border-top: 1px solid var(--rule); padding-block: 1.25rem; }
-.bq h2 { font-family: var(--font-display); font-size: 1.45rem; text-wrap: balance; margin: 0 0 0.75rem; }
-.bq h2 a { color: var(--ink); text-decoration: none; }
-.bq h2 a:hover { text-decoration: underline; }
-.bticks { position: relative; height: 1.1rem; margin-left: 0; font: 0.72rem var(--font-body); color: var(--ink-soft);
-  font-variant-numeric: tabular-nums; }
-.bticks span { position: absolute; transform: translateX(-50%); }
-.brow { display: grid; gap: 0.35rem; padding-block: 0.6rem; border-bottom: 1px dashed var(--rule); transition: opacity 0.2s; }
-.brow.dim { opacity: 0.3; }
-.bname { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem; }
-.bname h3 { font: 600 1rem var(--font-body); margin: 0; }
+.tl-row[data-trads] { transition: opacity 0.2s; }
+.tl-row.dim { opacity: 0.25; }
+
+/* Cards: each lane is named, since a card shows every position. */
+.tl-pos.tl-compact .tl-row { padding: 0.35rem 0 0; }
+.tl-pos.tl-compact .tl-claim { display: flex; }
+.tl-pos.tl-compact .tl-claim-text { font-size: 0.92rem; }
+.tl-pos.tl-compact .tl-tally { font-size: 0.78rem; }
+.tl-pos.tl-compact .btrads { gap: 0.2rem; margin-left: 0.4rem; }
+.tl-pos.tl-compact .btrad { font-size: 0.62rem; padding: 0 0.25rem; }
+/* Not a link, so not link blue and no box (Standing UX rule 2). */
+.ot-badge.divides { border: 0; color: var(--gold); }
+.ot-belief .tl-related { margin: 0.1rem 0 0; font-size: 0.85rem; color: var(--ink-soft); }
+
+/* Authorship uncertain: an open ring (a hollow dot, or a ring round the cross).
+   Tokens keep both themes. */
+.tl-pt.affirms.uncertain .dot { background: var(--leaf); border: 2px solid var(--affirm); box-shadow: none; }
+.tl-pt.denies.uncertain .dot { border-radius: 50%; outline: 1.5px solid var(--deny); outline-offset: 1.5px; }
+.tl-key.uncertain { border-radius: 50%; border: 2px solid var(--ink-soft); }
+
+.btrads { display: inline-flex; flex-wrap: wrap; gap: 0.3rem; margin-left: 0.5rem; vertical-align: 0.1rem; }
 .btrad { font: 600 0.7rem var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft);
   border: 1px solid var(--rule); border-radius: 4px; padding: 0.1rem 0.35rem; }
-.baxis { position: relative; height: 1.4rem; background: linear-gradient(var(--rule), var(--rule)) center / 100% 1px no-repeat; }
-.bm { position: absolute; top: 50%; width: 0.8rem; height: 0.8rem; transform: translate(-50%, -50%); border-radius: 50%; }
-.bm.st { background: var(--affirm); }
-.bm.ex { background: transparent; border: 2px solid var(--deny); border-radius: 2px; transform: translate(-50%, -50%) rotate(45deg); }
-a.bm:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
-.bfirst { font: 0.85rem var(--font-body); color: var(--ink-soft); margin: 0; }
-.bfirst.none { font-style: italic; }
+.tl-related { margin: 0.9rem 0 0; font-size: 0.95rem; }
+.tl-related a { color: var(--lapis); font-weight: 600; }
+
+.bpositions { margin-top: 2rem; }
+.bpositions > h2, .bpassages > h2 { font-size: 1.6rem; margin: 0 0 0.6rem; }
+.bpos { border-top: 1px solid var(--rule); padding-block: 0.9rem; display: grid; gap: 0.35rem; }
+.bpos h3 { margin: 0; font-size: 1.15rem; }
 .bdef { margin: 0.25rem 0; padding: 0.5rem 0.75rem; border-left: 3px solid var(--rule); font: italic 0.95rem/1.5 var(--font-read); color: var(--ink); }
 .bdef cite { display: block; font: normal 0.75rem var(--font-body); color: var(--ink-soft); margin-top: 0.25rem; }
-.bmark { margin: 0; font: 0.9rem/1.5 var(--font-body); color: var(--ink); }
+.bmark { margin: 0; font: 0.95rem/1.5 var(--font-body); color: var(--ink); }
 .bmark span { font-weight: 600; }
-.bfine { margin: 0; font: 0.78rem var(--font-body); color: var(--ink-soft); }
-.bmore { margin: 0.6rem 0 0; font: 600 0.9rem var(--font-body); }
-.bshared { background: var(--paper-2); border-radius: 8px; padding: 0.9rem 1rem; margin-bottom: 1rem; }
+.bfine, .bfirst { margin: 0; font: 0.85rem var(--font-body); color: var(--ink-soft); }
+.bfirst.none { font-style: italic; }
+.bshared { background: var(--paper-2); border-radius: 8px; padding: 0.9rem 1rem; margin: 1.5rem 0 1rem; }
 .bshared h2 { font: 600 1rem var(--font-body); margin: 0 0 0.3rem; }
 .bshared p { margin: 0 0 0.4rem; font-size: 0.9rem; color: var(--ink-soft); }
 .bshared ul { margin: 0; padding-left: 1.2rem; }
@@ -42,17 +51,19 @@ a.bm:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .bp { border-left: 3px solid var(--rule); padding-left: 0.9rem; min-width: 0; }
 .bpwho { margin: 0; font: 0.95rem var(--font-body); }
 .bptext { margin: 0.3rem 0; font: 1rem/1.6 var(--font-read); overflow-wrap: anywhere; }
-.bpdec { list-style: none; padding: 0; margin: 0.2rem 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.bpdec li { font: 600 0.75rem var(--font-body); padding: 0.15rem 0.45rem; border-radius: 4px; }
-.bpdec .st { color: var(--affirm); border: 1px solid var(--affirm); }
-.bpdec .ex { color: var(--deny); border: 1px solid var(--deny); }
+.bpdec { list-style: none; padding: 0; margin: 0.2rem 0; display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; }
+/* Plain labels, not boxes: a legend glyph in the stance colour (Standing UX rule 2). */
+.bpdec li { font: 600 0.8rem var(--font-body); color: var(--ink-soft); }
+.bpdec li::before { margin-right: 0.3em; }
+.bpdec .st::before { content: "\25CF\FE0E"; color: var(--affirm); }
+.bpdec .ex::before { content: "\00D7"; color: var(--deny); font-weight: 800; }
 .bpsrc { margin: 0; font: 0.85rem var(--font-body); }
-.bmethod { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; font-size: 0.95rem; color: var(--ink-soft); }
-@media (prefers-reduced-motion: reduce) { .brow { transition: none; } }
-.bm.unrev { opacity: 0.4; }
 .bpattr { margin: 0.15rem 0; font: 600 0.78rem var(--font-body); color: var(--partly); }
-.bhead h1 { margin: 0; }
-.bhead .intro { margin: 0; }
-.blegend .bm { position: relative; top: auto; transform: none; width: 0.75rem; height: 0.75rem; margin: 0 0.1rem 0 0.4rem; vertical-align: -0.05rem; }
-.blegend .bm:first-child { margin-left: 0; }
-.blegend .bm.ex { transform: rotate(45deg); width: 0.6rem; height: 0.6rem; }
+.bmethod { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; font-size: 0.95rem; color: var(--ink-soft); }
+@media (prefers-reduced-motion: reduce) { .tl-row[data-trads] { transition: none; } }
+
+/* Phone cards: every tally on its own line, so rows in one card line up. */
+@media (max-width: 640px) {
+  .tl-pos.tl-compact .tl-claim { flex-wrap: wrap; }
+  .tl-pos.tl-compact .tl-tally { flex-basis: 100%; }
+}
