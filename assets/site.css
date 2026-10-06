@@ -2619,9 +2619,10 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
   .bx-head .eyebrow { display: none; }
   .bx-head .lede { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; line-clamp: 1; overflow: hidden; font-size: 1rem; margin-bottom: 0.6rem; }
   .bx-tools .section-nav { display: none; }
-  .bx-tr { flex-wrap: nowrap; overflow-x: auto; max-width: 100%; padding-bottom: 2px; scrollbar-width: none; }
-  .bx-tr::-webkit-scrollbar { display: none; }
-  .bx-tr button { flex: 0 0 auto; }
+  /* Pills wrap to a second line: a hidden-scrollbar row hid CSB and NASB off
+     screen, and the browser gate fails on off-screen text (2026-10-06). */
+  .bx-tr { gap: 0.3rem 0.25rem; }
+  .bx-tr button { flex: 0 0 auto; padding: 0.35rem 0.7rem; }
   .sc-books { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .sc-book { padding: 0.65rem 0.75rem; }
   .sc-book .t { font-size: 1.15rem; }
