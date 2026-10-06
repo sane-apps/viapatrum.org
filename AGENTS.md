@@ -45,7 +45,7 @@ Do not regress: tip-suffix strip, ESTC/identifiers in About, publication gate + 
 - Mini-first for live visual verification after deploy.
 - Read `docs/IA.md` before changing URL structure.
 - Build with the translations venv (PyYAML): `~/SaneApps/clients/translations/.venv/bin/python scripts/build_site.py`.
-- Keep the game entry points (nav `Play` + home Play section → https://play.viapatrum.org) through any redesign. See `docs/GAME_LINKS.md`.
+- Keep the game entry points (nav `Games` → /games/, which lists every game, + the home Games section; owner 2026-10-06) through any redesign. See `docs/GAME_LINKS.md`.
 
 ## Works reader SOP (permanent)
 

@@ -97,6 +97,13 @@ class Library:
     def bundles(self) -> list[dict]:
         return [b for b in self.data.get("bundles") or [] if b.get("uploaded") and b.get("kind") not in self.dirty]
 
+    @property
+    def price(self) -> int:
+        return int(self.data.get("price_usd") or 50)
+
+    def has_audio(self) -> bool:
+        return any("audio" in w["files"] for w in self.by_slug.values())
+
     def __bool__(self) -> bool:
         # Live only with uploaded files AND a checkout link, which library_sync
         # go-live sets after Lemon Squeezy says the product is published.
@@ -134,7 +141,7 @@ class Library:
                 f'<p><a href="/downloads/">Included in the ${price} library pass.</a> Reading here stays free.</p></section>')
 
 
-def _row(w: dict, author_dates) -> str:
+def _row(w: dict, author_dates, show_author: bool = True) -> str:
     files = []
     for k in ("epub", "pdf", "word", "audio"):
         f = w["files"].get(k)
@@ -150,15 +157,60 @@ def _row(w: dict, author_dates) -> str:
                      f'{icon("lock", "dl-lk")}{icon("down", "dl-dn")}<span class="dl-fk">{LABEL[k]}</span>'
                      f'<span class="dl-fm">{escape(meta)}</span></a>')
     dates = w.get("author_dates") or author_dates(w.get("author"), None) or ""
+    byline = f'<p>{escape(w.get("author") or "")}{" · " + escape(dates) if dates else ""}</p>'
     part = part_only(w)
     scope = f'<span class="dl-scope">Part only: {escape(part)}</span>' if part else ""
     thumb = (f'<img src="/assets/covers/{escape(w["thumb"])}" alt="" width="64" height="96" loading="lazy" decoding="async">'
              if w.get("thumb") else '<span class="dl-nocover"></span>')
     q = f'{w["title"]} {w.get("subtitle") or ""} {w.get("author") or ""}'.lower()
     return (f'<li class="dl-w" data-q="{escape(q)}"{" data-audio" if "audio" in w["files"] else ""}>'
-            f'{thumb}<div class="dl-wt"><h3><a href="/works/{escape(w["slug"])}/">{escape(w["title"])}</a></h3>'
-            f'<p>{escape(w.get("author") or "")}{" · " + escape(dates) if dates else ""}</p>{scope}</div>'
+            f'{thumb}<div class="dl-wt"><h4><a href="/works/{escape(w["slug"])}/">{escape(w["title"])}</a></h4>'
+            f'{byline if show_author else ""}{scope}</div>'
             f'<div class="dl-files">{"".join(files)}</div></li>')
+
+
+# Shelf eras (2026-10-06 sketch item 6): the same breaks as the audiobook era
+# zips in library_sync.AUDIO_ZIPS. (end year, heading, span)
+ERAS = ((325, "Before Nicaea", "to 325 AD"), (451, "Nicaea to Chalcedon", "325 to 451 AD"),
+        (None, "After Chalcedon and later", "from 451 AD"))
+
+
+def era_of(year) -> str:
+    for end, name, _ in ERAS:
+        if end is None or (year is not None and year < end):
+            return name
+    return ERAS[-1][1]
+
+
+def shelf(works: list[dict], author_dates, year_of) -> str:
+    """One closed <details> per writer, earliest first, under era headings.
+    downloads.js opens them on wide screens and opens the ones a search matches."""
+    groups: list[tuple[str, str, list[dict]]] = []  # (era, author, works), works already in order
+    for w in works:
+        who = w.get("author") or "Unknown writer"
+        if groups and groups[-1][1] == who:
+            groups[-1][2].append(w)
+        else:
+            groups.append((era_of(year_of(w)), who, [w]))
+    out, era = [], None
+    for g_era, who, ws in groups:
+        if g_era != era:
+            if era is not None:
+                out.append("</section>")
+            span = next(s for _, n, s in ERAS if n == g_era)
+            out.append(f'<section class="dl-era" aria-label="{escape(g_era)}"><h3 class="dl-era-h">{escape(g_era)} '
+                       f'<span>{escape(span)}</span></h3>')
+            era = g_era
+        dates = ws[0].get("author_dates") or author_dates(who, None) or ""
+        n_audio = sum(1 for w in ws if "audio" in w["files"])
+        dates_html = f'<span class="dl-gd">{escape(dates)}</span>' if dates else ""
+        count = plural(len(ws), "work") + (" · " + plural(n_audio, "audiobook") if n_audio else "")
+        rows = "".join(_row(w, author_dates, show_author=False) for w in ws)  # the group names the writer
+        out.append(f'<details class="dl-g"><summary><span class="dl-gn">{escape(who)}</span>{dates_html}'
+                   f'<span class="dl-gc">{count}</span></summary><ol class="dl-list">{rows}</ol></details>')
+    if era is not None:
+        out.append("</section>")
+    return "".join(out)
 
 
 def lede(works: list[dict], n: dict[str, int], total_h: int, site_works: int = 0) -> str:
@@ -225,18 +277,28 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
     bundle_html = "".join(
         f'<a class="dl-b" href="/dl/{escape(b["key"])}" data-kind="{escape(b["kind"])}">{icon(b["kind"])}'
         f'<span class="dl-bt">{escape(bundle_label(b))}</span><span class="dl-bm">{b["count"]} files · {size(b["bytes"])} · one zip</span></a>'
-        for b in bundles)
-    audio = [w["files"]["audio"] for w in works if "audio" in w["files"]]
-    audio_bytes = sum(f["bytes"] for f in audio)
-    if n["audio"]:
-        # Hidden on touch screens (downloads.css): phones cannot take many files in a row.
-        bundle_html += (f'<button type="button" class="dl-b dl-b-all" data-all-audio>{icon("audio")}'
-                        f'<span class="dl-bt">Every audiobook</span><span class="dl-bm">{n["audio"]} files · {size(audio_bytes)} · one after another, on a computer</span></button>')
+        for b in bundles if b["kind"] != "audio")
+    # Audiobooks as a few era zips (sketch item 8), only the ones uploaded.
+    # Until they are, the shelf's per-book audio links are the way to get them.
+    era_zips = [b for b in bundles if b["kind"] == "audio"]
+    zips_html = ("" if not era_zips else
+                 '<div class="dl-zips"><h3 class="dl-era-h">Audiobooks, one zip per era</h3><div class="dl-bundles">'
+                 + "".join(f'<a class="dl-b" href="/dl/{escape(b["key"])}" data-kind="audio">{icon("audio")}'
+                           f'<span class="dl-bt">{escape(b.get("label") or "Audiobooks")}</span>'
+                           f'<span class="dl-bm">{plural(b["count"], "audiobook")} · {size(b["bytes"])} · one zip'
+                           f'{" · " + escape(b["note"]) if b.get("note") else ""}</span></a>' for b in era_zips)
+                 + '</div><p class="dl-zips-note">Large files: best on Wi-Fi.</p></div>')
     fmt_cards = "".join(
         f'<li class="dl-fmt">{icon(k, "dl-fic")}<h3>{name}</h3><p>{escape(text)}</p>'
         f'<p class="dl-fmt-n">{plural(n[k], "audiobook" if k == "audio" else "book")}</p></li>'
         for k, name, text in FORMATS if n[k])
-    rows = "".join(_row(w, author_dates) for w in works)
+    def year_of(w: dict):
+        # build_site's sort_key starts with author_sort_year (the site's
+        # chronology); library.json's own year can lag until the next assemble.
+        k = sort_key(w)
+        return k[0] if isinstance(k, tuple) and k and isinstance(k[0], int) else w.get("year")
+
+    groups = shelf(works, author_dates, year_of)
     buy = (f'<a class="dl-buy lemonsqueezy-button" href="{escape(checkout)}" data-buy>Get the library<span class="dl-price">${price}</span></a>'
            if checkout else '<span class="dl-buy is-off">Opening soon</span>')
     body = f"""
@@ -272,26 +334,6 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <ul>{fmt_cards}</ul>
 </section>
 
-<section class="dl-shelf" id="shelf" aria-labelledby="dl-shelf-h">
-  <div class="dl-shelf-head">
-    <h2 id="dl-shelf-h">The shelf</h2>
-    <p class="dl-shelf-sub dl-when-locked">Every file below comes with the pass. Covers and titles link to the free reading page.</p>
-    <p class="dl-shelf-sub dl-when-unlocked">Select any format to download it. Files carry no copy protection.</p>
-  </div>
-  <div class="dl-bundles" aria-label="Download everything">{bundle_html}</div>
-  <div class="dl-tools">
-    <label class="vh" for="dl-q">Find a work</label>
-    <input id="dl-q" type="search" placeholder="Find a work or writer" autocomplete="off">
-    {"""<div class="dl-chips" role="group" aria-label="Show">
-      <button type="button" class="dl-chip" data-filter="" aria-pressed="true">All</button>
-      <button type="button" class="dl-chip" data-filter="audio" aria-pressed="false">With audiobook</button>
-    </div>""" if n["audio"] else ""}
-    <p class="dl-count" aria-live="polite" data-count></p>
-  </div>
-  <ol class="dl-list">{rows}</ol>
-  <p class="dl-empty" hidden>No work matches that search.</p>
-</section>
-
 <section class="dl-faq" aria-labelledby="dl-faq-h">
   <h2 id="dl-faq-h">Questions</h2>
   <details><summary>Is reading on the site still free?</summary><p>Yes. Every work, every Scripture link and every read-along recording stays free on this site and in the app. The pass is only for files you keep.</p></details>
@@ -301,6 +343,27 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <details><summary>Where do I find my key later?</summary><p>It is in your receipt email from Lemon Squeezy, our payment provider. You can also look it up at <a href="https://app.lemonsqueezy.com/my-orders" rel="noopener">My Orders</a> with the email you paid with. Enter it here on any browser.</p></details>
   <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.</p></details>
   <details><summary>Can I get a refund?</summary><p>If something is wrong with a file, write to hi@saneapps.com and tell us what you see. We fix problems first; if we cannot, we refund.</p></details>
+</section>
+
+<section class="dl-shelf" id="shelf" aria-labelledby="dl-shelf-h">
+  <div class="dl-shelf-head">
+    <h2 id="dl-shelf-h">The shelf</h2>
+    <p class="dl-shelf-sub dl-when-locked">Every file below comes with the pass. Covers and titles link to the free reading page.</p>
+    <p class="dl-shelf-sub dl-when-unlocked">Select any format to download it. Files carry no copy protection.</p>
+  </div>
+  <div class="dl-bundles" aria-label="Download everything">{bundle_html}</div>
+  {zips_html}
+  <div class="dl-tools">
+    <label class="vh" for="dl-q">Find a work</label>
+    <input id="dl-q" type="search" placeholder="Find a work or writer" autocomplete="off">
+    {"""<div class="dl-chips" role="group" aria-label="Show">
+      <button type="button" class="dl-chip" data-filter="" aria-pressed="true">All</button>
+      <button type="button" class="dl-chip" data-filter="audio" aria-pressed="false">With audiobook</button>
+    </div>""" if n["audio"] else ""}
+    <p class="dl-count" aria-live="polite" data-count></p>
+  </div>
+  <div class="dl-eras">{groups}</div>
+  <p class="dl-empty" hidden>No work matches that search.</p>
 </section>
 
 <p class="dl-account dl-when-unlocked">Using a shared computer? <button type="button" class="dl-textbtn" data-signout>Remove the key from this browser</button></p>
@@ -328,14 +391,6 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <form method="dialog"><button class="dl-buy">Go to the shelf</button></form>
 </dialog>
 
-{f"""<dialog class="dl-dialog" id="dl-all-audio" aria-labelledby="dl-aa-h">
-  <form method="dialog" class="dl-x"><button aria-label="Close">×</button></form>
-  <h2 id="dl-aa-h">Download every audiobook</h2>
-  <p>{n['audio']} files, {size(audio_bytes)} in all. They download one after another, a few seconds apart, so use a computer with room to spare and keep this tab open until it finishes.</p>
-  <p><strong>Your browser will ask to allow several downloads.</strong> Choose Allow, or only the first file arrives. If you missed it, look for a blocked-download icon at the end of the address bar.</p>
-  <p class="dl-progress" data-aa-progress></p>
-  <div class="dl-cta"><button type="button" class="dl-buy" data-aa-start>Start</button><button type="button" class="dl-textbtn" data-aa-stop hidden>Stop</button></div>
-</dialog>""" if n["audio"] else ""}
 """
     write(dist / "downloads" / "index.html",
           layout("The library, to keep", body, crumb=[("Home", "/"), ("Downloads", "")], active="downloads",

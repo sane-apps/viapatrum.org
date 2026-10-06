@@ -85,7 +85,7 @@
 .dl-shelf-head h2 { margin-bottom: 0.3rem; }
 .dl-shelf-sub { margin: 0 0 1.1rem; color: var(--ink-soft); font-size: 0.95rem; }
 .dl-bundles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: 0.75rem; margin: 0 0 1.6rem; }
-.dl-b { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 0.8rem; align-items: center; text-align: left;
+.dl-b { display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 0.8rem; align-items: center; align-content: center; text-align: left;
   padding: 0.95rem 1rem; border-radius: 12px; border: 1px solid var(--rule); background: color-mix(in srgb, var(--paper-2) 55%, var(--leaf));
   color: var(--ink); text-decoration: none; cursor: pointer; font: inherit; transition: border-color 0.15s, background 0.15s; }
 .dl-b .dl-ic { grid-row: span 2; width: 1.6rem; height: 1.6rem; color: var(--gold); }
@@ -109,9 +109,9 @@
 .dl-w[hidden] { display: none; }
 .dl-w img, .dl-nocover { width: 64px; height: 96px; border-radius: 2px 5px 5px 2px; object-fit: cover; background: var(--paper-2);
   box-shadow: 0 6px 14px -8px rgb(0 0 0 / 0.45), inset 2px 0 0 rgb(0 0 0 / 0.1); }
-.dl-wt h3 { margin: 0 0 0.2rem; font: 500 1.28rem/1.25 var(--font-display); }
-.dl-wt h3 a { color: var(--ink); text-decoration: none; }
-.dl-wt h3 a:hover, .dl-wt h3 a:focus-visible { color: var(--lapis); text-decoration: underline; }
+.dl-wt h4 { margin: 0 0 0.2rem; font: 500 1.28rem/1.25 var(--font-display); }
+.dl-wt h4 a { color: var(--ink); text-decoration: none; }
+.dl-wt h4 a:hover, .dl-wt h4 a:focus-visible { color: var(--lapis); text-decoration: underline; }
 .dl-wt p { margin: 0; font-size: 0.92rem; color: var(--ink-soft); }
 .dl-files { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.4rem; }
 .dl-f { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.48rem 0.75rem; border-radius: 8px; border: 1px solid var(--rule);
@@ -126,11 +126,40 @@
 .dl-f.is-done { border-color: color-mix(in srgb, var(--affirm) 50%, var(--rule)); }
 .dl-empty { padding: 2rem 0; color: var(--ink-soft); text-align: center; }
 .dl-scope { display: inline-block; margin-top: 0.3rem; font: 600 0.75rem/1.2 var(--font-body); letter-spacing: 0.02em; color: var(--rubric); }
-/* Phones and tablets cannot take a long run of downloads: no "every audiobook" there. */
-@media (pointer: coarse) { .dl-b-all { display: none; } }
+
+/* Shelf groups (sketch item 6): era headings, then one <details> per writer.
+   Plain rows, not the site-wide boxed <details> (site.css). */
+.dl-era { margin: 2rem 0 0; }
+.dl-era[hidden], .dl-g[hidden] { display: none; }
+.dl-era-h { margin: 0; padding: 0 0 0.55rem; font: 700 0.82rem/1.3 var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); }
+.dl-era-h span { font-weight: 600; letter-spacing: 0.04em; text-transform: none; color: var(--ink-soft); margin-left: 0.4rem; }
+.dl-g { background: none; border: 0; border-top: 1px solid var(--rule); border-radius: 0; margin: 0; padding: 0; }
+.dl-g:last-child { border-bottom: 1px solid var(--rule); }
+.dl-g > summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.75rem;
+  padding: 0.85rem 0 0.85rem 1.6rem; position: relative; font-weight: 400; }
+.dl-g > summary::-webkit-details-marker { display: none; }
+.dl-g > summary::before { content: ""; position: absolute; left: 0.35rem; top: 1.25rem; width: 0.45rem; height: 0.45rem;
+  border-right: 2px solid var(--ink-soft); border-bottom: 2px solid var(--ink-soft); transform: rotate(-45deg); transition: transform 0.15s; }
+.dl-g[open] > summary::before { transform: rotate(45deg); top: 1.1rem; }
+.dl-g > summary:hover .dl-gn { color: var(--lapis); }
+.dl-g > summary:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; border-radius: 4px; }
+.dl-gn { font: 500 1.3rem/1.25 var(--font-display); color: var(--ink); }
+.dl-gd { font-size: 0.92rem; color: var(--ink-soft); }
+.dl-gc { margin-left: auto; font-size: 0.88rem; font-weight: 600; color: var(--ink-soft); white-space: nowrap; }
+.dl-g .dl-list { padding: 0 0 0.6rem 1.6rem; }
+.dl-g .dl-w:last-child { border-bottom: 0; }
+
+/* Audiobook era zips (sketch item 8) */
+.dl-zips { margin: 0 0 1.6rem; }
+.dl-zips .dl-bundles { margin: 0.2rem 0 0.6rem; }
+.dl-zips-note { margin: 0; font-size: 0.9rem; color: var(--ink-soft); }
 
 /* FAQ */
-.dl-faq { margin: 3.5rem 0 1rem; max-width: 46rem; }
+.dl-faq { margin: 0 0 3rem; }
+@media (min-width: 761px) {
+  .dl-faq { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2.5rem; align-items: start; }
+  .dl-faq h2 { grid-column: 1 / -1; }
+}
 /* A hairline list, not the site-wide boxed <details> (site.css). */
 .dl-faq details { background: none; border: 0; border-bottom: 1px solid var(--rule); border-radius: 0; margin: 0; padding: 0.2rem 0; }
 .dl-faq summary { cursor: pointer; padding: 0.85rem 0; font: 600 1.05rem var(--font-body); list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
@@ -157,7 +186,6 @@
 .dl-keybox { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; padding: 0.8rem 0.9rem; border-radius: 10px; background: var(--paper-2); }
 .dl-keybox code { font-size: 0.92rem; overflow-wrap: anywhere; }
 .dl-welcome .eyebrow { margin: 0; }
-.dl-progress { font-variant-numeric: tabular-nums; color: var(--ink-soft); min-height: 1.4em; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 
 @media (max-width: 760px) {
@@ -168,6 +196,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
   .dl-w img, .dl-nocover { width: 52px; height: 78px; grid-row: span 2; }
   .dl-files { justify-content: flex-start; grid-column: 2; }
   .dl-count { margin-left: 0; width: 100%; }
+  .dl-g .dl-list { padding-left: 0; }
+  .dl-gc { margin-left: 0; width: 100%; }
   .dl-stats { gap: 1rem 2rem; }
 }
 @media (prefers-reduced-motion: reduce) { .dl-stack img, .dl-buy { transition: none; } }

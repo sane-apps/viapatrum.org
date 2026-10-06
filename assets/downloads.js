@@ -1,7 +1,8 @@
 /* Downloads page (scripts/downloads_page.py): locked/unlocked state, shelf
-   search, Lemon Squeezy checkout overlay, unlock right after purchase, key
-   entry, and "every audiobook" one after another. Without JS the page still
-   works: Buy opens the hosted checkout, and /dl/ links redirect here. */
+   search over the writer groups, Lemon Squeezy checkout overlay, unlock right
+   after purchase, and key entry. Without JS the page still works: Buy opens
+   the hosted checkout, /dl/ links redirect here, and each writer group opens
+   with a tap. */
 (function () {
   var page = document.querySelector(".dl-page");
   if (!page) return;
@@ -54,8 +55,14 @@
     $(".dl-hero").scrollIntoView({ behavior: "smooth", block: "start" });
   });
 
-  /* Shelf search and filter. */
+  /* Shelf: one group per writer. Groups start closed (short on a phone) and
+     open on wide screens; a search opens every group with a match and hides
+     the rest, and clearing it puts the groups back. */
   var q = $("#dl-q"), rows = $$(".dl-w"), filter = "", count = $("[data-count]"), empty = $(".dl-empty");
+  var groups = $$(".dl-g"), eras = $$(".dl-era"), searching = false;
+  var wide = window.matchMedia ? window.matchMedia("(min-width: 761px)") : { matches: true };
+  function openDefault() { groups.forEach(function (g) { g.open = wide.matches; }); }
+  openDefault();
   function apply() {
     var words = (q.value || "").toLowerCase().split(/\s+/).filter(Boolean), shown = 0;
     rows.forEach(function (li) {
@@ -64,6 +71,14 @@
       li.hidden = !ok;
       if (ok) shown++;
     });
+    groups.forEach(function (g) {
+      var any = Boolean(g.querySelector(".dl-w:not([hidden])"));
+      g.hidden = !any;
+      if (words.length) g.open = any;
+    });
+    if (searching && !words.length) openDefault();
+    searching = words.length > 0;
+    eras.forEach(function (e) { e.hidden = !e.querySelector(".dl-g:not([hidden])"); });
     count.textContent = shown === rows.length ? rows.length + " works" : shown + " of " + rows.length + " works";
     empty.hidden = shown > 0;
   }
@@ -139,46 +154,5 @@
       } });
     };
     document.head.appendChild(s);
-  }
-
-  /* Every audiobook, one after another, on a computer only: phones and
-     tablets cannot take a long run of downloads (the CSS hides the button
-     there too). The dialog explains the browser's "allow several downloads"
-     prompt before anything starts. */
-  var aa = $("#dl-all-audio"), stop = false;
-  var touch = window.matchMedia && window.matchMedia("(pointer: coarse)").matches;
-  $$("[data-all-audio]").forEach(function (b) {
-    if (touch) { b.hidden = true; return; }
-    b.addEventListener("click", function () {
-      if (page.getAttribute("data-state") !== "unlocked") { $("[data-need]").hidden = false; $(".dl-hero").scrollIntoView({ behavior: "smooth" }); return; }
-      aa.showModal();
-    });
-  });
-  if (aa) {
-    $("[data-aa-start]").addEventListener("click", function () {
-      var links = $$('.dl-f[data-kind="audio"]').map(function (a) { return a; });
-      var i = 0, prog = $("[data-aa-progress]");
-      stop = false;
-      $("[data-aa-start]").hidden = true;
-      $("[data-aa-stop]").hidden = false;
-      (function next() {
-        if (stop || i >= links.length) {
-          prog.textContent = stop ? "Stopped after " + i + " of " + links.length + "." : "All " + links.length + " started. Your browser shows their progress.";
-          $("[data-aa-start]").hidden = false; $("[data-aa-stop]").hidden = true;
-          return;
-        }
-        var a = document.createElement("a");
-        a.href = links[i].getAttribute("href");
-        document.body.appendChild(a); a.click(); a.remove();
-        links[i].classList.add("is-done");
-        i++;
-        prog.textContent = i + " of " + links.length + " started";
-        /* Space starts by size (about 4 MB a second), 2.5 s to 60 s, so a
-           slow link is not running dozens of files at once. */
-        var bytes = Number(links[i - 1].getAttribute("data-bytes")) || 0;
-        setTimeout(next, Math.min(60000, Math.max(2500, bytes / 4000)));
-      })();
-    });
-    $("[data-aa-stop]").addEventListener("click", function () { stop = true; });
   }
 })();

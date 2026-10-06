@@ -2469,13 +2469,18 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .bx-tr button[aria-pressed="true"]:hover { background: var(--ink); }
 .bx-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 2.2rem; align-items: start; margin: 1.6rem 0; }
 .bx-text { background: var(--leaf); border: 1px solid var(--rule); padding: 1.8rem 2rem; }
-.bx-text p { font-family: var(--font-read); font-size: 1.12rem; line-height: 2; margin: 0; }
-.bx-text sup { font-family: var(--font-body); font-size: 0.62em; font-weight: 700; color: var(--gold); margin: 0 0.2em 0 0.15em; }
-.bx-text .v { border-radius: 3px; scroll-margin-top: 30vh; }
-.bx-text .v.cited { cursor: pointer; text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--rubric) calc(var(--heat, 0.5) * 100%), transparent); text-decoration-thickness: calc(1px + var(--heat, 0.5) * 3px); text-underline-offset: 0.3em; text-decoration-skip-ink: none; }
-.bx-text .v.cited sup { color: var(--rubric); }
-.bx-text .v.cited:hover, .bx-text .v.cited:focus-visible { background: color-mix(in srgb, var(--rubric) 10%, transparent); outline: none; }
-.bx-text .v.is-on { background: color-mix(in srgb, var(--rubric) 16%, transparent); }
+.bx-text p { font-family: var(--font-read); font-size: 1.12rem; line-height: 1.8; margin: 0; }
+/* Sketch 9 (2026-10-06): one verse per line, text hangs past the number; a cited verse shows a
+   filled badge on its number (darker = cited more), never an underline wall. */
+.bx-text .v { --hang: 2.15rem; display: block; padding: 0.05rem 0.3rem 0.05rem var(--hang); text-indent: calc(-1 * var(--hang) + 0.3rem); margin: 0 -0.3rem 0.3rem; border-radius: 4px; scroll-margin-top: 30vh; }
+.bx-text sup { display: inline-block; box-sizing: border-box; width: calc(var(--hang, 2.15rem) - 0.75rem); margin-right: 0.45rem; text-indent: 0; text-align: center; vertical-align: 0.12em; font-family: var(--font-body); font-size: 0.72rem; line-height: 1.45rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--gold); border-radius: 999px; }
+.bx-text .v.cited { cursor: pointer; }
+.bx-text .v.cited sup { color: var(--ink); background: color-mix(in srgb, var(--rubric) calc(14% + var(--heat, 0.5) * 46%), var(--leaf)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--rubric) 55%, transparent); }
+.bx-text .v.cited:hover, .bx-text .v.cited:focus-visible { background: color-mix(in srgb, var(--rubric) 8%, transparent); outline: none; }
+.bx-text .v.cited:hover .vt, .bx-text .v.cited:focus-visible .vt { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--rubric) 70%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: 0.25em; }
+.bx-text .v.cited:focus-visible sup { box-shadow: 0 0 0 2px var(--lapis); }
+.bx-text .v.is-on { background: color-mix(in srgb, var(--rubric) 14%, transparent); }
+.bx-text .v.is-on sup { background: var(--rubric); color: var(--leaf); box-shadow: none; }
 .bx-desk { position: sticky; top: 4.5rem; max-height: calc(100vh - 5.5rem); overflow: auto; background: var(--leaf); border: 1px solid var(--rule); padding: 1.2rem 1.3rem; overscroll-behavior: contain; }
 .bx-desk h2 { font-size: 1.6rem; margin: 0 0 0.4rem; }
 .bx-desk h3 { font-family: var(--font-body); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin: 1.2rem 0 0.4rem; }
@@ -2500,7 +2505,7 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 @media (max-width: 900px) {
   .bx-grid { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
   .bx-text { padding: 1.2rem 1.1rem; }
-  .bx-text p { font-size: 1.05rem; line-height: 1.9; }
+  .bx-text p { font-size: 1.05rem; line-height: 1.75; }
   .bx-desk { position: static; max-height: none; }
   .bx-desk.is-verse {
     position: fixed;
@@ -2628,8 +2633,9 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
 .gm-card { display: grid; grid-template-rows: auto 1fr; border: 1px solid var(--rule); border-radius: 16px; overflow: hidden; background: var(--leaf);
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.05), 0 14px 34px -18px rgb(0 0 0 / 0.35); scroll-margin-top: var(--header-offset); }
 .gm-shot { display: block; aspect-ratio: 3 / 2; background: #120f0b; overflow: hidden; }
-.gm-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
-.gm-card:hover .gm-shot img { transform: scale(1.025); }
+.gm-shot img { width: 100%; height: 100%; object-fit: cover; display: block; transition: filter 0.3s ease; }
+/* No scale on hover: the site's hover system forbids it (ui.test 'link hover system'). */
+.gm-card:hover .gm-shot img { filter: brightness(1.06); }
 .gm-body { padding: 1.2rem 1.3rem 1.3rem; display: grid; gap: 0.5rem; align-content: start; }
 .gm-kicker { margin: 0; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
 .gm-body h2 { margin: 0; font-size: 1.8rem; }
@@ -2640,3 +2646,71 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
 .gm-notes li { margin: 0.15rem 0; }
 .gm-more { margin-top: 1.6rem; }
 @media (prefers-reduced-motion: reduce) { .gm-shot img { transition: none; } }
+
+/* /works/ search results: Matching works, By meaning, Passages, then Writers. */
+.works-browse .title-results .work-title { font-size: 1.08rem; }
+@media (min-width: 900px) {
+  .works-browse .title-results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 2rem; }
+  /* Two to a line: the whole last row drops its rule, not just the last row item. */
+  .works-browse .title-results > li:nth-last-child(2):nth-child(odd) { border-bottom: 0; }
+}
+.works-browse .title-more {
+  font: inherit; font-size: 0.92rem; font-weight: 550; color: var(--ink); background: var(--leaf);
+  border: 1px solid var(--rule); border-radius: 999px; padding: 0.4rem 0.85rem; margin-top: 0.9rem; cursor: pointer;
+}
+.works-browse .title-more:hover { border-color: var(--gold); }
+.works-browse .title-more:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+.works-browse .writers-h { margin: 2.5rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+/* The first block under the status line needs no rule above it. */
+.works-browse :is(.passage-hits, .writers-h):not([hidden]):not(:is(.passage-hits, .writers-h):not([hidden]) ~ *) {
+  margin-top: 1rem; padding-top: 0; border-top: 0;
+}
+
+/* ---- Home doors: six cards, 3 x 2 on desktop, 2 x 3 on tablets, one per row on phones */
+.vp-home .vp-doors { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 52rem) { .vp-home .vp-doors { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 34rem) { .vp-home .vp-doors { grid-template-columns: minmax(0, 1fr); } }
+.vp-home .vp-doors a { grid-template-rows: auto 1fr auto; }
+
+/* ---- Fathers page (/authors/): era groups, three to a line on desktop (P18 sketch 4) */
+.au-era { margin-top: 2.2rem; scroll-margin-top: 5rem; }
+.au-era-h {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 0.45rem;
+}
+.au-era-h .au-era-span { color: var(--ink-soft); font-weight: 600; letter-spacing: 0.02em; text-transform: none; font-size: 0.95rem; }
+.au-era .card-list { margin-top: 0.3rem; }
+/* Later writers are not Fathers: their own panel, apart from the road. */
+.au-era-later {
+  margin-top: 3rem;
+  padding: 1.1rem 1.2rem 0.6rem;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 0.6rem;
+}
+.au-era-later .au-era-h { color: var(--ink); }
+.au-era-note { margin: 0 0 0.3rem; color: var(--ink-soft); font-size: 0.95rem; max-width: 40rem; }
+/* Phones: dates and count share one line under the name. */
+@media (max-width: 899px) {
+  .au-grid li a { flex-direction: row; flex-wrap: wrap; column-gap: 0.3rem; }
+  .au-grid li a strong { flex-basis: 100%; }
+  .au-grid .author-dates + span::before { content: "·\00a0"; }
+}
+@media (min-width: 900px) {
+  .au-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 1.6rem; }
+  /* Rules between rows only: the last row of each group drops its rule. */
+  .au-grid > li:nth-last-child(-n + 3):nth-child(3n + 1),
+  .au-grid > li:nth-last-child(-n + 3):nth-child(3n + 1) ~ li { border-bottom: 0; }
+}
+
+/* Home road: stops with the Fathers; one line under it for later writers. */
+.vp-road-later { margin: 0.55rem 0 0; font-size: 0.92rem; }
+.vp-road-later a { color: var(--lapis); text-decoration: none; font-weight: 600; }
+.vp-road-later .k { color: var(--ink-soft); font-weight: 500; }
+.vp-road-later a:hover, .vp-road-later a:focus-visible { text-decoration: underline; text-underline-offset: 0.18em; }

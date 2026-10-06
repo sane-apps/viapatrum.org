@@ -25,7 +25,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_audio import split_sentences
-from speak_text import read_text
+from speak_text import legacy_read_text, read_text
 
 ROOT = Path(__file__).resolve().parent.parent
 BOOKS = Path.home() / "SaneApps/clients/translations/books"
@@ -109,6 +109,12 @@ def section_candidates(work: str) -> dict:
 
     A later tip file must not hide the English the page was built from.
     The page text picks the winner.
+
+    Offsets are counted with the current cleaner and, until every recording is
+    re-voiced, with the pre-2026-10-06 one too: old-voice manifests were split
+    under the old words, and the drain does not re-record them (P14 review:
+    270 sections would lose Play). matching_choices keeps whichever window
+    matches the page.
     """
     folder = BOOKS / work / "translations"
     found = {}
@@ -117,16 +123,19 @@ def section_candidates(work: str) -> dict:
     for eng_file in sorted(folder.glob("*_english.json")):
         rows = json.loads(eng_file.read_text(encoding="utf-8"))
         rows = rows if isinstance(rows, list) else rows.get("sections", [])
-        idx = 0
-        for row in rows:
-            sec = str(row.get("section"))
-            n = 0
-            for para in row.get("english", []) or []:
-                n += len(split_sentences(read_text(para)))
-            if n <= 0:
-                continue
-            found.setdefault(sec, []).append((eng_file.stem, idx, idx + n - 1))
-            idx += n
+        for clean in (read_text, legacy_read_text):
+            idx = 0
+            for row in rows:
+                sec = str(row.get("section"))
+                n = 0
+                for para in row.get("english", []) or []:
+                    n += len(split_sentences(clean(para)))
+                if n <= 0:
+                    continue
+                cand = (eng_file.stem, idx, idx + n - 1)
+                if cand not in found.get(sec, []):
+                    found.setdefault(sec, []).append(cand)
+                idx += n
     return found
 
 
@@ -937,7 +946,7 @@ def _inject_reader(page: Path, ready: dict) -> int:
 # without re-routing while nothing routing reads has changed: the manifest,
 # the book's English files, this code, and the body text of every dist page.
 NOATTACH_CACHE = STATE / "audio-noattach-cache.json"
-_CODE_FILES = ("inject_audio.py", "build_audio.py", "speak_text.py")
+_CODE_FILES = ("inject_audio.py", "build_audio.py", "speak_text.py", "reader_text.py")
 
 
 def noattach_fingerprint(work: str, manifest_bytes: bytes) -> str | None:

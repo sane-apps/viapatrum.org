@@ -1,15 +1,22 @@
+import { pathToFileURL } from 'node:url';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { JSDOM } from 'jsdom';
+// Built site under test: FATHERS_DIST=<dir> (a package build) or the repo dist/.
+const DIST = process.env.FATHERS_DIST ? pathToFileURL(process.env.FATHERS_DIST.replace(/\/?$/, '/')) : new URL('../dist/', import.meta.url);
 const script = readFileSync(new URL('../assets/site.js', import.meta.url), 'utf8');
-const catalog = readFileSync(new URL('../dist/works/index.html', import.meta.url), 'utf8');
-const reader = readFileSync(new URL('../dist/works/julian-letter-to-rome/index.html', import.meta.url), 'utf8');
-const index = JSON.parse(readFileSync(new URL('../dist/data/search-index.json', import.meta.url), 'utf8'));
+const catalog = readFileSync(new URL('works/index.html',DIST), 'utf8');
+const reader = readFileSync(new URL('works/julian-letter-to-rome/index.html',DIST), 'utf8');
+const indexText = readFileSync(new URL('data/search-index.json',DIST), 'utf8');
+const index = JSON.parse(indexText);
+// P5 harness fix (outputs/pkg-P5-search-js/ui.test.mjs.patch): route like the site; a fresh parse per fetch.
+const fresh = () => JSON.parse(indexText);
+const site = async (u) => String(u).includes('/data/search-index.json') ? {ok:true,json:async()=>fresh()} : String(u).startsWith('/api/search') ? {ok:true,json:async()=>({results:[]})} : {ok:false};
 const longPassage = index.find(r=>r.kind==='work'&&r.text.length>600);
 const searchPhrase = longPassage.text.slice(450,510);
-const settle = () => new Promise(resolve => setImmediate(resolve));
-function mount(html, path='/works/', fetcher=async()=>({ok:true,json:async()=>index})) {
+const settle = () => new Promise(resolve => setTimeout(resolve, 260));
+function mount(html, path='/works/', fetcher=site) {
   const dom=new JSDOM(html,{url:`https://fathers.saneapps.com${path}`,runScripts:'outside-only',pretendToBeVisual:true});
   dom.window.fetch=fetcher;
   dom.window.eval(script);
@@ -32,7 +39,7 @@ test('failed passage index yields no hits; healthy fetch recovers',async()=>{
   query(bad,searchPhrase);await settle();
   assert.equal(bad.window.document.querySelectorAll('#passage-results a').length,0);
   bad.window.close();
-  const good=mount(catalog,'/works/',async()=>({ok:true,json:async()=>index}));
+  const good=mount(catalog,'/works/',site);
   await settle();
   query(good,searchPhrase);await settle();
   assert.ok(good.window.document.querySelector('#passage-results a'));
@@ -71,13 +78,13 @@ test('Contents jump target exists on reader pages',()=>{
 });
 
 test('author catalog prefetches the passage index for find-as-you-type',async()=>{
-  let calls=0;const dom=mount(catalog,'/works/',async()=>{calls++;return {ok:true,json:async()=>index};});
-  await settle();assert.equal(calls,1);query(dom,'numbering');await settle();assert.equal(calls,1);dom.window.close();
+  let calls=0;const dom=mount(catalog,'/works/',async(u)=>{if(String(u).includes('search-index'))calls++;return site(u);});
+  await settle();query(dom,'numbering');await settle();assert.equal(calls,1);query(dom,'numbers');await settle();assert.equal(calls,1);dom.window.close();
 });
 
 test('library progress line on About matches pipeline counts', ()=>{
-  const html=readFileSync(new URL('../dist/about/index.html',import.meta.url),'utf8');
-  const q=JSON.parse(readFileSync(new URL('../dist/data/progress.json',import.meta.url),'utf8'));
+  const html=readFileSync(new URL('about/index.html',DIST),'utf8');
+  const q=JSON.parse(readFileSync(new URL('data/progress.json',DIST),'utf8'));
   const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/about/'});
   const s=dom.window.document.querySelector('#explore-progress');assert.ok(s);
   assert.match(s.textContent,new RegExp(`${q.published_works} works live`));
@@ -88,7 +95,7 @@ test('library progress line on About matches pipeline counts', ()=>{
 });
 
 test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
-  const html=readFileSync(new URL('../dist/index.html',import.meta.url),'utf8');
+  const html=readFileSync(new URL('index.html',DIST),'utf8');
   const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/'});
   const doc=dom.window.document;
   assert.ok(doc.querySelector('link[rel="icon"]'),'favicon link present');
@@ -97,7 +104,7 @@ test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
   const card=doc.querySelector('[data-daily]');
   assert.ok(card,'today passage card');
   assert.ok(card.querySelector('.vp-daily-q').textContent.split(/\s+/).length>=14);
-  const pool=JSON.parse(readFileSync(new URL('../dist/data/daily.json',import.meta.url),'utf8'));
+  const pool=JSON.parse(readFileSync(new URL('data/daily.json',DIST),'utf8'));
   assert.ok(pool.length>=30,'daily pool too small: '+pool.length);
   const roman={i:'1',ii:'2',iii:'3',iv:'4',v:'5',vi:'6',vii:'7',viii:'8',ix:'9',x:'10'};
   const seen=new Set();
@@ -109,11 +116,11 @@ test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
   assert.ok(doc.querySelectorAll('.vp-road li').length>=10,'road of the Fathers');
   const play=doc.querySelector('.play-promo');
   assert.ok(play&&play.querySelector('a[href="https://play.viapatrum.org/daily"]'),'Play section kept');
-  assert.ok(doc.querySelector('#site-nav a[href="https://play.viapatrum.org/"]'),'Play nav kept');
+  assert.ok(doc.querySelector('#site-nav a[href="/games/"]'),'Games nav kept (owner 2026-10-06: Play became Games)');
   dom.window.close();
 });
 
-const page=(p)=>new JSDOM(readFileSync(new URL('../dist/'+p,import.meta.url),'utf8'),{url:'https://viapatrum.org/'+p.replace(/index\.html$/,'')}).window.document;
+const page=(p)=>new JSDOM(readFileSync(new URL(''+p,DIST),'utf8'),{url:'https://viapatrum.org/'+p.replace(/index\.html$/,'')}).window.document;
 
 test('question page timeline: one row per claim, stance marks link to passages', ()=>{
   const doc=page('topics/against-docetism/index.html');
@@ -144,10 +151,15 @@ test('free will: later turn sits in time order and the summary voice is labeled'
 
 test('over time overview: every question with stances gets a card and a mini timeline', ()=>{
   const doc=page('explore/index.html');
-  const data=JSON.parse(readFileSync(new URL('../dist/data/explore-index.json',import.meta.url),'utf8'));
+  const data=JSON.parse(readFileSync(new URL('data/explore-index.json',DIST),'utf8'));
   const withPoints=new Set(data.points.map(p=>p.topic));
   const cards=doc.querySelectorAll('.ot-card:not(.ot-belief)');
-  assert.equal(cards.length,data.topics.filter(t=>withPoints.has(t.id)).length);
+  // W3-topics (2026-10-06): a topic whose page draws no timeline (too few
+  // writers) gets no card; it is listed as a plain link below the cards.
+  for(const t of data.topics.filter(t=>withPoints.has(t.id))){
+    assert.ok(doc.getElementById(t.id)?.matches('.ot-card')||doc.querySelector(`a[href="/topics/${t.id}/"]`),'no card or link for '+t.id);
+  }
+  assert.ok(cards.length>=20,'expected most topics to have a card, got '+cards.length);
   for(const c of cards){
     assert.ok(c.querySelector('.tl-lane'),'mini timeline in '+c.id);
     assert.match(c.querySelector('h3 a').getAttribute('href'),/^\/topics\/[a-z0-9-]+\/#over-time$/);
@@ -162,19 +174,19 @@ test('beliefs live on the Timeline: a card per dividing question, no Beliefs tab
   assert.equal(cards.length,qs.length);
   for(const c of cards){
     assert.equal(c.querySelector('h3 a').getAttribute('href'),'/explore/'+c.id+'/');
-    assert.ok(readFileSync(new URL('../dist/explore/'+c.id+'/index.html',import.meta.url),'utf8').includes('class="tl tl-pos"'),'lanes on '+c.id);
+    assert.match(readFileSync(new URL('explore/'+c.id+'/index.html',DIST),'utf8'),/class="tl tl-pos[" ]/,'lanes on '+c.id);
   }
   assert.ok(!doc.querySelector('a[href^="/beliefs"]'),'no Beliefs link');
-  assert.match(readFileSync(new URL('../dist/_redirects',import.meta.url),'utf8'),/^\/beliefs\/:id\/ \/explore\/:id\/ 301$/m);
+  assert.match(readFileSync(new URL('_redirects',DIST),'utf8'),/^\/beliefs\/:id\/ \/explore\/:id\/ 301$/m);
 });
 
 test('favicon files ship in dist', ()=>{
-  assert.ok(readFileSync(new URL('../dist/favicon.ico',import.meta.url)).length>100);
-  assert.match(readFileSync(new URL('../dist/assets/favicon.svg',import.meta.url),'utf8'),/<svg/);
+  assert.ok(readFileSync(new URL('favicon.ico',DIST)).length>100);
+  assert.match(readFileSync(new URL('assets/favicon.svg',DIST),'utf8'),/<svg/);
 });
 
 test('link hover system ships in built CSS', ()=>{
-  const css=readFileSync(new URL('../dist/assets/site.css',import.meta.url),'utf8');
+  const css=readFileSync(new URL('assets/site.css',DIST),'utf8');
   const hovers=(css.match(/:hover/g)||[]).length;
   assert.ok(hovers>=40,'expected site-wide :hover coverage, got '+hovers);
   const focus=(css.match(/:focus-visible/g)||[]).length;
@@ -191,7 +203,7 @@ test('link hover system ships in built CSS', ()=>{
 
 test('library pass: /downloads/ and Keep this book link only uploaded files (owner 2026-10-05)', ()=>{
   let names;
-  try { names=JSON.parse(readFileSync(new URL('../dist/data/library-files.json',import.meta.url),'utf8')); } catch { return; } // no uploads yet: page not built
+  try { names=JSON.parse(readFileSync(new URL('data/library-files.json',DIST),'utf8')); } catch { return; } // no uploads yet: page not built
   const keys=Object.keys(names);
   assert.ok(keys.length>0,'library-files.json lists uploaded files');
   const doc=page('downloads/index.html');
@@ -210,12 +222,12 @@ test('scripture: only real chapters get pages; Greek Psalm numbers are refiled (
   const slug=(b)=>(b==='Psalm'?'Psalms':b).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
   const count={}; for(const [b,cs] of Object.entries(bsb.books)) count[slug(b)]=Object.keys(cs).length;
   const extra=new Set(['daniel/13','daniel/14','psalms/151']);
-  const root=new URL('../dist/scripture/',import.meta.url);
+  const root=new URL('scripture/',DIST);
   const over=[];
   for(const b of readdirSync(root)){ if(!count[b]) continue;
     for(const n of readdirSync(new URL(b+'/',root))) if(/^\d+$/.test(n)&&+n>count[b]&&!extra.has(b+'/'+n)) over.push(b+'/'+n); }
   assert.deepEqual(over,[],'no chapter page past the BSB count');
-  const sm=readFileSync(new URL('../dist/sitemap-scripture.xml',import.meta.url),'utf8');
+  const sm=readFileSync(new URL('sitemap-scripture.xml',DIST),'utf8');
   const bad=[...sm.matchAll(/\/scripture\/([^/]+)\/(\d+)\//g)].filter(m=>count[m[1]]&&+m[2]>count[m[1]]&&!extra.has(m[1]+'/'+m[2]));
   assert.equal(bad.length,0,'sitemap has no missing chapters');
   const desk=(p)=>[...page(p).querySelectorAll('.sc-list li')].map(li=>li.textContent);
@@ -237,7 +249,7 @@ test('scripture: only real chapters get pages; Greek Psalm numbers are refiled (
   assert.match(page('scripture/psalms/114/index.html').querySelector('.bx-psalm-note').textContent,/their Psalm\s114 is our Psalm\s116\b/);
   assert.match(page('scripture/psalms/113/index.html').querySelector('.bx-psalm-note').textContent,/their Psalm\s113 is our Psalms\s114 and 115\b/);
   assert.ok(!/numbered differently/.test(page('scripture/daniel/13/index.html').body.textContent),'Susanna is not "numbered differently"');
-  assert.ok(existsSync(new URL('../dist/scripture/daniel/13/index.html',import.meta.url)),'Susanna keeps its page');
+  assert.ok(existsSync(new URL('scripture/daniel/13/index.html',DIST)),'Susanna keeps its page');
 });
 
 test('authors: dates on every row but known gaps, no "0 passages", Augustine on the standard hub (audit 2026-10-06)', ()=>{
@@ -255,4 +267,67 @@ test('authors: dates on every row but known gaps, no "0 passages", Augustine on 
   const dio=page('authors/mathetes-epistle-to-diognetus/index.html');
   assert.doesNotMatch(dio.querySelector('.fa-head .author-dates')?.textContent||'',/\bfl\./);
   assert.ok(!/What Letter to Diognetus said/.test(dio.body.textContent));
+});
+
+// ---- S-search (sketch 1): results first, Matching works by title ----
+const doc=(dom)=>dom.window.document;
+const tpl=()=>{const d=new JSDOM(catalog);return [...d.window.document.querySelector('#works-by-title').content.querySelectorAll('li.title-entry')];};
+test('search blocks run Matching works, By meaning, Passages, Writers',()=>{
+  const d=new JSDOM(catalog).window.document;
+  const ids=['#works-status','#title-hits','#meaning-hits','#passage-hits','#writers-h','#works-list'].map(s=>d.querySelector(s));
+  assert.ok(ids.every(Boolean));
+  for(let i=1;i<ids.length;i++) assert.ok(ids[i-1].compareDocumentPosition(ids[i])&4,'order at '+i);
+  assert.equal(d.querySelector('#passage-hits h2').textContent,'Passages');
+  assert.equal(d.querySelector('#title-hits h2').textContent,'Matching works');
+});
+test('a work title search lists that work once, first, linking to the reader',async()=>{
+  const li=tpl().find(l=>/Witch of Endor/i.test(l.textContent))||tpl()[0];
+  const title=li.querySelector('.work-title').textContent;
+  const dom=mount(catalog);await settle();
+  query(dom,title);await settle();await settle();
+  const rows=[...doc(dom).querySelectorAll('#title-results a')];
+  assert.ok(rows.length>=1);
+  assert.equal(rows[0].getAttribute('href'),li.querySelector('a').getAttribute('href'));
+  assert.equal(rows.filter(a=>a.getAttribute('href')===rows[0].getAttribute('href')).length,1);
+  assert.equal(doc(dom).querySelector('#title-hits').hidden,false);
+  assert.match(doc(dom).querySelector('#works-status').textContent,/^\d+ works? (and \d+ passages? )?match(es)? “/);
+  dom.window.close();
+});
+test('status drops the zero part and the Writers heading follows writer matches',async()=>{
+  const dom=mount(catalog);await settle();
+  assert.equal(doc(dom).querySelector('#writers-h').hidden,true);
+  const author=doc(dom).querySelector('#works-list > li.author-entry').getAttribute('data-author');
+  query(dom,author);await settle();await settle();
+  assert.equal(doc(dom).querySelector('#writers-h').hidden,false);
+  query(dom,'zzzznonexistent');await settle();await settle();
+  assert.equal(doc(dom).querySelector('#writers-h').hidden,true);
+  assert.equal(doc(dom).querySelector('#title-hits').hidden,true);
+  assert.match(doc(dom).querySelector('#works-status').textContent,/^No works or passages match/);
+  assert.equal(doc(dom).querySelector('#works-empty').hidden,false);
+  dom.window.close();
+});
+test('Matching works caps at 20 with Show all N works',async()=>{
+  const dom=mount(catalog);await settle();
+  query(dom,'the');await settle();await settle();
+  const more=doc(dom).querySelector('#title-more');
+  assert.equal(doc(dom).querySelectorAll('#title-results > li').length,20);
+  assert.equal(more.hidden,false);
+  const n=Number(more.textContent.match(/\d+/)[0]);assert.ok(n>20);
+  assert.match(doc(dom).querySelector('#works-status').textContent,new RegExp('^'+n+' works and [\\d,]+ passages match “the”'));
+  more.click();
+  assert.equal(doc(dom).querySelectorAll('#title-results > li').length,n);
+  assert.equal(more.hidden,true);
+  dom.window.close();
+});
+test('starting a search resets the era filter to All',async()=>{
+  const dom=mount(catalog);await settle();
+  const chip=[...doc(dom).querySelectorAll('[data-filter]')].find(b=>b.getAttribute('data-filter')!=='all'&&!b.hidden);
+  chip.click();
+  assert.equal(chip.getAttribute('aria-pressed'),'true');
+  const author=[...doc(dom).querySelectorAll('#works-list > li.author-entry')].find(li=>!(li.getAttribute('data-era')||'').split(/\s+/).includes(chip.getAttribute('data-filter'))).getAttribute('data-author');
+  query(dom,author);await settle();
+  assert.equal(doc(dom).querySelector('[data-filter="all"]').getAttribute('aria-pressed'),'true');
+  assert.equal(chip.getAttribute('aria-pressed'),'false');
+  assert.ok(doc(dom).querySelectorAll('#works-list > li.author-entry:not([hidden])').length>0);
+  dom.window.close();
 });

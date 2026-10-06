@@ -16,7 +16,11 @@ only to unlocked browsers. This script:
             renders as /downloads/ and the per-work download links. Every
             file passes the worksheet-note gate (WORKSHEET below) first; one
             hit marks that format "dirty" in library.json (the page hides
-            it), stops the sync and blocks upload.
+            it), stops the sync and blocks upload. Also builds the
+            audiobook era zips (AUDIO_ZIPS).
+  audio-zips  only the audiobook era zips, into the existing library.json
+            (store-only, each at most 2 GB, not uploaded until upload runs;
+            the page links a zip only once it is uploaded).
   upload    sends new or changed files to R2 through /api/library/admin
             (big files in 50 MB parts) and marks them uploaded in
             library.json. A file is linked on the site only once uploaded.
@@ -27,6 +31,7 @@ site build that made them (--app-dir, required: no build, no sync).
 
   python3 scripts/library_sync.py word --app-dir outputs/dl-test/dist-snapshot/app/v1
   python3 scripts/library_sync.py assemble --app-dir outputs/dl-test/dist-snapshot/app/v1
+  python3 scripts/library_sync.py audio-zips --app-dir outputs/dl-test/dist-snapshot/app/v1
   python3 scripts/library_sync.py gate outputs/downloads/word/*.zip
   python3 scripts/library_sync.py upload --base https://viapatrum.org
   (upload needs CLOUDFLARE_API_TOKEN: source ~/.config/nv/env)
@@ -396,6 +401,79 @@ def bundle(name: str, files: list[tuple[Path, str]]) -> Path | None:
     return out
 
 
+# Audiobooks as a few zips, one per era (2026-10-06 sketch item 8), instead
+# of 229 downloads in a row. Didymus the Blind alone is 2.2 GB, so he gets two
+# zips of his own. Years are the site's author_sort_year (app export), so the
+# zips match the era headings on /downloads/. Each zip stays at or under
+# ZIP_MAX so older unzip tools cope.
+AUDIO_ZIPS = (
+    ("before-nicaea", "Before Nicaea", ""),
+    ("nicaea-to-chalcedon", "Nicaea to Chalcedon", "Didymus the Blind is in his own zips."),
+    ("didymus-psalms", "Didymus the Blind on the Psalms", ""),
+    ("didymus-other", "Didymus the Blind, other works", ""),
+    ("after-chalcedon", "After Chalcedon and later", ""),
+)
+ZIP_MAX = 2 * 1024 ** 3
+FREE_MIN = 15 * 1000 ** 3  # never zip below this much free disk (2026-10-06 disk-full crash)
+
+
+def audio_zip_of(w: dict) -> str:
+    """Which era zip a work's audiobook goes in."""
+    if "didymus" in (w.get("author") or "").lower():
+        return "didymus-psalms" if "psalm" in w["slug"] else "didymus-other"
+    y = w.get("year")
+    y = 9999 if y is None else int(y)
+    return "before-nicaea" if y < 325 else "nicaea-to-chalcedon" if y < 451 else "after-chalcedon"
+
+
+def audio_bundles(works: list[dict]) -> list[dict]:
+    """Build the era zips (store-only) and return their bundle entries, kind "audio".
+    Refuses a zip over ZIP_MAX and refuses to start below FREE_MIN free disk."""
+    groups: dict[str, list[tuple[Path, str]]] = {k: [] for k, _, _ in AUDIO_ZIPS}
+    for w in works:
+        f = (w.get("files") or {}).get("audio")
+        if f and (OUT / f["key"]).is_file():
+            groups[audio_zip_of(w)].append((OUT / f["key"], f["name"]))
+    need = 0
+    for i, (k, _, _) in enumerate(AUDIO_ZIPS, 1):
+        out = OUT / "bundles" / f"via-patrum-audiobooks-{i}-{k}.zip"
+        total = sum(p.stat().st_size for p, _ in groups[k])
+        if total > ZIP_MAX:
+            sys.exit(f"BLOCKED: the {k} audiobook zip would be {total / 1e9:.2f} GB, over the 2 GB cap; split it in AUDIO_ZIPS")
+        if not out.is_file() or out.stat().st_size < total:
+            need += total
+    free = shutil.disk_usage(OUT).free
+    if need and free - need < FREE_MIN:
+        sys.exit(f"BLOCKED: {free / 1e9:.1f} GB free; the audiobook zips need {need / 1e9:.1f} GB and 15 GB must stay free")
+    entries = []
+    for i, (k, label, note) in enumerate(AUDIO_ZIPS, 1):
+        name = f"via-patrum-audiobooks-{i}-{k}.zip"
+        p = bundle(name, sorted(groups[k], key=lambda x: x[1]))
+        if p:
+            entries.append({"kind": "audio", "era": k, "label": label, "note": note, "key": f"bundles/{name}",
+                            "bytes": p.stat().st_size, "count": len(groups[k]), "name": name, "sha256": sha256(p)})
+    return entries
+
+
+def audio_zips(app_dir: Path) -> int:
+    """Build or refresh only the era audiobook zips in an existing library.json.
+    Years come from the site build (--app-dir); other bundles and works are kept.
+    New zips are marked not uploaded until `upload` sends them."""
+    data = load(CATALOG)
+    if not data.get("works"):
+        sys.exit("run assemble first")
+    site = site_catalog(app_dir)
+    works = [{**w, "year": (site.get(w["slug"]) or {}).get("year", w.get("year"))} for w in data["works"]]
+    ledger = load(LEDGER)
+    fresh = audio_bundles(works)
+    for b in fresh:
+        b["uploaded"] = ledger.get(b["key"]) == b["sha256"]
+        print(f"  {b['name']}: {b['count']} audiobooks, {b['bytes'] / 1e9:.2f} GB, uploaded={b['uploaded']}", flush=True)
+    data["bundles"] = [b for b in data.get("bundles") or [] if b.get("kind") != "audio"] + fresh
+    CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    return 0
+
+
 def nice_name(title: str, author: str, ext: str) -> str:
     base = f"{title} - {author}" if author else title
     base = "".join(c for c in base if c not in '\\/:*?"<>|').strip()
@@ -486,6 +564,7 @@ def assemble(app_dir: Path) -> int:
         if p:
             bundles.append({"kind": kind, "label": label, "key": f"bundles/{name}", "bytes": p.stat().st_size,
                             "count": len(files_by_kind[kind]), "name": name, "sha256": sha256(p)})
+    bundles += audio_bundles(works)
     for item in [x for w in works for x in w["files"].values()] + bundles:
         item["uploaded"] = bool(item.get("sha256") and uploaded.get(item["key"]) == item["sha256"])
     hours = sum((w["files"].get("audio") or {}).get("duration_s", 0) for w in works) / 3600
@@ -639,6 +718,8 @@ def main() -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     asm = sub.add_parser("assemble")
     asm.add_argument("--app-dir", required=True, help="app export of the site build (catalog.json + works/)")
+    az = sub.add_parser("audio-zips", help="build only the era audiobook zips into library.json (not uploaded)")
+    az.add_argument("--app-dir", required=True, help="app export of the site build (catalog.json, for author years)")
     wd = sub.add_parser("word", help="build the Word-for-Logos zips from the site build")
     wd.add_argument("--app-dir", required=True, help="app export of the site build (catalog.json + works/)")
     wd.add_argument("--only", default="", help="comma list of slugs")
@@ -668,7 +749,7 @@ def main() -> int:
         # Lemon Squeezy product is published (2026-10-06 review).
         sys.exit("BLOCKED: set-checkout is for LIBRARY_STATE test catalogues; use go-live for production")
     lock()
-    if a.cmd in ("assemble", "word"):
+    if a.cmd in ("assemble", "word", "audio-zips"):
         app_dir = Path(a.app_dir).resolve()
         try:
             os.nice(10)
@@ -676,6 +757,8 @@ def main() -> int:
             pass
         if a.cmd == "word":
             return word(app_dir, a.only, a.jobs, a.force)
+        if a.cmd == "audio-zips":
+            return audio_zips(app_dir)
         return assemble(app_dir)
     if a.cmd == "go-live":
         key = os.environ.get("LEMONSQUEEZY_API_KEY", "")

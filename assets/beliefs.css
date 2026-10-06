@@ -62,6 +62,43 @@
 .bmethod { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; font-size: 0.95rem; color: var(--ink-soft); }
 @media (prefers-reduced-motion: reduce) { .tl-row[data-trads] { transition: none; } }
 
+/* When each position was formally defined (P18 item 5). Inside the lane: a gold
+   diamond (red for condemned) on its own row, with a faint line through the
+   lane. After the lane ends: a plain label, right of the lane on a wide
+   question page, on the claim line on phones and cards. Not links (rule 2). */
+.tl-defline { position: absolute; top: 0; bottom: 0; border-left: 1.5px dotted var(--gold); opacity: 0.75; }
+.tl-pt.tl-defpt { cursor: default; }
+.tl-pt.tl-defpt .dot { flex-basis: 10px; width: 10px; height: 10px; margin: 0 1px; border-radius: 1px;
+  transform: rotate(45deg); background: var(--gold); box-shadow: 0 0 0 2px var(--leaf); }
+.tl-pt.tl-defpt .nm { color: var(--gold); font-weight: 700; }
+.tl-pt.tl-defpt.condemned .dot { background: var(--deny); }
+.tl-pt.tl-defpt.condemned .nm { color: var(--deny); }
+.tl-key.tl-defkey { width: 10px; height: 10px; border-radius: 1px; transform: rotate(45deg); background: var(--gold); margin: 0 0.15rem; }
+.tl-key.tl-defkey.condemned { background: var(--deny); }
+.tl-defarrow { color: var(--gold); font-weight: 700; }
+.tl-defcap { font: 700 0.8rem/1.2 var(--font-body); color: var(--gold); white-space: nowrap; }
+.tl-defcap.condemned { color: var(--deny); }
+.tl-defcap.never { color: var(--ink-soft); font-weight: 600; font-style: italic; }
+.tl-defcap-line .sep { color: var(--ink-soft); }
+.tl-pos .tl-tally { white-space: normal; }
+.tl-pos .tl-tally > span { white-space: nowrap; }
+.tl-defcap-gut { display: none; }
+@media (min-width: 641px) {
+  .tl-pos.has-cap:not(.tl-compact) { --cap-w: 8.5rem; }
+  .tl-pos.has-cap:not(.tl-compact) > .tl-eras,
+  .tl-pos.has-cap:not(.tl-compact) > .tl-axis,
+  .tl-pos.has-cap:not(.tl-compact) .tl-lane { margin-right: var(--cap-w); }
+  .tl-pos:not(.tl-compact) .tl-defcap-gut { display: block; position: absolute; top: 15px; transform: translateY(-50%);
+    left: calc(100% + 0.7rem); width: calc(var(--cap-w) - 0.7rem); white-space: normal; }
+  .tl-pos:not(.tl-compact) .tl-defcap-line { display: none; }
+}
+
+/* Cards with no deciding passage: each position and when it was defined. */
+.bdefs { list-style: none; margin: 0.2rem 0 0; padding: 0; display: grid; gap: 0.25rem; }
+.bdefs li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem;
+  padding: 0.25rem 0; border-top: 1px solid var(--rule); }
+.bdefs-name { font: 0.95rem/1.4 var(--font-read); color: var(--ink); }
+
 /* Phone cards: every tally on its own line, so rows in one card line up. */
 @media (max-width: 640px) {
   .tl-pos.tl-compact .tl-claim { flex-wrap: wrap; }

@@ -291,6 +291,22 @@
     const passageResults = browse.querySelector("#passage-results");
     const meaningHits = browse.querySelector("#meaning-hits");
     const meaningResults = browse.querySelector("#meaning-results");
+    // Search results run: Matching works, By meaning, Passages, Writers.
+    const titleHits = browse.querySelector("#title-hits");
+    const titleResults = browse.querySelector("#title-results");
+    const titleMore = browse.querySelector("#title-more");
+    const titleTemplate = browse.querySelector("#works-by-title");
+    const passageNote = browse.querySelector("#passage-note");
+    const passageNoteText = passageNote ? passageNote.textContent : "";
+    const writersH = browse.querySelector("#writers-h");
+    const TITLE_CAP = 20;
+    let titleEntries = null;
+    let titleBySlug = null;
+    let entryHits = new Map();
+    let titleCount = 0;
+    let titleExpanded = false;
+    let titleHtml = "";
+    let wasSearching = false;
     let meaningTimer = 0;
     let meaningSeq = 0;
     let meaningCount = 0;
@@ -317,7 +333,7 @@
       if (f === "oet") return li.getAttribute("data-oet") === "1";
       return (li.getAttribute("data-era") || "").split(/\s+/).includes(f);
     };
-    const plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+    const plural = (n, one, many) => `${n.toLocaleString("en-US")} ${n === 1 ? one : many}`;
 
     // Shards listed in data/search/manifest.json, read in order; the single
     // data/search-index.json is the fallback. Each row's search text is
@@ -375,14 +391,93 @@
         status.textContent = `${lead} · ${workCount} works · sorted by ${sortLabel}`;
         return;
       }
-      const authors = visible.length ? ` · ${plural(visible.length, "writer", "writers")} by name or title` : "";
+      const writers = visible.length ? ` · ${plural(visible.length, "writer", "writers")}` : "";
       if (!searchIndex || passageTerm !== term) status.textContent = "Searching…";
-      else if (indexFailed) status.textContent = `Word search did not load. Try again later.${authors}`;
-      else if (passageCount) {
-        const shown = passageCount > 40 ? " (first 40 listed)" : "";
-        status.textContent = `${plural(passageCount, "passage matches", "passages match")} “${lastShown}”${shown}${authors}`;
+      else if (indexFailed)
+        status.textContent = titleCount
+          ? `${plural(titleCount, "work matches", "works match")} “${lastShown}” by title or writer. Word search did not load; try again later.`
+          : `Word search did not load. Try again later.${writers}`;
+      else {
+        // "N works and M passages match"; a part that is 0 is left out.
+        const parts = [];
+        if (titleCount) parts.push(plural(titleCount, "work", "works"));
+        if (passageCount) parts.push(plural(passageCount, "passage", "passages"));
+        const verb = parts.length > 1 || titleCount + passageCount > 1 ? "match" : "matches";
+        status.textContent = parts.length
+          ? `${parts.join(" and ")} ${verb} “${lastShown}”`
+          : `No works or passages match “${lastShown}”${writers}`;
       }
-      else status.textContent = `No passages match “${lastShown}”${authors}`;
+    };
+
+    // Rows of the Title template, one per work (a series in books is one
+    // row); read once, on the first search.
+    const readTitles = () => {
+      if (titleEntries) return titleEntries;
+      titleEntries = [];
+      titleBySlug = new Map();
+      const lis = titleTemplate && titleTemplate.content ? titleTemplate.content.querySelectorAll("li.title-entry") : [];
+      lis.forEach((li, order) => {
+        const a = li.querySelector("a");
+        const title = (li.querySelector(".work-title") || {}).textContent || "";
+        const meta = (li.querySelector(".meta") || {}).textContent || "";
+        const e = { order, href: a ? a.getAttribute("href") : "", title, meta, lc: title.toLowerCase(), find: `${title} ${meta}`.toLowerCase() };
+        titleEntries.push(e);
+        for (const s of (li.getAttribute("data-slug") || "").split(/\s+/)) if (s) titleBySlug.set(s, e);
+      });
+      return titleEntries;
+    };
+    // A work's passage row ("/works/<slug>/<section>/") -> its title row.
+    const titleForRow = (row) => {
+      const slug = String(row.href || "").split("/")[2];
+      if (!slug) return null;
+      readTitles();
+      let e = titleBySlug.get(slug);
+      if (!e) {
+        // Not in the template: title from the row ("Title §3: head").
+        const title = String(row.title || slug).split(" §")[0];
+        const meta = row.author || "";
+        e = { order: titleEntries.length, href: `/works/${slug}/`, title, meta, lc: title.toLowerCase(), find: `${title} ${meta}`.toLowerCase() };
+        titleEntries.push(e);
+        titleBySlug.set(slug, e);
+      }
+      return e;
+    };
+
+    // Matching works: title or writer matches at once; works whose passages
+    // match join once the passage scan for this term has run. Title matches
+    // first, then most matching passages, then A–Z.
+    const renderTitles = (term, searching) => {
+      if (!titleHits || !titleResults) return;
+      let html = "";
+      titleCount = 0;
+      if (searching) {
+        const counted = passageTerm === term;
+        const hits = [];
+        for (const e of readTitles()) {
+          const n = counted ? entryHits.get(e) || 0 : 0;
+          if (n || e.find.includes(term)) hits.push({ e, n, t: e.lc.includes(term) ? 1 : 0 });
+        }
+        hits.sort((a, b) => b.t - a.t || b.n - a.n || a.e.order - b.e.order);
+        titleCount = hits.length;
+        html = (titleExpanded ? hits : hits.slice(0, TITLE_CAP))
+          .map(
+            ({ e, n }) =>
+              `<li><a href="${escapeHtml(e.href)}"><strong class="work-title">${escapeHtml(e.title)}</strong><span>${escapeHtml(
+                e.meta
+              )}${n ? ` · ${plural(n, "matching passage", "matching passages")}` : ""}</span></a></li>`
+          )
+          .join("");
+      }
+      // Rewrite only on change, so a focused row keeps focus.
+      if (html !== titleHtml) {
+        titleResults.innerHTML = html;
+        titleHtml = html;
+      }
+      titleHits.hidden = titleCount === 0;
+      if (titleMore) {
+        titleMore.hidden = titleExpanded || titleCount <= TITLE_CAP;
+        titleMore.textContent = `Show all ${titleCount} works`;
+      }
     };
 
     // The empty note shows only when nothing at all is listed.
@@ -399,12 +494,13 @@
             !indexFailed &&
             passageTerm === term &&
             passageCount === 0 &&
+            titleCount === 0 &&
             meaningCount === 0 &&
             !meaningPending;
       }
       if (show && !searching) empty.textContent = "No writers in this group yet.";
       else if (show)
-        empty.innerHTML = `Nothing in the library matches “${escapeHtml(lastShown)}”. You can also try <a href="/topics/">Questions</a> or <a href="/scripture/">Scripture</a>.`;
+        empty.innerHTML = `Nothing in the library matches “${escapeHtml(lastShown)}”. You can also try <a href="/topics/">Topics</a> or <a href="/scripture/">Scripture</a>.`;
       else if (empty.innerHTML !== emptyHtml) empty.innerHTML = emptyHtml;
       empty.hidden = !show;
     };
@@ -470,6 +566,16 @@
       lastShown = (q && q.value ? q.value : "").trim();
       const searching = term.length >= 2;
       browse.classList.toggle("searching", searching);
+      if (termChanged) titleExpanded = false;
+      // A new search looks in every era: the era chips are hidden while a
+      // term is in the box, so a leftover era must not narrow the results.
+      if (searching && !wasSearching && filter !== "all") {
+        filter = "all";
+        browse.querySelectorAll("[data-filter]").forEach((b) => {
+          b.setAttribute("aria-pressed", b.getAttribute("data-filter") === "all" ? "true" : "false");
+        });
+      }
+      wasSearching = searching;
       // After a failed load, the next new term (debounced) tries once more.
       if (scan && searching && indexFailed && !indexPromise && term !== failedTerm) searchIndex = null;
       if (searching && !searchIndex) loadIndex();
@@ -510,12 +616,15 @@
       if (!inDom.every((li, i) => li === visible[i])) visible.forEach((li) => list.appendChild(li));
       if (termChanged) meaningSearch(term);
       if (scan && passageTerm !== term) scanPassages(term, searching);
+      renderTitles(term, searching);
+      if (writersH) writersH.hidden = !(searching && visible.length);
       lastVisible = visible;
       refresh();
     };
 
     const scanPassages = (term, searching) => {
       passageCount = 0;
+      entryHits = new Map();
       passageTerm = !searching || searchIndex ? term : null;
       if (passageHits && passageResults) {
         if (searching && searchIndex) {
@@ -524,8 +633,15 @@
             if (!row._b.includes(term)) continue;
             passageCount++;
             if (hits.length < 40) hits.push(row);
+            if (row.kind === "work") {
+              const e = titleForRow(row);
+              if (e) entryHits.set(e, (entryHits.get(e) || 0) + 1);
+            }
           }
           passageHits.hidden = hits.length === 0;
+          if (passageNote)
+            passageNote.textContent =
+              passageCount > 40 ? `${passageNoteText} The first 40 of ${passageCount.toLocaleString("en-US")} are listed.` : passageNoteText;
           passageResults.innerHTML = hits
             .map(
               (h) =>
@@ -569,6 +685,14 @@
         apply();
       });
     });
+    if (titleMore) {
+      titleMore.addEventListener("click", () => {
+        titleExpanded = true;
+        renderTitles(lastTerm, lastTerm.length >= 2);
+        const next = titleResults && titleResults.children[TITLE_CAP];
+        if (next) next.querySelector("a")?.focus();
+      });
+    }
     if (q) {
       let inputTimer = 0;
       q.addEventListener("input", () => {

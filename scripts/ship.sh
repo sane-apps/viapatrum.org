@@ -49,7 +49,8 @@ Usage: scripts/ship.sh [--dry-run] [--skip-build] [--audio-only]
   --skip-build    Reuse existing dist/ (all catalogue/browser/review gates still apply)
   --audio-only    Add players for audio recorded since the last ship to a clone of
                   the last shipped site, upload that audio, deploy, run live checks.
-                  No rebuild. Blocks when functions/, scripts/inject_audio.py or
+                  No rebuild. Blocks when functions/, scripts/inject_audio.py, the
+                  text cleaners (speak_text, reader_text, build_audio) or
                   assets/readalong.js changed since the last ship.
                   Re-recorded passages that already had a player need a full ship.
 
@@ -552,7 +553,9 @@ PY
 }
 
 # Recorded in the shipped-site receipt; --audio-only compares against it.
-INJECT_PY_SHA="$(sha_of "$ROOT/scripts/inject_audio.py")"
+# Covers the text cleaners too (2026-10-06 P14): a cleaner change moves the
+# sentence offsets players attach by, and the clone keeps the old page text.
+INJECT_PY_SHA="$(cat "$ROOT"/scripts/{inject_audio,speak_text,reader_text,build_audio}.py | shasum -a 256 | cut -d' ' -f1)"
 AO_PROBE_PATH=""
 AO_PROBE_TOKEN=""
 
@@ -580,7 +583,7 @@ print(int(bool(r.get("verified"))), r.get("audio_cut", 0), r.get("functions_sha"
   # The clone keeps the last ship's readalong.js under its ?v; new player
   # markup or new JS would ship without the readalong and UI gates.
   if [[ "$INJECT_PY_SHA" != "$LAST_INJECT" ]]; then
-    echo "BLOCKED: scripts/inject_audio.py changed since the last ship (or the receipt predates this check); run a full ship" >&2
+    echo "BLOCKED: scripts/inject_audio.py or a text cleaner changed since the last ship (or the receipt predates this check); run a full ship" >&2
     exit 1
   fi
   if [[ "$(sha_of "$ROOT/assets/readalong.js")" != "$LAST_READALONG" ]]; then

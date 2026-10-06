@@ -72,7 +72,7 @@ function sectionCards() {
   const verse = '“Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.”';
   const S = [
     ['home', ['/'], 'Free for the whole world', 'Read the early Church in its own words', verse, 'Jeremiah 6:16'],
-    ['topics', ['/topics/'], 'Questions', 'What did the early Church teach?', 'Each question answered in the writers’ own words, with the passages to read.'],
+    ['topics', ['/topics/'], 'Topics', 'What did the early Church teach?', 'Each topic in the writers’ own words, with the passages to read.'],
     ['authors', ['/authors/'], 'Fathers', 'The writers, in order', 'Every writer in the library, earliest first, with dates and works.'],
     ['works', ['/works/'], 'Works', 'The library', 'Whole works in faithful modern English, to read straight through.'],
     ['explore', ['/explore/'], 'Timeline', 'How the answers line up over time', 'What each early writer taught, claim by claim, century by century.'],
@@ -142,7 +142,7 @@ function topicCards() {
     if (!html) continue;
     const title = text(first(html, /<h1[^>]*>([\s\S]*?)<\/h1>/));
     if (!title) continue;
-    const eyebrow = text(first(html, /<p class="eyebrow">([\s\S]*?)<\/p>/) || '') || 'Questions';
+    const eyebrow = text(first(html, /<p class="eyebrow">([\s\S]*?)<\/p>/) || '') || 'Topics';
     const quotes = [];
     const re = /<article class="excerpt topic-card"[\s\S]*?<h2><a [^>]*>([\s\S]*?)<\/a>[\s\S]*?<p class="meta">([\s\S]*?)<\/p>[\s\S]*?<blockquote class="topic-lead">([\s\S]*?)<\/blockquote>/g;
     let m;

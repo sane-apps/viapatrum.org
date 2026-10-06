@@ -15,6 +15,7 @@ states its distinguishing mark or rules it out; shared ground counts for no one.
 """
 import datetime
 import json
+import re
 from html import escape
 from pathlib import Path
 
@@ -188,22 +189,113 @@ def _trad_badges(pos: dict) -> str:
     return "".join(f'<span class="btrad">{escape(TRAD_NAME.get(t, t))}</span>' for t in pos.get("traditions") or [])
 
 
+# When each position was formally defined, read from the first_defined text
+# (sketch P18 item 5). Each ';' part with a year gives one dated mark; its kind
+# comes from the words in that part. No dated part means "Never defined".
+_YEAR = re.compile(r"\b(\d{3,4})\b")
+_DEF_KINDS = (
+    ("condemned", re.compile(r"^\s*condemned", re.I)),
+    ("canon", re.compile(r"\(\d{3,4}, canon", re.I)),
+    ("local", re.compile(r"\blocal\b|Synod of Jerusalem|Carthage|Hippo|Toledo")),
+    ("confession", re.compile(r"Confession|Articles|Formula|Catechism|Treatise|Platform|Apology|Consensus|Ordinal|Dort|Westminster|Baptist Faith")),
+    ("defined", re.compile(r"Council|Lateran|Trent|Vatican|Pius|Clement|Lyon|Florence")),
+)
+DEF_WORD = {"defined": "Defined", "condemned": "Condemned", "confession": "Confession",
+            "local": "Local council", "canon": "Council canon", "never": "Never defined"}
+_CAP_RANK = {"defined": 0, "condemned": 0, "confession": 1, "local": 2, "canon": 3}
+
+
+def defined_marks(pos: dict, end: int) -> tuple[dict | None, dict | None]:
+    """(tick, cap): the earliest definition inside the lane (year <= end), and the
+    one shown at the right edge (after the lane ends, or "Never defined").
+    A dogma beats a confession beats a local council for the cap, then earliest."""
+    text = pos.get("first_defined") or ""
+    found = []
+    for part in text.split(";"):
+        m = _YEAR.search(part)
+        kind = next((k for k, rx in _DEF_KINDS if rx.search(part)), None) if m else None
+        if kind:
+            found.append({"kind": kind, "year": int(m.group(1))})
+    if not found:
+        return None, ({"kind": "never", "year": None} if text else None)
+    inside = sorted((f for f in found if f["year"] <= end), key=lambda f: f["year"])
+    after = sorted((f for f in found if f["year"] > end), key=lambda f: (_CAP_RANK[f["kind"]], f["year"]))
+    return (inside[0] if inside else None), (after[0] if after else None)
+
+
+def def_label(mark: dict) -> str:
+    return DEF_WORD[mark["kind"]] + (f" {mark['year']}" if mark.get("year") else "")
+
+
+def _def_title(pos: dict, kind: str = "") -> str:
+    text = pos["first_defined"]
+    lead = ("" if text.startswith("No ") else "No formal definition. ") if kind == "never" else "Formally defined: "
+    return escape(lead + text, quote=True)
+
+
+def _cap_html(pos: dict, cap: dict, cls: str) -> str:
+    arrow = " →" if cap.get("year") else ""
+    return (f'<span class="tl-defcap {cls} {cap["kind"]}" title="{_def_title(pos, cap["kind"])}">'
+            f'{escape(def_label(cap))}{arrow}</span>')
+
+
+def _tick_html(pos: dict, tick: dict, row: int, row_sm: int, lane_px: int, B) -> str:
+    """A diamond at the year it was defined, alone in the lane's last row so it
+    never sits on a writer's name, with a faint line through the whole lane."""
+    x = B.tl_pct(tick["year"])
+    text = def_label(tick)
+    _, flip = B.tl_pack_row([], x, len(text), lane_px, 7.3)
+    _, flip_sm = B.tl_pack_row([], x, len(text), 350, 6.4)
+    return (f'<span class="tl-defline" style="left:{x}%" aria-hidden="true"></span>'
+            f'<span class="tl-pt tl-defpt named {tick["kind"]}{" flip" if flip else ""}{" flip-sm" if flip_sm else ""}" '
+            f'style="left:{x}%;--row:{row};--row-sm:{row_sm}" title="{_def_title(pos)}">'
+            f'<span class="dot" aria-hidden="true"></span><span class="nm">{escape(text)}</span></span>')
+
+
 def _lanes(q: dict, dist: Path, B, *, compact: bool) -> str:
     rows = []
+    any_cap = False
+    lane_px = 520 if compact else 960
     for pos in q["positions"]:
         pts = _points(q, pos["id"], dist, B)
         marks, tally, stack, stack_sm = B.tl_marks_html(pts, lambda pt: pt.get("href") or None, labels=True,
-                                                        lane_px=520 if compact else 960, with_sm=True)
+                                                        lane_px=lane_px, with_sm=True)
+        tick, cap = defined_marks(pos, B.TL_END)
+        rows_n, rows_sm = stack + 1, stack_sm + 1
+        tick_html = ""
+        if tick:
+            row, row_sm = (stack + 1, stack_sm + 1) if marks else (0, 0)
+            tick_html = _tick_html(pos, tick, row, row_sm, lane_px, B)
+            rows_n, rows_sm = row + 1, row_sm + 1
+        cap_line = cap_gut = ""
+        if cap:
+            any_cap = True
+            # Phones and cards: on the claim line. Wide question page: right of the lane.
+            cap_line = f'<span class="tl-defcap-line"><span class="sep"> · </span>{_cap_html(pos, cap, "")}</span>'
+            cap_gut = "" if compact else _cap_html(pos, cap, "tl-defcap-gut")
         badges = f'<span class="btrads">{_trad_badges(pos)}</span>' if pos.get("traditions") else ""
         rows.append(
             f'<div class="tl-row" data-trads="{escape(" ".join(pos.get("traditions") or []))}">'
             f'<p class="tl-claim"><span class="tl-claim-text">{escape(pos["name"])}{badges}</span>'
-            f'<span class="tl-tally">{_tally(tally)}</span></p>'
-            f'<div class="tl-lane" style="--rows:{stack + 1};--rows-sm:{stack_sm + 1}">'
-            f'{B.tl_backdrop_html(labels=False)}{marks}</div></div>')
+            f'<span class="tl-tally">{_tally(tally)}{cap_line}</span></p>'
+            f'<div class="tl-lane" style="--rows:{rows_n};--rows-sm:{rows_sm}">'
+            f'{B.tl_backdrop_html(labels=False)}{tick_html}{marks}{cap_gut}</div></div>')
     era_strip = "" if compact else f'<div class="tl-eras">{B.tl_backdrop_html(labels=True)}</div>'
-    return (f'<div class="tl tl-pos{" tl-compact" if compact else ""}">'
+    return (f'<div class="tl tl-pos{" tl-compact" if compact else ""}{" has-cap" if any_cap else ""}">'
             f'{era_strip}{"".join(rows)}{B.tl_axis_html()}</div>')
+
+
+def _defs_list(q: dict, B) -> str:
+    """A card with no deciding passage: one short row per position and when it
+    was defined, instead of empty lanes."""
+    items = []
+    for pos in q["positions"]:
+        marks = [m for m in defined_marks(pos, B.TL_END) if m]
+        label = " · ".join(def_label(m) for m in marks)
+        mark = (f'<span class="tl-defcap {marks[-1]["kind"]}" title="{_def_title(pos, marks[-1]["kind"])}">{escape(label)}</span>'
+                if marks else "")
+        items.append(f'<li><span class="bdefs-name">{escape(pos["name"])}</span>{mark}</li>')
+    return f'<ul class="bdefs">{"".join(items)}</ul>'
 
 
 def _firsts(q: dict) -> list[tuple[int, str, str, bool]]:
@@ -255,8 +347,7 @@ def card_html(q: dict, dist: Path, B) -> str:
     """A Timeline card: one lane per position, matching the topic cards beside it."""
     n_dec = sum(1 for p in q["passages"] if any(_deciding(p, pid) for pid in p["positions"]))
     href = f"/explore/{escape(q['id'])}/"
-    body = (_lanes(q, dist, B, compact=True) if n_dec else
-            '<p class="ot-claim">Positions: ' + " · ".join(escape(p["name"]) for p in q["positions"]) + "</p>")
+    body = _lanes(q, dist, B, compact=True) if n_dec else _defs_list(q, B)
     return (f'<article class="ot-card ot-belief" id="{escape(q["id"])}">'
             f'<h3><a href="{href}">{escape(q["question"])}</a></h3>'
             f'<p class="ot-claim">{escape(story(q, B, short=True))}</p>{body}'
@@ -294,6 +385,19 @@ LEGEND = ('<p class="tl-legend">'
           '<span class="tl-k"><span class="tl-key affirms"></span>a passage teaches it</span> '
           '<span class="tl-k"><span class="tl-key denies"></span>a passage rejects it</span> '
           '<span class="tl-k"><span class="tl-key uncertain"></span>authorship uncertain</span></p>')
+
+
+def legend(q: dict, B) -> str:
+    """LEGEND plus the definition keys this question uses."""
+    marks = [m for pos in q["positions"] for m in defined_marks(pos, B.TL_END) if m]
+    keys = []
+    if any(m["kind"] not in ("condemned", "never") and m["year"] <= B.TL_END for m in marks):
+        keys.append('<span class="tl-k"><span class="tl-key tl-defkey"></span>formally defined</span>')
+    if any(m["kind"] == "condemned" for m in marks):
+        keys.append('<span class="tl-k"><span class="tl-key tl-defkey condemned"></span>formally condemned</span>')
+    if any(m.get("year") and m["year"] > B.TL_END for m in marks):
+        keys.append('<span class="tl-k"><span class="tl-defarrow" aria-hidden="true">→</span>defined after this timeline ends</span>')
+    return LEGEND.replace("</p>", " " + " ".join(keys) + "</p>") if keys else LEGEND
 
 
 def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str, str]) -> int:
@@ -345,7 +449,7 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
   {chips_html()}
 </header>
 <section class="over-time" aria-label="Each position over time">
-  {LEGEND}
+  {legend(q, B)}
   {_lanes(q, dist, B, compact=False)}
   {related}
 </section>
