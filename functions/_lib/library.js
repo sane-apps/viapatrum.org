@@ -18,7 +18,7 @@
  *   LIBRARY_PRODUCT_IDS  comma list of product ids that unlock (live + test)
  */
 export const COOKIE = "vpl";
-export const REVALIDATE_S = 7 * 24 * 3600;
+export const REVALIDATE_S = 24 * 3600; // owner 2026-10-06: a refunded or disabled key stops within a day
 const MAX_AGE_S = 400 * 24 * 3600; // browsers cap cookie lifetime at 400 days
 const LS = "https://api.lemonsqueezy.com/v1";
 

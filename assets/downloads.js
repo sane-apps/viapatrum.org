@@ -131,7 +131,11 @@
       }
       if (d.pending && tries < 15) return new Promise(function (r) { setTimeout(r, 2000); }).then(function () { return claim(order, tries + 1); });
       keyDialog.showModal();
-      $("[data-key-err]").textContent = "Payment received. Enter the key from your receipt email to unlock.";
+      // Say what actually happened (red-team 2026-10-06): a pending, unpaid or
+      // wrong-product order used to read "Payment received" too.
+      $("[data-key-err]").textContent = d.pending
+        ? "Your payment is still being processed. Your key will be in your receipt email in a few minutes; enter it here to unlock."
+        : (d.reason || "We could not confirm this order.") + " If you were charged, enter the key from your receipt email, or write to hi@saneapps.com.";
     });
   }
   $$("[data-copy]").forEach(function (b) {
