@@ -242,7 +242,13 @@ async function run(base,out) {
   // Escape/focus still covered by scripts/ui.test.mjs; keep the handler wired in site.js.
   receipt.checks.push({mobileNavAlwaysOn:true,readerContents:true});
 
-  const index=JSON.parse(fs.readFileSync("dist/data/search-index.json","utf8"));
+  // The build ships data/search shards and deletes the old single file.
+  const manifest=JSON.parse(fs.readFileSync("dist/data/search/manifest.json","utf8"));
+  const index=[];
+  for(const shard of manifest.shards){
+    const name=String(shard.file).split("/").pop();
+    index.push(...JSON.parse(fs.readFileSync("dist/data/search/"+name,"utf8")));
+  }
   const sample=index.find(r=>r.kind==="work"&&r.text?.length>600)||index.find(r=>r.text?.length>100);
   assert(sample,"No searchable passage sample");
   const term=sample.text.slice(sample.text.length>600?450:30,sample.text.length>600?510:75).trim();
