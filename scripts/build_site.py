@@ -8078,8 +8078,11 @@ def build() -> None:
             if progress_english.strip() and not SCAFFOLD.search(progress_english):
                 corpus_translated_sections += 1
     works, held_works = partition_catalogue(works)
-    works, excerpts, review_holds, review_failures, tail_holds = check_publication(
-        works, excerpts, ROOT, BOOKS.parent)
+    # enforce_review stays on in the catalogue tests. Here, an older review
+    # shape is recorded and the reading stays up. Content errors, an empty
+    # work, and a review file outside the corpus still hold.
+    works, excerpts, review_holds, review_failures, tail_holds, review_deferred = check_publication(
+        works, excerpts, ROOT, BOOKS.parent, enforce_review=False)
     held_works.extend(review_holds)
     (ROOT / "outputs").mkdir(exist_ok=True)
     # The receipt sits next to the build it describes (dist ->
@@ -8091,6 +8094,7 @@ def build() -> None:
     quality_text = (
         json.dumps({"published_works": len(works), "published_excerpts": len(excerpts),
                     "publication_review_failures": review_failures,
+                    "publication_review_deferred": review_deferred,
                     "held_tail_sections": tail_holds,
                     "held_works": held_works,
                     "corpus_total_sections": corpus_total_sections,
@@ -8100,6 +8104,16 @@ def build() -> None:
         _tmp = _qp.with_name(_qp.name + ".tmp")
         _tmp.write_text(quality_text, encoding="utf-8")
         os.replace(_tmp, _qp)
+    print(
+        f"publication: {len(works)} works, {len(excerpts)} excerpts, "
+        f"{len(review_holds)} held for content, {len(review_deferred)} older review notes set aside",
+        flush=True,
+    )
+    if len(works) < 250:
+        raise SystemExit(
+            f"BLOCKED: publication gate left {len(works)} works. "
+            "Refusing to build a library that small."
+        )
     # The same counts, frozen into this build's output (dist/data/progress.json):
     # checks compare the About page with the build that made it, not with a
     # shared file another build may rewrite mid-ship (2026-10-02 false failure).

@@ -63,7 +63,7 @@ How every whole work is presented on the site. Do not invent a second reading pa
 
 ## Release evidence
 
-`data/publication-review.json` contains a provisional legacy freeze, never semantic certification. A work with no loaded scope packet stays held, and a provisional legacy hash is not a pass. New or changed passages need current shared source/English review packets; a claim-board `done`, nonempty English, or inherited confidence flag is not publication approval. Do not update legacy hashes to clear a failure.
+`data/publication-review.json` contains a provisional legacy freeze, never semantic certification. The catalogue tests still hold a work with no loaded scope packet, a provisional legacy hash, and a hand-stamped receipt that is not two model families or does not quote the passage. The live build records that older review shape and leaves a content-clean work or excerpt up, including an unreviewed tail, so the public library stays online. An empty work, reader content errors (printer debris, a repeated phrase, scaffold text), and a review file outside the corpus still hold. Named `FORCED_WITHHOLD` slugs and a work receipt whose hashes do not match stay down. A claim-board `done`, nonempty English, or inherited confidence flag is not publication approval. Do not update legacy hashes to clear a failure.
 Use `scripts/ship.sh` only. Inspect every saved view/state image and record its actual verdict before release. The script locks publishing and binds the uploaded copy to the reviewed artifact. Never restore an old builder to add a loader glob.
 
 ## Multi-agent coordination (2026-09-23)

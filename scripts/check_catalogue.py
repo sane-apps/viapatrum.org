@@ -22,6 +22,9 @@ with tempfile.TemporaryDirectory() as tmp:
     (root / "data/publication-review.json").write_text(json.dumps(manifest))
     legacy = check_publication([], [row], root, corpus)
     assert not legacy[1] and any("legacy hash is not a review" in e for errs in legacy[3].values() for e in errs), legacy[3]
+    live_legacy = check_publication([], [row], root, corpus, enforce_review=False)
+    assert live_legacy[1] == [row] and not live_legacy[3], live_legacy[3]
+    assert any("legacy hash is not a review" in e for errs in live_legacy[5].values() for e in errs)
     changed = {**row, "english": ["A different meaning."]}
     changed_result = check_publication([], [changed], root, corpus)
     assert not changed_result[1] and any("no review entry" in e for errs in changed_result[3].values() for e in errs), changed_result[3]
@@ -33,6 +36,7 @@ with tempfile.TemporaryDirectory() as tmp:
         publication_inventory([], [scaffold])["excerpt:fixture"])
     (root / "data/publication-review.json").write_text(json.dumps(manifest))
     assert not check_publication([], [scaffold], root, corpus)[1]
+    assert not check_publication([], [scaffold], root, corpus, enforce_review=False)[1]
 
 # A mismatched human packet does not hold a content-clean work. One packet
 # is still validated once even when it covers several selected passages.
@@ -74,7 +78,7 @@ with tempfile.TemporaryDirectory() as tmp:
     manifest_path = root / "data/publication-review.json"
     manifest_path.write_text(json.dumps(manifest))
     with patch("pipeline.verify_translation_qa.validate_audit_receipt", wraps=validate_audit_receipt) as validate:
-        kept, _, _, errors, _tails = check_publication([work], [], root, corpus)
+        kept, _, _, errors, _tails, _deferred = check_publication([work], [], root, corpus)
         assert kept == [work] and not errors, errors
         assert validate.call_count == 1, "same packet rehashed for every passage"
     transplanted = {**work, "author": "Author B", "title": "Work B"}
@@ -120,13 +124,16 @@ with tempfile.TemporaryDirectory() as tmp:
     english.write_text(json.dumps(rows + [{"section": "3", "english": row3["english"]}]))
     source.write_text(json.dumps(rows + [{"section": "3", "latin": row3["latin"]}]))
     grown = {**work, "sections": rows + [row3]}
-    kept, _, _, errors, tails = check_publication([grown], [], root, corpus)
+    kept, _, _, errors, tails, _deferred = check_publication([grown], [], root, corpus)
     assert kept == [{**work, "sections": rows}], "reviewed head did not publish"
     assert not [k for k in errors if k.startswith("work:")], errors
     assert len(tails) == 1 and tails[0]["held_sections"] == ["3"], tails
     assert tails[0]["published_sections"] == 2
+    live_grown = check_publication([grown], [], root, corpus, enforce_review=False)
+    assert live_grown[0] and [s["section"] for s in live_grown[0][0]["sections"]] == ["1", "2", "3"], live_grown
+    assert not live_grown[4], live_grown[4]
     edited = {**work, "sections": [{**rows[0], "english": ["Changed English."]}, rows[1], row3]}
-    kept_edited, _, _, edited_errors, edited_tails = check_publication([edited], [], root, corpus)
+    kept_edited, _, _, edited_errors, edited_tails, _edited_deferred = check_publication([edited], [], root, corpus)
     assert kept_edited and kept_edited[0]["sections"][0]["english"] == ["Changed English."], edited_errors
     assert not [k for k in edited_errors if k.startswith("work:")], edited_errors
     assert edited_tails and edited_tails[0]["held_sections"] == ["3"], edited_tails
@@ -139,6 +146,8 @@ with tempfile.TemporaryDirectory() as tmp:
     retitled = {**work, "edition": "Another print", "sections": rows + [row3]}
     kept_retitled = check_publication([retitled], [], root, corpus)[0]
     assert kept_retitled and kept_retitled[0]["edition"] == "Another print", kept_retitled
+    dirty_tail = {**work, "sections": rows + [{**row3, "english": ["Lemma-led open — source"]}]}
+    assert not check_publication([dirty_tail], [], root, corpus, enforce_review=False)[0]
     stamped = json.loads(json.dumps(scoped_receipt))
     stamped["reviewer"] = "cursor-held-eeng-20260924 (Mini)"
     for rev in stamped["reviews"]:
@@ -150,6 +159,28 @@ with tempfile.TemporaryDirectory() as tmp:
     assert not stamped_result[0], stamped_result[3]
     assert any("two model families" in e for e in stamped_errors), stamped_errors
     assert any("do not quote" in e for e in stamped_errors), stamped_errors
+    # The live build keeps this reading and records the stamp. The test above
+    # still rejects it. A packet outside the corpus stays down either way.
+    live_stamp = check_publication([work], [], root, corpus, enforce_review=False)
+    assert live_stamp[0] == [work] and not live_stamp[3], live_stamp[3]
+    live_stamp_errors = [e for errs in live_stamp[5].values() for e in errs]
+    assert any("two model families" in e for e in live_stamp_errors), live_stamp_errors
+    assert any("do not quote" in e for e in live_stamp_errors), live_stamp_errors
+    manifest = {"schema": "fathers-publication-v1", "reviews": {},
+                "provisional_work_scopes": {"fixture": publication_digest(work_scope(work))},
+                "provisional_legacy": {key: publication_digest(value)
+                                       for key, value in publication_inventory([work], []).items()}}
+    manifest_path.write_text(json.dumps(manifest))
+    assert not check_publication([work], [], root, corpus)[0]
+    live_hash = check_publication([work], [], root, corpus, enforce_review=False)
+    assert live_hash[0] == [work] and not live_hash[3], live_hash[3]
+    assert any("no scope review" in e for errs in live_hash[5].values() for e in errs), live_hash[5]
+    assert not check_publication([{**work, "sections": []}], [], root, corpus, enforce_review=False)[0]
+    manifest["scope_reviews"] = {"fixture": {"packet": "../outside.json", "receipt": "none"}}
+    manifest_path.write_text(json.dumps(manifest))
+    escaped = check_publication([work], [], root, corpus, enforce_review=False)
+    assert not escaped[0], escaped[0]
+    assert any("must stay in the corpus" in e for errs in escaped[3].values() for e in errs), escaped[3]
 
 kept_w, held_w = site.split_withheld([
     {"slug": "eustathius-engastrimytho", "status": "available"},
