@@ -95,10 +95,9 @@ def live_origin(origin, site, quality):
     root = Path(__file__).resolve().parents[1]
     receipt = {"origin": origin, "site": str(site), "quality": str(quality), "checks": [], "held": 0}
     held = json.loads(Path(quality).read_text())["held_works"]
-    paths = ["/", "/works/", "/data/search-index.json"]
+    paths = ["/", "/works/", "/data/search/manifest.json"]
     expected = {p: hashlib.sha256((site / p.lstrip("/") / ("index.html" if p.endswith("/") else "")).read_bytes()).hexdigest()
-                for p in paths if p != "/data/search-index.json"}
-    expected["/data/search-index.json"] = hashlib.sha256((site / "data/search-index.json").read_bytes()).hexdigest()
+                for p in paths}
     css = next((p for p in (site / "assets").glob("site.css")), None)
     js = next((p for p in (site / "assets").glob("site.js")), None)
     # Fetch the versioned URL pages actually load; the bare path can sit in the edge cache.

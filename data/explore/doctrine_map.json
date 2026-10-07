@@ -1,12 +1,14 @@
 {
- "generated": "2026-10-06",
+ "generated": "2026-10-07",
  "searched": {
   "2": [
    "Acts of the Martyrs",
    "Anonymous (Epistle to Diognetus)",
+   "Anonymous (anti-Montanist writer to Avircius Marcellus)",
    "Athenagoras",
    "Church of Smyrna",
    "Dionysius of Corinth",
+   "Justin Martyr",
    "Minucius Felix",
    "Polycarp of Smyrna",
    "Polycrates of Ephesus"
@@ -92,7 +94,8 @@
      "id": "memorial",
      "name": "Memorial",
      "traditions": [
-      "baptist"
+      "baptist",
+      "pentecostal"
      ],
      "rejected_by": [
       "catholic",
@@ -109,6 +112,11 @@
        "source": "Baptist Faith and Message, Article VII (2000)",
        "quote": "The Lord's Supper is a symbolic act of obedience whereby members of the church, through partaking of the bread and the fruit of the vine, memorialize the death of the Redeemer and anticipate His second coming.",
        "url": "https://bfm.sbc.net/bfm2000/"
+      },
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "a memorial of his suffering and death",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
       }
      ],
      "statement": "The bread and wine are symbols that call Christ's death to mind; Christ's body and blood are neither present in them nor received through them.",
@@ -125,6 +133,7 @@
      "traditions": [
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "rejected_by": [
@@ -147,6 +156,16 @@
        "source": "Second London Baptist Confession, 30.7 (1689)",
        "quote": "spiritually receive, and feed upon Christ crucified, and all the benefits of his death",
        "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter30.htm"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "The body of Christ is given, taken, and eaten in the Supper, only after a heavenly and spiritual manner. And the mean whereby the body of Christ is received and eaten in the Supper is faith.",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
+      },
+      {
+       "source": "Confession of Faith of the Evangelical United Brethren Church (UMC Book of Discipline, para. 104)",
+       "quote": "partake of the body and blood of Christ in a spiritual manner until he comes",
+       "url": "https://www.umc.org/en/content/confession-of-faith"
       }
      ],
      "statement": "Believers truly receive Christ's body and blood in the Supper, but spiritually and by faith; the body is not in or under the bread, and unbelievers receive only the outward signs.",
@@ -192,8 +211,10 @@
      "id": "eucharistic-change",
      "name": "Real change, manner undefined",
      "traditions": [
+      "catholic",
       "orthodox",
-      "catholic"
+      "oriental-orthodox",
+      "church-of-the-east"
      ],
      "rejected_by": [
       "lutheran",
@@ -216,6 +237,16 @@
        "source": "Catechism of the Catholic Church, 1375",
        "quote": "It is by the conversion of the bread and wine into Christ's body and blood that Christ becomes present in this sacrament.",
        "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM"
+      },
+      {
+       "source": "Ethiopian Orthodox Tewahedo Church, The Faith of the Church (text by V. C. Samuel, 1970)",
+       "quote": "During the service of the Holy Liturgy, the bread turns into the true flesh of the Son of God and the wine into the true blood of the Son of God.",
+       "url": "http://www.ethiopianorthodox.org/english/dogma/faith.html"
+      },
+      {
+       "source": "Assyrian Church of the East, Diocese of California, FAQ",
+       "quote": "The elements of bread and wine are transformed in the eucharistic prayer, in a mystical way, by the unseen action of the Holy Spirit who operates through the priest celebrating this most sacred action.",
+       "url": "https://acoecalifornia.org/faq"
       }
      ],
      "statement": "By God's action at the consecration the bread and wine are changed into, and become, Christ's body and blood, so that they are no longer simply bread and wine; how the change happens is not defined.",
@@ -275,6 +306,7 @@
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -630,12 +662,14 @@
      "name": "Propitiatory sacrifice",
      "traditions": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -653,6 +687,11 @@
        "source": "Catechism of the Catholic Church, 1367",
        "quote": "The sacrifice of Christ and the sacrifice of the Eucharist are one single sacrifice",
        "url": "https://www.vatican.va/archive/ENG0015/__P41.HTM"
+      },
+      {
+       "source": "CopticChurch.net, Sacraments: Eucharist",
+       "quote": "Be well knowledgeable of the sublime value of the sacrifice between your hands. He is Christ Emmanuel who sacrificed Himself for you.",
+       "url": "https://www.copticchurch.net/introduction-to-the-coptic-church/sacraments/4_eucharist"
       }
      ],
      "statement": "In the Eucharist the one sacrifice of Christ is offered to God without bloodshed, and it obtains mercy and forgiveness for the living and the dead.",
@@ -786,10 +825,10 @@
      "id": "no-special-authority",
      "name": "No special authority",
      "traditions": [
-      "reformed",
-      "baptist",
       "lutheran",
-      "anglican"
+      "reformed",
+      "anglican",
+      "baptist"
      ],
      "rejected_by": [
       "catholic"
@@ -856,6 +895,7 @@
      ],
      "rejected_by": [
       "orthodox",
+      "church-of-the-east",
       "lutheran",
       "reformed",
       "anglican",
@@ -933,9 +973,10 @@
      "traditions": [
       "catholic",
       "orthodox",
+      "oriental-orthodox",
       "lutheran",
-      "anglican",
-      "reformed"
+      "reformed",
+      "anglican"
      ],
      "rejected_by": [],
      "defined": [
@@ -948,6 +989,11 @@
        "source": "Council of Chalcedon, Definition of Faith (451)",
        "quote": "in the last days the same for us and for our salvation from Mary, the virgin God-bearer as regards his humanity",
        "url": "https://www.papalencyclicals.net/councils/ecum04.htm"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), The Holy Virgin Saint Mary",
+       "quote": "She is, in the belief of the Church, the mother of God, (Theotokos in Coptic)",
+       "url": "https://www.copticchurch.net/books/the_holy_virgin_saint_mary"
       }
      ],
      "statement": "Because the one born of Mary is God the Word made flesh, Mary is rightly called Mother of God.",
@@ -990,6 +1036,7 @@
      "rejected_by": [
       "catholic",
       "orthodox",
+      "oriental-orthodox",
       "lutheran",
       "reformed",
       "anglican"
@@ -1545,7 +1592,8 @@
      "name": "Perpetual virginity",
      "traditions": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [],
      "defined": [
@@ -1563,6 +1611,11 @@
        "source": "Kontakion of the Dormition (Orthodox Church in America)",
        "quote": "she was translated into life by Him who dwelt in her ever-virginal womb.",
        "url": "https://www.oca.org/saints/id/troparia/102302"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), The Holy Virgin Saint Mary",
+       "quote": "The Church believes in the perpetuality of the virginity of The Virgin.",
+       "url": "https://www.copticchurch.net/books/the_holy_virgin_saint_mary"
       }
      ],
      "statement": "Mary remained a virgin before, in and after Jesus' birth, and had no other children.",
@@ -1602,7 +1655,9 @@
      "id": "other-children",
      "name": "Mary had other children",
      "traditions": [],
-     "rejected_by": [],
+     "rejected_by": [
+      "oriental-orthodox"
+     ],
      "defined": [],
      "statement": "After Jesus' birth Mary and Joseph lived as married and had other children, the Lord's brothers and sisters.",
      "mark": "The passage says the Lord's brothers were Mary's own sons, or that she did not remain a virgin after Jesus' birth.",
@@ -1747,7 +1802,8 @@
      "id": "dormition",
      "name": "Died, then taken bodily to heaven (Dormition)",
      "traditions": [
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [],
      "defined": [
@@ -1760,6 +1816,16 @@
        "source": "Kontakion of the Dormition (Orthodox Church in America)",
        "quote": "Neither the tomb, nor death had power over the Theotokos",
        "url": "https://www.oca.org/saints/id/troparia/102302"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), The Holy Virgin Saint Mary",
+       "quote": "The Church believes in the Ascent of the body of The Virgin to heaven, and celebrates that feast on the 16th of Misra.",
+       "url": "https://www.copticchurch.net/books/the_holy_virgin_saint_mary"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), The Holy Virgin Saint Mary",
+       "quote": "in commemoration of her death on the 21st of Tubah",
+       "url": "https://www.copticchurch.net/books/the_holy_virgin_saint_mary"
       }
      ],
      "statement": "Mary truly died (fell asleep), and was then raised and taken into heavenly life; neither tomb nor death held her.",
@@ -1815,7 +1881,8 @@
      ],
      "rejected_by": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "defined": [
       {
@@ -1867,12 +1934,14 @@
      "name": "Asking the saints to pray for us",
      "traditions": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -1885,6 +1954,11 @@
        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 8 (1672)",
        "quote": "Notwithstanding, in [our] prayers and supplications unto Him, we say the Saints are intercessors, and, above all, the undefiled Mother of the very God the Word",
        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), Comparative Theology (1988)",
+       "quote": "We reply that we do not pray to the saints; we only ask their prayers and their support for us.",
+       "url": "https://www.copticchurch.net/books/comparative_theology"
       }
      ],
      "statement": "Departed saints pray for the living, and it is right to address them directly and ask for their prayers.",
@@ -1956,11 +2030,15 @@
       "lutheran",
       "reformed",
       "anglican",
-      "baptist"
+      "methodist",
+      "baptist",
+      "anabaptist",
+      "pentecostal"
      ],
      "rejected_by": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "defined": [
       {
@@ -1977,6 +2055,21 @@
        "source": "Thirty-Nine Articles, Article VI (1571)",
        "quote": "Holy Scripture containeth all things necessary to salvation: so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man, that it should be believed as an article of the Faith",
        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      },
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "The Bible is our all-sufficient rule for faith and practice.",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "The Holy Scripture containeth all things necessary to salvation; so that whatsoever is not read therein, nor may be proved thereby, is not to be required of any man that it should be believed as an article of faith",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
+      },
+      {
+       "source": "Confession of Faith in a Mennonite Perspective (1995)",
+       "quote": "Other claims on our understanding of Christian faith and life, such as tradition, culture, experience, reason, and political powers, need to be tested and corrected by the light of Holy Scripture.",
+       "url": "https://www.mennoniteusa.org/wp-content/uploads/2024/02/Confession-of-Faith-In-a-Mennonite-Perspective.pdf"
       }
      ],
      "statement": "Scripture is the only infallible rule of faith; councils, fathers and traditions are judged by it, and nothing not provable from it may be required as necessary belief.",
@@ -1992,13 +2085,16 @@
      "name": "Scripture with binding Church tradition",
      "traditions": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [
       "lutheran",
       "reformed",
       "anglican",
-      "baptist"
+      "methodist",
+      "baptist",
+      "pentecostal"
      ],
      "defined": [
       {
@@ -2010,6 +2106,11 @@
        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 2 (1672)",
        "quote": "the witness also of the Catholic Church is, we believe, not of inferior authority to that of the Divine Scriptures.",
        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+       "source": "Ethiopian Orthodox Tewahedo Church, Canonical books",
+       "quote": "The word of God is not contained in the Bible alone, it is to be found in tradition as well.",
+       "url": "https://ethiopianorthodox.org/english/canonical/books.html"
       }
      ],
      "statement": "Unwritten apostolic tradition, kept in the Church, binds with the same authority as Scripture, and the Church's interpretation of Scripture is authoritative.",
@@ -2038,6 +2139,7 @@
      "name": "Hebrew canon only",
      "traditions": [
       "reformed",
+      "methodist",
       "baptist"
      ],
      "rejected_by": [
@@ -2049,6 +2151,16 @@
        "source": "Westminster Confession of Faith, 1.3 (1646)",
        "quote": "The books commonly called Apocrypha, not being of divine inspiration, are no part of the canon of the Scripture",
        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "The names of the canonical books are: Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges, Ruth, The First Book of Samuel, The Second Book of Samuel, The First Book of Kings, The Second Book of Kings, The First Book of Chronicles, The Second Book of Chronicles, The Book of Ezra, The Book of Nehemiah, The Book of Esther, The Book of Job, The Psalms, The Proverbs, Ecclesiastes or the Preacher, Cantica or Songs of Solomon, Four Prophets the Greater, Twelve Prophets the Less.",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
+      },
+      {
+       "source": "Church of the Nazarene, Articles of Faith (Manual 2023)",
+       "quote": "by which we understand the 66 books of the Old and New Testaments",
+       "url": "https://nazarene.org/what-we-believe/"
       }
      ],
      "statement": "The Old Testament consists only of the books of the Hebrew canon; the others are not inspired.",
@@ -2063,8 +2175,8 @@
      "id": "read-not-for-doctrine",
      "name": "Read for example of life, not for doctrine",
      "traditions": [
-      "anglican",
-      "lutheran"
+      "lutheran",
+      "anglican"
      ],
      "rejected_by": [],
      "defined": [
@@ -2087,10 +2199,12 @@
      "name": "Wider canon as full Scripture",
      "traditions": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [
       "reformed",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -2103,6 +2217,11 @@
        "source": "Confession of Dositheus (Synod of Jerusalem), Question 3 (1672)",
        "quote": "For we judge these also to be with the other genuine Books of Divine Scripture genuine parts of Scripture.",
        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+       "source": "Ethiopian Orthodox Tewahedo Church, Canonical books",
+       "quote": "The Ethiopian Orthodox Church has 46 books of the Old Testament and 35 books of the New Testament that will bring the total of canonized books of the Bible to 81.",
+       "url": "https://ethiopianorthodox.org/english/canonical/books.html"
       }
      ],
      "statement": "Books such as Tobit, Judith, Wisdom, Sirach, Baruch and Maccabees are inspired Scripture on the same footing as the rest.",
@@ -2155,11 +2274,13 @@
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "rejected_by": [
       "catholic",
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "defined": [
       {
@@ -2176,6 +2297,11 @@
        "source": "Thirty-Nine Articles, Article XI (1571)",
        "quote": "We are accounted righteous before God, only for the merit of our Lord and Saviour Jesus Christ by Faith, and not for our own works or deservings",
        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, and not for our own works or deservings.",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
       }
      ],
      "statement": "God declares the sinner righteous by crediting Christ's righteousness to him, received by faith alone; inner renewal follows but is not the ground.",
@@ -2197,6 +2323,7 @@
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -2307,7 +2434,8 @@
      "id": "from-the-father",
      "name": "From the Father as sole source",
      "traditions": [
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [
       "catholic"
@@ -2322,6 +2450,11 @@
        "source": "Encyclical of the Eastern Patriarchs, 5.i (1848)",
        "quote": "This novel opinion destroys the oneness from the One cause, and the diverse origin of the Persons of the Blessed Trinity",
        "url": "http://orthodoxinfo.com/ecumenism/encyc_1848.aspx"
+      },
+      {
+       "source": "Ethiopian Orthodox Tewahedo Church, The Faith of the Church (text by V. C. Samuel, 1970)",
+       "quote": "The Son is born of, and the Holy Spirit proceeds from, the Father.",
+       "url": "http://www.ethiopianorthodox.org/english/dogma/faith.html"
       }
      ],
      "statement": "The Father alone is the source and cause of the Spirit's eternal being; the Son is not a co-cause of the Spirit.",
@@ -2339,7 +2472,9 @@
       "catholic",
       "lutheran",
       "reformed",
-      "anglican"
+      "anglican",
+      "methodist",
+      "pentecostal"
      ],
      "rejected_by": [
       "orthodox"
@@ -2359,6 +2494,16 @@
        "source": "Thirty-Nine Articles, Article V (1571)",
        "quote": "The Holy Ghost, proceeding from the Father and the Son, is of one substance, majesty, and glory, with the Father and the Son, very and eternal God.",
        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      },
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "the Holy Spirit is the one proceeding from the Father and the Son",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "The Holy Ghost, proceeding from the Father and the Son, is of one substance, majesty, and glory with the Father and the Son, very and eternal God.",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
       }
      ],
      "statement": "The Spirit eternally proceeds from the Father and the Son together, as from one principle.",
@@ -2393,6 +2538,7 @@
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -2419,7 +2565,8 @@
      "id": "prayer-no-defined-place",
      "name": "Prayer for the dead, purification not defined",
      "traditions": [
-      "orthodox"
+      "orthodox",
+      "oriental-orthodox"
      ],
      "rejected_by": [
       "reformed",
@@ -2435,6 +2582,11 @@
        "source": "Divine Liturgy of St John Chrysostom, Anaphora",
        "quote": "Again, we offer this spiritual worship for those who repose in the faith",
        "url": "https://www.ewtn.com/catholicism/library/divine-liturgy-of-st-john-chrysostom-11120"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), Comparative Theology (1988)",
+       "quote": "We plead for the departed in our prayers and they intercede for us through their prayers",
+       "url": "https://www.copticchurch.net/books/comparative_theology"
       }
      ],
      "statement": "The Church prays and offers the Eucharist for the departed, who are helped by it before the final judgment, without defining a place or process of purifying punishment.",
@@ -2449,10 +2601,10 @@
      "id": "no-intermediate-purification",
      "name": "No purification or help after death",
      "traditions": [
+      "lutheran",
       "reformed",
       "anglican",
-      "baptist",
-      "lutheran"
+      "baptist"
      ],
      "rejected_by": [
       "catholic",
@@ -2521,6 +2673,7 @@
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -2550,6 +2703,7 @@
       "lutheran",
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "rejected_by": [
@@ -2560,6 +2714,11 @@
        "source": "Thirty-Nine Articles, Article XXII (1571)",
        "quote": "The Romish Doctrine concerning Purgatory, Pardons, Worshipping, and Adoration, as well of Images as of Reliques, and also invocation of Saints, is a fond thing vainly invented",
        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "The Romish doctrine concerning purgatory, pardon, worshiping, and adoration, as well of images as of relics, and also invocation of saints, is … grounded upon no warrant of Scripture, but repugnant to the Word of God.",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
       }
      ],
      "statement": "The Church has no power to remit punishment before God; forgiveness through Christ leaves no punishment for the Church to lessen.",
@@ -2590,12 +2749,16 @@
      "traditions": [
       "catholic",
       "orthodox",
+      "oriental-orthodox",
+      "church-of-the-east",
       "lutheran",
       "reformed",
-      "anglican"
+      "anglican",
+      "methodist"
      ],
      "rejected_by": [
-      "baptist"
+      "baptist",
+      "anabaptist"
      ],
      "defined": [
       {
@@ -2612,6 +2775,21 @@
        "source": "Westminster Confession of Faith, 28.4 (1646)",
        "quote": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized.",
        "url": "https://www.opc.org/wcf.html"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "The Baptism of young children is to be retained in the Church.",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
+      },
+      {
+       "source": "Ethiopian Orthodox Tewahedo Church, The Faith of the Church (text by V. C. Samuel, 1970)",
+       "quote": "the Ethiopian Orthodox Tewahido Church baptizes male infants at the age of 40 days and female infants at the age of 80 days",
+       "url": "http://www.ethiopianorthodox.org/english/dogma/faith.html"
+      },
+      {
+       "source": "Common Statement on Sacramental Life, Catholic Church and Assyrian Church of the East (2017)",
+       "quote": "both the Catholic and the Assyrian tradition practice the baptism of adults and the baptism of infants.",
+       "url": "https://news.assyrianchurch.org/wp-content/uploads/2017/11/Common-Statement-on-Sacramental-Life-FINAL-VERSION-18-NOV.pdf"
       }
      ],
      "statement": "Infants of Christian parents should be baptized, before they can profess faith themselves.",
@@ -2651,14 +2829,18 @@
      "id": "believers-only",
      "name": "Professing believers only",
      "traditions": [
-      "baptist"
+      "baptist",
+      "anabaptist"
      ],
      "rejected_by": [
       "catholic",
       "orthodox",
+      "oriental-orthodox",
+      "church-of-the-east",
       "lutheran",
       "reformed",
-      "anglican"
+      "anglican",
+      "methodist"
      ],
      "defined": [
       {
@@ -2670,6 +2852,16 @@
        "source": "Baptist Faith and Message, Article VII (2000)",
        "quote": "Christian baptism is the immersion of a believer in water in the name of the Father, the Son, and the Holy Spirit.",
        "url": "https://bfm.sbc.net/bfm2000/"
+      },
+      {
+       "source": "Schleitheim Confession (1527)",
+       "quote": "This excludes all infant baptism",
+       "url": "https://anabaptists.org/history/schleith.html"
+      },
+      {
+       "source": "Confession of Faith in a Mennonite Perspective (1995)",
+       "quote": "water baptism is to be reserved for those old enough to make such a pledge.",
+       "url": "https://www.mennoniteusa.org/wp-content/uploads/2024/02/Confession-of-Faith-In-a-Mennonite-Perspective.pdf"
       }
      ],
      "statement": "Only those who personally profess repentance and faith should be baptized; infants should not be.",
@@ -2779,6 +2971,8 @@
      "traditions": [
       "catholic",
       "orthodox",
+      "oriental-orthodox",
+      "church-of-the-east",
       "lutheran"
      ],
      "rejected_by": [
@@ -2799,6 +2993,16 @@
        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 16 (1672)",
        "quote": "We believe Holy Baptism, which was instituted by the Lord, and is conferred in the name of the Holy Trinity, to be of the highest necessity.",
        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), Comparative Theology (1988)",
+       "quote": "Through baptism we receive the Second Birth which is of water and the Spirit",
+       "url": "https://www.copticchurch.net/books/comparative_theology"
+      },
+      {
+       "source": "Assyrian Church of the East, Diocese of California, FAQ",
+       "quote": "It is a new birth, according to water and the Holy Spirit (cf. John 3:5) without which one may not enter into the Kingdom of Heaven.",
+       "url": "https://acoecalifornia.org/faq"
       }
      ],
      "statement": "Baptism itself is God's means of regeneration and forgiveness of sins, and is ordinarily necessary for salvation.",
@@ -2870,12 +3074,17 @@
      "id": "ordinance-symbol",
      "name": "Symbol of faith already received",
      "traditions": [
-      "baptist"
+      "baptist",
+      "anabaptist",
+      "pentecostal"
      ],
      "rejected_by": [
       "catholic",
       "orthodox",
-      "lutheran"
+      "oriental-orthodox",
+      "church-of-the-east",
+      "lutheran",
+      "methodist"
      ],
      "defined": [
       {
@@ -2887,6 +3096,16 @@
        "source": "Second London Baptist Confession, 29.1 (1689)",
        "quote": "Baptism is an ordinance of the New Testament, ordained by Jesus Christ, to be unto the party baptized, a sign of his fellowship with him, in his death and resurrection",
        "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter29.htm"
+      },
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "Thus they declare to the world that they have died with Christ and that they also have been raised with Him to walk in newness of life.",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
+      },
+      {
+       "source": "Confession of Faith in a Mennonite Perspective (1995)",
+       "quote": "Baptism by water is a sign that a person has repented, received forgiveness, renounced evil, and died to sin",
+       "url": "https://www.mennoniteusa.org/wp-content/uploads/2024/02/Confession-of-Faith-In-a-Mennonite-Perspective.pdf"
       }
      ],
      "statement": "Baptism is an act of obedience by one already saved, picturing the faith and new life already received; it is not a means of regeneration.",
@@ -3565,6 +3784,8 @@
      "traditions": [
       "catholic",
       "orthodox",
+      "oriental-orthodox",
+      "church-of-the-east",
       "anglican"
      ],
      "rejected_by": [
@@ -3586,6 +3807,16 @@
        "source": "Book of Common Prayer, Preface to the Ordinal (1662)",
        "quote": "It is evident unto all men diligently reading holy Scripture and ancient Authors, that from the Apostles' time there have been these Orders of Ministers in Christ's Church; Bishops, Priests, and Deacons.",
        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/form-and-manner-making-ordaining"
+      },
+      {
+       "source": "CopticChurch.net, Sacraments: Priesthood",
+       "quote": "the service of Patriarchs, successors of the Apostles everywhere, at all times",
+       "url": "https://www.copticchurch.net/introduction-to-the-coptic-church/sacraments/7_priesthood"
+      },
+      {
+       "source": "Common Statement on Sacramental Life, Catholic Church and Assyrian Church of the East (2017)",
+       "quote": "The requirement that all ordained ministers of the Church should stand in the apostolic succession, in virtue of their sacramental ordination, is an expression and a guarantee of continuity between the apostolic origin of the Church and the present qualification of her ministers.",
+       "url": "https://news.assyrianchurch.org/wp-content/uploads/2017/11/Common-Statement-on-Sacramental-Life-FINAL-VERSION-18-NOV.pdf"
       }
      ],
      "statement": "Bishops, distinct from and above presbyters, succeed the apostles through an unbroken line of ordination, and govern the churches.",
@@ -3693,12 +3924,14 @@
      "id": "venerated",
      "name": "Images venerated",
      "traditions": [
+      "catholic",
       "orthodox",
-      "catholic"
+      "oriental-orthodox"
      ],
      "rejected_by": [
       "reformed",
       "anglican",
+      "methodist",
       "baptist"
      ],
      "defined": [
@@ -3711,6 +3944,11 @@
        "source": "Confession of Dositheus (Synod of Jerusalem), Question 4 (1672)",
        "quote": "the honor paid to the Icon is not at all divided or at all different from [the honor paid to the one who] is portrayed",
        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), Comparative Theology (1988)",
+       "quote": "venerating icons, kissing them, lighting candles in front of them and kneeling before them. We will try to reply to all these points, showing the spiritual benefits of icons and why the Church keeps them.",
+       "url": "https://www.copticchurch.net/books/comparative_theology"
       }
      ],
      "statement": "Images of Christ, Mary and the saints should be set up and honoured with outward signs (kissing, bowing, lights, incense); the honour passes to the person shown and differs from the worship due to God.",
@@ -3751,8 +3989,9 @@
       "baptist"
      ],
      "rejected_by": [
+      "catholic",
       "orthodox",
-      "catholic"
+      "oriental-orthodox"
      ],
      "defined": [
       {
@@ -3822,7 +4061,9 @@
      "rejected_by": [
       "catholic",
       "orthodox",
-      "lutheran"
+      "lutheran",
+      "methodist",
+      "pentecostal"
      ],
      "defined": [
       {
@@ -3848,7 +4089,8 @@
      "id": "foreknowledge",
      "name": "Predestination according to foreseen free choice",
      "traditions": [
-      "orthodox"
+      "orthodox",
+      "pentecostal"
      ],
      "rejected_by": [
       "reformed"
@@ -3858,6 +4100,11 @@
        "source": "Confession of Dositheus (Synod of Jerusalem), Decree 3 (1672)",
        "quote": "But since He foreknew the one would make a right use of their free-will, and the other a wrong, He predestinated the one, or condemned the other.",
        "url": "https://www.crivoice.org/creeddositheus.html"
+      },
+      {
+       "source": "Assemblies of God position paper, The Assurance of Salvation (General Presbytery, 2017)",
+       "quote": "believers are chosen in Christ on the basis of His foreknowledge (Romans 8:29; Ephesians 1:4).",
+       "url": "https://ag.org/-/media/AGORG/Beliefs/Position-Papers/Assurance-of-Salvation.pdf"
       }
      ],
      "statement": "God predestines to glory those he foreknows will freely cooperate with his grace, and condemns those he foreknows will refuse it.",
@@ -4025,6 +4272,528 @@
     }
    ],
    "on_question": 70
+  },
+  {
+   "id": "spiritual-gifts",
+   "question": "Do gifts such as tongues, prophecy and healing continue in the Church today, and is speaking in tongues the sign of a baptism in the Spirit?",
+   "shared_ground": [
+    "The Holy Spirit gives gifts to the Church (1 Corinthians 12)",
+    "Love is greater than any gift (1 Corinthians 13)",
+    "Gifts are for building up the Church",
+    "Miracles were done by the apostles (as history)",
+    "The Spirit was poured out at Pentecost with tongues (Acts 2 retold)"
+   ],
+   "positions": [
+    {
+     "id": "spirit-baptism-evidence",
+     "name": "Baptism in the Spirit, first shown by tongues",
+     "traditions": [
+      "pentecostal"
+     ],
+     "rejected_by": [
+      "methodist"
+     ],
+     "defined": [
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "This experience is distinct from and subsequent to the experience of the new birth.",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
+      },
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "The baptism of believers in the Holy Spirit is witnessed by the initial physical sign of speaking with other tongues as the Spirit of God gives them utterance.",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
+      },
+      {
+       "source": "Church of God (Cleveland, TN), Declaration of Faith",
+       "quote": "In speaking with other tongues as the Spirit gives utterance and that it is the initial evidence of the baptism in the Holy Ghost.",
+       "url": "https://www.churchofgod.org/beliefs/declaration-of-faith"
+      }
+     ],
+     "statement": "After conversion believers should seek a further baptism in the Holy Spirit, whose first outward sign is speaking in tongues; all the gifts named in 1 Corinthians 12 continue.",
+     "mark": "The passage says believers receive the Spirit in a distinct experience after faith, and that speaking in tongues is the sign that they have received it.",
+     "first_defined": "Charles Parham's 'Bible evidence' teaching (Topeka, 1901); Assemblies of God Statement of Fundamental Truths (1916)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "gifts-continue",
+     "name": "Gifts continue as the Spirit gives them",
+     "traditions": [
+      "catholic",
+      "oriental-orthodox",
+      "methodist",
+      "anabaptist"
+     ],
+     "rejected_by": [],
+     "defined": [
+      {
+       "source": "Catechism of the Catholic Church 2003",
+       "quote": "Whatever their character - sometimes it is extraordinary, such as the gift of miracles or of tongues - charisms are oriented toward sanctifying grace",
+       "url": "https://www.vatican.va/archive/ENG0015/__P6Z.HTM"
+      },
+      {
+       "source": "Catechism of the Catholic Church 799-801",
+       "quote": "No charism is exempt from being referred and submitted to the Church's shepherds.",
+       "url": "https://www.vatican.va/archive/ENG0015/__P28.HTM"
+      },
+      {
+       "source": "UMC Book of Resolutions, Guidelines: The UMC and the Charismatic Movement",
+       "quote": "their charismatic gifts and experiences can be considered as fresh wind of the Spirit",
+       "url": "https://www.umc.org/en/content/guidelines-the-umc-and-the-charismatic-movement"
+      },
+      {
+       "source": "UMC Book of Resolutions, Guidelines: The UMC and the Charismatic Movement",
+       "quote": "When United Methodist charismatics adopt a classical pentecostal line, they are no longer United Methodist-at least in the Wesleyan sense.",
+       "url": "https://www.umc.org/en/content/guidelines-the-umc-and-the-charismatic-movement"
+      },
+      {
+       "source": "Confession of Faith in a Mennonite Perspective (1995)",
+       "quote": "We know from Scripture that the Holy Spirit continues to reveal God's will to us (1 Cor. 14:26-33).",
+       "url": "https://www.mennoniteusa.org/wp-content/uploads/2024/02/Confession-of-Faith-In-a-Mennonite-Perspective.pdf"
+      },
+      {
+       "source": "Pope Shenouda III (Coptic Orthodox), Comparative Theology (1988)",
+       "quote": "God endows whatever gift He wishes to whomever He wishes in the time His Divine Wisdom defines",
+       "url": "https://www.copticchurch.net/books/comparative_theology"
+      }
+     ],
+     "statement": "The Spirit still gives gifts such as healing, prophecy and tongues as he wills; no single gift is the required sign of having the Spirit, and gifts are tested by the Church.",
+     "mark": "The passage says gifts such as prophecy, healing, miracles or tongues are still given in the writer's own day, and says or implies that not every Spirit-filled believer speaks in tongues.",
+     "first_defined": "No single defining text; Catechism of the Catholic Church (1992), paragraphs 799-801 and 2003; UMC Guidelines on the Charismatic Movement (1976)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "revelatory-gifts-ceased",
+     "name": "New revelation ceased with the apostles",
+     "traditions": [],
+     "rejected_by": [
+      "pentecostal"
+     ],
+     "defined": [
+      {
+       "source": "Westminster Confession of Faith (1646)",
+       "quote": "those former ways of God's revealing his will unto his people being now ceased.",
+       "url": "https://www.opc.org/wcf.html"
+      },
+      {
+       "source": "Second London Baptist Confession (1689), ch. 1",
+       "quote": "those former ways of God's revealing his will unto his people being now ceased.",
+       "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter01.htm"
+      }
+     ],
+     "statement": "God's former ways of giving new revelation, such as prophecy and tongues as revelation, ended with the apostles once Scripture was complete; such revelation is not given today.",
+     "mark": "The passage says new revelation, through prophecy or tongues, ended with the apostles or is no longer given.",
+     "first_defined": "Westminster Confession 1.1 (1646); Second London Baptist Confession 1.1 (1689)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    }
+   ],
+   "passages": [],
+   "on_question": 0
+  },
+  {
+   "id": "sanctification",
+   "question": "Can a Christian be made wholly holy in this life, and when is sanctification made complete?",
+   "shared_ground": [
+    "Believers are called to holiness ('be holy, for I am holy')",
+    "Sanctification is God's work by the Spirit",
+    "Growth in grace through life",
+    "Exhortations to be perfect (Matthew 5:48) without saying perfection is reached",
+    "The souls of the righteous are made perfect at death (shared by both positions that deny purification after death)"
+   ],
+   "positions": [
+    {
+     "id": "entire-sanctification",
+     "name": "Entire sanctification in this life",
+     "traditions": [
+      "methodist",
+      "pentecostal"
+     ],
+     "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+     ],
+     "defined": [
+      {
+       "source": "Confession of Faith of the Evangelical United Brethren Church (UMC Book of Discipline, para. 104)",
+       "quote": "Entire sanctification is a state of perfect love, righteousness and true holiness which every regenerate believer may obtain by being delivered from the power of sin",
+       "url": "https://www.umc.org/en/content/confession-of-faith"
+      },
+      {
+       "source": "Confession of Faith of the Evangelical United Brethren Church (UMC Book of Discipline, para. 104)",
+       "quote": "Through faith in Jesus Christ this gracious gift may be received in this life both gradually and instantaneously",
+       "url": "https://www.umc.org/en/content/confession-of-faith"
+      },
+      {
+       "source": "Church of the Nazarene, Articles of Faith (Manual 2023)",
+       "quote": "We believe that entire sanctification is that act of God, subsequent to regeneration, by which believers are made free from original sin, or depravity",
+       "url": "https://nazarene.org/what-we-believe/"
+      },
+      {
+       "source": "International Pentecostal Holiness Church, Articles of Faith",
+       "quote": "we believe it includes a definite, instantaneous work of grace achieved by faith subsequent to regeneration",
+       "url": "https://iphc.org/beliefs/"
+      },
+      {
+       "source": "Church of God (Cleveland, TN), Declaration of Faith",
+       "quote": "In sanctification subsequent to the new birth, through faith in the blood of Christ; through the Word, and by the Holy Ghost.",
+       "url": "https://www.churchofgod.org/beliefs/declaration-of-faith"
+      }
+     ],
+     "statement": "After regeneration God can, by a further work received through faith, free the believer from the power of sin and make him perfect in love in this life; growth in grace continues afterwards.",
+     "mark": "The passage says a believer can be made wholly holy, free from sin's power or perfect in love, in this life, as a work of God after conversion.",
+     "first_defined": "Methodist Protestant article on sanctification, placed in the Methodist Discipline (1939); John Wesley's teaching on Christian perfection (18th century, not itself a church confession); EUB Confession XI; Nazarene Articles of Faith",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "progressive-to-death",
+     "name": "Progressive, made complete at death",
+     "traditions": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "baptist"
+     ],
+     "rejected_by": [],
+     "defined": [
+      {
+       "source": "Westminster Confession of Faith (1646)",
+       "quote": "This sanctification is throughout, in the whole man; yet imperfect in this life, there abiding still some remnants of corruption in every part",
+       "url": "https://www.opc.org/wcf.html"
+      },
+      {
+       "source": "Westminster Confession of Faith (1646)",
+       "quote": "the souls of the righteous, being then made perfect in holiness, are received into the highest heavens",
+       "url": "https://www.opc.org/wcf.html"
+      },
+      {
+       "source": "Second London Baptist Confession (1689), ch. 13",
+       "quote": "This sanctification is throughout the whole man, yet imperfect in this life",
+       "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter13.htm"
+      },
+      {
+       "source": "Baptist Faith and Message (2000)",
+       "quote": "Growth in grace should continue throughout the regenerate person's life.",
+       "url": "https://bfm.sbc.net/bfm2000/"
+      },
+      {
+       "source": "Thirty-Nine Articles (1571)",
+       "quote": "But all we the rest, although baptized, and born again in Christ, yet offend in many things; and if we say we have no sin, we deceive ourselves, and the truth is not in us.",
+       "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      },
+      {
+       "source": "Formula of Concord, Epitome (1577)",
+       "quote": "notwithstanding the fact that many weaknesses and defects cling to the true believers and truly regenerate, even to the grave",
+       "url": "https://bookofconcord.org/formula-of-concord-epitome/"
+      }
+     ],
+     "statement": "Sanctification begins at regeneration and grows through life but stays incomplete; remaining sin is removed only at death, when the soul is made perfect in holiness.",
+     "mark": "The passage says even the regenerate stay imperfect or keep sinning until death.",
+     "first_defined": "Augsburg Confession (1530) and Formula of Concord (1577); Thirty-Nine Articles XV (1563/1571); Westminster Confession 13 and 32 (1646)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "purification-after-death",
+     "name": "Completed by purification after death if not in this life",
+     "traditions": [
+      "catholic"
+     ],
+     "rejected_by": [
+      "lutheran",
+      "reformed",
+      "anglican",
+      "methodist",
+      "baptist"
+     ],
+     "defined": [
+      {
+       "source": "Catechism of the Catholic Church 1030-1031",
+       "quote": "All who die in God's grace and friendship, but still imperfectly purified, are indeed assured of their eternal salvation; but after death they undergo purification, so as to achieve the holiness necessary to enter the joy of heaven.",
+       "url": "https://www.vatican.va/archive/ENG0015/__P2N.HTM"
+      },
+      {
+       "source": "Catechism of the Catholic Church 2013-2015",
+       "quote": "All Christians in any state or walk of life are called to the fullness of Christian life and to the perfection of charity.",
+       "url": "https://www.vatican.va/archive/ENG0015/__P71.HTM"
+      }
+     ],
+     "statement": "All are called to perfect charity in this life; those who die in grace but not yet fully purified are cleansed after death before entering heaven.",
+     "mark": "The passage says those who are saved but not yet wholly holy at death are cleansed after death.",
+     "first_defined": "Councils of Florence (1439) and Trent (1563), as cited in Catechism 1031",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    }
+   ],
+   "passages": [],
+   "on_question": 0
+  },
+  {
+   "id": "christ-natures",
+   "question": "After the incarnation, is Christ one nature, or two natures in one person, and how is the union to be stated?",
+   "shared_ground": [
+    "Christ is truly God and truly man (all three positions)",
+    "The union is without confusion or change (all three)",
+    "Christ is one Lord and Son, worshipped with a single worship",
+    "Christ is consubstantial with the Father and with us",
+    "'Fully God and fully man' without saying 'one nature' or 'two natures'"
+   ],
+   "positions": [
+    {
+     "id": "two-natures-chalcedon",
+     "name": "Two natures in one person (Chalcedon)",
+     "traditions": [
+      "catholic",
+      "orthodox",
+      "lutheran",
+      "reformed",
+      "anglican",
+      "methodist",
+      "baptist",
+      "pentecostal"
+     ],
+     "rejected_by": [
+      "oriental-orthodox"
+     ],
+     "defined": [
+      {
+       "source": "Council of Chalcedon, Definition of the Faith (451)",
+       "quote": "acknowledged in two natures which undergo no confusion, no change, no division, no separation",
+       "url": "https://www.papalencyclicals.net/councils/ecum04.htm"
+      },
+      {
+       "source": "Catechism of the Catholic Church 467 (quoting Chalcedon)",
+       "quote": "Following the holy Fathers, we unanimously teach and confess one and the same Son, our Lord Jesus Christ: the same perfect in divinity and perfect in humanity",
+       "url": "https://www.vatican.va/archive/ENG0015/__P1J.HTM"
+      },
+      {
+       "source": "Augsburg Confession (1530)",
+       "quote": "so that there are two natures, the divine and the human, inseparably enjoined in one Person",
+       "url": "https://bookofconcord.org/augsburg-confession/"
+      },
+      {
+       "source": "Westminster Confession of Faith (1646)",
+       "quote": "So that two whole, perfect, and distinct natures, the Godhead and the manhood, were inseparably joined together in one person, without conversion, composition, or confusion.",
+       "url": "https://www.opc.org/wcf.html"
+      },
+      {
+       "source": "Second London Baptist Confession (1689), ch. 8",
+       "quote": "so that two whole, perfect, and distinct natures were inseparably joined together in one person, without conversion, composition, or confusion",
+       "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter08.htm"
+      },
+      {
+       "source": "Thirty-Nine Articles (1571)",
+       "quote": "so that two whole and perfect Natures, that is to say, the Godhead and Manhood, were joined together in one Person, never to be divided",
+       "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+      },
+      {
+       "source": "Articles of Religion of the Methodist Church (UMC Book of Discipline, para. 104)",
+       "quote": "so that two whole and perfect natures, that is to say, the Godhead and Manhood, were joined together in one person, never to be divided",
+       "url": "https://www.umc.org/en/content/articles-of-religion"
+      },
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "The Lord Jesus Christ, as to His divine and eternal nature, is the proper and only Begotten of the Father, but as to His human nature, He is the proper Son of Man.",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
+      }
+     ],
+     "statement": "After the union Christ is one person in two natures, divine and human, each keeping its own properties, without confusion, change, division or separation.",
+     "mark": "The passage says Christ is in two natures after the union, concurring in one person and one hypostasis (subsistence).",
+     "first_defined": "Tome of Leo (449); Council of Chalcedon, Definition of the Faith (451)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "one-incarnate-nature",
+     "name": "One incarnate nature of God the Word (miaphysite)",
+     "traditions": [
+      "oriental-orthodox"
+     ],
+     "rejected_by": [],
+     "defined": [
+      {
+       "source": "Ethiopian Orthodox Tewahedo Church, The Faith of the Church (text by V. C. Samuel, 1970)",
+       "quote": "On this ground the Church of Ethiopia, with the other Oriental Orthodox Churches, affirms that Jesus Christ is not two natures, but one incarnate nature of God the Word.",
+       "url": "http://www.ethiopianorthodox.org/english/dogma/faith.html"
+      },
+      {
+       "source": "Ethiopian Orthodox Tewahedo Church, The Faith of the Church (text by V. C. Samuel, 1970)",
+       "quote": "The Church of Ethiopia, with the other Oriental Orthodox Churches, has refused to accept the Chalcedonian Definition of the Faith with the affirmation that Christ is \"made known in two natures.\"",
+       "url": "http://www.ethiopianorthodox.org/english/dogma/faith.html"
+      },
+      {
+       "source": "CopticChurch.net, Theology (summary of Pope Shenouda III, The Nature of Christ)",
+       "quote": "His Divine nature is one with his human nature yet without mingling, confusion or alteration; a complete Hypostatic Union.",
+       "url": "https://www.copticchurch.net/theology"
+      },
+      {
+       "source": "Armenian Apostolic Church, Pontifical Legation of Western Europe, Faith",
+       "quote": "In the 5th century the Armenian Church did not accept the Council of Chalcedon in 451. In 506 at the Dvin Council, the Armenian Church formulated an official response to Chalcedon defending its Christology.",
+       "url": "https://www.armenian-church.eu/en/faith/"
+      }
+     ],
+     "statement": "God the Word united manhood to himself so that Christ is one incarnate nature of God the Word, Godhead and manhood continuing in him without mixture, confusion or change; 'two natures' is not said after the union.",
+     "mark": "The passage says that after the union Christ is one nature of God the Word incarnate, or refuses 'two natures' after the union while denying any mixture.",
+     "first_defined": "Cyril of Alexandria's 'one nature of God the Word incarnate' (letters to Succensus, c. 433); refusal of Chalcedon by the non-Chalcedonian churches after 451; Armenian Council of Dvin (506)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "two-qnome-one-parsopa",
+     "name": "Two natures, each with its own qnoma, in one person (Church of the East)",
+     "traditions": [
+      "church-of-the-east"
+     ],
+     "rejected_by": [],
+     "defined": [
+      {
+       "source": "Assyrian Church of the East, Diocese of California, FAQ",
+       "quote": "The Church is diaphysite, and thus holds two natures in Christ—the Godhead or divine, and the human—which are preserved in their respective 'qnome', or substances. The two natures are united in the one Person of Filiation of the Son of God.",
+       "url": "https://acoecalifornia.org/faq"
+      },
+      {
+       "source": "Common Christological Declaration, Catholic Church and Assyrian Church of the East (1994)",
+       "quote": "In him has been preserved the difference of the natures of divinity and humanity, with all their properties, faculties and operations.",
+       "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html"
+      }
+     ],
+     "statement": "Christ's Godhead and manhood each remain a complete nature with its own qnoma (concrete individual reality), united in the one person (parsopa) of the Son; the Church of the East does not speak of one hypostasis for the union.",
+     "mark": "The passage says each nature in Christ keeps its own concrete subsistence (qnoma or hypostasis) and that the two are united in one person (prosopon or parsopa).",
+     "first_defined": "",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    }
+   ],
+   "passages": [],
+   "on_question": 0
+  },
+  {
+   "id": "millennium",
+   "question": "Will Christ reign on earth for a thousand years after he returns (Revelation 20), or is the thousand years the present age?",
+   "shared_ground": [
+    "Christ will return visibly in glory",
+    "The dead will be raised and all will be judged",
+    "Christ reigns now at the Father's right hand",
+    "Revelation 20 quoted without saying when the thousand years fall"
+   ],
+   "positions": [
+    {
+     "id": "premillennial",
+     "name": "Christ returns before a thousand-year reign on earth",
+     "traditions": [
+      "pentecostal"
+     ],
+     "rejected_by": [
+      "catholic",
+      "lutheran",
+      "reformed"
+     ],
+     "defined": [
+      {
+       "source": "Assemblies of God, Statement of Fundamental Truths",
+       "quote": "The second coming of Christ includes the rapture of the saints, which is our blessed hope, followed by the visible return of Christ with His saints to reign on earth for one thousand years.",
+       "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths"
+      },
+      {
+       "source": "Church of God (Cleveland, TN), Declaration of Faith",
+       "quote": "In the premillennial second coming of Jesus. First, to resurrect the righteous dead and to catch away the living saints to Him in the air. Second, to reign on the earth a thousand years.",
+       "url": "https://www.churchofgod.org/beliefs/declaration-of-faith"
+      },
+      {
+       "source": "International Pentecostal Holiness Church, Articles of Faith",
+       "quote": "We believe in the imminent, personal, premillennial second coming of our Lord Jesus Christ",
+       "url": "https://iphc.org/beliefs/"
+      }
+     ],
+     "statement": "Christ will return before a thousand-year reign on earth, raising the righteous first; the last judgment follows the thousand years.",
+     "mark": "The passage says Christ, or the saints with him, will reign on earth for a thousand years after his coming and a first resurrection, before the end.",
+     "first_defined": "No early creed defines it; taught by Papias, Justin (Dialogue 80-81) and Irenaeus (Against Heresies 5.32-36). Modern confessional form: AG Statement of Fundamental Truths (1916)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "amillennial",
+     "name": "The thousand years is the present age",
+     "traditions": [
+      "catholic",
+      "lutheran"
+     ],
+     "rejected_by": [
+      "pentecostal"
+     ],
+     "defined": [
+      {
+       "source": "Catechism of the Catholic Church 676",
+       "quote": "the Church has rejected even modified forms of this falsification of the kingdom to come under the name of millenarianism",
+       "url": "https://www.vatican.va/archive/ENG0015/__P1V.HTM"
+      },
+      {
+       "source": "Augsburg Confession, Article XVII (1530), condemning the view",
+       "quote": "They condemn also others who are now spreading … that before the resurrection of the dead the godly shall take possession of the kingdom of the world, the ungodly being everywhere suppressed.",
+       "url": "https://bookofconcord.org/augsburg-confession/"
+      },
+      {
+       "source": "Second Helvetic Confession, Chapter XI (1566), condemning the view",
+       "quote": "We further condemn … that there will be a golden age on earth before the Day of Judgment",
+       "url": "https://www.ccel.org/creeds/helvetic.htm"
+      }
+     ],
+     "statement": "There is no earthly thousand-year reign after Christ's return; the thousand years of Revelation 20 is Christ's present reign with his saints, ended by one return, one general resurrection and one judgment.",
+     "mark": "The passage says the thousand years is the present age or the Church's present reign, or rejects any earthly golden age of the saints either before or after Christ's return.",
+     "first_defined": "Augustine, City of God 20.7-9 (c. 426), for the reading; condemnations of an earthly kingdom in Augsburg XVII (1530), Second Helvetic XI (1566), Catechism 676 (1992)",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    },
+    {
+     "id": "postmillennial",
+     "name": "Christ returns after a golden age of the gospel",
+     "traditions": [],
+     "rejected_by": [],
+     "defined": [
+      {
+       "source": "Savoy Declaration of Faith and Order (1658)",
+       "quote": "we expect that in the latter days, antichrist being destroyed, the Jews called, and the adversaries of the kingdom of his dear Son broken, the churches of Christ being enlarged, and edified through a free and plentiful communication of light and grace, shall enjoy in this world a more quiet, peaceable and glorious condition than they have enjoyed.",
+       "url": "https://apostles-creed.org/wp-content/uploads/2014/07/the-savoy-declaration-of-faith-and-order-1658.pdf"
+      }
+     ],
+     "statement": "Before Christ returns, the gospel will spread so widely that the Church enjoys a long age of peace and righteousness on earth; Christ returns after it.",
+     "mark": "The passage says that before Christ's return the Church will triumph through the gospel and enjoy a long earthly age of peace and righteousness.",
+     "first_defined": "Savoy Declaration 26.5 (1658, Congregationalist), in a mild form",
+     "first_states": null,
+     "first_uncertain": null,
+     "states": 0,
+     "excludes": 0
+    }
+   ],
+   "passages": [],
+   "on_question": 0
   }
  ]
 }

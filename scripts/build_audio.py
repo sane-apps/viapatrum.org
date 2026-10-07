@@ -1302,8 +1302,16 @@ def _start_here_books() -> set:
     return {book_for_site(str(s)) for s in sites} - {None}
 
 
+# Same two skip lines fathers_watch.MISMATCH_RE counts. A section is one pair.
+_DRIFT_SKIP = re.compile(
+    r"^skip (\S+) (\S+): (?:audio does not match the page|sentence drift)",
+    re.M,
+)
+
+
 def _ship_drift() -> int:
-    """Sections the last ship skipped for 'sentence drift' (inject_audio)."""
+    """Sections the last ship skipped because the recording does not match
+    the page ('sentence drift' or 'audio does not match the page')."""
     logs = sorted((ROOT / "outputs").glob("ship-*.log"), key=lambda p: p.stat().st_mtime, reverse=True)
     for log in logs[:10]:
         try:
@@ -1311,7 +1319,7 @@ def _ship_drift() -> int:
         except OSError:
             continue
         if "+ audio:" in text:
-            return len(set(re.findall(r"^skip (\S+ \S+): sentence drift", text, re.M)))
+            return len(set(_DRIFT_SKIP.findall(text)))
     return 0
 
 
@@ -1363,7 +1371,8 @@ def write_reports(scan: dict | None = None, books_waiting: int | None = None,
                or has "fail" in its name, so a reader that sums the non-fail
                ints gets the backlog.
       waiting  counts that do not go down on their own: old-voice files (owner
-               decision), pages that match no English file, sentence drift,
+               decision), pages that match no English file, recordings that do not
+               match the page (sentence drift, or audio does not match),
                unmapped works, and items failed once that will be retried."""
     tiers = _queue_tiers()
     failures = _prune_failures(_load_failures())

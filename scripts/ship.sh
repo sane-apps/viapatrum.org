@@ -755,8 +755,12 @@ step "Research receipts (intros sourced, dates agree)"
 "$PYTHON" "$HOME/SaneApps/clients/translations/scripts/check_research.py"
 
 step "Build"
+# The build attaches players and writes the R2 list. Set the host first so
+# it does not copy mp3s into dist.
+export AUDIO_BASE="${AUDIO_BASE:-https://audio.viapatrum.org}"
 if [[ "$SKIP_BUILD" -eq 0 ]]; then
   nice -n 10 "$PYTHON" "$ROOT/scripts/build_site.py"
+  AUDIO_CUT="$(date +%s)"
 else
   echo "(skipped — using existing dist/)"
 fi
@@ -782,7 +786,11 @@ bad = [w["slug"] for w in held if (Path(sys.argv[2]) / "works" / w["slug"] / "in
 if bad:
     sys.exit("BLOCKED: quality receipt does not match this dist (held but built: %s); rebuild" % ", ".join(bad[:5]))
 PY
-AUDIO_CUT="$(python3 -c 'import os,sys; print(int(os.stat(sys.argv[1]).st_mtime))' "$BUILD_QUALITY")"
+# A full build set AUDIO_CUT after the players were attached. A skip-build
+# ship has no new inject, so the cut stays at the receipt this dist was built with.
+if [[ "$SKIP_BUILD" -ne 0 ]]; then
+  AUDIO_CUT="$(python3 -c 'import os,sys; print(int(os.stat(sys.argv[1]).st_mtime))' "$BUILD_QUALITY")"
+fi
 
 step "Catalogue regressions"
 "$PYTHON" "$ROOT/scripts/check_catalogue.py"
@@ -803,23 +811,11 @@ if [[ "$SKIP_BUILD" -eq 0 ]]; then
   rsync -a "$ROOT/assets/og/" "$ROOT/dist/assets/og/"
   "$PYTHON" "$ROOT/scripts/og_apply.py"
 
-  step "Read-along audio injection"
-  # Audio lives on R2 (audio.viapatrum.org), not in the Pages deploy: ships
-  # carry pages only (2026-10-03: 6 GB of mp3 at 0.8 MB/s made ships take hours).
-  export AUDIO_BASE="https://audio.viapatrum.org"
-  AUDIO_CUT="$(date +%s)"
-  rm -f "$R2_PENDING"
+  step "Read-along audio"
+  # Players are attached at the end of build_site.py, which also writes
+  # the R2 list. Do not delete that list. Drop any local mp3 a build
+  # copied when AUDIO_BASE was unset. Audio stays on R2, not in Pages.
   find "$ROOT/dist/assets/audio" -name "*.mp3" -delete 2>/dev/null || true
-  if grep -q -- '"--all"' "$ROOT/scripts/inject_audio.py"; then
-    python3 "$ROOT/scripts/inject_audio.py" --all || exit 1
-  else
-    for manifest in "$ROOT"/outputs/audio/*/manifest.json; do
-      [[ -f "$manifest" ]] || continue
-      work="$(basename "$(dirname "$manifest")")"
-      echo "  + audio: $work"
-      python3 "$ROOT/scripts/inject_audio.py" "$work" || exit 1
-    done
-  fi
   if [[ "$DRY_RUN" -eq 0 ]]; then
     start_r2_sync
   else

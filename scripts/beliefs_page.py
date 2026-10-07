@@ -2,7 +2,11 @@
 moved into the Timeline 2026-10-05: "Beliefs was not supposed to be a separate tab").
 
 Data: data/explore/doctrine_map.json (built by the translations repo's
-scripts/doctrine_map.py; spec docs/BELIEFS_MAP_SPEC.md).
+scripts/doctrine_map.py; spec docs/BELIEFS_MAP_SPEC.md), read through
+data/explore/doctrine_questions.json: the questions file decides which
+questions and positions show, and which churches hold or reject each; the map
+adds the graded passages. So a new question or church shows at the next build,
+with "no early passage yet" until the nightly job grades it.
 
   /explore/            each question is a card in its group, one lane per position
   /explore/<id>/       one question: the lanes full width, what sets each position
@@ -19,8 +23,12 @@ import re
 from html import escape, unescape
 from pathlib import Path
 
-TRADITIONS = [("catholic", "Catholic"), ("orthodox", "Orthodox"), ("lutheran", "Lutheran"),
-              ("reformed", "Reformed"), ("anglican", "Anglican"), ("baptist", "Baptist")]
+# Chip order (owner 2026-10-06): ancient churches, then the Reformation churches by age.
+TRADITIONS = [("catholic", "Catholic"), ("orthodox", "Orthodox"), ("oriental-orthodox", "Oriental Orthodox"),
+              ("church-of-the-east", "Church of the East"), ("lutheran", "Lutheran"), ("reformed", "Reformed"),
+              ("anglican", "Anglican"), ("methodist", "Methodist"), ("baptist", "Baptist"),
+              ("anabaptist", "Anabaptist"), ("pentecostal", "Pentecostal")]
+TRAD_ORDER = {t: i for i, (t, _) in enumerate(TRADITIONS)}
 TRAD_NAME = dict(TRADITIONS) | {"most": "Most churches"}
 
 # Which Timeline group each question joins. "mary-saints" is a group of its own.
@@ -35,6 +43,8 @@ LOCUS = {
     "mary-mother-of-god": "mary-saints", "mary-virginity": "mary-saints",
     "mary-sinlessness": "mary-saints", "mary-end-of-life": "mary-saints",
     "saints": "mary-saints", "images": "mary-saints",
+    "spiritual-gifts": "pneumatology", "sanctification": "soteriology",
+    "christ-natures": "christology", "millennium": "eschatology",
 }
 EXTRA_LOCUS = {"id": "mary-saints", "title": "Mary, the Saints and Images", "after": "ecclesiology"}
 
@@ -52,6 +62,8 @@ RELATED_TOPIC = {
     "mary-mother-of-god": ["incarnation-word-flesh", "virgin-birth"],
     "mary-sinlessness": ["virgin-birth"], "mary-end-of-life": ["virgin-birth"],
     "images": ["against-idols"], "saints": ["martyrdom-witness", "liturgy-prayer"],
+    "spiritual-gifts": ["gifts-and-order", "spirit-prophecy"], "sanctification": ["spirit-sanctifies"],
+    "christ-natures": ["two-natures-seed", "unity-of-christ"], "millennium": ["millennium-debate", "judgment-second-coming"],
 }
 # Topics that sit near the question but do not answer it directly.
 LOOSE_RELATED = {"mary-sinlessness", "mary-end-of-life"}
@@ -77,6 +89,10 @@ SHORT_TITLE = {
     "church-order": "How the Church is governed",
     "images": "Images of Christ and the saints",
     "predestination": "Predestination to salvation",
+    "spiritual-gifts": "Spiritual gifts today",
+    "sanctification": "Being made holy in this life",
+    "christ-natures": "Christ's divine and human natures",
+    "millennium": "The thousand years of Revelation 20",
 }
 
 
@@ -84,10 +100,34 @@ def short_title(q: dict) -> str:
     return SHORT_TITLE.get(q["id"]) or q["question"]
 
 
+# Editorial fields taken from doctrine_questions.json over the map's copy.
+_POS_KEYS = ("id", "name", "traditions", "rejected_by", "defined", "statement", "mark", "first_defined")
+
+
 def load(data_path: Path) -> list[dict]:
-    if not data_path.is_file():
-        return []
-    return json.loads(data_path.read_text(encoding="utf-8")).get("questions") or []
+    """The map's questions, overlaid on doctrine_questions.json beside it. The
+    questions file gives the list, order, wording and churches; the map gives
+    each position's graded passages and counts. A question or position the map
+    has not reached yet shows with no passages; one the questions file dropped
+    is left out."""
+    graded = json.loads(data_path.read_text(encoding="utf-8")).get("questions") or [] if data_path.is_file() else []
+    qpath = data_path.with_name("doctrine_questions.json")
+    if not qpath.is_file():
+        return graded
+    by_id = {q["id"]: q for q in graded}
+    out = []
+    for e in json.loads(qpath.read_text(encoding="utf-8")):
+        g = by_id.get(e["id"]) or {}
+        stats = {p["id"]: p for p in g.get("positions") or []}
+        positions = [{k: p.get(k) for k in _POS_KEYS}
+                     | {k: (stats.get(p["id"]) or {}).get(k) for k in ("first_states", "first_uncertain")}
+                     | {k: (stats.get(p["id"]) or {}).get(k) or 0 for k in ("states", "excludes")}
+                     for p in e["positions"]]
+        out.append({"id": e["id"], "question": e["question"], "shared_ground": e.get("shared_ground"),
+                    "tradition_notes": e.get("tradition_notes") or [], "public_note": e.get("public_note") or "",
+                    "positions": positions, "passages": g.get("passages") or [],
+                    "on_question": g.get("on_question") or 0})
+    return out
 
 
 def searched_depth(data_path: Path) -> str:
@@ -249,8 +289,29 @@ def _tally(tally: dict) -> str:
     return " · ".join(bits) or '<span class="t-none">no early passage yet</span>'
 
 
+def _trads(pos: dict) -> list[str]:
+    return sorted(pos.get("traditions") or [], key=lambda t: TRAD_ORDER.get(t, 99))
+
+
 def _trad_badges(pos: dict) -> str:
-    return "".join(f'<span class="btrad">{escape(TRAD_NAME.get(t, t))}</span>' for t in pos.get("traditions") or [])
+    return "".join(f'<span class="btrad">{escape(TRAD_NAME.get(t, t))}</span>' for t in _trads(pos))
+
+
+OO_SOURCES = ("Oriental Orthodox placements rest mainly on Coptic and Ethiopian church texts. The Armenian texts checked "
+              "so far are brief, and Syriac and Indian Orthodox texts are not yet checked.")
+
+
+def notes_html(q: dict) -> str:
+    """Short lines under the chips: churches left unplaced because they are
+    divided (the page has no divided state) or have no settled text, a note
+    the question needs, and where the Oriental Orthodox placements come from."""
+    lines = [f'<li><strong>{escape(TRAD_NAME.get(n["tradition"], n["tradition"]))}:</strong> {escape(n["note"])}</li>'
+             for n in sorted(q.get("tradition_notes") or [], key=lambda n: TRAD_ORDER.get(n["tradition"], 99))]
+    if q.get("public_note"):
+        lines.append(f'<li>{escape(q["public_note"])}</li>')
+    if any("oriental-orthodox" in (p.get("traditions") or []) for p in q["positions"]):
+        lines.append(f'<li>{escape(OO_SOURCES)}</li>')
+    return f'<ul class="bnotes">{"".join(lines)}</ul>' if lines else ""
 
 
 # When each position was formally defined, read from the first_defined text
@@ -261,7 +322,8 @@ _DEF_KINDS = (
     ("condemned", re.compile(r"^\s*condemned", re.I)),
     ("canon", re.compile(r"\(\d{3,4}, canon", re.I)),
     ("local", re.compile(r"\blocal\b|Synod of Jerusalem|Carthage|Hippo|Toledo")),
-    ("confession", re.compile(r"Confession|Articles|Formula|Catechism|Treatise|Platform|Apology|Consensus|Ordinal|Dort|Westminster|Baptist Faith")),
+    ("confession", re.compile(r"Confession|Articles|Formula|Catechism|Treatise|Platform|Apology|Consensus|Ordinal|Dort|Westminster|Baptist Faith"
+                              r"|Fundamental Truths|Declaration of Faith|Savoy|Discipline")),
     ("defined", re.compile(r"Council|Lateran|Trent|Vatican|Pius|Clement|Lyon|Florence")),
 )
 DEF_WORD = {"defined": "Defined", "condemned": "Condemned", "confession": "Confession",
@@ -339,7 +401,7 @@ def _lanes(q: dict, dist: Path, B, *, compact: bool) -> str:
             cap_gut = "" if compact else _cap_html(pos, cap, "tl-defcap-gut")
         badges = f'<span class="btrads">{_trad_badges(pos)}</span>' if pos.get("traditions") else ""
         rows.append(
-            f'<div class="tl-row" data-trads="{escape(" ".join(pos.get("traditions") or []))}">'
+            f'<div class="tl-row" data-trads="{escape(" ".join(_trads(pos)))}">'
             f'<p class="tl-claim"><span class="tl-claim-text">{escape(pos["name"])}{badges}</span>'
             f'<span class="tl-tally">{_tally(tally)}{cap_line}</span></p>'
             f'<div class="tl-lane" style="--rows:{rows_n};--rows-sm:{rows_sm}">'
@@ -358,7 +420,7 @@ def _defs_list(q: dict, B) -> str:
         label = " · ".join(def_label(m) for m in marks)
         mark = (f'<span class="tl-defcap {marks[-1]["kind"]}" title="{_def_title(pos, marks[-1]["kind"])}">{escape(label)}</span>'
                 if marks else "")
-        items.append(f'<li><span class="bdefs-name">{escape(pos["name"])}</span>{mark}</li>')
+        items.append(f'<li data-trads="{escape(" ".join(_trads(pos)))}"><span class="bdefs-name">{escape(pos["name"])}</span>{mark}</li>')
     return f'<ul class="bdefs">{"".join(items)}</ul>'
 
 
@@ -436,7 +498,7 @@ FILTER_JS = """<script>
     c.addEventListener('click', function () {
       var t = c.getAttribute('data-t');
       chips.forEach(function (o) { o.setAttribute('aria-pressed', String(o === c)); });
-      document.querySelectorAll('.tl-row[data-trads]').forEach(function (r) {
+      document.querySelectorAll('.tl-row[data-trads], .bdefs li[data-trads]').forEach(function (r) {
         var on = !t || (' ' + r.getAttribute('data-trads') + ' ').indexOf(' ' + t + ' ') >= 0;
         r.classList.toggle('dim', !on);
       });
@@ -486,7 +548,7 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
                           f'{escape(unsure["author"])}, c. {unsure["year"]}.</p>' if unsure else
                           '<p class="bfirst none">No early passage in the works searched so far states it yet.</p>')
             positions.append(
-                f'<div class="bpos" data-trads="{escape(" ".join(pos.get("traditions") or []))}">'
+                f'<div class="bpos" data-trads="{escape(" ".join(_trads(pos)))}">'
                 f'<h3>{escape(pos["name"])} {_trad_badges(pos)}</h3>'
                 f'<p class="bmark"><span>What sets it apart:</span> {escape(pos.get("mark") or "")}</p>'
                 f'{quote}{fine}{first_html}</div>')
@@ -513,6 +575,7 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
   <h1>{escape(q["question"])}</h1>
   <p class="tl-verdict">{story(q, B)}</p>
   {chips_html()}
+  {notes_html(q)}
 </header>
 <section class="over-time" aria-label="Each position over time">
   {legend(q, B)}

@@ -315,10 +315,13 @@
     const authorCount = Number(browse.getAttribute("data-author-count") || "0");
     let sort = "chrono";
     let filter = "all";
-    // Passage index: loaded on the first search only (it is several MB).
+    // Passage index: shards load as a word needs them. Several MB, not on page load.
     let searchIndex = null;
     let indexFailed = false;
     let indexPromise = null;
+    let manifest = null;
+    let manifestPromise = null;
+    const loadedShards = new Map();
     let failedTerm = "";
     let passageCount = 0;
     // The term the passage list was last built for; until it equals the
@@ -335,55 +338,100 @@
     };
     const plural = (n, one, many) => `${n.toLocaleString("en-US")} ${n === 1 ? one : many}`;
 
-    // Shards listed in data/search/manifest.json, read in order; the single
-    // data/search-index.json is the fallback. Each row's search text is
-    // lowercased once here, not on every keystroke.
+    // Shards listed in data/search/manifest.json. Each shard carries a bitset
+    // of a–z trigrams (build_site.search_trigrams); a word skips shards that
+    // cannot contain it. Shards with no bitset are all loaded. There is no
+    // single-file index. Each row's search text is lowercased once here.
     const readJson = (url) => fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))));
-    // Word search reads every shard (about 7 MB on the wire), so it starts
-    // only for 3 or more letters, after the typing pause. Two letters still
-    // match titles and writers from the page (2026-10-06 audit).
+    // Word search starts only for 3 or more letters, after the typing pause.
+    // Two letters still match titles and writers from the page (2026-10-06 audit).
     const PASSAGE_MIN = 3;
-    const shardUrls = (manifest) => {
-      const raw = Array.isArray(manifest) ? manifest : manifest && (manifest.shards || manifest.files);
-      if (!Array.isArray(raw) || !raw.length) return null;
-      const urls = raw.map((s) => (typeof s === "string" ? s : s && (s.file || s.path || s.href || s.url)));
-      if (!urls.every((u) => typeof u === "string" && u)) return null;
-      return urls.map((u) => (u.startsWith("/") ? u : `/data/search/${u}`));
+    const b64bytes = (b64) => {
+      const bin = atob(b64);
+      const out = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+      return out;
     };
-    const loadIndex = () => {
-      if (!indexPromise) {
-        indexPromise = (async () => {
-          let rows = null;
-          try {
-            const urls = shardUrls(await readJson("/data/search/manifest.json"));
-            if (urls) {
-              // Fetch in parallel; concat in manifest order.
-              const parts = await Promise.all(urls.map(readJson));
-              if (!parts.every(Array.isArray)) throw new Error("bad shard");
-              rows = [].concat(...parts);
-            }
-          } catch {
-            rows = null;
-          }
-          if (!rows) rows = await readJson("/data/search-index.json");
-          if (!Array.isArray(rows)) throw new Error("bad index");
-          for (const row of rows) {
-            row._b = `${row.title || ""} ${row.author || ""} ${row.text || ""}`.toLowerCase();
-            delete row.text;
-          }
-          searchIndex = rows;
-          indexFailed = false;
-        })().catch(() => {
-          // Keep the failure for the status line; the next new term retries.
-          indexFailed = true;
-          failedTerm = lastTerm;
-          searchIndex = [];
-          indexPromise = null;
-        });
-        indexPromise.then(() => {
-          if (lastTerm.length >= PASSAGE_MIN) apply();
-        });
+    // Same bit order as build_site.search_grams_cover. No bitset, or no 3-letter
+    // run, means the shard cannot be skipped.
+    const gramsCover = (grams, term) => {
+      if (!grams) return true;
+      const runs = String(term || "").toLowerCase().match(/[a-z]{3,}/g);
+      if (!runs) return true;
+      const raw = b64bytes(grams);
+      const has = (i) => ((raw[i >> 3] || 0) & (1 << (i & 7))) !== 0;
+      for (const run of runs) {
+        for (let i = 0; i <= run.length - 3; i++) {
+          const a = run.charCodeAt(i) - 97;
+          const b = run.charCodeAt(i + 1) - 97;
+          const c = run.charCodeAt(i + 2) - 97;
+          if (a < 0 || b < 0 || c < 0 || a > 25 || b > 25 || c > 25) return true;
+          if (!has((a * 26 + b) * 26 + c)) return false;
+        }
       }
+      return true;
+    };
+    const shardPlan = (man) => {
+      const raw = Array.isArray(man) ? man : man && (man.shards || man.files);
+      if (!Array.isArray(raw) || !raw.length) return null;
+      const plan = [];
+      for (const s of raw) {
+        const file = typeof s === "string" ? s : s && (s.file || s.path || s.href || s.url);
+        if (typeof file !== "string" || !file) return null;
+        const grams = s && typeof s === "object" && typeof s.grams === "string" ? s.grams : "";
+        plan.push({ url: file.startsWith("/") ? file : `/data/search/${file}`, grams });
+      }
+      return plan;
+    };
+    const termCovered = (term) => {
+      if (!manifest) return false;
+      const plan = shardPlan(manifest);
+      if (!plan) return false;
+      return plan.every((p) => !gramsCover(p.grams, term) || loadedShards.has(p.url));
+    };
+    const loadIndex = (term) => {
+      if (indexPromise) return indexPromise;
+      indexPromise = (async () => {
+        if (!manifest) {
+          if (!manifestPromise) {
+            manifestPromise = readJson("/data/search/manifest.json").catch((err) => {
+              manifestPromise = null;
+              throw err;
+            });
+          }
+          manifest = await manifestPromise;
+        }
+        const plan = shardPlan(manifest);
+        if (!plan) throw new Error("bad manifest");
+        const missing = plan.filter((p) => gramsCover(p.grams, term) && !loadedShards.has(p.url));
+        if (missing.length) {
+          const parts = await Promise.all(missing.map((p) => readJson(p.url)));
+          if (!parts.every(Array.isArray)) throw new Error("bad shard");
+          missing.forEach((p, i) => {
+            for (const row of parts[i]) {
+              row._b = `${row.title || ""} ${row.author || ""} ${row.text || ""}`.toLowerCase();
+              delete row.text;
+            }
+            loadedShards.set(p.url, parts[i]);
+          });
+        }
+        const rows = [];
+        for (const part of loadedShards.values()) rows.push(...part);
+        searchIndex = rows;
+        indexFailed = false;
+      })().catch(() => {
+        // Keep the failure for the status line; the next new term retries.
+        indexFailed = true;
+        failedTerm = lastTerm;
+        searchIndex = [];
+        manifest = null;
+      }).finally(() => {
+        indexPromise = null;
+      });
+      indexPromise.then(() => {
+        passageTerm = null;
+        if (lastTerm.length >= PASSAGE_MIN) apply();
+      });
       return indexPromise;
     };
 
@@ -587,8 +635,11 @@
       wasSearching = searching;
       // After a failed load, the next new term (debounced) tries once more.
       const wordSearch = term.length >= PASSAGE_MIN;
-      if (scan && wordSearch && indexFailed && !indexPromise && term !== failedTerm) searchIndex = null;
-      if (scan && wordSearch && !searchIndex) loadIndex();
+      if (scan && wordSearch && indexFailed && !indexPromise && term !== failedTerm) {
+        searchIndex = null;
+        indexFailed = false;
+      }
+      if (scan && wordSearch && !indexFailed && !termCovered(term) && !indexPromise) loadIndex(term);
       let visible = items().filter((li) => {
         if (!inFilter(li, filter)) return false;
         if (searching) {
@@ -633,11 +684,12 @@
     };
 
     const scanPassages = (term, searching) => {
+      const ready = !searching || (termCovered(term) && !indexFailed);
       passageCount = 0;
       entryHits = new Map();
-      passageTerm = !searching || searchIndex ? term : null;
+      passageTerm = !searching || ready || indexFailed ? term : null;
       if (passageHits && passageResults) {
-        if (searching && searchIndex) {
+        if (searching && ready && searchIndex) {
           const hits = [];
           for (const row of searchIndex) {
             if (!row._b.includes(term)) continue;

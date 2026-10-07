@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Semantic search sync for viapatrum.org (owner 2026-10-03: "semantic search is a must").
 
-  python3 scripts/search_sync.py export   # dist/data/search-index.json -> outputs/search-docs/*.md + meta.json
+  python3 scripts/search_sync.py export   # dist/data/search shards -> outputs/search-docs/*.md + meta.json
   python3 scripts/search_sync.py upload   # embed new/changed chunks into Vectorize, delete removed
 
 Backend: Cloudflare Vectorize index "viapatrum-search" (1024-d, cosine) with
@@ -41,10 +41,34 @@ def key_for(item: dict) -> str:
     return re.sub(r"[^A-Za-z0-9_.-]", "_", f"{item['kind']}__{item['id']}")[:180] + ".md"
 
 
+def writer_dates():
+    """name -> (sort year or None, display dates), from the site's own author
+    dates (data/author-dates.json via build_site), so /api/ask can order quotes
+    by date. Meta only: nothing is re-embedded. Without PyYAML (build_site
+    needs it) the fields are simply left out."""
+    try:
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import build_site as B  # noqa: E402
+    except Exception as e:  # pragma: no cover - only without the build venv
+        print(f"writer dates skipped: {e}", file=sys.stderr)
+        return lambda _name: (None, "")
+    cache: dict[str, tuple] = {}
+
+    def look(name: str):
+        if name not in cache:
+            y = B.author_sort_year(name) if name else 9999
+            cache[name] = (None if y == 9999 else y, B.author_dates_display(name) if name else "")
+        return cache[name]
+    return look
+
+
 def export() -> int:
-    idx = json.loads((ROOT / "dist" / "data" / "search-index.json").read_text(encoding="utf-8"))
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import build_site as B  # noqa: E402
+    idx = B.load_search_docs(ROOT / "dist" / "data")
     DOCS.mkdir(parents=True, exist_ok=True)
     meta, keep = {}, set()
+    dates_for = writer_dates()
     for it in idx:
         text = (it.get("text") or "").strip()
         if not text:
@@ -57,6 +81,11 @@ def export() -> int:
             path.write_text(body, encoding="utf-8")
         meta[key] = {"title": it.get("title", ""), "author": it.get("author", ""), "href": it.get("href", ""),
                      "kind": it.get("kind", "")}
+        year, dates = dates_for(it.get("author", ""))
+        if year is not None:
+            meta[key]["year"] = year
+        if dates:
+            meta[key]["dates"] = dates
     for old in DOCS.glob("*.md"):
         if old.name not in keep:
             old.unlink()

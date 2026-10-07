@@ -1,0 +1,115 @@
+/* Creeds and churches (/creeds/). Loaded only on that page.
+   site.css sizes .tl-axis as a 1.6rem chart bar. This page reuses those
+   class names for an era index, so the overrides stay under #timeline. */
+
+.cr-head { max-width: 42rem; margin-bottom: 1.4rem; }
+.cr-head h1 { margin-bottom: 0.4rem; }
+.cr-jump { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin: 0.9rem 0 0; }
+.cr-jump a { font-weight: 600; }
+
+#timeline > .tl-axis {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+  height: auto;
+  position: static;
+  margin: 0 0 1.6rem;
+  padding: 0;
+}
+#timeline .tl-era {
+  position: static;
+  height: auto;
+  background: var(--leaf);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem 0.7rem;
+}
+#timeline .tl-era-h {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  margin-bottom: 0.35rem;
+}
+#timeline .tl-era-h strong { display: block; font: 600 0.95rem/1.3 var(--font-body); }
+#timeline .tl-era-h span { display: block; font-size: 0.78rem; color: var(--ink-soft); }
+#timeline .tl-era ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.2rem; }
+#timeline .tl-era li a { font-size: 0.86rem; line-height: 1.35; }
+#timeline .tl-era .y { color: var(--gold); font-weight: 600; }
+
+.cr-eras { display: none; }
+
+.cr-era { margin: 0 0 0.4rem; }
+.cr-era > h2 { font-size: 1.7rem; margin: 1.6rem 0 0.3rem; }
+.cr-era > h2 span { font: 600 0.95rem var(--font-body); color: var(--ink-soft); }
+.cr-era > .intro { max-width: 40rem; margin-top: 0; }
+
+.cr-item, .ch-card, .cr-era, #churches {
+  scroll-margin-top: 5.5rem;
+}
+.cr-item {
+  display: grid;
+  grid-template-columns: 8.2rem 1fr;
+  gap: 0.4rem 1.2rem;
+  border-top: 1px solid var(--rule);
+  padding: 1.15rem 0;
+}
+.cr-year { margin: 0.35rem 0 0; font: 600 0.92rem/1.35 var(--font-body); color: var(--gold); }
+.cr-body h3 { margin: 0; font-family: var(--font-display); font-size: 1.65rem; line-height: 1.15; }
+.cr-sub { margin: 0.15rem 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+.cr-meta { display: flex; flex-wrap: wrap; gap: 0.2rem 1rem; margin: 0.35rem 0 0.6rem; font-size: 0.92rem; color: var(--ink-soft); }
+.cr-body h4 { margin: 0.85rem 0 0.25rem; font: 600 0.82rem var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); }
+.cr-why, .cr-held-note { margin: 0; max-width: 42rem; }
+.cr-quote { margin: 0.7rem 0; padding: 0.15rem 0 0.15rem 0.85rem; border-left: 3px solid var(--gold); }
+.cr-quote blockquote { margin: 0; max-width: 40rem; font: italic 1.05rem/1.55 var(--font-read); color: var(--ink); overflow-wrap: break-word; }
+.cr-quote figcaption { margin-top: 0.3rem; font-size: 0.85rem; color: var(--ink-soft); }
+.cr-held { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.35rem; max-width: 44rem; }
+.cr-held li { display: grid; grid-template-columns: 13rem 11rem 1fr; gap: 0.15rem 0.7rem; align-items: baseline; font-size: 0.95rem; }
+.cr-use, .cr-note { grid-column: 3; }
+.cr-trad { font-weight: 600; }
+.cr-status { font-size: 0.82rem; font-weight: 600; }
+.s-formal, .s-doctrine, .s-content { color: var(--verified); }
+.s-no { color: var(--deny); }
+.s-unsettled { color: var(--partly); }
+.cr-use, .cr-note { color: var(--ink); }
+.cr-links { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; margin: 0.8rem 0 0; }
+.cr-links a { font-weight: 600; }
+.cr-src { margin-top: 0.6rem; }
+.cr-src summary { cursor: pointer; font-weight: 600; }
+.cr-src ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
+.cr-marker { background: var(--paper-2); border: 1px solid var(--rule); border-radius: 8px; padding: 0.9rem 1rem; margin: 0.4rem 0; }
+.cr-fine { margin-top: 1.6rem; }
+
+.ch-section { margin-top: 2.2rem; }
+.ch-section > h2 { font-size: 1.7rem; margin-bottom: 0.3rem; }
+.ch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); gap: 1rem; margin-top: 1rem; }
+.ch-card {
+  background: var(--leaf);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 1rem 1.05rem 1.1rem;
+}
+.ch-card h3 { margin: 0; font-family: var(--font-display); font-size: 1.45rem; }
+.ch-sub { margin: 0.15rem 0 0; color: var(--ink-soft); }
+.ch-facts { display: grid; grid-template-columns: 5.5rem 1fr; gap: 0.25rem 0.6rem; margin: 0.7rem 0; }
+.ch-facts dt { font-weight: 600; color: var(--ink-soft); }
+.ch-facts dd { margin: 0; }
+.ch-why { margin: 0.2rem 0 0.4rem; }
+.ch-card h4 { margin: 0.75rem 0 0.25rem; font: 600 0.82rem var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; }
+.ch-people, .ch-events, .ch-holds { margin: 0; padding-left: 1.15rem; }
+.ch-events, .ch-holds { list-style: none; padding-left: 0; display: grid; gap: 0.28rem; }
+.ch-date { font-weight: 600; color: var(--gold); }
+.ch-how { color: var(--ink-soft); }
+
+@media (max-width: 900px) {
+  #timeline > .tl-axis { display: none; }
+  .cr-jump { flex-direction: column; align-items: flex-start; }
+  .cr-eras { display: flex; flex-direction: column; gap: 0.35rem; margin: 0 0 1rem; }
+  .cr-eras a { font-weight: 600; }
+  .cr-eras span { font-weight: 400; color: var(--ink-soft); }
+  .cr-held li { grid-template-columns: 1fr; gap: 0.05rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--rule); }
+  .cr-use, .cr-note { grid-column: auto; }
+  .cr-item { grid-template-columns: 1fr; gap: 0.15rem; }
+  .cr-year { margin-top: 0; }
+}

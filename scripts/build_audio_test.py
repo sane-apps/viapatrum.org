@@ -556,6 +556,14 @@ class PublicPagesTests(unittest.TestCase):
             ia.inject_work("bk")
         return buf.getvalue()
 
+    def test_bare_build_attaches_the_player(self):
+        import build_site
+        _root, dist, _out = self._env()
+        build_site._attach_players()
+        page = lambda sec: (dist / "works" / "site-x" / sec / "index.html").read_text()
+        self.assertIn('class="rdl-player"', page("1.1"))
+        self.assertNotIn('class="rdl-player"', page("1.2"))
+
     def test_scoped_folder_gets_play_and_changed_pages_count_unmatched(self):
         import json
         root, dist, out = self._env()

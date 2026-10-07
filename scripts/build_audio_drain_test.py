@@ -488,7 +488,8 @@ class ReportTests(unittest.TestCase):
             B.QUEUE.write_text(json.dumps({"cert-old": {"result": "certified"}}))
             (env.root / "outputs" / "ship-1.log").write_text(
                 "  + audio: a\nskip a u1: sentence drift in x para 0\nskip a u1: sentence drift in x para 2\n"
-                "skip b u2: sentence drift in y para 0\n")
+                "skip b u2: sentence drift in y para 0\n"
+                "skip c u3: audio does not match the page\n")
             stale = {n: [n + "_english"] for n in ("plain-old", "cert-old", "start-old", "cur")}
             with mock.patch.object(B, "stale_stems", lambda w: list(stale.get(w, []))), \
                  mock.patch.object(B, "_stale_batch", lambda ready: "stale"), \
@@ -502,7 +503,7 @@ class ReportTests(unittest.TestCase):
             self.assertEqual(on_disk["counts"], status["counts"])
             self.assertEqual(status["waiting"]["stale_old_voice"], 3)
             self.assertEqual(status["counts"]["stale_current_voice"], 1)
-            self.assertEqual(status["waiting"]["sentence_drift"], 2)
+            self.assertEqual(status["waiting"]["sentence_drift"], 3)
             self.assertEqual(status["backlog"], 1)
             for key in ("page_not_english", "unmapped_works", "retrying"):
                 self.assertIsInstance(status["waiting"][key], int)

@@ -830,6 +830,12 @@ details summary { cursor: pointer; font-weight: 650; }
   padding-left: 0.65rem;
   border-left: 2px solid color-mix(in srgb, var(--rule) 80%, var(--gold));
 }
+.reader-note {
+  font-style: italic;
+  color: var(--ink);
+  font-size: 0.95rem;
+  margin: 0 0 0.7rem;
+}
 .work-section .reader-about,
 .main > .reader-about {
   margin: 1.1rem 0 0;

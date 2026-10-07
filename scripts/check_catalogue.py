@@ -1,6 +1,7 @@
 """Focused catalogue regression checks; run with the translations Python."""
 import json
 import re
+import sys
 from html.parser import HTMLParser
 from pathlib import Path
 import build_site as site
@@ -8,7 +9,7 @@ from catalogue_quality import self_check, check_publication, publication_invento
 
 self_check()
 
-# New/changed content cannot inherit the legacy screen or self-attest a review.
+# A legacy hash is not a review. Changed text with no review entry is held too.
 import tempfile
 with tempfile.TemporaryDirectory() as tmp:
     root = Path(tmp)
@@ -19,9 +20,11 @@ with tempfile.TemporaryDirectory() as tmp:
         key: publication_digest(value) for key, value in publication_inventory([], [row]).items()},
         "reviews": {}}
     (root / "data/publication-review.json").write_text(json.dumps(manifest))
-    assert check_publication([], [row], root, corpus)[1] == [row]
+    legacy = check_publication([], [row], root, corpus)
+    assert not legacy[1] and any("legacy hash is not a review" in e for errs in legacy[3].values() for e in errs), legacy[3]
     changed = {**row, "english": ["A different meaning."]}
-    assert check_publication([], [changed], root, corpus)[1] == [changed]
+    changed_result = check_publication([], [changed], root, corpus)
+    assert not changed_result[1] and any("no review entry" in e for errs in changed_result[3].values() for e in errs), changed_result[3]
     manifest["reviews"]["excerpt:fixture"] = {"packet": "../outside.json", "receipt": "none"}
     (root / "data/publication-review.json").write_text(json.dumps(manifest))
     assert check_publication([], [changed], root, corpus)[3]
@@ -56,10 +59,12 @@ with tempfile.TemporaryDirectory() as tmp:
                                publication_scope=work_scope(work))
     semantic = {"verdict": "pass", "checks": dict.fromkeys(
         ("source_identity", "completeness", "negation", "agency", "modality", "doctrine", "scripture"), True),
-        "notes": "The named print contains both complete sentences; negation and agency match.",
         "uncertainties": [], "covered_source_paragraphs": [1]}
-    receipt = {"packet_id": packet["packet_id"], "reviewer": "offline fixture", "verdict": "pass",
-               "reviews": [{**semantic, "section": row["section"]} for row in rows], "scope_review": semantic}
+    reviews = [{**semantic, "section": row["section"],
+                "notes": f"The print reads {row['latin'][0]} The English reads {row['english'][0]}"}
+               for row in rows]
+    receipt = {"packet_id": packet["packet_id"], "reviewer": "kimi-k2.6+glm-5.2", "verdict": "pass",
+               "reviews": reviews, "scope_review": {**semantic, "notes": reviews[0]["notes"]}}
     (corpus / "packet.json").write_text(json.dumps(packet))
     (corpus / "receipt.json").write_text(json.dumps(receipt))
     pair = {"packet": "packet.json", "receipt": "receipt.json"}
@@ -82,10 +87,11 @@ with tempfile.TemporaryDirectory() as tmp:
                 "provisional_work_scopes": {"fixture": publication_digest(work_scope(work))},
                 "provisional_legacy": {key: publication_digest(value) for key, value in publication_inventory([work], []).items()}}
     manifest_path.write_text(json.dumps(manifest))
-    assert check_publication([work], [], root, corpus)[0] == [work]
+    hash_only = check_publication([work], [], root, corpus)
+    assert not hash_only[0] and any("no scope review" in e for errs in hash_only[3].values() for e in errs), hash_only[3]
     for changed in ({**work, "sections": rows[:1]}, {**work, "sections": list(reversed(rows))},
                     {**work, "edition": "Another print"}, {**work, "blurb": "Complete works, critically certified"}):
-        assert check_publication([changed], [], root, corpus)[0], "clean change with no review packet was held"
+        assert not check_publication([changed], [], root, corpus)[0], "clean change with no review packet was published"
     empty = {**work, "sections": []}
     from catalogue_quality import partition_catalogue
     assert not partition_catalogue([empty])[0], "zero-section work passed catalogue gate"
@@ -97,10 +103,10 @@ with tempfile.TemporaryDirectory() as tmp:
     scoped_packet = make_audit_packet(english, source, raw_sources=[raw], identity=identity,
                                       expected_sections=["1", "2"], selected_sections=["1", "2"],
                                       publication_scope=work_scope(work))
-    scoped_receipt = {"packet_id": scoped_packet["packet_id"], "reviewer": "offline fixture",
+    scoped_receipt = {"packet_id": scoped_packet["packet_id"], "reviewer": "kimi-k2.6+glm-5.2",
                       "verdict": "pass",
-                      "reviews": [{**semantic, "section": row["section"]} for row in rows],
-                      "scope_review": semantic}
+                      "reviews": reviews,
+                      "scope_review": {**semantic, "notes": reviews[0]["notes"]}}
     (corpus / "scoped_packet.json").write_text(json.dumps(scoped_packet))
     (corpus / "scoped_receipt.json").write_text(json.dumps(scoped_receipt))
     scoped_pair = {"packet": "scoped_packet.json", "receipt": "scoped_receipt.json"}
@@ -133,8 +139,206 @@ with tempfile.TemporaryDirectory() as tmp:
     retitled = {**work, "edition": "Another print", "sections": rows + [row3]}
     kept_retitled = check_publication([retitled], [], root, corpus)[0]
     assert kept_retitled and kept_retitled[0]["edition"] == "Another print", kept_retitled
+    stamped = json.loads(json.dumps(scoped_receipt))
+    stamped["reviewer"] = "cursor-held-eeng-20260924 (Mini)"
+    for rev in stamped["reviews"]:
+        rev["notes"] = "Pass A/B OET tip."
+    stamped["scope_review"]["notes"] = "Engastrimytho tip."
+    (corpus / "scoped_receipt.json").write_text(json.dumps(stamped))
+    stamped_result = check_publication([work], [], root, corpus)
+    stamped_errors = [e for errs in stamped_result[3].values() for e in errs]
+    assert not stamped_result[0], stamped_result[3]
+    assert any("two model families" in e for e in stamped_errors), stamped_errors
+    assert any("do not quote" in e for e in stamped_errors), stamped_errors
 
-import sys
+kept_w, held_w = site.split_withheld([
+    {"slug": "eustathius-engastrimytho", "status": "available"},
+    {"slug": "other-work", "status": "available"},
+    {"slug": "already-held", "status": "withheld"},
+])
+assert [w["slug"] for w in kept_w] == ["other-work"], kept_w
+assert held_w == ["eustathius-engastrimytho", "already-held"], held_w
+eust_meta = json.loads((site.BOOKS / "eustathius-engastrimytho/translations/eeng_u01_open_meta.json").read_text())
+assert eust_meta["slug"] == "eustathius-engastrimytho"
+assert eust_meta["slug"] in site.FORCED_WITHHOLD
+named_holds = [
+    "evagrius-sententiae-monachos", "didymus-fragmenta-romanos", "macarius-spiritual-homilies",
+    "origen-ezekiel-fragments", "origen-philocalia", "origen-romans-catena", "origen-de-principiis",
+    "origen-letters-africanus-rem", "origen-song-homily-1", "cyril-adoration-10",
+    "pseudo-cyprian-to-vigilius", "didymus-dialexis-montanistae",
+]
+kept_named, held_named = site.split_withheld(
+    [{"slug": slug, "status": "available"} for slug in named_holds]
+    + [{"slug": "origen-song-homily-2", "status": "available"},
+       {"slug": "origen-letters-gregory-series", "status": "available"}]
+)
+assert [w["slug"] for w in kept_named] == ["origen-song-homily-2", "origen-letters-gregory-series"], kept_named
+assert held_named == named_holds, held_named
+evag = json.loads((site.BOOKS / "evagrius-sententiae-monachos/translations/esm_u01_open_english.json").read_text())
+evag_text = "\n".join(evag[0]["english"])
+assert "Insert the superscription" not in evag_text
+assert evag[0]["english"][0] == "To the monks who live in monasteries or in communities."
+assert evag[0]["english"][1].startswith("Heirs of God, listen to the words of God.")
+didy = json.loads((site.BOOKS / "didymus-fragmenta-romanos/translations/dfr_u01_rem_english.json").read_text())
+close = next(row for row in didy if row["section"] == "u01-rem-close")
+close_text = "\n".join(close["english"])
+assert "Keep the English" not in close_text and "Add to translator_notes" not in close_text
+assert "and likewise the good lies beside those who will to do evil" in close_text
+assert any("οὐ καλὸν παράκειται" in note for note in close["translator_notes"])
+
+import tempfile
+with tempfile.TemporaryDirectory() as receipt_tmp:
+    receipt_root = Path(receipt_tmp)
+    (receipt_root / "sample-book" / "reviews").mkdir(parents=True)
+    (receipt_root / "sample-book" / "reviews" / "work_receipt.json").write_text("{}")
+    (receipt_root / "clean-book").mkdir()
+    receipt_works = [{"slug": "sample-book"}, {"slug": "clean-book"}, {"slug": "no-folder"}]
+    assert site.stale_receipt_slugs(
+        receipt_works, books_root=receipt_root, certified_fn=lambda _n: False, pass_ab_fn=lambda _f: True,
+    ) == ["sample-book"]
+    assert site.stale_receipt_slugs(
+        receipt_works, books_root=receipt_root, certified_fn=lambda _n: True, pass_ab_fn=lambda _f: False,
+    ) == ["sample-book"]
+    assert site.stale_receipt_slugs(
+        receipt_works, books_root=receipt_root, certified_fn=lambda _n: True, pass_ab_fn=lambda _f: True,
+    ) == []
+    saved_work_book = site.work_book
+    site.work_book = lambda slug: "sample-book" if slug == "alias" else saved_work_book(slug)
+    try:
+        assert site.stale_receipt_slugs(
+            [{"slug": "alias"}], books_root=receipt_root,
+            certified_fn=lambda _n: False, pass_ab_fn=lambda _f: True,
+        ) == ["alias"]
+    finally:
+        site.work_book = saved_work_book
+
+live_receipt = next(site.BOOKS.glob("*/reviews/work_receipt.json"))
+live_book = live_receipt.parent.parent.name
+sys.path.insert(0, str(site.BOOKS.parent / "scripts"))
+sys.path.insert(0, str(site.BOOKS.parent))
+import work_pipeline
+from pipeline.check_pass_ab import check_translation_files
+live_certified = work_pipeline.certified(live_book)
+live_pairs = site._translation_pairs(site.BOOKS / live_book)
+live_ab = bool(live_pairs) and all(
+    src.is_file() and not check_translation_files(en, src) for en, src in live_pairs)
+live_held = site.stale_receipt_slugs([{"slug": live_book}])
+assert (live_book in live_held) == (not (live_certified and live_ab)), (live_book, live_certified, live_ab, live_held)
+
+baron_title = "Philosophia theologiae ancillans (Exercitatio Prima Art. I-XII + Secunda Art. I-XV + Tertia Art. I-XXX)"
+baron_sub = site.public_reader_latin_subtitle(baron_title, slug="baron-philosophia-theologiae-ancillans")
+assert baron_sub == "Philosophia theologiae ancillans", baron_sub
+assert site.public_reader_latin_subtitle(
+    "Exercitatio Prima Art. I-XII + Secunda Art. I",
+    slug="baron-philosophia-theologiae-ancillans",
+) == ""
+assert site.public_reader_latin_subtitle(
+    "De oratione (Cap. I–XIV)",
+    slug="baron-philosophia-theologiae-ancillans",
+) == "De oratione"
+baron_meta = json.loads((site.BOOKS / "baron-philosophia-theologiae-ancillans/translations/ente_art1_2_meta.json").read_text())
+baron_blurb = site.public_blurb(baron_meta["blurb"])
+assert "not in this volume" not in baron_blurb.lower() and "later exercise" not in baron_blurb.lower(), baron_blurb
+assert "faith, science, and opinion" in baron_blurb
+baron_method = site.public_note(site.public_method(baron_meta["text_history"]["method"]))
+assert "remain" not in baron_method.lower() and "faith, science, and opinion" in baron_method, baron_method
+
+placeus_meta = json.loads((site.BOOKS / "placeus-de-imputatione/translations/cap1_tip_meta.json").read_text())
+placeus_blurb = site.public_blurb(placeus_meta["blurb"])
+placeus_method = site.public_note(site.public_method(placeus_meta["text_history"]["method"]))
+placeus_about = site.about_edition_text(placeus_meta["edition"])
+for label, text in (("blurb", placeus_blurb), ("method", placeus_method), ("edition", placeus_about)):
+    low = text.lower()
+    assert "honest partial" not in low and "densify" not in low and "english follows" not in low, (label, text)
+    assert "man. post" not in low, (label, text)
+assert "from the Latin" in placeus_blurb and "chapters 1 to 14" in placeus_blurb, placeus_blurb
+assert "1661 Saumur" in placeus_method and "chapters 1 to 14" in placeus_method, placeus_method
+assert site.mast_edition_label(placeus_meta["edition"]) == "Saumur 1661"
+assert site.public_blurb("Capita I–XIV from the Latin. Honest partial; more to come.") == ""
+assert site.public_note("English follows the Latin partial through Man. Post. Caput IX.") == ""
+for n in range(1, 18):
+    adore = site.public_reader_latin_subtitle(
+        f"On Adoration and Worship in Spirit and Truth, Book {n}",
+        slug=f"cyril-adoration-{n}",
+    )
+    assert adore == "Περὶ προσκυνήσεως", (n, adore)
+assert site.public_reader_latin_subtitle(
+    "Syntagma sacrae theologiae (Liber I Cap. 10 densify complete)",
+    slug="crocius-syntagma",
+) == "Syntagma sacrae theologiae"
+strim_meta = json.loads((site.BOOKS / "strimesius-in-controversias-evangelicorum/translations/prefatio_si_tip_meta.json").read_text())
+strim_blurb = site.public_blurb(strim_meta["blurb"])
+assert "honest partial" not in strim_blurb.lower() and "1708" in strim_blurb, strim_blurb
+assert site.public_reader_latin_subtitle(strim_meta["title"], slug=strim_meta["slug"]) == "Ingenua in Controversias Evangelicorum"
+assert "Prefatio" not in site.public_reader_title(strim_meta["title"], slug=strim_meta["slug"])
+job_edition = site.imprint_with_known_volume("PG; Commentarii in Job (Khazarzar)", "didymus-commentarii-job")
+assert "PG 39" in job_edition, job_edition
+assert site.mast_edition_label(job_edition) == "PG 39", site.mast_edition_label(job_edition)
+assert site.mast_edition_label("PG;") == ""
+assert site.mast_edition_label("Migne PG 68") == "PG 68"
+assert site.display_author("Paulus Silentarius") == "Paul the Silentiary"
+assert 'author: "Paul the Silentiary"' in (site.BOOKS / "paulus-silentarius-ambonis/book.yml").read_text()
+assert 'author: "Paul the Silentiary"' in (site.BOOKS / "paulus-silentarius-sophia/book.yml").read_text()
+chrono = site.person_page_meta("chronicon-paschale", "Chronicon Paschale", works=1, passages=0)
+assert chrono[2][0]["mainEntity"]["@type"] == "CreativeWork", chrono[2]
+origen_meta = site.person_page_meta("origen", "Origen", works=1, passages=0)
+assert origen_meta[2][0]["mainEntity"]["@type"] == "Person"
+didache_meta = site.person_page_meta("didache", "Didache", works=1, passages=0)
+assert didache_meta[2][0]["mainEntity"]["@type"] == "CreativeWork", didache_meta[2]
+perpetua_meta = site.person_page_meta(
+    "passion-of-perpetua-and-felicity", "Passion of Perpetua and Felicity", works=1, passages=0)
+assert perpetua_meta[2][0]["mainEntity"]["@type"] == "CreativeWork"
+assert site.author_schema_type(None, "The Didache") == "CreativeWork"
+assert site.author_schema_type("origen", "Origen") == "Person"
+assert site.public_reader_title("Letter to Rome (Fragments)", slug="julian-letter-to-rome") == "Fragments of the Letter to Rome"
+assert site.public_reader_title(
+    "To Turbantius — fragments in Against Julian", slug="julian-turbantius-fragments") == "Fragments to Turbantius"
+assert site.public_reader_title("To Florus", slug="julian-to-florus") == "To Florus"
+_printed, _ = site.mast_meta_line(
+    {"author": "Julian of Eclanum", "author_slug": "julian-of-eclanum", "period": "1700"}, "")
+assert "printed 1700 AD" in _printed and "written" not in _printed, _printed
+_written, _ = site.mast_meta_line(
+    {"author": "Julian of Eclanum", "author_slug": "julian-of-eclanum", "period": "c. 419–430"},
+    "Quoted by Augustine")
+assert "written c. 419–430 AD" in _written, _written
+assert site.display_author("Theodorus (PG 86a)") == "Theodorus, not yet identified"
+assert site.author_dates_display("Theodorus (PG 86a)", "theodorus-pg86a") == ""
+assert site.confidence_text(site.CONFIDENCE_NOTE, True).startswith(
+    "This work has passed this project's source check. ")
+assert "independently certified" in site.confidence_text(site.CONFIDENCE_NOTE, True)
+assert site.confidence_text(site.CONFIDENCE_NOTE, False).startswith(
+    "This work has not yet been re-checked against its source. ")
+assert site.section_orientation_html({"orientation": "The preacher opens."}).startswith(
+    '<p class="reader-note">')
+assert site.section_orientation_html({}) == ""
+assert site._origen_rows(
+    [{"section": "1", "english": ["Hello."], "orientation": "A note."}], {})[0]["orientation"] == "A note."
+_mapped_books = set(site.WORK_BOOK_INTRO)
+_intro_slug = ""
+for _intro_path in site.BOOKS.glob("*/intro.md"):
+    _name = _intro_path.parent.name
+    if _name in _mapped_books or any(_name.startswith(pref) for pref, _cand in site.WORK_BOOK_PREFIXES):
+        continue
+    _intro_slug = _name
+    break
+assert _intro_slug and site.work_book(_intro_slug) == _intro_slug, _intro_slug
+_grace_grams = site.search_trigrams([{"title": "On Grace", "author": "Gregory", "text": "grace upon grace"}])
+_other_grams = site.search_trigrams([{"title": "Note", "author": "Cyril", "text": "xyzzy plugh"}])
+assert site.search_grams_cover(_grace_grams, "gra") and not site.search_grams_cover(_grace_grams, "xyz")
+assert not site.search_grams_cover(_other_grams, "gra") and site.search_grams_cover(_other_grams, "xyz")
+assert site.search_grams_cover("", "gra")
+with tempfile.TemporaryDirectory() as _search_tmp:
+    _search_root = Path(_search_tmp)
+    _search_docs = [
+        {"kind": "work", "id": "a", "title": "On Grace", "author": "Gregory", "text": "grace upon grace", "href": "/works/a/"},
+        {"kind": "work", "id": "b", "title": "Letters", "author": "Basil", "text": "the gravity of sin", "href": "/works/b/"},
+    ]
+    assert site.write_search_shards(_search_root, _search_docs) >= 1
+    assert not (_search_root / "search-index.json").exists()
+    assert {r["id"] for r in site.load_search_docs(_search_root)} == {"a", "b"}
+    _search_man = json.loads((_search_root / "search" / "manifest.json").read_text())
+    assert all(s.get("grams") for s in _search_man["shards"])
+
 if "--publication-only" in sys.argv:
     print("publication gate: offline attack regressions passed")
     raise SystemExit(0)
@@ -236,7 +440,7 @@ assert len({r["data-author"] for r in page.rows}) == len(page.rows)
 assert all(r.get("data-oet") in {"0", "1"} for r in page.rows)
 held = {r["slug"] for r in receipt["held_works"]}
 assert "agathias-historiae" in held
-index = json.loads((site.DIST / "data/search-index.json").read_text())
+index = site.load_search_docs(site.DIST / "data")
 for key in receipt["publication_review_failures"]:
     if key.startswith("work:"):
         assert key.split(":", 2)[1] in held, "publication failure was not held"
@@ -339,7 +543,7 @@ for _page in sorted((site.DIST / "works").glob("*/index.html")):
 # page's own writer, so an honest "Surviving Greek fragments." still ships.
 import html as _html
 _DESC = re.compile(r'<meta name="description" content="([^"]*)"')
-_LD_AUTHOR = re.compile(r'"author": \{"@type": "Person", "name": "([^"]+)"')
+_LD_AUTHOR = re.compile(r'"author": \{"@type": "(?:Person|CreativeWork)", "name": "([^"]+)"')
 _stub_hits = []
 for _page in sorted((site.DIST / "works").glob("*/index.html")):
     _s = _page.read_text(encoding="utf-8")

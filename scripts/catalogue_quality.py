@@ -310,18 +310,25 @@ def work_scope(work):
 
 
 def packet_blocks_publication(err: str) -> bool:
-    """Human packet drift does not hold a reading. A path outside the corpus does."""
+    """Identity drift does not hold a reading. Missing evidence does.
+
+    A path outside the corpus holds. So does a note that does not quote the
+    passage, and a reviewer that is not two model families.
+    """
     message = str(err)
-    return "must stay in the corpus" in message or message == "empty work"
+    return ("must stay in the corpus" in message or message == "empty work"
+            or "do not quote" in message or "not two model families" in message)
 
 
 def check_publication(works, excerpts, root, corpus):
-    """Publish the current reading. A human packet is not a queue.
+    """Publish a work only when a scope packet loads.
 
-    A missing, stale, or mismatched packet does not hold the work. A packet
-    path outside the corpus still holds. Scaffold text, contamination, empty
-    works, and the named scope sets are held earlier by partition_catalogue.
-    Reader corrections live on the site.
+    A missing scope review holds the work. A hash in provisional_legacy or
+    provisional_work_scopes is not a review. A section outside a validated
+    scope prefix needs its own review entry. A packet that loads but no longer
+    matches identity still leaves a content-clean reading up. A packet path
+    outside the corpus holds. Scaffold text, contamination, empty works, and
+    the named scope sets are held earlier by partition_catalogue.
     """
     import json
     import sys
@@ -358,9 +365,11 @@ def check_publication(works, excerpts, root, corpus):
 
     exception_types = (OSError, ValueError, KeyError, TypeError, AttributeError)
     works_by_slug = {work["slug"]: work for work in works}
-    # Publish plan per work: the reviewed leading prefix of its sections.
-    # A clean reviewed prefix publishes (tail held, never public); anything
-    # else (reorder, drop, middle edit, metadata change) holds the whole work.
+    # Publish plan per work: the reviewed leading prefix, when that packet
+    # loads and the current sections still start with it. A missing or
+    # unloadable scope packet holds the work. A packet that loads but no
+    # longer matches identity or order publishes the current content-clean
+    # sections. A provisional hash is not a packet.
     publish_ids = {}
     for work in works:
         key = f"work:{work['slug']}:@scope"
@@ -368,15 +377,10 @@ def check_publication(works, excerpts, root, corpus):
         if not scope["section_ids"]:
             failures[key] = ["empty work"]
             continue
-        if manifest.get("provisional_work_scopes", {}).get(work["slug"]) == publication_digest(scope):
-            publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
-            continue
         try:
             index = manifest.get("scope_reviews", {}).get(work["slug"])
             if not isinstance(index, dict):
-                # No scope packet. Publish the current sections. A packet that
-                # loads does not hold the work. A path outside the corpus does.
-                publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
+                failures[key] = ["no scope review"]
                 continue
             packet, _selected, errors = reviewed_packet(index)
             errors = list(errors) + identity_errors(packet, work.get("author"), work.get("title"), work.get("edition"))
@@ -401,11 +405,7 @@ def check_publication(works, excerpts, root, corpus):
                 elif work["slug"] not in publish_ids:
                     publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
         except exception_types as exc:
-            message = "unusable scope review: %s" % (exc,)
-            if packet_blocks_publication(message):
-                failures[key] = [message]
-            elif work["slug"] not in publish_ids:
-                publish_ids[work["slug"]] = [str(i) for i in scope["section_ids"]]
+            failures[key] = ["unusable scope review: %s" % (exc,)]
 
     tails = {}
     for key, payload in entries.items():
@@ -426,10 +426,17 @@ def check_publication(works, excerpts, root, corpus):
         if issues:
             record(issues)
             continue
-        if legacy.get(key) == publication_digest(payload):
-            continue
+        in_prefix = (slug is not None and slug in publish_ids
+                     and f"work:{slug}:@scope" not in failures
+                     and str(sec) in {str(i) for i in publish_ids[slug]})
         index = reviews.get(key)
         if not isinstance(index, dict):
+            if in_prefix:
+                continue
+            if legacy.get(key) == publication_digest(payload):
+                record(["legacy hash is not a review"])
+            else:
+                record(["no review entry"])
             continue
         try:
             packet, selected, errors = reviewed_packet(index)
@@ -454,9 +461,7 @@ def check_publication(works, excerpts, root, corpus):
                 if blocking:
                     record(blocking)
         except exception_types as exc:
-            message = "unusable review: %s" % (exc,)
-            if packet_blocks_publication(message):
-                record([message])
+            record(["unusable review: %s" % (exc,)])
     bad_works = {key.split(":", 2)[1] for key in failures if key.startswith("work:")}
     held = [{"slug": w["slug"], "title": w["title"], "author": w["author"],
              "section_count": len(w["sections"]), "reason": "publication_review_required",
@@ -532,7 +537,7 @@ def self_check() -> None:
 
 
 def _check_publication_packets() -> None:
-    """A missing or unloadable packet publishes. A path outside the corpus holds."""
+    """A missing or unloadable scope packet holds. A legacy hash does not publish."""
     import json as _json
     import tempfile
     from pathlib import Path as _Path
@@ -547,24 +552,45 @@ def _check_publication_packets() -> None:
         "slug": "sample-work", "title": "Sample", "author": "Author", "edition": "edition",
         "sections": [{"section": "1", "english": ["He explains the passage in plain sentences."]}],
     }
+
+    def messages(failures):
+        return [err for errs in failures.values() for err in errs]
+
     (data / "publication-review.json").write_text(_json.dumps({
         "schema": "fathers-publication-v1", "provisional_legacy": {},
     }), encoding="utf-8")
     kept, _excerpts, held, failures, _tails = check_publication([sample], [], tmp, corpus)
-    assert kept and kept[0]["slug"] == "sample-work" and not held, failures
+    assert not kept and held and held[0]["slug"] == "sample-work", failures
+    assert "no scope review" in messages(failures), failures
     scaffold = {
         "slug": "sample-scaffold", "title": "Sample", "author": "Author", "edition": "edition",
         "sections": [{"section": "1", "english": ["Lemma-led open — unit pending."]}],
     }
     kept, _excerpts, held, failures, _tails = check_publication([sample, scaffold], [], tmp, corpus)
-    assert [row["slug"] for row in held] == ["sample-scaffold"], failures
+    assert [row["slug"] for row in held] == ["sample-work", "sample-scaffold"], failures
+    (data / "publication-review.json").write_text(_json.dumps({
+        "schema": "fathers-publication-v1",
+        "provisional_legacy": {},
+        "provisional_work_scopes": {"sample-work": publication_digest(work_scope(sample))},
+    }), encoding="utf-8")
+    kept, _excerpts, held, failures, _tails = check_publication([sample], [], tmp, corpus)
+    assert not kept and "no scope review" in messages(failures), failures
+    excerpt = {"id": "fixture", "author": "Author", "work": "Sample",
+               "english": ["He explains the passage in plain sentences."]}
+    digest = publication_digest(publication_inventory([], [excerpt])["excerpt:fixture"])
+    (data / "publication-review.json").write_text(_json.dumps({
+        "schema": "fathers-publication-v1",
+        "provisional_legacy": {"excerpt:fixture": digest},
+    }), encoding="utf-8")
+    _kept, excerpts, _held, failures, _tails = check_publication([], [excerpt], tmp, corpus)
+    assert not excerpts and "legacy hash is not a review" in messages(failures), failures
     (data / "publication-review.json").write_text(_json.dumps({
         "schema": "fathers-publication-v1",
         "provisional_legacy": {},
         "scope_reviews": {"sample-work": {"packet": "missing-packet.json", "receipt": "missing-receipt.json"}},
     }), encoding="utf-8")
     kept, _excerpts, held, failures, _tails = check_publication([sample], [], tmp, corpus)
-    assert kept and kept[0]["slug"] == "sample-work" and not held, failures
+    assert not kept and held and any(err.startswith("unusable scope review") for err in messages(failures)), failures
 
 
 if __name__ == "__main__":

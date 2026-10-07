@@ -7,8 +7,19 @@
   border: 1px solid var(--rule); background: var(--leaf); color: var(--ink); cursor: pointer; }
 .bchip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .bchip:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
-.tl-row[data-trads] { transition: opacity 0.2s; }
-.tl-row.dim { opacity: 0.25; }
+.tl-row[data-trads], .bdefs li[data-trads] { transition: opacity 0.2s; }
+.tl-row.dim, .bdefs li.dim { opacity: 0.25; }
+/* Eleven churches (2026-10-06): on phones the label takes its own line, so the
+   chips wrap as one even block under it. */
+@media (max-width: 640px) {
+  .bfilter-label { flex-basis: 100%; margin: 0 0 0.1rem; }
+  .bchip { padding: 0.45rem 0.65rem; }
+}
+/* Churches left unplaced on a question (divided, or no settled text), and
+   where the Oriental Orthodox placements come from. Plain text, not links. */
+.bnotes { list-style: none; margin: 0.8rem 0 0; padding: 0; display: grid; gap: 0.3rem;
+  font: 0.9rem/1.5 var(--font-body); color: var(--ink-soft); max-width: 62rem; }
+.bnotes strong { color: var(--ink); font-weight: 600; }
 
 /* Cards: each lane is named, since a card shows every position. */
 .tl-pos.tl-compact .tl-row { padding: 0.35rem 0 0; }
@@ -32,6 +43,8 @@
   border: 1px solid var(--rule); border-radius: 4px; padding: 0.1rem 0.35rem; }
 .tl-related { margin: 0.9rem 0 0; font-size: 0.95rem; }
 .tl-related a { color: var(--lapis); font-weight: 600; }
+.ot-creeds { margin: 0.75rem 0 0; max-width: 40rem; }
+.ot-creeds a { font-weight: 600; }
 
 .bpositions { margin-top: 2rem; }
 .bpositions > h2, .bpassages > h2 { font-size: 1.6rem; margin: 0 0 0.6rem; }
@@ -60,7 +73,7 @@
 .bpsrc { margin: 0; font: 0.85rem var(--font-body); }
 .bpattr { margin: 0.15rem 0; font: 600 0.78rem var(--font-body); color: var(--partly); }
 .bmethod { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; font-size: 0.95rem; color: var(--ink-soft); }
-@media (prefers-reduced-motion: reduce) { .tl-row[data-trads] { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .tl-row[data-trads], .bdefs li[data-trads] { transition: none; } }
 
 /* When each position was formally defined (P18 item 5). Inside the lane: a gold
    diamond (red for condemned) on its own row, with a faint line through the

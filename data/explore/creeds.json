@@ -1,0 +1,1852 @@
+{
+ "meta": {
+  "generated": "2026-10-06",
+  "method": "Each key_text was cut by script from the raw text of the page at key_text_source (fetched with curl; several spot-checked again with WebFetch). Only whitespace left by HTML tags before punctuation was closed up. Dates were kept only where two independent sources agree; ranges show where they differ.",
+  "traditions": [
+   "catholic",
+   "orthodox",
+   "oriental-orthodox",
+   "church-of-the-east",
+   "lutheran",
+   "reformed",
+   "anglican",
+   "methodist",
+   "baptist",
+   "anabaptist",
+   "pentecostal"
+  ],
+  "reviewed": "2026-10-06: every correction in outputs/beliefs-expansion-20261006/REVIEW_creeds.json applied by outputs/pkg-creeds/apply_review.py; new facts checked against outputs/pkg-creeds/receipts/.",
+  "holds_rule": "held_by[].holds: formal (dogma, confession or liturgy), doctrine (teaching received; council not binding in itself), content (content affirmed, not binding), no, or unsettled. A church card's holds_creeds is every item whose row for that church is formal, doctrine or content."
+ },
+ "creeds": [
+  {
+   "id": "rule-of-faith",
+   "name": "The rule of faith (Irenaeus and Tertullian)",
+   "date": {
+    "display": "c. 180 AD (Irenaeus, Against Heresies 1.10.1) and about 200 AD (Tertullian, Prescription against Heretics 13)",
+    "start": 180,
+    "end": 200,
+    "approximate": true
+   },
+   "place": "Lyon, Gaul (Irenaeus); Carthage, North Africa (Tertullian)",
+   "occasion": "Before any council wrote a creed, teachers summed up the faith that the churches had received from the apostles. Irenaeus and Tertullian set these summaries against teachers who claimed a secret tradition of their own. Tertullian calls it the rule of faith. The later baptismal creeds grew from summaries like these.",
+   "held_by": [],
+   "held_note": "Not a fixed text that any church adopts as its creed; it is the shared summary the later creeds grew from.",
+   "key_text": "The Church, though dispersed throughout the whole world, even to the ends of the earth, has received from the apostles and their disciples this faith: [She believes] in one God, the Father Almighty, Maker of heaven, and earth, and the sea, and all things that are in them; and in one Christ Jesus, the Son of God, who became incarnate for our salvation; and in the Holy Spirit, who proclaimed through the prophets",
+   "key_text_source": "https://www.newadvent.org/fathers/0103110.htm",
+   "key_text_note": "Irenaeus, Against Heresies 1.10.1 (ANF translation).",
+   "extra_excerpts": [
+    {
+     "text": "there is one only God, and that He is none other than the Creator of the world, who produced all things out of nothing through His own Word",
+     "url": "https://www.newadvent.org/fathers/0311.htm",
+     "from": "Tertullian, Prescription against Heretics 13 (ANF translation)"
+    }
+   ],
+   "full_text_url": "https://www.ccel.org/ccel/schaff/anf01.ix.ii.xi.html",
+   "site_links": [
+    {
+     "label": "Irenaeus on Via Patrum",
+     "href": "/authors/irenaeus/"
+    },
+    {
+     "label": "Tertullian on Via Patrum",
+     "href": "/authors/tertullian/"
+    }
+   ],
+   "site_works": [
+    {
+     "slug": "tertullian-prescription-against-heretics",
+     "label": "Read the Prescription against Heretics in our English"
+    },
+    {
+     "slug": "irenaeus-against-heresies",
+     "label": "Read Against Heresies in our English"
+    }
+   ],
+   "sources": [
+    {
+     "title": "Irenaeus, Against Heresies 1.10 (ANF), New Advent",
+     "url": "https://www.newadvent.org/fathers/0103110.htm",
+     "type": "primary text (public-domain translation)",
+     "fetched": "2026-10-06",
+     "supports": "Excerpt."
+    },
+    {
+     "title": "Irenaeus, Against Heresies 1.10 (ANF), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/anf01.ix.ii.xi.html",
+     "type": "primary text (public-domain translation)",
+     "fetched": "2026-10-06",
+     "supports": "Full text."
+    },
+    {
+     "title": "Irenaeus, Against Heresies 3.3.3 (ANF), New Advent",
+     "url": "https://www.newadvent.org/fathers/0103303.htm",
+     "type": "primary text",
+     "fetched": "2026-10-06",
+     "supports": "Written while Eleutherius 'does now' hold the see of Rome."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'St. Irenaeus', New Advent",
+     "url": "https://www.newadvent.org/cathen/08130b.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Irenaeus went to Rome in 177 or 178 with a letter to Pope Eleutherius."
+    },
+    {
+     "title": "Tertullian, Prescription against Heretics 13 (ANF), New Advent",
+     "url": "https://www.newadvent.org/fathers/0311.htm",
+     "type": "primary text (public-domain translation)",
+     "fetched": "2026-10-06",
+     "supports": "Excerpt."
+    },
+    {
+     "title": "Tertullian, Prescription against Heretics 13 (ANF), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/anf03.v.iii.xiii.html",
+     "type": "primary text (public-domain translation)",
+     "fetched": "2026-10-06",
+     "supports": "Same words; chapter title 'Summary of the Creed, or Rule of Faith'."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Tertullian', New Advent",
+     "url": "https://www.newadvent.org/cathen/14520c.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Prescription written 'about 200'."
+    }
+   ]
+  },
+  {
+   "id": "apostles-creed",
+   "name": "Apostles' Creed (from the Old Roman Symbol)",
+   "date": {
+    "display": "Old Roman form 2nd-4th century; received form by the 8th century",
+    "start": 150,
+    "end": 750,
+    "approximate": true
+   },
+   "place": "Rome (Old Roman Symbol); received text settled in the Latin West by the 8th century",
+   "occasion": "A short summary of the faith confessed at baptism in the church of Rome. Over several centuries the Old Roman form grew a few clauses and became the received Apostles' Creed of the Western church.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "liturgical and catechetical",
+     "note": "Catechism of the Catholic Church 194 calls it 'the ancient baptismal symbol of the Church of Rome'.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "confessional and liturgical",
+     "note": "Printed first among the three ecumenical creeds in the Book of Concord.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "reformed",
+     "use": "confessional and catechetical",
+     "note": "Belgic Confession art. 9 accepts it; the Heidelberg Catechism (Q&A 23) teaches it line by line.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "anglican",
+     "use": "confessional and liturgical",
+     "note": "Thirty-nine Articles art. VIII; the Chicago-Lambeth Quadrilateral names it 'the baptismal symbol'.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "methodist",
+     "use": "liturgical",
+     "note": "Printed in the United Methodist Hymnal; not among the Methodist Articles of Religion.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "baptist",
+     "use": "used by some congregations; not binding",
+     "note": "Baptists recognize only the Bible as binding (WCC). Use varies by congregation.",
+     "holds": "content"
+    },
+    {
+     "tradition": "pentecostal",
+     "use": "used by some congregations; not binding",
+     "note": "The AG Statement of Fundamental Truths names the Bible as the all-sufficient rule; it does not adopt any creed.",
+     "holds": "content"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "not used",
+     "note": "A Western creed; Eastern churches confess the Nicene Creed.",
+     "holds": "no"
+    },
+    {
+     "tradition": "anabaptist",
+     "use": "used by some congregations; not binding",
+     "note": "Many Mennonite and Brethren congregations say it; their own confessions are their statements of faith.",
+     "holds": "content"
+    }
+   ],
+   "key_text": "I believe in God the Father Almighty; Maker of heaven and earth. And in Jesus Christ his only (begotten) Son our Lord; who was conceived by the Holy Ghost, born of the Virgin Mary; suffered under Pontius Pilate, was crucified, dead, and buried;",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.i.i.html",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.i.i.html",
+   "sources": [
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.iv.ii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.iv.ii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Latin text known from Rufinus (390), Greek from Marcellus of Ancyra (336-341); probably 2nd-century Roman origin; first fully identical copy is Pirminius, 8th century."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds2.iv.i.i.ii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.i.ii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Old Roman form text; Marcellus letter to Julius I about 341 (or 337)."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Apostles' Creed', New Advent",
+     "url": "https://www.newadvent.org/cathen/01629a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Legend of twelve apostolic authors dates from the 6th century; Rufinus c. 400."
+    },
+    {
+     "title": "Catechism of the Catholic Church 194-195, vatican.va",
+     "url": "https://www.vatican.va/archive/ENG0015/__P14.HTM",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Catholic use: 'the ancient baptismal symbol of the Church of Rome'."
+    }
+   ]
+  },
+  {
+   "id": "nicene-325",
+   "name": "Creed of Nicaea (First Council of Nicaea)",
+   "date": {
+    "display": "325 (council c. 20 May - 25 August; creed c. 19 June)",
+    "start": 325,
+    "end": 325
+   },
+   "place": "Nicaea, Bithynia (modern Iznik, Turkey)",
+   "occasion": "Arius of Alexandria taught that the Son had a beginning and was not God in the same sense as the Father. The council answered that the Son is 'of one substance' (homoousios) with the Father.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "First ecumenical council. In worship the 381 form is used, not the 325 text.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "conciliar dogma",
+     "note": "First of the seven councils.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "oriental-orthodox",
+     "use": "conciliar dogma",
+     "note": "Accept Nicaea, Constantinople and Ephesus.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "conciliar dogma",
+     "note": "Officially received at the Synod of Seleucia-Ctesiphon in 410 (Brock).",
+     "holds": "formal"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "confessional",
+     "note": "Augsburg Confession art. I: 'the decree of the Council of Nicaea ... is true'.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "anglican",
+     "use": "confessional",
+     "note": "Received through the Nicene Creed (art. VIII).",
+     "holds": "formal"
+    },
+    {
+     "tradition": "reformed",
+     "use": "confessional",
+     "note": "Received through the Nicene Creed (Belgic art. 9).",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "We believe in one God, the Father Almighty, maker of all things visible and invisible; and in one Lord Jesus Christ, the Son of God, the only-begotten of his Father, of the substance of the Father, God of God, Light of Light, very God of very God, begotten (γεννηθέντα), not made, being of one substance (ὁμοούσιον, consubstantialem) with the Father.",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/npnf214.vii.iii.html",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.vii.iii.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.vii.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.vii.iii.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Text of the creed (the Ecthesis of the Synod at Nice)."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'First Council of Nicaea', New Advent",
+     "url": "https://www.newadvent.org/cathen/11044a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Held in 325 over Arianism; convoked for 20 May, creed 19 June (both offered as probable), sessions ended 25 August."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.iv.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.iv.iii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Original Nicene form ended with anathemas against the Arians; authorized form until Chalcedon."
+    }
+   ]
+  },
+  {
+   "id": "niceno-constantinopolitan-381",
+   "name": "Niceno-Constantinopolitan Creed (\"the Nicene Creed\")",
+   "date": {
+    "display": "381 (council called May 381); first attested as the creed of the 150 fathers at Chalcedon, 451",
+    "start": 381,
+    "end": 381
+   },
+   "place": "Constantinople",
+   "occasion": "Called by Emperor Theodosius to confirm Nicaea and to answer the Macedonians (Pneumatomachians), who denied that the Holy Spirit is fully God. The enlarged creed adds the clauses on the Holy Spirit 'the Lord and Giver of life'.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "liturgical (Mass) and dogmatic",
+     "note": "Catechism 195: 'common to all the great Churches of both East and West'. Western text adds the Filioque.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "liturgical (Divine Liturgy) and dogmatic",
+     "note": "Recited without the Filioque.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "oriental-orthodox",
+     "use": "liturgical and dogmatic",
+     "note": "Accept the council of 381.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "sources differ",
+     "note": "Sources differ on whether this church formally received the council of 381. It confesses a Syriac form of the Nicene faith.",
+     "holds": "unsettled"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "confessional and liturgical",
+     "note": "One of the three ecumenical creeds in the Book of Concord.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "reformed",
+     "use": "confessional",
+     "note": "Belgic art. 9.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "anglican",
+     "use": "confessional and liturgical",
+     "note": "Art. VIII; Quadrilateral calls it 'the sufficient statement of the Christian faith'. Lambeth 1978 and 1988 recommended leaving out the Filioque in future prayer books.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "methodist",
+     "use": "liturgical",
+     "note": "Printed in the United Methodist Hymnal (No. 880) for worship; creeds are not among the UMC's doctrinal standards (umc.org).",
+     "holds": "formal"
+    },
+    {
+     "tradition": "baptist",
+     "use": "content affirmed; not binding",
+     "note": "Most Baptist confessions do not name the creed. One exception: the General Baptist Orthodox Creed (drafted 1678, printed 1679), art. 38, says the Nicene, Athanasian and Apostles' Creeds should be received and believed.",
+     "holds": "content"
+    },
+    {
+     "tradition": "pentecostal",
+     "use": "content affirmed in their own statements; not adopted as binding; used in some congregations",
+     "note": "Trinitarian Pentecostal statements, such as the Assemblies of God's, teach the same faith in God. Oneness Pentecostals, who confess one God revealed as Father, Son and Holy Spirit rather than three persons, do not use it.",
+     "holds": "content"
+    },
+    {
+     "tradition": "anabaptist",
+     "use": "content affirmed in their own statements; not adopted as binding; used in some congregations",
+     "note": "Mennonite confessions such as Dordrecht (1632) confess the Father, Son and Holy Spirit in their own words.",
+     "holds": "content"
+    }
+   ],
+   "key_text": "And in the Holy Ghost, the Lord and Giver of life, who proceedeth from the Father; who, with the Father and the Son together is worshipped and glorified, who spake by the prophets",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/npnf214.ix.iii.html",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.ix.iii.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.ix.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.ix.iii.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Text of the creed of the 150 fathers."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'First Council of Constantinople', New Advent",
+     "url": "https://www.newadvent.org/cathen/04308a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Called in May 381 by Theodosius, to confirm the Nicene faith and end the Macedonian heresy; read and accepted at Chalcedon and at the Sixth Council."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.iv.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.iv.iii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "No authentic evidence of ecumenical recognition until Chalcedon 451, where Aetius read it as the creed of the 150 fathers; the added clauses already existed in 374."
+    },
+    {
+     "title": "Catechism of the Catholic Church 195, vatican.va",
+     "url": "https://www.vatican.va/archive/ENG0015/__P14.HTM",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Stems from the councils of 325 and 381; common to East and West."
+    },
+    {
+     "title": "United Methodist Church, 'Why do we say creeds?'",
+     "url": "https://www.umc.org/content/why-do-we-say-creeds",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "UM Hymnal prints the Nicene and Apostles' Creeds; creeds are not UMC doctrinal standards (checked by the reviewer)."
+    },
+    {
+     "title": "Wikipedia, 'Orthodox Creed'",
+     "url": "https://en.wikipedia.org/wiki/Orthodox_Creed",
+     "type": "reference",
+     "fetched": "2026-10-06",
+     "supports": "General Baptist confession drafted after a 1678 assembly, published 1679; covers the Nicene, Athanasian and Apostles' Creeds."
+    }
+   ]
+  },
+  {
+   "id": "ephesus-431",
+   "name": "Council of Ephesus (Mary as Theotokos, Mother of God)",
+   "date": {
+    "display": "431 (opened 22 June)",
+    "start": 431,
+    "end": 431
+   },
+   "place": "Ephesus, Asia Minor",
+   "occasion": "Nestorius, bishop of Constantinople, preferred to call Mary Christotokos (Christ-bearer) rather than Theotokos (God-bearer), to guard the full humanity of Christ. Cyril of Alexandria held that the one born of Mary is God the Word made flesh. The council, opened by Cyril before John of Antioch and the Eastern bishops arrived, approved Cyril's letter; the two sides were reconciled in the Formula of Reunion of 433. It wrote no new creed.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "Third ecumenical council.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "conciliar dogma",
+     "note": "Third of the seven councils.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "oriental-orthodox",
+     "use": "conciliar dogma",
+     "note": "The last council they accept; Cyril is the foundation of their Christology (WCC).",
+     "holds": "formal"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "not received",
+     "note": "Not received (McGuckin, Encyclopedia of Eastern Orthodox Christianity). The 1994 Common Christological Declaration addresses the old dispute.",
+     "holds": "no"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "doctrine received; councils not binding in themselves",
+     "note": "Protestant confessions accept the ancient creeds and what agrees with Scripture.",
+     "holds": "doctrine"
+    },
+    {
+     "tradition": "anglican",
+     "use": "doctrine received; councils may err (art. XXI)",
+     "note": "",
+     "holds": "doctrine"
+    },
+    {
+     "tradition": "reformed",
+     "use": "doctrine received",
+     "note": "Belgic art. 9: 'what the ancient fathers decided in agreement with' the creeds.",
+     "holds": "doctrine"
+    }
+   ],
+   "key_text": "therefore they ventured to call the holy Virgin, the Mother of God, not as if the nature of the Word or his divinity had its beginning from the holy Virgin, but because of her was born that holy body with a rational soul, to which the Word being personally united is said to be born according to the flesh",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/npnf214.x.v.html",
+   "key_text_note": "From Cyril's letter to Nestorius, which the council read and approved in its first session.",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.x.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.x.v), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.x.v.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Cyril's letter to Nestorius (text)."
+    },
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.x.xi), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.x.xi.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Decree of the council against Nestorius."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Council of Ephesus', New Advent",
+     "url": "https://www.newadvent.org/cathen/05491a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Third ecumenical council, 431; Cyril and the majority opened it on 22 June."
+    },
+    {
+     "title": "J. A. McGuckin, Encyclopedia of Eastern Orthodox Christianity, 'Assyrian Apostolic Church of the East'",
+     "url": "https://azbyka.ru/otechnik/world/the-encyclopedia-of-eastern-orthodox-christianity/33",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "'The Council of Ephesus (431) was the occasion of the ancient rupture' (checked by the reviewer)."
+    }
+   ]
+  },
+  {
+   "id": "athanasian-creed",
+   "name": "Athanasian Creed (Quicunque vult)",
+   "date": {
+    "display": "Late 5th or early 6th century (by about 540, when Caesarius of Arles quotes it); not by Athanasius",
+    "start": 475,
+    "end": 540,
+    "approximate": true
+   },
+   "place": "Latin West, probably southern Gaul (disputed)",
+   "occasion": "A Latin teaching creed on the Trinity and the person of Christ, written in the West after the 5th-century debates. Its author is unknown; it was later named after Athanasius.",
+   "held_by": [
+    {
+     "tradition": "lutheran",
+     "use": "confessional",
+     "note": "One of the three ecumenical creeds in the Book of Concord.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "reformed",
+     "use": "confessional",
+     "note": "Belgic art. 9; listed by the CRC among its three creeds.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "anglican",
+     "use": "confessional",
+     "note": "Art. VIII of the 1571 English text; the American Episcopal revision of 1801 leaves it out.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "catholic",
+     "use": "received; rarely used in worship today",
+     "note": "Formerly said at Sunday Prime; rarely used since Vatican II.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "not used",
+     "note": "Unknown to the Greeks until the 11th century; rejected or modified because of the Filioque clause (Schaff).",
+     "holds": "no"
+    },
+    {
+     "tradition": "baptist",
+     "use": "content affirmed; not binding",
+     "note": "Most Baptist confessions do not name it; the General Baptist Orthodox Creed (1679), art. 38, received it.",
+     "holds": "content"
+    }
+   ],
+   "key_text": "And the Catholic Faith is this: That we worship one God in Trinity, and Trinity in Unity;",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iv.html",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iv.html",
+   "sources": [
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.iv.v), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.iv.v.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Authorship conjectural (Hilary of Arles, Vigilius of Thapsus, etc.); Caspari places it 450-600; first appears in Gaul, North Africa and Spain."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Athanasian Creed', New Advent",
+     "url": "https://www.newadvent.org/cathen/02033b.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Voss (1644) showed Athanasius was not the author; some Catholic authors refuse it an origin earlier than the 5th century."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds2.iv.i.iv), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.iv.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Latin text with English translation."
+    }
+   ]
+  },
+  {
+   "id": "chalcedon-451",
+   "name": "Definition of Chalcedon",
+   "date": {
+    "display": "451 (8 October - 1 November)",
+    "start": 451,
+    "end": 451
+   },
+   "place": "Chalcedon, Bithynia (opposite Constantinople)",
+   "occasion": "After Eutyches taught that Christ's humanity was absorbed into one nature, the council, drawing on the Tome of Pope Leo, confessed one Christ 'in two natures' without confusion or division. Churches of Egypt, Syria and Armenia did not accept its wording, holding to Cyril's 'one nature of the Word incarnate'; this became the largest lasting division of the early church. They saw the two-natures wording as leaning toward Nestorius, and they honour Dioscorus, whom the council deposed.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "conciliar dogma",
+     "note": "",
+     "holds": "formal"
+    },
+    {
+     "tradition": "oriental-orthodox",
+     "use": "rejected",
+     "note": "They reject the council but also reject Eutyches. They call their teaching Miaphysite (one united nature); the WCC calls the old label 'Monophysite' erroneous.",
+     "holds": "no"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "not received as a council",
+     "note": "Its own dyophysite (two-nature) Christology follows Theodore of Mopsuestia (GEDSH).",
+     "holds": "no"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "doctrine received",
+     "note": "",
+     "holds": "doctrine"
+    },
+    {
+     "tradition": "reformed",
+     "use": "doctrine received",
+     "note": "",
+     "holds": "doctrine"
+    },
+    {
+     "tradition": "anglican",
+     "use": "doctrine received",
+     "note": "",
+     "holds": "doctrine"
+    }
+   ],
+   "key_text": "the peculiar property of each nature being preserved and being united in one Person and subsistence, not separated or divided into two persons",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/npnf214.xi.xiii.html",
+   "key_text_note": "The better-known phrase 'in two natures, unconfusedly, immutably, indivisibly, inseparably' sits in the same sentence but is broken by footnote and page markers in the CCEL text, so a clean adjacent span was used.",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.xi.xiii.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.xi.xiii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.xi.xiii.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Text of the Definition."
+    },
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.xi.vii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.xi.vii.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "The Tome of St. Leo, read at the council."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Council of Chalcedon', New Advent",
+     "url": "https://www.newadvent.org/cathen/03555a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Held 8 October - 1 November 451 against Eutyches and the Monophysites."
+    },
+    {
+     "title": "World Council of Churches, church family page: Orthodox churches (Oriental)",
+     "url": "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "The breach of 451 over Chalcedon was the first ecclesial division; the term Monophysite is erroneous."
+    },
+    {
+     "title": "Coptic Synaxarium, 7 Thout (CopticChurch.net)",
+     "url": "https://copticchurch.net/synaxarium/1_7.html",
+     "type": "church text",
+     "fetched": "2026-10-06",
+     "supports": "Commemorates St. Dioscorus, 25th Pope of Alexandria."
+    }
+   ]
+  },
+  {
+   "id": "constantinople-553",
+   "name": "Second Council of Constantinople",
+   "date": {
+    "display": "553 (5 May - 2 June)",
+    "start": 553,
+    "end": 553
+   },
+   "place": "Constantinople",
+   "occasion": "Called by Emperor Justinian, it condemned the 'Three Chapters' (writings of Theodore of Mopsuestia, Theodoret of Cyrus and Ibas of Edessa) and stressed that Christ is one person, 'one of the Holy Trinity'. It hoped to win back the churches that rejected Chalcedon.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "Fifth ecumenical council; Pope Vigilius later confirmed it.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "conciliar dogma",
+     "note": "",
+     "holds": "formal"
+    },
+    {
+     "tradition": "oriental-orthodox",
+     "use": "not received",
+     "note": "They accept only the first three councils.",
+     "holds": "no"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "not received",
+     "note": "Theodore of Mopsuestia, condemned here, is a revered teacher of this church.",
+     "holds": "no"
+    },
+    {
+     "tradition": "reformed",
+     "use": "not a confessional standard",
+     "note": "Protestant reception of councils after Chalcedon varies.",
+     "holds": "no"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "not a confessional standard",
+     "note": "",
+     "holds": "no"
+    },
+    {
+     "tradition": "anglican",
+     "use": "not a confessional standard",
+     "note": "",
+     "holds": "no"
+    }
+   ],
+   "key_text": "that such union is made synthetically and hypostatically, and that therefore there is only one Person, to wit: our Lord Jesus Christ, one of the Holy Trinity: let him be anathema.",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/npnf214.xii.vii.html",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.xii.vii.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.xii.vii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.xii.vii.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "The Capitula (anathemas), incl. XII-XIV on Theodore, Theodoret and Ibas."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Second Council of Constantinople', New Advent",
+     "url": "https://www.newadvent.org/cathen/04308b.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Held 5 May - 2 June 553, called by Justinian; the Three Chapters defined."
+    }
+   ]
+  },
+  {
+   "id": "filioque",
+   "name": "The Filioque ('and the Son') in the Western Nicene Creed",
+   "date": {
+    "display": "589 (Third Council of Toledo, as traditionally dated) to 1014 (sung at Mass in Rome); defined as doctrine at Lateran IV (1215), Lyon II (1274) and Florence (1439)",
+    "start": 589,
+    "end": 1014
+   },
+   "place": "Toledo, Spain; then Frankish lands; then Rome",
+   "occasion": "At Toledo III (589, as traditionally dated) the Visigoths, newly turned from Arianism, professed the creed with 'and the Son' added to the procession of the Spirit, to stress the Son's full equality with the Father. The addition spread through Frankish lands. After the Frankish council of Aachen (809), Pope Leo III accepted the teaching but declined to add the words to the creed; the creed with the addition was sung at Mass in Rome from about 1014. The Orthodox hold that the Spirit proceeds from the Father and that no council may change the creed. The question became one of the issues behind the estrangement of East and West, marked by the excommunications of 1054.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "liturgical (Latin rite)",
+     "note": "",
+     "holds": "formal"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "liturgical and confessional",
+     "note": "Inherited in the Western creed text.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "reformed",
+     "use": "liturgical and confessional",
+     "note": "Inherited.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "anglican",
+     "use": "liturgical and confessional",
+     "note": "Inherited. Lambeth 1978 and 1988 recommended leaving it out in future prayer books, and some provinces now do; the Episcopal Church accepts the creed 'with or without the filioque'.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "methodist",
+     "use": "liturgical",
+     "note": "Inherited (not separately verified).",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "rejected",
+     "note": "One of the two dividing issues with Rome (WCC).",
+     "holds": "no"
+    },
+    {
+     "tradition": "oriental-orthodox",
+     "use": "not used",
+     "note": "",
+     "holds": "no"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "not used",
+     "note": "",
+     "holds": "no"
+    }
+   ],
+   "key_text": "And [I believe] in the Holy Ghost, the Lord and Giver of Life; who proceedeth from the Father [and the Son]; who with the Father and the Son together is worshiped and glorified",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.ii.ii.html",
+   "key_text_note": "Schaff brackets the Western additions; [and the Son] is the Filioque.",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.iv.i.ii.ii.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.ix.iv), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.ix.iv.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Historical excursus: Toledo 400 and 589; Aix-la-Chapelle 809 and Leo III; first sanctioned use at Mass in 1014 under Benedict VIII."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.iv.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.iv.iii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "First clear trace of the Filioque in the Nicene Creed at Toledo III, 589; spread in England and France in the 8th century."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Filioque', New Advent",
+     "url": "https://www.newadvent.org/cathen/06073a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Toledo councils incl. 589; most scholars assign its introduction at Rome to Benedict VIII (1014-15); accepted by Greek deputies at Florence 1439."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Toledo (councils)', New Advent",
+     "url": "https://www.newadvent.org/cathen/14755a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Third council (589): King Reccared and the bishops abjured Arianism."
+    },
+    {
+     "title": "World Council of Churches, church family page: Orthodox churches (Eastern)",
+     "url": "https://www.oikoumene.org/church-families/orthodox-churches-eastern",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Filioque and papal jurisdiction were the issues dividing the churches; schism 1054, formal break 15th century."
+    },
+    {
+     "title": "Lambeth Conference resolutions 1978 and 1988, quoted at Liturgy (liturgy.co.nz)",
+     "url": "https://liturgy.co.nz/?p=3294",
+     "type": "secondary (quotes the resolutions)",
+     "fetched": "2026-10-06",
+     "supports": "1978: member churches should consider omitting the Filioque; 1988: omit it in future liturgical revisions."
+    },
+    {
+     "title": "The Episcopal Church, glossary: Filioque",
+     "url": "https://www.episcopalchurch.org/glossary/filioque/",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "'The Episcopal Church accepts the Nicene Creed with or without the filioque.'"
+    }
+   ]
+  },
+  {
+   "id": "constantinople-680",
+   "name": "Third Council of Constantinople (two wills in Christ)",
+   "date": {
+    "display": "680-681 (7 November 680 - 16 September 681)",
+    "start": 680,
+    "end": 681
+   },
+   "place": "Constantinople (domed hall of the imperial palace)",
+   "occasion": "Monothelites taught that Christ had only one will. The council, following the letter of Pope Agatho, confessed two natural wills and two natural operations in Christ, the human will freely following the divine. It also condemned earlier leaders who had backed the one-will teaching, among them Pope Honorius I.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "Sixth ecumenical council.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "conciliar dogma",
+     "note": "",
+     "holds": "formal"
+    },
+    {
+     "tradition": "oriental-orthodox",
+     "use": "not received",
+     "note": "",
+     "holds": "no"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "not received",
+     "note": "",
+     "holds": "no"
+    }
+   ],
+   "key_text": "we likewise declare that in him are two natural wills and two natural operations indivisibly, inconvertibly, inseparably, inconfusedly, according to the teaching of the holy Fathers.",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/npnf214.xiii.x.html",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.xiii.x.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.xiii.x), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.xiii.x.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "The Definition of Faith (text)."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Third Council of Constantinople', New Advent",
+     "url": "https://www.newadvent.org/cathen/04310a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Opened 7 Nov 680; thirteenth session 28 March 681; final session 16 Sept 681."
+    }
+   ]
+  },
+  {
+   "id": "nicaea-787",
+   "name": "Second Council of Nicaea (holy images)",
+   "date": {
+    "display": "787 (24 September - 23 October)",
+    "start": 787,
+    "end": 787
+   },
+   "place": "Nicaea; final session in the Magnaura Palace, Constantinople",
+   "occasion": "Iconoclasts, holding that images of Christ and the saints broke the commandment against idols, had removed and destroyed them. The council ruled that images of Christ, Mary and the saints may be set up and given honour and reverence, but that worship (latreia) belongs to God alone.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "Seventh ecumenical council.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "conciliar dogma",
+     "note": "The last council Orthodox count as ecumenical (WCC); its decree is the basis of icon veneration.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "reformed",
+     "use": "rejected on images",
+     "note": "Heidelberg Q&A 98: images should not be permitted in churches in place of books.",
+     "holds": "no"
+    },
+    {
+     "tradition": "anglican",
+     "use": "not received on veneration",
+     "note": "Art. XXII rejects 'Worshipping, and Adoration, as well of Images as of Reliques'.",
+     "holds": "no"
+    },
+    {
+     "tradition": "lutheran",
+     "use": "not a confessional standard",
+     "note": "Lutherans kept images in churches but do not treat this council as binding.",
+     "holds": "no"
+    }
+   ],
+   "key_text": "and to these should be given due salutation and honourable reverence (ἀσπασμὸν καὶ τιμητικὴν προσκύνησιν), not indeed that true worship of faith (λατρείαν) which pertains alone to the divine nature",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/npnf214.xvi.xii.html",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/npnf214.xvi.xii.html",
+   "sources": [
+    {
+     "title": "NPNF 2nd series vol. 14, The Seven Ecumenical Councils (ed. H. R. Percival) (npnf214.xvi.xii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.xvi.xii.html",
+     "type": "primary text in translation (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "The Decree of the council (text)."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Second Council of Nicaea', New Advent",
+     "url": "https://www.newadvent.org/cathen/11045a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Held in 787; first session 24 September in St Sophia, Nicaea; last session 23 October in the Magnaura Palace."
+    },
+    {
+     "title": "World Council of Churches, church family page: Orthodox churches (Eastern)",
+     "url": "https://www.oikoumene.org/church-families/orthodox-churches-eastern",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Orthodox do not recognize any council since Nicaea II (787) as ecumenical."
+    }
+   ]
+  },
+  {
+   "id": "schleitheim-1527",
+   "name": "Schleitheim Confession (Brotherly Union)",
+   "date": {
+    "display": "24 February 1527",
+    "start": 1527,
+    "end": 1527
+   },
+   "place": "Schleitheim, canton of Schaffhausen, Switzerland",
+   "occasion": "Swiss Brethren under persecution met to agree on seven points that set them apart: believers' baptism, church discipline (the ban), the Lord's Supper, separation from the world, pastors, refusal of the sword, and refusal of oaths. It was not a full confession, but the points they could not give up.",
+   "held_by": [
+    {
+     "tradition": "anabaptist",
+     "use": "historic touchstone, not a binding creed for most",
+     "note": "Called a \"theological landmark\" of early Anabaptism (Yoder, quoted in GAMEO).",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "Baptism shall be given to all those who have learned repentance and amendment of life, and who believe truly that their sins are taken away by Christ",
+   "key_text_source": "https://anabaptists.org/history/schleith.html",
+   "full_text_url": "https://anabaptists.org/history/schleith.html",
+   "sources": [
+    {
+     "title": "GAMEO, \"Schleitheim Confession\"",
+     "url": "https://gameo.org/index.php?title=Schleitheim_Confession",
+     "type": "reference (Mennonite encyclopedia)",
+     "fetched": "2026-10-06",
+     "supports": "Composed by Anabaptist leaders on 24 February 1527; group led by Michael Sattler.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    },
+    {
+     "title": "Christian History Institute, \"From the Archives: The Schleitheim Confession\"",
+     "url": "https://christianhistoryinstitute.org/magazine/article/archives-schleitheim-confession",
+     "type": "magazine (Christian History issue 5)",
+     "fetched": "2026-10-06",
+     "supports": "February 1527 meeting at Schleitheim; authored largely by Michael Sattler."
+    },
+    {
+     "title": "Schleitheim Confession text (Rod and Staff printing), anabaptists.org",
+     "url": "https://anabaptists.org/history/schleith.html",
+     "type": "primary text in translation",
+     "fetched": "2026-10-06",
+     "supports": "Adopted by a Swiss Brethren conference, February 24, 1527."
+    }
+   ]
+  },
+  {
+   "id": "augsburg-1530",
+   "name": "Augsburg Confession",
+   "date": {
+    "display": "25 June 1530",
+    "start": 1530,
+    "end": 1530
+   },
+   "place": "Diet of Augsburg, Holy Roman Empire",
+   "occasion": "Emperor Charles V asked the evangelical princes to state their faith at the imperial diet. Philip Melanchthon drafted 28 articles to show that their teaching agreed with Scripture and the ancient church, and to list the abuses they had corrected.",
+   "held_by": [
+    {
+     "tradition": "lutheran",
+     "use": "confessional (chief Lutheran confession)",
+     "note": "Named by the WCC as a core Lutheran confessional writing.",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "Also they teach that men cannot be justified before God by their own strength, merits, or works",
+   "key_text_source": "https://bookofconcord.org/augsburg-confession/",
+   "full_text_url": "https://bookofconcord.org/augsburg-confession/",
+   "sources": [
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.viii.ii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.viii.ii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Read aloud in German on 25 June 1530."
+    },
+    {
+     "title": "Lutheran Church in Singapore, \"The Augsburg Confession\"",
+     "url": "https://lcor.lutheran.org.sg/updates/the-augsburg-confession",
+     "type": "church site",
+     "fetched": "2026-10-06",
+     "supports": "Presented to Charles V on 25 June 1530."
+    },
+    {
+     "title": "BookOfConcord.org, Augsburg Confession (Triglot text)",
+     "url": "https://bookofconcord.org/augsburg-confession/",
+     "type": "confessional text",
+     "fetched": "2026-10-06",
+     "supports": "Article IV text."
+    },
+    {
+     "title": "World Council of Churches, church family page: Lutheran churches",
+     "url": "https://www.oikoumene.org/church-families/lutheran-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Augsburg Confession and Small Catechism as Lutheran confessional writings."
+    }
+   ]
+  },
+  {
+   "id": "trent-1545",
+   "name": "Council of Trent (canons and decrees)",
+   "date": {
+    "display": "13 December 1545 - 4 December 1563 (in three periods)",
+    "start": 1545,
+    "end": 1563
+   },
+   "place": "Trent (Trento), northern Italy",
+   "occasion": "The Catholic Church's response to the Reformation and a centre of the Catholic Reform. It defined Catholic teaching on Scripture and tradition, justification, the seven sacraments and the Mass, and began wide reform of clergy and church life.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "Nineteenth ecumenical council in Catholic reckoning.",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "we are therefore said to be justified by faith, because faith is the beginning of human salvation, the foundation, and the root of all Justification",
+   "key_text_source": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.iv.html",
+   "key_text_note": "Decree on Justification (Session VI, 13 January 1547), chapter VIII.",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.html",
+   "sources": [
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Council of Trent', New Advent",
+     "url": "https://www.newadvent.org/cathen/15030c.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Opened 13 December 1545, closed 4 December 1563."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.vi.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.vi.iii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "History of the canons and decrees."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds2.v.i.i.iv), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds2.v.i.i.iv.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Sixth session, 13 January 1547 (text)."
+    }
+   ]
+  },
+  {
+   "id": "belgic-1561",
+   "name": "Belgic Confession",
+   "date": {
+    "display": "1561 (revised by the Synod of Dort, 1619)",
+    "start": 1561,
+    "end": 1561
+   },
+   "place": "Southern Netherlands (modern Belgium)",
+   "occasion": "Guido de Bres wrote it for persecuted Reformed believers in the Low Countries, to show the authorities they were law-abiding Christians, not rebels. A copy was sent to King Philip II in 1562. De Bres was martyred in 1567.",
+   "held_by": [
+    {
+     "tradition": "reformed",
+     "use": "confessional",
+     "note": "Continental Reformed churches (e.g. CRCNA confessions).",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "We all believe in our hearts and confess with our mouths that there is a single and simple spiritual being, whom we call God",
+   "key_text_source": "https://www.crcna.org/welcome/beliefs/confessions/belgic-confession",
+   "full_text_url": "https://www.crcna.org/welcome/beliefs/confessions/belgic-confession",
+   "sources": [
+    {
+     "title": "Christian Reformed Church in North America, Belgic Confession",
+     "url": "https://www.crcna.org/welcome/beliefs/confessions/belgic-confession",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Chief author Guido de Bres, prepared 1561; sent to Philip II the next year; de Bres martyred 1567."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.iii.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.iii.iii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Presented to Philip II in 1562; adopted by synods incl. Dort, 29 April 1619, which revised the text."
+    }
+   ]
+  },
+  {
+   "id": "heidelberg-1563",
+   "name": "Heidelberg Catechism",
+   "date": {
+    "display": "1563 (preface dated 19 January 1563)",
+    "start": 1563,
+    "end": 1563
+   },
+   "place": "Heidelberg, Electoral Palatinate",
+   "occasion": "Elector Frederick III wanted one teaching tool for a Palatinate divided between Lutheran and Reformed views. A team of ministers, traditionally credited to Zacharias Ursinus and Caspar Olevianus, wrote 129 questions and answers for youth, preaching and unity.",
+   "held_by": [
+    {
+     "tradition": "reformed",
+     "use": "confessional and catechetical",
+     "note": "A confession of Continental Reformed churches, e.g. the CRCNA, alongside the Belgic Confession and Canons of Dort.",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "Q. What is your only comfort in life and in death? A. That I am not my own",
+   "key_text_source": "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism",
+   "full_text_url": "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism",
+   "sources": [
+    {
+     "title": "Christian Reformed Church in North America, Heidelberg Catechism",
+     "url": "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Composed 1563 at Heidelberg at the request of Frederick III; team of ministers, traditionally Ursinus and Olevianus."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.iv.ii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.iv.ii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Elector's preface dated Tuesday, 19 January 1563; Ursinus chief author."
+    }
+   ]
+  },
+  {
+   "id": "thirty-nine-articles",
+   "name": "Thirty-nine Articles of Religion",
+   "date": {
+    "display": "Latin 1563 (Convocation of \"1562\", old-style year); English text 1571",
+    "start": 1563,
+    "end": 1571
+   },
+   "place": "Convocation of Canterbury, London",
+   "occasion": "Under Elizabeth I the Church of England revised Cranmer's Forty-two Articles (1553) to set its position between Rome and the Anabaptists and other radical reformers. Convocation ratified them in 1563; the English text was settled and subscription required in 1571.",
+   "held_by": [
+    {
+     "tradition": "anglican",
+     "use": "confessional (historic formulary)",
+     "note": "Printed in the Book of Common Prayer; weight given to them varies across Anglican provinces (not verified per province).",
+     "holds": "formal"
+    },
+    {
+     "tradition": "methodist",
+     "use": "source",
+     "note": "Wesley abridged them into the Methodist Articles of Religion (1784).",
+     "holds": "no"
+    }
+   ],
+   "key_text": "We are accounted righteous before God, only for the merit of our Lord and Saviour Jesus Christ by Faith, and not for our own works or deservings",
+   "key_text_source": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+   "full_text_url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+   "sources": [
+    {
+     "title": "Church of England, Book of Common Prayer: Articles of Religion",
+     "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Title: Convocation holden at London in the year 1562; ratification by subscription 'in the Year of our Lord 1571'."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.vi.v), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.vi.v.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Convocations of January 1563 reduced the articles to 39, ratified and published 1563; English subscription by the Act of 13 Elizabeth (1571)."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Calvinism', New Advent",
+     "url": "https://www.newadvent.org/cathen/03198a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Cranmer and Ridley's 42 Articles of 1553 were reduced to 39 under Elizabeth in 1562."
+    }
+   ]
+  },
+  {
+   "id": "book-of-concord-1580",
+   "name": "Book of Concord (with the Formula of Concord)",
+   "date": {
+    "display": "Formula completed 1577; Book of Concord published 25 June 1580",
+    "start": 1577,
+    "end": 1580
+   },
+   "place": "Dresden (publication); Formula drafted at Kloster Bergen near Magdeburg",
+   "occasion": "After decades of dispute among Luther's heirs, theologians including Jakob Andreae and Martin Chemnitz wrote the Formula of Concord to settle the questions. It was published with the three creeds and the earlier Lutheran confessions as one book on the 50th anniversary of the Augsburg Confession.",
+   "held_by": [
+    {
+     "tradition": "lutheran",
+     "use": "confessional",
+     "note": "The LCMS accepts the Book of Concord of 1580 as binding; some Lutheran churches give primary weight to the Augsburg Confession and Small Catechism.",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "We believe, teach, and confess that the sole rule and standard according to which all dogmas together with [all] teachers should be estimated and judged are the prophetic and apostolic Scriptures of the Old and of the New Testament alone",
+   "key_text_source": "https://bookofconcord.org/formula-of-concord-epitome/",
+   "full_text_url": "https://bookofconcord.org/formula-of-concord-epitome/",
+   "sources": [
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.viii.vi), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.viii.vi.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Formula completed 1577, first published 1580; published at Dresden 25 June 1580, the 50th anniversary of the Augsburg Confession; framers Andreae, Chemnitz, Selnecker, Chytraeus."
+    },
+    {
+     "title": "Lutheran Church-Missouri Synod, \"Lutheran Confessions\"",
+     "url": "https://www.lcms.org/about/beliefs/lutheran-confessions",
+     "type": "official church site",
+     "fetched": "2026-10-06",
+     "supports": "Accepts the Lutheran Confessions in the Book of Concord of 1580."
+    },
+    {
+     "title": "BookOfConcord.org, Formula of Concord, Epitome",
+     "url": "https://bookofconcord.org/formula-of-concord-epitome/",
+     "type": "confessional text",
+     "fetched": "2026-10-06",
+     "supports": "Rule and norm text."
+    }
+   ]
+  },
+  {
+   "id": "dort-1619",
+   "name": "Canons of Dort",
+   "date": {
+    "display": "13 November 1618 - 9 May 1619",
+    "start": 1618,
+    "end": 1619
+   },
+   "place": "Dordrecht, Dutch Republic",
+   "occasion": "Followers of Jacob Arminius set out five points in the Remonstrance of 1610 (election on foreseen faith, resistible grace, and others). A national synod with foreign Reformed delegates answered them on election, the atonement, grace and perseverance.",
+   "held_by": [
+    {
+     "tradition": "reformed",
+     "use": "confessional",
+     "note": "Continental Reformed churches (e.g. CRCNA confessions).",
+     "holds": "formal"
+    },
+    {
+     "tradition": "methodist",
+     "use": "contrasting position",
+     "note": "Wesleyan Methodism holds the Arminian view that grace is offered to all (WCC Methodist page).",
+     "holds": "no"
+    }
+   ],
+   "key_text": "Election is God’s unchangeable purpose by which he did the following: Before the foundation of the world, by sheer grace, according to the free good pleasure of his will, God chose in Christ to salvation a definite number of particular people out of the entire human race",
+   "key_text_source": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+   "full_text_url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+   "sources": [
+    {
+     "title": "Christian Reformed Church in North America, Canons of Dort",
+     "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Synod met at Dordrecht 1618-19 with 26 delegates from 8 foreign countries; answered the Remonstrance of 1610."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.iii.iv), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.iii.iv.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Convened by the States-General 13 Nov 1618, lasted till 9 May 1619."
+    }
+   ]
+  },
+  {
+   "id": "dordrecht-1632",
+   "name": "Dordrecht Confession of Faith (Mennonite)",
+   "date": {
+    "display": "21 April 1632",
+    "start": 1632,
+    "end": 1632
+   },
+   "place": "Dordrecht, Dutch Republic",
+   "occasion": "Flemish and Frisian Mennonite preachers adopted 18 articles, first drafted by Adriaan Cornelisz, as a basis of union between divided Mennonite groups. It teaches believers' baptism, foot washing, church discipline and shunning, non-resistance, and refusal of oaths.",
+   "held_by": [
+    {
+     "tradition": "anabaptist",
+     "use": "confessional for Amish and conservative Mennonites",
+     "note": "Adopted in Alsace 1660 and by Pennsylvania Mennonites 1725; still recognized by the Amish (GAMEO, Third Way).",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "we confess with the mouth, and believe with the heart, with all the pious, according to the holy Scriptures, in one eternal, almighty, and incomprehensible God, the Father, Son, and Holy Ghost",
+   "key_text_source": "https://www.reformedreader.org/ccc/dcf.htm",
+   "full_text_url": "https://gameo.org/index.php?title=Dordrecht_Confession_of_Faith_(Mennonite,_1632)",
+   "sources": [
+    {
+     "title": "GAMEO, \"Dordrecht Confession of Faith (Mennonite, 1632)\"",
+     "url": "https://gameo.org/index.php?title=Dordrecht_Confession_of_Faith_(Mennonite,_1632)",
+     "type": "reference (Mennonite encyclopedia, with full text)",
+     "fetched": "2026-10-06",
+     "supports": "Drafted by Adriaan Cornelisz; adopted 21 April 1632, signed by 51 preachers; Alsace 1660; Pennsylvania 1725.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    },
+    {
+     "title": "Third Way (Mennonite Media), glossary: Dortrecht Confession of Faith",
+     "url": "https://thirdwaycafe.com/glossary/dortrecht-confession-of-faith/",
+     "type": "church media",
+     "fetched": "2026-10-06",
+     "supports": "Adopted 1632; adopted by some US groups in 1725; still recognized by the Amish and conservative Mennonites."
+    },
+    {
+     "title": "The Reformed Reader, Dordrecht Confession text",
+     "url": "https://www.reformedreader.org/ccc/dcf.htm",
+     "type": "text host",
+     "fetched": "2026-10-06",
+     "supports": "Adopted April 21, 1632."
+    }
+   ]
+  },
+  {
+   "id": "westminster-1646",
+   "name": "Westminster Confession of Faith",
+   "date": {
+    "display": "Completed and presented to Parliament 4 December 1646; proof texts 1647; adopted by the Church of Scotland 27 August 1647",
+    "start": 1646,
+    "end": 1647
+   },
+   "place": "Westminster Abbey, London (Westminster Assembly)",
+   "occasion": "During the English Civil War, Parliament called an assembly of divines to reform the Church of England, partly to secure an alliance with Scotland. The confession became the doctrinal standard of Presbyterian churches worldwide.",
+   "held_by": [
+    {
+     "tradition": "reformed",
+     "use": "confessional (Presbyterian)",
+     "note": "Adopted by the Church of Scotland in 1647; the confessional standard of the Orthodox Presbyterian Church today (OPC site). Other Presbyterian bodies not verified individually.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "baptist",
+     "use": "source",
+     "note": "The Second London Baptist Confession is modelled on it.",
+     "holds": "no"
+    }
+   ],
+   "key_text": "The authority of the Holy Scripture, for which it ought to be believed, and obeyed, dependeth not upon the testimony of any man, or church; but wholly upon God (who is truth itself) the author thereof",
+   "key_text_source": "https://opc.org/wcf.html",
+   "full_text_url": "https://opc.org/wcf.html",
+   "sources": [
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.viii.iii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.viii.iii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Editio princeps printed (not published) 7 December 1646; second edition with Scripture proofs ordered 29 April 1647; Parliament adopted a revised form."
+    },
+    {
+     "title": "PCA Historical Center, \"This Day in Presbyterian History: August 27, Church of Scotland Adopts WCF (1647)\"",
+     "url": "https://thisday.pcahistory.org/?p=10136",
+     "type": "denominational archive",
+     "fetched": "2026-10-06",
+     "supports": "Church of Scotland adopted the Confession on 27 August 1647."
+    },
+    {
+     "title": "Orthodox Presbyterian Church, Confession of Faith",
+     "url": "https://opc.org/wcf.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Current text used by the OPC."
+    }
+   ]
+  },
+  {
+   "id": "second-london-1689",
+   "name": "Second London Baptist Confession (\"1689 Confession\")",
+   "date": {
+    "display": "First published 1677; approved by the first General Assembly of Particular Baptists, 1689",
+    "start": 1677,
+    "end": 1689
+   },
+   "place": "London",
+   "occasion": "Particular (Calvinistic) Baptists modelled a confession on Westminster to show their agreement with other Reformed Protestants, changing it on baptism, church order and the Lord's Supper. After the 1689 Act of Toleration, delegates from over 100 churches approved it openly.",
+   "held_by": [
+    {
+     "tradition": "baptist",
+     "use": "confessional for Reformed Baptists",
+     "note": "Adopted in America by the Philadelphia Association (1742). Many other Baptists use later confessions or none.",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "The Holy Scripture is the only sufficient, certain, and infallible rule of all saving knowledge, faith, and obedience",
+   "key_text_source": "https://www.the1689confession.com/1689/chapter-1",
+   "full_text_url": "https://www.ccel.org/ccel/schaff/creeds3.v.ii.i.html",
+   "sources": [
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.x.vi), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.x.vi.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Appeared first in 1677 in London; reprinted 1688, 1689; approved by ministers of over a hundred congregations; adopted at Philadelphia 25 Sept 1742."
+    },
+    {
+     "title": "Southern Baptist Theological Seminary, \"A Confessing People: A Brief History of Baptist Confessions of Faith\"",
+     "url": "https://equip.sbts.edu/publications/magazine/a-confessing-people-a-brief-history-of-baptist-confessions-of-faith/",
+     "type": "seminary publication",
+     "fetched": "2026-10-06",
+     "supports": "Published 1677; revised by the first general assembly (over 100 congregations) in 1689; Philadelphia Association 1742."
+    },
+    {
+     "title": "the1689confession.com, chapter 1",
+     "url": "https://www.the1689confession.com/1689/chapter-1",
+     "type": "text host",
+     "fetched": "2026-10-06",
+     "supports": "Chapter 1 text."
+    }
+   ]
+  },
+  {
+   "id": "methodist-articles-1784",
+   "name": "Methodist Articles of Religion",
+   "date": {
+    "display": "1784 (Christmas Conference, Baltimore): Wesley's 24 articles plus Article XXIII on the rulers of the United States, added by the conference; wording of XXIII revised 1804",
+    "start": 1784,
+    "end": 1784
+   },
+   "place": "Baltimore, Maryland (Christmas Conference of the Methodist Episcopal Church)",
+   "occasion": "After American independence, John Wesley abridged the Thirty-nine Articles to 24 for the new Methodist Episcopal Church, leaving out Calvinist-leaning and some other articles. The conference itself added an article recognizing the United States.",
+   "held_by": [
+    {
+     "tradition": "methodist",
+     "use": "confessional (protected by a restrictive rule)",
+     "note": "In the United Methodist Book of Discipline; also historic standard of other Methodist Episcopal descendants (not verified individually).",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "We are accounted righteous before God only for the merit of our Lord and Saviour Jesus Christ, by faith, and not for our own works or deservings.",
+   "key_text_source": "https://www.umc.org/en/content/articles-of-religion",
+   "key_text_note": "Compare Thirty-nine Articles art. XI, from which it is drawn.",
+   "full_text_url": "https://www.umc.org/en/content/articles-of-religion",
+   "sources": [
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.x.xi), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.x.xi.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Wesley abridged the Anglican Articles; adopted by the Conference in Baltimore, 1784, except Art. XXIII (adopted 1804)."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Methodism', New Advent",
+     "url": "https://www.newadvent.org/cathen/10237b.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Twenty-four articles prepared by Wesley, adopted at Baltimore 1784; Article XXIII added in 1804."
+    },
+    {
+     "title": "United Methodist Church, The Articles of Religion of the Methodist Church (Book of Discipline 2020/2024)",
+     "url": "https://www.umc.org/en/content/articles-of-religion",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Current text."
+    },
+    {
+     "title": "World Council of Churches, church family page: Methodist churches",
+     "url": "https://www.oikoumene.org/church-families/methodist-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "American Methodists constituted the Methodist Episcopal Church in 1784."
+    },
+    {
+     "title": "United Methodist Church, glossary: Articles of Religion",
+     "url": "https://www.umc.org/content/glossary-articles-of-religion",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "'John Wesley abridged this list to twenty-four ... The 1784 Christmas Conference added what is now Article 23.'"
+    }
+   ]
+  },
+  {
+   "id": "vatican-i-1870",
+   "name": "First Vatican Council (Dei Filius; Pastor Aeternus)",
+   "date": {
+    "display": "8 December 1869 - 20 October 1870; Pastor Aeternus 18 July 1870",
+    "start": 1869,
+    "end": 1870
+   },
+   "place": "St Peter's Basilica, Rome",
+   "occasion": "Facing rationalism and the threatened loss of the Papal States, the council taught on faith and reason (Dei Filius) and defined the primacy of the pope and his infallibility when he speaks ex cathedra on faith or morals.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar dogma",
+     "note": "Some who rejected the decree formed the Old Catholic churches.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "orthodox",
+     "use": "rejected",
+     "note": "Papal jurisdiction is a dividing issue (WCC).",
+     "holds": "no"
+    }
+   ],
+   "key_text": "he possesses, by the divine assistance promised to him in blessed Peter, that infallibility which the divine Redeemer willed his church to enjoy in defining doctrine concerning faith or morals",
+   "key_text_source": "https://www.papalencyclicals.net/councils/ecum20.htm",
+   "full_text_url": "https://www.papalencyclicals.net/councils/ecum20.htm",
+   "sources": [
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Vatican Council', New Advent",
+     "url": "https://www.newadvent.org/cathen/15303a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Opened 8 December 1869, adjourned 20 October 1870."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.vi.xii), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.vi.xii.html",
+     "type": "reference (public domain, 1877/1931 ed.)",
+     "fetched": "2026-10-06",
+     "supports": "Pastor Aeternus passed in the fourth public session, 18 July 1870, with two dissenting votes."
+    },
+    {
+     "title": "Papal Encyclicals Online, Decrees of the First Vatican Council",
+     "url": "https://www.papalencyclicals.net/councils/ecum20.htm",
+     "type": "text host (Tanner translation)",
+     "fetched": "2026-10-06",
+     "supports": "Session 4: 18 July 1870 (text)."
+    }
+   ]
+  },
+  {
+   "id": "ag-fundamental-truths-1916",
+   "name": "Assemblies of God Statement of Fundamental Truths",
+   "date": {
+    "display": "October 1916",
+    "start": 1916,
+    "end": 1916
+   },
+   "place": "St. Louis, Missouri (fourth General Council)",
+   "occasion": "Two years after the Assemblies of God formed, some ministers adopted Oneness teaching: baptism in Jesus' name only, and one God revealed as Father, Son and Holy Spirit rather than three distinct persons. The General Council adopted a statement that affirmed the Trinity and tongues as the initial sign of Spirit baptism; 156 ministers left and formed Oneness bodies.",
+   "held_by": [
+    {
+     "tradition": "pentecostal",
+     "use": "confessional basis of fellowship (AG)",
+     "note": "The AG says it is 'intended simply as a basis of fellowship' and that 'The Bible is our all-sufficient rule'.",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "The baptism of believers in the Holy Spirit is witnessed by the initial physical sign of speaking with other tongues as the Spirit of God gives them utterance.",
+   "key_text_source": "https://ag.org/beliefs/statement-of-fundamental-truths",
+   "key_text_note": "Fetched through the Wayback Machine copy because ag.org blocks automated requests. This is the current AG wording; the exact 1916 wording was not checked.",
+   "full_text_url": "https://ag.org/beliefs/statement-of-fundamental-truths",
+   "sources": [
+    {
+     "title": "Assemblies of God (USA), \"History\"",
+     "url": "https://ag.org/about/about-the-ag/history",
+     "type": "official church site",
+     "fetched": "2026-10-06",
+     "supports": "Organized at Hot Springs, Arkansas, 2-12 April 1914; in 1916 the General Council approved the Statement, affirming Trinitarian orthodoxy against Oneness theology.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    },
+    {
+     "title": "Christianity Today (Christian History issue 58), \"Dividing over Oneness\"",
+     "url": "https://www.christianitytoday.com/history/issues/issue-58/dividing-over-oneness.html",
+     "type": "magazine",
+     "fetched": "2026-10-06",
+     "supports": "Delegates back in St. Louis within a year of Oct 1915; Statement accepted; 156 members left."
+    },
+    {
+     "title": "Encyclopedia.com, \"Assemblies of God\" (Encyclopedia of American Religions)",
+     "url": "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/assemblies-god",
+     "type": "reference",
+     "fetched": "2026-10-06",
+     "supports": "In 1916 adopted the Statement, including a trinitarian position."
+    },
+    {
+     "title": "Assemblies of God, Statement of Fundamental Truths",
+     "url": "https://ag.org/beliefs/statement-of-fundamental-truths",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Current text.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    }
+   ]
+  },
+  {
+   "id": "vatican-ii-1962",
+   "name": "Second Vatican Council",
+   "date": {
+    "display": "11 October 1962 - 8 December 1965",
+    "start": 1962,
+    "end": 1965
+   },
+   "place": "St Peter's Basilica, Rome",
+   "occasion": "Pope John XXIII called the council to renew the church's life and to seek Christian unity. Its 16 documents treat the church, revelation, liturgy, ecumenism and the modern world; it called other Christians 'brothers' and opened official dialogues.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "conciliar teaching",
+     "note": "",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "This Church constituted and organized in the world as a society, subsists in the Catholic Church, which is governed by the successor of Peter and by the Bishops in communion with him",
+   "key_text_source": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+   "extra_excerpts": [
+    {
+     "text": "all who have been justified by faith in Baptism are members of Christ's body",
+     "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html",
+     "from": "Unitatis Redintegratio 3 (Decree on Ecumenism)"
+    }
+   ],
+   "full_text_url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm",
+   "sources": [
+    {
+     "title": "Holy See, John XXIII, Address at the solemn opening of the Council (October 11, 1962)",
+     "url": "https://www.vatican.va/content/john-xxiii/en/speeches/1962/documents/hf_j-xxiii_spe_19621011_opening-council.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Opening date 11 October 1962."
+    },
+    {
+     "title": "Holy See, Joint Catholic-Orthodox Declaration (7 December 1965), read at the council's close",
+     "url": "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Issued at the conclusion of the council, December 1965."
+    },
+    {
+     "title": "World Council of Churches, church family page: [Roman] Catholic church",
+     "url": "https://www.oikoumene.org/church-families/the-roman-catholic-church",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Second Vatican Council (1962-1965), Lumen Gentium."
+    },
+    {
+     "title": "Holy See, Lumen Gentium and Unitatis Redintegratio (texts)",
+     "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/index.htm",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Texts."
+    }
+   ],
+   "date_note": "Closing date 8 December 1965 is standard but was not found on a fetched page; the 7 December 1965 declaration and WCC \"1962-1965\" confirm the year."
+  },
+  {
+   "id": "common-christological-declaration-1994",
+   "name": "Common Christological Declaration (Catholic Church and Assyrian Church of the East)",
+   "date": {
+    "display": "11 November 1994",
+    "start": 1994,
+    "end": 1994
+   },
+   "place": "St Peter's, Vatican City",
+   "occasion": "Pope John Paul II and Catholicos-Patriarch Mar Dinkha IV declared that their churches share one faith in Christ, true God and true man, despite the 5th-century split over Nestorius. Each church's way of naming Mary was recognized as a legitimate expression of the same faith.",
+   "held_by": [
+    {
+     "tradition": "catholic",
+     "use": "ecumenical agreement",
+     "note": "",
+     "holds": "formal"
+    },
+    {
+     "tradition": "church-of-the-east",
+     "use": "ecumenical agreement",
+     "note": "Assyrian Church of the East (not the separate Ancient Church of the East).",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "the Assyrian Church of the East is praying the Virgin Mary as \"the Mother of Christ our God and Saviour\". In the light of this same faith the Catholic tradition addresses the Virgin Mary as \"the Mother of God\" and also as \"the Mother of Christ\".",
+   "key_text_source": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html",
+   "full_text_url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html",
+   "sources": [
+    {
+     "title": "Holy See, Common Christological Declaration (11 November 1994)",
+     "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Text, date, signatories."
+    },
+    {
+     "title": "Gorgias Encyclopedic Dictionary of the Syriac Heritage, \"Church of the East\" (Brock and Coakley)",
+     "url": "https://gedsh.bethmardutho.org/Church-of-the-East",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "In 1994 Mar Denha IV and Pope John Paul II issued a historic common statement on christology."
+    },
+    {
+     "title": "EWTN Library (from L'Osservatore Romano, 16 Nov 1994)",
+     "url": "https://www.ewtn.com/catholicism/library/common-christological-declaration-between-catholic-church-and-assyrian-church-of-the-east-7988",
+     "type": "reprint",
+     "fetched": "2026-10-06",
+     "supports": "Given at Saint Peter's, 11 November 1994."
+    }
+   ]
+  },
+  {
+   "id": "jddj-1999",
+   "name": "Joint Declaration on the Doctrine of Justification",
+   "date": {
+    "display": "31 October 1999 (later associations 2006, 2016, 2017)",
+    "start": 1999,
+    "end": 2017
+   },
+   "place": "Augsburg, Germany",
+   "occasion": "Lutherans and Catholics stated a consensus on basic truths of justification, so that the remaining differences no longer warrant the 16th-century condemnations. Methodists, Anglicans and the Reformed later associated themselves with it.",
+   "held_by": [
+    {
+     "tradition": "lutheran",
+     "use": "ecumenical agreement",
+     "note": "Lutheran World Federation, 1999.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "catholic",
+     "use": "ecumenical agreement",
+     "note": "Pontifical Council for Promoting Christian Unity, 1999.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "methodist",
+     "use": "associated 2006",
+     "note": "World Methodist Council, Seoul.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "anglican",
+     "use": "'welcomes and affirms the substance' 2016",
+     "note": "Anglican Consultative Council, Lusaka.",
+     "holds": "formal"
+    },
+    {
+     "tradition": "reformed",
+     "use": "associated 2017",
+     "note": "World Communion of Reformed Churches, Wittenberg, 5 July 2017.",
+     "holds": "formal"
+    }
+   ],
+   "key_text": "By grace alone, in faith in Christ's saving work and not because of any merit on our part, we are accepted by God and receive the Holy Spirit, who renews our hearts while equipping and calling us to good works.",
+   "key_text_source": "https://www.ewtn.com/catholicism/library/joint-declaration-on-the-doctrine-of-justification-28863",
+   "key_text_note": "Paragraph 15.",
+   "full_text_url": "https://www.ewtn.com/catholicism/library/joint-declaration-on-the-doctrine-of-justification-28863",
+   "sources": [
+    {
+     "title": "Lutheran World Federation, \"Joint Declaration on the Doctrine of Justification\"",
+     "url": "https://lutheranworld.org/what-we-do/unity-church/joint-declaration-doctrine-justification-jddj",
+     "type": "official body",
+     "fetched": "2026-10-06",
+     "supports": "Signed 1999; Methodists joined July 2006; Anglican Consultative Council April 2016; Reformed later."
+    },
+    {
+     "title": "Holy See, Pontifical Council for Promoting Christian Unity, letter of Cardinal Kasper and Dr Noko",
+     "url": "https://www.christianunity.va/content/unitacristiani/en/dialoghi/sezione-occidentale/luterani/relazioni/en3.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Signed 31 October 1999 in Augsburg by the LWF and the Roman Catholic Church."
+    },
+    {
+     "title": "America magazine, \"Reformed churches endorse Catholic-Lutheran accord\" (7 July 2017)",
+     "url": "https://www.americamagazine.org/faith/2017/07/07/reformed-churches-endorse-catholic-lutheran-accord-key-reformation-dispute",
+     "type": "news",
+     "fetched": "2026-10-06",
+     "supports": "WCRC signed at Wittenberg; Methodists endorsed in 2006."
+    }
+   ]
+  }
+ ]
+}

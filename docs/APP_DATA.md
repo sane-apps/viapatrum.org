@@ -17,7 +17,7 @@ iPad only, free on the App Store, no Mac app.
 | Timeline | `dist/data/explore-index.json` (`eras`, `authors`, `points`, …) + `data/author-dates.json` | Use as is |
 | Authors | `data/author-bios.json`, `data/author-dates.json` | Use as is |
 | Daily quote | `dist/data/daily.json` | Optional home card |
-| Search | `dist/data/search-index.json` is 21 MB | Do not ship; app builds a local SQLite FTS index from the work files |
+| Search | `dist/data/search/` shards plus `manifest.json` | Do not ship these in the app; it builds a local SQLite FTS index from the work files |
 
 ## Export to add (one step at the end of `build_site.py`)
 
@@ -43,7 +43,7 @@ anything the reader saves for offline use. No backend, no accounts.
 
 ## Open decision
 
-Every passage still exports `verified: false` (`search-index.json`), and
+Every passage still exports `verified: false` (the search shards), and
 `data/publication-review.json` says its hashes are not fidelity evidence.
 Whether the app shows only reviewed works or mirrors the site is the
 owner's call.

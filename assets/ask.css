@@ -1,0 +1,82 @@
+/* Ask page (scripts/ask_page.py, assets/ask.js). Uses the site tokens in
+   site.css, so both themes follow. */
+.ask-page { max-width: 46rem; margin: 0 auto; }
+.ask-head { text-align: center; margin: 1rem 0 1.25rem; }
+.ask-head h1 { font-size: clamp(2.1rem, 6vw, 3rem); margin: 0 0 0.5rem; }
+.ask-head .intro { margin: 0 auto; }
+.ask-form { margin: 0 auto; }
+.ask-status { min-height: 1.4em; margin: 0.6rem 0 0; text-align: center; color: var(--ink-soft); font-size: 0.95rem; }
+.ask-out { margin-top: 1.25rem; }
+.ask-out .vp-section-label {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--rubric);
+  margin: 0 0 0.35rem;
+}
+.ask-out h2:focus { outline: none; }
+.ask-out h2:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; }
+.ask-empty { text-align: center; }
+.ask-try { margin-top: 0.6rem; }
+
+.ask-answer {
+  background: var(--leaf);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--rubric);
+  border-radius: 0.6rem;
+  padding: 1.1rem 1.25rem 0.6rem;
+}
+.ask-from { margin: 0 0 0.9rem; color: var(--ink-soft); font-size: 0.95rem; }
+.ask-quotes { list-style: none; margin: 0; padding: 0; counter-reset: q; }
+.ask-quotes > li { margin: 0 0 1.1rem; }
+.ask-quote { margin: 0; }
+.ask-quote p {
+  margin: 0;
+  font-family: var(--font-read);
+  font-size: 1.08rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.ask-cite { margin: 0.3rem 0 0; font-size: 0.92rem; color: var(--ink-soft); }
+.ask-cite a { color: var(--lapis); }
+.ask-ref { text-decoration: none; font-variant-numeric: tabular-nums; margin-left: 0.15rem; }
+.ask-ref:hover, .ask-ref:focus-visible { text-decoration: underline; }
+
+.ask-note { font-size: 1.02rem; color: var(--ink); margin: 0 0 1rem; }
+.ask-thin {
+  background: var(--paper-2);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1rem;
+}
+.ask-loading { color: var(--ink-soft); text-align: center; font-style: italic; }
+
+.ask-passages { margin-top: 1.75rem; }
+.ask-plist { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+.ask-plist > li {
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  align-items: start;
+  border-top: 1px solid var(--rule);
+  padding: 0.75rem 0;
+  scroll-margin-top: 5rem;
+}
+.ask-plist > li:target { background: color-mix(in srgb, var(--gold) 12%, transparent); }
+.ask-n { color: var(--ink-soft); font-variant-numeric: tabular-nums; padding-top: 0.1rem; }
+.ask-plist a { display: grid; gap: 0.15rem; color: var(--ink); text-decoration: none; min-width: 0; }
+.ask-plist a strong { color: var(--lapis); font-weight: 650; }
+.ask-plist a:hover strong, .ask-plist a:focus-visible strong { text-decoration: underline; }
+.ask-by { color: var(--ink-soft); font-size: 0.92rem; }
+.ask-plist .meaning-snippet { font-style: normal; color: var(--ink-soft); font-size: 0.95rem; overflow-wrap: anywhere; }
+.ask-plist .go { color: var(--lapis); font-size: 0.9rem; font-weight: 650; }
+.ask-more { margin: 1rem 0 0; font-weight: 650; }
+.ask-how { margin: 2.5rem 0 0; color: var(--ink-soft); font-size: 0.92rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+
+@media (max-width: 560px) {
+  .ask-head { text-align: left; }
+  .ask-empty { text-align: left; }
+  .ask-empty .vp-chips { justify-content: flex-start; }
+  .ask-answer { padding: 0.9rem 0.95rem 0.4rem; }
+  .ask-plist > li { grid-template-columns: 2rem 1fr; }
+}

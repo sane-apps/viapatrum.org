@@ -1367,18 +1367,22 @@ def inject_all() -> int:
     _ALL_MODE = True
     _SITE_STATS.clear()
     failed = []
-    for manifest in sorted((ROOT / "outputs/audio").glob("*/manifest.json")):
-        work = manifest.parent.name
-        print("  + audio: %s" % work, flush=True)
-        try:
-            inject_work(work)
-        except Exception as exc:  # report every broken work, then fail the run
-            import traceback
-            traceback.print_exc()
-            print("FAIL %s: %s" % (work, exc), flush=True)
-            failed.append(work)
-    report_no_play(_SITE_STATS)
-    _save_plain_cache()
+    try:
+        for manifest in sorted((ROOT / "outputs/audio").glob("*/manifest.json")):
+            work = manifest.parent.name
+            print("  + audio: %s" % work, flush=True)
+            try:
+                inject_work(work)
+            except Exception as exc:  # report every broken work, then fail the run
+                import traceback
+                traceback.print_exc()
+                print("FAIL %s: %s" % (work, exc), flush=True)
+                failed.append(work)
+        report_no_play(_SITE_STATS)
+        _save_plain_cache()
+    finally:
+        _ALL_MODE = False
+        _SITE_STATS.clear()
     if failed:
         print("inject failed for %d works: %s" % (len(failed), " ".join(failed)), file=sys.stderr)
         return 1

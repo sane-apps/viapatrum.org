@@ -8,12 +8,25 @@ const DIST = process.env.FATHERS_DIST ? pathToFileURL(process.env.FATHERS_DIST.r
 const script = readFileSync(new URL('../assets/site.js', import.meta.url), 'utf8');
 const catalog = readFileSync(new URL('works/index.html',DIST), 'utf8');
 const reader = readFileSync(new URL('works/julian-letter-to-rome/index.html',DIST), 'utf8');
-const indexText = readFileSync(new URL('data/search-index.json',DIST), 'utf8');
-const index = JSON.parse(indexText);
-// P5 harness fix (outputs/pkg-P5-search-js/ui.test.mjs.patch): route like the site; a fresh parse per fetch.
-const fresh = () => JSON.parse(indexText);
-const site = async (u) => String(u).includes('/data/search-index.json') ? {ok:true,json:async()=>fresh()} : String(u).startsWith('/api/search') ? {ok:true,json:async()=>({results:[]})} : {ok:false};
-const longPassage = index.find(r=>r.kind==='work'&&r.text.length>600);
+const manifestText = readFileSync(new URL('data/search/manifest.json', DIST), 'utf8');
+const manifest = JSON.parse(manifestText);
+const shardText = new Map();
+const index = [];
+for (const shard of manifest.shards) {
+  const name = String(shard.file || shard).split('/').pop();
+  const text = readFileSync(new URL(`data/search/${name}`, DIST), 'utf8');
+  shardText.set(`/data/search/${name}`, text);
+  index.push(...JSON.parse(text));
+}
+// A fresh parse per fetch: the page deletes each row's text after it loads.
+const site = async (u) => {
+  const p = String(u).replace(/^https?:\/\/[^/]+/, '').split('?')[0];
+  if (p === '/data/search/manifest.json') return { ok: true, json: async () => JSON.parse(manifestText) };
+  if (shardText.has(p)) return { ok: true, json: async () => JSON.parse(shardText.get(p)) };
+  if (String(u).startsWith('/api/search')) return { ok: true, json: async () => ({ results: [] }) };
+  return { ok: false };
+};
+const longPassage = index.find(r=>r.kind==='work'&&(r.text||'').length>600);
 const searchPhrase = longPassage.text.slice(450,510);
 const settle = () => new Promise(resolve => setTimeout(resolve, 260));
 function mount(html, path='/works/', fetcher=site) {
@@ -28,7 +41,7 @@ function query(dom, value) {
 }
 test('work passages are searchable, including words beyond 400 characters',async()=>{
   const dom=mount(catalog);await settle();
-  const row=index.find(r=>r.kind==='work'&&r.text.length>600);
+  const row=index.find(r=>r.kind==='work'&&(r.text||'').length>600);
   query(dom,row.text.slice(450,510));await settle();
   assert.ok([...dom.window.document.querySelectorAll('#passage-results a')].some(a=>a.getAttribute('href')===row.href));
   dom.window.close();
@@ -77,9 +90,19 @@ test('Contents jump target exists on reader pages',()=>{
   dom.window.close();
 });
 
-test('author catalog prefetches the passage index for find-as-you-type',async()=>{
-  let calls=0;const dom=mount(catalog,'/works/',async(u)=>{if(String(u).includes('search-index'))calls++;return site(u);});
-  await settle();query(dom,'numbering');await settle();assert.equal(calls,1);query(dom,'numbers');await settle();assert.equal(calls,1);dom.window.close();
+test('author catalog loads the passage shards once',async()=>{
+  const seen=[];
+  let calls=0;
+  const dom=mount(catalog,'/works/',async(u)=>{
+    const p=String(u);
+    seen.push(p);
+    if(p.includes('/data/search/manifest.json'))calls++;
+    return site(u);
+  });
+  await settle();query(dom,'numbering');await settle();assert.equal(calls,1);
+  query(dom,'numbers');await settle();assert.equal(calls,1);
+  assert.ok(!seen.some((u)=>u.includes('search-index.json')));
+  dom.window.close();
 });
 
 test('library progress line on About matches pipeline counts', ()=>{
@@ -169,7 +192,8 @@ test('over time overview: every question with stances gets a card and a mini tim
 
 test('beliefs live on the Timeline: a card per dividing question, no Beliefs tab (owner 2026-10-05)', ()=>{
   const doc=page('explore/index.html');
-  const qs=JSON.parse(readFileSync(new URL('../data/explore/doctrine_map.json',import.meta.url),'utf8')).questions;
+  // The questions file decides which questions show (beliefs_page.load); the map adds passages.
+  const qs=JSON.parse(readFileSync(new URL('../data/explore/doctrine_questions.json',import.meta.url),'utf8'));
   const cards=doc.querySelectorAll('.ot-card.ot-belief');
   assert.equal(cards.length,qs.length);
   for(const c of cards){
@@ -178,6 +202,43 @@ test('beliefs live on the Timeline: a card per dividing question, no Beliefs tab
   }
   assert.ok(!doc.querySelector('a[href^="/beliefs"]'),'no Beliefs link');
   assert.match(readFileSync(new URL('_redirects',DIST),'utf8'),/^\/beliefs\/:id\/ \/explore\/:id\/ 301$/m);
+});
+
+test('beliefs: eleven church chips, four new questions, new churches filter (owner 2026-10-06)', ()=>{
+  const want=['All','Catholic','Orthodox','Oriental Orthodox','Church of the East','Lutheran','Reformed','Anglican','Methodist','Baptist','Anabaptist','Pentecostal'];
+  for(const f of ['explore/index.html','explore/christ-natures/index.html']){
+    const chips=[...page(f).querySelectorAll('.bfilter .bchip')];
+    assert.deepEqual(chips.map(c=>c.textContent.trim()),want,'chip row on '+f);
+    assert.equal(chips.filter(c=>c.getAttribute('aria-pressed')==='true').length,1);
+  }
+  const doc=page('explore/index.html');
+  for(const id of ['spiritual-gifts','sanctification','christ-natures','millennium']){
+    const card=doc.getElementById(id);
+    assert.ok(card?.matches('.ot-card.ot-belief'),'card for '+id);
+    assert.equal(card.querySelector('h3 a').getAttribute('href'),'/explore/'+id+'/');
+    const q=page('explore/'+id+'/index.html');
+    assert.equal(q.querySelectorAll('.tl-pos:not(.tl-compact) .tl-row[data-trads]').length,3,'three lanes on '+id);
+  }
+  // A new church is placed (lane data-trads) and a divided one is named in a note line.
+  const cn=page('explore/christ-natures/index.html');
+  assert.ok(cn.querySelector('.tl-row[data-trads~="oriental-orthodox"]'));
+  assert.ok(cn.querySelector('.tl-row[data-trads~="church-of-the-east"]'));
+  assert.match(cn.querySelector('.bnotes').textContent,/Coptic and Ethiopian/);
+  const ep=page('explore/eucharist-presence/index.html');
+  assert.ok(ep.querySelector('.tl-row[data-trads~="methodist"]'));
+  assert.match(ep.querySelector('.bnotes').textContent,/Anabaptist:\s*Divided\./);
+  assert.equal(doc.querySelector('.ot-creeds a').getAttribute('href'),'/creeds/');
+});
+
+test('creeds and churches page: timeline, eleven cards, reviewed dates (owner 2026-10-06)', ()=>{
+  const doc=page('creeds/index.html');
+  assert.equal(doc.querySelector('h1').textContent,'Creeds and churches');
+  assert.equal(doc.querySelectorAll('.ch-card').length,11);
+  assert.ok(doc.querySelector('link[href^="/assets/creeds.css"]'));
+  assert.match(doc.querySelector('#c-filioque').textContent,/Lateran IV \(1215\).*Lyon II \(1274\).*Florence \(1439\)/s);
+  assert.match(doc.querySelector('#k-methodist').textContent,/1784/);
+  assert.equal(doc.querySelectorAll('#site-nav a[href="/creeds/"]').length,0,'creeds stays under Timeline, not a nav item');
+  assert.equal(doc.querySelector('.crumbs a[href="/explore/"]').textContent,'Timeline');
 });
 
 test('favicon files ship in dist', ()=>{
@@ -329,5 +390,53 @@ test('starting a search resets the era filter to All',async()=>{
   assert.equal(doc(dom).querySelector('[data-filter="all"]').getAttribute('aria-pressed'),'true');
   assert.equal(chip.getAttribute('aria-pressed'),'false');
   assert.ok(doc(dom).querySelectorAll('#works-list > li.author-entry:not([hidden])').length>0);
+  dom.window.close();
+});
+
+test('ask: /ask/ page, home hero asks there, answer/thin/error states (owner 2026-10-06)', async ()=>{
+  const home=page('index.html');
+  const form=home.querySelector('.vp-hero form.vp-ask');
+  assert.equal(form.getAttribute('action'),'/ask/','home hero search goes to Ask');
+  assert.equal(form.querySelector('input').getAttribute('name'),'q');
+  const html=readFileSync(new URL('ask/index.html',DIST),'utf8');
+  const doc=new JSDOM(html).window.document;
+  assert.equal(doc.querySelector('h1').textContent,'Ask the Fathers');
+  assert.ok(doc.querySelector('label[for="ask-q"]'),'labelled input');
+  assert.equal(doc.querySelector('#ask-status').getAttribute('aria-live'),'polite');
+  assert.ok(doc.querySelector('script[src^="/assets/ask.js"]')&&doc.querySelector('link[href^="/assets/ask.css"]'));
+  assert.ok(doc.querySelectorAll('.ask-try a[href^="/ask/?q="]').length>=3,'example questions');
+  const askJs=readFileSync(new URL('assets/ask.js',DIST),'utf8');
+  const answer={query:'baptism',mode:'answer',passages:[
+    {title:'First Apology 61',author:'Justin Martyr',href:'/e/j61/',kind:'excerpt',score:0.9,snippet:'Then we lead them'},
+    {title:'Didache 7',author:'The Didache',href:'/e/d7/',kind:'excerpt',score:0.8,snippet:'Concerning baptism'}],
+    answer:[{text:'Then we lead them to where there is water.',author:'Justin Martyr',author_dates:'c. 100–c. 165 AD',title:'First Apology 61',cite:'First Apology 61',href:'/e/j61/',year:165,ref:1,score:0.9},
+      {text:'Concerning baptism, baptize in this way.',author:'Augustine of Hippo',author_dates:'354–430 AD',title:'x',cite:'Letters §5',href:'/works/aug/5/',year:430,ref:2,score:0.95}]};
+  const thin={query:'internet',mode:'thin',answer:[],note:'Our library does not cover this well yet. These are the closest passages; more works are being translated.',passages:answer.passages};
+  const open=async(q,reply)=>{
+    const dom=new JSDOM(html,{url:'https://viapatrum.org/ask/?q='+encodeURIComponent(q),runScripts:'outside-only',pretendToBeVisual:true});
+    dom.window.fetch=async(u)=>{ assert.match(String(u),/^\/api\/ask\?q=/); return reply(); };
+    dom.window.eval(askJs); await settle(); return dom;
+  };
+  let dom=await open('baptism',()=>({ok:true,json:async()=>answer}));
+  let d=dom.window.document;
+  assert.equal(d.querySelectorAll('.ask-quotes > li').length,2);
+  assert.match(d.querySelector('.ask-from').textContent,/From 2 passages, c\. 165–430 AD/);
+  const cite=d.querySelector('.ask-cite a');
+  assert.equal(cite.getAttribute('href'),'/e/j61/');
+  assert.equal(cite.textContent,'Justin Martyr (c. 100–c. 165 AD), First Apology 61');
+  assert.equal(d.querySelector('.ask-ref').getAttribute('href'),'#ask-p-1');
+  assert.ok(d.querySelector('#ask-p-2 a[href="/e/d7/"]'),'numbered passage rows');
+  assert.ok(d.querySelector('a[href="/works/?q=baptism"]'),'see every match');
+  assert.match(d.querySelector('#ask-status').textContent,/Answer ready/);
+  dom.window.close();
+  dom=await open('internet',()=>({ok:true,json:async()=>thin}));
+  d=dom.window.document;
+  assert.ok(!d.querySelector('.ask-answer'),'no answer block when thin');
+  assert.match(d.querySelector('.ask-thin').textContent,/does not cover this well yet/);
+  assert.equal(d.querySelectorAll('.ask-plist > li').length,2);
+  dom.window.close();
+  dom=await open('grace',()=>({ok:false,status:502,json:async()=>({error:'x'})}));
+  d=dom.window.document;
+  assert.ok(d.querySelector('.ask-error a[href="/works/?q=grace"]'),'API down: fall back to the library search');
   dom.window.close();
 });

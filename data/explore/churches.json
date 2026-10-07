@@ -1,0 +1,1024 @@
+{
+ "meta": {
+  "generated": "2026-10-06",
+  "note": "'from' gives the id of the earlier body the tradition came out of, or null for churches that see themselves as continuous with the apostolic church. Each card describes the church as its own members do; see CREEDS_NOTES.md for points to check.",
+  "holds_rule": "held_by[].holds: formal (dogma, confession or liturgy), doctrine (teaching received; council not binding in itself), content (content affirmed, not binding), no, or unsettled. A church card's holds_creeds is every item whose row for that church is formal, doctrine or content.",
+  "reviewed": "2026-10-06: every correction in outputs/beliefs-expansion-20261006/REVIEW_creeds.json applied by outputs/pkg-creeds/apply_review.py; new facts checked against outputs/pkg-creeds/receipts/."
+ },
+ "churches": [
+  {
+   "id": "catholic",
+   "name": "Catholic Church",
+   "began": {
+    "display": "Apostolic age (Catholics date the church to Christ and Pentecost, 1st century AD)",
+    "start": 30,
+    "approximate": true
+   },
+   "where": "Jerusalem, then Rome and the whole Roman world; centred on the see of Rome",
+   "from": null,
+   "from_note": "Sees itself as the church founded by Christ, with no parent body. Its Latin West and the Greek East parted in stages, with 1054 as the usual marker.",
+   "why": "Catholics believe Christ founded the church on the apostles, gave it the Holy Spirit at Pentecost, and promised to stay with it to the end of time. They hold that this one church subsists in the Catholic Church, led by the bishop of Rome as Peter's successor with the bishops in communion with him. They also teach that real elements of grace and truth are found in other churches. Besides the Latin Church it includes Eastern Catholic churches with their own rites and laws.",
+   "key_people": [
+    "Apostles Peter and Paul",
+    "Pope Leo I (his Tome was read at Chalcedon, 451)",
+    "Pope Gregory I (sent Augustine to England, 597)",
+    "Pope Pius IX (Vatican I)",
+    "Popes John XXIII and Paul VI (Vatican II)"
+   ],
+   "key_events": [
+    {
+     "date": "325-787",
+     "event": "Seven ecumenical councils, shared with the Orthodox."
+    },
+    {
+     "date": "1054",
+     "event": "Rome's legates and the Patriarch of Constantinople exchange excommunications; the estrangement of East and West deepens."
+    },
+    {
+     "date": "1439",
+     "event": "Council of Florence: a union with the Greek Church is agreed but not received in the East."
+    },
+    {
+     "date": "1545-1563",
+     "event": "Council of Trent answers the Reformation."
+    },
+    {
+     "date": "1870",
+     "event": "Vatican I defines papal primacy and infallibility (18 July)."
+    },
+    {
+     "date": "1962-1965",
+     "event": "Second Vatican Council; ecumenical dialogue opens."
+    },
+    {
+     "date": "1965",
+     "event": "Joint declaration with Ecumenical Patriarch Athenagoras I regrets the 1054 excommunications (7 December)."
+    },
+    {
+     "date": "1994",
+     "event": "Common Christological Declaration with the Assyrian Church of the East."
+    },
+    {
+     "date": "1999",
+     "event": "Joint Declaration on Justification with the Lutheran World Federation."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "nicene-325",
+    "niceno-constantinopolitan-381",
+    "ephesus-431",
+    "chalcedon-451",
+    "athanasian-creed",
+    "constantinople-553",
+    "filioque",
+    "constantinople-680",
+    "nicaea-787",
+    "trent-1545",
+    "vatican-i-1870",
+    "vatican-ii-1962",
+    "common-christological-declaration-1994",
+    "jddj-1999"
+   ],
+   "sources": [
+    {
+     "title": "World Council of Churches, church family page: [Roman] Catholic church",
+     "url": "https://www.oikoumene.org/church-families/the-roman-catholic-church",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Catholic self-description: church founded by Christ; death, resurrection and sending of the Spirit established it; Vatican II 1962-1965."
+    },
+    {
+     "title": "Vatican II, Lumen Gentium 8, vatican.va",
+     "url": "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_en.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "'subsists in the Catholic Church ... many elements of sanctification and of truth are found outside of its visible structure'."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Eastern Schism', New Advent",
+     "url": "https://www.newadvent.org/cathen/13535a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Roman legates excommunicated the patriarch, 16 July 1054, without excommunicating the whole East."
+    },
+    {
+     "title": "Holy See, Joint Catholic-Orthodox Declaration (7 December 1965)",
+     "url": "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Concerns the exchange of excommunications in 1054."
+    }
+   ]
+  },
+  {
+   "id": "orthodox",
+   "name": "Eastern Orthodox Church",
+   "began": {
+    "display": "Apostolic age, 1st century AD (Orthodox self-understanding)",
+    "start": 30,
+    "approximate": true
+   },
+   "where": "The eastern Roman (Byzantine) world: Constantinople, Alexandria, Antioch, Jerusalem; later Slavic, Romanian, Georgian and other lands",
+   "from": null,
+   "from_note": "Sees itself as the unbroken continuation of the church of Christ and the apostles. Its separation from Rome grew from 1054 to a formal break in the 15th century.",
+   "why": "The Orthodox see their church as the same church founded by Christ and the apostles, keeping the faith of the seven ecumenical councils. It is a family of self-governing churches, with the Ecumenical Patriarch of Constantinople as 'first among equals'. The split with Rome turned on the pope's claim to universal jurisdiction and on the Filioque added to the creed.",
+   "key_people": [
+    "Athanasius of Alexandria",
+    "Basil the Great",
+    "Gregory of Nazianzus",
+    "John Chrysostom",
+    "Photios the Great",
+    "Gregory Palamas",
+    "Mark of Ephesus",
+    "Ecumenical Patriarch Athenagoras I (1965 declaration)"
+   ],
+   "key_events": [
+    {
+     "date": "325-787",
+     "event": "Seven ecumenical councils, the last being Nicaea II on icons."
+    },
+    {
+     "date": "988",
+     "event": "Baptism of Kievan Rus'."
+    },
+    {
+     "date": "1054",
+     "event": "Rome's legates and the Patriarch of Constantinople exchange excommunications; the estrangement of East and West deepens."
+    },
+    {
+     "date": "early 13th century",
+     "event": "The Fourth Crusade (sack of Constantinople, 1204) deepens the estrangement."
+    },
+    {
+     "date": "15th century",
+     "event": "Formal break with Rome (WCC dates it to the 15th century; the union agreed at Florence in 1439 was not received in the East)."
+    },
+    {
+     "date": "1965",
+     "event": "Patriarch Athenagoras I and Pope Paul VI regret the 1054 excommunications."
+    }
+   ],
+   "holds_creeds": [
+    "nicene-325",
+    "niceno-constantinopolitan-381",
+    "ephesus-431",
+    "chalcedon-451",
+    "constantinople-553",
+    "constantinople-680",
+    "nicaea-787"
+   ],
+   "sources": [
+    {
+     "title": "World Council of Churches, church family page: Orthodox churches (Eastern)",
+     "url": "https://www.oikoumene.org/church-families/orthodox-churches-eastern",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Self-governing churches; faith of the seven councils; Ecumenical Patriarch first among equals; schism 1054, worsened by the Fourth Crusade, formal break in the 15th century; issues: papal jurisdiction and Filioque."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Eastern Schism', New Advent",
+     "url": "https://www.newadvent.org/cathen/13535a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Events of 1054."
+    },
+    {
+     "title": "Holy See, Joint Catholic-Orthodox Declaration (7 December 1965)",
+     "url": "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Paul VI and Athenagoras I on the 1054 excommunications."
+    }
+   ],
+   "notes": "1204 for the Fourth Crusade is a standard date; the WCC page says only \"early 13th century\"."
+  },
+  {
+   "id": "oriental-orthodox",
+   "name": "Oriental Orthodox Churches (Coptic, Syriac, Armenian, Ethiopian, Eritrean, Malankara/Indian)",
+   "began": {
+    "display": "Apostolic age; separate from the Chalcedonian churches after 451",
+    "start": 30,
+    "approximate": true
+   },
+   "where": "Egypt, Syria, Armenia, Ethiopia, Eritrea, India",
+   "from": null,
+   "from_note": "Founded in apostolic times by apostles or their first disciples (their own account, WCC). Not in communion with Rome or the Eastern Orthodox since the dispute over the Council of Chalcedon (451).",
+   "why": "These ancient churches keep the faith of the first three councils and follow Cyril of Alexandria's formula 'one nature of God the Word incarnate'. They did not accept Chalcedon's wording 'in two natures', which they read as dividing Christ. They call their teaching Miaphysite: one united nature of God the Word incarnate, fully God and fully human, without mixing or division. They are not Monophysite in the sense of Eutyches, whom they also reject.",
+   "key_people": [
+    "Cyril of Alexandria",
+    "Dioscorus of Alexandria (deposed at Chalcedon, honoured by these churches)",
+    "Severus of Antioch",
+    "Jacob Baradaeus"
+   ],
+   "key_events": [
+    {
+     "date": "431",
+     "event": "Council of Ephesus, the last council they accept."
+    },
+    {
+     "date": "451",
+     "event": "Council of Chalcedon; these churches do not accept it, and the largest lasting division of the early church follows."
+    },
+    {
+     "date": "6th century",
+     "event": "A separate line of Syriac Orthodox patriarchs takes shape."
+    },
+    {
+     "date": "1985",
+     "event": "Official theological dialogue with the Eastern Orthodox begins; Christological agreements follow."
+    }
+   ],
+   "holds_creeds": [
+    "nicene-325",
+    "niceno-constantinopolitan-381",
+    "ephesus-431"
+   ],
+   "sources": [
+    {
+     "title": "World Council of Churches, church family page: Orthodox churches (Oriental)",
+     "url": "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Ethiopian, Coptic, Armenian, Syrian, Indian, Eritrean; founded in apostolic times; accept Nicaea, Constantinople, Ephesus; Cyrilian formula; Monophysite label erroneous; breach of 451; official dialogue from 1985."
+    },
+    {
+     "title": "Gorgias Encyclopedic Dictionary of the Syriac Heritage, 'Syriac Orthodox Church'",
+     "url": "https://gedsh.bethmardutho.org/Syriac-Orthodox-Church",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "Accepts Nicaea, Constantinople and Ephesus but rejects Chalcedon; distinct line of patriarchs in the 6th century; 'Jacobite' and 'Monophysite' are misleading names, 'Miaphysite' acceptable."
+    },
+    {
+     "title": "NPNF 2nd series vol. 14, Condemnation sent by the Synod of Chalcedon to Dioscorus, CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/npnf214.xi.x.html",
+     "type": "primary text in translation",
+     "fetched": "2026-10-06",
+     "supports": "Dioscorus deposed at Chalcedon."
+    },
+    {
+     "title": "Coptic Synaxarium, 7 Thout (CopticChurch.net)",
+     "url": "https://copticchurch.net/synaxarium/1_7.html",
+     "type": "church text",
+     "fetched": "2026-10-06",
+     "supports": "Commemorates St. Dioscorus, 25th Pope of Alexandria."
+    }
+   ]
+  },
+  {
+   "id": "church-of-the-east",
+   "name": "Church of the East (Assyrian Church of the East; Ancient Church of the East)",
+   "began": {
+    "display": "Earliest Christianity in Mesopotamia and Persia (1st-3rd century); organized as a church of the Persian Empire in 410",
+    "start": 100,
+    "approximate": true
+   },
+   "where": "Mesopotamia and the Persian (Sasanian) Empire; later Central Asia, China and South India; today Iraq, Iran, Syria and a large diaspora",
+   "from": null,
+   "from_note": "Traces its origins to the see of Seleucia-Ctesiphon and the apostle Thomas, with Addai and Mari (WCC). It grew outside the Roman Empire and its councils.",
+   "why": "Christians in the Persian Empire organized under their own Catholicos at Seleucia-Ctesiphon in 410 and received the faith of Nicaea. Following Theodore of Mopsuestia, they stress the full and distinct divinity and humanity of Christ; their theology took shape outside the councils of the Roman Empire. Opponents called them 'Nestorian', a name the church itself considers pejorative and scholars call misleading. It did not receive the Council of Ephesus (431) or later councils.",
+   "key_people": [
+    "Catholicos Isaac (Synod of 410)",
+    "Catholicos Dadisho I (Synod of 424)",
+    "Catholicos Acacius (Synod of 486)",
+    "Theodore of Mopsuestia (theological source)",
+    "Patriarch Timothy I (780-820/23)",
+    "Catholicos-Patriarch Mar Dinkha IV (1994 declaration)"
+   ],
+   "key_events": [
+    {
+     "date": "410",
+     "event": "Synod of Seleucia-Ctesiphon under Catholicos Isaac officially receives the Council of Nicaea."
+    },
+    {
+     "date": "424",
+     "event": "Synod of Markabta under Dadisho I ends appeals to 'Western' (Roman-Empire) bishops; sometimes read as a declaration of independence."
+    },
+    {
+     "date": "486",
+     "event": "Synod under Acacius issues its first Christological statement after Ephesus and Chalcedon, in Antiochene terms."
+    },
+    {
+     "date": "635-781",
+     "event": "The monk Aluoben reaches the Tang capital Chang'an (Xi'an) in 635; a stone monument set up there in 781 tells the story of the mission."
+    },
+    {
+     "date": "mid-16th century",
+     "event": "A separate patriarchal line in communion with Rome forms (Chaldean Catholic Church)."
+    },
+    {
+     "date": "1964-1968",
+     "event": "Division over adopting the Gregorian calendar and the hereditary succession of the patriarch; the Ancient Church of the East consecrates its own patriarch (1968)."
+    },
+    {
+     "date": "1994",
+     "event": "Common Christological Declaration with the Catholic Church (11 November)."
+    }
+   ],
+   "holds_creeds": [
+    "nicene-325",
+    "common-christological-declaration-1994"
+   ],
+   "sources": [
+    {
+     "title": "Gorgias Encyclopedic Dictionary of the Syriac Heritage, 'Church of the East'",
+     "url": "https://gedsh.bethmardutho.org/Church-of-the-East",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "Developed outside the Roman Empire; third position alongside Oriental Orthodox and Chalcedonians; dyophysite christology of Theodore; 'misleadingly labelled as Nestorian'; mid-16th-century Chaldean line; 1968 schism; 1994 statement."
+    },
+    {
+     "title": "Gorgias Encyclopedic Dictionary of the Syriac Heritage, 'Dadisho I'",
+     "url": "https://gedsh.bethmardutho.org/Dadisho-I",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "Synod of Isaac 410; Synod of 424 at Markabta; abolition of appeals to Western bishops sometimes read as a declaration of independence."
+    },
+    {
+     "title": "Sebastian Brock, 'The Christology of the Church of the East in the Synods of the Fifth to Early Seventh Centuries', in Aksum-Thyateira (1985)",
+     "url": "https://www.gospelstudies.org.uk/biblicalstudies/pdf/aksum-thyatiera/aksum-thyateira_02-brock.pdf",
+     "type": "scholarly article",
+     "fetched": "2026-10-06",
+     "supports": "410 synod officially recognized Nicaea; 486 statement Antiochene 'but can in no way be described as openly Nestorian'."
+    },
+    {
+     "title": "World Council of Churches, church family page: The Assyrian Church",
+     "url": "https://www.oikoumene.org/church-families/the-assyrian-church",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Origins at Seleucia-Ctesiphon, St Thomas, Mari and Addai; church considers 'Nestorian' pejorative; Xi'an monument; Timothy I (780-820/23). (This WCC page cites Wikipedia as its source.)"
+    },
+    {
+     "title": "Gorgias Encyclopedic Dictionary of the Syriac Heritage, 'China, Syriac Christianity in'",
+     "url": "https://gedsh.bethmardutho.org/China-Syriac-Christianity-in",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "Aluoben reached Chang'an in 635; the Xi'an Stele was erected in 781."
+    },
+    {
+     "title": "Gorgias Encyclopedic Dictionary of the Syriac Heritage, 'Shemʿon XXIII Eshai'",
+     "url": "https://gedsh.bethmardutho.org/Shemon-Eshai",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "1964 synodical letter adopted the Gregorian calendar; schism in 1968 under Mar Toma Darmo; Eshai the last hereditary patriarch."
+    },
+    {
+     "title": "J. A. McGuckin, Encyclopedia of Eastern Orthodox Christianity, 'Assyrian Apostolic Church of the East'",
+     "url": "https://azbyka.ru/otechnik/world/the-encyclopedia-of-eastern-orthodox-christianity/33",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "Ephesus 431 the occasion of the rupture (checked by the reviewer)."
+    }
+   ],
+   "notes": "Sources differ on whether this church formally received the council of 381, so the 381 creed is not listed among its creeds; it confesses a Syriac form of the Nicene faith."
+  },
+  {
+   "id": "lutheran",
+   "name": "Lutheran churches",
+   "began": {
+    "display": "1517-1530",
+    "start": 1517
+   },
+   "where": "Wittenberg, Saxony; then much of Germany and Scandinavia",
+   "from": "catholic",
+   "from_note": "A reform movement within the Western (Latin) Catholic Church that became separate churches.",
+   "why": "Martin Luther, a monk and professor, came to believe that sinners are made right with God by grace through faith in Christ, not by their own merit, and protested the sale of indulgences. When reform within the Roman church failed, evangelical princes and cities organized churches around the preached word, the sacraments and the Augsburg Confession.",
+   "key_people": [
+    "Martin Luther",
+    "Philip Melanchthon",
+    "Jakob Andreae",
+    "Martin Chemnitz"
+   ],
+   "key_events": [
+    {
+     "date": "31 October 1517",
+     "event": "Luther publishes his 95 Theses at Wittenberg; the usual start of the Reformation."
+    },
+    {
+     "date": "1521",
+     "event": "Excommunicated by Rome (January) and outlawed at the Diet of Worms (May); hidden at the Wartburg."
+    },
+    {
+     "date": "1529",
+     "event": "Luther's Small and Large Catechisms."
+    },
+    {
+     "date": "25 June 1530",
+     "event": "Augsburg Confession read before Charles V."
+    },
+    {
+     "date": "1546",
+     "event": "Death of Luther (18 February)."
+    },
+    {
+     "date": "25 June 1580",
+     "event": "Book of Concord published."
+    },
+    {
+     "date": "1947",
+     "event": "Lutheran World Federation founded."
+    },
+    {
+     "date": "1999",
+     "event": "Joint Declaration on Justification with the Catholic Church."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "nicene-325",
+    "niceno-constantinopolitan-381",
+    "ephesus-431",
+    "chalcedon-451",
+    "athanasian-creed",
+    "filioque",
+    "augsburg-1530",
+    "book-of-concord-1580",
+    "jddj-1999"
+   ],
+   "sources": [
+    {
+     "title": "World Council of Churches, church family page: Lutheran churches",
+     "url": "https://www.oikoumene.org/church-families/lutheran-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Emerged from the Reformation within the Western Catholic Church in the 16th century; justification by grace through faith the decisive issue; Augsburg Confession and Small Catechism."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Lutherans and Lutheranism', New Advent",
+     "url": "https://www.newadvent.org/cathen/09458a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Dates Lutheranism from 31 October 1517; break with Rome three years later; Wartburg 1521; Luther died 18 Feb 1546."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.viii.vi), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.viii.vi.html",
+     "type": "reference (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Book of Concord published 25 June 1580; framers Andreae, Chemnitz, Selnecker, Chytraeus."
+    }
+   ]
+  },
+  {
+   "id": "reformed",
+   "name": "Reformed and Presbyterian churches",
+   "began": {
+    "display": "1519-1541 (Zurich from 1519; Geneva from 1536/1541)",
+    "start": 1519
+   },
+   "where": "Zurich and Geneva, Switzerland; then France, the Netherlands, the Palatinate, Scotland, Hungary and beyond",
+   "from": "catholic",
+   "from_note": "Grew from the Swiss and French Reformation within the Western Catholic Church.",
+   "why": "Reformers such as Ulrich Zwingli in Zurich and John Calvin in Geneva sought to reform worship and doctrine strictly by Scripture, with Christ as the only head of the church. They stressed God's sovereign grace and governed churches through pastors and elders in local and regional assemblies. Presbyterians are the branch shaped in Scotland and England, chiefly by John Knox and the Westminster Assembly.",
+   "key_people": [
+    "Ulrich Zwingli",
+    "Heinrich Bullinger",
+    "John Calvin",
+    "John Knox",
+    "Guido de Bres",
+    "Zacharias Ursinus"
+   ],
+   "key_events": [
+    {
+     "date": "1519",
+     "event": "Zwingli begins preaching reform in Zurich."
+    },
+    {
+     "date": "August 1536",
+     "event": "Calvin is held in Geneva by William Farel; he settles there for good in 1541."
+    },
+    {
+     "date": "1560",
+     "event": "Scots Confession and the Scottish Reformation under John Knox (First Book of Discipline)."
+    },
+    {
+     "date": "1561-1563",
+     "event": "Belgic Confession and Heidelberg Catechism."
+    },
+    {
+     "date": "1618-1619",
+     "event": "Synod of Dort."
+    },
+    {
+     "date": "1646-1647",
+     "event": "Westminster Confession; adopted in Scotland 1647."
+    },
+    {
+     "date": "2017",
+     "event": "World Communion of Reformed Churches associates with the Joint Declaration on Justification."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "nicene-325",
+    "niceno-constantinopolitan-381",
+    "ephesus-431",
+    "chalcedon-451",
+    "athanasian-creed",
+    "filioque",
+    "belgic-1561",
+    "heidelberg-1563",
+    "dort-1619",
+    "westminster-1646",
+    "jddj-1999"
+   ],
+   "sources": [
+    {
+     "title": "World Council of Churches, church family page: Reformed churches",
+     "url": "https://www.oikoumene.org/church-families/reformed-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Roots in the French and Swiss Reformation (Calvin, Zwingli, Bullinger); Christ the only head; elders and courts (session, presbytery, synod, general assembly)."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.ii.i), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.ii.i.html",
+     "type": "reference (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Zwingli preached at Einsiedeln (1516) and at Zurich (since 1519)."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.ii.vi), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.ii.vi.html",
+     "type": "reference (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Calvin passed through Geneva in August 1536 and was held by Farel; second, final settlement 1541."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Calvinism', New Advent",
+     "url": "https://www.newadvent.org/cathen/03198a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Knox and the First Book of Discipline, 1560; Calvinist confessions listed."
+    }
+   ]
+  },
+  {
+   "id": "anglican",
+   "name": "Anglican Communion (Church of England, Episcopal Church and others)",
+   "began": {
+    "display": "English church from 597 (and earlier British Christianity); separate from Rome 1534; settled identity under Elizabeth I from 1558/1559",
+    "start": 1534
+   },
+   "where": "England; then Ireland, Scotland, the United States and worldwide",
+   "from": "catholic",
+   "from_note": "The English church, part of the Western Catholic Church since the 597 mission and earlier Celtic and British streams, broke with papal authority under Henry VIII.",
+   "why": "Anglicans see their church as the ancient Catholic church of England, reformed in the 16th century. The break with Rome came when the pope refused to annul Henry VIII's marriage and English rulers claimed authority over the English church; reform deepened under Edward VI and was settled under Elizabeth I. It keeps bishops, the Book of Common Prayer and continuity with the early church, while holding Reformation teaching.",
+   "key_people": [
+    "Augustine of Canterbury (597)",
+    "Henry VIII",
+    "Thomas Cranmer",
+    "Elizabeth I",
+    "Matthew Parker",
+    "Richard Hooker"
+   ],
+   "key_events": [
+    {
+     "date": "597",
+     "event": "Mission from Pope Gregory the Great under Augustine lands in Kent."
+    },
+    {
+     "date": "664",
+     "event": "Synod of Whitby joins the Roman and Celtic streams."
+    },
+    {
+     "date": "1534",
+     "event": "Act of Supremacy names the king supreme head of the Church of England."
+    },
+    {
+     "date": "1549",
+     "event": "First Book of Common Prayer (Cranmer); its 1662 revision is still standard in England."
+    },
+    {
+     "date": "1553",
+     "event": "Cranmer's Forty-two Articles."
+    },
+    {
+     "date": "1558",
+     "event": "Elizabeth I becomes queen; the Elizabethan settlement follows."
+    },
+    {
+     "date": "1563/1571",
+     "event": "Thirty-nine Articles."
+    },
+    {
+     "date": "1867",
+     "event": "First Lambeth Conference."
+    },
+    {
+     "date": "1886-1888",
+     "event": "Chicago-Lambeth Quadrilateral."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "nicene-325",
+    "niceno-constantinopolitan-381",
+    "ephesus-431",
+    "chalcedon-451",
+    "athanasian-creed",
+    "filioque",
+    "thirty-nine-articles",
+    "jddj-1999"
+   ],
+   "sources": [
+    {
+     "title": "Church of England, \"History of the Church of England\"",
+     "url": "https://www.churchofengland.org/about/history-church-england",
+     "type": "official church site",
+     "fetched": "2026-10-06",
+     "supports": "597 mission; three streams; Whitby 664; break with Rome over Henry VIII annulment and royal authority; Edward VI; Elizabeth I in 1558."
+    },
+    {
+     "title": "World Council of Churches, church family page: Anglican churches",
+     "url": "https://www.oikoumene.org/church-families/anglican-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Derives from the ancient Celtic and Saxon churches; distinct identity in the 16th-17th century Reformation; Quadrilateral 1886/1888."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.ix.vi.i), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.ix.vi.i.html",
+     "type": "reference (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Act of Supremacy (1534)."
+    }
+   ]
+  },
+  {
+   "id": "methodist",
+   "name": "Methodist churches (including the Holiness movement)",
+   "began": {
+    "display": "1729-1739 (Oxford group 1729; movement from 1739); separate church in America 1784",
+    "start": 1739
+   },
+   "where": "Oxford and Bristol/London, England; then America (Baltimore, 1784) and worldwide",
+   "from": "anglican",
+   "from_note": "A revival movement inside the Church of England that became separate churches. The Holiness churches grew out of American Methodism in the 19th century.",
+   "why": "John and Charles Wesley sought to bring warmer faith and disciplined holiness to the Church of England. They taught that God's grace is offered to all, that faith changes character, and that perfect love is possible in this life. Their societies outgrew the established church, first in America after independence and later in Britain. The Holiness movement set out to recover Wesley's teaching on entire sanctification.",
+   "key_people": [
+    "John Wesley",
+    "Charles Wesley",
+    "Francis Asbury",
+    "Philip William Otterbein",
+    "Martin Boehm"
+   ],
+   "key_events": [
+    {
+     "date": "1729",
+     "event": "John Wesley joins the Oxford student group led by Charles."
+    },
+    {
+     "date": "24 May 1738",
+     "event": "John Wesley's conversion experience."
+    },
+    {
+     "date": "1739",
+     "event": "Methodism as a movement begins."
+    },
+    {
+     "date": "1784",
+     "event": "Methodist Episcopal Church organized at Baltimore; Articles of Religion adopted; Asbury and Coke as superintendents (called bishops from the late 1780s)."
+    },
+    {
+     "date": "1795",
+     "event": "Plan of Pacification lets British Methodist chapels give the sacraments."
+    },
+    {
+     "date": "1816",
+     "event": "African Methodist Episcopal Church organized (Richard Allen)."
+    },
+    {
+     "date": "1843, 1860",
+     "event": "Wesleyan Methodist Connection and Free Methodist Church (Holiness)."
+    },
+    {
+     "date": "1908",
+     "event": "Church of the Nazarene (Holiness)."
+    },
+    {
+     "date": "1968",
+     "event": "United Methodist Church formed."
+    },
+    {
+     "date": "2006",
+     "event": "World Methodist Council associates with the Joint Declaration on Justification."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "niceno-constantinopolitan-381",
+    "filioque",
+    "methodist-articles-1784",
+    "jddj-1999"
+   ],
+   "sources": [
+    {
+     "title": "World Council of Churches, church family page: Methodist churches",
+     "url": "https://www.oikoumene.org/church-families/methodist-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Wesleys in the 18th-century Church of England; Arminian view; perfection in love; Methodist Episcopal Church 1784."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Methodism', New Advent",
+     "url": "https://www.newadvent.org/cathen/10237b.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Movement originated 1739; Wesley joined the Oxford group 22 Nov 1729; 24 articles adopted at Baltimore 1784; Plan of Pacification 1795."
+    },
+    {
+     "title": "United Methodist Church, \"Our History\"",
+     "url": "https://www.umc.org/en/who-we-are/history",
+     "type": "official church site",
+     "fetched": "2026-10-06",
+     "supports": "UMC created 1968; roots in the Wesleys at Oxford; Otterbein and Boehm."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.x.x), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.x.x.html",
+     "type": "reference (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "Wesley's conversion 24 May 1738; Asbury ordained bishop 1784."
+    },
+    {
+     "title": "World Council of Churches, church family page: Holiness churches",
+     "url": "https://www.oikoumene.org/church-families/holiness-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Renewal within American Methodism; Wesleyan Methodist Connection 1843; Free Methodist 1860; Church of the Nazarene 1908."
+    },
+    {
+     "title": "United Methodist Church, 'The Christmas Conference: 10 days that started a church'",
+     "url": "https://www.umc.org/content/the-christmas-conference-10-days-that-started-a-church",
+     "type": "official church text",
+     "fetched": "2026-10-06",
+     "supports": "Asbury consecrated general superintendent; soon called bishop, despite Wesley's objections."
+    }
+   ],
+   "notes": "Holiness denominations have their own articles (e.g. Nazarene), not covered here. The Methodist Articles are drawn from the Thirty-nine Articles, but Methodists do not subscribe the Thirty-nine Articles themselves."
+  },
+  {
+   "id": "baptist",
+   "name": "Baptist churches",
+   "began": {
+    "display": "1609 (Amsterdam); first Baptist church in England 1611 or 1612",
+    "start": 1609
+   },
+   "where": "Amsterdam, then London; later America and worldwide",
+   "from": "anglican",
+   "from_note": "English Separatists who had left the Church of England (John Smyth's congregation from Gainsborough).",
+   "why": "John Smyth's exiled English congregation in Amsterdam concluded from the New Testament that the church is a fellowship of believers, so baptism should follow a personal confession of faith rather than be given to infants. Thomas Helwys led part of the group back to London and pleaded for religious freedom for all. Baptists hold the Bible as their only binding authority and give each local church freedom to order its life.",
+   "key_people": [
+    "John Smyth",
+    "Thomas Helwys",
+    "Benjamin Keach",
+    "John Bunyan"
+   ],
+   "key_events": [
+    {
+     "date": "1609",
+     "event": "Smyth's congregation in Amsterdam adopts believers' baptism."
+    },
+    {
+     "date": "1611 or 1612",
+     "event": "Helwys founds the first Baptist church in England, in London."
+    },
+    {
+     "date": "1638/1639",
+     "event": "Roger Williams founds the first Baptist church in America, at Providence."
+    },
+    {
+     "date": "1644",
+     "event": "Seven Particular Baptist churches in London issue the First London Confession; General Baptist churches number about 47."
+    },
+    {
+     "date": "1677/1689",
+     "event": "Second London Confession."
+    },
+    {
+     "date": "1742",
+     "event": "Philadelphia Baptist Association adopts the confession."
+    },
+    {
+     "date": "1891",
+     "event": "General and Particular Baptists unite in the Baptist Union of Great Britain and Ireland."
+    },
+    {
+     "date": "1905",
+     "event": "Baptist World Alliance founded."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "niceno-constantinopolitan-381",
+    "athanasian-creed",
+    "second-london-1689"
+   ],
+   "sources": [
+    {
+     "title": "World Council of Churches, church family page: Baptist churches",
+     "url": "https://www.oikoumene.org/church-families/baptist-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Founded in the Netherlands 1609 by John Smyth; London church 1612 under Helwys; Bible (no creed) the binding authority; 1891 union."
+    },
+    {
+     "title": "Catholic Encyclopedia (1907-1912), 'Baptists', New Advent",
+     "url": "https://www.newadvent.org/cathen/02278a.htm",
+     "type": "reference (public domain; Catholic viewpoint)",
+     "fetched": "2026-10-06",
+     "supports": "Smyth to Amsterdam about 1606; rejected infant baptism 1609; Helwys returned 1611 or 1612 and formed the first Baptist community in London."
+    },
+    {
+     "title": "Philip Schaff, Creeds of Christendom (creeds1.x.vi), CCEL",
+     "url": "https://www.ccel.org/ccel/schaff/creeds1.x.vi.html",
+     "type": "reference (public domain)",
+     "fetched": "2026-10-06",
+     "supports": "1644 congregation numbers; Second London Confession 1677/1689; Philadelphia 1742; Keach and Bunyan."
+    }
+   ],
+   "notes": "Baptists often say they have 'no creed but the Bible'; confessions are statements of agreement rather than binding creeds. Only the 1689 Confession is in creeds.json; many Baptists use other confessions. One historic exception: the General Baptist Orthodox Creed (drafted 1678, printed 1679) received the Nicene, Athanasian and Apostles' Creeds."
+  },
+  {
+   "id": "anabaptist",
+   "name": "Anabaptist churches (Mennonite, Amish, Hutterite; the Church of the Brethren shares this heritage)",
+   "began": {
+    "display": "21 January 1525",
+    "start": 1525
+   },
+   "where": "Zurich, Switzerland; then South Germany, Moravia and the Netherlands",
+   "from": "reformed",
+   "from_note": "Began among Zwingli's followers in Zurich, in what historians call the Radical Reformation.",
+   "why": "A circle of Zwingli's followers believed Scripture required faster change, above all baptism only for those who confess faith and choose to follow Jesus. On 21 January 1525 they baptized one another in Zurich and formed free churches of committed believers, separate from the state, who refused the sword and the oath. Despite fierce persecution they spread, and Menno Simons gathered the Dutch and North German groups later called Mennonites.",
+   "key_people": [
+    "Conrad Grebel",
+    "Felix Manz",
+    "George Blaurock",
+    "Michael Sattler",
+    "Menno Simons",
+    "Jakob Hutter"
+   ],
+   "key_events": [
+    {
+     "date": "21 January 1525",
+     "event": "First believers' baptisms in Felix Manz's house, Zurich."
+    },
+    {
+     "date": "24 February 1527",
+     "event": "Schleitheim Confession."
+    },
+    {
+     "date": "1533",
+     "event": "Jakob Hutter comes to lead the Moravian communities later called Hutterites."
+    },
+    {
+     "date": "1536",
+     "event": "Menno Simons joins the Anabaptists."
+    },
+    {
+     "date": "21 April 1632",
+     "event": "Dordrecht Confession."
+    },
+    {
+     "date": "1693-1697",
+     "event": "Amish division among the Swiss Brethren."
+    },
+    {
+     "date": "1925",
+     "event": "Mennonite World Conference begins."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "niceno-constantinopolitan-381",
+    "schleitheim-1527",
+    "dordrecht-1632"
+   ],
+   "sources": [
+    {
+     "title": "Mennonite World Conference, \"How Mennonites came to be\"",
+     "url": "https://mwc-cmm.org/stories/how-mennonites-came-be-0",
+     "type": "official body",
+     "fetched": "2026-10-06",
+     "supports": "21 January 1525, Grebel baptized Blaurock in Manz's house in Zurich; Mennonites named after Menno Simons; MWC began 1925."
+    },
+    {
+     "title": "World Council of Churches, church family page: Moravian and Historic Peace Churches",
+     "url": "https://www.oikoumene.org/church-families/moravian-and-historic-peace-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Mennonites derive from the non-violent Anabaptist movement of the 16th-century Reformation; Menno Simons (c. 1496-1561)."
+    },
+    {
+     "title": "GAMEO, \"Menno Simons (1496-1561)\"",
+     "url": "https://gameo.org/index.php?title=Menno_Simons_(1496-1561)",
+     "type": "reference (Mennonite encyclopedia)",
+     "fetched": "2026-10-06",
+     "supports": "Joined the Anabaptists in 1536.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    },
+    {
+     "title": "GAMEO, \"Amish\"",
+     "url": "https://gameo.org/index.php?title=Amish",
+     "type": "reference (Mennonite encyclopedia)",
+     "fetched": "2026-10-06",
+     "supports": "Amish division 1693-97.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    },
+    {
+     "title": "Global Anabaptist Mennonite Encyclopedia Online, 'Hutter, Jakob (d. 1536)'",
+     "url": "https://gameo.org/index.php?title=Hutter,_Jakob_(d._1536)",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "Arrived at Auspitz, Moravia, 11 August 1533; founder of the brotherhood named for him.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    }
+   ],
+   "notes": "'from' is set to reformed because the first Anabaptists came out of Zwingli's Zurich circle; the page shows the from_note, not a church split. Jakob Ammann (Amish leader) is left out: no fetched page names him."
+  },
+  {
+   "id": "pentecostal",
+   "name": "Pentecostal and Charismatic churches",
+   "began": {
+    "display": "1901-1906 (Topeka 1 January 1901; Azusa Street, Los Angeles, April 1906); Charismatic renewal from 1960",
+    "start": 1901
+   },
+   "where": "Topeka, Kansas, and Los Angeles, California; spread worldwide within a few years; also independent beginnings in India (1905-1906), Korea (1907) and Chile (1909)",
+   "from": "methodist",
+   "from_note": "Mainly from the Wesleyan Holiness movement, with others from Reformed and Keswick circles. The later Charismatic renewal stayed inside historic churches (Episcopal 1960, Catholic 1967).",
+   "why": "Believers seeking more of God's power prayed for a fresh Pentecost and began to speak in tongues. Many took this as the Bible evidence of baptism in the Holy Spirit (Acts 2:4). They saw this as restoring the gifts of the apostolic church for holy living and worldwide mission. From the 1960s many in older churches had the same experience and stayed in their own churches as Charismatics.",
+   "key_people": [
+    "Charles Parham",
+    "William J. Seymour",
+    "Eudorus N. Bell",
+    "J. Roswell Flower",
+    "Dennis Bennett",
+    "Charles Harrison Mason"
+   ],
+   "key_events": [
+    {
+     "date": "1 January 1901",
+     "event": "Students at Parham's Bethel Bible School in Topeka speak in tongues."
+    },
+    {
+     "date": "April 1906",
+     "event": "Azusa Street Mission revival under William J. Seymour begins (to 1909)."
+    },
+    {
+     "date": "2-12 April 1914",
+     "event": "Assemblies of God organized at Hot Springs, Arkansas."
+    },
+    {
+     "date": "1916",
+     "event": "AG Statement of Fundamental Truths; Oneness ministers, who hold one God revealed as Father, Son and Spirit, leave."
+    },
+    {
+     "date": "1960",
+     "event": "Dennis Bennett's resignation at St Mark's Episcopal, Van Nuys, brings national attention to the Charismatic movement."
+    },
+    {
+     "date": "1967",
+     "event": "Catholic Charismatic Renewal begins at a Duquesne University retreat."
+    }
+   ],
+   "holds_creeds": [
+    "apostles-creed",
+    "niceno-constantinopolitan-381",
+    "ag-fundamental-truths-1916"
+   ],
+   "sources": [
+    {
+     "title": "Assemblies of God (USA), \"History\"",
+     "url": "https://ag.org/about/about-the-ag/history",
+     "type": "official church site",
+     "fetched": "2026-10-06",
+     "supports": "Topeka 1 January 1901; Parham; Azusa Street 1906-09 under Seymour; Hot Springs 2-12 April 1914; Bell and Flower; 1916 Statement.",
+     "fetched_via": "Wayback Machine copy (live site blocks automated fetch)"
+    },
+    {
+     "title": "World Council of Churches, church family page: Pentecostal churches",
+     "url": "https://www.oikoumene.org/church-families/pentecostal-churches",
+     "type": "ecumenical body (official description)",
+     "fetched": "2026-10-06",
+     "supports": "Emerged from the Wesleyan Holiness Movement; tongues as 'Bible Evidence'; Azusa Street, April 1906; Holiness/Finished Work split; Oneness churches by 1916; Chile 1910."
+    },
+    {
+     "title": "Hartford Institute for Religion Research, Encyclopedia of Religion and Society, \"Charismatic Movement\"",
+     "url": "https://hirr.hartfordinternational.edu/articles/4201/",
+     "type": "scholarly reference",
+     "fetched": "2026-10-06",
+     "supports": "Dennis Bennett, Van Nuys, 1959-1960; Catholic renewal at Duquesne 1967."
+    },
+    {
+     "title": "Revival Library, 'Pentecost in Valparaiso: 1909'",
+     "url": "https://revival-library.org/histories/1909-pentecost-in-valparaiso/",
+     "type": "secondary",
+     "fetched": "2026-10-06",
+     "supports": "Valparaiso revival, 1909 (Methodist Pentecostal Church founded 1909)."
+    }
+   ],
+   "notes": "Charismatics in Catholic, Anglican, Lutheran and other churches keep their own church's creeds. Oneness Pentecostals, who confess one God revealed as Father, Son and Holy Spirit rather than three persons, do not have a card of their own."
+  }
+ ]
+}

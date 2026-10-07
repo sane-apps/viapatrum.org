@@ -72,5 +72,56 @@ class OnPageTests(unittest.TestCase):
         self.assertIs(B.on_page_only(q, self.dist), q)
 
 
+class OverlayTests(unittest.TestCase):
+    """load() reads the map through doctrine_questions.json (2026-10-06)."""
+
+    def test_questions_file_decides_list_wording_and_churches(self):
+        import json
+        with tempfile.TemporaryDirectory() as d:
+            d = Path(d)
+            stays = passage(300, "bk2", "Some words here")
+            (d / "doctrine_map.json").write_text(json.dumps({"questions": [
+                {"id": "old", "question": "Old?", "positions": [
+                    {"id": "p1", "name": "Old name", "traditions": ["baptist"], "first_states": stays, "states": 1, "excludes": 0},
+                    {"id": "gone", "name": "Dropped"}], "passages": [stays], "on_question": 4},
+                {"id": "dropped", "question": "Dropped?", "positions": [], "passages": []}]}))
+            (d / "doctrine_questions.json").write_text(json.dumps([
+                {"id": "old", "question": "Old?", "positions": [
+                    {"id": "p1", "name": "New name", "traditions": ["baptist", "methodist"], "rejected_by": [], "mark": "m"},
+                    {"id": "p2", "name": "Added", "traditions": ["pentecostal"], "rejected_by": [], "mark": "m"}],
+                 "tradition_notes": [{"tradition": "anabaptist", "note": "Divided."}]},
+                {"id": "new", "question": "New?", "positions": [{"id": "n1", "name": "N", "traditions": ["oriental-orthodox"]}]}]))
+            qs = B.load(d / "doctrine_map.json")
+        self.assertEqual([q["id"] for q in qs], ["old", "new"])
+        old, new = qs
+        self.assertEqual([p["id"] for p in old["positions"]], ["p1", "p2"])
+        self.assertEqual(old["positions"][0]["name"], "New name")
+        self.assertEqual(old["positions"][0]["traditions"], ["baptist", "methodist"])
+        self.assertEqual(old["positions"][0]["first_states"]["year"], 300)
+        self.assertEqual((old["positions"][1]["states"], old["positions"][1]["first_states"]), (0, None))
+        self.assertEqual(len(old["passages"]), 1)
+        self.assertEqual(new["passages"], [])
+        self.assertIn("Anabaptist:", B.notes_html(old))
+        self.assertIn("Coptic and Ethiopian", B.notes_html(new))
+
+    def test_chips_in_owner_order(self):
+        import re
+        names = re.findall(r'<button[^>]*>([^<]+)</button>', B.chips_html())
+        self.assertEqual(names, ["All", "Catholic", "Orthodox", "Oriental Orthodox", "Church of the East", "Lutheran",
+                                 "Reformed", "Anglican", "Methodist", "Baptist", "Anabaptist", "Pentecostal"])
+
+    def test_badges_follow_chip_order(self):
+        html = B._trad_badges({"traditions": ["pentecostal", "catholic", "church-of-the-east"]})
+        self.assertLess(html.index("Catholic"), html.index("Church of the East"))
+        self.assertLess(html.index("Church of the East"), html.index("Pentecostal"))
+
+    def test_new_definition_texts_date_correctly(self):
+        self.assertEqual(B.defined_marks({"first_defined": "Charles Parham (Topeka, 1901); Assemblies of God Statement "
+                                                           "of Fundamental Truths (1916)"}, 470)[1]["year"], 1916)
+        self.assertEqual(B.defined_marks({"first_defined": "No single defining text; Catechism of the Catholic Church "
+                                                           "(1992), paragraphs 799-801"}, 470)[1]["year"], 1992)
+        self.assertEqual(B.defined_marks({"first_defined": ""}, 470), (None, None))
+
+
 if __name__ == "__main__":
     unittest.main()

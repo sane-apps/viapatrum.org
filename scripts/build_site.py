@@ -23,6 +23,8 @@ except ImportError as e:
 ROOT = Path(__file__).resolve().parents[1]
 import downloads_page  # noqa: E402  (library pass: /downloads/ + "Keep this book")
 import games_page  # noqa: E402  (/games/: every game, owner 2026-10-06)
+import ask_page  # noqa: E402  (/ask/: answers in the writers' own sentences, owner 2026-10-06)
+import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, owner 2026-10-06)
 
 # FATHERS_DIST: build somewhere else to test without touching the ship staging dir.
 DIST = Path(os.environ["FATHERS_DIST"]) if os.environ.get("FATHERS_DIST") else ROOT / "dist"
@@ -1166,6 +1168,10 @@ AUTHOR_DISPLAY = {
     "Alexander Monachus": "Alexander the Monk",
     "Barnabas (Epistle)": "Barnabas",
     "Didache": "The Didache",
+    "Paulus Silentarius": "Paul the Silentiary",
+    # PG 86a is a shelfmark, and this row is not Theodore of Heraclea.
+    # No date is known. Do not invent one.
+    "Theodorus (PG 86a)": "Theodorus, not yet identified",
 }
 
 
@@ -1180,7 +1186,21 @@ TEXT_AUTHOR_SLUGS = frozenset({
     "didache", "mathetes-epistle-to-diognetus", "acts-of-the-martyrs",
     "passion-of-perpetua-and-felicity", "chronicon-paschale",
 })
+# Excerpt rows often carry the display name and no slug.
+TEXT_AUTHOR_NAMES = frozenset({
+    "didache", "the didache", "letter to diognetus", "chronicon paschale",
+    "passion of perpetua and felicity", "acts of the martyrs",
+})
 GROUP_AUTHOR_SLUGS = frozenset({"church-of-smyrna", "council-of-carthage-256-under-cyprian"})
+
+
+def author_schema_type(slug: str | None = None, name: str | None = None) -> str:
+    """Person for a writer. CreativeWork for a text that has its own row."""
+    if (slug or "") in TEXT_AUTHOR_SLUGS or canonical_author_slug(slug, name) in TEXT_AUTHOR_SLUGS:
+        return "CreativeWork"
+    if display_author(name).casefold() in TEXT_AUTHOR_NAMES:
+        return "CreativeWork"
+    return "Person"
 
 
 def author_in_sentence(name: str | None, slug: str | None) -> str:
@@ -1678,8 +1698,16 @@ _DENSE_EDITION_MARK = re.compile(
     r"\b(?:ESTC|Wing|IA|EEBO|STC|VD17|SLUB|Google Books|ONB|Densify|Partial|Not whole|remain\w*)\b", re.I
 )
 _SCOPE_LADEN_MARK = re.compile(
-    r"\b(GAR|PLAC|TIP|PHYS|Densify|VD17|SLUB|ONB|ESTC|Wing|EEBO|STC|Google Books)\b"
+    r"\b(GAR|PLAC|TIP|PHYS|Densify|VD17|SLUB|ONB|ESTC|Wing|EEBO|STC|Google Books|Exercitatio)\b"
+    r"|\bArt\."
     r"|→|reatus-only|before PLAC|through Man|partial:",
+    re.I,
+)
+# A parenthetical that only says which chapters or exercises are in the file
+# ("(Cap. I–XIV)", "(Exercitatio Prima Art. I-XII + Secunda Art. I-XV)").
+_SCOPE_PAREN = re.compile(
+    r"\s*\((?:Cap|Capp|Caput)\.?\s[^()]*\)"
+    r"|\s*\([^()]*(?:\bExercitatio\b|\bArt\.|\+)[^()]*\)",
     re.I,
 )
 
@@ -1884,7 +1912,8 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "origen-psalms-excerpta": "Excerpts on the Psalms",
     "origen-psalms-fragments-greek": "Fragments on the Psalms",
     "cyril-fragmenta-contra-theodorum-2": "Fragments Against Theodore",
-    "julian-letter-to-rome": "Letter to Rome (fragments)",
+    "julian-letter-to-rome": "Fragments of the Letter to Rome",
+    "julian-turbantius-fragments": "Fragments to Turbantius",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
@@ -1915,6 +1944,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "polycarp-philippians": "Epistula ad Philippenses",
     "le-blanc-theses-theologicae": "Theses theologicae",
     "strimesius-in-controversias-evangelicorum": "Ingenua in Controversias Evangelicorum",
+    "crocius-syntagma": "Syntagma sacrae theologiae",
     "epiphanius-ancoratus": "Ancoratus",
     "epiphanius-anacephalaeosis": "Anacephalaeosis",
     "epiphanius-panarion": "Panarion",
@@ -2089,6 +2119,22 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "cyril-epistula-photium": "Epistula ad Photium",
     "cyril-matthew-fragments": "Fragmenta in Matthaeum",
     "cyril-adoration-1": "Περὶ προσκυνήσεως",
+    "cyril-adoration-2": "Περὶ προσκυνήσεως",
+    "cyril-adoration-3": "Περὶ προσκυνήσεως",
+    "cyril-adoration-4": "Περὶ προσκυνήσεως",
+    "cyril-adoration-5": "Περὶ προσκυνήσεως",
+    "cyril-adoration-6": "Περὶ προσκυνήσεως",
+    "cyril-adoration-7": "Περὶ προσκυνήσεως",
+    "cyril-adoration-8": "Περὶ προσκυνήσεως",
+    "cyril-adoration-9": "Περὶ προσκυνήσεως",
+    "cyril-adoration-10": "Περὶ προσκυνήσεως",
+    "cyril-adoration-11": "Περὶ προσκυνήσεως",
+    "cyril-adoration-12": "Περὶ προσκυνήσεως",
+    "cyril-adoration-13": "Περὶ προσκυνήσεως",
+    "cyril-adoration-14": "Περὶ προσκυνήσεως",
+    "cyril-adoration-15": "Περὶ προσκυνήσεως",
+    "cyril-adoration-16": "Περὶ προσκυνήσεως",
+    "cyril-adoration-17": "Περὶ προσκυνήσεως",
     "gregory-thaumaturgus-de-fide-xii": "Duodecim capita de fide",
     "gregory-thaumaturgus-ad-tatianum-de-anima": "Ad Tatianum de anima",
     "gregory-thaumaturgus-in-annuntiationem": "In annuntiationem",
@@ -2165,6 +2211,11 @@ def work_book(slug: str) -> str | None:
         for prefix, candidate in WORK_BOOK_PREFIXES:
             if (slug or "").startswith(prefix):
                 return candidate
+    # A book's own intro.md is the About this text for that work. Mapped
+    # books and prefixes above still win, so a shared volume intro is not
+    # pasted onto a different work by this fallback.
+    if book is None and slug and (BOOKS / slug / "intro.md").is_file():
+        return slug
     return book
 
 
@@ -2229,12 +2280,15 @@ def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     if english_title_for(slug):
         raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
         if raw and raw.lower() != h1.lower():
+            # Drop the exercise or chapter ledger before the scope test, so
+            # the traditional name can stay and a ledger-only title cannot.
+            raw = _SCOPE_PAREN.sub("", raw).strip(" -–—")
+            if not raw or raw.lower() == h1.lower():
+                return ""
             if _SCOPE_LADEN_MARK.search(raw):
                 return ""
             if _same_title_words(raw, h1):
                 return ""
-            # A chapter span is scope, not part of the name ("(Cap. I–XIV)").
-            raw = re.sub(r"\s*\((?:Cap|Capp|Caput)\.?\s[^()]*\)\s*$", "", raw)
             return scrub_worksheet_note(raw).strip()
     return ""
 
@@ -2315,7 +2369,10 @@ def mast_edition_label(edition: str) -> str:
     label = first
     m = re.match(r"(?:Migne\s+)?(PG|PL)(?:\s*(\d+(?:[-–/]\d+)?[a-z]?))?\b", first)
     if m:
-        label = f"{m.group(1)} {m.group(2)}" if m.group(2) else f"Migne {m.group(1)}"
+        # "PG;" with no volume is not an edition label.
+        if not m.group(2):
+            return ""
+        label = f"{m.group(1)} {m.group(2)}"
     elif (m := re.match(r"(?:[A-Z][a-z]*\.?\s+)*?([A-Z][\w’'-]+),\s.*?\b" + year + r"\b", first)):
         label = f"{'de La Rue' if m.group(1) == 'Rue' else m.group(1)} ({m.group(2)})"
     elif (m := re.search(r"\(([A-Z][a-z]+)\s+" + year + r"\)", first)):
@@ -2330,6 +2387,21 @@ def mast_edition_label(edition: str) -> str:
     if len(label) > MAST_EDITION_MAX or MAST_EDITION_JUNK.search(label):
         return ""
     return label
+
+
+def imprint_with_known_volume(edition: str, slug: str) -> str:
+    """A section meta that says only 'PG;' takes the volume already in book.yml."""
+    text = str(edition or "")
+    if re.search(r"\b(?:PG|PL)\s*\d", text, re.I) or not re.search(r"\b(?:PG|PL)\s*;", text, re.I):
+        return text
+    book = (WORK_SOURCES.get(slug) or {}).get("book") or (slug if (BOOKS / (slug or "_")).is_dir() else work_book(slug))
+    yml = BOOKS / book / "book.yml" if book else None
+    if not yml or not yml.is_file():
+        return text
+    found = re.search(r"\b(PG|PL)\s+(\d+[a-z]?)\b", yml.read_text(encoding="utf-8", errors="replace"), re.I)
+    if not found:
+        return text
+    return re.sub(r"\b(PG|PL)\s*;", f"{found.group(1)} {found.group(2)};", text, count=1, flags=re.I)
 
 
 _ABOUT_EDITION_JUNK = re.compile(
@@ -2381,7 +2453,14 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
         or (life and not years and centuries)
     ):
         period = ""
-    written = f"written {period}" if period else ""
+    # A year after the writer died is when a book was printed, not when he wrote.
+    # Julian's 419–430 sits inside c. 386–c. 455, so that line stays "written".
+    life_end = max((int(y) for y in life_years), default=0)
+    print_date = bool(
+        period and years and life_years and "BC" not in life
+        and all(int(y) > life_end for y in years)
+    )
+    written = f"{'printed' if print_date else 'written'} {period}" if period else ""
     full = f"Part only: {scope}" if scope else ""
     short = "Part only" if scope else ""
     tries = ((written, full), (written, short), ("", full), ("", short))
@@ -2642,7 +2721,7 @@ _WORKSHEET_LEFT_I = re.compile(
     r"densify|\btip\b|\blocked\b|\block\b|staging|Latin column|Greek OCR"
     r"|_meta|_packet|folio|sigla|obelus|pinax|Cap\.\s*(?:\d+|[IVXLCDM]+)\b"
     r"|\bCapita\b|Canon\s+(?:\d+|[IVXLCDM]+)|Sermo\s+(?:\d+|[IVXLCDM]+)"
-    r"|Art\.\s*(?:\d+|[IVXLCDM]+)|Haer\.|next PHYS|starts PHYS|new OET"
+    r"|Art\.\s*(?:\d+|[IVXLCDM]+)|Haer\.|next PHYS|starts PHYS|new OET|Honest partial"
     r"|SERIES CLOSEOUT|private study",
     re.I,
 )
@@ -2781,7 +2860,9 @@ def shown_source(parts, kind: str = "") -> list[str]:
 
 
 _METHOD_BUILDROOM = re.compile(
-    r"\bOET\b|tip slices?|\bPass [AB]\b|\b[a-z]+_\*|densify|\bslices?\b|Archive OCR|\bOCR\b",
+    r"\bOET\b|tip slices?|\bPass [AB]\b|\b[a-z]+_\*|densify|\bslices?\b|Archive OCR|\bOCR\b"
+    r"|Honest partial|partial through|Man\.\s*Post",
+    re.I,
 )
 
 
@@ -2798,7 +2879,8 @@ def public_method(text: str) -> str:
 # (2026-10-05: found in About this text and copied into the paid ebooks).
 WORKSHEET_JARGON = re.compile(
     r"\b(?:scaffold\w*|densif\w*|tips?|exhausted|lemma-led|pinax|deepen\+?|remain|held|PHYS|worksheet|"
-    r"bridge|rank[- ]?\d|closeout|packet|receipt)\b", re.I)
+    r"bridge|rank[- ]?\d|closeout|packet|receipt|honest partial|partial through)\b"
+    r"|Man\.\s*Post", re.I)
 
 
 NOTE_ABBREV = {"cap", "capp", "rom", "man", "post", "cf", "pg", "pl", "ed", "eds", "vol", "fr", "frr", "haer", "hom",
@@ -3378,7 +3460,7 @@ def father_head_html(slug: str, display: str, *, n_works: int, n_passages: int, 
         )
     return (
         f'<header class="fa-head">'
-        f'<p class="eyebrow">Fathers</p>'
+        f'<p class="eyebrow">{"Text" if slug in TEXT_AUTHOR_SLUGS else "Fathers"}</p>'
         f"<h1>{escape(display_author(display))}</h1>"
         + (f'<p class="fa-dates author-dates">{escape(dates)}</p>' if dates else "")
         + (f'<p class="fa-bio">{escape(bio)}</p>' if bio else "")
@@ -3672,6 +3754,7 @@ def _origen_rows(english_rows, source_map) -> list[dict]:
                 "supplied_from": supplied,
                 "scholar_label": scholar,
                 "sort_key": sort_key,
+                "orientation": str(row.get("orientation") or row.get("reader_note") or "").strip(),
             }
         )
     return out
@@ -5409,7 +5492,7 @@ def load_julian_works() -> list[dict]:
     works.append(
         _pack_work(
             slug="julian-turbantius-fragments",
-            title="To Turbantius — fragments in Against Julian",
+            title="Fragments to Turbantius",
             author="Julian of Eclanum",
             author_slug="julian-of-eclanum",
             period="c. 418–430",
@@ -5508,7 +5591,7 @@ def load_julian_works() -> list[dict]:
     works.append(
         _pack_work(
             slug="julian-letter-to-rome",
-            title="Letter to Rome (Fragments)",
+            title="Fragments of the Letter to Rome",
             author="Julian of Eclanum",
             author_slug="julian-of-eclanum",
             period="c. 418–420",
@@ -5719,6 +5802,38 @@ CONFIDENCE_NOTE_WITH_LATIN = (
     "Open Latin on each section (or the Latin source witness link) for the source text. "
     "This is not a complete critical edition."
 )
+
+
+def work_source_checked(work: dict, stale: set[str] | None = None) -> bool:
+    """True when this work's book has a current pipeline receipt.
+
+    The independent-scholar sentence stays either way. This only tells a
+    reader whether the project has re-checked the English against the source.
+    """
+    slug = str(work.get("slug") or "")
+    if stale and slug in stale:
+        return False
+    folder_name = slug if (BOOKS / slug).is_dir() else (work_book(slug) or "")
+    if not folder_name:
+        return False
+    return (BOOKS / folder_name / "reviews" / "work_receipt.json").is_file()
+
+
+def confidence_text(base: str, checked: bool) -> str:
+    lead = (
+        "This work has passed this project's source check. "
+        if checked
+        else "This work has not yet been re-checked against its source. "
+    )
+    return lead + base
+
+
+def section_orientation_html(section: dict) -> str:
+    """One existing reader note for this section. Empty when the row has none."""
+    note = str(section.get("orientation") or section.get("reader_note") or "").strip()
+    if not note:
+        return ""
+    return f'<p class="reader-note">{escape(note)}</p>'
 
 
 def related_panel(title: str, links: list[tuple[str, str]]) -> str:
@@ -7246,7 +7361,9 @@ def person_page_meta(slug: str, name: str, *, works: int, passages: int) -> tupl
     if passages:
         bits.append(f"{passages} passage{'s' if passages != 1 else ''} by question")
     desc = f"{shown}{', ' + dates if dates else ''}: {' and '.join(bits) or 'writings'} in new English, free. {bio}"
-    person = {"@type": "Person", "name": shown, "url": f"{SITE_ORIGIN}/authors/{slug}/"}
+    # These rows are works (Didache, the Passion, the chronicle), not writers.
+    kind = author_schema_type(slug, name)
+    person = {"@type": kind, "name": shown, "url": f"{SITE_ORIGIN}/authors/{slug}/"}
     if bio:
         person["description"] = bio
     return title, desc, [{"@type": "ProfilePage", "mainEntity": person}]
@@ -7423,9 +7540,67 @@ def write_search_shards(data_dir: Path, docs: list[dict]) -> int:
         name = f"{i:02d}-{hashlib.sha256(raw).hexdigest()[:10]}.json"
         (out / name).write_text(blob, encoding="utf-8")
         manifest["shards"].append({"file": f"/data/search/{name}", "bytes": len(raw),
-                                   "docs": len(rows), "authors": names})
+                                   "docs": len(rows), "authors": names,
+                                   "grams": search_trigrams(rows)})
     (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
     return len(groups)
+
+
+def search_trigrams(rows: list[dict]) -> str:
+    """Base64 bitset of a–z trigrams in title, author, and text.
+
+    A word search can skip a shard that lacks one trigram of the query.
+    assets/site.js reads the same bit order."""
+    import base64
+    bits = bytearray((26 ** 3 + 7) // 8)
+    run: list[int] = []
+
+    def add(a: int, b: int, c: int) -> None:
+        idx = (a * 26 + b) * 26 + c
+        bits[idx >> 3] |= 1 << (idx & 7)
+
+    for row in rows:
+        blob = f"{row.get('title') or ''} {row.get('author') or ''} {row.get('text') or ''}".lower()
+        run.clear()
+        for ch in blob:
+            o = ord(ch)
+            if 97 <= o <= 122:
+                run.append(o - 97)
+                if len(run) > 3:
+                    del run[0]
+                if len(run) == 3:
+                    add(run[0], run[1], run[2])
+            else:
+                run.clear()
+    return base64.b64encode(bits).decode("ascii")
+
+
+def search_grams_cover(grams: str, term: str) -> bool:
+    """True when every a–z trigram of term is in the bitset. Empty grams cannot skip."""
+    import base64
+    if not grams:
+        return True
+    runs = re.findall(r"[a-z]{3,}", (term or "").lower())
+    if not runs:
+        return True
+    raw = base64.b64decode(grams)
+    for run in runs:
+        for i in range(len(run) - 2):
+            idx = ((ord(run[i]) - 97) * 26 + (ord(run[i + 1]) - 97)) * 26 + (ord(run[i + 2]) - 97)
+            if not (raw[idx >> 3] & (1 << (idx & 7))):
+                return False
+    return True
+
+
+def load_search_docs(data_dir: Path) -> list:
+    """Passage rows from data/search shards. The monolith is not shipped."""
+    manifest = json.loads((Path(data_dir) / "search" / "manifest.json").read_text(encoding="utf-8"))
+    rows: list = []
+    for shard in manifest["shards"]:
+        file = shard["file"] if isinstance(shard, dict) else shard
+        name = str(file).rsplit("/", 1)[-1]
+        rows.extend(json.loads((Path(data_dir) / "search" / name).read_text(encoding="utf-8")))
+    return rows
 
 
 def write_work_sources(path: Path, works: list[dict]) -> None:
@@ -7461,6 +7636,30 @@ def write_work_sources(path: Path, works: list[dict]) -> None:
                                separators=(",", ":")), encoding="utf-8")
     if unresolved:
         print(f"work-sources: {len(unresolved)} works with no book folder: {', '.join(unresolved[:8])}", flush=True)
+
+
+def _attach_players() -> None:
+    """Put the read-along player on the pages this build just wrote.
+
+    ship.sh used to do this only after build_site.py returned, so a bare
+    build had the pages and no Play bar. Audio URLs point at the public
+    host unless the caller already set AUDIO_BASE, so the mp3s stay off
+    the Pages upload."""
+    had = "AUDIO_BASE" in os.environ
+    os.environ.setdefault("AUDIO_BASE", "https://audio.viapatrum.org")
+    try:
+        import inject_audio
+        if not any((inject_audio.ROOT / "outputs/audio").glob("*/manifest.json")):
+            return
+        pending = inject_audio.R2_PENDING
+        if pending.is_file():
+            pending.unlink()
+        rc = inject_audio.inject_all()
+    finally:
+        if not had:
+            os.environ.pop("AUDIO_BASE", None)
+    if rc:
+        raise SystemExit("read-along injection failed")
 
 
 def _default_dist() -> bool:
@@ -7584,6 +7783,111 @@ def author_era_span(key: str, years: list[int]) -> str:
             return f"{lo}–{min(top, hi)} AD"
         return f"{lo}–{hi} AD"
     return ""
+
+
+# Live English is still wrong. The tip loader reads status from the section
+# meta, not book.yml, so a book.yml flag would not drop the work. Do not
+# apply the staged replacement while the reader scores are 2 and 3.
+_RECERT = "Held until this English goes through the same recert path as the other works."
+FORCED_WITHHOLD = {
+    "eustathius-engastrimytho": "Held until a real review pass replaces the live English.",
+    # Instruction leaks are restored in the files and still need recert.
+    "evagrius-sententiae-monachos": _RECERT,
+    "didymus-fragmenta-romanos": _RECERT,
+    # Named defects. The English is not rewritten here.
+    "macarius-spiritual-homilies": _RECERT,
+    "origen-ezekiel-fragments": _RECERT,
+    "origen-philocalia": _RECERT,
+    "origen-philocalia-1": _RECERT,
+    "origen-philocalia-2-7": _RECERT,
+    "origen-philocalia-8-14": _RECERT,
+    "origen-philocalia-15-21": _RECERT,
+    "origen-philocalia-22-27": _RECERT,
+    "origen-romans-catena": _RECERT,
+    "origen-de-principiis": _RECERT,
+    "origen-letters": _RECERT,
+    "origen-letters-open": _RECERT,
+    "origen-letters-africanus-rem": _RECERT,
+    "origen-song-homily-1": _RECERT,
+    "cyril-adoration-10": _RECERT,
+    "pseudo-cyprian-to-vigilius": _RECERT,
+    "didymus-dialexis-montanistae": _RECERT,
+}
+
+
+def split_withheld(works: list[dict]) -> tuple[list[dict], list[str]]:
+    """Drop works already marked withheld, and the named slugs above."""
+    kept, held = [], []
+    for work in works:
+        slug = work.get("slug")
+        if work.get("status") == "withheld" or slug in FORCED_WITHHOLD:
+            held.append(str(slug))
+        else:
+            kept.append(work)
+    return kept, held
+
+
+def _translation_pairs(folder: Path) -> list[tuple[Path, Path]]:
+    trans = folder / "translations"
+    if not trans.is_dir():
+        return []
+    pairs = []
+    for english in sorted(trans.glob("*_english.json")):
+        if english.name.startswith("_"):
+            continue
+        stem = english.name[: -len("_english.json")]
+        pairs.append((english, trans / f"{stem}_source.json"))
+    return pairs
+
+
+def _pass_ab_ok(folder: Path) -> bool:
+    """True when every English/source pair passes check_pass_ab."""
+    sys.path.insert(0, str(BOOKS.parent))
+    from pipeline.check_pass_ab import check_translation_files
+    pairs = _translation_pairs(folder)
+    if not pairs:
+        return False
+    for english, source in pairs:
+        if not source.is_file() or check_translation_files(english, source):
+            return False
+    return True
+
+
+def stale_receipt_slugs(works: list[dict], *, books_root: Path | None = None,
+                        certified_fn=None, pass_ab_fn=None) -> list[str]:
+    """Hold a loaded book whose receipt no longer matches.
+
+    A book with no work_receipt.json is left to the scope-packet gate.
+    A receipt publishes only when its hashes match and check_pass_ab passes.
+    """
+    root = books_root or BOOKS
+    if certified_fn is None:
+        try:
+            sys.path.insert(0, str(BOOKS.parent / "scripts"))
+            import work_pipeline as _wp
+            certified_fn = _wp.certified
+        except Exception as exc:
+            print(f"receipt check: work_pipeline unavailable ({type(exc).__name__}: {exc})")
+            certified_fn = lambda _book: False
+    if pass_ab_fn is None:
+        pass_ab_fn = _pass_ab_ok
+    held = []
+    for work in works:
+        slug = str(work.get("slug") or "")
+        folder_name = slug if (root / slug).is_dir() else (work_book(slug) or "")
+        folder = root / folder_name if folder_name else None
+        if folder is None or not folder.is_dir():
+            continue
+        if not (folder / "reviews" / "work_receipt.json").is_file():
+            continue
+        try:
+            ok = bool(certified_fn(folder.name)) and bool(pass_ab_fn(folder))
+        except Exception as exc:
+            print(f"receipt check: {folder.name} held ({type(exc).__name__}: {exc})")
+            ok = False
+        if not ok:
+            held.append(slug)
+    return held
 
 
 def build() -> None:
@@ -7713,10 +8017,14 @@ def build() -> None:
     # SOP source-identity gate (2026-10-02): VOID works (translator fed the
     # wrong source, or English with no source) never publish. Withhold by
     # setting the work meta status to "withheld" with a withhold_note.
-    withheld = sorted({w["slug"] for w in works if w.get("status") == "withheld"})
+    # Named slugs in FORCED_WITHHOLD are dropped even when the loader
+    # still marks them available.
+    works, withheld = split_withheld(works)
+    stale = stale_receipt_slugs(works)
+    withheld = sorted(set(withheld) | set(stale))
+    works = [w for w in works if w.get("slug") not in set(stale)]
     if withheld:
         print(f"withheld works (not published): {', '.join(withheld)}")
-    works = [w for w in works if w.get("status") != "withheld"]
     # Several source batches can extend one work. Previously each batch rewrote
     # the reader, leaving earlier citation pages linking to missing anchors.
     merged_works: dict[str, dict] = {}
@@ -8072,10 +8380,10 @@ def build() -> None:
   <p class="eyebrow">Free for the whole world</p>
   <h1>Read the early Church in its own words</h1>
   <p class="vp-sub">{len(works)} works by the Fathers in faithful modern English, and more each week. Read them, hear them, and follow any passage to everything connected to it.</p>
-  <form class="vp-ask" action="/works/" method="get" role="search">
+  <form class="vp-ask" action="/ask/" method="get" role="search">
     <label class="vh" for="home-q">Ask what the Fathers said about…</label>
-    <input id="home-q" name="q" type="search" placeholder="Ask what the Fathers said about…" autocomplete="off">
-    <button type="submit">Search</button>
+    <input id="home-q" name="q" type="search" maxlength="300" placeholder="Ask what the Fathers said about…" autocomplete="off">
+    <button type="submit">Ask</button>
   </form>
   <ul class="vp-chips" aria-label="Popular topics">{chip_html}</ul>
 </section>
@@ -8482,7 +8790,7 @@ def build() -> None:
                         "@type": "Quotation",
                         "name": f"{e_author}, {e_cite}",
                         "text": meta_description(" ".join(paras_list), 300),
-                        "creator": {"@type": "Person", "name": e_author,
+                        "creator": {"@type": author_schema_type(None, x.get("author")), "name": e_author,
                                     "url": f"{SITE_ORIGIN}/authors/{author_hub_slug(x.get('author'))}/"},
                         "about": meta["title"],
                         "inLanguage": "en",
@@ -8671,7 +8979,7 @@ def build() -> None:
                     "isPartOf": {"@id": f"{SITE_ORIGIN}/#site"},
                     "hasPart": [
                         {"@type": "Quotation", "url": f"{SITE_ORIGIN}/e/{x['id']}/",
-                         "creator": {"@type": "Person", "name": display_author(x.get("author") or "")}}
+                         "creator": {"@type": author_schema_type(None, x.get("author")), "name": display_author(x.get("author") or "")}}
                         for x in primary[:40]
                     ],
                 }],
@@ -8821,6 +9129,7 @@ def build() -> None:
             conf = CONFIDENCE_NOTE_WITH_LATIN
         else:
             conf = CONFIDENCE_NOTE
+        conf = confidence_text(conf, work_source_checked(w, set(stale)))
         confidence = f"<p class='intro fine'>{escape(conf)}</p>"
         prior_mark = ""
         if w.get("first_english"):
@@ -8840,7 +9149,8 @@ def build() -> None:
             "@id": f"{SITE_ORIGIN}/works/{w['slug']}/#book",
             "name": pub_title,
             "url": f"{SITE_ORIGIN}/works/{w['slug']}/",
-            "author": {"@type": "Person", "name": w_author,
+            "author": {"@type": author_schema_type(w.get("author_slug"), w.get("author")),
+                       "name": w_author,
                        "url": f"{SITE_ORIGIN}/authors/{canonical_author_slug(w.get('author_slug'), w.get('author'))}/"},
             "inLanguage": "en",
             "isAccessibleForFree": True,
@@ -8866,6 +9176,7 @@ def build() -> None:
         # <period> · <short edition>". Empty bits drop out; a part-only work
         # still says so up top. Everything longer moves to About this text.
         edition_full = re.sub(r"\s+", " ", edition_short or w["edition"] or "").strip(" ;")
+        edition_full = imprint_with_known_volume(edition_full, w["slug"])
         if edition_full.count(")") > edition_full.count("("):
             edition_full = edition_full.rstrip(")").strip()
         edition_label = (w.get("edition_short") or "").strip() or mast_edition_label(edition_full)
@@ -9018,6 +9329,9 @@ def build() -> None:
                 supplied = (s.get("supplied_from") or "").strip()
                 if supplied and len(unique_cues) != 1:
                     paras.append(f'<p class="reader-supplied">{escape(supplied)}</p>')
+                note_html = section_orientation_html(s)
+                if note_html:
+                    paras.append(note_html)
                 for i, p in enumerate(s["english"]):
                     marker = ""
                     if i == 0:
@@ -9282,6 +9596,7 @@ def build() -> None:
             supplied_html = (
                 f'<p class="reader-supplied">{escape(supplied)}</p>' if supplied else ""
             )
+            note_html = section_orientation_html(s)
             nav = prev_next_nav(
                 w["slug"], w["sections"], idx,
                 contents_href=sec_contents_href.get(str(s["section"])),
@@ -9308,6 +9623,7 @@ def build() -> None:
                     {kind}
                     <h1>{escape(cite_h1)}</h1>
                     {supplied_html}
+                    {note_html}
                     <div class="sec-layout">
                     <div class="sec-main"><div class="body">{paras}</div>
                     {source}{src_block}</div>
@@ -9589,7 +9905,7 @@ def build() -> None:
                         "about": {"@type": "Chapter", "name": f"{ref_name(book)} {c}", "position": str(c),
                                   "isPartOf": {"@type": "Book", "name": book_name(book)}},
                         "citation": [
-                            {"@type": "Quotation", "creator": {"@type": "Person", "name": r["who"]}, "url": f"{SITE_ORIGIN}{r['href']}"}
+                            {"@type": "Quotation", "creator": {"@type": author_schema_type(None, r.get("who")), "name": r["who"]}, "url": f"{SITE_ORIGIN}{r['href']}"}
                             for r in rows[:40]
                         ],
                     }] if rows else None,
@@ -9872,8 +10188,15 @@ def build() -> None:
 
     # Group the rows by era (P18 sketch 4); order inside each group stays earliest first.
     _era_rows: dict[str, list[tuple[int, str]]] = defaultdict(list)
+    _text_rows: list[tuple[int, str]] = []
     for h in author_links:
         y = _author_link_sort_key(h)[0]
+        slug_m = re.search(r"/authors/([^/]+)/", h)
+        row_slug = slug_m.group(1) if slug_m else ""
+        # A text with its own row is not a writer. Keep its date. File it apart.
+        if row_slug in TEXT_AUTHOR_SLUGS:
+            _text_rows.append((y, h))
+            continue
         # A row with no dates sits under "Date not known", not in a dated era (rule 1b).
         _era_rows[author_era(y) if 'class="author-dates"' in h else "undated"].append((y, h))
     _era_html = []
@@ -9889,13 +10212,20 @@ def build() -> None:
             f'<h2 class="au-era-h" id="era-{key}"><span>{escape(title)}</span>{span_html}</h2>{note}'
             f"<ul class='card-list au-grid'>{''.join(h for _y, h in rows)}</ul></section>"
         )
+    if _text_rows:
+        _era_html.append(
+            '<section class="au-era au-era-texts" id="texts" aria-labelledby="era-texts">'
+            '<h2 class="au-era-h" id="era-texts"><span>Texts</span></h2>'
+            '<p class="au-era-note">These are works, not writers.</p>'
+            f"<ul class='card-list au-grid'>{''.join(h for _y, h in _text_rows)}</ul></section>"
+        )
 
     write(
         DIST / "authors" / "index.html",
         layout(
             "Fathers",
             f"<p class=\"eyebrow\">Fathers</p><h1>The writers, in order</h1>"
-            f"<p class=\"intro\">Every writer in the library, earliest first. Open one to read who they were and what they wrote.</p>"
+            f"<p class=\"intro\">Every writer in the library, earliest first. Works that are not by a named writer are listed at the end.</p>"
             f"{''.join(_era_html)}",
             crumb=[("Home", "/"), ("Fathers", "")],
             active="authors",
@@ -9907,14 +10237,11 @@ def build() -> None:
     (DIST / "data").mkdir(exist_ok=True)
     _n_shards = write_search_shards(DIST / "data", search_index)
     print(f"search: {len(search_index)} docs in {_n_shards} shards", flush=True)
-    # Compatibility copy for the current site.js until the shard loader ships.
-    # Cloudflare Pages rejects files over 25 MiB, so it is dropped (with a
-    # warning) rather than failing the build once it outgrows that.
-    _compat = json.dumps(search_index, ensure_ascii=False, separators=(",", ":"))
-    if len(_compat.encode("utf-8")) < 24 * 1024 * 1024:
-        (DIST / "data" / "search-index.json").write_text(_compat, encoding="utf-8")
-    else:
-        print("WARNING: data/search-index.json over 24 MiB; only the shards were written", flush=True)
+    # The site reads data/search/manifest.json and the shards. A leftover
+    # monolith from an older build would still be uploaded, so drop it.
+    _stale_index = DIST / "data" / "search-index.json"
+    if _stale_index.is_file():
+        _stale_index.unlink()
     write_work_sources(DIST / "data" / "work-sources.json", works)
 
     # Only ui.test.mjs still reads this (assets/explore.js is gone); minified.
@@ -9997,6 +10324,7 @@ def build() -> None:
   <p class="eyebrow">Timeline</p>
   <h1>How beliefs developed over time</h1>
   <p class="intro">For every question, where each writer stood and when, from the apostles to the councils. Questions that divide the churches today get one lane per position, so you can see when each belief first appears. Open a question to see every writer and the passages.</p>
+  <p class="ot-creeds"><a href="/creeds/">Creeds and churches</a> puts every major creed and confession on one timeline, and says where each church came from.</p>
   {beliefs_page.chips_html()}
   {TL_LEGEND_UNCERTAIN}
   <nav class="ot-nav" aria-label="Question groups">{ot_nav}</nav>
@@ -10204,6 +10532,7 @@ def build() -> None:
     )
 
     print(f"games: {games_page.build(DIST, layout, write)} on /games/", flush=True)
+    print(f"ask: /ask/ with {ask_page.build(DIST, layout, write)} example questions", flush=True)
 
     # Library pass page (owner 2026-10-05).
     n_dl = downloads_page.build(
@@ -10217,6 +10546,7 @@ def build() -> None:
     n_beliefs = beliefs_page.build(DIST, ROOT / "data" / "explore" / "doctrine_map.json", layout, write,
                                    sys.modules[__name__], {k: v.get("title") or k for k, v in topic_meta.items()})
     print(f"beliefs: {n_beliefs} questions on the Timeline", flush=True)
+    print(f"creeds: {creeds_page.build(DIST, layout, write)} on /creeds/", flush=True)
 
     # /data/search/* shard names carry a hash of their bytes, so browsers may
     # keep them for a year; manifest.json names the current shards and is
@@ -10389,6 +10719,7 @@ https://:version.:project.pages.dev/*
         encoding="utf-8",
     )
 
+    _attach_players()
     audio_manifests = sorted((ROOT / "outputs/audio").glob("*/manifest.json"))
     audio_hit = False
     if audio_manifests:
@@ -10398,12 +10729,6 @@ https://:version.:project.pages.dev/*
             if "rdl-player" in p.read_text(encoding="utf-8")[:60000]:
                 audio_hit = True
                 break
-    if audio_manifests and not audio_hit:
-        print(
-            f"WARNING: {len(audio_manifests)} audio manifests but no injected players sampled — "
-            "bare build; run ship.sh for read-along injection.",
-            file=sys.stderr,
-        )
 
     print(
         json.dumps(

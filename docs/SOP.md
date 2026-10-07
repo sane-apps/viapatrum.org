@@ -5,6 +5,9 @@
 - Fix: added section 8 to `.sanemaster/tools/mini-disk-clean.sh` — per-project keep newest 3 + anything under 48h old, delete the rest. Never touches `latest.txt`. Backup at `mini-disk-clean.sh.bak-20260927`.
 - Result: Mini at 67.5G free. Salvaged orphans (21G gitignored scans/scratch, all books committed) trashed after audit. No plist reload needed (script path unchanged).
 
+## Standing: Fathers watch notifier source (checked 2026-10-07)
+The Air notifier is the committed file `clients/translations/scripts/fathers_watch_notify.py` (commit `8087fd4b9`). It alerts `watch:stale` when Mini `status.json` is older than 30 minutes. Do not keep a second untracked copy on the Air.
+
 ## Standing: audit tools always on for accuracy work (owner, 2026-09-28)
 Any accuracy/verification task on site or book content must proactively use
 every applicable check without being reminded: jev_stance_check.py sweeps for
