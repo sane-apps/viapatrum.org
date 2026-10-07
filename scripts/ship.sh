@@ -57,6 +57,8 @@ Usage: scripts/ship.sh [--dry-run] [--skip-build] [--audio-only]
 Every deploy keeps a clone of what it uploaded in outputs/ship-last for
 --audio-only. It is free at first (APFS clone) but costs about 600 MB of disk
 once the next build rewrites dist/. It is not kept when less than 5 GB is free.
+A ship does not start under 15 GB free, or while another build or ship holds
+outputs/build.lock (agents build with scripts/pkg_build.sh, which waits for it).
 Ctrl-C during a long step (deploy, live checks) stops that step and the ship.
 An audio upload to R2 that is still running when a ship fails keeps going in
 the background (3 h limit); the next ship waits for it.
@@ -108,6 +110,61 @@ fi
 # build_site.py refuses to wipe dist/ while the lock is held, unless the
 # rebuild is this ship's own (the child cannot take its parent's lock).
 export FATHERS_SHIP=1
+
+# One build or ship at a time on the Mini: outputs/build.lock is the lock
+# scripts/pkg_build.sh, build_site.py and ship_if_changed.py take. A caller
+# that already holds it names its pid in FATHERS_BUILD_LOCK_HELD. That counts
+# only while a `ship_lock.py <ROOT>/outputs/build.lock <that pid>` process runs
+# and the lock is held: a live pid alone could be a stale or inherited value
+# (same check as _lock_watcher_for in build_site.py).
+caller_holds_build_lock() {
+  [[ "${FATHERS_BUILD_LOCK_HELD:-}" =~ ^[0-9]+$ ]] || return 1
+  python3 - "$ROOT/outputs/build.lock" "$FATHERS_BUILD_LOCK_HELD" <<'PY' 2>/dev/null
+import fcntl, os, subprocess, sys
+lock, pid = os.path.realpath(sys.argv[1]), sys.argv[2]
+ps = subprocess.run(["ps", "-axww", "-o", "args="], capture_output=True, text=True, timeout=15).stdout
+def watcher(p):
+    return any(os.path.basename(p[i]) == "ship_lock.py" and p[i + 2] == pid
+               and os.path.realpath(p[i + 1]) == lock for i in range(len(p) - 2))
+if not any(watcher(line.split()) for line in ps.splitlines()):
+    sys.exit(1)
+fd = os.open(lock, os.O_RDONLY)
+try:
+    fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+except BlockingIOError:
+    sys.exit(0)  # held, by the caller's ship_lock.py
+sys.exit(1)
+PY
+}
+BUILD_LOCK_PID=""
+if caller_holds_build_lock; then
+  echo "build lock: held by the caller (pid $FATHERS_BUILD_LOCK_HELD)"
+else
+  if ! build_out="$(python3 "$ROOT/scripts/ship_lock.py" "$ROOT/outputs/build.lock" "$$" 2>&1)"; then
+    echo "BLOCKED: another build or ship holds outputs/build.lock ($build_out)" >&2
+    exit 1
+  fi
+  BUILD_LOCK_PID="${build_out#OK }"
+  export FATHERS_BUILD_LOCK_HELD="$$"
+fi
+
+# The one disk floor (15 GB), checked before this ship deletes or writes
+# anything, outputs/ship-last included (2026-10-06 disk-full crash).
+# Same reading as build_site.py (_free_gb). If free space cannot be read, the
+# ship stops. FATHERS_FREE_GB_TEST can only lower the number, so tests can fake
+# a full disk but nothing can skip the floor (scripts/builder_gate_test.py).
+FREE_GB="$(python3 -c 'import os, shutil
+g = shutil.disk_usage("/System/Volumes/Data").free // 2**30
+t = os.environ.get("FATHERS_FREE_GB_TEST", "")
+print(min(g, int(t)) if t.isdigit() else g)' 2>/dev/null)"
+if ! [[ "$FREE_GB" =~ ^[0-9]+$ ]]; then
+  echo "BLOCKED: could not read free disk space; a ship needs 15 GB. Nothing was deleted or written." >&2
+  exit 1
+fi
+if (( FREE_GB < 15 )); then
+  echo "BLOCKED: ${FREE_GB} GB free; a ship needs 15 GB. Nothing was deleted or written." >&2
+  exit 1
+fi
 
 MODE="full"
 [[ "$SKIP_BUILD" -eq 1 ]] && MODE="skip-build"
@@ -194,6 +251,7 @@ cleanup() {
   case "$GATE_FN_DIR" in /tmp/fathers-gate.?*) rm -rf -- "$GATE_FN_DIR" ;; esac
   record_timings "$rc"
   [[ -n "$LOCK_PID" ]] && kill "$LOCK_PID" 2>/dev/null
+  [[ -n "$BUILD_LOCK_PID" ]] && kill "$BUILD_LOCK_PID" 2>/dev/null
   exec 9>&-
   return 0
 }

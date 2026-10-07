@@ -339,6 +339,10 @@
     // data/search-index.json is the fallback. Each row's search text is
     // lowercased once here, not on every keystroke.
     const readJson = (url) => fetch(url).then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))));
+    // Word search reads every shard (about 7 MB on the wire), so it starts
+    // only for 3 or more letters, after the typing pause. Two letters still
+    // match titles and writers from the page (2026-10-06 audit).
+    const PASSAGE_MIN = 3;
     const shardUrls = (manifest) => {
       const raw = Array.isArray(manifest) ? manifest : manifest && (manifest.shards || manifest.files);
       if (!Array.isArray(raw) || !raw.length) return null;
@@ -377,7 +381,7 @@
           indexPromise = null;
         });
         indexPromise.then(() => {
-          if (lastTerm.length >= 2) apply();
+          if (lastTerm.length >= PASSAGE_MIN) apply();
         });
       }
       return indexPromise;
@@ -392,8 +396,9 @@
         return;
       }
       const writers = visible.length ? ` · ${plural(visible.length, "writer", "writers")}` : "";
-      if (!searchIndex || passageTerm !== term) status.textContent = "Searching…";
-      else if (indexFailed)
+      const words = term.length >= PASSAGE_MIN;
+      if (words && (!searchIndex || passageTerm !== term)) status.textContent = "Searching…";
+      else if (words && indexFailed)
         status.textContent = titleCount
           ? `${plural(titleCount, "work matches", "works match")} “${lastShown}” by title or writer. Word search did not load; try again later.`
           : `Word search did not load. Try again later.${writers}`;
@@ -405,7 +410,9 @@
         const verb = parts.length > 1 || titleCount + passageCount > 1 ? "match" : "matches";
         status.textContent = parts.length
           ? `${parts.join(" and ")} ${verb} “${lastShown}”`
-          : `No works or passages match “${lastShown}”${writers}`;
+          : words
+          ? `No works or passages match “${lastShown}”${writers}`
+          : `No work titles match “${lastShown}”${writers}. Passages are searched from ${PASSAGE_MIN} letters.`;
       }
     };
 
@@ -490,6 +497,8 @@
         // Not when word search failed: "nothing matches" is not known then.
         else
           show =
+            // Short terms search titles only: no "nothing matches" yet.
+            term.length >= PASSAGE_MIN &&
             !!searchIndex &&
             !indexFailed &&
             passageTerm === term &&
@@ -577,8 +586,9 @@
       }
       wasSearching = searching;
       // After a failed load, the next new term (debounced) tries once more.
-      if (scan && searching && indexFailed && !indexPromise && term !== failedTerm) searchIndex = null;
-      if (searching && !searchIndex) loadIndex();
+      const wordSearch = term.length >= PASSAGE_MIN;
+      if (scan && wordSearch && indexFailed && !indexPromise && term !== failedTerm) searchIndex = null;
+      if (scan && wordSearch && !searchIndex) loadIndex();
       let visible = items().filter((li) => {
         if (!inFilter(li, filter)) return false;
         if (searching) {
@@ -615,7 +625,7 @@
       const inDom = all.filter((li) => shown.has(li));
       if (!inDom.every((li, i) => li === visible[i])) visible.forEach((li) => list.appendChild(li));
       if (termChanged) meaningSearch(term);
-      if (scan && passageTerm !== term) scanPassages(term, searching);
+      if (scan && passageTerm !== term) scanPassages(term, wordSearch);
       renderTitles(term, searching);
       if (writersH) writersH.hidden = !(searching && visible.length);
       lastVisible = visible;

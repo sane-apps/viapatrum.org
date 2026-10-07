@@ -3,8 +3,9 @@
 every EPUB, PDF, Word for Logos file and audiobook, now and later).
 
 Data: outputs/downloads/library.json from scripts/library_sync.py. Only files
-marked uploaded are linked, and a format library_sync marked "dirty" (it
-failed the worksheet-note gate) is left out everywhere. Copy states real
+marked uploaded are linked, and a file library_sync marked "dirty" (it failed
+the worksheet-note gate) is left out; the work's other formats stay. An
+audiobook that leaves sections out says which ones. Copy states real
 counts: "every" only where every work on the shelf has that format. Locked browsers that follow a /dl/ link are sent
 back here by functions/dl; assets/downloads.js shows the locked or unlocked
 state from /api/library/status and runs the Lemon Squeezy checkout.
@@ -83,19 +84,42 @@ def hours(sec: float) -> str:
     return f"{m // 60} h {m % 60:02d} min" if m % 60 else f"{m // 60} h"
 
 
+def short_audio(f: dict) -> str:
+    """'§ 18 and 90 not narrated yet' for an audiobook that leaves sections
+    out, or ''. The shelf must not show only the length of a partial
+    recording (2026-10-06 audit: 12 sold audiobooks were short)."""
+    total, done = int(f.get("sections") or 0), int(f.get("narrated") or 0)
+    if not total or done >= total:
+        return ""
+    marks = [str(m) for m in f.get("missing") or []]
+    if not marks:  # a library.json from before the list was kept
+        return f"{done} of {total} sections narrated"
+    shown = marks if len(marks) <= 6 else marks[:5] + [f"{len(marks) - 5} more"]
+    return f"§ {join(shown)} not narrated yet"
+
+
 class Library:
     def __init__(self, path: Path):
         self.data = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
-        # Formats that failed the worksheet-note gate stay off the site.
-        self.dirty = set(self.data.get("dirty") or ())
+        # Files that failed the worksheet-note gate stay off the site: kind ->
+        # held slugs. An older list form names whole formats.
+        dirty = self.data.get("dirty") or {}
+        self.dirty = {k: None for k in dirty} if isinstance(dirty, list) else {k: set(v or ()) for k, v in dirty.items()}
         self.by_slug = {}
         for w in self.data.get("works") or []:
-            files = {k: f for k, f in (w.get("files") or {}).items() if f.get("uploaded") and k not in self.dirty}
+            files = {k: f for k, f in (w.get("files") or {}).items() if f.get("uploaded") and not self.held(k, w["slug"])}
             if files:
                 self.by_slug[w["slug"]] = {**w, "files": files}
 
+    def held(self, kind: str, slug: str) -> bool:
+        if kind not in self.dirty:
+            return False
+        return self.dirty[kind] is None or slug in self.dirty[kind]
+
     def bundles(self) -> list[dict]:
-        return [b for b in self.data.get("bundles") or [] if b.get("uploaded") and b.get("kind") not in self.dirty]
+        # library_sync builds each bundle without the held files; an older
+        # list form held the whole format, bundle included.
+        return [b for b in self.data.get("bundles") or [] if b.get("uploaded") and self.dirty.get(b.get("kind"), ()) is not None]
 
     @property
     def price(self) -> int:
@@ -135,6 +159,9 @@ class Library:
             for k in KINDS if (f := w["files"].get(k)))
         part = part_only(w)
         scope = f'<p class="keep-scope">Part only: {escape(part)}</p>' if part else ""
+        gap = short_audio(w["files"].get("audio") or {})
+        if gap:
+            scope += f'<p class="keep-scope">Audiobook: {escape(gap)}.</p>'
         price = int(self.data.get("price_usd") or 50)
         return (f'<section class="keep" aria-labelledby="keep-h"><h2 id="keep-h">Keep this book <br><span class="keep-sub">with the library pass</span></h2>'
                 f'{scope}<ul>{links}</ul>'
@@ -149,7 +176,7 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
             continue
         meta = hours(f["duration_s"]) if k == "audio" else size(f["bytes"])
         part = ""
-        if k == "audio" and f.get("sections") and f.get("narrated", 0) < f["sections"]:
+        if k == "audio" and short_audio(f):
             part = f' title="Narrated: {f["narrated"]} of {f["sections"]} sections"'
         if k == "audio":
             part += f' data-bytes="{int(f["bytes"])}"'
@@ -160,6 +187,9 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
     byline = f'<p>{escape(w.get("author") or "")}{" · " + escape(dates) if dates else ""}</p>'
     part = part_only(w)
     scope = f'<span class="dl-scope">Part only: {escape(part)}</span>' if part else ""
+    gap = short_audio(w["files"].get("audio") or {})
+    if gap:
+        scope += ("<br>" if scope else "") + f'<span class="dl-scope">Audiobook: {escape(gap)}</span>'
     thumb = (f'<img src="/assets/covers/{escape(w["thumb"])}" alt="" width="64" height="96" loading="lazy" decoding="async">'
              if w.get("thumb") else '<span class="dl-nocover"></span>')
     q = f'{w["title"]} {w.get("subtitle") or ""} {w.get("author") or ""}'.lower()

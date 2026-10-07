@@ -895,24 +895,76 @@ def file_entry(path: Path, out: Path) -> dict:
     return {"file": str(path.relative_to(out)), "bytes": path.stat().st_size, "sha256": h.hexdigest()}
 
 
+# --------------------------------------------------------------- run / lock
+# Everything below this line decides what to rebuild and how to run. It does
+# not change a book's bytes, so builder_version() leaves it out: editing the
+# skip key must not rebuild all 343 books (2026-10-06 audit).
+RUN_MARK = b"\n# --------------------------------------------------------------- run / lock\n"
+
+# The version every book on the shelf was built with before RUN_MARK existed
+# (2026-10-06). That builder's book-making code is the code above RUN_MARK, so
+# its books are still current when their page and catalogue hash are unchanged.
+LEGACY_VERSION = "b4a1d4624929"
+
+# The site asset hash (?v= on site.css, site.js, fonts.css) on the pages the
+# old keys were made from (outputs/ship-last, 2026-10-06). To check an old key
+# the page's current site asset hash is put back to this value, so the old
+# keys still count after the next style edit changes it.
+LEGACY_ASSET_VER = b"1e3ab26209"
+SITE_ASSET = re.compile(rb"/assets/site\.css\?v=([0-9A-Za-z]+)")
+
+
 def builder_version() -> str:
+    """Hash of the code and templates that make a book's bytes."""
     h = hashlib.sha256()
     for p in BUILDER_FILES:
-        h.update(p.read_bytes())
+        data = p.read_bytes()
+        h.update(data.split(RUN_MARK, 1)[0] if p == Path(__file__) else data)
     return h.hexdigest()[:12]
 
 
-def page_key(site_dir: Path, slug: str) -> str:
-    """Hash of the work page(s) so About/title/subtitle edits trigger a rebuild."""
+def page_key(site_dir: Path, slug: str, legacy: bool = False) -> str:
+    """Hash of what a book takes from its work page: the masthead (title,
+    author, dates, subtitle) and page_facts (edition line, intro, About,
+    notes, passage headings and Contents labels). Asset ?v= hashes, the audio
+    player, download sizes and site navigation are left out, so a site-wide
+    page or style edit does not rebuild every book (2026-10-06: hashing the
+    whole page would have rebuilt 325 of 334 books on the next ship).
+    legacy=True hashes the raw pages as keys written before 2026-10-06 did,
+    with the site asset hash set back to LEGACY_ASSET_VER."""
     h = hashlib.sha256()
     base = site_dir / "works" / slug
-    for p in [base / "index.html", *sorted(base.glob("book-*/index.html"))]:
-        if p.exists():
-            h.update(p.read_bytes())
+    if legacy:
+        for p in [base / "index.html", *sorted(base.glob("book-*/index.html"))]:
+            if p.exists():
+                data = p.read_bytes()
+                if m := SITE_ASSET.search(data):
+                    data = data.replace(b"?v=" + m.group(1), b"?v=" + LEGACY_ASSET_VER)
+                h.update(data)
+        return h.hexdigest()[:12]
+    page = base / "index.html"
+    if page.exists():
+        doc = parse_html(page.read_text(encoding="utf-8"))
+        main = doc.find(lambda n: n.tag == "main") or doc
+        mast = main.find(tag_cls("header", "reader-mast"))
+        h.update(squash(mast.text()).encode() if mast is not None else b"")
+        h.update(json.dumps(page_facts(site_dir, slug), sort_keys=True, ensure_ascii=False).encode())
     return h.hexdigest()[:12]
 
 
-# --------------------------------------------------------------- run / lock
+def up_to_date(prev_key: str, catalog_hash: str, site_dir: Path, slug: str, version: str,
+               legacy_version: str) -> tuple[bool, str]:
+    """(still current?, key to store). A key written before 2026-10-06 counts
+    when it was built by legacy_version from the same catalogue hash and the
+    same raw page (site asset hash aside); it is then stored in the new form.
+    Run --rekey against the build those keys came from (outputs/ship-last)
+    before the next ship changes its pages."""
+    key = f"{catalog_hash}:{page_key(site_dir, slug)}:{version}"
+    if prev_key == key:
+        return True, key
+    if legacy_version and prev_key == f"{catalog_hash}:{page_key(site_dir, slug, legacy=True)}:{legacy_version}":
+        return True, key
+    return False, key
 
 LOCK: Path | None = None
 
@@ -955,6 +1007,8 @@ def main() -> int:
     ap.add_argument("--jobs", type=int, default=3)
     ap.add_argument("--force", action="store_true", help="rebuild even when up to date")
     ap.add_argument("--check", action="store_true", help="run epubcheck on every EPUB built in this run")
+    ap.add_argument("--rekey", action="store_true",
+                    help="only rewrite old-style skip keys that still match in the new form; build nothing")
     args = ap.parse_args()
 
     try:
@@ -994,11 +1048,13 @@ def main() -> int:
 
     jobs, skipped = [], 0
     for w in works:
-        key = f"{w.get('hash', '')}:{page_key(site_dir, w['slug'])}:{version}"
         prev = manifest["works"].get(w["slug"])
+        current, key = up_to_date((prev or {}).get("key", ""), w.get("hash", ""), site_dir, w["slug"],
+                                  version, LEGACY_VERSION)
         files = [out / "epub" / f"{w['slug']}.epub", out / "pdf" / f"{w['slug']}.pdf",
                  out / "covers" / f"{w['slug']}.jpg", out / "covers" / f"{w['slug']}-square.jpg"]
-        if not args.force and prev and prev.get("key") == key and all(f.exists() for f in files):
+        if not args.force and prev and current and all(f.exists() for f in files):
+            prev["key"] = key  # an old-style key is rewritten in the new form
             skipped += 1
             continue
         jobs.append({"work": w, "author": authors.get(w["author"], {"name": w["author"]}), "key": key,
@@ -1018,6 +1074,12 @@ def main() -> int:
         tmp = manifest_path.with_suffix(".tmp")
         tmp.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
         tmp.replace(manifest_path)
+
+    if args.rekey:
+        save()
+        print(f"build_ebooks --rekey: {skipped} keys current (old-style ones rewritten), "
+              f"{len(jobs)} books would rebuild; nothing built", flush=True)
+        return 0
 
     with cf.ProcessPoolExecutor(max_workers=max(1, args.jobs)) as pool:
         futs = {pool.submit(build_one, j): j["work"]["slug"] for j in jobs}

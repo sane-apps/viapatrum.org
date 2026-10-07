@@ -535,6 +535,9 @@ _PLAIN_SEEN: set = set()
 # --all: one run over a dist whose pages do not appear or change text, so the
 # page lists can be memoized, and cache entries the run never read are gone.
 _ALL_MODE = False
+# Public work -> [tracked sentences, reader passages, sections not matched],
+# summed over the books that feed it; report_no_play prints it once at the end.
+_SITE_STATS: dict = {}
 _RUN_MEMO: dict = {}
 
 
@@ -650,6 +653,192 @@ def locate_sites_text_first(book: str, cands: dict, manifest: dict) -> dict:
             continue
         site_map[dist_sec] = [key]
     return found
+
+
+def _mapped_sites(book: str) -> dict:
+    """Public works build_site made from this book, from the injected build's
+    dist/data/work-sources.json: site slug -> English stems it was built from
+    (None: all of them). Only works with a page folder in this dist."""
+    import build_audio as ba
+    key = ("sources", str(_dist()))
+    sources = _RUN_MEMO.get(key) if _ALL_MODE else None
+    if sources is None:
+        sources, _none = ba._work_sources(_dist() / "data" / "work-sources.json")
+        if _ALL_MODE:
+            _RUN_MEMO[key] = sources
+    works = _dist() / "works"
+    out = {}
+    for site, row in sources.items():
+        if row["book"] == book and (works / site).is_dir():
+            stems = {st[:-5] if st.endswith(".json") else st for st in row["stems"]}
+            out[site] = stems or None
+    return out
+
+
+def route_mapped_pages(book: str, cands: dict, manifest: dict, sites: dict, mapped: dict) -> dict:
+    """Give the pages of `mapped` works that routing left without a recording
+    one whose words are the page's words (text-first rule, limited to the
+    English files that work was built from).
+
+    Page folders need not be the English file's section ids (2026-10-06:
+    To Florus 1.134 is book 1 section 134), and id-first routing used to stop
+    text-first for every other work of the same book."""
+    if not mapped:
+        return sites
+    passages = manifest.get("passages") or {}
+    win: dict[str, list] = {}
+    loose: dict[str, list] = {}
+    for opts in cands.values():
+        for stem, first, last in opts:
+            got = _window(passages, stem, first, last)
+            if got:
+                said = _expected_plain(got[1])
+                win.setdefault(said, []).append((stem, first, last))
+                loose.setdefault(match_key(said), []).append((stem, first, last))
+    used = {k for site_map in sites.values() for keys in site_map.values() for k in keys}
+    owners: dict = {}
+    works = _dist() / "works"
+    for site, allowed in sorted(mapped.items()):
+        have = sites.get(site) or {}
+        for sub in sorted((works / site).iterdir()):
+            page = sub / "index.html"
+            if sub.name in have or not page.is_file():
+                continue
+            plain = _cached_plain(page)
+            if not plain:
+                continue
+            keys = win.get(plain) or loose.get(_cached_key(page, plain)) or []
+            for key in keys:
+                if key not in used and (allowed is None or key[0] in allowed):
+                    owners.setdefault(key, []).append((site, sub.name))
+    for key, pages in sorted(owners.items()):
+        if len(pages) > 1:
+            print("skip %s %s: recording matches %d pages" % (book, key[0], len(pages)))
+            continue
+        site, sec = pages[0]
+        sites.setdefault(site, {}).setdefault(sec, []).append(key)
+    return sites
+
+
+def pages_without_play(site_dir: Path) -> list:
+    """Section folders whose page has text and no Play bar. A chapter with
+    no Play counts as unmatched, whatever the reason (2026-10-06 audit: the
+    log said 0 unmatched while On Prayer 1-5 had no player). Checked once per
+    work after every book has injected, so a page another book covers later
+    in the run is not reported, and a page is not reported once per book."""
+    missing = []
+    for sub in sorted(site_dir.iterdir()):
+        page = sub / "index.html"
+        if not page.is_file():
+            continue
+        has = 'class="rdl-player"' in page.read_text(encoding="utf-8", errors="replace")
+        if not has and _cached_plain(page):
+            missing.append(sub.name)
+    return missing
+
+
+def report_no_play(sites) -> int:
+    """One "work" line per public work, after every book has injected, then
+    one total line. "unmatched" is the sections with no Play bar, plus
+    sections a book routed to a page that does not exist. status_site.py
+    reads the "work" lines. Returns the no-Play total."""
+    total = n_works = 0
+    for site in sorted(set(sites)):
+        site_dir = _dist() / "works" / site
+        no_play = pages_without_play(site_dir) if site_dir.is_dir() else []
+        tracked, reader_hits, missed = _SITE_STATS.get(site, (0, 0, set()))
+        unmatched = set(no_play) | {sec for sec in missed if not (site_dir / sec / "index.html").is_file()}
+        print("work %s: %d tracked sentences, %d reader passages, %d unmatched" % (
+            site, tracked, reader_hits, len(unmatched)), flush=True)
+        if not no_play:
+            continue
+        total += len(no_play)
+        n_works += 1
+        print("no Play %s: %s%s" % (site, " ".join(no_play[:12]),
+                                     " (+%d more)" % (len(no_play) - 12) if len(no_play) > 12 else ""))
+    print("audio no-Play total: %d sections, %d works" % (total, n_works), flush=True)
+    return total
+
+
+# Listen and the app's audio flag count a manifest's "work" (build_site.py
+# has_audio, which this script must not edit). inject labels each manifest
+# with the public works where its audio plays: "work" is one of them (the
+# book's own slug first) and "sites" lists all. NO_PLAY is no work's slug, so
+# audio that plays nowhere is not counted (2026-10-06: Listen said 247 while
+# 339 works played, and listed two that play nowhere).
+NO_PLAY = "(no public page plays this audio)"
+
+
+def _labels_on() -> bool:
+    """Only a ship's own injection labels manifests. Test runs
+    (INJECT_STATE_DIR) and package builds (a dist under outputs/) must not
+    change what the next site build counts."""
+    if os.environ.get("INJECT_STATE_DIR"):
+        return False
+    dist = _dist().resolve()
+    return dist == (ROOT / "dist").resolve() or (ROOT / "outputs").resolve() not in dist.parents
+
+
+MANIFEST_LOCK = ".manifest.lock"  # under outputs/audio; build_audio uses the same name
+
+
+def _manifest_lock():
+    """A short lock shared with build_audio._write_manifest: the drain can
+    write a new passage while a ship labels the same manifest, and a label
+    written from a stale read would throw that passage away."""
+    import fcntl
+    fd = os.open(str(ROOT / "outputs/audio" / MANIFEST_LOCK), os.O_CREAT | os.O_RDWR, 0o644)
+    fcntl.flock(fd, fcntl.LOCK_EX)
+    return fd
+
+
+def label_manifest(work: str, played) -> None:
+    """Record where this book's audio plays. `played` maps each public work
+    to how many of its sections play this book's audio (a list counts 1
+    each). "work" is the book's own slug when it plays there, else the work
+    with the most playing sections (alphabetical only on a tie), so To Florus,
+    not Julian's first letter, carries Julian's audio. Writes only when that
+    changed: a work whose own slug plays it alone keeps its manifest untouched."""
+    weights = dict(played) if isinstance(played, dict) else {site: 1 for site in played}
+    played = sorted(weights)
+    if work in weights:
+        primary = work
+    elif weights:
+        primary = min(played, key=lambda site: (-weights[site], site))
+    else:
+        primary = NO_PLAY
+    path = ROOT / "outputs/audio" / work / "manifest.json"
+
+    def unchanged(data: dict) -> bool:
+        cur_work, cur_sites = data.get("work"), data.get("sites")
+        return cur_work == primary and (cur_sites == played or (cur_sites is None and played == [primary]))
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return
+    if unchanged(data):
+        return
+    if not _labels_on():
+        print("label %s: plays on %s, work %s (test build, manifest not changed)"
+              % (work, ", ".join(played) or "no public work", primary))
+        return
+    fd = _manifest_lock()
+    try:
+        # Read again under the lock: the drain may have added a passage.
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            return
+        if unchanged(data):
+            return
+        data["work"], data["sites"] = primary, played
+        tmp = path.with_name("manifest.json.tmp%d" % os.getpid())
+        tmp.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        os.replace(tmp, path)
+    finally:
+        os.close(fd)
+    print("label %s: plays on %s, work %s" % (work, ", ".join(played) or "no public work", primary))
 
 
 def _tool(name: str) -> str:
@@ -1047,15 +1236,19 @@ def inject_work(work: str) -> None:
     cands = section_candidates(work)
     if not cands:
         print("SKIP %s: no English section map, audio kept" % work)
+        label_manifest(work, [])
         return
     sites = locate_sites(work, cands, manifest)
     if not sites:
         print("note %s: no id-matched pages, trying text-first routing" % work)
         sites = locate_sites_text_first(work, cands, manifest)
-    if not sites:
+    mapped = _mapped_sites(work)
+    sites = route_mapped_pages(work, cands, manifest, sites, mapped)
+    if not sites and not mapped:
         print("SKIP %s: not on this site, audio kept" % work)
-        if not direct:
-            _store_noattach(work, noattach_fingerprint(work, manifest_bytes))
+        label_manifest(work, [])
+        if not direct:  # the label may have rewritten the manifest: hash what is on disk now
+            _store_noattach(work, noattach_fingerprint(work, manifest_path.read_bytes()))
         return
     if cached:
         _store_noattach(work, None)
@@ -1063,6 +1256,11 @@ def inject_work(work: str) -> None:
     dist_js.parent.mkdir(parents=True, exist_ok=True)
     shutil.copyfile(ROOT / "assets/readalong.js", dist_js)
     passages = manifest.get("passages") or {}
+    played = {}
+    # Works build_site made from this book are reported even when nothing
+    # attached, so their pages count as unmatched instead of vanishing.
+    for site in mapped:
+        sites.setdefault(site, {})
     for site, site_cands in sorted(sites.items()):
         plans = []
         missed = []
@@ -1140,8 +1338,21 @@ def inject_work(work: str) -> None:
             if 'class="reader-sec"' not in text:
                 continue
             reader_hits += _inject_reader(reader, ready)
-        print("work %s: %d tracked sentences, %d reader passages, %d unmatched" % (
-            site, tracked, reader_hits, len(missed)), flush=True)
+        # This book's own result: a Play bar another book put on the site
+        # does not make this book's audio play there.
+        if ready or reader_hits:
+            played[site] = len(ready) + reader_hits
+        st = _SITE_STATS.setdefault(site, [0, 0, set()])
+        st[0] += tracked
+        st[1] += reader_hits
+        st[2].update(missed)
+        # Not a "work ..." line: report_no_play prints that once per work.
+        print("book %s on %s: %d tracked sentences, %d reader passages, %d not matched" % (
+            work, site, tracked, reader_hits, len(set(missed))), flush=True)
+    label_manifest(work, played)
+    if not _ALL_MODE:
+        report_no_play(sites)
+        _SITE_STATS.clear()
 
 
 def inject_all() -> int:
@@ -1154,6 +1365,7 @@ def inject_all() -> int:
     """
     global _ALL_MODE
     _ALL_MODE = True
+    _SITE_STATS.clear()
     failed = []
     for manifest in sorted((ROOT / "outputs/audio").glob("*/manifest.json")):
         work = manifest.parent.name
@@ -1165,6 +1377,7 @@ def inject_all() -> int:
             traceback.print_exc()
             print("FAIL %s: %s" % (work, exc), flush=True)
             failed.append(work)
+    report_no_play(_SITE_STATS)
     _save_plain_cache()
     if failed:
         print("inject failed for %d works: %s" % (len(failed), " ".join(failed)), file=sys.stderr)

@@ -482,5 +482,307 @@ class SlugMapTests(unittest.TestCase):
                 self.assertEqual([p.name for p in B.site_dirs_for("cyril-alexandria-ad-xystum")], ["cyril-ad-xystum"])
                 self.assertEqual(B.book_for_site("unknown-work"), "unknown-work", "unmapped slugs keep the old behaviour")
 
+class PublicPagesTests(unittest.TestCase):
+    """P7 2026-10-06: Play follows the public page, not the book's ids.
+
+    One book "bk" (file f_english, sections 1-3) is published as "site-x"
+    with scoped folders 1.1-1.3, like To Florus. Section 1's recording
+    matches its page; section 2's page changed after recording; section 3
+    was never recorded."""
+
+    S1 = ["Alpha one is here.", "Beta two is here."]
+    S2_OLD = ["Gamma three is here."]
+    S2_NEW = "Gamma three is now here."
+    S3 = "Delta four is here."
+
+    def _env(self, plays_on="site-x"):
+        import json
+        import os
+        import tempfile
+        from pathlib import Path
+        from unittest import mock
+        import build_audio as B
+        import inject_audio as ia
+        tmp = tempfile.TemporaryDirectory()
+        t = Path(tmp.name)
+        root, books = t / "site", t / "books"
+        tr = books / "bk" / "translations"
+        tr.mkdir(parents=True)
+        (tr / "f_english.json").write_text(json.dumps([
+            {"section": 1, "english": [" ".join(self.S1)]},
+            {"section": 2, "english": [self.S2_NEW]},
+            {"section": 3, "english": [self.S3]}]))
+        out = root / "outputs" / "audio" / "bk"
+        out.mkdir(parents=True)
+        rows = [{"t": x, "s": float(i), "e": float(i) + 0.9} for i, x in enumerate(self.S1 + self.S2_OLD)]
+        (out / "manifest.json").write_text(json.dumps({"work": "bk", "voice": "bm_daniel", "passages": {
+            "f_english": {"r2_key": "narration/bk/f.mp3", "bytes": 10, "sentences": rows}}}))
+        (root / "assets").mkdir(parents=True)
+        (root / "assets" / "readalong.js").write_text("// test")
+        dist = root / "dist"
+        for sec, text in (("1.1", " ".join(self.S1)), ("1.2", self.S2_NEW), ("1.3", self.S3)):
+            (dist / "works" / plays_on / sec).mkdir(parents=True)
+            (dist / "works" / plays_on / sec / "index.html").write_text(
+                '<html><body><h1>T</h1><div class="body"><p>%s</p></div></body></html>' % text)
+        (dist / "data").mkdir(parents=True)
+        (dist / "data" / "work-sources.json").write_text(json.dumps(
+            {"works": {plays_on: {"book": "bk", "stems": ["f_english"]}}}))
+        patches = [
+            mock.patch.object(B, "ROOT", root), mock.patch.object(B, "BOOKS", books),
+            mock.patch.object(B, "OUT", root / "outputs" / "audio"), mock.patch.object(B, "_SLUGS", None),
+            mock.patch.object(ia, "ROOT", root), mock.patch.object(ia, "BOOKS", books),
+            mock.patch.object(ia, "NOATTACH_CACHE", root / "outputs" / "noattach.json"),
+            mock.patch.object(ia, "R2_PENDING", root / "outputs" / "pending.jsonl"),
+            mock.patch.object(ia, "_PLAIN_CACHE", {}), mock.patch.object(ia, "_PLAIN_MEMO", {}),
+            mock.patch.dict(os.environ, {"FATHERS_DIST": str(dist)}),
+        ]
+        for x in patches:
+            x.start()
+        os.environ.pop("INJECT_STATE_DIR", None)
+
+        def done():
+            for x in reversed(patches):
+                x.stop()
+            tmp.cleanup()
+        self.addCleanup(done)
+        return root, dist, out
+
+    def _inject(self):
+        import contextlib
+        import io
+        import inject_audio as ia
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            ia.inject_work("bk")
+        return buf.getvalue()
+
+    def test_scoped_folder_gets_play_and_changed_pages_count_unmatched(self):
+        import json
+        root, dist, out = self._env()
+        log = self._inject()
+        page = lambda sec: (dist / "works" / "site-x" / sec / "index.html").read_text()
+        self.assertIn('class="rdl-player"', page("1.1"), log)
+        self.assertNotIn('class="rdl-player"', page("1.2"))
+        self.assertIn("work site-x: 2 tracked sentences, 0 reader passages, 2 unmatched", log)
+        self.assertIn("no Play site-x: 1.2 1.3", log)
+        self.assertIn("audio no-Play total: 2 sections, 1 works", log, "never-recorded 1.3 counts too")
+        m = json.loads((out / "manifest.json").read_text())
+        self.assertEqual((m["work"], m["sites"]), ("site-x", ["site-x"]), "Listen counts the public slug")
+
+    def test_audio_that_plays_nowhere_is_not_counted(self):
+        import json
+        import inject_audio as ia
+        root, dist, out = self._env()
+        (dist / "works" / "site-x" / "1.1" / "index.html").write_text(
+            '<html><body><h1>T</h1><div class="body"><p>Alpha one was here.</p></div></body></html>')
+        log = self._inject()
+        self.assertIn("work site-x: 0 tracked sentences, 0 reader passages, 3 unmatched", log)
+        self.assertIn("audio no-Play total: 3 sections, 1 works", log)
+        m = json.loads((out / "manifest.json").read_text())
+        self.assertEqual((m["work"], m["sites"]), (ia.NO_PLAY, []))
+
+    def test_package_build_does_not_relabel(self):
+        import json
+        import os
+        root, dist, out = self._env()
+        pkg = root / "outputs" / "pkg-x" / "dist"
+        pkg.parent.mkdir(parents=True)
+        dist.rename(pkg)
+        os.environ["FATHERS_DIST"] = str(pkg)
+        log = self._inject()
+        self.assertIn("test build, manifest not changed", log)
+        self.assertEqual(json.loads((out / "manifest.json").read_text())["work"], "bk")
+
+    def test_drain_keeps_the_label_and_finds_scoped_stale_pages(self):
+        import json
+        import build_audio as B
+        root, dist, out = self._env()
+        self._inject()
+        # Page 1.2 is current English with an old recording: stale. Page 1.3
+        # is current English never recorded: stale too (a re-read covers it).
+        self.assertEqual(B.stale_stems("bk"), ["f_english"])
+        self.assertEqual(B._PAGE_OFF["bk"], 0)
+        (dist / "works" / "site-x" / "1.3" / "index.html").write_text(
+            '<html><body><h1>T</h1><div class="body"><p>Words no English file has.</p></div></body></html>')
+        B.stale_stems("bk")
+        self.assertEqual(B._PAGE_OFF["bk"], 1, "a page matching no English file is counted")
+        B._write_manifest("bk", {"work": "bk", "voice": "aura-2-orion", "passages": {}}, 0)
+        m = json.loads((out / "manifest.json").read_text())
+        self.assertEqual((m["work"], m["sites"]), ("site-x", ["site-x"]), "a new recording keeps the label")
+
+
+class SharedSitesTests(unittest.TestCase):
+    """P7 review 2026-10-06: a book that feeds several public works is
+    counted on the one where most of it plays, and a book is counted only
+    where its own audio plays, not where another book's Play bar sits."""
+
+    def _world(self, books, sites, sources):
+        """books: {name: (sections [(n, text)], recorded sentences)};
+        sites: {site: {folder: page text}}; sources: {site: book}."""
+        import json
+        import os
+        import tempfile
+        from pathlib import Path
+        from unittest import mock
+        import build_audio as B
+        import inject_audio as ia
+        tmp = tempfile.TemporaryDirectory()
+        t = Path(tmp.name)
+        root, books_dir = t / "site", t / "books"
+        for name, (sections, recorded) in books.items():
+            tr = books_dir / name / "translations"
+            tr.mkdir(parents=True)
+            (tr / "f_english.json").write_text(json.dumps(
+                [{"section": n, "english": [text]} for n, text in sections]))
+            out = root / "outputs" / "audio" / name
+            out.mkdir(parents=True)
+            rows = [{"t": x, "s": float(i), "e": float(i) + 0.9} for i, x in enumerate(recorded)]
+            (out / "manifest.json").write_text(json.dumps({"work": name, "voice": "aura-2-orion", "passages": {
+                "f_english": {"r2_key": "narration/%s/f.mp3" % name, "bytes": 10, "sentences": rows}}}))
+        (root / "assets").mkdir(parents=True)
+        (root / "assets" / "readalong.js").write_text("// test")
+        dist = root / "dist"
+        for site, pages in sites.items():
+            for sec, text in pages.items():
+                (dist / "works" / site / sec).mkdir(parents=True)
+                (dist / "works" / site / sec / "index.html").write_text(
+                    '<html><body><h1>T</h1><div class="body"><p>%s</p></div></body></html>' % text)
+        (dist / "data").mkdir(parents=True)
+        (dist / "data" / "work-sources.json").write_text(json.dumps(
+            {"works": {site: {"book": book, "stems": ["f_english"]} for site, book in sources.items()}}))
+        patches = [
+            mock.patch.object(B, "ROOT", root), mock.patch.object(B, "BOOKS", books_dir),
+            mock.patch.object(B, "OUT", root / "outputs" / "audio"), mock.patch.object(B, "_SLUGS", None),
+            mock.patch.object(ia, "ROOT", root), mock.patch.object(ia, "BOOKS", books_dir),
+            mock.patch.object(ia, "STATE", root / "outputs"),
+            mock.patch.object(ia, "NOATTACH_CACHE", root / "outputs" / "noattach.json"),
+            mock.patch.object(ia, "R2_PENDING", root / "outputs" / "pending.jsonl"),
+            mock.patch.object(ia, "_PLAIN_CACHE", {}), mock.patch.object(ia, "_PLAIN_MEMO", {}),
+            mock.patch.object(ia, "_PLAIN_SEEN", set()), mock.patch.object(ia, "_RUN_MEMO", {}),
+            mock.patch.object(ia, "_SITE_STATS", {}), mock.patch.object(ia, "_ALL_MODE", False),
+            mock.patch.dict(os.environ, {"FATHERS_DIST": str(dist)}),
+        ]
+        for x in patches:
+            x.start()
+        os.environ.pop("INJECT_STATE_DIR", None)
+
+        def done():
+            for x in reversed(patches):
+                x.stop()
+            tmp.cleanup()
+        self.addCleanup(done)
+        return root
+
+    def _label(self, root, book):
+        import json
+        m = json.loads((root / "outputs" / "audio" / book / "manifest.json").read_text())
+        return m["work"], m.get("sites")
+
+    def _run_all(self):
+        import contextlib
+        import io
+        import inject_audio as ia
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = ia.inject_all()
+        return rc, buf.getvalue()
+
+    def test_bigger_site_carries_the_label_not_the_first_alphabetically(self):
+        texts = ["Alpha one is here.", "Gamma three is here.", "Delta four is here."]
+        root = self._world(
+            {"bk": ([(1, texts[0]), (2, texts[1]), (3, texts[2])], texts)},
+            {"a-small": {"1.1": texts[0]}, "z-big": {"1.2": texts[1], "1.3": texts[2]}},
+            {"a-small": "bk", "z-big": "bk"})
+        rc, log = self._run_all()
+        self.assertEqual(rc, 0, log)
+        self.assertEqual(self._label(root, "bk"), ("z-big", ["a-small", "z-big"]), log)
+
+    def test_another_books_play_bar_does_not_count_for_this_book(self):
+        good = ["Alpha one is here.", "Beta two is here."]
+        root = self._world(
+            {"bk": ([(1, good[0]), (2, good[1])], good),
+             # Book named like the public work: its recording matches nothing.
+             "site-x": ([(1, good[0]), (2, good[1])], ["Old words one.", "Old words two."])},
+            {"site-x": {"1.1": good[0], "1.2": good[1], "1.3": "Never recorded here."}},
+            {"site-x": "bk"})
+        rc, log = self._run_all()
+        self.assertEqual(rc, 0, log)
+        self.assertEqual(self._label(root, "bk"), ("site-x", ["site-x"]), log)
+        import inject_audio as ia
+        self.assertEqual(self._label(root, "site-x"), (ia.NO_PLAY, []), log)
+        self.assertEqual(log.count("work site-x:"), 1, "one line per public work, not one per book")
+        self.assertIn("no Play site-x: 1.3\n", log)
+        self.assertIn("audio no-Play total: 1 sections, 1 works", log)
+
+    def test_label_keeps_a_passage_the_drain_wrote_meanwhile(self):
+        import json
+        import build_audio as B
+        import inject_audio as ia
+        texts = ["Alpha one is here."]
+        root = self._world({"bk": ([(1, texts[0])], texts)}, {"site-x": {"1.1": texts[0]}}, {"site-x": "bk"})
+        path = root / "outputs" / "audio" / "bk" / "manifest.json"
+        real_lock = ia._manifest_lock
+
+        def lock_after_drain_write():
+            # The drain writes a new passage between the label's first read
+            # and its locked write.
+            m = json.loads(path.read_text())
+            m["passages"]["new_english"] = {"r2_key": "narration/bk/new.mp3", "bytes": 5, "sentences": []}
+            B._write_manifest("bk", m, 0)
+            return real_lock()
+        from unittest import mock
+        with mock.patch.object(ia, "_manifest_lock", lock_after_drain_write):
+            ia.label_manifest("bk", {"site-x": 1})
+        m = json.loads(path.read_text())
+        self.assertIn("new_english", m["passages"], "the label must not drop the drain's passage")
+        self.assertEqual((m["work"], m["sites"]), ("site-x", ["site-x"]))
+
+
+class AudiobookKeptOnSaleTests(unittest.TestCase):
+    """Owner 2026-10-06: an audiobook whose page text moved on stays on sale
+    and is listed for the owner (manifest-audio.json "text_mismatch")."""
+
+    def test_short_built_work_keeps_its_file_and_is_listed(self):
+        import contextlib
+        import io
+        import json
+        import tempfile
+        from pathlib import Path
+        from unittest import mock
+        import build_audiobooks as BA
+        with tempfile.TemporaryDirectory() as d:
+            t = Path(d)
+            out = t / "downloads" / "audio"
+            out.mkdir(parents=True)
+            (out / "old-voice.m4b").write_bytes(b"m4b")
+            man = t / "downloads" / "manifest-audio.json"
+            man.write_text(json.dumps({"works": {"old-voice": {
+                "file": "audio/old-voice.m4b", "built": "2026-10-03T00:00:00Z", "voice": "bm_daniel",
+                "sections_narrated": 4, "bytes": 3, "duration_s": 60.0, "cover": True}}, "skipped": {}}))
+            plans = [{"slug": "old-voice", "title": "Old Voice", "narrated": 0, "total": 4,
+                      "coverage": 0.0, "audio_s": 0.0},
+                     {"slug": "never-built", "title": "Never Built", "narrated": 1, "total": 4,
+                      "coverage": 0.25, "audio_s": 1.0}]
+            seen = {}
+
+            def plan_all(app_dir, also=None):
+                seen["also"] = also
+                return plans, {"dropped_shared": 0}
+            with mock.patch.object(BA, "plan_all", plan_all), \
+                 mock.patch.object(BA, "take_lock", lambda: None), \
+                 mock.patch.object(BA, "PLAIN_CACHE", t / "none.json"), \
+                 mock.patch.object(BA.ba, "_ship_busy", lambda: False), \
+                 contextlib.redirect_stdout(io.StringIO()) as buf:
+                self.assertEqual(BA.main(["--out", str(out), "--app-dir", str(t)]), 0)
+            self.assertEqual(seen["also"], {"old-voice"}, "built files are planned even without a Play bar")
+            self.assertTrue((out / "old-voice.m4b").is_file(), "nothing comes off sale")
+            data = json.loads(man.read_text())
+            self.assertIn("old-voice", data["works"])
+            self.assertNotIn("old-voice", data["skipped"])
+            self.assertEqual(data["text_mismatch"]["old-voice"]["sections_matching_now"], 0)
+            self.assertIn("never-built", data["skipped"])
+            self.assertIn("text moved on, kept on sale: old-voice", buf.getvalue())
+
+
 if __name__ == "__main__":
     unittest.main()

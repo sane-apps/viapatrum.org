@@ -1321,7 +1321,7 @@ def author_sort_year(name: str | None, period: str | None = None, slug: str | No
     rec = author_record(name)
     if rec.get("sort_year") is not None and str(rec.get("sort_year")).strip() != "":
         return int(rec["sort_year"])
-    y = year_from_period(period, bound="end")
+    y = year_from_period(guessless_period(period), bound="end")
     if y is not None:
         return y
     # No dates yet: the earliest of the writer's works, so a new writer does
@@ -1339,7 +1339,7 @@ AUTHOR_WORK_YEARS: dict[str, int] = {}
 def note_author_work_years(works: list[dict]) -> None:
     AUTHOR_WORK_YEARS.clear()
     for w in works:
-        y = year_from_period(w.get("period") or "", bound="end")
+        y = year_from_period(guessless_period(w.get("period")), bound="end")
         if y is None:
             continue
         for key in {canonical_author_slug(w.get("author_slug"), w.get("author")), w.get("author_slug")}:
@@ -1352,8 +1352,17 @@ def work_era(w: dict) -> str:
     year = work_chrono_year(w)
     if year == 9999:
         # "5th cent.", "fl. 4th/5th c.": the century's middle, not Unknown.
-        year = year_from_period(w.get("period") or "")
+        year = year_from_period(guessless_period(w.get("period")))
     return era_band(year, author_slug, catalogue=True)
+
+
+def guessless_period(p: str | None) -> str:
+    """A work period with a question mark ("c. 9th cent.?") is a guess, not a
+    date. For a writer with no dates it must not place him in a century on
+    Works while his own page says the date is not known (Georgius Peccator,
+    2026-10-06 audit). The reader mast still says "perhaps in the 9th century"."""
+    p = str(p or "")
+    return "" if "?" in p else p
 
 
 def work_chrono_year(w: dict) -> int:
@@ -2912,6 +2921,11 @@ def display_head(s: dict, w: dict) -> str:
         echoes.update({f"{name} {sid}", f"{name} {sid_dot}"})
     if low in echoes:
         return ""
+    # A head that only repeats the work's Latin title ("Fragmenta in
+    # Matthaeum" on Fragments on Matthew) names no thought, and rule 1 keeps
+    # Latin out of headings: treat it as untitled (first line leads).
+    if title and low == title.lower() and public_reader_title(title, slug=str(w.get("slug") or "")) != title:
+        return ""
     # "Against Julian 1.5.16" / "Marriage 2.2.3" when section is 1-5-16 / 2-2-3
     if _LOCUS_ECHO_RE.fullmatch(low):
         return ""
@@ -3434,7 +3448,7 @@ def author_catalog_html(works: list[dict]) -> str:
             ),
         )
         author = ww_sorted[0]["author"]
-        period = author_dates_display(author, slug) or format_bc_ad(ww_sorted[0].get("period") or "")
+        period = author_dates_display(author, slug) or format_bc_ad(guessless_period(ww_sorted[0].get("period")))
         year = min(work_chrono_year(w) for w in ww_sorted)
         eras = sorted({work_era(w) for w in ww_sorted})
         oet = any(bool(w.get("first_english")) for w in ww_sorted)
@@ -5909,10 +5923,10 @@ def layout(
     <a class="brand" href="/" aria-label="Via Patrum home">Via <span class="brand-p">Patrum</span></a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+      <a href="/works/"{nav_cls("works")}>Works</a>
+      <a href="/authors/"{nav_cls("authors")}>Fathers</a>
       <a href="/topics/"{nav_cls("topics")}>Topics</a>
       <a href="/scripture/"{nav_cls("scripture")}>Scripture</a>
-      <a href="/authors/"{nav_cls("authors")}>Fathers</a>
-      <a href="/works/"{nav_cls("works")}>Works</a>
       <a href="/listen/"{nav_cls("listen")}>Listen</a>
       <a href="/explore/"{nav_cls("explore")}>Timeline</a>
       <a href="/games/"{nav_cls("games")}>Games</a>
@@ -5922,6 +5936,7 @@ def layout(
         <label class="vh" for="site-q">Search the library</label>
         <input id="site-q" name="q" type="search" placeholder="Search…" autocomplete="off">
       </form>
+      <a class="dl-btn{' is-active' if active == 'downloads' else ''}" href="/downloads/"{' aria-current="page"' if active == 'downloads' else ''}>Downloads</a>
       <button type="button" class="theme-toggle" aria-label="Switch light or dark reading" title="Light or dark">☾</button>
     </div>
   </div>
@@ -6934,6 +6949,19 @@ def scripture_snippet_html(snippet: str, ref: tuple[int, int] | None) -> str:
     return f'{escape(snippet[:i])}<b class="ref">{escape(snippet[i:j])}</b>{escape(snippet[j:])}'
 
 
+def clip_verse_to_chapter(verse: str, chapter_verses) -> tuple[str, bool]:
+    """A cite whose first verse is past the chapter's last verse (Hebrews 2:26,
+    Daniel 4:158) is a misread number, not a verse: file the passage under the
+    chapter as a whole. Returns (verse, clipped). chapter_verses is the base
+    Bible's [(number, text), ...] for the chapter; with no text loaded nothing
+    is clipped, since there is no last verse to compare with."""
+    nums = re.findall(r"\d+", verse or "")
+    if not nums or not chapter_verses:
+        return verse, False
+    last = max(int(v) for v, _t in chapter_verses)
+    return ("", True) if int(nums[0]) > last else (verse, False)
+
+
 # Greek (Septuagint, also the Latin) Psalm numbers -> the Hebrew numbers our
 # Bibles use. Many Fathers cite the Greek way, so their Psalm 21 is our 22.
 def greek_psalm_to_hebrew(c: int) -> tuple[int, ...]:
@@ -7439,10 +7467,10 @@ def _default_dist() -> bool:
     return DIST.resolve() == (ROOT / "dist").resolve()
 
 
-def _ship_holds_lock() -> bool:
-    """True when another process (a running ship) holds outputs/ship.lock."""
+def _ship_holds_lock(name: str = "ship.lock") -> bool:
+    """True when another process holds outputs/<name> (ship.lock: a running ship)."""
     import fcntl
-    lock = ROOT / "outputs" / "ship.lock"
+    lock = ROOT / "outputs" / name
     if not lock.exists():
         return False
     fd = os.open(str(lock), os.O_RDONLY)
@@ -7455,6 +7483,65 @@ def _ship_holds_lock() -> bool:
         return False
     finally:
         os.close(fd)
+
+
+# The one disk floor for Fathers builds, ships and the shelf (same number as
+# MIN_FREE_GB in clients/translations/scripts/ship_if_changed.py).
+BUILD_FLOOR_GB = 15
+
+
+def _free_gb() -> int:
+    data = Path("/System/Volumes/Data")
+    return shutil.disk_usage(data if data.exists() else ROOT).free // 2**30
+
+
+def _lock_watcher_for(pid: str) -> bool:
+    """True when a `ship_lock.py <ROOT>/outputs/build.lock <pid>` process is
+    running, which is how every caller holds the build lock. A live pid alone
+    is not enough: a stale or inherited FATHERS_BUILD_LOCK_HELD (launchd is
+    pid 1 and always alive) would let a second build run beside the real one.
+    scripts/ship.sh makes the same check."""
+    import subprocess
+    if not pid.isdigit():
+        return False
+    lock = os.path.realpath(ROOT / "outputs" / "build.lock")
+    try:
+        ps = subprocess.run(["ps", "-axww", "-o", "args="], capture_output=True, text=True, timeout=15).stdout
+    except (OSError, subprocess.SubprocessError):
+        return False
+    for line in ps.splitlines():
+        p = line.split()
+        for i in range(len(p) - 2):
+            if os.path.basename(p[i]) == "ship_lock.py" and p[i + 2] == pid and os.path.realpath(p[i + 1]) == lock:
+                return True
+    return False
+
+
+def _build_gate() -> None:
+    """One full build at a time, and none under 15 GB free.
+
+    2026-10-06: six agent builds ran at once, filled the disk, and every job
+    on the Mini died. A caller that already holds outputs/build.lock
+    (scripts/pkg_build.sh, scripts/ship.sh, ship_if_changed.py) passes its pid
+    in FATHERS_BUILD_LOCK_HELD; it counts only while that pid's ship_lock.py
+    holds the lock. Otherwise this build takes the lock through
+    scripts/ship_lock.py, which lets go when this process exits."""
+    import subprocess
+    held_by = os.environ.get("FATHERS_BUILD_LOCK_HELD", "")
+    caller_holds = _lock_watcher_for(held_by) and _ship_holds_lock("build.lock")
+    if not caller_holds:
+        (ROOT / "outputs").mkdir(exist_ok=True)
+        r = subprocess.run(["python3", str(ROOT / "scripts" / "ship_lock.py"),
+                            str(ROOT / "outputs" / "build.lock"), str(os.getpid())],
+                           capture_output=True, text=True, timeout=60)
+        if r.returncode != 0:
+            raise SystemExit(
+                "BLOCKED: another build or ship holds outputs/build.lock. "
+                "Use scripts/pkg_build.sh, which waits for it.")
+    free = _free_gb()
+    if free < BUILD_FLOOR_GB:
+        raise SystemExit(
+            f"BLOCKED: {free} GB free; a build needs {BUILD_FLOOR_GB} GB. Free space first.")
 
 
 # Fathers page and home road, grouped by era (P18 sketch 4). Words match the
@@ -7506,6 +7593,7 @@ def build() -> None:
         raise SystemExit(
             "BLOCKED: a ship holds outputs/ship.lock and is using dist/. "
             "Build somewhere else with FATHERS_DIST=<folder> python3 scripts/build_site.py")
+    _build_gate()  # before anything is deleted or written
     if DIST.exists():
         shutil.rmtree(DIST)
     DIST.mkdir(parents=True)
@@ -8118,6 +8206,7 @@ def build() -> None:
     sc_seen: set[tuple] = set()
     sc_ex_seen: set[tuple] = set()
     sc_skipped: list[dict] = []
+    sc_clipped: list[dict] = []   # verse past the chapter end -> chapter as a whole
     psalm_refiler = PsalmRefiler(bibles)
     wrong_cites = flagged_wrong_citations()
 
@@ -8225,6 +8314,10 @@ def build() -> None:
                 _t = psalm_refiler.title_shift(chap)
                 verse = re.sub(r"\d+", lambda m: str(max(1, greek_psalm_verse(_g, chap, int(m.group(0))) + _t)), verse)
                 psalm_refiler.log(row, cited, f"Psalm {chap}" + (f":{verse}" if verse else ""), "work numbering", j, row["clause"])
+        _cited_verse = verse
+        verse, _clipped = clip_verse_to_chapter(verse, (base_bible["books"].get(book) or {}).get(str(chap)))
+        if _clipped:
+            sc_clipped.append({"cite": f"{book} {chap}:{_cited_verse}", "href": row["href"], "title": row["title"]})
         first = (re.findall(r"\d+", verse) or [""])[0]
         key = (row["href"], book, chap, first)   # once per verse list, even if cited as 7 and 7-9
         if key in sc_seen:
@@ -8243,6 +8336,7 @@ def build() -> None:
     _sc_receipt = DIST.parent / f"{DIST.name}.scripture-refile.json"
     _sc_receipt.write_text(json.dumps({
         "psalm_moves": psalm_refiler.moves, "skipped_bad_chapters": sc_skipped,
+        "verse_past_chapter_end": sc_clipped,
         "psalm_kept": psalm_refiler.kept, "psalm_greek_label_dropped": psalm_refiler.dropped,
         "psalm_title_shift": {h: {"used": psalm_refiler.title_shift(h), "votes": dict(v)}
                               for h, v in sorted(psalm_refiler.title_votes.items())},
@@ -8251,7 +8345,8 @@ def build() -> None:
     print(f"scripture: {sum(m['how'] == 'words' for m in psalm_refiler.moves)} Psalm cites refiled by their words, "
           f"{sum(m['how'] == 'work numbering' for m in psalm_refiler.moves)} by their work's Greek numbering, "
           f"{sum(m['how'] == 'label' for m in psalm_refiler.moves)} by an LXX label ({len(psalm_refiler.dropped)} dropped beside our number), "
-          f"{len(sc_skipped)} cites to missing chapters skipped ({_sc_receipt.name})", flush=True)
+          f"{len(sc_skipped)} cites to missing chapters skipped, "
+          f"{len(sc_clipped)} verses past the chapter end filed under the chapter ({_sc_receipt.name})", flush=True)
 
     SCRIPTURE_CHAPTERS.clear()
     SCRIPTURE_CHAPTERS.update(k for k in sc_entries if k in sc_valid)
@@ -10123,6 +10218,10 @@ def build() -> None:
                                    sys.modules[__name__], {k: v.get("title") or k for k, v in topic_meta.items()})
     print(f"beliefs: {n_beliefs} questions on the Timeline", flush=True)
 
+    # /data/search/* shard names carry a hash of their bytes, so browsers may
+    # keep them for a year; manifest.json names the current shards and is
+    # re-checked on every load ("! Cache-Control" drops the shard rule first).
+    # HTML keeps the Pages default (max-age=0, must-revalidate).
     (DIST / "_headers").write_text(
         """/*
   X-Content-Type-Options: nosniff
@@ -10139,6 +10238,13 @@ def build() -> None:
 
 /assets/og/*
   Cache-Control: public, max-age=86400
+
+/data/search/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/data/search/manifest.json
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
 
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable

@@ -83,7 +83,8 @@ class DrainFailureTests(unittest.TestCase):
 
             with mock.patch.object(B, "render_book", render_book), \
                  mock.patch.object(B, "_work_words", lambda w: (100 if w == "a-book" else 200, False)):
-                self.assertEqual(B.drain(budget_s=60), 0)
+                # A failed item makes the run exit 1 (launchd shows it), after the rest ran.
+                self.assertEqual(B.drain(budget_s=60), 1)
                 self.assertEqual(calls, ["a-book", "b-book"], "the failing book must not block the next one")
                 fails = json.loads((env.out / ".failures.json").read_text())
                 self.assertEqual(fails["book:a-book"]["count"], 1)
@@ -116,7 +117,7 @@ class DrainFailureTests(unittest.TestCase):
                 raise SystemExit("no English passages for %s" % work)
 
             with mock.patch.object(B, "render_book", render_book):
-                self.assertEqual(B.drain(budget_s=60), 0)
+                self.assertEqual(B.drain(budget_s=60), 1)
             self.assertIn("book:c-book", json.loads((env.out / ".failures.json").read_text()))
 
     def test_success_clears_an_old_failure(self):
@@ -128,6 +129,36 @@ class DrainFailureTests(unittest.TestCase):
             with mock.patch.object(B, "render_book", lambda w: None):
                 B.drain(budget_s=60)
             self.assertEqual(json.loads((env.out / ".failures.json").read_text()), {})
+
+
+class DrainExitTests(unittest.TestCase):
+    """P7 2026-10-06: the drain waits for a ship and says when it did not run clean."""
+
+    def test_clean_run_exits_0(self):
+        with Env() as env:
+            _book(env.books, "d-book", {"d_english": ["One."] * 5})
+            env.publish("d-book")
+            with mock.patch.object(B, "render_book", lambda w: None):
+                self.assertEqual(B.drain(budget_s=60), 0)
+
+    def test_busy_lock_exits_75(self):
+        with Env(), mock.patch.object(B, "_hold_next_lock", lambda: None):
+            self.assertEqual(B.drain(budget_s=60), B.DRAIN_BUSY)
+            self.assertEqual(B.DRAIN_BUSY, 75)
+
+    def test_cloudflare_drain_waits_for_a_ship_even_with_pages_built(self):
+        with Env("cf-worker") as env:
+            _book(env.books, "a", {"a1_english": ["A one."]})
+            env.publish("a")  # dist/works exists: the old exception skipped the wait
+            said, naps = [], []
+            with mock.patch.object(B, "_ship_busy", lambda: True), \
+                 mock.patch.object(B, "_next_item", side_effect=AssertionError("narrated during a ship")), \
+                 mock.patch.object(B, "_say", lambda m, err=False: said.append(m)), \
+                 mock.patch("time.sleep", lambda s: naps.append(s)), \
+                 mock.patch("time.time", side_effect=[0, 0, 61, 61, 61, 61]):
+                self.assertEqual(B.drain(budget_s=60), 0)
+            self.assertTrue(any("waiting" in m and "ship True" in m for m in said), said)
+            self.assertEqual(naps, [60])
 
 
 class DeferralTests(unittest.TestCase):
@@ -530,7 +561,7 @@ class BatchRobustnessTests(unittest.TestCase):
             _book(env.books, "b", {"b1_english": ["B one."]})
             for n in "ab":
                 env.publish(n)
-            self.assertEqual(self._drain(BadResultWorker()), 0)
+            self.assertEqual(self._drain(BadResultWorker()), 1)
             self.assertTrue((env.out / "a" / "manifest.json").is_file(), "the good book is published")
             self.assertFalse((env.out / "b" / "manifest.json").exists())
             fails = self._fails(env)
@@ -585,7 +616,7 @@ class BatchRobustnessTests(unittest.TestCase):
             err = []
             with mock.patch.object(cf_tts, "require_llm_receipt", gate), \
                  mock.patch.object(B, "_say", lambda m, err_=False, **k: err.append(m)):
-                self._drain(worker)
+                self.assertEqual(self._drain(worker), 1, "a blocked narrator is not a clean run")
             self.assertEqual(worker.submitted, [])
             self.assertEqual(self._fails(env), {})
             self.assertTrue(any("narrator blocked: LLM receipt missing" in m for m in err), err)

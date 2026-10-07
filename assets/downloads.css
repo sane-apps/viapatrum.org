@@ -188,10 +188,14 @@
 .dl-welcome .eyebrow { margin: 0; }
 code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
 
-@media (max-width: 760px) {
+/* Two columns leave the fanned covers too little room below ~900px: they
+   spilled 22px past the screen at 768 (2026-10-06). One column from there. */
+@media (max-width: 900px) {
   .dl-hero { grid-template-columns: 1fr; }
   .dl-stack { order: -1; height: 220px; margin: 0.5rem 0 1.25rem; }
   .dl-stack img { width: 120px; }
+}
+@media (max-width: 760px) {
   .dl-w { grid-template-columns: 52px minmax(0, 1fr); gap: 0.4rem 0.9rem; align-items: start; }
   .dl-w img, .dl-nocover { width: 52px; height: 78px; grid-row: span 2; }
   .dl-files { justify-content: flex-start; grid-column: 2; }

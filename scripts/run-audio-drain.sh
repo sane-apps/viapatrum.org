@@ -4,6 +4,8 @@
 # build_audio.py --drain holds the narrator lock, so runs never overlap, and
 # re-reads every stale or missing file back to back (Aura-2 voice "orion";
 # works in an older voice are re-read in full, never mixed).
+# It waits while a ship runs. Exit (exec passes it to launchd): 0 all read,
+# 75 another narrator holds the lock, 1 narrator blocked or an item failed.
 set -u
 export PATH="/opt/homebrew/opt/node@24/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
 set -a; source "$HOME/.config/nv/env" >/dev/null 2>&1; set +a

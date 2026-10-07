@@ -157,10 +157,17 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
     _dump(out / "scripture-index.json", scripture)
     digest.update(json.dumps(scripture, ensure_ascii=False).encode("utf-8"))
 
+    author_rows = sorted(authors.values(), key=lambda a: (a["year"], a["name"]))
+    # The app skips a sync when "content" matches, so the rows go in too:
+    # a new title, Listen flag, topic list or author note with the same
+    # bodies must still reach an installed app.
+    digest.update(json.dumps({"authors": author_rows, "works": work_rows, "topics": topic_rows},
+                             ensure_ascii=False, sort_keys=True).encode("utf-8"))
+
     catalog = {
         "version": VERSION,
         "content": digest.hexdigest()[:16],
-        "authors": sorted(authors.values(), key=lambda a: (a["year"], a["name"])),
+        "authors": author_rows,
         "works": work_rows,
         "topics": topic_rows,
         "bible_order": list(b.BIBLE_ORDER),

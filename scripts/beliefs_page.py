@@ -16,7 +16,7 @@ states its distinguishing mark or rules it out; shared ground counts for no one.
 import datetime
 import json
 import re
-from html import escape
+from html import escape, unescape
 from pathlib import Path
 
 TRADITIONS = [("catholic", "Catholic"), ("orthodox", "Orthodox"), ("lutheran", "Lutheran"),
@@ -108,8 +108,11 @@ def searched_date(data_path: Path) -> str:
 
 
 def _deciding(p: dict, pid: str) -> str | None:
-    v = (p["positions"].get(pid) or {}).get("verdict")
-    return v if v in ("states", "excludes") else None
+    """'states' or 'excludes' once the Claude audit has passed it (spec step 4).
+    The nightly report keeps new verdicts with reviewed false; they wait off
+    the site until the audit marks them reviewed."""
+    v = p["positions"].get(pid) or {}
+    return v["verdict"] if v.get("verdict") in ("states", "excludes") and v.get("reviewed") else None
 
 
 def max_year(qs: list[dict]) -> int:
@@ -160,6 +163,67 @@ def _passage_href(dist: Path, p: dict) -> str:
     if (dist / "works" / p["book"] / "index.html").is_file():
         return f"/works/{p['book']}/"
     return ""
+
+
+_PAGE_TEXT: dict[Path, str] = {}
+_OFF_PAGE: set[tuple[str, str]] = set()
+
+
+def _plain(s: str) -> str:
+    """Page or passage text as plain words: no tags, straight quotes, no square
+    brackets (the map's cleaner keeps "[lacuna]" where the page shows "lacuna"),
+    one space, and no space inside a Scripture reference's brackets."""
+    s = unescape(re.sub(r"<[^>]+>", " ", s))
+    s = s.translate({0x2018: "'", 0x2019: "'", 0x201C: '"', 0x201D: '"', 0x5B: None, 0x5D: None})
+    s = re.sub(r"\s+", " ", s)
+    return re.sub(r"\s+\)", ")", re.sub(r"\(\s+", "(", s)).strip()
+
+
+def _on_page(dist: Path, p: dict) -> bool:
+    """False when the passage's own section page is built but no longer says the
+    words the map quotes. The map is rebuilt nightly; the English can change and
+    ship in between (Amphilochius "Fire was kindled", 2026-10-06). Every whole
+    sentence in the shown text must be on the page. A passage with no section
+    page links nowhere and is left alone."""
+    f = dist / "works" / p["book"] / str(p["section"]) / "index.html"
+    if not f.is_file():
+        return True
+    if f not in _PAGE_TEXT:
+        _PAGE_TEXT[f] = _plain(f.read_text(encoding="utf-8"))
+    text = _plain(p.get("text") or "")[:600]
+    # The quote is cut at a length, so its last piece may be half a sentence:
+    # drop that piece first, then the short ones.
+    sents = [s for s in re.split(r"(?<=[.!?])\s+", text)[:-1] if len(s) > 25] or [text[:80]]
+    if all(s in _PAGE_TEXT[f] for s in sents):
+        return True
+    if (p["book"], str(p["section"])) not in _OFF_PAGE:
+        _OFF_PAGE.add((p["book"], str(p["section"])))
+        print(f"beliefs: left out {p['book']}/{p['section']}: its work page no longer has the quoted words")
+    return False
+
+
+def on_page_only(q: dict, dist: Path) -> dict:
+    """The question with every off-page passage removed, once, so the lanes, the
+    passage list, the "N deciding passages" count and the "Earliest statement"
+    lines all agree. When a passage leaves, each position's earliest statement
+    is worked out again from what is left, by the same rule doctrine_map.py
+    uses: the earliest reviewed "states" with a secure author, else the earliest
+    reviewed one of uncertain authorship. The Timeline scale end in build_site.py
+    still reads the unfiltered map; at worst that widens the scale a little."""
+    kept = [p for p in q["passages"] if _on_page(dist, p)]
+    if len(kept) == len(q["passages"]):
+        return q
+    positions = []
+    for pos in q["positions"]:
+        pid = pos["id"]
+        st = [x for x in kept if (x["positions"].get(pid) or {}).get("verdict") == "states"]
+        st_rev = [x for x in st if x["positions"][pid].get("reviewed") and not x.get("attribution")]
+        positions.append(dict(
+            pos, first_states=st_rev[0] if st_rev else None,
+            first_uncertain=None if st_rev else next((x for x in st if x["positions"][pid].get("reviewed")), None),
+            states=len(st),
+            excludes=sum(1 for x in kept if (x["positions"].get(pid) or {}).get("verdict") == "excludes")))
+    return dict(q, passages=kept, positions=positions)
 
 
 def _points(q: dict, pid: str, dist: Path, B) -> list[dict]:
@@ -345,6 +409,7 @@ def story(q: dict, B, *, short: bool = False) -> str:
 
 def card_html(q: dict, dist: Path, B) -> str:
     """A Timeline card: one lane per position, matching the topic cards beside it."""
+    q = on_page_only(q, dist)
     n_dec = sum(1 for p in q["passages"] if any(_deciding(p, pid) for pid in p["positions"]))
     href = f"/explore/{escape(q['id'])}/"
     body = _lanes(q, dist, B, compact=True) if n_dec else _defs_list(q, B)
@@ -405,6 +470,7 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
     depth = searched_depth(data_path)
     searched_on = searched_date(data_path)
     for q in qs:
+        q = on_page_only(q, dist)
         positions = []
         for pos in q["positions"]:
             d = (pos.get("defined") or [None])[0]

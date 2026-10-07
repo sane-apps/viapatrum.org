@@ -228,8 +228,10 @@ def text_first_index(book: str) -> tuple[dict, dict]:
     return win, loose
 
 
-def plan_all(app_dir: Path) -> tuple[list, dict]:
-    """Every audio work with its sections and the recording chosen for each."""
+def plan_all(app_dir: Path, also: set | None = None) -> tuple[list, dict]:
+    """Every audio work with its sections and the recording chosen for each.
+    `also`: slugs planned even when the catalogue says no audio (built files
+    whose page no longer plays, so they can be listed for the owner)."""
     dist = app_dir.parent.parent
     catalog = load_json(app_dir / "catalog.json")
     authors = {a["slug"]: a for a in catalog.get("authors") or []}
@@ -237,9 +239,9 @@ def plan_all(app_dir: Path) -> tuple[list, dict]:
     plans = []
     owners: dict = {}
     for w in catalog["works"]:
-        if not w.get("audio"):
-            continue
         slug = w["slug"]
+        if not w.get("audio") and slug not in (also or ()):
+            continue
         body = load_json(app_dir / "works" / ("%s.json" % slug))
         books = candidate_books(slug, dist, pend)
         secs = []
@@ -788,7 +790,7 @@ def main(argv: list) -> int:
         return covers_pass(manifest, man_path, out_dir)
 
     t_start = time.monotonic()
-    plans, stats = plan_all(args.app_dir.resolve())
+    plans, stats = plan_all(args.app_dir.resolve(), set(manifest["works"]))
     only = {s.strip() for s in args.only.split(",") if s.strip()}
     if only:
         unknown = only - {p["slug"] for p in plans}
@@ -805,21 +807,35 @@ def main(argv: list) -> int:
         if p["coverage"] < 1.0:
             log("  %-60s %3d/%-3d %5.1f%%%s" % (p["slug"], p["narrated"], p["total"], p["coverage"] * 100,
                                                 "" if p in eligible else "  SKIP"))
+    # Owner 2026-10-06: nothing comes off sale. A built audiobook whose page
+    # text moved on (too little narration still matches to rebuild it) keeps
+    # its file and is listed in manifest-audio.json "text_mismatch" for the
+    # owner, instead of being deleted.
+    mismatch = {}
+    for p in short:
+        old = manifest["works"].get(p["slug"])
+        if old and not only:
+            mismatch[p["slug"]] = {
+                "title": p["title"], "file": old.get("file"), "built": old.get("built"),
+                "voice": old.get("voice"), "sections_in_file": old.get("sections_narrated"),
+                "sections_total": p["total"], "sections_matching_now": p["narrated"]}
+    for slug, row in sorted(mismatch.items()):
+        log("  text moved on, kept on sale: %-48s file %s sections, %d of %d match the page now"
+            % (slug, row["sections_in_file"], row["sections_matching_now"], row["sections_total"]))
     if args.plan:
         return 0
 
     with _manifest_lock:
         for p in short:
+            if p["slug"] in manifest["works"]:
+                continue  # kept on sale (see mismatch above)
             manifest["skipped"][p["slug"]] = {
                 "title": p["title"], "sections_total": p["total"], "sections_narrated": p["narrated"],
                 "reason": "under %.0f%% of sections narrated" % (args.min_coverage * 100)}
-            old = manifest["works"].pop(p["slug"], None)
-            if old:
-                stale = out_dir.parent / old["file"]
-                if stale.is_file():
-                    stale.unlink()
         for p in eligible:
             manifest["skipped"].pop(p["slug"], None)
+        if not only:
+            manifest["text_mismatch"] = mismatch
         write_manifest(man_path, manifest)
 
     todo = []

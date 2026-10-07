@@ -10,14 +10,17 @@
 //   assets/og/e/<slug>.png         one per excerpt page (topic, writer, opening line)
 //   assets/og/index.json           page path -> card path
 //
-// Re-runnable: a card is redrawn only when its text or this script changed
-// (hashes in outputs/og-cards-cache.json). Flags:
+// Re-runnable: a card is redrawn only when its text or the drawing (TEMPLATE
+// and card size) changed (hashes in outputs/og-cards-cache.json). An edit to
+// how cards are read from dist/ redraws only the cards whose text changed.
+// Flags:
 //   --force            redraw everything
 //   --only=KIND[,KIND] section, work, author, topic (Scripture book cards count as section)
 //   --slug=SLUG        only cards whose slug matches (repeatable via commas)
 //   --format=png|jpg   default png
 //   --dist=DIR         read another built site (default dist/)
 //   --list             print the card text and exit (no drawing)
+//   --plan             print how many cards would be drawn and exit (writes nothing)
 //
 // Run on the Mini: nice -n 10 node scripts/make_og_cards.cjs
 'use strict';
@@ -30,7 +33,12 @@ const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'assets', 'og');
 const CACHE = path.join(ROOT, 'outputs', 'og-cards-cache.json');
 const BRAVE = '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser';
-const SCRIPT_HASH = crypto.createHash('sha1').update(fs.readFileSync(__filename)).digest('hex');
+const sha1 = s => crypto.createHash('sha1').update(s).digest('hex');
+// Until 2026-10-06 the cache keyed on a hash of this whole file, so any edit
+// redrew all 2,467 cards (964 s in one ship). Entries made by that last
+// version are carried over once when their text still matches (see main).
+const LEGACY_SCRIPT_HASH = '66c2d191185ccbe2a2882ed27e5aeed2f2d5b64a';
+const CARD_SIZE = '1200x630@1';
 
 const args = Object.fromEntries(process.argv.slice(2).map(a => {
   const m = a.match(/^--([^=]+)(?:=(.*))?$/);
@@ -359,10 +367,28 @@ async function main() {
   let cache = {};
   try { cache = JSON.parse(fs.readFileSync(CACHE, 'utf8')); } catch { /* first run */ }
   const ext = FORMAT;
-  const hashOf = c => crypto.createHash('sha1').update(SCRIPT_HASH + ext + JSON.stringify(c.data)).digest('hex');
+  const drawHash = sha1(CARD_SIZE + TEMPLATE);
+  const hashOf = c => sha1(drawHash + ext + JSON.stringify(c.data));
+  if (cache.__keys !== 'draw-v1') {
+    // One-time move from the whole-script key: same text, same picture.
+    let moved = 0;
+    for (const c of all) {
+      if (cache[c.file] && cache[c.file] === sha1(LEGACY_SCRIPT_HASH + ext + JSON.stringify(c.data))) {
+        cache[c.file] = hashOf(c);
+        moved++;
+      }
+    }
+    cache.__keys = 'draw-v1';
+    console.log(`cards: ${moved} cache entries moved to drawing-only keys`);
+  }
   const todo = cards.filter(c => args.force || cache[c.file] !== hashOf(c) || !fs.existsSync(path.join(OUT, `${c.file}.${ext}`)));
 
   const warnings = [];
+  if (args.plan) {
+    console.log(`cards: ${all.length} · would draw ${todo.length}, skip ${cards.length - todo.length}`);
+    for (const c of todo.slice(0, 20)) console.log('  draw ' + c.file);
+    return;
+  }
   let rendered = 0;
   if (todo.length) {
     let chromium;

@@ -13,17 +13,21 @@ only to unlocked browsers. This script:
             notes. A book with no Scripture link is held (Logos needs one).
   assemble  cover thumbnails for the page, whole-format bundles (EPUB, PDF,
             Word), and outputs/downloads/library.json, which build_site.py
-            renders as /downloads/ and the per-work download links. Every
-            file passes the worksheet-note gate (WORKSHEET below) first; one
-            hit marks that format "dirty" in library.json (the page hides
-            it), stops the sync and blocks upload. Also builds the
-            audiobook era zips (AUDIO_ZIPS).
+            renders as /downloads/ and the per-work download links. A file
+            is listed only when it was built from this site build's English
+            (catalogue hash) and is the file its builder recorded. Every
+            file passes the worksheet-note gate (WORKSHEET below); a file
+            with a hit is left off the shelf and out of its bundle, and
+            library.json "dirty" names it, while every other file is listed
+            and uploads. Also builds the audiobook era zips (AUDIO_ZIPS).
   audio-zips  only the audiobook era zips, into the existing library.json
             (store-only, each at most 2 GB, not uploaded until upload runs;
             the page links a zip only once it is uploaded).
   upload    sends new or changed files to R2 through /api/library/admin
             (big files in 50 MB parts) and marks them uploaded in
-            library.json. A file is linked on the site only once uploaded.
+            library.json. A file is linked on the site only once uploaded,
+            and it counts as uploaded only when the size read back from the
+            bucket matches. A file that fails is reported and the rest go on.
 
 Inputs: outputs/downloads/manifest-books.json (scripts/build_ebooks.py),
 outputs/downloads/manifest-audio.json (scripts/build_audiobooks.py), and the
@@ -185,13 +189,6 @@ is public domain.
 """
 
 
-def word_version() -> str:
-    h = hashlib.sha256()
-    for f in (Path(__file__), TRANSLATIONS / "pipeline" / "docx_helpers.py"):
-        h.update(f.read_bytes())
-    return h.hexdigest()[:12]
-
-
 def safe_folder(name: str) -> str:
     cleaned = re.sub(r'[<>:"/\\|?*]+', " ", name)
     cleaned = re.sub(r"\s+", " ", cleaned).strip(" .")
@@ -311,7 +308,7 @@ def word_build_one(job: dict) -> dict:
         return {"slug": slug, "ok": False, "why": f"{type(e).__name__}: {e}"}
 
 
-def word(app_dir: Path, only: str, jobs: int, force: bool) -> int:
+def word(app_dir: Path, only: str, jobs: int, force: bool, rekey: bool = False) -> int:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import build_ebooks as be  # noqa: E402
     site = site_catalog(app_dir)
@@ -326,15 +323,21 @@ def word(app_dir: Path, only: str, jobs: int, force: bool) -> int:
     version, built, licence = word_version(), time.strftime("%Y-%m-%d"), be.licence_line()
     todo, skipped = [], 0
     for w in works:
-        key = f"{w.get('hash', '')}:{be.page_key(site_dir, w['slug'])}:{version}"
         prev = man["works"].get(w["slug"]) or {}
+        current, key = be.up_to_date(prev.get("key", ""), w.get("hash", ""), site_dir, w["slug"],
+                                     version, LEGACY_WORD_VERSION)
         out = OUT / "word" / f"{w['slug']}.zip"
-        if not force and prev.get("key") == key and out.is_file() and prev.get("sha256") == sha256(out):
+        if not force and current and out.is_file() and prev.get("sha256") == sha256(out):
+            prev["key"] = key  # an old-style key is rewritten in the new form
             skipped += 1
             continue
         todo.append({"work": w, "author": authors.get(w["author"]) or {}, "app_dir": str(app_dir),
                      "site_dir": str(site_dir), "licence": licence, "built": built, "key": key})
     print(f"word: {len(todo)} to build, {skipped} up to date", flush=True)
+    if rekey:  # rewrite old-style keys in the new form; build and hold nothing
+        WORD_MANIFEST.write_text(json.dumps(man, ensure_ascii=False, indent=1), encoding="utf-8")
+        print(f"word --rekey: {skipped} keys current, {len(todo)} would build; nothing built", flush=True)
+        return 0
     started = time.time()
     from concurrent.futures import ProcessPoolExecutor
     with ProcessPoolExecutor(max_workers=max(1, jobs)) as pool:
@@ -356,13 +359,45 @@ def word(app_dir: Path, only: str, jobs: int, force: bool) -> int:
     return 0
 
 
-def word_zips() -> dict[str, Path]:
-    """slug -> Word zip, only for books the word step built and recorded."""
+# The Word skip key hashes only the code that makes a Word zip: this file from
+# WORD_MARK up to `def word(`, the gate pattern, and the docx helpers. These
+# lines sit below that range on purpose, so editing the skip key, assemble or
+# upload, or deleting LEGACY_WORD_VERSION later, does not rebuild every Word
+# book (2026-10-06 review).
+WORD_MARK = "# --- word: Logos books from the site build"
+# The version every Word zip on the shelf was built with before this split
+# (2026-10-06); see build_ebooks.LEGACY_VERSION.
+LEGACY_WORD_VERSION = "a10e0ce37eec"
+
+
+def word_version() -> str:
+    h = hashlib.sha256()
+    src = Path(__file__).read_text(encoding="utf-8")
+    h.update(src[src.index(WORD_MARK):src.index("\ndef word(")].encode())
+    h.update(WORKSHEET.pattern.encode())
+    h.update((TRANSLATIONS / "pipeline" / "docx_helpers.py").read_bytes())
+    return h.hexdigest()[:12]
+
+
+def word_zips(site: dict[str, dict]) -> dict[str, Path]:
+    """slug -> Word zip, only for books the word step built and recorded from
+    the English in this site build. The skip key starts with the catalogue
+    hash of the text it was built from; a zip from older English is refused,
+    so it is never sold as current (2026-10-06 audit: Logos files still had
+    the pre-recert wording)."""
     made = {}
     for slug, e in (load(WORD_MANIFEST).get("works") or {}).items():
         p = OUT / "word" / f"{slug}.zip"
-        if p.is_file() and p.stat().st_size == e.get("bytes"):
-            made[slug] = p
+        if not (p.is_file() and p.stat().st_size == e.get("bytes")):
+            continue
+        want = (site.get(slug) or {}).get("hash")
+        if want and str(e.get("key", "")).split(":")[0] != want:
+            print(f"  refused word/{slug}.zip: built from older English than the site (run the word step)", flush=True)
+            continue
+        if e.get("sha256") != sha256(p):
+            print(f"  refused word/{slug}.zip: not the file the word step recorded (run the word step)", flush=True)
+            continue
+        made[slug] = p
     return made
 
 
@@ -496,7 +531,8 @@ def site_catalog(app_dir: Path) -> dict[str, dict]:
     authors = {a["slug"]: a for a in cat.get("authors") or []}
     return {w["slug"]: {"title": w["title"], "author": (authors.get(w["author"]) or {}).get("name", ""),
                         "author_dates": (authors.get(w["author"]) or {}).get("dates", ""),
-                        "year": (authors.get(w["author"]) or {}).get("year"), "part_only": w.get("part_only") or ""}
+                        "year": (authors.get(w["author"]) or {}).get("year"), "part_only": w.get("part_only") or "",
+                        "hash": w.get("hash") or "", "sections": w.get("sections")}
             for w in cat["works"]}
 
 
@@ -506,61 +542,103 @@ HOLD = {
 }
 
 
+def section_marks(app_dir: Path, slug: str, ids: list) -> list[str]:
+    """The section numbers a reader sees on the site for these section ids."""
+    sections = load(app_dir / "works" / f"{slug}.json").get("sections") or []
+    mark = {str(s.get("id")): str(s.get("n") or s.get("id")) for s in sections}
+    return [mark.get(str(i), str(i)) for i in ids]
+
+
 def assemble(app_dir: Path) -> int:
     site = site_catalog(app_dir)
     books = load(OUT / "manifest-books.json").get("works") or {}
-    audio = load(OUT / "manifest-audio.json").get("works") or {}
-    words = word_zips()
+    audio_man = load(OUT / "manifest-audio.json")
+    audio = audio_man.get("works") or {}
+    audio_failed = audio_man.get("failed") or {}
+    words = word_zips(site)
     prev = load(CATALOG)
     uploaded = load(LEDGER)
-    works = []
-    files_by_kind: dict[str, list[tuple[Path, str]]] = {"epub": [], "pdf": [], "word": []}
+    works, refused = [], []
     for slug in sorted(set(books) | set(audio) | set(words)):
         if slug not in site:
             continue  # not published on the site (withheld or retired): never sell it
         if slug in HOLD:
             print(f"  held from the shelf: {slug}: {HOLD[slug]}", flush=True)
             continue
-        b = {**(site.get(slug) or {}), **{k: v for k, v in (books.get(slug) or {}).items() if v}}
+        s = site[slug]
+        book = books.get(slug) or {}
+        b = {**s, **{k: v for k, v in book.items() if v}}
         title = b.get("title") or slug
         author = b.get("author") or ""
         f = {}
+        # EPUB and PDF only when built from this site build's English (the
+        # manifest keeps the catalogue hash it was built from) and the file on
+        # disk is the one build_ebooks recorded (2026-10-06 audit: seven paid
+        # books were an older English than the site).
         for kind, ext in (("epub", "epub"), ("pdf", "pdf")):
-            e = b.get(kind) or {}
             p = OUT / kind / f"{slug}.{ext}"
-            if p.is_file():
+            if not p.is_file():
+                continue
+            digest = sha256(p)
+            if s.get("hash") and book.get("hash") != s["hash"]:
+                refused.append(f"{kind}/{slug}.{ext}: built from older English than the site (run build_ebooks)")
+            elif (book.get(kind) or {}).get("sha256") != digest:
+                refused.append(f"{kind}/{slug}.{ext}: not the file build_ebooks recorded (run build_ebooks)")
+            else:
                 f[kind] = {"key": f"{kind}/{slug}.{ext}", "bytes": p.stat().st_size, "name": nice_name(title, author, ext),
-                           "sha256": e.get("sha256") or ""}
-                files_by_kind[kind].append((p, f[kind]["name"]))
+                           "sha256": digest}
         if slug in words:
             p = words[slug]
             f["word"] = {"key": f"word/{slug}.zip", "bytes": p.stat().st_size, "name": nice_name(title, author, "zip").replace(" (Via Patrum).zip", " (Word for Logos).zip"), "sha256": sha256(p)}
-            files_by_kind["word"].append((p, f["word"]["name"]))
         a = audio.get(slug) or {}
         p = OUT / "audio" / f"{slug}.m4b"
         if p.is_file() and a:
-            f["audio"] = {"key": f"audio/{slug}.m4b", "bytes": p.stat().st_size, "name": nice_name(title, author, "m4b"),
-                          "sha256": a.get("sha256") or "", "duration_s": a.get("duration_s") or 0,
-                          "narrated": a.get("sections_narrated") or 0, "sections": a.get("sections_total") or 0}
+            # build_audiobooks keeps only narration that matches the page's
+            # words, so an entry from its last run is current. A failed rebuild
+            # leaves the older file behind, and a different section count
+            # means it was planned against another text.
+            why = ("its last rebuild failed" if slug in audio_failed
+                   else "planned for %s sections, the site has %s" % (a.get("sections_total"), s["sections"])
+                   if s.get("sections") and a.get("sections_total") != s["sections"]
+                   else "not the file build_audiobooks recorded" if p.stat().st_size != a.get("bytes") else "")
+            if why:
+                refused.append(f"audio/{slug}.m4b: {why} (run build_audiobooks)")
+            else:
+                f["audio"] = {"key": f"audio/{slug}.m4b", "bytes": p.stat().st_size, "name": nice_name(title, author, "m4b"),
+                              "sha256": a.get("sha256") or "", "duration_s": a.get("duration_s") or 0,
+                              "narrated": a.get("sections_narrated") or 0, "sections": a.get("sections_total") or 0,
+                              "missing": section_marks(app_dir, slug, a.get("missing_sections") or [])}
         if not f:
             continue
         cover = OUT / "covers" / f"{slug}.jpg"
         works.append({"slug": slug, "title": title, "subtitle": b.get("subtitle") or "", "author": author,
                       "author_dates": b.get("author_dates") or "", "year": b.get("year"), "part_only": b.get("part_only") or "",
                       "thumb": thumb(cover, slug) if cover.is_file() else "", "files": f})
-    # The worksheet-note gate: one bad file marks its whole format dirty.
+    for line in refused:
+        print(f"  refused {line}", flush=True)
+    # The worksheet-note gate, file by file: a file with a hit stays off the
+    # shelf and out of its bundle; every other file is still listed and goes
+    # up (2026-10-06 audit: one hit used to hide a whole format and block
+    # the upload). library.json "dirty" lists the held works per format.
     dirty: dict[str, list[str]] = {}
     for kind in ("epub", "pdf", "word"):
-        bad = gate_files([p for p, _ in files_by_kind[kind]])
+        bad = gate_files([OUT / w["files"][kind]["key"] for w in works if kind in w["files"]])
         if bad:
             dirty[kind] = sorted(Path(x).stem for x in bad)
-            for path, hits in list(bad.items())[:5]:
-                print(f"  GATE {kind} {Path(path).name}: {len(hits)} hit(s), e.g. {hits[0]!r}", flush=True)
+            for path, hits in bad.items():
+                print(f"  HELD {kind} {Path(path).name}: {len(hits)} worksheet note(s), e.g. {hits[0]!r}", flush=True)
+    for w in works:
+        for kind, slugs in dirty.items():
+            if w["slug"] in slugs:
+                w["files"].pop(kind, None)
+    works = [w for w in works if w["files"]]
+    files_by_kind = {kind: [(OUT / w["files"][kind]["key"], w["files"][kind]["name"]) for w in works if kind in w["files"]]
+                     for kind in ("epub", "pdf", "word")}
     bundles = []
     for kind, label, name in (("epub", "Every book as EPUB", "via-patrum-library-epub.zip"),
                               ("pdf", "Every book as PDF", "via-patrum-library-pdf.zip"),
                               ("word", "Every book for Logos (Word)", "via-patrum-library-logos-word.zip")):
-        p = None if kind in dirty else bundle(name, files_by_kind[kind])
+        p = bundle(name, files_by_kind[kind])
         if p:
             bundles.append({"kind": kind, "label": label, "key": f"bundles/{name}", "bytes": p.stat().st_size,
                             "count": len(files_by_kind[kind]), "name": name, "sha256": sha256(p)})
@@ -576,11 +654,9 @@ def assemble(app_dir: Path) -> int:
     CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
     print(json.dumps(data["counts"]), f"bundles={len(bundles)}", flush=True)
     if dirty:
-        print("BLOCKED: worksheet notes in " + "; ".join(f"{k} ({len(v)} files)" for k, v in dirty.items())
-              + ". Those formats are hidden on the site and upload is refused until they are rebuilt clean.", flush=True)
-        return 1
+        print("HELD: worksheet notes in " + "; ".join(f"{k} ({len(v)} files)" for k, v in dirty.items())
+              + ". Those files are off the shelf until rebuilt clean; every other file is listed and uploads.", flush=True)
     return 0
-
 
 # --- upload -------------------------------------------------------------
 
@@ -605,6 +681,7 @@ def call(base: str, token: str, method: str, params: dict, data=None, timeout=90
 
 
 R2_API = "https://api.cloudflare.com/client/v4/accounts/2c267ab06352ba2522114c3081a8c5fa/r2/buckets/viapatrum-downloads/objects/"
+STOP_AFTER = 10  # failed files before an upload run stops trying the rest
 DIRECT_MAX = 280 * 1024 * 1024  # one REST PUT; bigger files go through the site's admin route
 TYPES = {"epub": "application/epub+zip", "pdf": "application/pdf", "zip": "application/zip", "m4b": "audio/mp4"}
 
@@ -624,13 +701,19 @@ def put_direct(token: str, path: Path, key: str) -> None:
     raise SystemExit(f"direct upload failed: {key}")
 
 
-def head_direct(token: str, key: str) -> int:
+def head_direct(token: str, key: str, tries: int = 3) -> int:
+    """Size of the object in the bucket, or -1 when the check itself failed
+    (the caller treats that as a failed upload, never as a pass)."""
     req = urllib.request.Request(R2_API + key, method="HEAD", headers={"Authorization": f"Bearer {token}"})
-    try:
-        with urllib.request.urlopen(req, timeout=60) as r:
-            return int(r.headers.get("Content-Length") or -1)
-    except Exception:  # noqa: BLE001
-        return -1
+    for attempt in range(tries):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                return int(r.headers.get("Content-Length") or -1)
+        except Exception as e:  # noqa: BLE001
+            print(f"  retry size check {key}: {e}", flush=True)
+        if attempt + 1 < tries:
+            time.sleep(5 * (attempt + 1))
+    return -1
 
 
 def put_file(base: str, token: str, path: Path, key: str, name: str, digest: str) -> None:
@@ -659,11 +742,14 @@ def upload(base: str, only: str, direct: bool, jobs: int) -> int:
     data = load(CATALOG)
     if not data:
         sys.exit("run assemble first")
-    if data.get("dirty"):
-        sys.exit("BLOCKED: library.json has formats with worksheet notes (" + ", ".join(data["dirty"])
-                 + "). Rebuild them, run assemble until it passes, then upload.")
+    # A file that failed the worksheet-note gate never goes up. assemble
+    # already leaves it out; this also covers a library.json from before
+    # 2026-10-06, which kept those files listed and named whole formats.
+    dirty = data.get("dirty") or {}
+    held = (lambda kind, slug: kind in dirty) if isinstance(dirty, list) else \
+        (lambda kind, slug: slug in (dirty.get(kind) or ()))
     ledger = load(LEDGER)
-    items = [x for w in data["works"] for x in w["files"].values()] + data["bundles"]
+    items = [x for w in data["works"] for k, x in w["files"].items() if not held(k, w["slug"])] + data["bundles"]
     if only:
         items = [x for x in items if x["key"].split("/")[0] in only.split(",")]
     sent = skipped = 0
@@ -683,23 +769,42 @@ def upload(base: str, only: str, direct: bool, jobs: int) -> int:
         else:
             todo.append((it, path, digest))
 
-    def send(job):
-        it, path, digest = job
-        if direct:
-            put_direct(token, path, it["key"])
-            got = head_direct(token, it["key"])
-            if got not in (-1, path.stat().st_size):
-                raise SystemExit(f"size mismatch after upload: {it['key']} {got}")
-        else:
-            put_file(base, token, path, it["key"], it["name"], digest)
-            head = call(base, token, "GET", {"action": "head", "key": it["key"]})
-            if head.get("size") != path.stat().st_size:
-                raise SystemExit(f"size mismatch after upload: {it['key']} {head}")
-        return job
+    problems: list[str] = []  # keys that failed so far (list.append is thread-safe)
 
+    def send(job):
+        """Upload one file, then read its size back from the bucket. Returns
+        (job, problem); a file is ledgered only when the size read back
+        matches (2026-10-06 audit: a failed size check counted as success).
+        A failed upload or size check fails only that file; after STOP_AFTER
+        failures the rest are left for the next run (a bad token would
+        otherwise retry every file for minutes each)."""
+        it, path, digest = job
+        if len(problems) >= STOP_AFTER:
+            return job, f"not tried: upload stopped after {STOP_AFTER} failures"
+        try:
+            if direct:
+                put_direct(token, path, it["key"])
+                got = head_direct(token, it["key"])
+            else:
+                put_file(base, token, path, it["key"], it["name"], digest)
+                got = call(base, token, "GET", {"action": "head", "key": it["key"]}).get("size")
+        except (SystemExit, Exception) as e:  # noqa: BLE001 - one failed PUT must not end the whole upload
+            problems.append(it["key"])
+            return job, f"upload failed: {e}"
+        want = path.stat().st_size
+        if got == want:
+            return job, ""
+        problems.append(it["key"])
+        return job, ("size check failed" if got in (-1, None) else f"size mismatch: bucket has {got}, file is {want}")
+
+    failed = []
     # Small files are latency-bound (~1.5 s each), so send several at once.
     with ThreadPoolExecutor(max_workers=jobs) as pool:
-        for it, path, digest in pool.map(send, todo):
+        for (it, path, digest), problem in pool.map(send, todo):
+            if problem:
+                failed.append(f"{it['key']}: {problem}")
+                print(f"  NOT UPLOADED {it['key']}: {problem}; left out of the ledger, the next upload retries it", flush=True)
+                continue
             ledger[it["key"]] = digest
             it["uploaded"] = True
             sent += 1
@@ -709,7 +814,10 @@ def upload(base: str, only: str, direct: bool, jobs: int) -> int:
                 print(f"  {sent}/{len(todo)} sent, {skipped} unchanged, {int(time.time() - started)}s", flush=True)
     LEDGER.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
     CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"upload done: {sent} sent, {skipped} unchanged, {int(time.time() - started)}s", flush=True)
+    print(f"upload done: {sent} sent, {skipped} unchanged, {len(failed)} failed, {int(time.time() - started)}s", flush=True)
+    if failed:
+        print("FAILED: " + "; ".join(failed[:10]) + (f" and {len(failed) - 10} more" if len(failed) > 10 else ""), flush=True)
+        return 1
     return 0
 
 
@@ -725,6 +833,7 @@ def main() -> int:
     wd.add_argument("--only", default="", help="comma list of slugs")
     wd.add_argument("--jobs", type=int, default=4)
     wd.add_argument("--force", action="store_true", help="rebuild even when up to date")
+    wd.add_argument("--rekey", action="store_true", help="only rewrite old-style skip keys; build nothing")
     gt = sub.add_parser("gate", help="check files for worksheet notes (exit 1 on any hit)")
     gt.add_argument("paths", nargs="+")
     u = sub.add_parser("upload")
@@ -756,7 +865,7 @@ def main() -> int:
         except OSError:
             pass
         if a.cmd == "word":
-            return word(app_dir, a.only, a.jobs, a.force)
+            return word(app_dir, a.only, a.jobs, a.force, a.rekey)
         if a.cmd == "audio-zips":
             return audio_zips(app_dir)
         return assemble(app_dir)

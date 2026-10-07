@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-05",
+ "generated": "2026-10-06",
  "searched": {
   "2": [
    "Acts of the Martyrs",
@@ -16,8 +16,10 @@
    "Gregory Thaumaturgus",
    "Irenaeus of Lyons",
    "Julius Africanus",
+   "Novatian",
    "Origen (anthology by Basil & Gregory)",
    "Origen of Alexandria",
+   "Pseudo-Cyprian",
    "Serapion of Antioch",
    "Tertullian"
   ],
@@ -37,19 +39,30 @@
    "Theodore of Heraclea"
   ],
   "5": [
+   "Ammonius of Alexandria",
    "Asterius of Amasea",
    "Cyril of Alexandria",
    "Epiphanius of Salamis",
+   "Gennadius of Constantinople",
    "Hesychius of Jerusalem",
    "Julian of Eclanum",
    "Philostorgius",
    "Theophilus of Alexandria"
   ],
   "6": [
-   "Paul the Silentiary"
+   "Alexander Monachus",
+   "Olympiodorus of Alexandria",
+   "Paul the Silentiary",
+   "Procopius of Gaza"
+  ],
+  "8": [
+   "John of Damascus"
   ],
   "9": [
    "Photius of Constantinople"
+  ],
+  "10": [
+   "Arethas of Caesarea"
   ],
   "17": [
    "John Davenant",
@@ -104,7 +117,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 6
+     "excludes": 10
     },
     {
      "id": "spiritual-presence",
@@ -141,8 +154,8 @@
      "first_defined": "Consensus Tigurinus (1549); Thirty-Nine Articles (1563/1571); Westminster Confession (1646)",
      "first_states": null,
      "first_uncertain": null,
-     "states": 0,
-     "excludes": 1
+     "states": 1,
+     "excludes": 2
     },
     {
      "id": "sacramental-union",
@@ -173,7 +186,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 1
+     "excludes": 3
     },
     {
      "id": "eucharistic-change",
@@ -249,8 +262,8 @@
       "attribution": "catena",
       "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
      },
-     "states": 1,
-     "excludes": 0
+     "states": 2,
+     "excludes": 1
     },
     {
      "id": "transubstantiation",
@@ -282,7 +295,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 0
+     "excludes": 1
     }
    ],
    "passages": [
@@ -304,6 +317,78 @@
      },
      "attribution": "catena",
      "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+    },
+    {
+     "year": 399,
+     "author": "Evagrius Ponticus",
+     "book": "evagrius-scholia-proverbia",
+     "file": "esp_u02_open_english",
+     "section": "u02-open",
+     "text": "They wear away the flesh of Christ and squander the blood, regarding it as common; for he says, 'He who eats my flesh and drinks my blood has eternal life, and I will raise him up on the last day' (John 6:54).",
+     "positions": {
+      "memorial": {
+       "verdict": "excludes",
+       "quote": "He who eats my flesh and drinks my blood has eternal life",
+       "agreement": "2/3",
+       "reviewed": false
+      }
+     },
+     "attribution": null,
+     "attribution_note": null
+    },
+    {
+     "year": 403,
+     "author": "Epiphanius of Salamis",
+     "book": "epiphanius-anaphora-graeca",
+     "file": "epi00_u01_rem_english",
+     "section": "u01-rem-close",
+     "text": "May this bread be changed and become the body of Christ—a divine body, a body that brings salvation to souls and bodies. And may what has been mixed in this cup into one reality become the blood of Christ, the blood of the new covenant, blood that brings salvation to us. Grant this so that we may wholly share in your mysteries in newness of spirit, and not in the oldness of the letter.",
+     "positions": {
+      "memorial": {
+       "verdict": "excludes",
+       "quote": "May this bread be changed and become the body of Christ—a divine body, a body that brings salvation to souls and bodies",
+       "agreement": "3/3",
+       "reviewed": false
+      },
+      "spiritual-presence": {
+       "verdict": "excludes",
+       "quote": "May this bread be changed and become the body of Christ… and may … become the blood of Christ.",
+       "agreement": "2/3",
+       "reviewed": false
+      },
+      "sacramental-union": {
+       "verdict": "excludes",
+       "quote": "May this bread be changed and become the body of Christ",
+       "agreement": "3/3",
+       "reviewed": false
+      },
+      "eucharistic-change": {
+       "verdict": "states",
+       "quote": "May this bread be changed and become the body of Christ",
+       "agreement": "3/3",
+       "reviewed": false
+      }
+     },
+     "attribution": "doubtful",
+     "attribution_note": "Authorship and date of this anaphora are uncertain."
+    },
+    {
+     "year": 403,
+     "author": "Epiphanius of Salamis",
+     "book": "epiphanius-anaphora-graeca",
+     "file": "epi00_u01_rem_english",
+     "section": "u01-rem-mid",
+     "text": "to the apostles, saying, “Take, eat; this is my body, which is being broken for you for the forgiveness of sins.” In the same way, after supper, he took the cup, having mixed it from two elements—from the fruit of the vine and water—sealed the cup of immortality, and gave it to his disciples, saying, “Drink from it, all of you; this is my blood of the new covenant, which is being poured out for you and for many for the forgiveness of sins.”",
+     "positions": {
+      "memorial": {
+       "verdict": "excludes",
+       "quote": "this is my body, which is being broken for you for the forgiveness of sins",
+       "agreement": "3/3",
+       "reviewed": false
+      }
+     },
+     "attribution": "doubtful",
+     "attribution_note": "Authorship and date of this anaphora are uncertain."
     },
     {
      "year": 444,
@@ -420,9 +505,51 @@
      },
      "attribution": null,
      "attribution_note": null
+    },
+    {
+     "year": 499,
+     "author": "Ammonius of Alexandria",
+     "book": "ammonius-fragmenta-joannem",
+     "file": "ammfj_u04_rem_english",
+     "section": "u04-rem-early",
+     "text": "As if the matter were contrary to nature they disbelieve; as soulish they do not understand the Lord's spiritual body. He does not speak of eating flesh, but of sharing in the mysteries.",
+     "positions": {
+      "memorial": {
+       "verdict": "excludes",
+       "quote": "sharing in the mysteries",
+       "agreement": "2/3",
+       "reviewed": false
+      },
+      "spiritual-presence": {
+       "verdict": "states",
+       "quote": "He does not speak of eating flesh, but of sharing in the mysteries",
+       "agreement": "3/3",
+       "reviewed": false
+      },
+      "sacramental-union": {
+       "verdict": "excludes",
+       "quote": "He does not speak of eating flesh, but of sharing in the mysteries.",
+       "agreement": "2/3",
+       "reviewed": false
+      },
+      "eucharistic-change": {
+       "verdict": "excludes",
+       "quote": "He does not speak of eating flesh, but of sharing in the mysteries.",
+       "agreement": "2/3",
+       "reviewed": false
+      },
+      "transubstantiation": {
+       "verdict": "excludes",
+       "quote": "He does not speak of eating flesh, but of sharing in the mysteries.",
+       "agreement": "2/3",
+       "reviewed": false
+      }
+     },
+     "attribution": "catena",
+     "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
     }
    ],
-   "on_question": 52
+   "on_question": 57
   },
   {
    "id": "eucharist-sacrifice",
@@ -853,7 +980,7 @@
       "attribution_note": "Cyril quotes this as Athanasius; it is Apollinaris' creed to Jovian."
      },
      "first_uncertain": null,
-     "states": 19,
+     "states": 18,
      "excludes": 1
     },
     {
@@ -899,7 +1026,7 @@
       "attribution_note": "Nestorius' words, quoted in a dialogue whose ascription to Cyril is doubted."
      },
      "states": 1,
-     "excludes": 18
+     "excludes": 17
     }
    ],
    "passages": [
@@ -1103,32 +1230,6 @@
      },
      "attribution": "doubtful",
      "attribution_note": "Nestorius' words, quoted in a dialogue whose ascription to Cyril is doubted."
-    },
-    {
-     "year": 444,
-     "author": "Cyril of Alexandria",
-     "book": "cyril-alexandria-fragmentum-psalmum",
-     "file": "fps_frag_rem_english",
-     "section": "frag-rem-mid",
-     "text": "You see the confession at the very start, that is, the declaration. For the Father has set down the words \"You are\" in order to show the Son's eternal being. He did not become Son in time; he always was this—that is, Son. Then the Father brought in the words \"Today I have begotten you\" (Psalm 2:7) in order to show his recent birth according to the flesh, which he willingly underwent through the holy Virgin. This is why she has been named Mother of God. For she gave birth not to a mere human being simply joined to God by a mere external union, but rather to the very Word from God the Father, who put on human lowliness and became a human being like us.",
-     "positions": {
-      "theotokos": {
-       "verdict": "states",
-       "quote": "This is why she has been named Mother of God. For she gave birth not to a mere human being simply joined to God by a mere external union, but rather to the very Word from God the Father, who put on human lowliness and became a human being like us.",
-       "agreement": "2/2",
-       "audited": "'This is why she has been named Mother of God. For she gave birth not to a mere human being ... but rather to the very Word'. A direct statement of the mark.",
-       "reviewed": true
-      },
-      "christotokos": {
-       "verdict": "excludes",
-       "quote": "she gave birth not to a mere human being simply joined to God by a mere external union, but rather to the very Word from God the Father, who put on human lowliness and became a human being like us.",
-       "agreement": "2/2",
-       "audited": "'she gave birth not to a mere human being simply joined to God ... but rather to the very Word' rejects the excluding claim word for word.",
-       "reviewed": true
-      }
-     },
-     "attribution": "catena",
-     "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
     },
     {
      "year": 444,
@@ -2731,7 +2832,7 @@
      },
      "first_uncertain": null,
      "states": 22,
-     "excludes": 0
+     "excludes": 1
     },
     {
      "id": "sign-and-seal",
@@ -2763,7 +2864,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 2
+     "excludes": 3
     },
     {
      "id": "ordinance-symbol",
@@ -2901,32 +3002,6 @@
      },
      "attribution": "doubtful",
      "attribution_note": "Ascription to Amphilochius is debated."
-    },
-    {
-     "year": 395,
-     "author": "Amphilochius of Iconium",
-     "book": "amphilochius-de-recens-baptizatis",
-     "file": "adrb_u01_rem_english",
-     "section": "u01-rem-early",
-     "text": "Fire was kindled. Let us use that song of Miriam the sister of Moses, for it is fitting for us now just as it was for them then. Let the choir of those saints also be present with us and let it sing what it used to sing then upon the Red Sea: 'Let us sing to the Lord,' (Exod 15:1) for He has been gloriously glorified. For what has He done? He cast horse and rider into the sea. Horse and rider: the horse being the female sin, and the rider being the demon sitting upon sin, whom He drove down into the bath of the baptismal font. Let us therefore sing to the Lord, for He has been gloriously glorified; for He cast Pharaoh and his power into the sea, that is, the devil and his darkness, and He turned the camp of his demons into a sea in the bath of baptism. I no longer fear to hear: 'You are earth and to earth you shall return'; (Ps 118:22) for in baptism I laid aside the earth and clothed my",
-     "positions": {
-      "regeneration": {
-       "verdict": "states",
-       "quote": "in baptism I laid aside the earth and clothed myself with heaven",
-       "agreement": "2/2",
-       "audited": "Sin and the demon riding it are drowned 'into the bath of the baptismal font', and 'in baptism I laid aside the earth and clothed myself with heaven': baptism itself destroys sin.",
-       "reviewed": true
-      },
-      "ordinance-symbol": {
-       "verdict": "excludes",
-       "quote": "He drove down into the bath of the baptismal font... He cast Pharaoh and his power into the sea, that is, the devil and his darkness, and He turned the camp of his demons into a sea in the bath of baptism",
-       "agreement": "2/2",
-       "audited": "Sin is drowned 'in the bath of baptism', which rules out baptism as only a picture.",
-       "reviewed": true
-      }
-     },
-     "attribution": null,
-     "attribution_note": null
     },
     {
      "year": 398,
@@ -3421,6 +3496,54 @@
      },
      "attribution": null,
      "attribution_note": null
+    },
+    {
+     "year": 499,
+     "author": "Ammonius of Alexandria",
+     "book": "ammonius-fragmenta-joannem",
+     "file": "ammfj_u02_rem_english",
+     "section": "u02-rem-mid",
+     "text": "; but John’s baptism gave forgiveness of voluntary sins to those truly repenting, and Christ’s of all sins, and also supplied Holy Spirit and the dignity of adoption.",
+     "positions": {
+      "regeneration": {
+       "verdict": "states",
+       "quote": "Christ's [baptism] of all sins, and also supplied Holy Spirit and the dignity of adoption",
+       "agreement": "3/3",
+       "reviewed": false
+      },
+      "sign-and-seal": {
+       "verdict": "excludes",
+       "quote": "Christ's [baptism] of all sins, and also supplied Holy Spirit and the dignity of adoption",
+       "agreement": "2/3",
+       "reviewed": false
+      },
+      "ordinance-symbol": {
+       "verdict": "excludes",
+       "quote": "Christ's [baptism] of all sins, and also supplied Holy Spirit and the dignity of adoption",
+       "agreement": "3/3",
+       "reviewed": false
+      }
+     },
+     "attribution": "catena",
+     "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
+    },
+    {
+     "year": 499,
+     "author": "Ammonius of Alexandria",
+     "book": "ammonius-fragmenta-joannem",
+     "file": "ammfj_u03_rem_english",
+     "section": "u03-rem-mid",
+     "text": "Before the passion and resurrection, and apart from being baptized, those who received Christ's word and believed that he was the Father's Son were saved.",
+     "positions": {
+      "regeneration": {
+       "verdict": "excludes",
+       "quote": "apart from being baptized, those who received Christ's word and believed that he was the Father's Son were saved",
+       "agreement": "2/3",
+       "reviewed": false
+      }
+     },
+     "attribution": "catena",
+     "attribution_note": "A catena fragment: the ascription rests on the catena heading and is not secure."
     }
    ],
    "on_question": 118
@@ -3531,10 +3654,29 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 0
+     "excludes": 1
     }
    ],
-   "passages": [],
+   "passages": [
+    {
+     "year": 599,
+     "author": "Alexander Monachus",
+     "book": "alexander-monachus-inventio-crucis-epitome",
+     "file": "almice_u01_open_english",
+     "section": "u01-open",
+     "text": "Seeing the great contentiousness, the Great Constantine was grieved in soul; and first he tried, through hortatory letters to both sides, to quench the strife. But when he saw the evil becoming incurable, he ordered an ecumenical synod to be held in the city of the Nicaeans, and bishops came together to the number of three hundred and eighteen. Of these the greater part were confessors, bearing the marks of Jesus in the body. And with them also was the all-famed Constantine; and when the matter was set in motion, they put forth a written exposition of the faith, the one now proclaimed throughout every church of the orthodox. But those around Arius and Eusebius of Nicomedia who persisted in the bad doctrine they denounced, and they were banished, and others were ordained in their place. And the emperor, having honored the bishops and embraced them, dismissed them in peace to their own dio",
+     "positions": {
+      "congregational": {
+       "verdict": "excludes",
+       "quote": "he ordered an ecumenical synod to be held in the city of the Nicaeans, and bishops came together to the number of three hundred and eighteen",
+       "agreement": "2/2",
+       "reviewed": false
+      }
+     },
+     "attribution": null,
+     "attribution_note": null
+    }
+   ],
    "on_question": 61
   },
   {
@@ -3577,7 +3719,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 2
+     "excludes": 0
     },
     {
      "id": "permitted-not-venerated",
@@ -3599,7 +3741,7 @@
      "first_states": null,
      "first_uncertain": null,
      "states": 0,
-     "excludes": 2
+     "excludes": 0
     },
     {
      "id": "rejected",
@@ -3628,111 +3770,12 @@
      "mark": "The passage says images must not be in churches or used in worship at all, not only that they must not be honoured.",
      "first_defined": "Heidelberg Catechism (1563); Westminster Confession (1646)",
      "first_states": null,
-     "first_uncertain": {
-      "year": 403,
-      "author": "Epiphanius of Salamis",
-      "book": "epiphanius-testamentum-ad-cives",
-      "file": "epi23_u01_open_english",
-      "section": "u01-open",
-      "text": "He presents a testament to the citizens, a binding testament, in which he urges them not to bring images into churches or into the cemeteries. \"Pay attention to yourselves and hold fast the traditions you received. Do not turn aside to the right or to the left. And in this matter, beloved children, keep memory: do not bring images into churches or into the cemeteries of the saints. Instead, always keep God in memory in your hearts. But not even in an ordinary house is this permitted, for a Christian must not be distracted through the eyes and the wanderings of the mind. Let the things toward God be written and impressed on all. If anyone deliberately endeavors to depict the divine character of God's Word according to the incarnation from material colors, let him be anathema.\"",
-      "positions": {
-       "venerated": {
-        "verdict": "excludes",
-        "quote": "do not bring images into churches or into the cemeteries of the saints",
-        "agreement": "2/2",
-        "audited": "Kept. 'Do not bring images into churches or into the cemeteries of the saints' (Greek μὴ ἀναφέρειν εἰκόνας ἐπ' ἐκκλησίας) forbids images in churches. ATTRIBUTION: the Testament survives only as cited by iconoclasts and quoted by Nicephorus, who denied it was Epiphanius's; its authenticity is disputed.",
-        "reviewed": true
-       },
-       "permitted-not-venerated": {
-        "verdict": "excludes",
-        "quote": "do not bring images into churches or into the cemeteries of the saints",
-        "agreement": "2/2",
-        "audited": "Kept. 'Do not bring images into churches ... not even in an ordinary house is this permitted' forbids images in churches altogether. ATTRIBUTION: authenticity of the Testament is disputed (known only through Nicephorus's refutation).",
-        "reviewed": true
-       },
-       "rejected": {
-        "verdict": "states",
-        "quote": "do not bring images into churches or into the cemeteries of the saints",
-        "agreement": "2/2",
-        "audited": "Kept. 'Do not bring images into churches or into the cemeteries of the saints' and an anathema on depicting the incarnate Word 'from material colors'; Greek checked and faithful (μὴ ἀναφέρειν εἰκόνας ἐπ' ἐκκλησίας). ATTRIBUTION: authenticity disputed; preserved only via Nicephorus, who rejected it.",
-        "reviewed": true
-       }
-      },
-      "attribution": "doubtful",
-      "attribution_note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
-     },
-     "states": 2,
+     "first_uncertain": null,
+     "states": 0,
      "excludes": 0
     }
    ],
-   "passages": [
-    {
-     "year": 403,
-     "author": "Epiphanius of Salamis",
-     "book": "epiphanius-testamentum-ad-cives",
-     "file": "epi23_u01_open_english",
-     "section": "u01-open",
-     "text": "He presents a testament to the citizens, a binding testament, in which he urges them not to bring images into churches or into the cemeteries. \"Pay attention to yourselves and hold fast the traditions you received. Do not turn aside to the right or to the left. And in this matter, beloved children, keep memory: do not bring images into churches or into the cemeteries of the saints. Instead, always keep God in memory in your hearts. But not even in an ordinary house is this permitted, for a Christian must not be distracted through the eyes and the wanderings of the mind. Let the things toward God be written and impressed on all. If anyone deliberately endeavors to depict the divine character of God's Word according to the incarnation from material colors, let him be anathema.\"",
-     "positions": {
-      "venerated": {
-       "verdict": "excludes",
-       "quote": "do not bring images into churches or into the cemeteries of the saints",
-       "agreement": "2/2",
-       "audited": "Kept. 'Do not bring images into churches or into the cemeteries of the saints' (Greek μὴ ἀναφέρειν εἰκόνας ἐπ' ἐκκλησίας) forbids images in churches. ATTRIBUTION: the Testament survives only as cited by iconoclasts and quoted by Nicephorus, who denied it was Epiphanius's; its authenticity is disputed.",
-       "reviewed": true
-      },
-      "permitted-not-venerated": {
-       "verdict": "excludes",
-       "quote": "do not bring images into churches or into the cemeteries of the saints",
-       "agreement": "2/2",
-       "audited": "Kept. 'Do not bring images into churches ... not even in an ordinary house is this permitted' forbids images in churches altogether. ATTRIBUTION: authenticity of the Testament is disputed (known only through Nicephorus's refutation).",
-       "reviewed": true
-      },
-      "rejected": {
-       "verdict": "states",
-       "quote": "do not bring images into churches or into the cemeteries of the saints",
-       "agreement": "2/2",
-       "audited": "Kept. 'Do not bring images into churches or into the cemeteries of the saints' and an anathema on depicting the incarnate Word 'from material colors'; Greek checked and faithful (μὴ ἀναφέρειν εἰκόνας ἐπ' ἐκκλησίας). ATTRIBUTION: authenticity disputed; preserved only via Nicephorus, who rejected it.",
-       "reviewed": true
-      }
-     },
-     "attribution": "doubtful",
-     "attribution_note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
-    },
-    {
-     "year": 403,
-     "author": "Epiphanius of Salamis",
-     "book": "epiphanius-testamentum-ad-cives",
-     "file": "epi23_u01_rem_english",
-     "section": "u01-rem-mid",
-     "text": "Pay attention to yourselves, and hold fast the traditions you received. Do not turn aside to the right or to the left. And in this, beloved children, keep the memory of not bringing images into churches or into the cemeteries of the saints, but always keep God in memory in your hearts.",
-     "positions": {
-      "venerated": {
-       "verdict": "excludes",
-       "quote": "not bringing images into churches",
-       "agreement": "3/3",
-       "audited": "Kept. 'Keep the memory of not bringing images into churches or into the cemeteries of the saints' (Greek τοῦ μὴ ἀναφέρειν εἰκόνας ἐπ' ἐκκλησίας). ATTRIBUTION: Testament of disputed authenticity, known only via Nicephorus.",
-       "reviewed": true
-      },
-      "permitted-not-venerated": {
-       "verdict": "excludes",
-       "quote": "keep the memory of not bringing images into churches",
-       "agreement": "3/3",
-       "audited": "Kept. 'Not bringing images into churches' forbids images in churches altogether. ATTRIBUTION: authenticity disputed.",
-       "reviewed": true
-      },
-      "rejected": {
-       "verdict": "states",
-       "quote": "not bringing images into churches or into the cemeteries of the saints, but always keep God in memory in your hearts",
-       "agreement": "2/3",
-       "audited": "Kept. 'Not bringing images into churches or into the cemeteries of the saints, but always keep God in memory in your hearts'; Greek checked and faithful. ATTRIBUTION: authenticity disputed.",
-       "reviewed": true
-      }
-     },
-     "attribution": "doubtful",
-     "attribution_note": "Known only through iconoclast quotation; Nicephorus denied Epiphanius wrote it, and scholars still debate it."
-    }
-   ],
+   "passages": [],
    "on_question": 48
   },
   {

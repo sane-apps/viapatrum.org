@@ -397,11 +397,30 @@ def _render_via_worker(eng_file: Path, work: str, manifest: dict, sentences: lis
 
 def _write_manifest(work: str, manifest: dict, total_sentences: int) -> None:
     """Write to a temp file, then swap it in: ship.sh reads manifests while
-    the drain runs, and a half-written file failed the whole ship."""
+    the drain runs, and a half-written file failed the whole ship.
+
+    inject_audio labels a manifest with the public works that play it
+    ("work" and "sites"; build_site counts "work" on Listen). A new recording
+    keeps that label until the next ship looks at the pages again."""
+    import fcntl
     path = OUT / work / "manifest.json"
-    tmp = path.with_name("manifest.json.tmp%d" % os.getpid())
-    tmp.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
-    os.replace(tmp, path)
+    # Same lock inject_audio.label_manifest holds while it relabels, so the
+    # label read here is never one a ship is about to replace.
+    OUT.mkdir(parents=True, exist_ok=True)
+    fd = os.open(str(OUT / ".manifest.lock"), os.O_CREAT | os.O_RDWR, 0o644)
+    try:
+        fcntl.flock(fd, fcntl.LOCK_EX)
+        try:
+            on_disk = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            on_disk = {}
+        if isinstance(on_disk, dict) and isinstance(on_disk.get("sites"), list):
+            manifest["work"], manifest["sites"] = on_disk.get("work"), on_disk["sites"]
+        tmp = path.with_name("manifest.json.tmp%d" % os.getpid())
+        tmp.write_text(json.dumps(manifest, ensure_ascii=False, indent=1), encoding="utf-8")
+        os.replace(tmp, path)
+    finally:
+        os.close(fd)
     _say("manifest: %d passages, %d sentences" % (len(manifest["passages"]), total_sentences))
 
 
@@ -558,30 +577,55 @@ def stale_stems(work: str) -> list[str]:
             for para in row.get("english", []) or []:
                 sents.extend(split_sentences(read_text(para)))
             texts[(eng_file.stem, str(row.get("section")))] = ia.norm(" ".join(sents))
+    # Public pages can use other section ids than the English file
+    # (2026-10-06: To Florus pages are 1.134 where book 1 says 134), so every
+    # page of the work is checked, and a page whose id is not the file's is
+    # matched by its words: first to a recording, then to current English.
+    by_key: dict[str, set] = {}
+    for (stem, _sec), text in texts.items():
+        by_key.setdefault(ia.match_key(text), set()).add(stem)
     stale = set()
     off = 0
     candidates = ia.section_candidates(work)
+    recorded: dict | None = None
     for site_dir in site_dirs:
         allowed = _site_stems(work, site_dir.name)
-        for sec, opts in candidates.items():
-            if allowed is not None:
-                opts = [o for o in opts if o[0] in allowed]
-            if not opts or not ia._safe_sec(sec):
-                continue
-            page = site_dir / sec / "index.html"
-            if not page.is_file():
-                continue
+        for page in sorted(site_dir.glob("*/index.html")):
+            sec = page.parent.name
             plain = ia._body_plain(page)
-            if not plain or SCAFFOLD.search(plain) or ia.matching_choices(opts, passages, plain):
+            if not plain or SCAFFOLD.search(plain):
                 continue
-            hit = False
-            for stem, _first, _last in opts:
-                if ia.match_key(texts.get((stem, sec), "")) == ia.match_key(plain):
-                    stale.add(stem)
-                    hit = True
-            off += not hit
+            opts = [o for o in candidates.get(sec, []) if allowed is None or o[0] in allowed]
+            if opts and ia.matching_choices(opts, passages, plain):
+                continue
+            if recorded is None:
+                recorded = _recorded_index(candidates, passages)
+            heard = recorded.get(plain) or recorded.get(ia.match_key(plain)) or ()
+            if any(allowed is None or st in allowed for st in heard):
+                continue
+            key = ia.match_key(plain)
+            hits = {st for st, _f, _l in opts if ia.match_key(texts.get((st, sec), "")) == key}
+            if not hits:
+                hits = {st for st in by_key.get(key, ()) if allowed is None or st in allowed}
+            stale |= hits
+            off += not hits
     _PAGE_OFF[work] = off
     return sorted(stale)
+
+
+def _recorded_index(candidates: dict, passages: dict) -> dict:
+    """Recorded words (exact text and match_key) -> stems that recorded them,
+    for pages whose ids are not the English file's (inject's text-first rule)."""
+    import inject_audio as ia
+    out: dict[str, set] = {}
+    for opts in candidates.values():
+        for stem, first, last in opts:
+            got = ia._window(passages, stem, first, last)
+            if got:
+                said = ia._expected_plain(got[1])
+                out.setdefault(said, set()).add(stem)
+                out.setdefault(ia.match_key(said), set()).add(stem)
+    return out
 
 
 SCAFFOLD = re.compile(
@@ -602,8 +646,9 @@ def _work_sources_path() -> Path:
     return ROOT / "dist" / "data" / "work-sources.json"
 
 
-def _work_sources() -> tuple[dict, set]:
-    """build_site's map (dist/data/work-sources.json): site slug -> {"book",
+def _work_sources(path: Path | None = None) -> tuple[dict, set]:
+    """build_site's map (dist/data/work-sources.json, or `path` for another
+    build, as inject_audio reads it): site slug -> {"book",
     "stems", "start_here"}, and the published slugs it lists as having no
     English book (a null book, or a "no_source" list).
 
@@ -616,7 +661,7 @@ def _work_sources() -> tuple[dict, set]:
     "stems" may be empty (all of the book's English files). A bare
     {slug: row} map is also read."""
     try:
-        data = json.loads(_work_sources_path().read_text(encoding="utf-8"))
+        data = json.loads((path or _work_sources_path()).read_text(encoding="utf-8"))
     except (OSError, ValueError):
         return {}, set()
     if not isinstance(data, dict):
@@ -1389,12 +1434,17 @@ def drain(budget_s: int = 3 * 3600) -> int:
     budget runs out (owner 2026-10-03: audio for all missing or corrected
     sections). Waits out ships and memory spikes instead of skipping 15 min.
     A failing item is recorded in outputs/audio/.failures.json and set aside
-    after FAIL_LIMIT failures; the drain goes on to the next item."""
+    after FAIL_LIMIT failures; the drain goes on to the next item.
+
+    Exit code (launchd records it): 0 when every item it tried was read,
+    DRAIN_BUSY when another narrator holds the lock, 1 when the narrator was
+    blocked, the drain stopped outside an item, or any item failed."""
     import time
     lock_fd = _hold_next_lock()
     if lock_fd is None:
         _say("audio drain: another narrator holds the lock")
-        return 0
+        return DRAIN_BUSY
+    stopped = False
     t0, done = time.time(), {"stale": 0, "book": 0, "quotes": 0, "failed": 0}
     idle = False
     _RUN["done"], _RUN["scan"], _RUN["failed"] = set(), None, 0
@@ -1402,11 +1452,11 @@ def drain(budget_s: int = 3 * 3600) -> int:
         while time.time() - t0 < budget_s:
             level, heat, shipping = _pressure_level(), _memory_heat(), _ship_busy()
             if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
-                # Cloudflare does the speaking: Mini memory is not at stake, so
-                # only wait while a ship is rebuilding the pages audio is matched
-                # against (2026-10-03: a 4-hour ship had paused all narration).
+                # Cloudflare does the speaking: Mini memory is not at stake.
+                # A running ship still counts: it injects and uploads from the
+                # manifests this drain rewrites (2026-10-06 audit: the old
+                # "dist/works exists" exception meant it never waited).
                 level, heat = 0, 0
-                shipping = shipping and not (ROOT / "dist" / "works").is_dir()
             if level >= 2 or heat >= 30 or shipping:
                 _say("audio drain waiting: level %s heat %s ship %s" % (level, heat, shipping))
                 time.sleep(60)
@@ -1417,6 +1467,7 @@ def drain(budget_s: int = 3 * 3600) -> int:
                 what = _next_item()
             except NarratorBlocked as e:  # a run problem: blame no item
                 _say("audio drain: stopped, narrator blocked: %s" % e, err=True)
+                stopped = True
                 break
             except (Exception, SystemExit) as e:
                 key, batch = _RUN["key"], _RUN["batch"]
@@ -1431,6 +1482,7 @@ def drain(budget_s: int = 3 * 3600) -> int:
                     continue
                 if key is None:  # not inside an item: nothing to set aside, so stop
                     _say("audio drain: stopped outside an item: %s" % _where(e), err=True)
+                    stopped = True
                     break
                 _RUN["done"].add(key)
                 _record_failure(key, e)
@@ -1454,7 +1506,11 @@ def drain(budget_s: int = 3 * 3600) -> int:
             _say("audio drain: status report failed: %s" % _where(e), err=True)
     finally:
         os.close(lock_fd)
-    return 0
+    return 1 if stopped or done["failed"] else 0
+
+
+# Same number as ship_if_changed.EXIT_BUSY: busy, not broken.
+DRAIN_BUSY = 75
 
 
 def main(argv: list[str]) -> int:

@@ -44,7 +44,7 @@ Do not regress: tip-suffix strip, ESTC/identifiers in About, publication gate + 
 - Never hand-edit `dist/`; only `scripts/build_site.py` + `assets/` (+ data/books), then rebuild. See `docs/DIST.md`.
 - Mini-first for live visual verification after deploy.
 - Read `docs/IA.md` before changing URL structure.
-- Build with the translations venv (PyYAML): `~/SaneApps/clients/translations/.venv/bin/python scripts/build_site.py`.
+- Build with the translations venv (PyYAML). Agents and test runs build only through `scripts/pkg_build.sh <ROOT>/outputs/pkg-<name>/dist <log>` (absolute dist): one build at a time on the 8 GB Mini, waits for `outputs/build.lock`, refuses under 15 GB free. Delete that dist when done. `build_site.py` and `scripts/ship.sh` take the same lock and floor themselves, so a second build or ship exits BLOCKED instead of filling the disk (2026-10-06: six parallel builds filled it and killed every job).
 - Keep the game entry points (nav `Games` → /games/, which lists every game, + the home Games section; owner 2026-10-06) through any redesign. See `docs/GAME_LINKS.md`.
 
 ## Works reader SOP (permanent)
