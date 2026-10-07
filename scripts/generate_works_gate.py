@@ -6,6 +6,10 @@ current deployment has no asset for a path. Zone purges do not clear it, which
 is why fathers.saneapps.com returned 200 for held works while the deployment
 URL returned 404. This Function runs before the asset server for /works/* and
 returns a real 404 unless the slug is in the current live allowlist.
+
+/authors/* gets the same gate: an author whose only work was withheld kept a
+200 page on the custom domain that linked to a 404 work (2026-10-07: Macarius,
+Pseudo-Cyprian).
 """
 from __future__ import annotations
 
@@ -67,7 +71,7 @@ export async function onRequest(context) {{
 
 ROUTES_JSON = {
     "version": 1,
-    "include": ["/works/*", "/api/*", "/dl/*"],  # /api: search + library pass; /dl: paid downloads (functions/dl)
+    "include": ["/works/*", "/authors/*", "/api/*", "/dl/*"],  # /api: search + library pass; /dl: paid downloads (functions/dl)
     "exclude": [],
 }
 
@@ -85,8 +89,8 @@ def live_slugs_from_works_dir(works_dir: Path) -> list[str]:
     return slugs
 
 
-def write_gate(functions_dir: Path, slugs: list[str]) -> Path:
-    target = functions_dir / "works" / "[[path]].js"
+def write_gate(functions_dir: Path, slugs: list[str], section: str = "works") -> Path:
+    target = functions_dir / section / "[[path]].js"
     target.parent.mkdir(parents=True, exist_ok=True)
     live_json = json.dumps(slugs, separators=(",", ":"))
     target.write_text(FUNCTION_TEMPLATE.format(live_json=live_json), encoding="utf-8")
@@ -135,10 +139,14 @@ def main() -> None:
 
     slugs = live_slugs_from_works_dir(works_dir)
     gate_path = write_gate(args.functions_dir, slugs)
+    authors = live_slugs_from_works_dir(works_dir.parent / "authors")
+    authors_path = write_gate(args.functions_dir, authors, "authors")
     routes = write_routes(args.stage) if args.stage is not None else None
     receipt = {
         "live_works": len(slugs),
+        "live_authors": len(authors),
         "function": str(gate_path),
+        "authors_function": str(authors_path),
         "routes": str(routes) if routes else None,
     }
     if args.print_slugs:

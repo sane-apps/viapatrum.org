@@ -12,6 +12,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+import urllib.error
 import zipfile
 from unittest import mock
 from pathlib import Path
@@ -389,8 +390,7 @@ class Upload(Fixture):
         sent = []
         out = io.StringIO()
         with mock.patch.dict(os.environ, {"CLOUDFLARE_API_TOKEN": "test"}), \
-                mock.patch.object(ls, "put_direct", lambda token, path, key: sent.append(key)), \
-                mock.patch.object(ls, "head_direct", lambda token, key: -1 if key == "epub/b.epub" else 100), \
+                mock.patch.object(ls, "put_direct", lambda token, path, key: sent.append(key) or (-1 if key == "epub/b.epub" else 100)), \
                 mock.patch("sys.stdout", out):
             rc = ls.upload("http://127.0.0.1:9", "", True, 2)
         ledger = json.loads(ls.LEDGER.read_text())
@@ -412,10 +412,11 @@ class Upload(Fixture):
         def put(token, path, key):
             if key == "epub/a.epub":
                 raise SystemExit(f"direct upload failed: {key}")
+            return 100
 
         out = io.StringIO()
         with mock.patch.dict(os.environ, {"CLOUDFLARE_API_TOKEN": "test"}), \
-                mock.patch.object(ls, "put_direct", put), mock.patch.object(ls, "head_direct", lambda t, k: 100), \
+                mock.patch.object(ls, "put_direct", put), \
                 mock.patch.object(ls, "STOP_AFTER", stop_after), mock.patch("sys.stdout", out):
             rc = ls.upload("http://127.0.0.1:9", "", True, 1)
         return rc, json.loads(ls.LEDGER.read_text()), out.getvalue()
@@ -439,6 +440,51 @@ class Upload(Fixture):
                 mock.patch.object(ls, "put_file", lambda *a: None), \
                 mock.patch.object(ls, "call", lambda *a, **k: {"size": 99}), mock.patch("sys.stdout", io.StringIO()):
             self.assertEqual(ls.upload("http://127.0.0.1:9", "", False, 1), 1)
+        self.assertEqual(json.loads(ls.LEDGER.read_text()), {})
+
+    def test_direct_put_reads_the_stored_size_from_the_reply(self):
+        """Real put_direct against a fake Cloudflare reply. The REST API
+        answers HEAD with 405, so nothing may send one (2026-10-06)."""
+        p = self.put("epub/a.epub", b"a" * 100)
+        ls.CATALOG.write_text(json.dumps({"bundles": [], "works": [
+            {"slug": "a", "files": {"epub": {"key": "epub/a.epub", "name": "a", "sha256": ls.sha256(p)}}}]}))
+        methods = []
+
+        class Reply(io.BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *a):
+                return False
+
+        def urlopen(req, timeout=None):
+            methods.append(req.get_method())
+            if req.get_method() != "PUT":
+                raise urllib.error.HTTPError(req.full_url, 405, "Method Not Allowed", {}, None)
+            return Reply(json.dumps({"success": True, "result": {"key": "epub/a.epub", "size": len(req.data)}}).encode())
+
+        with mock.patch.dict(os.environ, {"CLOUDFLARE_API_TOKEN": "test"}), \
+                mock.patch("urllib.request.urlopen", urlopen), mock.patch("sys.stdout", io.StringIO()):
+            self.assertEqual(ls.upload("http://127.0.0.1:9", "", True, 1), 0)
+        self.assertEqual(methods, ["PUT"])
+        self.assertEqual(json.loads(ls.LEDGER.read_text()), {"epub/a.epub": ls.sha256(p)})
+
+    def test_direct_put_without_a_size_is_not_ledgered(self):
+        p = self.put("epub/a.epub", b"a" * 100)
+        ls.CATALOG.write_text(json.dumps({"bundles": [], "works": [
+            {"slug": "a", "files": {"epub": {"key": "epub/a.epub", "name": "a", "sha256": ls.sha256(p)}}}]}))
+
+        class Reply(io.BytesIO):
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *a):
+                return False
+
+        with mock.patch.dict(os.environ, {"CLOUDFLARE_API_TOKEN": "test"}), \
+                mock.patch("urllib.request.urlopen", lambda req, timeout=None: Reply(b'{"success": true, "result": {}}')), \
+                mock.patch("sys.stdout", io.StringIO()):
+            self.assertEqual(ls.upload("http://127.0.0.1:9", "", True, 1), 1)
         self.assertEqual(json.loads(ls.LEDGER.read_text()), {})
 
 

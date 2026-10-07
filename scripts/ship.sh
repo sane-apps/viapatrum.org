@@ -47,6 +47,8 @@ Usage: scripts/ship.sh [--dry-run] [--skip-build] [--audio-only]
                   deploy, no search upload, no audio to R2, repo functions/ untouched.
   --skip-deploy   Same as --dry-run
   --skip-build    Reuse existing dist/ (all catalogue/browser/review gates still apply)
+  ALLOW_SHRINK=1  Let a build that drops more than SHIP_MAX_DROP (default 10) live
+                  works ship; without it that build is blocked as a likely gate bug.
   --audio-only    Add players for audio recorded since the last ship to a clone of
                   the last shipped site, upload that audio, deploy, run live checks.
                   No rebuild. Blocks when functions/, scripts/inject_audio.py, the
@@ -794,6 +796,32 @@ fi
 
 step "Catalogue regressions"
 "$PYTHON" "$ROOT/scripts/check_catalogue.py"
+# Shrink guard: a build that holds many works at once is a gate bug, not a
+# release (2026-10-07: one build held all 682 and published 0). More than
+# SHIP_MAX_DROP works gone from the live site needs ALLOW_SHRINK=1. The live
+# catalogue is the baseline; outputs/ship-last is the fallback when offline.
+"$PYTHON" - "$LAST/dist/app/v1/catalog.json" "$ROOT/dist/app/v1/catalog.json" "${SHIP_MAX_DROP:-10}" "${ALLOW_SHRINK:-0}" <<'PY'
+import json, sys, urllib.request
+from pathlib import Path
+last, new, max_drop, allow = Path(sys.argv[1]), Path(sys.argv[2]), int(sys.argv[3]), sys.argv[4] == "1"
+try:
+    req = urllib.request.Request("https://viapatrum.org/app/v1/catalog.json", headers={"user-agent": "viapatrum-ship"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        base, where = json.loads(r.read()), "live"
+except Exception as e:  # noqa: BLE001
+    if not last.is_file():
+        print(f"  shrink guard: live catalogue unreadable ({e}) and no previous ship to compare"); sys.exit(0)
+    base, where = json.loads(last.read_text()), "the last ship"
+was = {w["slug"] for w in base["works"]}
+now = {w["slug"] for w in json.loads(new.read_text())["works"]} if new.is_file() else set()
+gone = sorted(was - now)
+print(f"  works: {len(was)} on {where}, {len(now)} now ({len(gone)} gone, {len(now - was)} new)")
+if gone:
+    print("  gone: " + ", ".join(gone))
+if len(gone) > max_drop and not allow:
+    sys.exit(f"BLOCKED: {len(gone)} works would leave the site (limit {max_drop}). "
+             "Check the build's held_works; rerun with ALLOW_SHRINK=1 if the holds are intended.")
+PY
 CATALOGUE_PRINT="$(dist_fingerprint)"
 
 if [[ "$SKIP_BUILD" -eq 0 ]]; then

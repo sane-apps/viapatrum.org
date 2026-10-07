@@ -36,8 +36,12 @@ class GenerateWorksGateTest(unittest.TestCase):
             routes = gate.write_routes(stage)
             self.assertEqual(
                 json.loads(routes.read_text(encoding="utf-8")),
-                {"version": 1, "include": ["/works/*"], "exclude": []},
+                {"version": 1, "include": ["/works/*", "/authors/*", "/api/*", "/dl/*"], "exclude": []},
             )
+
+            author = gate.write_gate(functions, ["origen"], "authors")
+            self.assertEqual(author, functions / "authors" / "[[path]].js")
+            self.assertIn('const LIVE = new Set(["origen"]);', author.read_text(encoding="utf-8"))
 
 
 if __name__ == "__main__":

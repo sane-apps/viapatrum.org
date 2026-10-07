@@ -282,8 +282,8 @@ for label, text in (("blurb", placeus_blurb), ("method", placeus_method), ("edit
     low = text.lower()
     assert "honest partial" not in low and "densify" not in low and "english follows" not in low, (label, text)
     assert "man. post" not in low, (label, text)
-assert "from the Latin" in placeus_blurb and "chapters 1 to 14" in placeus_blurb, placeus_blurb
-assert "1661 Saumur" in placeus_method and "chapters 1 to 14" in placeus_method, placeus_method
+assert "from the Latin" in placeus_blurb and "chapters 1 to 12 and 14" in placeus_blurb, placeus_blurb  # no chapter 13 in the files
+assert "1661 Saumur" in placeus_method and "chapters 1 to 12 and 14" in placeus_method, placeus_method
 assert site.mast_edition_label(placeus_meta["edition"]) == "Saumur 1661"
 assert site.public_blurb("Capita I–XIV from the Latin. Honest partial; more to come.") == ""
 assert site.public_note("English follows the Latin partial through Man. Post. Caput IX.") == ""

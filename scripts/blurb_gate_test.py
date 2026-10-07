@@ -152,7 +152,7 @@ class PublicBlurbTest(unittest.TestCase):
     def test_tautology_never_reaches_reader(self) -> None:
         html = work_teaser_html({"blurb": "Evagrius Ponticus \u2014 Scholia on Proverbs."})
         self.assertNotIn("Scholia on Proverbs", html)
-        self.assertIn("New English translation", html)
+        self.assertEqual(html, "")  # no placeholder teaser since 6752465
 
     def test_real_blurbs_kept(self) -> None:
         good = "Evagrius\u2019s short notes on Proverbs, turning each proverb toward the fight against temptation."

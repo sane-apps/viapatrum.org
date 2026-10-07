@@ -285,3 +285,21 @@ test('/api/search keeps its output after the retrieval move', async () => {
   assert.deepEqual(Object.keys(body.results[0]), ['title', 'author', 'href', 'kind', 'score', 'snippet']);
   assert.ok(!body.results[0].snippet.startsWith('The Didache, Didache 7 ('), 'chunk prefix stripped');
 });
+
+test('/api/ask: the edge cache key carries the deployed search map ETag', async () => {
+  const keys = [];
+  const saved = globalThis.caches;
+  globalThis.caches = { default: { match: async (req) => { keys.push(req.url); return undefined; }, put: async () => {} } };
+  try {
+    const s = stubEnv({ rerankSentences: (text) => (/baptiz|water/i.test(text) ? 4 : -4) });
+    const assets = s.env.ASSETS.fetch;
+    s.env.ASSETS.fetch = async (u, init) => (init && init.method === 'HEAD'
+      ? { ok: true, headers: new Headers({ etag: '"build-1"' }) } : assets(u, init));
+    const fresh = await import(`../functions/api/ask.js?v=${Date.now()}`);
+    await run(fresh.onRequest, 'https://viapatrum.org/api/ask?q=baptism', s.env);
+    assert.equal(keys.length, 1);
+    assert.match(keys[0], /[?&]v=%22build-1%22$/);
+  } finally {
+    globalThis.caches = saved;
+  }
+});

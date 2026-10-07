@@ -2455,9 +2455,10 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
         period = ""
     # A year after the writer died is when a book was printed, not when he wrote.
     # Julian's 419–430 sits inside c. 386–c. 455, so that line stays "written".
+    # "fl. c. 150" is a working year, not a death year: never call a later date printed.
     life_end = max((int(y) for y in life_years), default=0)
     print_date = bool(
-        period and years and life_years and "BC" not in life
+        period and years and life_years and "BC" not in life and "fl." not in life
         and all(int(y) > life_end for y in years)
     )
     written = f"{'printed' if print_date else 'written'} {period}" if period else ""

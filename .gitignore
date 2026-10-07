@@ -35,3 +35,4 @@ credentials.*
 secrets.*
 
 node_modules/
+/dist.*.json

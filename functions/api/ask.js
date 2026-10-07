@@ -8,8 +8,11 @@
  * 40 sentences from the best passages. `passages` rows have the /api/search
  * shape; each answer item's `ref` is its 1-based place in `passages`.
  *
- * Cached a day: Cache API keyed on the normalised question, plus
- * cache-control for browsers. Thin questions are logged (no IP, no user) to
+ * Cached a day: Cache API keyed on the normalised question and the ETag of
+ * the deployed /data/search-meta.json, plus cache-control for browsers. The
+ * ETag changes when a deploy publishes or withholds a work, so an answer
+ * cached before a withhold never links to a page that is now 404
+ * (2026-10-07: a day-old Melchizedek answer did). Thin questions are logged (no IP, no user) to
  * R2 binding LIBRARY at ask-log/YYYY-MM-DD/<sha1(q)>.json so THRESHOLD can be
  * tuned and missing works found.
  */
@@ -22,6 +25,19 @@ const DAY = "public, max-age=86400";
 async function sha1(s) {
   const d = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(s));
   return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+let deployTag; // one per isolate; a new deploy starts new isolates
+async function searchMapTag(env, url) {
+  if (deployTag === undefined) {
+    try {
+      const r = await env.ASSETS.fetch(new URL("/data/search-meta.json", url), { method: "HEAD" });
+      deployTag = (r.headers && r.headers.get && r.headers.get("etag")) || "";
+    } catch (e) {
+      deployTag = "";
+    }
+  }
+  return deployTag;
 }
 
 async function logThin(env, q, best) {
@@ -41,7 +57,8 @@ export async function onRequest(context) {
   if (!q) return json({ query: q, mode: "thin", answer: [], passages: [] });
 
   const cache = typeof caches !== "undefined" ? caches.default : null;
-  const cacheKey = new Request(`${url.origin}/api/ask?q=${encodeURIComponent(q)}`, { method: "GET" });
+  const tag = cache ? await searchMapTag(env, url) : "";
+  const cacheKey = new Request(`${url.origin}/api/ask?q=${encodeURIComponent(q)}&v=${encodeURIComponent(tag)}`, { method: "GET" });
   if (cache) {
     const hit = await cache.match(cacheKey);
     if (hit) return hit;

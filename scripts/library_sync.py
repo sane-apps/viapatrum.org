@@ -96,6 +96,15 @@ def load(path: Path) -> dict:
         return {}
 
 
+def save(path: Path, data, **kw) -> None:
+    """Write JSON through a temp file and os.replace, so a killed run never
+    leaves a half-written library.json (load() reads that as empty, and the
+    downloads page would then list no books)."""
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(json.dumps(data, **kw), encoding="utf-8")
+    os.replace(tmp, path)
+
+
 # --- assemble -----------------------------------------------------------
 
 # Translators' worksheet notes that must never reach a paid file (2026-10-06
@@ -335,7 +344,7 @@ def word(app_dir: Path, only: str, jobs: int, force: bool, rekey: bool = False) 
                      "site_dir": str(site_dir), "licence": licence, "built": built, "key": key})
     print(f"word: {len(todo)} to build, {skipped} up to date", flush=True)
     if rekey:  # rewrite old-style keys in the new form; build and hold nothing
-        WORD_MANIFEST.write_text(json.dumps(man, ensure_ascii=False, indent=1), encoding="utf-8")
+        save(WORD_MANIFEST, man, ensure_ascii=False, indent=1)
         print(f"word --rekey: {skipped} keys current, {len(todo)} would build; nothing built", flush=True)
         return 0
     started = time.time()
@@ -353,7 +362,7 @@ def word(app_dir: Path, only: str, jobs: int, force: bool, rekey: bool = False) 
                 print(f"  {i}/{len(todo)}, {int(time.time() - started)}s", flush=True)
     man["generated"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     man["app_dir"] = str(app_dir)
-    WORD_MANIFEST.write_text(json.dumps(man, ensure_ascii=False, indent=1), encoding="utf-8")
+    save(WORD_MANIFEST, man, ensure_ascii=False, indent=1)
     shutil.rmtree(OUT / ".word-build", ignore_errors=True)
     print(f"word done: {len(man['works'])} books, {len(man['held'])} held, {int(time.time() - started)}s", flush=True)
     return 0
@@ -505,7 +514,7 @@ def audio_zips(app_dir: Path) -> int:
         b["uploaded"] = ledger.get(b["key"]) == b["sha256"]
         print(f"  {b['name']}: {b['count']} audiobooks, {b['bytes'] / 1e9:.2f} GB, uploaded={b['uploaded']}", flush=True)
     data["bundles"] = [b for b in data.get("bundles") or [] if b.get("kind") != "audio"] + fresh
-    CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    save(CATALOG, data, ensure_ascii=False, indent=1)
     return 0
 
 
@@ -651,7 +660,7 @@ def assemble(app_dir: Path) -> int:
             "counts": {"books": len(works), **{k: sum(1 for w in works if k in w["files"]) for k in ("epub", "pdf", "word", "audio")},
                        "audio_hours": round(hours)},
             "bundles": bundles, "works": works}
-    CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    save(CATALOG, data, ensure_ascii=False, indent=1)
     print(json.dumps(data["counts"]), f"bundles={len(bundles)}", flush=True)
     if dirty:
         print("HELD: worksheet notes in " + "; ".join(f"{k} ({len(v)} files)" for k, v in dirty.items())
@@ -686,34 +695,24 @@ DIRECT_MAX = 280 * 1024 * 1024  # one REST PUT; bigger files go through the site
 TYPES = {"epub": "application/epub+zip", "pdf": "application/pdf", "zip": "application/zip", "m4b": "audio/mp4"}
 
 
-def put_direct(token: str, path: Path, key: str) -> None:
-    """Straight to the bucket with the Cloudflare REST API (as scripts/audio_r2.py does)."""
+def put_direct(token: str, path: Path, key: str) -> int:
+    """Straight to the bucket with the Cloudflare REST API (as scripts/audio_r2.py
+    does). Returns the size the bucket says it stored, or -1 when the reply
+    names none (the caller treats that as a failed upload, never as a pass).
+    The REST API answers HEAD with 405, so the PUT reply is the size check
+    (as backup_audio.py does); 2026-10-06 every shelf upload failed on that HEAD."""
     for attempt in range(5):
         req = urllib.request.Request(R2_API + key, data=path.read_bytes(), method="PUT",
                                      headers={"Authorization": f"Bearer {token}", "Content-Type": TYPES[key.rsplit(".", 1)[-1]]})
         try:
             with urllib.request.urlopen(req, timeout=1800) as r:
-                if json.loads(r.read() or b"{}").get("success"):
-                    return
+                body = json.loads(r.read() or b"{}")
+                if body.get("success"):
+                    return int((body.get("result") or {}).get("size") or -1)
         except Exception as e:  # noqa: BLE001
             print(f"  retry {key}: {e}", flush=True)
         time.sleep(min(60, 5 * 2 ** attempt))
     raise SystemExit(f"direct upload failed: {key}")
-
-
-def head_direct(token: str, key: str, tries: int = 3) -> int:
-    """Size of the object in the bucket, or -1 when the check itself failed
-    (the caller treats that as a failed upload, never as a pass)."""
-    req = urllib.request.Request(R2_API + key, method="HEAD", headers={"Authorization": f"Bearer {token}"})
-    for attempt in range(tries):
-        try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                return int(r.headers.get("Content-Length") or -1)
-        except Exception as e:  # noqa: BLE001
-            print(f"  retry size check {key}: {e}", flush=True)
-        if attempt + 1 < tries:
-            time.sleep(5 * (attempt + 1))
-    return -1
 
 
 def put_file(base: str, token: str, path: Path, key: str, name: str, digest: str) -> None:
@@ -783,8 +782,7 @@ def upload(base: str, only: str, direct: bool, jobs: int) -> int:
             return job, f"not tried: upload stopped after {STOP_AFTER} failures"
         try:
             if direct:
-                put_direct(token, path, it["key"])
-                got = head_direct(token, it["key"])
+                got = put_direct(token, path, it["key"])
             else:
                 put_file(base, token, path, it["key"], it["name"], digest)
                 got = call(base, token, "GET", {"action": "head", "key": it["key"]}).get("size")
@@ -809,11 +807,11 @@ def upload(base: str, only: str, direct: bool, jobs: int) -> int:
             it["uploaded"] = True
             sent += 1
             if sent % 10 == 0 or path.stat().st_size > PART:
-                LEDGER.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
-                CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+                save(LEDGER, ledger, indent=1)
+                save(CATALOG, data, ensure_ascii=False, indent=1)
                 print(f"  {sent}/{len(todo)} sent, {skipped} unchanged, {int(time.time() - started)}s", flush=True)
-    LEDGER.write_text(json.dumps(ledger, indent=1), encoding="utf-8")
-    CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    save(LEDGER, ledger, indent=1)
+    save(CATALOG, data, ensure_ascii=False, indent=1)
     print(f"upload done: {sent} sent, {skipped} unchanged, {len(failed)} failed, {int(time.time() - started)}s", flush=True)
     if failed:
         print("FAILED: " + "; ".join(failed[:10]) + (f" and {len(failed) - 10} more" if len(failed) > 10 else ""), flush=True)
@@ -880,13 +878,13 @@ def main() -> int:
             sys.exit(f"NOT LIVE: Lemon Squeezy product {a.product} is '{attrs.get('status')}'. Publish it in the dashboard first.")
         data = load(CATALOG) or {}
         data["checkout_url"] = attrs["buy_now_url"] + "?embed=1"
-        CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        save(CATALOG, data, ensure_ascii=False, indent=1)
         print(f"checkout set: {data['checkout_url']}\nNext: ./scripts/ship.sh (the shelf goes live on that ship)")
         return 0
     if a.cmd == "set-checkout":
         data = load(CATALOG) or {}
         data["checkout_url"] = a.url
-        CATALOG.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        save(CATALOG, data, ensure_ascii=False, indent=1)
         return 0
     return upload(a.base.rstrip("/"), a.only, a.direct, a.jobs)
 
