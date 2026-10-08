@@ -45,6 +45,17 @@ class VerseClipTest(unittest.TestCase):
 
 
 class TitleAndDateTest(unittest.TestCase):
+    def test_brief_title_drops_a_word_the_catalogue_bans_in_the_h1(self) -> None:
+        # 2026-10-08 13:49: the ship built, then died on this H1.
+        slug = "test-scholia-heading"
+        build_site._BRIEF_TITLES[slug] = "Scholia on the Apocalypse (Greek)"
+        try:
+            self.assertEqual(
+                build_site.public_reader_title("Scholia in Apocalypsem", slug=slug),
+                "Notes on the Apocalypse")
+        finally:
+            build_site._BRIEF_TITLES.pop(slug, None)
+
     def test_latin_work_title_is_not_a_section_heading(self) -> None:
         w = {"slug": "theophilus-alex-fragmenta-matthaeum", "title": "Fragmenta in Matthaeum"}
         self.assertEqual(build_site.display_head({"section": "u01-open", "head": "Fragmenta in Matthaeum"}, w), "")

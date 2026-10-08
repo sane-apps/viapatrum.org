@@ -2310,11 +2310,26 @@ def english_title_for(slug: str) -> str:
     return PUBLIC_ENGLISH_TITLES.get(slug or "", "").strip() or brief_english_title(slug or "")
 
 
+def plain_english_heading(text: str) -> str:
+    """Words the catalogue rejects in an H1, said in English.
+
+    Section heads already do this in public_head. A certified brief's title
+    is used as the H1 as written, and the 13:49 ship died on "Scholia on the
+    Apocalypse" after a finished build. The same swaps belong here.
+    """
+    h = re.sub(r"\s*\((?:Greek|Latin|Vat\.|\d)[^)]*\)", "", text or "")
+    h = re.sub(r"\b(Liber|Homilia|Sermo)\s+([IVXLC]+)\b",
+               lambda m: f"{_HEAD_LATIN_WORD[m.group(1)]} {_roman_to_int(m.group(2))}", h)
+    h = re.sub(r"\bScholia\b", "Notes", h)
+    h = re.sub(r"\bCesti\b", "Miscellanies", h)
+    return re.sub(r"\s{2,}", " ", h).strip(" :;—–-")
+
+
 def public_reader_title(title: str, *, slug: str = "") -> str:
     """Public H1 / card / crumb: English-first when mapped (or from the work brief); drop tip parentheticals."""
     eng = english_title_for(slug)
     if eng:
-        return eng
+        return plain_english_heading(eng) or eng
     raw = (title or "").strip()
     cleaned = _TIP_TITLE_SUFFIX.sub("", raw).strip(" -–—")
     return cleaned or raw
