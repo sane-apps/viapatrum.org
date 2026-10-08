@@ -82,7 +82,7 @@ function sectionCards() {
     ['home', ['/'], 'Free for the whole world', 'Read the early Church in its own words', verse, 'Jeremiah 6:16'],
     ['topics', ['/topics/'], 'Topics', 'What did the early Church teach?', 'Each topic in the writers’ own words, with the passages to read.'],
     ['authors', ['/authors/'], 'Fathers', 'The writers, in order', 'Every writer in the library, earliest first, with dates and works.'],
-    ['works', ['/works/'], 'Works', 'The library', 'Whole works in faithful modern English, to read straight through.'],
+    ['works', ['/works/'], 'Works', 'All works', 'Whole works in faithful modern English, to read straight through.'],
     ['explore', ['/explore/'], 'Timeline', 'How the answers line up over time', 'What each early writer taught, claim by claim, century by century.'],
     ['about', ['/about/'], 'About', 'About Via Patrum', 'A free library of early Christian writing in faithful modern English.'],
     ['methodology', ['/methodology/'], 'For scholars', 'How we translate', 'Sources, two passes, and what stays off the reading page.'],

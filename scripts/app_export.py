@@ -76,7 +76,9 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
             paras = [p for p in (_paragraph(b, raw, flagged) for raw in s.get("english") or []) if p]
             if not paras:
                 continue
-            row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": b.public_head(str(s.get("head") or "")), "p": paras}
+            # display_head, as the reader page uses: public_head left worksheet tags
+            # (GAR/PLAC/Man. Post.) on 559 of 712 Placeus heads.
+            row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": b.display_head(s, w), "p": paras}
             if (s.get("supplied_from") or "").strip():
                 row["supplied"] = s["supplied_from"].strip()
             sections.append(row)
@@ -98,6 +100,10 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
             "audio": bool(w.get("has_audio")),
             "topics": [t for t in (w.get("related_topics") or []) if t in topic_meta],
             "first_english": bool(w.get("first_english")),
+            # Same rule as the reader mast: only a meta "scope" marks a work
+            # as part of a longer book (never book.yml's scope line).
+            "part_only": bool(str(w.get("scope") or "").strip()),
+            "scope": str(w.get("scope") or "").strip(),
             "hash": hashlib.sha256(blob.encode("utf-8")).hexdigest()[:12],
         })
 
@@ -117,7 +123,7 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
                     "id": x["id"],
                     "author": author_entry(x.get("author") or ""),
                     "cite": b.public_citation(x.get("citation") or x["id"], x.get("work") or ""),
-                    "older": str(x.get("confidence") or "") == "seed_anf",
+                    "older": bool(b.excerpt_is_anf(x)),  # the site's own ANF test (seed_edition New Advent too)
                     "p": paras,
                 })
             if not excerpts:

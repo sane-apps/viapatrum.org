@@ -27,6 +27,8 @@ FAKE_B = SimpleNamespace(
     section_ordinals=lambda sections: {},
     shown_section=lambda section, ordinals: str(section),
     public_head=lambda head: head,
+    display_head=lambda s, w: str(s.get("head") or ""),
+    excerpt_is_anf=lambda x: str(x.get("confidence") or "") == "seed_anf",
     clean_reader_notation=lambda text: text,
     strip_logos_markup=lambda text: text,
     _scripture_matches=lambda text: [],
@@ -72,6 +74,49 @@ class ContentDigestTest(unittest.TestCase):
         self.assertNotEqual(base, content([work(title="De Incarnatione")])["content"])
         self.assertNotEqual(base, content([work(related_topics=[])])["content"])
         self.assertNotEqual(base, content([work()], topic_title="Divine grace")["content"])
+
+
+def topic_json(rows: list[dict]) -> dict:
+    with tempfile.TemporaryDirectory() as tmp:
+        dist = Path(tmp) / "dist"
+        app_export.write(dist, Path(tmp), FAKE_B, works=[work()], by_topic={"t1": rows},
+                         topic_meta={"t1": {"title": "Grace", "locus_title": "Salvation"}},
+                         tax={"loci": [{"topics": [{"id": "t1"}]}]}, sc_entries={}, wrong_cites={})
+        return json.loads((dist / "app" / "v1" / "topics" / "t1.json").read_text(encoding="utf-8"))
+
+
+class ContentStreamFieldsTest(unittest.TestCase):
+    """2026-10-07 audit: the app said less than the reader page did."""
+
+    def test_part_only_comes_from_meta_scope(self) -> None:
+        self.assertFalse(content([work()])["work"]["part_only"])
+        part = content([work(scope="Homilies 5 and 6 of 50")])["work"]
+        self.assertTrue(part["part_only"])
+        self.assertEqual(part["scope"], "Homilies 5 and 6 of 50")
+
+    def test_head_uses_display_head(self) -> None:
+        seen = []
+        fake = SimpleNamespace(**{**vars(FAKE_B), "display_head": lambda s, w: seen.append(w["slug"]) or "Clean"})
+        with tempfile.TemporaryDirectory() as tmp:
+            dist = Path(tmp) / "dist"
+            app_export.write(dist, Path(tmp), fake, works=[work(sections=[{"section": "1", "head": "Cap. I: PLAC x",
+                                                                          "english": ["Text."]}])],
+                             by_topic={}, topic_meta={}, tax={"loci": []}, sc_entries={}, wrong_cites={})
+            body = json.loads((dist / "app/v1/works/athanasius-on-the-incarnation.json").read_text(encoding="utf-8"))
+        self.assertEqual(body["sections"][0]["head"], "Clean")
+        self.assertEqual(seen, ["athanasius-on-the-incarnation"])
+
+    def test_older_flag_uses_site_rule(self) -> None:
+        fake_rule = lambda x: x.get("source", "").startswith("https://www.newadvent.org/fathers/")
+        global FAKE_B
+        saved = FAKE_B
+        FAKE_B = SimpleNamespace(**{**vars(saved), "excerpt_is_anf": fake_rule})
+        try:
+            rows = [{"id": "a", "author": "Cyprian", "paras": ["One."], "confidence": "seed_edition",
+                     "source": "https://www.newadvent.org/fathers/050701.htm"}]
+            self.assertTrue(topic_json(rows)["excerpts"][0]["older"])
+        finally:
+            FAKE_B = saved
 
 
 if __name__ == "__main__":

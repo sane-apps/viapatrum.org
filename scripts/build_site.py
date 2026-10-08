@@ -14,7 +14,7 @@ from html import escape
 from pathlib import Path
 from urllib.parse import quote_plus
 
-from catalogue_quality import SCAFFOLD, check_publication, partition_catalogue, text_value
+from catalogue_quality import SCAFFOLD, check_publication, group_deferred, partition_catalogue, text_value
 
 try:
     import yaml
@@ -234,7 +234,7 @@ EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
 SITE_NAME = "Via Patrum"
 SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
-SITE_TAG = "The early Church in its own words: every Father, every work, in faithful modern English. Free."
+SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
 BASE = ""
 
 # Work ↔ topic cross-refs (topic ids from ante-nicene-topics/topics.yml).
@@ -1244,6 +1244,11 @@ _CITE_LATIN = (
     (r"\bDe Fuga in Persecutione\b", "On Flight in Persecution"),
     (r"\bScorpiace\b", "Antidote for the Scorpion's Sting"),
     (r"\bStromata\b", "Miscellanies"),
+    # Excerpt citations still in Latin (2026-10-07 audit, rule 1).
+    (r"\bDe Spectaculis\b", "On the Shows"),
+    (r"\bDe Saeculi Istius Fine\b", "On the End of This Age"),
+    (r"\s*\(De Creatis / Photius\)", ""),
+    (r"\(on De vera religione\)", "(on True Religion)"),
 )
 _CITE_DROP = (
     r"\s*\((?:local HTML|ANF misc|Reliquiae Sacrae)[^)]*\)",
@@ -1395,6 +1400,26 @@ def _plain_tag(s: str) -> str:
     return (s or "").replace("-", " ").replace("_", " ").strip().title()
 
 
+_WORK_HREF = re.compile(r"^/works/([^/?#]+)/")
+
+
+def published_path_links(paths: list, live_slugs: set[str]) -> list:
+    """Reading paths without links to works this build does not publish.
+    A withheld work (irenaeus-demonstration, 2026-10-07) otherwise stays
+    linked from explore-index.json. Numbered labels are renumbered."""
+    out = []
+    for path in paths:
+        if not isinstance(path, dict) or not isinstance(path.get("links"), list):
+            out.append(path)
+            continue
+        links = [l for l in path["links"] if not (isinstance(l, dict) and (m := _WORK_HREF.match(str(l.get("href") or "")))
+                                                    and m.group(1) not in live_slugs)]
+        if len(links) != len(path["links"]) and all(re.match(r"\d+\.\s", str(l.get("label") or "")) for l in links):
+            links = [{**l, "label": re.sub(r"^\d+\.", f"{i}.", l["label"])} for i, l in enumerate(links, 1)]
+        out.append({**path, "links": links})
+    return out
+
+
 def build_explore_index(
     excerpts: list[dict],
     works: list[dict],
@@ -1544,6 +1569,7 @@ def build_explore_index(
     paths = _json_load(EXPLORE_DATA / "paths.json", [])
     if not isinstance(paths, list):
         paths = []
+    paths = published_path_links(paths, set(works_by_slug))
 
     return {
         "version": 1,
@@ -2220,6 +2246,19 @@ def work_book(slug: str) -> str | None:
     return book
 
 
+# Brief-writer sentences that are worksheet notes, not reader prose: a bare
+# term list and a note that no Scripture is cited (42 pages, 2026-10-07).
+_INTRO_WORKSHEET = re.compile(
+    r"\s*\b(?:Key terms include\b[^.]*(?:\.(?=\s|<|$))"
+    r"|No [Ss]cripture is (?:cited|quoted) in this [a-z]+\.)")
+
+
+def scrub_intro_worksheet(html_text: str) -> str:
+    """Drop the worksheet sentences above; an emptied paragraph goes too."""
+    out = re.sub(r"<p>\s+", "<p>", _INTRO_WORKSHEET.sub("", html_text or ""))
+    return re.sub(r"<p>\s*</p>\s*", "", out)
+
+
 def work_intro_html(slug: str) -> str:
     """Shared book intro for a site work page; "" when unmapped."""
     book = work_book(slug)
@@ -2233,7 +2272,7 @@ def work_intro_html(slug: str) -> str:
         from pipeline.book_frontmatter import render_intro_html
         out = render_intro_html(str(BOOKS / book))
         # Build-room scope words ("tip densify") never reach readers.
-        return re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out)
+        return scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out))
     except (ImportError, ValueError, OSError):
         return ""
 
@@ -2414,7 +2453,7 @@ def about_edition_text(edition: str) -> str:
     """The full edition line for About this text, without scan-site and file
     tags ("MGR", "TEI", "OCR from Archive", "scrap"); "" when only a bare
     language word would be left."""
-    t = _ABOUT_EDITION_JUNK.sub(" ", scrub_worksheet_note(str(edition or "")))
+    t = _ABOUT_EDITION_JUNK.sub(" ", scrub_worksheet_note(tidy_witness_name(str(edition or ""))))
     t = re.sub(r"\(\s*\)", "", t)
     t = re.sub(r"\s+([;,.)])", r"\1", re.sub(r"\s+", " ", t)).strip(" ;,.—–-")
     if not t or re.fullmatch(r"(?:Greek|Latin|Syriac|Coptic|Armenian)?", t, re.I):
@@ -2827,6 +2866,10 @@ def _clean_source_part(part: str, greek_panel: bool | None = None) -> str:
     text = part.replace("\\'", "'").replace('\\"', '"')
     for _ in range(2):  # some scans arrive escaped twice ("&amp;lt;quem")
         text = _html.unescape(text)
+    # A part that is only a column number ("95.244") has no Greek to test,
+    # so it would skip the rule below and show bare (john-damascus u01-open).
+    if _PG_COLUMN.fullmatch(text.strip()):
+        return f"‹{text.strip()}›"
     if not _GREEK_ANY.search(text) or not (_greek_heavy(text) if greek_panel is None else greek_panel):
         return text
     lines = text.split("\n")
@@ -2912,7 +2955,7 @@ def public_note(text: str) -> str:
     t = re.sub(r"\bGCS page image\b", "printed edition", t)
     t = re.sub(r"\bTEI\s*/\s*OCR\b", "digital text", t)
     t = re.sub(r"\bTEI\b", "digital text", t)
-    t = re.sub(r"\bOCR\b", "machine-read text", t)
+    t = re.sub(r"\bOCR\b", "machine-read text", t, flags=re.I)
     t = re.sub(r"\b([Cc])opy-text\b", lambda m: "Base text" if m.group(1) == "C" else "base text", t)
     # Khazarzar is the scan site the Greek came from, not part of the edition.
     t = re.sub(r"\s*/\s*Khazarzar\b|\s*\(Khazarzar\)|\bKhazarzar\s+", " ", t)
@@ -3021,6 +3064,33 @@ def display_head(s: dict, w: dict) -> str:
     return public_head(head)
 
 
+# Catalogue records pasted from TEI headers ("Origenis Opera Omnia Charles de
+# La Rue ... Patrologiae cursus completus (series Graeca) 17 The Internet
+# Archive (First1KGreek TEI, urn:cts:...)") are not book names a reader can use.
+_CATALOGUE_TAIL = re.compile(r"\s*\((?:[^()]*\b(?:TEI|urn:cts)\b[^()]*)\)|\s*\b(?:The\s+)?Internet Archive\b|\s*\bHathiTrust\b")
+
+
+def tidy_witness_name(name: str) -> str:
+    """A short printed-book name from a pasted catalogue record or scan tag."""
+    n = re.sub(r"\s+", " ", str(name or "")).strip()
+    n = re.sub(r"\bIA\s+(?:Text\s+)?PDF(?:\s+tip-page)?\s+extract\b", "Text extract", n)
+    n = re.sub(r"\bIA\s+DjVu\s+", "", n)
+    if not _CATALOGUE_TAIL.search(n):
+        return n
+    year = re.search(r"\b(1[4-9]\d\d)\b", n)
+    pg = re.search(r"Patrologiae cursus completus \(series (Graeca|Latina)\)\s*(\d+)", n)
+    if pg:
+        return f"Migne {'PG' if pg.group(1) == 'Graeca' else 'PL'} {pg.group(2)}" + (f" ({year.group(1)})" if year else "")
+    csel = re.search(r"Corpus Scriptorum Ecclesiasticorum Latinorum\s*(\d+(?:\.\d+)?)", n, re.I)
+    if csel:
+        return f"CSEL {csel.group(1)}" + (f" ({year.group(1)})" if year else "")
+    n = _CATALOGUE_TAIL.sub("", n).strip(" ;,.")
+    # An unpunctuated record runs on after the year with volume and series numbers.
+    if year and "," not in n:
+        n = n[: n.find(year.group(1)) + 4]
+    return n
+
+
 def text_history_html(th: dict | None) -> str:
     """Collapsed About block: copy-text, checks, and real joins only."""
     if not isinstance(th, dict) or not th:
@@ -3049,21 +3119,32 @@ def text_history_html(th: dict | None) -> str:
             # Scan-site and file-format tags are not part of a book's name.
             name = re.sub(r"\s*\(?\bkhazarzar\b\)?", "", name, flags=re.I)
             name = re.sub(r"\s*\(?\bTLG\s+[\d.]+\)?", "", name)
-            name = public_note(name).strip(" ;,·")
+            name = public_note(tidy_witness_name(placeus_head(name))).strip(" ;,·")
             if not name:
                 continue
-            cov = public_note(str(wtn.get("coverage") or "")).strip()
+            cov = public_note(placeus_head(str(wtn.get("coverage") or ""))).strip()
             if role_key and role_key not in WITNESS_ROLE_LABEL:
                 # Free-text role ("same print as M2, independent scan"): keep it as written.
                 raw_role = public_note(role_key.replace("-", " ")).strip()
                 cov = "; ".join(x for x in (raw_role, cov) if x)
-            lang = str(wtn.get("language") or "").strip()
+            lang = public_note(str(wtn.get("language") or "")).strip()
             url = str(wtn.get("url") or "").strip()
-            row = rows.setdefault((name, url), {"role": role, "lang": lang, "covs": []})
+            # One row per printed book: "Latin, Chapter 2 (Saumur 1661)" and
+            # "Latin, Chapter 3 (Saumur 1661)" from one scan merge into
+            # "Latin (Saumur 1661)" (Placeus listed 93 rows).
+            part = re.match(r"^(.+?),\s*([^,()]+?)\s*(\([^()]*\d{4}[^()]*\))$", name)
+            base = f"{part.group(1)} {part.group(3)}" if part else name
+            key = (role, url, base) if url else (role, name, "")
+            row = rows.setdefault(key, {"role": role, "lang": lang, "covs": [], "name": name, "names": set()})
+            row["names"].add(name)
+            if len(row["names"]) > 1:
+                row["name"] = base
             if cov and cov not in row["covs"]:
                 row["covs"].append(cov)
         items = []
-        for (name, url), row in rows.items():
+        for (_role, url, _base), row in rows.items():
+            url = url if _base else ""
+            name = row["name"]
             label = escape(name)
             if url:
                 label = f'<a href="{escape(url)}" rel="noopener">{label}</a>'
@@ -5929,6 +6010,8 @@ OG_INDEX: dict[str, str] = _json_load(ASSETS / "og" / "index.json", {}) if (ASSE
 def meta_description(text: str, limit: int = 158) -> str:
     """A search snippet that ends cleanly: at a sentence end, else a word, with an ellipsis."""
     t = re.sub(r"\s+", " ", strip_logos_markup(str(text or ""))).strip()
+    # Damage notes read as one plain marker here too, as in the reader.
+    t = reader_text.DAMAGE_NOTE_RE.sub(reader_text.damage_mark, t)
     if len(t) <= limit:
         return t
     cut = t[:limit]
@@ -6097,14 +6180,14 @@ def layout(
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
-      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help translate</a></li></ul>
+      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li></ul>
     </nav>
     <nav aria-label="Support">
       <h2>Support</h2>
       <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li></ul>
     </nav>
   </div>
-  <p class="footer-fine">New English from the Greek and Latin, made with AI help and checked against the sources. A study library, not a critical edition.</p>
+  <p class="footer-fine">New English from the Greek and Latin, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
 </footer>
 <script src="/assets/site.js?v={ASSET_VER}" defer></script>
 {extra_js}</body>
@@ -6214,7 +6297,8 @@ def excerpt_paragraphs(x: dict) -> list[str]:
     for para in eng_list(x.get("english")):
         cleaned = strip_source_chrome(para).strip()
         # Leftover edition chapter mark at the start ("X. \"I purposely pass over…").
-        cleaned = re.sub(r"^[IVXLC]+\.\s+(?=[\"“‘'A-Z])", "", cleaned)
+        # Also "XIV. 1. And yet…" (chapter and paragraph marks, 28 pages).
+        cleaned = re.sub(r"^[IVXLC]+\.\s+(?:\d+\.\s+)?(?=[\"“‘'A-Z])", "", cleaned)
         if not cleaned:
             continue
         key = cleaned[:180]
@@ -6231,6 +6315,28 @@ def excerpt_is_anf(x: dict) -> bool:
     seed_edition rows translated afresh from a Greek or Latin file)."""
     conf = str(x.get("confidence") or "")
     return conf == "seed_anf" or (conf == "seed_edition" and "newadvent.org/fathers/" in str(x.get("source") or ""))
+
+
+def _words(value) -> int:
+    if isinstance(value, list):
+        value = " ".join(str(v) for v in value)
+    return len(str(value or "").split())
+
+
+def excerpt_check_note(x: dict) -> str:
+    """Plain notes for an excerpt page (2026-10-07 audit): a row the data
+    flags needs_recert has not been re-checked (39 Against Marcion rows had
+    a modern summary cut and still said source_verified), and a short
+    English under a whole-chapter source says it gives only part of it."""
+    if x.get("confidence") == "reader":
+        return ""
+    notes = []
+    if x.get("needs_recert"):
+        notes.append("This passage has not yet been re-checked against its source.")
+    src = x.get("latin") or x.get("greek") or x.get("source_text")
+    if _words(src) >= 60 and _words(x.get("english")) < 0.6 * _words(src):
+        notes.append("The English gives part of this chapter. The full original is below.")
+    return "".join(f'<p class="meta excerpt-check">{escape(n)}</p>' for n in notes)
 
 
 def excerpt_cite(x: dict) -> str:
@@ -6260,6 +6366,9 @@ def _work_key(author_slug: str, title: str, author: str) -> tuple[str, str]:
 
 
 READER_MATCH_REJECTS: list[str] = []
+# Excerpt id -> work, for excerpts of a published work that match no single
+# section (Octavius 22's second excerpt). The page links the whole work.
+EXCERPT_WORK_ONLY: dict[str, dict] = {}
 
 
 def _excerpt_words(paras) -> set[str]:
@@ -6300,6 +6409,7 @@ def excerpt_reader_sections(excerpts: list[dict], works: list[dict]) -> dict[str
         m = re.match(r"Chapter\s+(\d+)(?!\d|\.\d)", locus)
         s = secs.get(locus) or (secs.get(m.group(1)) if m else None)
         if not s:
+            EXCERPT_WORK_ONLY[x["id"]] = w
             continue
         # The chapter number is not proof: excerpt and edition numbering drift
         # (Octavius 22-24). Keep the match only when the excerpt's own English
@@ -6316,6 +6426,7 @@ def excerpt_reader_sections(excerpts: list[dict], works: list[dict]) -> dict[str
                 s, sid = secs[best_k], best_k
             else:
                 READER_MATCH_REJECTS.append(f"{x['id']}: §{sid} {here:.2f}, neighbours {', '.join(f'§{k} {v:.2f}' for k, v in near.items())} -> unmatched")
+                EXCERPT_WORK_ONLY[x["id"]] = w
                 continue
         book = next((g for g in w.get("groups") or [] if sid in {str(v) for v in g.get("sections") or []}), None)
         href = f"/works/{w['slug']}/{slugify(book['title']) + '/' if book else ''}#s{sid}"
@@ -6650,6 +6761,16 @@ _WESLEY_NOT_IN_SERMON = re.compile(r"\bnot in the 1\d{3} sermon\b", re.I)
 _WESLEY_LISTENING_LINE = re.compile(r"\s*This is a listening version\b", re.I)
 
 
+# (slug, section) of each Wesley opening dropped above. Their old /<n>/
+# pages were live and linked, so _redirects sends them to the sermon.
+WESLEY_DROPPED_SECTIONS: list[tuple[str, str]] = []
+
+
+def dropped_section_redirects(dropped: list[tuple[str, str]], live: set[str]) -> str:
+    return "".join(f"/works/{slug}/{sec}/ /works/{slug}/ 301\n"
+                   for slug, sec in sorted(set(dropped)) if slug in live)
+
+
 def load_wesley_sermons() -> list[dict]:
     """Wesley sermons: a modern reading, with the 1872 text beside it.
 
@@ -6690,6 +6811,7 @@ def load_wesley_sermons() -> list[dict]:
             if any(_WESLEY_NOT_IN_SERMON.search(x) for x in witness):
                 english = [p for p in english if not _WESLEY_LISTENING_LINE.match(p)]
                 if not english:
+                    WESLEY_DROPPED_SECTIONS.append((slug, sec))
                     continue
                 title, witness = "The Bible text", []
             sections.append(
@@ -7819,22 +7941,32 @@ FORCED_WITHHOLD = {
     # Named defects. The English is not rewritten here.
     "macarius-spiritual-homilies": _RECERT,
     "origen-ezekiel-fragments": _RECERT,
+    # The loader publishes each of these books under its book slug, so the
+    # book slug holds every part (the part slugs in the metas never load).
     "origen-philocalia": _RECERT,
-    "origen-philocalia-1": _RECERT,
-    "origen-philocalia-2-7": _RECERT,
-    "origen-philocalia-8-14": _RECERT,
-    "origen-philocalia-15-21": _RECERT,
-    "origen-philocalia-22-27": _RECERT,
     "origen-romans-catena": _RECERT,
     "origen-de-principiis": _RECERT,
     "origen-letters": _RECERT,
-    "origen-letters-open": _RECERT,
-    "origen-letters-africanus-rem": _RECERT,
     "origen-song-homily-1": _RECERT,
     "cyril-adoration-10": _RECERT,
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
 }
+
+
+# Writers with no sourced date. They stay undated on purpose rather than get a
+# guess, and sit under "Date not known" (owner calls, decided 2026-10-07).
+# check_catalogue fails on any other undated writer or "Unknown" era row.
+UNDATED_AUTHORS = {
+    "georgius-peccator": "George the Sinner, hymn writer; no source dates him.",
+}
+
+
+def dead_withhold_slugs(loaded: set[str]) -> list[str]:
+    """FORCED_WITHHOLD slugs that match no loaded work and no book folder.
+    A renamed slug would otherwise stop holding its work without a word."""
+    return sorted(slug for slug in FORCED_WITHHOLD
+                  if slug not in loaded and not (BOOKS / slug).is_dir())
 
 
 def split_withheld(works: list[dict]) -> tuple[list[dict], list[str]]:
@@ -7945,7 +8077,7 @@ def build() -> None:
             {"src": "/assets/icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"},
         ],
     }, indent=2), encoding="utf-8")
-    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><form class="vp-ask" action="/works/" method="get" role="search"><label class="vh" for="nf-q">Search the library</label><input id="nf-q" name="q" type="search" placeholder="Search the library…" autocomplete="off"><button type="submit">Search</button></form><p><a href="/works/">Browse the works</a>, <a href="/authors/">meet the Fathers</a>, or <a href="/topics/">pick a question</a>.</p></section>', description="This page is not in the Via Patrum library.", robots="noindex"))
+    write(DIST / "404.html", layout("Page unavailable", '<section><h1>Page unavailable</h1><p>This page is not in the current library.</p><form class="vp-ask" action="/works/" method="get" role="search"><label class="vh" for="nf-q">Search the library</label><input id="nf-q" name="q" type="search" placeholder="Search the library…" autocomplete="off"><button type="submit">Search</button></form><p><a href="/works/">Browse the works</a>, <a href="/authors/">meet the Fathers</a>, or <a href="/topics/">browse the topics</a>.</p></section>', description="This page is not in the Via Patrum library.", robots="noindex"))
 
     explore = load_explore_raw()
     explore_topic_ids = {c["topic"] for c in explore["claims"] if c.get("topic")}
@@ -8041,6 +8173,10 @@ def build() -> None:
     # setting the work meta status to "withheld" with a withhold_note.
     # Named slugs in FORCED_WITHHOLD are dropped even when the loader
     # still marks them available.
+    _dead = dead_withhold_slugs({str(w.get("slug")) for w in works})
+    if _dead:
+        print(f"WARNING: FORCED_WITHHOLD names no loaded work or book: {', '.join(_dead)}",
+              file=sys.stderr, flush=True)
     works, withheld = split_withheld(works)
     stale = stale_receipt_slugs(works)
     withheld = sorted(set(withheld) | set(stale))
@@ -8116,7 +8252,7 @@ def build() -> None:
     quality_text = (
         json.dumps({"published_works": len(works), "published_excerpts": len(excerpts),
                     "publication_review_failures": review_failures,
-                    "publication_review_deferred": review_deferred,
+                    "publication_review_deferred": group_deferred(review_deferred),
                     "held_tail_sections": tail_holds,
                     "held_works": held_works,
                     "corpus_total_sections": corpus_total_sections,
@@ -8182,6 +8318,10 @@ def build() -> None:
     for x in excerpts:
         hit = reader_for_excerpt.get(x["id"])
         if not hit:
+            _ww = EXCERPT_WORK_ONLY.get(x["id"])
+            if _ww:
+                x["_reader_href"] = f"/works/{_ww['slug']}/"
+                x["_reader_title"] = public_reader_title(_ww["title"], slug=_ww["slug"])
             continue
         _w, _s, _href = hit
         x["english"] = list(_s["english"])
@@ -8787,6 +8927,7 @@ def build() -> None:
                 if excerpt_is_anf(x)
                 else ""
             )
+            e_older += excerpt_check_note(x)
             e_reader = (
                 f'<p class="meta e-reader"><a href="{escape(x["_reader_href"])}">Read it in the whole work, '
                 f'<em>{escape(x["_reader_title"])}</em> →</a></p>'
@@ -8875,6 +9016,12 @@ def build() -> None:
                             and p.get("kind") != "contrast" for p in tp)
         path = paths_for_topic.get(tid)
         path_html = ""
+        # The path note reads as a second lede, so it sits above the timeline
+        # and passes the same editor-note check as the intro (2026-10-07).
+        if path and EDITOR_NOTE_RE.search(path.get("summary") or ""):
+            print(f"WARNING: /topics/{tid}/ path note dropped, reads like an editor note: "
+                  f"{EDITOR_NOTE_RE.search(path.get('summary') or '').group(0)!r}", file=sys.stderr, flush=True)
+            path = None
         if path:
             _ph = path.get("title") or ""
             path_html = (
@@ -8991,8 +9138,8 @@ def build() -> None:
 <h1>{escape(meta['title'])}</h1>
 <p class="meta">{" · ".join(meta_bits)}</p>
 {era_html}{intro_html}
-{timeline_html}
 {path_html}
+{timeline_html}
 <section class="voices" aria-label="What each writer said">
 <h2 class="voices-h">What each writer said, earliest first</h2>
 {''.join(voices)}
@@ -9078,8 +9225,8 @@ def build() -> None:
             "Works",
             f"""<div class="works-browse" data-works-browse data-work-count="{len(works)}" data-author-count="{author_n}">
 <p class="eyebrow">Works</p>
-<h1>The library</h1>
-<p class="intro">Every work you can read straight through, grouped by writer, earliest first. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY and not logos_retired() else ''}</p>
+<h1>All works</h1>
+<p class="intro">Every work on the site, grouped by writer, earliest first. A work marked Part only is a portion of a longer book. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY and not logos_retired() else ''}</p>
 <div class="works-chrome">
   <label class="works-find"><span class="vh">Find in library</span>
     <input type="search" id="works-q" class="search-input" placeholder="Search titles, writers, or words…" autocomplete="off">
@@ -9251,7 +9398,8 @@ def build() -> None:
         # worksheet notes ("Densify: Caput Primum ...", "Greek column OCR
         # damaged"); the source is named cleanly in About this text instead.
         intro_note = re.sub(
-            r"Translated from (?=[^<]*(?:Densify|densify|OCR|\bIA\b|Apud|Sancti|Salmurii|check PG|column|;))[^<]*",
+            r"Translated from (?=[^<]*(?:Densify|densify|OCR|\bIA\b|Apud|Sancti|Salmurii|check PG|column|;"
+            r"|Internet Archive|HathiTrust|urn:cts|\bTEI\b|Documenta Catholica|Tip:))[^<]*",
             "The printed source is named in About this text.",
             intro_note,
         )
@@ -10219,8 +10367,9 @@ def build() -> None:
                         for m in [re.search(r"/authors/([^/]+)/", h)] if m})
     (DIST.parent / f"{DIST.name}.authors-without-dates.json").write_text(
         json.dumps(_no_dates, indent=1) + "\n", encoding="utf-8")
-    if _no_dates:
-        print(f"WARNING: {len(_no_dates)} writers without dates (rule 1b): {', '.join(_no_dates)}", flush=True)
+    _no_dates_new = [slug for slug in _no_dates if slug not in UNDATED_AUTHORS]
+    if _no_dates_new:
+        print(f"WARNING: {len(_no_dates_new)} writers without dates (rule 1b): {', '.join(_no_dates_new)}", flush=True)
 
     # Group the rows by era (P18 sketch 4); order inside each group stays earliest first.
     _era_rows: dict[str, list[tuple[int, str]]] = defaultdict(list)
@@ -10402,7 +10551,7 @@ def build() -> None:
         DIST / "contribute" / "index.html",
         layout(
             "Help us",
-            f"""<p class="eyebrow">Support the library</p><h1>Help us</h1>
+            f"""<h1>Help us</h1>
             <p class="intro">This library is free. If you want to help it keep growing, pick one of these. None of them is required to read.</p>
 
             <ol class="help-list">
@@ -10483,7 +10632,7 @@ def build() -> None:
             <p>Want to help finish a text? See <a href="/contribute/">Help us</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
             crumb=[("Home", "/"), ("About", "")],
             active="about",
-            description="Via Patrum is a free library of early Christian writing in faithful modern English: questions, Fathers, whole works, and how they line up over time.",
+            description="Via Patrum is a free library of early Christian writing in faithful modern English: topics, Fathers, whole works, and how they line up over time.",
         ),
     )
 
@@ -10517,7 +10666,7 @@ def build() -> None:
             <p class="lede">How this library makes its English, and how far to trust a page.</p>
 
             <h2>Why this exists</h2>
-            <p>Via Patrum is a free library for study: what the early Church taught, question by question; whole works to read straight through; and a timeline of where each writer stood. It is not a critical edition. The aim is readable English that is honest about its sources.</p>
+            <p>Via Patrum is a free library for study: what the early Church taught, topic by topic; whole works to read straight through; and a timeline of where each writer stood. It is not a critical edition. The aim is readable English that is honest about its sources.</p>
 
             <h2>What you will find</h2>
             <p><strong>Topics</strong> gather what the Fathers said on one subject, earliest first. <strong>Works</strong> let you read a whole book straight through, with the Greek or Latin one tap away. <strong>Timeline</strong> shows where each writer stood on a claim, and when. New works go up as they pass the checks below.</p>
@@ -10720,6 +10869,7 @@ https://:version.:project.pages.dev/*
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))
+        + dropped_section_redirects(WESLEY_DROPPED_SECTIONS, {w["slug"] for w in works})
         + logos_redirect,
         encoding="utf-8",
     )
