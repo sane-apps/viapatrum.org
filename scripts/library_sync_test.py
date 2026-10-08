@@ -305,7 +305,8 @@ def word_zip_bytes(text: str) -> bytes:
 
 
 class Assemble(Fixture):
-    def build(self, epubs, words, audio=None, book_hash=None, word_hash=None, audio_failed=None, site_sections=None):
+    def build(self, epubs, words, audio=None, book_hash=None, word_hash=None, audio_failed=None, site_sections=None,
+              text_mismatch=None):
         works = sorted(set(epubs) | set(words) | set(audio or {}))
         (self.app / "catalog.json").write_text(json.dumps({
             "authors": [{"slug": "x", "name": "Writer", "year": 200}],
@@ -329,7 +330,8 @@ class Assemble(Fixture):
                           "sections_narrated": narrated, "sections_total": total, "missing_sections": missing}
             (self.app / "works" / f"{slug}.json").write_text(json.dumps(
                 {"sections": [{"id": f"u0{i}", "n": str(i)} for i in range(1, total + 1)]}))
-        (self.out / "manifest-audio.json").write_text(json.dumps({"works": aman, "failed": audio_failed or {}}))
+        (self.out / "manifest-audio.json").write_text(json.dumps({"works": aman, "failed": audio_failed or {},
+                                                                 "text_mismatch": text_mismatch or {}}))
         out = io.StringIO()
         with mock.patch("sys.stdout", out):
             rc = ls.assemble(self.app)
@@ -387,6 +389,13 @@ class Assemble(Fixture):
         self.assertEqual(audio["full"]["missing"], [])
         self.assertIn("audio/failed.m4b: its last rebuild failed", log)
         self.assertIn("audio/reshaped.m4b: planned for 4 sections, the site has 5", log)
+
+    def test_audio_from_older_wording_is_marked(self):
+        rc, data, log = self.build({}, {}, audio={"old": (4, 4, []), "new": (4, 4, [])},
+                                   text_mismatch={"old": {"sections_matching_now": 1}})
+        audio = {w["slug"]: w["files"]["audio"] for w in data["works"]}
+        self.assertTrue(audio["old"]["older_text"])
+        self.assertFalse(audio["new"]["older_text"])
 
 
 class Upload(Fixture):
@@ -588,6 +597,18 @@ class Copy(unittest.TestCase):
         self.assertIn("Audiobook: § 30, 31 and 37 not narrated yet.", lib.work_block("a"))
         self.assertNotIn("not narrated", dp._row(lib.by_slug["b"], lambda *a: ""))
         self.assertNotIn("not narrated", lib.work_block("b"))
+
+    def test_audiobook_from_older_wording_says_so(self):
+        w = work("a", ["epub", "audio"])
+        w["files"]["audio"].update(sections=4, narrated=4, missing=[], older_text=True)
+        lib = lib_with([w, work("b", ["epub"])])
+        self.assertIn("Audiobook: narrated from an earlier wording; the text on the site is newer", dp._row(lib.by_slug["a"], lambda *a: ""))
+        self.assertIn("narrated from an earlier wording", lib.work_block("a"))
+        pages = {}
+        with tempfile.TemporaryDirectory() as d:
+            dp.build(Path(d), lib, lambda title, body, **kw: body, lambda path, html: pages.__setitem__(path.name, html),
+                     covers_dir=Path(d), sort_key=lambda w: w["slug"], author_dates=lambda *a: "")
+        self.assertIn("A few audiobooks were narrated from an earlier wording", pages["index.html"])
 
     def test_short_audiobook_without_a_list_still_says_so(self):
         self.assertEqual(dp.short_audio({"sections": 8, "narrated": 7}), "7 of 8 sections narrated")

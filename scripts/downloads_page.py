@@ -88,10 +88,15 @@ def hours(sec: float) -> str:
     return f"{m // 60} h {m % 60:02d} min" if m % 60 else f"{m // 60} h"
 
 
+OLDER_TEXT = "narrated from an earlier wording; the text on the site is newer"
+
+
 def short_audio(f: dict) -> str:
     """'§ 18 and 90 not narrated yet' for an audiobook that leaves sections
     out, or ''. The shelf must not show only the length of a partial
     recording (2026-10-06 audit: 12 sold audiobooks were short)."""
+    if f.get("older_text"):  # build_audiobooks "text_mismatch": kept on sale, said plainly
+        return OLDER_TEXT
     total, done = int(f.get("sections") or 0), int(f.get("narrated") or 0)
     if not total or done >= total:
         return ""
@@ -206,7 +211,7 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
             continue
         meta = hours(f["duration_s"]) if k == "audio" else size(f["bytes"])
         part = ""
-        if k == "audio" and short_audio(f):
+        if k == "audio" and short_audio(f) and not f.get("older_text"):
             part = f' title="Narrated: {f["narrated"]} of {f["sections"]} sections"'
         if k == "audio":
             part += f' data-bytes="{int(f["bytes"])}"'
@@ -401,7 +406,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   {"<details><summary>How do I open these on a Kindle?</summary><p>Send the EPUB with Amazon's Send to Kindle (the app, the website, or email). Kindle converts it for you.</p></details>" if n["epub"] else ""}
   {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The README in each zip walks through it, and the cover and description are included.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
   <details><summary>Where do I find my key later?</summary><p>It is in your receipt email from Lemon Squeezy, our payment provider. You can also look it up at <a href="https://app.lemonsqueezy.com/my-orders" rel="noopener">My Orders</a> with the email you paid with. Enter it here on any browser.</p></details>
-  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.</p></details>
+  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
   <details><summary>Can I get a refund?</summary><p>If something is wrong with a file, write to hi@saneapps.com and tell us what you see. We fix problems first; if we cannot, we refund.</p></details>
 </section>
 
