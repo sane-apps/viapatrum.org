@@ -3,8 +3,12 @@
 every EPUB, PDF, Word for Logos file and audiobook, now and later).
 
 Data: outputs/downloads/library.json from scripts/library_sync.py. Only files
-marked uploaded are linked, and a file library_sync marked "dirty" (it failed
-the worksheet-note gate) is left out; the work's other formats stay. An
+marked uploaded are linked, and only when the upload ledger next to it
+(uploaded.json, R2 key -> sha256 the bucket confirmed) holds the same sha256
+as library.json: a file rebuilt after its upload, or a library.json older or
+newer than the ledger, is never listed as the current file. A file
+library_sync marked "dirty" (it failed the worksheet-note gate) is left out;
+the work's other formats stay. An
 audiobook that leaves sections out says which ones. Copy states real
 counts: "every" only where every work on the shelf has that format. Locked browsers that follow a /dl/ link are sent
 back here by functions/dl; assets/downloads.js shows the locked or unlocked
@@ -84,10 +88,15 @@ def hours(sec: float) -> str:
     return f"{m // 60} h {m % 60:02d} min" if m % 60 else f"{m // 60} h"
 
 
+OLDER_TEXT = "narrated from an earlier wording; the text on the site is newer"
+
+
 def short_audio(f: dict) -> str:
     """'§ 18 and 90 not narrated yet' for an audiobook that leaves sections
     out, or ''. The shelf must not show only the length of a partial
     recording (2026-10-06 audit: 12 sold audiobooks were short)."""
+    if f.get("older_text"):  # build_audiobooks "text_mismatch": kept on sale, said plainly
+        return OLDER_TEXT
     total, done = int(f.get("sections") or 0), int(f.get("narrated") or 0)
     if not total or done >= total:
         return ""
@@ -101,15 +110,27 @@ def short_audio(f: dict) -> str:
 class Library:
     def __init__(self, path: Path):
         self.data = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+        ledger_path = path.with_name("uploaded.json")
+        try:
+            self.ledger = json.loads(ledger_path.read_text(encoding="utf-8")) if ledger_path.is_file() else {}
+        except (OSError, json.JSONDecodeError):
+            self.ledger = {}  # unreadable ledger: list nothing rather than guess
         # Files that failed the worksheet-note gate stay off the site: kind ->
         # held slugs. An older list form names whole formats.
         dirty = self.data.get("dirty") or {}
         self.dirty = {k: None for k in dirty} if isinstance(dirty, list) else {k: set(v or ()) for k, v in dirty.items()}
         self.by_slug = {}
         for w in self.data.get("works") or []:
-            files = {k: f for k, f in (w.get("files") or {}).items() if f.get("uploaded") and not self.held(k, w["slug"])}
+            files = {k: f for k, f in (w.get("files") or {}).items() if self.current(f) and not self.held(k, w["slug"])}
             if files:
                 self.by_slug[w["slug"]] = {**w, "files": files}
+
+    def current(self, f: dict) -> bool:
+        """Uploaded, and the bucket holds this exact file: the ledger's sha256
+        for the key equals the one library.json lists (2026-10-07: the shelf
+        must never link a stale file as the current one)."""
+        digest = f.get("sha256")
+        return bool(f.get("uploaded") and digest and self.ledger.get(f.get("key")) == digest)
 
     def held(self, kind: str, slug: str) -> bool:
         if kind not in self.dirty:
@@ -119,7 +140,7 @@ class Library:
     def bundles(self) -> list[dict]:
         # library_sync builds each bundle without the held files; an older
         # list form held the whole format, bundle included.
-        return [b for b in self.data.get("bundles") or [] if b.get("uploaded") and self.dirty.get(b.get("kind"), ()) is not None]
+        return [b for b in self.data.get("bundles") or [] if self.current(b) and self.dirty.get(b.get("kind"), ()) is not None]
 
     @property
     def price(self) -> int:
@@ -142,7 +163,21 @@ class Library:
         if full:
             line = "Every book as " + join(full) + (", plus " + join(some) if some else "")
         else:
-            line = f"{len(works)} books as " + join(some) if some else "Every download"
+            # No format covers every work: give each format its own count and
+            # never pair len(works) with a format that has fewer files
+            # (2026-10-07: "332 books as EPUB, PDF..." when 322 had EPUB).
+            groups: list[tuple[int, list[str]]] = []
+            for k in ("epub", "pdf", "word"):
+                if n[k]:
+                    if groups and groups[-1][0] == n[k]:
+                        groups[-1][1].append(NAME[k])
+                    else:
+                        groups.append((n[k], [NAME[k]]))
+            bits = [(plural(c, "book") if i == 0 else f"{c:,}") + " as " + " and ".join(names)
+                    for i, (c, names) in enumerate(groups)]
+            if n["audio"]:
+                bits.append(plural(n["audio"], "audiobook"))
+            line = (", ".join(bits[:-1]) + " and " + bits[-1] if len(bits) > 1 else bits[0]) if bits else "Every download"
         return line + f". One payment of ${int(self.data.get('price_usd') or 50)}."
 
     def work_block(self, slug: str) -> str:
@@ -176,7 +211,7 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
             continue
         meta = hours(f["duration_s"]) if k == "audio" else size(f["bytes"])
         part = ""
-        if k == "audio" and short_audio(f):
+        if k == "audio" and short_audio(f) and not f.get("older_text"):
             part = f' title="Narrated: {f["narrated"]} of {f["sections"]} sections"'
         if k == "audio":
             part += f' data-bytes="{int(f["bytes"])}"'
@@ -371,7 +406,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   {"<details><summary>How do I open these on a Kindle?</summary><p>Send the EPUB with Amazon's Send to Kindle (the app, the website, or email). Kindle converts it for you.</p></details>" if n["epub"] else ""}
   {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The README in each zip walks through it, and the cover and description are included.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
   <details><summary>Where do I find my key later?</summary><p>It is in your receipt email from Lemon Squeezy, our payment provider. You can also look it up at <a href="https://app.lemonsqueezy.com/my-orders" rel="noopener">My Orders</a> with the email you paid with. Enter it here on any browser.</p></details>
-  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.</p></details>
+  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
   <details><summary>Can I get a refund?</summary><p>If something is wrong with a file, write to hi@saneapps.com and tell us what you see. We fix problems first; if we cannot, we refund.</p></details>
 </section>
 

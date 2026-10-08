@@ -5,9 +5,10 @@
  * Proof of purchase is the Lemon Squeezy licence key. The browser holds it in
  * a signed, HttpOnly cookie ("vpl"), so no accounts and no database:
  *   vpl = base64url(JSON {k: key, v: last check (s), i: issued (s)}) "." base64url(HMAC-SHA256)
- * Every REVALIDATE_S the key is checked again with the public Licence API, so
- * a refunded or disabled key stops working; if Lemon Squeezy is unreachable
- * the cookie keeps working until it can be checked.
+ * Every REVALIDATE_S the key is checked again with the public Licence API and
+ * its order, so a refunded or disabled key stops working within a day; if
+ * Lemon Squeezy is unreachable or rate-limits us, the cookie keeps working
+ * until it can be checked.
  *
  * Pages project settings:
  *   LIBRARY            R2 binding, private bucket "viapatrum-downloads"
@@ -15,11 +16,20 @@
  *                      just asks buyers to enter their key again)
  *   LEMONSQUEEZY_API_KEY  secret: reads an order to unlock right after checkout
  *   LIBRARY_STORE_ID   e.g. "270691"
- *   LIBRARY_PRODUCT_IDS  comma list of product ids that unlock (live + test)
+ *   LIBRARY_PRODUCT_IDS  comma list of product ids that unlock
+ *   LIBRARY_ALLOW_TEST_KEYS  "1" only while testing: test-mode keys unlock too
  */
 export const COOKIE = "vpl";
 export const REVALIDATE_S = 24 * 3600; // owner 2026-10-06: a refunded or disabled key stops within a day
 const MAX_AGE_S = 400 * 24 * 3600; // browsers cap cookie lifetime at 400 days
+// While the store does not answer, a pass stays unlocked only this long after
+// its last successful check. Without a cap, anyone who got our worker
+// rate-limited by Lemon Squeezy would keep refunded passes alive for good
+// (parent review 2026-10-07).
+export const UNREACHABLE_GRACE_S = 7 * 24 * 3600;
+// Lemon Squeezy licence keys are UUIDs. Anything else is refused here, before
+// it costs a call to the store.
+const KEY_SHAPE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const LS = "https://api.lemonsqueezy.com/v1";
 
 const enc = new TextEncoder();
@@ -71,10 +81,21 @@ export async function readCookie(request, env) {
 
 const allowedProducts = (env) => new Set(String(env.LIBRARY_PRODUCT_IDS || "").split(",").map((s) => s.trim()).filter(Boolean));
 
-/** Check a key with the public Licence API. Returns {ok, reason, meta, test}. */
+// Order states that end access (owner 2026-10-07, shelf stream): a full
+// refund or a fraud flag. A partial refund is a goodwill credit; the buyer
+// still paid, so the pass keeps working.
+const ENDED_ORDER = new Set(["refunded", "fraudulent"]);
+
+/** Check a key with the public Licence API, then (with the store API key) the
+ * order behind it. Returns {ok, reason, meta, test, unreachable}.
+ * "unreachable" means the store gave no answer about this key (network error,
+ * 408, 429 rate limit, 5xx, or a reply that is not JSON): session() keeps the
+ * cookie then, so a store outage never locks a buyer out. Lemon Squeezy does
+ * not document that a refund disables the key, so the order status is read
+ * too (2026-10-07 red team). */
 export async function validateKey(env, key) {
   key = String(key || "").trim();
-  if (!/^[A-Za-z0-9-]{8,64}$/.test(key)) return { ok: false, reason: "That does not look like a licence key." };
+  if (!KEY_SHAPE.test(key)) return { ok: false, reason: "That does not look like a licence key. Paste it from your receipt email." };
   let r;
   try {
     r = await fetch(`${LS}/licenses/validate`, {
@@ -85,8 +106,11 @@ export async function validateKey(env, key) {
   } catch {
     return { ok: false, reason: "We could not reach the store. Please try again in a minute.", unreachable: true };
   }
-  if (r.status >= 500) return { ok: false, reason: "The store is not answering. Please try again in a minute.", unreachable: true };
-  const d = await r.json().catch(() => ({}));
+  if (r.status >= 500 || r.status === 408 || r.status === 429) {
+    return { ok: false, reason: "The store is not answering. Please try again in a minute.", unreachable: true };
+  }
+  const d = await r.json().catch(() => null);
+  if (!d || typeof d !== "object") return { ok: false, reason: "The store is not answering. Please try again in a minute.", unreachable: true };
   const meta = d.meta || {};
   if (!d.valid) {
     const status = d.license_key && d.license_key.status;
@@ -98,7 +122,18 @@ export async function validateKey(env, key) {
   if (String(meta.store_id) !== String(env.LIBRARY_STORE_ID) || !allowedProducts(env).has(String(meta.product_id))) {
     return { ok: false, reason: "That key is for a different product." };
   }
-  return { ok: true, meta, test: Boolean(d.license_key && d.license_key.test_mode) };
+  const test = Boolean(d.license_key && d.license_key.test_mode);
+  // A test-mode key costs nothing; it unlocks only while the owner is testing.
+  if (test && env.LIBRARY_ALLOW_TEST_KEYS !== "1") return { ok: false, reason: "That is a test key. Use the key from your receipt email." };
+  if (env.LEMONSQUEEZY_API_KEY && meta.order_id) {
+    const order = await lsGet(env, `/orders/${encodeURIComponent(String(meta.order_id))}`);
+    const a = order && order.data && order.data.attributes;
+    // No answer about the order is not a refusal: the key itself is valid.
+    if (a && (ENDED_ORDER.has(a.status) || a.refunded === true)) {
+      return { ok: false, reason: "This purchase was refunded, so the key no longer unlocks downloads." };
+    }
+  }
+  return { ok: true, meta, test };
 }
 
 /** Is this browser unlocked? Re-checks the key when the last check is stale. */
@@ -112,17 +147,46 @@ export async function session(request, env) {
     const fresh = { ...p, v: now };
     return { unlocked: true, payload: fresh, setCookie: await sealCookie(env, fresh) };
   }
-  if (v.unreachable) return { unlocked: true, payload: p };
+  if (v.unreachable && now - (p.v || 0) < UNREACHABLE_GRACE_S) return { unlocked: true, payload: p };
+  if (v.unreachable) {
+    return { unlocked: false, setCookie: clearCookie(),
+      reason: "We could not confirm your library pass with the store for a week. Enter your key again to unlock." };
+  }
   return { unlocked: false, setCookie: clearCookie(), reason: v.reason };
+}
+
+/** Per-isolate attempt limit for key entry: junk keys must not get our
+ * worker rate-limited by Lemon Squeezy. Returns true when this caller may
+ * try again. (Cheap and per isolate: a flood across many isolates is caught
+ * by UNREACHABLE_GRACE_S, not by this.) */
+const attempts = new Map(); // ip -> [window start (ms), count]
+export const UNLOCK_LIMIT = 10;
+export const UNLOCK_WINDOW_MS = 10 * 60 * 1000;
+export function allowAttempt(ip, now = Date.now()) {
+  ip = String(ip || "unknown");
+  const [start, n] = attempts.get(ip) || [now, 0];
+  if (now - start >= UNLOCK_WINDOW_MS) {
+    attempts.set(ip, [now, 1]);
+    return true;
+  }
+  if (n >= UNLOCK_LIMIT) return false;
+  attempts.set(ip, [start, n + 1]);
+  if (attempts.size > 5000) attempts.clear(); // bound memory in a long-lived isolate
+  return true;
 }
 
 export const keyHint = (k) => (k ? `…${String(k).slice(-4).toUpperCase()}` : "");
 
 /** Lemon Squeezy REST call with the store API key. */
 export async function lsGet(env, path) {
-  const r = await fetch(`${LS}${path}`, {
-    headers: { accept: "application/vnd.api+json", authorization: `Bearer ${env.LEMONSQUEEZY_API_KEY}` },
-  });
+  let r;
+  try {
+    r = await fetch(`${LS}${path}`, {
+      headers: { accept: "application/vnd.api+json", authorization: `Bearer ${env.LEMONSQUEEZY_API_KEY}` },
+    });
+  } catch {
+    return null;
+  }
   if (!r.ok) return null;
   return r.json().catch(() => null);
 }

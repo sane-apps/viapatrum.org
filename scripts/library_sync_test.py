@@ -39,8 +39,21 @@ class Gate(unittest.TestCase):
         for t in self.BAD:
             self.assertTrue(ls.gate_hits(f"Some English. {t} More."), t)
 
+    # 2026-10-07: shapes found in real shelf files (fix-wave instructions in
+    # the English, the locked Greek, About scope notes).
+    BAD_2026_10_07 = ['Keep the English unchanged: "and likewise"', "Add to translator_notes: u01-rem-close",
+                      "Reading the locked Greek in open English:", "Man. Post. Cap. II GAR Deinde habitus",
+                      "Cap. IX PLAC vs GAR 3", "Opening tip — Long-s and column joins", "Cap. 9 complete. Liber I still open.",
+                      "Art. I-XV. Not whole Philosophia (213 pp).", "(Greek · Philocalia §§1–27 SERIES)"]
+
+    def test_2026_10_07_patterns_hit(self):
+        for t in self.BAD_2026_10_07:
+            self.assertTrue(ls.gate_hits(f"Some English. {t} More."), t)
+
     def test_clean_text_passes(self):
-        for t in ["Passover, as Paul says in Romans 5:12.", "Unit of the Trinity", "a pass in the hills", "Pass. A man said"]:
+        for t in ["Passover, as Paul says in Romans 5:12.", "Unit of the Trinity", "a pass in the hills", "Pass. A man said",
+                  "upon the tip of the skin", "When the gates are locked, he commands entry", "the door is still open",
+                  "Keep the commandments", "not wholly", "a garden"]:
             self.assertEqual(ls.gate_hits(t), [], t)
 
     def test_wrapped_pdf_text_hits(self):
@@ -292,7 +305,8 @@ def word_zip_bytes(text: str) -> bytes:
 
 
 class Assemble(Fixture):
-    def build(self, epubs, words, audio=None, book_hash=None, word_hash=None, audio_failed=None, site_sections=None):
+    def build(self, epubs, words, audio=None, book_hash=None, word_hash=None, audio_failed=None, site_sections=None,
+              text_mismatch=None):
         works = sorted(set(epubs) | set(words) | set(audio or {}))
         (self.app / "catalog.json").write_text(json.dumps({
             "authors": [{"slug": "x", "name": "Writer", "year": 200}],
@@ -316,7 +330,8 @@ class Assemble(Fixture):
                           "sections_narrated": narrated, "sections_total": total, "missing_sections": missing}
             (self.app / "works" / f"{slug}.json").write_text(json.dumps(
                 {"sections": [{"id": f"u0{i}", "n": str(i)} for i in range(1, total + 1)]}))
-        (self.out / "manifest-audio.json").write_text(json.dumps({"works": aman, "failed": audio_failed or {}}))
+        (self.out / "manifest-audio.json").write_text(json.dumps({"works": aman, "failed": audio_failed or {},
+                                                                 "text_mismatch": text_mismatch or {}}))
         out = io.StringIO()
         with mock.patch("sys.stdout", out):
             rc = ls.assemble(self.app)
@@ -374,6 +389,13 @@ class Assemble(Fixture):
         self.assertEqual(audio["full"]["missing"], [])
         self.assertIn("audio/failed.m4b: its last rebuild failed", log)
         self.assertIn("audio/reshaped.m4b: planned for 4 sections, the site has 5", log)
+
+    def test_audio_from_older_wording_is_marked(self):
+        rc, data, log = self.build({}, {}, audio={"old": (4, 4, []), "new": (4, 4, [])},
+                                   text_mismatch={"old": {"sections_matching_now": 1}})
+        audio = {w["slug"]: w["files"]["audio"] for w in data["works"]}
+        self.assertTrue(audio["old"]["older_text"])
+        self.assertFalse(audio["new"]["older_text"])
 
 
 class Upload(Fixture):
@@ -488,16 +510,23 @@ class Upload(Fixture):
         self.assertEqual(json.loads(ls.LEDGER.read_text()), {})
 
 
-def lib_with(works, bundles=(), dirty=None, checkout="https://example.test/buy"):
+def lib_with(works, bundles=(), dirty=None, checkout="https://example.test/buy", ledger=None):
+    """A Library over a temp library.json. The upload ledger matches every
+    listed file unless a ledger is given."""
     d = tempfile.mkdtemp()
     p = Path(d) / "library.json"
-    p.write_text(json.dumps({"price_usd": 50, "checkout_url": checkout, "works": works, "bundles": list(bundles),
+    bundles = [{"sha256": "s-" + b["key"], **b} for b in bundles]
+    p.write_text(json.dumps({"price_usd": 50, "checkout_url": checkout, "works": works, "bundles": bundles,
                              "dirty": dirty or {}}))
+    if ledger is None:
+        ledger = {x["key"]: x["sha256"] for w in works for x in w["files"].values()} | {b["key"]: b["sha256"] for b in bundles}
+    (Path(d) / "uploaded.json").write_text(json.dumps(ledger))
     return dp.Library(p)
 
 
 def work(slug, kinds, part_only="", scope=""):
-    f = {k: {"key": f"{k}/{slug}.x", "bytes": 1000, "name": slug, "uploaded": True, "duration_s": 600} for k in kinds}
+    f = {k: {"key": f"{k}/{slug}.x", "bytes": 1000, "name": slug, "uploaded": True, "duration_s": 600,
+             "sha256": f"s-{k}/{slug}.x"} for k in kinds}
     return {"slug": slug, "title": slug.title(), "author": "A", "files": f, "part_only": part_only, "scope": scope}
 
 
@@ -519,6 +548,26 @@ class Copy(unittest.TestCase):
         self.assertEqual(dp.lede(one, dp.counts(one), 1), "1 work as EPUB and PDF, and 1 audiobook, 1 hour in all")
         many = [work(f"w{i}", ["epub", "pdf", "audio"]) for i in range(2)]
         self.assertEqual(dp.lede(many, dp.counts(many), 1203), "2 works as EPUB and PDF, and 2 audiobooks, 1,203 hours in all")
+
+    def test_file_is_listed_only_when_the_ledger_holds_its_sha(self):
+        """library.json says uploaded, but the bucket holds another version
+        (the ledger's sha differs) or none: the shelf must not link it."""
+        works = [work("a", ["epub", "pdf"]), work("b", ["epub"])]
+        ledger = {"epub/a.x": "s-epub/a.x", "pdf/a.x": "an-older-build", "bundles/e.zip": "older"}
+        lib = lib_with(works, bundles=[{"kind": "epub", "uploaded": True, "key": "bundles/e.zip"}], ledger=ledger)
+        self.assertEqual(set(lib.by_slug["a"]["files"]), {"epub"})
+        self.assertNotIn("b", lib.by_slug)
+        self.assertEqual(lib.bundles(), [])
+        no_sha = work("c", ["epub"])
+        no_sha["files"]["epub"]["sha256"] = ""
+        self.assertFalse(lib_with([no_sha], ledger={"epub/c.x": ""}).by_slug)
+
+    def test_pitch_never_pairs_the_work_count_with_a_shorter_format(self):
+        works = [work("a", ["epub", "pdf", "word", "audio"]), work("b", ["epub", "pdf", "audio"]), work("c", ["audio"])]
+        self.assertEqual(lib_with(works).pitch(),
+                         "2 books as EPUB and PDF, 1 as Word for Logos and 3 audiobooks. One payment of $50.")
+        one = [work("a", ["epub"]), work("b", ["audio"])]
+        self.assertEqual(lib_with(one).pitch(), "1 book as EPUB and 1 audiobook. One payment of $50.")
 
     def test_dirty_file_is_hidden_not_its_format(self):
         lib = lib_with([work("a", ["epub", "word"]), work("b", ["epub", "word"])],
@@ -548,6 +597,18 @@ class Copy(unittest.TestCase):
         self.assertIn("Audiobook: § 30, 31 and 37 not narrated yet.", lib.work_block("a"))
         self.assertNotIn("not narrated", dp._row(lib.by_slug["b"], lambda *a: ""))
         self.assertNotIn("not narrated", lib.work_block("b"))
+
+    def test_audiobook_from_older_wording_says_so(self):
+        w = work("a", ["epub", "audio"])
+        w["files"]["audio"].update(sections=4, narrated=4, missing=[], older_text=True)
+        lib = lib_with([w, work("b", ["epub"])])
+        self.assertIn("Audiobook: narrated from an earlier wording; the text on the site is newer", dp._row(lib.by_slug["a"], lambda *a: ""))
+        self.assertIn("narrated from an earlier wording", lib.work_block("a"))
+        pages = {}
+        with tempfile.TemporaryDirectory() as d:
+            dp.build(Path(d), lib, lambda title, body, **kw: body, lambda path, html: pages.__setitem__(path.name, html),
+                     covers_dir=Path(d), sort_key=lambda w: w["slug"], author_dates=lambda *a: "")
+        self.assertIn("A few audiobooks were narrated from an earlier wording", pages["index.html"])
 
     def test_short_audiobook_without_a_list_still_says_so(self):
         self.assertEqual(dp.short_audio({"sections": 8, "narrated": 7}), "7 of 8 sections narrated")

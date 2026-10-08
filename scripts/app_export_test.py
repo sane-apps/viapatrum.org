@@ -27,6 +27,7 @@ FAKE_B = SimpleNamespace(
     section_ordinals=lambda sections: {},
     shown_section=lambda section, ordinals: str(section),
     public_head=lambda head: head,
+    display_head=lambda s, w: str(s.get("head") or "").replace(" GAR 3 tip", ""),
     clean_reader_notation=lambda text: text,
     strip_logos_markup=lambda text: text,
     _scripture_matches=lambda text: [],
@@ -55,6 +56,15 @@ def content(works: list[dict], topic_title: str = "Grace") -> dict:
         catalog = json.loads((dist / "app" / "v1" / "catalog.json").read_text(encoding="utf-8"))
         body = (dist / "app" / "v1" / "works" / "athanasius-on-the-incarnation.json").read_text(encoding="utf-8")
         return {"content": catalog["content"], "body": body, "work": catalog["works"][0]}
+
+
+class HeadTest(unittest.TestCase):
+    def test_section_head_is_the_reader_heading(self):
+        """The app (and the shelf files built from it) use display_head, the
+        reader's H2 rule, never the raw head (Placeus worksheet tags)."""
+        w = work(sections=[{"section": "1", "head": "On imputation GAR 3 tip", "english": ["Text."]}])
+        body = json.loads(content([w])["body"])
+        self.assertEqual(body["sections"][0]["head"], "On imputation")
 
 
 class ContentDigestTest(unittest.TestCase):

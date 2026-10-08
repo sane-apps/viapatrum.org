@@ -6,6 +6,11 @@
  * unlock this browser, and return the key so the buyer can keep it.
  * Answers 200 with ok:false (and pending:true while the order settles) so the
  * page can poll without filling the console with errors.
+ *
+ * The reply carries the full key and the order email on purpose (decided
+ * 2026-10-07): it goes only to the browser that just paid and proved the
+ * order's private identifier, over HTTPS with no-store, and the buyer needs
+ * the key to unlock other devices. The key is never put in a URL or logged.
  */
 import { json, lsGet, sealCookie, keyHint, allowedProducts } from "../../_lib/library.js";
 
@@ -21,6 +26,7 @@ export async function onRequestPost({ request, env }) {
   if (String(a.store_id) !== String(env.LIBRARY_STORE_ID) || !allowedProducts(env).has(String(a.first_order_item && a.first_order_item.product_id))) {
     return json({ ok: false, reason: "That order is for a different product." });
   }
+  if (a.test_mode && env.LIBRARY_ALLOW_TEST_KEYS !== "1") return json({ ok: false, reason: "That was a test order." });
   if (a.status !== "paid") return json({ ok: false, reason: "The payment has not cleared yet.", pending: a.status === "pending" });
   const keys = await lsGet(env, `/license-keys?filter[order_id]=${id}`);
   const lk = keys && keys.data && keys.data[0] && keys.data[0].attributes;
