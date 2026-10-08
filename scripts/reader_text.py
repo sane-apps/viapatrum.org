@@ -188,7 +188,9 @@ STATUS_NOTE_RE = re.compile(
 DAMAGE_NOTE_RE = re.compile(
     r"\[\s*(?:the\s+)?(?:text|greek|latin)\b[^\[\]]*?"
     r"(?:garbl\w*|corrupt\w*|gap\w*|unclear|illegible|placeholders?)[^\[\]]*\]"
-    r"|\[\s*Here\s+T\b[^\[\]]*\]",
+    r"|\[\s*Here\s+T\b[^\[\]]*\]"
+    # "[lacuna — several words ... daggered]", "[a corrupt word, παιδοται]"
+    r"|\[\s*(?:lacuna|an?\s+corrupt\s+word|crux)\b[^\[\]]*\]",
     re.IGNORECASE,
 )
 DAMAGE_MARK = "[The text is damaged here.]"

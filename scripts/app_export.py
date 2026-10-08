@@ -126,7 +126,7 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
                     "id": x["id"],
                     "author": author_entry(x.get("author") or ""),
                     "cite": b.public_citation(x.get("citation") or x["id"], x.get("work") or ""),
-                    "older": str(x.get("confidence") or "") == "seed_anf",
+                    "older": bool(b.excerpt_is_anf(x)),  # the site's own ANF test (seed_edition New Advent too)
                     "p": paras,
                 })
             if not excerpts:

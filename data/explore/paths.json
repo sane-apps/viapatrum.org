@@ -2,9 +2,9 @@
   {
     "id": "tulip-augustine-grace",
     "kind": "doctrine",
-    "title": "Grace, will, and later TULIP framing",
+    "title": "Grace and the human will",
     "status": "live",
-    "summary": "What the Fathers actually say about human will, sin, and grace — and where Augustine’s late teaching breaks from earlier patterns. Read as background to later Reformed TULIP slogans, not as those slogans themselves.",
+    "summary": "What the Fathers say about the human will, sin and grace, and where Augustine’s late teaching parts from the writers before him.",
     "explore_topic": "free-will",
     "also_topics": ["sin-and-death", "grace-and-assistance", "faith-and-obedience", "image-likeness"],
     "links": [
@@ -20,7 +20,7 @@
     "kind": "doctrine",
     "title": "Father, Son, and Spirit",
     "status": "live",
-    "summary": "How early writers speak of the one God and the Son and Spirit — before later creed shorthand. Prefer the timeline and topical excerpts over slogans.",
+    "summary": "How the early writers speak of the one God, and of the Son and the Spirit, before the later creeds set the words.",
     "explore_topic": "father-son-spirit",
     "also_topics": ["one-god-creator", "attributes-providence"],
     "links": [
@@ -32,9 +32,9 @@
   {
     "id": "christology",
     "kind": "doctrine",
-    "title": "Christology: Word, flesh, two natures",
+    "title": "The Word made flesh",
     "status": "live",
-    "summary": "Incarnation, against docetism, passion and resurrection, and early two-natures language — the road toward later definitions without pretending Nicaea/Chalcedon are already in Ignatius.",
+    "summary": "How the early writers speak of the Word becoming flesh, of his real suffering and rising, and of what is divine and human in him, long before the councils of Nicaea and Chalcedon.",
     "explore_topic": "incarnation-word-flesh",
     "also_topics": ["against-docetism", "two-natures-seed", "passion-resurrection", "virgin-birth"],
     "links": [
@@ -48,7 +48,7 @@
     "kind": "doctrine",
     "title": "Baptism and new birth",
     "status": "live",
-    "summary": "Washing, regeneration, Spirit and baptism — what writers actually tie to the water before later slogan wars.",
+    "summary": "What the early writers tie to the water of baptism: washing, new birth and the gift of the Spirit.",
     "explore_topic": "baptism-and-new-birth",
     "also_topics": ["spirit-and-baptism"],
     "links": [
@@ -62,7 +62,7 @@
     "kind": "doctrine",
     "title": "Eucharist and thanksgiving",
     "status": "live",
-    "summary": "Thanksgiving, presence language, and assembly practice in the loaded excerpts — honest about how thin some stretches still are.",
+    "summary": "How the early writers speak of the thanksgiving meal, of Christ present in it, and of the gathered church. Some centuries have only a few passages so far.",
     "explore_topic": "eucharist-thanksgiving",
     "also_topics": ["liturgy-prayer"],
     "links": [
@@ -219,7 +219,7 @@
     "also_topics": [],
     "links": [
       {"label": "1. Topics map", "href": "/topics/"},
-      {"label": "2. Irenaeus, Demonstration", "href": "/works/irenaeus-demonstration/"},
+      {"label": "2. Tertullian, On Repentance", "href": "/works/tertullian-on-repentance/"},
       {"label": "3. Baptism over time", "href": "/explore/?topic=baptism-and-new-birth"},
       {"label": "4. Origen, On Prayer", "href": "/works/origen-on-prayer/"},
       {"label": "5. Free will + Augustine contrast", "href": "/explore/?topic=free-will&author=augustine-of-hippo"}

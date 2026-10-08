@@ -509,6 +509,15 @@ _LOCK_NOTE = re.compile(r"\[[^\]]{0,40}\block\b[^\]]{0,60}\]|\block (?:marks|unr
 _lock_hits = [p.parent.name for p in sorted((site.DIST / "works").glob("*/index.html"))
               if _LOCK_NOTE.search(re.sub(r"<[^>]+>", "", p.read_text(encoding="utf-8")))]
 assert not _lock_hits, "Worksheet lock notes in reader text: %s" % _lock_hits[:5]
+# Every writer has a date and an era chip, except the named undated ones
+# (no chip can reach a data-era="Unknown" row; 2026-10-07 audit).
+_unknown_era = {re.search(r"/authors/([^/]+)/", r.get("data-author-href") or "").group(1)
+                for r in page.rows if r.get("data-era") == "Unknown" and r.get("data-author-href")}
+assert _unknown_era <= set(site.UNDATED_AUTHORS), "works rows with no era chip: %s" % sorted(_unknown_era)
+_undated_path = site.DIST.parent / f"{site.DIST.name}.authors-without-dates.json"
+if _undated_path.exists():
+    _undated = set(json.loads(_undated_path.read_text()))
+    assert _undated <= set(site.UNDATED_AUTHORS), "writers without dates: %s" % sorted(_undated - set(site.UNDATED_AUTHORS))
 print(json.dumps({"status": "passed", "authors": len(page.rows), "works": work_total, "held": len(held)}))
 
 assert site.display_section("4-2-2-collective-23") == "4.2.2"

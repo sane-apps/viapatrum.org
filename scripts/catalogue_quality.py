@@ -584,6 +584,17 @@ def check_publication(works, excerpts, root, corpus, *, enforce_review=True):
             tail_records, deferred)
 
 
+def group_deferred(deferred: dict) -> dict:
+    """Receipt form of the deferred review notes: each distinct error list once,
+    with the keys that share it. One packet's errors used to be copied onto
+    every section it covers (13,411 keys, 321 MB receipt on 2026-10-07)."""
+    groups: dict[tuple, list] = {}
+    for key, errs in deferred.items():
+        groups.setdefault(tuple(errs), []).append(key)
+    return {"keys": len(deferred),
+            "groups": [{"errors": list(errs), "keys": keys} for errs, keys in groups.items()]}
+
+
 def self_check() -> None:
     def work(slug, *bodies):
         return {"slug": slug, "sections": [
