@@ -1180,16 +1180,6 @@ details summary { cursor: pointer; font-weight: 650; }
     transform 0.2s ease,
     background-color 0.16s ease;
 }
-html.js .reader-top {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(0.35rem);
-}
-html.js .reader-top.is-visible {
-  opacity: 0.92;
-  pointer-events: auto;
-  transform: translateY(0);
-}
 .reader-top:hover {
   opacity: 1;
   color: var(--paper);
@@ -1515,12 +1505,12 @@ details.toc-group .toc {
 .search-retry { font: inherit; cursor: pointer; }
 .works-sort button, .works-filters button, .nav-toggle { min-height: 44px; }
 .reader-top { bottom: calc(1rem + env(safe-area-inset-bottom)); }
-@media (max-width: 900px) {
-  /* Phones: the floating pill sat on the reading line ("scorn death?" on
-     Diognetus, redteam 2026-10-06). Make it a solid bar along the bottom edge,
-     so it covers no word in part, and pad the page so the last line clears it. */
-  .reader-top,
-  html.js .reader-top.is-visible {
+@media (max-width: 1100px) {
+  /* The floating pill sat on the reading line ("scorn death?" on Diognetus,
+     redteam 2026-10-06). Up to 1069px wide the text column runs under it, so
+     make it a solid bar along the bottom edge, which covers no word in part,
+     and pad the page so the last line clears it. */
+  .reader-top {
     left: 0; right: 0; bottom: 0;
     display: block;
     text-align: center;
@@ -1551,10 +1541,7 @@ details.toc-group .toc {
   .site-header { position: relative; }
   :root { --header-offset: 1rem; }
   .nav-toggle { display: none; }
-  html.js .nav-toggle { display: none; }
-  .site-nav,
-  html.js .site-nav,
-  html.js .site-nav:not(.is-open) {
+  .site-nav {
     display: flex;
   }
   .site-nav a {
