@@ -56,6 +56,22 @@ class TitleAndDateTest(unittest.TestCase):
         finally:
             build_site._BRIEF_TITLES.pop(slug, None)
 
+    def test_english_section_title_is_not_a_latin_subtitle(self) -> None:
+        # 2026-10-08 14:21: the ship built, then died on this subtitle.
+        slug = "test-ignatius-subtitle"
+        build_site._BRIEF_TITLES[slug] = "The Letters of Ignatius"
+        try:
+            self.assertEqual(
+                build_site.public_reader_latin_subtitle(
+                    "The Letters of Ignatius: Ephesians", slug=slug),
+                "")
+            self.assertEqual(
+                build_site.public_reader_latin_subtitle(
+                    "Scholia in Apocalypsem", slug=slug),
+                "Scholia in Apocalypsem")
+        finally:
+            build_site._BRIEF_TITLES.pop(slug, None)
+
     def test_latin_work_title_is_not_a_section_heading(self) -> None:
         w = {"slug": "theophilus-alex-fragmenta-matthaeum", "title": "Fragmenta in Matthaeum"}
         self.assertEqual(build_site.display_head({"section": "u01-open", "head": "Fragmenta in Matthaeum"}, w), "")

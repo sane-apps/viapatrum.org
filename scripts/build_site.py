@@ -2335,6 +2335,14 @@ def public_reader_title(title: str, *, slug: str = "") -> str:
     return cleaned or raw
 
 
+# Same pattern as check_catalogue._LATIN_ENGLISH. A section file's English
+# title is not a traditional name. The 14:21 ship died because Ignatius's
+# first letter meta ("The Letters of Ignatius: Ephesians") filled this slot.
+_LATIN_SLOT_ENGLISH = re.compile(
+    r"\((?:the|a|an|on|of)\b|\b(?:the|and|of|Homily|Sermon|Letter|Fragments)\b"
+)
+
+
 def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     """Latin secondary line when H1 leads English; empty when H1 is already that form."""
     h1 = public_reader_title(title, slug=slug)
@@ -2353,7 +2361,10 @@ def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
                 return ""
             if _same_title_words(raw, h1):
                 return ""
-            return scrub_worksheet_note(raw).strip()
+            out = scrub_worksheet_note(raw).strip()
+            if _LATIN_SLOT_ENGLISH.search(out):
+                return ""
+            return out
     return ""
 
 
