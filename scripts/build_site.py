@@ -136,18 +136,27 @@ OTHER_RANK1_TIP_BOOKS = sorted(
 )
 
 
+def _load_work_pipeline():
+    sys.path.insert(0, str(BOOKS.parent / "scripts"))
+    import work_pipeline as _wp
+    return _wp
+
+
 def _certified_books() -> set:
     """Books the translation lanes certified: a work_pipeline receipt whose hashes
     still match the source and English (work_pipeline.certified). They publish
     through the tip loader with no hand-kept glob: on 2026-10-04 ten certified
     early works (Martyrdom of Polycarp, Diognetus, Athenagoras, Tertullian ...)
-    were missing from the site because nobody had added their names above."""
+    were missing from the site because nobody had added their names above.
+    If the pipeline cannot be imported, the build stops. Publishing with an
+    empty certified set used to exit 0 and drop those books with no alarm."""
     try:
-        sys.path.insert(0, str(BOOKS.parent / "scripts"))
-        import work_pipeline as _wp
-    except Exception as e:  # the site still builds; say why nothing was added
-        print(f"certified books: work_pipeline unavailable ({type(e).__name__}: {e}); none added")
-        return set()
+        _wp = _load_work_pipeline()
+    except Exception as e:
+        raise SystemExit(
+            f"BLOCKED: work_pipeline unavailable ({type(e).__name__}: {e}); "
+            "refusing to publish with no certified books"
+        ) from e
     # Books another loader already reads stay with that loader (a second copy
     # with different metadata breaks the build: "Conflicting authors").
     import fnmatch
@@ -3791,11 +3800,27 @@ def load_origen_works() -> list[dict]:
     ]
 
 
+def _reuse_footer(english, greek) -> bool:
+    """A section that is only a modern reuse notice must not become a page."""
+    root = str(BOOKS.parent)
+    if root not in sys.path:
+        sys.path.insert(0, root)
+    try:
+        from pipeline.check_pass_ab import is_reuse_footer
+    except Exception as exc:  # a missing gate must not publish the notice
+        raise SystemExit(
+            f"BLOCKED: reuse-footer check unavailable ({type(exc).__name__}: {exc})"
+        ) from exc
+    return is_reuse_footer(english) or is_reuse_footer(greek, source=True)
+
+
 def _origen_rows(english_rows, source_map) -> list[dict]:
     out = []
     for row in english_rows:
         sec = str(row.get("section"))
         src = source_map.get(sec, {})
+        if _reuse_footer(row.get("english"), src.get("greek") or src.get("text") or ""):
+            continue
         titled = (row.get("title") or "").strip()
         raw = (src.get("head") or "").strip()
         matthew = str(row.get("matthew") or src.get("matthew") or "").strip()
@@ -8091,8 +8116,8 @@ FORCED_WITHHOLD = {
     "origen-romans-catena": _RECERT,
     "origen-de-principiis": _RECERT,
     "origen-letters": _RECERT,
-    # This part slug does load as its own work. The book slug does not cover it.
-    "origen-letters-africanus-rem": _RECERT,
+    # The letter to Africanus is a section of origen-letters, not its own work.
+    # Naming the part slug held nothing: the loader never emits it.
     "origen-song-homily-1": _RECERT,
     "cyril-adoration-10": _RECERT,
     "pseudo-cyprian-to-vigilius": _RECERT,
@@ -8321,8 +8346,9 @@ def build() -> None:
     # still marks them available.
     _dead = dead_withhold_slugs({str(w.get("slug")) for w in works})
     if _dead:
-        print(f"WARNING: FORCED_WITHHOLD names no loaded work or book: {', '.join(_dead)}",
-              file=sys.stderr, flush=True)
+        raise SystemExit(
+            "BLOCKED: FORCED_WITHHOLD names no loaded work or book: " + ", ".join(_dead)
+        )
     works, withheld = split_withheld(works)
     stale = stale_receipt_slugs(works)
     withheld = sorted(set(withheld) | set(stale))

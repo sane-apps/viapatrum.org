@@ -162,5 +162,61 @@ class BuildGateTest(unittest.TestCase):
         self.assertNotIn("==>", r.stdout)  # no step started
 
 
+class PublicationProcessTest(unittest.TestCase):
+    """Holds and the certified-book import must fail closed (2026-10-08)."""
+
+    def test_a_hold_that_matches_nothing_is_named(self) -> None:
+        """A part slug that no loader emits must not sit on the list as a decoy."""
+        self.assertNotIn("origen-letters-africanus-rem", build_site.FORCED_WITHHOLD)
+        self.assertIn("origen-letters", build_site.FORCED_WITHHOLD)
+        real = build_site.FORCED_WITHHOLD
+        build_site.FORCED_WITHHOLD = {**real, "not-a-book-or-work": "test"}
+        try:
+            self.assertEqual(
+                build_site.dead_withhold_slugs(set(real)),
+                ["not-a-book-or-work"],
+            )
+        finally:
+            build_site.FORCED_WITHHOLD = real
+
+    def test_missing_pipeline_refuses_to_publish(self) -> None:
+        real = build_site._load_work_pipeline
+
+        def boom():
+            raise ImportError("gone")
+
+        build_site._load_work_pipeline = boom
+        try:
+            with self.assertRaises(SystemExit) as cm:
+                build_site._certified_books()
+            self.assertIn("BLOCKED", str(cm.exception))
+            self.assertIn("work_pipeline", str(cm.exception))
+        finally:
+            build_site._load_work_pipeline = real
+
+    def test_origen_rows_drop_the_reuse_footer(self) -> None:
+        rows = [
+            {"section": "1", "title": "Created",
+             "english": ["The Lord created me as the beginning of his ways."]},
+            {"section": "2", "title": "Free use is permitted",
+             "english": ["The free use is permitted."]},
+            {"section": "3", "title": "mid",
+             "english": ["[Source too fragmentary to translate; the line is a footer."]},
+            {"section": "4", "title": "close",
+             "english": ["It was the source. [Fragmentary remnant; the link is lost.]"]},
+            {"section": "5", "title": "Origin",
+             "english": ["He speaks of the origin of the word."]},
+        ]
+        src = {
+            "1": {"greek": "Κύριος ἔκτισέν με ἀρχὴν ὁδῶν αὐτοῦ."},
+            "2": {"greek": "Επιτρέπεται η ελεύθερη χρήση"},
+            "3": {"greek": "ση του υλικού με αναφορά στ"},
+            "4": {"greek": "ην πηγή προέλευσής του."},
+            "5": {"greek": "ην πηγή προέλευσής του."},
+        }
+        out = build_site._origen_rows(rows, src)
+        self.assertEqual([row["section"] for row in out], ["1"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

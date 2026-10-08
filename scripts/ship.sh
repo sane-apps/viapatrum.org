@@ -857,6 +857,7 @@ if [[ -z "$CSS_HASH" ]]; then
 fi
 
 step "UI, read-along and visual-gate tests"
+"$PYTHON" "$ROOT/scripts/builder_gate_test.py" PublicationProcessTest
 node --test "$ROOT/scripts/ui.test.mjs"
 node --test "$ROOT/scripts/readalong.test.mjs"
 node --test "$ROOT/scripts/check_visual_gate.test.cjs"
