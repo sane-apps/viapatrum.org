@@ -1,8 +1,10 @@
 # Generated site — rebuild with scripts/build_site.py; never hand-edit
 /dist/
 
-# Generated Pages Function allowlist (scripts/generate_works_gate.py)
+# Generated Pages Function allowlists (scripts/generate_works_gate.py).
+# Both are rewritten on every ship. Tracking them kept auto-ship off.
 /functions/works/
+/functions/authors/
 
 # Wrangler / Cloudflare local cache (may hold account metadata)
 .wrangler/
