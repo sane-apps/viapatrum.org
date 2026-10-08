@@ -109,8 +109,16 @@ def save(path: Path, data, **kw) -> None:
 
 # Translators' worksheet notes that must never reach a paid file (2026-10-06
 # audit: 120 of 170 Word books from the old Logos packs carried them).
+# 2026-10-07 additions: editor instructions a fix wave wrote into the
+# English ("Add to translator_notes: ...", "Keep the English unchanged"),
+# "the locked Greek", and workroom scope notes copied from the site's About
+# (Placeus GAR/PLAC tags, "Opening tip", "Liber I still open", "Not whole",
+# "§§1–27 SERIES"). Each is specific enough not to hit real translation
+# ("the tip of the skin", "gates are locked").
 WORKSHEET = re.compile(r"CLOSEOUT|Pass [AB]\b|True OET|Melito skipped|PD\.TN|\bUnit \d+ rem\b|\.json\b"
-                       r"|Machine draft|Locked Greek")
+                       r"|Machine draft|Locked Greek|(?i:\bthe locked (?:Greek|Latin|text)\b)"
+                       r"|translator_notes|Keep the English\b|\bGAR\b|\bPLAC\b|Opening tip\b"
+                       r"|\b(?:Liber|Book|Cap\.?)\s+[\w.]+\s+still open\b|\bNot whole\b|§§\S+ SERIES\b")
 GATE_CACHE = OUT / ".gate-cache.json"
 
 
@@ -170,7 +178,7 @@ def gate_files(paths: list[Path]) -> dict[str, list[str]]:
         if got["hits"]:
             bad[str(p)] = got["hits"]
     try:
-        GATE_CACHE.write_text(json.dumps(cache), encoding="utf-8")
+        save(GATE_CACHE, cache)
     except OSError:
         pass
     return bad

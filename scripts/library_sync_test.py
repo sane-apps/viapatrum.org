@@ -39,8 +39,21 @@ class Gate(unittest.TestCase):
         for t in self.BAD:
             self.assertTrue(ls.gate_hits(f"Some English. {t} More."), t)
 
+    # 2026-10-07: shapes found in real shelf files (fix-wave instructions in
+    # the English, the locked Greek, About scope notes).
+    BAD_2026_10_07 = ['Keep the English unchanged: "and likewise"', "Add to translator_notes: u01-rem-close",
+                      "Reading the locked Greek in open English:", "Man. Post. Cap. II GAR Deinde habitus",
+                      "Cap. IX PLAC vs GAR 3", "Opening tip — Long-s and column joins", "Cap. 9 complete. Liber I still open.",
+                      "Art. I-XV. Not whole Philosophia (213 pp).", "(Greek · Philocalia §§1–27 SERIES)"]
+
+    def test_2026_10_07_patterns_hit(self):
+        for t in self.BAD_2026_10_07:
+            self.assertTrue(ls.gate_hits(f"Some English. {t} More."), t)
+
     def test_clean_text_passes(self):
-        for t in ["Passover, as Paul says in Romans 5:12.", "Unit of the Trinity", "a pass in the hills", "Pass. A man said"]:
+        for t in ["Passover, as Paul says in Romans 5:12.", "Unit of the Trinity", "a pass in the hills", "Pass. A man said",
+                  "upon the tip of the skin", "When the gates are locked, he commands entry", "the door is still open",
+                  "Keep the commandments", "not wholly", "a garden"]:
             self.assertEqual(ls.gate_hits(t), [], t)
 
     def test_wrapped_pdf_text_hits(self):
