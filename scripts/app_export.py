@@ -76,7 +76,10 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
             paras = [p for p in (_paragraph(b, raw, flagged) for raw in s.get("english") or []) if p]
             if not paras:
                 continue
-            row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": b.public_head(str(s.get("head") or "")), "p": paras}
+            # Same title rule as the reader's H2 (display_head), not the bare
+            # public_head: Placeus heads carried GAR/PLAC/tip worksheet tags
+            # into the app and the shelf files built from this export.
+            row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": b.display_head(s, w), "p": paras}
             if (s.get("supplied_from") or "").strip():
                 row["supplied"] = s["supplied_from"].strip()
             sections.append(row)
