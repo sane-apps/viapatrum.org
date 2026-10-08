@@ -22,6 +22,14 @@
 export const COOKIE = "vpl";
 export const REVALIDATE_S = 24 * 3600; // owner 2026-10-06: a refunded or disabled key stops within a day
 const MAX_AGE_S = 400 * 24 * 3600; // browsers cap cookie lifetime at 400 days
+// While the store does not answer, a pass stays unlocked only this long after
+// its last successful check. Without a cap, anyone who got our worker
+// rate-limited by Lemon Squeezy would keep refunded passes alive for good
+// (parent review 2026-10-07).
+export const UNREACHABLE_GRACE_S = 7 * 24 * 3600;
+// Lemon Squeezy licence keys are UUIDs. Anything else is refused here, before
+// it costs a call to the store.
+const KEY_SHAPE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const LS = "https://api.lemonsqueezy.com/v1";
 
 const enc = new TextEncoder();
@@ -87,7 +95,7 @@ const ENDED_ORDER = new Set(["refunded", "fraudulent"]);
  * too (2026-10-07 red team). */
 export async function validateKey(env, key) {
   key = String(key || "").trim();
-  if (!/^[A-Za-z0-9-]{8,64}$/.test(key)) return { ok: false, reason: "That does not look like a licence key." };
+  if (!KEY_SHAPE.test(key)) return { ok: false, reason: "That does not look like a licence key. Paste it from your receipt email." };
   let r;
   try {
     r = await fetch(`${LS}/licenses/validate`, {
@@ -139,8 +147,32 @@ export async function session(request, env) {
     const fresh = { ...p, v: now };
     return { unlocked: true, payload: fresh, setCookie: await sealCookie(env, fresh) };
   }
-  if (v.unreachable) return { unlocked: true, payload: p };
+  if (v.unreachable && now - (p.v || 0) < UNREACHABLE_GRACE_S) return { unlocked: true, payload: p };
+  if (v.unreachable) {
+    return { unlocked: false, setCookie: clearCookie(),
+      reason: "We could not confirm your library pass with the store for a week. Enter your key again to unlock." };
+  }
   return { unlocked: false, setCookie: clearCookie(), reason: v.reason };
+}
+
+/** Per-isolate attempt limit for key entry: junk keys must not get our
+ * worker rate-limited by Lemon Squeezy. Returns true when this caller may
+ * try again. (Cheap and per isolate: a flood across many isolates is caught
+ * by UNREACHABLE_GRACE_S, not by this.) */
+const attempts = new Map(); // ip -> [window start (ms), count]
+export const UNLOCK_LIMIT = 10;
+export const UNLOCK_WINDOW_MS = 10 * 60 * 1000;
+export function allowAttempt(ip, now = Date.now()) {
+  ip = String(ip || "unknown");
+  const [start, n] = attempts.get(ip) || [now, 0];
+  if (now - start >= UNLOCK_WINDOW_MS) {
+    attempts.set(ip, [now, 1]);
+    return true;
+  }
+  if (n >= UNLOCK_LIMIT) return false;
+  attempts.set(ip, [start, n + 1]);
+  if (attempts.size > 5000) attempts.clear(); // bound memory in a long-lived isolate
+  return true;
 }
 
 export const keyHint = (k) => (k ? `…${String(k).slice(-4).toUpperCase()}` : "");

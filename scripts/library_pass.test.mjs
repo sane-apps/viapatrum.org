@@ -3,7 +3,8 @@
 // Run: node --test scripts/library_pass.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { session, sealCookie, validateKey, REVALIDATE_S } from '../functions/_lib/library.js';
+import { session, sealCookie, validateKey, REVALIDATE_S, UNREACHABLE_GRACE_S, allowAttempt, UNLOCK_LIMIT, UNLOCK_WINDOW_MS } from '../functions/_lib/library.js';
+import { onRequestPost as unlock } from '../functions/api/library/unlock.js';
 import { onRequest as dl } from '../functions/dl/[[path]].js';
 
 const ENV = { LIBRARY_SECRET: 'test-secret', LIBRARY_STORE_ID: '1', LIBRARY_PRODUCT_IDS: '4', LEMONSQUEEZY_API_KEY: 'k' };
@@ -27,8 +28,8 @@ function store({ validate, order }) {
   return calls;
 }
 
-async function staleCookie() {
-  const old = Math.floor(Date.now() / 1000) - REVALIDATE_S - 60;
+async function staleCookie(age = REVALIDATE_S + 60) {
+  const old = Math.floor(Date.now() / 1000) - age;
   const c = await sealCookie(ENV, { k: KEY, v: old, i: old });
   return new Request('https://viapatrum.org/api/library/status', { headers: { cookie: c.split(';')[0] } });
 }
@@ -55,6 +56,16 @@ for (const [name, validate] of [
     assert.equal(s.setCookie, undefined);
   });
 }
+
+test('session: an unreachable store keeps a pass only 7 days after its last good check', async () => {
+  store({ validate: () => reply(429, {}) });
+  const s = await session(await staleCookie(UNREACHABLE_GRACE_S + 60), ENV);
+  assert.equal(s.unlocked, false);
+  assert.match(s.setCookie, /Max-Age=0/);
+  assert.match(s.reason, /Enter your key again/);
+  store({ validate: () => reply(429, {}) });
+  assert.equal((await session(await staleCookie(UNREACHABLE_GRACE_S - 3600), ENV)).unlocked, true);
+});
 
 test('session: a disabled key locks and clears the cookie', async () => {
   store({ validate: reply(200, { valid: false, license_key: { status: 'disabled' }, meta: {} }) });
@@ -89,6 +100,48 @@ test('validateKey: a test-mode key unlocks only with LIBRARY_ALLOW_TEST_KEYS=1',
   assert.equal((await validateKey(ENV, KEY)).ok, false);
   store({ validate: reply(200, testKey) });
   assert.equal((await validateKey({ ...ENV, LIBRARY_ALLOW_TEST_KEYS: '1' }, KEY)).ok, true);
+});
+
+// --- /api/library/unlock ------------------------------------------------------
+
+function unlockReq(key, ip) {
+  return new Request('https://viapatrum.org/api/library/unlock', {
+    method: 'POST', body: JSON.stringify({ key }), headers: { 'content-type': 'application/json', 'cf-connecting-ip': ip },
+  });
+}
+
+test('unlock: an unreachable store never unlocks (503, no cookie)', async () => {
+  store({ validate: () => reply(429, {}) });
+  const r = await unlock({ request: unlockReq(KEY, '10.0.0.1'), env: ENV });
+  assert.equal(r.status, 503);
+  assert.equal(r.headers.get('set-cookie'), null);
+  assert.equal((await r.json()).ok, false);
+});
+
+test('unlock: a key that is not a UUID is refused without calling the store', async () => {
+  const calls = store({ validate: reply(200, VALID) });
+  for (const junk of ['AAAAAAAA', 'x'.repeat(40), '38b1460a-5104-4067-a91d-77b872934d5Z']) {
+    const r = await unlock({ request: unlockReq(junk, '10.0.0.2'), env: ENV });
+    assert.equal((await r.json()).ok, false);
+  }
+  assert.equal(calls.length, 0);
+});
+
+test('unlock: a valid key unlocks', async () => {
+  store({ validate: reply(200, VALID) });
+  const r = await unlock({ request: unlockReq(KEY, '10.0.0.3'), env: ENV });
+  assert.equal((await r.json()).ok, true);
+  assert.match(r.headers.get('set-cookie'), /^vpl=/);
+});
+
+test('unlock: each address gets a limited number of tries per window', async () => {
+  const calls = store({ validate: reply(200, { valid: false, meta: {} }) });
+  let last;
+  for (let i = 0; i <= UNLOCK_LIMIT; i++) last = await unlock({ request: unlockReq(KEY, '10.0.0.4'), env: ENV });
+  assert.equal(last.status, 429);
+  assert.equal(calls.length, UNLOCK_LIMIT);
+  const t = Date.now() + UNLOCK_WINDOW_MS + 1;
+  assert.equal(allowAttempt('10.0.0.4', t), true);
 });
 
 // --- /dl ---------------------------------------------------------------------
