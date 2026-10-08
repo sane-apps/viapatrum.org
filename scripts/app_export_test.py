@@ -74,5 +74,18 @@ class ContentDigestTest(unittest.TestCase):
         self.assertNotEqual(base, content([work()], topic_title="Divine grace")["content"])
 
 
+class PartOnlyTest(unittest.TestCase):
+    def test_partial_work_carries_part_only(self) -> None:
+        row = content([work(scope="Homilies 5 and 6  of 50")])["work"]
+        self.assertEqual(row["part_only"], "Homilies 5 and 6 of 50")
+
+    def test_whole_work_has_no_part_only(self) -> None:
+        self.assertNotIn("part_only", content([work()])["work"])
+        self.assertNotIn("part_only", content([work(scope="  ")])["work"])
+
+    def test_part_only_alone_changes_digest(self) -> None:
+        self.assertNotEqual(content([work()])["content"], content([work(scope="Codices 1–17 of 279")])["content"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -100,6 +100,12 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
             "first_english": bool(w.get("first_english")),
             "hash": hashlib.sha256(blob.encode("utf-8")).hexdigest()[:12],
         })
+        # A partial work says so, as on its page ("Part only: Homilies 5 and 6
+        # of 50"). The same reader-facing scope the page mast prints; the paid
+        # shelf (library_sync.site_catalog) reads it from here too.
+        scope = " ".join(str(w.get("scope") or "").split())
+        if scope:
+            work_rows[-1]["part_only"] = scope
 
     topic_rows = []
     for locus in tax.get("loci", []):

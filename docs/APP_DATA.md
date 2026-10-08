@@ -26,6 +26,12 @@ Static files under `dist/app/v1/`, served by the same Pages project:
 - `catalog.json` — authors, works (slug, title, author_slug, section count,
   audio site-slug + sections with audio, era note, translation note), topics,
   content version hash.
+  As built (scripts/app_export.py): each work row is `slug, title, author,
+  sections, words, audio, topics, first_english, hash`, plus `part_only`
+  ("Homilies 5 and 6 of 50") on a partial work only. The app shows it as
+  "Part only: ..." like the page; older apps ignore it. `audio` is true when a
+  public page plays read-along audio; the app still asks per section and hides
+  Listen where `/assets/audio/<slug>/<section>.json` is 404.
 - `works/<slug>.json` — sections `{id, head, paragraphs[], scripture[]}` (plain
   text, Logos markup stripped, same as the reader page).
 - `topics/<id>.json` — excerpts for one topic.
