@@ -3310,6 +3310,37 @@ def _fallback_blurb(folder: Path, title: str = "", author: str = "", max_chars: 
     return ""
 
 
+# inject_audio.NO_PLAY. A manifest with this label plays on no public page.
+_NO_PUBLIC_AUDIO = "(no public page plays this audio)"
+
+
+def playing_slugs(data, folder: str = "") -> set[str]:
+    """Public works whose page plays this recording.
+
+    `sites` is the full list and `work` is one of them. Listen used to count
+    only `work`, so a book that shares a recording (Wesley, Julian) never
+    appeared. The no-play label is not a work. A manifest that cannot be
+    read still counts its folder, which is what the old loop did.
+    """
+    if not isinstance(data, dict):
+        return {folder} if folder else set()
+    found: set[str] = set()
+    sites = data.get("sites")
+    labelled = isinstance(sites, list) or isinstance(data.get("work"), str)
+    if isinstance(sites, list):
+        for slug in sites:
+            if isinstance(slug, str) and slug and slug != _NO_PUBLIC_AUDIO:
+                found.add(slug)
+    work = data.get("work")
+    if isinstance(work, str) and work and work != _NO_PUBLIC_AUDIO:
+        found.add(work)
+    if found:
+        return found
+    if labelled:
+        return set()
+    return {folder} if folder else set()
+
+
 def work_card_html(w: dict, *, catalog: bool = False) -> str:
     year = work_chrono_year(w)
     era = work_era(w)
@@ -8589,14 +8620,15 @@ def build() -> None:
     search_index: list[dict] = []
 
     # --- Home ---
-    # Works with read-along audio: a manifest whose book slug is the page slug.
-    # Conservative on purpose: never mark audio that may not play.
+    # Works with read-along audio. `sites` lists every page that plays;
+    # a manifest that plays nowhere contributes nothing.
     audio_slugs: set[str] = set()
     for _m in (ROOT / "outputs/audio").glob("*/manifest.json"):
         try:
-            audio_slugs.add(str(json.loads(_m.read_text(encoding="utf-8")).get("work") or _m.parent.name))
+            _data = json.loads(_m.read_text(encoding="utf-8"))
         except (OSError, ValueError):
-            audio_slugs.add(_m.parent.name)
+            _data = None
+        audio_slugs |= playing_slugs(_data, _m.parent.name)
     for _w in works:
         _w["has_audio"] = _w["slug"] in audio_slugs
 

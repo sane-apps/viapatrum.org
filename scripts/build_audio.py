@@ -424,7 +424,7 @@ def _write_manifest(work: str, manifest: dict, total_sentences: int) -> None:
     the drain runs, and a half-written file failed the whole ship.
 
     inject_audio labels a manifest with the public works that play it
-    ("work" and "sites"; build_site counts "work" on Listen). A new recording
+    ("work" and "sites"; build_site.playing_slugs counts every site). A new recording
     keeps that label until the next ship looks at the pages again."""
     import fcntl
     path = OUT / work / "manifest.json"

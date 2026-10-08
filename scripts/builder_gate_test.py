@@ -44,6 +44,26 @@ class VerseClipTest(unittest.TestCase):
         self.assertEqual(build_site.clip_verse_to_chapter("40", None), ("40", False))
 
 
+class ListenCountTest(unittest.TestCase):
+    def test_every_page_that_plays_is_counted(self) -> None:
+        slugs = build_site.playing_slugs({
+            "work": "julian-to-florus",
+            "sites": ["julian-collective-letter", "julian-to-florus"],
+        }, "julian-of-eclanum")
+        self.assertEqual(slugs, {"julian-collective-letter", "julian-to-florus"})
+
+    def test_a_recording_that_plays_nowhere_is_not_a_work(self) -> None:
+        self.assertEqual(build_site.playing_slugs(
+            {"work": "(no public page plays this audio)", "sites": []},
+            "origen-letters"), set())
+
+    def test_an_unlabelled_manifest_counts_its_work(self) -> None:
+        self.assertEqual(build_site.playing_slugs({"work": "didache"}, "didache"), {"didache"})
+
+    def test_a_broken_manifest_counts_the_folder(self) -> None:
+        self.assertEqual(build_site.playing_slugs(None, "didache"), {"didache"})
+
+
 class TitleAndDateTest(unittest.TestCase):
     def test_brief_title_drops_a_word_the_catalogue_bans_in_the_h1(self) -> None:
         # 2026-10-08 13:49: the ship built, then died on this H1.

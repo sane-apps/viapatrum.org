@@ -789,12 +789,11 @@ def write_last_inject(failed: list) -> None:
         print("last-inject report not written: %s" % e, file=sys.stderr, flush=True)
 
 
-# Listen and the app's audio flag count a manifest's "work" (build_site.py
-# has_audio, which this script must not edit). inject labels each manifest
-# with the public works where its audio plays: "work" is one of them (the
-# book's own slug first) and "sites" lists all. NO_PLAY is no work's slug, so
-# audio that plays nowhere is not counted (2026-10-06: Listen said 247 while
-# 339 works played, and listed two that play nowhere).
+# Listen and the app's audio flag count every public slug in "sites"
+# (build_site.playing_slugs). This script must not edit build_site.py.
+# "work" is one of those slugs (the book's own slug first). NO_PLAY is not a
+# slug, so audio that plays nowhere is not counted (2026-10-06: Listen said
+# 247 while 339 works played, and listed two that play nowhere).
 NO_PLAY = "(no public page plays this audio)"
 
 
