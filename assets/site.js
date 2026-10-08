@@ -322,6 +322,12 @@
     let manifest = null;
     let manifestPromise = null;
     const loadedShards = new Map();
+    // Word index (manifest.words, build_site.write_search_words): vocabulary,
+    // one row per passage, and postings buckets. A one-word search reads these
+    // (a few hundred KB) instead of the text shards (about 20 MB).
+    let words = null;
+    let wordsPromise = null;
+    const WORD_TERM = /^[a-z0-9]+$/;
     let failedTerm = "";
     let passageCount = 0;
     // The term the passage list was last built for; until it equals the
@@ -383,8 +389,52 @@
       }
       return plan;
     };
+    const useWords = (term) =>
+      !!(manifest && manifest.words && Array.isArray(manifest.words.buckets) && WORD_TERM.test(term));
+    // Vocabulary entries that contain term, and the buckets holding their postings.
+    let wordHitsFor = "";
+    let wordHitsCache = null;
+    const wordHits = (term) => {
+      if (wordHitsFor === term && wordHitsCache) return wordHitsCache;
+      const hits = [];
+      const buckets = new Set();
+      const firsts = words.buckets;
+      for (let i = 0; i < words.vocab.length; i++) {
+        if (!words.vocab[i].includes(term)) continue;
+        let lo = 0;
+        let hi = firsts.length - 1;
+        while (lo < hi) {
+          const mid = (lo + hi + 1) >> 1;
+          if (firsts[mid].first <= i) lo = mid;
+          else hi = mid - 1;
+        }
+        hits.push([i, lo]);
+        buckets.add(lo);
+      }
+      wordHitsFor = term;
+      wordHitsCache = { hits, buckets: [...buckets] };
+      return wordHitsCache;
+    };
+    // Rows whose search text contains term, in shard order.
+    const matchRows = (term) => {
+      if (!useWords(term)) return (searchIndex || []).filter((row) => row._b.includes(term));
+      const mark = new Uint8Array(words.docs.length);
+      for (const [wi, bi] of wordHits(term).hits) {
+        const list = words.loaded.get(bi)[wi - words.buckets[bi].first] || "";
+        let id = -1;
+        for (const gap of list.split(",")) {
+          id += parseInt(gap, 36);
+          if (id >= 0 && id < mark.length) mark[id] = 1;
+        }
+      }
+      const rows = [];
+      for (let id = 0; id < mark.length; id++) if (mark[id]) rows.push(words.docs[id]);
+      return rows;
+    };
+    const indexReady = () => !!searchIndex || !!words;
     const termCovered = (term) => {
       if (!manifest) return false;
+      if (useWords(term)) return !!words && wordHits(term).buckets.every((b) => words.loaded.has(b));
       const plan = shardPlan(manifest);
       if (!plan) return false;
       return plan.every((p) => !gramsCover(p.grams, term) || loadedShards.has(p.url));
@@ -400,6 +450,31 @@
             });
           }
           manifest = await manifestPromise;
+        }
+        if (useWords(term)) {
+          if (!words) {
+            const w = manifest.words;
+            if (!wordsPromise) {
+              wordsPromise = Promise.all([readJson(w.vocab), readJson(w.docs)]).catch((err) => {
+                wordsPromise = null;
+                throw err;
+              });
+            }
+            const [vocab, docs] = await wordsPromise;
+            if (!Array.isArray(vocab) || !Array.isArray(docs)) throw new Error("bad word index");
+            words = {
+              vocab,
+              docs: docs.map(([kind, title, author, href]) => ({ kind, title, author, href })),
+              buckets: w.buckets.map((b) => ({ url: b.file, first: Number(b.first) || 0 })),
+              loaded: new Map(),
+            };
+          }
+          const need = wordHits(term).buckets.filter((b) => !words.loaded.has(b));
+          const parts = await Promise.all(need.map((b) => readJson(words.buckets[b].url)));
+          if (!parts.every(Array.isArray)) throw new Error("bad word bucket");
+          need.forEach((b, i) => words.loaded.set(b, parts[i]));
+          indexFailed = false;
+          return;
         }
         const plan = shardPlan(manifest);
         if (!plan) throw new Error("bad manifest");
@@ -444,9 +519,9 @@
         return;
       }
       const writers = visible.length ? ` · ${plural(visible.length, "writer", "writers")}` : "";
-      const words = term.length >= PASSAGE_MIN;
-      if (words && (!searchIndex || passageTerm !== term)) status.textContent = "Searching…";
-      else if (words && indexFailed)
+      const long = term.length >= PASSAGE_MIN;
+      if (long && (!indexReady() || passageTerm !== term)) status.textContent = "Searching…";
+      else if (long && indexFailed)
         status.textContent = titleCount
           ? `${plural(titleCount, "work matches", "works match")} “${lastShown}” by title or writer. Word search did not load; try again later.`
           : `Word search did not load. Try again later.${writers}`;
@@ -458,7 +533,7 @@
         const verb = parts.length > 1 || titleCount + passageCount > 1 ? "match" : "matches";
         status.textContent = parts.length
           ? `${parts.join(" and ")} ${verb} “${lastShown}”`
-          : words
+          : long
           ? `No works or passages match “${lastShown}”${writers}`
           : `No work titles match “${lastShown}”${writers}. Passages are searched from ${PASSAGE_MIN} letters.`;
       }
@@ -547,7 +622,7 @@
           show =
             // Short terms search titles only: no "nothing matches" yet.
             term.length >= PASSAGE_MIN &&
-            !!searchIndex &&
+            indexReady() &&
             !indexFailed &&
             passageTerm === term &&
             passageCount === 0 &&
@@ -689,10 +764,9 @@
       entryHits = new Map();
       passageTerm = !searching || ready || indexFailed ? term : null;
       if (passageHits && passageResults) {
-        if (searching && ready && searchIndex) {
+        if (searching && ready) {
           const hits = [];
-          for (const row of searchIndex) {
-            if (!row._b.includes(term)) continue;
+          for (const row of matchRows(term)) {
             passageCount++;
             if (hits.length < 40) hits.push(row);
             if (row.kind === "work") {

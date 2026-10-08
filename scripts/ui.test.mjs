@@ -23,6 +23,10 @@ const site = async (u) => {
   const p = String(u).replace(/^https?:\/\/[^/]+/, '').split('?')[0];
   if (p === '/data/search/manifest.json') return { ok: true, json: async () => JSON.parse(manifestText) };
   if (shardText.has(p)) return { ok: true, json: async () => JSON.parse(shardText.get(p)) };
+  if (p.startsWith('/data/words/')) {
+    try { const t = readFileSync(new URL(p.slice(1), DIST), 'utf8'); return { ok: true, json: async () => JSON.parse(t) }; }
+    catch { return { ok: false }; }
+  }
   if (String(u).startsWith('/api/search')) return { ok: true, json: async () => ({ results: [] }) };
   return { ok: false };
 };
@@ -439,4 +443,25 @@ test('ask: /ask/ page, home hero asks there, answer/thin/error states (owner 202
   d=dom.window.document;
   assert.ok(d.querySelector('.ask-error a[href="/works/?q=grace"]'),'API down: fall back to the library search');
   dom.window.close();
+});
+
+// One-word searches read data/words (build_site.write_search_words), not the
+// text shards. Count and first 40 hits must equal a scan of the shards.
+test('word index finds what a text scan finds, without the text shards', async () => {
+  if (!manifest.words) return;
+  const lc = (r) => `${r.title || ''} ${r.author || ''} ${r.text || ''}`.toLowerCase();
+  for (const term of ['grace', 'baptism', 'logos', 'theotokos', '100', 'zzzzq']) {
+    const seen = [];
+    const dom = mount(catalog, '/works/', async (u) => { seen.push(String(u)); return site(u); });
+    query(dom, term);
+    for (let i = 0; i < 20 && /Searching/.test(dom.window.document.querySelector('#works-status').textContent); i++) await settle();
+    const want = index.filter((r) => lc(r).includes(term));
+    const status = dom.window.document.querySelector('#works-status').textContent;
+    const m = status.match(/([\d,]+) passages? match/);
+    assert.equal(m ? Number(m[1].replace(/,/g, '')) : 0, want.length, `${term}: ${status}`);
+    const hrefs = [...dom.window.document.querySelectorAll('#passage-results a')].map((a) => a.getAttribute('href'));
+    assert.deepEqual(hrefs, want.slice(0, 40).map((r) => r.href), term);
+    assert.ok(!seen.some((u) => /\/data\/search\/\d/.test(u)), `${term} fetched a text shard`);
+    dom.window.close();
+  }
 });

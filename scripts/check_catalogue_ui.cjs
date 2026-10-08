@@ -253,11 +253,12 @@ async function run(base,out) {
   assert(sample,"No searchable passage sample");
   const term=sample.text.slice(sample.text.length>600?450:30,sample.text.length>600?510:75).trim();
   assert(term.length>=3,"Passage sample term too short");
-  // Fail the shards (manifest + parts, P5) and the single-file fallback: the
-  // site reads data/search/ first, so failing only search-index.json was no outage.
+  // Fail the shards (manifest + parts, P5), the word index (data/words) and the
+  // old single-file path: failing only one of them is no outage.
   const failIndex=async route=>{await route.fulfill({status:503,body:"Temporary failure"});};
   await page.route("**/data/search-index.json",failIndex);
   await page.route("**/data/search/**",failIndex);
+  await page.route("**/data/words/**",failIndex);
   await visit(base+"/works/",{waitUntil:"networkidle"});
   assert.equal(await page.locator('[data-filter="all"]').getAttribute("aria-pressed"),"true");
   await page.locator("#works-q").fill(term);
@@ -267,6 +268,7 @@ async function run(base,out) {
   await shot("index-error",390);
   await page.unroute("**/data/search-index.json");
   await page.unroute("**/data/search/**");
+  await page.unroute("**/data/words/**");
   await visit(base+"/works/",{waitUntil:"networkidle"});
   await page.locator("#works-q").fill(term);
   await page.locator("#passage-results a").first().waitFor({timeout:15000});

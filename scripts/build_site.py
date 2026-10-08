@@ -7553,6 +7553,8 @@ def write_search_shards(data_dir: Path, docs: list[dict]) -> int:
     if cur:
         groups.append((cur_names, cur))
     manifest = {"version": 1, "docs": len(docs), "shards": []}
+    # Doc ids in the word index follow the shard order below.
+    manifest["words"] = write_search_words(data_dir, [r for _, rows in groups for r in rows])
     for i, (names, rows) in enumerate(groups):
         blob = json.dumps(rows, ensure_ascii=False, separators=(",", ":"))
         raw = blob.encode("utf-8")
@@ -7595,6 +7597,100 @@ def search_trigrams(rows: list[dict]) -> str:
             else:
                 run.clear()
     return base64.b64encode(bits).decode("ascii")
+
+
+SEARCH_WORD_BUCKET_BYTES = 64 * 1024
+
+
+def search_words(row: dict) -> set[str]:
+    """Runs of a–z and 0–9 in the lowercased title, author, and text: the same
+    blob assets/site.js searches. A term made only of those characters is in
+    the blob exactly when it is inside one of these runs."""
+    blob = f"{row.get('title') or ''} {row.get('author') or ''} {row.get('text') or ''}".lower()
+    return set(re.findall(r"[a-z0-9]+", blob))
+
+
+def write_search_words(data_dir: Path, docs: list[dict]) -> dict:
+    """data/words/: a word index, so a one-word search need not fetch the text.
+
+    vocab-<hash>.json  every word, sorted
+    docs-<hash>.json   [kind, title, author, href] per passage, in shard order
+    pNN-<hash>.json    postings for a run of the vocabulary: per word, the doc
+                       ids as base-36 gaps joined by commas
+    Returns the manifest entry. assets/site.js reads it; the text shards stay
+    for searches with spaces or other characters, and for the other readers."""
+    import hashlib
+    out = data_dir / "words"
+    out.mkdir(parents=True, exist_ok=True)
+    for old in out.glob("*.json"):
+        old.unlink()
+
+    def b36(n: int) -> str:
+        digits = "0123456789abcdefghijklmnopqrstuvwxyz"
+        s = ""
+        while True:
+            n, r = divmod(n, 36)
+            s = digits[r] + s
+            if not n:
+                return s
+
+    def put(prefix: str, value) -> str:
+        raw = json.dumps(value, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        assert len(raw) < PAGES_FILE_LIMIT, f"search words {prefix} is {len(raw) / 1048576:.1f} MiB"
+        name = f"{prefix}-{hashlib.sha256(raw).hexdigest()[:10]}.json"
+        (out / name).write_bytes(raw)
+        return f"/data/words/{name}"
+
+    postings: dict[str, list[int]] = defaultdict(list)
+    for i, row in enumerate(docs):
+        for w in search_words(row):
+            postings[w].append(i)
+    vocab = sorted(postings)
+    lists = []
+    for w in vocab:
+        prev, gaps = -1, []
+        for i in postings[w]:
+            gaps.append(b36(i - prev))
+            prev = i
+        lists.append(",".join(gaps))
+    buckets, start, size = [], 0, 0
+    for i, s in enumerate(lists):
+        if size and size + len(s) > SEARCH_WORD_BUCKET_BYTES:
+            buckets.append((start, i))
+            start, size = i, 0
+        size += len(s) + 3
+    if lists:
+        buckets.append((start, len(lists)))
+    return {
+        "chars": "a-z0-9",
+        "vocab": put("vocab", vocab),
+        "docs": put("docs", [[d.get("kind") or "", d.get("title") or "", d.get("author") or "", d.get("href") or ""]
+                             for d in docs]),
+        "buckets": [{"file": put(f"p{n:02d}", lists[a:b]), "first": a} for n, (a, b) in enumerate(buckets)],
+    }
+
+
+def search_word_docs(data_dir: Path, term: str) -> list[int]:
+    """Doc ids whose blob contains term, read from data/words (term is a–z/0–9).
+    The Python twin of the assets/site.js word path, for tests."""
+    manifest = json.loads((Path(data_dir) / "search" / "manifest.json").read_text(encoding="utf-8"))
+    words = manifest["words"]
+    read = lambda url: json.loads((Path(data_dir) / url.removeprefix("/data/")).read_text(encoding="utf-8"))
+    vocab = read(words["vocab"])
+    firsts = [b["first"] for b in words["buckets"]]
+    hits: set[int] = set()
+    cache: dict[int, list[str]] = {}
+    for wi, w in enumerate(vocab):
+        if term not in w:
+            continue
+        bi = max(k for k, f in enumerate(firsts) if f <= wi)
+        if bi not in cache:
+            cache[bi] = read(words["buckets"][bi]["file"])
+        doc = -1
+        for gap in cache[bi][wi - firsts[bi]].split(","):
+            doc += int(gap, 36)
+            hits.add(doc)
+    return sorted(hits)
 
 
 def search_grams_cover(grams: str, term: str) -> bool:
@@ -10588,21 +10684,17 @@ def build() -> None:
     # keep them for a year; manifest.json names the current shards and is
     # re-checked on every load ("! Cache-Control" drops the shard rule first).
     # HTML keeps the Pages default (max-age=0, must-revalidate).
+    # Every top-level asset is linked with ?v=ASSET_VER, a hash of all of them,
+    # so each one gets the year cache; a new asset needs no hand-kept line.
+    _immutable = "".join(
+        f"/assets/{a.name}\n  Cache-Control: public, max-age=31536000, immutable\n\n"
+        for a in sorted(ASSETS.iterdir()) if a.is_file() and a.suffix in {".css", ".js", ".svg"})
     (DIST / "_headers").write_text(
         """/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
 
-/assets/site.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/site.js
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/readalong.js
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/og/*
+""" + _immutable + """/assets/og/*
   Cache-Control: public, max-age=86400
 
 /data/search/*
@@ -10612,19 +10704,13 @@ def build() -> None:
   ! Cache-Control
   Cache-Control: public, max-age=0, must-revalidate
 
+/data/words/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/data/daily.json
+  Cache-Control: public, max-age=3600
+
 /assets/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/fonts.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/beliefs.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/downloads.css
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/downloads.js
   Cache-Control: public, max-age=31536000, immutable
 
 /assets/covers/*

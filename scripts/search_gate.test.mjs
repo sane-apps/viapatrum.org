@@ -127,3 +127,74 @@ test('a word loads only shards that can contain it, including a later shard', as
   assert.ok(!urls.includes('/data/search/00-grace.json'), 'a shard that cannot match is not fetched');
   dom.window.close();
 });
+
+// Word index (build_site.write_search_words): a one-word search reads the
+// vocabulary, the passage list and only the postings buckets its words sit
+// in, never the text shards. A term with a space still uses the shards.
+test('a one-word search reads the word index, not the text shards', async () => {
+  const docs = [
+    ['work', 'On Grace', 'Gregory', '/works/a/#s1'],
+    ['work', 'Letters', 'Basil', '/works/b/#s2'],
+    ['work', 'Note', 'Cyril', '/works/c/#s3'],
+  ];
+  // Blobs: "on grace gregory grace upon grace", "letters basil the gravity of sin",
+  // "note cyril xyzzy plugh disgrace". Postings are base-36 gaps from -1.
+  const vocab = ['basil', 'cyril', 'disgrace', 'grace', 'gravity', 'gregory', 'letters',
+    'note', 'of', 'on', 'plugh', 'sin', 'the', 'upon', 'xyzzy'];
+  const rows = {
+    '/data/search/manifest.json': {
+      shards: ['/data/search/00-a.json', '/data/search/01-b.json'],
+      words: {
+        chars: 'a-z0-9',
+        vocab: '/data/words/vocab-1.json',
+        docs: '/data/words/docs-1.json',
+        buckets: [{ file: '/data/words/p00-1.json', first: 0 }, { file: '/data/words/p01-1.json', first: 7 }],
+      },
+    },
+    '/data/words/vocab-1.json': vocab,
+    '/data/words/docs-1.json': docs,
+    '/data/words/p00-1.json': ['2', '3', '3', '1', '2', '1', '2'],
+    '/data/words/p01-1.json': ['3', '2', '1', '3', '2', '2', '1', '3'],
+    '/data/search/00-a.json': [
+      { kind: 'work', href: '/works/a/#s1', title: 'On Grace', author: 'Gregory', text: 'grace upon grace' },
+      { kind: 'work', href: '/works/b/#s2', title: 'Letters', author: 'Basil', text: 'the gravity of sin' },
+    ],
+    '/data/search/01-b.json': [{ kind: 'work', href: '/works/c/#s3', title: 'Note', author: 'Cyril', text: 'xyzzy plugh disgrace' }],
+  };
+  const urls = [];
+  const dom = new JSDOM(page, { url: 'https://viapatrum.org/works/', runScripts: 'outside-only', pretendToBeVisual: true });
+  dom.window.fetch = async (u) => {
+    const p = String(u).replace(/^https?:\/\/[^/]+/, '').split('?')[0];
+    urls.push(p);
+    if (p.startsWith('/api/search')) return { ok: true, json: async () => ({ results: [] }) };
+    if (p in rows) return { ok: true, json: async () => structuredClone(rows[p]) };
+    return { ok: false, json: async () => ({}) };
+  };
+  dom.window.eval(script);
+  const doc = dom.window.document;
+  const q = doc.querySelector('#works-q');
+  const type = (v) => { q.value = v; q.dispatchEvent(new dom.window.Event('input')); };
+  const hits = () => [...doc.querySelectorAll('#passage-results a')].map((a) => a.getAttribute('href'));
+  const data = () => urls.filter((u) => u.startsWith('/data/'));
+
+  type('Grace'); await settle(); await settle();
+  assert.deepEqual(data(), [
+    '/data/search/manifest.json', '/data/words/vocab-1.json', '/data/words/docs-1.json', '/data/words/p00-1.json',
+  ]);
+  assert.deepEqual(hits(), ['/works/a/#s1', '/works/c/#s3'], 'grace and disgrace, in shard order');
+  assert.match(doc.querySelector('#works-status').textContent, /2 passages match/);
+
+  type('upon'); await settle(); await settle();
+  assert.equal(data().at(-1), '/data/words/p01-1.json', 'a word in another bucket loads that bucket only');
+  assert.deepEqual(hits(), ['/works/a/#s1']);
+
+  type('zzzq'); await settle(); await settle();
+  assert.equal(data().length, 5, 'a word with no vocabulary hit fetches nothing more');
+  assert.deepEqual(hits(), []);
+  assert.ok(!data().some((u) => u.startsWith('/data/search/0')), 'one-word searches never fetch text shards');
+
+  type('upon grace'); await settle(); await settle();
+  assert.ok(data().includes('/data/search/00-a.json'), 'a phrase reads the text shards');
+  assert.deepEqual(hits(), ['/works/a/#s1']);
+  dom.window.close();
+});
