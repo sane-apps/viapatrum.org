@@ -360,6 +360,26 @@ def _say_spec(spec: dict) -> None:
             ", %d with quotations in %s" % (spec["n_quotes"], qv) if qv else ""))
 
 
+MIN_SENTENCE_S = 0.12
+
+
+def min_width(rows: list[dict]) -> list[dict]:
+    """A silent sentence ('...' alone) comes back with end == start. The
+    read-along never highlights it, and a click on it lands in the next
+    sentence (2026-10-07: 16 such sentences). Give it MIN_SENTENCE_S taken
+    from the start of the next sentence, never past that sentence's end."""
+    for i, r in enumerate(rows):
+        if r["e"] - r["s"] > 0:
+            continue
+        nxt = rows[i + 1] if i + 1 < len(rows) else None
+        room = (nxt["e"] - nxt["s"]) / 2 if nxt else MIN_SENTENCE_S
+        width = max(0.0, min(MIN_SENTENCE_S, room))
+        r["e"] = round(r["s"] + width, 3)
+        if nxt and nxt["s"] < r["e"]:
+            nxt["s"] = r["e"]
+    return rows
+
+
 def _apply_worker_result(spec: dict, result: dict, manifest: dict) -> int:
     """Put one finished Worker result into the manifest. Returns the sentence count."""
     sentences, sig = spec["sentences"], spec["sig"]
@@ -369,10 +389,14 @@ def _apply_worker_result(spec: dict, result: dict, manifest: dict) -> int:
         "bytes": result["bytes"],
         "voice": _voice_name(),
         "quote_voice": spec["quote_voice"] or None,
-        "sentences": [dict({"t": s, "s": r["s"], "e": r["e"]}, **({"q": sig[i]} if i in sig else {}))
-                      for i, (s, r) in enumerate(zip(sentences, result["sentences"]))],
+        "sentences": min_width([dict({"t": s, "s": r["s"], "e": r["e"]}, **({"q": sig[i]} if i in sig else {}))
+                                for i, (s, r) in enumerate(zip(sentences, result["sentences"]))]),
     }
     units, spoken = int(result.get("units", 0)), int(result.get("spoken", 0))
+    # Characters actually spoken (the Worker's cache serves the rest), for the
+    # re-voice dollar cap. No unit counts in the reply: count it all as spoken.
+    chars = sum(len(j.get("text") or "") for j in spec.get("job") or [])
+    _RUN["spoken_chars"] = _RUN.get("spoken_chars", 0) + (chars * spoken / units if units else chars)
     # Starts with "rendered": fathers_watch.py counts these lines, so the time goes last.
     print("rendered %s: %d sentences -> %s (%d of %d parts spoken, rest cached) at %s"
           % (spec["stem"], len(sentences), result["key"], spoken, units, _now()), flush=True)
@@ -986,8 +1010,9 @@ def _clear_failure(key: str) -> None:
         del data[key]
         try:
             _save_failures(data)
-        except OSError as e:
-            _say("could not save %s: %s" % (_failures_path().name, e), err=True)
+        except OSError as e:  # disk full (2026-10-06): the drain must not exit 0 over it
+            _RUN["report_failed"] = True
+            _say("audio drain: FAILED to save %s: %s" % (_failures_path().name, e), err=True)
 
 
 def _skipped(key: str, failures: dict) -> bool:
@@ -1109,9 +1134,124 @@ def _next_item() -> str:
         _say("restem %s: %s" % (work, " ".join(stems)))
         _render_stems_locked(work, stems)
         return "stale"
+    if _revoice_on():
+        return _revoice_item(tiers, failures, scan)
     if os.environ.get("AUDIO_REREAD_OLD") == "1":
         return _quote_voice_item()
     return "idle"
+
+
+# --- Re-voice (owner, via Claude at the owner's request, 2026-10-07: "the spend
+# is fine"; every audiobook in the current voice). A work recorded wholly or
+# partly in an older voice (bm_daniel, aura-2-apollo, aura-2-odysseus), or in
+# the current voice before Scripture had its own voice, is re-read whole as one
+# fresh item: the new manifest replaces the old one only when every passage is
+# back, so the old audio keeps playing until then and a book never mixes
+# narrators. Sentences already spoken in the current voice come from the
+# Worker's cache, so a current-voice work pays only for its quotations.
+# Spend is capped per day (Aura-2 $0.030 per 1,000 characters,
+# docs/GPU_RENDER_COSTS.md; re-verify the price before raising the cap).
+USD_PER_1K_CHARS = 0.030
+
+
+def _revoice_on() -> bool:
+    return os.environ.get("AUDIO_REVOICE") == "1" and os.environ.get("KOKORO_ENGINE") in CF_ENGINES
+
+
+def _revoice_cap() -> float:
+    try:
+        return float(os.environ.get("REVOICE_USD_PER_DAY", "150"))
+    except ValueError:
+        return 150.0
+
+
+def _spend_path() -> Path:
+    return OUT / ".revoice-spend.json"
+
+
+def _spent_today() -> float:
+    import time
+    try:
+        data = json.loads(_spend_path().read_text(encoding="utf-8"))
+        return float(data.get(time.strftime("%Y-%m-%d"), 0.0))
+    except (OSError, ValueError, AttributeError, TypeError):
+        return 0.0
+
+
+def _add_spend(usd: float) -> float:
+    """Add to today's re-voice spend; keep two weeks of days. Returns today's total."""
+    import time
+    try:
+        data = json.loads(_spend_path().read_text(encoding="utf-8"))
+        data = data if isinstance(data, dict) else {}
+    except (OSError, ValueError):
+        data = {}
+    today = time.strftime("%Y-%m-%d")
+    data[today] = round(float(data.get(today, 0.0)) + usd, 4)
+    data = {k: data[k] for k in sorted(data)[-14:]}
+    try:
+        _write_json(_spend_path(), data)
+    except OSError as e:  # a full disk must not lose the item; the cap then counts from memory
+        _say("could not save %s: %s" % (_spend_path().name, e), err=True)
+    return data[today]
+
+
+def _behind(manifest: dict) -> bool:
+    """True when any passage is in another voice, or predates the quotation voice."""
+    passages = manifest.get("passages") or {}
+    qv = os.environ.get("CF_TTS_QUOTE_VOICE", "") or None
+    return any((v.get("voice") or manifest.get("voice")) != _voice_name() or v.get("quote_voice") != qv
+               for v in passages.values())
+
+
+def revoice_queue(tiers: dict, failures: dict, scan: dict | None = None) -> list[str]:
+    """Works to re-read whole, best first: works whose changed text has no Play
+    bar (old voice) first, then start-here books, certified works, and shorter
+    works. Only works with a published page and English on disk."""
+    missing_play = {r["work"] for r in (scan or {}).get("old_voice") or []}
+    start_here = _start_here_books()
+    rows = []
+    for manifest_path in sorted(OUT.glob("*/manifest.json")):
+        work = manifest_path.parent.name
+        if _skipped("revoice:" + work, failures) or not (BOOKS / work / "translations").is_dir():
+            continue
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if not _behind(manifest) or not site_dirs_for(work):
+            continue
+        rows.append(((work not in missing_play, work not in start_here, tiers.get(work, 1),
+                      _sentence_count(work)), work))
+    return [w for _k, w in sorted(rows)]
+
+
+def _revoice_item(tiers: dict, failures: dict, scan: dict | None) -> str:
+    cap, spent = _revoice_cap(), _spent_today()
+    if spent >= cap:
+        _say("revoice: today's cap reached ($%.2f of $%.2f, REVOICE_USD_PER_DAY); resumes tomorrow" % (spent, cap))
+        return "idle"
+    queue = revoice_queue(tiers, failures, scan)
+    if not queue:
+        return "idle"
+
+    def size(work):
+        return len(list((BOOKS / work / "translations").glob("*_english.json")))
+    groups = []
+    for work in _take(queue, size):
+        _say("revoice %s: whole work in %s" % (work, _voice_name()))
+        files = sorted((BOOKS / work / "translations").glob("*_english.json"))
+        groups.append({"key": "revoice:" + work, "work": work, "files": files, "fresh": True})
+    _RUN["items"] = len(groups)
+    before = _RUN.get("spoken_chars", 0)
+    try:
+        _narrate_batch(groups)
+    finally:
+        usd = (_RUN.get("spoken_chars", 0) - before) / 1000 * USD_PER_1K_CHARS
+        total = _add_spend(usd)
+        _say("revoice: about $%.2f spoken this batch, $%.2f today (cap $%.2f), %d works still to re-voice"
+             % (usd, total, cap, max(0, len(queue) - len(groups))))
+    return "revoice"
 
 
 def _take(rows: list, size) -> list:
@@ -1310,8 +1450,16 @@ _DRIFT_SKIP = re.compile(
 
 
 def _ship_drift() -> int:
-    """Sections the last ship skipped because the recording does not match
-    the page ('sentence drift' or 'audio does not match the page')."""
+    """Sections the last build's injection skipped because the recording does
+    not match the page. One source of truth (2026-10-07: the drain read 30 from
+    one ship log, the watch 58 from another): inject_audio writes
+    outputs/audio/last-inject.json on every build that ships. Older trees
+    without that file fall back to the newest ship log with injection lines."""
+    try:
+        data = json.loads((OUT / "last-inject.json").read_text(encoding="utf-8"))
+        return int(data["audio_mismatch"])
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
     logs = sorted((ROOT / "outputs").glob("ship-*.log"), key=lambda p: p.stat().st_mtime, reverse=True)
     for log in logs[:10]:
         try:
@@ -1354,7 +1502,8 @@ def _prune_failures(failures: dict) -> dict:
         try:
             _save_failures(kept)
         except OSError as e:
-            _say("could not save %s: %s" % (_failures_path().name, e), err=True)
+            _RUN["report_failed"] = True
+            _say("audio drain: FAILED to save %s: %s" % (_failures_path().name, e), err=True)
     return kept
 
 
@@ -1392,9 +1541,11 @@ def write_reports(scan: dict | None = None, books_waiting: int | None = None,
         r.pop("tier", None)
     _write_json(OUT / "stale-old-voice.json", {
         "generated": _now(), "voice_now": _voice_name(),
-        "note": "Changed text recorded in an older voice. A re-read would re-voice the whole "
-                "file, so it waits for the owner: AUDIO_RESTEM_OLD_VOICE=1, or "
-                "build_audio.py <book> to re-read one whole book in the current voice.",
+        "note": ("Changed text recorded in an older voice. The drain re-voices these works "
+                 "whole first (AUDIO_REVOICE=1, decided 2026-10-07)." if _revoice_on() else
+                 "Changed text recorded in an older voice. A re-read would re-voice the whole "
+                 "file, so it waits: AUDIO_REVOICE=1 re-voices every older-voice work whole, or "
+                 "build_audio.py <book> re-reads one book in the current voice."),
         "files": sum(len(r["stems"]) for r in rows), "works": rows})
     unmapped = unmapped_sites()
     set_aside = sorted(k for k, v in failures.items() if int(v.get("count", 0)) >= FAIL_LIMIT)
@@ -1410,6 +1561,7 @@ def write_reports(scan: dict | None = None, books_waiting: int | None = None,
         "sentence_drift": _ship_drift(),
         "unmapped_works": len(unmapped),
         "retrying": len(retrying),
+        "revoice_works": len(revoice_queue(tiers, failures, scan)) if _revoice_on() else 0,
     }
     backlog = counts["works_without_audio"] + counts["stale_current_voice"]
     status = {"generated": _now(), "minutes": round(minutes, 1), "voice": _voice_name(),
@@ -1419,9 +1571,10 @@ def write_reports(scan: dict | None = None, books_waiting: int | None = None,
               "old_voice_first": [r["work"] for r in rows[:10]]}
     _write_json(OUT / "drain-status.json", status)
     if rows:
-        _say("old voice: %d changed files in %d works wait for the owner (AUDIO_RESTEM_OLD_VOICE=1), "
-             "first %s; see outputs/audio/stale-old-voice.json"
-             % (sum(len(r["stems"]) for r in rows), len(rows), rows[0]["work"]))
+        _say("old voice: %d changed files in %d works %s, first %s; see outputs/audio/stale-old-voice.json"
+             % (sum(len(r["stems"]) for r in rows), len(rows),
+                "are re-voiced first (AUDIO_REVOICE=1)" if _revoice_on() else "wait (AUDIO_REVOICE is off)",
+                rows[0]["work"]))
     _say("audio backlog %d: " % backlog
          + ", ".join("%s %d" % (k.replace("_", " "), v) for k, v in list(counts.items()) + list(waiting.items())))
     return status
@@ -1454,9 +1607,10 @@ def drain(budget_s: int = 3 * 3600) -> int:
         _say("audio drain: another narrator holds the lock")
         return DRAIN_BUSY
     stopped = False
-    t0, done = time.time(), {"stale": 0, "book": 0, "quotes": 0, "failed": 0}
+    t0, done = time.time(), {"stale": 0, "book": 0, "quotes": 0, "revoice": 0, "failed": 0}
     idle = False
     _RUN["done"], _RUN["scan"], _RUN["failed"] = set(), None, 0
+    _RUN["report_failed"] = False
     try:
         while time.time() - t0 < budget_s:
             level, heat, shipping = _pressure_level(), _memory_heat(), _ship_busy()
@@ -1507,15 +1661,20 @@ def drain(budget_s: int = 3 * 3600) -> int:
         minutes = (time.time() - t0) / 60
         done["failed"] = _RUN["failed"]
         _say("audio drain: %d stale works re-read, %d new audiobooks, %d works given the quotation voice, "
-             "%d failed, %.0f min" % (done["stale"], done["book"], done["quotes"], done["failed"], minutes))
+             "%d works re-voiced, %d failed, %.0f min" % (done["stale"], done["book"], done["quotes"],
+                                                         done["revoice"], done["failed"], minutes))
         try:
             # After an idle pass the last scan is current: reuse it.
             write_reports(_RUN["scan"] if idle else None, None, done, minutes)
         except (Exception, SystemExit) as e:  # the report must never stop narration
-            _say("audio drain: status report failed: %s" % _where(e), err=True)
+            # ...but a run whose status file could not be written is not a clean
+            # run: exit 1 so launchd and fathers-watch see it (2026-10-06: nine
+            # ENOSPC report failures, every run exited 0).
+            _RUN["report_failed"] = True
+            _say("audio drain: FAILED status report: %s" % _where(e), err=True)
     finally:
         os.close(lock_fd)
-    return 1 if stopped or done["failed"] else 0
+    return 1 if stopped or done["failed"] or _RUN.get("report_failed") else 0
 
 
 # Same number as ship_if_changed.EXIT_BUSY: busy, not broken.

@@ -523,6 +523,102 @@ class ReportTests(unittest.TestCase):
                 self.assertEqual(B._next_item(), "idle")
             self.assertEqual(sent, [])
 
+class RevoiceTests(unittest.TestCase):
+    """Decided 2026-10-07 (owner: 'the spend is fine'): every audiobook in the
+    current voice, whole works at a time, under a daily dollar cap."""
+
+    def _old(self, env, name, voice="bm_daniel", stems=("x_english",)):
+        _book(env.books, name, {st: ["One here.", "Two here."] for st in stems})
+        env.publish(name)
+        (env.out / name).mkdir()
+        (env.out / name / "manifest.json").write_text(json.dumps(
+            {"work": name, "sites": [name], "voice": voice,
+             "passages": {st: {"voice": voice, "sentences": []} for st in stems}}))
+
+    def _run(self, env, worker, **extra):
+        e = {"AUDIO_REVOICE": "1", "KOKORO_ENGINE": "cf-worker"}
+        e.update(extra)
+        with mock.patch.dict(os.environ, e), \
+             mock.patch.object(cf_tts, "submit_passage", worker.submit), \
+             mock.patch.object(cf_tts, "collect_passages", worker.collect), \
+             mock.patch.object(B, "stale_stems", lambda w: []):
+            return B.drain(budget_s=60)
+
+    def test_old_voice_work_is_reread_whole_and_spend_is_recorded(self):
+        with Env("cf-worker") as env:
+            self._old(env, "old", stems=("a_english", "b_english"))
+            self._old(env, "cur", voice="aura-2-orion")
+            worker = FakeWorker()
+            self.assertEqual(self._run(env, worker), 0)
+            self.assertEqual(sorted(worker.submitted), ["a_english", "b_english"])
+            m = json.loads((env.out / "old" / "manifest.json").read_text())
+            self.assertEqual({p["voice"] for p in m["passages"].values()}, {"aura-2-orion"})
+            self.assertEqual(m["sites"], ["old"], "ship labels survive the re-read")
+            spend = json.loads((env.out / ".revoice-spend.json").read_text())
+            self.assertGreater(sum(spend.values()), 0)
+
+    def test_cap_stops_revoice(self):
+        with Env("cf-worker") as env:
+            self._old(env, "old")
+            import time
+            (env.out / ".revoice-spend.json").write_text(json.dumps({time.strftime("%Y-%m-%d"): 150.0}))
+            worker = FakeWorker()
+            self._run(env, worker)
+            self.assertEqual(worker.submitted, [])
+            self._run(env, worker, REVOICE_USD_PER_DAY="200")
+            self.assertEqual(worker.submitted, ["x_english"])
+
+    def test_off_by_default(self):
+        with Env("cf-worker") as env:
+            self._old(env, "old")
+            worker = FakeWorker()
+            self._run(env, worker, AUDIO_REVOICE="0")
+            self.assertEqual(worker.submitted, [])
+
+    def test_failed_passage_keeps_the_old_audio(self):
+        with Env("cf-worker") as env:
+            self._old(env, "old", stems=("a_english", "b_english"))
+            before = (env.out / "old" / "manifest.json").read_text()
+            self.assertEqual(self._run(env, FakeWorker(fail_stems={"b_english"})), 1)
+            self.assertEqual((env.out / "old" / "manifest.json").read_text(), before)
+
+    def test_missing_play_works_go_first(self):
+        with Env("cf-worker") as env:
+            for n in ("aaa", "zzz"):
+                self._old(env, n)
+            with mock.patch.dict(os.environ, {"AUDIO_REVOICE": "1"}):
+                q = B.revoice_queue({}, {}, {"old_voice": [{"work": "zzz"}]})
+            self.assertEqual(q, ["zzz", "aaa"])
+
+
+class DriftAndExitTests(unittest.TestCase):
+
+    def test_drift_count_reads_the_last_injection(self):
+        with Env() as env:
+            (env.root / "outputs" / "ship-1.log").write_text("  + audio: a\nskip a u1: audio does not match the page\n")
+            self.assertEqual(B._ship_drift(), 1)
+            (env.out / "last-inject.json").write_text(json.dumps({"audio_mismatch": 7}))
+            self.assertEqual(B._ship_drift(), 7)
+
+    def test_failed_status_report_exits_1(self):
+        with Env() as env:
+            with mock.patch.object(B, "_next_item", lambda: "idle"), \
+                 mock.patch.object(B, "write_reports", side_effect=OSError(28, "No space left on device")):
+                self.assertEqual(B.drain(budget_s=60), 1)
+
+    def test_failed_failure_save_exits_1(self):
+        with Env() as env:
+            (env.out / ".failures.json").write_text(json.dumps({"book:x": {"count": 1, "at": 0}}))
+            with mock.patch.object(B, "_next_item", lambda: "idle"), \
+                 mock.patch.object(B, "_save_failures", side_effect=OSError(28, "No space left on device")):
+                self.assertEqual(B.drain(budget_s=60), 1)
+
+    def test_silent_sentence_gets_a_width(self):
+        rows = B.min_width([{"s": 1.0, "e": 2.0}, {"s": 2.0, "e": 2.0}, {"s": 2.0, "e": 3.0}])
+        self.assertEqual([(r["s"], r["e"]) for r in rows], [(1.0, 2.0), (2.0, 2.12), (2.12, 3.0)])
+        self.assertGreater(B.min_width([{"s": 5.0, "e": 5.0}])[0]["e"], 5.0)
+
+
 class BadResultWorker(FakeWorker):
     """b1_english comes back without sentence end times (a bad Worker result)."""
 
