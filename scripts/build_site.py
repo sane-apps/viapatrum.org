@@ -7940,9 +7940,7 @@ def _attach_players() -> None:
         import inject_audio
         if not any((inject_audio.ROOT / "outputs/audio").glob("*/manifest.json")):
             return
-        pending = inject_audio.R2_PENDING
-        if pending.is_file():
-            pending.unlink()
+        inject_audio.reset_pending()  # only for the build that ships, never a package build
         rc = inject_audio.inject_all()
     finally:
         if not had:

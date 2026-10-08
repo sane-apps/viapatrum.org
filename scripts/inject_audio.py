@@ -21,6 +21,7 @@ import re
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -757,7 +758,35 @@ def report_no_play(sites) -> int:
         print("no Play %s: %s%s" % (site, " ".join(no_play[:12]),
                                      " (+%d more)" % (len(no_play) - 12) if len(no_play) > 12 else ""))
     print("audio no-Play total: %d sections, %d works" % (total, n_works), flush=True)
+    _NO_PLAY[:] = [total, n_works]
     return total
+
+
+# One run's counts, kept for write_last_inject: sections whose recording does
+# not match the page, and the no-Play totals.
+_MISMATCH: set = set()
+_NO_PLAY: list = [0, 0]
+LAST_INJECT = ROOT / "outputs" / "audio" / "last-inject.json"
+
+
+def write_last_inject(failed: list) -> None:
+    """The one count of audio drift (2026-10-07: the drain counted 30 from one
+    ship log, the watch 58 from another). Written by the build's own
+    injection only (_labels_on: not tests, not package builds); build_audio's
+    drain status and fathers_watch read it instead of parsing ship logs."""
+    if not _labels_on():
+        return
+    data = {"at": time.strftime("%Y-%m-%dT%H:%M:%S%z"), "dist": str(_dist()),
+            "audio_mismatch": len(_MISMATCH),
+            "mismatch_sections": ["%s/%s" % x for x in sorted(_MISMATCH)][:200],
+            "no_play_sections": _NO_PLAY[0], "no_play_works": _NO_PLAY[1], "failed": sorted(failed)}
+    try:
+        LAST_INJECT.parent.mkdir(parents=True, exist_ok=True)
+        tmp = LAST_INJECT.with_name(LAST_INJECT.name + ".tmp%d" % os.getpid())
+        tmp.write_text(json.dumps(data, indent=1), encoding="utf-8")
+        os.replace(tmp, LAST_INJECT)
+    except OSError as e:  # a full disk must not fail the build over a report
+        print("last-inject report not written: %s" % e, file=sys.stderr, flush=True)
 
 
 # Listen and the app's audio flag count a manifest's "work" (build_site.py
@@ -922,6 +951,15 @@ def _safe_sec(sec: str) -> str:
 # file is listed for scripts/audio_r2.py to upload before the deploy.
 AUDIO_BASE = os.environ.get("AUDIO_BASE", "").rstrip("/")
 R2_PENDING = STATE / "audio-r2-pending.jsonl"
+
+
+def reset_pending() -> None:
+    """Start a fresh R2 upload list for this build's injection. Only the
+    build whose pages ship may do it (_labels_on): a package or test build
+    into outputs/ must not wipe the list a running full ship is filling
+    (2026-10-07 review of build_site._attach_players)."""
+    if _labels_on() and R2_PENDING.is_file():
+        R2_PENDING.unlink()
 
 
 def _audio_ref(src: Path, site: str, name: str, assets: Path) -> str:
@@ -1279,6 +1317,7 @@ def inject_work(work: str) -> None:
             choices = matching_choices(opts, passages, _cached_plain(page))
             if not choices:
                 print("skip %s %s: audio does not match the page" % (site, sec))
+                _MISMATCH.add((site, sec))
                 missed.append(sec)
                 continue
             stem, first, last, window, full = choices[0]
@@ -1366,6 +1405,7 @@ def inject_all() -> int:
     global _ALL_MODE
     _ALL_MODE = True
     _SITE_STATS.clear()
+    _MISMATCH.clear()
     failed = []
     try:
         for manifest in sorted((ROOT / "outputs/audio").glob("*/manifest.json")):
@@ -1379,6 +1419,7 @@ def inject_all() -> int:
                 print("FAIL %s: %s" % (work, exc), flush=True)
                 failed.append(work)
         report_no_play(_SITE_STATS)
+        write_last_inject(failed)
         _save_plain_cache()
     finally:
         _ALL_MODE = False
