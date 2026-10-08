@@ -7710,6 +7710,55 @@ def search_grams_cover(grams: str, term: str) -> bool:
     return True
 
 
+def pages_headers() -> str:
+    """dist/_headers. Every top-level asset is linked with ?v=ASSET_VER, a hash
+    of all of them, so each one gets the year cache; a new asset needs no
+    hand-kept line (ask.css, creeds.css and favicon.svg were missed once)."""
+    _immutable = "".join(
+        f"/assets/{a.name}\n  Cache-Control: public, max-age=31536000, immutable\n\n"
+        for a in sorted(ASSETS.iterdir()) if a.is_file() and a.suffix in {".css", ".js", ".svg"})
+    return (
+        """/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+""" + _immutable + """/assets/og/*
+  Cache-Control: public, max-age=86400
+
+/data/search/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/data/search/manifest.json
+  ! Cache-Control
+  Cache-Control: public, max-age=0, must-revalidate
+
+/data/words/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/data/daily.json
+  Cache-Control: public, max-age=3600
+
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/covers/*
+  Cache-Control: public, max-age=604800
+
+/assets/icons/*
+  Cache-Control: public, max-age=604800
+
+/assets/audio/*
+  Cache-Control: public, max-age=3600
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
+"""
+    )
+
+
 def load_search_docs(data_dir: Path) -> list:
     """Passage rows from data/search shards. The monolith is not shipped."""
     manifest = json.loads((Path(data_dir) / "search" / "manifest.json").read_text(encoding="utf-8"))
@@ -10684,52 +10733,7 @@ def build() -> None:
     # keep them for a year; manifest.json names the current shards and is
     # re-checked on every load ("! Cache-Control" drops the shard rule first).
     # HTML keeps the Pages default (max-age=0, must-revalidate).
-    # Every top-level asset is linked with ?v=ASSET_VER, a hash of all of them,
-    # so each one gets the year cache; a new asset needs no hand-kept line.
-    _immutable = "".join(
-        f"/assets/{a.name}\n  Cache-Control: public, max-age=31536000, immutable\n\n"
-        for a in sorted(ASSETS.iterdir()) if a.is_file() and a.suffix in {".css", ".js", ".svg"})
-    (DIST / "_headers").write_text(
-        """/*
-  X-Content-Type-Options: nosniff
-  Referrer-Policy: strict-origin-when-cross-origin
-
-""" + _immutable + """/assets/og/*
-  Cache-Control: public, max-age=86400
-
-/data/search/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/data/search/manifest.json
-  ! Cache-Control
-  Cache-Control: public, max-age=0, must-revalidate
-
-/data/words/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/data/daily.json
-  Cache-Control: public, max-age=3600
-
-/assets/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/covers/*
-  Cache-Control: public, max-age=604800
-
-/assets/icons/*
-  Cache-Control: public, max-age=604800
-
-/assets/audio/*
-  Cache-Control: public, max-age=3600
-
-https://:project.pages.dev/*
-  X-Robots-Tag: noindex
-
-https://:version.:project.pages.dev/*
-  X-Robots-Tag: noindex
-""",
-        encoding="utf-8",
-    )
+    (DIST / "_headers").write_text(pages_headers(), encoding="utf-8")
     (DIST / "robots.txt").write_text(
         # Data files, the API, paid downloads and the app feed are not pages.
         "User-agent: *\nAllow: /\nDisallow: /data/\nDisallow: /api/\nDisallow: /dl/\nDisallow: /app/\n"
