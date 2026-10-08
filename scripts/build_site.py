@@ -2,6 +2,7 @@
 """Build the Via Patrum site (viapatrum.org) from the translations books."""
 from __future__ import annotations
 
+import functools
 import gzip
 import json
 import os
@@ -5817,7 +5818,30 @@ def work_source_checked(work: dict, stale: set[str] | None = None) -> bool:
     folder_name = slug if (BOOKS / slug).is_dir() else (work_book(slug) or "")
     if not folder_name:
         return False
-    return (BOOKS / folder_name / "reviews" / "work_receipt.json").is_file()
+    if not (BOOKS / folder_name / "reviews" / "work_receipt.json").is_file():
+        return False
+    return not _fallback_ruled(folder_name)
+
+
+@functools.lru_cache(maxsize=None)
+def _fallback_ruled(folder_name: str) -> bool:
+    """True when the unbenched fallback model gave the verdict on any section
+    (work_pipeline.used_fallback). Such a work is not called source-checked
+    until the real pair re-checks it (owner decision 2026-10-07; nine works).
+    An unreadable pipeline counts as not checked."""
+    try:
+        sys.path.insert(0, str(BOOKS.parent / "scripts"))
+        import work_pipeline as _wp
+    except Exception:  # noqa: BLE001
+        return True
+    for j in (BOOKS / folder_name / "reviews" / "justifications").glob("*.json"):
+        try:
+            d = json.loads(j.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if isinstance(d, dict) and _wp.used_fallback(d):
+            return True
+    return False
 
 
 def confidence_text(base: str, checked: bool) -> str:
@@ -7389,14 +7413,11 @@ def logos_pack_manifest() -> dict:
 
 
 def logos_retired() -> bool:
-    """The free /logos/ page and its zips give way to the library pass only
-    once the pass really serves Word files: the whole Logos Word bundle and
-    per-book Word files uploaded. Until then Logos readers keep the free pack.
-    Retiring it is still an owner call before ship."""
-    if not LIBRARY:
-        return False
-    return (any(b.get("kind") == "word" for b in LIBRARY.bundles())
-            and any("word" in w["files"] for w in LIBRARY.by_slug.values()))
+    """The free /logos/ page and its zips are retired (owner 2026-10-07).
+    The 2026-10-05 zips still held the 17 works withdrawn on 2026-10-07 and
+    worksheet notes; Logos Word files belong to the library pass (owner
+    2026-10-05). /logos/ now 301s to /downloads/."""
+    return True
 
 
 def _logos_part_number(name: str) -> int:
@@ -9058,7 +9079,7 @@ def build() -> None:
             f"""<div class="works-browse" data-works-browse data-work-count="{len(works)}" data-author-count="{author_n}">
 <p class="eyebrow">Works</p>
 <h1>The library</h1>
-<p class="intro">Every work you can read straight through, grouped by writer, earliest first. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY else ''}</p>
+<p class="intro">Every work you can read straight through, grouped by writer, earliest first. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY and not logos_retired() else ''}</p>
 <div class="works-chrome">
   <label class="works-find"><span class="vh">Find in library</span>
     <input type="search" id="works-q" class="search-input" placeholder="Search titles, writers, or words…" autocomplete="off">

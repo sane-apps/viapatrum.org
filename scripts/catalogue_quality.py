@@ -517,6 +517,12 @@ def check_publication(works, excerpts, root, corpus, *, enforce_review=True):
             record(["unusable review: %s" % (exc,)])
     deferred = {}
     if not enforce_review:
+        # Owner decision 2026-10-07: the live build publishes with the review
+        # shape rules as warnings (recorded in "deferred"). Enforcing them held
+        # all 682 works, including lane-certified ones. The live gates are the
+        # receipt-hash check (build_site.stale_receipt_slugs), FORCED_WITHHOLD,
+        # content errors, and the 250-work floor; works without a current
+        # receipt say "has not yet been re-checked against its source".
         # A content error on an unreviewed tail still holds the whole work.
         # A tail that only lacks the newer review shape is published whole.
         for slug, items in tails.items():
