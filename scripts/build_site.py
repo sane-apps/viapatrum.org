@@ -5810,6 +5810,7 @@ def load_nemesius_works() -> list[dict]:
             era_note=meta.get("era_note") or "",
             groups=None,  # Reviewed scope carries no groups.
             text_history=_text_history_from_meta(meta),
+            scope=meta.get("scope") or "",
         )
     ]
 
@@ -8090,6 +8091,8 @@ FORCED_WITHHOLD = {
     "origen-romans-catena": _RECERT,
     "origen-de-principiis": _RECERT,
     "origen-letters": _RECERT,
+    # This part slug does load as its own work. The book slug does not cover it.
+    "origen-letters-africanus-rem": _RECERT,
     "origen-song-homily-1": _RECERT,
     "cyril-adoration-10": _RECERT,
     "pseudo-cyprian-to-vigilius": _RECERT,
