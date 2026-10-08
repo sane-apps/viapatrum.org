@@ -488,16 +488,23 @@ class Upload(Fixture):
         self.assertEqual(json.loads(ls.LEDGER.read_text()), {})
 
 
-def lib_with(works, bundles=(), dirty=None, checkout="https://example.test/buy"):
+def lib_with(works, bundles=(), dirty=None, checkout="https://example.test/buy", ledger=None):
+    """A Library over a temp library.json. The upload ledger matches every
+    listed file unless a ledger is given."""
     d = tempfile.mkdtemp()
     p = Path(d) / "library.json"
-    p.write_text(json.dumps({"price_usd": 50, "checkout_url": checkout, "works": works, "bundles": list(bundles),
+    bundles = [{"sha256": "s-" + b["key"], **b} for b in bundles]
+    p.write_text(json.dumps({"price_usd": 50, "checkout_url": checkout, "works": works, "bundles": bundles,
                              "dirty": dirty or {}}))
+    if ledger is None:
+        ledger = {x["key"]: x["sha256"] for w in works for x in w["files"].values()} | {b["key"]: b["sha256"] for b in bundles}
+    (Path(d) / "uploaded.json").write_text(json.dumps(ledger))
     return dp.Library(p)
 
 
 def work(slug, kinds, part_only="", scope=""):
-    f = {k: {"key": f"{k}/{slug}.x", "bytes": 1000, "name": slug, "uploaded": True, "duration_s": 600} for k in kinds}
+    f = {k: {"key": f"{k}/{slug}.x", "bytes": 1000, "name": slug, "uploaded": True, "duration_s": 600,
+             "sha256": f"s-{k}/{slug}.x"} for k in kinds}
     return {"slug": slug, "title": slug.title(), "author": "A", "files": f, "part_only": part_only, "scope": scope}
 
 
@@ -519,6 +526,26 @@ class Copy(unittest.TestCase):
         self.assertEqual(dp.lede(one, dp.counts(one), 1), "1 work as EPUB and PDF, and 1 audiobook, 1 hour in all")
         many = [work(f"w{i}", ["epub", "pdf", "audio"]) for i in range(2)]
         self.assertEqual(dp.lede(many, dp.counts(many), 1203), "2 works as EPUB and PDF, and 2 audiobooks, 1,203 hours in all")
+
+    def test_file_is_listed_only_when_the_ledger_holds_its_sha(self):
+        """library.json says uploaded, but the bucket holds another version
+        (the ledger's sha differs) or none: the shelf must not link it."""
+        works = [work("a", ["epub", "pdf"]), work("b", ["epub"])]
+        ledger = {"epub/a.x": "s-epub/a.x", "pdf/a.x": "an-older-build", "bundles/e.zip": "older"}
+        lib = lib_with(works, bundles=[{"kind": "epub", "uploaded": True, "key": "bundles/e.zip"}], ledger=ledger)
+        self.assertEqual(set(lib.by_slug["a"]["files"]), {"epub"})
+        self.assertNotIn("b", lib.by_slug)
+        self.assertEqual(lib.bundles(), [])
+        no_sha = work("c", ["epub"])
+        no_sha["files"]["epub"]["sha256"] = ""
+        self.assertFalse(lib_with([no_sha], ledger={"epub/c.x": ""}).by_slug)
+
+    def test_pitch_never_pairs_the_work_count_with_a_shorter_format(self):
+        works = [work("a", ["epub", "pdf", "word", "audio"]), work("b", ["epub", "pdf", "audio"]), work("c", ["audio"])]
+        self.assertEqual(lib_with(works).pitch(),
+                         "2 books as EPUB and PDF, 1 as Word for Logos and 3 audiobooks. One payment of $50.")
+        one = [work("a", ["epub"]), work("b", ["audio"])]
+        self.assertEqual(lib_with(one).pitch(), "1 book as EPUB and 1 audiobook. One payment of $50.")
 
     def test_dirty_file_is_hidden_not_its_format(self):
         lib = lib_with([work("a", ["epub", "word"]), work("b", ["epub", "word"])],

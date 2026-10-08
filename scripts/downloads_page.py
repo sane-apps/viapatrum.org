@@ -3,8 +3,12 @@
 every EPUB, PDF, Word for Logos file and audiobook, now and later).
 
 Data: outputs/downloads/library.json from scripts/library_sync.py. Only files
-marked uploaded are linked, and a file library_sync marked "dirty" (it failed
-the worksheet-note gate) is left out; the work's other formats stay. An
+marked uploaded are linked, and only when the upload ledger next to it
+(uploaded.json, R2 key -> sha256 the bucket confirmed) holds the same sha256
+as library.json: a file rebuilt after its upload, or a library.json older or
+newer than the ledger, is never listed as the current file. A file
+library_sync marked "dirty" (it failed the worksheet-note gate) is left out;
+the work's other formats stay. An
 audiobook that leaves sections out says which ones. Copy states real
 counts: "every" only where every work on the shelf has that format. Locked browsers that follow a /dl/ link are sent
 back here by functions/dl; assets/downloads.js shows the locked or unlocked
@@ -101,15 +105,27 @@ def short_audio(f: dict) -> str:
 class Library:
     def __init__(self, path: Path):
         self.data = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
+        ledger_path = path.with_name("uploaded.json")
+        try:
+            self.ledger = json.loads(ledger_path.read_text(encoding="utf-8")) if ledger_path.is_file() else {}
+        except (OSError, json.JSONDecodeError):
+            self.ledger = {}  # unreadable ledger: list nothing rather than guess
         # Files that failed the worksheet-note gate stay off the site: kind ->
         # held slugs. An older list form names whole formats.
         dirty = self.data.get("dirty") or {}
         self.dirty = {k: None for k in dirty} if isinstance(dirty, list) else {k: set(v or ()) for k, v in dirty.items()}
         self.by_slug = {}
         for w in self.data.get("works") or []:
-            files = {k: f for k, f in (w.get("files") or {}).items() if f.get("uploaded") and not self.held(k, w["slug"])}
+            files = {k: f for k, f in (w.get("files") or {}).items() if self.current(f) and not self.held(k, w["slug"])}
             if files:
                 self.by_slug[w["slug"]] = {**w, "files": files}
+
+    def current(self, f: dict) -> bool:
+        """Uploaded, and the bucket holds this exact file: the ledger's sha256
+        for the key equals the one library.json lists (2026-10-07: the shelf
+        must never link a stale file as the current one)."""
+        digest = f.get("sha256")
+        return bool(f.get("uploaded") and digest and self.ledger.get(f.get("key")) == digest)
 
     def held(self, kind: str, slug: str) -> bool:
         if kind not in self.dirty:
@@ -119,7 +135,7 @@ class Library:
     def bundles(self) -> list[dict]:
         # library_sync builds each bundle without the held files; an older
         # list form held the whole format, bundle included.
-        return [b for b in self.data.get("bundles") or [] if b.get("uploaded") and self.dirty.get(b.get("kind"), ()) is not None]
+        return [b for b in self.data.get("bundles") or [] if self.current(b) and self.dirty.get(b.get("kind"), ()) is not None]
 
     @property
     def price(self) -> int:
@@ -142,7 +158,21 @@ class Library:
         if full:
             line = "Every book as " + join(full) + (", plus " + join(some) if some else "")
         else:
-            line = f"{len(works)} books as " + join(some) if some else "Every download"
+            # No format covers every work: give each format its own count and
+            # never pair len(works) with a format that has fewer files
+            # (2026-10-07: "332 books as EPUB, PDF..." when 322 had EPUB).
+            groups: list[tuple[int, list[str]]] = []
+            for k in ("epub", "pdf", "word"):
+                if n[k]:
+                    if groups and groups[-1][0] == n[k]:
+                        groups[-1][1].append(NAME[k])
+                    else:
+                        groups.append((n[k], [NAME[k]]))
+            bits = [(plural(c, "book") if i == 0 else f"{c:,}") + " as " + " and ".join(names)
+                    for i, (c, names) in enumerate(groups)]
+            if n["audio"]:
+                bits.append(plural(n["audio"], "audiobook"))
+            line = (", ".join(bits[:-1]) + " and " + bits[-1] if len(bits) > 1 else bits[0]) if bits else "Every download"
         return line + f". One payment of ${int(self.data.get('price_usd') or 50)}."
 
     def work_block(self, slug: str) -> str:
