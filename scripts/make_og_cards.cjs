@@ -89,6 +89,11 @@ function sectionCards() {
     ['help', ['/contribute/', '/help/'], 'Help translate', 'Help us', 'Donate, correct a passage, sponsor a book, or spread the word.'],
     ['scripture', ['/scripture/'], 'Scripture', 'The Bible, through the Fathers’ eyes', 'Every book and chapter, with each Father who comments on it.'],
     ['listen', ['/listen/'], 'Listen', 'Hear the Fathers read aloud', 'Read-along audio in new English.'],
+    ['games', ['/games/'], 'Games', 'Play with the Fathers', 'A daily fragment puzzle, and Ten Leopards: carry Ignatius’s letters on his road to Rome.'],
+    ['downloads', ['/downloads/'], 'The library, to keep', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. One payment; reading on the site stays free.'],
+    ['ask', ['/ask/'], 'Ask', 'Ask the Fathers', 'Ask a question. Read the early writers’ own sentences, each linked to its passage.'],
+    ['creeds', ['/creeds/'], 'Timeline', 'Creeds and churches', 'Every major creed and confession from AD 180 to today, and which churches hold it.'],
+    ['privacy', ['/privacy/'], 'Privacy', 'No personal data, ever', 'Via Patrum collects no personal data, on the website or in the iPhone and iPad app.'],
   ];
   return S.map(([slug, pages, eyebrow, title, line, cite]) => ({
     kind: 'section', slug, file: `${slug}`, pages, data: { kind: 'section', home: slug === 'home', eyebrow, title, line, cite: cite || '' },
@@ -218,6 +223,23 @@ function excerptCards() {
   return out;
 }
 
+// One card per Timeline question (/explore/<id>/): the question itself.
+function exploreCards() {
+  const out = [];
+  for (const id of dirs('explore')) {
+    const html = read(path.join(DIST, 'explore', id, 'index.html'));
+    if (!html) continue;
+    const title = text(first(html, /<h1[^>]*>([\s\S]*?)<\/h1>/));
+    if (!title) continue;
+    out.push({
+      kind: 'question', slug: id, file: `explore/${id}`, pages: [`/explore/${id}/`],
+      data: { kind: 'question', eyebrow: 'Timeline · What the early Church said', title,
+              line: 'Every early writer on it, claim by claim, in date order.' },
+    });
+  }
+  return out;
+}
+
 // Per-book Scripture cards appear once dist/scripture/<book>/ is built; until then there are none.
 function scriptureCards() {
   const out = [];
@@ -250,31 +272,34 @@ const TEMPLATE = String.raw`<!doctype html><html lang="en"><head><meta charset="
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=Source+Sans+3:wght@600;700&display=block">
 <style>
-:root{--vellum:#f8f6f0;--leaf:#fffefa;--wash:#f0ebdf;--ink:#1e1a15;--ink-soft:#4a4238;--rule:#ddd4c2;--rubric:#a3261b;--lapis:#24427c;--gold:#765812}
+:root{--paper:#15120e;--leaf:#1d1914;--paper-2:#2a241c;--ink:#ece4d4;--ink-soft:#bcb09b;--rule:#3a3329;--rubric:#e2685a;--gold:#d8b45f}
 *{margin:0;padding:0;box-sizing:border-box}
-html,body{width:1200px;height:630px;overflow:hidden;background:var(--vellum)}
+html,body{width:1200px;height:630px;overflow:hidden;background:var(--paper)}
 body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-kerning:normal}
-.card{position:relative;width:1200px;height:630px;background:var(--vellum)}
-.leaf{position:absolute;inset:24px;background:var(--leaf);
+.card{position:relative;width:1200px;height:630px;background:
+  radial-gradient(760px 560px at 92% 46%,rgba(226,104,90,.13),rgba(226,104,90,0) 70%),
+  radial-gradient(900px 520px at 4% 108%,rgba(42,36,28,.95),rgba(42,36,28,0) 72%),
+  var(--paper)}
+.leaf{position:absolute;inset:24px;background:linear-gradient(160deg,rgba(29,25,20,.92) 0%,rgba(21,18,14,.55) 62%,rgba(29,25,20,.75) 100%);
   border:1px solid var(--rule);overflow:hidden;
-  box-shadow:0 1px 0 rgba(30,26,21,.05),0 12px 24px -18px rgba(30,26,21,.35)}
-.frame{position:absolute;inset:14px;border:1px solid rgba(163,38,27,.5);pointer-events:none}
-.frame::after{content:"";position:absolute;inset:4px;border:1px solid rgba(163,38,27,.2)}
+  box-shadow:inset 0 1px 0 rgba(236,228,212,.05),0 30px 60px -28px rgba(0,0,0,.85)}
+.frame{position:absolute;inset:14px;border:1px solid rgba(216,180,95,.5);pointer-events:none}
+.frame::after{content:"";position:absolute;inset:4px;border:1px solid rgba(216,180,95,.16)}
 .initial{position:absolute;right:34px;top:50%;transform:translateY(-54%);font:700 600px/1 'Cormorant Garamond',serif;
-  color:var(--rubric);opacity:.065;pointer-events:none;user-select:none}
+  color:var(--rubric);opacity:.11;pointer-events:none;user-select:none}
 .body{position:absolute;inset:58px 80px 50px 80px;display:flex;flex-direction:column}
 .head{display:flex;align-items:center;gap:16px;font:700 19px/1 'Source Sans 3',sans-serif;letter-spacing:.2em;
   text-transform:uppercase;color:var(--rubric)}
-.head::after{content:"";width:56px;height:1.5px;background:var(--rubric);opacity:.7}
+.head::after{content:"";width:56px;height:1.5px;background:var(--rubric);opacity:.75}
 .mid{flex:1;min-height:0;display:flex;flex-direction:column;justify-content:center}
 .stack{max-width:960px}
 .title{font-family:'Cormorant Garamond',serif;font-weight:600;color:var(--ink);line-height:1.02;letter-spacing:-.006em;
-  text-wrap:balance;font-size:96px;font-variant-numeric:lining-nums}
+  text-wrap:balance;font-size:96px;font-variant-numeric:lining-nums;text-shadow:0 2px 28px rgba(0,0,0,.45)}
 .bar{width:76px;height:2px;background:var(--rubric);margin:26px 0 22px}
 .sub{font:400 29px/1.35 'Literata',serif;color:var(--ink-soft);text-wrap:balance}
 .sub b{font-weight:500;color:var(--ink)}
 .sub .dates{color:var(--rubric)}
-.sub .sep{color:var(--rule);padding:0 .35em}
+.sub .sep{color:var(--ink-soft);opacity:.55;padding:0 .35em}
 .dates-line{font:500 30px/1.2 'Literata',serif;color:var(--rubric);margin-top:20px}
 .bio{font:400 26px/1.42 'Literata',serif;color:var(--ink-soft);margin-top:16px;max-width:920px;text-wrap:pretty}
 .quote{margin-top:28px;padding-left:26px;border-left:3px solid var(--rubric);max-width:920px}
@@ -282,7 +307,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-k
 .cite{margin-top:12px;font:700 15px/1.2 'Source Sans 3',sans-serif;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
 .line{font:400 29px/1.4 'Literata',serif;color:var(--ink-soft);max-width:900px;text-wrap:pretty}
 .line.verse{font-style:italic;color:var(--ink)}
-.foot{margin-top:26px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid var(--rule);padding-top:16px}
+.foot{margin-top:26px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid rgba(216,180,95,.5);padding-top:16px}
 .mark{font:700 38px/1 'Cormorant Garamond',serif;color:var(--ink);letter-spacing:.005em;white-space:nowrap}
 .mark span{color:var(--rubric)}
 .motto{font:italic 400 19px/1 'Literata',serif;color:var(--ink-soft);white-space:nowrap}
@@ -297,7 +322,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-k
 <script>
 const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const MOTTO = 'Read the early Church in its own words.';
-const LIMITS = { section: [100, 56], work: [96, 50], author: [104, 56], topic: [84, 46] };
+const LIMITS = { section: [100, 56], question: [72, 44], work: [96, 50], author: [104, 56], topic: [84, 46] };
 window.renderCard = async function (c) {
   const $ = s => document.querySelector(s);
   $('.head').textContent = c.eyebrow || '';
@@ -305,7 +330,7 @@ window.renderCard = async function (c) {
   $('.initial').textContent = letter;
   $('.motto').textContent = c.home ? 'Every Father, every work, in faithful modern English.' : MOTTO;
   let h = '<h1 class="title">' + esc(c.title) + '</h1>';
-  if (c.kind === 'section') {
+  if (c.kind === 'section' || c.kind === 'question') {
     if (c.line) h += '<div class="bar"></div><p class="line' + (c.home ? ' verse' : '') + ' fitq">' + esc(c.line) +
       (c.cite ? ' <span style="font-style:normal;color:var(--rubric);white-space:nowrap">— ' + esc(c.cite) + '</span>' : '') + '</p>';
   } else if (c.kind === 'work') {
@@ -358,7 +383,7 @@ async function main() {
   if (!works.length || !authors.length || !topics.length) {
     throw new Error(`dist/ looks incomplete (works ${works.length}, authors ${authors.length}, topics ${topics.length}); build the site first`);
   }
-  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards(), ...excerptCards()];
+  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards(), ...exploreCards(), ...excerptCards()];
   const all = cards;
   if (ONLY) cards = cards.filter(c => ONLY.has(c.kind));
   if (SLUGS) cards = cards.filter(c => SLUGS.has(c.slug));
