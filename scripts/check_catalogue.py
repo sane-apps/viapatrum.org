@@ -42,6 +42,23 @@ with tempfile.TemporaryDirectory() as tmp:
 # is still validated once even when it covers several selected passages.
 from unittest.mock import patch
 from pipeline.verify_translation_qa import make_audit_packet, validate_audit_receipt
+from pipeline.verify_translation_qa import PROVENANCE_SCHEMA
+
+
+def recorded_provenance(packet):
+    """Two-family provenance as scripts/dual_family_review.py records it: real
+    model ids, one call per selected section, bound to the reviewed hashes.
+    Families come only from this, never from the free-text reviewer string."""
+    lanes = []
+    for model, family in (("nvidia/nemotron-3-super-120b-a12b", "nemotron"),
+                          ("gemini-3.5-flash-lite", "gemini")):
+        calls = [{"section": s["section"], "source_sha256": s["source_sha256"],
+                  "english_sha256": s["english_sha256"], "response_model": model,
+                  "response_id": f"fixture-{family}-{s['section']}",
+                  "finished_at": "2026-10-09T20:00:00Z", "verdict": "pass", "uncertainties": []}
+                 for s in packet["sections"]]
+        lanes.append({"model": model, "family": family, "call_count": len(calls), "calls": calls})
+    return {"schema": PROVENANCE_SCHEMA, "lanes": lanes}
 with tempfile.TemporaryDirectory() as tmp:
     root = Path(tmp)
     corpus = root / "corpus"
@@ -68,6 +85,7 @@ with tempfile.TemporaryDirectory() as tmp:
                 "notes": f"The print reads {row['latin'][0]} The English reads {row['english'][0]}"}
                for row in rows]
     receipt = {"packet_id": packet["packet_id"], "reviewer": "kimi-k2.6+glm-5.2", "verdict": "pass",
+               "review_provenance": recorded_provenance(packet),
                "reviews": reviews, "scope_review": {**semantic, "notes": reviews[0]["notes"]}}
     (corpus / "packet.json").write_text(json.dumps(packet))
     (corpus / "receipt.json").write_text(json.dumps(receipt))
@@ -109,6 +127,7 @@ with tempfile.TemporaryDirectory() as tmp:
                                       publication_scope=work_scope(work))
     scoped_receipt = {"packet_id": scoped_packet["packet_id"], "reviewer": "kimi-k2.6+glm-5.2",
                       "verdict": "pass",
+                      "review_provenance": recorded_provenance(scoped_packet),
                       "reviews": reviews,
                       "scope_review": {**semantic, "notes": reviews[0]["notes"]}}
     (corpus / "scoped_packet.json").write_text(json.dumps(scoped_packet))
@@ -150,6 +169,8 @@ with tempfile.TemporaryDirectory() as tmp:
     assert not check_publication([dirty_tail], [], root, corpus, enforce_review=False)[0]
     stamped = json.loads(json.dumps(scoped_receipt))
     stamped["reviewer"] = "cursor-held-eeng-20260924 (Mini)"
+    # A hand stamp has no recorded model calls: no provenance at all.
+    del stamped["review_provenance"]
     for rev in stamped["reviews"]:
         rev["notes"] = "Pass A/B OET tip."
     stamped["scope_review"]["notes"] = "Engastrimytho tip."
@@ -166,6 +187,17 @@ with tempfile.TemporaryDirectory() as tmp:
     live_stamp_errors = [e for errs in live_stamp[5].values() for e in errs]
     assert any("two model families" in e for e in live_stamp_errors), live_stamp_errors
     assert any("do not quote" in e for e in live_stamp_errors), live_stamp_errors
+    # Empty provenance (no lanes / zero calls) is no better than none.
+    for hollow in ({"schema": PROVENANCE_SCHEMA, "lanes": []},
+                   {**recorded_provenance(scoped_packet),
+                    "lanes": [{**lane, "calls": [], "call_count": 0}
+                              for lane in recorded_provenance(scoped_packet)["lanes"]]}):
+        hollow_receipt = {**json.loads(json.dumps(scoped_receipt)), "review_provenance": hollow}
+        (corpus / "scoped_receipt.json").write_text(json.dumps(hollow_receipt))
+        hollow_result = check_publication([work], [], root, corpus)
+        assert not hollow_result[0], hollow_result[3]
+        assert any("two model families" in e for errs in hollow_result[3].values() for e in errs), hollow_result[3]
+    (corpus / "scoped_receipt.json").write_text(json.dumps(stamped))
     manifest = {"schema": "fathers-publication-v1", "reviews": {},
                 "provisional_work_scopes": {"fixture": publication_digest(work_scope(work))},
                 "provisional_legacy": {key: publication_digest(value)
