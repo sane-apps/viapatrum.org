@@ -8179,6 +8179,8 @@ FORCED_WITHHOLD = {
     "cyril-adoration-10": _RECERT,
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
+    # withheld 2026-10-09 pending Stephan promote call; densify in progress (Densify)
+    "le-blanc-theses-theologicae": "Withheld 2026-10-09 pending Stephan's promote call; densify in progress.",
 }
 
 
