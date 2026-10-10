@@ -16,6 +16,8 @@ from unittest import mock
 import build_audio as B
 import cf_tts
 
+REAL_VOICE_NAME = B._voice_name  # before any test patches it
+
 
 def _book(books: Path, name: str, files: dict) -> None:
     tr = books / name / "translations"
@@ -801,6 +803,85 @@ class PerWorkVoiceTests(unittest.TestCase):
             B._render_english_file(eng, None, None, FakeVoice(), env.root, "kw", manifest)
             self.assertEqual(set(used), {"af_heart"})
             self.assertEqual(manifest["passages"]["k_english"]["voice"], "af_heart")
+
+
+class NewWorkDefaultTests(unittest.TestCase):
+    """Owner 2026-10-09: NEW works default to Aura-2 arcas narrating and Aura-2
+    mars reading Scripture quotations. Recorded works keep their own voices and
+    are never marked behind or re-voiced for differing from the defaults."""
+
+    def _env(self):
+        e = mock.patch.dict(os.environ, {"KOKORO_ENGINE": "cf-worker"})
+        e.start()
+        self.addCleanup(e.stop)
+        for k in ("CF_TTS_SPEAKER", "CF_TTS_QUOTE_VOICE", "AUDIO_REVOICE"):
+            os.environ.pop(k, None)
+        v = mock.patch.object(B, "_voice_name", REAL_VOICE_NAME)
+        v.start()
+        self.addCleanup(v.stop)
+
+    def test_defaults_are_arcas_and_mars(self):
+        with Env("cf-worker"):
+            self._env()
+            self.assertEqual(B._voice_name(), "aura-2-arcas")
+            self.assertEqual(B._default_quote_voice(), "mars")
+            self.assertEqual(B.work_voices("fresh", None), ("aura-2-arcas", "mars"))
+            self.assertIn('os.environ.get("CF_TTS_SPEAKER") or "arcas"', Path(cf_tts.__file__).read_text())
+
+    def test_empty_quote_env_still_means_no_quote_voice(self):
+        with Env("cf-worker"):
+            self._env()
+            os.environ["CF_TTS_QUOTE_VOICE"] = ""
+            self.assertIsNone(B._default_quote_voice())
+
+    def test_drain_script_sets_the_new_defaults_and_keeps_revoice_off(self):
+        sh = (Path(B.__file__).resolve().parent / "run-audio-drain.sh").read_text()
+        self.assertIn("CF_TTS_SPEAKER=arcas", sh)
+        self.assertIn("CF_TTS_QUOTE_VOICE=mars", sh)
+        self.assertIn("AUDIO_REVOICE=0", sh)
+        self.assertNotIn("AUDIO_REVOICE=1", sh.replace("Set to 1", ""))
+
+    def test_recorded_orion_arcas_work_keeps_its_voices(self):
+        with Env("cf-worker") as env:
+            self._env()
+            m = {"voice": "aura-2-orion", "passages": {
+                "a": {"voice": "aura-2-orion", "quote_voice": "arcas"},
+                "b": {"voice": "aura-2-orion", "quote_voice": "arcas"}}}
+            self.assertEqual(B.restem_voices(m), ("aura-2-orion", "arcas"))
+            self.assertEqual(B.work_voices("w", m), ("aura-2-orion", "arcas"))
+            self.assertFalse(B._behind(m, "w"))
+            for v in ("aura-2-apollo", "aura-2-odysseus"):
+                self.assertFalse(B._behind({"passages": {"a": {"voice": v, "quote_voice": None}}}, "w"))
+
+    def test_new_book_goes_to_the_worker_as_arcas_and_mars(self):
+        with Env("cf-worker") as env:
+            self._env()
+            _book(env.books, "nd", {"n1_english": ["One."]})
+            env.publish("nd")
+            worker = RecordingWorker()
+            with mock.patch.object(cf_tts, "submit_passage", worker.submit), \
+                 mock.patch.object(cf_tts, "collect_passages", worker.collect), \
+                 mock.patch.object(B, "stale_stems", lambda w: []), \
+                 mock.patch.object(B, "_work_words", lambda w: (100, False)):
+                B.drain(budget_s=60)
+            self.assertEqual(worker.voices, {"n1_english": ("arcas", "mars")})
+            m = json.loads((env.out / "nd" / "manifest.json").read_text())
+            self.assertEqual((m["voice"], m["quote_voice"]), ("aura-2-arcas", "mars"))
+
+    def test_changed_text_in_an_orion_work_stays_orion_arcas(self):
+        with Env("cf-worker") as env:
+            self._env()
+            _book(env.books, "old", {"a_english": ["New text."], "b_english": ["Kept."]})
+            env.publish("old")
+            _manifest(env, "old", "aura-2-orion", "arcas", ("a_english", "b_english"))
+            worker = RecordingWorker()
+            stale = {"old": ["a_english"]}
+            with mock.patch.object(cf_tts, "submit_passage", worker.submit), \
+                 mock.patch.object(cf_tts, "collect_passages", worker.collect), \
+                 mock.patch.object(B, "stale_stems", lambda w: stale.pop(w, [])), \
+                 mock.patch.object(B, "_work_words", lambda w: (100, False)):
+                B.drain(budget_s=60)
+            self.assertEqual(worker.voices, {"a_english": ("orion", "arcas")})
 
 
 class DriftAndExitTests(unittest.TestCase):

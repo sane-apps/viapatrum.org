@@ -12,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path.home() / "SaneApps/clients/translations/scripts"))
 import jev_cite_correct as J  # noqa: E402
 
-QUOTE_VOICE = "arcas"
+QUOTE_VOICE = "mars"  # default for new works (owner 2026-10-09); recorded works keep theirs
 MIN_SHARED = 4      # distinctive words shared with the verse
 MIN_RATIO = 0.6     # share of the clause's distinctive words found in the verse
 # Places a quotation can start: sentence start, after clause marks or an

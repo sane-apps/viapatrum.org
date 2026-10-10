@@ -35,6 +35,11 @@ def _say(msg: str, err: bool = False) -> None:
     print("%s %s" % (_now(), msg), file=sys.stderr if err else sys.stdout, flush=True)
 
 VOICE = "bm_daniel"
+# Defaults for NEW works on the Cloudflare engines (owner 2026-10-09: Aura-2 arcas
+# narrates, Aura-2 mars reads Scripture quotations; Muse rejected as too manual).
+# A recorded work keeps its own voices; these never re-voice anything.
+DEFAULT_CF_SPEAKER = "arcas"
+DEFAULT_QUOTE_VOICE = "mars"
 # "cf": Workers AI speaks, the Mini joins and uploads. "cf-worker": the
 # viapatrum-narrator Worker speaks, joins and writes the mp3 to R2 itself.
 CF_ENGINES = ("cf", "cf-worker")
@@ -54,15 +59,16 @@ def _voice_name() -> str:
     restem_voices); this is not a lock on the whole site."""
     import os
     if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
-        return "aura-2-" + os.environ.get("CF_TTS_SPEAKER", "orion")
+        return "aura-2-" + (os.environ.get("CF_TTS_SPEAKER") or DEFAULT_CF_SPEAKER)
     return VOICE
 
 
 def _default_quote_voice() -> str | None:
     """Default Scripture-quotation voice for a work with none recorded
-    (CF_TTS_QUOTE_VOICE; Cloudflare engines only). Owner 2026-10-09: keep it."""
+    (CF_TTS_QUOTE_VOICE, else mars; Cloudflare engines only; set it empty for
+    none). Owner 2026-10-09: keep a separate quotation voice."""
     if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
-        return os.environ.get("CF_TTS_QUOTE_VOICE", "") or None
+        return os.environ.get("CF_TTS_QUOTE_VOICE", DEFAULT_QUOTE_VOICE) or None
     return None
 
 
@@ -1581,7 +1587,7 @@ def _quote_voice_item() -> str:
     Same narrator: only quotation sentences are spoken again. An older
     narrator: the whole work is re-read so one book never mixes narrators."""
     import os
-    qv = os.environ.get("CF_TTS_QUOTE_VOICE", "")
+    qv = _default_quote_voice() or ""
     if not qv or os.environ.get("KOKORO_ENGINE") not in CF_ENGINES:
         return "idle"
     for manifest_path in sorted(OUT.glob("*/manifest.json")):

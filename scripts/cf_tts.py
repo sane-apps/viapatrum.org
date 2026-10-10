@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cloudflare Workers AI TTS engine for build_audio.py (no local models).
 
-Renders one wav per sentence via Aura-2 (default speaker orion), decoded to
+Renders one wav per sentence via Aura-2 (default speaker arcas, owner 2026-10-09), decoded to
 24kHz mono to match the Kokoro pipeline's concat + timing code exactly.
 Covered by the $10k Startup grant (Workers AI, $50k cap).
 
@@ -24,7 +24,7 @@ sys.path.insert(0, os.path.join(os.path.expanduser("~"), "SaneApps/infra/SanePro
 from llm_vendor_gate import require_llm_receipt  # SOP call-site enforcement
 
 MODEL = os.environ.get("CF_TTS_MODEL", "@cf/deepgram/aura-2-en")
-SPEAKER = os.environ.get("CF_TTS_SPEAKER", "orion")
+SPEAKER = os.environ.get("CF_TTS_SPEAKER") or "arcas"
 WORKERS = int(os.environ.get("CF_TTS_WORKERS", "8"))
 TIMEOUT = int(os.environ.get("CF_TTS_TIMEOUT", "120"))
 ACCT = os.environ.get("CLOUDFLARE_ACCOUNT_ID", "2c267ab06352ba2522114c3081a8c5fa")
