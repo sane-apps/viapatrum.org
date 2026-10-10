@@ -26,6 +26,11 @@ Opponent-quotation and Augustine-recap attributions must say so in the note.
 
 ## Read-along audio (readalong.js + inject_audio.py)
 
+- Voice: follow the "Audiobook voice rule" in `clients/translations/docs/SOP.md`
+  (owner 2026-10-09): one narrator voice per work, kept for all its parts;
+  different works may use different voices; never one site-wide voice; choose
+  per work by quality, then speed, then cost (Muse included while prepaid, to
+  Nov 2, 2026); the manifest's `"voice"` is the record re-runs must reuse.
 - No sentence highlight until the user presses play (or taps a sentence). Seeking
   the load position on `loadedmetadata` must not light anything up.
 - Sentences are clickable (seek + play); prev/next buttons skip a paragraph;
