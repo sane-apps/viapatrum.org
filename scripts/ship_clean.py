@@ -7,6 +7,10 @@ Usage (ship.sh calls these; they also work by hand):
   python3 scripts/ship_clean.py status               # where the trees are and what they hold
   python3 scripts/ship_clean.py remove               # delete both trees (git worktree remove)
 
+ship.sh --clean removes both trees when the ship ends, failed or not (EXIT
+trap), so they cost disk only while a clean ship runs. Exception: an audio
+upload to R2 still running from that ship; the next --clean run removes them.
+
 Why: ship.sh builds whatever sits in the site checkout and in the translations
 working tree. One uncommitted edit by another session (2026-10-09: a Muse
 coding session's build_site.py change) failed every ship, and uncommitted
@@ -16,10 +20,13 @@ git worktrees under $FATHERS_CLEAN_ROOT (default ~/SaneApps/.ship-clean):
   site/          the site at <site-ref> (the commit of the ship.sh that was run)
   translations/  translations at refs/heads/main (committed translations only)
 
-Both are reused between runs: each prepare force-checks-out the ref and runs
+A tree left over (see above) is reused: each prepare force-checks-out the ref and runs
 `git clean -fdx`, then checks `git status` is empty, so nothing uncommitted can
 reach the build. A new tree is filled with APFS clones (cp -c) of the main
-checkout before `git reset --hard`, so only changed files take disk.
+checkout before `git reset --hard`, so only changed files take disk. prepare
+measures the free-space drop and, above FATHERS_CLEAN_MAX_PREP_GB (default
+1.0; measured 0.2 on 2026-10-09), removes the trees and fails: real copies
+instead of clones would cost about 6 GB.
 
 Shared with the main checkouts on purpose:
   site/outputs       -> main site outputs/ (ship.lock, build.lock, ship-last,
@@ -49,6 +56,7 @@ TR_COPY_GLOB = "outputs/work-pipeline/*/segments.json"
 TR_LINKS = ("outputs/jev-cite-sweep-20260925.jsonl", "outputs/work-pipeline/queue.json")
 OVERHEAD_GB = 0.5      # new trees: git indexes, clone metadata, files that differ (measured 0.2)
 REUSE_GB = 0.1         # existing trees: files changed since the last run
+MAX_PREP_GB = float(os.environ.get("FATHERS_CLEAN_MAX_PREP_GB") or 1.0)
 DIST_GB_FALLBACK = 1.5  # used when the main dist/ is missing
 
 
@@ -65,6 +73,10 @@ def git(repo: Path, *args: str, check: bool = True) -> str:
     if check and r.returncode != 0:
         raise SystemExit(f"ship_clean: git {' '.join(args)} in {repo} failed: {r.stderr.strip()}")
     return r.stdout.strip()
+
+
+def free_gb() -> float:
+    return shutil.disk_usage("/System/Volumes/Data" if Path("/System/Volumes/Data").is_dir() else "/").free / 2**30
 
 
 def main_site() -> Path:
@@ -145,6 +157,18 @@ def link(path: Path, target: Path) -> None:
 
 
 def prepare(site_ref: str) -> None:
+    before = free_gb()
+    _prepare(site_ref)
+    delta = before - free_gb()
+    print(f"PREPARE_DF_DELTA_GB={delta:.2f}")
+    if delta > MAX_PREP_GB:
+        print(f"ship_clean: preparing the trees took {delta:.2f} GB of disk (limit {MAX_PREP_GB:.1f}); "
+              "the clones are not clones. Removing the trees.", file=sys.stderr)
+        remove()
+        raise SystemExit(1)
+
+
+def _prepare(site_ref: str) -> None:
     site_main = main_site()
     site_tree, tr_tree = CLEAN_ROOT / "site", CLEAN_ROOT / "translations"
     # A ref such as HEAD means the checkout this script runs from.
@@ -192,6 +216,10 @@ def remove() -> None:
             print(f"removed {tree}")
     git(main_site(), "worktree", "prune")
     git(TRANSLATIONS, "worktree", "prune")
+    try:
+        CLEAN_ROOT.rmdir()  # only when empty (clean.lock may still be held)
+    except OSError:
+        pass
 
 
 if __name__ == "__main__":

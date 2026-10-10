@@ -69,8 +69,8 @@ the background (3 h limit); the next ship waits for it.
 one of translations main, under ~/SaneApps/.ship-clean (scripts/ship_clean.py).
 Uncommitted edits in either main checkout are ignored. outputs/ and node_modules
 are shared with the main site checkout (same locks, logs, ship-last); dist/ is
-built in the clean tree, so the disk floor adds its size (about 1.1 GB) the
-first time. Combine with --dry-run to build and run every gate without deploying.
+built in the clean tree, so the disk floor adds its size (about 1.1 GB). The
+trees are removed when the ship ends, failed or not. Combine with --dry-run to build and run every gate without deploying.
 
 Requires: translations venv with PyYAML; CLOUDFLARE_API_TOKEN (or source ~/.config/nv/env).
 Timings: outputs/ship-timings.jsonl (one line per run).
@@ -107,11 +107,12 @@ fi
 
 # --clean (2026-10-09): build from clean worktrees of committed code, so another
 # session's uncommitted edits in either checkout can neither fail nor leak into
-# a ship. This shell prepares the trees, then becomes (exec, same pid) the
+# a ship. This shell prepares the trees, then runs the
 # ship.sh of the clean site tree with FATHERS_BOOKS set to the clean
 # translations books/. The child takes ship.lock and build.lock as usual (its
 # outputs/ is this checkout's outputs/). clean.lock, held for this pid, keeps a
-# second --clean run from resetting the trees under a running build.
+# second --clean run from resetting the trees under a running build. The trees
+# are removed when the ship ends (EXIT trap below).
 if [[ "$CLEAN" -eq 1 && "${FATHERS_CLEAN_CHILD:-}" != "1" ]]; then
   CLEAN_ROOT="${FATHERS_CLEAN_ROOT:-$HOME/SaneApps/.ship-clean}"
   export FATHERS_CLEAN_ROOT="$CLEAN_ROOT"
@@ -150,6 +151,33 @@ print("%.1f" % (min(g, int(t)) if t.isdigit() else g))' 2>/dev/null)"
     echo "BLOCKED: ${CLEAN_FREE_GB:-?} GB free; a --clean ship needs ${CLEAN_NEED_GB} GB (15 + ${CLEAN_EXTRA_GB} for the clean trees and their dist/). Nothing was deleted or written." >&2
     exit 1
   fi
+  # From here on the trees are ours: remove them when this ship ends, however
+  # it ends (bash runs the trap after the foreground child ship exits).
+  clean_teardown() {
+    local rc=$?
+    trap - EXIT
+    trap '' INT TERM HUP
+    local r2pid; r2pid="$(cat "$MAIN_OUTPUTS/audio-r2-sync.pid" 2>/dev/null || true)"
+    if [[ "${FATHERS_CLEAN_KEEP:-}" == "1" ]]; then
+      echo "clean: keeping $CLEAN_ROOT (FATHERS_CLEAN_KEEP=1)"
+    elif [[ "$r2pid" =~ ^[0-9]+$ ]] && kill -0 "$r2pid" 2>/dev/null; then
+      echo "clean: keeping $CLEAN_ROOT while the audio upload to R2 (pid $r2pid) runs; the next --clean ship removes it"
+    elif [[ -d "$CLEAN_ROOT/site" || -d "$CLEAN_ROOT/translations" ]]; then
+      local before after
+      before="$(python3 -c 'import shutil; print("%.2f" % (shutil.disk_usage("/System/Volumes/Data").free / 2**30))')"
+      if nice -n 10 python3 "$ROOT/scripts/ship_clean.py" remove >/dev/null; then
+        after="$(python3 -c 'import shutil; print("%.2f" % (shutil.disk_usage("/System/Volumes/Data").free / 2**30))')"
+        echo "clean: removed the clean trees ($before -> $after GB free)"
+      else
+        echo "clean: WARNING could not remove $CLEAN_ROOT; run: python3 scripts/ship_clean.py remove" >&2
+      fi
+    fi
+    exit "$rc"
+  }
+  trap clean_teardown EXIT
+  trap 'exit 130' INT
+  trap 'exit 143' TERM
+  trap 'exit 129' HUP
   echo "clean: ${CLEAN_FREE_GB} GB free, needs ${CLEAN_NEED_GB} GB; preparing trees in $CLEAN_ROOT"
   if ! clean_out="$(python3 "$ROOT/scripts/ship_clean.py" prepare "$(git -C "$ROOT" rev-parse HEAD)")"; then
     echo "BLOCKED: could not prepare the clean trees" >&2
@@ -165,7 +193,10 @@ print("%.1f" % (min(g, int(t)) if t.isdigit() else g))' 2>/dev/null)"
     echo "BLOCKED: clean trees incomplete ($CLEAN_SITE_TREE, $FATHERS_BOOKS)" >&2
     exit 1
   fi
-  exec "$CLEAN_SITE_TREE/scripts/ship.sh" ${CHILD_ARGS[@]+"${CHILD_ARGS[@]}"}
+  # Not exec: this shell stays to remove the trees afterwards. It keeps holding
+  # clean.lock; the child takes ship.lock and build.lock for its own pid.
+  "$CLEAN_SITE_TREE/scripts/ship.sh" ${CHILD_ARGS[@]+"${CHILD_ARGS[@]}"}
+  exit $?
 fi
 if [[ "${FATHERS_CLEAN_CHILD:-}" == "1" ]]; then
   echo "clean build: site ${FATHERS_CLEAN_SITE_SHA:0:10} in $ROOT, translations ${FATHERS_CLEAN_TRANSLATIONS_SHA:0:10} ($FATHERS_BOOKS)"
