@@ -15,7 +15,10 @@ export CF_TTS_QUOTE_VOICE=arcas
 # Re-voice every audiobook into the current voice, whole works at a time, after
 # new books and changed text (decided 2026-10-07 at the owner's request: "the
 # spend is fine"). Capped per day in dollars; build_audio.py keeps the ledger.
-export AUDIO_REVOICE=1 REVOICE_USD_PER_DAY=150
+# AUDIO_REVOICE off (2026-10-09): voice rule, one narrator + one quote voice per work, no
+# site-wide voice; build_audio.py keeps each work in its own recorded voices. Set to 1 only
+# on the owner word to re-read mixed works whole.
+export AUDIO_REVOICE=0 REVOICE_USD_PER_DAY=150
 # Vendor SOP: cf_tts needs a smoked receipt (< 4 h); refresh after 3 h.
 RECEIPTS="$HOME/SaneApps/infra/SaneProcess/outputs/llm-api-research"
 R=$(ls -t "$RECEIPTS"/*-cf-_cf_deepgram_aura-2-en.json 2>/dev/null | head -1)

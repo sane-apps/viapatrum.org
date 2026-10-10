@@ -45,10 +45,139 @@ MP3_BITRATE = "64k"
 
 
 def _voice_name() -> str:
+    """The DEFAULT narrator: only for a work that has no voice of its own yet.
+
+    Audiobook voice rule (owner 2026-10-09, clients/translations/docs/SOP.md):
+    one narrator voice and one Scripture-quotation voice per work, kept for
+    every part of it; different works may differ; never one site-wide voice.
+    A recorded work keeps the voices in its manifest (work_voices,
+    restem_voices); this is not a lock on the whole site."""
     import os
     if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
         return "aura-2-" + os.environ.get("CF_TTS_SPEAKER", "orion")
     return VOICE
+
+
+def _default_quote_voice() -> str | None:
+    """Default Scripture-quotation voice for a work with none recorded
+    (CF_TTS_QUOTE_VOICE; Cloudflare engines only). Owner 2026-10-09: keep it."""
+    if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
+        return os.environ.get("CF_TTS_QUOTE_VOICE", "") or None
+    return None
+
+
+_KOKORO_VOICE = re.compile(r"[a-z][fm]_[a-z]+")
+_AURA_VOICE = re.compile(r"aura-2-[a-z]+")
+
+
+def _speakable(voice) -> bool:
+    """True when the current engine can read in this narrator voice, so a
+    work recorded in it can be fixed in that same voice."""
+    if not voice:
+        return False
+    if voice == _voice_name():
+        return True
+    if os.environ.get("KOKORO_ENGINE") in CF_ENGINES:
+        return bool(_AURA_VOICE.fullmatch(voice))
+    return bool(_KOKORO_VOICE.fullmatch(voice))
+
+
+def _cf_speaker(voice: str | None) -> str:
+    """Aura-2 speaker for a manifest voice name: "aura-2-apollo" -> "apollo"."""
+    voice = voice or _voice_name()
+    return voice[len("aura-2-"):] if voice.startswith("aura-2-") else voice
+
+
+def _majority(values: list):
+    """Most common value (first seen wins a tie), or None for no values."""
+    if not values:
+        return None
+    counts: dict = {}
+    for v in values:
+        counts[v] = counts.get(v, 0) + 1
+    return max(counts, key=lambda v: (counts[v], -values.index(v)))
+
+
+def recorded_voice(manifest: dict | None) -> str | None:
+    """The narrator a recorded work was read in: most of its passages' voice
+    (a passage without one was read in the manifest's voice)."""
+    manifest = manifest or {}
+    passages = manifest.get("passages") or {}
+    return _majority([v.get("voice") or manifest.get("voice") for v in passages.values()]) \
+        or manifest.get("voice")
+
+
+def recorded_quote_voice(manifest: dict | None) -> str | None:
+    """The Scripture-quotation voice a recorded work was read with (None: the
+    work has no separate quotation voice)."""
+    manifest = manifest or {}
+    passages = manifest.get("passages") or {}
+    if passages:
+        return _majority([v["quote_voice"] if "quote_voice" in v else manifest.get("quote_voice")
+                          for v in passages.values()]) or None
+    return manifest.get("quote_voice") or None
+
+
+_UNSET = object()
+
+
+def _book_setting(work: str, key: str):
+    """A per-work audio choice from the book's book.yml (read only):
+    `audio_voice: aura-2-apollo`, `audio_quote_voice: arcas` (or `none`).
+    _UNSET when the book does not say."""
+    try:
+        text = (BOOKS / work / "book.yml").read_text(encoding="utf-8")
+    except OSError:
+        return _UNSET
+    m = re.search(r"^%s:[ \t]*[\"']?([A-Za-z0-9_.-]*)[\"']?[ \t]*(?:#.*)?$" % re.escape(key), text, re.M)
+    if not m:
+        return _UNSET
+    val = m.group(1)
+    return None if val.lower() in ("", "none", "null", "off") else val
+
+
+def work_voices(work: str, manifest: dict | None = None, voice: str | None = None,
+                quote_voice=_UNSET) -> tuple[str, str | None]:
+    """(narrator, quotation voice) for reading a work whole or for the first
+    time. Each: explicit choice (CLI --voice / --quote-voice), else the
+    book's book.yml audio_voice / audio_quote_voice, else the voice the work
+    was recorded in (narrator: when this engine can still speak it), else the
+    default. Never the default just because it is the default."""
+    has_audio = bool((manifest or {}).get("passages"))
+    if voice:
+        if not _speakable(voice):
+            raise SystemExit("voice %s cannot be spoken by engine %s"
+                             % (voice, os.environ.get("KOKORO_ENGINE") or "torch"))
+        narrator = voice
+    else:
+        chosen = _book_setting(work, "audio_voice")
+        if chosen is not _UNSET and chosen and _speakable(chosen):
+            narrator = chosen
+        else:
+            if chosen is not _UNSET and chosen:
+                _say("%s: book.yml audio_voice %s cannot be spoken here; ignored" % (work, chosen), err=True)
+            rec = recorded_voice(manifest) if has_audio else None
+            narrator = rec if _speakable(rec) else _voice_name()
+    if quote_voice is _UNSET:
+        quote_voice = _book_setting(work, "audio_quote_voice")
+    if quote_voice is _UNSET:
+        quote_voice = (recorded_quote_voice(manifest) if has_audio else None) or _default_quote_voice()
+    if os.environ.get("KOKORO_ENGINE") not in CF_ENGINES:
+        quote_voice = None  # only the Cloudflare engines read quotations in a second voice
+    return narrator, quote_voice or None
+
+
+def restem_voices(manifest: dict) -> tuple[str, str | None]:
+    """(narrator, quotation voice) for re-reading some files of a recorded
+    work: exactly what the work was recorded in, so it never mixes voices.
+    Only when the engine cannot speak its narrator any more (the caller
+    forced it: AUDIO_RESTEM_OLD_VOICE=1 or --stems) does the default stand in."""
+    rec = recorded_voice(manifest)
+    narrator = rec if _speakable(rec) else _voice_name()
+    qv = recorded_quote_voice(manifest)
+    if os.environ.get("KOKORO_ENGINE") not in CF_ENGINES:
+        qv = None
+    return narrator, qv
 
 
 def _mp3_bitrate() -> str:
@@ -197,9 +326,10 @@ def _cut_wav(mp3: Path, start: float, end: float, wav: Path) -> None:
                     "-ar", "24000", "-ac", "1", str(wav)], check=True)
 
 
-def _passage_plan(eng_file: Path) -> tuple[list[str], dict, dict, str]:
+def _passage_plan(eng_file: Path, quote_voice=_UNSET) -> tuple[list[str], dict, dict, str]:
     """(sentences, quotation parts by sentence, quotation signature by
-    sentence, quotation voice) for one English file."""
+    sentence, quotation voice) for one English file. quote_voice is the
+    work's own quotation voice (None: no separate voice); unset, the default."""
     import os as _os
     rows = json.loads(eng_file.read_text(encoding="utf-8"))
     rows = rows if isinstance(rows, list) else rows.get("sections", [])
@@ -213,7 +343,9 @@ def _passage_plan(eng_file: Path) -> tuple[list[str], dict, dict, str]:
     # Bible quotations in a second voice (owner 2026-10-03: Orion narrates,
     # Arcas reads Scripture). Only words that match the cited verse count.
     cf_mode = _os.environ.get("KOKORO_ENGINE") in CF_ENGINES
-    quote_voice = _os.environ.get("CF_TTS_QUOTE_VOICE", "") if cf_mode else ""
+    if quote_voice is _UNSET:
+        quote_voice = _default_quote_voice()
+    quote_voice = (quote_voice or "") if cf_mode else ""
     parts_of: dict[int, list] = {}
     if quote_voice:
         from scripture_quotes import quote_parts
@@ -240,12 +372,14 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
         import soundfile as sf
         import torch
         import numpy as np
-    sentences, parts_of, sig, quote_voice = _passage_plan(eng_file)
+    voice = manifest.get("voice") or _voice_name()  # this work's narrator
+    sentences, parts_of, sig, quote_voice = _passage_plan(
+        eng_file, manifest["quote_voice"] if "quote_voice" in manifest else _UNSET)
     old_mp3 = OUT / work / (eng_file.stem + ".mp3")
     if _os.environ.get("KOKORO_ENGINE") == "cf-worker":
         return _render_via_worker(eng_file, work, manifest, sentences, parts_of, sig, quote_voice)
     plan: dict[int, tuple[float, float]] = {}
-    if prev and prev_voice == _voice_name() and old_mp3.is_file():
+    if prev and prev_voice == voice and old_mp3.is_file():
         if quote_voice:
             # A sentence is reused only when its quoted parts are unchanged too;
             # recordings made before this have none, so quotations are re-spoken.
@@ -261,7 +395,8 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
         print("  %s reuse %d, speak %d of %d sentences"
               % (eng_file.stem, len(plan), len(todo), len(sentences)), flush=True)
     if cf_mode:
-        from cf_tts import render_all, SPEAKER as CF_SPEAKER
+        from cf_tts import render_all
+        CF_SPEAKER = _cf_speaker(voice)
         mixed = [i for i in todo if i in parts_of]
         print("  %s cf_tts %d sentences (%s%s)"
               % (eng_file.stem, len(todo), CF_SPEAKER,
@@ -290,7 +425,7 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
         if mlx is not None:
             parts = []
             say = speak_text(sentence)
-            for chunk in mlx.generate(text=say, voice=VOICE, speed=SPEED, lang_code=LANG):
+            for chunk in mlx.generate(text=say, voice=voice, speed=SPEED, lang_code=LANG):
                 parts.append(np.asarray(chunk.audio).squeeze())
             clip = np.concatenate(parts)
             assert np.isfinite(clip).all(), "non-finite mlx audio at sentence %d" % i
@@ -298,12 +433,12 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
             continue
         audios = []
         say = speak_text(sentence)
-        for _, _, audio in pipeline(say, voice=VOICE, speed=SPEED):
+        for _, _, audio in pipeline(say, voice=voice, speed=SPEED):
             audios.append(audio)
         clip = torch.cat(audios)
         if cpu_fallback is not None and not bool(torch.isfinite(clip).all()):
             print("mps fallback to cpu at sentence %d" % i)
-            audios = [a for _, _, a in cpu_fallback(say, voice=VOICE, speed=SPEED)]
+            audios = [a for _, _, a in cpu_fallback(say, voice=voice, speed=SPEED)]
             clip = torch.cat(audios)
         sf.write(str(wav), clip.numpy(), 24000)
     offsets = sentence_offsets(wavs)
@@ -315,7 +450,7 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
                     _mp3_bitrate(), str(mp3)], check=True)
     manifest["passages"][eng_file.stem] = {
         "audio": "assets/audio/%s/%s.mp3" % (work, eng_file.stem),
-        "voice": _voice_name(),
+        "voice": voice,
         "quote_voice": quote_voice or None,
         "sentences": [dict({"t": s, "s": a, "e": b}, **({"q": sig[i]} if i in sig else {}))
                       for i, (s, (a, b)) in enumerate(zip(sentences, offsets))],
@@ -338,10 +473,13 @@ def _audit(work: str, stem: str, total: int, reused: int, spoken: int) -> None:
         pass  # the log must never stop narration
 
 
-def _worker_spec(eng_file: Path, work: str, plan=None) -> dict:
-    """The narrator Worker job for one English file (no network)."""
-    from cf_tts import SPEAKER as CF_SPEAKER
-    sentences, parts_of, sig, quote_voice = plan or _passage_plan(eng_file)
+def _worker_spec(eng_file: Path, work: str, plan=None, manifest: dict | None = None) -> dict:
+    """The narrator Worker job for one English file (no network), in the
+    voices of the manifest it goes into (the work's own; default if none)."""
+    m = manifest or {}
+    voice = m.get("voice") or _voice_name()
+    sentences, parts_of, sig, quote_voice = plan or _passage_plan(
+        eng_file, m["quote_voice"] if "quote_voice" in m else _UNSET)
     job = []
     for i, sentence in enumerate(sentences):
         if i in parts_of:
@@ -350,7 +488,8 @@ def _worker_spec(eng_file: Path, work: str, plan=None) -> dict:
         else:
             job.append({"text": speak_text(sentence)})
     return {"work": work, "stem": eng_file.stem, "sentences": sentences, "sig": sig,
-            "quote_voice": quote_voice, "n_quotes": len(parts_of), "job": job, "speaker": CF_SPEAKER}
+            "quote_voice": quote_voice, "n_quotes": len(parts_of), "job": job,
+            "voice": voice, "speaker": _cf_speaker(voice)}
 
 
 def _say_spec(spec: dict) -> None:
@@ -387,7 +526,7 @@ def _apply_worker_result(spec: dict, result: dict, manifest: dict) -> int:
         "audio": "%s/%s" % (AUDIO_PUBLIC, result["key"]),
         "r2_key": result["key"],
         "bytes": result["bytes"],
-        "voice": _voice_name(),
+        "voice": spec.get("voice") or _voice_name(),
         "quote_voice": spec["quote_voice"] or None,
         "sentences": min_width([dict({"t": s, "s": r["s"], "e": r["e"]}, **({"q": sig[i]} if i in sig else {}))
                                 for i, (s, r) in enumerate(zip(sentences, result["sentences"]))]),
@@ -413,7 +552,7 @@ def _render_via_worker(eng_file: Path, work: str, manifest: dict, sentences: lis
     if not sentences:
         return 0
     from cf_tts import narrate_passage
-    spec = _worker_spec(eng_file, work, (sentences, parts_of, sig, quote_voice))
+    spec = _worker_spec(eng_file, work, (sentences, parts_of, sig, quote_voice), manifest)
     _say_spec(spec)
     result = narrate_passage(work, eng_file.stem, spec["job"], spec["speaker"], quote_voice)
     return _apply_worker_result(spec, result, manifest)
@@ -449,7 +588,9 @@ def _write_manifest(work: str, manifest: dict, total_sentences: int) -> None:
 
 
 
-def render_book(work: str) -> dict:
+def render_book(work: str, voice: str | None = None, quote_voice=_UNSET) -> dict:
+    """Read a whole work in its own voices (work_voices): the recorded ones,
+    the book's book.yml choice, or the explicit --voice / --quote-voice."""
     book = BOOKS / work
     english_files = sorted((book / "translations").glob("*_english.json"))
     if not english_files:
@@ -458,7 +599,8 @@ def render_book(work: str) -> dict:
     work_out.mkdir(parents=True, exist_ok=True)
     pipeline, cpu_fallback, mlx = _load_engine()
     old = _old_manifest(work)
-    manifest = {"work": work, "voice": _voice_name(), "passages": {}}
+    narrator, qv = work_voices(work, old, voice, quote_voice)
+    manifest = {"work": work, "voice": narrator, "quote_voice": qv, "passages": {}}
     total_sentences = 0
     with tempfile.TemporaryDirectory(prefix="fathers-audio-") as tmp:
         tmpdir = Path(tmp)
@@ -535,28 +677,40 @@ def _english_files(work: str, stems: list[str]) -> list[Path]:
     return files
 
 
-def _stems_manifest(work: str) -> dict:
-    """The work's manifest, ready for re-read files to be merged in.
-    Untouched passages keep the voice they were read in."""
+def _stems_manifest(work: str, voice: str | None = None, quote_voice=_UNSET) -> dict:
+    """The work's manifest, ready for re-read files to be merged in. The
+    re-read files use the work's own recorded voices (restem_voices), not
+    the default. Untouched passages keep the voices they were read in."""
     manifest_path = OUT / work / "manifest.json"
     if manifest_path.is_file():
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     else:
-        manifest = {"work": work, "voice": _voice_name(), "passages": {}}
+        manifest = {"work": work, "passages": {}}
     manifest.setdefault("passages", {})
-    old_voice = manifest.get("voice")
+    old_voice, had_qv = manifest.get("voice"), "quote_voice" in manifest
+    old_qv = manifest.get("quote_voice")
     for entry in manifest["passages"].values():
         if old_voice:
             entry.setdefault("voice", old_voice)
-    manifest["voice"] = _voice_name()
+        if had_qv:
+            entry.setdefault("quote_voice", old_qv)
+    if manifest["passages"]:
+        narrator, qv = restem_voices(manifest)
+    else:
+        narrator, qv = work_voices(work, None)
+    if voice:
+        narrator = voice
+    if quote_voice is not _UNSET:
+        qv = quote_voice or None
+    manifest["voice"], manifest["quote_voice"] = narrator, qv
     return manifest
 
 
-def _render_stems_locked(work: str, stems: list[str]) -> int:
+def _render_stems_locked(work: str, stems: list[str], quote_voice=_UNSET) -> int:
     """render_stems body; the caller holds the narrator lock."""
     files = _english_files(work, stems)
     (OUT / work).mkdir(parents=True, exist_ok=True)
-    manifest = _stems_manifest(work)
+    manifest = _stems_manifest(work, quote_voice=quote_voice)
     pipeline, cpu_fallback, mlx = _load_engine()
     total_sentences = 0
     with tempfile.TemporaryDirectory(prefix="fathers-audio-") as tmp:
@@ -1074,7 +1228,11 @@ def _scan_stale(tiers: dict, failures: dict) -> dict:
 
         def voice_of(st):
             return (passages.get(st) or {}).get("voice") or manifest.get("voice")
-        now = [st for st in stems if old_ok or voice_of(st) == _voice_name()]
+        # Changed text is re-read in the work's own recorded voice (voice
+        # rule 2026-10-09), whatever the default is. Only a work whose voice
+        # this engine can no longer speak waits: fixing it would mix narrators.
+        own = _speakable(recorded_voice(manifest))
+        now = [st for st in stems if old_ok or own]
         later = [st for st in stems if st not in now]
         counts["stale_old_voice"] += len(later)
         if later:
@@ -1196,12 +1354,28 @@ def _add_spend(usd: float) -> float:
     return data[today]
 
 
-def _behind(manifest: dict) -> bool:
-    """True when any passage is in another voice, or predates the quotation voice."""
+def _behind(manifest: dict, work: str | None = None) -> bool:
+    """True when the work is not in one narrator and one quotation voice of
+    its own: its passages mix narrators or quotation voices, or the book
+    chose other voices (book.yml audio_voice / audio_quote_voice) than the
+    ones recorded. A work in voices other than the defaults is NOT behind
+    (voice rule, owner 2026-10-09)."""
     passages = manifest.get("passages") or {}
-    qv = os.environ.get("CF_TTS_QUOTE_VOICE", "") or None
-    return any((v.get("voice") or manifest.get("voice")) != _voice_name() or v.get("quote_voice") != qv
-               for v in passages.values())
+    if not passages:
+        return False
+    voices = {v.get("voice") or manifest.get("voice") for v in passages.values()}
+    qvs = {(v["quote_voice"] if "quote_voice" in v else manifest.get("quote_voice")) or None
+           for v in passages.values()}
+    if len(voices) > 1 or len(qvs) > 1:
+        return True
+    if work:
+        want = _book_setting(work, "audio_voice")
+        if want is not _UNSET and want and _speakable(want) and voices != {want}:
+            return True
+        want_q = _book_setting(work, "audio_quote_voice")
+        if want_q is not _UNSET and qvs != {want_q}:
+            return True
+    return False
 
 
 def revoice_queue(tiers: dict, failures: dict, scan: dict | None = None) -> list[str]:
@@ -1219,7 +1393,7 @@ def revoice_queue(tiers: dict, failures: dict, scan: dict | None = None) -> list
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         except (OSError, ValueError):
             continue
-        if not _behind(manifest) or not site_dirs_for(work):
+        if not _behind(manifest, work) or not site_dirs_for(work):
             continue
         rows.append(((work not in missing_play, work not in start_here, tiers.get(work, 1),
                       _sentence_count(work)), work))
@@ -1239,9 +1413,11 @@ def _revoice_item(tiers: dict, failures: dict, scan: dict | None) -> str:
         return len(list((BOOKS / work / "translations").glob("*_english.json")))
     groups = []
     for work in _take(queue, size):
-        _say("revoice %s: whole work in %s" % (work, _voice_name()))
+        narrator, qv = work_voices(work, _old_manifest(work))
+        _say("revoice %s: whole work in %s (quotations: %s)" % (work, narrator, qv or "narrator"))
         files = sorted((BOOKS / work / "translations").glob("*_english.json"))
-        groups.append({"key": "revoice:" + work, "work": work, "files": files, "fresh": True})
+        groups.append({"key": "revoice:" + work, "work": work, "files": files, "fresh": True,
+                       "voice": narrator, "quote_voice": qv})
     _RUN["items"] = len(groups)
     before = _RUN.get("spoken_chars", 0)
     try:
@@ -1345,7 +1521,11 @@ def _narrate_batch(groups: list[dict]) -> int:
             if g["fresh"]:
                 if not g["files"]:
                     raise SystemExit("no English passages for %s" % g["work"])
-                g["manifest"] = {"work": g["work"], "voice": _voice_name(), "passages": {}}
+                if "voice" in g:
+                    narrator, qv = g["voice"], g.get("quote_voice")
+                else:  # a new audiobook: its own choice (book.yml) or the defaults
+                    narrator, qv = work_voices(g["work"], _old_manifest(g["work"]))
+                g["manifest"] = {"work": g["work"], "voice": narrator, "quote_voice": qv, "passages": {}}
             else:
                 g["files"] = _english_files(g["work"], g["stems"])
                 g["manifest"] = _stems_manifest(g["work"])
@@ -1362,7 +1542,7 @@ def _narrate_batch(groups: list[dict]) -> int:
             if g["errors"] and g["fresh"]:
                 continue  # a new book with a failed passage is not published: stop spending on it
             try:
-                spec = _worker_spec(eng_file, g["work"])
+                spec = _worker_spec(eng_file, g["work"], manifest=g["manifest"])
                 if not spec["sentences"]:
                     continue
                 _say_spec(spec)
@@ -1410,16 +1590,20 @@ def _quote_voice_item() -> str:
             continue
         m = json.loads(manifest_path.read_text(encoding="utf-8"))
         passages = m.get("passages") or {}
-        behind = [k for k, v in passages.items() if v.get("quote_voice") != qv]
+        # The work's own quotation voice (book.yml, else recorded, else default).
+        _n, want = work_voices(work, m)
+        if not want:
+            continue
+        behind = [k for k, v in passages.items() if v.get("quote_voice") != want]
         if not behind:
             continue
         voices = {v.get("voice") or m.get("voice") for v in passages.values()}
-        if voices - {_voice_name()}:
+        if len(voices) > 1 or not _speakable(next(iter(voices))):
             print("revoice %s for quotation voice" % work, flush=True)
-            render_book(work)
+            render_book(work, quote_voice=want)
         else:
             print("quotation voice %s: %s" % (work, " ".join(behind)), flush=True)
-            _render_stems_locked(work, behind)
+            _render_stems_locked(work, behind, quote_voice=want)
         return "quotes"
     return "idle"
 
@@ -1541,11 +1725,9 @@ def write_reports(scan: dict | None = None, books_waiting: int | None = None,
         r.pop("tier", None)
     _write_json(OUT / "stale-old-voice.json", {
         "generated": _now(), "voice_now": _voice_name(),
-        "note": ("Changed text recorded in an older voice. The drain re-voices these works "
-                 "whole first (AUDIO_REVOICE=1, decided 2026-10-07)." if _revoice_on() else
-                 "Changed text recorded in an older voice. A re-read would re-voice the whole "
-                 "file, so it waits: AUDIO_REVOICE=1 re-voices every older-voice work whole, or "
-                 "build_audio.py <book> re-reads one book in the current voice."),
+        "note": ("Changed text in works whose own narrator this engine can no longer speak. "
+                 "Fixing it would mix narrators, so it waits: build_audio.py <book> --voice V "
+                 "re-reads the whole work in one new voice (voice rule 2026-10-09)."),
         "files": sum(len(r["stems"]) for r in rows), "works": rows})
     unmapped = unmapped_sites()
     set_aside = sorted(k for k, v in failures.items() if int(v.get("count", 0)) >= FAIL_LIMIT)
@@ -1681,7 +1863,25 @@ def drain(budget_s: int = 3 * 3600) -> int:
 DRAIN_BUSY = 75
 
 
+def _voice_flags(argv: list[str]) -> tuple[list[str], dict]:
+    """Pull --voice V and --quote-voice Q (or none) out of argv."""
+    rest, opts, k = [], {}, 0
+    while k < len(argv):
+        if argv[k] in ("--voice", "--quote-voice") and k + 1 < len(argv):
+            val = argv[k + 1]
+            if argv[k] == "--voice":
+                opts["voice"] = val
+            else:
+                opts["quote_voice"] = None if val.lower() in ("none", "off", "") else val
+            k += 2
+            continue
+        rest.append(argv[k])
+        k += 1
+    return rest, opts
+
+
 def main(argv: list[str]) -> int:
+    argv, opts = _voice_flags(argv)
     if len(argv) == 2 and argv[1] == "--drain":
         return drain()
     if len(argv) == 2 and argv[1] == "--next":
@@ -1689,9 +1889,10 @@ def main(argv: list[str]) -> int:
     if len(argv) >= 4 and argv[1] == "--stems":
         return render_stems(argv[2], argv[3:])
     if len(argv) != 2:
-        print("usage: build_audio.py <work-slug> | build_audio.py --next | build_audio.py --stems <work> <stem>...", file=sys.stderr)
+        print("usage: build_audio.py <work-slug> [--voice V] [--quote-voice Q|none] | build_audio.py --next"
+              " | build_audio.py --stems <work> <stem>...", file=sys.stderr)
         return 2
-    render_book(argv[1])
+    render_book(argv[1], **opts)
     return 0
 
 

@@ -524,11 +524,15 @@ class ReportTests(unittest.TestCase):
             self.assertEqual(sent, [])
 
 class RevoiceTests(unittest.TestCase):
-    """Decided 2026-10-07 (owner: 'the spend is fine'): every audiobook in the
-    current voice, whole works at a time, under a daily dollar cap."""
+    """Re-voice runs whole works at a time under a daily dollar cap. Voice
+    rule (owner 2026-10-09): a work is re-voiced only when it is not in one
+    voice of its own (mixed narrators) or its book chose another voice
+    (book.yml audio_voice), never just for differing from the default."""
 
-    def _old(self, env, name, voice="bm_daniel", stems=("x_english",)):
+    def _old(self, env, name, voice="bm_daniel", stems=("x_english",), choose="aura-2-orion"):
         _book(env.books, name, {st: ["One here.", "Two here."] for st in stems})
+        if choose:
+            (env.books / name / "book.yml").write_text("slug: %s\naudio_voice: %s\n" % (name, choose))
         env.publish(name)
         (env.out / name).mkdir()
         (env.out / name / "manifest.json").write_text(json.dumps(
@@ -547,7 +551,7 @@ class RevoiceTests(unittest.TestCase):
     def test_old_voice_work_is_reread_whole_and_spend_is_recorded(self):
         with Env("cf-worker") as env:
             self._old(env, "old", stems=("a_english", "b_english"))
-            self._old(env, "cur", voice="aura-2-orion")
+            self._old(env, "cur", voice="aura-2-orion", choose=None)
             worker = FakeWorker()
             self.assertEqual(self._run(env, worker), 0)
             self.assertEqual(sorted(worker.submitted), ["a_english", "b_english"])
@@ -556,6 +560,35 @@ class RevoiceTests(unittest.TestCase):
             self.assertEqual(m["sites"], ["old"], "ship labels survive the re-read")
             spend = json.loads((env.out / ".revoice-spend.json").read_text())
             self.assertGreater(sum(spend.values()), 0)
+
+    def test_work_in_its_own_non_default_voice_is_not_revoiced(self):
+        with Env("cf-worker") as env:
+            self._old(env, "apollo", voice="aura-2-apollo", choose=None)
+            self._old(env, "daniel", voice="bm_daniel", choose=None)
+            worker = FakeWorker()
+            self.assertEqual(self._run(env, worker), 0)
+            self.assertEqual(worker.submitted, [])
+            with mock.patch.dict(os.environ, {"AUDIO_REVOICE": "1"}):
+                self.assertEqual(B.revoice_queue({}, {}, None), [])
+
+    def test_mixed_narrators_are_reread_whole_in_the_works_main_voice(self):
+        with Env("cf-worker") as env:
+            _book(env.books, "mix", {st: ["One here."] for st in ("a_english", "b_english", "c_english")})
+            env.publish("mix")
+            (env.out / "mix").mkdir()
+            (env.out / "mix" / "manifest.json").write_text(json.dumps(
+                {"work": "mix", "voice": "aura-2-apollo", "passages": {
+                    "a_english": {"voice": "aura-2-apollo"}, "b_english": {"voice": "aura-2-apollo"},
+                    "c_english": {"voice": "aura-2-orion"}}}))
+            seen = []
+            worker = FakeWorker()
+            real = worker.submit
+            worker.submit = lambda w, st, sents, voice, qv: (seen.append(voice), real(w, st, sents, voice, qv))[1]
+            self._run(env, worker)
+            self.assertEqual(sorted(worker.submitted), ["a_english", "b_english", "c_english"])
+            self.assertEqual(set(seen), {"apollo"}, "re-read in the work's own voice, not the default")
+            m = json.loads((env.out / "mix" / "manifest.json").read_text())
+            self.assertEqual({p["voice"] for p in m["passages"].values()}, {"aura-2-apollo"})
 
     def test_cap_stops_revoice(self):
         with Env("cf-worker") as env:
@@ -589,6 +622,185 @@ class RevoiceTests(unittest.TestCase):
             with mock.patch.dict(os.environ, {"AUDIO_REVOICE": "1"}):
                 q = B.revoice_queue({}, {}, {"old_voice": [{"work": "zzz"}]})
             self.assertEqual(q, ["zzz", "aaa"])
+
+
+class RecordingWorker(FakeWorker):
+    """FakeWorker that also records the voices each passage was sent with."""
+
+    def __init__(self, *a, **k):
+        super().__init__(*a, **k)
+        self.voices = {}
+
+    def submit(self, work, stem, sentences, voice, quote_voice):
+        self.voices[stem] = (voice, quote_voice)
+        return super().submit(work, stem, sentences, voice, quote_voice)
+
+
+def _manifest(env, name, voice, quote_voice, stems):
+    (env.out / name).mkdir(parents=True, exist_ok=True)
+    (env.out / name / "manifest.json").write_text(json.dumps(
+        {"work": name, "voice": voice,
+         "passages": {st: {"voice": voice, "quote_voice": quote_voice,
+                           "sentences": [{"t": "Old.", "s": 0, "e": 1}]} for st in stems}}))
+
+
+class PerWorkVoiceTests(unittest.TestCase):
+    """Audiobook voice rule (owner 2026-10-09): each work keeps ONE narrator
+    voice and ONE Scripture-quotation voice of its own; different works may
+    differ; nothing is locked to the site-wide default."""
+
+    CF = {"KOKORO_ENGINE": "cf-worker", "CF_TTS_QUOTE_VOICE": "arcas"}
+
+    def _drain(self, worker, stale=None):
+        stale = dict(stale or {})
+        with mock.patch.object(cf_tts, "submit_passage", worker.submit), \
+             mock.patch.object(cf_tts, "collect_passages", worker.collect), \
+             mock.patch.object(B, "stale_stems", lambda w: stale.pop(w, [])), \
+             mock.patch.object(B, "_work_words", lambda w: (100, False)):
+            return B.drain(budget_s=60)
+
+    # --- resolution -------------------------------------------------------
+    def test_new_work_gets_the_defaults(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            self.assertEqual(B.work_voices("fresh", None), ("aura-2-orion", "arcas"))
+
+    def test_book_yml_chooses_both_voices_for_a_new_work(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            (env.books / "w").mkdir()
+            (env.books / "w" / "book.yml").write_text(
+                'slug: w\naudio_voice: "aura-2-apollo"  # warmer\naudio_quote_voice: luna\n')
+            self.assertEqual(B.work_voices("w", None), ("aura-2-apollo", "luna"))
+            (env.books / "w" / "book.yml").write_text("slug: w\naudio_quote_voice: none\n")
+            self.assertEqual(B.work_voices("w", None), ("aura-2-orion", None))
+
+    def test_recorded_work_keeps_its_own_voices_not_the_default(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            m = {"voice": "aura-2-apollo", "passages": {
+                "a": {"voice": "aura-2-apollo", "quote_voice": "luna"},
+                "b": {"voice": "aura-2-apollo", "quote_voice": "luna"}}}
+            self.assertEqual(B.work_voices("w", m), ("aura-2-apollo", "luna"))
+            self.assertEqual(B.restem_voices(m), ("aura-2-apollo", "luna"))
+
+    def test_explicit_choice_wins_and_must_be_speakable(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            m = {"voice": "aura-2-apollo", "passages": {"a": {"quote_voice": "luna"}}}
+            self.assertEqual(B.work_voices("w", m, "aura-2-odysseus", None), ("aura-2-odysseus", None))
+            with self.assertRaises(SystemExit):
+                B.work_voices("w", m, "bm_daniel")
+
+    def test_kokoro_voice_is_kept_under_kokoro(self):
+        with Env("") as env:
+            m = {"voice": "af_heart", "passages": {"a": {}}}
+            self.assertEqual(B.work_voices("w", m), ("af_heart", None))
+
+    def test_cli_flags(self):
+        rest, opts = B._voice_flags(["x", "w", "--voice", "aura-2-apollo", "--quote-voice", "none"])
+        self.assertEqual((rest, opts), (["x", "w"], {"voice": "aura-2-apollo", "quote_voice": None}))
+
+    # --- behind -----------------------------------------------------------
+    def test_differing_from_the_defaults_is_not_behind(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            for v, q in (("aura-2-apollo", "luna"), ("bm_daniel", None), ("aura-2-orion", None)):
+                m = {"voice": v, "passages": {"a": {"voice": v, "quote_voice": q},
+                                              "b": {"voice": v, "quote_voice": q}}}
+                self.assertFalse(B._behind(m, "w"), (v, q))
+
+    def test_mixed_quote_voices_or_narrators_are_behind(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            self.assertTrue(B._behind({"passages": {"a": {"voice": "aura-2-orion", "quote_voice": "arcas"},
+                                                    "b": {"voice": "aura-2-orion", "quote_voice": None}}}))
+            self.assertTrue(B._behind({"passages": {"a": {"voice": "aura-2-orion", "quote_voice": "arcas"},
+                                                    "b": {"voice": "aura-2-apollo", "quote_voice": "arcas"}}}))
+
+    def test_book_choosing_another_quote_voice_is_behind(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            (env.books / "w").mkdir()
+            (env.books / "w" / "book.yml").write_text("audio_quote_voice: luna\n")
+            m = {"passages": {"a": {"voice": "aura-2-orion", "quote_voice": "arcas"}}}
+            self.assertTrue(B._behind(m, "w"))
+            m["passages"]["a"]["quote_voice"] = "luna"
+            self.assertFalse(B._behind(m, "w"))
+
+    # --- the drain --------------------------------------------------------
+    def test_changed_text_is_reread_in_the_works_own_voices(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            _book(env.books, "ap", {"a_english": ["New text."], "b_english": ["Kept."]})
+            env.publish("ap")
+            _manifest(env, "ap", "aura-2-apollo", "luna", ("a_english", "b_english"))
+            worker = RecordingWorker()
+            self._drain(worker, {"ap": ["a_english"]})
+            self.assertEqual(worker.voices, {"a_english": ("apollo", "luna")})
+            m = json.loads((env.out / "ap" / "manifest.json").read_text())
+            self.assertEqual((m["voice"], m["quote_voice"]), ("aura-2-apollo", "luna"))
+            self.assertEqual({(p["voice"], p["quote_voice"]) for p in m["passages"].values()},
+                             {("aura-2-apollo", "luna")})
+
+    def test_work_without_a_quote_voice_is_not_patched_with_one(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            _book(env.books, "nq", {"a_english": ["New text."], "b_english": ["Kept."]})
+            env.publish("nq")
+            _manifest(env, "nq", "aura-2-orion", None, ("a_english", "b_english"))
+            worker = RecordingWorker()
+            self._drain(worker, {"nq": ["a_english"]})
+            self.assertEqual(worker.voices, {"a_english": ("orion", "")})
+            m = json.loads((env.out / "nq" / "manifest.json").read_text())
+            self.assertEqual({p["quote_voice"] for p in m["passages"].values()}, {None})
+
+    def test_unspeakable_own_voice_waits_instead_of_mixing(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            _book(env.books, "kd", {"a_english": ["New text."]})
+            env.publish("kd")
+            _manifest(env, "kd", "bm_daniel", None, ("a_english",))
+            worker = RecordingWorker()
+            self._drain(worker, {"kd": ["a_english"]})
+            self.assertEqual(worker.submitted, [])
+
+    def test_new_book_records_its_chosen_voices(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            _book(env.books, "nb", {"n1_english": ["One."], "n2_english": ["Two."]})
+            (env.books / "nb" / "book.yml").write_text("audio_voice: aura-2-odysseus\naudio_quote_voice: luna\n")
+            env.publish("nb")
+            worker = RecordingWorker()
+            self._drain(worker)
+            self.assertEqual(set(worker.voices.values()), {("odysseus", "luna")})
+            m = json.loads((env.out / "nb" / "manifest.json").read_text())
+            self.assertEqual((m["voice"], m["quote_voice"]), ("aura-2-odysseus", "luna"))
+            self.assertEqual({(p["voice"], p["quote_voice"]) for p in m["passages"].values()},
+                             {("aura-2-odysseus", "luna")})
+
+    def test_new_book_without_a_choice_gets_the_defaults(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            _book(env.books, "nd", {"n1_english": ["One."]})
+            env.publish("nd")
+            worker = RecordingWorker()
+            self._drain(worker)
+            self.assertEqual(worker.voices, {"n1_english": ("orion", "arcas")})
+
+    def test_revoice_stays_off_by_default(self):
+        with Env("cf-worker") as env, mock.patch.dict(os.environ, self.CF):
+            os.environ.pop("AUDIO_REVOICE", None)
+            self.assertFalse(B._revoice_on())
+
+    def test_kokoro_render_uses_the_works_voice(self):
+        try:
+            import numpy as np
+            import soundfile  # noqa: F401
+        except ImportError:
+            self.skipTest("needs the Kokoro venv (numpy, soundfile)")
+        used = []
+
+        class FakeVoice:
+            def generate(self, text, voice=None, **_kw):
+                used.append(voice)
+                yield mock.Mock(audio=np.zeros(2400))
+        with Env("") as env:
+            eng = env.books / "k_english.json"
+            eng.write_text(json.dumps([{"section": "1", "english": ["One here. Two here."]}]))
+            (env.out / "kw").mkdir()
+            manifest = {"work": "kw", "voice": "af_heart", "passages": {}}
+            B._render_english_file(eng, None, None, FakeVoice(), env.root, "kw", manifest)
+            self.assertEqual(set(used), {"af_heart"})
+            self.assertEqual(manifest["passages"]["k_english"]["voice"], "af_heart")
 
 
 class DriftAndExitTests(unittest.TestCase):
