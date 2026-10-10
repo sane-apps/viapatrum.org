@@ -65,6 +65,13 @@ Ctrl-C during a long step (deploy, live checks) stops that step and the ship.
 An audio upload to R2 that is still running when a ship fails keeps going in
 the background (3 h limit); the next ship waits for it.
 
+--clean builds from committed code only: a git worktree of this site commit and
+one of translations main, under ~/SaneApps/.ship-clean (scripts/ship_clean.py).
+Uncommitted edits in either main checkout are ignored. outputs/ and node_modules
+are shared with the main site checkout (same locks, logs, ship-last); dist/ is
+built in the clean tree, so the disk floor adds its size (about 1.1 GB) the
+first time. Combine with --dry-run to build and run every gate without deploying.
+
 Requires: translations venv with PyYAML; CLOUDFLARE_API_TOKEN (or source ~/.config/nv/env).
 Timings: outputs/ship-timings.jsonl (one line per run).
 USAGE
@@ -73,8 +80,12 @@ USAGE
 DRY_RUN=0
 SKIP_BUILD=0
 AUDIO_ONLY=0
+CLEAN=0
+CHILD_ARGS=()
 while [[ $# -gt 0 ]]; do
+  [[ "$1" != "--clean" ]] && CHILD_ARGS+=("$1")
   case "$1" in
+    --clean) CLEAN=1; shift ;;
     --dry-run|--skip-deploy) DRY_RUN=1; shift ;;
     --skip-build) SKIP_BUILD=1; shift ;;
     --audio-only) AUDIO_ONLY=1; shift ;;
@@ -87,6 +98,77 @@ case "$(hostname)" in
   *[Mm]ini*) ;;
   *) echo "BLOCKED: Fathers builds and browser verification run on the Mini" >&2; exit 1 ;;
 esac
+
+# FATHERS_BOOKS points the build at another translations books/. Only a --clean
+# child may use it; a normal ship always reads the translations working tree.
+if [[ "${FATHERS_CLEAN_CHILD:-}" != "1" ]]; then
+  unset FATHERS_BOOKS FATHERS_CLEAN_SITE_SHA FATHERS_CLEAN_TRANSLATIONS_SHA
+fi
+
+# --clean (2026-10-09): build from clean worktrees of committed code, so another
+# session's uncommitted edits in either checkout can neither fail nor leak into
+# a ship. This shell prepares the trees, then becomes (exec, same pid) the
+# ship.sh of the clean site tree with FATHERS_BOOKS set to the clean
+# translations books/. The child takes ship.lock and build.lock as usual (its
+# outputs/ is this checkout's outputs/). clean.lock, held for this pid, keeps a
+# second --clean run from resetting the trees under a running build.
+if [[ "$CLEAN" -eq 1 && "${FATHERS_CLEAN_CHILD:-}" != "1" ]]; then
+  CLEAN_ROOT="${FATHERS_CLEAN_ROOT:-$HOME/SaneApps/.ship-clean}"
+  export FATHERS_CLEAN_ROOT="$CLEAN_ROOT"
+  # The main site checkout's outputs/ (also when this ship.sh is in a linked worktree).
+  MAIN_OUTPUTS="$(dirname "$(git -C "$ROOT" rev-parse --path-format=absolute --git-common-dir)")/outputs"
+  mkdir -p "$CLEAN_ROOT" "$MAIN_OUTPUTS"
+  if ! python3 "$ROOT/scripts/ship_lock.py" "$CLEAN_ROOT/clean.lock" "$$" >/dev/null; then
+    echo "BLOCKED: another --clean ship holds $CLEAN_ROOT/clean.lock" >&2
+    exit 1
+  fi
+  # Respect build.lock before touching anything: a build that holds it may be
+  # reading the trees. (A caller that holds it passes FATHERS_BUILD_LOCK_HELD;
+  # the child checks that claim properly.)
+  if [[ -z "${FATHERS_BUILD_LOCK_HELD:-}" ]] && ! python3 - "$MAIN_OUTPUTS/build.lock" <<'PROBE'
+import fcntl, os, sys
+fd = os.open(sys.argv[1], os.O_WRONLY | os.O_CREAT, 0o644)
+try:
+    fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+except BlockingIOError:
+    raise SystemExit(1)
+fcntl.flock(fd, fcntl.LOCK_UN)
+PROBE
+  then
+    echo "BLOCKED: another build or ship holds outputs/build.lock; the clean trees were not touched" >&2
+    exit 1
+  fi
+  # Disk floor plus the clean build's own output (a second dist/ the first time).
+  CLEAN_EXTRA_GB="$(python3 "$ROOT/scripts/ship_clean.py" need HEAD)" || exit 1
+  CLEAN_FREE_GB="$(python3 -c 'import os, shutil
+g = shutil.disk_usage("/System/Volumes/Data").free // 2**30
+t = os.environ.get("FATHERS_FREE_GB_TEST", "")
+print(min(g, int(t)) if t.isdigit() else g)' 2>/dev/null)"
+  CLEAN_NEED_GB="$(python3 -c "import math; print(15 + math.ceil($CLEAN_EXTRA_GB))")"
+  if ! [[ "$CLEAN_FREE_GB" =~ ^[0-9]+$ ]] || (( CLEAN_FREE_GB < CLEAN_NEED_GB )); then
+    echo "BLOCKED: ${CLEAN_FREE_GB:-?} GB free; a --clean ship needs ${CLEAN_NEED_GB} GB (15 + ${CLEAN_EXTRA_GB} for the clean trees). Nothing was deleted or written." >&2
+    exit 1
+  fi
+  echo "clean: ${CLEAN_FREE_GB} GB free, needs ${CLEAN_NEED_GB} GB; preparing trees in $CLEAN_ROOT"
+  if ! clean_out="$(python3 "$ROOT/scripts/ship_clean.py" prepare "$(git -C "$ROOT" rev-parse HEAD)")"; then
+    echo "BLOCKED: could not prepare the clean trees" >&2
+    exit 1
+  fi
+  echo "$clean_out" | sed 's/^/clean: /'
+  CLEAN_SITE_TREE="$(echo "$clean_out" | sed -n 's/^SITE_TREE=//p')"
+  export FATHERS_BOOKS="$(echo "$clean_out" | sed -n 's/^BOOKS=//p')"
+  export FATHERS_CLEAN_SITE_SHA="$(echo "$clean_out" | sed -n 's/^SITE_SHA=//p')"
+  export FATHERS_CLEAN_TRANSLATIONS_SHA="$(echo "$clean_out" | sed -n 's/^TRANSLATIONS_SHA=//p')"
+  export FATHERS_CLEAN_CHILD=1
+  if [[ ! -x "$CLEAN_SITE_TREE/scripts/ship.sh" || ! -d "$FATHERS_BOOKS" ]]; then
+    echo "BLOCKED: clean trees incomplete ($CLEAN_SITE_TREE, $FATHERS_BOOKS)" >&2
+    exit 1
+  fi
+  exec "$CLEAN_SITE_TREE/scripts/ship.sh" ${CHILD_ARGS[@]+"${CHILD_ARGS[@]}"}
+fi
+if [[ "${FATHERS_CLEAN_CHILD:-}" == "1" ]]; then
+  echo "clean build: site ${FATHERS_CLEAN_SITE_SHA:0:10} in $ROOT, translations ${FATHERS_CLEAN_TRANSLATIONS_SHA:0:10} ($FATHERS_BOOKS)"
+fi
 
 # Release lock. scripts/ship_lock.py holds it in one small process that lets go
 # when this shell exits, so an orphaned child can no longer keep it
@@ -172,6 +254,7 @@ MODE="full"
 [[ "$SKIP_BUILD" -eq 1 ]] && MODE="skip-build"
 [[ "$AUDIO_ONLY" -eq 1 ]] && MODE="audio-only"
 [[ "$DRY_RUN" -eq 1 ]] && MODE="$MODE dry-run"
+[[ "${FATHERS_CLEAN_CHILD:-}" == "1" ]] && MODE="$MODE clean"
 
 TIMEOUT_BIN="$(command -v timeout || command -v gtimeout || true)"
 bounded() {  # bounded <secs> <cmd...>: every long wait gets a limit
@@ -754,7 +837,7 @@ if [[ -f "$PENDING_BACKUP" ]]; then mv -f "$PENDING_BACKUP" "$R2_PENDING"; fi
 
 # Cheap content gates first: a bad receipt fails in seconds, not after the build.
 step "Research receipts (intros sourced, dates agree)"
-"$PYTHON" "$HOME/SaneApps/clients/translations/scripts/check_research.py"
+"$PYTHON" "$(dirname "${FATHERS_BOOKS:-$HOME/SaneApps/clients/translations/books}")/scripts/check_research.py"
 
 step "Build"
 # The build attaches players and writes the R2 list. Set the host first so

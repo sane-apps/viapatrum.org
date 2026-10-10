@@ -16,7 +16,9 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BOOKS = Path.home() / "SaneApps/clients/translations/books"
+# FATHERS_BOOKS: the translations books/ to read (ship.sh --clean points it at a clean
+# checkout of committed main). Unset: the translations working tree, as before.
+BOOKS = Path(os.environ.get("FATHERS_BOOKS") or Path.home() / "SaneApps/clients/translations/books")
 OUT = ROOT / "outputs" / "audio"
 SPEAKERS = ["odysseus", "orion", "apollo"]
 

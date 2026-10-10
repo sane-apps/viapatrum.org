@@ -45,7 +45,9 @@ def _asset_version() -> str:
 
 
 ASSET_VER = _asset_version()
-BOOKS = Path.home() / "SaneApps/clients/translations/books"
+# FATHERS_BOOKS: the translations books/ to read (ship.sh --clean points it at a clean
+# checkout of committed main). Unset: the translations working tree, as before.
+BOOKS = Path(os.environ.get("FATHERS_BOOKS") or Path.home() / "SaneApps/clients/translations/books")
 TOPICS_BOOK = BOOKS / "ante-nicene-topics"
 ORIGEN_BOOK = BOOKS / "origen-prayer-martyrdom"
 ORIGEN_CONTRA_CELSUM_BOOK = BOOKS / "origen-contra-celsum"
