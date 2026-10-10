@@ -308,7 +308,7 @@ test('scripture: only real chapters get pages; Greek Psalm numbers are refiled (
   // Greek verse numbers count the title: Greek 17:40 is our 18:39.
   assert.ok(sec('scripture/psalms/18/index.html','.desk-verse[data-for="39"]').some(t=>/shackled all who rise up/.test(t)),'Greek 17:40 on our 18:39');
   // Greek 115:1 is our 116:10, so Greek 115:2 is our 116:11.
-  assert.ok(sec('scripture/psalms/116/index.html','.desk-verse[data-for="11"]').some(t=>/empty and a vapor/.test(t)),'Greek 115:2 on our 116:11');
+  assert.ok(sec('scripture/psalms/116/index.html','.desk-verse[data-for="11"]').some(t=>/empty and a falsehood/.test(t)),'Greek 115:2 on our 116:11');
   // "LXX/Vulgate Psalms 13:1" beside "Psalm 14:1" is the same verse: not listed on our Psalm 13.
   assert.ok(!desk('scripture/psalms/13/index.html').some(t=>/To Florus §3\.9/.test(t)),'LXX-labelled cite left our Psalm 13');
   assert.match(page('scripture/psalms/114/index.html').querySelector('.bx-psalm-note').textContent,/their Psalm\s114 is our Psalm\s116\b/);
