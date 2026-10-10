@@ -140,13 +140,14 @@ PROBE
   fi
   # Disk floor plus the clean build's own output (a second dist/ the first time).
   CLEAN_EXTRA_GB="$(python3 "$ROOT/scripts/ship_clean.py" need HEAD)" || exit 1
+  # Real free GB (not rounded) against 15 + the clean build's extra output.
   CLEAN_FREE_GB="$(python3 -c 'import os, shutil
-g = shutil.disk_usage("/System/Volumes/Data").free // 2**30
+g = shutil.disk_usage("/System/Volumes/Data").free / 2**30
 t = os.environ.get("FATHERS_FREE_GB_TEST", "")
-print(min(g, int(t)) if t.isdigit() else g)' 2>/dev/null)"
-  CLEAN_NEED_GB="$(python3 -c "import math; print(15 + math.ceil($CLEAN_EXTRA_GB))")"
-  if ! [[ "$CLEAN_FREE_GB" =~ ^[0-9]+$ ]] || (( CLEAN_FREE_GB < CLEAN_NEED_GB )); then
-    echo "BLOCKED: ${CLEAN_FREE_GB:-?} GB free; a --clean ship needs ${CLEAN_NEED_GB} GB (15 + ${CLEAN_EXTRA_GB} for the clean trees). Nothing was deleted or written." >&2
+print("%.1f" % (min(g, int(t)) if t.isdigit() else g))' 2>/dev/null)"
+  CLEAN_NEED_GB="$(python3 -c "print('%.1f' % (15 + $CLEAN_EXTRA_GB))")"
+  if ! [[ "$CLEAN_FREE_GB" =~ ^[0-9]+\.[0-9]$ ]] || ! python3 -c "import sys; sys.exit(0 if $CLEAN_FREE_GB >= $CLEAN_NEED_GB else 1)"; then
+    echo "BLOCKED: ${CLEAN_FREE_GB:-?} GB free; a --clean ship needs ${CLEAN_NEED_GB} GB (15 + ${CLEAN_EXTRA_GB} for the clean trees and their dist/). Nothing was deleted or written." >&2
     exit 1
   fi
   echo "clean: ${CLEAN_FREE_GB} GB free, needs ${CLEAN_NEED_GB} GB; preparing trees in $CLEAN_ROOT"

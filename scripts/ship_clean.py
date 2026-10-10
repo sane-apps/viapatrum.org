@@ -47,7 +47,8 @@ TRANSLATIONS_REF = os.environ.get("FATHERS_CLEAN_TRANSLATIONS_REF", "refs/heads/
 SITE_LINKS = ("outputs", "node_modules")
 TR_COPY_GLOB = "outputs/work-pipeline/*/segments.json"
 TR_LINKS = ("outputs/jev-cite-sweep-20260925.jsonl", "outputs/work-pipeline/queue.json")
-OVERHEAD_GB = 0.5      # git indexes, clone metadata, files that differ from the checkout
+OVERHEAD_GB = 0.5      # new trees: git indexes, clone metadata, files that differ (measured 0.2)
+REUSE_GB = 0.1         # existing trees: files changed since the last run
 DIST_GB_FALLBACK = 1.5  # used when the main dist/ is missing
 
 
@@ -86,7 +87,8 @@ def du_gb(path: Path) -> float:
 def need(site_ref: str) -> float:
     """Extra GB beyond a normal ship: a clean-tree dist/ the first time, plus overhead."""
     site_tree = CLEAN_ROOT / "site"
-    extra = OVERHEAD_GB
+    have = site_tree.is_dir() and (CLEAN_ROOT / "translations").is_dir()
+    extra = REUSE_GB if have else OVERHEAD_GB
     if not (site_tree / "dist").is_dir():
         d = du_gb(main_site() / "dist")
         extra += d if d > 0.1 else DIST_GB_FALLBACK
@@ -195,7 +197,7 @@ def remove() -> None:
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "need" and len(sys.argv) == 3:
-        print(f"{need(sys.argv[2]):.1f}")
+        print(f"{need(sys.argv[2]):.2f}")
     elif cmd == "prepare" and len(sys.argv) == 3:
         prepare(sys.argv[2])
     elif cmd == "status":
