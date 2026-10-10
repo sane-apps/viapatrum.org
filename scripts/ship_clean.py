@@ -51,6 +51,14 @@ OVERHEAD_GB = 0.5      # git indexes, clone metadata, files that differ from the
 DIST_GB_FALLBACK = 1.5  # used when the main dist/ is missing
 
 
+def dirt(tree: Path, links: tuple[str, ...]) -> str:
+    """`git status` of a clean tree, minus our own links (the ignore rules
+    /outputs/ and node_modules/ match directories, not symlinks)."""
+    allowed = {f"?? {k}" for k in links if (tree / k).is_symlink()}
+    out = git(tree, "status", "--porcelain", "--untracked-files=all", check=False)
+    return "\n".join(l for l in out.splitlines() if l not in allowed)
+
+
 def git(repo: Path, *args: str, check: bool = True) -> str:
     r = subprocess.run(["git", "-C", str(repo), *args], capture_output=True, text=True)
     if check and r.returncode != 0:
@@ -117,7 +125,7 @@ def ensure_tree(repo: Path, tree: Path, ref: str, keep: tuple[str, ...]) -> str:
     excl = [a for k in keep for a in ("-e", "/" + k)]
     git(tree, "clean", "-ffdxq", *excl)
     head = git(tree, "rev-parse", "HEAD")
-    dirty = git(tree, "status", "--porcelain", "--untracked-files=all")
+    dirty = dirt(tree, keep)
     if head != sha or dirty:
         raise SystemExit(f"ship_clean: {tree} is not clean at {sha[:10]} (HEAD {head[:10]}):\n{dirty[:2000]}")
     return sha
@@ -137,6 +145,8 @@ def link(path: Path, target: Path) -> None:
 def prepare(site_ref: str) -> None:
     site_main = main_site()
     site_tree, tr_tree = CLEAN_ROOT / "site", CLEAN_ROOT / "translations"
+    # A ref such as HEAD means the checkout this script runs from.
+    site_ref = git(Path(__file__).resolve().parent.parent, "rev-parse", "--verify", site_ref + "^{commit}")
     site_sha = ensure_tree(site_main, site_tree, site_ref, SITE_LINKS)
     for name in SITE_LINKS:
         link(site_tree / name, site_main / name)
@@ -164,7 +174,7 @@ def status() -> None:
             print(f"{name}: none ({tree})")
             continue
         head = git(tree, "rev-parse", "--short", "HEAD", check=False)
-        dirty = git(tree, "status", "--porcelain", check=False)
+        dirty = dirt(tree, SITE_LINKS if name == "site" else ())
         print(f"{name}: {tree} at {head}, {'clean' if not dirty else 'DIRTY'}, "
               f"dist {du_gb(tree / 'dist'):.2f} GB" if name == "site" else
               f"{name}: {tree} at {head}, {'clean' if not dirty else 'DIRTY'}")
