@@ -118,7 +118,7 @@ if [[ "$CLEAN" -eq 1 && "${FATHERS_CLEAN_CHILD:-}" != "1" ]]; then
   # The main site checkout's outputs/ (also when this ship.sh is in a linked worktree).
   MAIN_OUTPUTS="$(dirname "$(git -C "$ROOT" rev-parse --path-format=absolute --git-common-dir)")/outputs"
   mkdir -p "$CLEAN_ROOT" "$MAIN_OUTPUTS"
-  if ! python3 "$ROOT/scripts/ship_lock.py" "$CLEAN_ROOT/clean.lock" "$$" >/dev/null; then
+  if ! python3 "$ROOT/scripts/ship_lock.py" "$CLEAN_ROOT/clean.lock" "$$" >/dev/null 2>&1; then
     echo "BLOCKED: another --clean ship holds $CLEAN_ROOT/clean.lock" >&2
     exit 1
   fi
