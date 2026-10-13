@@ -1,0 +1,201 @@
+{
+  "id": "baptize-baptism-heretics-valid",
+  "number": 43,
+  "group": "baptism-supper",
+  "question": "Who could baptize, and was baptism by heretics valid?",
+  "short": "Who baptizes; heretics' baptism",
+  "search": [
+    "rebaptism",
+    "heretical baptism",
+    "donatists",
+    "cyprian and stephen",
+    "lay baptism",
+    "valid baptism",
+    "minister of baptism"
+  ],
+  "answers": [
+    {
+      "id": "bishop",
+      "label": "The bishop, or presbyters and deacons with his consent; laymen in need",
+      "short": "Bishop's office",
+      "tag": "Minister"
+    },
+    {
+      "id": "rebaptize",
+      "label": "Baptism outside the Church is no baptism; converts must be baptized",
+      "short": "Rebaptize",
+      "tag": "Rebaptize"
+    },
+    {
+      "id": "valid",
+      "label": "Baptism with water and the Trinity is Christ's and is not repeated",
+      "short": "Valid, not repeated",
+      "tag": "Valid"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Baptism was the bishop's office: Ignatius says no one should baptize without him, and Tertullian lets presbyters, deacons, and in need even laymen, baptize under his authority.",
+      "cites": [
+        "ignatius-smyrnaeans-8",
+        "tertullian-baptism-17"
+      ]
+    },
+    {
+      "text": "In 256 Cyprian's council at Carthage held that heretics' baptism is no baptism. Stephen of Rome held that tradition forbade repeating it.",
+      "cites": [
+        "caecilius-bilta-carthage-256",
+        "stephen-rome-in-cyprian-74"
+      ]
+    },
+    {
+      "text": "Augustine settled the West on Stephen's side: baptism belongs to Christ and is valid even outside the Church, though it profits only within it.",
+      "cites": [
+        "augustine-on-baptism-4-24"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-smyrnaeans-8",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Smyrnaeans",
+      "locus": "8.2",
+      "lang": "grc",
+      "answer": "bishop",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It is not lawful without the bishop either to baptize or to hold the love feast; but whatever he approves, this is pleasing to God too, so that everything you do may be secure and valid.",
+      "original": "οὐκ ἐξόν ἐστιν χωρὶς τοῦ ἐπισκόπου οὔτε βαπτίζειν οὔτε ἀγάπην ποιεῖν: ἀλλ’ ὃ ἂν ἐκεῖνος δοκιμάσῃ, τοῦτο καὶ τῷ θεῷ εὐάρεστον, ἵνα ἀσφαλὲς ᾖ καὶ βέβαιον πᾶν ὃ πράσσετε.",
+      "context": "The same passage first calls the Church \"catholic\".",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "6.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-baptism-17",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Baptism",
+      "locus": "17.1–2",
+      "lang": "la",
+      "answer": "bishop",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The right of giving it belongs to the high priest, who is the bishop; then to presbyters and deacons, but not without the bishop's authority, for the honor of the Church, which when kept keeps the peace. Otherwise even laymen have the right, for what is received equally can be given equally. ... But all the more must laymen keep humility and restraint, so as not to take on themselves the bishop's office.",
+      "original": "dandi quidem habet ius summus sacerdos, qui est episcopus; dehinc presbyteri et diaconi, non tamen sine episcopi auctoritate, propter ecclesiae honorem, quo saluo salua pax est. alioquin 'etiam laicis ius est. quod enim ex aequo accipitur, ex aequo dari potest. ... sed quanto magis laicis disciplina uerecundiae et modestiae incumbit, cum ea maioribuscompetant, ne sibi adsumant dicatum episcopis officium?",
+      "context": "In an emergency any Christian may baptize. Tertullian goes on to forbid women to baptize (17.4).",
+      "source": {
+        "book": "tertullian-on-baptism",
+        "section": "17"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "caecilius-bilta-carthage-256",
+      "author": "Council of Carthage (Caecilius of Bilta)",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Opinions of the Bishops",
+      "locus": "1",
+      "lang": "la",
+      "answer": "rebaptize",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "I know one baptism, in the Church alone, and none outside the Church. Here there will be one, where hope is true and faith certain. For so it is written: one faith, one hope, one baptism (Ephesians 4:5); not among heretics, where hope is none and faith false.",
+      "original": "Ego unum baptismum in ecclesia sola scio et extra ecclesiam nullum. hic erit unum, ubi spes uera est et fides certa. sic enim scriptum est: una fides, una spes, unum baptisma, non apud haereticos, ubi spes nulla est et fides falsa",
+      "context": "The first of 87 bishops who voted at Cyprian's council that converts from heretical sects must be baptized.",
+      "source": {
+        "book": "council-carthage-256-opinions-of-the-bishops",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "stephen-rome-in-cyprian-74",
+      "author": "Stephen of Rome (quoted by Cyprian)",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter, quoted in Cyprian, Letter 74",
+      "locus": "74.1",
+      "lang": "la",
+      "answer": "valid",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "If any come to you from any heresy whatever, let nothing be changed except what has been handed down: let hands be laid on them for repentance, since the heretics themselves do not baptize those who come to them from one another, but only give them communion.",
+      "original": "si qui ergo a quacumque haeresi uenient ad uos, nihil innouetur nisi quod traditum est, ut manus illis inponatur in paenitentiam, cum ipsi haeretici proprie alterutrum ad se uenientes non baptizent, sed communicent tantum.",
+      "context": "Cyprian quotes the bishop of Rome in order to refute him. Each side claimed tradition.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "74.1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-on-baptism-4-24",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "On Baptism, against the Donatists",
+      "locus": "4.17.24",
+      "lang": "la",
+      "answer": "valid",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "There is no salvation outside the Church. Who denies it? And so whatever belongs to the Church has no value for salvation outside the Church. But it is one thing not to have, another not to have to profit. Whoever does not have it must be baptized to have it; whoever has it without profit must be corrected so as to have it with profit. Nor is the water adulterous in the baptism of heretics.",
+      "original": "salus extra ecclesiam non est. quis negat? et ideo quaecumque ipsius ecclesiae habentur, extra ecclesiam non ualent ad salutem. sed aliud est non habere, aliud non utiliter habere. qui non habet, ut habeat baptizandus est, qui autem non utiliter habet, ut utiliter habeat corrigendus. nec adultera est aqua in baptismo haereticorum",
+      "context": "Augustine answers the Donatists, who appealed to Cyprian. Baptism belongs to Christ, not to the minister, so it is not repeated.",
+      "source": {
+        "book": "augustine-on-baptism",
+        "section": "4.24"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Arles",
+      "work": "Canon 8",
+      "year": 314,
+      "why": "Converts are asked the creed; if baptized in the Trinity they receive only the laying on of hands.",
+      "action": "intake",
+      "source_hint": "Munier, CCSL 148 (copyright) as note; Bruns (1839)"
+    },
+    {
+      "author": "Anonymous",
+      "work": "On Rebaptism",
+      "year": 256,
+      "why": "A contemporary answer to Cyprian. In the library as pseudo-cyprian-on-rebaptism.",
+      "action": "search",
+      "source_hint": "pseudo-cyprian-on-rebaptism"
+    },
+    {
+      "author": "Firmilian of Caesarea",
+      "work": "Letter 75, in Cyprian's letters",
+      "year": 256,
+      "why": "The Eastern bishop who sided with Cyprian.",
+      "action": "search",
+      "source_hint": "cyprian-letters 75"
+    }
+  ],
+  "related": {
+    "topics": [
+      "baptism-heretics"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

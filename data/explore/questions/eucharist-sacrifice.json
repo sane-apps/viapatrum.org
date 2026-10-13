@@ -1,0 +1,327 @@
+{
+  "id": "eucharist-sacrifice",
+  "number": 45,
+  "group": "baptism-supper",
+  "question": "Is the Eucharist a sacrifice?",
+  "short": "Is the Mass a sacrifice?",
+  "search": [
+    "sacrifice of the mass",
+    "eucharistic sacrifice",
+    "malachi 1:11",
+    "propitiatory",
+    "unbloody sacrifice",
+    "memorial",
+    "sacrifice of praise",
+    "altar"
+  ],
+  "answers": [
+    {
+      "id": "offering",
+      "label": "Yes: the Church offers the one sacrifice of Christ",
+      "short": "A true sacrifice",
+      "tag": "Sacrifice"
+    },
+    {
+      "id": "thanks",
+      "label": "A sacrifice of praise and thanksgiving, not of Christ",
+      "short": "Praise only",
+      "tag": "Thanks"
+    },
+    {
+      "id": "memorial",
+      "label": "Not a sacrifice: a remembrance of the cross",
+      "short": "Memorial",
+      "tag": "Memorial"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the Didache on, the Eucharist is called a sacrifice, the pure offering among the nations foretold by Malachi. Clement speaks of presbyters who \"offered the gifts\".",
+      "cites": [
+        "didache-14",
+        "1-clement-44",
+        "justin-dialogue-41"
+      ]
+    },
+    {
+      "text": "By the third and fourth centuries the language is fuller: the priest offers a true sacrifice in Christ's place (Cyprian), a bloodless sacrifice of propitiation (Cyril). Chrysostom adds that it is the one sacrifice, or rather its remembrance.",
+      "cites": [
+        "cyprian-letter-63-14",
+        "cyril-mystagogic-5-8",
+        "chrysostom-hebrews-homily-17"
+      ]
+    },
+    {
+      "text": "At the Reformation, Trent and the Orthodox kept the sacrifice; Lutherans and Reformed allowed only praise and thanksgiving; Zwingli called it a remembrance.",
+      "cites": [
+        "trent-1562-22-2",
+        "dositheus-1672-decree-17",
+        "apology-augsburg-24-19",
+        "westminster-1646-29-2",
+        "zwingli-1523-18-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-14",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "14.1–3",
+      "lang": "grc",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "On the Lord's day of the Lord, gather together, break bread and give thanks, having first confessed your sins, so that your sacrifice may be pure. Let no one who has a quarrel with his companion join you until they are reconciled, so that your sacrifice may not be defiled. For this is what the Lord said: \"In every place and time offer me a pure sacrifice; for I am a great king, says the Lord, and my name is wonderful among the nations\" (Malachi 1:11, 14).",
+      "original": "Κατὰ κυριακὴν δὲ κυρίου συναχθέντες κλάσατε ἄρτον καὶ εὐχαριστήσατε, προεξομολογησάμενοι τὰ παραπτώματα ὑμῶν, ὅπως καθαρὰ ἡ θυσία ὑμῶν ᾖ. πᾶς δὲ ἔχων τὴν ἀμφιβολίαν μετὰ τοῦ ἑταίρου αὐτοῦ μὴ συνελθέτω ὑμῖν, ἕως ... διαλλαγῶσιν, ἵνα μὴ κοινωθῇ ἡ θυσία ὑμῶν. αὕτη γάρ ἐστιν ἡ ῥηθεῖσα ὑπὸ κυρίον: Ἐν παντὶ τόπῳ καὶ χρόνῳ προσφέρειν μοι θυσίαν καθαράν. ὅτι βασιλεὺς μέγας εἰμί, λέγει κύριος, καὶ τὸ ὄνομά μου θαυμαστὸν ἐν τοῖς ἔθνεσι.",
+      "context": "Malachi 1:11 became the standard text for the Eucharist as the pure offering of the nations.",
+      "source": {
+        "book": "didache",
+        "section": "14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "1-clement-44",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "44.4",
+      "lang": "grc",
+      "answer": "offering",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "It will be no small sin for us if we remove from the episcopate those who have blamelessly and holily offered the gifts.",
+      "original": "ἁμαρτία γὰρ οὐ μικρὰ ἡμῖν ἔσται, ἐὰν τοὺς ἀμέμπτως καὶ ὁσίως προσενεγκόντας τὰ δῶρα τῆς ἐπισκοπῆς ἀποβάλωμεν.",
+      "context": "\"Offered the gifts\" uses the language of the Temple service Clement has just described (chapters 40–41).",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "44"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-dialogue-41",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "41.3",
+      "lang": "grc",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Of the sacrifices offered to him in every place by us Gentiles, that is, the bread of the Eucharist and likewise the cup of the Eucharist, he speaks beforehand, saying that we glorify his name and you profane it.",
+      "original": "Περὶ δὲ τῶν ἐν παντὶ τόπῳ ὑφ᾿ ἡμῶν τῶν ἐθνῶν προσφερομένων αὐτῷ θυσιῶν, τουτέστι τοῦ ἄρτου τῆς εὐχαριστίας καὶ τοῦ ποτηρίου ὁμοίως τῆς εὐχαριστίας, προλέγει τότε, εἰπὼν καὶ τὸ ὄνομα αὐτοῦ δοξάζειν ἡμᾶς, ὑμᾶς δὲ βεβηλοῦν.",
+      "context": "Justin elsewhere says the true sacrifices are prayers and thanksgivings (117).",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "41"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-63-14",
+      "author": "Cyprian of Carthage",
+      "year": 253,
+      "date": "c. 253",
+      "work": "Letter 63, to Caecilius",
+      "locus": "63.14",
+      "lang": "la",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If Christ Jesus, our Lord and God, is himself the high priest of God the Father, and first offered himself as a sacrifice to the Father, and commanded this to be done in memory of him, then that priest truly acts in Christ's place who imitates what Christ did, and he offers a true and full sacrifice in the Church to God the Father when he begins to offer as he sees Christ himself offered.",
+      "original": "nam si Christus Iesus Dominus et Deus noster ipse est summus sacerdos Dei patris et sacrificium patri se ipsum optulit et hoc fieri in sui commemorationem praecepit, utique ille sacerdos uice Christi uere fungitur qui id quod Christus fecit imitatur et sacrificium uerum et plenum tunc offert in ecclesia Deo patri, si sic incipiat offerre secundum quod ipsum Christum uideat optulisse.",
+      "context": "Written against those who used only water in the cup.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "63.14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogic-5-8",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogic Catecheses",
+      "locus": "5.8–9",
+      "lang": "grc",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Then, after the spiritual sacrifice, the bloodless worship, is completed, over that sacrifice of propitiation we call on God for the common peace of the churches ... and we all offer this sacrifice. Then we also remember those who have fallen asleep.",
+      "original": "Εἶτα μετὰ τὸ ἀπαρτισθῆναι τὴν πνευματικὴν θυσίαν, τὴν ἀναίμακτον λατρείαν, ἐπὶ τῆς θυσίας ἐκείνης τοῦ ἱλασμοῦ, παρακαλοῦμεν τὸν Θεὸν ὑπὲρ κοινῆς τῶν ἐκκλησιῶν εἰρήνης ... καὶ πάντες ἡμεῖς ταύτην προσφέρομεν τὴν θυσίαν. 5.9 Εἶτα μνημονεύομεν καὶ τῶν κεκοιμημένων",
+      "context": "\"Bloodless\" and \"propitiation\": the words Trent later used.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-hebrews-homily-17",
+      "author": "John Chrysostom",
+      "year": 403,
+      "date": "c. 403",
+      "work": "Homilies on Hebrews",
+      "locus": "17.6, on Hebrews 10:9",
+      "lang": "grc",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Our high priest is the one who offered the sacrifice that cleanses us. That we offer now too, the one offered then, which cannot be used up. This is done as a remembrance of what was done then: \"Do this,\" he says, \"in remembrance of me.\" We do not offer another sacrifice, as the high priest did then, but always the same; or rather we make a remembrance of a sacrifice.",
+      "original": "Ὁ ἀρχιερεὺς ἡμῶν ἐκεῖνός ἐστιν ὁ τὴν θυσίαν τὴν καθαίρουσαν ἡμᾶς προσενεγκών. Ἐκείνην προσφέρομεν καὶ νῦν, τὴν τότε προσενεχθεῖσαν, τὴν ἀνάλωτον. Τοῦτο εἰς ἀνάμνησιν γίνεται τοῦ τότε γενομένου· Τοῦτο γὰρ ποιεῖτε, φησὶν, εἰς τὴν ἐμὴν ἀνάμνησιν. Οὐκ ἄλλην θυσίαν, καθάπερ ὁ ἀρχιερεὺς τότε, ἀλλὰ τὴν αὐτὴν ἀεὶ ποιοῦμεν· μᾶλλον δὲ ἀνάμνησιν ἐργαζόμεθα θυσίας.",
+      "context": "Both Catholics (one sacrifice) and Protestants (a remembrance) cite this passage.",
+      "source": {
+        "book": "chrysostom-homiliae-hebraeos",
+        "section": "18.4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1562-22-2",
+      "author": "Council of Trent",
+      "year": 1562,
+      "date": "1562",
+      "work": "Session 22",
+      "locus": "Chapter 2",
+      "lang": "en",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "that same Christ is contained and immolated in an unbloody manner, who once offered Himself in a bloody manner on the altar of the cross",
+      "original": "that same Christ is contained and immolated in an unbloody manner, who once offered Himself in a bloody manner on the altar of the cross",
+      "context": "Trent called the Mass a true, propitiatory sacrifice, the same as the cross, offered in an unbloody way.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/twenty-second-session.htm",
+        "edition": "Council of Trent, Session 22, ch. 2 (1562)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dositheus-1672-decree-17",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 17",
+      "lang": "en",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "it is a true and propitiatory Sacrifice offered for all Orthodox, living and dead",
+      "original": "it is a true and propitiatory Sacrifice offered for all Orthodox, living and dead",
+      "context": "The Orthodox teach the same in their own terms.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 17 (1672)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "apology-augsburg-24-19",
+      "author": "Philip Melanchthon (Lutheran)",
+      "year": 1531,
+      "date": "1531",
+      "work": "Apology of the Augsburg Confession",
+      "locus": "XXIV.19",
+      "lang": "en",
+      "answer": "thanks",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The other species is the eucharistic sacrifice, which does not merit the remission of sins or reconciliation, but is rendered by those who have been reconciled, in order that we may give thanks",
+      "original": "The other species is the eucharistic sacrifice, which does not merit the remission of sins or reconciliation, but is rendered by those who have been reconciled, in order that we may give thanks",
+      "context": "Lutherans allow a sacrifice of thanksgiving but deny that the Mass earns forgiveness.",
+      "source": {
+        "url": "https://bookofconcord.org/defense/of-the-mass/",
+        "edition": "Apology of the Augsburg Confession, XXIV.19 (1531)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1646-29-2",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "29.2",
+      "lang": "en",
+      "answer": "thanks",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "In this sacrament, Christ is not offered up to his Father; nor any real sacrifice made at all, for remission of sins of the quick or dead; but only a commemoration of that one offering up of himself",
+      "original": "In this sacrament, Christ is not offered up to his Father; nor any real sacrifice made at all, for remission of sins of the quick or dead; but only a commemoration of that one offering up of himself",
+      "context": "The Reformed: a commemoration and a spiritual offering of praise, with no real sacrifice.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Westminster Confession of Faith, 29.2 (1646)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "zwingli-1523-18-b",
+      "author": "Huldrych Zwingli",
+      "year": 1523,
+      "date": "1523",
+      "work": "Sixty-Seven Articles",
+      "locus": "Article 18",
+      "lang": "en",
+      "answer": "memorial",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "the mass is not a sacrifice, but is a remembrance of the sacrifice and assurance of the salvation which Christ has given us.",
+      "original": "the mass is not a sacrifice, but is a remembrance of the sacrifice and assurance of the salvation which Christ has given us.",
+      "context": "Zwingli's first public theses at Zurich.",
+      "source": {
+        "url": "https://christianhistoryinstitute.org/study/module/zwinglis-sixty-seven-articles",
+        "edition": "Huldrych Zwingli, Sixty-Seven Articles, Article 18 (1523)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 4.17.5–4.18.1",
+      "year": 180,
+      "why": "\"The new oblation of the new covenant.\" Not found in the library's Harvey text.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 10.20",
+      "year": 417,
+      "why": "The Church offers itself in the sacrifice of Christ.",
+      "action": "intake",
+      "source_hint": "thelatinlibrary.com/augustine/civ10.shtml"
+    }
+  ],
+  "related": {
+    "timeline": "eucharist-sacrifice",
+    "topics": [
+      "eucharist-sacrifice"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

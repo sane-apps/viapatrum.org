@@ -1,0 +1,204 @@
+{
+  "id": "receive-communion-often",
+  "number": 46,
+  "group": "baptism-supper",
+  "question": "Who could receive communion, and how often?",
+  "short": "Who receives, how often",
+  "search": [
+    "communion",
+    "frequent communion",
+    "closed communion",
+    "open table",
+    "easter duty",
+    "weekly communion",
+    "daily communion",
+    "eucharist"
+  ],
+  "answers": [
+    {
+      "id": "baptized",
+      "label": "Only the baptized who hold the faith and live by it",
+      "short": "The baptized",
+      "tag": "Who"
+    },
+    {
+      "id": "often",
+      "label": "Every Lord's day, and for some daily",
+      "short": "Weekly or daily",
+      "tag": "Often"
+    },
+    {
+      "id": "yearly",
+      "label": "At least once a year, at Easter",
+      "short": "Yearly minimum",
+      "tag": "Yearly"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Only the baptized received: the Didache and Justin say so plainly, and Justin adds right faith and a Christian life.",
+      "cites": [
+        "didache-9-5",
+        "justin-1apol-66"
+      ]
+    },
+    {
+      "text": "All present received every Sunday, and deacons took it to the absent. Tertullian says Christians received at dawn gatherings too.",
+      "cites": [
+        "justin-1apol-67-communion",
+        "tertullian-crown-3-eucharist"
+      ]
+    },
+    {
+      "text": "As lay communion grew rare, the Fourth Lateran Council (1215) required at least once a year, at Easter.",
+      "cites": [
+        "lateran-iv-1215-canon-21"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-9-5",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "9.5",
+      "lang": "grc",
+      "answer": "baptized",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let no one eat or drink of your Eucharist except those baptized in the name of the Lord. For about this too the Lord said: \"Do not give what is holy to the dogs\" (Matthew 7:6).",
+      "original": "μηδεὶς δὲ φαγέτω μηδὲ πιέτω ἀπὸ τῆς εὐχαριστίας ὑμῶν, ἀλλ’ οἱ βαπτισθέντες εἰς ὄνομα κυρίου: καὶ γὰρ περὶ τούτου εἴρηκεν ὁ κύριος: Μὴ δῶτε τὸ ἄγιον τοῖς κυσί.",
+      "context": "Communion was for the baptized from the first.",
+      "source": {
+        "book": "didache",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-66",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "66.1",
+      "lang": "grc",
+      "answer": "baptized",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "This food is called among us Eucharist, of which no one may partake except one who believes that what we teach is true, and has been washed with the washing for forgiveness of sins and rebirth, and lives as Christ handed down.",
+      "original": "Καὶ ἡ τροφὴ αὕτη καλεῖται παρ᾿ ἡ μῖν εὐχαριστία, ἧς οὐδενὶ ἄλλῳ μετασχεῖν ἐξόν ἐστιν ἢ τῷ πιστεύοντι ἀληθῆ εἶναι τὰ δεδιδαγμένα ὑφ᾿ ἡμῶν, καὶ λουσαμένῳ τὸ ὑπὲρ ἀφέσεως ἁμαρτιῶν καὶ εἰς ἀναγέννησιν λουτρόν, καὶ οὕτως βιοῦντι ὡς ὁ Χριστὸς παρέδωκεν.",
+      "context": "Three conditions: right faith, baptism, a Christian life.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "66"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-67-communion",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "67.5",
+      "lang": "grc",
+      "answer": "often",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... and the distribution and sharing of the things over which thanks has been given is made to each, and to those not present it is sent through the deacons.",
+      "original": "καὶ ἡ διάδοσις καὶ ἡ μετάληψις ἀπὸ τῶν εὐχαριστηθέντων ἑκάστῳ γίνεται, καὶ τοῖς οὐ παροῦσι διὰ τῶν διακόνων πέμπεται.",
+      "context": "Every Sunday, everyone present received, and the absent were sent their share.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "67"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-crown-3-eucharist",
+      "author": "Tertullian",
+      "year": 211,
+      "date": "c. 211",
+      "work": "On the Crown",
+      "locus": "3.2–3",
+      "lang": "la",
+      "answer": "often",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "The sacrament of the Eucharist, which the Lord commanded to be taken at mealtime and by all, we take even in gatherings before dawn, and from the hand of none but those who preside.",
+      "original": "Eucharistiae sacramentum et in tempore victus et omnibus mandatum a domino, etiam antelucanis coetibus nec de aliorum manu quam praesidentium sumimus.",
+      "context": "Tertullian elsewhere speaks of Christians taking the sacrament at home before other food (To His Wife 2.5).",
+      "source": {
+        "book": "tertullian-on-the-crown",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "lateran-iv-1215-canon-21",
+      "author": "Fourth Lateran Council",
+      "year": 1215,
+      "date": "1215",
+      "work": "Canons",
+      "locus": "Canon 21",
+      "lang": "la",
+      "answer": "yearly",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Every believer of either sex, after reaching the age of discretion, shall faithfully confess all his sins alone to his own priest at least once a year, ... receiving reverently at least at Easter the sacrament of the Eucharist, unless by his own priest's counsel he abstains for a time for some reasonable cause.",
+      "original": "Omnis utriusque sexus fidelis, postquam ad annos discretionis pervenerit, omnia sua solus peccata saltem semel in anno fideliter confiteatur proprio sacerdoti ... suscipiens reverenter ad minus in Pascha Eucharistiae sacramentum , nisi forte de consilio proprii sacerdotis ob aliquam rationabilem causam ad tempus ab eius perceptione duxerit abstinendum",
+      "context": "By the Middle Ages most lay people received rarely, so the council set a minimum.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 437"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Basil of Caesarea",
+      "work": "Letter 93",
+      "year": 372,
+      "why": "\"We communicate four times a week.\"",
+      "action": "intake",
+      "source_hint": "Courtonne (copyright) as note; Migne PG 32 (fetched scan)"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "Letter 54.2–3",
+      "year": 400,
+      "why": "Some receive daily, some on certain days; follow your church's custom.",
+      "action": "intake",
+      "source_hint": "Goldbacher, CSEL 34 (1895)"
+    },
+    {
+      "author": "John Chrysostom",
+      "work": "Homilies on Ephesians 3.4",
+      "year": 395,
+      "why": "His complaint that many received only once a year.",
+      "action": "search",
+      "source_hint": "chrysostom-homiliae-ephesios"
+    }
+  ],
+  "related": {
+    "topics": [
+      "eucharist-practice"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "id": "baptism-done-immersion-pouring-words",
+  "number": 42,
+  "group": "baptism-supper",
+  "question": "How was baptism done: immersion or pouring, and with what words?",
+  "short": "How baptism was done",
+  "search": [
+    "immersion",
+    "pouring",
+    "sprinkling",
+    "affusion",
+    "triple immersion",
+    "trinitarian formula",
+    "matthew 28:19",
+    "in the name of jesus",
+    "mode of baptism"
+  ],
+  "answers": [
+    {
+      "id": "immersion",
+      "label": "Immersion, three times, in the name of the Father, Son and Holy Spirit",
+      "short": "Immersion",
+      "tag": "Immersion"
+    },
+    {
+      "id": "pouring",
+      "label": "Pouring is valid when immersion is not possible",
+      "short": "Pouring allowed",
+      "tag": "Pouring"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The normal practice was going down into water, three times, at the three names of Matthew 28:19, with questions on the faith at each. Didache, Tertullian and Cyril all describe it.",
+      "cites": [
+        "didache-7",
+        "tertullian-crown-3",
+        "cyril-mystagogic-2-4"
+      ]
+    },
+    {
+      "text": "From the first manual on, pouring was allowed when there was too little water, and Cyprian accepted pouring for the sick as full baptism.",
+      "cites": [
+        "didache-7-pouring",
+        "cyprian-letter-69-12"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-7",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "7.1–4",
+      "lang": "grc",
+      "answer": "immersion",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Concerning baptism, baptize this way: having first said all these things, baptize in the name of the Father and of the Son and of the Holy Spirit, in living water. If you do not have living water, baptize in other water; if you cannot in cold, then in warm. If you have neither, pour water on the head three times in the name of Father and Son and Holy Spirit. Before the baptism, let the one baptizing and the one baptized fast, and any others who can.",
+      "original": "Περὶ δὲ τοῦ βαπτίσματος, οὕτω βαπτίσατε: ταῦτα πάντα προειπόντες, βαπτίσατε εἰς τὸ ὄνομα τοῦ πατρὸς καὶ τοῦ υἱοῦ καὶ τοῦ ἁγίου πνεύματος ἐν ὕδατι ζῶντι. ἐὰν δὲ μὴ ἔχῃς ὕδωρ ζῶν, εἰς ἄλλο ὕδωρ βάπτισον: εἰ δ’ οὐ δύνασαι ἐν ψυχρῷ, ἐν θερμῷ. ἐὰν δὲ ἀμφότερα μὴ ἔχῃς, ἔκχεον εἰς τὴν κεφαλὴν τρὶς ὕδωρ εἰς ὄνομα πατρὸς καὶ υἱοῦ καὶ ἁγίου πνεύματος. πρὸ δὲ τοῦ βαπτίσματος προνηστευσάτω ὁ βαπτίζων καὶ ὁ βαπτιζόμενος καὶ εἴ τινες ἄλλοι δύνανται",
+      "context": "\"Living\" water is running water. Pouring is allowed when there is not enough water. The words are the triple name of Matthew 28:19.",
+      "source": {
+        "book": "didache",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-crown-3",
+      "author": "Tertullian",
+      "year": 211,
+      "date": "c. 211",
+      "work": "On the Crown",
+      "locus": "3.2–3",
+      "lang": "la",
+      "answer": "immersion",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "When we are about to enter the water, there, and also a little earlier in the church under the bishop's hand, we declare that we renounce the devil, his pomp and his angels. Then we are immersed three times, answering somewhat more than the Lord laid down in the Gospel. Then, taken up, we taste a mixture of milk and honey, and from that day we abstain from our daily bath for a whole week.",
+      "original": "aquam adituri ibidem, sed et aliquanto prius in ecclesia sub antistitis manu, contestamur nos renuntiare diabolo et pompae et angelis eius. Dehinc ter mergitamur amplius aliquid respondentes quam dominus in evangelio determinavit, Inde suscepti lactis et mellis concordiam praegustamus, exque ea die lavaero quotidiano per totam hebdomadem abstinemus.",
+      "context": "Tertullian lists customs kept by tradition without a written text. \"Answering\" refers to the questions on the creed put at each immersion.",
+      "source": {
+        "book": "tertullian-on-the-crown",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogic-2-4",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogic Catecheses",
+      "locus": "2.4",
+      "lang": "grc",
+      "answer": "immersion",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And each of you was asked whether he believed in the name of the Father, and of the Son, and of the Holy Spirit. And you made the saving confession, and went down three times into the water and came up again, signifying by a symbol the three days of Christ's burial.",
+      "original": "Καὶ ἠρωτᾶτο ἕκαστος εἰ πιστεύει εἰς τὸ ὄνομα τοῦ Πατρός, καὶ τοῦ Υἱοῦ, καὶ τοῦ ἁγίου Πνεύματος. Καὶ ὡμολογεῖτε τὴν σωτήριον ὁμολογίαν, καὶ κατεδύετε τρίτον εἰς τὸ ὕδωρ καὶ πάλιν ἀνεδύετε, καὶ ἐνταῦθα διὰ συμβόλου τὴν τριήμερον τοῦ Χριστοῦ αἰνιττόμενοι ταφήν.",
+      "context": "The Eastern churches still baptize by triple immersion.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "didache-7-pouring",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "7.1–4",
+      "lang": "grc",
+      "answer": "pouring",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "If you have neither, pour water on the head three times in the name of Father and Son and Holy Spirit.",
+      "original": "ἐὰν δὲ ἀμφότερα μὴ ἔχῃς, ἔκχεον εἰς τὴν κεφαλὴν τρὶς ὕδωρ εἰς ὄνομα πατρὸς καὶ υἱοῦ καὶ ἁγίου πνεύματος.",
+      "context": "The oldest permission to baptize by pouring.",
+      "source": {
+        "book": "didache",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-69-12",
+      "author": "Cyprian of Carthage",
+      "year": 255,
+      "date": "c. 255",
+      "work": "Letter 69, to Magnus",
+      "locus": "69.12",
+      "lang": "la",
+      "answer": "pouring",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You also asked, dear son, what I think of those who receive God's grace in sickness and weakness: whether they are to be counted true Christians, since they were not washed with the saving water but had it poured over them. ... As far as my small judgment reaches, I think that God's gifts cannot be cut short or weakened in any way, nor can less happen there, where what is drawn from God's gifts is received with full and whole faith by giver and receiver.",
+      "original": "Quaesisti etiam, fili carissime, quid mihi de illis nideotnr qui in infirmitate et languore gratiam Dei consecuntur, an habendi sint legitimi christiani, eo quod aqua salutari non loti sint sed perfusi. ... nos, quantum concipit mediocritas nostra, aestimamus in nullo mutilari et debilitari posse beneficia diuina nec minus aliquid illic posse contingere, ubi plena et tota fide et dantis et sumentis accipitur quod de diuinis muneribus hauritur.",
+      "context": "\"Clinical\" baptism, by pouring on the sick in bed. Cyprian accepts it as full baptism.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "69.12"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Hippolytus (attributed)",
+      "work": "Apostolic Tradition 21",
+      "year": 215,
+      "why": "The fullest early order of baptism, with the three questions. Survives in a Latin palimpsest.",
+      "action": "intake",
+      "source_hint": "Hauler, Didascaliae apostolorum fragmenta Veronensia latina (1900)"
+    },
+    {
+      "author": "Ambrose of Milan",
+      "work": "On the Sacraments 2.20",
+      "year": 390,
+      "why": "Questions and immersion at Milan. On the Mysteries is fetched; On the Sacraments is not.",
+      "action": "intake",
+      "source_hint": "Faller, CSEL 73 (1955, copyright) as note; Migne PL 16"
+    }
+  ],
+  "related": {
+    "topics": [
+      "baptism-rite"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "sunday-service-look-like-second",
+  "number": 48,
+  "group": "baptism-supper",
+  "question": "What did a Sunday service look like in the second century?",
+  "short": "Early worship",
+  "search": [
+    "early christian worship",
+    "liturgy",
+    "justin martyr worship",
+    "mass",
+    "early church service",
+    "hymn to christ",
+    "pliny"
+  ],
+  "answers": [
+    {
+      "id": "pattern",
+      "label": "Readings, sermon, prayers, bread and wine with thanksgiving, communion, gifts for the poor",
+      "short": "The pattern",
+      "tag": "Service"
+    }
+  ],
+  "overview": [
+    {
+      "text": "A Roman governor about 112 reports Christians meeting before dawn on a fixed day to sing a hymn to Christ \"as to a god\", and meeting later for a meal.",
+      "cites": [
+        "pliny-letter-10-96"
+      ]
+    },
+    {
+      "text": "Justin, about 155, gives the order still used: readings from the apostles and prophets, a sermon, common prayer, bread and wine, the president's thanksgiving, the people's Amen, communion, and a collection for the needy.",
+      "cites": [
+        "justin-1apol-67-service",
+        "didache-14-service"
+      ]
+    },
+    {
+      "text": "Tertullian adds prayer for the emperors and a monthly free collection that fed orphans, the old, and prisoners.",
+      "cites": [
+        "tertullian-apology-39"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "pliny-letter-10-96",
+      "author": "Pliny the Younger (Roman governor)",
+      "year": 112,
+      "date": "c. 112",
+      "work": "Letter 10.96, to the emperor Trajan",
+      "locus": "10.96.7",
+      "lang": "la",
+      "answer": "pattern",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "They affirmed that the whole of their fault or error was this: they were accustomed to meet on a fixed day before dawn and sing a hymn among themselves to Christ as to a god, and to bind themselves by an oath, not to some crime, but not to commit theft, robbery or adultery, not to break faith, and not to refuse to return a deposit. After this it was their custom to part and meet again to take food, but ordinary and harmless food.",
+      "original": "Affirmabant autem hanc fuisse summam vel culpae suae vel erroris, quod essent soliti stato die ante lucem convenire, carmenque Christo quasi deo dicere secum invicem seque sacramento non in scelus aliquod obstringere, sed ne furta ne latrocinia ne adulteria committerent, ne fidem fallerent, ne depositum appellati abnegarent. Quibus peractis morem sibi discedendi fuisse rursusque coeundi ad capiendum cibum, promiscuum tamen et innoxium",
+      "context": "A pagan's report from Bithynia, from Christians he interrogated. \"Harmless food\" answers rumors of cannibalism.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "didache-14-service",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "14.1–3",
+      "lang": "grc",
+      "answer": "pattern",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "On the Lord's day of the Lord, gather together, break bread and give thanks, having first confessed your sins, so that your sacrifice may be pure. Let no one who has a quarrel with his companion join you until they are reconciled, so that your sacrifice may not be defiled. For this is what the Lord said: \"In every place and time offer me a pure sacrifice; for I am a great king, says the Lord, and my name is wonderful among the nations\" (Malachi 1:11, 14).",
+      "original": "Κατὰ κυριακὴν δὲ κυρίου συναχθέντες κλάσατε ἄρτον καὶ εὐχαριστήσατε, προεξομολογησάμενοι τὰ παραπτώματα ὑμῶν, ὅπως καθαρὰ ἡ θυσία ὑμῶν ᾖ. πᾶς δὲ ἔχων τὴν ἀμφιβολίαν μετὰ τοῦ ἑταίρου αὐτοῦ μὴ συνελθέτω ὑμῖν, ἕως ... διαλλαγῶσιν, ἵνα μὴ κοινωθῇ ἡ θυσία ὑμῶν. αὕτη γάρ ἐστιν ἡ ῥηθεῖσα ὑπὸ κυρίον: Ἐν παντὶ τόπῳ καὶ χρόνῳ προσφέρειν μοι θυσίαν καθαράν. ὅτι βασιλεὺς μέγας εἰμί, λέγει κύριος, καὶ τὸ ὄνομά μου θαυμαστὸν ἐν τοῖς ἔθνεσι.",
+      "context": "Confession of sins and reconciliation came before the breaking of bread.",
+      "source": {
+        "book": "didache",
+        "section": "14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-67-service",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "67.3–6",
+      "lang": "grc",
+      "answer": "pattern",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "On the day called the day of the Sun, all who live in towns or the country gather in one place, and the memoirs of the apostles or the writings of the prophets are read, as long as time allows. Then, when the reader has stopped, the president in a speech warns and urges us to imitate these good things. Then we all stand up together and send up prayers. And, as we said before, when we have finished praying, bread is brought, and wine and water, and the president likewise sends up prayers and thanksgivings as he is able, and the people assent, saying Amen. Then the distribution and sharing of the things over which thanks has been given is made to each, and to those not present it is sent through the deacons. Those who are well off and willing give what each thinks fit, and what is collected is left with the president, who helps orphans and widows.",
+      "original": "Καὶ τῇ τοῦ ἡλίου λεγομένῃ ἡμέρᾳ πάντων κατὰ πόλεις ἢ ἀγροὺς μενόντων ἐπὶ τὸ αὐτὸ συνέλευσις γίνεται, καὶ τὰ ἀπομνημονεύματα τῶν ἀποστόλων ἢ τὰ συγγράμματα τῶν προφητῶν ἀναγινώσκεται, μέχρις ἐγχωρεῖ. Εἶτα παυσαμένου τοῦ ἀναγινώσκοντος ὁ προεστὼς διὰ λόγου τὴν νουθεσίαν καὶ πρόκλησιν τῆς τῶν καλῶν τούτων μιμήσεως ποιεῖται. Ἔπειτα ἀνιστάμεθα κοινῇ πάντες καὶ εὐχὰς πέμπομεν· καὶ, ὡς προέφημεν, παυσαμένων ἡμῶν τῆς εὐχῆς ἄρτος προσφέρεται καὶ οἶνος καὶ ὕδωρ, καὶ ὁ προεστὼς εὐχὰς ὁμοίως καὶ εὐχαριστίας, ὅση δύναμις αὐτῷ, ἀναπέμπει, καὶ ὁ λαὸς ἐπευφημεῖ λέγων τὸ Ἀμήν, καὶ ἡ διάδοσις καὶ ἡ μετάληψις ἀπὸ τῶν εὐχαριστηθέντων ἑκάστῳ γίνεται, καὶ τοῖς οὐ παροῦσι διὰ τῶν διακόνων πέμπεται. Οἱ εὐποροῦντες δὲ καὶ βουλόμενοι κατὰ προαίρεσιν ἕκαστος τὴν ἑαυτοῦ ὃ βούλεται δίδωσι, καὶ τὸ συλλεγόμενον παρὰ τῷ προεστῶτι ἀποτίθεται",
+      "context": "The order is still the shape of most liturgies: readings, sermon, prayers, offering of bread and wine, thanksgiving, Amen, communion, collection.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "67"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-39",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "39.2–6",
+      "lang": "la",
+      "answer": "pattern",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We meet in an assembly and congregation, to besiege God with prayers as with an army. This force pleases God. We pray also for the emperors, for their ministers and authorities, for the state of the world, for peace, for the delay of the end. We meet to remember the divine writings ... Approved elders preside, who have won that honor not by money but by testimony. ... Each one puts in a small coin once a month, or when he wishes, if he wishes and can. For no one is compelled; he gives freely. This is a deposit of piety: it is spent not on feasts and drinking, but to feed and bury the poor, for boys and girls without means or parents, for the old confined at home, the shipwrecked, and those in the mines, on the islands or in prison for the cause of God.",
+      "original": "Coimus in coetum et congregationem, ut ad deum quasi manu facta precationibus ambiamus orantes. Haec vis deo grata est. Oramus etiam pro imperatoribus, pro ministris eorum et potestatibus, pro statu saeculi, pro rerum quiete, pro mora finis. [3] Coimus ad litterarum divinarum commemorationem ... [5] Praesident probati quique seniores, honorem istum non pretio, sed testimonio adepti ... Modicam unusquisque stipem menstrua die, vel cum velit et si modo velit et si modo possit, apponit. Nam nemo compellitur, sed sponte confert. [6] Haec quasi deposita pietatis sunt. Nam inde non epulis nec potaculis nec ingratis voratrinis dispensatur, sed egenis alendis humandisque et pueris ac puellis re ac parentibus destitutis iamque domesticis senibus, item naufragis et si qui in metallis et si qui in insulis vel in custodiis, dumtaxat ex causa dei sectae",
+      "context": "Tertullian writes for Roman magistrates, so he describes the gathering, not the sacrament.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Hippolytus (attributed)",
+      "work": "Apostolic Tradition 4",
+      "year": 215,
+      "why": "The earliest full eucharistic prayer.",
+      "action": "intake",
+      "source_hint": "Hauler (1900)"
+    },
+    {
+      "author": "Didache",
+      "work": "Chapters 9–10, the meal prayers",
+      "year": 100,
+      "why": "The oldest prayers over cup and bread. In the library; to be added.",
+      "action": "search",
+      "source_hint": "didache 9 and 10"
+    }
+  ],
+  "related": {
+    "topics": [
+      "early-worship"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

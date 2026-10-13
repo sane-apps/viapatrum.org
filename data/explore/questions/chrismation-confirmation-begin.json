@@ -1,0 +1,194 @@
+{
+  "id": "chrismation-confirmation-begin",
+  "number": 50,
+  "group": "baptism-supper",
+  "question": "What is chrismation or confirmation, and when did it begin?",
+  "short": "Confirmation",
+  "search": [
+    "confirmation",
+    "chrismation",
+    "chrism",
+    "laying on of hands",
+    "anointing",
+    "seal of the spirit",
+    "acts 8"
+  ],
+  "answers": [
+    {
+      "id": "with-baptism",
+      "label": "Anointing and laying on of hands, given with baptism",
+      "short": "Part of baptism",
+      "tag": "With baptism"
+    },
+    {
+      "id": "sacrament",
+      "label": "A distinct sacrament, given by the bishop",
+      "short": "Own sacrament",
+      "tag": "Sacrament"
+    },
+    {
+      "id": "rite",
+      "label": "A church rite of profession, not a sacrament",
+      "short": "A rite",
+      "tag": "Rite"
+    }
+  ],
+  "overview": [
+    {
+      "text": "By about 200, baptism was followed at once by anointing and the laying on of hands for the Holy Spirit (Tertullian). Cyprian links it to Peter and John in Samaria; Cyril calls the chrism Christ's gift by the Spirit's presence.",
+      "cites": [
+        "tertullian-baptism-7-8",
+        "cyprian-letter-73-9",
+        "cyril-mystagogic-3-3"
+      ]
+    },
+    {
+      "text": "The East still gives chrismation with baptism. In the West it became a separate rite reserved to the bishop, which Trent defined as a sacrament. Protestants count only two sacraments.",
+      "cites": [
+        "trent-1547-confirmation-canon-1",
+        "westminster-1646-27-4"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "tertullian-baptism-7-8",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Baptism",
+      "locus": "7.1; 8.1",
+      "lang": "la",
+      "answer": "with-baptism",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Then, coming out of the washing, we are anointed with a blessed anointing, from the ancient practice by which they used to be anointed for the priesthood with oil from a horn. ... Then a hand is laid on us in blessing, calling and inviting the Holy Spirit.",
+      "original": "Exinde egressi de lauacro perungimur benedicta unctione de pristina disciplina, qua ungi oleo de cornu in sacerdotio solebant ... Dehinc manus imponitur per benedictionem advocans et inuitans spiritum sanctum.",
+      "context": "Anointing and laying on of hands follow straight after the water, in one rite.",
+      "source": {
+        "book": "tertullian-on-baptism",
+        "section": "7",
+        "also": {
+          "book": "tertullian-on-baptism",
+          "section": "8"
+        }
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-73-9",
+      "author": "Cyprian of Carthage",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter 73, to Jubaianus",
+      "locus": "73.9",
+      "lang": "la",
+      "answer": "with-baptism",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What was lacking was done by Peter and John: prayer was made for them, hands were laid on them, and the Holy Spirit was called down and poured out on them (Acts 8:14–17). This is done among us now too: those baptized in the Church are brought to the leaders of the Church, and by our prayer and laying on of hands they receive the Holy Spirit and are made complete with the Lord's seal.",
+      "original": "sed tantummodo quod deerat id a Petro et Iohanne factum est, ut oratione pro eis habita et manu inposita inuocaretur et infunderetur super eos spiritus sanctus. quod nunc quoque apud nos geritur, ut qui in ecclesia baptizantur praepositis ecclesiae offerantur et per nostram orationem ac manus inpositionem spiritum sanctum consequantur et signaculo dominico consummentur.",
+      "context": "The bishop's laying on of hands, separate from the water but on the same day.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "73.9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogic-3-3",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogic Catecheses",
+      "locus": "3.2–3",
+      "lang": "grc",
+      "answer": "with-baptism",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You were anointed with chrism, becoming sharers and partakers of Christ. But do not think that this chrism is plain ointment. For just as the bread of the Eucharist, after the invocation of the Holy Spirit, is no longer plain bread but the body of Christ, so this holy chrism is no longer plain or, as one might say, common after the invocation, but Christ's gift, made effective by the presence of the Holy Spirit. It is applied as a sign on your forehead and your other senses.",
+      "original": "ὑμεῖς δὲ μύρῳ ἐχρίσθητε, κοινωνοὶ καὶ μέτοχοι τοῦ Χριστοῦ γενόμενοι. 3.3 Ἀλλ' ὅρα μὴ ὑπονοήσῃς ἐκεῖνο τὸ μύρον ψιλὸν εἶναι. Ὥσπερ γὰρ ὁ ἄρτος τῆς εὐχαριστίας, μετὰ τὴν ἐπίκλησιν τοῦ ἁγίου Πνεύματος, οὐκ ἔτι ἄρτος λιτός, ἀλλὰ σῶμα Χριστοῦ, οὕτω καὶ τὸ ἅγιον τοῦτο μύρον οὐκ ἔτι ψιλόν, οὐδ' ὡς ἂν εἴποι τις κοινὸν μετ' ἐπικλήσεως, ἀλλὰ Χριστοῦ χάρισμα, καὶ Πνεύματος ἁγίου παρουσίας τῆς αὐτοῦ θεότητος ἐνεργητικὸν γινόμενον. Ὅπερ συμβολικῶς ἐπὶ μετώπου καὶ τῶν ἄλλων σου χρίεται αἰσθητηρίων.",
+      "context": "The Eastern rite, still given with baptism, even to infants.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1547-confirmation-canon-1",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 7, Canons on Confirmation",
+      "locus": "Canons 1, 3",
+      "lang": "la",
+      "answer": "sacrament",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says that the confirmation of the baptized is an idle ceremony, and not rather a true and proper sacrament; or that of old it was nothing but a kind of instruction in which those near adolescence gave an account of their faith before the Church: let him be anathema. ... If anyone says that the ordinary minister of holy confirmation is not the bishop alone, but any simple priest: let him be anathema.",
+      "original": "Si quis dixerit, confirmationem baptizatorum otiosam ceremoniam esse, et non potius verum et proprium sacramentum; aut olim nihil aliud fuisse quam catechesin quandam , qua adolescentiae proximi fidei suae rationem coram Ecclesia exponebant: A. S. ... Si quis dixerit, sanctae confirmationis ordinarium ministrum non esse solum episcopum, sed quemvis simplicem sacerdotem: A. S.",
+      "context": "In the West the bishop's anointing came to be separated from baptism by years. The East kept them together, with chrism blessed by the bishop.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 871, 873"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-27-4",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "27.4",
+      "lang": "en",
+      "answer": "rite",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "There be only two sacraments ordained by Christ our Lord in the Gospel; that is to say, baptism, and the Supper of the Lord.",
+      "original": "There be only two sacraments ordained by Christ our Lord in the Gospel; that is to say, baptism, and the Supper of the Lord",
+      "context": "Protestants count confirmation, where they keep it, as a church rite of profession, not a sacrament. That is the view Trent condemned.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Innocent I",
+      "work": "Letter to Decentius 3",
+      "year": 416,
+      "why": "Only bishops may sign the forehead with chrism.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 98)"
+    },
+    {
+      "author": "Hippolytus (attributed)",
+      "work": "Apostolic Tradition 21–22",
+      "year": 215,
+      "why": "Two anointings, by presbyter and bishop.",
+      "action": "intake",
+      "source_hint": "Hauler (1900)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "chrismation"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

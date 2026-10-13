@@ -1,0 +1,229 @@
+{
+  "id": "christians-confess-sins-priest",
+  "number": 49,
+  "group": "baptism-supper",
+  "question": "Did early Christians confess their sins to a priest?",
+  "short": "Confession",
+  "search": [
+    "confession",
+    "auricular confession",
+    "penance",
+    "exomologesis",
+    "absolution",
+    "confess to a priest",
+    "james 5:16"
+  ],
+  "answers": [
+    {
+      "id": "public",
+      "label": "Before the whole church, with public penance",
+      "short": "Before the church",
+      "tag": "Public"
+    },
+    {
+      "id": "priest",
+      "label": "To the bishop or priest, who prescribes a remedy",
+      "short": "To a priest",
+      "tag": "Priest"
+    },
+    {
+      "id": "god",
+      "label": "To God, and to those we have wronged",
+      "short": "To God",
+      "tag": "To God"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest confession was before the congregation: the Didache and Tertullian's public \"exomologesis\".",
+      "cites": [
+        "didache-4-14",
+        "tertullian-repentance-9"
+      ]
+    },
+    {
+      "text": "By the third century, Christians also confessed to the bishop and priests, even sins of thought: Origen speaks of declaring sin to \"the priest of the Lord\", and Cyprian of confessing before \"the priests of God\".",
+      "cites": [
+        "origen-leviticus-homily-2-4",
+        "cyprian-lapsed-28"
+      ]
+    },
+    {
+      "text": "In 1215 the Fourth Lateran Council made private confession to one's own priest a yearly duty. Reformed churches teach private confession to God and to those wronged.",
+      "cites": [
+        "lateran-iv-1215-confession",
+        "westminster-1646-15-6"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-4-14",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "4.14",
+      "lang": "grc",
+      "answer": "public",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In the assembly you shall confess your transgressions, and you shall not come to your prayer with an evil conscience. This is the way of life.",
+      "original": "ἐν ἐκκλησίᾳ ἐξομολογήσῃ τὰ παραπτώματά σου, καὶ οὐ προσελεύσῃ ἐπὶ προσευχήν σου ἐν συνειδήσει πονηρᾷ: αὕτη ἐστὶν ἡ ὁδὸς τῆς ζωῆς.",
+      "context": "Confession was made before the congregation, as also before the Eucharist (14.1).",
+      "source": {
+        "book": "didache",
+        "section": "4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-repentance-9",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Repentance",
+      "locus": "9.2",
+      "lang": "la",
+      "answer": "public",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "This act, which is more often expressed and named by a Greek word, is exomologesis, by which we confess our sin to the Lord, not as if he did not know it, but because satisfaction is arranged by confession, repentance is born of confession, and by repentance God is appeased.",
+      "original": "is actus, qui magis graeco uocabulo exprimitur et frequentatur, exomologesis est, qua delictum domino nostrum confitemur, non quidem ut ignaro, sed quatenus satisfactio confessione disponitur, confessione paenitentia nascitur,",
+      "context": "Tertullian describes a public penance in sackcloth, kneeling before the presbyters and the people.",
+      "source": {
+        "book": "tertullian-on-repentance",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-leviticus-homily-2-4",
+      "author": "Origen of Alexandria",
+      "year": 240,
+      "date": "c. 240",
+      "work": "Homilies on Leviticus (Rufinus's Latin)",
+      "locus": "2.4",
+      "lang": "la",
+      "answer": "priest",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "There is also a seventh, though hard and laborious: forgiveness of sins through penance, when the sinner washes his bed with tears, and his tears are his bread day and night, and when he is not ashamed to declare his sin to the priest of the Lord and to seek a remedy, as the one who says: \"I said, I will declare my injustice against myself to the Lord, and you forgave the impiety of my heart.\"",
+      "original": "per poenitentiam remissio ^ peccatorum, cum lavat peccator in lacrimis stratum suum, et fiunt ei lacrimae suae panes!) die ac nocte, et cum non erubescit sacerdoti Domini indicare peccatum suum, et quaerere medicinam, secundum eum, qui ait: ,,dixi?) pronuntiabo adversum me injustitiam meam Domino, et tu remisisti impietatem cordis mei",
+      "context": "The seventh of Origen's ways of forgiveness. He goes on to quote James 5:14 on calling the presbyters.",
+      "source": {
+        "witness": "books/origen-leviticus-homilies/sources/witnesses/lommatzsch-t9-1839_djvu.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 9 (1839), Homily on Leviticus 2.4 (Rufinus)",
+        "ia": "origenous-ta-heuriskomena-panta-t.-9-1839",
+        "also": {
+          "witness": "books/origen-leviticus-homilies/sources/witnesses/baehrens-gcs29-1920_djvu.txt"
+        }
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-lapsed-28",
+      "author": "Cyprian of Carthage",
+      "year": 251,
+      "date": "c. 251",
+      "work": "On the Lapsed",
+      "locus": "28",
+      "lang": "la",
+      "answer": "priest",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "How much greater in faith and better in fear are those who, though bound by no crime of sacrifice or certificate, yet because they even thought of it, confess this very thing before the priests of God with grief and simplicity, make the confession of their conscience, lay bare the weight on their soul, and seek a saving remedy even for small and slight wounds.",
+      "original": "Denique quanto et fide maiore et timore meliore sunt qui quamuis nullo sacrificii aut libelli facinore constricti, quoniam tamen de hoc uel cogitauerunt, hoc ipsum aput sacerdotes Dei dolenter et simpliciter confitentes exomologesim conscientiae faciant, animi sui pondus exponant, salutarem medellam paruis licet et modicis uulneribus exquirant",
+      "context": "Confession even of sinful thoughts, to the bishop and presbyters, about 251.",
+      "source": {
+        "book": "cyprian-on-the-lapsed",
+        "section": "28"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "lateran-iv-1215-confession",
+      "author": "Fourth Lateran Council",
+      "year": 1215,
+      "date": "1215",
+      "work": "Canons",
+      "locus": "Canon 21",
+      "lang": "la",
+      "answer": "priest",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Every believer of either sex, after reaching the age of discretion, shall faithfully confess all his sins alone to his own priest at least once a year, and strive to fulfil the penance imposed on him as far as he can.",
+      "original": "Omnis utriusque sexus fidelis, postquam ad annos discretionis pervenerit, omnia sua solus peccata saltem semel in anno fideliter confiteatur proprio sacerdoti, et iniunctam sibi poenitentiam pro viribus studeat adimplere",
+      "context": "Private confession, which had spread from Irish and English monasteries, became a yearly duty for all.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 437"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-15-6",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "15.6",
+      "lang": "en",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "As every man is bound to make private confession of his sins to God, praying for the pardon thereof; upon which, and the forsaking of them, he shall find mercy; so, he that scandalizeth his brother, or the church of Christ, ought to be willing, by a private or public confession, and sorrow for his sin, to declare his repentance to those that are offended.",
+      "original": "As every man is bound to make private confession of his sins to God, praying for the pardon thereof; upon which, and the forsaking of them, he shall find mercy; so, he that scandalizeth his brother, or the church of Christ, ought to be willing, by a private or public confession, and sorrow for his sin, to declare his repentance to those that are offended",
+      "context": "Lutherans kept private confession and absolution but did not require every sin to be listed (Augsburg Confession 11).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Leo I",
+      "work": "Letter 168",
+      "year": 459,
+      "why": "Secret confession to the priest is enough; public reading of sins is forbidden.",
+      "action": "intake",
+      "source_hint": "Migne PL 54"
+    },
+    {
+      "author": "Council of Trent",
+      "work": "Session 14, canons on penance",
+      "year": 1551,
+      "why": "Confession of all mortal sins to a priest by divine law. Not found in the Denzinger scan's text.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 911–925)"
+    },
+    {
+      "author": "Augsburg Confession",
+      "work": "Articles 11 and 25",
+      "year": 1530,
+      "why": "Lutheran private absolution.",
+      "action": "intake",
+      "source_hint": "Bekenntnisschriften (1930, copyright) as note; Müller (1848)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "penance-and-reconciliation"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

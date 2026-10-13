@@ -1,0 +1,278 @@
+{
+  "id": "baptism-save-only-sign",
+  "number": 41,
+  "group": "baptism-supper",
+  "question": "Does baptism save, or is it only a sign?",
+  "short": "What baptism does",
+  "search": [
+    "baptismal regeneration",
+    "born again",
+    "born of water",
+    "baptism saves",
+    "1 peter 3:21",
+    "sign and seal",
+    "ordinance",
+    "symbol"
+  ],
+  "answers": [
+    {
+      "id": "regenerates",
+      "label": "It washes away sin and gives new birth",
+      "short": "New birth",
+      "tag": "Regenerates"
+    },
+    {
+      "id": "sign",
+      "label": "A sign and seal through which God gives grace",
+      "short": "Sign and seal",
+      "tag": "Sign + seal"
+    },
+    {
+      "id": "symbol",
+      "label": "A symbol of a faith and new life already received",
+      "short": "Symbol",
+      "tag": "Symbol"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Every early writer speaks of baptism as rebirth and washing: Justin, Barnabas, Hermas (\"they go down dead and come up alive\"), Tertullian and Cyril.",
+      "cites": [
+        "justin-1apol-61",
+        "barnabas-11",
+        "hermas-similitude-9-16",
+        "tertullian-baptism-1",
+        "cyril-mystagogic-2-6"
+      ]
+    },
+    {
+      "text": "Catholic, Orthodox and Lutheran churches still teach this. The Reformed call it a sign and seal; Baptists, a symbol of faith already given.",
+      "cites": [
+        "ccc-1213",
+        "augsburg-1530-9-b",
+        "westminster-1646-28-1",
+        "bfm-2000-7-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-61",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "61.3–4",
+      "lang": "grc",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Then they are brought by us to where there is water, and are reborn in the same way of rebirth by which we ourselves were reborn. For in the name of God the Father and Lord of all, and of our Savior Jesus Christ, and of the Holy Spirit, they then receive the washing in the water. For Christ said: \"Unless you are born again, you will not enter the kingdom of heaven\" (John 3:3–5).",
+      "original": "Ἔπειτα ἄγονται ὑφ᾿ ἡμῶν, ἔνθα ὕδωρ ἐστί, καὶ τρόπον ἀναγεννήσεως, ὃν καὶ ἡμεῖς αὐτοὶ ἀνεγεννήθημεν, ἀναγεννῶνται· ἐπ᾿ ὀνόματος γὰρ τοῦ πατρὸς τῶν ὅλων καὶ δεσπότου θεοῦ καὶ τοῦ σωτῆρος ἡμῶν Ἰησοῦ Χριστοῦ καὶ πνεῦματος ἁγίου τὸ ἐν τῷ ὕδατι τότε λουτρὸν ποιοῦνται. Καὶ γὰρ ὁ Χριστὸς εἶπεν· Ἂν μὴ ἀναγεννηθῆτε, οὐ μὴ εἰσέλθητε εἰς τὴν βασιλείαν τῶν οὐρανῶν.",
+      "context": "The earliest description of baptism outside the New Testament, written for the emperor. Justin also calls it \"illumination\" (61.12).",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "61"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "barnabas-11",
+      "author": "Letter of Barnabas",
+      "year": 130,
+      "date": "c. 130",
+      "work": "Letter of Barnabas",
+      "locus": "11.11",
+      "lang": "grc",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "This means that we go down into the water full of sins and filth, and come up bearing fruit, with fear in our heart and hope in Jesus in our spirit.",
+      "original": "τοῦτο λέγει ὅτι ἡμεῖς μὲν καταβαίνομεν εἰς τὸ ὕδωρ γέμοντες ἁμαρτιῶν καὶ ῥύπου, καὶ ἀναβαίνομεν καρποφοροῦντες ἐν τῇ καρδίᾳ τὸν φόβον καὶ τὴν ἐλπίδα εἰς τὸν Ἰησοῦν ἐν τῷ πνεύματι ἔχοντες.",
+      "context": "Barnabas reads the river of Ezekiel 47 as baptism.",
+      "source": {
+        "book": "barnabas-epistle",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "hermas-similitude-9-16",
+      "author": "Shepherd of Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "Shepherd of Hermas",
+      "locus": "Similitude 9.16.3–4",
+      "lang": "grc",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Before a person bears the name of the Son of God, he is dead; but when he receives the seal, he lays aside death and takes up life. The seal, then, is the water. They go down into the water dead and come up alive.",
+      "original": "πρὶν γάρ, φησί, φορέσαι τὸν ἄνθρωπον τὸ ὄνομα τοῦ υἱοῦ τοῦ θεοῦ, νεκρός ἐστιν: ὅταν δὲ λάβῃ τὴν σφραγῖδα, ἀποτίθεται τὴν νέκρωσιν καὶ ἀναλαμβάνει τὴν ζωήν. ἡ σφραγὶς οὖν τὸ ὕδωρ ἐστίν: εἰς τὸ ὕδωρ οὖν καταβαίνουσι νεκροὶ καὶ ἀναβαίνουσι ζῶντες.",
+      "context": "\"The seal\" is the second-century name for baptism.",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "26"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-baptism-1",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Baptism",
+      "locus": "1.1",
+      "lang": "la",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Happy is our sacrament of water, because, washed of the sins of our former blindness, we are set free for eternal life!",
+      "original": "Felix sacramentum aquae nostrae, quia ablutis delictis pristinae caecitatis in uitam aeternam liberamur!",
+      "context": "The first whole treatise on baptism, written against a teacher who said faith alone was enough without water.",
+      "source": {
+        "book": "tertullian-on-baptism",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogic-2-6",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogic Catecheses",
+      "locus": "2.6",
+      "lang": "grc",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Let no one think that baptism is only for forgiveness of sins and the grace of adoption, as John's baptism gave only forgiveness of sins. We know well that just as it cleanses from sins and brings the gift of the Holy Spirit, so it is also the copy of Christ's sufferings.",
+      "original": "Μηδεὶς οὖν νομιζέτω τὸ βάπτισμα ἀφέσεως ἁμαρτιῶν μόνον, καὶ υἱοθεσίας χάριν τυγχάνειν, ὡς τὸ Ἰωάννου ἐτύγχανε βάπτισμα μόνης ἀφέσεως ἁμαρτημάτων παρεκτικόν· ἀλλ' ἀκριβῶς εἰδότων ἡμῶν, ὅτι ὡς ἔστιν ἁμαρτημάτων καθαρτήριον καὶ Πνεύματος ἁγίου δωρεᾶς πρόξενον, οὕτω καὶ τῶν τοῦ Χριστοῦ παθημάτων ἀντίτυπον.",
+      "context": "Addressed to the newly baptized at Jerusalem in Easter week. Some scholars give the Mystagogic Catecheses to Cyril's successor John.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ccc-1213",
+      "author": "Catechism of the Catholic Church",
+      "year": 1992,
+      "date": "1992",
+      "work": "Catechism of the Catholic Church",
+      "locus": "1213",
+      "lang": "en",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Through Baptism we are freed from sin and reborn as sons of God; we become members of Christ, are incorporated into the Church",
+      "original": "Through Baptism we are freed from sin and reborn as sons of God; we become members of Christ, are incorporated into the Church",
+      "context": "Catholic, Orthodox and Lutheran churches all teach that baptism gives new birth.",
+      "source": {
+        "url": "https://www.vatican.va/archive/ENG0015/__P3G.HTM",
+        "edition": "Catechism of the Catholic Church, 1213"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "augsburg-1530-9-b",
+      "author": "Augsburg Confession (Lutheran)",
+      "year": 1530,
+      "date": "1530",
+      "work": "Augsburg Confession",
+      "locus": "Article IX",
+      "lang": "en",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Of Baptism they teach that it is necessary to salvation, and that through Baptism is offered the grace of God",
+      "original": "Of Baptism they teach that it is necessary to salvation, and that through Baptism is offered the grace of God",
+      "context": "Luther kept baptismal regeneration.",
+      "source": {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "edition": "Augsburg Confession, Article IX (1530)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1646-28-1",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "28.1",
+      "lang": "en",
+      "answer": "sign",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "Baptism is a sacrament of the new testament, ordained by Jesus Christ, not only for the solemn admission of the party baptized into the visible church; but also, to be unto him a sign and seal of the covenant of grace, of his ingrafting into Christ, of regeneration, of remission of sins, and of his giving up unto God, through Jesus Christ, to walk in newness of life.",
+      "original": "Baptism is a sacrament of the new testament, ordained by Jesus Christ, not only for the solemn admission of the party baptized into the visible church; but also, to be unto him a sign and seal of the covenant of grace, of his ingrafting into Christ, of regeneration, of remission of sins, and of his giving up unto God, through Jesus Christ, to walk in newness of life.",
+      "context": "The Reformed middle view: a sign and seal through which grace is given, but not tied to the moment of baptism (28.5–6).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "bfm-2000-7-b",
+      "author": "Southern Baptist Convention",
+      "year": 2000,
+      "date": "2000",
+      "work": "Baptist Faith and Message",
+      "locus": "Article VII",
+      "lang": "en",
+      "answer": "symbol",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "It is an act of obedience symbolizing the believer's faith in a crucified, buried, and risen Saviour, the believer's death to sin, the burial of the old life, and the resurrection to walk in newness of life in Christ Jesus.",
+      "original": "It is an act of obedience symbolizing the believer's faith in a crucified, buried, and risen Saviour, the believer's death to sin, the burial of the old life, and the resurrection to walk in newness of life in Christ Jesus.",
+      "context": "Baptists and most free churches see baptism as the believer's public act of obedience.",
+      "source": {
+        "url": "https://bfm.sbc.net/bfm2000/",
+        "edition": "Baptist Faith and Message, Article VII (2000)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Huldrych Zwingli",
+      "work": "On Baptism",
+      "year": 1525,
+      "why": "The first Reformer to call baptism only a sign of commitment.",
+      "action": "intake",
+      "source_hint": "Corpus Reformatorum 91"
+    },
+    {
+      "author": "Theophilus of Antioch",
+      "work": "To Autolycus 2.16",
+      "year": 180,
+      "why": "Those reborn by water receive repentance and forgiveness. In the library.",
+      "action": "search",
+      "source_hint": "theophilus-autolycus"
+    }
+  ],
+  "related": {
+    "timeline": "baptism-effect",
+    "topics": [
+      "baptism-effect"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
