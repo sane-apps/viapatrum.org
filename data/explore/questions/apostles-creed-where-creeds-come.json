@@ -1,0 +1,207 @@
+{
+  "id": "apostles-creed-where-creeds-come",
+  "number": 60,
+  "group": "church",
+  "question": "What is the Apostles' Creed, and where did creeds come from?",
+  "short": "Where creeds came from",
+  "search": [
+    "apostles creed",
+    "nicene creed",
+    "rule of faith",
+    "symbolum",
+    "old roman creed",
+    "baptismal creed",
+    "regula fidei"
+  ],
+  "answers": [
+    {
+      "id": "rule",
+      "label": "From the apostles' \"rule of faith\" taught to converts",
+      "short": "Rule of faith",
+      "tag": "Rule"
+    },
+    {
+      "id": "baptism",
+      "label": "From the questions asked at baptism",
+      "short": "Baptismal questions",
+      "tag": "Baptism"
+    },
+    {
+      "id": "council",
+      "label": "Fixed in wording by councils",
+      "short": "Councils",
+      "tag": "Councils"
+    },
+    {
+      "id": "apostles",
+      "label": "Composed by the twelve apostles (a later legend)",
+      "short": "By the apostles",
+      "tag": "Legend"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Creeds grew from the \"rule of faith\" every church taught, a three-part summary of Father, Son and Spirit found in Irenaeus and Tertullian, and from the questions put at each immersion in baptism.",
+      "cites": [
+        "irenaeus-ah-1-10-1",
+        "tertullian-prescription-13",
+        "tertullian-crown-3-questions"
+      ]
+    },
+    {
+      "text": "Councils fixed the wording for disputed points, starting with Nicaea in 325.",
+      "cites": [
+        "nicene-creed-325"
+      ]
+    },
+    {
+      "text": "By about 400 the Roman creed was said to have been composed by the twelve apostles, each adding a phrase. Rufinus records the story; it is a legend.",
+      "cites": [
+        "rufinus-creed-2"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "irenaeus-ah-1-10-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "1.10.1",
+      "lang": "grc",
+      "answer": "rule",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Church, though scattered through the whole world to the ends of the earth, received from the apostles and their disciples the faith in one God the Father almighty, who made heaven and earth and the seas and all that is in them; and in one Christ Jesus, the Son of God, who became flesh for our salvation; and in the Holy Spirit, who through the prophets proclaimed the plan, the comings, the birth from a Virgin, the passion, the rising from the dead, and the bodily ascension into heaven of the beloved Christ Jesus our Lord.",
+      "original": "Ἡ μὲν γὰρ Ἐκκλησία, καίπερ καθ' ὅλης τῆς οἰκουμένης ἕως περάτων τῆς γῆς διεσπαρμένη, παρὰ δὲ τῶν Ἀποστόλων, καὶ τῶν ἐκείνων μαθητῶν παραλαβοῦσα τὴν εἰς ἕνα Θεὸν Πατέρα παντοκράτορα, τὸν πεποιηκότα τὸν οὐρανὸν, καὶ τὴν γῆν, καὶ τὰς θαλάσσας, καὶ πάντα τὰ ἐν αὐτοῖς, πίστιν· καὶ εἰς ἕνα Χριστὸν Ἰησοῦν, τὸν υἱὸν τοῦ Θεοῦ, τὸν σαρκωθέντα ὑπὲρ τῆς ἡμετέρας σωτηρίας· καὶ εἰς Πνεῦμα ἅγιον, τὸ διὰ τῶν προφητῶν κεκηρυχὸς τὰς οἰκονομίας, καὶ τὰς ἐλεύσεις, καὶ τὴν ἐκ Παρθένου γέννησιν, καὶ τὸ πάθος, καὶ τὴν ἔγερσιν ἐκ νεκρῶν, καὶ τὴν ἔνσαρκον εἰς τοὺς οὐρανοὺς ἀνάληψιν",
+      "context": "The three-part \"rule of faith\", the ancestor of every creed. The Greek survives in Epiphanius.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-libri-1-2.txt",
+        "edition": "Migne PG 7, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-13",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "13.1–5",
+      "lang": "la",
+      "answer": "rule",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The rule of faith ... is this: by which we believe that there is one only God, and no other besides the maker of the world, who produced all things out of nothing through his Word, sent forth first of all; that this Word, called his Son, was seen in various ways in the name of God by the patriarchs, was always heard in the prophets, and at last was brought down by the Spirit and power of God the Father into the Virgin Mary, was made flesh in her womb, and was born of her as Jesus Christ; that he then preached a new law and a new promise of the kingdom of heaven, worked miracles, was nailed to the cross, rose on the third day, was caught up into heaven, sat at the right hand of the Father, and sent in his place the power of the Holy Spirit to lead believers.",
+      "original": "Regula est autem fidei, ut iam hinc quid defendamus profiteamur, illa scilicet qua creditur unum omnino deum esse nec alium praeter mundi conditorem, qui universa de nihilo produxerit per verbum suum primo omnium demissum; id verbum filium eius appellatum, in nomine dei varie visum a patriarchis, in prophetis semper auditum, postremo delatum ex spiritu patris dei et virtute in virginem Mariam, carnem factum in utero eius et ex ea natum exisse Iesum Christum, exinde praedicasse novam legem et novam promissionem regni caelorum, virtutes fecisse, cruci fixum tertia die resurrexisse, in caelos ereptum sedisse ad dexteram patris, misisse vicariam vim spiritus sancti, qui credentes agat",
+      "context": "The same outline as the later Apostles' Creed, in Tertullian's own words.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "13"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-crown-3-questions",
+      "author": "Tertullian",
+      "year": 211,
+      "date": "c. 211",
+      "work": "On the Crown",
+      "locus": "3.3",
+      "lang": "la",
+      "answer": "baptism",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Then we are immersed three times, answering somewhat more than the Lord laid down in the Gospel.",
+      "original": "Dehinc ter mergitamur amplius aliquid respondentes quam dominus in evangelio determinavit",
+      "context": "The answers to questions on the faith, put at each immersion, were the seed of the baptismal creed.",
+      "source": {
+        "book": "tertullian-on-the-crown",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicene-creed-325",
+      "author": "Council of Nicaea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Creed of Nicaea (in Socrates, Church History 1.8)",
+      "locus": "Creed",
+      "lang": "grc",
+      "answer": "council",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "We believe in one God, the Father almighty, maker of all things seen and unseen. And in one Lord Jesus Christ, the Son of God, begotten of the Father, only-begotten, that is, from the substance of the Father, God from God, light from light, true God from true God, begotten not made, of one substance with the Father, through whom all things came to be, things in heaven and things on earth; who for us men and for our salvation came down and was made flesh and became man, suffered, and rose on the third day, ascended into the heavens, and is coming to judge the living and the dead. And in the Holy Spirit.",
+      "original": "Πιστεύομεν εἰς ἕνα Θεὸν Πατέρα παντοκράτορα, πάντων ὁρατῶν τε καὶ ἀοράτων ποιητήν. Καὶ εἰς ἕνα Κύριον Ἰησοῦν Χριστὸν τὸν Υἱὸν τοῦ Θεοῦ, γεννηθέντα ἐκ τοῦ Πατρὸς, μονογενῆ, τουτέστιν ἐκ τῆς οὐσίας τοῦ Πατρὸς, Θεὸν ἐκ Θεοῦ καὶ φῶς ἐκ φωτὸς, Θεὸν ἀληθινὸν ἐκ Θεοῦ ἀληθινοῦ: γεννηθέντα, οὐ ποιηθέντα: ὁμοούσιον τῷ Πατρί: δἰ οὗ τὰ πάντα ἐγένετο, τά τε ἐν τῷ οὐρανῷ καὶ τὰ ἐν τῇ γῇ: δἰ ἡμᾶς τοὺς ἀνθρώπους καὶ διὰ τὴν ἡμετέραν σωτηρίαν κατελθόντα, καὶ σαρκωθέντα, καὶ ἐνανθρωπήσαντα: παθόντα, καὶ ἀναστάντα τῇ τρίτῃ ἡμέρᾳ, ἀνελθόντα εἰς τοὺς οὐρανοὺς, ἐρχόμενον κρῖναι ζῶντας καὶ νεκρούς. Καὶ εἰς τὸ Ἅγιον Πνεῦμα.",
+      "context": "The first creed made by a council, built on a local baptismal creed. Its anathemas against Arius follow. Constantinople (381) expanded the article on the Spirit.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "rufinus-creed-2",
+      "author": "Rufinus of Aquileia",
+      "year": 404,
+      "date": "c. 404",
+      "work": "Commentary on the Apostles' Creed",
+      "locus": "2",
+      "lang": "la",
+      "answer": "apostles",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "Our ancestors hand down that after the Lord's ascension ... the apostles, about to part from one another, first set down together a standard for their future preaching. ... So, all gathered in one place and filled with the Holy Spirit, they composed this short sign of their future preaching, each contributing what he thought, and decreed that it be given as a rule to believers. They chose to call it a symbol for many good reasons. For symbolum in Greek can mean both a sign and a contribution, that is, what many bring together into one.",
+      "original": "Tradunt majores nostri, quod post Ascensionem Domini ... Discessuri itaque ab invicem, normam sibi prius futurae praedicationis in commune constituunt ... Omnes igitur in uno positi, et Spiritu Sancto repleti, breve istud futurae sibi, ut diximus, praedicationis indicium, in unum conferendo quod sentiebant unusquique, componunt, atque hanc credentibus dandam esse regulam statuunt. Symbolum autem hoc multis et justissimis ex caussis appellari voluerunt. Symbolum enim Graece et indicium dici potest et collatio, hoc est quod plures in unum conferunt.",
+      "context": "The legend of apostolic authorship, which Lorenzo Valla disproved in the fifteenth century. Rufinus himself notes that the churches' creeds differ in wording.",
+      "source": {
+        "book": "rufinus-commentary-on-the-apostles-creed",
+        "section": "2"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Marcellus of Ancyra",
+      "work": "Letter to Julius of Rome, in Epiphanius, Panarion 72.3",
+      "year": 340,
+      "why": "The Old Roman Creed in Greek, the earliest full text.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt"
+    },
+    {
+      "author": "Hippolytus (attributed)",
+      "work": "Apostolic Tradition 21",
+      "year": 215,
+      "why": "The three baptismal questions in their earliest form.",
+      "action": "intake",
+      "source_hint": "Hauler (1900)"
+    },
+    {
+      "author": "Council of Constantinople",
+      "work": "Creed of 381",
+      "year": 381,
+      "why": "The Nicene Creed as churches say it today.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 86)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "creeds"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "id": "there-women-deacons-women-clergy",
+  "number": 54,
+  "group": "church",
+  "question": "Were there women deacons or women clergy?",
+  "short": "Women in ministry",
+  "search": [
+    "deaconess",
+    "women deacons",
+    "phoebe",
+    "women priests",
+    "women's ordination",
+    "widows",
+    "presbytides",
+    "montanist women"
+  ],
+  "answers": [
+    {
+      "id": "deaconesses",
+      "label": "Yes: there were women deacons, serving women",
+      "short": "Deaconesses",
+      "tag": "Deaconesses"
+    },
+    {
+      "id": "no-priests",
+      "label": "Women were not made priests or bishops",
+      "short": "No women priests",
+      "tag": "No priests"
+    },
+    {
+      "id": "women-clergy",
+      "label": "Some groups had women presbyters and bishops",
+      "short": "Women clergy (sects)",
+      "tag": "Women clergy"
+    }
+  ],
+  "overview": [
+    {
+      "text": "There were women deacons from the start: Phoebe in Romans 16, Pliny's two \"ministrae\" (about 112), and an order of deaconesses in the fourth-century East.",
+      "cites": [
+        "pliny-letter-10-96-ministrae",
+        "chrysostom-romans-homily-30-phoebe",
+        "epiphanius-panarion-79-3"
+      ]
+    },
+    {
+      "text": "The great churches did not make women presbyters or bishops: Tertullian, Epiphanius and the Council of Laodicea say so. Some Montanist groups did.",
+      "cites": [
+        "tertullian-veiling-9",
+        "epiphanius-panarion-79-3-no-priestess",
+        "laodicea-canon-11",
+        "epiphanius-panarion-49-2"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "pliny-letter-10-96-ministrae",
+      "author": "Pliny the Younger (Roman governor)",
+      "year": 112,
+      "date": "c. 112",
+      "work": "Letter 10.96, to the emperor Trajan",
+      "locus": "10.96.8",
+      "lang": "la",
+      "answer": "deaconesses",
+      "strength": "indirect",
+      "voice": "reports",
+      "weight": "key",
+      "english": "So I thought it all the more necessary to find out the truth from two slave women, who were called ministers (ministrae), and by torture.",
+      "original": "Quo magis necessarium credidi ex duabus ancillis, quae ministrae dicebantur, quid esset veri, et per tormenta quaerere.",
+      "context": "\"Ministrae\" is probably Pliny's Latin for the Greek \"deacons\" (diakonoi).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-romans-homily-30-phoebe",
+      "author": "John Chrysostom",
+      "year": 392,
+      "date": "c. 392",
+      "work": "Homilies on Romans",
+      "locus": "30, on Romans 16:1",
+      "lang": "grc",
+      "answer": "deaconesses",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"I commend to you Phoebe our sister, who is a deacon of the church at Cenchreae.\" See how many ways he honors her: he mentions her before all the others and calls her sister. It is no small thing to be called Paul's sister. And he added her rank, calling her deacon.",
+      "original": "Συνίστημι δὲ ὑμῖν Φοίβην τὴν ἀδελφὴν, διάκονον οὖσαν τῆς Ἐκκλησίας τῆς ἐν Κεγχρεαῖς. Ὅρα διὰ πόσων αὐτὴν σεμνύνει· καὶ γὰρ πρὸ τῶν ἄλλων αὐτῆς ἐμνήσθη πάντων, καὶ ἀδελφὴν ἐκάλεσεν· οὐ μικρὸν δὲ Παύλου κληθῆναι ἀδελφήν. Καὶ τὸ ἀξίωμα προσέθηκε, διάκονον εἰπών·",
+      "context": "Chrysostom's friend Olympias was a deaconess of Constantinople.",
+      "source": {
+        "book": "chrysostom-homiliae-romanos",
+        "section": "31.3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "epiphanius-panarion-79-3",
+      "author": "Epiphanius of Salamis",
+      "year": 377,
+      "date": "c. 377",
+      "work": "Panarion",
+      "locus": "79.3.6",
+      "lang": "grc",
+      "answer": "deaconesses",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "That there is an order of deaconesses in the Church is clear, but not for priestly service or for undertaking anything of the kind, but for the sake of the modesty of women, at the time of baptism or of visiting the sick or suffering, when a woman's body is uncovered, so that she may be seen not by the men who perform the rite but by the deaconess.",
+      "original": "καὶ ὅτι μὲν διακονισσῶν τάγμα ἐστὶν εἰς τὴν ἐκκλησίαν δῆλον· ἀλλ' οὐχὶ εἰς τὸ ἱερατεύειν οὐδέ τι ἐπιχειρεῖν ἐπιτρέπεται, ἕνεκεν δὲ σεμνότητος τοῦ γυναικείου γένους ἢ δι' ὥραν λουτροῦ ἢ ἐπισκέψεως πάθους ἢ πόνου καὶ ὅτε γυμνωθείη σῶμα γυναίου, ἵνα μὴ ὑπὸ ἀνδρῶν ἱερουργούντων θεαθείη, ἀλλ' ὑπὸ τῆς διακον",
+      "context": "Written against the Collyridians, women who offered cakes to Mary.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 42, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-veiling-9",
+      "author": "Tertullian",
+      "year": 207,
+      "date": "c. 207",
+      "work": "On the Veiling of Virgins",
+      "locus": "9.1",
+      "lang": "la",
+      "answer": "no-priests",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "A woman is not permitted to speak in church, nor to teach, nor to baptize, nor to offer, nor to claim for herself the lot of any male office, still less the priestly.",
+      "original": "Non permittitur mulieri in ecclesia loqui, sed nec docere, nec tinguere, nec offerre, nec ullius virilis muneris, nedum sacerdotalis officii sortem sibi vindicare.",
+      "context": "Tertullian also mentions widows enrolled in the church's order (9.2).",
+      "source": {
+        "book": "tertullian-on-the-veiling-of-virgins",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "epiphanius-panarion-79-3-no-priestess",
+      "author": "Epiphanius of Salamis",
+      "year": 377,
+      "date": "c. 377",
+      "work": "Panarion",
+      "locus": "79.3.6",
+      "lang": "grc",
+      "answer": "no-priests",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... but not for priestly service or for undertaking anything of the kind.",
+      "original": "ἀλλ' οὐχὶ εἰς τὸ ἱερατεύειν οὐδέ τι ἐπιχειρεῖν ἐπιτρέπεται",
+      "context": "Epiphanius argues that no woman, not even Mary, was made a priest.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 42, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "laodicea-canon-11",
+      "author": "Council of Laodicea",
+      "year": 363,
+      "date": "c. 363",
+      "work": "Canons",
+      "locus": "Canon 11",
+      "lang": "grc",
+      "answer": "no-priests",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "That the women called presbytides, or presiding women, are not to be appointed in the church.",
+      "original": "Περὶ τοῦ μὴ δεῖν τὰς λεγομένας πρεσβύτιδας, ἤτοι προκαθημένας, ἐν τῇ ἐκκλησίᾳ καθίστασθαι.",
+      "context": "Who these \"presbytides\" were is debated: senior women, heads of the female order, or deaconesses. The canon ends the office, whatever it was.",
+      "source": {
+        "book": "council-of-laodicea-canons",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "epiphanius-panarion-49-2",
+      "author": "Epiphanius of Salamis",
+      "year": 377,
+      "date": "c. 377",
+      "work": "Panarion",
+      "locus": "49.2.5",
+      "lang": "grc",
+      "answer": "women-clergy",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "Among them women are bishops and women are presbyters and the rest. They say there is no difference, for \"in Christ Jesus there is neither male nor female\" (Galatians 3:28).",
+      "original": "ἐπίσκοποί τε παρ' αὐτοῖς γυναῖκες καὶ πρεσβύτεροι γυναῖκες καὶ τὰ ἄλλα· ὧν μηδὲν διαφέρειν φασίν «ἐν γὰρ Χριστῷ Ἰησοῦ οὔτε ἄρσεν οὔτε θῆλυ».",
+      "context": "The Quintillians, a branch of the Montanists in Phrygia, as Epiphanius reports them.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 41, Khazarzar text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Apostolic Constitutions",
+      "work": "8.19–20",
+      "year": 380,
+      "why": "An ordination prayer for a deaconess, with the laying on of hands.",
+      "action": "intake",
+      "source_hint": "Funk, Didascalia et Constitutiones Apostolorum (1905)"
+    },
+    {
+      "author": "Council of Nicaea and Chalcedon",
+      "work": "Nicaea canon 19; Chalcedon canon 15",
+      "year": 451,
+      "why": "Deaconesses counted among the laity (Nicaea, for one sect); ordained only after 40 (Chalcedon).",
+      "action": "intake",
+      "source_hint": "Bruns (1839)"
+    },
+    {
+      "author": "Origen of Alexandria",
+      "work": "Commentary on Romans 10.17, on Phoebe",
+      "year": 246,
+      "why": "\"Women too are appointed in the ministry of the Church.\" In Lommatzsch vol. 7, not yet fetched.",
+      "action": "intake",
+      "source_hint": "ia origenous-ta-heuriskomena-panta-t.-7"
+    }
+  ],
+  "related": {
+    "topics": [
+      "women-in-ministry"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

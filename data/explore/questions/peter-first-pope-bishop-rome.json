@@ -1,0 +1,358 @@
+{
+  "id": "peter-first-pope-bishop-rome",
+  "number": 51,
+  "group": "church",
+  "question": "Was Peter the first pope? Did the bishop of Rome rule the whole church?",
+  "short": "Peter and the papacy",
+  "search": [
+    "pope",
+    "papacy",
+    "papal primacy",
+    "peter the rock",
+    "matthew 16:18",
+    "chair of peter",
+    "bishop of rome",
+    "papal infallibility",
+    "primacy of honor"
+  ],
+  "answers": [
+    {
+      "id": "jurisdiction",
+      "label": "Yes: Rome holds Peter's primacy over the whole Church",
+      "short": "Primacy of rule",
+      "tag": "Jurisdiction"
+    },
+    {
+      "id": "honour",
+      "label": "Rome was first in honor among the churches, not their ruler",
+      "short": "First in honor",
+      "tag": "Honor"
+    },
+    {
+      "id": "none",
+      "label": "Rome has no special authority; Christ alone is head",
+      "short": "No primacy",
+      "tag": "None"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the start Rome had a special place: Ignatius greets it as \"presiding in love\", and Irenaeus says every church must agree with it because of its origin from Peter and Paul. The words are honorific and disputed.",
+      "cites": [
+        "ignatius-romans-preface",
+        "irenaeus-ah-3-3-2"
+      ]
+    },
+    {
+      "text": "In the third and fourth centuries \"the chair of Peter\" is named at Rome (Cyprian, Optatus), yet bishops in Africa and the East resisted Roman rulings and appeals.",
+      "cites": [
+        "cyprian-letter-59-14",
+        "optatus-against-parmenian-2-2",
+        "cyprian-unity-4",
+        "firmilian-in-cyprian-75-17",
+        "carthage-419-canon-34"
+      ]
+    },
+    {
+      "text": "The East ranked Constantinople second as \"New Rome\". The split shows today: Vatican I defined primacy and infallibility; the Orthodox grant a primacy of honor; Protestants grant none.",
+      "cites": [
+        "constantinople-381-canon-3",
+        "vatican-i-1870-pastor-aeternus-2",
+        "moscow-2013-primacy",
+        "westminster-1646-25-6"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-romans-preface",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Romans",
+      "locus": "Preface",
+      "lang": "grc",
+      "answer": "honour",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... the church which presides in the place of the region of the Romans, worthy of God, worthy of honor, worthy of blessing, worthy of praise, worthy of success, worthy of holiness, and presiding in love ...",
+      "original": "ἥτις καὶ προκάθηται ἐν τόπῳ χωρίου Ῥωμαίων, ἀξιόθεος, ἀξιοπρεπής, ἀξιομακάριστος, ἀξιέπαινος, ἀξιεπίτευκτος, ἀξίαγνος καὶ προκαθημένη τῆς ἀγάπης",
+      "context": "Ignatius gives Rome a greeting he gives no other church, but names no bishop of Rome. \"Presiding in love\" is read as a primacy by some and as a primacy of charity by others.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "4.praef"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-3-3-2",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.3.2",
+      "lang": "la",
+      "answer": "jurisdiction",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "... the greatest, most ancient church, known to all, founded and established at Rome by the two most glorious apostles Peter and Paul ... For with this church, because of its more powerful origin, every church must agree, that is, the faithful everywhere, since in it the tradition from the apostles has always been kept by those who are everywhere.",
+      "original": "maximae, et antiquissimae, et omnibus cognitae, a gloriosissimis duobus Apostolis Petro et Paulo Romae fundatae et constitutae ecclesiae ... Ad hanc enim ecclesiam propter potentiorem principalitatem necesse est omnem convenire Ecclesiam, hoc est, eos qui sunt undique fideles, in qua semper ab his, qui sunt undique, conservata est ea quae est ab Apostolis traditio.",
+      "context": "The Greek is lost, and every phrase is disputed: \"more powerful origin\" (potentiorem principalitatem), \"agree with\" or \"resort to\" (convenire), and whether the last clause makes Rome the keeper of tradition or its witness. Irenaeus then lists the bishops of Rome.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-unity-4",
+      "author": "Cyprian of Carthage",
+      "year": 251,
+      "date": "c. 251",
+      "work": "On the Unity of the Church",
+      "locus": "4",
+      "lang": "la",
+      "answer": "honour",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "He builds the Church on one man. And although after his resurrection he gives equal power to all the apostles ... yet to show unity he arranged by his authority that the origin of that unity should begin from one. The other apostles were certainly what Peter was, endowed with an equal share of honor and power, but the beginning starts from unity, so that the Church of Christ may be shown to be one.",
+      "original": "super unum aedificat ecclesiam, et quamuis apostolis omnibus post resurrectionem suam parem potestatem tribuat ... tamen ut unitatem manifestaret, unitatis eiusdem originem ab uno incipientem. sua auctoritate disposuit. hoc erant utique et ceteri apostoli quod fuit Petrus, pari consortio praediti et honoris et potestatis, sed exordium ab unitate proficiscitur, ut ecclesia Christi una monstretur.",
+      "context": "This is the \"received text\". A second version of the chapter, also from Cyprian's hand, adds \"primacy is given to Peter\" and speaks of \"the chair of Peter\".",
+      "source": {
+        "book": "cyprian-on-the-unity-of-the-church",
+        "section": "4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-59-14",
+      "author": "Cyprian of Carthage",
+      "year": 252,
+      "date": "c. 252",
+      "work": "Letter 59, to Cornelius",
+      "locus": "59.14",
+      "lang": "la",
+      "answer": "jurisdiction",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "... they dare to sail to the chair of Peter and to the principal church, from which priestly unity arose, carrying letters from schismatics and profane men, not thinking that these are the Romans whose faith was praised by the apostle's preaching, to whom faithlessness can have no access.",
+      "original": "nauigare audent et ad Petri cathedram adque ad ecclesiam principalem unde unitas sacerdotalis exorta est ab schismaticis et profanis litteras ferre nec cogitare eos esse Romanos quorum fides apostolo praedicante laudata est, ad quos perfidia habere non possit accessum.",
+      "context": "Yet the same letter insists that each bishop answers to the Lord for his own flock, and Cyprian later opposed Stephen of Rome.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "59.14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "firmilian-in-cyprian-75-17",
+      "author": "Firmilian of Caesarea",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter 75, to Cyprian",
+      "locus": "75.17",
+      "lang": "la",
+      "answer": "honour",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I am rightly angry at this open and plain folly of Stephen: he who boasts so of the place of his episcopate and claims to hold the succession of Peter, on whom the foundations of the Church were laid, brings in many other rocks and sets up new buildings of many churches.",
+      "original": "ego in hac parte iuste indignor ad hanc tam apertam et manifestam Stephani stultitiam, quod qui sic de episcopatus sui loco gloriatur et se successionem Petri tenere contendit, super quem fundamenta ecclesiae collocata sunt, multas alias petrae inducat et ecclesiarum multarum noua aedificia constituat",
+      "context": "An Eastern bishop, in Cyprian's Latin, mocks Rome's claim during the rebaptism dispute. It shows the claim was being made by 256.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "75.17"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "optatus-against-parmenian-2-2",
+      "author": "Optatus of Milevis",
+      "year": 367,
+      "date": "c. 367",
+      "work": "Against Parmenian the Donatist",
+      "locus": "2.2",
+      "lang": "la",
+      "answer": "jurisdiction",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You cannot deny that you know that in the city of Rome the episcopal chair was first given to Peter, in which sat Peter, the head of all the apostles, which is why he was called Cephas; that in this one chair unity might be kept by all, so that the other apostles would not each defend their own, and that whoever set up another chair against the single chair would already be a schismatic and a sinner.",
+      "original": "igitur negare non potes scire te in urbe Roma Petro primo cathedram episcopalem esse conlatam, in qua sederit omnium apostolorum caput Petrus, unde et Cephas est appellatus, in qua una cathedra unitas ab omnibus seruaretur, ne ceteri apostoli singulas sibi quisque defenderent, ut iam scismaticus et peccator esset, qui contra singularem cathedram alteram conlocaret.",
+      "context": "Optatus goes on to list the bishops of Rome down to Siricius.",
+      "source": {
+        "book": "optatus-against-parmenian",
+        "section": "2.2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "constantinople-381-canon-3",
+      "author": "Council of Constantinople (as Socrates reports)",
+      "year": 381,
+      "date": "c. 381",
+      "work": "Socrates, Church History",
+      "locus": "5.8",
+      "lang": "grc",
+      "answer": "honour",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Then they also issued a decree that the bishop of Constantinople should have the privileges of honor after the bishop of Rome, because it is New Rome.",
+      "original": "Τότε δὴ καὶ ὅρον ἐκφέρουσιν, ὥστε τὸν Κωνσταντινουπόλεως ἐπίσκοπον τὰ πρεσβεῖα ἔχειν τῆς τιμῆς μετὰ τὸν Ῥώμης ἐπίσκοπον, διὰ τὸ εἶναι αὐτὴν νέαν Ῥώμην.",
+      "context": "Canon 3 ties rank to the imperial capital. Rome did not accept it for centuries, nor Chalcedon's canon 28, which went further.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "5.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "carthage-419-canon-34",
+      "author": "Council of Carthage",
+      "year": 419,
+      "date": "c. 419",
+      "work": "Canons of the African Church",
+      "locus": "Canon 28 (Codex 34)",
+      "lang": "la",
+      "answer": "honour",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If they think they must appeal, let them not appeal to courts across the sea, but to the primates of their own provinces or to a general council ... Whoever thinks he must appeal across the sea, let no one in Africa receive him into communion.",
+      "original": "Quod si et ab eis provocandum putaverint, non provocent ad transmarina judicia, sed ad primates suarum provinciarum, aut ad universale concilium, sicut et de episcopis saepe constitutum est. Ad transmarina autem qui putaverit appellandum, a nullo intra eamdem provinciam ad communionem suscipiatur.",
+      "context": "\"Across the sea\" means Rome. The African bishops, Augustine among them, resisted Roman appeals in the case of Apiarius.",
+      "source": {
+        "book": "council-of-carthage-419-canons",
+        "section": "34"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "vatican-i-1870-pastor-aeternus-2",
+      "author": "First Vatican Council",
+      "year": 1870,
+      "date": "1870",
+      "work": "Pastor Aeternus",
+      "locus": "Chapter 2",
+      "lang": "en",
+      "answer": "jurisdiction",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Therefore whoever succeeds to the chair of Peter obtains by the institution of Christ himself, the primacy of Peter over the whole church.",
+      "original": "Therefore whoever succeeds to the chair of Peter obtains by the institution of Christ himself, the primacy of Peter over the whole church.",
+      "context": "The Catholic definition. Chapter 4 adds that the pope is infallible when he defines ex cathedra.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/ecum20.htm",
+        "edition": "First Vatican Council, Pastor Aeternus, ch. 2 (1870)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "vatican-i-1870-pastor-aeternus-4",
+      "author": "First Vatican Council",
+      "year": 1870,
+      "date": "1870",
+      "work": "Pastor Aeternus",
+      "locus": "Chapter 4",
+      "lang": "en",
+      "answer": "jurisdiction",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "when the Roman pontiff speaks EX CATHEDRA, that is, when, in the exercise of his office as shepherd and teacher of all Christians, in virtue of his supreme apostolic authority, he defines a doctrine concerning faith or morals to be held by the whole church, he possesses ... that infallibility which the divine Redeemer willed his church to enjoy",
+      "original": "when the Roman pontiff speaks EX CATHEDRA, that is, when, in the exercise of his office as shepherd and teacher of all Christians, in virtue of his supreme apostolic authority, he defines a doctrine concerning faith or morals to be held by the whole church, he possesses ... that infallibility which the divine Redeemer willed his church to enjoy",
+      "context": "Infallibility, defined in 1870, was the step that the Old Catholics refused.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/ecum20.htm",
+        "edition": "First Vatican Council, Pastor Aeternus, ch. 4 (1870)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "moscow-2013-primacy",
+      "author": "Russian Orthodox Church (Moscow Patriarchate)",
+      "year": 2013,
+      "date": "2013",
+      "work": "Position on the problem of primacy in the Universal Church",
+      "locus": "§1",
+      "lang": "en",
+      "answer": "honour",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "In the first millennium of church history, the primacy of honour used to belong to the chair of Rome.",
+      "original": "In the first millennium of church history, the primacy of honour used to belong to the chair of Rome.",
+      "context": "The Orthodox view: Rome was first in honor in the first millennium, among equal patriarchs.",
+      "source": {
+        "url": "https://ecumenism.net/?p=7189",
+        "edition": "Moscow Patriarchate, Position on the problem of primacy in the Universal Church (2013)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1646-25-6",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "25.6",
+      "lang": "en",
+      "answer": "none",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "There is no other head of the church but the Lord Jesus Christ. Nor can the pope of Rome, in any sense, be head thereof.",
+      "original": "There is no other head of the church but the Lord Jesus Christ. Nor can the pope of Rome, in any sense, be head thereof.",
+      "context": "The 1646 text goes on to call the pope \"that Antichrist\". American Presbyterians removed the phrase in 1788.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Leo I",
+      "work": "Sermons 3–4 on his anniversary; Letter 14",
+      "year": 445,
+      "why": "The classic Roman statement of Peter's continuing primacy in his successor.",
+      "action": "intake",
+      "source_hint": "Migne PL 54"
+    },
+    {
+      "author": "Council of Chalcedon",
+      "work": "Canon 28 and Leo's reply (Letter 105)",
+      "year": 451,
+      "why": "Equal privileges for New Rome, which Leo rejected.",
+      "action": "intake",
+      "source_hint": "Schwartz, ACO (copyright) as note; Bruns (1839)"
+    },
+    {
+      "author": "Gregory I",
+      "work": "Letters 5.37 and 5.44",
+      "year": 595,
+      "why": "Gregory rejects the title \"universal bishop\" for anyone, himself included.",
+      "action": "intake",
+      "source_hint": "Ewald and Hartmann, MGH Epistolae 1 (1891)"
+    }
+  ],
+  "related": {
+    "timeline": "rome-authority",
+    "topics": [
+      "roman-primacy"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

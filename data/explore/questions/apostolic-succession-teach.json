@@ -1,0 +1,231 @@
+{
+  "id": "apostolic-succession-teach",
+  "number": 53,
+  "group": "church",
+  "question": "What is apostolic succession, and did the early church teach it?",
+  "short": "Apostolic succession",
+  "search": [
+    "apostolic succession",
+    "bishops lists",
+    "succession of bishops",
+    "laying on of hands",
+    "ordination",
+    "linus",
+    "clement of rome"
+  ],
+  "answers": [
+    {
+      "id": "succession",
+      "label": "Yes: bishops succeed the apostles in an unbroken line",
+      "short": "Unbroken line",
+      "tag": "Succession"
+    },
+    {
+      "id": "teaching",
+      "label": "The succession that matters is the apostles' teaching",
+      "short": "Succession of teaching",
+      "tag": "Teaching"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Clement of Rome, about 96, says the apostles appointed leaders and arranged for tested men to succeed them.",
+      "cites": [
+        "1-clement-44-succession"
+      ]
+    },
+    {
+      "text": "In the second century, Hegesippus, Irenaeus and Tertullian used lists of bishops from the apostles to prove that the churches still held the apostles' teaching, against the Gnostics' secret traditions.",
+      "cites": [
+        "hegesippus-in-eusebius-4-22",
+        "irenaeus-ah-3-3-3",
+        "tertullian-prescription-32"
+      ]
+    },
+    {
+      "text": "Orthodox and Catholic teaching require succession by ordination. The Reformed stress succession in doctrine.",
+      "cites": [
+        "dositheus-1672-decree-10",
+        "ccc-77",
+        "belgic-1561-31-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "1-clement-44-succession",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "44.1–3",
+      "lang": "grc",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Our apostles also knew through our Lord Jesus Christ that there would be strife over the office of bishop. For this reason, having received perfect foreknowledge, they appointed those already mentioned, and afterwards gave a further rule, that when these fell asleep, other tested men should succeed to their ministry. Those, then, appointed by them, or later by other reputable men with the consent of the whole church, who have ministered blamelessly to the flock of Christ ... we think it unjust to remove from their ministry.",
+      "original": "Καὶ οἱ ἀπόστολοι ἡμῶν ἔγνωσαν διὰ τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ, ὅτι ἔρις ἔσται ἐπὶ τοῦ ὀνόματος τῆς ἐπισκοπῆς. διὰ ταύτην οὖν τὴν αἰτίαν πρόγνωσιν εἰληφότες τελείαν κατέστησαν τοὺς προειρημένους, καὶ μπταξὺ ἐπινομὴν δεδωκασιν, ὅπως, ἐὰν κοιμηθῶσιν, διαδέξωνται ἕτεροι δεδοκιμασμὲνοι ἅνδρες τὴν λειτουργίαν αὐτῶν. τοὺς οὖν κατασταθέντας ὑπ’ ἐκείνων ἢ μεταξὺ ὑφ̓ ἑτέρων ἐλλογίμων ἀνδρῶν συνενδοκησάσης τῆς ἐκκλησίας πάσης, καὶ λειτουργήσαντας ἀμέμπτως τῷ ποιμνίῳ τοῦ Χριστοῦ ... τούτους οὐ δικαίως νομίζομεν ἀποβάλλεσθαι",
+      "context": "The first statement of succession: the apostles appointed leaders and arranged for others to succeed them. Rome writes to restore deposed presbyters at Corinth.",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "44"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "hegesippus-in-eusebius-4-22",
+      "author": "Hegesippus (quoted by Eusebius)",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Memoirs, quoted in Eusebius, Church History",
+      "locus": "4.22.3",
+      "lang": "grc",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "When I came to Rome I made a succession list down to Anicetus, whose deacon was Eleutherus. Soter succeeded Anicetus, and after him Eleutherus. And in each succession and in each city things are as the law preaches, and the prophets, and the Lord.",
+      "original": "γενόμενος δὲ ἐν ῾Ρώμῃ “διαδοχὴν ἐποιησάμην μέχρις Ἀνικήτου, οὗ διάκονος “ἦν Ἐλεύθερος. καὶ παρὰ Ἀνικήτου διαδέχεται Σωτὴρ, μεθ’ ὃν Ελεύθερος. ἐν ἑκάστῃ δὲ διαδοχῇ καὶ ἐν ἑκάστῃ πόλει οὕτως ἔχει ὡς ὁ νόμος κηρύσσει καὶ οἱ προφῆται καὶ ὁ κύριος.",
+      "context": "Succession here proves that the same teaching was kept in every city.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "4.22"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-3-3-3",
+      "author": "Irenaeus of Lyons (quoted by Eusebius)",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies, quoted in Eusebius, Church History",
+      "locus": "3.3.3",
+      "lang": "grc",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The blessed apostles, having founded and built up the church, handed over the ministry of the episcopate to Linus. Paul mentions this Linus in his letters to Timothy. Anencletus succeeded him, and after him, in the third place from the apostles, Clement received the episcopate, who had seen the blessed apostles and spoken with them, and still had their preaching ringing in his ears and their tradition before his eyes.",
+      "original": "Θεμελιώσαντες οὖν καὶ οἰκοδομήσαντες οἶ μακάριοι ἀπόστολοι τὴν ἐκκλησίαν Λίνῳ τὴν τῆς ἐπισκοπῆς λειτουργίαν ἐνεχείρισαν. τούτου τοῦ Λίνου Παῦλος ἐν ταῖς πρὸς Τιμόθεον ἐπιστολαῖς μέμνηται, διαδέχεται δὲ αὐτὸν Ανέγκλητος. μετὰ τοῦτον δὲ τρίτῳ τόπῳ ἀπὸ “τῶν ἀποστόλων τὴν ἐπισκοπὴν κληροῦται Κλήμης, ὁ “καὶ ἑωρακὼς τοὺς μακαρίους ἀποστόλους, καὶ συμ- “βεβληκὼς αὐτοῖς, καὶ ἔτι ἔναυλον τὸ κήρυγμα τῶν “ἀποστόλων καὶ τὴν παράδοσιν πρὸ ὀφθαλμῶν ἔχων",
+      "context": "Irenaeus lists twelve bishops of Rome to Eleutherus, against Gnostics who claimed a secret tradition.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-32",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "32.1–2",
+      "lang": "la",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let them produce the origins of their churches; let them unroll the list of their bishops, running down in succession from the beginning, so that their first bishop had as his author and predecessor one of the apostles or of apostolic men who stayed with the apostles. For this is how the apostolic churches show their records: as the church of the Smyrnaeans reports Polycarp placed there by John, as the church of the Romans reports Clement ordained by Peter.",
+      "original": "Edant ergo origines ecclesiarum suarum, evolvant ordinem episcoporum suorum, ita per successionem ab initio decurrentem, ut primus ille episcopus aliquem ex apostolis vel apostolicis viris, qui tamen cum apostolis perseveravit, habuerit auctorem et antecessorem. Hoc enim modo ecclesiae apostolicae census suos deferunt, sicut Smyrnaeorum ecclesia Polycarpum ab Ioanne collocatum refert, sicut Romanorum Clementem a Petro ordinatum itidem.",
+      "context": "Tertullian adds that churches founded later are apostolic if they share the same faith (32.6).",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "dositheus-1672-decree-10",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 10",
+      "lang": "en",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "he, as a successor of the Apostles, having received in continued succession by the imposition of hands and the invocation of the All-holy Spirit the grace that is given him of the Lord of binding and loosing",
+      "original": "he, as a successor of the Apostles, having received in continued succession by the imposition of hands and the invocation of the All-holy Spirit the grace that is given him of the Lord of binding and loosing",
+      "context": "Orthodox, Catholic, and Oriental churches require succession by ordination.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 10 (1672)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "ccc-77",
+      "author": "Catechism of the Catholic Church",
+      "year": 1992,
+      "date": "1992",
+      "work": "Catechism of the Catholic Church",
+      "locus": "77",
+      "lang": "en",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "In order that the full and living Gospel might always be preserved in the Church the apostles left bishops as their successors.",
+      "original": "In order that the full and living Gospel might always be preserved in the Church the apostles left bishops as their successors.",
+      "context": "Catholic teaching joins succession of office to the handing on of the Gospel.",
+      "source": {
+        "url": "https://www.vatican.va/archive/ENG0015/__PK.HTM",
+        "edition": "Catechism of the Catholic Church, 77"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "belgic-1561-31-b",
+      "author": "Belgic Confession (Reformed)",
+      "year": 1561,
+      "date": "1561",
+      "work": "Belgic Confession",
+      "locus": "Article 31",
+      "lang": "en",
+      "answer": "teaching",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "As for the ministers of the Word, they all have the same power and authority, no matter where they may be",
+      "original": "As for the ministers of the Word, they all have the same power and authority, no matter where they may be",
+      "context": "Reformed churches hold that the true succession is faithfulness to the apostles' teaching, with ministers called by the church.",
+      "source": {
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/belgic-confession",
+        "edition": "Belgic Confession, Article 31 (1561)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Cyprian of Carthage",
+      "work": "Letter 66 and 69",
+      "year": 254,
+      "why": "The bishop in the Church and the Church in the bishop.",
+      "action": "search",
+      "source_hint": "cyprian-letters 66"
+    },
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 4.26.2",
+      "year": 180,
+      "why": "Presbyters with \"the sure gift of truth\" through succession.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-4.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "apostolic-succession"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

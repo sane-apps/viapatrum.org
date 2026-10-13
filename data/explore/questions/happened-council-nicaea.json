@@ -1,0 +1,147 @@
+{
+  "id": "happened-council-nicaea",
+  "number": 61,
+  "group": "church",
+  "question": "What happened at the Council of Nicaea?",
+  "short": "The Council of Nicaea",
+  "search": [
+    "council of nicaea",
+    "nicene council",
+    "325",
+    "arius",
+    "homoousios",
+    "constantine",
+    "easter date",
+    "nicene creed"
+  ],
+  "answers": [
+    {
+      "id": "creed",
+      "label": "It condemned Arius and confessed the Son \"of one substance\" with the Father",
+      "short": "The creed",
+      "tag": "Creed"
+    },
+    {
+      "id": "easter",
+      "label": "It agreed that all churches keep Easter on the same Sunday",
+      "short": "Easter",
+      "tag": "Easter"
+    }
+  ],
+  "overview": [
+    {
+      "text": "About 300 bishops met at Nicaea in 325, called by Constantine. They issued a creed confessing the Son \"from the substance of the Father ... of one substance with the Father\", and condemned Arius's sayings by name.",
+      "cites": [
+        "nicene-creed-325-b",
+        "nicene-creed-325-anathemas"
+      ]
+    },
+    {
+      "text": "They also ended the Easter dispute, so that the East would keep Easter with Rome and Alexandria, and passed twenty canons on church order. They did not decide which books are in the Bible, a common myth.",
+      "cites": [
+        "nicaea-synodal-letter-easter"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "nicene-creed-325-b",
+      "author": "Council of Nicaea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Creed of Nicaea (in Socrates, Church History 1.8)",
+      "locus": "Creed",
+      "lang": "grc",
+      "answer": "creed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "We believe in one God, the Father almighty, maker of all things seen and unseen. And in one Lord Jesus Christ, the Son of God, begotten of the Father, only-begotten, that is, from the substance of the Father, God from God, light from light, true God from true God, begotten not made, of one substance with the Father, through whom all things came to be, things in heaven and things on earth; who for us men and for our salvation came down and was made flesh and became man, suffered, and rose on the third day, ascended into the heavens, and is coming to judge the living and the dead. And in the Holy Spirit.",
+      "original": "Πιστεύομεν εἰς ἕνα Θεὸν Πατέρα παντοκράτορα, πάντων ὁρατῶν τε καὶ ἀοράτων ποιητήν. Καὶ εἰς ἕνα Κύριον Ἰησοῦν Χριστὸν τὸν Υἱὸν τοῦ Θεοῦ, γεννηθέντα ἐκ τοῦ Πατρὸς, μονογενῆ, τουτέστιν ἐκ τῆς οὐσίας τοῦ Πατρὸς, Θεὸν ἐκ Θεοῦ καὶ φῶς ἐκ φωτὸς, Θεὸν ἀληθινὸν ἐκ Θεοῦ ἀληθινοῦ: γεννηθέντα, οὐ ποιηθέντα: ὁμοούσιον τῷ Πατρί: δἰ οὗ τὰ πάντα ἐγένετο, τά τε ἐν τῷ οὐρανῷ καὶ τὰ ἐν τῇ γῇ: δἰ ἡμᾶς τοὺς ἀνθρώπους καὶ διὰ τὴν ἡμετέραν σωτηρίαν κατελθόντα, καὶ σαρκωθέντα, καὶ ἐνανθρωπήσαντα: παθόντα, καὶ ἀναστάντα τῇ τρίτῃ ἡμέρᾳ, ἀνελθόντα εἰς τοὺς οὐρανοὺς, ἐρχόμενον κρῖναι ζῶντας καὶ νεκρούς. Καὶ εἰς τὸ Ἅγιον Πνεῦμα.",
+      "context": "The creed adds anathemas on those who say of the Son \"there was when he was not\" or that he is from another substance, created, or changeable.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicene-creed-325-anathemas",
+      "author": "Council of Nicaea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Creed of Nicaea (in Socrates, Church History 1.8)",
+      "locus": "Anathemas",
+      "lang": "grc",
+      "answer": "creed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "But those who say \"there was when he was not\", and \"before he was begotten he was not\", and that he came to be from nothing, or who say that the Son of God is from another hypostasis or substance, or created, or changeable, or alterable: these the holy catholic and apostolic Church anathematizes.",
+      "original": "Τοὺς δὲ λέγοντας ὅτι ἦν ποτὲ ὅτε οὐκ ἦν, καὶ πρὶν γεννηθῆναι οὐκ ἦν, καὶ ὅτι ἐξ οὐκ ὄντων ἐγένετο, ἢ ἐξ ἑτέρας ὑποστάσεως ἢ οὐσίας φάσκοντας εἶναι, ἢ κτιστὸν, ἢ τρεπτὸν, ἢ ἀλλοιωτὸν τὸν Υἱὸν τοῦ Θεοῦ, ἀναθεματίζει ἡ ἁγία καθολικὴ καὶ ἀποστολικὴ ἐκκλησία.",
+      "context": "These are Arius's own slogans. Arius and two bishops who refused to sign were exiled.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicaea-synodal-letter-easter",
+      "author": "Council of Nicaea (synodal letter, in Socrates)",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Letter to the Church of Alexandria, in Socrates, Church History",
+      "locus": "1.9",
+      "lang": "grc",
+      "answer": "easter",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "We also bring you the good news about agreement on the most holy Pascha, that this point too was settled by your prayers: all the brothers in the East who used to keep it with the Jews will from now on keep it in agreement with the Romans, with us, and with all who have kept the Pascha with us from of old.",
+      "original": "Εὐαγγελιζόμεθα δὲ ὑμῖν, περὶ τῆς συμφωνίας τοῦ ἁγιωτάτου Πάσχα, ὅτι ὑμετέραις εὐχαῖς κατωρθώθη καὶ τοῦτο τὸ μέρος: ὥς τε πάντας τοὺς ἐν τῇ ἑῴᾳ ἀδελφοὺς, τοὺς μετὰ τῶν Ἰουδαίων τὸ πρότερον ποιοῦντας, συμφώνως Ῥωμαίοις καὶ ἡμῖν, καὶ πᾶσιν ὑμῖν τοῖς ἐξ ἀρχαίου μεθ̓ ἡμῶν φυλάττουσι τὸ Πάσχα, ἐκ τοῦ δεῦρο ἄγειν.",
+      "context": "Nicaea set no calendar rule in its canons; it agreed that all would keep Easter on a Sunday, independently of the Jewish reckoning.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.9"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Eusebius of Caesarea",
+      "work": "Letter to his church, in Socrates 1.8",
+      "year": 325,
+      "why": "An eyewitness account of how the creed was drafted. In the library; to be added.",
+      "action": "search",
+      "source_hint": "socrates-ecclesiastical-history 1.8"
+    },
+    {
+      "author": "Council of Nicaea",
+      "work": "Twenty canons",
+      "year": 325,
+      "why": "The canons themselves, in Greek.",
+      "action": "intake",
+      "source_hint": "Bruns (1839); Joannou (copyright) as note"
+    },
+    {
+      "author": "Eusebius of Caesarea",
+      "work": "Life of Constantine 3.6–21",
+      "year": 339,
+      "why": "Constantine at the council. In the library; to be added.",
+      "action": "search",
+      "source_hint": "eusebius-life-constantine 3"
+    }
+  ],
+  "related": {
+    "topics": [
+      "nicaea"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

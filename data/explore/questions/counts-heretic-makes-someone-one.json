@@ -1,0 +1,146 @@
+{
+  "id": "counts-heretic-makes-someone-one",
+  "number": 57,
+  "group": "church",
+  "question": "Who counts as a heretic, and what makes someone one?",
+  "short": "What is a heretic?",
+  "search": [
+    "heresy",
+    "heretic",
+    "orthodoxy",
+    "hairesis",
+    "schism",
+    "obstinacy",
+    "rule of faith"
+  ],
+  "answers": [
+    {
+      "id": "choice",
+      "label": "One who chooses his own teaching against the faith received from the apostles",
+      "short": "Chosen teaching",
+      "tag": "Choice"
+    },
+    {
+      "id": "obstinacy",
+      "label": "Error becomes heresy when held obstinately after correction",
+      "short": "Obstinate error",
+      "tag": "Obstinacy"
+    }
+  ],
+  "overview": [
+    {
+      "text": "\"Heresy\" means choice. Ignatius calls it a foreign plant mixed with Christ like poison in honeyed wine; Tertullian defines the heretic as one who chooses his own teaching instead of what the apostles handed on.",
+      "cites": [
+        "ignatius-trallians-6",
+        "tertullian-prescription-6"
+      ]
+    },
+    {
+      "text": "Augustine added that a mistaken person is not yet a heretic: he becomes one when, warned, he defends his error obstinately.",
+      "cites": [
+        "augustine-proceedings-pelagius-18"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-trallians-6",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Trallians",
+      "locus": "6.1–2",
+      "lang": "grc",
+      "answer": "choice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I urge you, then, not I but the love of Jesus Christ: use only Christian food, and keep away from a foreign plant, which is heresy. These people mix Jesus Christ with themselves to gain trust, like those who give a deadly drug with honeyed wine, which the unknowing take gladly, with evil pleasure, to their death.",
+      "original": "Παρακαλῶ οὖν ὑμᾶς, οὐκ ἐγώ, ἀλλ’ ἡ ἀγάπη Ἰησοῦ Χριστοῦ: μόνῃ τῇ χριστιανῇ τροφῇ χρῆσθε, ἀλλοτρίας δὲ βοτάνης ἀπέχεσθε, ἥτις ἐστὶν αἵρεσις: οἳ ἑαυτοῖς παρεμπλέκουσιν Ἰησοῦν Χριστὸν καταξιοπιστευόμενοι, ὥσπερ θανάσιμον φάρμακον διδόντες μετὰ οἰνομέλιτος, ὅπερ ὁ ἀγνοῶν ἡδέως λαμβάνει ἐν ἡδονῇ κακῇ τὸ ἀ",
+      "context": "The heresy Ignatius has in mind is the denial of Christ's real flesh.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "3.6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-6",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "6.2–4",
+      "lang": "la",
+      "answer": "choice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Heresies are so called from the Greek word for choice, which a person uses either to found them or to take them up. That is why the apostle called the heretic self-condemned, for he has chosen for himself that in which he is condemned. But we may not indulge in anything of our own will, nor choose what someone else has brought in of his own will. We have the apostles of the Lord as our authorities, who did not themselves choose to bring in anything of their own will, but faithfully delivered to the nations the teaching received from Christ.",
+      "original": "haereses dictae Graeca voce, ex interpretatione electionis qua quis sive ad instituendas sive ad suscipiendas eas utitur. Ideo et sibi damnatum dixit haereticum, quia et in quo damnatur sibi elegit. Nobis vere nihil ex nostro arbitrio indulgere licet, sed nec eligere quod aliquis de arbitrio suo induxerit. Apostolos domini habemus auctores, qui nec ipsi quicquam ex suo arbitrio quod inducerent elegerunt, sed acceptam a Christo disciplinam fideliter nationibus assignaverunt.",
+      "context": "\"Hairesis\" means choice. The heretic chooses his own teaching instead of receiving the apostles'.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-proceedings-pelagius-18",
+      "author": "Augustine of Hippo",
+      "year": 417,
+      "date": "c. 417",
+      "work": "On the Proceedings of Pelagius",
+      "locus": "6.18",
+      "lang": "la",
+      "answer": "obstinacy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It makes a difference how much, and from what source, and finally whether, when warned, a person corrects himself or, by defending it obstinately, turns into dogma what he had said lightly and not as dogma. So since every heretic is also a fool, but not every fool is at once to be called a heretic ...",
+      "original": "sed interest quanto, interest unde, interest postremo utrum admonitus corrigat an pertinaciter defendendo etiam dogma faciat, quod leuitate, non dogmate dixerat. cum igitur omnis haereticus consequenter et stultus sit, non autem omnis stultus continuo sit appellandus haereticus",
+      "context": "Error becomes heresy when it is held obstinately after correction. Augustine says the same in City of God 18.51.",
+      "source": {
+        "book": "augustine-proceedings-of-pelagius",
+        "section": "18"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Vincent of Lérins",
+      "work": "Commonitorium 2.6",
+      "year": 434,
+      "why": "\"What has been believed everywhere, always, and by all\": the classic test.",
+      "action": "intake",
+      "source_hint": "Moxon (1915); Migne PL 50"
+    },
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies, Book 1 preface and 3.2–4",
+      "year": 180,
+      "why": "Heresy as secret tradition against the public succession.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-libri-1-2.txt"
+    },
+    {
+      "author": "Thomas Aquinas",
+      "work": "Summa Theologiae II-II q. 11",
+      "year": 1270,
+      "why": "The medieval definition of heresy.",
+      "action": "intake",
+      "source_hint": "Leonine edition (1895)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "heresy"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

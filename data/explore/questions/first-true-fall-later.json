@@ -1,0 +1,152 @@
+{
+  "id": "first-true-fall-later",
+  "number": 63,
+  "group": "church",
+  "question": "Was the first church the true church, and did it \"fall\" later?",
+  "short": "Did the church fall?",
+  "search": [
+    "great apostasy",
+    "restorationism",
+    "constantinian shift",
+    "fall of the church",
+    "church corrupted",
+    "reformation",
+    "primitive church"
+  ],
+  "answers": [
+    {
+      "id": "continuous",
+      "label": "No: the Church kept the apostles' faith without break",
+      "short": "Never fell",
+      "tag": "Continuous"
+    },
+    {
+      "id": "reformed",
+      "label": "It remained but grew corrupt and needed reform",
+      "short": "Needed reform",
+      "tag": "Reform"
+    },
+    {
+      "id": "fell",
+      "label": "It fell away and had to be restored",
+      "short": "Fell, restored",
+      "tag": "Fell"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The early writers expected heresy outside the Church, not the Church's own fall. Hegesippus says false teachers rose once the apostles died; Tertullian argued that so many churches could not all have strayed into the same faith.",
+      "cites": [
+        "hegesippus-in-eusebius-3-32",
+        "tertullian-prescription-28"
+      ]
+    },
+    {
+      "text": "The Reformers said the Church had always existed but had grown corrupt. Later restorationist movements said it fell away entirely and had to be restored.",
+      "cites": [
+        "westminster-1646-25-5"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "hegesippus-in-eusebius-3-32",
+      "author": "Hegesippus (as Eusebius reports)",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Memoirs, in Eusebius, Church History",
+      "locus": "3.32.7–8",
+      "lang": "grc",
+      "answer": "continuous",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "... that until those times the Church remained a pure and uncorrupted virgin, while those who tried to corrupt the sound rule of the saving preaching, if there were any, still lurked in hidden darkness. But when the sacred band of the apostles had reached the end of life in various ways, and the generation of those who had heard the divine wisdom with their own ears had passed, then godless error began to take shape through the deceit of false teachers.",
+      "original": "ὡς ἄρα μέχρι τῶν τότε χρόνων παρθένος καθαρὰ καὶ ἀδιάφθορος ἔμενεν ἡ ἐκκλησία, ἐν ἀδήλῳ που σκότει φωλευόντων εἰσέτι τότε τῶν, εἰ καί τινες ὑπῆρχον, παραφθείρειν ἐπιχειρούντων τὸν ὑγιῆ κανόνα τοῦ σωτηρίου κηρύγματος. ὡς δ’ ὁ ἱερὸς τῶν ἀποστόλων χορὸς διάφορον εἰλήφει τοῦ βίου τέλος, παρεληλύθει τε ἡ γενεὰ ἐκείνη τῶν αὐταῖς ἀκοαῖς τῆς ἐνθέου σοφίας ἐπακοῦσαι κατηξιωμένων, τηνικαῦτα τῆς ἀθέου πλάνης ἀρχὴν ἐλάμβανεν ἡ σύστασις, διὰ τῆς τῶν ἑτεροδιδασκάλων ἀπάτης",
+      "context": "Hegesippus sees heresies rising outside the Church after the apostles, not the Church itself falling.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-28",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "28.1–3",
+      "lang": "la",
+      "answer": "continuous",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Suppose, then, that all have erred; that the apostle was mistaken in giving his testimony; that the Holy Spirit took care of no church to lead it into truth ... Is it likely that so many churches, and such great ones, should have strayed into one and the same faith? Among many, chance never comes out the same. The error of the churches' teaching would have produced different results. But what is found to be one among many is not error but tradition.",
+      "original": "Age nunc omnes erraverint; deceptus sit et apostolus de testimonio reddendo; nullam respexerit spiritus sanctus, uti eam in veritatem deduceret ... ecquid verisimile est, ut tot ac tantae in unam fidem erraverint? Nullus inter multos eventus unus est. Exitus variasse debuerat error doctrinae ecclesiarum. Ceterum quod apud multos unum invenitur, non est erratum, sed traditum.",
+      "context": "Tertullian's argument against the claim that the Church had lost the truth.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "28"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-25-5",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "25.5",
+      "lang": "en",
+      "answer": "reformed",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "The purest churches under heaven are subject both to mixture and error; and some have so degenerated, as to become no churches of Christ, but synagogues of Satan. Nevertheless, there shall be always a church on earth, to worship God according to his will.",
+      "original": "The purest churches under heaven are subject both to mixture and error; and some have so degenerated, as to become no churches of Christ, but synagogues of Satan. Nevertheless, there shall be always a church on earth, to worship God according to his will.",
+      "context": "The Reformers held that the Church never vanished but had grown corrupt and needed reform.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Joseph Smith",
+      "work": "History (Times and Seasons, 1842), 1:19",
+      "year": 1838,
+      "why": "The Latter-day Saint view of a general apostasy, in its public-domain first printing.",
+      "action": "intake",
+      "source_hint": "Times and Seasons 3 (1842), archive.org"
+    },
+    {
+      "author": "Alexander Campbell",
+      "work": "The Christian System",
+      "year": 1839,
+      "why": "The Restoration Movement's case for returning to the primitive church.",
+      "action": "intake",
+      "source_hint": "archive.org (1839 edition)"
+    },
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 3.4.1",
+      "year": 180,
+      "why": "If the apostles had left no writings, we would follow the tradition they handed to the churches.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "apostolic-tradition"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "id": "governed-bishops-presbyters-deacons",
+  "number": 52,
+  "group": "church",
+  "question": "How was the church governed: bishops, presbyters, deacons?",
+  "short": "Church government",
+  "search": [
+    "bishop",
+    "presbyter",
+    "elder",
+    "deacon",
+    "monepiscopacy",
+    "threefold ministry",
+    "episcopal",
+    "presbyterian",
+    "congregational",
+    "church government"
+  ],
+  "answers": [
+    {
+      "id": "threefold",
+      "label": "One bishop, with presbyters and deacons",
+      "short": "Bishop, presbyters, deacons",
+      "tag": "Threefold"
+    },
+    {
+      "id": "two",
+      "label": "Bishops (or presbyters) and deacons: two offices",
+      "short": "Two offices",
+      "tag": "Two"
+    },
+    {
+      "id": "congregation",
+      "label": "Each congregation governs itself",
+      "short": "Congregational",
+      "tag": "Congregation"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest texts know two local offices: bishops (also called presbyters) and deacons. The Didache, Clement and Polycarp's letter to Philippi all show this.",
+      "cites": [
+        "didache-15",
+        "1-clement-42",
+        "polycarp-philippians-5"
+      ]
+    },
+    {
+      "text": "By about 110 Ignatius knows one bishop in each city, with presbyters and deacons; \"without these it is not called a church\". By the late second century this was the pattern everywhere.",
+      "cites": [
+        "ignatius-trallians-3"
+      ]
+    },
+    {
+      "text": "Anglicans, Catholics and Orthodox keep the three orders; Reformed churches returned to presbyters; Baptists and Congregationalists gave authority to each congregation.",
+      "cites": [
+        "bcp-1662-ordinal",
+        "belgic-1561-31",
+        "lbcf-1689-26-7"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-15",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "15.1–2",
+      "lang": "grc",
+      "answer": "two",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Appoint for yourselves bishops and deacons worthy of the Lord, men who are gentle, not lovers of money, truthful and tested. For they too perform for you the ministry of the prophets and teachers. So do not despise them; for they are the honored ones among you, together with the prophets and teachers.",
+      "original": "Χειροτονήσατε οὖν ἑαυτοῖς ἐπισκόπους καὶ διακόνους ἀξίους τοῦ κυρίου, ἄνδρας πραεῖς καὶ ἀφιλαργύρους καὶ ἀληθεῖς καὶ δεδοκιμασμένους: ὑμῖν γὰρ λειτουργοῦσι καὶ αὐτοὶ τὴν λειτουργίαν τῶν προφητῶν καὶ διδασκάλων. μὴ οὖν ὑπερίδητε αὐτούς: αὐτοὶ γάρ εἰσιν οἱ τετιμημένοι ὑμῶν μετὰ τῶν προφητῶν καὶ διδασκ",
+      "context": "Two offices, chosen by the congregation, beside traveling prophets and teachers.",
+      "source": {
+        "book": "didache",
+        "section": "15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "1-clement-42",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "42.4",
+      "lang": "grc",
+      "answer": "two",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So preaching through country and town, they appointed their first fruits, after testing them by the Spirit, as bishops and deacons of those who would believe.",
+      "original": "κατὰ χώρας οὖν καὶ πόλεις κηρύσσοντες καθίστανον τὰς ἀπαρχὰς αὐτῶν, δοκιμάσαντες τῷ πνεύματι, εἰς ἐπισκόπους καὶ διακόνους τῶν μελλόντων πιστεύειν.",
+      "context": "Clement uses \"bishops\" and \"presbyters\" for the same leaders at Corinth (compare 44.4–5).",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "42"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "polycarp-philippians-5",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "5.3",
+      "lang": "grc",
+      "answer": "two",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... being subject to the presbyters and deacons as to God and Christ.",
+      "original": "ὑποτασσομένους τοῖς πρεσβυτέροις καὶ διακόνοις ὡς θεῷ καὶ Χριστῷ",
+      "context": "Polycarp, himself a bishop, names no bishop at Philippi, only presbyters and deacons.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-trallians-3",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Trallians",
+      "locus": "3.1",
+      "lang": "grc",
+      "answer": "threefold",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Likewise let all respect the deacons as Jesus Christ, as also the bishop, who is the image of the Father, and the presbyters as the council of God and the band of the apostles. Without these, it is not called a church.",
+      "original": "Ὁμοίως πάντες ἐντρεπέσθωσαν τοὺς διακόνους ὡς Ἰησοῦν Χριστόν, ὡς καὶ τὸν ἐπίσκοπον ὄντα τύπον τοῦ πατρός. τοὺς δὲ πρεσβυτέρους ὡς συνέδριον θεοῦ καὶ ὡς σύνδεσμον ἀποστόλων. χωρὶς τούτων ἐκκλησία οὐ καλεῖται.",
+      "context": "The first clear witness to one bishop over presbyters and deacons in each city, in Asia Minor and Syria about 110.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "3.3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "bcp-1662-ordinal",
+      "author": "Church of England",
+      "year": 1662,
+      "date": "1662",
+      "work": "Book of Common Prayer, Preface to the Ordinal",
+      "locus": "Preface",
+      "lang": "en",
+      "answer": "threefold",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "It is evident unto all men diligently reading holy Scripture and ancient Authors, that from the Apostles' time there have been these Orders of Ministers in Christ's Church; Bishops, Priests, and Deacons.",
+      "original": "It is evident unto all men diligently reading holy Scripture and ancient Authors, that from the Apostles' time there have been these Orders of Ministers in Christ's Church; Bishops, Priests, and Deacons.",
+      "context": "The Anglican Ordinal claims the three orders from the apostles' time.",
+      "source": {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/form-and-manner-making-ordaining",
+        "edition": "Book of Common Prayer, Preface to the Ordinal (1662)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "belgic-1561-31",
+      "author": "Belgic Confession (Reformed)",
+      "year": 1561,
+      "date": "1561",
+      "work": "Belgic Confession",
+      "locus": "Article 31",
+      "lang": "en",
+      "answer": "two",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "As for the ministers of the Word, they all have the same power and authority, no matter where they may be",
+      "original": "As for the ministers of the Word, they all have the same power and authority, no matter where they may be",
+      "context": "The Reformed read the New Testament as having one order of presbyter-bishops.",
+      "source": {
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/belgic-confession",
+        "edition": "Belgic Confession, Article 31 (1561)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "lbcf-1689-26-7",
+      "author": "Second London Baptist Confession",
+      "year": 1689,
+      "date": "1689",
+      "work": "Second London Baptist Confession",
+      "locus": "26.7",
+      "lang": "en",
+      "answer": "congregation",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "To each of these churches thus gathered, according to his mind declared in his word, he hath given all that power and authority, which is in any way needful for their carrying on that order in worship and discipline",
+      "original": "To each of these churches thus gathered, according to his mind declared in his word, he hath given all that power and authority, which is in any way needful for their carrying on that order in worship and discipline",
+      "context": "Baptists and Congregationalists give each congregation full authority.",
+      "source": {
+        "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter26.htm",
+        "edition": "Second London Baptist Confession, 26.7 (1689)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Jerome",
+      "work": "Letter 146; Commentary on Titus 1:5",
+      "year": 387,
+      "why": "\"A presbyter is the same as a bishop\": the patristic text the Reformed cited.",
+      "action": "intake",
+      "source_hint": "Hilberg, CSEL 56 (1918); Migne PL 26"
+    },
+    {
+      "author": "Hermas",
+      "work": "Vision 2.4.3; 3.9.7",
+      "year": 140,
+      "why": "Rome governed by \"the presbyters who preside over the church\".",
+      "action": "search",
+      "source_hint": "hermas-shepherd"
+    }
+  ],
+  "related": {
+    "timeline": "church-order",
+    "topics": [
+      "church-order"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

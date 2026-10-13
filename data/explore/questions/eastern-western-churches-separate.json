@@ -1,0 +1,178 @@
+{
+  "id": "eastern-western-churches-separate",
+  "number": 62,
+  "group": "church",
+  "question": "Why did the Eastern and Western churches separate?",
+  "short": "East and West",
+  "search": [
+    "great schism",
+    "1054",
+    "east west schism",
+    "filioque",
+    "photius",
+    "papal primacy",
+    "orthodox catholic split",
+    "fourth crusade"
+  ],
+  "answers": [
+    {
+      "id": "authority",
+      "label": "Over Rome's authority: primacy of rule or of honor",
+      "short": "Papal authority",
+      "tag": "Authority"
+    },
+    {
+      "id": "doctrine",
+      "label": "Over doctrine, above all the filioque",
+      "short": "The filioque",
+      "tag": "Filioque"
+    }
+  ],
+  "overview": [
+    {
+      "text": "There was no single break. Tensions over Rome's authority go back to the third century, and the East ranked sees by the imperial capital, \"New Rome\".",
+      "cites": [
+        "firmilian-in-cyprian-75-17-b",
+        "constantinople-381-canon-3-b"
+      ]
+    },
+    {
+      "text": "The open quarrels came over the filioque added to the Western creed (see question 16) and over papal claims: Photius in 867, the mutual excommunications of 1054, the sack of Constantinople in 1204. Florence (1439) tried to reunite them on Rome's terms and failed.",
+      "cites": [
+        "florence-1439-laetentur",
+        "moscow-2013-primacy-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "firmilian-in-cyprian-75-17-b",
+      "author": "Firmilian of Caesarea",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter 75, to Cyprian",
+      "locus": "75.17",
+      "lang": "la",
+      "answer": "authority",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "I am rightly angry at this open and plain folly of Stephen: he who boasts so of the place of his episcopate and claims to hold the succession of Peter, on whom the foundations of the Church were laid, brings in many other rocks and sets up new buildings of many churches.",
+      "original": "ego in hac parte iuste indignor ad hanc tam apertam et manifestam Stephani stultitiam, quod qui sic de episcopatus sui loco gloriatur et se successionem Petri tenere contendit, super quem fundamenta ecclesiae collocata sunt, multas alias petrae inducat et ecclesiarum multarum noua aedificia constituat",
+      "context": "Already in 256 an Eastern bishop rejected Rome's claim to settle a dispute for all churches.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "75.17"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "constantinople-381-canon-3-b",
+      "author": "Council of Constantinople (as Socrates reports)",
+      "year": 381,
+      "date": "c. 381",
+      "work": "Socrates, Church History",
+      "locus": "5.8",
+      "lang": "grc",
+      "answer": "authority",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Then they also issued a decree that the bishop of Constantinople should have the privileges of honor after the bishop of Rome, because it is New Rome.",
+      "original": "Τότε δὴ καὶ ὅρον ἐκφέρουσιν, ὥστε τὸν Κωνσταντινουπόλεως ἐπίσκοπον τὰ πρεσβεῖα ἔχειν τῆς τιμῆς μετὰ τὸν Ῥώμης ἐπίσκοπον, διὰ τὸ εἶναι αὐτὴν νέαν Ῥώμην.",
+      "context": "Ranking sees by the imperial capital, rather than by apostolic founding, set East and West on different paths. Rome rejected the canon, and the later canon 28 of Chalcedon.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "5.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "florence-1439-laetentur",
+      "author": "Council of Florence",
+      "year": 1439,
+      "date": "1439",
+      "work": "Laetentur Caeli",
+      "locus": "Decree of union",
+      "lang": "en",
+      "answer": "authority",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "to him was committed in blessed Peter the full power of tending, ruling and governing the whole church",
+      "original": "to him was committed in blessed Peter the full power of tending, ruling and governing the whole church",
+      "context": "The reunion decree, signed by the Byzantine emperor and most Greek bishops, accepted the filioque and Roman primacy. It was rejected in Constantinople and never took hold.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/ecum17.htm",
+        "edition": "Council of Florence, Laetentur Caeli (1439)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "moscow-2013-primacy-b",
+      "author": "Russian Orthodox Church (Moscow Patriarchate)",
+      "year": 2013,
+      "date": "2013",
+      "work": "Position on the problem of primacy in the Universal Church",
+      "locus": "§2",
+      "lang": "en",
+      "answer": "authority",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "They also believed that primacy in honour accorded to the bishops of Rome is instituted not by God but men.",
+      "original": "They also believed that primacy in honour accorded to the bishops of Rome is instituted not by God but men.",
+      "context": "The Orthodox position on the root of the split.",
+      "source": {
+        "url": "https://ecumenism.net/?p=7189",
+        "edition": "Moscow Patriarchate, Position on the problem of primacy in the Universal Church (2013)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Photius of Constantinople",
+      "work": "Encyclical Letter to the Eastern Patriarchs",
+      "year": 867,
+      "why": "The first Eastern charge sheet against Rome, led by the filioque. The fetched 1651 scan has only a poor Latin version.",
+      "action": "intake",
+      "source_hint": "Valettas, Photiou Epistolai (1864); Migne PG 102"
+    },
+    {
+      "author": "Humbert of Silva Candida and Michael Cerularius",
+      "work": "Bull of excommunication and synodal edict",
+      "year": 1054,
+      "why": "The documents of 1054.",
+      "action": "intake",
+      "source_hint": "Will, Acta et scripta (1861)"
+    },
+    {
+      "author": "Niketas Choniates",
+      "work": "History, on the sack of 1204",
+      "year": 1206,
+      "why": "The Greek eyewitness of the Fourth Crusade.",
+      "action": "intake",
+      "source_hint": "Bekker, CSHB (1835)"
+    },
+    {
+      "author": "Paul VI and Athenagoras I",
+      "work": "Joint Catholic-Orthodox Declaration",
+      "year": 1965,
+      "why": "Lifted the anathemas of 1054.",
+      "action": "search",
+      "source_hint": "vatican.va"
+    }
+  ],
+  "related": {
+    "timeline": "spirit-procession",
+    "topics": [
+      "east-west-schism"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

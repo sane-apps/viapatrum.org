@@ -1,0 +1,170 @@
+{
+  "id": "priests-bishops-marry",
+  "number": 55,
+  "group": "church",
+  "question": "Could priests and bishops marry?",
+  "short": "Married clergy",
+  "search": [
+    "clerical celibacy",
+    "married priests",
+    "priestly celibacy",
+    "1 timothy 3:2",
+    "husband of one wife",
+    "continence",
+    "paphnutius"
+  ],
+  "answers": [
+    {
+      "id": "married",
+      "label": "Married men could be ordained and keep their wives",
+      "short": "Married clergy",
+      "tag": "Married"
+    },
+    {
+      "id": "continence",
+      "label": "Married clergy must live in continence",
+      "short": "Continence",
+      "tag": "Continence"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The apostles included married men: Clement of Alexandria notes Peter and Philip had children. At Nicaea, as Socrates tells it, Paphnutius stopped a law separating clergy from their wives.",
+      "cites": [
+        "clement-stromata-3-6",
+        "paphnutius-nicaea-socrates-1-11"
+      ]
+    },
+    {
+      "text": "In the Latin West, councils from about 306 required married bishops, priests and deacons to abstain from their wives, claiming apostolic custom.",
+      "cites": [
+        "elvira-306-canon-33",
+        "carthage-419-canon-3"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "clement-stromata-3-6",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Stromata",
+      "locus": "3.6.52",
+      "lang": "grc",
+      "answer": "married",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Peter and Philip had children, and Philip gave his daughters in marriage. And Paul does not hesitate in one letter to speak of his wife, whom he did not take around with him for the sake of his ministry's freedom.",
+      "original": "Πέτρος μὲν γὰρ καὶ Φίλιππος ἐπαιδοποιήσαντο, Φίλιππος δὲ καὶ τὰς θυγατέρας ἀνδράσιν ἐξέδωκεν, καὶ ὅ γε Παῦλος οὐκ ὀκνεῖ ἔν τινι ἐπιστολῇ τὴν αὑτοῦ προσαγορεύειν σύζυγον, ἣν οὐ περιεκόμιζεν διὰ τὸ τῆς ὑπηρεσίας εὐσταλές.",
+      "context": "Written against teachers who condemned marriage. The \"wife\" of Paul is Clement's reading of Philippians 4:3.",
+      "source": {
+        "book": "clement-alexandria-stromata",
+        "section": "3.6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "paphnutius-nicaea-socrates-1-11",
+      "author": "Paphnutius at Nicaea (as Socrates reports)",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Socrates, Church History",
+      "locus": "1.11.4–6",
+      "lang": "grc",
+      "answer": "married",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "The bishops wanted to bring a new law into the Church, that those in holy orders, bishops, presbyters and deacons, should not sleep with the wives they had married while still laymen. When this was being discussed, Paphnutius stood up in the middle of the assembly of bishops and cried out not to lay a heavy yoke on the clergy, saying that marriage itself is honorable and the bed undefiled (Hebrews 13:4) ... that it was enough for those already ordained not to marry afterward, according to the Church's ancient tradition, but not to be separated from the wife they had once married as laymen.",
+      "original": "Ἐδόκει τοῖς ἐπισκόποις νόμον νεαρὸν εἰς τὴν ἐκκλησίαν εἰσφέρειν, ὥστε τοὺς ἱερωμένους, λέγω δὲ ἐπισκόπους καὶ πρεσβυτέρους καὶ διακόνους, μὴ συγκαθεύδειν ταῖς γαμεταῖς, ἃς ἔτι λαϊκοὶ ὄντες ἠγάγοντο. Καὶ ἐπεὶ περὶ τούτου βουλεύεσθαι προὔκειτο, διαναστὰς ἐν μέσῳ τοῦ συλλόγου τῶν ἐπισκόπων ὁ Παφνούτιος ἐβόα μακρὰ, μὴ βαρὺν ζυγὸν ἐπιθεῖναι τοῖς ἱερωμένοις ἀνδράσι, τίμιον εἶναι τὸν γάμον αὐτὸν καὶ τὴν κοίτην ἀμίαντον ... ἀρκεῖσθαι τε τὸν φθάσαντα κλήρου τυχεῖν μηκέτι ἐπὶ γάμον ἔρχεσθαι, κατὰ τὴν τῆς ἐκκλησίας ἀρχαίαν παράδοσιν, μὴ μὴν ἀποζεύγνυσθαι ταύτης, ἣν ἅπαξ ἤδη πρότερον λαϊκὸς ὢν ἠγάγετο.",
+      "context": "Socrates writes a century later; some historians doubt the story. It matches the later Eastern rule: married men may be ordained, but no one marries after ordination.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "elvira-306-canon-33",
+      "author": "Council of Elvira",
+      "year": 306,
+      "date": "c. 306",
+      "work": "Canons",
+      "locus": "Canon 33",
+      "lang": "la",
+      "answer": "continence",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It was decided to forbid entirely bishops, presbyters and deacons, or all clerics serving in the ministry, to have relations with their wives and beget children. Whoever does so shall be removed from clerical office.",
+      "original": "Placuit in totum prohibere episcopis, presbyteris et diaconibus, vel omnibus clericis positis in ministerio, abstinere se a coniugibus suis et non generare filios : quicumque vero fecerit, ab honore clericatus exterminetur.",
+      "context": "The Latin is famously awkward: read literally it forbids them \"to abstain\". It is taken as a rule of continence for married clergy in Spain.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), Council of Elvira, canon 33"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "carthage-419-canon-3",
+      "author": "Council of Carthage",
+      "year": 419,
+      "date": "c. 419",
+      "work": "Canons of the African Church",
+      "locus": "Canon 3",
+      "lang": "la",
+      "answer": "continence",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Bishop Aurelius said: ... it was decided that the holy bishops and priests of God, and also the deacons, who serve the divine sacraments, should be continent in all things, so that they may obtain simply what they ask of the Lord; so that what the apostles taught and antiquity itself kept, we too may keep. ... All the bishops said: It is agreed that chastity be kept in all things and by all who serve the altar.",
+      "original": "ita placuit, ut condecet, sacros antistites ac Dei sacerdotes, nec non et levitas, vel qui sacramentis divinis inserviunt, continentes esse in omnibus, quo possint simpliciter quod a Domino postulant impetrare, ut quod apostoli docuerunt, et ipsa servavit antiquitas, nos quoque custodiamus. ... Ab universis episcopis dictum est: Placet, ut in omnibus et ab omnibus pudicitia custodiatur qui altari inserviunt.",
+      "context": "The African church claimed apostolic origin for clerical continence.",
+      "source": {
+        "book": "council-of-carthage-419-canons",
+        "section": "3"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Siricius",
+      "work": "Letter to Himerius 7",
+      "year": 385,
+      "why": "The first papal ruling on clerical continence.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 89)"
+    },
+    {
+      "author": "Council in Trullo",
+      "work": "Canon 13",
+      "year": 692,
+      "why": "The Eastern rule against Rome's: married priests keep their wives.",
+      "action": "intake",
+      "source_hint": "Joannou, Discipline générale antique (1962, copyright) as note; Bruns (1839)"
+    },
+    {
+      "author": "Second Lateran Council; Augsburg Confession",
+      "work": "Canon 7; Article 23",
+      "year": 1139,
+      "why": "The West forbade clergy to marry at all; the East kept married priests with celibate bishops; Lutherans defended married clergy.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 360)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "clerical-celibacy"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

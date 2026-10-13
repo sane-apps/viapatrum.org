@@ -1,0 +1,182 @@
+{
+  "id": "discipline-members-excommunicated-return",
+  "number": 58,
+  "group": "church",
+  "question": "How did the church discipline members, and could the excommunicated return?",
+  "short": "Excommunication",
+  "search": [
+    "excommunication",
+    "church discipline",
+    "public penance",
+    "matthew 18",
+    "readmission",
+    "ambrose and theodosius",
+    "shunning"
+  ],
+  "answers": [
+    {
+      "id": "excluded",
+      "label": "Serious sinners were cut off from communion until they repented",
+      "short": "Cut off",
+      "tag": "Excluded"
+    },
+    {
+      "id": "restored",
+      "label": "After penance they were restored to communion",
+      "short": "Restored",
+      "tag": "Restored"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the Didache on, the church corrected members and cut off from prayer and fellowship those who would not repent. Tertullian calls it a foretaste of the last judgment.",
+      "cites": [
+        "didache-15-3",
+        "tertullian-apology-39-4"
+      ]
+    },
+    {
+      "text": "The aim was return: after penance, sometimes long and in stages, the excommunicated were readmitted, and no dying penitent was refused. Even an emperor, Theodosius, was barred by Ambrose until he did penance.",
+      "cites": [
+        "cyprian-letter-57-b",
+        "gregory-nyssa-canonical-letter-b",
+        "ambrose-theodosius-sozomen-7-25"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-15-3",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "15.3",
+      "lang": "grc",
+      "answer": "excluded",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Correct one another, not in anger but in peace, as you have it in the Gospel. And let no one speak to anyone who has wronged another, nor let him hear from you, until he repents.",
+      "original": "Ἐλέγχετε δὲ ἀλλήλους μὴ ἐν ὀργῇ, ἀλλ’ ἐν εἰρήνῃ ὡς ἔχετε ἐν τῷ εὐαγγελίῳ: καὶ παντὶ ἀστοχοῦντι κατὰ τοῦ ἑτέρου μηδεὶς λαλείτω μηδὲ παῤ ὑμῶν ἀκουέτω, ἕως οὗ μετανοήσῃ.",
+      "context": "Matthew 18 put into practice: shunning until repentance.",
+      "source": {
+        "book": "didache",
+        "section": "15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-39-4",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "39.4",
+      "lang": "la",
+      "answer": "excluded",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "There too are exhortations, rebukes and divine censure. For judgment is passed with great weight, as among people sure that they are in God's sight, and it is the gravest foretaste of the judgment to come if anyone has sinned so that he is cut off from sharing in prayer, in the assembly, and in all holy fellowship.",
+      "original": "Ibidem etiam exhortationes, castigationes et censura divina. Nam et iudicatur magno cum pondere, ut apud certos de dei conspectu, summumque futuri iudicii praeiudicium est, si quis ita deliquerit, ut a communicatione orationis et conventus et omnis sancti commercii relegetur.",
+      "context": "The earliest description of excommunication as a practice.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-57-b",
+      "author": "Cyprian of Carthage",
+      "year": 252,
+      "date": "c. 252",
+      "work": "Letter 57",
+      "locus": "57.1",
+      "lang": "la",
+      "answer": "restored",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Those who had fallen ... should do full penance for a long time, and if danger of sickness pressed, should receive peace at the point of death. For it was not right, nor did fatherly love and divine mercy allow, that the Church should be shut to those who knock.",
+      "original": "agerent diu paenitentiam plenam et si periculum infirmitatis urgueret, pacem sub ictu mortis acciperent. nec enim.. fas erat aut permittebat paterna pietas et diuina clementia ecclesiam pulsantibus cludi",
+      "context": "\"Peace\" means readmission to communion.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "57.1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-canonical-letter-b",
+      "author": "Gregory of Nyssa",
+      "year": 390,
+      "date": "c. 390",
+      "work": "Canonical Letter to Letoius",
+      "locus": "canon 4",
+      "lang": "grc",
+      "answer": "restored",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... the choice of the penitent being tested in this too, so that if his turning is trustworthy, the number of years need not be kept in every case, but he may be brought quickly to restoration in the Church and to sharing in the good.",
+      "original": "ὴ καὶ ἐν τούτῳ τῆς προαιρέσεως τοῦ με τανοοῦντος δοκιμαζομένης· ὥστε εἰ ἀξιόπιστος γένοιτο ἡ ἐπιστροφὴ, μὴ πάντως παραφυλαχθῆναι τὸν ἀριθμὸν τῶν ἐτῶν, ἀλλὰ διὰ συντομίας ἀγαγεῖν αὐτὸν εἰς τὴν τῆς Ἐκκλησίας ἀποκατάστασιν, καὶ εἰς τὴν τοῦ ἀγαθοῦ μετουσίαν.",
+      "context": "Penance came in years and grades (weepers, hearers, kneelers, standers), but a bishop could shorten them.",
+      "source": {
+        "witness": "books/gregory-nyssa-epistula-canonica-letoium/sources/epistula_canonica_ad_letoium_khazarzar.txt",
+        "edition": "Migne PG 45, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ambrose-theodosius-sozomen-7-25",
+      "author": "Ambrose and Theodosius (as Sozomen reports)",
+      "year": 390,
+      "date": "c. 390",
+      "work": "Sozomen, Church History",
+      "locus": "7.25.1–2",
+      "lang": "grc",
+      "answer": "excluded",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "When the emperor came to the church to pray, Ambrose, the bishop of the city, met him at the doors, took hold of his purple robe before the crowd, and said: \"Stop! A man defiled by sin, with hands stained with blood unjustly, may not cross the threshold of the sanctuary before repentance, or share in the divine mysteries.\" The emperor, amazed at the priest's boldness, turned back thoughtful, stung with repentance.",
+      "original": "Ὡς δὲ πρὸς ταῖς θύραις ἐγένετο, ὑπήντετο Ἀμβρόσιος ὁ τῆς πόλεως ἐπίσκοπος: καὶ λαβόμενος τῆς ἁλουργίδος ἐπὶ τοῦ πλήθους, Ἐπίσχες, ἔφη: ἀνδρὶ γὰρ ὑπὸ ἁμαρτίας βεβήλῳ, καὶ τὰς χεῖρας ᾑμαγμένας οὐκ ἐν δίκῃ ἔχοντι, οὐ θεμιτὸν πρὸ μετανοίας τῆς τοῦ ἱεροῦ ἐπιβαίνειν οὐδοῦ, ἢ μυστηρίων θείων κοινωνεῖν. Ὁ δὲ βασιλεὺς θαυμάσας τὸν ἱερέα τῆς παρρησίας, σύννους γεγονὼς ὑπέστρεφεν, ὑπὸ τῆς μετανοίας κεντούμενος.",
+      "context": "After the massacre at Thessalonica (390). Theodosius did public penance and was readmitted. Ambrose's own letter (Letter 51) is more private in tone.",
+      "source": {
+        "book": "sozomen-ecclesiastical-history",
+        "section": "7.25"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Gregory Thaumaturgus",
+      "work": "Canonical Letter, canon 11",
+      "year": 255,
+      "why": "The four grades of penitents. In the library, one section.",
+      "action": "search",
+      "source_hint": "gregory-thaumaturgus-epistula-canonica"
+    },
+    {
+      "author": "Basil of Caesarea",
+      "work": "Canonical Letters 188, 199, 217",
+      "year": 375,
+      "why": "The fullest early penitential canons, still used in the East.",
+      "action": "intake",
+      "source_hint": "Migne PG 32 (fetched scan)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "penance-and-reconciliation"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

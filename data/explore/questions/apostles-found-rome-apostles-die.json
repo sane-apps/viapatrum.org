@@ -1,0 +1,217 @@
+{
+  "id": "apostles-found-rome-apostles-die",
+  "number": 64,
+  "group": "church",
+  "question": "Did the apostles found the church in Rome, and how did the apostles die?",
+  "short": "Peter and Paul in Rome",
+  "search": [
+    "peter in rome",
+    "paul in rome",
+    "martyrdom of peter",
+    "crucified upside down",
+    "nero persecution",
+    "vatican tomb",
+    "deaths of the apostles"
+  ],
+  "answers": [
+    {
+      "id": "rome",
+      "label": "Peter and Paul taught at Rome and were martyred there",
+      "short": "Martyred at Rome",
+      "tag": "Rome"
+    },
+    {
+      "id": "deaths",
+      "label": "How they died: Peter crucified, Paul beheaded",
+      "short": "Their deaths",
+      "tag": "Deaths"
+    }
+  ],
+  "overview": [
+    {
+      "text": "A church existed at Rome before either apostle came (Paul's Letter to the Romans). Rome's own letter of about 96 counts Peter and Paul as martyrs \"of our own generation\", and Ignatius takes for granted that both taught there.",
+      "cites": [
+        "1-clement-5",
+        "ignatius-romans-4-3"
+      ]
+    },
+    {
+      "text": "By about 170–200, writers name their graves on the Vatican hill and the Ostian Way, and say both planted the churches of Rome and Corinth.",
+      "cites": [
+        "gaius-in-eusebius-2-25",
+        "dionysius-corinth-in-eusebius-2-25"
+      ]
+    },
+    {
+      "text": "Tradition says Peter was crucified, head downward at his own request, and Paul beheaded.",
+      "cites": [
+        "origen-in-eusebius-3-1",
+        "tertullian-prescription-36"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "1-clement-5",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "5.1–7",
+      "lang": "grc",
+      "answer": "rome",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But to stop with the ancient examples, let us come to the athletes nearest to us; let us take the noble examples of our own generation. Through jealousy and envy the greatest and most righteous pillars were persecuted and fought to the death. Let us set before our eyes the good apostles: Peter, who through unjust jealousy bore not one or two but many labors, and so, having borne witness, went to his appointed place of glory. Through jealousy and strife Paul showed the prize of endurance: seven times in chains, exiled, stoned, a herald in the East and in the West, he won the noble fame of his faith, teaching righteousness to the whole world ...",
+      "original": "Ἀλλ’ ἵνα τῶν ἀρχαίων ὑποδειγμάτων παυσώμεθα, ἔλθωμεν ἐπὶ τοὺς ἔγγιστα γενομένους ἀθλητάς: λάβωμεν τῆς γενεᾶς ἡμῶν τὰ γενναῖα ὑποδείγματα. διὰ ζῆλον καὶ φθόνον οἱ μέγιστοι καὶ δικαιότατοι στύλοι ἐδιώχθησαν καὶ ἕως θανάτου ἤθλησαν. λάβωμεν πρὸ ὀφθαλμῶν ἡμῶν τοὺς ἀγαθοὺς ἀποστόλους: Πέτρον, ὅς διὰ ζῆλον ἄδικον οὐχ ἕνα οὐδὲ δύο, ἀλλὰ πλείονας ὑπήνεγκεν πόνους καὶ οὕτω μαρτυρήσας ἐπορεύθη εἰς τὸν ὀφειλόμενον τόπον τῆς δόξης. διὰ ζῆλον καὶ ἔριν Παῦλος ὑπομονῆς βραβεῖον ὑπέδειξεν, ἑπτάκις δεσμὰ φορέσας, φυγαδευθείς, λιθασθείς, κήρυξ γενόμενος ἔν τε τῇ ἀνατολῇ καὶ ἐν τῇ δύσει, τὸ γενναῖον τῆς πίστεως αὐτοῦ κλέος ἔλαβεν, δικαιοσύνην διδάξας ὅλον τὸν κόσμον",
+      "context": "Written from Rome about thirty years after their deaths, by \"our own generation\". Clement adds that a great multitude suffered with them (6.1).",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-romans-4-3",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Romans",
+      "locus": "4.3",
+      "lang": "grc",
+      "answer": "rome",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "I do not give you orders like Peter and Paul. They were apostles; I am a condemned man.",
+      "original": "οὐχ ὡς Πέτρος καὶ Παῦλος διατάσσομαι ὑμῖν. ἐκεῖνοι ἀπόστολοι, ἐγὼ κατάκριτος",
+      "context": "Ignatius assumes that both apostles had taught the Roman church.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "4.4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gaius-in-eusebius-2-25",
+      "author": "Gaius of Rome (quoted by Eusebius)",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Dialogue with Proclus, in Eusebius, Church History",
+      "locus": "2.25.7",
+      "lang": "grc",
+      "answer": "rome",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "I can show you the trophies of the apostles. For if you will go to the Vatican or to the Ostian Way, you will find the trophies of those who founded this church.",
+      "original": "ἐγὼ δὲ τὰ “τρόπαια τῶν ἀποστόλων ἔχω δεῖξαι. ἐὰν γὰρ θελή- “ σῃς ἀπελθεῖν ἐπὶ τὸν Βατικανὸν , ἢ ἐπὶ τὴν ὁδὸν “τὴν Ὠστίαν, εὑρήσεις τὰ τρόπαια τῶν ταύτην ἱδρυ- “ σαμἐνων τὴν ἐκκλησίαν.",
+      "context": "\"Trophies\" are monuments over their graves. Excavations under St Peter's found a second-century shrine that fits Gaius's words.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "2.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "dionysius-corinth-in-eusebius-2-25",
+      "author": "Dionysius of Corinth (quoted by Eusebius)",
+      "year": 170,
+      "date": "c. 170",
+      "work": "Letter to the Romans, in Eusebius, Church History",
+      "locus": "2.25.8",
+      "lang": "grc",
+      "answer": "rome",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "So by such an admonition you too have joined together the planting of Peter and Paul at Rome and at Corinth. For both of them planted in our Corinth and taught us alike, and alike they taught together in Italy and were martyred at the same time.",
+      "original": "ταῦτα καὶ ὑμεῖς διὰ τῆς τοσαύτης νουθεσίας “τὴν ἀπὸ Πέτρου καὶ Παύλου φυτείαν γενηθεῖσαν “ Ῥωμαίων τε καὶ Κορινθίων συνεκεράσατε. καὶ γὰρ “ἄμφω καὶ εἰς τὴν ἡμετέραν Κόρινθον φυτεύσαντες ἡμᾶς ὁμοίως ἐδίδαξαν· ὁμοίως δὲ καὶ εἰς τὴν Ἰτο “ λίαν ὁμόσε διδάξαντες ἐμαρτύρησαν κατὰ τὸν αὐτ’ “ καιρόν.",
+      "context": "\"At the same time\" may mean the same period, not the same day.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "2.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-in-eusebius-3-1",
+      "author": "Origen of Alexandria (as Eusebius quotes)",
+      "year": 230,
+      "date": "c. 230",
+      "work": "Commentary on Genesis 3, in Eusebius, Church History",
+      "locus": "3.1.2",
+      "lang": "grc",
+      "answer": "deaths",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "Peter seems to have preached in Pontus, Galatia, Bithynia, Cappadocia and Asia to the Jews of the dispersion. At the end he came to Rome and was crucified head downward, for he had asked to suffer in this way.",
+      "original": "Πέτρος δὲ ἐν Πόντῳ καὶ Γαλατία καὶ Βιθυνία Καππαδοκία τε καὶ Ἀσία κεκηρυχέναι τοῖς ἐν διασπορᾷ Ἰουδαίοις ἔοικεν· ὃς καὶ ἐπὶ τέλει ἐν Ῥώμῃ γενόμενος ἀνεσκολοπίσθη κατὰ κεφαλῆς, οὕτως αὐτὸς ἀξιώσας παθεῖν.",
+      "context": "Eusebius says he is quoting Origen word for word.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-36",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "36.2–3",
+      "lang": "la",
+      "answer": "deaths",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... you have Rome, from which our authority too is at hand. How happy is that church, on which the apostles poured out all their teaching together with their blood! where Peter suffers a passion like the Lord's, where Paul is crowned with John's death, where the apostle John, after being plunged into burning oil and suffering nothing, was banished to an island.",
+      "original": "habes Romam, unde nobis quoque auctoritas praesto est. Ista quam felix ecclesia cui totam doctrinam apostoli cum sanguine suo profuderunt, ubi Petrus passioni dominicae adaequatur, ubi Paulus Ioannis exitu coronatur, ubi apostolus Ioannes, posteaquam in oleum igneum demersus nibil passus est, in insulam relegatur.",
+      "context": "Peter crucified like Christ; Paul beheaded like John the Baptist. The story of John and the oil is found only here.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "36"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 3.1.1",
+      "year": 180,
+      "why": "Peter and Paul preaching at Rome and founding the church.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
+    },
+    {
+      "author": "Acts of Peter",
+      "work": "Martyrdom of Peter 37–38",
+      "year": 190,
+      "why": "The legend of the upside-down cross and \"Quo vadis\".",
+      "action": "intake",
+      "source_hint": "Lipsius and Bonnet, Acta apostolorum apocrypha (1891)"
+    },
+    {
+      "author": "Eusebius of Caesarea",
+      "work": "Church History 3.1 and 2.22",
+      "year": 325,
+      "why": "Where the other apostles preached and died.",
+      "action": "search",
+      "source_hint": "eusebius-church-history 3.1"
+    }
+  ],
+  "related": {
+    "topics": [
+      "peter-and-paul"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

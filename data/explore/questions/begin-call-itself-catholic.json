@@ -1,0 +1,190 @@
+{
+  "id": "begin-call-itself-catholic",
+  "number": 59,
+  "group": "church",
+  "question": "When did the church begin to call itself \"Catholic\"?",
+  "short": "Why \"Catholic\"?",
+  "search": [
+    "catholic",
+    "katholikos",
+    "universal church",
+    "catholic church name",
+    "one holy catholic",
+    "ignatius catholic church"
+  ],
+  "answers": [
+    {
+      "id": "universal",
+      "label": "Catholic means whole and worldwide",
+      "short": "Universal",
+      "tag": "Universal"
+    },
+    {
+      "id": "orthodox",
+      "label": "Catholic marks the true Church against sects",
+      "short": "The true Church",
+      "tag": "True Church"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The word appears first in Ignatius, about 110: \"wherever Jesus Christ is, there is the catholic Church\". The Martyrdom of Polycarp (about 156) uses it of the worldwide Church.",
+      "cites": [
+        "ignatius-smyrnaeans-8-catholic",
+        "martyrdom-polycarp-catholic"
+      ]
+    },
+    {
+      "text": "Soon it also became the name that set the great Church apart from sects, as in the Muratorian Fragment and Augustine, who said every stranger knew which building was the Catholic one.",
+      "cites": [
+        "muratorian-fragment-catholic",
+        "augustine-fundamental-letter-4"
+      ]
+    },
+    {
+      "text": "Cyril of Jerusalem gave four reasons for the creed's word: it is everywhere, teaches all truth, gathers all kinds of people, and heals every sin.",
+      "cites": [
+        "cyril-catechesis-18-23"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-smyrnaeans-8-catholic",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Smyrnaeans",
+      "locus": "8.2",
+      "lang": "grc",
+      "answer": "universal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Wherever the bishop appears, there let the people be, just as wherever Jesus Christ is, there is the catholic Church.",
+      "original": "ὅπου ἂν φανῇ ὁ ἐπίσκοπος, ἐκεῖ τὸ πλῆθος ἤτω, ὥσπερ ὅπου ἂν ᾖ Ἰησοῦς Χριστός, ἐκεῖ ἡ καθολικὴ ἐκκλησία.",
+      "context": "The first use of \"catholic\" for the Church, about 110. Here it means whole or universal.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "6.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "martyrdom-polycarp-catholic",
+      "author": "Martyrdom of Polycarp",
+      "year": 156,
+      "date": "c. 156",
+      "work": "Martyrdom of Polycarp",
+      "locus": "Preface; 8.1",
+      "lang": "grc",
+      "answer": "universal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The church of God sojourning at Smyrna to the church of God sojourning at Philomelium, and to all the communities of the holy and catholic Church in every place ... remembering ... the whole catholic Church throughout the world.",
+      "original": "Ἡ ἐκκλησία τοῦ θεοῦ ἡ παροικοῦσα Σμύρναν τῇ ἐκκλησίᾳ τοῦ θεοῦ τῇ παροικούσῃ ἐν Φιλομηλίῳ καὶ πάσαις ταῖς κατὰ πάντα τόπον τῆς ἁγίας καὶ καθολικῆς ἐκκλησίας παροικίαις",
+      "context": "In 16.2 Polycarp is called \"bishop of the catholic Church in Smyrna\": here the word already marks the true Church against sects.",
+      "source": {
+        "book": "martyrdom-polycarp",
+        "section": "praef",
+        "also": {
+          "book": "martyrdom-polycarp",
+          "section": "8"
+        }
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "muratorian-fragment-catholic",
+      "author": "Muratorian Fragment",
+      "year": 190,
+      "date": "c. 190",
+      "work": "Muratorian Fragment",
+      "locus": "lines 61–69",
+      "lang": "la",
+      "answer": "orthodox",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... held sacred in the esteem of the catholic Church ... and many others which cannot be received into the catholic Church, for gall should not be mixed with honey.",
+      "original": "in honore tamen ecclesiae catholicae ... quae in catholicam ecclesiam recipi non potest; fel enim cum melle misceri non congruit.",
+      "context": "\"Catholic\" as the name of the great Church that sets the canon.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-muratorian-fragment.txt",
+        "edition": "Tregelles text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-catechesis-18-23",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Catechetical Lectures",
+      "locus": "18.23",
+      "lang": "grc",
+      "answer": "universal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It is called catholic because it is spread through the whole world, from one end of the earth to the other; and because it teaches universally and completely all the doctrines that people should know, about things seen and unseen, in heaven and on earth; and because it brings every kind of people to godliness, rulers and ruled, learned and unlearned; and because it treats and heals universally every kind of sin done by soul and body.",
+      "original": "Καθολικὴ μὲν οὖν καλεῖται διὰ τὸ κατὰ πάσης εἶναι τῆς οἰκουμένης ἀπὸ περάτων γῆς ἕως περάτων, καὶ διὰ τὸ διδάσκειν καθολικῶς καὶ ἀνελλιπῶς ἅπαντα τὰ εἰς γνῶσιν ἀνθρώπων ἐλθεῖν ὀφείλοντα δόγματα, περί τε ὁρατῶν καὶ ἀοράτων πραγμάτων, ἐπουρανίων τε καὶ ἐπιγείων, καὶ διὰ τὸ πᾶν γένος ἀνθρώπων εἰς εὐσέβειαν ὑποτάσσειν, ἀρχόντων τε καὶ ἀρχομένων, λογίων τε καὶ ἰδιωτῶν, καὶ διὰ τὸ καθολικῶς ἰατρεύειν μὲν καὶ θεραπεύειν ἅπαν τὸ τῶν ἁμαρτιῶν εἶδος τῶν διὰ ψυχῆς καὶ σώματος ἐπιτελουμένων",
+      "context": "Cyril explains the creed's \"one holy catholic Church\" to candidates for baptism.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-catecheses-ad-illuminandos.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-fundamental-letter-4",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "Against the Letter of Mani called Fundamental",
+      "locus": "4.5",
+      "lang": "la",
+      "answer": "orthodox",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Finally the very name Catholic holds me, which not without reason, among so many heresies, this Church alone has kept; so that, though all heretics want to be called catholics, yet if a stranger asks where the Catholics meet, none of the heretics dares to point to his own basilica or house.",
+      "original": "tenet postremo ipsum catholicae nomen. quod non sine causa inter tam multas haereses sic ista ecclesia sola obtinuit. ut cum omnes haeretici se catholicos dici uelint, quaerenti tamen alicui peregrino, ubi ad catholicam conueniatur, nullus haereticorum uel basilicam suam uel domum audeat ostendere.",
+      "context": "Just before, Augustine lists the agreement of peoples, the succession from Peter's see, and miracles.",
+      "source": {
+        "book": "augustine-against-the-fundamental-letter",
+        "section": "4"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Pacian of Barcelona",
+      "work": "Letter 1 to Sympronian",
+      "year": 375,
+      "why": "\"Christian is my name, Catholic my surname.\"",
+      "action": "intake",
+      "source_hint": "Migne PL 13"
+    },
+    {
+      "author": "Vincent of Lérins",
+      "work": "Commonitorium 2.6",
+      "year": 434,
+      "why": "What is truly \"catholic\": everywhere, always, by all.",
+      "action": "intake",
+      "source_hint": "Migne PL 50"
+    }
+  ],
+  "related": {
+    "topics": [
+      "catholicity"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

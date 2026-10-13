@@ -1,0 +1,213 @@
+{
+  "id": "there-salvation-outside",
+  "number": 56,
+  "group": "church",
+  "question": "Is there salvation outside the church?",
+  "short": "Outside the church",
+  "search": [
+    "extra ecclesiam nulla salus",
+    "no salvation outside the church",
+    "ark of noah",
+    "cyprian",
+    "church necessary for salvation",
+    "invincible ignorance"
+  ],
+  "answers": [
+    {
+      "id": "no",
+      "label": "No: there is no salvation outside the Church",
+      "short": "No salvation outside",
+      "tag": "No"
+    },
+    {
+      "id": "ignorance",
+      "label": "Not for those who refuse it; God can save those not at fault",
+      "short": "Except the blameless",
+      "tag": "Ignorance"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Cyprian, in the 250s, coined the rule: \"there is no salvation outside the Church\"; one cannot have God as Father without the Church as mother. Augustine accepted it.",
+      "cites": [
+        "cyprian-unity-6-b",
+        "cyprian-letter-73-21-b",
+        "augustine-on-baptism-4-24-b"
+      ]
+    },
+    {
+      "text": "Both Catholics and Protestants kept it (Westminster: \"no ordinary possibility of salvation\"), while modern Catholic teaching excepts those who through no fault of their own do not know the Church.",
+      "cites": [
+        "westminster-1646-25-2",
+        "pius-ix-1854-singulari-quadam-b",
+        "vatican-ii-1964-lumen-gentium-16-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "cyprian-unity-6-b",
+      "author": "Cyprian of Carthage",
+      "year": 251,
+      "date": "c. 251",
+      "work": "On the Unity of the Church",
+      "locus": "6",
+      "lang": "la",
+      "answer": "no",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "He cannot have God for his Father who does not have the Church for his mother. If anyone could escape who was outside Noah's ark, then he too escapes who is outside the Church.",
+      "original": "habere non potest Deum patrem qui ecclesiam non habet matrem. si potuit euadere quisque extra arcam Noe fuit, et qui extra ecclesiam foris fuerit euadit.",
+      "context": "Written against schism at Carthage and Rome.",
+      "source": {
+        "book": "cyprian-on-the-unity-of-the-church",
+        "section": "6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-73-21-b",
+      "author": "Cyprian of Carthage",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter 73, to Jubaianus",
+      "locus": "73.21",
+      "lang": "la",
+      "answer": "no",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... because there is no salvation outside the Church.",
+      "original": "quia salus extra ecclesiam non est",
+      "context": "The phrase in its first known use, about baptism by heretics.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "73.21"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-on-baptism-4-24-b",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "On Baptism, against the Donatists",
+      "locus": "4.17.24",
+      "lang": "la",
+      "answer": "no",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "There is no salvation outside the Church. Who denies it? And so whatever belongs to the Church has no value for salvation outside the Church. But it is one thing not to have, another not to have to profit.",
+      "original": "salus extra ecclesiam non est. quis negat? et ideo quaecumque ipsius ecclesiae habentur, extra ecclesiam non ualent ad salutem. sed aliud est non habere, aliud non utiliter habere.",
+      "context": "Augustine accepts the rule, and adds that the Church's sacraments can exist outside it without saving.",
+      "source": {
+        "book": "augustine-on-baptism",
+        "section": "4.24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-25-2",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "25.2",
+      "lang": "en",
+      "answer": "no",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "The visible church, which is also catholic or universal under the gospel (not confined to one nation, as before under the law), consists of all those throughout the world that profess the true religion; and of their children: and is the kingdom of the Lord Jesus Christ, the house and family of God, out of which there is no ordinary possibility of salvation.",
+      "original": "The visible church, which is also catholic or universal under the gospel (not confined to one nation, as before under the law), consists of all those throughout the world that profess the true religion; and of their children: and is the kingdom of the Lord Jesus Christ, the house and family of God, out of which there is no ordinary possibility of salvation.",
+      "context": "Protestants too kept the rule, applied to the visible church of all who profess the true faith.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "pius-ix-1854-singulari-quadam-b",
+      "author": "Pius IX",
+      "year": 1854,
+      "date": "1854",
+      "work": "Allocution Singulari quadam",
+      "locus": "9 December 1854",
+      "lang": "la",
+      "answer": "ignorance",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It must be held by faith that outside the Apostolic Roman Church no one can be saved ... But it must likewise be held as certain that those who labor in ignorance of the true religion, if that ignorance is invincible, are not bound by any guilt in this matter before the eyes of the Lord.",
+      "original": "Tenendum quippe ex fide est, extra Apostolicam Romanam Ecclesiam salvum fieri neminem posse ... sed tamen pro certo pariter habendum est, qui verae religionis ignorantia laborent, si ea sit invincibilis, nulla ipsos obstringi huiusce rei culpa ante oculos Domini.",
+      "context": "The modern Catholic reading keeps the rule and excepts those not at fault.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 1647"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "vatican-ii-1964-lumen-gentium-16-b",
+      "author": "Second Vatican Council",
+      "year": 1964,
+      "date": "1964",
+      "work": "Lumen Gentium",
+      "locus": "16",
+      "lang": "en",
+      "answer": "ignorance",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Those also can attain to salvation who through no fault of their own do not know the Gospel of Christ or His Church, yet sincerely seek God and moved by grace strive by their deeds to do His will as it is known to them through the dictates of conscience.",
+      "original": "Those also can attain to salvation who through no fault of their own do not know the Gospel of Christ or His Church, yet sincerely seek God and moved by grace strive by their deeds to do His will as it is known to them through the dictates of conscience.",
+      "context": "Section 14 of the same document says those who know the Church is necessary and refuse to enter it cannot be saved.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-vatican-ii-lumen-gentium.txt",
+        "edition": "Vatican English text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Homilies on Joshua 3.5",
+      "year": 240,
+      "why": "\"Outside this house, that is, outside the Church, no one is saved.\" The library's Joshua source is a working summary, not the text.",
+      "action": "relock-source",
+      "source_hint": "Lommatzsch vol. 11 (archive.org); Baehrens GCS 30 (1921)"
+    },
+    {
+      "author": "Fulgentius of Ruspe",
+      "work": "On the Faith, to Peter 38.79",
+      "year": 523,
+      "why": "The strictest form of the rule, quoted by Florence.",
+      "action": "intake",
+      "source_hint": "Migne PL 65"
+    },
+    {
+      "author": "Council of Florence",
+      "work": "Cantate Domino",
+      "year": 1442,
+      "why": "Pagans, Jews, heretics and schismatics outside the Church go into eternal fire.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 714)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "salvation-outside-church"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
