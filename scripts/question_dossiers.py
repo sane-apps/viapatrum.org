@@ -296,9 +296,21 @@ def author_dates(name: str) -> str:
     return _B.author_dates_raw(re.sub(r"\s*\([^)]*\)$", "", name).strip())
 
 
+def plain_author(name: str) -> str:
+    """'Hegesippus (as Eusebius reports)' -> 'Hegesippus'; 'Emperor Trajan' -> 'Trajan'."""
+    n = re.sub(r"\s*\([^)]*\)", "", name)
+    n = re.sub(r",\s*(as|in)\s.*$", "", n)
+    n = re.sub(r"^(Emperor|Pope)\s+", "", n)
+    return n.strip()
+
+
+def dates_for(name: str, dates: dict) -> str:
+    return author_dates(name) or author_dates(plain_author(name)) or dates.get(plain_author(name)) or ""
+
+
 def life_span(name: str, dates: dict) -> tuple[int | None, int | None]:
     """(born, died) from the site's author-dates strings, e.g. 'c. 130–c. 202'."""
-    d = author_dates(name) or dates.get(re.sub(r"\s*\([^)]*\)$", "", name).strip()) or ""
+    d = dates_for(name, dates)
     nums = [int(x) for x in re.findall(r"\b(\d{2,4})\b", d)]
     if not nums:
         return None, None
@@ -336,7 +348,7 @@ def cmd_export(out: str) -> int:
             corporate = q.get("voice") == "confession" or re.match(r"(Council|Synod|Catechism|Confession)\b", q["author"])
             born, died = (None, None) if corporate else life_span(q["author"], dates)
             q["born"], q["died"] = born, died
-            q["dates"] = "" if corporate else author_dates(q["author"])
+            q["dates"] = "" if corporate else dates_for(q["author"], dates)
         dossiers[d["id"]] = d
     Path(out).write_text(json.dumps({"groups": index["groups"], "questions": index["questions"], "dossiers": dossiers},
                                     ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
