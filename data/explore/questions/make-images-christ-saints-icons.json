@@ -1,0 +1,227 @@
+{
+  "id": "make-images-christ-saints-icons",
+  "number": 70,
+  "group": "mary-saints",
+  "question": "Did they make images of Christ and the saints, and are icons idolatry?",
+  "short": "Icons",
+  "search": [
+    "icons",
+    "iconoclasm",
+    "images of christ",
+    "second commandment",
+    "nicaea ii",
+    "veneration of icons",
+    "idolatry",
+    "graven images"
+  ],
+  "answers": [
+    {
+      "id": "venerated",
+      "label": "Images may be made and venerated; the honor passes to the person shown",
+      "short": "Venerated",
+      "tag": "Venerated"
+    },
+    {
+      "id": "allowed",
+      "label": "Images may be used but not venerated",
+      "short": "Allowed only",
+      "tag": "Allowed"
+    },
+    {
+      "id": "rejected",
+      "label": "Images in worship are forbidden",
+      "short": "Rejected",
+      "tag": "Rejected"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Images of Christ and the apostles existed by the third century (catacomb paintings; Eusebius saw some), but bishops such as Eusebius and Epiphanius distrusted them as pagan custom.",
+      "cites": [
+        "eusebius-church-history-7-18",
+        "epiphanius-against-image-makers"
+      ]
+    },
+    {
+      "text": "After the iconoclast controversy, the Second Council of Nicaea (787) taught that icons are venerated, not worshiped, because, as Basil had said, \"the honor paid to the image passes to the original\".",
+      "cites": [
+        "nicaea-ii-787-definition",
+        "basil-holy-spirit-18-45"
+      ]
+    },
+    {
+      "text": "Lutherans kept images without venerating them; the Reformed removed them.",
+      "cites": [
+        "apology-augsburg-24-51",
+        "heidelberg-1563-98"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "eusebius-church-history-7-18",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Church History",
+      "locus": "7.18.2–4",
+      "lang": "grc",
+      "answer": "rejected",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "They said this statue bore the image of Jesus. It has remained to our day, so that we saw it ourselves when we stayed in the city. And it is no wonder that those Gentiles of old, who had been helped by our Savior, did this, since we have learned that images of his apostles Paul and Peter, and of Christ himself, have been kept painted in colors, as one would expect, since the ancients were used to honoring them in this way, without taking care, as saviors, by pagan custom.",
+      "original": "τοῦτον τὸν ἀνδριάντα τοῦ Ἰησοῦ εἰκόνα φέρειν ἔλεγον. ἔμεινε δὲ καὶ εἰς ἡμᾶς, ὡς καὶ ὄψει παραλαβεῖν ἐπιδημήσαντας αὐτοὺς τῇ πόλει. καὶ θαυμαστὸν οὐδὲν τοὺς πάλαι ἐξ ἐθνῶν εὐεργετηθέντας πρὸς τοῦ σωτῆρος ἡμῶν ταῦτα πεποιηκέναι, ὅτε καὶ τῶν ἀποστόλων αὐτοῦ τὰς εἰκόνας, Παύλου καὶ Πέτρου καὶ αὐτοῦ δὴ τοὐ Χριστοῦ, διὰ χρωμάτων ἐν γραφαῖς σωζομένας ἱστορήσαμεν, ὡς εἰκὸς τῶν παλαιῶν ἀπαραφυλάκτως οἷα σωτῆρας ἐθνικῇ συνηθείᾳ παρ᾿ ἑαυτοῖς τοῦτον τιμὰν εἰωθότων τὸν τρόπον.",
+      "context": "A bronze statue at Caesarea Philippi said to show Christ healing the woman with the flow of blood. Eusebius reports images of Christ and the apostles but ascribes them to pagan habit. His letter to the empress Constantia refuses to send her an image of Christ.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "7.18"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "epiphanius-against-image-makers",
+      "author": "Epiphanius of Salamis (attributed)",
+      "year": 390,
+      "date": "c. 390",
+      "work": "Treatise against Those Who Make Images",
+      "locus": "fragments 1–5",
+      "lang": "grc",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Against those who undertake to make images, by an idolatrous custom, in the likeness of Christ, the Mother of God, the martyrs, and also angels and prophets. ... They have whitewashed the wall and painted images on it in varied colors. ... \"We make the images of the saints,\" they say, \"in their memory and honor.\" ... Those who think they honor the apostles this way should learn that instead of honoring them they dishonor them more.",
+      "original": "κατὰ τῶν ἐπιτηδευόντων ποιεῖν εἰδωλικῷ θεσμῷ εἰκόνας εἰς ἀφομοίωσιν τοῦ Χριστοῦ καὶ τῆς Θεοτόκου καὶ τῶν μαρτύρων, ετι δὲ καὶ ἀγγέλων καὶ προφητῶν. 1 τὸν τοῖχον κονιάσαντες χρώμασι διηλλαγμένοις τὰς εἰκόνας ἀνετύπωσαν. 2 οτι δή, φασί, τὰς εἰκόνας τῶν ἁγίων ποιοῦμεν εἰς μνημόσυνον καὶ τιμὴν αὐτῶν. ... 5 οἱ νομίζοντες ἐν τούτῳ τιμᾶν τοὺς ἀποστόλους, μαθέτωσαν οτι ἀντὶ τοῦ τιμᾶν, πλέον αὐτοὺς ἀτιμάζουσιν.",
+      "context": "Fragments quoted by the iconoclast council of 754 and answered by Nicephorus. Defenders of icons said they were forged; many scholars now accept them as Epiphanius's.",
+      "source": {
+        "book": "epiphanius-tractatus-contra-eos-qui-imagines-faciunt",
+        "section": "u01-open"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-holy-spirit-18-45",
+      "author": "Basil of Caesarea",
+      "year": 375,
+      "date": "c. 375",
+      "work": "On the Holy Spirit",
+      "locus": "18.45",
+      "lang": "grc",
+      "answer": "venerated",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "How then, if each is one, are they not two gods? Because the king and the king's image are spoken of, and not two kings. The power is not split nor the glory divided. ... For the honor paid to the image passes over to the original.",
+      "original": "Πῶς οὖν, εἴπερ εἷς καὶ εἷς, οὐχὶ δύο Θεοί; Ὅτι βασιλεὺς λέγεται καὶ ἡ τοῦ βασιλέως εἰκὼν, καὶ οὐ δύο βασιλεῖς. Οὔτε γὰρ τὸ κράτος σχίζεται, οὔτε ἡ δόξα διαμερίζεται ... διότι ἡ τῆς εἰκόνος τιμὴ ἐπὶ τὸ πρωτότυπον διαβαίνει.",
+      "context": "Basil is speaking of the Son as the Father's image, with the emperor's portrait as an example. The Second Council of Nicaea (787) applied his sentence to icons.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "edition": "Migne PG 32 (archive.org OCR)",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicaea-ii-787-definition",
+      "author": "Second Council of Nicaea",
+      "year": 787,
+      "date": "c. 787",
+      "work": "Definition",
+      "locus": "Horos",
+      "lang": "en",
+      "answer": "venerated",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "the honour paid to an image traverses it, reaching the model, and he who venerates the image, venerates the person represented in that image.",
+      "original": "the honour paid to an image traverses it, reaching the model, and he who venerates the image, venerates the person represented in that image.",
+      "context": "The council ended the first iconoclasm. It distinguished veneration (proskynesis) of images from worship (latreia), due to God alone.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/ecum07.htm",
+        "edition": "Second Council of Nicaea, Definition (787)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "apology-augsburg-24-51",
+      "author": "Philip Melanchthon (Lutheran)",
+      "year": 1531,
+      "date": "1531",
+      "work": "Apology of the Augsburg Confession",
+      "locus": "XXIV.51",
+      "lang": "en",
+      "answer": "allowed",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Candles, golden vessels [tapers, altar-cloths, images), and similar adornments are becoming, but they are not the adornment that properly belongs to the Church.",
+      "original": "Candles, golden vessels [tapers, altar-cloths, images), and similar adornments are becoming, but they are not the adornment that properly belongs to the Church.",
+      "context": "Lutherans kept images in churches without venerating them.",
+      "source": {
+        "url": "https://bookofconcord.org/defense/of-the-mass/",
+        "edition": "Apology of the Augsburg Confession, XXIV.51 (1531)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "heidelberg-1563-98",
+      "author": "Heidelberg Catechism (Reformed)",
+      "year": 1563,
+      "date": "1563",
+      "work": "Heidelberg Catechism",
+      "locus": "Q&A 98",
+      "lang": "en",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "But may not images be permitted in churches in place of books for the unlearned? A. No, we should not try to be wiser than God.",
+      "original": "But may not images be permitted in churches in place of books for the unlearned? A. No, we should not try to be wiser than God.",
+      "context": "Reformed churches removed images from worship.",
+      "source": {
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism",
+        "edition": "Heidelberg Catechism, Q&A 98 (1563)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Elvira",
+      "work": "Canon 36",
+      "year": 306,
+      "why": "\"There shall be no pictures in church.\"",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt"
+    },
+    {
+      "author": "John of Damascus",
+      "work": "Three Treatises on the Divine Images",
+      "year": 730,
+      "why": "The main defense of icons: since God became visible, he can be depicted.",
+      "action": "intake",
+      "source_hint": "Kotter (copyright) as note; Migne PG 94"
+    },
+    {
+      "author": "Gregory I",
+      "work": "Letters 9.209 and 11.10, to Serenus",
+      "year": 600,
+      "why": "Images as books for those who cannot read; not to be worshiped or destroyed.",
+      "action": "intake",
+      "source_hint": "Ewald and Hartmann, MGH (1891–1899)"
+    }
+  ],
+  "related": {
+    "timeline": "images",
+    "topics": [
+      "icons"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

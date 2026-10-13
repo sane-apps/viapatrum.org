@@ -1,0 +1,171 @@
+{
+  "id": "believe-about-angels-demons",
+  "number": 72,
+  "group": "mary-saints",
+  "question": "What did they believe about angels and demons?",
+  "short": "Angels and demons",
+  "search": [
+    "angels",
+    "demons",
+    "guardian angel",
+    "fall of satan",
+    "watchers",
+    "genesis 6",
+    "exorcism",
+    "devil"
+  ],
+  "answers": [
+    {
+      "id": "guardian",
+      "label": "Angels guard and guide each person and pray with us",
+      "short": "Guardian angels",
+      "tag": "Guardians"
+    },
+    {
+      "id": "fallen",
+      "label": "Demons are angels, created good, who fell by their own choice",
+      "short": "Fallen angels",
+      "tag": "Fallen"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Hermas, about 140, says each person has an angel of righteousness beside him; Origen says the angels pray with those who pray.",
+      "cites": [
+        "hermas-mandate-6-2",
+        "origen-on-prayer-11-angels"
+      ]
+    },
+    {
+      "text": "Demons were angels who fell by free choice. Early writers often linked the fall to Genesis 6; the Fourth Lateran Council (1215) defined only that they were created good and became evil by themselves.",
+      "cites": [
+        "athenagoras-plea-24",
+        "lateran-iv-1215-chapter-1"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "hermas-mandate-6-2",
+      "author": "Shepherd of Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "Shepherd of Hermas",
+      "locus": "Mandate 6.2.1–3",
+      "lang": "grc",
+      "answer": "guardian",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "There are two angels with each person, one of righteousness and one of wickedness. \"How then, sir,\" I said, \"shall I know their workings, since both angels dwell with me?\" \"Listen,\" he said, \"and understand them. The angel of righteousness is gentle and modest, meek and quiet. When he comes into your heart, he at once speaks with you of righteousness, purity, reverence, contentment, every righteous deed and every glorious virtue.\"",
+      "original": "δύο εἰσὶν ἄγγελοι μετὰ τοῦ ἀνθρώπου, εἷς τῆς δικαιοσύνης καὶ εἷς τῆς πονηρίας. Πῶς οὖν, φημί, κύριε, γνώσομαι τὰς αὐτῶν ἐνεργείας, ὅτι ἀμφότεροι ἄγγελοι μετ’ ἐμοῦ κατοικοῦσιν; Ἄκουε, φησί, καὶ συνιεῖς αὐτάς. ὁ μὲν τῆς δικαιοσύνης ἄγγελος τρυφερός ἐστι καὶ αἰσχυντηρὸς καὶ πραῢς καὶ ἡσύχιος: ὅταν οὖν οὗτος ἐπὶ τὴν καρδίαν σου ἀναβῇ, εὐθέως λαλεῖ μετὰ σοῦ περὶ δικαιοσύνης, περὶ ἁγνείας, περὶ σεμνότητος καὶ περὶ αὐταρκείας καὶ περὶ παντός ἔργου δικαίου καὶ περὶ πάσης ἀρετῆς ἐνδόξου.",
+      "context": "An early form of the guardian angel, with an evil spirit beside it.",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-on-prayer-11-angels",
+      "author": "Origen of Alexandria",
+      "year": 234,
+      "date": "c. 234",
+      "work": "On Prayer",
+      "locus": "11.1",
+      "lang": "grc",
+      "answer": "guardian",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Not only the high priest prays with those who pray sincerely, but also the angels who rejoice in heaven over one sinner who repents.",
+      "original": "Οὐ μόνος δὲ ὁ ἀρχιερεὺς τοῖς γνησίως εὐχομένοις συνεύχεται ἀλλὰ καὶ οἱ ἐν οὐρανῷ χαίροντες ἄγγελοι",
+      "context": "Origen goes on to the angel Raphael in Tobit, who carries prayers to God.",
+      "source": {
+        "book": "origen-prayer-martyrdom",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athenagoras-plea-24",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "24.4–5",
+      "lang": "grc",
+      "answer": "fallen",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The rest, being free as they were made by God, remained in what God made and ordered them for; but some outraged both the nature of their being and their office: this ruler of matter and of the forms in it, and others of those around this first firmament ... those fell into desire for virgins and were found weaker than the flesh, and he became negligent and wicked in the management of what was entrusted to him.",
+      "original": "Οἱ μὲν γὰρ ἄλλοι, αὐθαίρετοι δὴ οἷοι γεγόνασιν ὑπὸ τοῦ θεοῦ, ἔμειναν ἐφ᾿ οἷς αὐτοὺς ἐποίησεν καὶ διέταξεν ὁ θεός, οἱ δὲ ἐνύβρισαν καὶ τῇ τῆς οὐσίας ὑποστάσει καὶ τῇ ἀρχῇ, οὗτός τε ὁ τῆς ὕλης καὶ τῶν ἐν αὐτῇ εἰδῶν ἄρχων καὶ ἕτεροι τῶν περὶ τὸ πρῶτον τοῦτο στερέωμα ... ἐκεῖνοι μὲν εἰς ἐπιθυμίαν πεσόντες παρθένων καὶ ἥττους σαρκὸς εὑρεθέντες, οὗτος δὲ ἀμελήσας καὶ πονηρὸς περὶ τὴν τῶν πεπιστευμένων γενόμενος διοίκησιν.",
+      "context": "Many second-century writers read Genesis 6:1–4 as angels falling for women. Later writers dropped this reading and spoke of a fall through pride.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "lateran-iv-1215-chapter-1",
+      "author": "Fourth Lateran Council",
+      "year": 1215,
+      "date": "1215",
+      "work": "Chapter 1, On the Catholic Faith",
+      "locus": "Firmiter",
+      "lang": "la",
+      "answer": "fallen",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "For the devil and the other demons were created by God good in nature, but they became evil by their own doing. Man sinned at the devil's suggestion.",
+      "original": "Diabolus enim et alii daemones a Deo quidem natura creati sunt boni, sed ipsi per se facti sunt mali. Homo vero diaboli suggestione peccavit.",
+      "context": "Against the Cathars, who taught an evil creator. The council does not define the number or ranks of angels.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 428"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Justin Martyr",
+      "work": "Second Apology 5",
+      "year": 155,
+      "why": "Angels' fall with women and the demons born from them.",
+      "action": "search",
+      "source_hint": "justin-second-apology"
+    },
+    {
+      "author": "Pseudo-Dionysius",
+      "work": "Celestial Hierarchy",
+      "year": 500,
+      "why": "The nine choirs of angels.",
+      "action": "intake",
+      "source_hint": "Migne PG 3"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 11.9–15 and 12.1–9",
+      "year": 417,
+      "why": "The creation and fall of the angels.",
+      "action": "intake",
+      "source_hint": "thelatinlibrary.com/augustine/civ11.shtml"
+    }
+  ],
+  "related": {
+    "topics": [
+      "angels-demons"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

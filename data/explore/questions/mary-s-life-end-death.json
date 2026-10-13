@@ -1,0 +1,180 @@
+{
+  "id": "mary-s-life-end-death",
+  "number": 67,
+  "group": "mary-saints",
+  "question": "How did Mary's life end: death, or assumption?",
+  "short": "Mary's end",
+  "search": [
+    "assumption",
+    "dormition",
+    "falling asleep",
+    "mary's death",
+    "tomb of mary",
+    "transitus mariae",
+    "munificentissimus deus"
+  ],
+  "answers": [
+    {
+      "id": "unknown",
+      "label": "Scripture does not say, and no one knows",
+      "short": "Unknown",
+      "tag": "Unknown"
+    },
+    {
+      "id": "dormition",
+      "label": "She died (fell asleep) and was taken up by her Son",
+      "short": "Dormition",
+      "tag": "Dormition"
+    },
+    {
+      "id": "assumption",
+      "label": "She was assumed body and soul into heaven",
+      "short": "Assumption",
+      "tag": "Assumption"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Epiphanius, about 377, the first to discuss it, says Scripture is silent and no one knows whether she died or was buried.",
+      "cites": [
+        "epiphanius-panarion-78-11"
+      ]
+    },
+    {
+      "text": "From the fifth century, stories of her \"passing\" (Transitus) spread, and by about 600 the Dormition was a feast across the empire. The Orthodox and Copts sing of her death and of her body taken up.",
+      "cites": [
+        "orthodox-kontakion-dormition",
+        "coptic-shenouda-assumption"
+      ]
+    },
+    {
+      "text": "In 1950 Pius XII defined the Assumption, body and soul, without deciding whether she died first.",
+      "cites": [
+        "pius-xii-1950-munificentissimus"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "epiphanius-panarion-78-11",
+      "author": "Epiphanius of Salamis",
+      "year": 377,
+      "date": "c. 377",
+      "work": "Panarion",
+      "locus": "78.11.2–4",
+      "lang": "grc",
+      "answer": "unknown",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let them search the traces of the Scriptures, and they will find neither Mary's death, nor whether she died or did not die, nor whether she was buried or not buried ... For I do not dare to say it; I keep silent in thought. ... I do not say that she remained immortal, nor do I affirm that she died. For Scripture went beyond the human mind and left it in suspense, because of that honored and outstanding vessel. ... If she died, we do not know.",
+      "original": "ζητήσωσι τὰ ἴχνη τῶν γραφῶν καὶ εὕρωσιν ἂν οὔτε θάνατον Μαρίας οὔτε εἰ τέθνηκεν οὔτε εἰ μὴ τέθνηκεν, οὔτε εἰ τέθαπται οὔτε εἰ μὴ τέθαπται ... ἐγὼ γὰρ οὐ τολμῶ λέγειν, ἀλλὰ διανοούμενος σιωπὴν ἀσκῶ ... καὶ οὐ λέγω ὅτι ἀθάνατος ἔμεινεν· ἀλλ' οὔτε διαβεβαιοῦμαι εἰ τέθνηκεν. ὑπερέβαλε γὰρ ἡ γραφὴ τὸν νοῦν τὸν ἀνθρώπινον καὶ ἐν μετεώρῳ εἴασε διὰ τὸ σκεῦος τὸ τίμιον καὶ ἐξοχώτατον ... κἄν τε οὖν τέθνηκεν, οὐκ ἔγνωμεν",
+      "context": "The earliest Christian writer to address the question, about 377, a bishop from Palestine. He knew no tradition of her death or her tomb.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 41–42, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "orthodox-kontakion-dormition",
+      "author": "Orthodox Church",
+      "year": 600,
+      "date": "hymn of the Byzantine liturgy",
+      "work": "Kontakion of the Dormition",
+      "locus": "Kontakion",
+      "lang": "en",
+      "answer": "dormition",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Neither the tomb, nor death had power over the Theotokos",
+      "original": "Neither the tomb, nor death had power over the Theotokos",
+      "context": "The feast of the Dormition (\"falling asleep\") on 15 August was fixed for the whole empire by Emperor Maurice about 600. The kontakion is sung in the Orthodox liturgy.",
+      "source": {
+        "url": "https://www.oca.org/saints/id/troparia/102302",
+        "edition": "Kontakion of the Dormition (Orthodox Church in America)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "coptic-shenouda-assumption",
+      "author": "Coptic Orthodox Church (Pope Shenouda III)",
+      "year": 1990,
+      "date": "Shenouda III, pope 1971–2012",
+      "work": "The Holy Virgin Saint Mary",
+      "locus": "On the Assumption",
+      "lang": "en",
+      "answer": "dormition",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The Church believes in the Ascent of the body of The Virgin to heaven, and celebrates that feast on the 16th of Misra.",
+      "original": "The Church believes in the Ascent of the body of The Virgin to heaven, and celebrates that feast on the 16th of Misra.",
+      "context": "The Copts keep both her death (21 Tobah) and the bodily ascent (16 Misra).",
+      "source": {
+        "url": "https://www.copticchurch.net/books/the_holy_virgin_saint_mary",
+        "edition": "Pope Shenouda III (Coptic Orthodox), The Holy Virgin Saint Mary"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "pius-xii-1950-munificentissimus",
+      "author": "Pius XII",
+      "year": 1950,
+      "date": "1950",
+      "work": "Munificentissimus Deus",
+      "locus": "44",
+      "lang": "en",
+      "answer": "assumption",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "that the Immaculate Mother of God, the ever Virgin Mary, having completed the course of her earthly life, was assumed body and soul into heavenly glory.",
+      "original": "that the Immaculate Mother of God, the ever Virgin Mary, having completed the course of her earthly life, was assumed body and soul into heavenly glory.",
+      "context": "Defined in 1950. The definition does not say whether Mary died first.",
+      "source": {
+        "url": "https://www.vatican.va/content/pius-xii/en/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html",
+        "edition": "Pius XII, Munificentissimus Deus, 44 (1950)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Transitus Mariae",
+      "work": "The Passing of Mary (Greek and Latin forms)",
+      "year": 450,
+      "why": "The legends behind the feast.",
+      "action": "intake",
+      "source_hint": "Tischendorf, Apocalypses apocryphae (1866)"
+    },
+    {
+      "author": "John of Damascus",
+      "work": "Homilies on the Dormition",
+      "year": 740,
+      "why": "Includes the story of Juvenal of Jerusalem and the empty tomb.",
+      "action": "intake",
+      "source_hint": "Migne PG 96"
+    },
+    {
+      "author": "Gregory of Tours",
+      "work": "Glory of the Martyrs 4",
+      "year": 590,
+      "why": "The first Latin account of Mary's body taken to paradise.",
+      "action": "intake",
+      "source_hint": "Krusch, MGH SRM 1.2 (1885)"
+    }
+  ],
+  "related": {
+    "timeline": "mary-end-of-life",
+    "topics": [
+      "mary-end"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

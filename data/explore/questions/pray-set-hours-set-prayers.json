@@ -1,0 +1,193 @@
+{
+  "id": "pray-set-hours-set-prayers",
+  "number": 73,
+  "group": "mary-saints",
+  "question": "How did they pray: set hours, set prayers, facing east?",
+  "short": "How they prayed",
+  "search": [
+    "hours of prayer",
+    "liturgy of the hours",
+    "divine office",
+    "lord's prayer",
+    "praying east",
+    "ad orientem",
+    "fixed hour prayer"
+  ],
+  "answers": [
+    {
+      "id": "daily",
+      "label": "The Lord's Prayer three times a day",
+      "short": "Lord's Prayer daily",
+      "tag": "Daily"
+    },
+    {
+      "id": "hours",
+      "label": "At set hours: morning, third, sixth, ninth, evening",
+      "short": "Set hours",
+      "tag": "Hours"
+    },
+    {
+      "id": "east",
+      "label": "Facing east, toward the rising light",
+      "short": "Facing east",
+      "tag": "East"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The Didache, about 100, tells Christians to say the Lord's Prayer three times a day and to fast on Wednesday and Friday.",
+      "cites": [
+        "didache-8"
+      ]
+    },
+    {
+      "text": "By about 200, Christians kept the third, sixth and ninth hours, from Acts, plus prayer at dawn and at sunset: the pattern of the later daily office.",
+      "cites": [
+        "tertullian-on-prayer-25",
+        "cyprian-lords-prayer-35"
+      ]
+    },
+    {
+      "text": "They prayed facing east, toward the rising light, which pagans mistook for sun worship.",
+      "cites": [
+        "origen-on-prayer-32",
+        "tertullian-apology-16-east"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-8",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "8.1–3",
+      "lang": "grc",
+      "answer": "daily",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Do not let your fasts be with the hypocrites: they fast on the second and fifth day of the week, but you fast on the fourth day and the day of Preparation. Nor pray as the hypocrites, but as the Lord commanded in his Gospel, pray this way: Our Father in heaven, hallowed be your name ... for yours is the power and the glory for ever. Pray this way three times a day.",
+      "original": "Αἱ δὲ νηστεῖαι ὑμῶν μὴ ἔστωσαν μετὰ τῶν ὑποκριτῶν. νηστεύουσι γὰρ δευτέρᾳ σαββάτων καὶ πέμπτῃ: ὑμεῖς δὲ νηστεύσατε τετράδα καὶ παρασκευήν. μηδὲ προσεύχεσθε ὡς οἱ ὑποκριταί, ἀλλ’ ὡς ἐκέλευσεν ὁ κύριος ἐν τῷ εὐαγγελίῳ αὐτοῦ, οὕτω προσεύχεσθε: Πάτερ ἡμῶν ὁ ἐν τῷ οὐρανῷ, ἁγιασθήτω τὸ ὄνομά σου ... ὅτι σοῦ ἐστιν ἡ δύναμις καὶ ἡ δόξα εἰς τοὺς αἰῶνας. τρὶς τῆς ἡμέρας οὕτω προσεύχεσθε.",
+      "context": "The Lord's Prayer three times a day, with a closing doxology, and fasting on Wednesday and Friday.",
+      "source": {
+        "book": "didache",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-on-prayer-25",
+      "author": "Tertullian",
+      "year": 200,
+      "date": "c. 200",
+      "work": "On Prayer",
+      "locus": "25.1–5",
+      "lang": "la",
+      "answer": "hours",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "As to time, there will be no idleness in outwardly keeping certain hours, I mean those common ones that mark the divisions of the day, the third, sixth and ninth, which we find more solemn in the Scriptures. The Holy Spirit was first poured on the gathered disciples at the third hour. Peter, on the day he saw the vision of the vessel, had gone up to pray at the sixth hour. He and John went into the temple at the ninth.",
+      "original": "De tempore uero non erit otiosa extrinsecus obseruatio etiam horarum quarundam, istarum dico communium quae diei interspatia signant, tertia, sexta, nona; quas sollemniores in scripturis inuenire est. primus spiritus sanctus congregatis discipulis hora tertia infusus est. Petrus, qua die uisionem communitatis omnis in illo uasculo expertus est, sexta hora orandi gratia ascenderat in superiora. idem cum Iohanne ad nonam in templum adibat",
+      "context": "Tertullian adds the \"lawful\" prayers at the beginning of day and night.",
+      "source": {
+        "book": "tertullian-on-prayer",
+        "section": "25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-lords-prayer-35",
+      "author": "Cyprian of Carthage",
+      "year": 252,
+      "date": "c. 252",
+      "work": "On the Lord's Prayer",
+      "locus": "35",
+      "lang": "la",
+      "answer": "hours",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But for us, dear brothers, besides the hours of prayer kept from of old, both the times and the mysteries of prayer have now increased. For we must pray in the morning, so that the Lord's resurrection may be celebrated by morning prayer ... and again at sunset and the close of day.",
+      "original": "Sed nobis, fratres dilectissimi, praeter horas antiquitus obseruatas orandi nunc et spatia et sacramenta creuerunt. nam et mane orandum est, ut resurrectio Domini matutina oratione celebretur. ... recedente item sole ac die cessante necessario",
+      "context": "Morning and evening, added to the third, sixth and ninth hours: the outline of the later daily office.",
+      "source": {
+        "book": "cyprian-on-the-lords-prayer",
+        "section": "35"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-on-prayer-32",
+      "author": "Origen of Alexandria",
+      "year": 234,
+      "date": "c. 234",
+      "work": "On Prayer",
+      "locus": "32.1",
+      "lang": "grc",
+      "answer": "east",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Now a few words about the direction one should face when praying. There are four directions, north and south, west and east. Who would not at once agree that the east plainly shows that we should turn that way, symbolically, as the soul looks toward the rising of the true light, when we make our prayers?",
+      "original": "Ἤδη δὲ xal περὶ τοῦ κλίματος, εἰς ὃ ἀφορῶντα εὖ- χεσϑαι δεῖ, ὀλίγα λεχτέον. τεσσάρων» δὲ ὄντων κλιμάτων, τοῦ τε πρὸς ἄρχτον καὶ μεσημβρίαν καὶ τοῦ πρὸς δύσιν καὶ ἀνατολὴν, τίς οὐκ αν αὐτόϑεν ὁμολογήσαι τὸ πρὸς ἀνατολὴν ἐναργῶς ἐμφαίνειν τὸ δεῖν ἐκεῖ νεύοντας συμβολικῶς, ... τῆς ψυχῆς ἐνορώσης τῇ τοῦ ἀληϑινοῦ φωτὸς ἀνατολῇ, ποιεῖσϑαι τὰς εὐχάς;",
+      "context": "Origen says one should face east even if the house's door opens another way.",
+      "source": {
+        "book": "origen-prayer-martyrdom",
+        "section": "32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-16-east",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "16.10",
+      "lang": "la",
+      "answer": "east",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Hence the suspicion, because it has become known that we pray toward the east.",
+      "original": "denique inde suspicio, quod innotuerit nos ad orientis regionem precari.",
+      "context": "Pagans took this as sun worship. Tertullian denies it.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Hippolytus (attributed)",
+      "work": "Apostolic Tradition 41",
+      "year": 215,
+      "why": "The hours of prayer including midnight.",
+      "action": "intake",
+      "source_hint": "Hauler (1900)"
+    },
+    {
+      "author": "Basil of Caesarea",
+      "work": "Longer Rules 37",
+      "year": 370,
+      "why": "The monastic hours. In the library as basil-regulae-fusius; to be searched.",
+      "action": "search",
+      "source_hint": "books/basil-regulae-fusius/sources/asceticon_magnum_khazarzar.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "prayer"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

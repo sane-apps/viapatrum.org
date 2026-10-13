@@ -1,0 +1,167 @@
+{
+  "id": "honour-relics-martyrs",
+  "number": 69,
+  "group": "mary-saints",
+  "question": "Did they honour relics of the martyrs?",
+  "short": "Relics",
+  "search": [
+    "relics",
+    "bones of the martyrs",
+    "martyrs' tombs",
+    "cult of saints",
+    "shrines",
+    "veneration of relics"
+  ],
+  "answers": [
+    {
+      "id": "honoured",
+      "label": "Yes: they kept martyrs' remains with honor and met at their tombs",
+      "short": "Honored",
+      "tag": "Honored"
+    },
+    {
+      "id": "rejected",
+      "label": "Honoring relics is superstition",
+      "short": "Rejected",
+      "tag": "Rejected"
+    }
+  ],
+  "overview": [
+    {
+      "text": "By 156 the church of Smyrna gathered Polycarp's bones, \"more precious than costly stones\", and met at the spot each year on the day of his death. By 200 Rome showed visitors the apostles' tombs.",
+      "cites": [
+        "martyrdom-polycarp-18",
+        "gaius-in-eusebius-2-25-b"
+      ]
+    },
+    {
+      "text": "Fourth-century churches were built over martyrs' bodies, with sacrifice offered to God there (Augustine). The Reformers rejected the cult of relics.",
+      "cites": [
+        "augustine-against-faustus-20-21-b",
+        "thirty-nine-articles-22"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "martyrdom-polycarp-18",
+      "author": "Martyrdom of Polycarp",
+      "year": 156,
+      "date": "c. 156",
+      "work": "Martyrdom of Polycarp",
+      "locus": "18.2–3",
+      "lang": "grc",
+      "answer": "honoured",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So we afterwards took up his bones, more precious than costly stones and more tested than gold, and laid them where it was fitting. There, as far as we can, gathering in gladness and joy, the Lord will allow us to celebrate the birthday of his martyrdom, in memory of those who have already contended and to train and prepare those who will.",
+      "original": "οὕτως τε ἡμεῖς ὕστερον ἀνελόμενοι τὰ τιμιώτερα λίθων πολυτελῶν καὶ δοκιμώτερα ὑπὲρ χρυσίον ὀστᾶ αὐτοῦ ἀπεθέμεθα, ὅπου καὶ ἀκόλουθον ἦν. ἔνθα ὡς δυνατὸν ἡμῖν συναγομένοις ἐν ἀγαλλιάσει καὶ χαρᾷ παρέξει ὁ κύριος ἐπιτελεῖν τὴν τοῦ μαρτυρίου αὐτοῦ ἡμέραν γενέθλιον, εἴς τε τὴν τῶν προηθληκότων μνήμην καὶ τῶν μελλόντων ἄσκησίν τε καὶ ἑτοιμασίαν.",
+      "context": "The earliest evidence for honoring a martyr's remains and keeping his \"birthday\" (the day of death). The previous chapter insists Christ alone is worshiped; the martyrs are loved as disciples (17.3).",
+      "source": {
+        "book": "martyrdom-polycarp",
+        "section": "18"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gaius-in-eusebius-2-25-b",
+      "author": "Gaius of Rome (quoted by Eusebius)",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Dialogue with Proclus, in Eusebius, Church History",
+      "locus": "2.25.7",
+      "lang": "grc",
+      "answer": "honoured",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "supporting",
+      "english": "I can show you the trophies of the apostles. For if you will go to the Vatican or to the Ostian Way, you will find the trophies of those who founded this church.",
+      "original": "ἐγὼ δὲ τὰ “τρόπαια τῶν ἀποστόλων ἔχω δεῖξαι. ἐὰν γὰρ θελή- “ σῃς ἀπελθεῖν ἐπὶ τὸν Βατικανὸν , ἢ ἐπὶ τὴν ὁδὸν “τὴν Ὠστίαν, εὑρήσεις τὰ τρόπαια τῶν ταύτην ἱδρυ- “ σαμἐνων τὴν ἐκκλησίαν.",
+      "context": "Monuments over the apostles' graves in Rome, about 200.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "2.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-against-faustus-20-21-b",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Against Faustus the Manichaean",
+      "locus": "20.21",
+      "lang": "la",
+      "answer": "honoured",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Christian people celebrate the memorials of the martyrs with religious solemnity, both to stir up imitation and to share in their merits and be helped by their prayers; but in such a way that we set up altars not to any martyr, but to the God of the martyrs, even at the martyrs' memorials. For what bishop, standing at the altar where the holy bodies rest, ever said: We offer to you, Peter, or Paul, or Cyprian? What is offered is offered to God, who crowned the martyrs.",
+      "original": "populus autem christianus memorias martyrum religiosa sollemnitate concelebrat et ad excitandam imitationem et ut meritis eorum consocietur atque orationibus adiuuetur, ita tamen, ut nulli martyrum, sed ipsi deo martyrum quamuis in memoriis martyrum constituamus altaria. quis enim antistitum in locis sanctorum corporum adsistens altari aliquando dixit: offerimus tibi, Petre aut Paule aut Cypriane, sed quod offertur, offertur deo, qui martyres coronauit",
+      "context": "Altars stood over the martyrs' bodies, but the sacrifice was offered to God.",
+      "source": {
+        "book": "augustine-against-faustus",
+        "section": "20.21"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "thirty-nine-articles-22",
+      "author": "Church of England",
+      "year": 1571,
+      "date": "1571",
+      "work": "Thirty-Nine Articles",
+      "locus": "Article XXII",
+      "lang": "en",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The Romish Doctrine concerning Purgatory, Pardons, Worshipping, and Adoration, as well of Images as of Reliques, and also invocation of Saints, is a fond thing vainly invented",
+      "original": "The Romish Doctrine concerning Purgatory, Pardons, Worshipping, and Adoration, as well of Images as of Reliques, and also invocation of Saints, is a fond thing vainly invented",
+      "context": "The Anglican Articles reject the \"worshipping and adoration\" of relics, as Calvin's Treatise on Relics (1543) had.",
+      "source": {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "edition": "Thirty-Nine Articles, Article XXII (1571)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 22.8",
+      "year": 426,
+      "why": "Miracles at the shrine of Stephen's relics in Africa. The fetched Latin Library copy lacks chapters 6–11.",
+      "action": "intake",
+      "source_hint": "Dombart and Kalb (Teubner 1877–1905)"
+    },
+    {
+      "author": "Jerome",
+      "work": "Against Vigilantius 5–8",
+      "year": 406,
+      "why": "Defends honoring relics.",
+      "action": "intake",
+      "source_hint": "Migne PL 23"
+    },
+    {
+      "author": "Second Council of Nicaea",
+      "work": "Canon 7",
+      "year": 787,
+      "why": "Every altar must hold relics.",
+      "action": "intake",
+      "source_hint": "Mansi 13"
+    }
+  ],
+  "related": {
+    "topics": [
+      "relics"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

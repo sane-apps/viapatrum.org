@@ -1,0 +1,191 @@
+{
+  "id": "mary-remain-virgin-all-her",
+  "number": 65,
+  "group": "mary-saints",
+  "question": "Did Mary remain a virgin all her life?",
+  "short": "Ever-virgin?",
+  "search": [
+    "perpetual virginity",
+    "ever virgin",
+    "brothers of jesus",
+    "aeiparthenos",
+    "helvidius",
+    "protoevangelium of james",
+    "mary had other children"
+  ],
+  "answers": [
+    {
+      "id": "ever-virgin",
+      "label": "Yes: Mary remained a virgin; Jesus' \"brothers\" were relatives",
+      "short": "Ever-virgin",
+      "tag": "Ever-virgin"
+    },
+    {
+      "id": "other-children",
+      "label": "No: after Jesus she had other children by Joseph",
+      "short": "Other children",
+      "tag": "Other children"
+    }
+  ],
+  "overview": [
+    {
+      "text": "By about 150 the Protoevangelium of James made Jesus' \"brothers\" Joseph's sons by an earlier wife. Origen reports this and calls Mary the first fruits of virginity among women; by Athanasius \"Ever-Virgin\" is a title.",
+      "cites": [
+        "origen-matthew-10-17",
+        "athanasius-against-arians-2-70"
+      ]
+    },
+    {
+      "text": "Some held that Mary and Joseph had children afterward; Epiphanius and Jerome wrote against them. Catholic and Orthodox churches teach her perpetual virginity, as did the first Reformers.",
+      "cites": [
+        "antidicomarianites-in-epiphanius",
+        "ccc-499",
+        "dositheus-1672-decree-7"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "origen-matthew-10-17",
+      "author": "Origen of Alexandria",
+      "year": 246,
+      "date": "c. 246",
+      "work": "Commentary on Matthew",
+      "locus": "10.17",
+      "lang": "grc",
+      "answer": "ever-virgin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Some say, basing it on a tradition in the Gospel according to Peter, as it is called, or the Book of James, that the brothers of Jesus were sons of Joseph by a former wife who lived with him before Mary. Those who say this want to keep the honor of Mary in virginity to the end, so that the body chosen to serve the word \"The Holy Spirit will come upon you, and the power of the Most High will overshadow you\" should not know a man's bed after the Holy Spirit came upon her. And I think it reasonable that Jesus was the first fruits of purity in chastity among men, and Mary among women; for it would not be fitting to give the first fruits of virginity to any woman but her.",
+      "original": "Τοὺς δὲ ἀδελφοὺς Ἰησοῦ φασί τινες εἶναι, ἐκ παραδόσεως ὁρμώμενοι τοῦ ἐπιγεγραμμένου κατὰ Πέτρον εὐαγγελίου ἢ τῆς βίβλου Ἰακώβου, υἱοὺς Ἰωσὴφ ἐκ προτέρας γυναικὸς συνῳκηκυίας αὐτῷ πρὸ τῆς Μαρίας. Οἱ δὲ ταῦτα λέγοντες τὸ ἀξίωμα τῆς Μαρίας ἐν παρθενίᾳ τηρεῖν μέχρι τέλους βούλονται, ἵνα μὴ τὸ κριθὲν ἐκεῖνο σῶμα διακονήσασθαι τῷ εἰπόντι λόγῳ· «Πνεῦμα ἅγιον ἐπελεύσεται ἐπί σε καὶ δύναμις ὑψίστου ἐπισκιάσει σοι», γνῷ κοίτην ἀνδρὸς μετὰ τὸ ἐπελθεῖν ἐν αὐτῇ πνεῦμα ἅγιον καὶ τὴν ἐπεσκια κυῖαν αὐτῇ δύναμιν ἐξ ὕψους. Καὶ οἶμαι λόγον ἔχειν ἀνδρῶν μὲν καθαρότητος τῆς ἐν ἁγνείᾳ ἀπαρχὴν γεγονέναι τὸν Ἰησοῦν, γυναικῶν δὲ τὴν Μαρίαν· οὐ γὰρ εὔφημον ἄλλῃ παρ' ἐκείνην τὴν ἀπαρχὴν τῆς παρθενίας ἐπιγράψασθαι.",
+      "context": "The \"Book of James\" is the Protoevangelium of James (about 150). Origen gives the tradition and his own view, but notes it is a tradition, not Scripture.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-17-commentarium-in-evangelium-matthaei.txt",
+        "edition": "Migne PG 13, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athanasius-against-arians-2-70",
+      "author": "Athanasius of Alexandria",
+      "year": 340,
+      "date": "c. 340",
+      "work": "Against the Arians",
+      "locus": "2.70",
+      "lang": "grc",
+      "answer": "ever-virgin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... let them also deny that he took true human flesh from Mary the Ever-Virgin.",
+      "original": "ἀρνείσθωσαν καὶ ἀληθινὴν σάρκα ἀνθρωπίνην αὐτὸν εἰληφέναι ἐκ Μαρίας τῆς ἀειπαρθένου.",
+      "context": "\"Ever-Virgin\" (aeiparthenos) used as a title in passing, about 340.",
+      "source": {
+        "book": "athanasius-against-arians-2",
+        "section": "70"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "antidicomarianites-in-epiphanius",
+      "author": "Antidicomarianites (as Epiphanius reports)",
+      "year": 375,
+      "date": "c. 375",
+      "work": "Panarion, table of heresies",
+      "locus": "Heresy 78",
+      "lang": "grc",
+      "answer": "other-children",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "... those who say that holy Mary, the ever-virgin, was united with Joseph after she had borne the Savior, whom we have called Antidicomarianites (\"opponents of Mary\").",
+      "original": "οἱ καὶ τὴν ἁγίαν Μαρίαν τὴν ἀειπαρθένον λέγοντες μετὰ τὸ τὸν σωτῆρα γεγεννηκέναι τῷ Ἰωσὴφ συνῆφθαι, οὕστινας ἐκαλέσαμεν Ἀντιδικομαριαμίτας",
+      "context": "A group in Arabia who held that Mary had other children by Joseph. Helvidius held the same at Rome about 383.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 41–42, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ccc-499",
+      "author": "Catechism of the Catholic Church",
+      "year": 1992,
+      "date": "1992",
+      "work": "Catechism of the Catholic Church",
+      "locus": "499",
+      "lang": "en",
+      "answer": "ever-virgin",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The deepening of faith in the virginal motherhood led the Church to confess Mary's real and perpetual virginity even in the act of giving birth to the Son of God made man.",
+      "original": "The deepening of faith in the virginal motherhood led the Church to confess Mary's real and perpetual virginity even in the act of giving birth to the Son of God made man.",
+      "context": "Catholic and Orthodox teaching. Luther, Zwingli and Calvin also held Mary's perpetual virginity.",
+      "source": {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1K.HTM",
+        "edition": "Catechism of the Catholic Church, 499"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dositheus-1672-decree-7",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 7",
+      "lang": "en",
+      "answer": "ever-virgin",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "being conceived of the Holy Spirit, in the womb of the ever-virgin Mary",
+      "original": "being conceived of the Holy Spirit, in the womb of the ever-virgin Mary",
+      "context": "The Orthodox use the title in every liturgy.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 7 (1672)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Jerome",
+      "work": "Against Helvidius",
+      "year": 383,
+      "why": "The brothers as cousins, against Helvidius.",
+      "action": "intake",
+      "source_hint": "Migne PL 23"
+    },
+    {
+      "author": "Tertullian",
+      "work": "On the Flesh of Christ 23; On Monogamy 8",
+      "year": 208,
+      "why": "Tertullian seems to have thought Mary bore other children. In the library; to be read.",
+      "action": "search",
+      "source_hint": "tertullian-on-the-flesh-of-christ 23"
+    },
+    {
+      "author": "Protoevangelium of James",
+      "work": "Chapters 9 and 19–20",
+      "year": 150,
+      "why": "The oldest source for Joseph as an older widower.",
+      "action": "intake",
+      "source_hint": "Tischendorf, Evangelia apocrypha (1876)"
+    }
+  ],
+  "related": {
+    "timeline": "mary-virginity",
+    "topics": [
+      "mary-virginity"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "id": "christians-pray-saints-martyrs",
+  "number": 68,
+  "group": "mary-saints",
+  "question": "Did early Christians pray to the saints and martyrs?",
+  "short": "Prayer to saints",
+  "search": [
+    "intercession of saints",
+    "praying to saints",
+    "invocation of saints",
+    "communion of saints",
+    "martyrs",
+    "pray for us",
+    "mediator"
+  ],
+  "answers": [
+    {
+      "id": "intercede",
+      "label": "The saints pray for us, and we ask their prayers",
+      "short": "Ask their prayers",
+      "tag": "Intercession"
+    },
+    {
+      "id": "no-invocation",
+      "label": "Honor them as examples; pray to God alone",
+      "short": "God alone",
+      "tag": "No invocation"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the third century, Christians held that the saints who had died pray for the living: Origen says their souls pray with us; Cyprian asks that whoever dies first keep praying.",
+      "cites": [
+        "origen-on-prayer-11",
+        "cyprian-letter-60-5"
+      ]
+    },
+    {
+      "text": "By the fourth century the liturgy named the saints so that God would hear \"at their prayers\", and Christians gathered at martyrs' tombs, offering sacrifice to God, not to the martyrs (Augustine).",
+      "cites": [
+        "cyril-mystagogic-5-9",
+        "augustine-against-faustus-20-21"
+      ]
+    },
+    {
+      "text": "Catholics and Orthodox still invoke the saints. Lutherans and Reformed honor them but pray to God alone.",
+      "cites": [
+        "trent-1563-saints",
+        "dositheus-1672-decree-8",
+        "augsburg-1530-21",
+        "westminster-1646-21-2"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "origen-on-prayer-11",
+      "author": "Origen of Alexandria",
+      "year": 234,
+      "date": "c. 234",
+      "work": "On Prayer",
+      "locus": "11.1",
+      "lang": "grc",
+      "answer": "intercede",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Not only the high priest prays with those who pray sincerely, but also the angels who rejoice in heaven over one sinner who repents ... and the souls of the saints who have fallen asleep.",
+      "original": "Οὐ μόνος δὲ ὁ ἀρχιερεὺς τοῖς γνησίως εὐχομένοις συνεύχεται ἀλλὰ καὶ οἱ ἐν οὐρανῷ χαίροντες ἄγγελοι, ἐπὶ ἑνὶ ἁμαρτωλῷ μετανοοῦντι ἢ ἐπὶ ἐνενήκοντα ἐννέα δικαίοις, οἳ οὐ χρείαν ἔχουσι μετανοίας, αἵ τε τῶν προκεκοιμημένων ἁγίων ψυχαί.",
+      "context": "The departed saints pray with and for the living. Origen does not here speak of praying to them.",
+      "source": {
+        "book": "origen-prayer-martyrdom",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-60-5",
+      "author": "Cyprian of Carthage",
+      "year": 252,
+      "date": "c. 252",
+      "work": "Letter 60, to Cornelius",
+      "locus": "60.5",
+      "lang": "la",
+      "answer": "intercede",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let us remember one another, in harmony and of one mind; let us always pray for each other on both sides ... and if either of us, by the speed of God's favor, goes before the other, let our love continue before the Lord, and let our prayer for our brothers and sisters not cease before the Father's mercy.",
+      "original": "memores nostri inuicem simus, concordes adque unanimes, utrubique pro nobis semper oremus ... et si quia istinc nostrum prior diuinae dignationis celeritate praecesserit, perseueret apud Dominum nostra dilectio, pro fratribus et sororibus nostris apud misericordiam patris non cesset oratio.",
+      "context": "Written during persecution: the martyr who dies first keeps praying for the others.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "60.5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogic-5-9",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogic Catecheses",
+      "locus": "5.9",
+      "lang": "grc",
+      "answer": "intercede",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Then we remember also those who have fallen asleep before us, first the patriarchs, prophets, apostles and martyrs, that God, at their prayers and intercessions, may receive our petition.",
+      "original": "Εἶτα μνημονεύομεν καὶ τῶν κεκοιμημένων, πρῶτον πατριαρχῶν, προφητῶν, ἀποστόλων, μαρτύρων, ὅπως ὁ Θεὸς εὐχαῖς αὐτῶν καὶ πρεσβείαις προσδέξηται ἡμῶν τὴν δέησιν.",
+      "context": "In the eucharistic prayer at Jerusalem, about 350.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-against-faustus-20-21",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Against Faustus the Manichaean",
+      "locus": "20.21",
+      "lang": "la",
+      "answer": "intercede",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Christian people celebrate the memorials of the martyrs with religious solemnity, both to stir up imitation and to share in their merits and be helped by their prayers; but in such a way that we set up altars not to any martyr, but to the God of the martyrs, even at the martyrs' memorials. For what bishop, standing at the altar where the holy bodies rest, ever said: We offer to you, Peter, or Paul, or Cyprian? What is offered is offered to God, who crowned the martyrs.",
+      "original": "populus autem christianus memorias martyrum religiosa sollemnitate concelebrat et ad excitandam imitationem et ut meritis eorum consocietur atque orationibus adiuuetur, ita tamen, ut nulli martyrum, sed ipsi deo martyrum quamuis in memoriis martyrum constituamus altaria. quis enim antistitum in locis sanctorum corporum adsistens altari aliquando dixit: offerimus tibi, Petre aut Paule aut Cypriane, sed quod offertur, offertur deo, qui martyres coronauit",
+      "context": "Faustus had accused Catholics of turning idols into martyrs. Augustine distinguishes honor from worship.",
+      "source": {
+        "book": "augustine-against-faustus",
+        "section": "20.21"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1563-saints",
+      "author": "Council of Trent",
+      "year": 1563,
+      "date": "1563",
+      "work": "Session 25",
+      "locus": "On the invocation of saints",
+      "lang": "en",
+      "answer": "intercede",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "the saints, who reign together with Christ, offer up their own prayers to God for men; that it is good and useful suppliantly to invoke them",
+      "original": "the saints, who reign together with Christ, offer up their own prayers to God for men; that it is good and useful suppliantly to invoke them",
+      "context": "Trent called it \"good and useful\" to invoke the saints, while Christ remains the one Redeemer.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm",
+        "edition": "Council of Trent, Session 25, On the invocation of saints (1563)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dositheus-1672-decree-8",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 8",
+      "lang": "en",
+      "answer": "intercede",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Notwithstanding, in [our] prayers and supplications unto Him, we say the Saints are intercessors, and, above all, the undefiled Mother of the very God the Word",
+      "original": "Notwithstanding, in [our] prayers and supplications unto Him, we say the Saints are intercessors, and, above all, the undefiled Mother of the very God the Word",
+      "context": "The Orthodox ask the saints' intercession in every service.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 8 (1672)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "augsburg-1530-21",
+      "author": "Augsburg Confession (Lutheran)",
+      "year": 1530,
+      "date": "1530",
+      "work": "Augsburg Confession",
+      "locus": "Article XXI",
+      "lang": "en",
+      "answer": "no-invocation",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "But the Scripture teaches not the invocation of saints or to ask help of saints, since it sets before us the one Christ as the Mediator",
+      "original": "But the Scripture teaches not the invocation of saints or to ask help of saints, since it sets before us the one Christ as the Mediator",
+      "context": "Lutherans honor the saints as examples; the Apology grants that they pray for the Church in general (XXI.9).",
+      "source": {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "edition": "Augsburg Confession, Article XXI (1530)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1646-21-2",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "21.2",
+      "lang": "en",
+      "answer": "no-invocation",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Religious worship is to be given to God, the Father, Son, and Holy Ghost; and to him alone; not to angels, saints, or any other creature",
+      "original": "Religious worship is to be given to God, the Father, Son, and Holy Ghost; and to him alone; not to angels, saints, or any other creature",
+      "context": "The Reformed view.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Westminster Confession of Faith, 21.2 (1646)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Catacomb inscriptions",
+      "work": "Graffiti at San Sebastiano (\"Peter and Paul, pray for Victor\")",
+      "year": 260,
+      "why": "The earliest direct prayers to saints, in stone.",
+      "action": "intake",
+      "source_hint": "De Rossi, Inscriptiones christianae (1861); Diehl, ILCV (1925)"
+    },
+    {
+      "author": "Gregory of Nazianzus",
+      "work": "Oration 24.11",
+      "year": 379,
+      "why": "Justina's prayer to the Virgin Mary.",
+      "action": "intake",
+      "source_hint": "Migne PG 35"
+    },
+    {
+      "author": "Jerome",
+      "work": "Against Vigilantius 6",
+      "year": 406,
+      "why": "Defends the cult of martyrs against a critic.",
+      "action": "intake",
+      "source_hint": "Migne PL 23"
+    }
+  ],
+  "related": {
+    "timeline": "saints",
+    "topics": [
+      "saints"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

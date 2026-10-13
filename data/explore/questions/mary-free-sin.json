@@ -1,0 +1,226 @@
+{
+  "id": "mary-free-sin",
+  "number": 66,
+  "group": "mary-saints",
+  "question": "Was Mary free from sin?",
+  "short": "Mary sinless?",
+  "search": [
+    "immaculate conception",
+    "sinlessness of mary",
+    "mary sinless",
+    "new eve",
+    "panagia",
+    "all holy",
+    "ineffabilis deus"
+  ],
+  "answers": [
+    {
+      "id": "faults",
+      "label": "She was holy but had faults, like others",
+      "short": "Had faults",
+      "tag": "Faults"
+    },
+    {
+      "id": "sinless",
+      "label": "She committed no personal sin",
+      "short": "No personal sin",
+      "tag": "Sinless"
+    },
+    {
+      "id": "immaculate",
+      "label": "She was free from original sin from her conception",
+      "short": "Immaculate Conception",
+      "tag": "Immaculate"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Several early writers speak of Mary's faults: Tertullian counts her among the unbelieving relatives, and Chrysostom speaks of vainglory and asking at the wrong time.",
+      "cites": [
+        "tertullian-flesh-of-christ-7",
+        "chrysostom-matthew-homily-44"
+      ]
+    },
+    {
+      "text": "Augustine, against Pelagius, excepted Mary alone from any talk of sin, for the Lord's honor. That became the common view, East and West.",
+      "cites": [
+        "augustine-nature-and-grace-36-42",
+        "trent-1547-canon-23-mary",
+        "dositheus-1672-decree-6"
+      ]
+    },
+    {
+      "text": "In 1854 the Catholic Church defined that Mary was preserved from original sin from her conception. The Orthodox and Protestants do not accept this definition.",
+      "cites": [
+        "pius-ix-1854-ineffabilis-deus"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "tertullian-flesh-of-christ-7",
+      "author": "Tertullian",
+      "year": 208,
+      "date": "c. 208",
+      "work": "On the Flesh of Christ",
+      "locus": "7.9–13",
+      "lang": "la",
+      "answer": "faults",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "Did Christ use this saying, \"Who is my mother, and who are my brothers?\", fittingly, to strike at the unbelief of those standing outside, or to shake off the importunity of those calling him away from his work? ... When indignation denies parents, it does not deny them; it rebukes them.",
+      "original": "indigue usus est hoc dicto ad percutiendam incredulitatem foris stantium vel ad excutiendam importunitatem ab opere revocantium? ... Cum indignatio parentes negat, non negat, sed obiurgat.",
+      "context": "Against Marcion, who used the verse to deny Christ had a mother. Tertullian counts Mary among the unbelieving relatives of Mark 3:21.",
+      "source": {
+        "book": "tertullian-on-the-flesh-of-christ",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-matthew-homily-44",
+      "author": "John Chrysostom",
+      "year": 390,
+      "date": "c. 390",
+      "work": "Homilies on Matthew",
+      "locus": "44.1, on Matthew 12:46–50",
+      "lang": "grc",
+      "answer": "faults",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So here too he healed the disease of vainglory and gave his mother the honor due to her, though she asked at the wrong time.",
+      "original": "Οὕτω δὴ καὶ ἐνταῦθα τῆς τε κενοδοξίας τὸ νόσημα ἰάσατο, καὶ τὴν πρέπουσαν τιμὴν τῇ μητρὶ ἀπέδωκε, καίτοι καὶ ἄκαιρα αἰτούσῃ.",
+      "context": "Chrysostom thinks Mary and the brothers wanted to show their authority over Jesus before the crowd, as at Cana. Several Greek fathers spoke of Mary's faults this way.",
+      "source": {
+        "book": "chrysostom-homiliae-matthaeum",
+        "section": "357"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-nature-and-grace-36-42",
+      "author": "Augustine of Hippo",
+      "year": 415,
+      "date": "c. 415",
+      "work": "On Nature and Grace",
+      "locus": "36.42",
+      "lang": "la",
+      "answer": "sinless",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Except, then, the holy Virgin Mary, about whom, for the honor of the Lord, I want no question at all to be raised when we are dealing with sins.",
+      "original": "Excepta itaque sancta virgine Maria, de qua propter honorem Domini nullam prorsus cum de peccatis agitur, haberi volo quaestionem",
+      "context": "Pelagius had listed Mary among the sinless. Augustine agrees for her alone, asking how we can know what more grace she was given. He still held she was born with original sin. The Migne scan is poor here; the quote follows the standard text.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt",
+        "ia": "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_44",
+        "ocr_poor": true,
+        "edition": "Migne PL 44 (1845), De natura et gratia 36.42"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1547-canon-23-mary",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 6",
+      "locus": "Canon 23",
+      "lang": "en",
+      "answer": "sinless",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "except by a special privilege from God, as the Church holds in regard of the Blessed Virgin",
+      "original": "except by a special privilege from God, as the Church holds in regard of the Blessed Virgin",
+      "context": "Trent says no one avoids all venial sins for a whole life except by special privilege, \"as the Church holds of the Blessed Virgin\".",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/sixth-session.htm",
+        "edition": "Council of Trent, Session 6, Canon 23 (1547)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dositheus-1672-decree-6",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 6",
+      "lang": "en",
+      "answer": "sinless",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "and especially the Mother of God the Word, the ever-virgin Mary, did not experience these [sins], or such like faults.",
+      "original": "and especially the Mother of God the Word, the ever-virgin Mary, did not experience these [sins], or such like faults.",
+      "context": "The Orthodox hold Mary free of personal sin but do not accept the Immaculate Conception.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 6 (1672)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "pius-ix-1854-ineffabilis-deus",
+      "author": "Pius IX",
+      "year": 1854,
+      "date": "1854",
+      "work": "Ineffabilis Deus",
+      "locus": "Definition",
+      "lang": "en",
+      "answer": "immaculate",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "the most Blessed Virgin Mary, in the first instance of her conception, by a singular grace and privilege granted by Almighty God, in view of the merits of Jesus Christ, the Savior of the human race, was preserved free from all stain of original sin",
+      "original": "the most Blessed Virgin Mary, in the first instance of her conception, by a singular grace and privilege granted by Almighty God, in view of the merits of Jesus Christ, the Savior of the human race, was preserved free from all stain of original sin",
+      "context": "Defined as Catholic dogma in 1854 after centuries of debate (Bernard and Aquinas questioned it; Duns Scotus defended it).",
+      "source": {
+        "url": "https://www.papalencyclicals.net/pius09/p9ineff.htm",
+        "edition": "Pius IX, Ineffabilis Deus (1854)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Homilies on Luke 17.6–7",
+      "year": 233,
+      "why": "Simeon's sword as Mary's doubt at the cross. In the library's Luke witnesses.",
+      "action": "search",
+      "source_hint": "books/origen-luke-homilies/sources/witnesses/rauer-gcs49-1930_djvu.txt"
+    },
+    {
+      "author": "Ephrem the Syrian",
+      "work": "Carmina Nisibena 27.8",
+      "year": 360,
+      "why": "\"You and your mother alone are wholly beautiful; no stain is in you.\" Syriac.",
+      "action": "intake",
+      "source_hint": "Bickell, Carmina Nisibena (1866)"
+    },
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 3.22.4",
+      "year": 180,
+      "why": "Mary as the new Eve, whose obedience untied Eve's knot.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
+    }
+  ],
+  "related": {
+    "timeline": "mary-sinlessness",
+    "topics": [
+      "mary-sinlessness"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

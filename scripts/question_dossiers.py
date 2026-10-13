@@ -79,14 +79,15 @@ def fuzzy_in(piece: str, text: str) -> float:
     words = piece.split()
     if not words:
         return 0.0
-    anchor = max(words, key=len)
     best = 0.0
     span = len(piece)
-    for m in re.finditer(re.escape(anchor), text):
-        window = set(text[max(0, m.start() - span): m.end() + span].split())
-        best = max(best, sum(w in window for w in words) / len(words))
-        if best >= 0.999:
-            break
+    # Try the four longest words as anchors: in a poor scan the longest one may be garbled.
+    for anchor in sorted(set(words), key=len, reverse=True)[:4]:
+        for m in re.finditer(re.escape(anchor), text):
+            window = set(text[max(0, m.start() - span): m.end() + span].split())
+            best = max(best, sum(w in window for w in words) / len(words))
+            if best >= 0.999:
+                return best
     return best
 
 

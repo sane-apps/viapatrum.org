@@ -1,0 +1,282 @@
+{
+  "id": "pray-dead-there-purgatory",
+  "number": 71,
+  "group": "mary-saints",
+  "question": "Did they pray for the dead, and is there a purgatory?",
+  "short": "Prayer for the dead",
+  "search": [
+    "purgatory",
+    "prayers for the dead",
+    "intermediate state",
+    "requiem",
+    "refrigerium",
+    "2 maccabees 12",
+    "dinocrates"
+  ],
+  "answers": [
+    {
+      "id": "pray",
+      "label": "Yes: they prayed and offered the Eucharist for the dead",
+      "short": "Prayed for the dead",
+      "tag": "Prayer"
+    },
+    {
+      "id": "purgatory",
+      "label": "Some are purified by punishment after death",
+      "short": "Purgatory",
+      "tag": "Purgatory"
+    },
+    {
+      "id": "none",
+      "label": "No: heaven or hell at death, and no prayer for the dead",
+      "short": "No prayer",
+      "tag": "None"
+    }
+  ],
+  "overview": [
+    {
+      "text": "By about 200, Christians at Carthage offered the Eucharist for the dead on their anniversaries and prayed for their \"refreshment\"; the martyr Perpetua prayed for her dead brother.",
+      "cites": [
+        "tertullian-crown-3-dead",
+        "tertullian-monogamy-10",
+        "passion-perpetua-7"
+      ]
+    },
+    {
+      "text": "The fourth-century liturgy prayed for all the departed at the Eucharist, and Monica asked only to be remembered at the altar.",
+      "cites": [
+        "cyril-mystagogic-5-9-dead",
+        "augustine-confessions-9-36"
+      ]
+    },
+    {
+      "text": "Augustine allowed that some suffer purifying punishment after death; the West defined purgatory. The Orthodox pray for the dead without defining it; the Reformed reject both.",
+      "cites": [
+        "augustine-city-of-god-21-13",
+        "trent-1563-purgatory",
+        "dositheus-1672-decree-18",
+        "westminster-1646-32-1"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "tertullian-crown-3-dead",
+      "author": "Tertullian",
+      "year": 211,
+      "date": "c. 211",
+      "work": "On the Crown",
+      "locus": "3.3",
+      "lang": "la",
+      "answer": "pray",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We make offerings for the dead, for their birthdays, on the anniversary.",
+      "original": "Oblationes pro defunctis, pro nataliciis annua die facimus.",
+      "context": "Among customs kept by tradition. \"Birthdays\" are the days of their death.",
+      "source": {
+        "book": "tertullian-on-the-crown",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-monogamy-10",
+      "author": "Tertullian",
+      "year": 217,
+      "date": "c. 217",
+      "work": "On Monogamy",
+      "locus": "10.4",
+      "lang": "la",
+      "answer": "pray",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Indeed she prays for his soul, and asks refreshment for him in the meantime, and fellowship in the first resurrection, and she offers on the anniversaries of his falling asleep.",
+      "original": "Enimvero et pro anima eius orat, et refrigerium interim adpostulat ei, et in prima resurrectione consortium, et offert annuis diebus dormitionis eius.",
+      "context": "Tertullian uses the custom to argue that a widow is still bound to her husband.",
+      "source": {
+        "book": "tertullian-on-monogamy",
+        "section": "10"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "passion-perpetua-7",
+      "author": "Perpetua of Carthage",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Passion of Perpetua and Felicity",
+      "locus": "7.1–4",
+      "lang": "la",
+      "answer": "pray",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "A few days later, while we were all praying, suddenly in the middle of the prayer a word came to me, and I named Dinocrates ... And I knew at once that I was worthy, and ought to ask for him. And I began to pray much for him, and to groan to the Lord. That very night this was shown me: I see Dinocrates coming out of a dark place, where there were many others, very hot and thirsty, with a dirty face and pale color.",
+      "original": "Post dies paucos, dum universi oramus, subito media oratione profecta est mihi vox, et nominavi Dinocratem ... Et cognovi me statim dignam esse, et pro eo petere debere. Et coepi pro ipso orationem facere multum, et ingemiscere ad Dominum. Continuo ipsa nocte ostensum est mihi hoc in oromate: video Dinocratem exeuntem de loco tenebroso, ubi et complures erant, aestuantem et sitientem valde, sordido vultu et colore pallido",
+      "context": "From the diary of a young martyr in prison. After her prayers she sees her dead brother healed and refreshed (chapter 8).",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/passio_perpetuae_migne_pl3_wikisource.txt",
+        "edition": "Migne PL 3 (Wikisource text)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogic-5-9-dead",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogic Catecheses",
+      "locus": "5.9",
+      "lang": "grc",
+      "answer": "pray",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Then also for the holy fathers and bishops who have fallen asleep, and in short for all who have fallen asleep before us, believing that it will be the greatest help to the souls for whom the prayer is offered while the holy and most awesome sacrifice lies before us.",
+      "original": "Εἶτα καὶ ὑπὲρ τῶν κεκοιμημένων ἁγίων πατέρων καὶ ἐπισκόπων, καὶ πάντων ἁπλῶς τῶν ἡμῖν προκεκοιμημένων, μεγίστην ὄνησιν πιστεύοντες ἔσεσθαι ταῖς ψυχαῖς, ὑπὲρ ὧν ἡ δέησις ἀναφέρεται, τῆς ἁγίας καὶ φρικωδεστάτης προκειμένης θυσίας.",
+      "context": "Cyril goes on to answer those who ask what good it does a soul that died in sin.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-confessions-9-36",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Confessions",
+      "locus": "9.13.36",
+      "lang": "la",
+      "answer": "pray",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "She did not want her body richly wrapped or embalmed, nor did she seek a fine monument or care for her home grave. She did not ask that of us; she only wished to be remembered at your altar, which she had served without missing a day, where she knew the holy victim was offered.",
+      "original": "non ista mandauit nobis, sed tantummodo memoriam sui ad altare tuum fieri desiderauit, cui nullius diei praetermissione seruierat, unde sciret dispensari uictimam sanctam",
+      "context": "Monica's last wish, and Augustine's prayer for her that follows.",
+      "source": {
+        "book": "augustine-confessions",
+        "section": "9.36"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-21-13",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "21.13",
+      "lang": "la",
+      "answer": "purgatory",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We confess that even in this mortal life there are some purgatorial punishments ... But some suffer temporary punishments in this life only, others after death, others both now and then, yet before that most severe and final judgment.",
+      "original": "Nos uero etiam in hac quidem mortali uita esse quasdam poenas purgatorias confitemur ... Sed temporarias poenas alii in hac uita tantum, alii post mortem, alii et nunc et tunc, uerum tamen ante iudicium illud seuerissimum nouissimumque patiun",
+      "context": "Augustine speaks of a purifying punishment after death for some, before the judgment. He calls the details uncertain elsewhere (Enchiridion 69).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-21.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1563-purgatory",
+      "author": "Council of Trent",
+      "year": 1563,
+      "date": "1563",
+      "work": "Session 25",
+      "locus": "Decree on Purgatory",
+      "lang": "en",
+      "answer": "purgatory",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "there is a Purgatory, and that the souls there detained are helped by the suffrages of the faithful, but principally by the acceptable sacrifice of the altar",
+      "original": "there is a Purgatory, and that the souls there detained are helped by the suffrages of the faithful, but principally by the acceptable sacrifice of the altar",
+      "context": "The Catholic decree, also defined at Lyons (1274) and Florence (1439).",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/twenty-fifth-session.htm",
+        "edition": "Council of Trent, Session 25, Decree concerning Purgatory (1563)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dositheus-1672-decree-18",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 18",
+      "lang": "en",
+      "answer": "pray",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "are delivered by the Supreme Goodness, through the prayers of the Priests, and the good works which the relatives of each do for their Departed; especially the unbloody Sacrifice benefiting the most",
+      "original": "are delivered by the Supreme Goodness, through the prayers of the Priests, and the good works which the relatives of each do for their Departed; especially the unbloody Sacrifice benefiting the most",
+      "context": "The Orthodox pray for the dead without defining purgatory.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 18 (1672)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1646-32-1",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "32.1",
+      "lang": "en",
+      "answer": "none",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Besides these two places, for souls separated from their bodies, the Scripture acknowledgeth none.",
+      "original": "Besides these two places, for souls separated from their bodies, the Scripture acknowledgeth none.",
+      "context": "The Reformed: heaven or hell at death, and no prayer for the dead.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Westminster Confession of Faith, 32.1 (1646)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Abercius of Hierapolis",
+      "work": "Epitaph",
+      "year": 200,
+      "why": "\"Let every friend who understands this pray for Abercius.\"",
+      "action": "intake",
+      "source_hint": "Lightfoot, Apostolic Fathers 2.1 (1885)"
+    },
+    {
+      "author": "Gregory I",
+      "work": "Dialogues 4.41 and 4.57",
+      "year": 594,
+      "why": "Purgatorial fire and Masses for the dead.",
+      "action": "intake",
+      "source_hint": "Moricca (1924); Migne PL 77"
+    }
+  ],
+  "related": {
+    "timeline": "after-death",
+    "topics": [
+      "prayer-for-the-dead"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
