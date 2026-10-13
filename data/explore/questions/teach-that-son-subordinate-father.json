@@ -1,0 +1,165 @@
+{
+  "id": "teach-that-son-subordinate-father",
+  "number": 15,
+  "group": "god",
+  "question": "Did the early church teach that the Son is subordinate to the Father?",
+  "short": "Is the Son subordinate?",
+  "search": [
+    "subordinationism",
+    "subordinate",
+    "father greater than i",
+    "eternal subordination",
+    "monarchy of the father",
+    "john 14:28"
+  ],
+  "answers": [
+    {
+      "id": "order",
+      "label": "The Son is second in order under the Father",
+      "short": "Second in order",
+      "tag": "Order"
+    },
+    {
+      "id": "equal",
+      "label": "Equal in nature; the Father is first only as source",
+      "short": "Equal in nature",
+      "tag": "Equal"
+    },
+    {
+      "id": "created",
+      "label": "The Son is lower in being, a creature",
+      "short": "Lower in being",
+      "tag": "Lower"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Second- and third-century writers speak of an order: the Son in \"second place\" and the Spirit \"third\" (Justin), the Son as a \"portion\" of the Father's whole substance (Tertullian). They also call the Son God.",
+      "cites": [
+        "justin-1apol-13",
+        "tertullian-praxeas-9"
+      ]
+    },
+    {
+      "text": "Arius pressed order into inequality of being. The Nicene teachers answered that \"the Father is greater\" refers to the Father as cause, and \"equal\" to their one nature.",
+      "cites": [
+        "arius-in-athanasius-sub",
+        "gregory-nazianzus-oration-30-7"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-13",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "13.3–4",
+      "lang": "grc",
+      "answer": "order",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We will show that we honor him reasonably, having learned that he is the Son of the true God himself, and holding him in the second place, and the prophetic Spirit in the third rank. For they call this our madness: that we give second place after the unchangeable and ever-existing God, the begetter of all, to a crucified man.",
+      "original": "υἱὸν αὐτὸν τοῦ ὄντως θεοῦ μαθόντες καὶ ἐν δευτέρᾳ χώρᾳ ἔχοντες, πνεῦμά τε προφητικὸν ἐν τρίτῃ τάξει ὅτι μετὰ λόγου τιμῶμεν, ἀποδείξομεν. Ἐνταῦθα γὰρ μανίαν ἡμῶν καταφαίνονται, δευτέραν χώραν μετὰ τὸν ἄτρεπτον καὶ ἀεὶ ὄντα θεὸν καὶ γεννήτορα τῶν ἁπάντων ἀνθρώπῳ",
+      "context": "Second and third \"place\" names an order of honor. Justin does not explain how it fits with the Son being God.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "13"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-praxeas-9",
+      "author": "Tertullian",
+      "year": 213,
+      "date": "c. 213",
+      "work": "Against Praxeas",
+      "locus": "9.2",
+      "lang": "la",
+      "answer": "order",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Father is the whole substance, and the Son a derivation and portion of the whole, as he himself declares: \"The Father is greater than I\" (John 14:28).",
+      "original": "pater enim tota substantia est, filius uero deriuatio totius et portio, sicut ipse profitetur: quia pater maior me est.",
+      "context": "Tertullian holds one substance but describes the Son as a portion of it. Later writers judged this language too weak.",
+      "source": {
+        "book": "tertullian-against-praxeas",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "arius-in-athanasius-sub",
+      "author": "Arius (quoted by Athanasius)",
+      "year": 320,
+      "date": "c. 320",
+      "work": "Thalia, quoted in Athanasius, Against the Arians",
+      "locus": "1.5",
+      "lang": "grc",
+      "answer": "created",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "supporting",
+      "english": "God was not always Father; there was a time when God was alone and was not yet Father. Later he became Father. The Son was not always. For all things came to be from nothing, and all are creatures and things made; so the Word of God himself came to be from nothing, and there was when he was not, and he was not before he came to be, but he too had a beginning of being created. For, he says, God was alone, and the Word and Wisdom did not yet exist. Then, wishing to create us, he made one being and named him Word and Wisdom and Son, so that he might create us through him.",
+      "original": "Οὐκ ἀεὶ ὁ Θεὸς Πατὴρ ἦν· ἀλλʼ ἦν ὅτε ὁ Θεὸς μόνος ἦν, καὶ οὔπω Πατὴρ ἦν· ὕστερον δὲ ἐπιγέγονε Πατήρ. Οὐκ ἀεὶ ἦν ὁ Υἱός· πάντων γὰρ γενομένων ἐξ οὐκ ὄντων, καὶ πάντων ὄντων κτισμάτων καὶ ποιημάτων γενομένων, καὶ αὐτὸς ὁ τοῦ Θεοῦ Λόγος ἐξ οὐκ ὄντων γέγονε, καὶ ἦν ποτε ὅτε οὐκ ἦν· καὶ οὐκ ἦν πρὶν γένηται, ἀλλʼ ἀρχὴν τοῦ κτίζεσθαι ἔσχε καὶ αὐτός. Ἦν γὰρ, φησὶ, ‘μόνος ὁ Θεὸς, καὶ οὔπω ἦν ὁ Λόγος καὶ ἡ σοφία. Εἶτα θελήσας ἡμᾶς δημιουργῆσαι, τότε δὴ πεποίηκεν ἕνα τινὰ, καὶ ὠνόμασεν αὐτὸν Λόγον καὶ Σοφίαν καὶ Υἱὸν, ἵνα ἡμᾶς διʼ αὐτοῦ δημιουργήσῃ.",
+      "context": "The view Nicaea condemned, in Arius's own words as his opponent preserves them. Arius did call the Son \"God\" in a lesser sense: a perfect creature, not one of the creatures.",
+      "source": {
+        "book": "athanasius-against-arians-1",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-oration-30-7",
+      "author": "Gregory of Nazianzus",
+      "year": 380,
+      "date": "c. 380",
+      "work": "Oration 30",
+      "locus": "7",
+      "lang": "grc",
+      "answer": "equal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Their third text is \"greater\"; their fourth, \"my God and your God\". If he were called greater and not equal, that might count for something. But since we clearly find both, what will these fine people say? How will they reconcile what cannot be reconciled? For the same thing cannot be both greater and equal to the same thing. Is it not clear that \"greater\" refers to the cause, and \"equal\" to the nature?",
+      "original": "τρίτον ἀρίθμει τό· μεῖζον· τέταρτον τό· θεόν μου καὶ θεὸν ὑμῶν. εἰ μὲν οὖν μείζων μὲν ἐλέγετο, μὴ ἴσος δέ, τάχα ἂν ἦν τι τοῦτο αὐτοῖς· εἰ δὲ ἀμφότερα σαφῶς εὑρίσκομεν, τί φήσουσιν οἱ γεννάδαι; τί τὸ ἰσχυρὸν αὐτοῖς ; πῶς συμβήσεται τὰ ἀσύμβατα ; τὸ γὰρ αὐτὸ τοῦ αὐτοῦ ὁμοίως μεῖζον καὶ ἴσον εἶναι τῶν ἀδυνάτων· ἢ δῆλον ὅτι τὸ μεῖζον μέν ἐστι τῆς αἰτίας, τὸ δὲ ἴσον τῆς φύσεως ;",
+      "context": "The Nicene answer to John 14:28: the Father is the source of the Son, and the Son is equal in nature.",
+      "source": {
+        "book": "gregory-nazianzus-oration-30",
+        "section": "7"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Commentary on John 13.25",
+      "year": 235,
+      "why": "The Father exceeds the Son as much as the Son exceeds creatures. A key text for the subordination debate; the passage was not found in the library's Greek.",
+      "action": "search",
+      "source_hint": "Preuschen GCS 10 (1903)"
+    },
+    {
+      "author": "Novatian",
+      "work": "On the Trinity 31",
+      "year": 250,
+      "why": "The Son is subject to the Father. In the library's Fausset scan; not yet added.",
+      "action": "search",
+      "source_hint": "novatian_de_trinitate_fausset1909"
+    }
+  ],
+  "related": {
+    "topics": [
+      "father-son-spirit"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

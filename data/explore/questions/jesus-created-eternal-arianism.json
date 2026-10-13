@@ -1,0 +1,172 @@
+{
+  "id": "jesus-created-eternal-arianism",
+  "number": 12,
+  "group": "god",
+  "question": "Was Jesus created, or eternal? What was Arianism?",
+  "short": "Created or eternal?",
+  "search": [
+    "arianism",
+    "arius",
+    "eternal son",
+    "eternal generation",
+    "begotten not made",
+    "there was when he was not",
+    "jehovah's witnesses"
+  ],
+  "answers": [
+    {
+      "id": "eternal",
+      "label": "The Son is eternal: begotten, not made",
+      "short": "Eternal Son",
+      "tag": "Eternal"
+    },
+    {
+      "id": "emitted",
+      "label": "The Word was always in God and came forth as Son to create",
+      "short": "Word came forth",
+      "tag": "Came forth"
+    },
+    {
+      "id": "created",
+      "label": "The Son was created: there was when he was not",
+      "short": "Created",
+      "tag": "Created"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Second-century writers describe the Word as always within God and then \"uttered\" as Son when God made the world. Origen, about 225, denies outright that there was ever a time when the Son was not.",
+      "cites": [
+        "theophilus-autolycus-2-22",
+        "origen-first-principles-1-2-9"
+      ]
+    },
+    {
+      "text": "Arius, a priest of Alexandria, taught about 320 that God was not always Father and that the Son was made from nothing: \"there was when he was not\".",
+      "cites": [
+        "arius-in-athanasius-1-5"
+      ]
+    },
+    {
+      "text": "Nicaea answered in 325: begotten, not made, of one substance with the Father, and it condemned Arius's phrases word for word.",
+      "cites": [
+        "nicene-creed-325-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "theophilus-autolycus-2-22",
+      "author": "Theophilus of Antioch",
+      "year": 180,
+      "date": "c. 180",
+      "work": "To Autolycus",
+      "locus": "2.22",
+      "lang": "grc",
+      "answer": "emitted",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What is the voice but the Word of God, who is also his Son? Not as the poets and mythographers say, sons of gods born from intercourse, but as the truth relates: the Word, always present within God's heart. Before anything came to be he had him as counselor, being his own mind and understanding. When God wished to make what he had planned, he begot this Word, uttering him, the firstborn of all creation.",
+      "original": "ἀλλὰ ὡς ἀληθεία διηγεῖται τὸν λόγον, τὸν ὄντα διαπαντὸς ἐνδιάθετον ἐν καρδίᾳ Θεοῦ. πρὸ γὰρ τὶ γίνεσθαι, τοῦτον εἶχε σύμβουλον, ἑαυτοῦ νοῦν καὶ φρόνησιν ὄντα. ὁπότε δ᾿ ἠθέλησεν ὁ Θεὸς ποιῆσαι",
+      "context": "An early two-stage picture: the Word always within God, then uttered as Son for creation. Nicaea later avoided any \"before\" in God's begetting.",
+      "source": {
+        "book": "theophilus-autolycus",
+        "section": "2.22"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-first-principles-1-2-9",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "1.2.9",
+      "lang": "la",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So another power comes to be, subsisting in its own nature, as Scripture says, \"a breath of the power of God\" (Wisdom 7:25), drawing what it is from there. But there is no time when it was not. If anyone wants to say that it did not exist before but came into being later, let him give the reason why the Father, who made it subsist, did not do so before.",
+      "original": "Efficitur igitur virtus altera in sua proprietate subsistens, ut ait sermo Scripturae, vapor quidam primae et ingenitae virtutis Dei, hoc quidem quod est, inde trahens: non est autem quando non fuerit. Si enim quis voluerit dicere quasi prius non exstiterit, sed postea ad subsistentiam venerit, dicat causam, quare qui eam subsistere fecit Pater, ante hoc non fecerit.",
+      "context": "A hundred years before Arius, Origen denies the very phrase Arius would use. Survives in Rufinus's Latin, which sometimes smooths Origen.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 21 (1847), De principiis 1.2.9",
+        "ia": "origenous-ta-heuriskomena-panta-t.-21-1847"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "arius-in-athanasius-1-5",
+      "author": "Arius (quoted by Athanasius)",
+      "year": 320,
+      "date": "c. 320",
+      "work": "Thalia, quoted in Athanasius, Against the Arians",
+      "locus": "1.5",
+      "lang": "grc",
+      "answer": "created",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "God was not always Father; there was a time when God was alone and was not yet Father. Later he became Father. The Son was not always. For all things came to be from nothing, and all are creatures and things made; so the Word of God himself came to be from nothing, and there was when he was not, and he was not before he came to be, but he too had a beginning of being created. For, he says, God was alone, and the Word and Wisdom did not yet exist. Then, wishing to create us, he made one being and named him Word and Wisdom and Son, so that he might create us through him.",
+      "original": "Οὐκ ἀεὶ ὁ Θεὸς Πατὴρ ἦν· ἀλλʼ ἦν ὅτε ὁ Θεὸς μόνος ἦν, καὶ οὔπω Πατὴρ ἦν· ὕστερον δὲ ἐπιγέγονε Πατήρ. Οὐκ ἀεὶ ἦν ὁ Υἱός· πάντων γὰρ γενομένων ἐξ οὐκ ὄντων, καὶ πάντων ὄντων κτισμάτων καὶ ποιημάτων γενομένων, καὶ αὐτὸς ὁ τοῦ Θεοῦ Λόγος ἐξ οὐκ ὄντων γέγονε, καὶ ἦν ποτε ὅτε οὐκ ἦν· καὶ οὐκ ἦν πρὶν γένηται, ἀλλʼ ἀρχὴν τοῦ κτίζεσθαι ἔσχε καὶ αὐτός. Ἦν γὰρ, φησὶ, ‘μόνος ὁ Θεὸς, καὶ οὔπω ἦν ὁ Λόγος καὶ ἡ σοφία. Εἶτα θελήσας ἡμᾶς δημιουργῆσαι, τότε δὴ πεποίηκεν ἕνα τινὰ, καὶ ὠνόμασεν αὐτὸν Λόγον καὶ Σοφίαν καὶ Υἱὸν, ἵνα ἡμᾶς διʼ αὐτοῦ δημιουργήσῃ.",
+      "context": "The phrases Nicaea condemned. Arius taught that the Son was created before all ages, and that the Father alone is without beginning.",
+      "source": {
+        "book": "athanasius-against-arians-1",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicene-creed-325-b",
+      "author": "Council of Nicaea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "The Creed of Nicaea, preserved in Socrates, Church History",
+      "locus": "1.8",
+      "lang": "grc",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "We believe in one God, the Father Almighty, maker of all things visible and invisible; and in one Lord Jesus Christ, the Son of God, begotten of the Father, only-begotten, that is, from the substance of the Father, God from God, light from light, true God from true God, begotten, not made, of one substance with the Father ... But those who say \"there was when he was not\" and \"before he was begotten he was not\" and \"he came to be from nothing\" ... these the catholic Church anathematizes.",
+      "original": "Πιστεύομεν εἰς ἕνα Θεὸν Πατέρα παντοκράτορα, πάντων ὁρατῶν τε καὶ ἀοράτων ποιητήν. Καὶ εἰς ἕνα Κύριον Ἰησοῦν Χριστὸν τὸν Υἱὸν τοῦ Θεοῦ, γεννηθέντα ἐκ τοῦ Πατρὸς, μονογενῆ, τουτέστιν ἐκ τῆς οὐσίας τοῦ Πατρὸς, Θεὸν ἐκ Θεοῦ καὶ φῶς ἐκ φωτὸς, Θεὸν ἀληθινὸν ἐκ Θεοῦ ἀληθινοῦ: γεννηθέντα, οὐ ποιηθέντα: ὁμοούσιον τῷ Πατρί ... Τοὺς δὲ λέγοντας ὅτι ἦν ποτὲ ὅτε οὐκ ἦν, καὶ πρὶν γεννηθῆναι οὐκ ἦν, καὶ ὅτι ἐξ οὐκ ὄντων ἐγένετο",
+      "context": "The creed of 325 with its anathema, as Eusebius sent it home to his church. The longer creed recited today is the revision of 381.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.8"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Alexander of Alexandria",
+      "work": "Letter to Alexander of Thessalonica",
+      "year": 324,
+      "why": "Arius's bishop explains the controversy. Preserved in Theodoret's Church History 1.4.",
+      "action": "intake",
+      "source_hint": "Theodoret HE, Parmentier GCS (1911)"
+    },
+    {
+      "author": "Tertullian",
+      "work": "Against Hermogenes 3",
+      "year": 205,
+      "why": "Says there was a time when God was not yet Father, though the Word was always with him. In the library; not yet added.",
+      "action": "search",
+      "source_hint": "tertullian-against-hermogenes"
+    }
+  ],
+  "related": {
+    "topics": [
+      "father-son-spirit"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

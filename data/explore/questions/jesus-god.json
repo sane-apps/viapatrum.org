@@ -1,0 +1,269 @@
+{
+  "id": "jesus-god",
+  "number": 11,
+  "group": "god",
+  "question": "Is Jesus God?",
+  "short": "Is Jesus God?",
+  "search": [
+    "divinity of christ",
+    "deity of jesus",
+    "jesus god",
+    "son of god",
+    "homoousios",
+    "nicaea",
+    "arius",
+    "worship of jesus"
+  ],
+  "answers": [
+    {
+      "id": "god",
+      "label": "Yes: Jesus Christ is God",
+      "short": "Jesus is God",
+      "tag": "God"
+    },
+    {
+      "id": "creature",
+      "label": "No: the Son is the highest creature, not God by nature",
+      "short": "A creature",
+      "tag": "Creature"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Yes, from the beginning. About 112 a Roman governor reports Christians singing hymns to Christ as to a god, and about 110 Ignatius calls Jesus \"our God\" in letter after letter.",
+      "cites": [
+        "pliny-letters-10-96",
+        "ignatius-ephesians-18",
+        "ignatius-ephesians-7",
+        "ignatius-smyrnaeans-1"
+      ]
+    },
+    {
+      "text": "In the second century Justin says the Word, the firstborn of God, is also God, and his Jewish opponent sums up the Christian claim the same way. Tertullian writes \"God from God, light from light\" about 197.",
+      "cites": [
+        "justin-1apol-63",
+        "trypho-in-justin-dialogue-48",
+        "tertullian-apology-21"
+      ]
+    },
+    {
+      "text": "Around 320 Arius taught that the Son was created from nothing. The Council of Nicaea in 325 answered that the Son is true God from true God, of one substance with the Father, and condemned Arius's phrases.",
+      "cites": [
+        "arius-thalia-in-athanasius",
+        "nicene-creed-325"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-ephesians-18",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Ephesians",
+      "locus": "18.2",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Our God, Jesus the Christ, was carried in the womb by Mary according to God's plan, of the seed of David and of the Holy Spirit. He was born and baptized so that by his suffering he might cleanse the water.",
+      "original": "ὁ γὰρ θεὸς ἡμῶν Ἰησοῦς ὁ Χριστὸς ἐκυοφορήθη ὑπὸ Μαρίας κατ’ οἰκονομίαν θεοῦ ἐκ σπέρματος μὲν Δαυείδ, πνεύματος δὲ ἁγίου: ὃς ἐγεννήθη καὶ ἐβαπτίσθη, ἵνα τῷ πάθει τὸ ὕδωρ καθαρίσῃ.",
+      "context": "Ignatius, bishop of Antioch, calls Jesus God over a dozen times in seven short letters written on the way to his death.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "1.18"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-ephesians-7",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Ephesians",
+      "locus": "7.2",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "There is one physician, both fleshly and spiritual, born and unborn, God in man, true life in death, both from Mary and from God, first able to suffer and then beyond suffering: Jesus Christ our Lord.",
+      "original": "εἷς ἰατρός ἐστιν, σαρκικός τε καὶ πνευματικός, γεννητὸς καὶ ἀγέννητος, ἐν ἀνθρώπῳ θεός, ἐν θανάτῳ ζωὴ ἀληθινή, καὶ ἐκ Μαρίας καὶ ἐκ θεοῦ, πρῶτον παθητὸς καὶ τότε ἀπαθής. Ἰησοῦς Χριστὸς ὁ κύριος ἡμῶν.",
+      "context": "A poem-like confession in pairs: what Christ is as man and as God.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "1.7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-smyrnaeans-1",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Smyrnaeans",
+      "locus": "1.1",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "I glorify Jesus Christ, the God who has made you so wise.",
+      "original": "Δοξάζω Ἰησοῦν Χριστὸν τὸν θεὸν τὸν οὕτως ὑμᾶς σοφίσαντα",
+      "context": "The opening line of the letter.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "6.1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "pliny-letters-10-96",
+      "author": "Pliny the Younger (pagan governor)",
+      "year": 112,
+      "date": "c. 112",
+      "work": "Letter to Trajan",
+      "locus": "10.96.7",
+      "lang": "la",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "They declared that the whole of their fault or error was this: they were in the habit of meeting on a fixed day before dawn and singing a hymn among themselves to Christ as to a god, and of binding themselves by an oath, not to some crime, but not to commit theft, robbery or adultery, not to break faith, not to refuse to return a deposit when asked.",
+      "original": "quod essent soliti stato die ante lucem convenire, carmenque Christo quasi deo dicere secum invicem seque sacramento non in scelus aliquod obstringere, sed ne furta ne latrocinia ne adulteria committerent, ne fidem fallerent, ne depositum appellati abnegarent.",
+      "context": "An outside witness. The Roman governor of Bithynia reports what interrogated Christians told him, about eighty years after the crucifixion.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
+        "edition": "Latin text at The Latin Library"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-63",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "63.15",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Those who say the Son is the Father are shown to know neither the Father nor that the Father of all has a Son, who, being the Word and the firstborn of God, is also God. He appeared before in the form of fire and in an image without a body to Moses and the other prophets; and now, in the times of your rule, he became man through a virgin.",
+      "original": "ὃς λόγος καὶ πρωτότοκος ὢν τοῦ θεοῦ καὶ θεὶς ὑπάρχει. Καὶ πρότερον διὰ τῆς τοῦ πυρὸς μορφῆς καὶ εἰκόνος ἀσωμάτου τῷ Μωϋσεῖ καὶ τοῖς ἑτέροις προφήταις ἐφάνη· νῦν δ᾿ ἐν χρόνοις τῆς ὑμετέρας ἀρχῆς, ὡς προείπομεν, διὰ παρθένου ἄνθρωπος γενόμενος",
+      "context": "Justin identifies the God who spoke to Moses from the bush as the Son. The library's Greek prints a misprint (θεὶς for θεός).",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "63"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trypho-in-justin-dialogue-48",
+      "author": "Trypho (Jewish critic), in Justin's Dialogue",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "48.1",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "supporting",
+      "english": "For you to say that this Christ existed before the ages as God, then consented to be born and become man, and that he is not a man from men, seems to me not only a paradox but foolish.",
+      "original": "τὸ γὰρ λέγειν σε προϋπάρχειν θεὸν ὄντα πρὸ αἰώνων τοῦτον τὸν Χριστόν, εἶτα καὶ γεννηθῆναι ἄνθρωπον γενόμενον ὑπομεῖναι, καὶ ὅτι οὐκ ἄνθρωπος ἐξ ἀνθρώπων, οὐ μόνον παράδοξον δοκεῖ μοι εἶναι ἀλλὰ καὶ μωρόν.",
+      "context": "A critic's summary of what Christians taught in the 150s: that Christ existed as God before the ages.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "48"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-21",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "21.11–13",
+      "lang": "la",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We have learned that he was brought forth from God, and begotten by being brought forth, and is therefore called Son of God and God, from unity of substance; for God too is spirit. When a ray is put out from the sun, it is a portion of the whole, but the sun will be in the ray, because it is the sun's ray; the substance is not separated but extended. So spirit from spirit and God from God, as light kindled from light. ... So what has come forth from God is God and God's Son, and the two are one.",
+      "original": "Hunc ex deo prolatum didicimus et prolatione generatum et idcirco filium dei et deum dictum ex unitate substantiae; nam et deus spiritus. Et cum radius ex sole porrigitur, portio ex summa; sed sol erit in radio, quia solis est radius nec separatur substantia sed extenditur, ita de spiritu spiritus et de deo deus ut lumen de lumine accensum. ... Ita et quod de deo profectum est, deus et dei filius et unus ambo",
+      "context": "Written for Roman officials. \"God from God, light from light\" here comes over a century before the Nicene Creed.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "Latin text at The Latin Library (after Oehler)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "arius-thalia-in-athanasius",
+      "author": "Arius (quoted by Athanasius)",
+      "year": 320,
+      "date": "c. 320",
+      "work": "Thalia, quoted in Athanasius, Against the Arians",
+      "locus": "1.5",
+      "lang": "grc",
+      "answer": "creature",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "God was not always Father; there was a time when God was alone and was not yet Father. Later he became Father. The Son was not always. For all things came to be from nothing, and all are creatures and things made; so the Word of God himself came to be from nothing, and there was when he was not, and he was not before he came to be, but he too had a beginning of being created. For, he says, God was alone, and the Word and Wisdom did not yet exist. Then, wishing to create us, he made one being and named him Word and Wisdom and Son, so that he might create us through him.",
+      "original": "Οὐκ ἀεὶ ὁ Θεὸς Πατὴρ ἦν· ἀλλʼ ἦν ὅτε ὁ Θεὸς μόνος ἦν, καὶ οὔπω Πατὴρ ἦν· ὕστερον δὲ ἐπιγέγονε Πατήρ. Οὐκ ἀεὶ ἦν ὁ Υἱός· πάντων γὰρ γενομένων ἐξ οὐκ ὄντων, καὶ πάντων ὄντων κτισμάτων καὶ ποιημάτων γενομένων, καὶ αὐτὸς ὁ τοῦ Θεοῦ Λόγος ἐξ οὐκ ὄντων γέγονε, καὶ ἦν ποτε ὅτε οὐκ ἦν· καὶ οὐκ ἦν πρὶν γένηται, ἀλλʼ ἀρχὴν τοῦ κτίζεσθαι ἔσχε καὶ αὐτός. Ἦν γὰρ, φησὶ, ‘μόνος ὁ Θεὸς, καὶ οὔπω ἦν ὁ Λόγος καὶ ἡ σοφία. Εἶτα θελήσας ἡμᾶς δημιουργῆσαι, τότε δὴ πεποίηκεν ἕνα τινὰ, καὶ ὠνόμασεν αὐτὸν Λόγον καὶ Σοφίαν καὶ Υἱὸν, ἵνα ἡμᾶς διʼ αὐτοῦ δημιουργήσῃ.",
+      "context": "The view Nicaea condemned, in Arius's own words as his opponent preserves them. Arius did call the Son \"God\" in a lesser sense: a perfect creature, not one of the creatures.",
+      "source": {
+        "book": "athanasius-against-arians-1",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicene-creed-325",
+      "author": "Council of Nicaea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "The Creed of Nicaea, preserved in Socrates, Church History",
+      "locus": "1.8",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "We believe in one God, the Father Almighty, maker of all things visible and invisible; and in one Lord Jesus Christ, the Son of God, begotten of the Father, only-begotten, that is, from the substance of the Father, God from God, light from light, true God from true God, begotten, not made, of one substance with the Father ... But those who say \"there was when he was not\" and \"before he was begotten he was not\" and \"he came to be from nothing\" ... these the catholic Church anathematizes.",
+      "original": "Πιστεύομεν εἰς ἕνα Θεὸν Πατέρα παντοκράτορα, πάντων ὁρατῶν τε καὶ ἀοράτων ποιητήν. Καὶ εἰς ἕνα Κύριον Ἰησοῦν Χριστὸν τὸν Υἱὸν τοῦ Θεοῦ, γεννηθέντα ἐκ τοῦ Πατρὸς, μονογενῆ, τουτέστιν ἐκ τῆς οὐσίας τοῦ Πατρὸς, Θεὸν ἐκ Θεοῦ καὶ φῶς ἐκ φωτὸς, Θεὸν ἀληθινὸν ἐκ Θεοῦ ἀληθινοῦ: γεννηθέντα, οὐ ποιηθέντα: ὁμοούσιον τῷ Πατρί ... Τοὺς δὲ λέγοντας ὅτι ἦν ποτὲ ὅτε οὐκ ἦν, καὶ πρὶν γεννηθῆναι οὐκ ἦν, καὶ ὅτι ἐξ οὐκ ὄντων ἐγένετο",
+      "context": "The creed of 325 with its anathema, as Eusebius sent it home to his church. The longer creed recited today is the revision of 381.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.8"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Melito of Sardis",
+      "work": "On Pascha 96",
+      "year": 170,
+      "why": "\"God has been murdered.\" Left out by the library's standing rule on Melito.",
+      "action": "skip",
+      "source_hint": ""
+    }
+  ],
+  "related": {
+    "topics": [
+      "father-son-spirit",
+      "incarnation-word-flesh"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

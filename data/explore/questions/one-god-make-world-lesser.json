@@ -1,0 +1,194 @@
+{
+  "id": "one-god-make-world-lesser",
+  "number": 17,
+  "group": "god",
+  "question": "Did the one God make the world, or a lesser god, as the Gnostics said?",
+  "short": "One Creator or a demiurge?",
+  "search": [
+    "gnostic",
+    "gnosticism",
+    "demiurge",
+    "creator",
+    "marcion",
+    "creation out of nothing",
+    "ex nihilo",
+    "valentinus"
+  ],
+  "answers": [
+    {
+      "id": "one",
+      "label": "The one God, the Father, made all things from nothing",
+      "short": "One God, Creator",
+      "tag": "One God"
+    },
+    {
+      "id": "demiurge",
+      "label": "A lower god made the world",
+      "short": "A lower maker",
+      "tag": "Demiurge"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The church's first article of faith was one God who made all things, and made them from nothing. Hermas puts it first of all his commandments, and Theophilus argues it against eternal matter.",
+      "cites": [
+        "hermas-mandate-1",
+        "theophilus-autolycus-2-4"
+      ]
+    },
+    {
+      "text": "Gnostic teachers such as Ptolemy taught that the world's maker was a middle god between the perfect Father and the devil, and Marcion that the Creator was a lesser god than the Father of Jesus.",
+      "cites": [
+        "ptolemy-to-flora",
+        "tertullian-marcion-1-2"
+      ]
+    },
+    {
+      "text": "Irenaeus and Tertullian answered with the rule of truth: one God Almighty made everything through his Word, out of nothing.",
+      "cites": [
+        "irenaeus-ah-1-22-1",
+        "tertullian-hermogenes-1"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "hermas-mandate-1",
+      "author": "Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "The Shepherd",
+      "locus": "Mandate 1.1",
+      "lang": "grc",
+      "answer": "one",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "First of all, believe that God is one, who created and completed all things, and made all things out of what was not into being, who holds all things, and alone cannot be held.",
+      "original": "Πρῶτον πάντων πίστευσον, ὅτι εἷς ἐστὶν ὁ θεός, ὁ τὰ πάντα κτίσας καὶ καταρτίσας καὶ ποιήσας ἐκ τοῦ μὴ ὄντος εἰς τὸ εἶναι τὰ πάντα καὶ πάντα χωρῶν, μόνος δὲ ἀχώρητος ὤν.",
+      "context": "The first commandment of a widely read Roman book. Irenaeus quotes this line as \"Scripture\".",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ptolemy-to-flora",
+      "author": "Ptolemy (Valentinian teacher)",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Letter to Flora, preserved in Epiphanius, Panarion",
+      "locus": "33.7.3–5",
+      "lang": "grc",
+      "answer": "demiurge",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "This one is the craftsman and maker of this whole world and what is in it. Being different from the essences of the other two and standing between them, he might rightly be called the Middle. And if the perfect God is good by nature, as he is, ... and the one of the opposing nature is evil and wicked, ... then the one who stands between them, being neither good nor evil nor unjust, might properly be called just.",
+      "original": "οὗτος δὲ δημιουργὸς καὶ ποιητὴς τοῦδε τοῦ παντός ἐστι κόσμου καὶ τῶν ἐν αὐτῷ· ἕτερος ὢν παρὰ τὰς τούτων οὐσίας μέσος τε τούτων καθεστώς, ἐνδίκως καὶ τὸ τῆς μεσότητος ὄνομα ἀποφέροιτο ἄν. καὶ εἰ ὁ τέλειος θεὸς ἀγαθός ἐστι κατὰ τὴν ἑαυτοῦ φύσιν",
+      "context": "The Gnostic view in a Gnostic's own words: the maker of the world and giver of the Law is a lesser god, below the perfect Father. Epiphanius quotes the whole letter.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 41, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-marcion-1-2",
+      "author": "Tertullian on Marcion",
+      "year": 207,
+      "date": "c. 207",
+      "work": "Against Marcion",
+      "locus": "1.2.1–3",
+      "lang": "la",
+      "answer": "demiurge",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "He also had a certain Cerdo as teacher of this scandal: the two of them easily imagined they saw two gods, being blind; for they had not seen the one properly. ... The one god, whom he was forced to confess, he destroyed by defaming him as evil; the other, whom he labored to invent, he built up by preferring him as good.",
+      "original": "habuit et Cerdonem quendam informatorem scandali huius: duo facilius duos deos caeci perspexisse se existimauerunt. unum enim non integre uiderant. ... alterum igitur deum, quem confiteri cogebatur, de malo infamando destruxit, alterum, quem commentari conitebatur, de bono praeferendo construxit.",
+      "context": "Marcion of Pontus (about 140) taught that the Creator of the Old Testament was a different, lesser god from the Father of Jesus.",
+      "source": {
+        "book": "tertullian-against-marcion",
+        "section": "1.2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "theophilus-autolycus-2-4",
+      "author": "Theophilus of Antioch",
+      "year": 180,
+      "date": "c. 180",
+      "work": "To Autolycus",
+      "locus": "2.4",
+      "lang": "grc",
+      "answer": "one",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "God's power is shown in this, that he makes whatever he wishes out of what is not; just as giving life and movement belongs to no one else but God alone.",
+      "original": "Θεοῦ δὲ ἡ δύναμις ἐν τούτῳ φανεροῦται, ἵνα ἐξ οὐκ ὄντων ποιῇ ὅσα βούλεται· καθάπερ καὶ τὸ ψυχὴν δοῦναι καὶ κίνησιν οὐχ ἑτέρου τινός ἐστιν, ἀλλ᾿ ἢ μόνου Θεοῦ.",
+      "context": "Against Plato's eternal matter: God did not shape a world from material that was already there.",
+      "source": {
+        "book": "theophilus-autolycus",
+        "section": "2.4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-1-22-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "1.22.1",
+      "lang": "la",
+      "answer": "one",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We hold the rule of truth: that there is one God Almighty, who made all things through his Word, and arranged them, and made them out of what was not, so that they might be, as Scripture says: \"By the word of the Lord the heavens were established, and all their power by the Spirit of his mouth\" (Psalm 33:6).",
+      "original": "Cum teneamus autem nos regulam veritatis, id est, quia sit unus Deus omnipotens, qui omnia condidit per Verbum suum, et aptavit, et fecit ex eo, quod non erat, ad hoc ut sint omnia, quemadmodum Scriptura dicit: Verbo enim Domini caeli firmati sunt",
+      "context": "Irenaeus sets the rule of faith against every Gnostic system.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol1_harvgoog_djvu.txt",
+        "edition": "Harvey (1857), vol. 1 (Massuet 1.22.1)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-hermogenes-1",
+      "author": "Tertullian",
+      "year": 205,
+      "date": "c. 205",
+      "work": "Against Hermogenes",
+      "locus": "1.3–4",
+      "lang": "la",
+      "answer": "one",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "He takes away all that God is by refusing that he made all things out of nothing. Turning from the Christians to the philosophers, from the Church to the Academy and the Porch, he took from the Stoics the idea of putting matter alongside God, matter that also always was, neither born nor made, with no beginning at all and no end.",
+      "original": "immo totum, quod est deus, aufert, nolens illum ex nihilo uniuersa fecisse. a Christianis enim ad philosophos conuersus, de ecclesia in academiam et porticum, inde sumpsit [a Stoicis] materiam cum deo ponere, quae et ipsa semper fuerit, neque nata neque facta nec initium habens omnino nec finem",
+      "context": "Hermogenes, a Christian painter, taught that God shaped eternal matter. Tertullian answers that God made everything from nothing.",
+      "source": {
+        "book": "tertullian-against-hermogenes",
+        "section": "1"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [],
+  "related": {
+    "topics": [
+      "one-god-creator",
+      "old-and-new"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

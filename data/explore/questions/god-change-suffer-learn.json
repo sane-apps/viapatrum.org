@@ -1,0 +1,167 @@
+{
+  "id": "god-change-suffer-learn",
+  "number": 18,
+  "group": "god",
+  "question": "Does God change, suffer, or learn?",
+  "short": "Does God suffer or change?",
+  "search": [
+    "impassibility",
+    "immutability",
+    "does god suffer",
+    "patripassianism",
+    "open theism",
+    "god changes",
+    "theopaschite"
+  ],
+  "answers": [
+    {
+      "id": "impassible",
+      "label": "God's nature does not suffer or change",
+      "short": "Impassible",
+      "tag": "Impassible"
+    },
+    {
+      "id": "flesh",
+      "label": "The impassible Son suffered in his flesh, for us",
+      "short": "Suffered in flesh",
+      "tag": "In the flesh"
+    },
+    {
+      "id": "father",
+      "label": "The Father himself suffered",
+      "short": "Father suffered",
+      "tag": "Father"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From Ignatius on, writers hold two things together: God cannot suffer or change, and the Son, for our sake, became able to suffer and truly suffered in his flesh.",
+      "cites": [
+        "ignatius-polycarp-3",
+        "ignatius-ephesians-7-b"
+      ]
+    },
+    {
+      "text": "When Praxeas taught that the Father suffered on the cross, Tertullian answered that the Father cannot even suffer with another, and that the Son suffered as man, not in the nature in which he is God.",
+      "cites": [
+        "praxeas-in-tertullian",
+        "tertullian-praxeas-29"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-ephesians-7-b",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Ephesians",
+      "locus": "7.2",
+      "lang": "grc",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "There is one physician, both fleshly and spiritual, born and unborn, God in man, true life in death, both from Mary and from God, first able to suffer and then beyond suffering: Jesus Christ our Lord.",
+      "original": "εἷς ἰατρός ἐστιν, σαρκικός τε καὶ πνευματικός, γεννητὸς καὶ ἀγέννητος, ἐν ἀνθρώπῳ θεός, ἐν θανάτῳ ζωὴ ἀληθινή, καὶ ἐκ Μαρίας καὶ ἐκ θεοῦ, πρῶτον παθητὸς καὶ τότε ἀπαθής. Ἰησοῦς Χριστὸς ὁ κύριος ἡμῶν.",
+      "context": "A poem-like confession in pairs: what Christ is as man and as God.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "1.7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-polycarp-3",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to Polycarp",
+      "locus": "3.2",
+      "lang": "grc",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Wait for him who is above time, the timeless, the invisible, who for our sake became visible; the intangible, the impassible, who for our sake became passible; who for our sake endured in every way.",
+      "original": "τὸν ὑπὲρ καιρὸν προσδόκα, τὸν ἄχρονον, τὸν ἀόρατον, τὸν δἰ ἡμᾶς ὁρατόν, τὸν ἀψηλάφητον, τὸν ἀπαθῆ, τὸν δἰ ἡμᾶς παθητόν, τὸν κατὰ πάντα τρόπον δἰ ἡμᾶς ὑπομείναντα.",
+      "context": "The pattern of later teaching in one line: the impassible God became able to suffer, for us.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "7.3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "praxeas-in-tertullian",
+      "author": "Praxeas and his followers, as Tertullian reports",
+      "year": 213,
+      "date": "c. 213",
+      "work": "Against Praxeas",
+      "locus": "29.5–6",
+      "lang": "la",
+      "answer": "father",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "supporting",
+      "english": "They hope to lessen the blasphemy this way, granting now that the Father and Son are two: the Son suffers, the Father suffers with him.",
+      "original": "si filius quidem patitur, pater uero compatitur.",
+      "context": "The later form of the view that the Father suffered on the cross. Tertullian calls it blasphemy.",
+      "source": {
+        "book": "tertullian-against-praxeas",
+        "section": "29"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-praxeas-29",
+      "author": "Tertullian",
+      "year": 213,
+      "date": "c. 213",
+      "work": "Against Praxeas",
+      "locus": "29.5–6",
+      "lang": "la",
+      "answer": "impassible",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Fearing open blasphemy against the Father, they hope to lessen it this way, granting now that the Father and Son are two: the Son suffers, the Father suffers with him. Fools in this too! For what is \"to suffer with\" but to suffer with another? If the Father is impassible, he is also unable to suffer with; or if he can suffer with, he can suffer.",
+      "original": "si filius quidem patitur, pater uero compatitur. stulti et in hoc. quid est enim compati quam cum alio pati? porro si impassibilis pater, utique et incompassibilis; aut si compassibilis, utique passibilis.",
+      "context": "Praxeas taught that the Father himself was born and suffered (Patripassianism). Tertullian answers that the Son suffered as man, not as God.",
+      "source": {
+        "book": "tertullian-against-praxeas",
+        "section": "29"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Cyril of Alexandria",
+      "work": "Third Letter to Nestorius, anathema 12",
+      "year": 430,
+      "why": "\"The Word of God suffered in the flesh.\" Probably in the library under another title; not found by search.",
+      "action": "search",
+      "source_hint": "cyril-alexandria epistulae"
+    },
+    {
+      "author": "Gregory Thaumaturgus",
+      "work": "To Theopompus, on God's impassibility",
+      "year": 260,
+      "why": "A whole treatise on whether God can suffer. Survives in Syriac.",
+      "action": "intake",
+      "source_hint": "Ryssel (1880), German, Syriac text in Pitra"
+    }
+  ],
+  "related": {
+    "topics": [
+      "attributes-providence",
+      "passion-resurrection"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

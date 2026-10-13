@@ -1,0 +1,166 @@
+{
+  "id": "holy-spirit-person-god",
+  "number": 13,
+  "group": "god",
+  "question": "Is the Holy Spirit a person, and is he God?",
+  "short": "Is the Spirit God?",
+  "search": [
+    "holy spirit",
+    "deity of the holy spirit",
+    "pneumatomachians",
+    "macedonians",
+    "spirit a person",
+    "constantinople 381"
+  ],
+  "answers": [
+    {
+      "id": "god",
+      "label": "The Spirit is God, with the Father and the Son",
+      "short": "The Spirit is God",
+      "tag": "God"
+    },
+    {
+      "id": "creature",
+      "label": "The Spirit is a creature",
+      "short": "A creature",
+      "tag": "Creature"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the second century Christians named the Father, the Son and the Holy Spirit together in worship and in defending their faith, as Athenagoras does about 177.",
+      "cites": [
+        "athenagoras-plea-10"
+      ]
+    },
+    {
+      "text": "In the fourth century some said the Spirit was a creature. Athanasius answered that this breaks the Trinity apart, and Gregory of Nazianzus said plainly that the Spirit is God and of one substance with the Father.",
+      "cites": [
+        "pneumatomachians-in-athanasius",
+        "athanasius-serapion-1-2",
+        "gregory-nazianzus-oration-31-10"
+      ]
+    },
+    {
+      "text": "The council of Constantinople in 381 confessed the Spirit as Lord and giver of life, worshipped and glorified together with the Father and the Son. Its text is listed below as a gap.",
+      "cites": [
+        "gregory-nazianzus-oration-31-10"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "athenagoras-plea-10",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "10.5",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Who would not be amazed to hear people called atheists who speak of God the Father, and God the Son, and the Holy Spirit, and who show both their power in unity and their distinction in order?",
+      "original": "λέγοντας θεὸν πατέρα καὶ υἱὸν θεὸν καὶ πνεῦμα ἅγιον, δεικνύντας αὐτῶν καὶ τὴν ἐν τῇ ἑνώσει δύναμιν καὶ τὴν ἐν τῇ τάξει διαίρεσιν, ἀκούσας ἀθέους καλουμένους;",
+      "context": "Romans called Christians atheists for refusing the gods. Athenagoras answers with a threefold God.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "10"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "pneumatomachians-in-athanasius",
+      "author": "Spirit-fighters (Tropici), as Athanasius reports",
+      "year": 359,
+      "date": "c. 359",
+      "work": "Letters to Serapion",
+      "locus": "1.2",
+      "lang": "grc",
+      "answer": "creature",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "supporting",
+      "english": "A letter to Serapion, bishop of Thmuis, against those who blaspheme and say that the Holy Spirit is a creature.",
+      "original": "ἐπιστολὴ πρὸς Σεραπίωνα Θμουέως ἐπίσκοπον κατὰ τῶν βλασφημούντων καὶ λεγόντων κτίσμα εἶναι τὸ πνεῦμα τὸ ἅγιον",
+      "context": "The heading of Athanasius's first letter names the view he answers. Later the \"Spirit-fighters\" around Macedonius held a similar view; the council of 381 rejected it.",
+      "source": {
+        "book": "athanasius-epistulae-serapionem",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athanasius-serapion-1-2",
+      "author": "Athanasius of Alexandria",
+      "year": 359,
+      "date": "c. 359",
+      "work": "Letters to Serapion",
+      "locus": "1.2",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Either there is no Trinity but a pair, plus creation; or, if there is a Trinity, as indeed there is, how can they rank the Spirit of the Trinity with the creatures that come after the Trinity? That is to divide and dissolve the Trinity again. So those who think wrongly about the Holy Spirit do not think rightly about the Son either.",
+      "original": "Ἢ γὰρ οὐ Τριάς ἐστιν, ἀλλὰ δυὰς, καὶ λοιπὸν ἡ κτίσις, ἢ, εἰ Τριάς ἐστιν, ὥσπερ οὖν καί ἐστι, πῶς τοῖς μετὰ τὴν Τριάδα κτίσμασι συντάττουσι τὸ τῆς Τριάδος Πνεῦμα; Τοῦτο γάρ ἐστι πάλιν διαιρεῖν καὶ διαλύειν τὴν Τριάδα. Οὐκ οῦν, κακῶς φρονοῦντες περὶ τοῦ Πνεύματος τοῦ ἁγίου, οὐδὲ περὶ τοῦ Υἱοῦ καλῶς φρονοῦσιν.",
+      "context": "Written against a group in Egypt who said the Spirit was a creature, a kind of angel. The letter's heading names them.",
+      "source": {
+        "book": "athanasius-epistulae-serapionem",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-oration-31-10",
+      "author": "Gregory of Nazianzus",
+      "year": 380,
+      "date": "c. 380",
+      "work": "Oration 31, On the Holy Spirit",
+      "locus": "10",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What then? Is the Spirit God? Certainly. Then is he of one substance? Yes, if he is God.",
+      "original": "Τί οὖν ; θεὸς τὸ πνεῦμα ; πάνυ γε. τί οὖν, ὁμοούσιον ; εἴπερ θεός.",
+      "context": "Gregory preached this in Constantinople the year before the council of 381. He notes that Scripture reveals the Spirit's divinity more gradually than the Son's (31.26).",
+      "source": {
+        "book": "gregory-nazianzus-oration-31",
+        "section": "10"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Constantinople",
+      "work": "Creed of 381",
+      "year": 381,
+      "why": "The creed's article on the Spirit. Its Greek is in the site's Creeds data but not yet in the library.",
+      "action": "intake",
+      "source_hint": "Acts of Chalcedon, Schwartz ACO (copyright) as note; Hahn, Bibliothek der Symbole (1897)"
+    },
+    {
+      "author": "Basil of Caesarea",
+      "work": "On the Holy Spirit 16–19",
+      "year": 375,
+      "why": "The Spirit shares the Father's and Son's honor. Fetched (Migne 32); passages to be added.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "father-son-spirit",
+      "spirit-prophecy"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

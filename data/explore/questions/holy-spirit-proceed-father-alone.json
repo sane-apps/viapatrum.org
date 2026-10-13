@@ -1,0 +1,255 @@
+{
+  "id": "holy-spirit-proceed-father-alone",
+  "number": 16,
+  "group": "god",
+  "question": "From whom does the Holy Spirit proceed, the Father alone or the Father and the Son?",
+  "short": "The filioque",
+  "search": [
+    "filioque",
+    "procession of the holy spirit",
+    "and the son",
+    "great schism",
+    "photius",
+    "nicene creed"
+  ],
+  "answers": [
+    {
+      "id": "father",
+      "label": "From the Father, the one source",
+      "short": "From the Father",
+      "tag": "Father"
+    },
+    {
+      "id": "through",
+      "label": "From the Father through the Son",
+      "short": "Through the Son",
+      "tag": "Through"
+    },
+    {
+      "id": "both",
+      "label": "From the Father and the Son",
+      "short": "And the Son",
+      "tag": "And the Son"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Early writers in both East and West often say the Spirit is from the Father through the Son: Tertullian about 213, Basil about 375.",
+      "cites": [
+        "tertullian-praxeas-4",
+        "basil-holy-spirit-18-47"
+      ]
+    },
+    {
+      "text": "Cyril of Alexandria says \"from both\", which he explains as \"from the Father through the Son\". John of Damascus, about 740, refuses to say \"from the Son\" while calling the Spirit \"the Spirit of the Son\".",
+      "cites": [
+        "cyril-adoration-1-spirit",
+        "john-damascus-exposition-1-8"
+      ]
+    },
+    {
+      "text": "The Latin West added \"and the Son\" (filioque) to the creed, first in Spain in 589 and at Rome in 1014. Florence (1439) defined it for Catholics; Protestants kept it. The Orthodox reject it as making two sources.",
+      "cites": [
+        "florence-1439-filioque",
+        "westminster-2-3",
+        "eastern-patriarchs-1848"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "tertullian-praxeas-4",
+      "author": "Tertullian",
+      "year": 213,
+      "date": "c. 213",
+      "work": "Against Praxeas",
+      "locus": "4.1",
+      "lang": "la",
+      "answer": "through",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let this be said of the third rank too: for I think the Spirit comes from nowhere else than from the Father through the Son.",
+      "original": "hoc mihi et in tertium gradum dictum sit, quia spiritum non aliunde (de)puto quam a patre per filium.",
+      "context": "The earliest statement on the Spirit's origin. \"Through the Son\" became the common Greek phrasing.",
+      "source": {
+        "book": "tertullian-against-praxeas",
+        "section": "4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-holy-spirit-18-47",
+      "author": "Basil of Caesarea",
+      "year": 375,
+      "date": "c. 375",
+      "work": "On the Holy Spirit",
+      "locus": "18.47",
+      "lang": "grc",
+      "answer": "through",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So the way of knowing God goes from one Spirit through the one Son to the one Father. And in reverse, natural goodness, holiness by nature and royal dignity reach from the Father through the Only-begotten to the Spirit. In this way the persons are confessed and the true doctrine of the one source is not lost.",
+      "original": "Ἡ τοίνυν ὁδὸς τῆς θεογνωσίας ἐστὶν ἀπὸ ἑνὸς Πνεύματος διὰ τοῦ ἑνὸς Υἱοῦ ἐπὶ τὸν ἕνα Πατέρα. Καὶ ἀνάπαλιν, ἡ φυσικὴ ἀγαθότης, καὶ ὁ κατὰ φύσιν ἁγιασμὸς, καὶ τὸ βασιλικὸν ἀξίωμα ἐκ Πατρὸς διὰ τοῦ Μονογενοῦς ἐπὶ τὸ Πνεῦμα διήκει. Οὕτω καὶ αἱ ὑποστάσεις ὁμολογοῦνται, καὶ τὸ εὐσεβὲς δόγμα τῆς μοναρχίας οὐ διαπίπτει.",
+      "context": "Basil speaks of how God is known and gives gifts. Whether this describes the Spirit's eternal origin is part of the later debate.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "edition": "Migne PG 32 (archive.org OCR)",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-adoration-1-spirit",
+      "author": "Cyril of Alexandria",
+      "year": 425,
+      "date": "c. 425",
+      "work": "On Adoration in Spirit and Truth",
+      "locus": "1",
+      "lang": "grc",
+      "answer": "both",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "...since the Spirit is God the Father's, and indeed the Son's too: the Spirit that pours forth substantially from both, that is, from the Father through the Son.",
+      "original": "εἴπερ ἐστὶ τοῦ Θεοῦ καὶ Πατρὸς, καὶ μὴν καὶ τοῦ Υἱοῦ, τὸ οὐσιωδῶς ἐξ ἀμφοῖν, ἤγουν ἐκ Πατρὸς δι' Υἱοῦ προχεόμενον Πνεῦμα.",
+      "context": "Cyril says \"from both\" and explains it as \"from the Father through the Son\". Latins later cited him for the filioque, Greeks for \"through\".",
+      "source": {
+        "book": "cyril-alexandria-adoration-1",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "john-damascus-exposition-1-8",
+      "author": "John of Damascus",
+      "year": 740,
+      "date": "c. 740",
+      "work": "Exact Exposition of the Orthodox Faith",
+      "locus": "1.8",
+      "lang": "grc",
+      "answer": "father",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We say that the Holy Spirit is from the Father and call him the Spirit of the Father. We do not say the Spirit is from the Son, but we name him the Spirit of the Son (\"if anyone does not have the Spirit of Christ\", Romans 8:9), and we confess that he was made manifest and given to us through the Son.",
+      "original": "Τὸ δὲ πνεῦμα τὸ ἅγιον καὶ ἐκ τοῦ πατρὸς λέγομεν καὶ πνεῦμα πατρὸς ὀνομάζομεν, ἐκ τοῦ υἱοῦ δὲ τὸ πνεῦμα οὐ λέγομεν, πνεῦμα δὲ υἱοῦ ὀνομάζομεν («εἴ τις γὰρ πνεῦμα Χριστοῦ οὐκ ἔχει», φησὶν ὁ θεῖος ἀπόστολος) καὶ δι' υἱοῦ πεφανερῶσθαι καὶ μεταδεδόσθαι ἡμῖν ὁμολογοῦμεν",
+      "context": "The standard Greek position before the schism: from the Father, manifested through the Son.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-john-of-damascus-pg-94-96-expositio-fidei.txt",
+        "edition": "Migne PG 94, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "florence-1439-filioque",
+      "author": "Council of Florence (Catholic)",
+      "year": 1439,
+      "date": "1439",
+      "work": "Laetentur Caeli",
+      "locus": "Decree of union with the Greeks",
+      "lang": "en",
+      "answer": "both",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "the holy Spirit is eternally from the Father and the Son, and has his essence and his subsistent being from the Father together with the Son, and proceeds from both eternally as from one principle and a single spiration.",
+      "original": "the holy Spirit is eternally from the Father and the Son",
+      "context": "A short-lived union of Greeks and Latins. It also declared that \"through the Son\" and \"from the Son\" mean the same. The Greek churches later rejected the union.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/ecum17.htm",
+        "edition": "English at papalencyclicals.net"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-2-3",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "2.3",
+      "lang": "en",
+      "answer": "both",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "the Holy Ghost eternally proceeding from the Father and the Son.",
+      "original": "the Holy Ghost eternally proceeding from the Father and the Son.",
+      "context": "Protestant churches kept the Western creed with the filioque.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "eastern-patriarchs-1848",
+      "author": "Encyclical of the Eastern Patriarchs (Orthodox)",
+      "year": 1848,
+      "date": "1848",
+      "work": "Encyclical of the Eastern Patriarchs",
+      "locus": "5",
+      "lang": "en",
+      "answer": "father",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "This novel opinion destroys the oneness from the One cause, and the diverse origin of the Persons of the Blessed Trinity",
+      "original": "This novel opinion destroys the oneness from the One cause, and the diverse origin of the Persons of the Blessed Trinity",
+      "context": "The Orthodox objection: the Father alone is the source in the Trinity.",
+      "source": {
+        "url": "http://orthodoxinfo.com/ecumenism/encyc_1848.aspx",
+        "edition": "orthodoxinfo.com"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "On the Trinity 15.26.47",
+      "year": 420,
+      "why": "The Spirit proceeds from the Father \"principally\", and also from the Son. The Western basis for the filioque.",
+      "action": "intake",
+      "source_hint": "Maurist text, Migne PL 42"
+    },
+    {
+      "author": "Third Council of Toledo",
+      "work": "Creed and canons",
+      "year": 589,
+      "why": "The first creed with \"and the Son\".",
+      "action": "intake",
+      "source_hint": "Mansi vol. 9"
+    },
+    {
+      "author": "Photius of Constantinople",
+      "work": "Mystagogy of the Holy Spirit",
+      "year": 886,
+      "why": "The great Greek case against the filioque.",
+      "action": "intake",
+      "source_hint": "Migne PG 102"
+    },
+    {
+      "author": "Maximus the Confessor",
+      "work": "Letter to Marinus",
+      "year": 650,
+      "why": "Explains that Latins meant \"through the Son\", not a second cause.",
+      "action": "intake",
+      "source_hint": "Migne PG 91.133–137"
+    }
+  ],
+  "related": {
+    "timeline": "spirit-procession",
+    "topics": [
+      "father-son-spirit"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

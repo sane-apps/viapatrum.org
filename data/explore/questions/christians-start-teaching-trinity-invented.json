@@ -1,0 +1,164 @@
+{
+  "id": "christians-start-teaching-trinity-invented",
+  "number": 14,
+  "group": "god",
+  "question": "When did Christians start teaching the Trinity? Was it invented at Nicaea?",
+  "short": "When the Trinity began",
+  "search": [
+    "trinity",
+    "trinitarian",
+    "when was the trinity invented",
+    "nicaea",
+    "three persons",
+    "triune",
+    "trias",
+    "trinitas"
+  ],
+  "answers": [
+    {
+      "id": "practice",
+      "label": "Worship and baptism in the threefold name from the start",
+      "short": "From the start",
+      "tag": "Practice"
+    },
+    {
+      "id": "word",
+      "label": "The word Trinity appears about 180 to 210",
+      "short": "The word",
+      "tag": "Word"
+    },
+    {
+      "id": "defined",
+      "label": "Councils defined it in technical terms (325, 381)",
+      "short": "Defined",
+      "tag": "Defined"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Christians baptized in the name of the Father, the Son and the Holy Spirit from the first generations, as Justin describes about 155.",
+      "cites": [
+        "justin-1apol-61"
+      ]
+    },
+    {
+      "text": "The word itself came later: Theophilus of Antioch uses \"Trinity\" in Greek about 180, and Tertullian in Latin about 213, already with \"one substance\" and \"three\".",
+      "cites": [
+        "theophilus-autolycus-2-15",
+        "tertullian-praxeas-2"
+      ]
+    },
+    {
+      "text": "Nicaea (325) did not invent the doctrine. It settled one disputed point, that the Son is of one substance with the Father. Constantinople (381) did the same for the Spirit.",
+      "cites": [
+        "nicene-creed-325-c"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-61",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "61.3",
+      "lang": "grc",
+      "answer": "practice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Then they are brought by us to where there is water, and are reborn in the same way of rebirth by which we ourselves were reborn. For in the name of God, the Father and Lord of all, and of our Savior Jesus Christ, and of the Holy Spirit, they then receive the washing in the water.",
+      "original": "ἐπ᾿ ὀνόματος γὰρ τοῦ πατρὸς τῶν ὅλων καὶ δεσπότου θεοῦ καὶ τοῦ σωτῆρος ἡμῶν Ἰησοῦ Χριστοῦ καὶ πνεῦματος ἁγίου τὸ ἐν τῷ ὕδατι τότε λουτρὸν ποιοῦνται.",
+      "context": "The threefold name of Matthew 28:19 used at every baptism. Christians were baptized into Father, Son and Spirit long before the doctrine had technical words.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "61"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "theophilus-autolycus-2-15",
+      "author": "Theophilus of Antioch",
+      "year": 180,
+      "date": "c. 180",
+      "work": "To Autolycus",
+      "locus": "2.15",
+      "lang": "grc",
+      "answer": "word",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In the same way the three days before the lights were made are types of the Trinity: of God, and of his Word, and of his Wisdom.",
+      "original": "ὡσαύτως καὶ αἱ τρεῖς ἡμέραι, πρὸ τῶν φωστήρων γεγονυῖαι, τύποι εἰσὶ τῆς τριάδος, τοῦ Θεοῦ, καὶ τοῦ λόγου αὐτοῦ, καὶ τῆς σοφίας αὐτοῦ.",
+      "context": "The earliest surviving use of the word \"Trinity\" (Greek trias). Theophilus calls the Spirit \"Wisdom\".",
+      "source": {
+        "book": "theophilus-autolycus",
+        "section": "2.15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-praxeas-2",
+      "author": "Tertullian",
+      "year": 213,
+      "date": "c. 213",
+      "work": "Against Praxeas",
+      "locus": "2.4",
+      "lang": "la",
+      "answer": "word",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "...as if, in this way too, one were not all, since all are from one, through unity of substance, while the mystery of the economy is still kept, which arranges the unity into a Trinity, setting out three, Father, Son and Spirit: three not in standing but in sequence, not in substance but in form, not in power but in aspect; yet of one substance, one standing and one power, because there is one God, from whom these sequences and forms and aspects are reckoned in the name of the Father and of the Son and of the Holy Spirit.",
+      "original": "quasi non sic quoque unus sit omnia, dum ex uno omnia, per substantiae scilicet unitatem, et nihilominus custodiatur oikonomiae sacramentum, quae unitatem in trinitatem disponit, tres dirigens patrem et filium et spiritum, — tres autem non statu, sed gradu, nec substantia, sed forma, nec potestate, sed specie, — unius autem substantiae et unius status et unius potestatis, quia unus deus",
+      "context": "The first use of the Latin trinitas and of the formula \"one substance\", against a teacher who said Father and Son were the same person.",
+      "source": {
+        "book": "tertullian-against-praxeas",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicene-creed-325-c",
+      "author": "Council of Nicaea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "The Creed of Nicaea, preserved in Socrates, Church History",
+      "locus": "1.8",
+      "lang": "grc",
+      "answer": "defined",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "We believe in one God, the Father Almighty, maker of all things visible and invisible; and in one Lord Jesus Christ, the Son of God, begotten of the Father, only-begotten, that is, from the substance of the Father, God from God, light from light, true God from true God, begotten, not made, of one substance with the Father ... But those who say \"there was when he was not\" and \"before he was begotten he was not\" and \"he came to be from nothing\" ... these the catholic Church anathematizes.",
+      "original": "Πιστεύομεν εἰς ἕνα Θεὸν Πατέρα παντοκράτορα, πάντων ὁρατῶν τε καὶ ἀοράτων ποιητήν. Καὶ εἰς ἕνα Κύριον Ἰησοῦν Χριστὸν τὸν Υἱὸν τοῦ Θεοῦ, γεννηθέντα ἐκ τοῦ Πατρὸς, μονογενῆ, τουτέστιν ἐκ τῆς οὐσίας τοῦ Πατρὸς, Θεὸν ἐκ Θεοῦ καὶ φῶς ἐκ φωτὸς, Θεὸν ἀληθινὸν ἐκ Θεοῦ ἀληθινοῦ: γεννηθέντα, οὐ ποιηθέντα: ὁμοούσιον τῷ Πατρί ... Τοὺς δὲ λέγοντας ὅτι ἦν ποτὲ ὅτε οὐκ ἦν, καὶ πρὶν γεννηθῆναι οὐκ ἦν, καὶ ὅτι ἐξ οὐκ ὄντων ἐγένετο",
+      "context": "The creed of 325 with its anathema, as Eusebius sent it home to his church. The longer creed recited today is the revision of 381.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.8"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "The Didache",
+      "work": "Chapter 7",
+      "year": 100,
+      "why": "\"Baptize in the name of the Father and of the Son and of the Holy Spirit.\" In the library, not yet translated.",
+      "action": "translate",
+      "source_hint": "didache"
+    }
+  ],
+  "related": {
+    "topics": [
+      "father-son-spirit"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
