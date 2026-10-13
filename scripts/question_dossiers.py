@@ -322,8 +322,16 @@ def life_span(name: str, dates: dict) -> tuple[int | None, int | None]:
 
 
 def cmd_export(out: str) -> int:
-    """One JSON for the page: the 100 questions, each finished dossier with every
-    quote's edition, live link and source address, and writers' life spans."""
+    data = export_data()
+    Path(out).write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print(f"exported {len(data['dossiers'])} dossiers, {len(data['questions'])} questions -> {out}")
+    return 0
+
+
+def export_data() -> dict:
+    """One dict for the Timeline pages: the 100 questions, each dossier that passes
+    check with every quote's edition, live link and source address, and writers'
+    life spans. build_site sets _B to itself first so the builder is not imported twice."""
     index = json.loads((ROOT / "data" / "explore" / "questions-100.json").read_text(encoding="utf-8"))
     dates = json.loads((ROOT / "data" / "author-dates.json").read_text(encoding="utf-8"))
     dossiers = {}
@@ -350,10 +358,7 @@ def cmd_export(out: str) -> int:
             q["born"], q["died"] = born, died
             q["dates"] = "" if corporate else dates_for(q["author"], dates)
         dossiers[d["id"]] = d
-    Path(out).write_text(json.dumps({"groups": index["groups"], "questions": index["questions"], "dossiers": dossiers},
-                                    ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print(f"exported {len(dossiers)} dossiers, {len(index['questions'])} questions -> {out}")
-    return 0
+    return {"groups": index["groups"], "questions": index["questions"], "dossiers": dossiers}
 
 
 def main() -> int:

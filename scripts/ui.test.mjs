@@ -177,7 +177,8 @@ test('free will: later turn sits in time order and the summary voice is labeled'
 });
 
 test('over time overview: every question with stances gets a card and a mini timeline', ()=>{
-  const doc=page('explore/index.html');
+  // Since 2026-10-13 the church-lane overview lives at /explore/churches/; /explore/ is the 100 reader questions.
+  const doc=page('explore/churches/index.html');
   const data=JSON.parse(readFileSync(new URL('data/explore-index.json',DIST),'utf8'));
   const withPoints=new Set(data.points.map(p=>p.topic));
   const cards=doc.querySelectorAll('.ot-card:not(.ot-belief)');
@@ -195,14 +196,15 @@ test('over time overview: every question with stances gets a card and a mini tim
 });
 
 test('beliefs live on the Timeline: a card per dividing question, no Beliefs tab (owner 2026-10-05)', ()=>{
-  const doc=page('explore/index.html');
+  const doc=page('explore/churches/index.html');
   // The questions file decides which questions show (beliefs_page.load); the map adds passages.
   const qs=JSON.parse(readFileSync(new URL('../data/explore/doctrine_questions.json',import.meta.url),'utf8'));
   const cards=doc.querySelectorAll('.ot-card.ot-belief');
   assert.equal(cards.length,qs.length);
   for(const c of cards){
-    assert.equal(c.querySelector('h3 a').getAttribute('href'),'/explore/'+c.id+'/');
-    assert.match(readFileSync(new URL('explore/'+c.id+'/index.html',DIST),'utf8'),/class="tl tl-pos[" ]/,'lanes on '+c.id);
+    const href=c.querySelector('h3 a').getAttribute('href');
+    assert.ok(href==='/explore/'+c.id+'/'||href==='/explore/churches/'+c.id+'/',href);
+    assert.match(readFileSync(new URL(href.slice(1)+'index.html',DIST),'utf8'),/class="tl tl-pos[" ]/,'lanes on '+c.id);
   }
   assert.ok(!doc.querySelector('a[href^="/beliefs"]'),'no Beliefs link');
   assert.match(readFileSync(new URL('_redirects',DIST),'utf8'),/^\/beliefs\/:id\/ \/explore\/:id\/ 301$/m);
@@ -210,12 +212,12 @@ test('beliefs live on the Timeline: a card per dividing question, no Beliefs tab
 
 test('beliefs: eleven church chips, four new questions, new churches filter (owner 2026-10-06)', ()=>{
   const want=['All','Catholic','Orthodox','Oriental Orthodox','Church of the East','Lutheran','Reformed','Anglican','Methodist','Baptist','Anabaptist','Pentecostal'];
-  for(const f of ['explore/index.html','explore/christ-natures/index.html']){
+  for(const f of ['explore/churches/index.html','explore/christ-natures/index.html']){
     const chips=[...page(f).querySelectorAll('.bfilter .bchip')];
     assert.deepEqual(chips.map(c=>c.textContent.trim()),want,'chip row on '+f);
     assert.equal(chips.filter(c=>c.getAttribute('aria-pressed')==='true').length,1);
   }
-  const doc=page('explore/index.html');
+  const doc=page('explore/churches/index.html');
   for(const id of ['spiritual-gifts','sanctification','christ-natures','millennium']){
     const card=doc.getElementById(id);
     assert.ok(card?.matches('.ot-card.ot-belief'),'card for '+id);
@@ -228,10 +230,31 @@ test('beliefs: eleven church chips, four new questions, new churches filter (own
   assert.ok(cn.querySelector('.tl-row[data-trads~="oriental-orthodox"]'));
   assert.ok(cn.querySelector('.tl-row[data-trads~="church-of-the-east"]'));
   assert.match(cn.querySelector('.bnotes').textContent,/Coptic and Ethiopian/);
-  const ep=page('explore/eucharist-presence/index.html');
+  const ep=page('explore/churches/eucharist-presence/index.html');
   assert.ok(ep.querySelector('.tl-row[data-trads~="methodist"]'));
   assert.match(ep.querySelector('.bnotes').textContent,/Anabaptist:\s*Divided\./);
   assert.equal(doc.querySelector('.ot-creeds a').getAttribute('href'),'/creeds/');
+});
+
+test('timeline: 100 reader questions, static pages with quotes and the chart (owner 2026-10-13)', ()=>{
+  const doc=page('explore/index.html');
+  assert.equal(doc.querySelector('.tl h1').textContent,'Ask the early church');
+  const links=[...doc.querySelectorAll('.tl .group li > a')];
+  assert.equal(links.length,100,'every question links to its page');
+  assert.ok(doc.querySelector('#q[type="search"]'));
+  assert.equal(doc.querySelector('a[href="/explore/churches/"]').textContent,'Where the churches stand');
+  const s=JSON.parse(readFileSync(new URL('data/timeline-search.json',DIST),'utf8'));
+  assert.equal(s.questions.length,100); assert.ok(s.quotes.length>500);
+  const q=page('explore/infant-baptism/index.html');
+  assert.equal(q.querySelector('.tl h1').textContent,'Did the early church baptize infants?');
+  assert.ok(q.querySelectorAll('.tl .card blockquote.q').length>=10,'quotes are in the HTML, not drawn by script');
+  assert.ok(q.querySelector('.tl .card .orig[hidden]'),'original text is in the page');
+  assert.ok(q.querySelector('#tl-data'));
+  assert.ok(q.querySelector('a[href="/explore/baptism-subjects/"]'),'links to where each church stands');
+  const ep=page('explore/eucharist-presence/index.html');
+  assert.ok(ep.querySelector('.tl .answer-box'),'question page took the shared id');
+  assert.ok(ep.querySelector('a[href="/explore/churches/eucharist-presence/"]'));
+  assert.match(readFileSync(new URL('explore/churches/index.html',DIST),'utf8'),/<h1>Where the churches stand<\/h1>/);
 });
 
 test('creeds and churches page: timeline, eleven cards, reviewed dates (owner 2026-10-06)', ()=>{

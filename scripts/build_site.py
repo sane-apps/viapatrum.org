@@ -26,6 +26,7 @@ import downloads_page  # noqa: E402  (library pass: /downloads/ + "Keep this boo
 import games_page  # noqa: E402  (/games/: every game, owner 2026-10-06)
 import ask_page  # noqa: E402  (/ask/: answers in the writers' own sentences, owner 2026-10-06)
 import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, owner 2026-10-06)
+import timeline_page  # noqa: E402  (/explore/: 100 reader questions from checked dossiers, owner 2026-10-13)
 
 # FATHERS_DIST: build somewhere else to test without touching the ship staging dir.
 DIST = Path(os.environ["FATHERS_DIST"]) if os.environ.get("FATHERS_DIST") else ROOT / "dist"
@@ -8977,7 +8978,7 @@ def build() -> None:
   <a href="/authors/"><h2>Fathers</h2><p>{n_fathers} writers in date order, from Clement of Rome onward, with what each one wrote.</p><span class="go">Meet the Fathers →</span></a>
   <a href="/works/"><h2>Works</h2><p>{len(works)} works to read straight through, earliest first.</p><span class="go">Browse the works →</span></a>
   <a href="/listen/"><h2>Listen</h2><p>{n_audio} works read aloud, with the text following the voice.</p><span class="go">Start listening →</span></a>
-  <a href="/explore/"><h2>Timeline</h2><p>{n_timeline} questions that divide churches today, and what the early writers said on each, in date order.</p><span class="go">Open the timeline →</span></a>
+  <a href="/explore/"><h2>Timeline</h2><p>The 100 questions readers ask most about what the early Church believed, answered from the writers&rsquo; own words in date order.</p><span class="go">Open the timeline →</span></a>
 </nav>
 {'<a class="vp-keep" href="/downloads/"><span class="vp-keep-k">The library, to keep</span><span class="vp-keep-t">' + escape(LIBRARY.pitch()) + '</span><span class="go">See the library pass →</span></a>' if LIBRARY else ''}
 
@@ -11162,6 +11163,12 @@ def build() -> None:
     n_beliefs = beliefs_page.build(DIST, ROOT / "data" / "explore" / "doctrine_map.json", layout, write,
                                    sys.modules[__name__], {k: v.get("title") or k for k, v in topic_meta.items()})
     print(f"beliefs: {n_beliefs} questions on the Timeline", flush=True)
+    # The Timeline proper (owner-approved prototype v3, 2026-10-13): writes /explore/ and
+    # /explore/<id>/ for the 100 reader questions after the belief pages, so a shared id
+    # takes the new page; belief pages with other ids stay and are linked from the new ones.
+    n_tl = timeline_page.build(DIST, layout, write, sys.modules[__name__],
+                               {q["id"] for q in beliefs_page.load(ROOT / "data" / "explore" / "doctrine_map.json")})
+    print(f"timeline: {n_tl} questions on /explore/", flush=True)
     print(f"creeds: {creeds_page.build(DIST, layout, write)} on /creeds/", flush=True)
 
     # /data/search/* shard names carry a hash of their bytes, so browsers may
