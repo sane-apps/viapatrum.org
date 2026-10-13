@@ -1,0 +1,587 @@
+{
+  "id": "eucharist-presence",
+  "number": 44,
+  "group": "baptism-supper",
+  "question": "Did the early church believe the bread and wine become Christ's body and blood?",
+  "short": "Christ's presence in the Eucharist",
+  "search": [
+    "real presence",
+    "eucharist",
+    "lord's supper",
+    "communion",
+    "transubstantiation",
+    "consubstantiation",
+    "memorial",
+    "symbolic",
+    "this is my body",
+    "body and blood",
+    "mass"
+  ],
+  "answers": [
+    {
+      "id": "becomes",
+      "label": "The bread and wine become his body and blood",
+      "short": "Becomes his body",
+      "tag": "Becomes"
+    },
+    {
+      "id": "remains",
+      "label": "It is his body, yet the bread and wine remain what they were",
+      "short": "Body, bread remains",
+      "tag": "Remains"
+    },
+    {
+      "id": "sign",
+      "label": "A sign or figure; Christ is received spiritually, by faith",
+      "short": "Sign, received by faith",
+      "tag": "Sign"
+    },
+    {
+      "id": "memorial",
+      "label": "A memorial only",
+      "short": "Memorial only",
+      "tag": "Memorial"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From Ignatius about 110 and Justin about 155, writers say plainly that the Eucharist is the flesh and blood of Jesus, and that it is not common bread.",
+      "cites": [
+        "ignatius-smyrnaeans-7",
+        "justin-1apol-66",
+        "irenaeus-ah-4-18-5"
+      ]
+    },
+    {
+      "text": "The same writers also use the words figure and symbol. Tertullian says Christ made the bread his body, \"that is, the figure of my body\". Clement reads John 6 as a symbol of faith, and Origen calls what nourishes the faithful \"the typical and symbolic body\".",
+      "cites": [
+        "tertullian-marcion-4-40",
+        "clement-paedagogus-1-6",
+        "origen-matthew-11-14"
+      ]
+    },
+    {
+      "text": "In the fourth century the Greek and Latin teachers speak of a change: what seems bread is not bread (Cyril of Jerusalem), the bread is changed into the body (Gregory of Nyssa), nature itself is changed by the blessing (Ambrose). Chrysostom tells his hearers to trust Christ's word over their senses.",
+      "cites": [
+        "cyril-mystagogy-4-9",
+        "gregory-nyssa-catechetical-37",
+        "ambrose-mysteries-9",
+        "chrysostom-matthew-82-4"
+      ]
+    },
+    {
+      "text": "Theodoret, about 447, holds that the symbols keep their own substance after the consecration while being what they are believed to be. John of Damascus, about 740, rejects the word figure outright.",
+      "cites": [
+        "theodoret-eranistes-2",
+        "john-damascus-exposition-4-13"
+      ]
+    },
+    {
+      "text": "Later churches read this record in four ways. Trent (1551) defines a change of substance. Lutherans say the body is present with unchanged bread. Reformed churches say Christ is received spiritually by faith. Zwingli and later Baptist confessions call the Supper a memorial.",
+      "cites": [
+        "trent-1551",
+        "augsburg-1530-10",
+        "westminster-29-7",
+        "zwingli-1523-18",
+        "bfm-2000-7"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-smyrnaeans-7",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Smyrnaeans",
+      "locus": "7.1",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "They abstain from the Eucharist and from prayer, because they do not confess that the Eucharist is the flesh of our Savior Jesus Christ, the flesh that suffered for our sins and that the Father raised up in his goodness.",
+      "original": "Εὐχαριστίας καὶ πρυσευχῆς ἀπέχονται, διὰ τὸ μὴ ὁμολογεῖν τὴν εὐχαριστίαν σάρκα εἶναι τοῦ σωτῆρος ἡμῶν Ἰησοῦ Χριστοῦ τὴν ὑπὲρ τῶν ἁμαρτιῶν ἡμῶν παθοῦσαν, ἣν τῇ χρηστότητι ὁ πατὴρ ἤγειρεν.",
+      "context": "Ignatius, on his way to martyrdom in Rome, warns against teachers who said Christ only seemed to have a body. He ties the Eucharist to the real flesh that suffered and rose.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "6.7"
+      },
+      "translation": "site"
+    },
+    {
+      "id": "justin-1apol-66",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "66.2",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We do not receive these as common bread or common drink. Just as Jesus Christ our Savior, made flesh through the word of God, had flesh and blood for our salvation, so we have been taught that the food over which thanks has been given through the word of prayer that comes from him, the food from which our blood and flesh are nourished by being changed, is the flesh and blood of that Jesus who was made flesh.",
+      "original": "Οὐ γὰρ ὡς κοινὸν ἄρτον οὐδὲ κοινὸν πόμα ταῦτα λαμβάνομεν· ἀλλ᾿ ὃν τρόπον διὰ λόγου θεοῦ σαρκοποιηθεὶς Ἰησοῦς Χριστὸς ὁ σωτὴρ ἡμῶν καὶ σάρκα καὶ αἷμα ὑπὲρ σωτηρίας ἡμῶν ἔσχεν, οὕτως καὶ τὴν δι᾿ εὐχῆς λόγου τοῦ παρ᾿ αὐτοῦ εὐχαριστηθεῖσαν τροφήν, ἐξ ἠς αἷμα καὶ σάρκες κατὰ μεταβολὴν τρέφονται ἡμῶν, ἐκείνου τοῦ σαρκοποιηθέντος Ἰησοῦ καὶ σάρκα καὶ αἷμα ἐδιδάχθημεν εἶναι.",
+      "context": "Written to the emperor to explain what Christians do on Sunday. \"Changed\" here refers to digestion: the food that becomes our flesh. The comparison is with the incarnation: as the Word took flesh, so this food is his flesh.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "66"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-4-18-5",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "4.18.5",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Bread from the earth, when it receives the invocation of God, is no longer common bread but Eucharist, made of two realities, earthly and heavenly. So too our bodies, when they receive the Eucharist, are no longer corruptible, since they have the hope of resurrection for ever.",
+      "original": "Ὡς γὰρ ὁ ἀπὸ τῆς γῆς ἄρτος προσλαβόμενος τὴν ἐπίκλησιν τοῦ Θεοῦ οὐκέτι κοινὸς ἄρτος ἐστίν, ἀλλ' εὐχαριστία ἐκ δύο πραγμάτων συνεστηκυῖα, ἐπιγείου τε καὶ οὐρανίου, οὕτως καὶ τὰ σώματα ἡμῶν μεταλαμβάνοντα τῆς εὐχαριστίας μηκέτι εἶναι φθαρτά, τὴν ἐλπίδα τῆς εἰς αἰῶνα ἀναστάσεως ἔχοντα.",
+      "context": "Irenaeus argues against the Gnostics that matter can carry God's gift. Both sides of later debates cite \"two realities\": Catholics for a real change, Reformed writers such as Strimesius for bread that remains.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-4.txt",
+        "edition": "Greek fragment preserved by John of Damascus, Migne PG 7 (Massuet), Khazarzar text",
+        "check": "Latin: Harvey (1857), vol. 2, p. 206"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-5-2-3",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "5.2.3",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "When, then, the mixed cup and the bread that has been made receive the word of God and become the Eucharist, the body of Christ, from which the substance of our flesh grows and is held together, how can they say that the flesh cannot receive the gift of God, which is eternal life, when it is fed from the body and blood of the Lord and is a member of him?",
+      "original": "Ὁπότε οὖν καὶ τὸ κεκραμένον ποτήριον καὶ ὁ γεγονὼς ἄρτος ἐπιδέχεται τὸν λόγον τοῦ Θεοῦ καὶ γίνεται εὐχαριστία καὶ σῶμα Χριστοῦ, ἐκ τούτων τε αὔξει καὶ συνέστηκεν ἡ τῆς σαρκὸς ἡμῶν ὑπόστασις, πῶς δεκτικὴν μὴ εἶναι τὴν σάρκα λέγουσι τῆς δωρεᾶς τοῦ Θεοῦ, ἥτις ἐστὶ ζωὴ αἰώνιος, τὴν ἀπὸ τοῦ σώματος καὶ αἵματος τοῦ Κυρίου τρεφομένην καὶ μέλος αὐτοῦ ὑπάρχουσαν;",
+      "context": "The argument for the resurrection of the body depends on the Eucharist being Christ's body.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-5.txt",
+        "edition": "Greek fragment, Migne PG 7 (Massuet), Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-paedagogus-1-6",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "The Instructor",
+      "locus": "1.6.38",
+      "lang": "grc",
+      "answer": "sign",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Elsewhere, in the Gospel according to John, the Lord put this kind of food another way, through symbols: \"Eat my flesh and drink my blood\" (John 6:53). He was speaking allegorically of the clear evidence of faith and of the promise, food and drink by which the Church, like a person made of many members, is watered and grows.",
+      "original": "τὴν τοιάνδε τροφὴν ἀλλαχόθι [δὲ] καὶ ὁ κύριος ἐν τῷ κατὰ Ἰωάννην εὐαγγελίῳ ἑτέρως ἐξήνεγκεν διὰ συμβόλων »φάγεσθέ μου τὰς σάρκας« εἰπὼν »καὶ πίεσθέ μου τὸ αἷμα«, τὸ ἐναργὲς τῆς πίστεως καὶ τῆς ἐπαγγελίας τὸ βρώσιμον καὶ τὸ πότιμον ἀλληγορῶν· δι᾿ ὧν ἡ ἐκκλησία, καθάπερ ἄνθρωπος ἐκ πολλῶν συνεστηκυῖα μελῶν, ἄρδεταί τε καὶ αὔξεται",
+      "context": "Clement is reading John 6, not describing the rite. Elsewhere (Instructor 2.2) he calls the Eucharist drinking the blood of Jesus. He sees both a real gift and a spiritual meaning.",
+      "source": {
+        "book": "clement-alexandria-paedagogus",
+        "section": "1.6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-marcion-4-40",
+      "author": "Tertullian",
+      "year": 208,
+      "date": "c. 208",
+      "work": "Against Marcion",
+      "locus": "4.40.3",
+      "lang": "la",
+      "answer": "sign",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Taking bread and sharing it among his disciples, he made it his body by saying, \"This is my body\" (Luke 22:19), that is, the figure of my body. But there would have been no figure unless there were a true body. An empty thing, which is what a phantom is, could not have a figure.",
+      "original": "acceptum panem et distributum discipulis corpus suum illum fecit hoc est corpus meum dicendo, id est figura corporis mei. figura autem non fuisset nisi ueritatis esset corpus. ceterum uacua res, quod est phantasma, figuram capere non posset.",
+      "context": "Marcion said Christ had no real flesh. Tertullian argues that a figure needs a real body behind it. He says both that Christ \"made it his body\" and that it is \"the figure of my body\", so both sides cite this passage.",
+      "source": {
+        "book": "tertullian-against-marcion",
+        "section": "4.40"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-celsus-8-33",
+      "author": "Origen of Alexandria",
+      "year": 248,
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "8.33",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "We give thanks to the Maker of all, and we eat the loaves brought forward with thanksgiving and prayer over what was given. Through the prayer they become a body, something holy that makes holy those who use it with a sound purpose.",
+      "original": "ἡμεῖς δὲ τῷ τοῦ παντὸς δημιουργῷ εὐχαριστοῦντες καὶ τοὺς μετ᾿ εὐχαριστίας καὶ εὐχῆς τῆς ἐπὶ τοῖς δοθεῖσι προσαγομένους ἄρτους ἐσθίομεν, σῶμα γενομένους διὰ τὴν εὐχὴν ἅγιόν τι καὶ ἁγιάζον τοὺς μετὰ ὑγιοῦς προθέσεως αὐτῷ χρωμένους.",
+      "context": "Answering the pagan Celsus, who said Christians should give thanks to demons for their food.",
+      "source": {
+        "witness": "books/origen-contra-celsum/sources/cels_b8_working_greek.txt",
+        "edition": "Koetschau, GCS 3 [Origenes Werke 2] (1899), working Greek in the library"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-matthew-11-14",
+      "author": "Origen of Alexandria",
+      "year": 249,
+      "date": "c. 249",
+      "work": "Commentary on Matthew",
+      "locus": "11.14",
+      "lang": "grc",
+      "answer": "sign",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The food sanctified \"through the word of God and prayer\" (1 Timothy 4:5), as far as its matter goes, passes into the stomach and is cast out. But through the prayer said over it, \"in proportion to faith\" (Romans 12:6), it becomes a benefit and a cause of clear sight to the mind that looks to what helps. It is not the matter of the bread but the word spoken over it that benefits whoever does not eat it \"unworthily\" (1 Corinthians 11:27). So much for the typical and symbolic body.",
+      "original": "τὸ ἁγιαζόμενον βρῶμα «διὰ λόγου θεοῦ καὶ ἐντεύξεως» κατ' αὐτὸ μὲν τὸ ὑλικὸν εἰς τὴν κοιλίαν χωρεῖ καὶ εἰς ἀφεδρῶνα ἐκβάλλεται. Κατὰ δὲ τὴν ἐπιγενομένην αὐτῷ εὐχὴν «κατὰ τὴν ἀναλογίαν τῆς πίστεως» ὠφέλιμον γίνεται καὶ τῆς τοῦ νοῦ αἴτιον διαβλέψεως ὁρῶντος ἐπὶ τὸ ὠφελοῦν· καὶ οὐχ ἡ ὕλη τοῦ ἄρτου ἀλλ' ὁ ἐπ' αὐτῷ εἰρημένος λόγος ἐστὶν ὁ ὠφελῶν τὸν μὴ «ἀναξίως» τοῦ κυρίου ἐσθίοντα αὐτόν. Καὶ ταῦτα μὲν περὶ τοῦ τυπικοῦ καὶ συμβολικοῦ σώματος.",
+      "context": "Origen is explaining Jesus' saying that what enters the mouth does not defile (Matthew 15:11). He goes straight on to speak of the Word himself, \"who became flesh and true food\". He places the benefit in the Word and in faith, not in the material bread.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-17-commentarium-in-evangelium-matthaei.txt",
+        "edition": "Migne PG 13, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogy-4-3",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogical Lectures",
+      "locus": "4.3",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "So with full assurance let us share in them as the body and blood of Christ. For in the figure of bread the body is given to you, and in the figure of wine the blood, so that by sharing in the body and blood of Christ you may become one body and one blood with Christ.",
+      "original": "Ὥστε μετὰ πάσης πληροφορίας ὡς σώματος καὶ αἵματος μεταλαμβάνομεν Χριστοῦ. Ἐν τύπῳ γὰρ ἄρτου δίδοταί σοι τὸ σῶμα, καὶ ἐν τύπῳ οἴνου δίδοταί σοι τὸ αἷμα, ἵνα γένῃ, μεταλαβὼν σώματος καὶ αἵματος Χριστοῦ, σύσσωμος καὶ σύναιμος Χριστοῦ.",
+      "context": "Lectures to the newly baptized in Easter week. \"In the figure of bread\" means under the appearance of bread. Some scholars give these lectures to Cyril's successor, John of Jerusalem, about 390.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogy-4-9",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogical Lectures",
+      "locus": "4.9",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You have learned this and been fully assured that what seems bread is not bread, though it tastes like bread, but the body of Christ; and that what seems wine is not wine, though the taste wants it so, but the blood of Christ.",
+      "original": "Ταῦτα μαθὼν καὶ πληροφορηθείς, ὡς ὁ φαινόμενος ἄρτος οὐκ ἄρτος ἐστίν, εἰ καὶ τοιοῦτός ἐστι τῇ γεύσει, ἀλλὰ σῶμα Χριστοῦ, καὶ ὁ φαινόμενος οἶνος οὐκ οἶνός ἐστιν, εἰ καὶ ἡ γεῦσις τοῦτο βούλεται, ἀλλὰ αἷμα Χριστοῦ",
+      "context": "The clearest early statement that the bread is no longer bread.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-catechetical-37",
+      "author": "Gregory of Nyssa",
+      "year": 385,
+      "date": "c. 385",
+      "work": "Catechetical Oration",
+      "locus": "37",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So now too we rightly believe that the bread sanctified by the word of God is changed into the body of God the Word. ... The bread is sanctified through the word of God and prayer, as the apostle says (1 Timothy 4:5), not by going through eating to become the body of the Word, but by being changed at once into the body through the word, as the Word said: \"This is my body.\"",
+      "original": "καλῶς οὖν καὶ νῦν τὸν τῷ λόγῳ τοῦ θεοῦ ἁγιαζόμενον ἄρτον εἰς σῶμα τοῦ θεοῦ λόγου μετα ποιεῖσθαι πιστεύομεν. ... ὁ ἄρτος, καθώς φησιν ὁ ἀπόστολος, ἁγιάζεται διὰ λόγου θεοῦ καὶ ἐντεύξεως, οὐ διὰ βρώσεως προιὼν εἰς τὸ σῶμα γενέσθαι τοῦ λόγου, ἀλλ' εὐθὺς πρὸς τὸ σῶμα διὰ τοῦ λόγου μεταποιούμενος, καθὼς εἴρηται ὑπὸ τοῦ λόγου ὅτι Τοῦτό ἐστι τὸ σῶμά μου.",
+      "context": "Gregory compares this with the incarnation: bread eaten by Jesus became his body; now the bread becomes his body by the word. The verb he uses means to be made into something else.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-gregory-of-nyssa-pg-44-46-oratio-catechetica-magna.txt",
+        "edition": "Migne PG 45, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ambrose-mysteries-9",
+      "author": "Ambrose of Milan",
+      "year": 390,
+      "date": "c. 390",
+      "work": "On the Mysteries",
+      "locus": "9.50, 9.54",
+      "lang": "la",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Perhaps you say: \"I see something else. How can you tell me that I receive the body of Christ?\" ... Let us prove that this is not what nature formed but what the blessing consecrated, and that the power of the blessing is greater than the power of nature, because by the blessing nature itself is changed. ... The Lord Jesus himself declares: \"This is my body.\" Before the blessing of the heavenly words it is called another thing; after the consecration it is called the body. He himself speaks of his blood. Before the consecration it is called something else; after the consecration it is named blood. And you say: Amen, that is, it is true.",
+      "original": "Forte dicas: Aliud video, quomodo tu mihi asseris quod Christi corpus accipiam? ... Probemus non hoc esse quod natura formavit, sed quod benedictio consecravit: majoremque vim esse benedictionis quam naturae; quia benedictione etiam natura ipsa mutatur. ... Ipse clamat Dominus Jesus: Hoc est corpus meum. Ante benedictionem verborum coelestium alia species nominatur, post consecrationem corpus significatur. Ipse dicit sanguinem suum. Ante consecrationem aliud dicitur, post consecrationem sanguis nuncupatur. Et tu dicis: Amen, hoc est, verum est.",
+      "context": "Ambrose taught the newly baptized at Milan; he had baptized Augustine there in 387. He gives Old Testament miracles, such as Moses' rod turned into a snake, as proof that a blessing can change a nature.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-ambrose-de-mysteriis.txt",
+        "edition": "Migne PL 16, as given at The Latin Library"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-matthew-82-4",
+      "author": "John Chrysostom",
+      "year": 390,
+      "date": "c. 390",
+      "work": "Homilies on Matthew",
+      "locus": "82.4",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let us then believe God in everything and never contradict him, even if what he says seems contrary to our reasoning and our sight. Let his word carry more weight than reasoning and sight. So let us do with the mysteries too: not looking only at what lies before us, but holding to his words. His word cannot deceive; our senses are easily deceived. His word has never failed; our senses are mostly wrong. Since the Word says, \"This is my body,\" let us be persuaded and believe, and see it with the eyes of the mind.",
+      "original": "Πειθώμεθα τοίνυν πανταχοῦ τῷ Θεῷ, καὶ μηδὲν ἀντιλέγωμεν, κἂν ἐναντίον εἶναι δοκῇ τοῖς ἡμετέροις λογισμοῖς καὶ ταῖς ὄψεσι τὸ λεγόμενον· ἀλλ' ἔστω καὶ λογισμῶν καὶ ὄψεως κυριώτερος αὐτοῦ ὁ λόγος. Οὕτω καὶ ἐπὶ τῶν μυστηρίων ποιῶμεν, οὐ τοῖς κειμένοις μόνον ἐμβλέποντες. ἀλλὰ τὰ ῥήματα αὐτοῦ κατέχοντες. Ὁ μὲν γὰρ λόγος αὐτοῦ ἀπαραλόγιστος· ἡ δὲ αἴσθησις ἡμῶν εὐεξαπάτητος. Οὗτος οὐδέποτε διέπεσεν· αὕτη δὲ τὰ πλείονα σφάλλεται. Ἐπεὶ οὖν ὁ λόγος φησὶ, Τοῦτό ἐστι τὸ σῶμά μου, καὶ πειθώμεθα καὶ πιστεύωμεν, καὶ νοητοῖς αὐτὸ βλέπωμεν ὀφθαλμοῖς.",
+      "context": "Preached at Antioch. Chrysostom goes on: Christ gave nothing merely visible; the gift comes through visible things, as in baptism through water.",
+      "source": {
+        "book": "chrysostom-homiliae-matthaeum",
+        "section": "273"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "theodoret-eranistes-2",
+      "author": "Theodoret of Cyrrhus",
+      "year": 447,
+      "date": "c. 447",
+      "work": "Eranistes",
+      "locus": "Dialogue 2",
+      "lang": "grc",
+      "answer": "remains",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Not even after the sanctification do the mystical symbols leave their own nature. They remain in their former substance, shape and appearance, and can be seen and touched just as before. But they are understood to be what they have become, and they are believed and worshipped as being what they are believed to be.",
+      "original": "Οὐδὲ γὰρ μετὰ τὸν ἁγιασμὸν τὰ μυστικὰ σύμβολα τῆς οἰκείας ἐξίσταται φύσεως· μένει γὰρ ἐπὶ τῆς προτέρας οὐσίας, καὶ τοῦ σχήματος καὶ τοῦ εἴδους, καὶ ὁρατά ἐστι, καὶ ἁπτά, οἷα καὶ πρότερον ἦν· νοεῖται δὲ ἅπερ ἐγένετο, καὶ πιστεύ εται καὶ προσκυνεῖται, ὡς ἐκεῖνα ὄντα ἅπερ πιστεύεται.",
+      "context": "The opponent in the dialogue argues that Christ's body changed into divinity, just as the bread changes. Theodoret's \"Orthodox\" speaker answers that even the bread keeps its nature. Reformed writers cite the first half; Orthodox and Catholics cite the second.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-theodoretus-of-cyrrhus-pg-80-84-eranistes.txt",
+        "edition": "Migne PG 83, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "john-damascus-exposition-4-13",
+      "author": "John of Damascus",
+      "year": 740,
+      "date": "c. 740",
+      "work": "Exact Exposition of the Orthodox Faith",
+      "locus": "4.13",
+      "lang": "grc",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The bread and wine are not a figure of the body and blood of Christ (God forbid!) but the deified body of the Lord itself, since the Lord himself said, \"This is my body\": not a figure of the body, but \"the body\"; not a figure of the blood, but \"the blood\".",
+      "original": "Οὐκ ἔστι τύπος ὁ ἄρτος καὶ ὁ οἶνος τοῦ σώματος καὶ αἵματος τοῦ Χριστοῦ– μὴ γένοιτο–, ἀλλ' αὐτὸ τὸ σῶμα τοῦ κυρίου τεθεωμένον, αὐτοῦ τοῦ κυρίου εἰπόντος· «Τοῦτό μού ἐστι» οὐ τύπος τοῦ σώματος ἀλλὰ «τὸ σῶμα», καὶ οὐ τύπος τοῦ αἵματος ἀλλὰ «τὸ αἷμα»",
+      "context": "John's summary of Greek teaching became the standard Orthodox textbook of doctrine.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-john-of-damascus-pg-94-96-expositio-fidei.txt",
+        "edition": "Migne PG 94, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "strimesius-on-irenaeus",
+      "author": "Samuel Strimesius (Reformed)",
+      "year": 1708,
+      "date": "1708",
+      "work": "Annotations on the Lord's Supper",
+      "locus": "§514",
+      "lang": "la",
+      "answer": "sign",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Note, please, that the holy martyr calls it bread after the consecration has been made: no longer common, but set apart from all common use, and yet still bread. He does not say that this bread, set apart from common use, is itself the body of Christ, as though changed into it, but that it is the Eucharist, that is, bread appointed and consecrated for the holy Eucharist.",
+      "original": "Ubi observes velim, divum Martyrem (1) Panem post consecrationem factam, non amplius communem, sed ab omni communi usu sejunctum, interim tamen adhuc panem salutare. (2) Panem hunc ab omni communi usu separatum, non dicere ipsum corpus Christi, quasi in hoc transmutatum, sed verò Eucharistiam, i. e. panem, Eucharistiæ S. destinatum consecratumque.",
+      "context": "A Reformed professor at Frankfurt on the Oder reading Irenaeus 4.18.5 against transubstantiation. It shows how the same early sentence is read in the later debate.",
+      "source": {
+        "witness": "books/strimesius-in-controversias-evangelicorum/sources/_strimesius_hexades_annotationum_hexas_coena_annotatio_iv_svi_densify_latin_lock.txt",
+        "edition": "Strimesius, Ingenua in Controversias Evangelicorum (Frankfurt an der Oder, 1708)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "zwingli-1523-18",
+      "author": "Huldrych Zwingli",
+      "year": 1523,
+      "date": "1523",
+      "work": "Sixty-Seven Articles",
+      "locus": "Article 18",
+      "lang": "en",
+      "answer": "memorial",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "the mass is not a sacrifice, but is a remembrance of the sacrifice and assurance of the salvation which Christ has given us.",
+      "original": "the mass is not a sacrifice, but is a remembrance of the sacrifice and assurance of the salvation which Christ has given us.",
+      "context": "Zwingli, at Zurich, taught that \"is\" in \"This is my body\" means \"signifies\". He and Luther failed to agree at Marburg in 1529.",
+      "source": {
+        "url": "https://christianhistoryinstitute.org/study/module/zwinglis-sixty-seven-articles",
+        "edition": "Christian History Institute English"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "augsburg-1530-10",
+      "author": "Augsburg Confession (Lutheran)",
+      "year": 1530,
+      "date": "1530",
+      "work": "Augsburg Confession",
+      "locus": "Article X",
+      "lang": "en",
+      "answer": "remains",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "Of the Supper of the Lord they teach that the Body and Blood of Christ are truly present, and are distributed to those who eat the Supper of the Lord",
+      "original": "Of the Supper of the Lord they teach that the Body and Blood of Christ are truly present, and are distributed to those who eat the Supper of the Lord",
+      "context": "Lutherans confess a real bodily presence \"in, with and under\" the bread, which stays bread (Formula of Concord, 1577). They reject both transubstantiation and a merely spiritual presence.",
+      "source": {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "edition": "Book of Concord, English"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "trent-1551",
+      "author": "Council of Trent (Catholic)",
+      "year": 1551,
+      "date": "1551",
+      "work": "Session 13",
+      "locus": "Canon 2",
+      "lang": "en",
+      "answer": "becomes",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "that wonderful and singular conversion of the whole substance of the bread into the Body, and of the whole substance of the wine into the Blood, the species only of the bread and wine remaining, which conversion indeed the Catholic Church most aptly calls Transubstantiation",
+      "original": "that wonderful and singular conversion of the whole substance of the bread into the Body, and of the whole substance of the wine into the Blood",
+      "context": "The word transubstantiation was already used by the Fourth Lateran Council in 1215. The Orthodox speak of a real change and leave the manner undefined.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/thirteenth-session.htm",
+        "edition": "Waterworth English (1848)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-29-7",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "29.7",
+      "lang": "en",
+      "answer": "sign",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "the body and blood of Christ being then, not corporally or carnally, in, with, or under the bread and wine; yet, as really, but spiritually, present to the faith of believers in that ordinance",
+      "original": "the body and blood of Christ being then, not corporally or carnally, in, with, or under the bread and wine; yet, as really, but spiritually, present to the faith of believers in that ordinance",
+      "context": "Calvin's view: believers truly feed on Christ, by the Spirit and through faith. The Thirty-Nine Articles (1571) say the same.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "bfm-2000-7",
+      "author": "Baptist Faith and Message",
+      "year": 2000,
+      "date": "2000",
+      "work": "Baptist Faith and Message",
+      "locus": "Article VII",
+      "lang": "en",
+      "answer": "memorial",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The Lord's Supper is a symbolic act of obedience whereby members of the church, through partaking of the bread and the fruit of the vine, memorialize the death of the Redeemer and anticipate His second coming.",
+      "original": "The Lord's Supper is a symbolic act of obedience whereby members of the church, through partaking of the bread and the fruit of the vine, memorialize the death of the Redeemer and anticipate His second coming.",
+      "context": "The Southern Baptist statement. Many evangelical and Pentecostal churches hold the same.",
+      "source": {
+        "url": "https://bfm.sbc.net/bfm2000/",
+        "edition": "Southern Baptist Convention text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "Sermons 227 and 272; Tractates on John 26; Expositions of the Psalms 98.9; Letter 98.9",
+      "year": 410,
+      "why": "Augustine's most quoted Eucharist passages (\"If you are the body of Christ, your mystery lies on the Lord's table\"; \"Believe, and you have eaten\"; no one eats that flesh without first adoring it). None is in the library, and the usual web text refused automated download.",
+      "action": "intake",
+      "source_hint": "Maurist text, Migne PL 35, 37, 38 and 33"
+    },
+    {
+      "author": "Gelasius I",
+      "work": "On the Two Natures in Christ",
+      "year": 495,
+      "why": "Says the substance and nature of bread and wine do not cease to be. Often cited with Theodoret.",
+      "action": "intake",
+      "source_hint": "Thiel, Epistolae Romanorum pontificum (1868)"
+    },
+    {
+      "author": "Paschasius Radbertus and Ratramnus of Corbie",
+      "work": "On the Body and Blood of the Lord",
+      "year": 843,
+      "why": "The first treatises written on this exact question, giving opposite answers.",
+      "action": "intake",
+      "source_hint": "Migne PL 120 and 121"
+    },
+    {
+      "author": "Fourth Lateran Council",
+      "work": "Canon 1",
+      "year": 1215,
+      "why": "First official use of transubstantiation.",
+      "action": "intake",
+      "source_hint": "Mansi, vol. 22"
+    },
+    {
+      "author": "The Didache",
+      "work": "Chapters 9, 10 and 14",
+      "year": 100,
+      "why": "The oldest Eucharistic prayers. They give thanks over the cup and bread and call the Eucharist a sacrifice, but do not say what the bread becomes. In the library, not yet translated.",
+      "action": "translate",
+      "source_hint": "didache"
+    }
+  ],
+  "related": {
+    "timeline": "eucharist-presence",
+    "topics": [
+      "eucharist-thanksgiving"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026, except Ignatius, whose English is the site's own translation. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

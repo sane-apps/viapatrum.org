@@ -1,0 +1,455 @@
+{
+  "id": "old-testament-canon",
+  "number": 3,
+  "group": "bible",
+  "question": "Which Old Testament books did the early church use? Were Tobit, Wisdom and Maccabees Scripture to them?",
+  "short": "The Old Testament canon",
+  "search": [
+    "canon",
+    "old testament",
+    "apocrypha",
+    "deuterocanon",
+    "deuterocanonical",
+    "maccabees",
+    "tobit",
+    "judith",
+    "wisdom of solomon",
+    "sirach",
+    "ecclesiasticus",
+    "baruch",
+    "septuagint",
+    "73 books",
+    "66 books"
+  ],
+  "answers": [
+    {
+      "id": "hebrew",
+      "label": "Only the books of the Hebrew Bible",
+      "short": "Hebrew books only",
+      "tag": "Hebrew"
+    },
+    {
+      "id": "read",
+      "label": "The Hebrew books are the canon; the others are read in church but not used for doctrine",
+      "short": "Read, not for doctrine",
+      "tag": "Read"
+    },
+    {
+      "id": "wider",
+      "label": "The wider Greek list is Scripture",
+      "short": "Wider canon",
+      "tag": "Wider"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest Christian lists, Melito's about 170 and Origen's about 240, give the books as the Jews counted them: twenty-two by the Hebrew reckoning. Melito leaves out Esther; Origen puts Maccabees outside the list.",
+      "cites": [
+        "melito-in-eusebius-4-26",
+        "origen-in-eusebius-6-25"
+      ]
+    },
+    {
+      "text": "Yet the churches read the extra Greek books too. Origen defends the story of Susanna because every church of Christ reads it, and Cyprian quotes the Wisdom of Solomon alongside Deuteronomy.",
+      "cites": [
+        "origen-africanus",
+        "cyprian-testimonies-3-15"
+      ]
+    },
+    {
+      "text": "In the fourth century the Greek lists keep to the twenty-two books, as at Laodicea and in Gregory of Nazianzus. Hilary notes that some count twenty-four by adding Tobit and Judith.",
+      "cites": [
+        "laodicea-59-60",
+        "gregory-nazianzus-carmen-1-1-12",
+        "hilary-psalms-prologue-15"
+      ]
+    },
+    {
+      "text": "Around 400 the Latin West gave two answers. Jerome and Rufinus read Wisdom, Sirach, Tobit, Judith and Maccabees in church but would not use them to prove doctrine. Augustine counts them in the canon, forty-four books in all.",
+      "cites": [
+        "jerome-helmeted-prologue",
+        "jerome-preface-solomon",
+        "rufinus-creed-38",
+        "augustine-christian-doctrine-2-8-13"
+      ]
+    },
+    {
+      "text": "Both answers lasted. Trent in 1546 defined the wider canon, the Thirty-Nine Articles of 1571 follow Jerome, and the Westminster Confession of 1646 says those books are no part of Scripture.",
+      "cites": [
+        "trent-1546",
+        "thirty-nine-articles-6",
+        "westminster-1-3"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "melito-in-eusebius-4-26",
+      "author": "Melito of Sardis",
+      "year": 170,
+      "date": "c. 170",
+      "work": "Extracts, preserved in Eusebius, Church History",
+      "locus": "4.26.13–14",
+      "lang": "grc",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "So I went to the East, to the place where these things were preached and done. When I had learned exactly the books of the Old Covenant, I set them down and send them to you. Their names are these. Five of Moses: Genesis, Exodus, Numbers, Leviticus, Deuteronomy. Joshua son of Nun, Judges, Ruth. Four of Kingdoms, two of Chronicles. The Psalms of David. Solomon's Proverbs, which is also called Wisdom, Ecclesiastes, the Song of Songs, Job. The prophets: Isaiah, Jeremiah, the Twelve in one book, Daniel, Ezekiel. Ezra.",
+      "original": "ἀνελθὼν οὖν εἰς τὴν ἀνατολὴν, καὶ ἕως τοῦ τόπου γενόμενος ἔνθα ἐκηρύχθη καὶ ἐπράχθη, καὶ ἀκριβῶς μαθὼν τὰ τῆς παλαιᾶς διαθήκης βιβλία , ὑποτάξας ἔπεμψά σοι· ὧν ἐστὶ τὰ ὐνόματα· Μωυσέως πέντε , Γένεσις , Ἔξοδος , Ἀριθμοὶ, Λευιτικὸν, Δευτερονόμιον. Ἰησοῦς Ναυῆ , Κρι- ‘ταὶ, Ῥούθ· Βασιλειῶν τέσσαρα, Παραλειπομένων “ δύο. Ψαλμῶν Δαβὶδ , Σολομῶνος Παροιμίαι, ἣ καὶ Σοφία, Ἐκκλησιαστὴς, Ἀισμα Ἀισμάτων, Ἰώβ. Προφητῶν, Ἡσαΐου , Ἱερεμίου· τῶν δώδεκα ἐν μονοβίβλῳ· Δανιὴν, Ἰεξεκιὴλ, Ἔσδρας.",
+      "context": "The oldest Christian list of Old Testament books. Melito travelled to Palestine to find out which books the Jews used. Esther is missing. \"Wisdom\" here is a second name for Proverbs, not the Wisdom of Solomon.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "4.26"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-in-eusebius-6-25",
+      "author": "Origen of Alexandria",
+      "year": 235,
+      "date": "c. 235",
+      "work": "Commentary on Psalm 1, preserved in Eusebius, Church History",
+      "locus": "6.25.1–2",
+      "lang": "grc",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "It should be known that the books of the covenant, as the Hebrews hand them down, are twenty-two, the number of letters in their alphabet. ... These are the twenty-two books according to the Hebrews: Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua son of Nun, Judges and Ruth in one, First and Second Kingdoms in one, Third and Fourth Kingdoms in one, First and Second Chronicles in one, First and Second Ezra in one, the Psalms, Solomon's Proverbs, Ecclesiastes, the Song of Songs, Isaiah, Jeremiah with Lamentations and the Letter in one, Daniel, Ezekiel, Job, Esther. Outside these are the books of Maccabees.",
+      "original": "οὐκ ἀγνοητέον δ’ εἶναι τὰς “διαθήκους βίβλους, ὡς Ἑβραῖοι παραδιδόασιν, δύο “καὶ εἴκοσι, ὅσος ἀριθμὸς τῶν παρ’ αὐτοῖς στοιχείων ῾ἐστίν.” ... ἔξω δὲ τού- “των ἐστὶ τὰ Μακκαβαϊκὰ",
+      "context": "Origen reports the Jewish list, with each book's Hebrew name (left out here). Twelve minor prophets are missing from the copy Eusebius gives, probably by a slip. Origen also read the extra Greek books as Scripture: see his letter to Africanus.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "6.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-africanus",
+      "author": "Origen of Alexandria",
+      "year": 240,
+      "date": "c. 240",
+      "work": "Letter to Africanus",
+      "locus": "2, 7",
+      "lang": "grc",
+      "answer": "wider",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Consider what we ought to do, not only about the story of Susanna, which is read in the Greek in every church of Christ but is not found among the Hebrews ... Look at this, and see whether it would not be good to remember the saying: \"You shall not move the ancient boundary stones that those before you set\" (Proverbs 22:28).",
+      "original": "οὐ περὶ τῶν κατὰ Σωσάνναν μόνον (22), ἐν μὲν τῷ καθʼ Ἕλληνας Ἑλληνικῷ φερομένων ἐν πάσῃ Ἐκκλησίᾳ Χριστοῦ, παρὰ δὲ Ἑβραίοις μὴ κειμένων ... Πρὸς ταῦτα δὲ σκόπει, εἰ μὴ καλὸν μεμνῆσθαι τοῦ· « Οὐ μεταθήσεις ὅρια αἰώνια, ἃ ἔστησαν οἱ πρότεροί σου; »",
+      "context": "Julius Africanus argued that Susanna was a late Greek forgery. Origen answers that the churches' Greek Bible, with Susanna and Bel and the Dragon, is the Bible God gave them, and should not be swapped for the Jewish copies, even though he studied those copies closely.",
+      "source": {
+        "witness": "books/origen-letters/sources/africanus_working_greek.txt",
+        "edition": "Migne PG 11.48–60 (De la Rue), working Greek in the library"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-testimonies-3-15",
+      "author": "Cyprian of Carthage",
+      "year": 249,
+      "date": "c. 249",
+      "work": "Testimonies to Quirinus",
+      "locus": "3.15",
+      "lang": "la",
+      "answer": "wider",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Again in Deuteronomy: \"The Lord your God tests you, to know whether you love the Lord your God with all your heart and all your soul\" (Deuteronomy 13:3). Again in the Wisdom of Solomon: \"Though they suffered torments in the sight of men, their hope is full of immortality. Having been troubled a little, they will be greatly rewarded, because God tested them and found them worthy of himself. Like gold in the furnace he tried them\" (Wisdom 3:4–6).",
+      "original": "Item in Deuteronomio: Temptat Dominus Deus uester uos ut sciat, si diligitis Dominum Deum uestrum ex toto corde uestro et ex tota anima uestra. Item in Sapientia Salomonis: Et si coram hominibus tormenta passi sunt, spes eorum inmortalitate plena est: et in paucis uexati in multis bene disponentur, quoniam Deus temptauit illos et inuenit illos dignos se. tamquam aurum in fornace probauit illos",
+      "context": "Cyprian's Testimonies is a handbook of proof texts. He gives Wisdom the same \"again in\" as Deuteronomy, and quotes Tobit and Sirach the same way elsewhere. He makes no list, so this shows his use, not a ruling.",
+      "source": {
+        "book": "cyprian-testimonies-to-quirinus",
+        "section": "3.15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "laodicea-59-60",
+      "author": "Council of Laodicea",
+      "year": 363,
+      "date": "c. 363",
+      "work": "Canons",
+      "locus": "59–60",
+      "lang": "grc",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Psalms composed by private persons must not be read in the church, nor books outside the canon, but only the canonical books of the New and Old Covenant. These are the books of the Old Covenant that are to be read: Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua son of Nun, Judges and Ruth, Esther, First and Second Kingdoms, Third and Fourth Kingdoms, First and Second Chronicles, First and Second Ezra, the Book of 150 Psalms, Solomon's Proverbs, Ecclesiastes, the Song of Songs, Job, the Twelve Prophets, Isaiah, Jeremiah and Baruch, Lamentations and the letters, Ezekiel, Daniel.",
+      "original": "Ὅτι οὐ δεῖ ἰδιωτικοὺς ψαλμοὺς λέγεσθαι ἐν τῇ ἐκκλησίᾳ, οὐδὲ ἀκανόνιστα βιβλία, ἀλλὰ μόνα τὰ κανονικὰ τῆς καινῆς καὶ παλαιᾶς διαθήκης. ... Ὅσα δεῖ βιβλία ἀναγινώσκεσθαι τῆς Παλαιᾶς Διαθήκης",
+      "context": "A local council in Asia Minor. The list in canon 60 keeps to the Hebrew books, with Baruch and the Letter of Jeremiah joined to Jeremiah. Some old manuscripts and translations lack canon 60, so it may have been added later.",
+      "source": {
+        "book": "council-of-laodicea-canons",
+        "section": "59",
+        "also": {
+          "book": "council-of-laodicea-canons",
+          "section": "60"
+        }
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "hilary-psalms-prologue-15",
+      "author": "Hilary of Poitiers",
+      "year": 365,
+      "date": "c. 365",
+      "work": "Instructions on the Psalms",
+      "locus": "Prologue 15",
+      "lang": "la",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "This is why the law of the Old Testament is counted as twenty-two books: to agree with the number of letters. Following the tradition of the ancients they are counted so: five books of Moses, Joshua son of Nun the sixth, Judges and Ruth the seventh, First and Second Kingdoms the eighth, Third and Fourth the ninth, the two of Chronicles the tenth, the words of the days of Ezra the eleventh, the Psalms the twelfth, Solomon's Proverbs, Ecclesiastes and the Song of Songs the thirteenth to fifteenth, the twelve minor prophets the sixteenth, and then Isaiah, Jeremiah with Lamentations and the Letter, Daniel, Ezekiel, Job and Esther complete the twenty-two. Some have chosen to add Tobit and Judith and count twenty-four books, after the number of Greek letters.",
+      "original": "Et ea causa est, ut in uiginti duos libros lex Testamenti Veteris deputetur, ut cum litterarum numero conuenirent. ... quibusdam autem uisum est, additis Tobia et Iudith uiginti quattuor libros secundum numerum graecarum litterarum connumerare",
+      "context": "Hilary follows Origen closely here. He reports the alternative count with Tobit and Judith without ruling on it.",
+      "source": {
+        "book": "hilary-homilies-on-the-psalms",
+        "section": "pr.15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-carmen-1-1-12",
+      "author": "Gregory of Nazianzus",
+      "year": 385,
+      "date": "c. 385",
+      "work": "Poems on Doctrine 1.1.12, On the Genuine Books of Scripture",
+      "locus": "lines 5–30",
+      "lang": "grc",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "First Genesis, then Exodus and Leviticus; then Numbers, then the Second Law. Then Joshua and Judges; Ruth is eighth. The ninth and tenth books are the Acts of the Kings, and Chronicles. Last you have Ezra. The books in verse are five: Job first, then David, then three of Solomon, Ecclesiastes, the Song and Proverbs. And five likewise of the prophetic Spirit: the Twelve make one book, ... Isaiah the second, then Jeremiah, called from the womb, then Ezekiel, and the grace of Daniel. I have set down twenty-two ancient books, to match the letters of the Hebrews.",
+      "original": "Πρωτίστη, Γένεσις, εἶτ' Ἔξοδος, Λευιτικόν τε. Ἔπειτ' Ἀριθμοί. Εἶτα Δεύτερος Νόμος. ... Ἀρχαίας μὲν ἔθηκα δύω καὶ εἴκοσι βίβλους, Τοῖς τῶν Ἑβραίων γράμμασιν ἀντιθέτους.",
+      "context": "A verse list to help readers remember. Like Melito, Gregory leaves out Esther, and he names none of the extra Greek books.",
+      "source": {
+        "book": "gregory-nazianzus-carmina-dogmatica",
+        "section": "15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "jerome-helmeted-prologue",
+      "author": "Jerome",
+      "year": 391,
+      "date": "c. 391",
+      "work": "Preface to Samuel and Kings (the \"Helmeted Prologue\")",
+      "locus": "end",
+      "lang": "la",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "This prologue can stand like a helmet at the head of all the books I have translated from Hebrew into Latin, so that we may know that whatever is outside these must be set aside among the apocrypha. So the Wisdom commonly called Solomon's, the book of Jesus son of Sirach, Judith, Tobit and the Shepherd are not in the canon. The first book of Maccabees I found in Hebrew; the second is Greek, as its very style proves.",
+      "original": "Hic prologus Scripturarum quasi galeatum principium, omnibus libris quos de hebraeo vertimus in latinum, convenire potest : ut scire valeamus, quicquid extra hos est, inter apocrypha esse seponendum. Igitur Sapientia, quae vulgo Salomonis inscribitur, et Jesu filii Sirach liber, et Judith, et Tobias, et Pastor, non sunt in canone. Machabæorum primum librum, hebraicum reperi. Secundus, Græcus est : quod et ex ipsa phrasi probari potest.",
+      "context": "Jerome learned Hebrew in Bethlehem and translated the Old Testament from it. He still translated Tobit and Judith later, at friends' request.",
+      "source": {
+        "book": "jerome-prefaces-to-the-scriptures",
+        "section": "samuel-kings"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "jerome-preface-solomon",
+      "author": "Jerome",
+      "year": 398,
+      "date": "c. 398",
+      "work": "Preface to the Books of Solomon",
+      "locus": "Preface",
+      "lang": "la",
+      "answer": "read",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Church reads Judith, Tobit and the books of Maccabees, but does not receive them among the canonical Scriptures. In the same way let it read these two volumes [Wisdom and Sirach] for the building up of the people, not to confirm the authority of the Church's teachings.",
+      "original": "Sicut ergo Judith, et Tobiæ, et Machabæorum libros legit quidem Ecclesia, sed inter canonicas scripturas non recipit : sic et hæc duo volumina legat ad ædificationem plebis, non ad auctoritatem Ecclesiasticorum dogmatum confirmandam.",
+      "context": "This sentence is the source of the Anglican rule. Article VI of the Thirty-Nine Articles quotes Jerome by name.",
+      "source": {
+        "book": "jerome-prefaces-to-the-scriptures",
+        "section": "solomon"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-christian-doctrine-2-8-13",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "On Christian Teaching",
+      "locus": "2.8.13",
+      "lang": "la",
+      "answer": "wider",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The whole canon of the Scriptures is contained in these books: five of Moses, Joshua, Judges, Ruth, four of Kingdoms and two of Chronicles. There are others of a different order: Job, Tobit, Esther, Judith, the two books of Maccabees and the two of Ezra. Then the prophets: David's one book of Psalms, and three of Solomon. As for the two books called Wisdom and Ecclesiasticus, they are said to be Solomon's because they are like his. ... Since they have been counted worthy to be received into authority, they are to be numbered among the prophetic books.",
+      "original": "Totus autem canon Scripturarum, in quo istam considerationem versandam dicimus, his libris continetur ... sicut est Iob et Tobias et Esther et Iudith et Machabeorum libri duo et Esdrae duo ... Nam illi duo libri, unus qui Sapientia et alius qui Ecclesiasticus inscribitur, de quadam similitudine Salomonis esse dicuntur ... qui tamen quoniam in auctoritatem recipi meruerunt, inter propheticos numerandi sunt.",
+      "context": "Augustine counts forty-four Old Testament books, the list the North African councils of Hippo (393) and Carthage (397) also gave. The omitted lines, which name the prophets, are left out here for length.",
+      "source": {
+        "book": "augustine-on-christian-doctrine",
+        "section": "2.13"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "rufinus-creed-38",
+      "author": "Rufinus of Aquileia",
+      "year": 404,
+      "date": "c. 404",
+      "work": "Commentary on the Apostles' Creed",
+      "locus": "38",
+      "lang": "la",
+      "answer": "read",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It should be known, though, that there are other books, which our forebears called not canonical but ecclesiastical: the Wisdom said to be Solomon's, and the other Wisdom, of the son of Sirach, which the Latins call Ecclesiasticus, a name that marks what kind of writing it is, not who wrote it. Of the same order are Tobit and Judith and the books of Maccabees. ... They wanted all these read in the churches, but not brought forward to confirm the authority of the faith. The other writings they named apocrypha, and these they did not want read in the churches. This is what the Fathers handed down to us.",
+      "original": "Sciendum tamen est, quod et alii libri sunt, qui non canonici, sed Ecclesiastici a majoribus appellati sunt, id est, Sapientia, quae dicitur Salomomonis, et alia Sapientia, quae dicitur filii Syrach ... Ejusdem vero ordinis libellus est Tobiae et Judith, et Machabaeorum libri. ... Quae omnia legi quidem in Ecclesiis voluerunt, non tamen proferri ad auctoritatem ex his fidei confirmandam. Caeteras vero Scripturas apocryphas nominarunt, quas in Ecclesiis legi noluerunt. Haec nobis a Patribus tradita sunt",
+      "context": "Rufinus names three tiers: canonical books, \"ecclesiastical\" books read in church, and apocrypha not read at all.",
+      "source": {
+        "book": "rufinus-commentary-on-the-apostles-creed",
+        "section": "38"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1546",
+      "author": "Council of Trent (Catholic)",
+      "year": 1546,
+      "date": "1546",
+      "work": "Session 4",
+      "locus": "Decree on the Canonical Scriptures",
+      "lang": "en",
+      "answer": "wider",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Tobias, Judith, Esther, Job, the Davidical Psalter, consisting of a hundred and fifty psalms; the Proverbs, Ecclesiastes, the Canticle of Canticles, Wisdom, Ecclesiasticus",
+      "original": "Tobias, Judith, Esther, Job, the Davidical Psalter, consisting of a hundred and fifty psalms; the Proverbs, Ecclesiastes, the Canticle of Canticles, Wisdom, Ecclesiasticus",
+      "context": "Trent defines the forty-six-book Old Testament for Catholics, including Tobit, Judith, Wisdom, Sirach, Baruch and First and Second Maccabees. The Orthodox (Jerusalem, 1672) and the Ethiopian church (81 books in all) keep a wider canon too.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/fourth-session.htm",
+        "edition": "Waterworth English (1848)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "thirty-nine-articles-6",
+      "author": "Thirty-Nine Articles (Anglican)",
+      "year": 1571,
+      "date": "1571",
+      "work": "Thirty-Nine Articles of Religion",
+      "locus": "Article VI",
+      "lang": "en",
+      "answer": "read",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "And the other Books (as Hierome saith) the Church doth read for example of life and instruction of manners; but yet doth it not apply them to establish any doctrine",
+      "original": "And the other Books (as Hierome saith) the Church doth read for example of life and instruction of manners; but yet doth it not apply them to establish any doctrine",
+      "context": "\"Hierome\" is Jerome. Luther's Bible of 1534 also printed these books between the Testaments, as \"not equal to Holy Scripture, yet useful and good to read.\"",
+      "source": {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "edition": "Church of England text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1-3",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "1.3",
+      "lang": "en",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The books commonly called Apocrypha, not being of divine inspiration, are no part of the canon of the Scripture",
+      "original": "The books commonly called Apocrypha, not being of divine inspiration, are no part of the canon of the Scripture",
+      "context": "Reformed, Presbyterian and most Baptist and evangelical churches hold the thirty-nine-book Old Testament, the same books as the Hebrew Bible.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Athanasius of Alexandria",
+      "work": "Festal Letter 39",
+      "year": 367,
+      "why": "The best-known early list: the Hebrew books plus Baruch, with Wisdom, Sirach, Esther, Judith and Tobit \"not canonized but appointed to be read\" by new believers. Survives in Greek fragments and in Coptic.",
+      "action": "intake",
+      "source_hint": "Greek fragments, Migne PG 26.1176–1180; Coptic in Lefort (1955, check copyright) or older Schmidt edition"
+    },
+    {
+      "author": "Cyril of Jerusalem",
+      "work": "Catechetical Lecture 4.33–36",
+      "year": 350,
+      "why": "Gives the twenty-two books and tells catechumens to read nothing of the apocrypha.",
+      "action": "intake",
+      "source_hint": "Reischl and Rupp, Cyrilli opera (1848), vol. 1"
+    },
+    {
+      "author": "Council of Carthage (397) / Hippo (393)",
+      "work": "Canon on the Scriptures",
+      "year": 397,
+      "why": "The African list that matches Augustine's forty-four books.",
+      "action": "intake",
+      "source_hint": "Bruns, Canones apostolorum et conciliorum (1839), vol. 1"
+    },
+    {
+      "author": "Amphilochius of Iconium",
+      "work": "Iambics to Seleucus",
+      "year": 394,
+      "why": "A verse list that notes some add Esther.",
+      "action": "intake",
+      "source_hint": "Migne PG 37.1577–1600 (printed among Gregory of Nazianzus)"
+    },
+    {
+      "author": "Epiphanius of Salamis",
+      "work": "Panarion 8.6; On Weights and Measures 4",
+      "year": 375,
+      "why": "Calls Wisdom and Sirach useful but disputed. Epiphanius is in the library, but these passages were not found by search.",
+      "action": "search",
+      "source_hint": "epiphanius-panarion, epiphanius-de-mensuris"
+    },
+    {
+      "author": "John of Damascus",
+      "work": "Exact Exposition of the Orthodox Faith 4.17",
+      "year": 740,
+      "why": "The twenty-two books; Wisdom and Sirach \"noble and good, but not counted\".",
+      "action": "intake",
+      "source_hint": "Migne PG 94.1176–1180"
+    },
+    {
+      "author": "Origen of Alexandria",
+      "work": "Letter to Africanus 4–6",
+      "year": 240,
+      "why": "The library's Greek skips the lines where Origen asks whether the churches should throw out their copies. Re-lock from the Migne print.",
+      "action": "relock-source",
+      "source_hint": "Migne PG 11.48–60"
+    }
+  ],
+  "related": {
+    "timeline": "old-testament-canon",
+    "topics": [
+      "canon-rule-of-truth",
+      "lxx-and-form"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

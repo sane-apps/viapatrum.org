@@ -1,0 +1,996 @@
+{
+ "_note": "The 100 reader questions (owner approved 2026-10-13). One dossier per id in data/explore/questions/. Sources: GQ GotQuestions, CA Catholic Answers, OR Orthodox FAQs, CH christian-history.org, MS Missio, OF Onward in the Faith, LG Ligonier, VP already on the site.",
+ "groups": [
+  {
+   "id": "bible",
+   "title": "The Bible"
+  },
+  {
+   "id": "god",
+   "title": "God and the Trinity"
+  },
+  {
+   "id": "christ",
+   "title": "Jesus Christ"
+  },
+  {
+   "id": "salvation",
+   "title": "Salvation"
+  },
+  {
+   "id": "baptism-supper",
+   "title": "Baptism and the Lord's Supper"
+  },
+  {
+   "id": "church",
+   "title": "The Church"
+  },
+  {
+   "id": "mary-saints",
+   "title": "Mary, the saints, images and prayer"
+  },
+  {
+   "id": "last-things",
+   "title": "The last things"
+  },
+  {
+   "id": "spirit",
+   "title": "The Holy Spirit and gifts"
+  },
+  {
+   "id": "life",
+   "title": "How Christians lived"
+  },
+  {
+   "id": "world",
+   "title": "Christians and the world around them"
+  }
+ ],
+ "questions": [
+  {
+   "number": 1,
+   "id": "decided-which-books-bible",
+   "group": "bible",
+   "question": "Who decided which books are in the Bible, and when?",
+   "sources": [
+    "GQ",
+    "OF"
+   ]
+  },
+  {
+   "number": 2,
+   "id": "constantine-council-nicaea-choose-books",
+   "group": "bible",
+   "question": "Did Constantine or the Council of Nicaea choose the books of the Bible?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 3,
+   "id": "old-testament-canon",
+   "group": "bible",
+   "question": "Which Old Testament books did the early church use? Were Tobit, Wisdom and Maccabees Scripture to them?",
+   "sources": [
+    "VP",
+    "GQ"
+   ]
+  },
+  {
+   "number": 4,
+   "id": "four-gospels-settled-other-gospels",
+   "group": "bible",
+   "question": "When were the four Gospels settled, and why were other gospels left out?",
+   "sources": [
+    "CH",
+    "OF"
+   ]
+  },
+  {
+   "number": 5,
+   "id": "bible-only-rule-faith-tradition",
+   "group": "bible",
+   "question": "Is the Bible the only rule of faith, or is church tradition also binding?",
+   "sources": [
+    "VP",
+    "CA"
+   ]
+  },
+  {
+   "number": 6,
+   "id": "rule-faith-appealed",
+   "group": "bible",
+   "question": "What was \"the rule of faith\" the early church appealed to?",
+   "sources": [
+    "GQ",
+    "VP"
+   ]
+  },
+  {
+   "number": 7,
+   "id": "believe-bible-inspired-without-error",
+   "group": "bible",
+   "question": "Did the early church believe the Bible was inspired and without error?",
+   "sources": [
+    "LG",
+    "OF"
+   ]
+  },
+  {
+   "number": 8,
+   "id": "which-bible-text-read-hebrew",
+   "group": "bible",
+   "question": "Which Bible text did they read: the Hebrew or the Greek Septuagint?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 9,
+   "id": "read-old-testament-literally-types",
+   "group": "bible",
+   "question": "How did they read the Old Testament: literally, or as types and figures of Christ?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 10,
+   "id": "trust-that-text-copied-faithfully",
+   "group": "bible",
+   "question": "How can we trust that the text was copied faithfully?",
+   "sources": [
+    "OF"
+   ]
+  },
+  {
+   "number": 11,
+   "id": "jesus-god",
+   "group": "god",
+   "question": "Is Jesus God?",
+   "sources": [
+    "GQ",
+    "LG"
+   ]
+  },
+  {
+   "number": 12,
+   "id": "jesus-created-eternal-arianism",
+   "group": "god",
+   "question": "Was Jesus created, or eternal? What was Arianism?",
+   "sources": [
+    "GQ",
+    "LG"
+   ]
+  },
+  {
+   "number": 13,
+   "id": "holy-spirit-person-he-god",
+   "group": "god",
+   "question": "Is the Holy Spirit a person, and is he God?",
+   "sources": [
+    "LG",
+    "GQ"
+   ]
+  },
+  {
+   "number": 14,
+   "id": "christians-start-teaching-trinity-invented",
+   "group": "god",
+   "question": "When did Christians start teaching the Trinity? Was it invented at Nicaea?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 15,
+   "id": "teach-that-son-subordinate-father",
+   "group": "god",
+   "question": "Did the early church teach that the Son is subordinate to the Father?",
+   "sources": [
+    "CH"
+   ]
+  },
+  {
+   "number": 16,
+   "id": "whom-holy-spirit-proceed-father",
+   "group": "god",
+   "question": "From whom does the Holy Spirit proceed, the Father alone or the Father and the Son?",
+   "sources": [
+    "VP",
+    "OR"
+   ]
+  },
+  {
+   "number": 17,
+   "id": "one-god-make-world-lesser",
+   "group": "god",
+   "question": "Did the one God make the world, or a lesser god, as the Gnostics said?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 18,
+   "id": "god-change-suffer-learn",
+   "group": "god",
+   "question": "Does God change, suffer, or learn?",
+   "sources": [
+    "LG"
+   ]
+  },
+  {
+   "number": 19,
+   "id": "jesus-have-real-human-body",
+   "group": "christ",
+   "question": "Did Jesus have a real human body, or only seem to?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 20,
+   "id": "christ-one-nature-two-natures",
+   "group": "christ",
+   "question": "Is Christ one nature or two natures in one person?",
+   "sources": [
+    "VP",
+    "MS"
+   ]
+  },
+  {
+   "number": 21,
+   "id": "jesus-born-virgin",
+   "group": "christ",
+   "question": "Was Jesus born of a virgin?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 22,
+   "id": "jesus-rise-bodily-dead",
+   "group": "christ",
+   "question": "Did Jesus rise bodily from the dead?",
+   "sources": [
+    "OF"
+   ]
+  },
+  {
+   "number": 23,
+   "id": "jesus-have-die-his-death",
+   "group": "christ",
+   "question": "Why did Jesus have to die? What did his death accomplish?",
+   "sources": [
+    "OF",
+    "VP"
+   ]
+  },
+  {
+   "number": 24,
+   "id": "christ-descend-dead-after-crucifixion",
+   "group": "christ",
+   "question": "Did Christ descend to the dead after the crucifixion?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 25,
+   "id": "jesus-have-human-soul-mind",
+   "group": "christ",
+   "question": "Did Jesus have a human soul and mind, or did the Word replace them?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 26,
+   "id": "may-mary-called-mother-god",
+   "group": "christ",
+   "question": "May Mary be called Mother of God?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 27,
+   "id": "saved-faith-alone-faith-works",
+   "group": "salvation",
+   "question": "Are we saved by faith alone, or by faith and works?",
+   "sources": [
+    "GQ",
+    "CA",
+    "VP"
+   ]
+  },
+  {
+   "number": 28,
+   "id": "grace-anyone-good-without",
+   "group": "salvation",
+   "question": "What is grace, and can anyone do good without it?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 29,
+   "id": "have-free-will",
+   "group": "salvation",
+   "question": "Do we have free will?",
+   "sources": [
+    "CH",
+    "VP"
+   ]
+  },
+  {
+   "number": 30,
+   "id": "babies-born-guilty-adam-s",
+   "group": "salvation",
+   "question": "Are babies born guilty of Adam's sin? What is original sin?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 31,
+   "id": "god-choose-will-saved-before",
+   "group": "salvation",
+   "question": "Does God choose who will be saved before they are born?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 32,
+   "id": "christian-lose-salvation",
+   "group": "salvation",
+   "question": "Can a Christian lose salvation?",
+   "sources": [
+    "GQ",
+    "MS"
+   ]
+  },
+  {
+   "number": 33,
+   "id": "happens-people-never-heard-gospel",
+   "group": "salvation",
+   "question": "What happens to people who never heard the gospel?",
+   "sources": [
+    "OF"
+   ]
+  },
+  {
+   "number": 34,
+   "id": "will-everyone-saved-end",
+   "group": "salvation",
+   "question": "Will everyone be saved in the end?",
+   "sources": [
+    "OF"
+   ]
+  },
+  {
+   "number": 35,
+   "id": "hell-eternal",
+   "group": "salvation",
+   "question": "Is hell eternal?",
+   "sources": [
+    "OF"
+   ]
+  },
+  {
+   "number": 36,
+   "id": "mean-made-like-god",
+   "group": "salvation",
+   "question": "What does it mean to be made like God (theosis)?",
+   "sources": [
+    "OR",
+    "VP"
+   ]
+  },
+  {
+   "number": 37,
+   "id": "happens-christian-sins-seriously-after",
+   "group": "salvation",
+   "question": "What happens to a Christian who sins seriously after baptism?",
+   "sources": [
+    "VP",
+    "MS"
+   ]
+  },
+  {
+   "number": 38,
+   "id": "christian-become-wholly-holy-this",
+   "group": "salvation",
+   "question": "Can a Christian become wholly holy in this life?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 39,
+   "id": "god-want-everyone-saved",
+   "group": "salvation",
+   "question": "Does God want everyone to be saved?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 40,
+   "id": "infant-baptism",
+   "group": "baptism-supper",
+   "question": "Did the early church baptize infants?",
+   "sources": [
+    "VP",
+    "CH"
+   ]
+  },
+  {
+   "number": 41,
+   "id": "baptism-save-only-sign",
+   "group": "baptism-supper",
+   "question": "Does baptism save, or is it only a sign?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 42,
+   "id": "baptism-done-immersion-pouring-words",
+   "group": "baptism-supper",
+   "question": "How was baptism done: immersion or pouring, and with what words?",
+   "sources": [
+    "CA"
+   ]
+  },
+  {
+   "number": 43,
+   "id": "baptize-baptism-heretics-valid",
+   "group": "baptism-supper",
+   "question": "Who could baptize, and was baptism by heretics valid?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 44,
+   "id": "eucharist-presence",
+   "group": "baptism-supper",
+   "question": "Did the early church believe the bread and wine become Christ's body and blood?",
+   "sources": [
+    "VP",
+    "CA"
+   ]
+  },
+  {
+   "number": 45,
+   "id": "eucharist-sacrifice",
+   "group": "baptism-supper",
+   "question": "Is the Eucharist a sacrifice?",
+   "sources": [
+    "VP",
+    "CA"
+   ]
+  },
+  {
+   "number": 46,
+   "id": "receive-communion-often",
+   "group": "baptism-supper",
+   "question": "Who could receive communion, and how often?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 47,
+   "id": "christians-worship-sunday-keep-sabbath",
+   "group": "baptism-supper",
+   "question": "Did Christians worship on Sunday or keep the Sabbath?",
+   "sources": [
+    "CH"
+   ]
+  },
+  {
+   "number": 48,
+   "id": "sunday-service-look-like-second",
+   "group": "baptism-supper",
+   "question": "What did a Sunday service look like in the second century?",
+   "sources": [
+    "CA",
+    "CH"
+   ]
+  },
+  {
+   "number": 49,
+   "id": "christians-confess-sins-priest",
+   "group": "baptism-supper",
+   "question": "Did early Christians confess their sins to a priest?",
+   "sources": [
+    "CA"
+   ]
+  },
+  {
+   "number": 50,
+   "id": "chrismation-confirmation-begin",
+   "group": "baptism-supper",
+   "question": "What is chrismation or confirmation, and when did it begin?",
+   "sources": [
+    "GQ",
+    "OR"
+   ]
+  },
+  {
+   "number": 51,
+   "id": "peter-first-pope-bishop-rome",
+   "group": "church",
+   "question": "Was Peter the first pope? Did the bishop of Rome rule the whole church?",
+   "sources": [
+    "GQ",
+    "VP"
+   ]
+  },
+  {
+   "number": 52,
+   "id": "governed-bishops-presbyters-deacons",
+   "group": "church",
+   "question": "How was the church governed: bishops, presbyters, deacons?",
+   "sources": [
+    "VP",
+    "GQ"
+   ]
+  },
+  {
+   "number": 53,
+   "id": "apostolic-succession-teach",
+   "group": "church",
+   "question": "What is apostolic succession, and did the early church teach it?",
+   "sources": [
+    "VP",
+    "CA"
+   ]
+  },
+  {
+   "number": 54,
+   "id": "there-women-deacons-women-clergy",
+   "group": "church",
+   "question": "Were there women deacons or women clergy?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 55,
+   "id": "priests-bishops-marry",
+   "group": "church",
+   "question": "Could priests and bishops marry?",
+   "sources": [
+    "MS"
+   ]
+  },
+  {
+   "number": 56,
+   "id": "there-salvation-outside",
+   "group": "church",
+   "question": "Is there salvation outside the church?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 57,
+   "id": "counts-heretic-makes-someone-one",
+   "group": "church",
+   "question": "Who counts as a heretic, and what makes someone one?",
+   "sources": [
+    "MS",
+    "VP"
+   ]
+  },
+  {
+   "number": 58,
+   "id": "discipline-members-excommunicated-return",
+   "group": "church",
+   "question": "How did the church discipline members, and could the excommunicated return?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 59,
+   "id": "begin-call-itself-catholic",
+   "group": "church",
+   "question": "When did the church begin to call itself \"Catholic\"?",
+   "sources": [
+    "CH",
+    "CA"
+   ]
+  },
+  {
+   "number": 60,
+   "id": "apostles-creed-where-creeds-come",
+   "group": "church",
+   "question": "What is the Apostles' Creed, and where did creeds come from?",
+   "sources": [
+    "GQ",
+    "VP"
+   ]
+  },
+  {
+   "number": 61,
+   "id": "happened-council-nicaea",
+   "group": "church",
+   "question": "What happened at the Council of Nicaea?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 62,
+   "id": "eastern-western-churches-separate",
+   "group": "church",
+   "question": "Why did the Eastern and Western churches separate?",
+   "sources": [
+    "GQ",
+    "OR"
+   ]
+  },
+  {
+   "number": 63,
+   "id": "first-true-fall-later",
+   "group": "church",
+   "question": "Was the first church the true church, and did it \"fall\" later?",
+   "sources": [
+    "GQ",
+    "CH"
+   ]
+  },
+  {
+   "number": 64,
+   "id": "apostles-found-rome-apostles-die",
+   "group": "church",
+   "question": "Did the apostles found the church in Rome, and how did the apostles die?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 65,
+   "id": "mary-remain-virgin-all-her",
+   "group": "mary-saints",
+   "question": "Did Mary remain a virgin all her life?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 66,
+   "id": "mary-free-sin",
+   "group": "mary-saints",
+   "question": "Was Mary free from sin?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 67,
+   "id": "mary-s-life-end-death",
+   "group": "mary-saints",
+   "question": "How did Mary's life end: death, or assumption?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 68,
+   "id": "christians-pray-saints-martyrs",
+   "group": "mary-saints",
+   "question": "Did early Christians pray to the saints and martyrs?",
+   "sources": [
+    "VP",
+    "CA",
+    "OR"
+   ]
+  },
+  {
+   "number": 69,
+   "id": "honour-relics-martyrs",
+   "group": "mary-saints",
+   "question": "Did they honour relics of the martyrs?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 70,
+   "id": "make-images-christ-saints-icons",
+   "group": "mary-saints",
+   "question": "Did they make images of Christ and the saints, and are icons idolatry?",
+   "sources": [
+    "VP",
+    "MS",
+    "OR"
+   ]
+  },
+  {
+   "number": 71,
+   "id": "pray-dead-there-purgatory",
+   "group": "mary-saints",
+   "question": "Did they pray for the dead, and is there a purgatory?",
+   "sources": [
+    "VP",
+    "CA"
+   ]
+  },
+  {
+   "number": 72,
+   "id": "believe-about-angels-demons",
+   "group": "mary-saints",
+   "question": "What did they believe about angels and demons?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 73,
+   "id": "pray-set-hours-set-prayers",
+   "group": "mary-saints",
+   "question": "How did they pray: set hours, set prayers, facing east?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 74,
+   "id": "will-christ-reign-earth-thousand",
+   "group": "last-things",
+   "question": "Will Christ reign on earth for a thousand years?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 75,
+   "id": "where-dead-wait-before-resurrection",
+   "group": "last-things",
+   "question": "Where do the dead wait before the resurrection? Do Christians go to heaven at death?",
+   "sources": [
+    "VP",
+    "CH"
+   ]
+  },
+  {
+   "number": 76,
+   "id": "will-our-bodies-rise",
+   "group": "last-things",
+   "question": "Will our bodies rise?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 77,
+   "id": "these-end-times-will-christ",
+   "group": "last-things",
+   "question": "Are these the end times? When will Christ return?",
+   "sources": [
+    "MS"
+   ]
+  },
+  {
+   "number": 78,
+   "id": "last-judgment-there-rewards-heaven",
+   "group": "last-things",
+   "question": "What is the last judgment, and are there rewards in heaven?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 79,
+   "id": "antichrist",
+   "group": "last-things",
+   "question": "Who is the Antichrist?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 80,
+   "id": "tongues-prophecy-healing-continue",
+   "group": "spirit",
+   "question": "Do tongues, prophecy and healing continue in the church?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 81,
+   "id": "montanism-rejected",
+   "group": "spirit",
+   "question": "What was Montanism, and why was it rejected?",
+   "sources": [
+    "GQ",
+    "VP"
+   ]
+  },
+  {
+   "number": 82,
+   "id": "spirit-baptism",
+   "group": "spirit",
+   "question": "What does the Spirit do in baptism?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 83,
+   "id": "miracles-continue-after-apostles",
+   "group": "spirit",
+   "question": "Did miracles continue after the apostles?",
+   "sources": [
+    "OF"
+   ]
+  },
+  {
+   "number": 84,
+   "id": "christian-serve-army-kill",
+   "group": "life",
+   "question": "Could a Christian serve in the army or kill?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 85,
+   "id": "may-state-put-criminal-death",
+   "group": "life",
+   "question": "May the state put a criminal to death?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 86,
+   "id": "say-about-abortion-exposing-infants",
+   "group": "life",
+   "question": "What did they say about abortion and exposing infants?",
+   "sources": [
+    "CA"
+   ]
+  },
+  {
+   "number": 87,
+   "id": "marriage-divorce-remarriage-allowed",
+   "group": "life",
+   "question": "Marriage, divorce and remarriage: what was allowed?",
+   "sources": [
+    "VP",
+    "CA"
+   ]
+  },
+  {
+   "number": 88,
+   "id": "virginity-valued-above-marriage",
+   "group": "life",
+   "question": "Was virginity valued above marriage?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 89,
+   "id": "wealth-almsgiving-lending-interest-taught",
+   "group": "life",
+   "question": "Wealth, almsgiving and lending at interest: what was taught?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 90,
+   "id": "accept-slavery",
+   "group": "life",
+   "question": "Did the early church accept slavery?",
+   "sources": [
+    "OF",
+    "MS"
+   ]
+  },
+  {
+   "number": 91,
+   "id": "teach-about-same-sex-acts",
+   "group": "life",
+   "question": "What did they teach about same-sex acts?",
+   "sources": [
+    "CA",
+    "OF"
+   ]
+  },
+  {
+   "number": 92,
+   "id": "fasting-long",
+   "group": "life",
+   "question": "Fasting: when, how long, and why?",
+   "sources": [
+    "OR"
+   ]
+  },
+  {
+   "number": 93,
+   "id": "christian-swear-oath-hold-public",
+   "group": "life",
+   "question": "Could a Christian swear an oath or hold public office?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 94,
+   "id": "must-christians-obey-emperor-pray",
+   "group": "life",
+   "question": "Must Christians obey the emperor, and pray for him?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 95,
+   "id": "die-rather-than-offer-pinch",
+   "group": "life",
+   "question": "Why die rather than offer a pinch of incense? What is martyrdom for?",
+   "sources": [
+    "VP"
+   ]
+  },
+  {
+   "number": 96,
+   "id": "christianity-spread-so-fast",
+   "group": "world",
+   "question": "How did Christianity spread so fast?",
+   "sources": [
+    "CA",
+    "GQ"
+   ]
+  },
+  {
+   "number": 97,
+   "id": "christians-persecuted-accused",
+   "group": "world",
+   "question": "Why were Christians persecuted, and what were they accused of?",
+   "sources": [
+    "VP",
+    "GQ"
+   ]
+  },
+  {
+   "number": 98,
+   "id": "answer-pagans-jews",
+   "group": "world",
+   "question": "How did they answer pagans and Jews?",
+   "sources": [
+    "VP",
+    "MS"
+   ]
+  },
+  {
+   "number": 99,
+   "id": "christmas-easter-other-customs-pagan",
+   "group": "world",
+   "question": "Are Christmas, Easter and other customs pagan in origin? When was Easter fixed?",
+   "sources": [
+    "GQ"
+   ]
+  },
+  {
+   "number": 100,
+   "id": "think-greek-philosophy-reason",
+   "group": "world",
+   "question": "What did they think of Greek philosophy and reason?",
+   "sources": [
+    "MS",
+    "VP"
+   ]
+  }
+ ]
+}

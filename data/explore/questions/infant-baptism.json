@@ -1,0 +1,502 @@
+{
+  "id": "infant-baptism",
+  "number": 40,
+  "group": "baptism-supper",
+  "question": "Did the early church baptize infants?",
+  "short": "Infant baptism",
+  "search": [
+    "infant baptism",
+    "baby baptism",
+    "paedobaptism",
+    "pedobaptism",
+    "believer's baptism",
+    "credobaptism",
+    "baptize children",
+    "christening"
+  ],
+  "answers": [
+    {
+      "id": "baptize",
+      "label": "Yes: infants are baptized",
+      "short": "Baptize infants",
+      "tag": "Baptize"
+    },
+    {
+      "id": "wait",
+      "label": "Better to wait",
+      "short": "Wait",
+      "tag": "Wait"
+    },
+    {
+      "id": "believers",
+      "label": "Only those who profess faith",
+      "short": "Believers only",
+      "tag": "Believers"
+    }
+  ],
+  "overview": [
+    {
+      "text": "No writer before about 200 names infant baptism outright. Justin speaks of Christians who were made disciples of Christ from childhood, and Irenaeus of infants who are born again to God through Christ. Many readers take both as baptism, but neither says so directly.",
+      "cites": [
+        "justin-1apol-15",
+        "irenaeus-ah-2-22-4"
+      ]
+    },
+    {
+      "text": "The first writer to name it, Tertullian, shows that infants were already being baptized, with sponsors answering for them. He thinks it wiser to wait until children can know Christ, but he does not call the practice wrong.",
+      "cites": [
+        "tertullian-baptism-18"
+      ]
+    },
+    {
+      "text": "From Origen on, writers call infant baptism the Church's custom, received from the apostles. In 253 a council of 66 bishops under Cyprian ruled that a newborn need not wait even until the eighth day.",
+      "cites": [
+        "origen-luke-14",
+        "origen-leviticus-8-3",
+        "origen-romans-5-9",
+        "cyprian-letter-64-2",
+        "augustine-genesis-10-23"
+      ]
+    },
+    {
+      "text": "Gregory of Nazianzus urged baptism at once when a child is in danger, and otherwise at about three years old. Augustine and his Pelagian opponents both baptized infants; they argued only about why.",
+      "cites": [
+        "gregory-nazianzus-40-28",
+        "augustine-baptism-4-23-30",
+        "pelagians-two-letters-4-2"
+      ]
+    },
+    {
+      "text": "None of the early writers here says that infants must not be baptized. That teaching first appears in 1527 with the Swiss Anabaptists, and Baptist confessions follow from 1644.",
+      "cites": [
+        "schleitheim-1527",
+        "lbcf-1689-29-2"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-15",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "15.6",
+      "lang": "grc",
+      "answer": "baptize",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Many men and women of sixty and seventy, who were made disciples of Christ from childhood, have kept themselves pure.",
+      "original": "Καὶ πολλοί τινες καὶ πολλαὶ ἑξηκοντοῦται καὶ ἑβδομηκοντοῦται, οἵ ἐκ παίδων ἐμαθητεύθησαν τῷ Χριστῷ, ἄφθοροι διαμένουσι",
+      "context": "Justin is answering pagan charges about Christian morals. He does not mention baptism, but \"made disciples\" is the word of Matthew 28:19, and people that age in 155 were born between about 85 and 95.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-2-22-4",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "2.22.4",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "He came to save all through himself: all, I mean, who through him are born again to God, infants and little children, boys and youths and old men. So he passed through every age: an infant for infants, sanctifying infants; a little one among little ones, sanctifying those of that age.",
+      "original": "Omnes enim venit per semetipsum salvare: omnes, inquam, qui per eum renascuntur in Deum, infantes, et parvulos, et pueros, et juvenes, et seniores. Ideo per omnem venit aetatem, et infantibus infans factus, sanctificans infantes: in parvulis parvulus, sanctificans hanc ipsam habentes aetatem",
+      "context": "Irenaeus is arguing that Christ lived through every stage of life. Elsewhere he calls baptism being born again to God (Against Heresies 3.17.1), so \"infants who are born again\" most likely means baptized infants. He does not say so outright.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol1_harvgoog_djvu.txt",
+        "edition": "Harvey, Sancti Irenaei libros quinque adversus haereses (1857), vol. 1, p. 330 (Harvey 2.33.2 = Massuet 2.22.4)",
+        "ia": "harvgoog"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-baptism-18",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Baptism",
+      "locus": "18.4–5",
+      "lang": "la",
+      "answer": "wait",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So, given each person's condition, temperament and age, it is better to put off baptism, and above all for little children. Why must the sponsors too be put at risk, when there is no real need? They may die and fail to keep their promises, or be let down when a bad character grows up. The Lord does say, \"Do not forbid them to come to me\" (Matthew 19:14). Then let them come while they are growing up, while they are learning, while they are taught where they are coming. Let them become Christians when they are able to know Christ. Why should the age of innocence hurry to the forgiveness of sins?",
+      "original": "itaque pro cuiusque personae condicione ac dispositione, etiam aetate, cunctatio baptismi utilior est, praecipue tamen circa paruulos. quid enim necesse, si non tam necesse est, sponsores etiam periculo ingeri, qui et ipsi per mortalitatem destituere promissiones suas possunt et prouentu malae indolis falli? ait quidem dominus: nolite illos prohibere ad me uenire. ueniant ergo, dum adolescunt; ueniant, dum discunt, dum quo ueniant docentur; fiant Christiani, cum Christum nosse potuerint. quid festinat innocens aetas ad remissionem peccatorum?",
+      "context": "The first writer to name infant baptism. His advice to wait assumes that infants were already being baptized, with sponsors making the promises for them. He also tells the unmarried to wait. He gives advice; he does not forbid the practice. \"When there is no real need\" may mean except in danger of death.",
+      "source": {
+        "book": "tertullian-on-baptism",
+        "section": "18"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-luke-14",
+      "author": "Origen of Alexandria",
+      "year": 234,
+      "date": "c. 234",
+      "work": "Homilies on Luke",
+      "locus": "14.5",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Infants are baptized for the forgiveness of sins. Which sins? When did they sin? How can there be any reason for washing infants, unless in the sense we spoke of a little earlier: \"No one is clean from stain, not even if his life on earth has been one day\" (Job 14:4–5)? And because the stains of birth are put away through the sacrament of baptism, infants too are baptized: \"Unless someone is born again of water and the Spirit, he cannot enter the kingdom of heaven\" (John 3:5).",
+      "original": "parvuli baptizantur in remissionem peccatorum. quorum peccatorum? vel quo tempore peccaverunt? aut quomodo potest ulla lavacri in parvulis ratio subsistere, nisi iuxta illum sensum, de quo paulo ante diximus: nullus mundus a sorde, nec si unius diei quidem fuerit vita eius super terram? et quia per baptismi sacramentum nativitatis sordes deponuntur, propterea baptizantur et parvuli: nisi enim quis renatus fuerit ex aqua et spiritu, non poterit intrare in regnum coelorum.",
+      "context": "Origen preached this at Caesarea. The homily survives in Jerome's Latin, and a Greek fragment keeps the key line: \"for this reason the little children are baptized too.\" He treats the practice as settled and asks only what it means.",
+      "source": {
+        "witness": "books/origen-luke-homilies/sources/witnesses/lommatzsch-t5-1835_djvu.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 5 (1835), p. 135",
+        "ia": "origenous-ta-heuriskomena-panta-t.-5-1835",
+        "check": "Rauer, GCS 49 [Origenes Werke 9] (1930), Latin with the Greek fragment",
+        "check_file": "books/origen-luke-homilies/sources/witnesses/rauer-gcs49-1930_djvu.txt"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-leviticus-8-3",
+      "author": "Origen of Alexandria",
+      "year": 240,
+      "date": "c. 240",
+      "work": "Homilies on Leviticus",
+      "locus": "8.3",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "One may add the question why, when the Church's baptism is given for the forgiveness of sins, baptism is given to infants too, as the Church observes. Surely, if there were nothing in infants that called for forgiveness and pardon, the grace of baptism would seem needless.",
+      "original": "addi his etiam illud potest, ut requiratur, quid causae sit, cum baptisma ecclesiae pro remissione peccatorum detur, secundum ecclesiae observantiam etiam parvulis baptismum dari; cum utique, si nihil esset in parvulis, quod ad remissionem deberet et indulgentiam pertinere, gratia baptismi superflua videretur.",
+      "context": "Survives in Rufinus's Latin translation (about 400). Rufinus sometimes expanded Origen, but the same point appears in the Luke homily, which Jerome translated, and in its Greek fragment.",
+      "source": {
+        "witness": "books/origen-leviticus-homilies/sources/witnesses/baehrens-gcs29-1920_djvu.txt",
+        "edition": "Baehrens, GCS 29 [Origenes Werke 6] (1920), Homily 8.3",
+        "ia": "origenes-werke.-bd-6-1920",
+        "check": "Lommatzsch, vol. 9 (1839), Homily 8",
+        "check_file": "books/origen-leviticus-homilies/sources/witnesses/lommatzsch-t9-1839_djvu.txt"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-romans-5-9",
+      "author": "Origen of Alexandria",
+      "year": 246,
+      "date": "c. 246",
+      "work": "Commentary on Romans",
+      "locus": "5.9",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For this reason the Church received from the apostles the tradition of giving baptism even to infants. Those to whom the secrets of the divine mysteries were entrusted knew that in everyone there are inborn stains of sin, which had to be washed away through water and the Spirit.",
+      "original": "pro hoc et ecclesia ab apostolis traditionem suscepit, etiam parvulis baptismum dare. sciebant enim illi, quibus mysteriorum secreta commissa sunt divinorum, quod essent in omnibus genuinae sordes peccati, quae per aquam et spiritum ablui deberent",
+      "context": "The earliest claim that infant baptism comes from the apostles. It survives in Rufinus's Latin (about 405), so the exact wording is Rufinus's, but it agrees with Origen's Luke homily.",
+      "source": {
+        "witness": "books/origen-romans/sources/witnesses/lommatzsch-t6-1836_djvu.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 6 (1836), Commentary on Romans 5.9 (Migne PG 14.1047)",
+        "ia": "origenous-ta-heuriskomena-panta-t.-6-1836"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-64-2",
+      "author": "Cyprian of Carthage",
+      "year": 253,
+      "date": "253",
+      "work": "Letter 64, to Fidus",
+      "locus": "64.2",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "As for infants: you said they should not be baptized within the second or third day after birth, and that the law of the old circumcision should be kept in mind, so you thought a newborn should not be baptized and sanctified before the eighth day. Our council saw it very differently. No one agreed with what you thought should be done. Instead we all judged that the mercy and grace of God must be denied to no one who is born.",
+      "original": "Quantum uero ad causam infantium pertinet, quos dixisti intra secundum uel tertium diem quam nati sint constitutos baptizari non oportere et considerandam esse legem circumcisionis antiquae, ut intra octauum diem eum qui natus est baptizandum et sanctificandum non putares: longe aliud in concilio nostro uisum est. in hoc enim quod tu putabas esse faciendum nemo consensit, sed uniuersi potius iudicauimus nulli hominum nato misericordiam Dei et gratiam denegandam.",
+      "context": "Cyprian writes for a council of 66 North African bishops. The only question was how soon: Bishop Fidus wanted to wait until the eighth day, like circumcision. No one asked whether infants should be baptized at all.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "64.2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-64-5",
+      "author": "Cyprian of Carthage",
+      "year": 253,
+      "date": "253",
+      "work": "Letter 64, to Fidus",
+      "locus": "64.5",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "If even the worst sinners, who sinned greatly against God before, receive forgiveness once they believe, and no one is kept from baptism and grace, how much less should an infant be kept back. Newly born, he has not sinned at all, except that, born of Adam in the flesh, he caught the contagion of the ancient death at his first birth. He comes to receive forgiveness all the more easily because the sins forgiven him are not his own but another's.",
+      "original": "porro autem si etiam grauissimis delictoribus et in Deum multum ante peccantibus, cum postea crediderint, remissa peccatorum datur et a baptismo adque gratia nemo prohibetur, quanto magis prohiberi non debet infans qui recens natus nihil peccauit, nisi quod secundum Adam. carnaliter natus contagium mortis antiquae prima natiuitate contraxit, qui ad remissam peccatorum accipiendam hoc ipso facilius accedit quod illi remittuntur non propria sed aliena peccata.",
+      "context": "The council's reason: baptism is God's gift, and an infant has the fewest obstacles to receiving it.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "64.5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-40-17",
+      "author": "Gregory of Nazianzus",
+      "year": 381,
+      "date": "381",
+      "work": "Oration 40, On Holy Baptism",
+      "locus": "40.17",
+      "lang": "grc",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Do you have an infant? Do not give evil its chance. Let him be sanctified from babyhood, consecrated to the Spirit from the cradle. You fear the seal because the child's nature is weak? What a faint-hearted mother, and of little faith! Hannah promised Samuel to God before he was born, and once he was born she dedicated him at once.",
+      "original": "Νήπιον ἔστι σοι; Μὴ λαβέτω καιρὸν ἡ κακία· ἐκ βρέφους ἁγιασθήτω, ἐξ ὀνύχων καθιερωθήτω τῷ Πνεύματι. Σὺ δέδοικας τὴν σφραγῖδα διὰ τὸ τῆς φύσεως ἀσθενές· ὡς μικρόψυχος ἡ μήτηρ, καὶ ὀλιγόπιστος! Ἡ Ἄννα δὲ, καὶ πρὶν ἢ γεννηθῆναι τὸν Σαμουὴλ, καθυπέσχετο τῷ Θεῷ, καὶ γεννηθέντα, ἱερὸν εὐθὺς ποιεῖ",
+      "context": "Preached in Constantinople at Epiphany 381, to people who put off baptism. \"The seal\" is Gregory's word for baptism.",
+      "source": {
+        "book": "gregory-nazianzus-oration-40",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-40-28",
+      "author": "Gregory of Nazianzus",
+      "year": 381,
+      "date": "381",
+      "work": "Oration 40, On Holy Baptism",
+      "locus": "40.28",
+      "lang": "grc",
+      "answer": "wait",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"Very well,\" someone says, \"for those who ask for baptism. But what about those who are still infants, aware neither of the loss nor of the grace? Shall we baptize them too?\" Certainly, if any danger presses. It is better to be sanctified without knowing it than to depart unsealed and uninitiated. ... For the others, my advice is to wait until about three years old, a little before or after, when they can hear something of the mystery and answer, even if they do not fully understand it, and are being shaped by it. Then sanctify them, souls and bodies, with the great mystery of initiation.",
+      "original": "Τί δ' ἂν εἴποις περὶ τῶν ἔτι νηπίων, καὶ μήτε τῆς ζημίας ἐπαισθανομένων, μήτε τῆς χάριτος; ἢ καὶ ταῦτα βαπτίσομεν; Πάνυγε, εἴπερ τις ἐπείγοι κίνδυνος. Κρεῖσσον γὰρ ἀναισθήτως ἁγιασθῆναι, ἢ ἀπελθεῖν ἀσφράγιστα καὶ ἀτέλεστα. ... Περὶ δὲ τῶν ἄλ λων δίδωμι γνώμην, τὴν τριετίαν ἀναμείναντας, ἢ μικρὸν ἐντὸς τούτου, ἢ ὑπὲρ τοῦτο (ἡνίκα καὶ ἀκοῦ σαί τι μυστικὸν, καὶ ἀποκρίνεσθαι δυνατὸν, εἰ καὶ μὴ συνιέντα τελέως, ἀλλ' οὖν τυπούμενα), οὕτως ἁγιάζειν καὶ ψυχὰς καὶ σώματα τῷ μεγάλῳ μυστηρίῳ τῆς τελειώσεως.",
+      "context": "Gregory's own counsel: baptize at once in danger; otherwise wait only until about three, not until adulthood. The omitted lines compare circumcision on the eighth day.",
+      "source": {
+        "book": "gregory-nazianzus-oration-40",
+        "section": "13"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-baptism-4-23-30",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "On Baptism, against the Donatists",
+      "locus": "4.23.30",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "The whole Church holds this as handed down: little infants are baptized, though they certainly cannot yet believe with the heart for righteousness or confess with the mouth for salvation, as the thief could (Romans 10:10). They even cry and wail while the mystery is celebrated over them, and drown out the sacred words. Yet no Christian will say they are baptized for nothing.",
+      "original": "quod traditum tenet uniuersitas ecclesiae, cum paruuli infantes baptizantur, qui certe nondum possunt corde credere ad iustitiam et ore confiteri ad salutem quod latro potuit, quin etiam flendo et uagiendo, cum in eis mysterium celebratur, ipsis mysticis uocibus obstrepunt; et tamen nullus christianorum dixerit eos inaniter baptizari.",
+      "context": "Augustine uses infant baptism, which both he and the Donatists accepted, as common ground. Often cited as 4.24.31 in older editions.",
+      "source": {
+        "book": "augustine-on-baptism",
+        "section": "4.30"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-genesis-10-23",
+      "author": "Augustine of Hippo",
+      "year": 415,
+      "date": "c. 415",
+      "work": "Literal Commentary on Genesis",
+      "locus": "10.23.39",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Yet the custom of Mother Church in baptizing infants is by no means to be scorned, nor counted needless in any way, nor would it be believed at all unless it were an apostolic tradition. That little age, too, carries great weight of witness: it was the first to be counted worthy to shed its blood for Christ.",
+      "original": "consuetudo tamen matris ecclesiae in baptizandis paruulis nequaquam spernenda est neque ullo modo superflua deputanda nec omnino credenda, nisi apostolica esset traditio. habet enim et illa parua aetas magnum testimonii pondus, quae prima pro Christo meruit sanguinem fundere.",
+      "context": "Augustine is unsure where the soul comes from, but he treats infant baptism as fixed: so fixed that it must come from the apostles. The last line refers to the infants killed by Herod (Matthew 2:16).",
+      "source": {
+        "book": "augustine-literal-commentary-on-genesis",
+        "section": "10.23"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "pelagians-two-letters-4-2",
+      "author": "Julian of Eclanum and the Pelagian bishops",
+      "year": 418,
+      "date": "c. 418",
+      "work": "Letter quoted in Augustine, Against Two Letters of the Pelagians",
+      "locus": "4.2",
+      "lang": "la",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "They say that baptism is necessary for every age, so that this creature may be adopted among the sons of God; not because it draws anything from its parents that must be washed away in the bath of rebirth.",
+      "original": "quod omnibus aetatibus dicunt esse baptismum necessarium, ut scilicet illa creatura in dei filios adoptetur, non quod aliquid ex parentibus trahat, quod sit lauacro regenerationis expiandum",
+      "context": "The Pelagians denied that infants inherit sin, yet they still baptized infants, for adoption as God's children rather than for forgiveness. Augustine quotes their own letter. Elsewhere he gives their exact words: \"We confess that baptism is necessary for every age\" (2.11).",
+      "source": {
+        "book": "augustine-against-two-letters-of-the-pelagians",
+        "section": "4.2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "schleitheim-1527",
+      "author": "Schleitheim Confession (Swiss Anabaptists)",
+      "year": 1527,
+      "date": "1527",
+      "work": "Schleitheim Confession",
+      "locus": "Article 1",
+      "lang": "en",
+      "answer": "believers",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "This excludes all infant baptism, the highest and chief abomination of the pope.",
+      "original": "This excludes all infant baptism",
+      "context": "The first church text in this timeline to reject infant baptism. Mennonite and Amish churches descend from this movement.",
+      "source": {
+        "url": "https://anabaptists.org/history/schleith.html",
+        "edition": "English text at anabaptists.org"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "augsburg-1530-9",
+      "author": "Augsburg Confession (Lutheran)",
+      "year": 1530,
+      "date": "1530",
+      "work": "Augsburg Confession",
+      "locus": "Article IX",
+      "lang": "en",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Children are to be baptized who, being offered to God through Baptism, are received into God's grace.",
+      "original": "children are to be baptized who, being offered to God through Baptism are received into God's grace.",
+      "context": "The Lutheran confession keeps infant baptism and condemns the Anabaptists by name.",
+      "source": {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "edition": "Book of Concord, English"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "lbcf-1689-29-2",
+      "author": "Second London Baptist Confession",
+      "year": 1689,
+      "date": "1689",
+      "work": "Second London Baptist Confession",
+      "locus": "29.2",
+      "lang": "en",
+      "answer": "believers",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Those who do actually profess repentance towards God, faith in, and obedience to, our Lord Jesus Christ, are the only proper subjects of this ordinance.",
+      "original": "Those who do actually profess repentance towards God, faith in, and obedience to, our Lord Jesus Christ, are the only proper subjects of this ordinance.",
+      "context": "Reformed Baptists keep Westminster's theology but reject infant baptism. The First London Confession of 1644 already said the same.",
+      "source": {
+        "url": "https://www.reformedreader.org/ccc/1689lbc/english/Chapter29.htm",
+        "edition": "Reformed Reader"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1646-28-4",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "28.4",
+      "lang": "en",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized.",
+      "original": "Not only those that do actually profess faith in and obedience unto Christ, but also the infants of one, or both, believing parents, are to be baptized.",
+      "context": "Reformed and Presbyterian churches baptize the children of believers as members of the covenant.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "ccc-1250",
+      "author": "Catechism of the Catholic Church",
+      "year": 1992,
+      "date": "1992",
+      "work": "Catechism of the Catholic Church",
+      "locus": "1250",
+      "lang": "en",
+      "answer": "baptize",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Born with a fallen human nature and tainted by original sin, children also have need of the new birth in Baptism.",
+      "original": "Born with a fallen human nature and tainted by original sin, children also have need of the new birth in Baptism",
+      "context": "The Catholic and Orthodox churches baptize infants. The Orthodox also give chrismation and communion at the same time.",
+      "source": {
+        "url": "https://www.vatican.va/archive/ENG0015/__P3K.HTM",
+        "edition": "Vatican English text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Apostolic Tradition (attributed to Hippolytus)",
+      "work": "Apostolic Tradition 21",
+      "year": 215,
+      "why": "Tells the church to baptize the little ones first, with parents or relatives speaking for those who cannot answer. The section survives in Coptic, Arabic and Ethiopic versions, not in the Latin.",
+      "action": "intake",
+      "source_hint": "Horner, The Statutes of the Apostles (1904), Sahidic, Arabic and Ethiopic texts"
+    },
+    {
+      "author": "Council of Carthage (418)",
+      "work": "Canon 2",
+      "year": 418,
+      "why": "Condemns anyone who denies that newborn infants are to be baptized.",
+      "action": "intake",
+      "source_hint": "Bruns, Canones apostolorum et conciliorum (1839), vol. 1"
+    },
+    {
+      "author": "John Chrysostom",
+      "work": "Baptismal Instruction quoted in Augustine, Against Julian 1.6.21",
+      "year": 390,
+      "why": "Augustine quotes Chrysostom saying the Church baptizes infants although they have no sins of their own. Against Julian is not in the library yet.",
+      "action": "intake",
+      "source_hint": "Maurist Augustine, PL 44"
+    }
+  ],
+  "related": {
+    "timeline": "baptism-subjects",
+    "topics": [
+      "baptism-and-new-birth"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from. Where a scan was hard to read, a second printing was checked.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
