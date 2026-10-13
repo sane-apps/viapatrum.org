@@ -1,0 +1,218 @@
+{
+  "id": "jesus-have-die-his-death",
+  "number": 23,
+  "group": "christ",
+  "question": "Why did Jesus have to die? What did his death accomplish?",
+  "short": "Why the cross?",
+  "search": [
+    "atonement",
+    "penal substitution",
+    "ransom theory",
+    "christus victor",
+    "recapitulation",
+    "satisfaction",
+    "why did jesus die",
+    "sacrifice"
+  ],
+  "answers": [
+    {
+      "id": "sacrifice",
+      "label": "A sacrifice for our sins, in our place",
+      "short": "Sacrifice for us",
+      "tag": "Sacrifice"
+    },
+    {
+      "id": "victory",
+      "label": "He undid Adam's fall and conquered death",
+      "short": "Victory over death",
+      "tag": "Victory"
+    },
+    {
+      "id": "ransom",
+      "label": "A ransom that freed us from the devil",
+      "short": "Ransom",
+      "tag": "Ransom"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest writers say Christ died for us, in our place: his blood for us, his flesh for our flesh (Clement); his righteousness for our sins, \"the sweet exchange\" (Letter to Diognetus).",
+      "cites": [
+        "1-clement-49",
+        "diognetus-9"
+      ]
+    },
+    {
+      "text": "Others stress what the death undid: Irenaeus has Christ sum up Adam's race in himself to kill sin and destroy death, and Athanasius joins a debt paid with corruption overcome.",
+      "cites": [
+        "irenaeus-ah-3-18-7",
+        "athanasius-incarnation-9"
+      ]
+    },
+    {
+      "text": "Some pictured a ransom that tricked the devil (Gregory of Nyssa). Gregory of Nazianzus questioned whether any ransom was paid to the devil or demanded by the Father. No council defined one theory.",
+      "cites": [
+        "gregory-nyssa-catechetical-21",
+        "gregory-nazianzus-oration-45-22"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "1-clement-49",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "49.6",
+      "lang": "grc",
+      "answer": "sacrifice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Because of the love he had for us, Jesus Christ our Lord, by the will of God, gave his blood for us, his flesh for our flesh, and his life for our lives.",
+      "original": "διὰ τὴν ἀγάπην, ἣν ἔσχεν πρὸς ἡμᾶς, τὸ αἷμα αὐτοῦ ἔδωκεν ὑπὲρ ἡμῶν Ἰησοῦς Χριστὸς ὁ κύριος ἡμῶν ἐν θελήματι θεοῦ, καὶ τὴν σάρκα ὑπὲρ τῆς σαρκὸς ἡμῶν καὶ τὴν ψυχὴν ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "context": "Christ's death as a substitute, \"for us\", in the first letter after the New Testament.",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "49"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "diognetus-9",
+      "author": "Letter to Diognetus",
+      "year": 150,
+      "date": "c. 150",
+      "work": "Letter to Diognetus",
+      "locus": "9.3–5",
+      "lang": "grc",
+      "answer": "sacrifice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What else could cover our sins but his righteousness? In whom could we, lawless and ungodly, be made righteous, except in the Son of God alone? O sweet exchange! O work past finding out! O blessings beyond expectation! That the lawlessness of many should be hidden in one righteous man, and the righteousness of one should make many lawless righteous.",
+      "original": "τί γὰρ ἄλλο τὰς ἁμαρτίας ἡμῶν ἠδυνήθη καλύψαι ἢ ἐκείνου δικαιοσύνη; ἐν τίνι δικαιωθῆναι δυνατὸν τοὺς ἀνόμους ἡμᾶς καὶ ἀσεβεῖς ἢ ἐν μόνῳ τῷ υἱῷ τοῦ θεοῦ; ὢ τῆς γλυκείας ἀνταλλαγῆς, ὢ τῆς ἀνεξιχνιάστου δημιουργίας, ὢ τῶν ἀπροσδοκήτων εὐεργεσιῶν: ἵνα ἀνομία μὲν πολλῶν ἐν δικαίῳ ἑνὶ κρυβῇ, δικαιοσύνη δὲ ἑνὸς πολλοὺς ἀνόμους δικαιώσῃ.",
+      "context": "The \"sweet exchange\": our sin for his righteousness. Protestants often cite this passage. The verse just before says God \"gave his own Son as a ransom for us\".",
+      "source": {
+        "book": "diognetus-epistle",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-3-18-7",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.18.7",
+      "lang": "la",
+      "answer": "victory",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What he appeared to be, he also was: God, summing up in himself the ancient formation of man, so that he might kill sin, destroy death, and give life to man. And therefore his works are true.",
+      "original": "Quod autem parebat, hoc et erat; Deus, hominis antiquam plasmationem in se recapitulans, ut occideret quidem peccatum, evacuaret autem mortem, et vivificaret hominem: et propter hoc vera opera ejus.",
+      "context": "Irenaeus's \"recapitulation\": Christ goes over Adam's ground again, obeying where Adam disobeyed, and so undoes sin and death.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/latin/irenaeus_ah_3_18_7_harvey.txt",
+        "edition": "Harvey (1857), Latin"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athanasius-incarnation-9",
+      "author": "Athanasius of Alexandria",
+      "year": 318,
+      "date": "c. 318",
+      "work": "On the Incarnation",
+      "locus": "9.2",
+      "lang": "grc",
+      "answer": "sacrifice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Since the Word of God is above all, by offering his own temple and bodily instrument as a ransom for all, he fittingly paid what was owed by his death. And so, being united with all through a body like theirs, the incorruptible Son of God fittingly clothed all with incorruption by the promise of the resurrection. For the corruption of death has no more hold on human beings, because of the Word who dwells in them through the one body.",
+      "original": "Ὑπὲρ πάντας γὰρ ὢν ὁ Λόγος τοῦ Θεοῦ εἰκότως τὸν ἑαυτοῦ ναὸν καὶ τὸ σωματικὸν ὄργανον προσάγων ἀντίψυχον ὑπὲρ πάντων, ἐπλήρου τὸ ὀφειλόμενον ἐν τῷ θανάτῳ· καὶ 〈οὕτως συνὼν〉 διὰ τοῦ ὁμοίου τοῖς πᾶσιν ὁ ἄφθαρτος τοῦ Θεοῦ Υἱὸς, εἰκότως τοὺς πάντας ἐνέδυσεν ἀφθαρσίαν ἐν τῇ περὶ τῆς ἀναστάσεως ἐπαγγελίᾳ. καὶ αὐτὴ γὰρ ἡ ἐν τῷ θανάτῳ φθορὰ κατὰ τῶν ἀνθρώπων οὐκέτι χώραν ἔχει διὰ τὸν ἐνοικήσαντα Λόγον ἐν τούτοις διὰ τοῦ ἑνός",
+      "context": "Death as a debt paid and as corruption undone, held together.",
+      "source": {
+        "book": "athanasius-incarnation",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-catechetical-21",
+      "author": "Gregory of Nyssa",
+      "year": 385,
+      "date": "c. 385",
+      "work": "Catechetical Oration",
+      "locus": "21",
+      "lang": "grc",
+      "answer": "ransom",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "The deceit would not have worked unless the hook of evil had been covered with the appearance of good, like bait.",
+      "original": "οὐ γὰρ ἂν ἐνήργησεν ἡ ἀπάτη, μὴ δελέατος δίκην τῷ τῆς κακίας ἀγκίστρῳ τῆς τοῦ",
+      "context": "Gregory describes the devil's deceit of Adam as a hook in bait. In chapters 22–24 he turns the image round: God hid his divinity in Christ's flesh like a hook in bait, and the devil, swallowing the bait of the flesh, was caught. A ransom paid to the devil was one early way of picturing the cross.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-gregory-of-nyssa-pg-44-46-oratio-catechetica-magna.txt",
+        "edition": "Migne PG 45, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-oration-45-22",
+      "author": "Gregory of Nazianzus",
+      "year": 383,
+      "date": "c. 383",
+      "work": "Oration 45, on Easter",
+      "locus": "22",
+      "lang": "grc",
+      "answer": "sacrifice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If the ransom belongs only to the one who holds us captive, I ask to whom it was paid, and why. If to the evil one, what an outrage, that the robber should receive not only a ransom from God but God himself as the ransom! ... If to the Father, first, how? We were not held by him. Second, why would the blood of the Only-begotten delight the Father, who would not even accept Isaac when his father offered him, but exchanged the sacrifice and gave a ram instead? Is it not clear that the Father accepts it, not because he asked or needed it, but because of the plan of salvation?",
+      "original": "Εἰ δὲ τὸ λύτρον οὐκ ἄλλου τινὸς, ἢ τοῦ κατέχοντος γίνεται, ζητῶ τίνι τοῦτο εἰσηνέχθη, καὶ δι' ἥντινα τὴν αἰτίαν; Εἰ μὲν τῷ πονηρῷ, φεῦ τῆς ὕβρεως· εἰ μὴ παρὰ τοῦ Θεοῦ μόνον, ἀλλὰ καὶ τὸν Θεὸν αὐτὸν λύ τρον ὁ λῃστὴς λαμβάνει ... εἰ δὲ τῷ Πατρὶ, πρῶτον μὲν πῶς; Οὐχ ὑπ' ἐκείνου γὰρ ἐκρατούμεθα. Δεύτερον δὲ, τίς ὁ λόγος, Μονογενοῦς αἷμα τέρπειν Πατέρα, ὃς οὐδὲ τὸν Ἰσαὰκ ἐδέξατο παρὰ τοῦ πατρὸς προσ φερόμενον, ἀλλ' ἀντηλλάξατο τὴν θυσίαν, κριὸν ἀντι δοὺς τοῦ λογικοῦ θύματος; Ἢ δῆλον, ὅτι λαμβάνει μὲν ὁ Πατὴρ, οὐκ αἰτήσας, οὐδὲ δεηθεὶς, ἀλλὰ διὰ τὴν οἰκονομίαν",
+      "context": "Gregory rejects a ransom paid to the devil and questions a ransom demanded by the Father. His answer: God accepted the sacrifice for our sake, to sanctify humanity.",
+      "source": {
+        "book": "gregory-nazianzus-oration-45",
+        "section": "11"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Anselm of Canterbury",
+      "work": "Why God Became Man",
+      "year": 1098,
+      "why": "The satisfaction theory, which shaped later Catholic and Protestant views.",
+      "action": "intake",
+      "source_hint": "Migne PL 158; Schmitt (copyright) as note"
+    },
+    {
+      "author": "Origen of Alexandria",
+      "work": "Commentary on Matthew 16.8",
+      "year": 249,
+      "why": "The ransom paid to the devil, in its earliest form.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-17-commentarium-in-evangelium-matthaei.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "salvation-by-christ",
+      "atonement-recapitulation",
+      "passion-resurrection"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "id": "jesus-have-real-human-body",
+  "number": 19,
+  "group": "christ",
+  "question": "Did Jesus have a real human body, or only seem to?",
+  "short": "Real flesh or only seeming?",
+  "search": [
+    "docetism",
+    "docetists",
+    "real body",
+    "phantom",
+    "gnostic jesus",
+    "came in the flesh"
+  ],
+  "answers": [
+    {
+      "id": "real",
+      "label": "He had real flesh, suffered and rose in it",
+      "short": "Real flesh",
+      "tag": "Real"
+    },
+    {
+      "id": "seemed",
+      "label": "He only seemed to have a body and to suffer",
+      "short": "Only seemed",
+      "tag": "Seemed"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Some early teachers said Christ only seemed to suffer. The bishops who answered them were the earliest generation after the apostles: Ignatius about 110 and Polycarp about 135.",
+      "cites": [
+        "docetists-in-ignatius",
+        "ignatius-trallians-10",
+        "polycarp-philippians-7"
+      ]
+    },
+    {
+      "text": "They insisted on real flesh at every step: born, crucified, raised, eating with his disciples after the resurrection. Tertullian pressed the same point against Marcion.",
+      "cites": [
+        "ignatius-smyrnaeans-3",
+        "tertullian-flesh-of-christ-5"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "docetists-in-ignatius",
+      "author": "Docetists, as Ignatius reports",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Trallians",
+      "locus": "10",
+      "lang": "grc",
+      "answer": "seemed",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "supporting",
+      "english": "He only seemed to suffer.",
+      "original": "τὸ δοκεῖν πεπονθέναι αὐτόν",
+      "context": "The view Ignatius answers, in the three words he quotes from its teachers.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "3.10"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-trallians-10",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Trallians",
+      "locus": "10",
+      "lang": "grc",
+      "answer": "real",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But if, as some who are godless, that is, unbelievers, say, he only seemed to suffer (they themselves only seem to exist!), why am I in chains? Why do I pray to fight the wild beasts? Then I die for nothing. Then I am lying about the Lord.",
+      "original": "Εἰ δέ, ὥσπερ τινὲς ἄθεοι ὄντες, τουτέστιν ἄπιστοι, λέγουσιν, τὸ δοκεῖν πεπονθέναι αὐτόν, αὐτοὶ ὄντες τὸ δοκεῖν, ἐγὼ τί δέδεμαι, τί δὲ καὶ εὔχομαι θηριομαχῆσαι; δωρεὰν οὖν ἀποθνήσκω. ἄρα οὖν καταψεύδομαι τοῦ κυρίου.",
+      "context": "\"Seemed\" (dokein) gave these teachers their name, Docetists. Ignatius stakes his own martyrdom on Christ's real suffering.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "3.10"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-smyrnaeans-3",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Smyrnaeans",
+      "locus": "3.1–3",
+      "lang": "grc",
+      "answer": "real",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I know and believe that even after the resurrection he was in the flesh. And when he came to Peter and those with him, he said to them: \"Take, handle me and see that I am not a bodiless ghost\" (compare Luke 24:39). And at once they touched him and believed, being joined with his flesh and spirit. ... After the resurrection he ate and drank with them as one in the flesh, though spiritually united with the Father.",
+      "original": "Ἐγὼ γὰρ καὶ μετὰ τὴν ἀνάστασιν ἐν σαρκὶ αὐτὸν οἶδα καὶ πιστεύω ὄντα. καὶ ὅτε πρὸς τοὺς περὶ Πέτρον ἦλθεν, ἔφη αὐτοῖς: Λάβετε, ψηλαφήσατέ με καὶ ἴδετε, ὅτι οὐκ εἰμὶ δαιμόνιον ἀσώματον. καὶ εὐθὺς αὐτοῦ ἥψαντο καὶ ἐπίστευσαν, κραθέντες τῇ σαρκὶ αὐτοῦ καὶ τῷ πνεύματι. ... μετὰ δὲ τὴν ἀνάστασιν συνέφαγεν αὐτοῖς καὶ συνέπιεν ὡς σαρκικός, καίπερ πνευματικῶς ἡνωμένος",
+      "context": "Written against the Docetists at Smyrna.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "6.3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "polycarp-philippians-7",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "7.1",
+      "lang": "grc",
+      "answer": "real",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Everyone who does not confess that Jesus Christ has come in the flesh is antichrist (1 John 4:2–3); and whoever does not confess the testimony of the cross is of the devil; and whoever twists the Lord's sayings to suit his own desires and says there is neither resurrection nor judgment, that one is the firstborn of Satan.",
+      "original": "Πᾶς γὰρ ὃς ἂν μὴ ὁμολογῇ Ἰησοῦν Χριστὸν ἐν σαρκὶ ἐληλυθέναι, ἀντιχριστός ἐστιν: καὶ ὃς ἂν μὴ ὁμολογῇ τὸ μαρτύριον τοῦ σταυροῦ, ἐκ τοῦ διαβόλου ἐστίν: καὶ ὃς ἂν μεθοδεύῃ τὰ λόγια τοῦ κυρίου πρὸς τὰς ἰδίας ἐπιθυμίας καὶ λέγῃ μήτε ἀνάστασιν μήτε κρίσιν, οὗτος πρωτότοκος ἐστι τοῦ σατανᾶ.",
+      "context": "Polycarp, a disciple of John according to Irenaeus, quotes 1 John against the same teachers.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-flesh-of-christ-5",
+      "author": "Tertullian",
+      "year": 206,
+      "date": "c. 206",
+      "work": "On the Flesh of Christ",
+      "locus": "5.4",
+      "lang": "la",
+      "answer": "real",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Son of God was crucified: I am not ashamed, because it is shameful. The Son of God died: it is wholly believable, because it is absurd. He was buried and rose again: it is certain, because it is impossible. For how will these things be true in him if he himself was not true, if he did not truly have in himself what could be nailed, could die, could be buried and raised: this flesh, filled with blood, built on bones?",
+      "original": "Crucifixus est dei filius; non pudet, quia pudendum est. Et mortuus est dei filius; prorsus credibile est, quia ineptum est. Et sepultus resurresit; certum est, quia impossibile est. Nam quomodo vera in illo erunt, si ipse non fuit verus, si non vere habuit in se quod figeretur, quod moreretur, quod sepeliretur et resuscitaretur? carnem scilicet hanc sanguine suffusam, ossibus",
+      "context": "The source of the misquote \"I believe because it is absurd\". Tertullian is arguing against Marcion that Christ's flesh was real.",
+      "source": {
+        "book": "tertullian-on-the-flesh-of-christ",
+        "section": "5"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Serapion of Antioch",
+      "work": "On the Gospel of Peter, in Eusebius, Church History 6.12.6",
+      "year": 200,
+      "why": "Names the Docetists as the users of the Gospel of Peter. In the library; to be added.",
+      "action": "search",
+      "source_hint": "eusebius-church-history 6.12"
+    }
+  ],
+  "related": {
+    "topics": [
+      "against-docetism"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "id": "jesus-rise-bodily-dead",
+  "number": 22,
+  "group": "christ",
+  "question": "Did Jesus rise bodily from the dead?",
+  "short": "The bodily resurrection",
+  "search": [
+    "resurrection",
+    "bodily resurrection",
+    "empty tomb",
+    "resurrection of the flesh",
+    "spiritual resurrection"
+  ],
+  "answers": [
+    {
+      "id": "flesh",
+      "label": "Yes: he rose in the flesh, and we will too",
+      "short": "Bodily",
+      "tag": "Bodily"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest writers insist that Christ rose in the flesh: Ignatius says he ate and drank with his disciples after the resurrection.",
+      "cites": [
+        "ignatius-smyrnaeans-3-b"
+      ]
+    },
+    {
+      "text": "Because Christ rose bodily, Christians expected a bodily resurrection for themselves, and defended it at length against pagan and Gnostic doubts.",
+      "cites": [
+        "polycarp-philippians-7-b",
+        "athenagoras-resurrection-3",
+        "tertullian-resurrection-63"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-smyrnaeans-3-b",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Smyrnaeans",
+      "locus": "3.1–3",
+      "lang": "grc",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I know and believe that even after the resurrection he was in the flesh. And when he came to Peter and those with him, he said to them: \"Take, handle me and see that I am not a bodiless ghost\" (compare Luke 24:39). And at once they touched him and believed, being joined with his flesh and spirit. ... After the resurrection he ate and drank with them as one in the flesh, though spiritually united with the Father.",
+      "original": "Ἐγὼ γὰρ καὶ μετὰ τὴν ἀνάστασιν ἐν σαρκὶ αὐτὸν οἶδα καὶ πιστεύω ὄντα. καὶ ὅτε πρὸς τοὺς περὶ Πέτρον ἦλθεν, ἔφη αὐτοῖς: Λάβετε, ψηλαφήσατέ με καὶ ἴδετε, ὅτι οὐκ εἰμὶ δαιμόνιον ἀσώματον. καὶ εὐθὺς αὐτοῦ ἥψαντο καὶ ἐπίστευσαν, κραθέντες τῇ σαρκὶ αὐτοῦ καὶ τῷ πνεύματι. ... μετὰ δὲ τὴν ἀνάστασιν συνέφαγεν αὐτοῖς καὶ συνέπιεν ὡς σαρκικός, καίπερ πνευματικῶς ἡνωμένος",
+      "context": "Written against the Docetists at Smyrna.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "6.3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "polycarp-philippians-7-b",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "7.1",
+      "lang": "grc",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Everyone who does not confess that Jesus Christ has come in the flesh is antichrist (1 John 4:2–3); and whoever does not confess the testimony of the cross is of the devil; and whoever twists the Lord's sayings to suit his own desires and says there is neither resurrection nor judgment, that one is the firstborn of Satan.",
+      "original": "Πᾶς γὰρ ὃς ἂν μὴ ὁμολογῇ Ἰησοῦν Χριστὸν ἐν σαρκὶ ἐληλυθέναι, ἀντιχριστός ἐστιν: καὶ ὃς ἂν μὴ ὁμολογῇ τὸ μαρτύριον τοῦ σταυροῦ, ἐκ τοῦ διαβόλου ἐστίν: καὶ ὃς ἂν μεθοδεύῃ τὰ λόγια τοῦ κυρίου πρὸς τὰς ἰδίας ἐπιθυμίας καὶ λέγῃ μήτε ἀνάστασιν μήτε κρίσιν, οὗτος πρωτότοκος ἐστι τοῦ σατανᾶ.",
+      "context": "Polycarp puts denial of the resurrection beside denial of Christ's flesh.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athenagoras-resurrection-3",
+      "author": "Athenagoras",
+      "year": 180,
+      "date": "c. 180",
+      "work": "On the Resurrection of the Dead",
+      "locus": "3.1–2",
+      "lang": "grc",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If at their first making he created human bodies and their elements when they did not exist, he will raise them just as easily when they have been dissolved, however that happens; for this too is equally possible for him.",
+      "original": "Εἰ γὰρ μὴ ὄντα κατὰ τὴν πρώτην σύστασιν ἐποίησε τὰ τῶν ἀνθρώπων σώματα καὶ τὰς τούτων ἀρχάς, καὶ διαλυθέντα, καθ᾿ ὃν ἂν τύχῃ τρόπον, ἀναστήσει μετὰ τῆς ἴσης εὐμαρείας· ἐπ᾿ ἴσης γὰρ αὐτῷ καὶ τοῦτο δυνατόν.",
+      "context": "The first whole treatise on the resurrection of the body, answering pagan objections.",
+      "source": {
+        "book": "athenagoras-resurrection",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-resurrection-63",
+      "author": "Tertullian",
+      "year": 210,
+      "date": "c. 210",
+      "work": "On the Resurrection of the Flesh",
+      "locus": "63.1",
+      "lang": "la",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So the flesh will rise: all of it, the very same, entire. It is in safe keeping with God, wherever it is, through the most faithful trustee between God and men, Jesus Christ, who will give back God to man and man to God, spirit to flesh and flesh to spirit.",
+      "original": "Resurget igitur caro, et quidem omnis, et quidem ipsa, et quidem integra. in deposito est ubicumque apud deum per fidelissimum sequestrem dei et hominum Iesum Christum, qui et homini deum et hominem deo reddet, carni spiritum et spiritui carnem.",
+      "context": "The conclusion of Tertullian's book-length defense of bodily resurrection.",
+      "source": {
+        "book": "tertullian-on-the-resurrection-of-the-flesh",
+        "section": "63"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen and Methodius",
+      "work": "On the Resurrection",
+      "year": 300,
+      "why": "Origen taught a spiritual body; Methodius answered him. The library's Methodius books are not yet searched for this.",
+      "action": "search",
+      "source_hint": "methodius books; Bonwetsch GCS 27 (1917)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "passion-resurrection",
+      "resurrection-body"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

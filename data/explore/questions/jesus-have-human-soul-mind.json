@@ -1,0 +1,138 @@
+{
+  "id": "jesus-have-human-soul-mind",
+  "number": 25,
+  "group": "christ",
+  "question": "Did Jesus have a human soul and mind, or did the Word replace them?",
+  "short": "Christ's human mind",
+  "search": [
+    "apollinarianism",
+    "apollinaris",
+    "human soul of christ",
+    "human mind of christ",
+    "what is not assumed is not healed"
+  ],
+  "answers": [
+    {
+      "id": "full",
+      "label": "He had a full human soul and mind",
+      "short": "Full humanity",
+      "tag": "Full"
+    },
+    {
+      "id": "replaced",
+      "label": "The divine Word took the place of a human mind",
+      "short": "Word replaced mind",
+      "tag": "Replaced"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Apollinaris of Laodicea, about 375, taught that in Christ the divine Word took the place of a human mind, so that Christ was \"mind made flesh\".",
+      "cites": [
+        "apollinaris-mind-made-flesh"
+      ]
+    },
+    {
+      "text": "A synod at Alexandria in 362 had already said the Savior's body was not without soul or mind. Gregory of Nazianzus answered with the rule that what Christ did not take on, he did not heal: the whole of Adam fell, so the whole was assumed.",
+      "cites": [
+        "athanasius-tome-antiochenes-7",
+        "gregory-nazianzus-letter-101-32"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "athanasius-tome-antiochenes-7",
+      "author": "Athanasius of Alexandria (council of Alexandria)",
+      "year": 362,
+      "date": "c. 362",
+      "work": "Tome to the Antiochenes",
+      "locus": "7",
+      "lang": "grc",
+      "answer": "full",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "They also confessed this: that the Savior did not have a body without soul, or without sense, or without mind. For it was not possible, when the Lord became man for us, that his body should be without mind; nor was it the body alone but the soul too that found salvation in the Word himself.",
+      "original": "Ὡμολόγουν γὰρ καὶ τοῦτο, ὅτι οὐ σῶμα ἄψυχον, οὐδ' ἀναίσθητον, οὐδ' ἀνόητον εἶχεν ὁ Σωτήρ. Οὐδὲ γὰρ οἷόν τε ἦν, τοῦ Κυρίου δι' ἡμᾶς ἀνθρώπου γενομένου, ἀνόητον εἶναι τὸ σῶμα αὐτοῦ, οὐδὲ σώματος μόνου, ἀλλὰ καὶ ψυχῆς ἐν αὐτῷ τῷ Λόγῳ σωτηρία γέγονεν",
+      "context": "A synod at Alexandria in 362 settles the question before it becomes a schism.",
+      "source": {
+        "book": "athanasius-tomus-antiochenos",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "apollinaris-mind-made-flesh",
+      "author": "Apollinaris of Laodicea (quoted by Gregory of Nyssa)",
+      "year": 375,
+      "date": "c. 375",
+      "work": "Demonstration of the Divine Incarnation",
+      "locus": "fragments 69–70",
+      "lang": "grc",
+      "answer": "replaced",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "He would not have come in the likeness of man unless, like a man, he were mind made flesh. ... If the Lord is not mind made flesh, he would be wisdom enlightening a human mind. But that is in all people. And if so, Christ's coming was not God's coming to live among us, but a man's birth.",
+      "original": "οὐ γὰρ ἄν (φησιν) ἐν ὁμοιώματι ἀνθρώπου γεγονὼς εἴη, εἰ μὴ τυγχάνοι καθάπερ ἄνθρωπος νοῦς ἔνσαρκος ὦν. ... εἰ μὴ νοῦς ἔνσαρκός ἐστιν ὁ κύριος, σοφία ἂν εἴη φωτίζουσα νοῦν ἀνθρώπου. αὕτη δὲ καὶ ἐν πᾶσιν ἀνθρώποις· εἰ δὲ ταῦτα, οὐκ ἦν ἐπιδημία θεοῦ ἡ Χριστοῦ παρουσία, ἀλλ᾽ ἀνθρώπου γέννησις.",
+      "context": "Apollinaris, once Athanasius's ally, held that the divine Word took the place of a human mind in Christ, to keep Christ one and sinless.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-apollinarisvonl00apolgoog.txt",
+        "edition": "Lietzmann, Apollinaris von Laodicea und seine Schule (1904), fragments 69–70, from Gregory of Nyssa's Antirrheticus",
+        "ia": "apollinarisvonl00apolgoog"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-letter-101-32",
+      "author": "Gregory of Nazianzus",
+      "year": 382,
+      "date": "c. 382",
+      "work": "Letter 101, to Cledonius",
+      "locus": "101.32–33",
+      "lang": "grc",
+      "answer": "full",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If anyone has put his hope in a man without a mind, he is truly mindless himself and unworthy of salvation. For what was not assumed was not healed; but what is united to God is saved. If half of Adam fell, then half was assumed and half is saved; but if the whole of Adam fell, the whole is united to the one who was born, and the whole is saved.",
+      "original": "Εἴ τις εἰς ἄνουν ἄνθρωπον ἤλπικεν, ἀνόητος ὄντως ἐστὶ καὶ οὐκ ἄξιος ὅλως σῴζεσθαι. Τὸ γὰρ ἀπρόσληπτον, ἀθεράπευτον· ὃ δὲ ἥνωται τῷ Θεῷ, τοῦτο καὶ σῴζεται. Εἰ ἥμισυς ἔπταισεν ὁ Ἀδάμ, ἥμισυ καὶ τὸ προσειλημμένον καὶ τὸ σῳζόμενον. Εἰ δὲ ὅλος, ὅλῳ τῷ γεννηθέντι ἥνωται καὶ ὅλως σῴζεται.",
+      "context": "\"What was not assumed was not healed\": the most quoted line against Apollinaris. Constantinople (381) condemned his teaching.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-gregory-of-nazianzus-pg-35-38-epistulae-theologicae.txt",
+        "edition": "Migne PG 37, Khazarzar text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "On First Principles 2.6.3–5",
+      "year": 225,
+      "why": "Christ's human soul as the link between the Word and the flesh. In the Lommatzsch text; to be added.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt"
+    },
+    {
+      "author": "Council of Constantinople",
+      "work": "Canon 1",
+      "year": 381,
+      "why": "Condemns the Apollinarians by name.",
+      "action": "intake",
+      "source_hint": "Bruns (1839)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "incarnation-word-flesh",
+      "two-natures-seed"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

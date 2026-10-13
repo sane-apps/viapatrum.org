@@ -1,0 +1,282 @@
+{
+  "id": "may-mary-called-mother-god",
+  "number": 26,
+  "group": "christ",
+  "question": "May Mary be called Mother of God?",
+  "short": "Mother of God?",
+  "search": [
+    "theotokos",
+    "mother of god",
+    "god-bearer",
+    "christotokos",
+    "nestorius",
+    "council of ephesus",
+    "mary"
+  ],
+  "answers": [
+    {
+      "id": "theotokos",
+      "label": "Yes: the one she bore is God, so she is Mother of God",
+      "short": "Mother of God",
+      "tag": "Theotokos"
+    },
+    {
+      "id": "christotokos",
+      "label": "No: call her Mother of Christ",
+      "short": "Mother of Christ",
+      "tag": "Christotokos"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The title protects a claim about Christ, not only about Mary: the one she bore is God. Ignatius already says \"our God\" was carried in her womb, and Gregory of Nazianzus, fifty years before Ephesus, made the title a test of faith.",
+      "cites": [
+        "ignatius-ephesians-18",
+        "gregory-nazianzus-letter-101-16"
+      ]
+    },
+    {
+      "text": "At Constantinople in 428 Nestorius's chaplain preached that no one should call Mary Mother of God. Nestorius argued that Scripture says \"Christ\", not \"God\", when it speaks of the birth.",
+      "cites": [
+        "anastasius-in-socrates-7-32",
+        "nestorius-in-cyril-dialogue"
+      ]
+    },
+    {
+      "text": "The Council of Ephesus (431) affirmed the title, and Chalcedon repeated it. The historian Socrates noted that older writers, Origen among them, had already used it.",
+      "cites": [
+        "ephesus-431-anathema-1",
+        "chalcedon-451-theotokos",
+        "socrates-7-32-origen"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-ephesians-18",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Ephesians",
+      "locus": "18.2",
+      "lang": "grc",
+      "answer": "theotokos",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For our God, Jesus the Christ, was carried in the womb by Mary, by God's plan, of the seed of David and of the Holy Spirit. He was born and was baptized, so that by his suffering he might cleanse the water.",
+      "original": "ὁ γὰρ θεὸς ἡμῶν Ἰησοῦς ὁ Χριστὸς ἐκυοφορήθη ὑπὸ Μαρίας κατ’ οἰκονομίαν θεοῦ ἐκ σπέρματος μὲν Δαυείδ, πνεύματος δὲ ἁγίου: ὃς ἐγεννήθη καὶ ἐβαπτίσθη, ἵνα τῷ πάθει τὸ ὕδωρ καθαρίσῃ.",
+      "context": "Ignatius does not use the title, but he says \"our God\" was carried in Mary's womb, which is what the title means.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "1.18"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-letter-101-16",
+      "author": "Gregory of Nazianzus",
+      "year": 382,
+      "date": "c. 382",
+      "work": "Letter 101, to Cledonius",
+      "locus": "101.16",
+      "lang": "grc",
+      "answer": "theotokos",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If anyone does not accept holy Mary as Mother of God, he is cut off from the Godhead. If anyone says that Christ passed through the Virgin as through a pipe, and was not formed in her both divinely and humanly (divinely, because without a man; humanly, because by the law of pregnancy), he is equally godless.",
+      "original": "Εἴ τις οὐ Θεοτόκον τὴν ἁγίαν Μαρίαν ὑπολαμβάνει, χωρὶς ἐστὶ τῆς θεότητος. Εἴ τις ὡς διὰ σωλῆνος τῆς Παρθένου διαδραμεῖν, ἀλλὰ μὴ ἐν αὐτῇ διαπεπλάσθαι λέγοι θεϊκῶς ἅμα καὶ ἀνθρωπικῶς (θεϊκῶς μέν, ὅτι χωρὶς ἀνδρός· ἀνθρωπικῶς δέ, ὅτι νόμῳ κυήσεως), ὁμοίως ἄθεος.",
+      "context": "Fifty years before Ephesus. For Gregory the title protects the truth that the one born of Mary is God.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-gregory-of-nazianzus-pg-35-38-epistulae-theologicae.txt",
+        "edition": "Migne PG 37, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "socrates-7-32-origen",
+      "author": "Socrates Scholasticus",
+      "year": 440,
+      "date": "c. 440",
+      "work": "Church History",
+      "locus": "7.32.17",
+      "lang": "grc",
+      "answer": "theotokos",
+      "strength": "indirect",
+      "voice": "reports",
+      "weight": "supporting",
+      "english": "And Origen too, in the first volume of his commentary on the apostle's Letter to the Romans, examined at length how she is called Mother of God. So Nestorius seems to have been unaware of the works of the ancients.",
+      "original": "Καὶ Ὠριγένης δὲ ἐν τῷ πρώτῳ τόμῳ τῶν εἰς τὴν πρὸς Ῥωμαίους τοῦ ἀποστόλου ἐπιστολὴν ἑρμηνεύων πῶς Θεοτόκος λέγεται πλατέως ἐξήτασε. Φαίνεται τοίνυν ὁ Νεστόριος ἀγνοήσας τὰς πραγματείας τῶν παλαιῶν",
+      "context": "A historian's report that Origen, about 246, already discussed the title. The Greek of Origen's commentary is lost and Rufinus's Latin does not keep the passage, so this cannot be checked.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "7.32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "anastasius-in-socrates-7-32",
+      "author": "Anastasius, Nestorius's chaplain (as Socrates reports)",
+      "year": 428,
+      "date": "c. 428",
+      "work": "Church History",
+      "locus": "7.32.2",
+      "lang": "grc",
+      "answer": "christotokos",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "Once, preaching in church, Anastasius said: Let no one call Mary Mother of God. For Mary was a human being, and it is impossible for God to be born of a human being.",
+      "original": "Καί ποτε ἐπ’ ἐκκλησίας ὁ Ἀναστάσιος διδάσκων ἔφη, Θεοτόκον τὴν Μαρίαν καλείτω μηδείς: Μαρία γὰρ ἄνθρωπος ἦν: ὑπὸ ἀνθρώπου δὲ Θεὸν τεχθῆναι ἀδύνατον.",
+      "context": "The sermon that began the controversy at Constantinople. Nestorius backed his chaplain. The crowd was scandalized, Socrates says.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "7.32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nestorius-in-cyril-dialogue",
+      "author": "Nestorius (as quoted by Cyril)",
+      "year": 429,
+      "date": "c. 429",
+      "work": "Quoted in Cyril of Alexandria, Dialogue against Nestorius",
+      "locus": "opening",
+      "lang": "grc",
+      "answer": "christotokos",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "When the divine Scripture speaks of Christ's birth from Mary the Virgin, or his death, it nowhere appears to say \"God\", but \"Christ\" or \"Lord\" or \"Jesus\", since these three names signify the two natures, sometimes this one, sometimes that.",
+      "original": "Οταν ἡ θεία Γραφὴ διαλέγηται γέννησιν Χριστοῦ ἐκ Μαρίας τῆς παρθένου [η] θάνατον, οὐδαμοῦ τεθεῖσα φαίνεται Θεοῦ, ἀλλὰ Χριστοῦ η Κυρίου η ̓Ιησοῦ, ἐπειδὴ τὰ τρία ταῦτα τῶν δύο φύσεων σημαντικὰ, ποτὲ μὲν ταύτης, ποτὲ δὲ ἐκείνης",
+      "context": "Nestorius preferred \"Mother of Christ\". His opponent preserves his words; Nestorius himself said he would accept \"Mother of God\" if rightly explained.",
+      "source": {
+        "book": "cyril-alexandria-dialogus-nestorio",
+        "section": "dial-open"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "hesychius-homily-mother-of-god",
+      "author": "Hesychius of Jerusalem",
+      "year": 450,
+      "date": "c. 450",
+      "work": "Homily on Mary the Mother of God",
+      "locus": "opening",
+      "lang": "grc",
+      "answer": "theotokos",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"Therefore the one to be born will be called holy, the Son of God\" (Luke 1:35). Do you see how great the dignity of the virgin Mother of God is? For the only-begotten Son of God, the maker of the world, was carried by her as an infant.",
+      "original": "∆ιὸ καὶ τὸ γεννώμενον ἅγιον κληθήσεται υἱὸς θεοῦ.» Ὁρᾷς ὅσον τὸ τῆς θεοτόκου παρ θένου καὶ πηλίκον ἀξίωμα. Ὁ γὰρ μονογενὴς υἱὸς τοῦ θεοῦ, ὁ τοῦ κόσμου ποιητής, ὡς βρέφος παρ' αὐτῆς ἐβαστάζετο",
+      "context": "A Jerusalem preacher of the same years, using the title as a matter of course.",
+      "source": {
+        "book": "hesychius-homilia-i-maria-deipara",
+        "section": "u01-open"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ephesus-431-anathema-1",
+      "author": "Council of Ephesus",
+      "year": 431,
+      "date": "c. 431",
+      "work": "Cyril's Twelve Anathemas, received at Ephesus",
+      "locus": "Anathema 1",
+      "lang": "en",
+      "answer": "theotokos",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone does not confess that Emmanuel is God in truth, and therefore that the holy virgin is the mother of God",
+      "original": "If anyone does not confess that Emmanuel is God in truth, and therefore that the holy virgin is the mother of God",
+      "context": "Cyril's first anathema, received at Ephesus in 431. Nestorius was deposed.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/ecum03.htm",
+        "edition": "Council of Ephesus, Cyril's First Anathema (431)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "chalcedon-451-theotokos",
+      "author": "Council of Chalcedon",
+      "year": 451,
+      "date": "c. 451",
+      "work": "Definition of the Faith",
+      "locus": "Definition",
+      "lang": "en",
+      "answer": "theotokos",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "in the last days the same for us and for our salvation from Mary, the virgin God-bearer as regards his humanity",
+      "original": "in the last days the same for us and for our salvation from Mary, the virgin God-bearer as regards his humanity",
+      "context": "Chalcedon, which also condemned Eutyches, repeats the title in its definition.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/ecum04.htm",
+        "edition": "Council of Chalcedon, Definition of Faith (451)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "coptic-shenouda-theotokos",
+      "author": "Coptic Orthodox Church (Pope Shenouda III)",
+      "year": 1990,
+      "date": "Shenouda III, pope 1971–2012",
+      "work": "The Holy Virgin Saint Mary",
+      "locus": "On the title Theotokos",
+      "lang": "en",
+      "answer": "theotokos",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "She is, in the belief of the Church, the mother of God, (Theotokos in Coptic)",
+      "original": "She is, in the belief of the Church, the mother of God, (Theotokos in Coptic)",
+      "context": "The churches that rejected Chalcedon kept Ephesus and the title.",
+      "source": {
+        "url": "https://www.copticchurch.net/books/the_holy_virgin_saint_mary",
+        "edition": "Pope Shenouda III (Coptic Orthodox), The Holy Virgin Saint Mary"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Cyril of Alexandria",
+      "work": "Second and Third Letters to Nestorius",
+      "year": 430,
+      "why": "Cyril's own case for the title. Not yet in the library.",
+      "action": "intake",
+      "source_hint": "Migne PG 77"
+    },
+    {
+      "author": "Nestorius",
+      "work": "Sermons (Loofs, Nestoriana) and the Bazaar of Heracleides",
+      "year": 451,
+      "why": "Nestorius in his own words, not only as his opponents quote him. The Bazaar survives in Syriac.",
+      "action": "intake",
+      "source_hint": "Loofs, Nestoriana (1905); Bedjan (1910)"
+    },
+    {
+      "author": "Alexander of Alexandria",
+      "work": "Letter to Alexander of Thessalonica",
+      "year": 324,
+      "why": "Uses Theotokos about a century before Ephesus. Greek in Theodoret, Church History 1.4.",
+      "action": "search",
+      "source_hint": "theodoret church history 1.4"
+    }
+  ],
+  "related": {
+    "timeline": "mary-mother-of-god",
+    "topics": [
+      "theotokos"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

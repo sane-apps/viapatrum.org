@@ -1,0 +1,182 @@
+{
+  "id": "jesus-born-virgin",
+  "number": 21,
+  "group": "christ",
+  "question": "Was Jesus born of a virgin?",
+  "short": "The virgin birth",
+  "search": [
+    "virgin birth",
+    "virginal conception",
+    "isaiah 7:14",
+    "almah",
+    "parthenos",
+    "born of the virgin mary",
+    "panthera"
+  ],
+  "answers": [
+    {
+      "id": "virgin",
+      "label": "Yes: conceived by the Holy Spirit, born of the Virgin Mary",
+      "short": "Born of a virgin",
+      "tag": "Virgin"
+    },
+    {
+      "id": "denied",
+      "label": "Denied by critics",
+      "short": "Denied",
+      "tag": "Denied"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The virgin birth is in the earliest writers after the New Testament. Ignatius, about 110, counts Mary's virginity among three great mysteries, and \"born of the Virgin Mary\" was part of the rule of faith.",
+      "cites": [
+        "ignatius-ephesians-19",
+        "tertullian-veiling-1-virgin"
+      ]
+    },
+    {
+      "text": "Christians defended it from Isaiah 7:14 in its Greek form. Jewish teachers replied that the Hebrew says \"young woman\", and the pagan Celsus spread a slander about a soldier, which shows the Christian claim was widely known.",
+      "cites": [
+        "justin-1apol-33",
+        "trypho-in-justin-dialogue-67",
+        "celsus-in-origen-1-32"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-ephesians-19",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Ephesians",
+      "locus": "19.1",
+      "lang": "grc",
+      "answer": "virgin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The virginity of Mary and her giving birth were hidden from the ruler of this age, as was the death of the Lord: three mysteries to be shouted aloud, which were done in God's silence.",
+      "original": "Καὶ ἔλαθεν τὸν ἄρχοντα τοῦ αἰῶνος τούτου ἡ παρθενία Μαρίας καὶ ὁ τοκετὸς αὐτῆς, ὁμοίως καὶ ὁ θάνατος τοῦ κυρίου: τρία μυστήρια κραυγῆς, ἅτινα ἐν ἡσυχίᾳ θεοῦ ἐπράχθη.",
+      "context": "Ignatius treats the virgin birth as one of the three central mysteries, alongside the cross.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "1.19"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-33",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "33.1–4",
+      "lang": "grc",
+      "answer": "virgin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Hear how it was foretold through Isaiah, in so many words, that he would be born of a virgin. It was said: \"Behold, the virgin shall conceive in the womb and bear a son, and they shall say of his name, God with us\" (Isaiah 7:14). For God foretold through the prophetic Spirit that things thought unbelievable and impossible among men would happen, so that when they happened they would not be disbelieved. ... \"Behold, the virgin shall conceive\" means that the virgin conceived without intercourse.",
+      "original": "Ἐλέχθη δὲ οὕτως· „Ἰδοὺ ἡ παρθένος ἐν γαστρὶ ἕξει καὶ τέξεται υἱόν, καὶ ἐροῦσιν ἐπὶ τᾷ ὀνόματι αὐτοῦ Μεθ᾿ ἡμῶν ὁ θεός“. Ἃ γὰρ ἦν ἄπιστα καὶ ἀδύνατα νομιζόμενα παρὰ τοῖς ἀνθρώποις γενήσεσθαι, ταῦτα ὁ θεὸς προεμήνυσε διὰ τοῦ προφητικοῦ πνεύματος μέλλειν γίνεσθαι, ἵνα ὅταν γένηται μὴ ἀπιστηθῇ ... Τὸ οὖν „Ἰδοὺ ἡ παρθένος ἐν γαστρὶ ἕξει“ σημαίνει οὐ συνουσιασθεῖσαν τὴν παρθένον συλλαβεῖν",
+      "context": "Justin explains the virgin birth to pagan readers and distinguishes it from myths of gods lying with women.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "33"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trypho-in-justin-dialogue-67",
+      "author": "Trypho (Jewish critic), in Justin's Dialogue",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "67.1",
+      "lang": "grc",
+      "answer": "denied",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "And Trypho answered: The Scripture does not have \"Behold, the virgin shall conceive and bear a son\" but \"Behold, the young woman shall conceive and bear a son,\" and so on as you said. The whole prophecy was spoken of Hezekiah, and it is shown to have come true in him.",
+      "original": "Καὶ ὁ Τρύφων ἀπεκρίνατο · ῾Π γραφὴ οὐκ ἔχει· Ἰδοῦ ἡ παρθένος ἐν γαστρὶ λήψεται καὶ τέξεται υἱόν, ἀλλ᾿· Ἰδοὺ ἡ νεᾶνις ἐν γαστρὶ λήψεται καὶ τέξεται υἱόν, καὶ τὰ ἑξῆς λοιπὰ ὡς ἔφης. Ἔστι δὲ ἡ πᾶσα προφητεία λελεγμένη εἰς Ἐζεκίαν",
+      "context": "The debate over Isaiah 7:14 (Hebrew almah, Greek parthenos) already ran in the second century. Justin answers in the chapters that follow.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "67"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "celsus-in-origen-1-32",
+      "author": "Celsus (pagan critic), quoted by Origen",
+      "year": 178,
+      "date": "c. 178",
+      "work": "True Word, quoted in Origen, Against Celsus",
+      "locus": "1.32",
+      "lang": "grc",
+      "answer": "denied",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "Let us go back to the words put in the mouth of Celsus's Jew, where it is written that the mother of Jesus was driven out by the carpenter who was engaged to her, convicted of adultery, and bore a child by a certain soldier named Panthera.",
+      "original": "Ἀλλὰ γὰρ ἐπανέλθωμεν εἰς τὴν τοῦ Ἰουδαίου προσωποποιΐαν, ἐν ᾗ ἀναγέγραπται ἡ τοῦ Ἰησοῦ μήτηρ ὡς ἐξωσθεῖσα ὑπὸ τοῦ μνηστευσαμένου αὐτὴν τέκτονος, ἐλεγχθεῖσα ἐπὶ μοιχείᾳ καὶ τίκτουσα ἀπό τινος στρατιώτου Πανθήρα τοὔνομα·",
+      "context": "The earliest pagan attack on the virgin birth. It shows the Christian claim was well known by about 178. Origen answers it.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/greek/origen_celsum.xml",
+        "edition": "Koetschau, GCS 2 (1899), First1KGreek TEI"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-veiling-1-virgin",
+      "author": "Tertullian",
+      "year": 207,
+      "date": "c. 207",
+      "work": "On the Veiling of Virgins",
+      "locus": "1.3",
+      "lang": "la",
+      "answer": "virgin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "The rule of faith is altogether one, alone unchangeable and beyond reform: believing in one only God almighty, maker of the world, and in his Son Jesus Christ, born of the Virgin Mary, crucified under Pontius Pilate.",
+      "original": "Regula quidem fidei una omnino est, sola immobilis et irreformabilis, credendi scilicet in unicum deum omnipotentem, mundi conditorem, et filium eius Iesum Christum, natum ex virgine Maria, crucifixum sub Pontio Pilato",
+      "context": "\"Born of the Virgin Mary\" was in the rule of faith every convert learned, and later in the Apostles' Creed.",
+      "source": {
+        "book": "tertullian-on-the-veiling-of-virgins",
+        "section": "1"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 3.21.1",
+      "year": 180,
+      "why": "Names Theodotion and Aquila, who rendered \"young woman\", and the Ebionites who denied the virgin birth. Greek in Eusebius 5.8.10.",
+      "action": "search",
+      "source_hint": "eusebius-church-history 5.8"
+    },
+    {
+      "author": "Aristides of Athens",
+      "work": "Apology 15",
+      "year": 125,
+      "why": "\"Born of a Hebrew virgin.\" Survives in Syriac and in a Greek reworking.",
+      "action": "intake",
+      "source_hint": "Harris and Robinson (1891)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "virgin-birth"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

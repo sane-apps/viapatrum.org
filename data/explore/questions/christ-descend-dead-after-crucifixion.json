@@ -1,0 +1,139 @@
+{
+  "id": "christ-descend-dead-after-crucifixion",
+  "number": 24,
+  "group": "christ",
+  "question": "Did Christ descend to the dead after the crucifixion?",
+  "short": "The descent to the dead",
+  "search": [
+    "descent into hell",
+    "harrowing of hell",
+    "he descended into hell",
+    "1 peter 3:19",
+    "hades",
+    "spirits in prison"
+  ],
+  "answers": [
+    {
+      "id": "descended",
+      "label": "Yes: he went down to the dead and freed the righteous",
+      "short": "Descended",
+      "tag": "Descended"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the second century Christians taught that Christ went down to the dead between his death and resurrection, to preach to them and raise the righteous of old.",
+      "cites": [
+        "ignatius-magnesians-9",
+        "justin-dialogue-72"
+      ]
+    },
+    {
+      "text": "The phrase entered the Apostles' Creed slowly: Rufinus, about 404, notes that Rome and the East did not yet have it in their creeds.",
+      "cites": [
+        "rufinus-creed-18"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-magnesians-9",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Magnesians",
+      "locus": "9.2",
+      "lang": "grc",
+      "answer": "descended",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "How can we live apart from him, whom even the prophets, being his disciples in the Spirit, awaited as their teacher? And so he, for whom they rightly waited, came and raised them from the dead.",
+      "original": "οὗ καὶ οἱ προφῆται μαθηταὶ ὄντες τῷ πνεύματι ὡς διδάσκαλον αὐτὸν προσεδόκων; καὶ διὰ τοῦτο, ὃν δικαίως ἀνέμενον, παρὼν ἤγειρεν αὐτοὺς ἐκ νεκρῶν.",
+      "context": "\"Came\" (parōn, \"being present\") to the dead prophets: the oldest hint of Christ's descent after the New Testament (1 Peter 3:19; Matthew 27:52).",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "2.9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-dialogue-72",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "72.4",
+      "lang": "grc",
+      "answer": "descended",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "From the words of the same Jeremiah they cut out this: \"The Lord God, the Holy One of Israel, remembered his dead who slept in the earth of the grave, and went down to them to preach to them his salvation.\"",
+      "original": "Ἐμνήσθη δὲ κύριος ὁ θεὸς ἅγιος Ἰσραὴλ τῶν νεκρῶν αὐτοῦ, τῶν κεκοιμημένων εἰς γῆν χώματος, καὶ κατέβη πρὸς αὐτοὺς εὐαγγελίσασθαι αὐτοῖς τὸ σωτήριον αὐτοῦ",
+      "context": "Justin quotes a saying he attributes to Jeremiah. It is not in our Bibles. Irenaeus quotes it too. It shows the descent was already a Christian belief.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "72"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "rufinus-creed-18",
+      "author": "Rufinus of Aquileia",
+      "year": 404,
+      "date": "c. 404",
+      "work": "Commentary on the Apostles' Creed",
+      "locus": "18",
+      "lang": "la",
+      "answer": "descended",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It should be known that the words \"he descended into hell\" are not added in the creed of the Roman church, nor are they found in the churches of the East. Yet the meaning of the phrase seems to be the same as \"he was buried\".",
+      "original": "Sciendum sane est, quod in Ecclesiae Romanae Symbolo non habetur additum, descendit ad inferna: sed neque in Orientis Ecclesiis habetur hic sermo: vis tamen verbi eadem videtur esse in eo, quod sepultus dicitur.",
+      "context": "Rufinus's creed at Aquileia had the phrase; Rome's did not yet. He then defends the descent from Scripture.",
+      "source": {
+        "book": "rufinus-commentary-on-the-apostles-creed",
+        "section": "18"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 4.27.2; 5.31.1",
+      "year": 180,
+      "why": "The Lord descended to the lower parts of the earth to preach to the dead.",
+      "action": "search",
+      "source_hint": "Harvey 1857 vol. 2"
+    },
+    {
+      "author": "Gospel of Nicodemus",
+      "work": "Descent into Hell",
+      "year": 400,
+      "why": "The popular account of the harrowing of hell.",
+      "action": "intake",
+      "source_hint": "Tischendorf, Evangelia apocrypha (1876)"
+    },
+    {
+      "author": "John Calvin",
+      "work": "Institutes 2.16.10",
+      "year": 1559,
+      "why": "Read the phrase as Christ's suffering of God's wrath on the cross.",
+      "action": "intake",
+      "source_hint": "Corpus Reformatorum"
+    }
+  ],
+  "related": {
+    "topics": [
+      "heaven-hell-intermediate"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
