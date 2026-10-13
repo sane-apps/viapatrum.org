@@ -1,0 +1,167 @@
+{
+  "id": "will-our-bodies-rise",
+  "number": 76,
+  "group": "last-things",
+  "question": "Will our bodies rise?",
+  "short": "Resurrection of the body",
+  "search": [
+    "resurrection of the body",
+    "resurrection of the flesh",
+    "spiritual body",
+    "1 corinthians 15",
+    "glorified body",
+    "general resurrection"
+  ],
+  "answers": [
+    {
+      "id": "same-flesh",
+      "label": "Yes: the same body will rise, transformed and glorified",
+      "short": "The same body",
+      "tag": "Same body"
+    },
+    {
+      "id": "spiritual",
+      "label": "A spiritual body will rise, not this flesh",
+      "short": "A spiritual body",
+      "tag": "Spiritual"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the first letters after the New Testament, Christians taught that God will raise our bodies as he raised Christ's: Clement points to day and night and the seed; Polycarp to Christ as the pattern.",
+      "cites": [
+        "1-clement-24",
+        "polycarp-philippians-2"
+      ]
+    },
+    {
+      "text": "Against pagan scorn and Gnostic denial, Athenagoras and Tertullian defended the resurrection of this flesh, \"all of it, the very same, entire\".",
+      "cites": [
+        "athenagoras-resurrection-3-b",
+        "tertullian-resurrection-63-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "1-clement-24",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "24.1–4",
+      "lang": "grc",
+      "answer": "same-flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let us consider, beloved, how the Master continually shows us the resurrection to come, of which he made the Lord Jesus Christ the first fruits by raising him from the dead. Let us look, beloved, at the resurrection that happens at each season. Day and night show us resurrection: the night falls asleep, the day rises; the day departs, night comes on. Let us take the crops: how and in what way does the sowing happen?",
+      "original": "Κατανοήσωμεν, ἀγαπητοί, πῶς ὁ δεσπότης ἐπιδείκνυται διηνεκῶς ἡμῖν τὴν μέλλουσαν ἀνάστασιν ἔσεσθαι, ἧς τὴν ἀπαρχὴν ἐποιήσατο τὸν κύριον Ἰησοῦν Χριστὸν ἐκ νεκρῶν ἀναστήσας. ἴδωμεν, ἀγαπητοί. τὴν κατὰ καιρὸν γινομένην ἀνάστασιν. ἡμέρα καὶ νὺξ ἀνάστασιν ἡμῖν δηλοῦσιν: κοιμᾶται ἡ νύξ, ἀνίσταται ἡ ἡμέρα: ἡ ἡμέρα ἄπεισιν, νὺξ ἐπέρχεται. λάβωμεν τοὺς καρπούς: ὁ σπόρος πῶς καὶ τίνα τρόπον γίνεται;",
+      "context": "Clement goes on to the seed and to the phoenix (chapter 25) as signs of the resurrection.",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "polycarp-philippians-2",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "2.1–2",
+      "lang": "grc",
+      "answer": "same-flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... believing in him who raised our Lord Jesus Christ from the dead and gave him glory and a throne at his right hand ... who comes as judge of the living and the dead ... And he who raised him from the dead will raise us also, if we do his will and walk in his commandments.",
+      "original": "πιστεύσαντες εἰς τὸν ἐγείραντα τὸν κύριον ἡμῶν Ἰησοῦν Χριστὸν ἐκ νεκρῶν καὶ δόντα αὐτῷ δόξαν καὶ θρόνον ἐκ δεξιῶν αὐτοῦ ... ὃς ἔρχεται κριτὴς ζώντων καὶ νεκρῶν ... ὁ δὲ ἐγείρας αὐτὸν ἐκ νεκρῶν καὶ ἡμᾶς ἐγερεῖ, ἐὰν ποιῶμεν αὐτοῦ τὸ θέλημα",
+      "context": "Christ's resurrection as the pattern and promise of ours.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athenagoras-resurrection-3-b",
+      "author": "Athenagoras",
+      "year": 180,
+      "date": "c. 180",
+      "work": "On the Resurrection of the Dead",
+      "locus": "3.1–2",
+      "lang": "grc",
+      "answer": "same-flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If at their first making he created human bodies and their elements when they did not exist, he will raise them just as easily when they have been dissolved, however that happens; for this too is equally possible for him.",
+      "original": "Εἰ γὰρ μὴ ὄντα κατὰ τὴν πρώτην σύστασιν ἐποίησε τὰ τῶν ἀνθρώπων σώματα καὶ τὰς τούτων ἀρχάς, καὶ διαλυθέντα, καθ᾿ ὃν ἂν τύχῃ τρόπον, ἀναστήσει μετὰ τῆς ἴσης εὐμαρείας· ἐπ᾿ ἴσης γὰρ αὐτῷ καὶ τοῦτο δυνατόν.",
+      "context": "Athenagoras answers the pagan objection about bodies eaten by animals or scattered.",
+      "source": {
+        "book": "athenagoras-resurrection",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-resurrection-63-b",
+      "author": "Tertullian",
+      "year": 210,
+      "date": "c. 210",
+      "work": "On the Resurrection of the Flesh",
+      "locus": "63.1",
+      "lang": "la",
+      "answer": "same-flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So the flesh will rise: all of it, the very same, entire.",
+      "original": "Resurget igitur caro, et quidem omnis, et quidem ipsa, et quidem integra.",
+      "context": "The same flesh, not another body.",
+      "source": {
+        "book": "tertullian-on-the-resurrection-of-the-flesh",
+        "section": "63"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "On First Principles 2.10–11; fragment in Methodius",
+      "year": 225,
+      "why": "The risen body as spiritual, keeping the body's form (eidos) but not its matter.",
+      "action": "relock-source",
+      "source_hint": "Lommatzsch vol. 21; Methodius, On the Resurrection (Bonwetsch, GCS 27)"
+    },
+    {
+      "author": "Methodius of Olympus",
+      "work": "On the Resurrection",
+      "year": 300,
+      "why": "Against Origen: the same flesh rises. The library's Methodius texts are partly OCR.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/greek/methodius_tlg002.xml"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 22.12–21",
+      "year": 426,
+      "why": "What risen bodies will be like: age, size, beauty.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-22.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "resurrection-body"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "id": "tongues-prophecy-healing-continue",
+  "number": 80,
+  "group": "spirit",
+  "question": "Do tongues, prophecy and healing continue in the church?",
+  "short": "Do the gifts continue?",
+  "search": [
+    "spiritual gifts",
+    "charismata",
+    "speaking in tongues",
+    "prophecy",
+    "healing",
+    "cessationism",
+    "continuationism",
+    "pentecostal",
+    "charismatic"
+  ],
+  "answers": [
+    {
+      "id": "continue",
+      "label": "Yes: the Spirit's gifts continue in the Church",
+      "short": "Continue",
+      "tag": "Continue"
+    },
+    {
+      "id": "ceased",
+      "label": "The revelatory and sign gifts ceased after the apostles",
+      "short": "Ceased",
+      "tag": "Ceased"
+    }
+  ],
+  "overview": [
+    {
+      "text": "In the second century, Justin and Irenaeus point to prophecy, exorcism, healing and tongues in the Church of their day as proof of the Spirit.",
+      "cites": [
+        "justin-dialogue-82",
+        "irenaeus-in-eusebius-5-7"
+      ]
+    },
+    {
+      "text": "By the third century Origen speaks of \"traces\", and by about 390 Chrysostom says tongues \"used to happen then but do not happen now\".",
+      "cites": [
+        "origen-contra-celsum-1-2",
+        "chrysostom-1-corinthians-homily-29"
+      ]
+    },
+    {
+      "text": "Today the churches divide: Pentecostals and charismatics say the gifts continue, Catholic teaching receives charisms under the pastors, and Reformed confessions hold that revelatory gifts ceased.",
+      "cites": [
+        "assemblies-of-god-tongues",
+        "ccc-2003",
+        "westminster-1646-1-1-ceased"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-dialogue-82",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "82.1",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For prophetic gifts remain with us even to this day, from which you ought to understand that what was formerly among your people has been transferred to us. And just as there were false prophets among your holy prophets, so now there are many false teachers among us.",
+      "original": "Παρὰ γὰρ ἡμῖν καὶ μέχρι νῦν προφητικὰ χαρίσματά ἐστιν, ἐξ οὗ καὶ αὐτοὶ συνιέναι ὀφείλετε, ὅτι τὰ πάλαι ἐν τῷ γένει ὑμῶν ὄντα εἰς ἡμᾶς μετετέθη. Ὅνπερ δὲ τρόπον καὶ ψευδοπροφῆται ἐπὶ τῶν παρ᾿ ὑμῖν γενομένων ἁγίων προφητῶν ἦσαν, καὶ παρ᾿ ἡμῖν νῦν πολλοί εἰσι καὶ ψευδοδιδάσκαλοι",
+      "context": "Justin uses the gifts as evidence that the Spirit has passed to the Church.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "82"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-in-eusebius-5-7",
+      "author": "Irenaeus of Lyons (quoted by Eusebius)",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies 2.32.4 and 5.6.1, in Eusebius, Church History",
+      "locus": "5.7.4–6",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Some drive out demons truly and certainly, so that often those cleansed of evil spirits believe and are in the Church; others have foreknowledge of things to come, visions and prophetic utterances; others heal the sick by laying on of hands and make them well. And already, as we said, even the dead have been raised and remained with us many years. ... We hear many brothers in the Church who have prophetic gifts and speak through the Spirit in all kinds of tongues, and bring men's hidden things to light for their good, and set forth the mysteries of God.",
+      "original": "οἶ μὲν γὰρ δαίμονας ἐλαύνουσι βεβαίως καὶ ἀληθῶς, ὥστε πολλάκις καὶ πιστεύειν ἐκείνους αὐτοὺς τοὺς καθαρισθέντας ἀπὸ τῶν πονηρῶν πνευμάτων καὶ εἶναι ἐν τῇ ἐκκλησίᾳ, οἶ δὲ καὶ πρόγνωσιν ἔχουσι τῶν μελλόντων καὶ ὀπτασίας καὶ ῥήσεις προφητικὰς, ἄλλοι δὲ τοὺς κάμνοντας ... πολλῶν ἀκούομεν ἀδελφῶν ἐν τῇ ἐκκλησίᾳ “τικὰ χαρίσματα ἐχόντων, καὶ παντοδαπαῖς λαλούν- “των διὰ τοῦ πνεύματος γλώσσαις, καὶ τὰ κρύφια “τῶν ἀνθρώπων εἰς φανερὸν ἀγόντων ἐπὶ τῷ καὶ τὰ μυστήρια τοῦ θεοῦ ἐκδιηγουμένων.",
+      "context": "Eusebius quotes Irenaeus to show that the gifts lasted \"to the times we are describing\".",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-contra-celsum-1-2",
+      "author": "Origen of Alexandria",
+      "year": 248,
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "1.2",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"Power\" because of the wonderful works, which we must hold took place, both from many other proofs and from the fact that traces of them are still preserved among those who live by the will of the Word.",
+      "original": "„δυνάμεως“ δὲ διὰ τὰς τεραστίους δυνάμεις, ἃς κατασκευαστέον γεγονέναι καὶ ἐκ πολλῶν μὲν ἄλλων καὶ ἐκ τοῦ ἴχνη δὲ αὐτῶν ἔτι σῴζεσθαι παρὰ τοῖς κατὰ τὸ βούλημα τοῦ λόγου βιοῦσι.",
+      "context": "\"Traces\": by Origen's time, the gifts were fewer than at first (compare 1.46).",
+      "source": {
+        "book": "origen-contra-celsum",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-1-corinthians-homily-29",
+      "author": "John Chrysostom",
+      "year": 392,
+      "date": "c. 392",
+      "work": "Homilies on 1 Corinthians",
+      "locus": "29.1, on 1 Corinthians 12:1",
+      "lang": "grc",
+      "answer": "ceased",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "This whole passage is very obscure. The obscurity comes from our ignorance of the facts and from their absence, since they used to happen then but do not happen now. And why do they not happen now? ... Why did they happen then and no longer now? Let us put that off to another time. ... What then happened then? Whoever was baptized at once spoke in tongues.",
+      "original": "Τοῦτο ἅπαν τὸ χωρίον σφόδρα ἐστὶν ἀσαφές· τὴν δὲ ἀσάφειαν ἡ τῶν πραγμάτων ἄγνοιά τε καὶ ἔλλειψις ποιεῖ τῶν τότε μὲν συμβαινόντων, νῦν δὲ οὐ γινομένων. Καὶ τίνος ἕνεκεν οὐ γίνεται νῦν; ... Τί δήποτε γὰρ τότε μὲν ἐγίνετο, νῦν δὲ οὐκέτι; Ἀλλὰ τοῦτο μὲν εἰς αὖθις ἀναβαλλώμεθα, τέως δὲ τὰ συμβαίνοντα τότε λέγωμεν. Τί οὖν τότε συνέβαινεν; Εἴ τις ἐβαπτίσατο, γλώσσαις εὐθέως ἐλάλει",
+      "context": "By about 390 Chrysostom at Antioch knew tongues only from Scripture.",
+      "source": {
+        "book": "chrysostom-homiliae-1-corinthios",
+        "section": "16.121"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "assemblies-of-god-tongues",
+      "author": "Assemblies of God",
+      "year": 1916,
+      "date": "Statement of Fundamental Truths (1916, revised)",
+      "work": "Statement of Fundamental Truths",
+      "locus": "Article 8",
+      "lang": "en",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The baptism of believers in the Holy Spirit is witnessed by the initial physical sign of speaking with other tongues as the Spirit of God gives them utterance.",
+      "original": "The baptism of believers in the Holy Spirit is witnessed by the initial physical sign of speaking with other tongues as the Spirit of God gives them utterance.",
+      "context": "Pentecostal churches teach that tongues are the initial evidence of baptism in the Spirit.",
+      "source": {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "edition": "Assemblies of God, Statement of Fundamental Truths"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "ccc-2003",
+      "author": "Catechism of the Catholic Church",
+      "year": 1992,
+      "date": "1992",
+      "work": "Catechism of the Catholic Church",
+      "locus": "2003",
+      "lang": "en",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Whatever their character - sometimes it is extraordinary, such as the gift of miracles or of tongues - charisms are oriented toward sanctifying grace",
+      "original": "Whatever their character - sometimes it is extraordinary, such as the gift of miracles or of tongues - charisms are oriented toward sanctifying grace",
+      "context": "Catholic teaching: charisms continue, ordered to holiness and tested by the Church's pastors.",
+      "source": {
+        "url": "https://www.vatican.va/archive/ENG0015/__P6Z.HTM",
+        "edition": "Catechism of the Catholic Church 2003"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1646-1-1-ceased",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "1.1",
+      "lang": "en",
+      "answer": "ceased",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "those former ways of God's revealing his will unto his people being now ceased.",
+      "original": "those former ways of God's revealing his will unto his people being now ceased.",
+      "context": "The Reformed view that revelatory gifts ceased with the apostles.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Westminster Confession of Faith (1646)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "Homilies on 1 John 6.10; City of God 22.8",
+      "year": 416,
+      "why": "Tongues were a sign for the beginning; yet miracles still happen at the martyrs' shrines.",
+      "action": "intake",
+      "source_hint": "Migne PL 35; Dombart (Teubner)"
+    },
+    {
+      "author": "Didache",
+      "work": "Chapters 11–13 on prophets",
+      "year": 100,
+      "why": "How to test traveling prophets. In the library.",
+      "action": "search",
+      "source_hint": "didache 11"
+    }
+  ],
+  "related": {
+    "timeline": "spiritual-gifts",
+    "topics": [
+      "spiritual-gifts"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

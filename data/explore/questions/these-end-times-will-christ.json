@@ -1,0 +1,189 @@
+{
+  "id": "these-end-times-will-christ",
+  "number": 77,
+  "group": "last-things",
+  "question": "Are these the end times? When will Christ return?",
+  "short": "When will Christ return?",
+  "search": [
+    "second coming",
+    "end times",
+    "date setting",
+    "last days",
+    "world week",
+    "six thousand years",
+    "parousia",
+    "signs of the end"
+  ],
+  "answers": [
+    {
+      "id": "near",
+      "label": "The end is near, and the time can be reckoned",
+      "short": "Near, calculable",
+      "tag": "Near"
+    },
+    {
+      "id": "unknown",
+      "label": "No one knows the day or hour; be ready",
+      "short": "Unknown",
+      "tag": "Unknown"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest manual simply says: be ready, for you do not know the hour.",
+      "cites": [
+        "didache-16-1"
+      ]
+    },
+    {
+      "text": "Some reckoned the time. A \"world week\" of six thousand years was common: Hippolytus put the end about AD 500, Lactantius about two hundred years after his day. Cyprian saw the world grown old.",
+      "cites": [
+        "hippolytus-daniel-4-23",
+        "lactantius-divine-institutes-7-14",
+        "cyprian-to-demetrianus-3"
+      ]
+    },
+    {
+      "text": "Augustine rejected all date-setting: \"it is not for us to know the times\".",
+      "cites": [
+        "augustine-city-of-god-18-53"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-16-1",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "16.1",
+      "lang": "grc",
+      "answer": "unknown",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Watch over your life. Let your lamps not go out, nor your loins be ungirded, but be ready; for you do not know the hour in which our Lord is coming.",
+      "original": "Γρηγορεῖτε ὑπὲρ τῆς ζωῆς ὑμῶν: οἱ λύχνοι ὑμῶν μὴ σβεσθήτωσαν, καὶ αἱ ὀσφύες ὑμῶν μὴ ἐκλυέσθωσαν, ἀλλὰ γίνεσθε ἕτοιμοι: οὐ γὰρ οἴδατε τὴν ὥραν, ἐν ᾗ ὁ κύριος ἡμῶν ἔρχεται.",
+      "context": "The church manual's last chapter, on the signs of the end.",
+      "source": {
+        "book": "didache",
+        "section": "16"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "hippolytus-daniel-4-23",
+      "author": "Hippolytus of Rome",
+      "year": 204,
+      "date": "c. 204",
+      "work": "Commentary on Daniel",
+      "locus": "4.23–24",
+      "lang": "grc",
+      "answer": "near",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But someone will surely say: How will you prove to me that the Savior was born in the five thousand five hundredth year? ... [the ark's measure of five and a half cubits] shows the five thousand five hundred years.",
+      "original": "Πῶς μοι ἀποδείξεις, εἰ πεντακισχιλιοστῷ καὶ πεν- τακοσιοστῷ ἔτει ἐγεννήθη ὁ σωτήρ; ... δειχθὴ τὰ πεντακισχίλια καὶ πεντακόσια ἔτη.",
+      "context": "Hippolytus dates Christ's birth to year 5500 of the world, so the six thousand years end about AD 500. He did it to calm those who said the end was at hand.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/hippolytus_lagarde1858_daniel_tesseract.txt",
+        "edition": "Lagarde, Hippolyti Romani quae feruntur omnia graece (1858), OCR",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "lactantius-divine-institutes-7-14",
+      "author": "Lactantius",
+      "year": 310,
+      "date": "c. 310",
+      "work": "Divine Institutes",
+      "locus": "7.14.9–10",
+      "lang": "la",
+      "answer": "near",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Since all God's works were finished in six days, the world must remain in this state for six ages, that is, six thousand years. For the great day of God is bounded by a cycle of a thousand years, as the prophet shows, who says: \"Before your eyes, Lord, a thousand years are as one day.\"",
+      "original": "ergo quoniam sex diebus cuncta dei opera perfecta sunt, per saecula sex id est annorum sex milia manere in hoc statu mundum necesse est. dies enim magnus dei mille annorum circulo terminatur, sicut indicat propheta, qui dicit: ante oculos tuos, domine, mille anni tamquam dies unus.",
+      "context": "Lactantius reckoned that about two hundred years remained (7.25).",
+      "source": {
+        "book": "lactantius-divine-institutes",
+        "section": "7.14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-to-demetrianus-3",
+      "author": "Cyprian of Carthage",
+      "year": 252,
+      "date": "c. 252",
+      "work": "To Demetrianus",
+      "locus": "3",
+      "lang": "la",
+      "answer": "near",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You must know first of all that the world has now grown old. It does not stand in the strength it once had, nor is it as vigorous and robust as before. Even if we were silent and brought no proofs from the holy Scriptures, the world itself now says so, and bears witness to its decline by the failing of things.",
+      "original": "illud primo in loco scire debes senuisse iam saeculum, non illis uiribus stare quibus prius steterat nec uigore et robore ipso ualere quo antea praeualebat. hoc etiam nobis tacentibus et nulla de scripturis sanctis praedicationibusque diuinis documenta promentibus mundus ipse iam loquitur et occasum sui rerum labentium probatione testatur.",
+      "context": "A pagan blamed Christians for plague and war. Cyprian answers that the world is in its old age.",
+      "source": {
+        "book": "cyprian-to-demetrianus",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-18-53",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "18.53.1",
+      "lang": "la",
+      "answer": "unknown",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Here the question is usually asked: When will this be? Quite out of place. For if it profited us to know, from whom better would it have been told than from God himself, our teacher, when the disciples asked him? ... It is in vain, then, that we try to count and fix the years left to this world, since we hear from the mouth of Truth that it is not for us to know. Yet some have said four hundred, some five hundred, some even a thousand years from the Lord's ascension to his last coming. ... He who says \"It is not for you to know the times\" loosens the fingers of all who calculate about this, and tells them to rest.",
+      "original": "Hic quaeri solet: Quando istud erit? Inportune omnino. Si enim hoc nobis nosse prodesset, a quo melius quam ab ipso Deo magistro interrogantibus discipulis diceretur? ... Frustra igitur annos, qui remanent huic saeculo, computare ac definire conamur, cum hoc scire non esse nostrum ex ore Veritatis audiamus; quos tamen alii quadringentos, alii quingentos, alii etiam mille ab ascensione Domini usque ad eius ultimum aduentum compleri posse dixerunt. ... Omnium uero de hac re calculantium digitos resoluit et quiescere iubet ille, qui dicit: Non est uestrum scire tempora, quae Pater posuit in sua potestate.",
+      "context": "Augustine's answer to every date-setter, ancient and modern.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-18.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "Letters 197–199, to Hesychius",
+      "year": 419,
+      "why": "A bishop who expected the end soon, and Augustine's reply.",
+      "action": "intake",
+      "source_hint": "Goldbacher, CSEL 57 (1911)"
+    },
+    {
+      "author": "Montanists",
+      "work": "The descent of the New Jerusalem at Pepuza",
+      "year": 170,
+      "why": "An early prophecy of an imminent end. See question 81.",
+      "action": "skip",
+      "source_hint": "eusebius-church-history 5.18"
+    }
+  ],
+  "related": {
+    "topics": [
+      "second-coming"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "id": "spirit-baptism",
+  "number": 82,
+  "group": "spirit",
+  "question": "What does the Spirit do in baptism?",
+  "short": "The Spirit and baptism",
+  "search": [
+    "baptism of the holy spirit",
+    "spirit baptism",
+    "gift of the spirit",
+    "laying on of hands",
+    "acts 8",
+    "second blessing",
+    "chrismation"
+  ],
+  "answers": [
+    {
+      "id": "in-water",
+      "label": "Baptism itself gives the Holy Spirit",
+      "short": "Given in baptism",
+      "tag": "In baptism"
+    },
+    {
+      "id": "after-water",
+      "label": "The water cleanses; the Spirit is given with the laying on of hands that follows",
+      "short": "With the hands",
+      "tag": "With hands"
+    },
+    {
+      "id": "subsequent",
+      "label": "Baptism in the Spirit is a later experience after conversion",
+      "short": "A later experience",
+      "tag": "Subsequent"
+    }
+  ],
+  "overview": [
+    {
+      "text": "In the West about 200, the water was said to cleanse and prepare, and the Spirit to be given by the bishop's laying on of hands at the same rite (Tertullian, Cyprian).",
+      "cites": [
+        "tertullian-baptism-6",
+        "tertullian-baptism-8",
+        "cyprian-letter-73-9-b"
+      ]
+    },
+    {
+      "text": "In the East the Spirit's gift is joined to the water itself, sealed at once with chrism (Cyril). Pentecostals speak of a distinct, later baptism in the Spirit.",
+      "cites": [
+        "cyril-mystagogic-2-6-spirit",
+        "assemblies-of-god-spirit-baptism"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "tertullian-baptism-6",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Baptism",
+      "locus": "6.1",
+      "lang": "la",
+      "answer": "after-water",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Not that we receive the Holy Spirit in the waters, but cleansed in the water under the angel we are prepared for the Holy Spirit. Here too a figure went before: John was the Lord's forerunner, preparing his ways.",
+      "original": "Non quod in aquis spiritum sanctum consequamur, sed in aqua emundati sub angelo spiritui sancto praeparamur. hic quoque figura praecessit; sic enim Iohannes antepraecursor domini fuit praeparans uias eius.",
+      "context": "For Tertullian the water cleanses and the laying on of hands that follows gives the Spirit (chapter 8).",
+      "source": {
+        "book": "tertullian-on-baptism",
+        "section": "6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-baptism-8",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Baptism",
+      "locus": "8.1",
+      "lang": "la",
+      "answer": "after-water",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Then a hand is laid on us in blessing, calling and inviting the Holy Spirit.",
+      "original": "Dehinc manus imponitur per benedictionem advocans et inuitans spiritum sanctum.",
+      "context": "Same rite, same day: water, anointing, hands.",
+      "source": {
+        "book": "tertullian-on-baptism",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-73-9-b",
+      "author": "Cyprian of Carthage",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter 73, to Jubaianus",
+      "locus": "73.9",
+      "lang": "la",
+      "answer": "after-water",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Those baptized in the Church are brought to the leaders of the Church, and by our prayer and laying on of hands they receive the Holy Spirit and are made complete with the Lord's seal.",
+      "original": "ut qui in ecclesia baptizantur praepositis ecclesiae offerantur et per nostram orationem ac manus inpositionem spiritum sanctum consequantur et signaculo dominico consummentur.",
+      "context": "Cyprian also says that baptism outside the Church cannot give the Spirit (73.6).",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "73.9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-mystagogic-2-6-spirit",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Mystagogic Catecheses",
+      "locus": "2.6",
+      "lang": "grc",
+      "answer": "in-water",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We know well that just as it cleanses from sins and brings the gift of the Holy Spirit, so it is also the copy of Christ's sufferings.",
+      "original": "ἀκριβῶς εἰδότων ἡμῶν, ὅτι ὡς ἔστιν ἁμαρτημάτων καθαρτήριον καὶ Πνεύματος ἁγίου δωρεᾶς πρόξενον, οὕτω καὶ τῶν τοῦ Χριστοῦ παθημάτων ἀντίτυπον.",
+      "context": "In the East the gift of the Spirit is spoken of with the water and sealed at once with chrism.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-mystagogiae.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "assemblies-of-god-spirit-baptism",
+      "author": "Assemblies of God",
+      "year": 1916,
+      "date": "Statement of Fundamental Truths (1916, revised)",
+      "work": "Statement of Fundamental Truths",
+      "locus": "Article 7",
+      "lang": "en",
+      "answer": "subsequent",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "This experience is distinct from and subsequent to the experience of the new birth.",
+      "original": "This experience is distinct from and subsequent to the experience of the new birth.",
+      "context": "Pentecostals teach a baptism in the Spirit distinct from and after new birth.",
+      "source": {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "edition": "Assemblies of God, Statement of Fundamental Truths"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Didymus the Blind",
+      "work": "On the Holy Spirit",
+      "year": 370,
+      "why": "The Spirit's work in baptism. In Jerome's Latin.",
+      "action": "intake",
+      "source_hint": "Migne PG 39"
+    },
+    {
+      "author": "John Wesley and the Holiness movement",
+      "work": "A Plain Account of Christian Perfection",
+      "year": 1766,
+      "why": "The \"second blessing\" behind later Pentecostal teaching.",
+      "action": "intake",
+      "source_hint": "Wesley's Works (1872) vol. 11"
+    }
+  ],
+  "related": {
+    "topics": [
+      "spirit-baptism",
+      "chrismation"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

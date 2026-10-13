@@ -1,0 +1,169 @@
+{
+  "id": "where-dead-wait-before-resurrection",
+  "number": 75,
+  "group": "last-things",
+  "question": "Where do the dead wait before the resurrection? Do Christians go to heaven at death?",
+  "short": "Between death and resurrection",
+  "search": [
+    "intermediate state",
+    "soul sleep",
+    "hades",
+    "paradise",
+    "abraham's bosom",
+    "heaven at death",
+    "beatific vision",
+    "resurrection"
+  ],
+  "answers": [
+    {
+      "id": "waiting",
+      "label": "Souls wait in a hidden place until the resurrection",
+      "short": "Waiting place",
+      "tag": "Waiting"
+    },
+    {
+      "id": "heaven",
+      "label": "The faithful go at once to be with Christ in paradise",
+      "short": "With Christ at once",
+      "tag": "Paradise"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Second-century writers stressed the resurrection: Justin calls those who say souls go to heaven at death, with no resurrection, no Christians at all. Tertullian has souls wait in the underworld, with only martyrs in paradise.",
+      "cites": [
+        "justin-dialogue-80-souls",
+        "tertullian-on-the-soul-55"
+      ]
+    },
+    {
+      "text": "By the third century Cyprian could speak of death as going home to paradise, where loved ones wait. Later teaching joined the two: the righteous are with Christ now and await the body's resurrection.",
+      "cites": [
+        "cyprian-on-mortality-26",
+        "westminster-1646-32-1-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-dialogue-80-souls",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "80.4",
+      "lang": "grc",
+      "answer": "waiting",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If you meet some who are called Christians but do not confess this, but dare to blaspheme the God of Abraham, Isaac and Jacob, who say there is no resurrection of the dead, but that their souls are taken up into heaven at the moment of death, do not suppose they are Christians.",
+      "original": "Εἰ γὰρ καὶ συνεβάλετε ὑμεῖς τισι λεγομένοις Χριστιανοῖς. καὶ τοῦτο μὴ ὁμολογοῦσιν, ἀλλὰ καὶ βλασφημεῖν τολμῶσι τὸν θεὸν Ἀβραὰμ καὶ τὸν θεὸν Ἰσαὰκ καὶ τὸν θεὸν Ἰακώβ. οἳ καὶ λέγουσι μὴ εἶναι νεκρῶν ἀνάστασιν, ἀλλὰ ἅμα τῷ ἀποθνήσκειν τὰς ψυχὰς αὐτῶν ἀναλαμβάνεσθαι εἰς τὸν οὐρανόν",
+      "context": "Justin is attacking Gnostics who replaced the resurrection with the soul's flight to heaven, not every hope of being with Christ.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "80"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-on-the-soul-55",
+      "author": "Tertullian",
+      "year": 210,
+      "date": "c. 210",
+      "work": "On the Soul",
+      "locus": "55.4–5",
+      "lang": "la",
+      "answer": "waiting",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"But no,\" you say, \"in paradise, to which the patriarchs and prophets have already moved from the underworld, as an appendage of the Lord's resurrection.\" Then how is it that the region of paradise, shown to John in the Spirit beneath the altar, shows no other souls in it but the martyrs? How did Perpetua, bravest martyr, on the day of her passion see only her fellow martyrs there, in her vision of paradise, unless the sword that guards paradise gives way to none but those who have died in Christ, not in Adam? ... Your own blood is the whole key to paradise.",
+      "original": "immo, inquis, in paradiso, quo iam tunc et patriarchae et prophetae appendices dominicae resurrectionis ab inferis migrauerint. et quomodo Iohanni in spiritu paradisi regio reuelata, quae subicitur altari, nullas alias animas apud se praeter martyrum ostendit? quomodo Perpetua fortissima martyr sub die passionis in reuelatione paradisi solos illic commartyres suos uidit, nisi quia nullis romphaea paradisi ianitrix cedit nisi qui in Christo decesserint, non in Adam? ... tota paradisi clauis tuus sanguis est.",
+      "context": "For Tertullian, souls wait in the underworld until the resurrection; only martyrs go at once to paradise.",
+      "source": {
+        "book": "tertullian-on-the-soul",
+        "section": "55"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-on-mortality-26",
+      "author": "Cyprian of Carthage",
+      "year": 252,
+      "date": "c. 252",
+      "work": "On Mortality",
+      "locus": "26",
+      "lang": "la",
+      "answer": "heaven",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let us welcome the day which assigns each of us to his own home, which snatches us from here, frees us from the snares of the world, and restores us to paradise and the kingdom. ... We count paradise as our homeland. ... A great number of our dear ones awaits us there: parents, brothers, children, a large and crowded throng longs for us, already sure of their own safety, still anxious for ours.",
+      "original": "amplectamur diem qui adsignat singulos domicilio suo, qui nos istinc ereptos et laqueis saecularibus exsolutos paradiso restituit et regno. ... patriam nos nostram paradisum conputamus ... magnus illic nos carorum numerus expectat, parentum, fratrum, filiorum frequens nos et copiosa turba desiderat iam de sua incolumitate secura, adhuc de nostra salute sollicita.",
+      "context": "Written during the plague of 252 to comfort Christians who feared dying in bed rather than as martyrs.",
+      "source": {
+        "book": "cyprian-on-mortality",
+        "section": "26"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-32-1-b",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "32.1",
+      "lang": "en",
+      "answer": "heaven",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Besides these two places, for souls separated from their bodies, the Scripture acknowledgeth none.",
+      "original": "Besides these two places, for souls separated from their bodies, the Scripture acknowledgeth none.",
+      "context": "The full section says the souls of the righteous are \"received into the highest heavens\" to wait for the redemption of their bodies.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Westminster Confession of Faith, 32.1 (1646)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 5.31.2",
+      "year": 180,
+      "why": "Souls go to an invisible place set by God and wait there for the resurrection.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
+    },
+    {
+      "author": "Benedict XII",
+      "work": "Benedictus Deus",
+      "year": 1336,
+      "why": "The souls of the blessed see God's essence at once, before the resurrection.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 530)"
+    },
+    {
+      "author": "Martin Luther",
+      "work": "Sermons on the sleep of the soul",
+      "year": 1532,
+      "why": "The sleep of souls until the last day.",
+      "action": "intake",
+      "source_hint": "Weimar Ausgabe"
+    }
+  ],
+  "related": {
+    "topics": [
+      "heaven-hell-intermediate"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "id": "will-christ-reign-earth-thousand",
+  "number": 74,
+  "group": "last-things",
+  "question": "Will Christ reign on earth for a thousand years?",
+  "short": "The millennium",
+  "search": [
+    "millennium",
+    "chiliasm",
+    "premillennialism",
+    "amillennialism",
+    "postmillennialism",
+    "revelation 20",
+    "thousand years",
+    "papias"
+  ],
+  "answers": [
+    {
+      "id": "reign",
+      "label": "Yes: after the resurrection Christ will reign a thousand years in a renewed Jerusalem",
+      "short": "Earthly reign",
+      "tag": "Premillennial"
+    },
+    {
+      "id": "church",
+      "label": "The thousand years are the present age of the Church",
+      "short": "The Church age",
+      "tag": "Amillennial"
+    },
+    {
+      "id": "golden",
+      "label": "A golden age of the gospel will come before Christ returns",
+      "short": "Golden age",
+      "tag": "Postmillennial"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Many second-century Christians expected Christ to reign on earth for a thousand years after the resurrection: Papias, Justin, Irenaeus and Tertullian. Justin admits that good Christians disagreed.",
+      "cites": [
+        "papias-in-eusebius-3-39",
+        "justin-dialogue-80",
+        "tertullian-marcion-3-24"
+      ]
+    },
+    {
+      "text": "From the third century, Alexandrian writers opposed the earthly reign, and Augustine, who once held it, read the thousand years as the Church's present age. That became the teaching of the great churches.",
+      "cites": [
+        "dionysius-alexandria-nepos-eusebius-7-24",
+        "augustine-city-of-god-20-7",
+        "ccc-676",
+        "augsburg-1530-17"
+      ]
+    },
+    {
+      "text": "The earthly reign returned among Protestants in modern times; others hoped for a golden age before Christ's return.",
+      "cites": [
+        "assemblies-of-god-millennium",
+        "savoy-1658-26-5"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "papias-in-eusebius-3-39",
+      "author": "Papias of Hierapolis (as Eusebius reports)",
+      "year": 120,
+      "date": "c. 120",
+      "work": "Expositions of the Lord's Sayings, in Eusebius, Church History",
+      "locus": "3.39.12–13",
+      "lang": "grc",
+      "answer": "reign",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "Among these he says there will be a thousand years after the resurrection of the dead, when the kingdom of Christ will be set up bodily on this earth. I think he got these ideas by misunderstanding the apostolic accounts, not seeing what they had said mystically in figures. For he was a man of very little understanding, as his own words show.",
+      "original": "ἐν οἷς καὶ χιλιάδα τινά φησιν ἐτῶν ἔσεσθαι μετὰ τὴν ἐκ νεκρῶν ἀνάστασιν , σωματικῶς τῆς Χριστοῦ βασιλείας ἐπὶ ταυτησὶ τῆς γῆς ὑποστησομένης. ἃ καὶ ἡγοῦμαι τὰς ἀποστολικὰς παρεκδεξάμενον διηγήσεις ὑπολαβεῖν, τὰ ἐν ὑποδείγμασι πρὸς αὐτῶν μυστικῶς εἰρημένα μὴ συνεωρακότα. σφόδρα γάρ τοι σμικρὸς ὢν τὸν νοῦν",
+      "context": "Papias, who had heard John's disciples, is the earliest witness to the thousand-year reign. Eusebius, who did not share the view, reports it with scorn and notes that Irenaeus followed Papias.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.39"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-dialogue-80",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "80.2, 5",
+      "lang": "grc",
+      "answer": "reign",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I admitted to you earlier that I and many others hold this, so that we are fully sure it will happen; but I also told you that many Christians of pure and godly mind do not accept it. ... But I, and any others who are right-minded Christians in all things, know that there will be a resurrection of the flesh and a thousand years in Jerusalem rebuilt, adorned and enlarged, as the prophets Ezekiel and Isaiah and the others declare.",
+      "original": "Ὡμολόγησα οὖν σοι καὶ πρότερον ὅτι ἐγὼ μὲν καὶ ἄλλοι πολλοὶ ταῦτα φρονοῦμεν, ὡς καὶ πάντως ἐπίστασθαι τοῦτο γενησόμενον· πολλοὺς δ᾿ αὖ καὶ τῶν τῆς καθαρᾶς καὶ εὐσεβοῦς ὄντων Χριστιανῶν γνώμης τοῦτο μὴ γνωρίζειν ἐσήμανά σοι. ... Ἐγὼ δέ, καὶ εἴ τινές εἰσιν ὁρθογνώμονες κατὰ πάντα Χριστιανοί, καὶ σαρκὸς ἀνάστασιν γενήσεσθαι ἐπιστάμεθα καὶ χίλια ἔτη ἐν Ἱερουσαλὴμ οἰκοδομηθείσῃ [fol. 135] καὶ κοσμηθείσῃ καὶ πλατυνθείσῃ.",
+      "context": "Justin both holds the millennium and admits that good Christians disagree.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "80"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-marcion-3-24",
+      "author": "Tertullian",
+      "year": 208,
+      "date": "c. 208",
+      "work": "Against Marcion",
+      "locus": "3.24.3–4",
+      "lang": "la",
+      "answer": "reign",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For we confess that a kingdom is promised to us on earth, but before heaven and in another state: after the resurrection, for a thousand years, in the divinely built city of Jerusalem let down from heaven.",
+      "original": "nam et confitemur in terra nobis regnum promissum, sed ante caelum, sed alio statu, utpote post resurrectionem in mille annos in ciuitate diuini operis Hierusalem caelo delatum",
+      "context": "Tertullian cites the \"new prophecy\" of the Montanists as confirming it.",
+      "source": {
+        "book": "tertullian-against-marcion",
+        "section": "3.24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "dionysius-alexandria-nepos-eusebius-7-24",
+      "author": "Dionysius of Alexandria (as Eusebius reports)",
+      "year": 255,
+      "date": "c. 255",
+      "work": "On the Promises, in Eusebius, Church History",
+      "locus": "7.24.1–2",
+      "lang": "grc",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "Nepos, a bishop in Egypt, taught that the promises made to the saints in the divine Scriptures would be fulfilled in a more Jewish way, and supposed there would be a thousand years of bodily luxury on this earth. Thinking he could prove his view from the Revelation of John, he wrote a book called \"Refutation of the Allegorists\". Dionysius opposes him in his books On the Promises.",
+      "original": "ἡ δ᾿ ὑπόθεσις αὐτῷ Νέπως ἦν, ἐπίσκοπος τῶν κατ᾿ Αἴγυπτον, Ἰουδαϊκώτερον τὰς ἐπηγγελμένας τοῖς ἁγίοις ἐν ταῖς θείαις γραφαῖς ἐπαγγε- λίας ἀποδοθήσεσθαι διδάσκων, καί τινα χιλιάδα ἐτῶν τρυφῆς σωματικῆς ἐπὶ τῆς ξηρᾶς ταύτης ἔσεσθαι ὑποτιθέμενος. δόξας γοῦν οὗτος ἐκ τῆς Ἀποκαλύψεως Ἰωάννου τὴν ἰδίαν κρατύνειν ὑπόληψιν, “ἔλεγχον ἀλληγοριστῶν” λόγον τινὰ περὶ τούτου συντάξας ἐπέγραψε.",
+      "context": "Dionysius met the Egyptian millenarians, debated for three days, and persuaded them. He also doubted that John the apostle wrote Revelation.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "7.24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-20-7",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "20.7.1",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Those who, because of these words of this book, suspected that the first resurrection would be bodily, were moved above all by the number of a thousand years, as if there ought to be a sabbath rest of that length for the saints after the labors of six thousand years ... This opinion would be tolerable if they believed the saints would have spiritual delights in that sabbath through the Lord's presence. For we too once held this view. But since they say that those who rise then will spend their time in immoderate fleshly feasts ... these things can be believed only by carnal people.",
+      "original": "Qui propter haec huius libri uerba primam resurrectionem futuram suspicati sunt corporalem, inter cetera maxime numero annorum mille permoti sunt, tamquam oporteret in sanctis eo modo uelut tanti temporis fieri sabbatismum, uacatione scilicet sancta post labores annorum sex milium ... Quae opinio esset utcumque tolerabilis, si aliquae deliciae spiritales in illo sabbato adfuturae sanctis per Domini praesentiam crederentur. Nam etiam nos hoc opinati fuimus aliquando. Sed cum eos, qui tunc resurrexerint, dicant inmoderatissimis carnalibus epulis uacaturos ... nullo modo ista possunt nisi a carnalibus credi.",
+      "context": "Augustine then reads the thousand years as the present age of the Church, with the first resurrection as the soul's rebirth. This became the Western view.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-20.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ccc-676",
+      "author": "Catechism of the Catholic Church",
+      "year": 1992,
+      "date": "1992",
+      "work": "Catechism of the Catholic Church",
+      "locus": "676",
+      "lang": "en",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "the Church has rejected even modified forms of this falsification of the kingdom to come under the name of millenarianism",
+      "original": "the Church has rejected even modified forms of this falsification of the kingdom to come under the name of millenarianism",
+      "context": "Catholic teaching rejects millenarianism.",
+      "source": {
+        "url": "https://www.vatican.va/archive/ENG0015/__P1V.HTM",
+        "edition": "Catechism of the Catholic Church 676"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "augsburg-1530-17",
+      "author": "Augsburg Confession (Lutheran)",
+      "year": 1530,
+      "date": "1530",
+      "work": "Augsburg Confession",
+      "locus": "Article XVII",
+      "lang": "en",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "They condemn also others who are now spreading … that before the resurrection of the dead the godly shall take possession of the kingdom of the world, the ungodly being everywhere suppressed.",
+      "original": "They condemn also others who are now spreading … that before the resurrection of the dead the godly shall take possession of the kingdom of the world, the ungodly being everywhere suppressed.",
+      "context": "Lutherans and Reformed also rejected an earthly reign before the resurrection.",
+      "source": {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "edition": "Augsburg Confession, Article XVII (1530), condemning the view"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "assemblies-of-god-millennium",
+      "author": "Assemblies of God",
+      "year": 1916,
+      "date": "Statement of Fundamental Truths (1916, revised)",
+      "work": "Statement of Fundamental Truths",
+      "locus": "Article 14",
+      "lang": "en",
+      "answer": "reign",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The second coming of Christ includes the rapture of the saints, which is our blessed hope, followed by the visible return of Christ with His saints to reign on earth for one thousand years.",
+      "original": "The second coming of Christ includes the rapture of the saints, which is our blessed hope, followed by the visible return of Christ with His saints to reign on earth for one thousand years.",
+      "context": "Premillennialism returned in the nineteenth century and is common among Evangelicals and Pentecostals.",
+      "source": {
+        "url": "https://ag.org/Beliefs/Statement-of-Fundamental-Truths",
+        "edition": "Assemblies of God, Statement of Fundamental Truths"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "savoy-1658-26-5",
+      "author": "Savoy Declaration (Congregationalist)",
+      "year": 1658,
+      "date": "1658",
+      "work": "Savoy Declaration",
+      "locus": "26.5",
+      "lang": "en",
+      "answer": "golden",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "we expect that in the latter days, antichrist being destroyed, the Jews called, and the adversaries of the kingdom of his dear Son broken, the churches of Christ being enlarged, and edified through a free and plentiful communication of light and grace, shall enjoy in this world a more quiet, peaceable and glorious condition than they have enjoyed.",
+      "original": "we expect that in the latter days, antichrist being destroyed, the Jews called, and the adversaries of the kingdom of his dear Son broken, the churches of Christ being enlarged, and edified through a free and plentiful communication of light and grace, shall enjoy in this world a more quiet, peaceable and glorious condition than they have enjoyed.",
+      "context": "The postmillennial hope: a golden age of the Church before Christ returns.",
+      "source": {
+        "url": "https://apostles-creed.org/wp-content/uploads/2014/07/the-savoy-declaration-of-faith-and-order-1658.pdf",
+        "edition": "Savoy Declaration of Faith and Order (1658)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 5.32–36",
+      "year": 180,
+      "why": "The fullest early account of the earthly kingdom, citing Papias.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
+    },
+    {
+      "author": "Origen of Alexandria",
+      "work": "On First Principles 2.11.2",
+      "year": 225,
+      "why": "Against those who expect bodily pleasures in the kingdom.",
+      "action": "relock-source",
+      "source_hint": "Koetschau GCS 22 (1913); Lommatzsch vol. 21"
+    },
+    {
+      "author": "John Nelson Darby",
+      "work": "Writings on the rapture",
+      "year": 1830,
+      "why": "The source of dispensational premillennialism.",
+      "action": "intake",
+      "source_hint": "Collected Writings (1867–1883)"
+    }
+  ],
+  "related": {
+    "timeline": "millennium",
+    "topics": [
+      "millennium"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

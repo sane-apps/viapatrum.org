@@ -1,0 +1,183 @@
+{
+  "id": "montanism-rejected",
+  "number": 81,
+  "group": "spirit",
+  "question": "What was Montanism, and why was it rejected?",
+  "short": "Montanism",
+  "search": [
+    "montanism",
+    "montanus",
+    "new prophecy",
+    "priscilla and maximilla",
+    "paraclete",
+    "ecstatic prophecy",
+    "pepuza",
+    "cataphrygians"
+  ],
+  "answers": [
+    {
+      "id": "new-prophecy",
+      "label": "The Paraclete spoke anew through Montanus and his prophetesses",
+      "short": "The New Prophecy",
+      "tag": "New Prophecy"
+    },
+    {
+      "id": "rejected",
+      "label": "Rejected: ecstatic prophecy against the Church's tradition",
+      "short": "Rejected",
+      "tag": "Rejected"
+    }
+  ],
+  "overview": [
+    {
+      "text": "About 170, Montanus in Phrygia, with the prophetesses Priscilla and Maximilla, began prophesying in ecstasy, speaking in the first person as God or the Spirit. Their followers called it the New Prophecy.",
+      "cites": [
+        "montanus-in-epiphanius-48-11",
+        "maximilla-in-eusebius-5-16"
+      ]
+    },
+    {
+      "text": "Asian bishops rejected it for its uncontrolled ecstasy \"contrary to the custom of the Church handed down\", and for setting new rules above the bishops. Tertullian joined it and attacked Catholics as \"psychics\".",
+      "cites": [
+        "anonymous-in-eusebius-5-16-montanus",
+        "tertullian-on-fasting-1",
+        "tertullian-modesty-21-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "montanus-in-epiphanius-48-11",
+      "author": "Montanus (as Epiphanius reports)",
+      "year": 172,
+      "date": "c. 172",
+      "work": "Oracle, quoted in Epiphanius, Panarion",
+      "locus": "48.11.1",
+      "lang": "grc",
+      "answer": "new-prophecy",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "\"I am the Lord God almighty, dwelling in a man.\"",
+      "original": "«ἐγὼ κύριος ὁ θεὸς ὁ παντοκράτωρ καταγινόμενος ἐν ἀνθρώπῳ»",
+      "context": "Epiphanius cites this as proof that Montanus confused himself with God. Montanists took it as God speaking through the prophet.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 41, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "maximilla-in-eusebius-5-16",
+      "author": "Maximilla (Montanist prophetess, quoted by Eusebius)",
+      "year": 175,
+      "date": "c. 175",
+      "work": "Oracle, quoted in Eusebius, Church History",
+      "locus": "5.16.17",
+      "lang": "grc",
+      "answer": "new-prophecy",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "\"I am driven away like a wolf from the sheep. I am not a wolf: I am word and spirit and power.\"",
+      "original": "῾διώκομαι ὡς λύκος ἐκ “προβάτων· οὐκ εἰμὶ λύκος· ῥῆμά εἰμι καὶ πνεῦμα καὶ “δύναμις᾿",
+      "context": "The anonymous writer demands that the spirit in Maximilla prove its power before the bishops who tried to examine it.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.16"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "anonymous-in-eusebius-5-16-montanus",
+      "author": "Anonymous anti-Montanist (quoted by Eusebius)",
+      "year": 192,
+      "date": "c. 192",
+      "work": "Treatise, quoted in Eusebius, Church History",
+      "locus": "5.16.7",
+      "lang": "grc",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "There is said to be a village in Mysia in Phrygia called Ardabau. There, they say, one of the new believers, named Montanus, when Gratus was proconsul of Asia, in his boundless desire for first place gave the adversary a way into himself. He was carried away in spirit, suddenly fell into a kind of possession and ecstasy, raved, and began to babble and speak strange things, prophesying contrary to the custom of the Church handed down by tradition and succession from the beginning.",
+      "original": "κώμη τις εἶναι λέγεται ἐν τῇ κατὰ “τὴν Φρυγίαν Μυσίᾳ, καλουμένη Ἀρδαβαῦ τοὔνομα· “ἔνθα φασί τινα τῶν νεοπίστων πρώτως, Μοντανὸν “τοὔνομα, κατὰ Γρᾶτον Ἀσίας ἀνθύπατον, ἐν ἀπιθυμίᾳ “ψυχῆς ἀμέτρῳ φιλοπρωτείας δόντα πάροδον εἰς “ἑαυτὸν τῷ ἀντικειμένῳ πνευματοφορηθῆναί τε καὶ “αἰφνιδίως ἐν κατοχῇ τινι καὶ παρεκστάσει γενόμενον “ἐνθουσιᾶν ἄρξασθαί τε λαλεῖν καὶ ξενοφωνεῖν, “παρὰ τὸ κατὰ παράδοσιν καὶ κατὰ διαδοχὴν ἄνωθεν “τῆς ἐκκλησίας",
+      "context": "The charge was ecstatic, uncontrolled prophecy against the Church's tradition, not prophecy as such. Synods in Asia examined and condemned it.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.16"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-on-fasting-1",
+      "author": "Tertullian",
+      "year": 213,
+      "date": "c. 213",
+      "work": "On Fasting, against the Psychics",
+      "locus": "1.1–3",
+      "lang": "la",
+      "answer": "new-prophecy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I would be surprised at these psychics if they were held only by lust, which makes them marry more than once, and not also torn by gluttony, which makes them hate fasts. ... I recognize, then, an animal faith devoted to the flesh ... so that it rightly accuses the spiritual discipline, its rival, in this matter of continence too.",
+      "original": "Mirarer psychicos istos, si sola luxuria tenerentur, qua saepius nubunt, si non etiam ingluuie lacerarentur, qua ieiunia oderunt. ... agnosco igitur animalem fidem studio carnis ... ut merito spiritalem disciplinam pro substantia aemulam in hac quoque specie continentiae accuset",
+      "context": "Tertullian, now a Montanist, calls Catholics \"psychics\" (unspiritual) for rejecting the New Prophecy's stricter fasts and ban on second marriage.",
+      "source": {
+        "book": "tertullian-on-fasting",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-modesty-21-b",
+      "author": "Tertullian",
+      "year": 215,
+      "date": "c. 215",
+      "work": "On Modesty",
+      "locus": "21.7",
+      "lang": "la",
+      "answer": "new-prophecy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "I have the Paraclete himself in the new prophets saying: \"The Church can forgive sin, but I will not, lest they commit others.\"",
+      "original": "qui ipsum paracletum in prophetis nouis habeo dicentem: potest ecclesia donare delictum, sed non faciam, ne et alia delinquant.",
+      "context": "The New Prophecy claimed to bring the Paraclete's stricter discipline, not new doctrine.",
+      "source": {
+        "book": "tertullian-on-modesty",
+        "section": "21"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Apollonius",
+      "work": "Against the Montanists, in Eusebius 5.18",
+      "year": 197,
+      "why": "Charges of greed and false prophecy. In the library; to be added.",
+      "action": "search",
+      "source_hint": "eusebius-church-history 5.18"
+    },
+    {
+      "author": "Epiphanius of Salamis",
+      "work": "Panarion 48–49",
+      "year": 377,
+      "why": "More oracles, including Priscilla's vision of Christ as a woman at Pepuza.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "montanism"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

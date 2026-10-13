@@ -1,0 +1,147 @@
+{
+  "id": "last-judgment-there-rewards-heaven",
+  "number": 78,
+  "group": "last-things",
+  "question": "What is the last judgment, and are there rewards in heaven?",
+  "short": "Judgment and rewards",
+  "search": [
+    "last judgment",
+    "judgment seat of christ",
+    "rewards in heaven",
+    "degrees of glory",
+    "crowns",
+    "judged by works",
+    "many mansions"
+  ],
+  "answers": [
+    {
+      "id": "by-works",
+      "label": "Christ will judge all, living and dead, by their deeds",
+      "short": "Judged by deeds",
+      "tag": "Judgment"
+    },
+    {
+      "id": "degrees",
+      "label": "There are different rewards and places in glory",
+      "short": "Degrees of reward",
+      "tag": "Degrees"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Polycarp and Justin confess Christ as judge of the living and the dead, raising the body and judging by deeds.",
+      "cites": [
+        "polycarp-philippians-2-judge",
+        "justin-1apol-8-judgment"
+      ]
+    },
+    {
+      "text": "Irenaeus, citing \"the presbyters\", read Jesus' \"many rooms\" (John 14:2) and the hundred-, sixty- and thirtyfold harvest as different dwellings in glory, though God will be seen everywhere.",
+      "cites": [
+        "irenaeus-ah-5-36-1"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "polycarp-philippians-2-judge",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "2.1–2",
+      "lang": "grc",
+      "answer": "by-works",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... believing in him who raised our Lord Jesus Christ from the dead and gave him glory and a throne at his right hand ... who comes as judge of the living and the dead ... And he who raised him from the dead will raise us also, if we do his will and walk in his commandments.",
+      "original": "πιστεύσαντες εἰς τὸν ἐγείραντα τὸν κύριον ἡμῶν Ἰησοῦν Χριστὸν ἐκ νεκρῶν καὶ δόντα αὐτῷ δόξαν καὶ θρόνον ἐκ δεξιῶν αὐτοῦ ... ὃς ἔρχεται κριτὴς ζώντων καὶ νεκρῶν ... ὁ δὲ ἐγείρας αὐτὸν ἐκ νεκρῶν καὶ ἡμᾶς ἐγερεῖ, ἐὰν ποιῶμεν αὐτοῦ τὸ θέλημα",
+      "context": "Christ is judge of the living and the dead, and God will require his blood from those who disobey him.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-8-judgment",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "8.4",
+      "lang": "grc",
+      "answer": "by-works",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "We say the same thing will happen, but by Christ, and to the same bodies united again with their souls, which will be punished with eternal punishment.",
+      "original": "ἡμεῖς δὲ τὸ αὐτὸ πρᾶγμά φαμεν γενήσεσθαι, ἀλλ᾿ ὑπὸ τοῦ Χριστοῦ, κἀν τοῖς αὐτοῖς σώμασι μετὰ τῶν ψυχῶν γινομένων καὶ αἰωνίαν κόλασιν κολασθησομένων",
+      "context": "Judgment by Christ, in the body, according to deeds (compare 1 Apology 12).",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-5-36-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "5.36.1–2",
+      "lang": "la",
+      "answer": "degrees",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And as the presbyters say, then those who are worthy of a dwelling in heaven will go there, that is, into the heavens; others will enjoy the delights of paradise; others will possess the splendor of the city; but everywhere God will be seen, as those who see him are worthy. This is the difference of dwelling between those who bore fruit a hundredfold, sixtyfold and thirtyfold: some will be taken up into heaven, some will live in paradise, some will dwell in the city. And that is why the Lord said there are many dwellings with the Father.",
+      "original": "Et quemadmodum Presbyteri dicunt, tunc qui digni fuerint coelorum conversatione, illuc transibunt, id est, in coelos; alii ... Paradisi deliciis utentur; alii autem speciositatem civitatis possidebunt: ubique autem Deus videbitur, ... quemadmodum digni erunt videntes eum. Esse autem distantiam hanc habitationis eorum qui centum fructificaverunt, et eorum qui sexaginta, et eorum qui triginta: quorum quidam in coelum assumentur, alii in paradiso conversabuntur, alii in civitate inhabitabunt: et propter hoc dixisse Dominum, multas esse apud Patrem mansiones.",
+      "context": "\"The presbyters, the disciples of the apostles\" are Irenaeus's source. The Greek of part of this passage survives too.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Jerome",
+      "work": "Against Jovinian 2.18–34",
+      "year": 393,
+      "why": "Degrees of reward, against Jovinian's equal reward for all.",
+      "action": "intake",
+      "source_hint": "Migne PL 23"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 20.1–5 and 22.30",
+      "year": 426,
+      "why": "The last judgment and the different degrees of honor in the city of God.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-20.txt"
+    },
+    {
+      "author": "Cyprian of Carthage",
+      "work": "On Works and Almsgiving 26",
+      "year": 253,
+      "why": "Rewards for works of mercy on the day of judgment.",
+      "action": "search",
+      "source_hint": "cyprian-on-works-and-alms"
+    }
+  ],
+  "related": {
+    "topics": [
+      "judgment"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

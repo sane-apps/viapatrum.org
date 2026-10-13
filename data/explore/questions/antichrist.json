@@ -1,0 +1,147 @@
+{
+  "id": "antichrist",
+  "number": 79,
+  "group": "last-things",
+  "question": "Who is the Antichrist?",
+  "short": "The Antichrist",
+  "search": [
+    "antichrist",
+    "man of sin",
+    "man of lawlessness",
+    "2 thessalonians 2",
+    "666",
+    "beast",
+    "number of the beast",
+    "pope antichrist"
+  ],
+  "answers": [
+    {
+      "id": "person",
+      "label": "A single man who will come at the end and deceive many",
+      "short": "A man at the end",
+      "tag": "Person"
+    },
+    {
+      "id": "deniers",
+      "label": "All who deny Christ come in the flesh, already present",
+      "short": "False teachers now",
+      "tag": "Deniers"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Polycarp, following 1 John, calls every denier of Christ's flesh \"antichrist\".",
+      "cites": [
+        "polycarp-philippians-7-antichrist"
+      ]
+    },
+    {
+      "text": "From Irenaeus on, writers also expected one man at the end: Cyril describes a magician who seizes Roman power and calls himself Christ. Augustine was unsure whether \"the temple\" is Jerusalem's or the Church, and notes some who took Antichrist as a whole body of people.",
+      "cites": [
+        "cyril-catechesis-15-11",
+        "augustine-city-of-god-20-19"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "polycarp-philippians-7-antichrist",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "7.1",
+      "lang": "grc",
+      "answer": "deniers",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Everyone who does not confess that Jesus Christ has come in the flesh is antichrist.",
+      "original": "Πᾶς γὰρ ὃς ἂν μὴ ὁμολογῇ Ἰησοῦν Χριστὸν ἐν σαρκὶ ἐληλυθέναι, ἀντιχριστός ἐστιν",
+      "context": "Following 1 John: \"antichrist\" for false teachers already present.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-catechesis-15-11",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Catechetical Lectures",
+      "locus": "15.11",
+      "lang": "grc",
+      "answer": "person",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "As the devil, before Christ's first coming as God born of a virgin, slandered it beforehand by idol stories of false gods born of women, so before Christ's second coming the adversary, using the hope of the simple and especially of the circumcised, brings forward a certain man, a magician, most skilled in the deceitful arts of sorcery and spells, who will seize for himself the power of the Roman empire and falsely call himself Christ, and by the name of Christ deceive the Jews who expect the anointed one.",
+      "original": "Ἀλλ' ὥσπερ, μέλλοντος αὐτοῦ πρότερον ἐνανθρωπεῖν καὶ ἐκ παρθένου γεννᾶσθαι προσδοκωμένου θεοῦ, προδιέβαλεν ὁ διάβολος τὸ πρᾶγμα, κακούργως ἐν εἰδωλολατρείᾳ θεοὺς ψευδεῖς γεννῶντας καὶ γεννωμένους ὑπὸ γυναικῶν προμυθολογήσας ... οὕτως μέλλοντος Χριστοῦ δεύτερον ἔρχεσθαι τοῦ ἀληθοῦς ἐφόδιον λαμβάνων τὴν τῶν ἀκάκων προσδοκίαν ὁ ἀντικείμενος καὶ μάλιστα τῶν ἐκ περιτομῆς ἄγει τινὰ ἄνθρωπον μάγον καὶ τῆς ἐν φαρμακείαις καὶ ἐπαοιδαῖς ἀπατηλῆς κακοτεχνίας ἐμπειρότατον, ἁρπάζοντα μὲν ἑαυτῷ τῆς τῶν Ῥωμαίων βασιλείας τὴν ἐξουσίαν, ψευδῶς δὲ Χριστὸν ἑαυτὸν ἀποκαλοῦντα, καὶ διὰ μὲν τῆς τοῦ Χριστοῦ προσηγορίας Ἰουδαίους τοὺς τὸν ἠλειμμένον προσδοκῶντας ἀπατῶντα",
+      "context": "Cyril goes on: he will rebuild the Jerusalem temple and reign three and a half years.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-catecheses-ad-illuminandos.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-20-19",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "20.19.2",
+      "lang": "la",
+      "answer": "person",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "No one doubts that he said this of the Antichrist ... But in which temple of God he will sit is uncertain: whether in the ruin of the temple built by King Solomon, or in the Church. ... Hence some want the Antichrist here to mean not the leader himself but, in a way, his whole body, that is, the multitude of people who belong to him together with their leader.",
+      "original": "Nulli dubium est eum de Antichristo ista dixisse ... Sed in quo templo Dei sit sessurus, incertum est; utrum in illa ruina templi, quod a Salomone rege constructum est, an uero in ecclesia. ... Vnde nonnulli non ipsum principem, sed uniuersum quodam modo corpus eius, id est ad eum pertinentem hominum multitudinem, simul cum ipso suo principe hoc loco intellegi Antichristum uolunt",
+      "context": "Augustine admits he does not know what Paul meant by \"what restrains\" (2 Thessalonians 2:6).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-20.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 5.25–30",
+      "year": 180,
+      "why": "The Antichrist from the tribe of Dan; 666 as Teitan or Lateinos.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-5.txt"
+    },
+    {
+      "author": "Hippolytus of Rome",
+      "work": "On Christ and the Antichrist",
+      "year": 200,
+      "why": "The first treatise on the Antichrist. In the library's Achelis OCR, poor.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/hippolytus_werke1_achelis1897_djvu.txt"
+    },
+    {
+      "author": "Martin Luther; Westminster Confession (1646 text)",
+      "work": "Smalcald Articles 2.4; WCF 25.6 (original)",
+      "year": 1537,
+      "why": "The Reformers identified the papacy as Antichrist. The fetched Westminster text is the American revision, which removed the phrase.",
+      "action": "intake",
+      "source_hint": "Westminster Confession 1646 printing (archive.org)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "antichrist"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

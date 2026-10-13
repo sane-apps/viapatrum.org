@@ -1,0 +1,168 @@
+{
+  "id": "miracles-continue-after-apostles",
+  "number": 83,
+  "group": "spirit",
+  "question": "Did miracles continue after the apostles?",
+  "short": "Miracles after the apostles",
+  "search": [
+    "miracles",
+    "exorcism",
+    "healing",
+    "raising the dead",
+    "cessationism",
+    "signs and wonders",
+    "early church miracles"
+  ],
+  "answers": [
+    {
+      "id": "continue",
+      "label": "Yes: exorcisms, healings and other wonders went on",
+      "short": "Continued",
+      "tag": "Continued"
+    },
+    {
+      "id": "ceased",
+      "label": "The great signs ended with the apostolic age",
+      "short": "Ended",
+      "tag": "Ended"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Second-century apologists claimed present miracles as evidence: exorcism in Jesus' name (Justin), healings and even raisings from the dead (Irenaeus), and a public test of demons before Roman judges (Tertullian).",
+      "cites": [
+        "justin-dialogue-76",
+        "irenaeus-in-eusebius-5-7-b",
+        "tertullian-apology-23"
+      ]
+    },
+    {
+      "text": "By the late fourth century, some said the great signs had ceased, as Chrysostom did of tongues. Augustine first agreed, then recorded many miracles at the martyrs' shrines (City of God 22.8).",
+      "cites": [
+        "chrysostom-1-corinthians-homily-29-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-dialogue-76",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "76.6",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And now we who believe in Jesus our Lord, crucified under Pontius Pilate, exorcise all demons and evil spirits, and have them subject to us.",
+      "original": "Καὶ νῦν ἡμεῖς, οἱ πιστεύοντες ἐπὶ τὸν σταυρωθέντα ἐπὶ Ποντίου Πιλάτου Ἰησοῦν κύριον ἡμῶν, τὰ δαιμόνια πάντα καὶ πνεύματα πονηρὰ ἐξορκίζοντες ὑποτασσόμενα ἡμῖν ἔχομεν.",
+      "context": "Exorcism in the name of Jesus was the most common claim of present miracles.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "76"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-in-eusebius-5-7-b",
+      "author": "Irenaeus of Lyons (quoted by Eusebius)",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies 2.32.4 and 5.6.1, in Eusebius, Church History",
+      "locus": "5.7.4–6",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Some drive out demons truly and certainly ... others heal the sick by laying on of hands and make them well. And already, as we said, even the dead have been raised and remained with us many years.",
+      "original": "οἶ μὲν γὰρ δαίμονας ἐλαύνουσι βεβαίως καὶ ἀληθῶς ... ἄλλοι δὲ τοὺς κάμνοντας δια τῆς τῶν χειρῶν ἐπιθέσεως ἰῶνται καὶ ὑγιεῖς ἀποκαθιστᾶσιν. ἤδη δὲ, καθὼς ἔφαμεν, καὶ νεκροὶ ἠγέρθησαν, καὶ παρέμειναν σὺν ἡμῖν ἔτεσιν ἱκανοῖς.",
+      "context": "Irenaeus claims raisings from the dead in his own time.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-23",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "23.4–6",
+      "lang": "la",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let someone be brought before your tribunals who is plainly possessed by a demon. Ordered by any Christian to speak, that spirit will confess itself a demon as truly as elsewhere it falsely calls itself a god. ... Unless they confess themselves demons, not daring to lie to a Christian, then shed that impudent Christian's blood on the spot!",
+      "original": "Edatur hic aliqui ibidem sub tribunalibus vestris, quem daemone agi constet; iussus a quolibet Christiano loqui spiritus ille tam se daemonem confitebitur de vero quam alibi deum de falso. ... nisi se daemones confessi fuerint, Christiano mentiri non au",
+      "context": "Tertullian offers a public test before Roman judges.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-1-corinthians-homily-29-b",
+      "author": "John Chrysostom",
+      "year": 392,
+      "date": "c. 392",
+      "work": "Homilies on 1 Corinthians",
+      "locus": "29.1, on 1 Corinthians 12:1",
+      "lang": "grc",
+      "answer": "ceased",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "This whole passage is very obscure. The obscurity comes from our ignorance of the facts and from their absence, since they used to happen then but do not happen now. And why do they not happen now? ... Why did they happen then and no longer now? Let us put that off to another time. ... What then happened then? Whoever was baptized at once spoke in tongues.",
+      "original": "Τοῦτο ἅπαν τὸ χωρίον σφόδρα ἐστὶν ἀσαφές· τὴν δὲ ἀσάφειαν ἡ τῶν πραγμάτων ἄγνοιά τε καὶ ἔλλειψις ποιεῖ τῶν τότε μὲν συμβαινόντων, νῦν δὲ οὐ γινομένων. Καὶ τίνος ἕνεκεν οὐ γίνεται νῦν; ... Τί δήποτε γὰρ τότε μὲν ἐγίνετο, νῦν δὲ οὐκέτι; Ἀλλὰ τοῦτο μὲν εἰς αὖθις ἀναβαλλώμεθα, τέως δὲ τὰ συμβαίνοντα τότε λέγωμεν. Τί οὖν τότε συνέβαινεν; Εἴ τις ἐβαπτίσατο, γλώσσαις εὐθέως ἐλάλει",
+      "context": "Chrysostom elsewhere explains that miracles were needed at the beginning, to plant the faith, and are less needed now.",
+      "source": {
+        "book": "chrysostom-homiliae-1-corinthios",
+        "section": "16.121"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 22.8; Retractations 1.13.7",
+      "year": 427,
+      "why": "His change of mind on present miracles.",
+      "action": "intake",
+      "source_hint": "Dombart (Teubner); Migne PL 32"
+    },
+    {
+      "author": "Gregory of Nyssa",
+      "work": "Life of Gregory the Wonderworker",
+      "year": 380,
+      "why": "The great third-century wonderworker. In the library; to be added.",
+      "action": "search",
+      "source_hint": "gregory-nyssa-vita-gregorii-thaumaturgi"
+    },
+    {
+      "author": "Athanasius",
+      "work": "Life of Antony",
+      "year": 360,
+      "why": "Healings and exorcisms of the first monk.",
+      "action": "intake",
+      "source_hint": "Migne PG 26"
+    }
+  ],
+  "related": {
+    "topics": [
+      "miracles"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
