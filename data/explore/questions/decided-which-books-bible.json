@@ -1,0 +1,331 @@
+{
+  "id": "decided-which-books-bible",
+  "number": 1,
+  "group": "bible",
+  "question": "Who decided which books are in the Bible, and when?",
+  "short": "Who decided the Bible's books",
+  "search": [
+    "canon",
+    "new testament canon",
+    "who chose the books",
+    "bible books",
+    "muratorian",
+    "festal letter",
+    "council of carthage",
+    "council of hippo"
+  ],
+  "answers": [
+    {
+      "id": "received",
+      "label": "The churches kept what they had received from the apostles",
+      "short": "Received",
+      "tag": "Received"
+    },
+    {
+      "id": "listed",
+      "label": "Bishops and councils wrote down lists",
+      "short": "Listed",
+      "tag": "Listed"
+    },
+    {
+      "id": "defined",
+      "label": "A council made the list binding",
+      "short": "Defined",
+      "tag": "Defined"
+    },
+    {
+      "id": "self",
+      "label": "Scripture's authority comes from God; the Church recognizes it",
+      "short": "Self-attesting",
+      "tag": "Self"
+    }
+  ],
+  "overview": [
+    {
+      "text": "No single meeting chose the books. By about 180 the four Gospels and Paul's letters were already received everywhere, and bishops tested other books by asking whether they had been handed down from the apostles.",
+      "cites": [
+        "irenaeus-ah-3-11-8",
+        "serapion-in-eusebius-6-12",
+        "origen-in-eusebius-6-25-4"
+      ]
+    },
+    {
+      "text": "Lists come next. The Muratorian Fragment names the books read in church and why the Shepherd is not. Eusebius, around 325, sorts books into recognized, disputed and spurious; only a few short letters and Revelation were still in question.",
+      "cites": [
+        "muratorian-fragment",
+        "eusebius-he-3-25"
+      ]
+    },
+    {
+      "text": "In the fourth century, councils and bishops wrote the lists down: Laodicea in Asia Minor, and in North Africa the councils of Hippo and Carthage, whose list Augustine follows. Augustine's rule is to follow what most churches, and above all the apostolic churches, received.",
+      "cites": [
+        "laodicea-60-nt",
+        "augustine-christian-doctrine-2-8-12"
+      ]
+    },
+    {
+      "text": "A binding definition came much later. Trent fixed the list for Catholics in 1546. The Westminster Confession of 1646 holds the same New Testament but says Scripture's authority comes from God, not from the Church.",
+      "cites": [
+        "trent-1546-canon",
+        "westminster-1-4"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "irenaeus-ah-3-11-8",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.11.8",
+      "lang": "grc",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Why are the Gospels neither more nor fewer in number? Since there are four regions of the world we live in and four main winds, and the Church is scattered over all the earth, and the pillar and support of the Church is the gospel and the Spirit of life, it is fitting that she has four pillars, breathing out incorruption on every side and setting people's life aflame. ... The Word, the maker of all things, ... gave us the gospel in four forms, held together by one Spirit.",
+      "original": "Τί δήποτε οὔτε πλείονα οὔτε ἐλάττονα τὸν ἀριθμόν εἰσι τὰ εὐαγγέλια; Ἐπεὶ γὰρ τέσσαρα κλίματα τοῦ κόσμου ἐν ᾧ ἐσμὲν καὶ τέσσαρα καθολικὰ πνεύματα, κατέσπαρται δὲ ἡ ἐκκλησία ἐπὶ πάσης τῆς γῆς, στῦλος δὲ καὶ στήριγμα ἐκκλησίας τὸ εὐαγγέλιον καὶ Πνεῦμα ζωῆς, εἰκότως τέσσαρας ἔχειν αὐτὴν στύλους πανταχόθεν πνέοντας τὴν ἀφθαρσίαν καὶ ἀναζωπυροῦντας τοὺς ἀνθρώπους. ... ἔδωκεν ἡμῖν τετράμορφον τὸ εὐαγγέλιον, ἑνὶ δὲ πνεύματι συνεχόμενον.",
+      "context": "Irenaeus writes against groups that used one Gospel only, or many. His reasons from nature are illustrations; his point is that the four were already fixed and received across the Church by about 180.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-3.txt",
+        "edition": "Greek fragment, Migne PG 7, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "serapion-in-eusebius-6-12",
+      "author": "Serapion of Antioch",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Letter on the Gospel of Peter, preserved in Eusebius, Church History",
+      "locus": "6.12.3–4",
+      "lang": "grc",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "We, brothers, receive Peter and the other apostles as Christ. But the writings that falsely bear their names we reject, as men of experience, knowing that we did not receive such things. When I was with you, I supposed you all held the right faith, and without going through the gospel they put forward under Peter's name I said: if this is the only thing that seems to trouble you, let it be read. But now I have learned that their mind was hiding some heresy.",
+      "original": "ἡμεῖς γὰρ, ἀδελφοὶ, καὶ “Πέτρον καὶ τοὺς ἄλλους ἀποστόλους ἀποδεχόμεθα “ὡς Χριστὸν, τὰ δὲ ὀνόματι αὐτῶν ψευδεπίγραφα ὡς “ἔμπειροι παραιτούμεθα, γινώσκοντες ὅτι τὰ τοιαῦτα “οὐ παρελάβομεν. ἐγὼ γὰρ γενόμενος παρ’ ὑμῖν ‘ὑπενόουν τοὺς πάντας ὀρθῇ πίστει προσφέρεσθαι, καὶ μὴ διελθὼν τὸ ὑπ’ αὐτῶν προφερόμενον ὀνό- “ματι Πέτρου εὐαγγέλιον εἶπον ὅτι, εἰ τοῦτό ἐστι “μόνον τὸ δοκοῦν ὑμῖν παρέχειν μικροψυχίαν, ἀναγινωσκέσθω. νῦν δὲ μαθὼν ὅτι αἱρέσει τινὶ ὁ νοῦς “αὐτῶν ἐνεφώλευεν",
+      "context": "A bishop's test in practice: is this what we received from the apostles? Serapion first let a congregation at Rhossus read the Gospel of Peter, then withdrew it once he read it.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "6.12"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-luke-1",
+      "author": "Origen of Alexandria",
+      "year": 234,
+      "date": "c. 234",
+      "work": "Homilies on Luke",
+      "locus": "1.2",
+      "lang": "la",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Church has four Gospels; the heresies have very many. One of them is written \"according to the Egyptians\", another \"according to the Twelve Apostles\". Basilides even dared to write a gospel and put his own name on it. ... Only four Gospels have been approved, from which the teachings are to be drawn in the person of our Lord and Savior. I know a gospel called \"according to Thomas\", and one \"according to Matthias\", and we have read many others, so as not to seem ignorant for the sake of those who think they know something if they know these. But in all of them we approve nothing except what the Church does: only four Gospels are to be received.",
+      "original": "Ecclesia quatuor habet evangelia, haereses pluri- ma, e quibus quoddam scribitur secundum Aegyptios, aliud juxta duodecim Apostolos. Ausus fuit et Basilides scribere evangelium, et suo illud nomine titulare. ... quatuor tantum evangelia sunt probata, e quibus sub persona Domini et Salvatoris nostri proferenda sunt do- gmata. Scio quoddam evangelium, quod appellatur secun- dum Thomam, et juxta Mathiam: et alia plura legi- mus, ne quid ignorare videremur propter eos, qui se pu- tant aliquid scire, si ista cognoverint. Sed in his omni- bus nihil aliud probamus, nisi quod ecclesia, id est, qua- tuor tantum evangelia recipienda.",
+      "context": "Origen read the other gospels himself. He rejects them because the Church did not receive them. Survives in Jerome's Latin.",
+      "source": {
+        "witness": "books/origen-luke-homilies/sources/witnesses/lommatzsch-t5-1835_djvu.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 5 (1835), Homily 1",
+        "ia": "origenous-ta-heuriskomena-panta-t.-5-1835"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-in-eusebius-6-25-4",
+      "author": "Origen of Alexandria",
+      "year": 245,
+      "date": "c. 245",
+      "work": "Commentary on Matthew, preserved in Eusebius, Church History",
+      "locus": "6.25.4",
+      "lang": "grc",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "As I have learned by tradition about the four Gospels, which alone are undisputed in the Church of God under heaven: first was written the one according to Matthew, once a tax collector and later an apostle of Jesus Christ, who published it for believers from Judaism, composed in Hebrew letters; second the one according to Mark, who wrote it as Peter guided him.",
+      "original": "ὡς ἐν παραδόσει μαθὼν περὶ “τῶν τεσσάρων εὐαγγελίων, ἃ καὶ μόνα ἀναντίρρητά “ἐστιν ἐν τῇ ὑπὸ τὸν οὐρανὸν ἐκκλησίᾳ τοῦ θεοῦ, “ὅτι πρῶτον μὲν γέγραπται τὸ κατὰ τόν ποτε ῾νην, ὕστερον δὲ ἀπόστολον Ἰησοῦ Χριστοῦ Ματ- “θαῖον, ἐκδεδωκότα αὐτὸ τοῖς ἀπὸ Ἰουδαϊσμοῦ πι- “στεύσασι, γράμμασιν Ἑβραϊκοῖς συντεταγμένον· “ δεύτερον δὲ τὸ κατὰ Μάρκον",
+      "context": "Origen speaks of tradition, not of a ruling. The word \"tax collector\" is a gap in the library's Greek, filled from the standard text.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "6.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "muratorian-fragment",
+      "author": "Muratorian Fragment (author unknown)",
+      "year": 190,
+      "date": "c. 190",
+      "work": "Muratorian Fragment",
+      "locus": "lines 2–9, 73–80",
+      "lang": "la",
+      "answer": "listed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The third book of the Gospel is that according to Luke. Luke, the physician, after Christ's ascension, when Paul had taken him along as a companion on his travels, wrote it in his own name from what he heard; he himself did not see the Lord in the flesh. ... But Hermas wrote the Shepherd very recently, in our own times, in the city of Rome, while his brother Pius the bishop sat in the chair of the church of Rome. So it ought to be read, but it cannot be read publicly to the people in church, either among the prophets, whose number is complete, or among the apostles, for it is after their time.",
+      "original": "tertium euangelii librum secundum Lucam. Lucas iste medicus post ascensum Christi cum eum Paulus quasi itineris sui socium secum adsumsisset nomine suo ex opinione conscripsit — Dominum tamen nec ipse uidit in carne ... Pastorem uero nuperrime temporibus nostris in Urbe Roma Hermas conscripsit, sedente cathedra Urbis Romae ecclesiae Pio Episcopo fratre eius; et ideo legi eum quidem oportet, se publicare uero in ecclesia populo, neque inter Prophetas, completum numero, neque inter apostolos, in finem temporum potest.",
+      "context": "The oldest surviving list of New Testament books, known from an eighth-century Latin copy. Most date it about 180 to 200; a few scholars argue for the fourth century. The Latin is barely grammatical; the text here is the usual restored reading. The test it applies to the Shepherd is apostolic date.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-muratorian-fragment.txt",
+        "edition": "Restored Latin from Theron, Evidence of Tradition (1957), as given at earlychristianwritings.com; single manuscript, Milan, Ambrosian Library I 101 sup."
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "eusebius-he-3-25",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Church History",
+      "locus": "3.25.1–6",
+      "lang": "grc",
+      "answer": "listed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "First we must place the holy four of the Gospels, followed by the Acts of the Apostles. After this, the letters of Paul; then the first letter of John and likewise the first of Peter must be accepted. After these, if it seems right, the Revelation of John. These are the recognized books. Among the disputed books, which are nonetheless known to most, are the letter called James's, and Jude's, the second of Peter, and the second and third of John. Among the spurious are the Acts of Paul, the Shepherd, the Revelation of Peter, the letter of Barnabas and the so-called Teachings of the Apostles. ... We have made this list so that we may know these books, and also those that heretics put forward under the apostles' names, such as the gospels of Peter, Thomas and Matthias, which no churchman in the succession has ever thought fit to mention in writing.",
+      "original": "ἐν πρώτοις τὴν ἁγίαν τῶν εὐαγγελίων τετρακτὺν, οἷς ἴπε- ται ἡ τῶν πράξεων τῶν ἀποστόλων γραφή. μετὰ δὲ ταύτην τὰς Παύλου καταλεκτέον ἐπιστολὰς, αἷς ἐξῆς τὴν φερομένην Ἰωάννου προτέραν καὶ ὁμοίως τὴν Πέτρου κυρωτέον ἐπιστολήν. ἐπὶ τούτοις τακτέον, εἴ γε φανείη, τὴν Ἀποκάλυψιν Ἰωάννου ... καὶ ταῦτα μὲν ἐν ὁμολογουμένοις. τῶν δ᾿ ἀντιλεγομένων, γνωρίμων δ᾿ οὖν ὅμως τοῖς πολλοῖς, ἡ λεγομένη Ἰακώβου φέρεται καὶ ἡ Ἰούδα, ἥ τε Πέτρου δευτέρα ἐπιστολὴ, καὶ ἡ ὀνομαζομένη δευτέρα καὶ τρίτη Ἰωάννου ... ἤτοι ὡς Πέτρου καὶ Θωμᾶ καὶ Ματθία ἢ καί τινων παρὰ τούτους ἄλλων εὐαγγέλια περιεχούσας",
+      "context": "Written about the time of Nicaea. Eusebius sorts books by how widely the churches received them. Most of the New Testament is settled; a few short letters and Revelation are still debated.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "laodicea-60-nt",
+      "author": "Council of Laodicea",
+      "year": 363,
+      "date": "c. 363",
+      "work": "Canons",
+      "locus": "60",
+      "lang": "grc",
+      "answer": "listed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "These are the books of the New Covenant: four Gospels, according to Matthew, according to Mark, according to Luke, according to John; the Acts of the Apostles; seven catholic letters, one of James, two of Peter, three of John, one of Jude; fourteen letters of Paul.",
+      "original": "Τὰ δὲ τῆς Καινῆς Διαθήκης ταῦτα· Εὐαγγέλια τέσσαρα, κατὰ Ματθαῖον, κατὰ Μάρκον, κατὰ Λουκᾶν, κατὰ Ἰωάννην· Πράξεις Ἀποστόλων· Ἐπιστολαὶ καθολικαὶ ἑπτά, Ἰακώβου μία, Πέτρου δύο, Ἰωάννου τρεῖς, Ἰούδα μία· Ἐπιστολαὶ Παύλου δεκατέσσαρες",
+      "context": "A local council in Asia Minor. Its list has every New Testament book except Revelation. Some old copies lack this canon, so it may have been added later.",
+      "source": {
+        "book": "council-of-laodicea-canons",
+        "section": "60"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-christian-doctrine-2-8-12",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "On Christian Teaching",
+      "locus": "2.8.12",
+      "lang": "la",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In the canonical Scriptures let the reader follow the authority of as many catholic churches as possible, among them those that were counted worthy to have an apostle's seat and to receive his letters. He will keep this rule: prefer the books accepted by all the catholic churches to those some do not accept. Among those not accepted by all, prefer the ones more and weightier churches accept.",
+      "original": "In canonicis autem Scripturis Ecclesiarum catholicarum quam plurium auctoritatem sequatur, inter quas sane illae sint, quae apostolicas Sedes habere et epistolas accipere meruerunt. Tenebit igitur hunc modum in Scripturis canonicis, ut eas quae ab omnibus accipiuntur Ecclesiis catholicis praeponat eis quas quaedam non accipiunt. In eis vero quae non accipiuntur ab omnibus, praeponat eas quas plures gravioresque accipiunt",
+      "context": "Augustine's test is reception by the churches, weighted toward churches the apostles founded. He then gives his list (2.8.13).",
+      "source": {
+        "book": "augustine-on-christian-doctrine",
+        "section": "2.12"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1546-canon",
+      "author": "Council of Trent (Catholic)",
+      "year": 1546,
+      "date": "1546",
+      "work": "Session 4",
+      "locus": "Decree on the Canonical Scriptures",
+      "lang": "en",
+      "answer": "defined",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone receive not, as sacred and canonical, the said books entire with all their parts, as they have been used to be read in the Catholic Church, and as they are contained in the old Latin vulgate edition; ... let him be anathema.",
+      "original": "If anyone receive not, as sacred and canonical, the said books entire with all their parts",
+      "context": "The first binding definition of the full canon for Catholics. Earlier councils (Hippo 393, Carthage 397, Florence 1442) had given the same list without an anathema.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/fourth-session.htm",
+        "edition": "Waterworth English (1848)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1-4",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "1.4",
+      "lang": "en",
+      "answer": "self",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "The authority of the Holy Scripture, for which it ought to be believed, and obeyed, dependeth not upon the testimony of any man, or church; but wholly upon God (who is truth itself) the author thereof: and therefore it is to be received, because it is the Word of God.",
+      "original": "The authority of the Holy Scripture, for which it ought to be believed, and obeyed, dependeth not upon the testimony of any man, or church; but wholly upon God (who is truth itself) the author thereof: and therefore it is to be received, because it is the Word of God.",
+      "context": "Reformed churches list the same 66 books, but say the Church recognizes Scripture's authority rather than conferring it. The next paragraph allows that the Church's testimony moves people to esteem it.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Athanasius of Alexandria",
+      "work": "Festal Letter 39",
+      "year": 367,
+      "why": "The first list of exactly our 27 New Testament books.",
+      "action": "intake",
+      "source_hint": "Greek fragments, Migne PG 26"
+    },
+    {
+      "author": "Councils of Hippo (393) and Carthage (397)",
+      "work": "Canon on the Scriptures",
+      "year": 397,
+      "why": "The African list of both Testaments.",
+      "action": "intake",
+      "source_hint": "Bruns, Canones apostolorum et conciliorum (1839)"
+    },
+    {
+      "author": "Cyril of Jerusalem",
+      "work": "Catechetical Lecture 4.36",
+      "year": 350,
+      "why": "A New Testament list without Revelation. Its Greek is now fetched; the passage was not found by search.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-catecheses-ad-illuminandos.txt"
+    },
+    {
+      "author": "Innocent I",
+      "work": "Letter to Exsuperius of Toulouse",
+      "year": 405,
+      "why": "A Roman bishop's list.",
+      "action": "intake",
+      "source_hint": "Migne PL 20"
+    }
+  ],
+  "related": {
+    "topics": [
+      "canon-rule-of-truth"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

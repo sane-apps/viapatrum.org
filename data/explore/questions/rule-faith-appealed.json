@@ -1,0 +1,204 @@
+{
+  "id": "rule-faith-appealed",
+  "number": 6,
+  "group": "bible",
+  "question": "What was \"the rule of faith\" the early church appealed to?",
+  "short": "The rule of faith",
+  "search": [
+    "rule of faith",
+    "regula fidei",
+    "rule of truth",
+    "canon of truth",
+    "creed",
+    "apostolic preaching"
+  ],
+  "answers": [
+    {
+      "id": "summary",
+      "label": "A short summary of the faith received from the apostles",
+      "short": "Summary of the faith",
+      "tag": "Summary"
+    },
+    {
+      "id": "key",
+      "label": "The measure for reading Scripture and judging questions",
+      "short": "Key to reading",
+      "tag": "Key"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The rule of faith was the outline of belief every church taught to converts: one God the Father and Creator; Jesus Christ his Son, born of the Virgin, crucified, risen, coming to judge; the Holy Spirit who spoke through the prophets.",
+      "cites": [
+        "irenaeus-ah-1-10-1",
+        "tertullian-veiling-1",
+        "novatian-trinity-9"
+      ]
+    },
+    {
+      "text": "It was the same everywhere, Irenaeus says, from Germany to the East. It was also the measure for reading Scripture and for deciding which questions are open.",
+      "cites": [
+        "irenaeus-ah-1-10-1",
+        "tertullian-prescription-12",
+        "origen-first-principles-preface",
+        "augustine-christian-doctrine-3-2-2"
+      ]
+    },
+    {
+      "text": "The baptismal creeds, such as the Apostles' Creed, grew out of it. See the Creeds and churches page.",
+      "cites": [
+        "tertullian-veiling-1"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "irenaeus-ah-1-10-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "1.10.1–2",
+      "lang": "grc",
+      "answer": "summary",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Church, though scattered through the whole world to the ends of the earth, received from the apostles and their disciples this faith: in one God, the Father Almighty, who made heaven and earth and the seas and all that is in them; and in one Christ Jesus, the Son of God, who became flesh for our salvation; and in the Holy Spirit, who proclaimed through the prophets the plan of God, the comings, the birth from the Virgin, the passion, the rising from the dead, and the bodily ascension into heaven of the beloved ... Having received this preaching and this faith, the Church, though scattered through the whole world, guards it carefully as if living in one house. ... The churches founded in Germany have not believed or handed down otherwise, nor those in Spain, nor among the Celts, nor in the East.",
+      "original": "Ἡ μὲν γὰρ Ἐκκλησία, καίπερ καθʼ ὅλης τῆς οἰκουμένης ἕως περάτων τῆς γῆς διεσπαρμένη, παρὰ δὲ τῶν Ἀποστόλων, καὶ τῶν ἐκείνων μαθητῶν παραλαβοῦσα τὴν εἰς ἕνα Θεὸν Πατέρα παντοκράτορα, τὸν πεποιηκότα τὸν οὐρανὸν, καὶ τὴν γῆν, καὶ τὰς θαλάσσας, καὶ πάντα τὰ ἐν αὐτοῖς, πίστιν· καὶ εἰς ἕνα Χριστὸν Ἰησοῦν, τὸν υἱὸν τοῦ Θεοῦ, τὸν σαρκωθέντα ὑπὲρ τῆς ὑμετέρας σωτηρίας ... ΤΟΥΤΟ τὸ κήρυγμα παρειληφυῖα, καὶ ταύτην τὴν πίστιν, ὡς προέφαμεν, ἡ Ἐκκλησία, καίπερ ἐν ὅλῳ τῷ κόσμῳ διεσπαρμένη, ἐπιμελῶς φυλάσσει, ὡς ἔνα οἶκον οἰκοῦσα ... Καὶ οὔτε αἱ ἐν Γερμανίαις ἱδρυμέναι ἐκκλησίαι ἄλλως πεπιστεύκασιν, ἢ ἄλλως παραδιδόασιν, οὔτε ἐν ταῖς Ἰβηρίαις, οὔτε ἐν Κελτοῖς, οὔτε κατὰ τὰς ἀνατολὰς",
+      "context": "The fullest early statement of the rule of faith, kept in Greek through later writers. Its shape is the shape of the later creeds: Father, Son, Spirit.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/greek/irenaeus_ah.xml",
+        "edition": "Harvey (1857), Greek of Book 1.10 (Massuet 1.10.1–2)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-12",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "12",
+      "lang": "la",
+      "answer": "key",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let us seek in what is ours, from those who are ours, and about what is ours, and only what can be raised as a question without harm to the rule of faith.",
+      "original": "quaeramus ergo in nostro et a nostris et de nostro, idque dumtaxat quod salua regula fidei potest in quaestionem deuenire.",
+      "context": "The rule marks the limits of open questions. Inside it, Tertullian says, inquiry is free.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "12"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-veiling-1",
+      "author": "Tertullian",
+      "year": 207,
+      "date": "c. 207",
+      "work": "On the Veiling of Virgins",
+      "locus": "1.3",
+      "lang": "la",
+      "answer": "summary",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The rule of faith is altogether one, alone unchangeable and beyond reform: believing in one only God almighty, maker of the world; and in his Son Jesus Christ, born of the Virgin Mary, crucified under Pontius Pilate, raised from the dead on the third day, received into heaven, now seated at the Father's right hand, coming to judge the living and the dead through the resurrection of the flesh too. While this law of faith stays fixed, other matters of discipline and life admit correction, as the grace of God works and advances to the end.",
+      "original": "Regula quidem fidei una omnino est, sola immobilis et irreformabilis, credendi scilicet in unicum deum omnipotentem, mundi conditorem, et filium eius Iesum Christum, natum ex virgine Maria, crucifixum sub Pontio Pilato, tertia die resuscitatum a mortuis, receptum in caelis, sedentem nunc ad dexteram patris, venturum iudicare vivos et mortuos per carnis etiam resurrectionem. Hac lege fidei manente cetera iam disciplinae et conversationis admittunt novitatem correctionis",
+      "context": "Tertullian, by now in sympathy with the Montanists, distinguishes the fixed rule of faith from church discipline, which he thinks can develop.",
+      "source": {
+        "book": "tertullian-on-the-veiling-of-virgins",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-first-principles-preface",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "Preface 2",
+      "lang": "la",
+      "answer": "key",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Since many who think they hold the things of Christ think differently from those before them, let the Church's preaching be kept, handed down from the apostles by the order of succession and remaining in the churches to the present. That alone is to be believed as truth which differs in nothing from the Church's and the apostles' tradition.",
+      "original": "servetur vero ecclesiastica praedicatio per successionis ordinem ab apostolis tradita, et usque ad praesens in ecclesiis permanens: illa sola credenda est veritas, quae in nullo ab ecclesiastica et apostolica discordat traditione.",
+      "context": "Origen then lists the points the apostles taught plainly and leaves other questions open for study. Survives in Rufinus's Latin.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 21 (1847), De principiis, Preface",
+        "ia": "origenous-ta-heuriskomena-panta-t.-21-1847"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "novatian-trinity-9",
+      "author": "Novatian",
+      "year": 250,
+      "date": "c. 250",
+      "work": "On the Trinity",
+      "locus": "9.1",
+      "lang": "la",
+      "answer": "summary",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The same rule of truth teaches us to believe, after the Father, also in the Son of God, Christ Jesus, our Lord God, but the Son of God: of this God who is one and alone, the maker of all things, as has been said above.",
+      "original": "Eadem regula veritatis docet nos credere post patrem etiam in filium dei, Christum Iesum, dominum deum nostrum, sed dei filium; huius dei qui et unus et solus est, conditor scilicet rerum omnium",
+      "context": "Novatian, a Roman presbyter, organizes his whole treatise as a commentary on the rule of truth.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/novatian_de_trinitate_fausset1909_djvu.txt",
+        "edition": "Fausset, Novatiani Romanae urbis presbyteri De Trinitate liber (Cambridge, 1909)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-christian-doctrine-3-2-2",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "On Christian Teaching",
+      "locus": "3.2.2",
+      "lang": "la",
+      "answer": "key",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "When careful attention finds it uncertain how a passage should be punctuated or pronounced, let the reader consult the rule of faith, which he has learned from the plainer places of Scripture and from the authority of the Church.",
+      "original": "Cum ergo adhibita intentio incertum esse perviderit quomodo distinguendum aut quomodo pronuntiandum sit, consulat regulam fidei, quam de Scripturarum planioribus locis et Ecclesiae auctoritate percepit",
+      "context": "Augustine draws the rule from Scripture's clear passages and from the Church together.",
+      "source": {
+        "book": "augustine-on-christian-doctrine",
+        "section": "3.2"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Hippolytus",
+      "work": "Against Noetus 1, 17–18",
+      "year": 220,
+      "why": "A rule of faith set against Noetus's teaching that the Father suffered.",
+      "action": "intake",
+      "source_hint": "Migne PG 10; Butterworth (1977, copyright) only as a note"
+    }
+  ],
+  "related": {
+    "topics": [
+      "canon-rule-of-truth",
+      "apostolic-tradition"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

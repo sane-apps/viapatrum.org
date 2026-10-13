@@ -1,0 +1,217 @@
+{
+  "id": "which-bible-text-read-hebrew",
+  "number": 8,
+  "group": "bible",
+  "question": "Which Bible text did they read: the Hebrew or the Greek Septuagint?",
+  "short": "Hebrew or Septuagint",
+  "search": [
+    "septuagint",
+    "lxx",
+    "hebrew bible",
+    "masoretic",
+    "vulgate",
+    "hexapla",
+    "seventy",
+    "isaiah 7:14",
+    "translation"
+  ],
+  "answers": [
+    {
+      "id": "septuagint",
+      "label": "The Greek Septuagint, the churches' Bible",
+      "short": "Septuagint",
+      "tag": "Greek"
+    },
+    {
+      "id": "hebrew",
+      "label": "Go back to the Hebrew original",
+      "short": "Hebrew",
+      "tag": "Hebrew"
+    },
+    {
+      "id": "both",
+      "label": "A received translation is authoritative for church use",
+      "short": "Received version",
+      "tag": "Received"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The early church read the Old Testament in the Greek Septuagint. Justin and Irenaeus defended it against new Jewish translations, and Irenaeus held that the Seventy translated by God's inspiration.",
+      "cites": [
+        "justin-dialogue-71",
+        "irenaeus-in-eusebius-5-8"
+      ]
+    },
+    {
+      "text": "Origen compared it word by word with the Hebrew in his Hexapla, but kept the Septuagint for the churches.",
+      "cites": [
+        "origen-africanus-hexapla"
+      ]
+    },
+    {
+      "text": "Jerome went back to the \"Hebrew truth\" for his Latin translation, which became the Vulgate. Trent made the Vulgate authentic for public use in 1546; the Westminster Confession calls the Hebrew and Greek originals authentic.",
+      "cites": [
+        "jerome-samuel-kings-hebrew-truth",
+        "trent-1546-vulgate",
+        "westminster-1-8"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-dialogue-71",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "71.1–2",
+      "lang": "grc",
+      "answer": "septuagint",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I do not trust your teachers, who refuse to admit that the translation made by the seventy elders at the court of Ptolemy, king of Egypt, is correct, and try to make their own. I want you to know that they have entirely removed many passages from the translation made by the elders at Ptolemy's court, passages that show plainly that this very man who was crucified was proclaimed as God and man, crucified and dying.",
+      "original": "Ἀλλ᾿ οὐχὶ τοῖς διδασκάλοις ὑμῶν πείθομαι, μὴ συντεθειμένοις καλῶς ἐξηγεῖσθαι τὰ ὑπὸ τῶν παρὰ Πτολεμαίῳ τῷ Αἰγυπτίων γενομένῳ βασιλεῖ ἑβδομήκοντα πρεσβυτέρων, ἀλλ᾿ αὐτοὶ ἐξηγεῖσθαι πειρῶνται. Καὶ ὅτι πολλὰς γραφὰς τέλεον περιεῖλον ἀπὸ τῶν ἐξηγήσεων τῶν γεγενημένων ὑπὸ τῶν παρὰ Πτολεμαίῳ γεγενημένων, πρεσβυτέρων, ἐξ ὧν διαρρήδην οὗτος αὐτὸς ὁ σταυρωθεὶς ὅτι θεὸς καὶ ἄνθρωπος καὶ σταυρούμενος καὶ ἀποθνήσκων κεκηρυγμένος ἀποδείκνυται, εἰδέναι ὑμᾶς βούλομαι",
+      "context": "By the second century Jewish scholars made new Greek translations (Aquila and others). Christians held to the older Septuagint, especially for Isaiah 7:14, \"the virgin shall conceive\".",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "71"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-in-eusebius-5-8",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies 3.21.2, preserved in Eusebius, Church History",
+      "locus": "5.8.11–14",
+      "lang": "grc",
+      "answer": "septuagint",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "Ptolemy son of Lagus, eager to adorn the library he had built at Alexandria with the writings of all peoples, asked the people of Jerusalem to have their Scriptures turned into Greek. They sent seventy elders, the most skilled in the Scriptures and in both languages. Ptolemy, wishing to test them and fearing they might agree together to hide the truth of the Scriptures in the translation, separated them and told them all to write the same translation, and did this for all the books.",
+      "original": "Πτολεμαῖος ὁ Λάγου, φιλοτιμούμενος τὴν “ὑπ᾿ αὐτοῦ κατεσκευασμένην βιβλιοθήκην ἐν Ἀλε- “ξανδρείᾳ κοσμῆσαι τοῖς πάντων ἀνθρώπων συγγράμμασιν, ὅσα γε σπουδαῖα ὑπῆρχεν, ᾐτήσατο παρὰ τῶν Ἱεροσολυμιτῶν εἰς τὴν Ἑλληνικὴν διάλεκτον σχεῖν αὐτῶν μεταβεβλημένας τὰς γραφάς. οἱ δὲ ὑπήκουον γὰρ ἔτι τοῖς Μακεδόσι τότε) τοὺς παρ’ αὐτοῖς ἐμπειροτάτους τῶν γραφῶν καὶ ἀμφοτέρων τῶν διαλέκτων, ἑβδομήκοντα πρεσβυτέρους ἔπεμψαν Πτολεμαίῳ, ποιήσοντας τοῦθ’ ὅπερ ἠβούλετο ὁ δὲ ἰδέᾳ πεῖραν αὐτῶν λαβεῖν θελή- “σας, εὐλαβηθείς τε μή τι ἄρα συνθέμενοι τὴν ἐν ταῖς γραφαῖς διὰ τῆς ἑρμηνείας ἀλή- “θειαν, χωρίσας αὐτοὺς ἀπ’ ἀλλήλων ἐκέλευσε πάντας τὴν αὐτὴν ἑρμηνείαν γράφειν",
+      "context": "Irenaeus goes on: they all agreed word for word, so the translation was by God's inspiration. He uses this against new translations that read \"young woman\" in Isaiah 7:14.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-africanus-hexapla",
+      "author": "Origen of Alexandria",
+      "year": 240,
+      "date": "c. 240",
+      "work": "Letter to Africanus",
+      "locus": "7–9",
+      "lang": "grc",
+      "answer": "septuagint",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I say this not from reluctance to search the Jewish Scriptures and compare all ours with theirs and see the differences. If it is not boastful to say it, we have done this at length as far as we could, training our minds on all the editions and their differences, while giving more attention to the translation of the Seventy, so as not to seem to forge anything for the churches under heaven.",
+      "original": "Καὶ ταῦτα δὲ φημὶ οὐχὶ ὅκνῳ τοῦ ἐρευνᾷν καὶ τὰς κατὰ Ἰουδαίους (42) Γραφὰς, καὶ πάσας τὰς ἡμετέρας ταῖς ἐκείνων συγκρίνειν, καὶ ὁρᾷν τὰς ἐν αὐταῖς διαφοράς. Εἰ μὴ φορτικὸν γοῦν εἰπεῖν, ἐπὶ πολὺ τοῦτο, ὅση δύναμις, πεποιήκαμεν, γυμνάζοντες αὑτῶν τὸν νοῦν ἐν πάσαις ταῖς ἐκδόσεσι καὶ ταῖς διαφοραῖς αὐτῶν (43), μετὰ τοῦ ποσῶς μᾶλλον ἀσκεῖν τὴν ἑρμηνείαν τῶν Ο΄· ἵνα μή τι παραχαράττειν δοκοίημεν (44) ταῖς ὑπὸ τὸν οὐρανὸν Ἐκκλησίαις",
+      "context": "Origen's Hexapla set the Hebrew, a Greek transliteration and four Greek translations side by side. He kept the Septuagint for the churches but marked where it differs from the Hebrew.",
+      "source": {
+        "witness": "books/origen-letters/sources/africanus_working_greek.txt",
+        "edition": "Migne PG 11, working Greek in the library"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "jerome-samuel-kings-hebrew-truth",
+      "author": "Jerome",
+      "year": 391,
+      "date": "c. 391",
+      "work": "Preface to Samuel and Kings",
+      "locus": "end of the preface",
+      "lang": "la",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So read first my Samuel and Kings: mine, I say, mine. Whatever we have learned and hold by often translating and carefully correcting is ours. And when you understand what you did not know before, think me a translator if you are grateful, or a paraphraser if you are not, though I am not aware that I have changed anything from the Hebrew truth. If you doubt it, read the Greek and Latin copies and compare.",
+      "original": "Lege ergo primum Samuel, et Melachim meum : meum, inquam, meum. Quidquid enim crebrius vertendo, et emendando sollicitius et didicimus et tenemus, nostrum est. Et cum intellexeris quod antea nesciebas, vel interpretem me æstimato, si gratus es; vel Paraphrasten, si ingratus, quamquam mihi omnino conscius non sim, mutasse me quippiam de Hebraica veritate. Certe si incredulus es, lege Græcos codices et Latinos, et confer",
+      "context": "Jerome's new Latin from the Hebrew became the Vulgate. Augustine worried it would divide the churches from the Septuagint they knew.",
+      "source": {
+        "book": "jerome-prefaces-to-the-scriptures",
+        "section": "samuel-kings"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1546-vulgate",
+      "author": "Council of Trent (Catholic)",
+      "year": 1546,
+      "date": "1546",
+      "work": "Session 4",
+      "locus": "Decree on the Edition and Use of the Sacred Books",
+      "lang": "en",
+      "answer": "both",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "...that the said old and vulgate edition, which, by the lengthened usage of so many years, has been approved of in the Church, be, in public lectures, disputations, sermons and expositions, held as authentic",
+      "original": "that the said old and vulgate edition",
+      "context": "Trent made Jerome's Latin the authentic text for public use in the Latin Church, without condemning the Hebrew or Greek. The Orthodox still read the Septuagint.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/fourth-session.htm",
+        "edition": "Waterworth English (1848)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "westminster-1-8",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "1.8",
+      "lang": "en",
+      "answer": "hebrew",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "The Old Testament in Hebrew (which was the native language of the people of God of old), and the New Testament in Greek (which, at the time of the writing of it, was most generally known to the nations), being immediately inspired by God, and, by his singular care and providence, kept pure in all ages, are therefore authentical; so as, in all controversies of religion, the church is finally to appeal unto them.",
+      "original": "The Old Testament in Hebrew (which was the native language of the people of God of old), and the New Testament in Greek (which, at the time of the writing of it, was most generally known to the nations), being immediately inspired by God, and, by his singular care and providence, kept pure in all ages, are therefore authentical",
+      "context": "Protestant translations since the Reformation follow the Hebrew for the Old Testament.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 18.43–44",
+      "year": 425,
+      "why": "Holds that both the Hebrew and the Seventy were given by the one Spirit.",
+      "action": "intake",
+      "source_hint": "Dombart, Teubner (1877); Maurist PL 41"
+    },
+    {
+      "author": "Augustine and Jerome",
+      "work": "Letters 71, 75, 82",
+      "year": 404,
+      "why": "Their argument over Jerome's translation, including the riot at Oea over Jonah's plant.",
+      "action": "intake",
+      "source_hint": "Maurist text, Migne PL 33"
+    }
+  ],
+  "related": {
+    "topics": [
+      "lxx-and-form"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "trust-that-text-copied-faithfully",
+  "number": 10,
+  "group": "bible",
+  "question": "How can we trust that the text was copied faithfully?",
+  "short": "Copying the Scriptures",
+  "search": [
+    "manuscripts",
+    "textual criticism",
+    "scribes",
+    "copying",
+    "variants",
+    "corrupted",
+    "originals",
+    "autographs"
+  ],
+  "answers": [
+    {
+      "id": "careful",
+      "label": "Copies were checked against their source and the apostles' churches",
+      "short": "Careful copying",
+      "tag": "Careful"
+    },
+    {
+      "id": "corrupted",
+      "label": "Some copies were altered; comparing exposed them",
+      "short": "Alterations exposed",
+      "tag": "Exposed"
+    },
+    {
+      "id": "variants",
+      "label": "Copies differ, and scholars compared them to correct them",
+      "short": "Variants compared",
+      "tag": "Compared"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Early Christians knew copying could go wrong, and they guarded against it. Irenaeus made copyists swear to check their work against the original, and Tertullian points to the churches where the apostles' letters were still read.",
+      "cites": [
+        "irenaeus-in-eusebius-5-20",
+        "tertullian-prescription-36"
+      ]
+    },
+    {
+      "text": "They also caught deliberate changes. Dionysius of Corinth complains that his own letters were altered, and a third-century writer exposes heretics' \"corrected\" Bibles by comparing their copies.",
+      "cites": [
+        "dionysius-in-eusebius-4-23",
+        "anonymous-in-eusebius-5-28"
+      ]
+    },
+    {
+      "text": "Scholars compared copies on a large scale. Origen's Hexapla set translations side by side, and Augustine tells every reader to correct his copy first.",
+      "cites": [
+        "origen-africanus-hexapla",
+        "augustine-christian-doctrine-2-14-21"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "dionysius-in-eusebius-4-23",
+      "author": "Dionysius of Corinth",
+      "year": 170,
+      "date": "c. 170",
+      "work": "Letter, preserved in Eusebius, Church History",
+      "locus": "4.23.12",
+      "lang": "grc",
+      "answer": "corrupted",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "When brothers asked me to write letters, I wrote them. And the devil's apostles have filled them with weeds, taking some things out and adding others. Woe awaits them. So it is no wonder that some have set out to tamper even with the Lord's writings, since they have plotted against writings of lesser weight.",
+      "original": "ἐπιστολὰς γὰρ ἀδελφῶν ἀξιω- ‘σάντων με γράψαι ἔγραψα. καὶ ταύτας οἱ τοῦ δια- ῾ βόλου ἀπόστολοι ζιζανίων γεγέμικαν , ἃ μὲν ἐξαι- ‘ροῦντες, ἃ δὲ προστιθέντες. οἷς τὸ οὐαὶ κεῖται. οὐ θαυμαστὸν ἄρα εἰ καὶ τῶν κυριακῶν ῥᾳδιουργῆσαί ‘τινες ἐπιβέβληνται γραφῶν, ὁπότε καὶ ταῖς οὐ τοι- ῾αύταις ἐπιβεβουλεύκασι.",
+      "context": "Dionysius was bishop of Corinth. The \"Lord's writings\" may mean the Gospels.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "4.23"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-in-eusebius-5-20",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "On the Ogdoad, preserved in Eusebius, Church History",
+      "locus": "5.20.2",
+      "lang": "grc",
+      "answer": "careful",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "I adjure you who copy this book, by our Lord Jesus Christ and by his glorious coming, when he comes to judge the living and the dead, that you compare what you have copied, and correct it carefully against this copy from which you copied it; and that you copy this oath likewise and put it in the copy.",
+      "original": "ὁρκίζω σε τὸν μεταγραψόμενον τὸ βιβλίον τοῦτο κατὰ τοὐ κυρίου “ἡμῶν Ἰησοῦ Χριστοῦ καὶ κατὰ τῆς ἐνδόξου παρου- “σίας αὐτοῦ, ἧς ἔρχεται κρῖναι ζῶντας καὶ νεκροὺς, “ἵνα ἀντιβάλῃς ὃ μετεγράψω, καὶ κατορθώσῃς αὐτὸ “πρὸς τὸ ἀντίγραφον τοῦτο, ὅθεν μετεγράψω, ἐπιμε- “λῶς· καὶ τὸν ὅρκον τοῦτον ὁμοίως μεταγράψεις καὶ “θήσεις ἐν τῷ ἀντιγράφῳ.",
+      "context": "Irenaeus asks this for his own book. Eusebius quotes it as a model of the care early Christians took in copying.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.20"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-36",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "36.1–2",
+      "lang": "la",
+      "answer": "careful",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Come now, you who want to exercise your curiosity better in the business of your salvation: go through the apostolic churches, where the very chairs of the apostles still preside in their places, where their own authentic letters are read, sounding the voice and showing the face of each. Achaia is nearest you: you have Corinth. If you are not far from Macedonia, you have Philippi and the Thessalonians. If you can cross into Asia, you have Ephesus. If you are near Italy, you have Rome.",
+      "original": "Age iam, qui voles curiositatem melius exercere in negotio salutis tuae, percurre ecclesias apostolicas, apud quas ipsae adhuc cathedrae apostolorum suis locis praesident, apud quas ipsae authenticae litterae eorum recitantur, sonantes vocem et repraesentantes faciem uniuscuiusque. Proxima est tibi Achaia, habes Corinthum. Si non longe es a Macedonia, habes Philippos, habes Thessalonicenses. Si potes in Asiam tendere, habes Ephesum. Si autem Italiae adiaces, habes Romam",
+      "context": "\"Authentic letters\" may mean the originals or trustworthy copies; scholars disagree. Either way, the letters were read in the churches that received them.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "36"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "anonymous-in-eusebius-5-28",
+      "author": "Anonymous writer against Artemon",
+      "year": 230,
+      "date": "c. 230",
+      "work": "Little Labyrinth, preserved in Eusebius, Church History",
+      "locus": "5.28.15–17",
+      "lang": "grc",
+      "answer": "corrupted",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "So they laid hands on the divine Scriptures without fear, saying they had corrected them. That I am not slandering them, anyone who wishes can learn: if someone collects their copies and examines them against one another, he will find them very much at odds. Asclepiades's copies will not agree with Theodotus's ... what they call corrected copies, that is, corrupted ones.",
+      "original": "διὰ τοῦτο ταῖς θείαις “γραφαῖς ἀφόβως ἐπέβαλον τὰς χεῖρας, λέγοντες αὐ- “τὰς διωρθωκέναι. καὶ ὅτι τοῦτο μὴ καταψευδό- “μενος αὐτῶν λέγω ὁ βούλομενος δύναται μαθεῖν. “εἰ γάρ τις θελήσει συγκομίσας αὐτῶν ἑκάστου τὰ “ἀντίγραφα ἐξετάζειν πρὸς ἄλληλα, κατὰ πολὺ ἂν “εὕροι διαφωνοῦντα. ἀσύμφωνα γοῦν ἔσται τὰ Ασκλη- ‘πιάδου τοῖς Θεοδότου ... ‘κατωρθωμένα, τουτ’ έστιν ἠφανισμένα.",
+      "context": "The test is comparison: the altered copies disagree with each other and with the churches' copies. The writer may be Hippolytus.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.28"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-africanus-hexapla",
+      "author": "Origen of Alexandria",
+      "year": 240,
+      "date": "c. 240",
+      "work": "Letter to Africanus",
+      "locus": "7–9",
+      "lang": "grc",
+      "answer": "variants",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I say this not from reluctance to search the Jewish Scriptures and compare all ours with theirs and see the differences. If it is not boastful to say it, we have done this at length as far as we could, training our minds on all the editions and their differences, while giving more attention to the translation of the Seventy, so as not to seem to forge anything for the churches under heaven.",
+      "original": "Καὶ ταῦτα δὲ φημὶ οὐχὶ ὅκνῳ τοῦ ἐρευνᾷν καὶ τὰς κατὰ Ἰουδαίους (42) Γραφὰς, καὶ πάσας τὰς ἡμετέρας ταῖς ἐκείνων συγκρίνειν, καὶ ὁρᾷν τὰς ἐν αὐταῖς διαφοράς. Εἰ μὴ φορτικὸν γοῦν εἰπεῖν, ἐπὶ πολὺ τοῦτο, ὅση δύναμις, πεποιήκαμεν, γυμνάζοντες αὑτῶν τὸν νοῦν ἐν πάσαις ταῖς ἐκδόσεσι καὶ ταῖς διαφοραῖς αὐτῶν (43), μετὰ τοῦ ποσῶς μᾶλλον ἀσκεῖν τὴν ἑρμηνείαν τῶν Ο΄· ἵνα μή τι παραχαράττειν δοκοίημεν (44) ταῖς ὑπὸ τὸν οὐρανὸν Ἐκκλησίαις",
+      "context": "Origen spent years comparing copies and translations. His Hexapla is the first large critical edition of the Bible.",
+      "source": {
+        "witness": "books/origen-letters/sources/africanus_working_greek.txt",
+        "edition": "Migne PG 11, working Greek in the library"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-christian-doctrine-2-14-21",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "On Christian Teaching",
+      "locus": "2.14.21",
+      "lang": "la",
+      "answer": "variants",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "A large number of translators also helps a great deal, when their copies are compared, examined and discussed, provided there is no falsehood. For those who want to know the divine Scriptures should first of all take care to correct their copies, so that uncorrected copies give way to corrected ones, at least when they come from the same kind of translation.",
+      "original": "Plurimum hic quoque adiuvat interpretum numerositas collatis codicibus inspecta atque discussa. Tantum absit falsitas, nam codicibus emendandis primitus debet invigilare sollertia eorum qui Scripturas divinas nosse desiderant, ut emendatis non emendati cedant, ex uno dumtaxat interpretationis genere venientes.",
+      "context": "Augustine treats differences between copies as normal, and correcting them as the first task of a reader of Scripture.",
+      "source": {
+        "book": "augustine-on-christian-doctrine",
+        "section": "2.21"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Commentary on Matthew 15.14",
+      "year": 249,
+      "why": "\"The differences among the copies have become great\", from careless or bold scribes. The passage was not found in the fetched Greek.",
+      "action": "search",
+      "source_hint": "Klostermann GCS 40 (1935, copyright) as note; Migne PG 13"
+    },
+    {
+      "author": "Jerome",
+      "work": "Preface to the Gospels, to Damasus",
+      "year": 383,
+      "why": "\"There are almost as many versions as copies.\" Only English was fetched.",
+      "action": "intake",
+      "source_hint": "Wordsworth and White, Novum Testamentum Latine (1889); Migne PL 29"
+    }
+  ],
+  "related": {
+    "topics": [
+      "lxx-and-form"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

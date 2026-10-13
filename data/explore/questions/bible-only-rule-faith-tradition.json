@@ -1,0 +1,355 @@
+{
+  "id": "bible-only-rule-faith-tradition",
+  "number": 5,
+  "group": "bible",
+  "question": "Is the Bible the only rule of faith, or is church tradition also binding?",
+  "short": "Scripture and tradition",
+  "search": [
+    "sola scriptura",
+    "scripture alone",
+    "tradition",
+    "unwritten tradition",
+    "magisterium",
+    "rule of faith",
+    "bible only"
+  ],
+  "answers": [
+    {
+      "id": "sufficient",
+      "label": "Scripture is sufficient and the rule of doctrine",
+      "short": "Scripture sufficient",
+      "tag": "Sufficient"
+    },
+    {
+      "id": "unwritten",
+      "label": "Unwritten apostolic tradition also binds",
+      "short": "Unwritten tradition too",
+      "tag": "Unwritten"
+    },
+    {
+      "id": "church",
+      "label": "Scripture belongs to, and is read within, the apostolic churches",
+      "short": "Read in the Church",
+      "tag": "Church"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Second-century writers answer heretics by pointing to the churches the apostles founded: those churches hold the Scriptures and the true reading of them. Irenaeus says that even without Scriptures the apostles' tradition would suffice.",
+      "cites": [
+        "irenaeus-ah-3-4-1",
+        "tertullian-prescription-19"
+      ]
+    },
+    {
+      "text": "Fourth-century bishops say Scripture is sufficient and the rule of every doctrine. Cyril tells catechumens not to believe even him without proof from Scripture.",
+      "cites": [
+        "athanasius-against-heathen-1",
+        "cyril-catechesis-4-17",
+        "gregory-nyssa-soul-resurrection",
+        "augustine-christian-doctrine-2-9-14"
+      ]
+    },
+    {
+      "text": "The same century also speaks of unwritten traditions from the apostles with equal force, mostly about worship and practice: Basil, Epiphanius and Chrysostom.",
+      "cites": [
+        "basil-holy-spirit-27-66",
+        "epiphanius-panarion-61-6",
+        "chrysostom-2-thessalonians-4"
+      ]
+    },
+    {
+      "text": "The Reformation split these strands. Trent (1546) receives Scripture and unwritten traditions with equal reverence. The Westminster Confession (1646) says nothing is to be added to Scripture by tradition, and Reformed writers build on Augustine's words.",
+      "cites": [
+        "trent-1546-traditions",
+        "westminster-1-6",
+        "crocius-syntagma-1-6"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "irenaeus-ah-3-4-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.4.1",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What if the apostles had not even left us Scriptures? Would we not have had to follow the order of the tradition they handed on to those to whom they entrusted the churches? Many barbarian peoples who believe in Christ assent to this order. They have salvation written in their hearts by the Spirit without paper or ink, and carefully keep the ancient tradition, believing in one God, maker of heaven and earth and all that is in them, through Christ Jesus the Son of God.",
+      "original": "Quid autem si neque Apostoli quidem Scripturas reliquissent nobis, nonne oportebat ordinem sequi traditionis, quam tradiderunt iis quibus committebant ecclesias? Cui ordinationi assentiunt multae gentes barbarorum eorum qui in Christum credunt, sine charta vel atramento scriptam habentes per Spiritum in cordibus suis salutem, et veterem traditionem diligenter custodientes, in unum Deum credentes fabricatorem caeli et terrae",
+      "context": "Irenaeus is not setting tradition against Scripture; he has just spent two books arguing from Scripture. His point is that the apostles' teaching was also kept alive in the churches they founded.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Book 3.4.1 (Latin)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-19",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "19",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So we must not appeal to the Scriptures, nor fight the battle on ground where victory is impossible, or uncertain, or barely certain. ... The question to settle first is this: to whom does the faith itself belong? Whose are the Scriptures? From whom, through whom, when and to whom was the teaching handed down by which people become Christians? For where the true Christian teaching and faith are shown to be, there will be the true Scriptures, the true interpretations, and all the true Christian traditions.",
+      "original": "Ergo non ad scripturas provocandum est, nec in his constituendum certamen in quibus aut nulla aut incerta victoria est aut parum certa. ... quibus competat fides ipsa, cuius sint scripturae, a quo, et per quos, et quando, et quibus sit tradita disciplina qua fiunt Christiani. Ubi enim apparuerit esse veritatem disciplinae et fidei Christianae, illic erit veritas scripturarum et expositionum et omnium traditionum Christianarum.",
+      "context": "Tertullian's legal argument: heretics have no title to Scripture, because it belongs to the churches the apostles founded. In other books he argues from Scripture at length.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "19"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athanasius-against-heathen-1",
+      "author": "Athanasius of Alexandria",
+      "year": 335,
+      "date": "c. 335",
+      "work": "Against the Heathen",
+      "locus": "1.3",
+      "lang": "grc",
+      "answer": "sufficient",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The holy and God-breathed Scriptures are sufficient for the proclamation of the truth. There are also many works composed by our blessed teachers on these matters; whoever reads them will learn something of the interpretation of the Scriptures.",
+      "original": "αὐτάρκεις μὲν γάρ εἰσιν αἱ ἅγιαι καὶ θεόπνευστοι γραφαὶ πρὸς τὴν τῆς ἀληθείας ἀπαγγελίαν· εἰσὶ δὲ καὶ πολλοὶ τῶν μακαρίων ἡμῶν διδασκάλων εἰς ταῦτα συνταχθέντες λόγοι· οἷς ἐάν τις ἐντύχοι, εἴσεται μέν πως τὴν τῶν γραφῶν ἑρμηνείαν",
+      "context": "Both sides of the later debate quote this sentence: the first half for Scripture's sufficiency, the second for the help of the Church's teachers in reading it.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-athanasius-the-great-of-alexandria-pg-25-28-contra-gentes.txt",
+        "edition": "Migne PG 25, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyril-catechesis-4-17",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Catechetical Lectures",
+      "locus": "4.17",
+      "lang": "grc",
+      "answer": "sufficient",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Concerning the divine and holy mysteries of the faith, not even the smallest point should be handed on without the divine Scriptures, nor should we be carried away by mere plausible arguments and clever words. Do not simply believe me when I tell you these things, unless you receive the proof of what I announce from the divine Scriptures. For the saving power of our faith comes not from clever reasoning but from proof out of the divine Scriptures.",
+      "original": "∆εῖ γὰρ περὶ τῶν θείων καὶ ἁγίων τῆς Πίστεως μυστηρίων, μηδὲ τὸ τυχὸν ἄνευ τῶν θείων παραδίδοσθαι γραφῶν· καὶ μὴ ἁπλῶς πιθανότησι καὶ λόγων κατασκευαῖς παραφέρεσθαι. Μηδὲ ἐμοὶ τῷ ταῦτά σοι λέγοντι, ἁπλῶς πιστεύσῃς· ἐὰν τὴν ἀπόδειξιν τῶν καταγγελλομένων ἀπὸ τῶν θείων μὴ λάβῃς γραφῶν. Ἡ σωτηρία γὰρ αὕτη τῆς πίστεως ἡμῶν, οὐκ ἐξ εὑρεσιλογίας, ἀλλὰ ἐξ ἀποδείξεως τῶν θείων ἐστὶ γραφῶν.",
+      "context": "Said to candidates for baptism while handing them the creed. The same lectures also pass on unwritten customs of the rite.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-catecheses-ad-illuminandos.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-holy-spirit-27-66",
+      "author": "Basil of Caesarea",
+      "year": 375,
+      "date": "c. 375",
+      "work": "On the Holy Spirit",
+      "locus": "27.66",
+      "lang": "grc",
+      "answer": "unwritten",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Of the doctrines and proclamations kept in the Church, some we have from written teaching, and others we have received handed down to us in a mystery from the tradition of the apostles. Both have the same force for true religion. No one will dispute this, at least no one with even a little experience of church practice.",
+      "original": "Τῶν ἐν τῇ Ἐκκλησίᾳ πεφυλαγμένων δογμάτων καὶ κηρυγμάτων τὰ μὲν ἐκ τῆς ἐγγράφου διδασκαλίας ἔχομεν, τὰ δὲ ἐκ τῆς τῶν ἀποστόλων παραδόσεως διαδοθέντα ἡμῖν ἐν μυστηρίῳ παρεδεξάμεθα· ἅπερ ἀμφότερα τὴν αὐτὴν ἰσχὺν ἔχει πρὸς τὴν εὐσέβειαν.",
+      "context": "Basil's examples are practices: signing with the cross, facing east to pray, the words of the Eucharistic prayer, threefold immersion. He uses them to defend a form of praise to the Holy Spirit.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "edition": "Migne PG 32 (archive.org OCR); checked against Johnston, The Book of Saint Basil on the Holy Spirit (Oxford, 1892)",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "epiphanius-panarion-61-6",
+      "author": "Epiphanius of Salamis",
+      "year": 377,
+      "date": "c. 377",
+      "work": "Panarion (Medicine Chest against Heresies)",
+      "locus": "61.6.4–5",
+      "lang": "grc",
+      "answer": "unwritten",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "One must use tradition too, for not everything can be taken from the divine Scripture. That is why the holy apostles handed some things down in writings and others in traditions, as the holy apostle says: \"as I handed on to you\" (1 Corinthians 11:2), and elsewhere: \"so I teach, and so I have handed on in the churches\".",
+      "original": "δεῖ δὲ καὶ παραδόσει κεχρῆσθαι· οὐ γὰρ πάντα ἀπὸ τῆς θείας γραφῆς δύναται λαμβάνεσθαι. διὸ τὰ μὲν ἐν γραφαῖς, τὰ δὲ ἐν παραδόσεσιν παρέδωκαν οἱ ἅγιοι ἀπόστολοι, ὥς φησιν ὁ ἅγιος ἀπόστολος «ὡς παρέδωκα ὑμῖν» καὶ ἄλλοτε «οὕτως διδάσκω, καὶ οὕτως παρέδωκα ἐν ταῖς ἐκκλησίαις»",
+      "context": "Written against a group that forbade marriage after vowed virginity. Epiphanius's examples are church rules of practice.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 41, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-soul-resurrection",
+      "author": "Gregory of Nyssa",
+      "year": 380,
+      "date": "c. 380",
+      "work": "On the Soul and the Resurrection",
+      "locus": "library section 12",
+      "lang": "grc",
+      "answer": "sufficient",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We have no share in that freedom, I mean to say whatever we like. We use the Holy Scripture as the rule and law of every doctrine. We must look to it, and accept only what agrees with the intent of what is written.",
+      "original": "ἡμεῖς δὲ τῆς ἐξουσίας ἄμοι ροι ταύτης ἐσμὲν, τῆς λέγειν φημὶ ἅπερ βουλόμεθα, κανόνι παντὸς δόγματος καὶ νόμῳ κεχρημένοι τῇ ἁγίᾳ Γραφῇ· ἀναγκαίως πρὸς ταύτην βλέποντες, τοῦτο δεχόμεθα μόνον, ὅ, τι περ ἂν ᾖ συμφωνοῦν τῷ τῶν γεγραμμένων σκοπῷ.",
+      "context": "Gregory contrasts Christian teachers with the philosophers, who reason freely about the soul.",
+      "source": {
+        "book": "gregory-nyssa-de-anima-et-resurrectione",
+        "section": "12"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-christian-doctrine-2-9-14",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "On Christian Teaching",
+      "locus": "2.9.14",
+      "lang": "la",
+      "answer": "sufficient",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In what is plainly set down in the Scriptures are found all the things that make up faith and the way of life, that is, hope and love.",
+      "original": "In iis enim quae aperte in Scripturis posita sunt, inveniuntur illa omnia quae continent fidem moresque vivendi, spem scilicet atque caritatem",
+      "context": "Augustine also teaches that the Church's authority moves people to believe the Gospel, and he defends customs held everywhere as apostolic though unwritten (On Baptism 4.24.31).",
+      "source": {
+        "book": "augustine-on-christian-doctrine",
+        "section": "2.14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-2-thessalonians-4",
+      "author": "John Chrysostom",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Homilies on 2 Thessalonians",
+      "locus": "4.2",
+      "lang": "grc",
+      "answer": "unwritten",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"So then, brothers, stand firm and hold the traditions you were taught, whether by word or by our letter\" (2 Thessalonians 2:15). From this it is clear that they did not hand down everything by letter, but many things also without writing, and these are just as worthy of trust. So let us count the tradition of the Church worthy of belief too. It is a tradition: seek nothing further.",
+      "original": "Ἄρα οὖν, ἀδελφοὶ, στήκετε, καὶ κρατεῖτε τὰς παραδόσεις, ἃς ἐδιδάχθητε εἴτε διὰ λόγου εἴτε δι' ἐπιστολῆς ἡμῶν. Ἐντεῦθεν δῆλον ὅτι οὐ πάντα δι' ἐπιστολῆς παρεδίδοσαν, ἀλλὰ πολλὰ καὶ ἀγράφως· ὁμοίως δὲ κἀκεῖνα καὶ ταῦτά ἐστιν ἀξιόπιστα. Ὥστε καὶ τὴν παράδοσιν τῆς Ἐκκλησίας ἀξιόπιστον ἡγώμεθα. Παράδοσίς ἐστι, μηδὲν πλέον ζήτει.",
+      "context": "Preached at Constantinople. Chrysostom elsewhere urges his people to read the Scriptures at home and calls ignorance of them the cause of all evils.",
+      "source": {
+        "book": "chrysostom-homiliae-2-thessalonicenses",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1546-traditions",
+      "author": "Council of Trent (Catholic)",
+      "year": 1546,
+      "date": "1546",
+      "work": "Session 4",
+      "locus": "Decree on the Canonical Scriptures",
+      "lang": "en",
+      "answer": "unwritten",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "...the truth and discipline are contained in the written books, and the unwritten traditions which, received by the Apostles from the mouth of Christ himself, or from the Apostles themselves, the Holy Ghost dictating, have come down even unto us ... receives and venerates with an equal affection of piety, and reverence, all the books both of the Old and of the New Testament ... as also the said traditions",
+      "original": "the truth and discipline are contained in the written books, and the unwritten traditions",
+      "context": "Trent's answer to the Reformers. Catholic teaching since Vatican II (Dei Verbum 9) speaks of Scripture and tradition as one deposit flowing from one source.",
+      "source": {
+        "url": "https://www.papalencyclicals.net/councils/trent/fourth-session.htm",
+        "edition": "Waterworth English (1848)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "crocius-syntagma-1-6",
+      "author": "Ludwig Crocius (Reformed)",
+      "year": 1636,
+      "date": "1636",
+      "work": "Syntagma of Sacred Theology",
+      "locus": "1, chapter 6",
+      "lang": "la",
+      "answer": "sufficient",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So much for the perfection and sufficiency of Holy Scripture. Next comes its clarity: the property by which all the things that make up faith and the way of life are so plainly set down and found in it that, with due care and prudence and suitable means, by God's help, those who fear God and claim nothing for themselves or their own judgment can know them with certainty, each according to his age, and understand them for salvation.",
+      "original": "Haec de sacrae Scripturae perfectione & sufficientia: sequitur claritas, quae est illius proprietas, qua in ea ita aperte posita sunt et inveniuntur illa omnia, quae continent fidem moresque vivendi, ut adhibitis cum debita diligentia & prudentia mediis convenientibus per DEI auxilium a DEI timentibus nihilque sibi, suoque carnali judicio tribuentibus pro cujusque aetate certo sciri & ad salutem intelligi possint.",
+      "context": "A Reformed professor at Bremen builds his definition of Scripture's clarity on Augustine's sentence (On Christian Teaching 2.9.14).",
+      "source": {
+        "book": "crocius-syntagma",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1-6",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "1.6",
+      "lang": "en",
+      "answer": "sufficient",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "The whole counsel of God concerning all things necessary for his own glory, man's salvation, faith and life, is either expressly set down in Scripture, or by good and necessary consequence may be deduced from Scripture: unto which nothing at any time is to be added, whether by new revelations of the Spirit, or traditions of men.",
+      "original": "The whole counsel of God concerning all things necessary for his own glory, man’s salvation, faith and life, is either expressly set down in Scripture, or by good and necessary consequence may be deduced from Scripture: unto which nothing at any time is to be added, whether by new revelations of the Spirit, or traditions of men.",
+      "context": "The Reformed statement of Scripture's sufficiency. Lutherans say the same in the Formula of Concord (1577): Scripture is \"the only rule and norm\".",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Vincent of Lérins",
+      "work": "Commonitory 2",
+      "year": 434,
+      "why": "Scripture is complete and sufficient, yet must be read by what has been believed everywhere, always and by all.",
+      "action": "intake",
+      "source_hint": "Migne PL 50; Moxon (1915)"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "Against the Letter of Mani called Fundamental 5",
+      "year": 397,
+      "why": "\"I would not believe the Gospel unless the authority of the Catholic Church moved me.\" The book is in the library but the line was not found.",
+      "action": "search",
+      "source_hint": "augustine-against-the-fundamental-letter"
+    }
+  ],
+  "related": {
+    "topics": [
+      "apostolic-tradition",
+      "canon-rule-of-truth"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

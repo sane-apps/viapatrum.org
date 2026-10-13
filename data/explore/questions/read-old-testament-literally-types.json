@@ -1,0 +1,182 @@
+{
+  "id": "read-old-testament-literally-types",
+  "number": 9,
+  "group": "bible",
+  "question": "How did they read the Old Testament: literally, or as types and figures of Christ?",
+  "short": "Literal and spiritual reading",
+  "search": [
+    "allegory",
+    "typology",
+    "types",
+    "figures",
+    "spiritual sense",
+    "literal sense",
+    "alexandria",
+    "antioch",
+    "four senses"
+  ],
+  "answers": [
+    {
+      "id": "types",
+      "label": "Old Testament events and people foreshadow Christ",
+      "short": "Types of Christ",
+      "tag": "Types"
+    },
+    {
+      "id": "spiritual",
+      "label": "Beyond the letter there is a spiritual sense",
+      "short": "Spiritual sense",
+      "tag": "Spiritual"
+    },
+    {
+      "id": "literal",
+      "label": "Keep to the one true sense of the text",
+      "short": "One sense",
+      "tag": "One sense"
+    }
+  ],
+  "overview": [
+    {
+      "text": "All the early writers read the Old Testament as pointing to Christ, following the New Testament's own use of types (Romans 5:14, 1 Corinthians 10:11). Barnabas finds Christ in Isaac and in the Day of Atonement.",
+      "cites": [
+        "barnabas-7"
+      ]
+    },
+    {
+      "text": "Origen taught three levels: the body of the text (its history), its soul (moral teaching) and its spirit (the mystery of Christ). Augustine gave a test: what cannot refer to love or faith in its plain sense must be figurative.",
+      "cites": [
+        "origen-first-principles-4-2-4",
+        "augustine-christian-doctrine-3-10-14"
+      ]
+    },
+    {
+      "text": "Teachers at Antioch, such as Diodore and Theodore, pushed back against allegory and kept closer to the history. The Reformers later spoke of one sense of Scripture.",
+      "cites": [
+        "westminster-1-9"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "barnabas-7",
+      "author": "Letter of Barnabas",
+      "year": 130,
+      "date": "c. 130",
+      "work": "Letter of Barnabas",
+      "locus": "7.3–5",
+      "lang": "grc",
+      "answer": "types",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "He himself was going to offer the vessel of the Spirit as a sacrifice for our sins, so that the type that took place in Isaac, who was offered on the altar, might be fulfilled. What then does he say in the prophet? \"And let them eat of the goat that is offered at the fast for all their sins.\" Pay close attention.",
+      "original": "ἐπεὶ καὶ αὐτὸς ὑπὲρ τῶν ἡμετέρων ἁμαρτιῶν ἔμελλεν τὸ σκεῦος τοῦ πνεύματος προσφέρειν θυσίαν, ἵνα καὶ ὁ τύπος ὁ γενόμενος ἐπὶ Ἰσαὰκ τοῦ προσενεχθέντος ἐπὶ τὸ θυσιαστήριον τελεσθῇ. τί οὖν λέγει ἐν τῷ προφήτῃ; Καὶ φαγέτωσαν ἐκ τοῦ τράγου τοῦ προσφερομένου τῇ νηστείᾳ ὑπὲρ πασῶν τῶν ἁμαρτιῶν. προσέχετε ἀκριβῶς",
+      "context": "An early, bold reader of types. Barnabas finds Christ in the Day of Atonement ritual and in Isaac. He also says the Jewish food laws were always meant spiritually, which later writers did not follow.",
+      "source": {
+        "book": "barnabas-epistle",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-first-principles-4-2-4",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "4.2.4",
+      "lang": "la",
+      "answer": "spiritual",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So each person must write the meaning of the divine writings threefold in his soul: the simpler are built up by what we may call the body of Scripture, which is the common, historical sense; those who have begun to advance and can see further, by its soul; and the perfect, of whom the apostle says \"we speak wisdom among the perfect\" (1 Corinthians 2:6), by the spiritual law itself, which holds a shadow of good things to come. For as a human being is said to be made of body, soul and spirit, so is holy Scripture.",
+      "original": "Tripliciter ergo describere oportet in anima sua unumquemque divinarum intelligentiam literarum: id est, ut simpliciores quique aedificentur ab ipso, ut ita dixerim, corpore Scripturarum; sic enim appellamus communem istum et historialem intellectum; si qui vero aliquantum jam proficere coeperunt, et possunt amplius aliquid intueri, ab ipsa Scripturae anima aedificentur; qui vero perfecti sunt ... ab ipsa spirituali lege, quae umbram habet futurorum bonorum, tanquam a spiritu, aedificentur. Sicut ergo homo constare dicitur ex corpore, et anima, et spiritu, ita etiam sancta Scriptura",
+      "context": "The founding statement of the spiritual sense. Origen also says a few passages cannot be true literally and point beyond themselves (4.3.1). Survives in Rufinus's Latin and in the Greek of the Philocalia.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 21 (1847), De principiis 4.2.4",
+        "ia": "origenous-ta-heuriskomena-panta-t.-21-1847"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-christian-doctrine-3-10-14",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "On Christian Teaching",
+      "locus": "3.10.14",
+      "lang": "la",
+      "answer": "spiritual",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "This is the method for telling whether a saying is literal or figurative: whatever in God's word cannot be referred in its proper sense either to good conduct or to the truth of faith, you must know to be figurative. Good conduct is the love of God and neighbor; the truth of faith is knowing God and neighbor.",
+      "original": "et iste omnino modus est, ut quidquid in sermone divino neque ad morum honestatem neque ad fidei veritatem proprie referri potest, figuratum esse cognoscas. Morum honestas ad diligendum Deum et proximum, fides veritatis ad cognoscendum Deum et proximum pertinet.",
+      "context": "Augustine also insisted that the historical events really happened; his Literal Commentary on Genesis reads Genesis as history.",
+      "source": {
+        "book": "augustine-on-christian-doctrine",
+        "section": "3.14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1-9",
+      "author": "Westminster Confession (Reformed)",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "1.9",
+      "lang": "en",
+      "answer": "literal",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "The infallible rule of interpretation of Scripture is the Scripture itself: and therefore, when there is a question about the true and full sense of any Scripture (which is not manifold, but one), it must be searched and known by other places that speak more clearly.",
+      "original": "The infallible rule of interpretation of Scripture is the Scripture itself: and therefore, when there is a question about the true and full sense of any Scripture (which is not manifold, but one), it must be searched and known by other places that speak more clearly.",
+      "context": "The Reformers rejected the medieval four senses of Scripture in favor of one sense, which can include types the text itself intends.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Diodore of Tarsus",
+      "work": "Commentary on the Psalms, preface",
+      "year": 378,
+      "why": "The Antiochene case for history over allegory, with theoria as the higher sense that grows from the history.",
+      "action": "intake",
+      "source_hint": "Mariès / Olivier edition (copyright) as note; older catena fragments"
+    },
+    {
+      "author": "John Cassian",
+      "work": "Conferences 14.8",
+      "year": 427,
+      "why": "The four senses: Jerusalem as city, the Church, the soul, and heaven.",
+      "action": "intake",
+      "source_hint": "Petschenig, CSEL 13 (1886)"
+    },
+    {
+      "author": "Justin Martyr",
+      "work": "Dialogue with Trypho 90–91",
+      "year": 160,
+      "why": "Moses' raised arms and the bronze serpent as types of the cross. In the library, not yet added here.",
+      "action": "search",
+      "source_hint": "justin-dialogue-trypho"
+    }
+  ],
+  "related": {
+    "topics": [
+      "hermeneutics-types"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

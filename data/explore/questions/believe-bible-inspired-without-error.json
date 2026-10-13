@@ -1,0 +1,188 @@
+{
+  "id": "believe-bible-inspired-without-error",
+  "number": 7,
+  "group": "bible",
+  "question": "Did the early church believe the Bible was inspired and without error?",
+  "short": "Inspiration and inerrancy",
+  "search": [
+    "inspiration",
+    "inspired",
+    "inerrancy",
+    "infallible",
+    "god-breathed",
+    "contradictions",
+    "errors in the bible"
+  ],
+  "answers": [
+    {
+      "id": "inspired",
+      "label": "Given by the Holy Spirit through the writers",
+      "short": "Inspired",
+      "tag": "Inspired"
+    },
+    {
+      "id": "no-error",
+      "label": "True throughout; no part contradicts another",
+      "short": "Without error",
+      "tag": "No error"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the first letters after the New Testament, Christians call the Scriptures true and given through the Holy Spirit. Clement of Rome says nothing false is written in them.",
+      "cites": [
+        "1-clement-45",
+        "athenagoras-plea-9",
+        "theophilus-autolycus-2-9"
+      ]
+    },
+    {
+      "text": "When passages seemed to clash, writers blamed their own understanding, not the text. Justin will never say that Scripture contradicts Scripture, and Gregory of Nazianzus finds the Spirit's precision in every stroke.",
+      "cites": [
+        "justin-dialogue-65",
+        "gregory-nazianzus-oration-2-105"
+      ]
+    },
+    {
+      "text": "This did not mean every passage was read literally. Many of the same writers read some passages figuratively. See question 9.",
+      "cites": [
+        "gregory-nazianzus-oration-2-105"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "1-clement-45",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "45.2–3",
+      "lang": "grc",
+      "answer": "no-error",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You have looked closely into the holy Scriptures, which are true, given through the Holy Spirit. You know that nothing unjust or falsified is written in them.",
+      "original": "ἐγκεκύφατε εἰς τὰς ἱερὰς γραφάς, τὰς ἀληθεῖς, τὰς διὰ τοῦ πνεύματος τοῦ ἁγίου. ἐπίστασθε, ὅτι οὐδὲν ἄδικον οὐδὲ παραπεποιημένον γέγραπται ἐν αὐταῖς.",
+      "context": "Written from Rome about 96. \"The Scriptures\" here are the Old Testament.",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "45"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athenagoras-plea-9",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "9.1",
+      "lang": "grc",
+      "answer": "inspired",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Moses, Isaiah, Jeremiah and the other prophets, lifted out of their own reasoning when the divine Spirit moved them, spoke out what was worked in them, the Spirit using them as a flute player breathes into a flute.",
+      "original": "οἳ κατ᾿ ἔκστασιν τῶν ἐν αὐτοῖς λογισμῶν κινήσαντος αὐτοὺς τοῦ θείου πνεύματος ἃ ἐνηργοῦντο ἐξεφώνησαν, συγχρησαμένου τοῦ πνεύματος ὡσεὶ καὶ αὐλητὴς αὐτὸν ἐμπνεύσαι",
+      "context": "Addressed to the emperor Marcus Aurelius. The flute image stresses God as the source. Later writers, against the Montanists, insisted the prophets kept their minds.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "theophilus-autolycus-2-9",
+      "author": "Theophilus of Antioch",
+      "year": 180,
+      "date": "c. 180",
+      "work": "To Autolycus",
+      "locus": "2.9",
+      "lang": "grc",
+      "answer": "inspired",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The men of God, bearers of the Holy Spirit and become prophets, inspired and made wise by God himself, became taught by God, holy and righteous. So they were counted worthy to receive this reward: to become God's instruments.",
+      "original": "Οἱ δὲ τοῦ Θεοῦ ἄνθρωποι πνευματοφόροι πνεύματος ἁγίου, καὶ προφῆται γενόμενοι, ὑπ᾿ αὐτοῦ τοῦ Θεοῦ ἐμπνευσθέντες, καὶ σοφισθέντες, ἐγένοντο θεοδίδακτοι καὶ ὅσιοι καὶ δίκαιοι. διὸ καὶ κατηξιώθησαν τὴν ἀντιμισθίαν ταύτην λαβεῖν, ὄργανα Θεοῦ γενόμενοι",
+      "context": "Theophilus, bishop of Antioch, is also the first to name the Gospel writers among the Spirit-bearers (2.22).",
+      "source": {
+        "book": "theophilus-autolycus",
+        "section": "2.9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-dialogue-65",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "65.2",
+      "lang": "grc",
+      "answer": "no-error",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If you put this passage forward hoping to drive the argument into a corner, so that I would say the Scriptures contradict one another, you are mistaken. I will never dare to think or say that. If a Scripture that seems to be of that kind is put forward, and gives the impression of contradicting another, I am fully convinced that no Scripture contradicts another, and I will rather admit that I do not understand what is said.",
+      "original": "εἰ δὲ χάριν τοῦ νομίζειν δύνασθαι εἰς ἀπορίαν ἐμβάλλειν τὸν λόγον, ἵνα εἴπω ἐναντίας εἶναι τὰς γραφὰς ἀλλήλαις, πεπλάνησαι· οὐ γὰρ τολμήσω τοῦτό ποτε ἢ ἐνθυμηθῆναι ἢ εἰπεῖν, ἀλλ᾿ ἐὰν τοιαύτη τις δοκοῦσα εἶναι γραφὴ προβληθῇ, καὶ πρόφασιν ἔχῃ ὡς ἐναντία οὖσα, ἐκ παντὸς πεπεισμένος ὅτι οὐδεμία γραφὴ τῇ ἑτέρᾳ ἐναντία ἐστίν, αὐτὸς μὴ νοεῖν μᾶλλον ὁμολογήσω τὰ εἰρημένα",
+      "context": "Justin is debating a Jewish teacher over Isaiah 42:8.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "65"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-oration-2-105",
+      "author": "Gregory of Nazianzus",
+      "year": 362,
+      "date": "c. 362",
+      "work": "Oration 2",
+      "locus": "105",
+      "lang": "grc",
+      "answer": "no-error",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We, who trace the precision of the Spirit down to every stroke and line, will never admit, for it would be impious, that even the smallest deeds were written down with care by those who recorded them, and kept in memory to this day, for no reason.",
+      "original": "Ἡμεῖς δὲ, οἱ καὶ μέχρι τῆς τυχούσης κεραίας καὶ γραμμῆς τοῦ πνεύματος τὴν ἀκρί βειαν ἕλκοντες, οὔποτε δεξόμεθα, οὐ γὰρ ὅσιον, οὐδὲ τὰς ἐλαχίστας πράξεις εἰκῆ σπουδασθῆναι τοῖς ἀναγράψασι, καὶ μέχρι τοῦ παρόντος μνήμῃ διασωθῆναι",
+      "context": "\"Stroke\" is the word of Matthew 5:18, \"not one stroke of a letter\".",
+      "source": {
+        "book": "gregory-nazianzus-oration-2",
+        "section": "27"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "Letter 82.3, to Jerome",
+      "year": 405,
+      "why": "\"I firmly believe that none of their authors erred in writing anything.\" Augustine's letters are not in the library yet.",
+      "action": "intake",
+      "source_hint": "Maurist text, Migne PL 33"
+    },
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 2.28.2",
+      "year": 180,
+      "why": "\"The Scriptures are perfect, since they were spoken by the Word of God and his Spirit.\" The Latin was not found in the Harvey scan by search.",
+      "action": "search",
+      "source_hint": "Harvey 1857 vol. 1"
+    }
+  ],
+  "related": {
+    "topics": [
+      "scripture-inspiration"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

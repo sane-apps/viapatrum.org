@@ -1,0 +1,172 @@
+{
+  "id": "constantine-council-nicaea-choose-books",
+  "number": 2,
+  "group": "bible",
+  "question": "Did Constantine or the Council of Nicaea choose the books of the Bible?",
+  "short": "Did Nicaea choose the Bible?",
+  "search": [
+    "constantine",
+    "nicaea",
+    "council of nicaea",
+    "da vinci code",
+    "who chose the bible",
+    "325"
+  ],
+  "answers": [
+    {
+      "id": "no-list",
+      "label": "Nicaea made no list of books",
+      "short": "No list at Nicaea",
+      "tag": "No list"
+    },
+    {
+      "id": "copies",
+      "label": "Constantine paid for copies of the Scriptures",
+      "short": "Copies only",
+      "tag": "Copies"
+    },
+    {
+      "id": "judith",
+      "label": "A later report: Nicaea counted Judith as Scripture",
+      "short": "Judith report",
+      "tag": "Judith"
+    }
+  ],
+  "overview": [
+    {
+      "text": "No. The Council of Nicaea in 325 dealt with Arius, the date of Easter and church discipline. None of its twenty canons or its creed names a book of the Bible.",
+      "cites": [
+        "eusebius-he-3-25",
+        "laodicea-60-nt"
+      ]
+    },
+    {
+      "text": "Before and after Nicaea the canon grew the same way: by what the churches had received, with local lists. Eusebius, writing around 325, does not mention a council deciding anything.",
+      "cites": [
+        "eusebius-he-3-25",
+        "laodicea-60-nt"
+      ]
+    },
+    {
+      "text": "Constantine's documented part is that he ordered fifty copies of the Scriptures for new churches, about 332. Jerome later reports that Nicaea was said to count Judith among the Scriptures; nothing of the kind survives.",
+      "cites": [
+        "constantine-in-eusebius-life-4-36",
+        "jerome-preface-judith"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "eusebius-he-3-25",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Church History",
+      "locus": "3.25.1–6",
+      "lang": "grc",
+      "answer": "no-list",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "First we must place the holy four of the Gospels, followed by the Acts of the Apostles. After this, the letters of Paul; then the first letter of John and likewise the first of Peter must be accepted. After these, if it seems right, the Revelation of John. These are the recognized books. Among the disputed books, which are nonetheless known to most, are the letter called James's, and Jude's, the second of Peter, and the second and third of John. Among the spurious are the Acts of Paul, the Shepherd, the Revelation of Peter, the letter of Barnabas and the so-called Teachings of the Apostles. ... We have made this list so that we may know these books, and also those that heretics put forward under the apostles' names, such as the gospels of Peter, Thomas and Matthias, which no churchman in the succession has ever thought fit to mention in writing.",
+      "original": "ἐν πρώτοις τὴν ἁγίαν τῶν εὐαγγελίων τετρακτὺν, οἷς ἴπε- ται ἡ τῶν πράξεων τῶν ἀποστόλων γραφή. μετὰ δὲ ταύτην τὰς Παύλου καταλεκτέον ἐπιστολὰς, αἷς ἐξῆς τὴν φερομένην Ἰωάννου προτέραν καὶ ὁμοίως τὴν Πέτρου κυρωτέον ἐπιστολήν. ἐπὶ τούτοις τακτέον, εἴ γε φανείη, τὴν Ἀποκάλυψιν Ἰωάννου ... καὶ ταῦτα μὲν ἐν ὁμολογουμένοις. τῶν δ᾿ ἀντιλεγομένων, γνωρίμων δ᾿ οὖν ὅμως τοῖς πολλοῖς, ἡ λεγομένη Ἰακώβου φέρεται καὶ ἡ Ἰούδα, ἥ τε Πέτρου δευτέρα ἐπιστολὴ, καὶ ἡ ὀνομαζομένη δευτέρα καὶ τρίτη Ἰωάννου ... ἤτοι ὡς Πέτρου καὶ Θωμᾶ καὶ Ματθία ἢ καί τινων παρὰ τούτους ἄλλων εὐαγγέλια περιεχούσας",
+      "context": "Written in the years around Nicaea. Eusebius describes the canon as the churches already received it, with a few books still debated. He does not mention any council deciding.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "constantine-in-eusebius-life-4-36",
+      "author": "Constantine (letter in Eusebius, Life of Constantine)",
+      "year": 332,
+      "date": "c. 332",
+      "work": "Life of Constantine",
+      "locus": "4.36",
+      "lang": "grc",
+      "answer": "copies",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "It has seemed right to tell your wisdom that you should order fifty copies, on prepared parchment, easy to read and convenient to carry for use, to be written by skilled scribes who know their craft exactly: copies, that is, of the divine Scriptures, whose preparation and use you know to be most needed for the instruction of the Church.",
+      "original": "ὅπως ἂν πεντήκοντα σωμάτια ἐν διφθέραις ἐγκατασκεύοις εὐανάγνωστά τε καὶ πρὸς τὴν χρῆσιν εὐμετακόμιστα ὑπὸ τεχνιτῶν καλλιγάφων καὶ ἀκριβῶς τὴν τέχνην ἐπισταμένων γραφῆναι κελεύσειας, τῶν θείων δηλαδὴ γραφῶν, ὧν μάλιστα τήν τ’ ἐπισκευὴν καὶ τὴν χρῆσιν τῷ τῆς ἐκκληςίας λόγῳ ἀναγκαίαν εἶναι γινώσκεις.",
+      "context": "Constantine's whole role in Scripture, as far as the sources go: he paid for copies for the new churches of Constantinople, about seven years after Nicaea, and left the contents to Bishop Eusebius.",
+      "source": {
+        "book": "eusebius-life-constantine",
+        "section": "4.36"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "laodicea-60-nt",
+      "author": "Council of Laodicea",
+      "year": 363,
+      "date": "c. 363",
+      "work": "Canons",
+      "locus": "60",
+      "lang": "grc",
+      "answer": "no-list",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "These are the books of the New Covenant: four Gospels, according to Matthew, according to Mark, according to Luke, according to John; the Acts of the Apostles; seven catholic letters, one of James, two of Peter, three of John, one of Jude; fourteen letters of Paul.",
+      "original": "Τὰ δὲ τῆς Καινῆς Διαθήκης ταῦτα· Εὐαγγέλια τέσσαρα, κατὰ Ματθαῖον, κατὰ Μάρκον, κατὰ Λουκᾶν, κατὰ Ἰωάννην· Πράξεις Ἀποστόλων· Ἐπιστολαὶ καθολικαὶ ἑπτά, Ἰακώβου μία, Πέτρου δύο, Ἰωάννου τρεῖς, Ἰούδα μία· Ἐπιστολαὶ Παύλου δεκατέσσαρες",
+      "context": "About forty years after Nicaea, local councils were still writing their own lists. They do not cite Nicaea.",
+      "source": {
+        "book": "council-of-laodicea-canons",
+        "section": "60"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "jerome-preface-judith",
+      "author": "Jerome",
+      "year": 398,
+      "date": "c. 398",
+      "work": "Preface to Judith",
+      "locus": "Preface",
+      "lang": "la",
+      "answer": "judith",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Among the Hebrews the book of Judith is read among the apocrypha, and its authority is judged less fit to settle disputed points. ... But because the Nicene Synod is read to have counted this book among the sacred Scriptures, I have agreed to your request.",
+      "original": "Apud Hebraeos liber Judith inter apocrypha legitur: cujus auctoritas ad roboranda illa quae in contentionem veniunt, minus idonea judicatur. ... Sed quia hunc librum Synodus Nicaena in numero sanctarum Scripturarum legitur computasse, acquievi postulationi vestrae",
+      "context": "The only ancient claim that Nicaea said anything about a biblical book. No such statement survives in the council's canons or creed. Jerome may mean that the bishops quoted Judith.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-jerome-preface-judith.txt",
+        "edition": "Migne PL 29.37–39, as given at tertullian.org"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Nicaea",
+      "work": "Creed and twenty canons",
+      "year": 325,
+      "why": "Showing the full canons would let readers see that none concerns Scripture.",
+      "action": "intake",
+      "source_hint": "Bruns, Canones apostolorum et conciliorum (1839), vol. 1"
+    },
+    {
+      "author": "Synodicon Vetus",
+      "work": "Chapter on Nicaea",
+      "year": 887,
+      "why": "A ninth-century tale that the true books were sorted from false ones at Nicaea by a miracle at the altar. It is the earliest source of the popular story.",
+      "action": "intake",
+      "source_hint": "Fabricius, Bibliotheca Graeca vol. 12 (1809)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "canon-rule-of-truth"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

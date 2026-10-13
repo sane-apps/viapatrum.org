@@ -1,0 +1,287 @@
+{
+  "id": "four-gospels-settled-other-gospels",
+  "number": 4,
+  "group": "bible",
+  "question": "When were the four Gospels settled, and why were other gospels left out?",
+  "short": "Why four Gospels?",
+  "search": [
+    "four gospels",
+    "gospel of thomas",
+    "gospel of peter",
+    "gnostic gospels",
+    "lost gospels",
+    "diatessaron",
+    "gospel of judas",
+    "apocryphal gospels"
+  ],
+  "answers": [
+    {
+      "id": "four",
+      "label": "Four Gospels, received from the apostles and their followers",
+      "short": "Four received",
+      "tag": "Four"
+    },
+    {
+      "id": "rejected",
+      "label": "Other gospels rejected as not handed down",
+      "short": "Others rejected",
+      "tag": "Rejected"
+    },
+    {
+      "id": "received",
+      "label": "The test: what the whole Church received",
+      "short": "Church's test",
+      "tag": "Test"
+    },
+    {
+      "id": "listed",
+      "label": "Lists of the books",
+      "short": "Lists",
+      "tag": "Lists"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest witnesses, Papias about 125 and Irenaeus about 180, already know the four by name and give accounts of how they were written. Irenaeus treats four, and only four, as settled across the Church.",
+      "cites": [
+        "papias-in-eusebius-3-39",
+        "irenaeus-ah-3-11-8"
+      ]
+    },
+    {
+      "text": "Other gospels existed and were read by some. Bishops judged them by one test: had they been handed down from the apostles? Serapion withdrew the Gospel of Peter on that test, and Origen, who had read the gospels of Thomas and Matthias, says the Church received only four.",
+      "cites": [
+        "serapion-in-eusebius-6-12",
+        "origen-luke-1",
+        "origen-in-eusebius-6-25-4"
+      ]
+    },
+    {
+      "text": "By Eusebius's time, about 325, the four were \"recognized\" everywhere and the others counted as heretics' books. In Syria a harmony of the four, Tatian's Diatessaron, was read in churches until Theodoret replaced it in the fifth century.",
+      "cites": [
+        "eusebius-he-3-25",
+        "theodoret-heretical-fables-1-20"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "papias-in-eusebius-3-39",
+      "author": "Papias of Hierapolis",
+      "year": 125,
+      "date": "c. 125",
+      "work": "Exposition of the Lord's Sayings, preserved in Eusebius, Church History",
+      "locus": "3.39.15",
+      "lang": "grc",
+      "answer": "four",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "And the elder used to say this: Mark, having become Peter's interpreter, wrote down accurately, though not in order, whatever he remembered of what the Lord said or did. For he had neither heard the Lord nor followed him, but later, as I said, followed Peter, who gave his teaching as needed, not making an ordered account of the Lord's sayings. So Mark did no wrong in writing some things as he remembered them. For he took care of one thing: to leave out nothing he had heard, and to state nothing falsely.",
+      "original": "καὶ τοῦτο ὁ πρεσβύτερος ἔλεγε “ Μάρκος μὲν ἑρμηνευτὴς Πέτρου γενόμενος, ὅσα ἐμνη- “ μόνευσεν ἀκριβῶς ἔγραψεν, οὐ μέντοι τάξει, τὰ ὑπο “ τοῦ Χριστοῦ ἢ λεχθέντα ἢ πραχθέντα. οὔτε γὰρ “ἤκουσε τοο͂ κυρίου οὔτε παρηκολούθησεν αὐτῷ, “ὕστερον δὲ, ὡς ἔφην, Πέτρῳ, ὃς πρὸς τἀς χρείας ἐποι- ’’ εἷτο τὰς διδασκαλίας, ἀλλ’ οὐχ ὥσπερ σύνταξιν τῶν “κυριακῶν ποιούμενος λόγων, ὥστε οὐδὲν ἥμαρτε “Μάρκος, οὕτως ἔνια γράψας ὡς ἀπεμνημόνευσεν. \" ἑνὸς γὰρ ἐποιήσατο πρόνοιαν, τοῦ μηδὲν ὧν ἤκουσε \" παραλιπεῖν",
+      "context": "The oldest statement about who wrote a Gospel. Papias reports what \"the elder\", probably John the Elder, told him. He also says Matthew collected the sayings in Hebrew.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.39"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-3-11-8",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.11.8",
+      "lang": "grc",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Why are the Gospels neither more nor fewer in number? Since there are four regions of the world we live in and four main winds, and the Church is scattered over all the earth, and the pillar and support of the Church is the gospel and the Spirit of life, it is fitting that she has four pillars, breathing out incorruption on every side and setting people's life aflame. ... The Word, the maker of all things, ... gave us the gospel in four forms, held together by one Spirit.",
+      "original": "Τί δήποτε οὔτε πλείονα οὔτε ἐλάττονα τὸν ἀριθμόν εἰσι τὰ εὐαγγέλια; Ἐπεὶ γὰρ τέσσαρα κλίματα τοῦ κόσμου ἐν ᾧ ἐσμὲν καὶ τέσσαρα καθολικὰ πνεύματα, κατέσπαρται δὲ ἡ ἐκκλησία ἐπὶ πάσης τῆς γῆς, στῦλος δὲ καὶ στήριγμα ἐκκλησίας τὸ εὐαγγέλιον καὶ Πνεῦμα ζωῆς, εἰκότως τέσσαρας ἔχειν αὐτὴν στύλους πανταχόθεν πνέοντας τὴν ἀφθαρσίαν καὶ ἀναζωπυροῦντας τοὺς ἀνθρώπους. ... ἔδωκεν ἡμῖν τετράμορφον τὸ εὐαγγέλιον, ἑνὶ δὲ πνεύματι συνεχόμενον.",
+      "context": "Irenaeus writes against groups that used one Gospel only, or many. His reasons from nature are illustrations; his point is that the four were already fixed and received across the Church by about 180.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-3.txt",
+        "edition": "Greek fragment, Migne PG 7, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "muratorian-fragment",
+      "author": "Muratorian Fragment (author unknown)",
+      "year": 190,
+      "date": "c. 190",
+      "work": "Muratorian Fragment",
+      "locus": "lines 2–9, 73–80",
+      "lang": "la",
+      "answer": "listed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The third book of the Gospel is that according to Luke. Luke, the physician, after Christ's ascension, when Paul had taken him along as a companion on his travels, wrote it in his own name from what he heard; he himself did not see the Lord in the flesh. ... But Hermas wrote the Shepherd very recently, in our own times, in the city of Rome, while his brother Pius the bishop sat in the chair of the church of Rome. So it ought to be read, but it cannot be read publicly to the people in church, either among the prophets, whose number is complete, or among the apostles, for it is after their time.",
+      "original": "tertium euangelii librum secundum Lucam. Lucas iste medicus post ascensum Christi cum eum Paulus quasi itineris sui socium secum adsumsisset nomine suo ex opinione conscripsit — Dominum tamen nec ipse uidit in carne ... Pastorem uero nuperrime temporibus nostris in Urbe Roma Hermas conscripsit, sedente cathedra Urbis Romae ecclesiae Pio Episcopo fratre eius; et ideo legi eum quidem oportet, se publicare uero in ecclesia populo, neque inter Prophetas, completum numero, neque inter apostolos, in finem temporum potest.",
+      "context": "The oldest surviving list of New Testament books, known from an eighth-century Latin copy. Most date it about 180 to 200; a few scholars argue for the fourth century. The Latin is barely grammatical; the text here is the usual restored reading. The test it applies to the Shepherd is apostolic date.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-muratorian-fragment.txt",
+        "edition": "Restored Latin from Theron, Evidence of Tradition (1957), as given at earlychristianwritings.com; single manuscript, Milan, Ambrosian Library I 101 sup."
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-in-eusebius-6-14",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Outlines, preserved in Eusebius, Church History",
+      "locus": "6.14.5–6",
+      "lang": "grc",
+      "answer": "four",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "In the same books Clement gives a tradition of the early elders about the order of the Gospels, as follows. He said that the Gospels with the genealogies were written first. Mark's came about in this way: when Peter had preached the word publicly in Rome and declared the gospel by the Spirit, those present, who were many, urged Mark, who had followed him for a long time and remembered what was said, to write it down. He did so and gave the Gospel to those who asked for it.",
+      "original": "αὖθις δ’ ἐν τοῖς αὐτοῖς ὁ Κλήμης βιβλίοις περὶ τῆς τάξεως τῶν εὐαγγελίων παράδοσιν τῶν ἀνέκαθεν πρεσβυτέρων τέθειται, τοῦτον ἔχουσαν τὸν τρόπον· προγε- γράφθαι [ἔλεγεν] τόν εὐαγγελίων τὰ περιέχοντα τὰς γενεαλογίας, τὸ δὲ κατὰ Μάρκον ταύτην ἐσχηκέναι τὴν οἰκονομίαν. τοῦ Πέτρου δημοσίᾳ ἐν Ῥώμῃ κηρύξαντος τὸν λόγον, καὶ πνεύματι τὸ εὐαγγέλιον ἐξειπόντος, τοὺς παρόντας πολλοὺς ὄντας παρακαλέσαι τὸν Μάρκον, ὡσὰν ἀκολουθήσαντα αὐτῷ πόρρωθεν καὶ μεμνημένον τῶν λεχθέντων, ἀναγράψαι τὰ εἰρημένα· ποιήσαντα δὲ τὸ εὐαγγέλιον μεταδοῦναι τοῖς δεομένοις αὐτοῦ.",
+      "context": "Clement passes on what \"the elders\" said. He goes on to call John \"a spiritual Gospel\" written last.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "6.14"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "serapion-in-eusebius-6-12",
+      "author": "Serapion of Antioch",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Letter on the Gospel of Peter, preserved in Eusebius, Church History",
+      "locus": "6.12.3–4",
+      "lang": "grc",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "We, brothers, receive Peter and the other apostles as Christ. But the writings that falsely bear their names we reject, as men of experience, knowing that we did not receive such things. When I was with you, I supposed you all held the right faith, and without going through the gospel they put forward under Peter's name I said: if this is the only thing that seems to trouble you, let it be read. But now I have learned that their mind was hiding some heresy.",
+      "original": "ἡμεῖς γὰρ, ἀδελφοὶ, καὶ “Πέτρον καὶ τοὺς ἄλλους ἀποστόλους ἀποδεχόμεθα “ὡς Χριστὸν, τὰ δὲ ὀνόματι αὐτῶν ψευδεπίγραφα ὡς “ἔμπειροι παραιτούμεθα, γινώσκοντες ὅτι τὰ τοιαῦτα “οὐ παρελάβομεν. ἐγὼ γὰρ γενόμενος παρ’ ὑμῖν ‘ὑπενόουν τοὺς πάντας ὀρθῇ πίστει προσφέρεσθαι, καὶ μὴ διελθὼν τὸ ὑπ’ αὐτῶν προφερόμενον ὀνό- “ματι Πέτρου εὐαγγέλιον εἶπον ὅτι, εἰ τοῦτό ἐστι “μόνον τὸ δοκοῦν ὑμῖν παρέχειν μικροψυχίαν, ἀναγινωσκέσθω. νῦν δὲ μαθὼν ὅτι αἱρέσει τινὶ ὁ νοῦς “αὐτῶν ἐνεφώλευεν",
+      "context": "A bishop's test in practice: is this what we received from the apostles? Serapion first let a congregation at Rhossus read the Gospel of Peter, then withdrew it once he read it.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "6.12"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-luke-1",
+      "author": "Origen of Alexandria",
+      "year": 234,
+      "date": "c. 234",
+      "work": "Homilies on Luke",
+      "locus": "1.2",
+      "lang": "la",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Church has four Gospels; the heresies have very many. One of them is written \"according to the Egyptians\", another \"according to the Twelve Apostles\". Basilides even dared to write a gospel and put his own name on it. ... Only four Gospels have been approved, from which the teachings are to be drawn in the person of our Lord and Savior. I know a gospel called \"according to Thomas\", and one \"according to Matthias\", and we have read many others, so as not to seem ignorant for the sake of those who think they know something if they know these. But in all of them we approve nothing except what the Church does: only four Gospels are to be received.",
+      "original": "Ecclesia quatuor habet evangelia, haereses pluri- ma, e quibus quoddam scribitur secundum Aegyptios, aliud juxta duodecim Apostolos. Ausus fuit et Basilides scribere evangelium, et suo illud nomine titulare. ... quatuor tantum evangelia sunt probata, e quibus sub persona Domini et Salvatoris nostri proferenda sunt do- gmata. Scio quoddam evangelium, quod appellatur secun- dum Thomam, et juxta Mathiam: et alia plura legi- mus, ne quid ignorare videremur propter eos, qui se pu- tant aliquid scire, si ista cognoverint. Sed in his omni- bus nihil aliud probamus, nisi quod ecclesia, id est, qua- tuor tantum evangelia recipienda.",
+      "context": "Origen read the other gospels himself. He rejects them because the Church did not receive them. Survives in Jerome's Latin.",
+      "source": {
+        "witness": "books/origen-luke-homilies/sources/witnesses/lommatzsch-t5-1835_djvu.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 5 (1835), Homily 1",
+        "ia": "origenous-ta-heuriskomena-panta-t.-5-1835"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-in-eusebius-6-25-4",
+      "author": "Origen of Alexandria",
+      "year": 245,
+      "date": "c. 245",
+      "work": "Commentary on Matthew, preserved in Eusebius, Church History",
+      "locus": "6.25.4",
+      "lang": "grc",
+      "answer": "received",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "As I have learned by tradition about the four Gospels, which alone are undisputed in the Church of God under heaven: first was written the one according to Matthew, once a tax collector and later an apostle of Jesus Christ, who published it for believers from Judaism, composed in Hebrew letters; second the one according to Mark, who wrote it as Peter guided him.",
+      "original": "ὡς ἐν παραδόσει μαθὼν περὶ “τῶν τεσσάρων εὐαγγελίων, ἃ καὶ μόνα ἀναντίρρητά “ἐστιν ἐν τῇ ὑπὸ τὸν οὐρανὸν ἐκκλησίᾳ τοῦ θεοῦ, “ὅτι πρῶτον μὲν γέγραπται τὸ κατὰ τόν ποτε ῾νην, ὕστερον δὲ ἀπόστολον Ἰησοῦ Χριστοῦ Ματ- “θαῖον, ἐκδεδωκότα αὐτὸ τοῖς ἀπὸ Ἰουδαϊσμοῦ πι- “στεύσασι, γράμμασιν Ἑβραϊκοῖς συντεταγμένον· “ δεύτερον δὲ τὸ κατὰ Μάρκον",
+      "context": "Origen speaks of tradition, not of a ruling. The word \"tax collector\" is a gap in the library's Greek, filled from the standard text.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "6.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "eusebius-he-3-25",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Church History",
+      "locus": "3.25.1–6",
+      "lang": "grc",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "First we must place the holy four of the Gospels, followed by the Acts of the Apostles. After this, the letters of Paul; then the first letter of John and likewise the first of Peter must be accepted. After these, if it seems right, the Revelation of John. These are the recognized books. Among the disputed books, which are nonetheless known to most, are the letter called James's, and Jude's, the second of Peter, and the second and third of John. Among the spurious are the Acts of Paul, the Shepherd, the Revelation of Peter, the letter of Barnabas and the so-called Teachings of the Apostles. ... We have made this list so that we may know these books, and also those that heretics put forward under the apostles' names, such as the gospels of Peter, Thomas and Matthias, which no churchman in the succession has ever thought fit to mention in writing.",
+      "original": "ἐν πρώτοις τὴν ἁγίαν τῶν εὐαγγελίων τετρακτὺν, οἷς ἴπε- ται ἡ τῶν πράξεων τῶν ἀποστόλων γραφή. μετὰ δὲ ταύτην τὰς Παύλου καταλεκτέον ἐπιστολὰς, αἷς ἐξῆς τὴν φερομένην Ἰωάννου προτέραν καὶ ὁμοίως τὴν Πέτρου κυρωτέον ἐπιστολήν. ἐπὶ τούτοις τακτέον, εἴ γε φανείη, τὴν Ἀποκάλυψιν Ἰωάννου ... καὶ ταῦτα μὲν ἐν ὁμολογουμένοις. τῶν δ᾿ ἀντιλεγομένων, γνωρίμων δ᾿ οὖν ὅμως τοῖς πολλοῖς, ἡ λεγομένη Ἰακώβου φέρεται καὶ ἡ Ἰούδα, ἥ τε Πέτρου δευτέρα ἐπιστολὴ, καὶ ἡ ὀνομαζομένη δευτέρα καὶ τρίτη Ἰωάννου ... ἤτοι ὡς Πέτρου καὶ Θωμᾶ καὶ Ματθία ἢ καί τινων παρὰ τούτους ἄλλων εὐαγγέλια περιεχούσας",
+      "context": "Eusebius names the gospels of Peter, Thomas and Matthias as heretics' books, and says no writer in the line of bishops ever cited them.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.25"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "theodoret-heretical-fables-1-20",
+      "author": "Theodoret of Cyrrhus",
+      "year": 453,
+      "date": "c. 453",
+      "work": "Compendium of Heretical Fables",
+      "locus": "1.20",
+      "lang": "grc",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Not only Tatian's own party used this book [the Diatessaron], but also those who follow the apostles' teaching, who did not see the fraud in the arrangement but used it simply as a short book. I myself found more than two hundred such books held in honor in our churches. I gathered them all, put them away, and brought in instead the Gospels of the four evangelists.",
+      "original": "Ἐχρήσαντο δὲ τούτῳ, οὐ μόνοι οἱ τῆς ἐκείνου συμμορίας, ἀλλὰ καὶ οἱ τοῖς ἀποστολικοῖς ἑπόμενοι δόγμασι, τὴν τῆς συνθήκης κακουργίαν οὐ ἐγνωκότες, ἀλλ' ἁπλούστερον ὡς συντόμῳ τῷ βιβλίῳ χρησάμενοι. Εὗρον δὲ κἀγὼ πλείους ἢ διακοσίας βίβλους τοιαύτας ἐν ταῖς παρ' ἡμῖν ἐκκλησίαις τετιμημένας, καὶ πάσας συναγαγὼν ἀπεθέμην, καὶ τὰ τῶν τεττάρων εὐαγγελιστῶν ἀντεισήγαγον Εὐαγγέλια.",
+      "context": "Tatian's Diatessaron (about 170) wove the four Gospels into one. Syriac churches read it for centuries. Theodoret, a bishop in Syria, replaced it, because it left out the genealogies of Christ.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-theodoretus-of-cyrrhus-pg-80-84-haereticarum-fabularum-compendium.txt",
+        "edition": "Migne PG 83, Khazarzar text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 3.1.1",
+      "year": 180,
+      "why": "Says who wrote each Gospel and where. Latin only; the Latin of Book 3 is not yet fetched.",
+      "action": "intake",
+      "source_hint": "Harvey 1857 vol. 2 or Massuet, Migne PG 7"
+    },
+    {
+      "author": "Tatian",
+      "work": "Diatessaron",
+      "year": 170,
+      "why": "The harmony itself survives in Arabic and other versions.",
+      "action": "intake",
+      "source_hint": "Ciasca, Tatiani Evangeliorum harmoniae arabice (1888)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "canon-rule-of-truth"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -43,6 +43,7 @@ def norm(s: str) -> str:
     s = unicodedata.normalize("NFD", s or "")
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = s.lower().replace("ς", "σ").replace("ϲ", "σ").replace("v", "u").replace("j", "i")
+    s = re.sub(r"(\w)[-¬]\s+(\w)", r"\1\2", s)  # a word split across a scan's line break
     s = re.sub(r"[^\w\s]", " ", s)
     return re.sub(r"\s+", " ", s).strip()
 
@@ -181,10 +182,15 @@ def check_one(path: Path) -> tuple[list[str], list[str], dict]:
             if t is None:
                 errs.append(f"{tag}: witness file missing: {src['witness']} (re-fetch archive.org {src.get('ia')})")
                 continue
+            # A scan whose OCR misreads letters (Migne's Greek columns read k as x)
+            # is checked at a lower bar and always reported, so a person reads it.
+            bar = 0.6 if src.get("ocr_poor") else 0.85
             for p in pieces(orig):
                 score = 1.0 if p in t else fuzzy_in(p, t)
-                if score < 0.85:
+                if score < bar:
                     errs.append(f"{tag}: only {score:.0%} of words found in {src['witness']}: {p[:60]}")
+                elif src.get("ocr_poor") and score < 0.85:
+                    warns.append(f"{tag}: poor OCR, {score:.0%} of words matched; the quote follows the standard text")
             if src.get("check_file"):
                 c = file_text(src["check_file"])
                 if c is not None:
