@@ -1,0 +1,263 @@
+{
+  "id": "christian-become-wholly-holy-this",
+  "number": 38,
+  "group": "salvation",
+  "question": "Can a Christian become wholly holy in this life?",
+  "short": "Perfection in this life?",
+  "search": [
+    "entire sanctification",
+    "christian perfection",
+    "perfect love",
+    "sinless perfection",
+    "holiness",
+    "second blessing",
+    "sanctification",
+    "1 john 1:8"
+  ],
+  "answers": [
+    {
+      "id": "perfect",
+      "label": "Yes: entire sanctification, perfect love, can be given in this life",
+      "short": "Yes, in this life",
+      "tag": "Perfect"
+    },
+    {
+      "id": "not-in-life",
+      "label": "No: only Christ was without sin; we are made perfect after death",
+      "short": "Not in this life",
+      "tag": "Not yet"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Clement of Alexandria doubted that anyone but Christ is perfect in everything while still human. Augustine, against Pelagius, said the same: sinlessness is possible by grace, but no one but Christ has had it.",
+      "cites": [
+        "clement-stromata-4-21",
+        "augustine-merits-2-7",
+        "augustine-perfection-righteousness-24",
+        "pelagius-in-proceedings-54-b"
+      ]
+    },
+    {
+      "text": "Reformed and Catholic teaching both place full holiness after this life: at death, or through purification after death.",
+      "cites": [
+        "westminster-1646-13-2",
+        "ccc-1030"
+      ]
+    },
+    {
+      "text": "Wesley taught that \"perfect love\", entire sanctification, can be received in this life by faith. The Holiness churches made it an article of faith.",
+      "cites": [
+        "wesley-scripture-way-salvation",
+        "nazarene-articles-entire-sanctification"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "clement-stromata-4-21",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Stromata",
+      "locus": "4.21.130",
+      "lang": "grc",
+      "answer": "not-in-life",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "One is made perfect as devout, as patient, as self-controlled, as a worker, as a martyr, as one who knows God. But perfect in all of them together, I do not know if any human being is, while still human, except only the one who put on humanity for our sake.",
+      "original": "τελειοῦται γοῦν τις καὶ ὡς εὐλαβὴς καὶ ὡς ὑπομονητικὸς καὶ ὡς ἐγκρατὴς καὶ ὡς ἐργάτης καὶ ὡς μάρτυς καὶ ὡς γνωστικός· πάντα δὲ ὁμοῦ τέλειος οὐκ οἶδ’ εἴ τις ἀνθρώπων, ἔτι ἄνθρωπος ὤν, πλὴν μόνον ὁ δἰ ἡμᾶς ἄνθρωπον ἐνδυσάμενος.",
+      "context": "Clement also describes the mature Christian, his \"true gnostic\", as free from passion and perfect (Stromata 7).",
+      "source": {
+        "book": "clement-alexandria-stromata",
+        "section": "4.21"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "pelagius-in-proceedings-54-b",
+      "author": "Pelagius (quoted by Augustine)",
+      "year": 416,
+      "date": "c. 416",
+      "work": "Letter, quoted in Augustine, On the Proceedings of Pelagius",
+      "locus": "30.54",
+      "lang": "la",
+      "answer": "perfect",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "supporting",
+      "english": "By the judgment of fourteen bishops our definition was approved, in which we said that a person can be without sin and easily keep God's commandments, if he wishes.",
+      "original": "quattuordecim episcoporum sententia definitio nostra comprobata est, qua diximus posse hominem sine peccato esse et dei mandata facile custodire, si uelit.",
+      "context": "For Pelagius, sinlessness is possible by our own will, with the help God gives in nature and teaching.",
+      "source": {
+        "book": "augustine-proceedings-of-pelagius",
+        "section": "54"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-merits-2-7",
+      "author": "Augustine of Hippo",
+      "year": 412,
+      "date": "c. 412",
+      "work": "On the Merits and Forgiveness of Sins",
+      "locus": "2.6.7",
+      "lang": "la",
+      "answer": "not-in-life",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Those who say that a person can be without sin in this life should not be opposed at once with careless rashness. For if we deny that it can be, we will take away from both the free choice of man, who wills it, and the power or mercy of God, who brings it about by his help. But it is one question whether it can be, another whether it is.",
+      "original": "Nam qui dicunt esse posse in hac uita hominem sine peccato, non est eis continuo incauta temeritate obsistendum. si enim esse posse negauerimus, et hominis libero arbitrio, qui hoc uolendo appetit, et dei uirtuti uel misericordiae, qui hoc adiuuando efficit, derogabimus. sed alia quaestio est, utrum esse possit, alia utrum sit",
+      "context": "Augustine grants it is possible by grace, but denies that anyone but Christ has done it.",
+      "source": {
+        "book": "augustine-merits-and-forgiveness-of-sins",
+        "section": "2.7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-perfection-righteousness-24",
+      "author": "Augustine of Hippo",
+      "year": 415,
+      "date": "c. 415",
+      "work": "On the Perfection of Human Righteousness",
+      "locus": "11.24",
+      "lang": "la",
+      "answer": "not-in-life",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But it is one thing to be without sin, which in this life is said of the Only-begotten alone; another to be without blame, which could be said of many righteous people even in this life.",
+      "original": "sed aliud est esse sine peccato, quod de solo in hac uita unigenito dictum est, aliud esse sine querella, quod de multis iustis etiam in hac uita dici potuit",
+      "context": "Augustine answers Caelestius, Pelagius's disciple. 1 John 1:8 was his constant text: \"If we say we have no sin, we deceive ourselves.\"",
+      "source": {
+        "book": "augustine-perfection-of-righteousness",
+        "section": "24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-13-2",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "13.2",
+      "lang": "en",
+      "answer": "not-in-life",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "This sanctification is throughout, in the whole man; yet imperfect in this life, there abiding still some remnants of corruption in every part",
+      "original": "This sanctification is throughout, in the whole man; yet imperfect in this life, there abiding still some remnants of corruption in every part",
+      "context": "The Reformed view: holiness grows, but sin remains until death.",
+      "source": {
+        "url": "https://www.opc.org/wcf.html",
+        "edition": "Westminster Confession of Faith (1646)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "ccc-1030",
+      "author": "Catechism of the Catholic Church",
+      "year": 1992,
+      "date": "1992",
+      "work": "Catechism of the Catholic Church",
+      "locus": "1030",
+      "lang": "en",
+      "answer": "not-in-life",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "All who die in God's grace and friendship, but still imperfectly purified, are indeed assured of their eternal salvation; but after death they undergo purification, so as to achieve the holiness necessary to enter the joy of heaven.",
+      "original": "All who die in God's grace and friendship, but still imperfectly purified, are indeed assured of their eternal salvation; but after death they undergo purification, so as to achieve the holiness necessary to enter the joy of heaven.",
+      "context": "The Catholic view: those not yet fully purified at death are made holy after death (purgatory).",
+      "source": {
+        "url": "https://www.vatican.va/archive/ENG0015/__P2N.HTM",
+        "edition": "Catechism of the Catholic Church 1030-1031"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "wesley-scripture-way-salvation",
+      "author": "John Wesley",
+      "year": 1765,
+      "date": "1765",
+      "work": "The Scripture Way of Salvation",
+      "locus": "3.9",
+      "lang": "en",
+      "answer": "perfect",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It is thus that we wait for entire sanctification, for a full salvation from all our sins, from pride, self-will, anger, unbelief; or, as the apostle expresses it, go on to perfection. But what is perfection? The word has various senses: here it means, perfect love. It is love excluding sin: love filling the heart, taking up the whole capacity of the soul.",
+      "original": "It is thus that we wait for entire sanctification, for a full salvation from all our sins, from pride, self-will, anger, unbelief; or, as the apostle expresses it, go on to perfection. But what is perfection? The word has various senses: here it means, perfect love. It is love excluding sin: love filling the heart, taking up the whole capacity of the soul.",
+      "context": "Wesley taught that perfect love can be given in this life, by faith. He did not mean freedom from all mistakes or weakness.",
+      "source": {
+        "witness": "books/john-wesley-sermons/translations/sermon_43_source.json",
+        "edition": "Wesley's Works (1771)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "nazarene-articles-entire-sanctification",
+      "author": "Church of the Nazarene",
+      "year": 2023,
+      "date": "2023",
+      "work": "Articles of Faith",
+      "locus": "Article X",
+      "lang": "en",
+      "answer": "perfect",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "We believe that entire sanctification is that act of God, subsequent to regeneration, by which believers are made free from original sin, or depravity",
+      "original": "We believe that entire sanctification is that act of God, subsequent to regeneration, by which believers are made free from original sin, or depravity",
+      "context": "The Holiness churches that grew from Methodism.",
+      "source": {
+        "url": "https://nazarene.org/what-we-believe/",
+        "edition": "Church of the Nazarene, Articles of Faith (Manual 2023)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Carthage",
+      "work": "Canons 6–8",
+      "year": 418,
+      "why": "Condemns saying that the saints pray \"forgive us our debts\" only out of humility.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 106–108)"
+    },
+    {
+      "author": "Macarius (Symeon)",
+      "work": "Fifty Spiritual Homilies",
+      "year": 390,
+      "why": "The Eastern monastic source Wesley admired. Only two homilies are in the library.",
+      "action": "intake",
+      "source_hint": "Dörries, Klostermann and Kroeger, PTS 4 (1964, copyright) as note; Migne PG 34"
+    },
+    {
+      "author": "Jerome",
+      "work": "Dialogue against the Pelagians",
+      "year": 415,
+      "why": "Jerome's case against sinlessness in this life.",
+      "action": "intake",
+      "source_hint": "Migne PL 23"
+    }
+  ],
+  "related": {
+    "timeline": "sanctification",
+    "topics": [
+      "holiness"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

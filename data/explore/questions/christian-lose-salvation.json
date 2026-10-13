@@ -1,0 +1,221 @@
+{
+  "id": "christian-lose-salvation",
+  "number": 32,
+  "group": "salvation",
+  "question": "Can a Christian lose salvation?",
+  "short": "Can salvation be lost?",
+  "search": [
+    "eternal security",
+    "once saved always saved",
+    "perseverance of the saints",
+    "apostasy",
+    "falling away",
+    "hebrews 6",
+    "backsliding"
+  ],
+  "answers": [
+    {
+      "id": "can-fall",
+      "label": "Yes: a true believer can fall away and be lost",
+      "short": "Can be lost",
+      "tag": "Can fall"
+    },
+    {
+      "id": "persevere",
+      "label": "No: those truly God's will persevere to the end",
+      "short": "Will persevere",
+      "tag": "Persevere"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest writers warn believers that their faith will not profit them unless they hold out to the end, and that the called can be thrust out of the kingdom.",
+      "cites": [
+        "didache-16",
+        "barnabas-4"
+      ]
+    },
+    {
+      "text": "Augustine taught that the elect will persevere, by God's gift, though no one knows in this life that he is elect. The Reformed confessions made this a promise to every true believer.",
+      "cites": [
+        "augustine-rebuke-grace-13-40",
+        "westminster-1646-17-1"
+      ]
+    },
+    {
+      "text": "Trent and the Methodists answered that the justified can lose grace and wholly fall away.",
+      "cites": [
+        "trent-1547-justification-canon-23",
+        "wesley-sermon-mount-4"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-16",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "16.2",
+      "lang": "grc",
+      "answer": "can-fall",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "Gather often, seeking what is good for your souls. For the whole time of your faith will not profit you unless you are made perfect at the last time.",
+      "original": "πυκνῶς δὲ συναχθήσεσθε ζητοῦντες τὰ ἀνήκοντα ταῖς ψυχαῖς ὑμῶν: οὐ γὰρ ὠφελήσει ὑμᾶς ὁ πᾶς χρόνος τῆς πίστεως ὑμῶν, ἐὰν μὴ ἐν τῷ ἐσχάτῳ καιρῷ τελειωθῆτε.",
+      "context": "A church manual from about the end of the first century. The warning comes before its description of the last days.",
+      "source": {
+        "book": "didache",
+        "section": "16"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "barnabas-4",
+      "author": "Letter of Barnabas",
+      "year": 130,
+      "date": "c. 130",
+      "work": "Letter of Barnabas",
+      "locus": "4.13",
+      "lang": "grc",
+      "answer": "can-fall",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... so that we may never rest as those who are called and fall asleep in our sins, and the evil ruler take power over us and thrust us out of the kingdom of the Lord.",
+      "original": "ἵνα μήποτε ἐπαναπαύομενοι ὡς κλητοὶ ἐπικαθυπνώσωμεν ταῖς ἁμαρτίαις ἡμῶν, καὶ ὁ πονηρὸς ἄρχων λαβὼν τὴν καθ̓ ἡμῶν ἐξουσίαν ἀπώσηται ἡμᾶς ἀπὸ τῆς βασιλείας τοῦ κυρίου.",
+      "context": "\"As those who are called\": the warning is to believers, not outsiders.",
+      "source": {
+        "book": "barnabas-epistle",
+        "section": "4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-rebuke-grace-13-40",
+      "author": "Augustine of Hippo",
+      "year": 427,
+      "date": "c. 427",
+      "work": "On Rebuke and Grace",
+      "locus": "13.40",
+      "lang": "la",
+      "answer": "persevere",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Who, out of the multitude of the faithful, may presume while he lives in this mortal life that he is in the number of the predestined?",
+      "original": "Quis enim ex multitudine ſidelium, quamdiu in hac morta- litate vivitur, in numero prædestinatorum se esse prsumat?",
+      "context": "Augustine holds that the elect will persevere, because perseverance is God's gift to them. But no believer can know in this life that he is one of them.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt",
+        "ia": "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_44",
+        "ocr_poor": true,
+        "edition": "Migne PL 44 (1845), De correptione et gratia 13.40"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1547-justification-canon-23",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 6, Canons on Justification",
+      "locus": "Canon 23",
+      "lang": "la",
+      "answer": "can-fall",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says that a person once justified can sin no more and cannot lose grace, and that therefore one who falls and sins was never truly justified ... let him be anathema.",
+      "original": "Si quis hominem semel iustificatum dixerit amplius peccare non posse, neque gratiam amittere, atque ideo eum, qui labitur et peccat, nunquam vere fuisse iustificatum",
+      "context": "Trent also condemns claiming certainty of final perseverance without a special revelation (canon 16).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 833"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-17-1",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "17.1–2",
+      "lang": "en",
+      "answer": "persevere",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "They, whom God hath accepted in his Beloved, effectually called, and sanctified by his Spirit, can neither totally nor finally fall away from the state of grace, but shall certainly persevere therein to the end, and be eternally saved. This perseverance of the saints depends not upon their own free will, but upon the immutability of the decree of election.",
+      "original": "They, whom God hath accepted in his Beloved, effectually called, and sanctified by his Spirit, can neither totally nor finally fall away from the state of grace, but shall certainly persevere therein to the end, and be eternally saved. 2. This perseverance of the saints depends not upon their own free will, but upon the immutability of the decree of election",
+      "context": "The Synod of Dort (1619) had made the same point against the Remonstrants.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "wesley-sermon-mount-4",
+      "author": "John Wesley",
+      "year": 1748,
+      "date": "1748",
+      "work": "Upon Our Lord's Sermon on the Mount, Discourse 4",
+      "locus": "on Hebrews 6:4–6",
+      "lang": "en",
+      "answer": "can-fall",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What that falling away is which is here spoken of. It is an absolute, total apostacy. A believer may fall, and not fall away. He may fall and rise again. And if he should fall, even into sin, yet this case, dreadful as it is, is not desperate. ... But let him above all things beware, lest his heart be hardened by the deceitfulness of sin: lest he should sink lower and lower, 'till he wholly fall away.",
+      "original": "What that falling away is which is here spoken of. It is an absolute, total apostacy. A believer may fall, and not fall away. He may fall and rise again. And if he should fall, even into sin, yet this case, dreadful as it is, is not desperate. ... But let him above all things beware, lest his heart be hardened by the deceitfulness of sin: lest he should sink lower and lower, ’till he wholly fall away",
+      "context": "The Methodist and Arminian view: a true believer can wholly fall away, though a fall into sin is not yet that.",
+      "source": {
+        "witness": "books/john-wesley-sermons/translations/sermon_24_source.json",
+        "edition": "Wesley's Works (1771)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Synod of Dort",
+      "work": "Canons, Fifth Head",
+      "year": 1619,
+      "why": "The Reformed article on perseverance, against the Remonstrants.",
+      "action": "intake",
+      "source_hint": "Acta Synodi Dordrechtanae (1620)"
+    },
+    {
+      "author": "Remonstrants",
+      "work": "Five Articles, article 5",
+      "year": 1610,
+      "why": "Left open whether believers can fall from grace.",
+      "action": "intake",
+      "source_hint": "Schaff, Creeds of Christendom vol. 3 (1877)"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "On the Gift of Perseverance",
+      "year": 429,
+      "why": "Augustine's full case. In Migne PL 45, not yet fetched.",
+      "action": "intake",
+      "source_hint": "Migne PL 45"
+    }
+  ],
+  "related": {
+    "topics": [
+      "perseverance"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

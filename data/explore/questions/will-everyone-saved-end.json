@@ -1,0 +1,192 @@
+{
+  "id": "will-everyone-saved-end",
+  "number": 34,
+  "group": "salvation",
+  "question": "Will everyone be saved in the end?",
+  "short": "Will all be saved?",
+  "search": [
+    "universalism",
+    "universal salvation",
+    "apokatastasis",
+    "restoration of all things",
+    "origen",
+    "gregory of nyssa",
+    "all in all",
+    "hopeful universalism"
+  ],
+  "answers": [
+    {
+      "id": "all",
+      "label": "Yes: in the end evil vanishes and all are restored to God",
+      "short": "All restored",
+      "tag": "All"
+    },
+    {
+      "id": "not-all",
+      "label": "No: some are lost for ever",
+      "short": "Not all",
+      "tag": "Not all"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Origen hoped that even the devil would be restored, as Augustine reports. Gregory of Nyssa taught that evil will finally be wiped out, so that God may be \"all in all\".",
+      "cites": [
+        "origen-in-augustine-city-of-god-21-17",
+        "gregory-nyssa-soul-resurrection-20",
+        "gregory-nyssa-soul-resurrection-31"
+      ]
+    },
+    {
+      "text": "His own brother Basil answered that if eternal punishment ends, so does eternal life. Augustine argued the same against the \"merciful ones\" of his day.",
+      "cites": [
+        "basil-shorter-rules-267",
+        "augustine-city-of-god-21-17"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "origen-in-augustine-city-of-god-21-17",
+      "author": "Origen of Alexandria (as Augustine reports)",
+      "year": 230,
+      "date": "c. 230",
+      "work": "City of God",
+      "locus": "21.17",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "supporting",
+      "english": "Origen believed that even the devil and his angels would be rescued from those torments after severe and long punishment and joined to the holy angels.",
+      "original": "misericordior profecto fuit Origenes, qui et ipsum diabolum atque angelos eius post grauiora pro meritis et diuturniora supplicia ex illis cruciatibus eruendos et sociandos sanctis angelis credidit.",
+      "context": "Origen's own words survive mainly in Rufinus's softened Latin and in the excerpts his accusers made. Augustine also reports that Origen taught endless cycles of falls and returns.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-21.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-soul-resurrection-20",
+      "author": "Gregory of Nyssa",
+      "year": 380,
+      "date": "c. 380",
+      "work": "On the Soul and the Resurrection",
+      "locus": "on Philippians 2:10",
+      "lang": "grc",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... meaning that, when evil has at last been wiped out in the long cycles of the ages, nothing will be left outside the good. Even from them there will be one voice confessing the lordship of Christ.",
+      "original": "ὅτι τῆς κακίας ποτὲ ταῖς μακραῖς τῶν αἰώνων περιόδοις ἀφανισθείσης, οὐδὲν ἔξω τοῦ ἀγαθοῦ καταλειφθήσεται. Ἀλλὰ καὶ παρ' ἐκείνων ὁμοφώνως ἡ ὁμολογία τῆς τοῦ Χριστοῦ κυριότητος ἔσται.",
+      "context": "Gregory's sister Macrina is the teacher in this dialogue. \"Them\" are those \"under the earth\" in Philippians 2:10.",
+      "source": {
+        "book": "gregory-nyssa-de-anima-et-resurrectione",
+        "section": "20"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-soul-resurrection-31",
+      "author": "Gregory of Nyssa",
+      "year": 380,
+      "date": "c. 380",
+      "work": "On the Soul and the Resurrection",
+      "locus": "on 1 Corinthians 15:28",
+      "lang": "grc",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In this the passage seems to me to teach the complete wiping out of evil. For if God will be in all things that exist, evil will clearly not be among the things that exist. If anyone supposed it still was, how could God be \"in all\"? Leaving it out would make \"all\" incomplete.",
+      "original": "Ἐν τούτῳ δέ μοι δοκεῖ τὸν παντελῆ τῆς κακίας ἀφανισμὸν δογματίζειν ὁ λόγος. Εἰ γὰρ ἐν πᾶσι τοῖς οὖσιν ὁ Θεὸς ἔσται, ἡ κακία δηλαδὴ ἐν τοῖς οὖσιν οὐκ ἔσται. Εἰ γάρ τις ὑπόθοιτο κἀκείνην εἶναι, πῶς σωθήσεται τὸ ἐν πᾶσι τὸν Θεὸν εἶναι; Ἡ γὰρ ὑπεξαίρεσις ἐκείνης, ἐλλιπῆ τῶν πάντων ποιεῖ τὴν περίληψιν.",
+      "context": "\"God all in all\" (1 Corinthians 15:28). Gregory was honored as a Father at the council of 381 and later; his hope was not condemned by name.",
+      "source": {
+        "book": "gregory-nyssa-de-anima-et-resurrectione",
+        "section": "31"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-shorter-rules-267",
+      "author": "Basil of Caesarea",
+      "year": 375,
+      "date": "c. 375",
+      "work": "Shorter Rules",
+      "locus": "267",
+      "lang": "grc",
+      "answer": "not-all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... it is one of the devil's tricks that many people, as if they had forgotten these and so many other sayings and verdicts of the Lord, set an end to punishment for themselves, so as to dare sin all the more. For if eternal punishment will one day have an end, eternal life too will certainly have an end. But if we will not think this of life, what reason is there to set an end to eternal punishment?",
+      "original": "ἓν καὶ τοῦτο τῆς μεθοδείας τοῦ διαβόλου, τὸ τοὺς πολλοὺς τῶν ἀνθρώπων, ὥσπερ ἐπιλαθομέ νους τῶν τοσούτων καὶ τοιούτων τοῦ Κυρίου ῥημάτων καὶ ἀποφάσεων, τέλος κολάσεως εἰς τὸ μᾶλλον κατατολμᾷν τῆς ἁμαρτίας ἑαυτοῖς ὑπο γράφειν. Εἰ γὰρ τῆς αἰωνίου κολάσεως ἔσται ποτὲ τέλος, τέλος ἕξει πάντως καὶ ἡ αἰώνιος ζωή.",
+      "context": "The question put to Basil, Gregory of Nyssa's brother: \"If one is beaten with many stripes and another with few (Luke 12:47–48), how do some say punishment has no end?\" Basil cites Matthew 25:46.",
+      "source": {
+        "book": "basil-regulae-brevius",
+        "section": "68"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-21-17",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "21.17",
+      "lang": "la",
+      "answer": "not-all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Now I see I must deal, and peacefully, with our merciful ones, who refuse to believe that the punishment will be everlasting for all, or for some, of those the most just Judge will condemn to hell, but think they will be freed after a fixed time. More merciful still was Origen, who believed that even the devil and his angels would be rescued from those torments after severe and long punishment and joined to the holy angels. But the Church rightly rejected him for this and other things.",
+      "original": "Nunc iam cum misericordibus nostris agendum esse uideo et pacifice disputandum, qui uel omnibus illis hominibus, quos iustissimus iudex dignos. gehennae supplicio iudicabit, uel quibusdam eorum nolunt credere poenam sempiternam futuram, sed post certi temporis metas pro cuiusque peccati quantitate longioris siue breuioris eos inde existimant liberandos. Qua in re misericordior profecto fuit Origenes, qui et ipsum diabolum atque angelos eius post grauiora pro meritis et diuturniora supplicia ex illis cruciatibus eruendos et sociandos sanctis angelis credidit. Sed illum et propter hoc et propter alia nonnulla ... non inmerito reprobauit ecclesia",
+      "context": "Augustine's \"merciful ones\" (misericordes) were fellow Catholics. He answers them in the chapters that follow.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-21.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "On First Principles 1.6 and 3.6",
+      "year": 225,
+      "why": "The restoration in Origen's own words. The library book is needs-source.",
+      "action": "relock-source",
+      "source_hint": "Koetschau, GCS 22 (1913); Lommatzsch vol. 21 (fetched)"
+    },
+    {
+      "author": "Emperor Justinian and the council of 543",
+      "work": "Anathemas against Origen, no. 9",
+      "year": 543,
+      "why": "\"If anyone says the punishment of demons and the ungodly is temporary ... let him be anathema.\" Not found in the Denzinger scan's text.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 211)"
+    },
+    {
+      "author": "Isaac of Nineveh",
+      "work": "Second Part, Discourses 39–41",
+      "year": 680,
+      "why": "The Syriac voice for final restoration.",
+      "action": "intake",
+      "source_hint": "Syriac manuscript Bodleian syr. e. 7; Chialà edition (copyright) as note"
+    }
+  ],
+  "related": {
+    "topics": [
+      "apokatastasis",
+      "heaven-hell-intermediate"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

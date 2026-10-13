@@ -1,0 +1,221 @@
+{
+  "id": "god-want-everyone-saved",
+  "number": 39,
+  "group": "salvation",
+  "question": "Does God want everyone to be saved?",
+  "short": "Does God want all saved?",
+  "search": [
+    "1 timothy 2:4",
+    "universal atonement",
+    "limited atonement",
+    "particular redemption",
+    "god wills all to be saved",
+    "unlimited atonement",
+    "for whom did christ die"
+  ],
+  "answers": [
+    {
+      "id": "all",
+      "label": "Yes: God wills every person to be saved, and Christ died for all",
+      "short": "Yes, all",
+      "tag": "All"
+    },
+    {
+      "id": "elect",
+      "label": "He wills the salvation of the elect; Christ died to save them",
+      "short": "The elect",
+      "tag": "Elect"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Chrysostom and Ambrose read 1 Timothy 2:4 plainly: God wills every person to be saved, but forces no one, so those who perish do so by their own fault.",
+      "cites": [
+        "chrysostom-1-timothy-homily-7",
+        "chrysostom-on-the-change-of-names",
+        "ambrose-cain-abel-2-3"
+      ]
+    },
+    {
+      "text": "Augustine, defending predestination, read \"all\" as all the saved, or all kinds of people. The Reformed confessions followed him: Christ redeemed the elect only.",
+      "cites": [
+        "augustine-against-julian-4-8-44",
+        "westminster-1646-3-6"
+      ]
+    },
+    {
+      "text": "In the ninth century a council at Quierzy taught that God wills all without exception to be saved, and that Christ suffered for every human being.",
+      "cites": [
+        "quierzy-853-chapters-3-4"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "chrysostom-1-timothy-homily-7",
+      "author": "John Chrysostom",
+      "year": 397,
+      "date": "c. 397",
+      "work": "Homilies on 1 Timothy",
+      "locus": "7.2, on 1 Timothy 2:4",
+      "lang": "grc",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"He wants all people to be saved,\" it says, \"and to come to the knowledge of the truth.\" Imitate God. If he wants all people to be saved, it is right to pray for all. If he himself has willed all to be saved, will it yourself too; and if you will it, pray.",
+      "original": "Πάντας γὰρ ἀνθρώπους θέλει σωθῆναι, φησὶ, καὶ εἰς ἐπίγνωσιν ἀληθείας ἐλθεῖν. βʹ. Μιμοῦ τὸν Θεόν. Εἰ πάντας ἀνθρώπους θέλει σωθῆναι, εἰκότως ὑπὲρ ἁπάντων δεῖ εὔχεσθαι· εἰ πάντας αὐτὸς ἠθέλησε σωθῆναι, θέλε καὶ σύ· εἰ δὲ θέλεις, εὔχου",
+      "context": "Chrysostom reads \"all\" as everyone, including the pagans and the emperors Paul tells Timothy to pray for.",
+      "source": {
+        "book": "chrysostom-homiliae-1-timotheum",
+        "section": "8.2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-on-the-change-of-names",
+      "author": "John Chrysostom",
+      "year": 388,
+      "date": "c. 388",
+      "work": "On the Change of Names",
+      "locus": "Homily 3",
+      "lang": "grc",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "God never brings anyone by force and compulsion. He wills all to be saved, but compels no one, as Paul says: \"who wills all people to be saved and to come to the knowledge of the truth.\" Then how are not all saved, if he wills all to be saved? Because not everyone's will follows his will, and he forces no one.",
+      "original": "ἀνάγκῃ καὶ βίᾳ οὐδένα προσάγεταί ποτε ὁ Θεός· ἀλλὰ θέλει μὲν ἅπαντας σωθῆναι, οὐκ ἀναγκάζει δὲ οὐδένα· καθὼς καὶ Παῦλός φησιν, Ὁ θέλων πάντας ἀνθρώπους σωθῆναι καὶ εἰς ἐπίγνωσιν ἀληθείας ἐλθεῖν. Πῶς οὖν οὐχ ἅπαντες σώζονται, εἰ θέλει πάντας σωθῆναι; Ἐπειδὴ οὐχ ἁπάντων τὸ θέλημα τῷ θελήματι αὐτοῦ ἕπεται, αὐτὸς δὲ οὐδένα βιάζεται.",
+      "context": "The question every reader asks, put and answered in one breath.",
+      "source": {
+        "witness": "books/chrysostom-de-mutatione-nominum/sources/de_mutatione_nominum_khazarzar.txt",
+        "edition": "Migne PG 51, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ambrose-cain-abel-2-3",
+      "author": "Ambrose of Milan",
+      "year": 377,
+      "date": "c. 377",
+      "work": "On Cain and Abel",
+      "locus": "2.3.11",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... so that whoever perishes may blame himself for the cause of his death, since he would not be healed when he had a remedy to escape by; and Christ's mercy may be proclaimed openly toward all, since those who perish perish by their own neglect, and those who are saved are freed according to the word of Christ, who wills all people to be saved and to come to the knowledge of the truth.",
+      "original": "ut quicumque perierit mortis suae causas sibi adscribat, qui curari noluit, cum remedium haberet quo posset euadere, Christi ... autem manifesta in omnes praedicetur misericordia, eo quod ii qui pereunt sua pereant neglegentia, qui autem saluantur secundum Christi sententiam liberentur, qui omnes homines uult saluos fieri et in agnitionem ueritatis uenire.",
+      "context": "Augustine's own teacher reads the verse as all people without exception.",
+      "source": {
+        "witness": "books/ambrose-on-cain-and-abel/sources/stoa0022.stoa021.opp-lat1.xml",
+        "edition": "Schenkl, CSEL 32.1 (1897), First1KLatin TEI"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-against-julian-4-8-44",
+      "author": "Augustine of Hippo",
+      "year": 421,
+      "date": "c. 421",
+      "work": "Against Julian",
+      "locus": "4.8.44",
+      "lang": "la",
+      "answer": "elect",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Lord knows those who are his (2 Timothy 2:19), and his will is certain for their salvation and entry into his kingdom. So the saying \"He wills all people to be saved and to come to the knowledge of the truth\" must be understood in the same way as the saying \"Through the righteousness of one, the gift came to all people for justification of life\" (Romans 5:18).",
+      "original": "Novit Dominus qui sunt ejus (Il Tim. n, 19) : et in eorum salute atque in suum regnum introductione certa est voluntas ejus. Sic ergo debet intelligi quod _ dictum est, Omnes homines vult salvos fieri, et in agni- tionem veritatis venire",
+      "context": "Augustine reads \"all\" as all who are saved, since none is saved except by his will. Elsewhere (Enchiridion 103; Rebuke and Grace 14.44) he reads it as all kinds of people.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt",
+        "ia": "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_44",
+        "ocr_poor": true,
+        "edition": "Migne PL 44 (1845), Contra Iulianum 4.8.44"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "quierzy-853-chapters-3-4",
+      "author": "Council of Quierzy",
+      "year": 853,
+      "date": "c. 853",
+      "work": "Chapters against Gottschalk",
+      "locus": "Chapters 3–4",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Almighty God wills all people without exception to be saved, though not all are saved. That some are saved is the gift of the one who saves; that some perish is the desert of those who perish. Christ Jesus our Lord, as there is, was, or will be no human being whose nature was not assumed in him, so there is, was, or will be no human being for whom he did not suffer, though not all are redeemed by the mystery of his passion.",
+      "original": "Deus omnipotens omnes homines sine exceptione vult salvos fieri ... licet non omnes salventur. Quod autem quidam salvantur, salvantis est donum: quod autem quidam pereunt, pereuntium est meritum. ... ita nullus est, fuit vel erit homo, pro quo passus non fuerit; licet non omnes passionis eius mysterio redimantur.",
+      "context": "A synod under Hincmar of Reims against Gottschalk's double predestination. Valence (855) answered with a stricter view.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 318–319"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-3-6",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "3.6",
+      "lang": "en",
+      "answer": "elect",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "Wherefore, they who are elected, being fallen in Adam, are redeemed by Christ, are effectually called unto faith in Christ by his Spirit working in due season, are justified, adopted, sanctified, and kept by his power, through faith, unto salvation. Neither are any other redeemed by Christ, effectually called, justified, adopted, sanctified, and saved, but the elect only.",
+      "original": "Wherefore, they who are elected, being fallen in Adam, are redeemed by Christ, are effectually called unto faith in Christ by his Spirit working in due season, are justified, adopted, sanctified, and kept by his power, through faith, unto salvation. Neither are any other redeemed by Christ, effectually called, justified, adopted, sanctified, and saved, but the elect only.",
+      "context": "\"Particular redemption\": Christ's death was meant to save the elect.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Prosper of Aquitaine",
+      "work": "The Call of All Nations",
+      "year": 450,
+      "why": "A disciple of Augustine who held that God wills all to be saved.",
+      "action": "intake",
+      "source_hint": "Migne PL 51"
+    },
+    {
+      "author": "Synod of Dort",
+      "work": "Canons, Second Head, Article 8",
+      "year": 1619,
+      "why": "Christ's death effective for the elect alone.",
+      "action": "intake",
+      "source_hint": "Acta Synodi Dordrechtanae (1620)"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "Enchiridion 103",
+      "year": 421,
+      "why": "\"All\" as all kinds of people.",
+      "action": "intake",
+      "source_hint": "Migne PL 40"
+    }
+  ],
+  "related": {
+    "topics": [
+      "predestination"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

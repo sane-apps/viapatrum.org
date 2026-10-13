@@ -1,0 +1,270 @@
+{
+  "id": "happens-people-never-heard-gospel",
+  "number": 33,
+  "group": "salvation",
+  "question": "What happens to people who never heard the gospel?",
+  "short": "Those who never heard",
+  "search": [
+    "never heard",
+    "unevangelized",
+    "no salvation outside the church",
+    "extra ecclesiam nulla salus",
+    "invincible ignorance",
+    "inclusivism",
+    "exclusivism",
+    "socrates"
+  ],
+  "answers": [
+    {
+      "id": "logos",
+      "label": "Those who lived by the Word they had belong to Christ",
+      "short": "By the Word they had",
+      "tag": "Logos"
+    },
+    {
+      "id": "church",
+      "label": "There is no salvation outside Christ's Church",
+      "short": "Only in the Church",
+      "tag": "Church"
+    },
+    {
+      "id": "ignorance",
+      "label": "Those who are not at fault for not knowing can be saved by grace",
+      "short": "Not at fault",
+      "tag": "Ignorance"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Justin, about 155, said that everyone shares in the Word, and those who lived by it, like Socrates and Abraham, were Christians before Christ. Clement called Greek philosophy a schoolmaster to Christ.",
+      "cites": [
+        "justin-1apol-46",
+        "justin-2apol-13",
+        "clement-stromata-1-5"
+      ]
+    },
+    {
+      "text": "Cyprian, writing against schism, said there is no salvation outside the Church. The Reformed confessions applied the rule to all who do not profess Christ.",
+      "cites": [
+        "cyprian-unity-6",
+        "cyprian-letter-73-21",
+        "westminster-1646-10-4"
+      ]
+    },
+    {
+      "text": "Modern Catholic teaching keeps the rule but excepts those whose ignorance is not their fault.",
+      "cites": [
+        "pius-ix-1854-singulari-quadam",
+        "vatican-ii-1964-lumen-gentium-16"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-46",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "46.1–4",
+      "lang": "grc",
+      "answer": "logos",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We have been taught that Christ is the firstborn of God, and we have shown that he is the Word, of whom every race of people has had a share. And those who lived with the Word are Christians, even if they were thought godless, such as, among the Greeks, Socrates and Heraclitus and those like them, and among the barbarians Abraham, Ananias, Azarias, Misael, Elijah and many others.",
+      "original": "Τὸν Χριστὸν πρωτότοκον τοῦ θεοῦ εἶναι ἐδιδάχθημεν καὶ προεμηνύσαμεν λόγον ὄντα, οἷ πᾶν γένος ἀνθρώπων μετέσχε. Καὶ οἱ μετὰ λόγου βιώσαντες Χριστιανοί εἰσι, κἂν ἄθεοι ἐνομίσθησαν, οἷον ἐν Ἕλλησι μὲν Σωκράτης καὶ Ἡράκλειτος καὶ οἱ ὅμοιοι αὐτοῖς, ἐν βαρβάροις δὲ Αβραὰμ καὶ Ἀνανίας καὶ Ἀζαρίας καὶ Μισαὴλ καὶ Ἡλίας καὶ ἄλλοι πολλοί",
+      "context": "Justin answers the objection that people born before Christ cannot be blamed. \"Word\" (logos) also means reason.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "46"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-2apol-13",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "Second Apology",
+      "locus": "13.3–4",
+      "lang": "grc",
+      "answer": "logos",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Each of them spoke well in proportion to the share he had of the seed-scattering divine Word, seeing what was akin to it. ... Whatever has been well said among all people belongs to us Christians.",
+      "original": "Ἕκαστος γάρ τις ἀπὸ μέρους τοῦ σπερματικοῦ θείου λόγου τὸ συγγενὲς ὁρῶν καλῶς ἐφθέγξατο ... Ὅσα οὖν παρὰ καλῶς εἴρηται, ἡμῶν τᾶν Χριστιανῶν ἐστι",
+      "context": "The \"seed of the Word\" in pagan philosophers.",
+      "source": {
+        "book": "justin-second-apology",
+        "section": "13"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-stromata-1-5",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Stromata",
+      "locus": "1.5.28",
+      "lang": "grc",
+      "answer": "logos",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Perhaps philosophy too was given to the Greeks directly, before the Lord called the Greeks as well. For it was a schoolmaster to bring the Greek mind to Christ, as the law brought the Hebrews. So philosophy prepares the way for one who is made perfect by Christ.",
+      "original": "τάχα δὲ καὶ προηγουμένως τοῖς Ἕλλησιν ἐδόθη τότε πρὶν ἢ τὸν κύριον καλέσαι καὶ τοὺς Ἕλληνας· ἐπαιδαγώγει γὰρ καὶ αὕτη τὸ Ἑλληνικὸν ὡς ὁ νόμος τοὺς Ἑβραίους εἰς Χριστόν. προπαρασκευάζει τοίνυν ἡ φιλοσοφία προοδοποιοῦσα τὸν ὑπὸ Χριστοῦ τελειούμενον.",
+      "context": "\"Schoolmaster\" is Paul's word for the law in Galatians 3:24.",
+      "source": {
+        "book": "clement-alexandria-stromata",
+        "section": "1.5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-unity-6",
+      "author": "Cyprian of Carthage",
+      "year": 251,
+      "date": "c. 251",
+      "work": "On the Unity of the Church",
+      "locus": "6",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Whoever is separated from the Church and joined to an adulteress is separated from the Church's promises, and whoever leaves the Church of Christ will not come to Christ's rewards. He is a stranger, he is profane, he is an enemy. He cannot have God for his Father who does not have the Church for his mother. If anyone could escape who was outside Noah's ark, then he too escapes who is outside the Church.",
+      "original": "quisque ab ecclesia segregatus adulterae iungitur a promissis ecclesiae separatur, nec perueniet ad Christi praemia qui reliquit ecclesiam Christi. alienus est, profanus est, hostis est. habere non potest Deum patrem qui ecclesiam non habet matrem. si potuit euadere quisque extra arcam Noe fuit, et qui extra ecclesiam foris fuerit euadit.",
+      "context": "Cyprian is writing about Christians who left the Church in a schism, not about pagans who never heard.",
+      "source": {
+        "book": "cyprian-on-the-unity-of-the-church",
+        "section": "6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-73-21",
+      "author": "Cyprian of Carthage",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter 73, to Jubaianus",
+      "locus": "73.21",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "If even the baptism of public confession and blood cannot profit a heretic for salvation, because there is no salvation outside the Church, how much less will it profit him ...",
+      "original": "quod si haeretico nec baptisma publicae confessionis et sanguinis proficere ad salutem potest, quia salus extra ecclesiam non est, quanto magis ei nihil proderit",
+      "context": "The origin of the phrase \"no salvation outside the Church\" (salus extra ecclesiam non est).",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "73.21"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-10-4",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "10.4",
+      "lang": "en",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "Much less can men, not professing the Christian religion, be saved in any other way whatsoever, be they never so diligent to frame their lives according to the light of nature, and the laws of that religion they do profess. And, to assert and maintain that they may, is very pernicious, and to be detested.",
+      "original": "much less can men, not professing the Christian religion, be saved in any other way whatsoever, be they never so diligent to frame their lives according to the light of nature, and the laws of that religion they do profess. And, to assert and maintain that they may, is very pernicious, and to be detested.",
+      "context": "The same section allows that elect infants and others \"incapable of being outwardly called\" are saved by Christ (10.3).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "pius-ix-1854-singulari-quadam",
+      "author": "Pius IX",
+      "year": 1854,
+      "date": "1854",
+      "work": "Allocution Singulari quadam",
+      "locus": "9 December 1854",
+      "lang": "la",
+      "answer": "ignorance",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It must be held by faith that outside the Apostolic Roman Church no one can be saved; that this is the only ark of salvation; that whoever has not entered it will perish in the flood. But it must likewise be held as certain that those who labor in ignorance of the true religion, if that ignorance is invincible, are not bound by any guilt in this matter before the eyes of the Lord.",
+      "original": "Tenendum quippe ex fide est, extra Apostolicam Romanam Ecclesiam salvum fieri neminem posse, hanc esse unicam salutis arcam, hanc qui non fuerit ingressus, diluvio periturum ; sed tamen pro certo pariter habendum est, qui verae religionis ignorantia laborent, si ea sit invincibilis, nulla ipsos obstringi huiusce rei culpa ante oculos Domini.",
+      "context": "Both halves in one sentence: the old rule and the exception for \"invincible ignorance\".",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 1647"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "vatican-ii-1964-lumen-gentium-16",
+      "author": "Second Vatican Council",
+      "year": 1964,
+      "date": "1964",
+      "work": "Lumen Gentium",
+      "locus": "16",
+      "lang": "en",
+      "answer": "ignorance",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Those also can attain to salvation who through no fault of their own do not know the Gospel of Christ or His Church, yet sincerely seek God and moved by grace strive by their deeds to do His will as it is known to them through the dictates of conscience.",
+      "original": "Those also can attain to salvation who through no fault of their own do not know the Gospel of Christ or His Church, yet sincerely seek God and moved by grace strive by their deeds to do His will as it is known to them through the dictates of conscience.",
+      "context": "The council adds that whatever good is found among them is \"a preparation for the Gospel\", using Eusebius's phrase.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-vatican-ii-lumen-gentium.txt",
+        "edition": "Vatican English text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Florence",
+      "work": "Cantate Domino (Decree for the Copts)",
+      "year": 1442,
+      "why": "\"No one outside the Catholic Church ... can share in eternal life.\" Not found in the Denzinger scan's text.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 714)"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "Letter 102, question 2",
+      "year": 409,
+      "why": "Why Christ came so late, and the saved before him.",
+      "action": "intake",
+      "source_hint": "Goldbacher, CSEL 34 (1895)"
+    },
+    {
+      "author": "Huldrych Zwingli",
+      "work": "Exposition of the Christian Faith",
+      "year": 1531,
+      "why": "Places Socrates and other good pagans in heaven.",
+      "action": "intake",
+      "source_hint": "Zwinglis Werke (Schuler and Schulthess, 1841) vol. 4"
+    }
+  ],
+  "related": {
+    "topics": [
+      "seeds-of-the-word"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

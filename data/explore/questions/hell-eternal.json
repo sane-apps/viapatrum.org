@@ -1,0 +1,247 @@
+{
+  "id": "hell-eternal",
+  "number": 35,
+  "group": "salvation",
+  "question": "Is hell eternal?",
+  "short": "Is hell forever?",
+  "search": [
+    "hell",
+    "eternal punishment",
+    "annihilationism",
+    "conditional immortality",
+    "gehenna",
+    "unquenchable fire",
+    "eternal fire",
+    "purgatorial fire"
+  ],
+  "answers": [
+    {
+      "id": "eternal",
+      "label": "Yes: the punishment of the wicked is eternal",
+      "short": "Eternal",
+      "tag": "Eternal"
+    },
+    {
+      "id": "restorative",
+      "label": "The fire purifies, and punishment ends",
+      "short": "Purifying, ends",
+      "tag": "Ends"
+    },
+    {
+      "id": "destroyed",
+      "label": "The wicked are punished, then cease to exist",
+      "short": "Destroyed",
+      "tag": "Destroyed"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the start Christians spoke of unquenchable fire and eternal punishment: Ignatius, the martyr Polycarp, and Justin, who set it against Plato's thousand-year cycle.",
+      "cites": [
+        "ignatius-ephesians-16",
+        "martyrdom-polycarp-11",
+        "justin-1apol-8"
+      ]
+    },
+    {
+      "text": "Justin also records the view that souls live only as long as God wills, which later readers took as a hint that the wicked finally cease to be. Gregory of Nyssa hoped the fire would purify and end.",
+      "cites": [
+        "justin-dialogue-5",
+        "gregory-nyssa-soul-resurrection-31-b"
+      ]
+    },
+    {
+      "text": "Basil and Augustine argued that \"eternal\" punishment must last as long as \"eternal\" life. That became the common teaching of the churches.",
+      "cites": [
+        "basil-shorter-rules-267-b",
+        "augustine-city-of-god-21-17-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-ephesians-16",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Ephesians",
+      "locus": "16.1–2",
+      "lang": "grc",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Do not be deceived, my brothers: those who corrupt households will not inherit the kingdom of God. If those who did these things in the flesh were put to death, how much more one who corrupts by evil teaching the faith of God, for which Jesus Christ was crucified? Such a one, being defiled, will go into the unquenchable fire, and so will anyone who listens to him.",
+      "original": "Μὴ πλανᾶσθε, ἀδελφοί μου: οἱ οἰκοφθόροι βασιλείαν θεοῦ οὐ κληρονομήσουσιν. εἰ οὖν οἱ κατὰ σάρκα ταῦτα πράσσοντες ἀπέθανον, πόσῳ μᾶλλον, ἐὰν πίστιν θεοῦ ἐν κακῇ διδασκαλίᾳ φθείρῃ, ὑπὲρ ἧς Ἰησοῦς Χριστὸς ἐσταυρώθη; ὁ τοιοῦτος ῥυπαρὸς γενόμενος, εἰς τὸ πῦρ τὸ ἄσβεστον χωρήσει, ὁμοίως καὶ ὁ ἀκούων αὐτοῦ.",
+      "context": "\"Unquenchable fire\" is Jesus' phrase in Mark 9:43.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "1.16"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "martyrdom-polycarp-11",
+      "author": "Martyrdom of Polycarp",
+      "year": 156,
+      "date": "c. 156",
+      "work": "Martyrdom of Polycarp",
+      "locus": "11.2",
+      "lang": "grc",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Polycarp said: \"You threaten fire that burns for an hour and is soon put out. For you do not know the fire of the coming judgment and of eternal punishment, kept for the ungodly. But why do you delay? Bring what you will.\"",
+      "original": "ὁ δὲ Πολύκαρπος εἶπεν: Πῦρ ἀπειλεῖς τὸ πρὸς ὥραν καιόμενον καὶ μετ’ ὀλίγον σβεννύμενον: ἀγνοεῖς γὰρ τὸ τῆς μελλούσης κρίσεως καὶ αἰωνίου κολάσεως τοῖς ἀσεβέσι τηρούμενον πῦρ. ἀλλὰ τί βραδύνεις; φέρε, ὃ βούλει.",
+      "context": "Polycarp's answer to the proconsul at Smyrna, in the church's letter about his death.",
+      "source": {
+        "book": "martyrdom-polycarp",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-8",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "8.4",
+      "lang": "grc",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Plato likewise said that Rhadamanthus and Minos would punish the unjust who came before them. We say the same thing will happen, but by Christ, and to the same bodies united again with their souls, which will be punished with eternal punishment, and not only for a thousand-year period, as he said.",
+      "original": "Πλάτων δ᾿ ὁμοίως ἔφη Ῥαδάμανθυν καὶ Μίνω κολάσειν τοὺς ἀδίκους παρ᾿ αὐτοὺς ἐλθόντας· ἡμεῖς δὲ τὸ αὐτὸ πρᾶγμά φαμεν γενήσεσθαι, ἀλλ᾿ ὑπὸ τοῦ Χριστοῦ, κἀν τοῖς αὐτοῖς σώμασι μετὰ τῶν ψυχῶν γινομένων καὶ αἰωνίαν κόλασιν κολασθησομένων, ἀλλ᾿ οὐχὶ χιλιονταετῆ περίοδον, ὡς ἐκεῖνος ἔφη, μόνον.",
+      "context": "Justin sets Christian teaching against Plato's thousand-year cycle (Republic 10).",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-dialogue-5",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "5.3",
+      "lang": "grc",
+      "answer": "destroyed",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "But I do not say that all souls die; that would be a godsend to the wicked. What then? The souls of the godly stay in a better place, and the unjust and wicked in a worse, awaiting the time of judgment. So those that have shown themselves worthy of God die no more; the others are punished, as long as God wills them to exist and to be punished.",
+      "original": "Ἀλλὰ μὴν οὐδὲ ἀποθνήσκειν φημὶ πάσας τὰς ψυχὰς ἐγώ· ἕρμαιον γὰρ ἦν ὡς ἀληθῶς τοῖς κακοῖς. Ἀλλὰ τί: Τὰς μὲν τῶν εὐσεβῶν ἐν κρείττονί ποι χώρῳ μένειν. τὰς δὲ ἀδίκους καὶ πονηρὰς ἐν χείρονι, τὸν τῆς κρίσεως ἐκδεχομένας χρόνον τότε. Οὕτως αἱ μέν, ἄξιαι τοῦ θεοῦ φανεῖσαι, οὐκ ἀποθνήσκουσιν ἔτι· αἱ δὲ κολά[fol. 56] ζονται. ἔστ᾿ ἂν αὐτὰς καὶ εἶναι καὶ κολάζεσθαι ὁ θεὸς θέλῃ.",
+      "context": "The old man who converted Justin says souls are not immortal by nature but live as long as God wills. Those who hold that the wicked finally cease to exist quote this; elsewhere Justin speaks of eternal punishment.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-soul-resurrection-31-b",
+      "author": "Gregory of Nyssa",
+      "year": 380,
+      "date": "c. 380",
+      "work": "On the Soul and the Resurrection",
+      "locus": "on 1 Corinthians 15:28",
+      "lang": "grc",
+      "answer": "restorative",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "In this the passage seems to me to teach the complete wiping out of evil. For if God will be in all things that exist, evil will clearly not be among the things that exist. If anyone supposed it still was, how could God be \"in all\"? Leaving it out would make \"all\" incomplete.",
+      "original": "Ἐν τούτῳ δέ μοι δοκεῖ τὸν παντελῆ τῆς κακίας ἀφανισμὸν δογματίζειν ὁ λόγος. Εἰ γὰρ ἐν πᾶσι τοῖς οὖσιν ὁ Θεὸς ἔσται, ἡ κακία δηλαδὴ ἐν τοῖς οὖσιν οὐκ ἔσται. Εἰ γάρ τις ὑπόθοιτο κἀκείνην εἶναι, πῶς σωθήσεται τὸ ἐν πᾶσι τὸν Θεὸν εἶναι; Ἡ γὰρ ὑπεξαίρεσις ἐκείνης, ἐλλιπῆ τῶν πάντων ποιεῖ τὴν περίληψιν.",
+      "context": "For Gregory the fire purifies: once evil is gone there is nothing left for it to burn.",
+      "source": {
+        "book": "gregory-nyssa-de-anima-et-resurrectione",
+        "section": "31"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-shorter-rules-267-b",
+      "author": "Basil of Caesarea",
+      "year": 375,
+      "date": "c. 375",
+      "work": "Shorter Rules",
+      "locus": "267",
+      "lang": "grc",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... it is one of the devil's tricks that many people, as if they had forgotten these and so many other sayings and verdicts of the Lord, set an end to punishment for themselves, so as to dare sin all the more. For if eternal punishment will one day have an end, eternal life too will certainly have an end. But if we will not think this of life, what reason is there to set an end to eternal punishment?",
+      "original": "ἓν καὶ τοῦτο τῆς μεθοδείας τοῦ διαβόλου, τὸ τοὺς πολλοὺς τῶν ἀνθρώπων, ὥσπερ ἐπιλαθομέ νους τῶν τοσούτων καὶ τοιούτων τοῦ Κυρίου ῥημάτων καὶ ἀποφάσεων, τέλος κολάσεως εἰς τὸ μᾶλλον κατατολμᾷν τῆς ἁμαρτίας ἑαυτοῖς ὑπο γράφειν. Εἰ γὰρ τῆς αἰωνίου κολάσεως ἔσται ποτὲ τέλος, τέλος ἕξει πάντως καὶ ἡ αἰώνιος ζωή.",
+      "context": "The question put to Basil, Gregory of Nyssa's brother: \"If one is beaten with many stripes and another with few (Luke 12:47–48), how do some say punishment has no end?\" Basil cites Matthew 25:46.",
+      "source": {
+        "book": "basil-regulae-brevius",
+        "section": "68"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-21-17-b",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "21.17",
+      "lang": "la",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Now I see I must deal, and peacefully, with our merciful ones, who refuse to believe that the punishment will be everlasting for all, or for some, of those the most just Judge will condemn to hell, but think they will be freed after a fixed time. More merciful still was Origen, who believed that even the devil and his angels would be rescued from those torments after severe and long punishment and joined to the holy angels. But the Church rightly rejected him for this and other things.",
+      "original": "Nunc iam cum misericordibus nostris agendum esse uideo et pacifice disputandum, qui uel omnibus illis hominibus, quos iustissimus iudex dignos. gehennae supplicio iudicabit, uel quibusdam eorum nolunt credere poenam sempiternam futuram, sed post certi temporis metas pro cuiusque peccati quantitate longioris siue breuioris eos inde existimant liberandos. Qua in re misericordior profecto fuit Origenes, qui et ipsum diabolum atque angelos eius post grauiora pro meritis et diuturniora supplicia ex illis cruciatibus eruendos et sociandos sanctis angelis credidit. Sed illum et propter hoc et propter alia nonnulla ... non inmerito reprobauit ecclesia",
+      "context": "Augustine's \"merciful ones\" (misericordes) were fellow Catholics. He answers them in the chapters that follow.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-21.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Arnobius of Sicca",
+      "work": "Against the Nations 2.14",
+      "year": 300,
+      "why": "The clearest early statement that wicked souls are destroyed.",
+      "action": "intake",
+      "source_hint": "Reifferscheid, CSEL 4 (1875)"
+    },
+    {
+      "author": "Athanasian Creed",
+      "work": "Quicumque vult",
+      "year": 500,
+      "why": "\"Those who have done evil will go into eternal fire.\"",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 40)"
+    },
+    {
+      "author": "Irenaeus of Lyons",
+      "work": "Against Heresies 2.34 and 4.28",
+      "year": 180,
+      "why": "Souls live as long as God wills, and eternal fire for the unrepentant.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol1_harvgoog_djvu.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "heaven-hell-intermediate",
+      "apokatastasis"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

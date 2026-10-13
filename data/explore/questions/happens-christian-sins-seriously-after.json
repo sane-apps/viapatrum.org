@@ -1,0 +1,249 @@
+{
+  "id": "happens-christian-sins-seriously-after",
+  "number": 37,
+  "group": "salvation",
+  "question": "What happens to a Christian who sins seriously after baptism?",
+  "short": "Serious sin after baptism",
+  "search": [
+    "penance",
+    "confession",
+    "second repentance",
+    "lapsed",
+    "novatian",
+    "mortal sin",
+    "reconciliation",
+    "hebrews 6",
+    "montanism"
+  ],
+  "answers": [
+    {
+      "id": "once",
+      "label": "There is one repentance after baptism, and no more",
+      "short": "One more chance",
+      "tag": "Once"
+    },
+    {
+      "id": "restored",
+      "label": "The Church can reconcile every penitent sinner",
+      "short": "Can be restored",
+      "tag": "Restored"
+    },
+    {
+      "id": "refused",
+      "label": "Some sins the Church must not forgive",
+      "short": "Not forgiven by the Church",
+      "tag": "Refused"
+    }
+  ],
+  "overview": [
+    {
+      "text": "In the second century, Hermas and the young Tertullian allowed one repentance after baptism, and only one.",
+      "cites": [
+        "hermas-mandate-4-3",
+        "tertullian-repentance-7"
+      ]
+    },
+    {
+      "text": "Rigorists, including the later Tertullian and the followers of Novatian, refused to readmit adulterers or those who denied Christ under persecution.",
+      "cites": [
+        "tertullian-modesty-1",
+        "tertullian-modesty-21"
+      ]
+    },
+    {
+      "text": "The bishops chose mercy: after long penance, the lapsed were readmitted, and no dying penitent was refused communion. Trent called penance the \"second plank after shipwreck\".",
+      "cites": [
+        "cyprian-letter-57",
+        "gregory-nyssa-canonical-letter",
+        "trent-1547-justification-14"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "hermas-mandate-4-3",
+      "author": "Shepherd of Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "Shepherd of Hermas",
+      "locus": "Mandate 4.3.6",
+      "lang": "grc",
+      "answer": "once",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But I tell you, he said, after that great and holy calling, if anyone, tempted by the devil, sins, he has one repentance. But if he sins again and again and repents, it is of no use to such a person; he will hardly live.",
+      "original": "ἀλλὰ ἐγώ σοι λέγω, φησί μετὰ τὴν κλῆσιν ἐκείνην τὴν μεγάλην καὶ σεμνὴν ἐάν τις ἐκπειρασθεὶς ὑπὸ τοῦ διαβόλου ἁμαρτήσῃ, μίαν μετάνοιαν ἔχει",
+      "context": "Hermas, at Rome, announces one repentance for baptized sinners, against teachers who allowed none.",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-repentance-7",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "On Repentance",
+      "locus": "7.10",
+      "lang": "la",
+      "answer": "once",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "God, foreseeing these poisons of the devil, although the door of forgiveness has been shut and bolted with the bar of baptism, has let something still stand open. He has placed in the vestibule a second repentance, to open to those who knock: but now once only, because it is already the second time; and never again, because the last was in vain.",
+      "original": "Haec igitur venena eius providens deus, clausa licet ignoscentiae ianua et intinctionis sera obstructa, aliquid adhuc permisit patere. Collocavit in vestibulo paenitentiam secundam, quae pulsantibus patefaciat; sed iam semel, quia iam secundo; sed amplius nunquam, quia proxime frustra.",
+      "context": "Written while Tertullian was still a Catholic.",
+      "source": {
+        "book": "tertullian-on-repentance",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-modesty-1",
+      "author": "Tertullian",
+      "year": 215,
+      "date": "c. 215",
+      "work": "On Modesty",
+      "locus": "1.6",
+      "lang": "la",
+      "answer": "refused",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I hear that an edict has even been published, and a peremptory one. The supreme pontiff, that is, the bishop of bishops, decrees: \"I forgive the sins of adultery and fornication to those who have done penance.\" What an edict!",
+      "original": "audio etiam edictum esse propositum, et quidem peremptorium. pontifex scilicet maximus, quod est episcopus episcoporum, edicit: ego et moechiae et fornicationis delicta paenitentia functis dimitto. o edictum",
+      "context": "Tertullian, now a Montanist, mocks a bishop (of Rome or Carthage) for readmitting adulterers.",
+      "source": {
+        "book": "tertullian-on-modesty",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-modesty-21",
+      "author": "Tertullian",
+      "year": 215,
+      "date": "c. 215",
+      "work": "On Modesty",
+      "locus": "21.7",
+      "lang": "la",
+      "answer": "refused",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "\"But,\" you say, \"the Church has power to forgive sins.\" This I acknowledge and set out even more, since I have the Paraclete himself in the new prophets saying: \"The Church can forgive sin, but I will not, lest they commit others.\"",
+      "original": "sed habet, inquis, potestatem ecclesia delicta donandi. hoc ego magis et agnosco et dispono, qui ipsum paracletum in prophetis nouis habeo dicentem: potest ecclesia donare delictum, sed non faciam, ne et alia delinquant.",
+      "context": "\"The new prophets\" are the Montanist prophets.",
+      "source": {
+        "book": "tertullian-on-modesty",
+        "section": "21"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-57",
+      "author": "Cyprian of Carthage",
+      "year": 252,
+      "date": "c. 252",
+      "work": "Letter 57, from the council of Carthage to Cornelius",
+      "locus": "57.1",
+      "lang": "la",
+      "answer": "restored",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We had decided some time ago, dear brother, in shared counsel, that those who had been tripped up by the adversary in the persecution and had fallen and defiled themselves with forbidden sacrifices should do full penance for a long time, and if danger of sickness pressed, should receive peace at the point of death. For it was not right, nor did fatherly love and divine mercy allow, that the Church should be shut to those who knock.",
+      "original": "Statueramus quidem pridem, frater carissime, participato inuicem nobiscum consilio ut qui in persecutionis infestatione subplantati ab aduersario et lapsi fuissent et sacrificiis se inlicitis maculassent, agerent diu paenitentiam plenam et si periculum infirmitatis urgueret, pacem sub ictu mortis acciperent. nec enim.. fas erat aut permittebat paterna pietas et diuina clementia ecclesiam pulsantibus cludi",
+      "context": "After the persecution of Decius (250). Novatian at Rome refused to readmit the lapsed and began a rival church.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "57.1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-canonical-letter",
+      "author": "Gregory of Nyssa",
+      "year": 390,
+      "date": "c. 390",
+      "work": "Canonical Letter to Letoius",
+      "locus": "canon 5",
+      "lang": "grc",
+      "answer": "restored",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "If anyone dies before completing the time fixed by the canons, the kindness of the Fathers commands that he share in the holy things, and not be sent on that last long journey without provision for the way.",
+      "original": "Εἰ δέ τις μὴ πληρώσας τὸν χρόνον τὸν ἐκ τῶν κανόνων ἀφωρισμένον, ἐξοδεύοι τοῦ βίου· κελεύει ἡ τῶν Πατέρων φιλανθρωπία μετασχόντα τῶν ἁγιασμάτων, μὴ κενὸν τοῦ ἐφοδίου πρὸς τὴν ἐσχάτην ἐκείνην καὶ μακρὰν ἀποδημίαν ἐκπεμφθῆναι.",
+      "context": "\"The Fathers\" here are Nicaea (canon 13). The same letter lets a bishop shorten the years of penance for a sincere convert.",
+      "source": {
+        "witness": "books/gregory-nyssa-epistula-canonica-letoium/sources/epistula_canonica_ad_letoium_khazarzar.txt",
+        "edition": "Migne PG 45, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1547-justification-14",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 6, Decree on Justification",
+      "locus": "Chapter 14",
+      "lang": "la",
+      "answer": "restored",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Those who by sin have fallen from the grace of justification they received can be justified again, when, moved by God, they take care to recover the lost grace through the sacrament of penance by the merit of Christ. This way of justification is the restoration of the fallen, which the holy Fathers fittingly called the second plank after the shipwreck of lost grace.",
+      "original": "Qui vero ab accepta iustificationis gratia per peccatum exciderunt, rursus iustificari poterunt, cum excitante Deo per poenitentiae sacramentum merito Christi amissam gratiam recuperare procuraverint. Hic enim iustificationis modus est lapsis reparatio, quam secundam post naufragium deperditae gratiae tabulam sancti Patres apte nuncuparunt.",
+      "context": "\"Second plank after shipwreck\" is Jerome's phrase (Letter 130.9).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 807"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Novatian",
+      "work": "Letter 30 (from the Roman clergy, in Cyprian's letters)",
+      "year": 250,
+      "why": "Novatian's own early, moderate statement, before the schism. In the library; to be read.",
+      "action": "search",
+      "source_hint": "cyprian-letters 30"
+    },
+    {
+      "author": "Council of Nicaea",
+      "work": "Canons 8, 11–13",
+      "year": 325,
+      "why": "Rules for receiving the Novatianists and the lapsed, and viaticum for the dying.",
+      "action": "intake",
+      "source_hint": "Bruns, Canones apostolorum et conciliorum (1839)"
+    },
+    {
+      "author": "Martin Luther and the Reformed",
+      "work": "Augsburg Confession 11–12; Westminster 15",
+      "year": 1530,
+      "why": "Repentance and confession in Protestant teaching.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/url-westminster-confession.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "penance-and-reconciliation"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

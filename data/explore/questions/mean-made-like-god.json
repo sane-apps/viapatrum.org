@@ -1,0 +1,213 @@
+{
+  "id": "mean-made-like-god",
+  "number": 36,
+  "group": "salvation",
+  "question": "What does it mean to be made like God (theosis)?",
+  "short": "Theosis",
+  "search": [
+    "theosis",
+    "deification",
+    "divinization",
+    "partakers of the divine nature",
+    "2 peter 1:4",
+    "become god",
+    "union with christ",
+    "adoption"
+  ],
+  "answers": [
+    {
+      "id": "deified",
+      "label": "God became man so that we might become god by grace",
+      "short": "Made god by grace",
+      "tag": "Theosis"
+    },
+    {
+      "id": "union",
+      "label": "We are united to Christ and adopted, but share nothing of God's substance",
+      "short": "Union, not substance",
+      "tag": "Union"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From Irenaeus on, the fathers state an exchange: the Word became what we are so that we might become what he is. Clement and Athanasius say it outright: man may \"become god\".",
+      "cites": [
+        "irenaeus-ah-3-19-1",
+        "clement-protrepticus-1-8",
+        "athanasius-incarnation-54",
+        "gregory-nazianzus-oration-29-19"
+      ]
+    },
+    {
+      "text": "Augustine puts it as sons by nature and sons by grace. Reformed confessions speak of union and adoption and rule out any share in God's substance, which the fathers also denied.",
+      "cites": [
+        "augustine-city-of-god-21-15",
+        "westminster-1646-26-3"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "irenaeus-ah-3-19-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.19.1",
+      "lang": "grc",
+      "answer": "deified",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "For this is why the Word became man, and the Son of God the Son of man: so that man, having received the Word and taken on adoption, might become a son of God.",
+      "original": "Εἰς τοῦτο γὰρ ὁ Λόγος ἄνθρωπος καὶ Υἱὸς ἀνθρώπου ὁ Υἱὸς τοῦ Θεοῦ, ἵνα ὁ ἄνθρωπος χωρήσας τὸν Λόγον καὶ τὴν υἱοθεσίαν λαβὼν γένηται υἱὸς τοῦ Θεοῦ.",
+      "context": "The \"exchange\" form that later writers sharpened. The Greek survives in Theodoret's Eranistes.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-3.txt",
+        "edition": "Migne PG 7, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-protrepticus-1-8",
+      "author": "Clement of Alexandria",
+      "year": 195,
+      "date": "c. 195",
+      "work": "Exhortation to the Greeks",
+      "locus": "1.8.4",
+      "lang": "grc",
+      "answer": "deified",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Yes, I say, the Word of God became man, so that you too may learn from a man how a man may become god.",
+      "original": "ναί φημι, ὁ λόγος ὁ τοῦ θεοῦ ἄνθρωπος γενόμενος, ἵνα δὴ καὶ σὺ παρὰ ἀνθρώπου μάθῃς, πῇ ποτε ἄρα ἄνθρωπος γένηται θεός.",
+      "context": "The first plain statement that a human being may \"become god\".",
+      "source": {
+        "book": "clement-alexandria-protrepticus",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athanasius-incarnation-54",
+      "author": "Athanasius of Alexandria",
+      "year": 318,
+      "date": "c. 318",
+      "work": "On the Incarnation",
+      "locus": "54.3",
+      "lang": "grc",
+      "answer": "deified",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For he became man so that we might be made god; and he showed himself through a body so that we might receive an idea of the unseen Father; and he endured insult from men so that we might inherit incorruption.",
+      "original": "Αὐτὸς γὰρ ἐνηνθρώπησεν, ἵνα ἡμεῖς θεοποιηθῶμεν· καὶ αὐτὸς ἐφανέρωσεν ἑαυτὸν διὰ σώματος, ἵνα ἡμεῖς τοῦ ἀοράτου Πατρὸς ἔννοιαν λάβωμεν· καὶ αὐτὸς ὑπέμεινε τὴν παρ’ ἀνθρώπων ὕβριν, ἵνα ἡμεῖς ἀφθαρσίαν κληρονομήσωμεν.",
+      "context": "The most quoted line on deification. The Catechism of the Catholic Church cites it (460).",
+      "source": {
+        "book": "athanasius-incarnation",
+        "section": "54"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nazianzus-oration-29-19",
+      "author": "Gregory of Nazianzus",
+      "year": 380,
+      "date": "c. 380",
+      "work": "Oration 29 (Third Theological Oration)",
+      "locus": "19",
+      "lang": "grc",
+      "answer": "deified",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "He became man, God below ... so that I might become god as much as he became man.",
+      "original": "καὶ γενόμενος ἄνθρωπος, ὁ κάτω θεός· ἐπειδὴ συνανεκράθη θεῷ, καὶ γέγονεν εἷς, τοῦ κρείττονος ἐκνικήσαντος, ἵνα γένωμαι τοσοῦτον θεός, ὅσον ἐκεῖνος ἄνθρωπος.",
+      "context": "Maximus the Confessor built on this line in the seventh century.",
+      "source": {
+        "book": "gregory-nazianzus-oration-29",
+        "section": "19"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-21-15",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "21.15",
+      "lang": "la",
+      "answer": "deified",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "The only Son of God by nature became, for our sake and in mercy, a son of man, so that we, sons of man by nature, might through him become sons of God by grace.",
+      "original": "Vnicus enim natura Dei filius propter nos misericordia factus est hominis filius, ut nos, natura filii hominis, filii Dei per illum gratia fieremus.",
+      "context": "The Western form: by grace, not by nature. Augustine also says God \"makes gods\" of those he justifies (Exposition of Psalm 49).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-21.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-26-3",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "26.3",
+      "lang": "en",
+      "answer": "union",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "This communion which the saints have with Christ, doth not make them in any wise partakers of the substance of his Godhead; or to be equal with Christ in any respect: either of which to affirm is impious and blasphemous.",
+      "original": "This communion which the saints have with Christ, doth not make them in any wise partakers of the substance of his Godhead; or to be equal with Christ in any respect: either of which to affirm is impious and blasphemous.",
+      "context": "Reformed teaching speaks of union with Christ and adoption, and guards against any sharing in God's substance. The fathers also denied that.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Gregory Palamas",
+      "work": "Triads in Defense of the Holy Hesychasts",
+      "year": 1340,
+      "why": "We share God's energies, not his essence: the Orthodox definition, confirmed by councils in 1341 and 1351.",
+      "action": "intake",
+      "source_hint": "Meyendorff edition (copyright) as note; Migne PG 150"
+    },
+    {
+      "author": "Maximus the Confessor",
+      "work": "Ambigua 7 and 10",
+      "year": 630,
+      "why": "The fullest patristic account of deification. The library has Maximus in PG 91; to be searched.",
+      "action": "search",
+      "source_hint": "maximus-pg91 books"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "Exposition of Psalm 49.2",
+      "year": 415,
+      "why": "\"He who was God became man, to make gods of those who were men.\"",
+      "action": "intake",
+      "source_hint": "Dekkers and Fraipont, CCSL 38 (copyright) as note; Migne PL 36"
+    }
+  ],
+  "related": {
+    "topics": [
+      "deification"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
