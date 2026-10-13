@@ -27,6 +27,7 @@ GAP_STATUS = {"intake": "Text being fetched", "relock-source": "Text being re-ch
               "translate": "Queued for translation", "search": "Being searched"}
 LANG = {"grc": "Greek", "la": "Latin", "en": "English"}
 POPULAR = ["infant-baptism", "eucharist-presence", "old-testament-canon"]
+TOPICS_LIVE: set[str] = set()  # filled by build() from dist/topics/
 
 
 def T(y: float) -> float:
@@ -159,7 +160,8 @@ def question_page(d: dict, group_title: str, church_url: dict[str, str]) -> str:
     if rel.get("timeline") in church_url:
         links.append(f'<a href="{escape(church_url[rel["timeline"]])}">Where each church stands today →</a>')
     for t in rel.get("topics") or []:
-        links.append(f'<a href="/topics/{escape(t)}/">More passages on this topic →</a>')
+        if t in TOPICS_LIVE:  # only topics the build actually wrote; the link check fails a ship on any other
+            links.append(f'<a href="/topics/{escape(t)}/">More passages on this topic →</a>')
     related = f'<p class="related">{" · ".join(links)}</p>' if links else ""
     church = (f'<p class="related"><a href="{escape(church_url[rel["timeline"]])}">Where each church stands on this today →</a></p>'
               if rel.get("timeline") in church_url else "")
@@ -276,6 +278,7 @@ def build(dist: Path, layout, write, B, old_ids: set[str]) -> int:
     data = QD.export_data()
     titles = {g["id"]: g["title"] for g in data["groups"]}
     church_url = move_church_views(dist, old_ids, set(data["dossiers"]))
+    TOPICS_LIVE.clear(); TOPICS_LIVE.update(p.parent.name for p in (dist / "topics").glob("*/index.html"))
     for qid, d in data["dossiers"].items():
         write(dist / "explore" / qid / "index.html", layout(
             f'{d["question"]} · Timeline', question_page(d, titles.get(d["group"], ""), church_url),
