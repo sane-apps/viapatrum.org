@@ -23,6 +23,9 @@
     function score(text, words) { var t = norm(text), s = 0; words.forEach(function (w) { if (t.indexOf(w) >= 0) s += w.length > 3 ? 2 : 1; }); return s; }
     function results(term) {
       var words = norm(term).split(/[^a-z0-9Ͱ-Ͽ]+/).filter(function (w) { return w.length > 1 && STOP.indexOf(w) < 0; });
+      // Everyday words readers type, mapped to the words the questions use.
+      var SYN = { babies: 'infant', baby: 'infant', kids: 'infant', children: 'infant', newborns: 'infant', communion: 'eucharist', mass: 'eucharist', bible: 'scripture', pope: 'rome', virgin: 'mary' };
+      words = words.map(function (w) { return SYN[w] || w; });
       if (!words.length) return '';
       var qs = S.questions.map(function (q) { return { q: q, s: score(q.q + ' ' + q.s + ' ' + q.k, words) }; })
         .filter(function (x) { return x.s > 1; }).sort(function (a, b) { return b.s - a.s; }).slice(0, 7);
