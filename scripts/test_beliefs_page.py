@@ -122,6 +122,78 @@ class OverlayTests(unittest.TestCase):
                                                            "(1992), paragraphs 799-801"}, 470)[1]["year"], 1992)
         self.assertEqual(B.defined_marks({"first_defined": ""}, 470), (None, None))
 
+    def test_death_penalty_dates_and_quotes(self):
+        import json
+        root = Path(__file__).resolve().parents[1]
+        qs = json.loads((root / "data/explore/doctrine_questions.json").read_text())
+        q = next(x for x in qs if x["id"] == "death-penalty")
+        self.assertEqual([p["id"] for p in q["positions"]],
+                         ["lawful-sword", "christians-do-not-wield", "inadmissible"])
+        lawful, abstain, inad = q["positions"]
+        self.assertEqual(lawful["traditions"], ["catholic", "orthodox", "lutheran", "reformed", "anglican"])
+        self.assertEqual(lawful["tradition_labels"]["catholic"], "Catholic, until 2018")
+        self.assertEqual(abstain["traditions"], [])
+        self.assertEqual(inad["traditions"], ["catholic"])
+        self.assertEqual(inad["tradition_labels"]["catholic"], "Catholic, from 2018")
+        self.assertIn("Catholic, until 2018", B._trad_badges(lawful))
+        self.assertIn("Catholic, from 2018", B._trad_badges(inad))
+        self.assertNotIn("still quotes Genesis", q["public_note"])
+        self.assertIn("Catholic on the first lane is the teaching until 2018", q["public_note"])
+        self.assertTrue(all("anabaptist" not in p["traditions"] for p in q["positions"]))
+        tick, cap = B.defined_marks(lawful, 470)
+        self.assertIsNone(tick)
+        self.assertEqual(cap["year"], 1529)
+        self.assertEqual(cap["kind"], "confession")
+        _, cap_ab = B.defined_marks(abstain, 470)
+        self.assertEqual(cap_ab["year"], 1527)
+        _, cap_in = B.defined_marks(inad, 470)
+        self.assertEqual(cap_in["year"], 1995)
+        html = B.defined_html(lawful) + B.defined_html(inad)
+        self.assertIn("inadmissible", html)
+        self.assertIn("power of life and death", html)
+        self.assertNotIn("__P7Z.HTM", html)
+        self.assertIn("sheddeth man", html)
+        self.assertIn("10 October 2026", q["public_note"])
+        self.assertIn("10 October 2026", inad["first_defined"])
+        self.assertIn("put to death wicked men", B.defined_html(lawful))
+        self.assertIn("occupation of the sword", B.defined_html(abstain))
+        self.assertIn("though justly", B.defined_html(abstain))
+        self.assertIn("always unlawful to put to death", B.defined_html(inad))
+        self.assertEqual(B._lane_witnesses(lawful, 40, 470)[0]["author"], "Augustine")
+        self.assertEqual([d["author"] for d in B._lane_witnesses(abstain, 40, 470)],
+                         ["Athenagoras", "Athenagoras", "Tertullian"])
+        self.assertEqual(B._lane_witnesses(inad, 40, 470)[0]["author"], "Lactantius")
+        self.assertEqual(B.question_scale_end(q, 470), 2150)
+        self.assertEqual(B._lane_witnesses(lawful, 40, 470)[0]["author"], "Augustine")
+        class _Long:
+            TL_START, TL_END = 40, 2150
+
+            @staticmethod
+            def slugify(name):
+                return name
+        lawful_names = [p["author"] for p in B._bar_points(lawful, _Long)]
+        self.assertEqual(lawful_names[:4], ["Genesis 9:6", "Numbers 35:31", "Romans 13:4", "Acts 25:11"])
+        for name in ("Augustine", "Aquinas", "Luther", "Trent", "Article 37", "Westminster",
+                     "John Paul II", "Catechism", "Russian Orthodox"):
+            self.assertIn(name, lawful_names)
+        self.assertIn("Schleitheim", [p["author"] for p in B._bar_points(abstain, _Long)])
+        self.assertEqual([p["author"] for p in B._bar_points(inad, _Long)],
+                         ["Lactantius", "Mennonite", "Catechism", "Leo XIV"])
+        self.assertEqual(B._bar_points(lawful, _Long)[0]["period"], "Scripture")
+
+        class _Scale:
+            TL_START, TL_END = 40, 470
+
+            @staticmethod
+            def display_author(name):
+                return name
+
+        told = B.story(q, _Scale())
+        self.assertIn("Augustine", told)
+        self.assertIn("Athenagoras", told)
+        self.assertIn("Lactantius", told)
+        self.assertNotIn("No early passage yet states", told)
+
 
 if __name__ == "__main__":
     unittest.main()

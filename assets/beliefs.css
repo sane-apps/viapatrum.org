@@ -2,8 +2,8 @@
    church filter, position labels on cards, and the question page sections.
    Colors come from the site tokens, so both themes follow. */
 .bfilter { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.9rem; }
-.bfilter-label { font: 600 0.88rem var(--font-body); color: var(--ink); margin-right: 0.2rem; }
-.bchip { font: 600 0.85rem/1 var(--font-body); padding: 0.45rem 0.75rem; border-radius: 999px;
+.bfilter-label { font: 600 13pt var(--font-body); color: var(--ink); margin-right: 0.2rem; }
+.bchip { font: 600 13pt/1 var(--font-body); padding: 0.45rem 0.75rem; border-radius: 999px;
   border: 1px solid var(--rule); background: var(--leaf); color: var(--ink); cursor: pointer; }
 .bchip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .bchip:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
@@ -18,7 +18,7 @@
 /* Churches left unplaced on a question (divided, or no settled text), and
    where the Oriental Orthodox placements come from. Plain text, not links. */
 .bnotes { list-style: none; margin: 0.8rem 0 0; padding: 0; display: grid; gap: 0.3rem;
-  font: 0.9rem/1.5 var(--font-body); color: var(--ink-soft); max-width: 62rem; }
+  font: 15pt/1.5 var(--font-body); color: var(--ink-soft); max-width: 62rem; }
 .bnotes strong { color: var(--ink); font-weight: 600; }
 
 /* Cards: each lane is named, since a card shows every position. */
@@ -39,9 +39,11 @@
 .tl-key.uncertain { border-radius: 50%; border: 2px solid var(--ink-soft); }
 
 .btrads { display: inline-flex; flex-wrap: wrap; gap: 0.3rem; margin-left: 0.5rem; vertical-align: 0.1rem; }
-.btrad { font: 600 0.7rem var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft);
-  border: 1px solid var(--rule); border-radius: 4px; padding: 0.1rem 0.35rem; }
-.tl-related { margin: 0.9rem 0 0; font-size: 0.95rem; }
+.btrad { font: 600 13pt var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft);
+  border: 1px solid var(--rule); border-radius: 4px; padding: 0.12rem 0.4rem; }
+.tl-quotes { margin: 0.45rem 0 0.85rem; display: grid; gap: 0.35rem; max-width: 62rem; }
+.tl-pos.tl-compact .tl-quotes { margin-bottom: 0.35rem; }
+.tl-related { margin: 0.9rem 0 0; font-size: 15pt; }
 .tl-related a { color: var(--lapis); font-weight: 600; }
 .ot-creeds { margin: 0.75rem 0 0; max-width: 40rem; }
 .ot-creeds a { font-weight: 600; }
@@ -49,30 +51,31 @@
 .bpositions { margin-top: 2rem; }
 .bpositions > h2, .bpassages > h2 { font-size: 1.6rem; margin: 0 0 0.6rem; }
 .bpos { border-top: 1px solid var(--rule); padding-block: 0.9rem; display: grid; gap: 0.35rem; }
-.bpos h3 { margin: 0; font-size: 1.15rem; }
-.bdef { margin: 0.25rem 0; padding: 0.5rem 0.75rem; border-left: 3px solid var(--rule); font: italic 0.95rem/1.5 var(--font-read); color: var(--ink); }
-.bdef cite { display: block; font: normal 0.75rem var(--font-body); color: var(--ink-soft); margin-top: 0.25rem; }
-.bmark { margin: 0; font: 0.95rem/1.5 var(--font-body); color: var(--ink); }
+.bpos h3 { margin: 0; font-size: 16pt; }
+.bdef { margin: 0.35rem 0; padding: 0.65rem 0.85rem; border-left: 3px solid var(--rule); font: italic 15pt/1.55 var(--font-read); color: var(--ink); }
+.bdef cite { display: block; font: normal 13pt/1.4 var(--font-body); color: var(--ink-soft); margin-top: 0.35rem; }
+.bmark { margin: 0; font: 15pt/1.5 var(--font-body); color: var(--ink); }
 .bmark span { font-weight: 600; }
-.bfine, .bfirst { margin: 0; font: 0.85rem var(--font-body); color: var(--ink-soft); }
+.bfine, .bfirst { margin: 0; font: 13pt/1.45 var(--font-body); color: var(--ink-soft); }
 .bfirst.none { font-style: italic; }
 .bshared { background: var(--paper-2); border-radius: 8px; padding: 0.9rem 1rem; margin: 1.5rem 0 1rem; }
-.bshared h2 { font: 600 1rem var(--font-body); margin: 0 0 0.3rem; }
-.bshared p { margin: 0 0 0.4rem; font-size: 0.9rem; color: var(--ink-soft); }
+.bshared h2 { font: 600 16pt var(--font-body); margin: 0 0 0.3rem; }
+.bshared p, .bshared li { margin: 0 0 0.4rem; font-size: 15pt; line-height: 1.5; color: var(--ink-soft); }
 .bshared ul { margin: 0; padding-left: 1.2rem; }
 .bpassages ol { list-style: none; padding: 0; display: grid; gap: 1rem; }
+.bpassages li { font-size: 15pt; line-height: 1.5; }
 .bp { border-left: 3px solid var(--rule); padding-left: 0.9rem; min-width: 0; }
-.bpwho { margin: 0; font: 0.95rem var(--font-body); }
-.bptext { margin: 0.3rem 0; font: 1rem/1.6 var(--font-read); overflow-wrap: anywhere; }
+.bpwho { margin: 0; font: 15pt var(--font-body); }
+.bptext { margin: 0.3rem 0; font: 15pt/1.55 var(--font-read); overflow-wrap: anywhere; }
 .bpdec { list-style: none; padding: 0; margin: 0.2rem 0; display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; }
 /* Plain labels, not boxes: a legend glyph in the stance colour (Standing UX rule 2). */
-.bpdec li { font: 600 0.8rem var(--font-body); color: var(--ink-soft); }
+.bpdec li { font: 600 13pt var(--font-body); color: var(--ink-soft); }
 .bpdec li::before { margin-right: 0.3em; }
 .bpdec .st::before { content: "\25CF\FE0E"; color: var(--affirm); }
 .bpdec .ex::before { content: "\00D7"; color: var(--deny); font-weight: 800; }
-.bpsrc { margin: 0; font: 0.85rem var(--font-body); }
-.bpattr { margin: 0.15rem 0; font: 600 0.78rem var(--font-body); color: var(--partly); }
-.bmethod { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; font-size: 0.95rem; color: var(--ink-soft); }
+.bpsrc { margin: 0; font: 13pt var(--font-body); }
+.bpattr { margin: 0.15rem 0; font: 600 13pt var(--font-body); color: var(--partly); }
+.bmethod { border-top: 1px solid var(--rule); margin-top: 1.5rem; padding-top: 1rem; font-size: 15pt; line-height: 1.5; color: var(--ink-soft); }
 @media (prefers-reduced-motion: reduce) { .tl-row[data-trads], .bdefs li[data-trads] { transition: none; } }
 
 /* When each position was formally defined (P18 item 5). Inside the lane: a gold
@@ -89,7 +92,7 @@
 .tl-key.tl-defkey { width: 10px; height: 10px; border-radius: 1px; transform: rotate(45deg); background: var(--gold); margin: 0 0.15rem; }
 .tl-key.tl-defkey.condemned { background: var(--deny); }
 .tl-defarrow { color: var(--gold); font-weight: 700; }
-.tl-defcap { font: 700 0.8rem/1.2 var(--font-body); color: var(--gold); white-space: nowrap; }
+.tl-defcap { font: 700 13pt/1.3 var(--font-body); color: var(--gold); white-space: nowrap; }
 .tl-defcap.condemned { color: var(--deny); }
 .tl-defcap.never { color: var(--ink-soft); font-weight: 600; font-style: italic; }
 .tl-defcap-line .sep { color: var(--ink-soft); }
@@ -97,7 +100,7 @@
 .tl-pos .tl-tally > span { white-space: nowrap; }
 .tl-defcap-gut { display: none; }
 @media (min-width: 641px) {
-  .tl-pos.has-cap:not(.tl-compact) { --cap-w: 8.5rem; }
+  .tl-pos.has-cap:not(.tl-compact) { --cap-w: 11rem; }
   .tl-pos.has-cap:not(.tl-compact) > .tl-eras,
   .tl-pos.has-cap:not(.tl-compact) > .tl-axis,
   .tl-pos.has-cap:not(.tl-compact) .tl-lane { margin-right: var(--cap-w); }
@@ -110,7 +113,28 @@
 .bdefs { list-style: none; margin: 0.2rem 0 0; padding: 0; display: grid; gap: 0.25rem; }
 .bdefs li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 1rem;
   padding: 0.25rem 0; border-top: 1px solid var(--rule); }
-.bdefs-name { font: 0.95rem/1.4 var(--font-read); color: var(--ink); }
+.bdefs-name { font: 15pt/1.4 var(--font-read); color: var(--ink); }
+
+/* Question page. Reading text is 15pt. Citations, badges, era names, year
+   ticks, and the names on the lane are 13pt, which is the floor. The lane
+   packing in beliefs_page.py uses the same 13pt width. */
+.ot-head .eyebrow { font-size: 13pt; }
+.ot-head .tl-verdict { font-size: 15pt; line-height: 1.5; }
+.over-time .tl-claim-text { font-size: 16pt; }
+.over-time .tl-tally,
+.over-time .tl-legend { font-size: 13pt; }
+.over-time .tl-eras { height: 1.8rem; }
+.over-time .tl-eras .tl-era-name { font-size: 13pt; letter-spacing: 0.03em; }
+.over-time .tl-pt { height: 26px; margin-top: -13px; }
+.over-time .tl-pt .nm { font-size: 13pt; }
+.over-time .tl-tick { font-size: 13pt; }
+.over-time .tl-axis { height: 1.8rem; }
+@media (max-width: 600px) {
+  .over-time .tl-eras { height: 2.7rem; }
+  .over-time .tl-eras .tl-era-name { font-size: 13pt; letter-spacing: 0.02em; line-height: 1.15; white-space: normal; }
+  .over-time .tl-tick { font-size: 13pt; }
+  .over-time .tl-pt .nm { font-size: 13pt; }
+}
 
 /* Phone cards: every tally on its own line, so rows in one card line up. */
 @media (max-width: 640px) {

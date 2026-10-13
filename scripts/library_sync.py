@@ -478,21 +478,63 @@ def audio_zip_of(w: dict) -> str:
     return "before-nicaea" if y < 325 else "nicaea-to-chalcedon" if y < 451 else "after-chalcedon"
 
 
-def audio_bundles(works: list[dict]) -> list[dict]:
+def retained_row(prev: dict, slug: str, kind: str, ledger: dict) -> dict | None:
+    """The last catalogue row for this paid file, when R2 still holds that sha.
+
+    Used only when the local file is gone. The row was hashed and gated
+    before that upload, so a later assemble can keep selling it."""
+    for w in prev.get("works") or []:
+        if w.get("slug") != slug:
+            continue
+        item = (w.get("files") or {}).get(kind)
+        if item and item.get("sha256") and item.get("key") and ledger.get(item["key"]) == item["sha256"]:
+            return dict(item)
+        return None
+    return None
+
+
+def retained_bundle(prev: dict, key: str, ledger: dict) -> dict | None:
+    """The last zip row, when R2 still holds that sha."""
+    for b in prev.get("bundles") or []:
+        if b.get("key") == key and b.get("sha256") and ledger.get(key) == b["sha256"]:
+            return dict(b)
+    return None
+
+
+def audio_bundles(works: list[dict], prev: dict | None = None, ledger: dict | None = None) -> list[dict]:
     """Build the era zips (store-only) and return their bundle entries, kind "audio".
-    Refuses a zip over ZIP_MAX and refuses to start below FREE_MIN free disk."""
+
+    An era whose m4bs are already on R2, with the local files removed, keeps
+    that uploaded zip. It is not rebuilt from whatever m4bs are still on disk.
+    Refuses a zip over ZIP_MAX and refuses to start a rebuild below FREE_MIN free disk."""
+    prev = prev or {}
+    ledger = ledger or {}
     groups: dict[str, list[tuple[Path, str]]] = {k: [] for k, _, _ in AUDIO_ZIPS}
+    remote: dict[str, list[str]] = {k: [] for k, _, _ in AUDIO_ZIPS}
     for w in works:
         f = (w.get("files") or {}).get("audio")
-        if f and (OUT / f["key"]).is_file():
-            groups[audio_zip_of(w)].append((OUT / f["key"], f["name"]))
+        if not f:
+            continue
+        era = audio_zip_of(w)
+        path = OUT / f["key"]
+        if path.is_file():
+            groups[era].append((path, f["name"]))
+        else:
+            remote[era].append(w["slug"])
     need = 0
     for i, (k, _, _) in enumerate(AUDIO_ZIPS, 1):
+        if remote[k]:
+            continue
         out = OUT / "bundles" / f"via-patrum-audiobooks-{i}-{k}.zip"
+        key = f"bundles/{out.name}"
+        # Kept as the uploaded zip (file still matches, or the file is already
+        # gone). Either way this era is not rebuilt and needs no free space.
+        if retained_bundle(prev, key, ledger) and (not out.is_file() or ledger.get(key) == sha256(out)):
+            continue
         total = sum(p.stat().st_size for p, _ in groups[k])
         if total > ZIP_MAX:
             sys.exit(f"BLOCKED: the {k} audiobook zip would be {total / 1e9:.2f} GB, over the 2 GB cap; split it in AUDIO_ZIPS")
-        if not out.is_file() or out.stat().st_size < total:
+        if groups[k] and (not out.is_file() or out.stat().st_size < total):
             need += total
     free = shutil.disk_usage(OUT).free
     if need and free - need < FREE_MIN:
@@ -500,9 +542,21 @@ def audio_bundles(works: list[dict]) -> list[dict]:
     entries = []
     for i, (k, label, note) in enumerate(AUDIO_ZIPS, 1):
         name = f"via-patrum-audiobooks-{i}-{k}.zip"
+        key = f"bundles/{name}"
+        kept = retained_bundle(prev, key, ledger)
+        zip_path = OUT / "bundles" / name
+        # R2 already has this zip. Keep that row when members are gone, when
+        # the local zip is gone, or when the local zip still matches. Rebuilding
+        # would change the sha and the next upload would replace the paid file.
+        if kept and (remote[k] or not zip_path.is_file() or ledger.get(key) == sha256(zip_path)):
+            entries.append(kept)
+            continue
+        if remote[k]:
+            print(f"  {name}: local audiobooks missing and the uploaded zip is not in the ledger; left off this build", flush=True)
+            continue
         p = bundle(name, sorted(groups[k], key=lambda x: x[1]))
         if p:
-            entries.append({"kind": "audio", "era": k, "label": label, "note": note, "key": f"bundles/{name}",
+            entries.append({"kind": "audio", "era": k, "label": label, "note": note, "key": key,
                             "bytes": p.stat().st_size, "count": len(groups[k]), "name": name, "sha256": sha256(p)})
     return entries
 
@@ -517,7 +571,7 @@ def audio_zips(app_dir: Path) -> int:
     site = site_catalog(app_dir)
     works = [{**w, "year": (site.get(w["slug"]) or {}).get("year", w.get("year"))} for w in data["works"]]
     ledger = load(LEDGER)
-    fresh = audio_bundles(works)
+    fresh = audio_bundles(works, data, ledger)
     for b in fresh:
         b["uploaded"] = ledger.get(b["key"]) == b["sha256"]
         print(f"  {b['name']}: {b['count']} audiobooks, {b['bytes'] / 1e9:.2f} GB, uploaded={b['uploaded']}", flush=True)
@@ -578,8 +632,19 @@ def assemble(app_dir: Path) -> int:
     words = word_zips(site)
     prev = load(CATALOG)
     uploaded = load(LEDGER)
+    # Word-only books are listed from the zip on disk. Once that zip is gone,
+    # the slug has to come from the last catalogue or the paid file drops off.
+    remote_slugs = set()
+    for w in prev.get("works") or []:
+        slug = w.get("slug") or ""
+        item = (w.get("files") or {}).get("word") or {}
+        key = item.get("key") or ""
+        if not slug or slug not in site or not key or (OUT / key).is_file():
+            continue
+        if item.get("sha256") and uploaded.get(key) == item["sha256"]:
+            remote_slugs.add(slug)
     works, refused = [], []
-    for slug in sorted(set(books) | set(audio) | set(words)):
+    for slug in sorted(set(books) | set(audio) | set(words) | remote_slugs):
         if slug not in site:
             continue  # not published on the site (withheld or retired): never sell it
         if slug in HOLD:
@@ -598,6 +663,9 @@ def assemble(app_dir: Path) -> int:
         for kind, ext in (("epub", "epub"), ("pdf", "pdf")):
             p = OUT / kind / f"{slug}.{ext}"
             if not p.is_file():
+                kept = retained_row(prev, slug, kind, uploaded)
+                if kept:
+                    f[kind] = kept
                 continue
             digest = sha256(p)
             if s.get("hash") and book.get("hash") != s["hash"]:
@@ -610,6 +678,10 @@ def assemble(app_dir: Path) -> int:
         if slug in words:
             p = words[slug]
             f["word"] = {"key": f"word/{slug}.zip", "bytes": p.stat().st_size, "name": nice_name(title, author, "zip").replace(" (Via Patrum).zip", " (Word for Logos).zip"), "sha256": sha256(p)}
+        elif not (OUT / "word" / f"{slug}.zip").is_file():
+            kept = retained_row(prev, slug, "word", uploaded)
+            if kept:
+                f["word"] = kept
         a = audio.get(slug) or {}
         p = OUT / "audio" / f"{slug}.m4b"
         if p.is_file() and a:
@@ -629,6 +701,10 @@ def assemble(app_dir: Path) -> int:
                               "narrated": a.get("sections_narrated") or 0, "sections": a.get("sections_total") or 0,
                               "missing": section_marks(app_dir, slug, a.get("missing_sections") or []),
                               "older_text": slug in audio_older}
+        elif not p.is_file():
+            kept = retained_row(prev, slug, "audio", uploaded)
+            if kept:
+                f["audio"] = kept
         if not f:
             continue
         cover = OUT / "covers" / f"{slug}.jpg"
@@ -643,7 +719,7 @@ def assemble(app_dir: Path) -> int:
     # the upload). library.json "dirty" lists the held works per format.
     dirty: dict[str, list[str]] = {}
     for kind in ("epub", "pdf", "word"):
-        bad = gate_files([OUT / w["files"][kind]["key"] for w in works if kind in w["files"]])
+        bad = gate_files([p for p in (OUT / w["files"][kind]["key"] for w in works if kind in w["files"]) if p.is_file()])
         if bad:
             dirty[kind] = sorted(Path(x).stem for x in bad)
             for path, hits in bad.items():
@@ -659,11 +735,22 @@ def assemble(app_dir: Path) -> int:
     for kind, label, name in (("epub", "Every book as EPUB", "via-patrum-library-epub.zip"),
                               ("pdf", "Every book as PDF", "via-patrum-library-pdf.zip"),
                               ("word", "Every book for Logos (Word)", "via-patrum-library-logos-word.zip")):
+        key = f"bundles/{name}"
+        missing = [w["slug"] for w in works if kind in w["files"] and not (OUT / w["files"][kind]["key"]).is_file()]
+        kept = retained_bundle(prev, key, uploaded)
+        zip_path = OUT / key
+        # A partial zip would replace the full one. A zip R2 already has stays
+        # when a member is gone, when the zip itself is gone, or when the local
+        # zip still matches, so a newer file does not get uploaded over it.
+        if missing or (kept and (not zip_path.is_file() or uploaded.get(key) == sha256(zip_path))):
+            if kept:
+                bundles.append(kept)
+            continue
         p = bundle(name, files_by_kind[kind])
         if p:
-            bundles.append({"kind": kind, "label": label, "key": f"bundles/{name}", "bytes": p.stat().st_size,
+            bundles.append({"kind": kind, "label": label, "key": key, "bytes": p.stat().st_size,
                             "count": len(files_by_kind[kind]), "name": name, "sha256": sha256(p)})
-    bundles += audio_bundles(works)
+    bundles += audio_bundles(works, prev, uploaded)
     for item in [x for w in works for x in w["files"].values()] + bundles:
         item["uploaded"] = bool(item.get("sha256") and uploaded.get(item["key"]) == item["sha256"])
     hours = sum((w["files"].get("audio") or {}).get("duration_s", 0) for w in works) / 3600

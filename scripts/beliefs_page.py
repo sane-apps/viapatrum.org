@@ -45,6 +45,7 @@ LOCUS = {
     "saints": "mary-saints", "images": "mary-saints",
     "spiritual-gifts": "pneumatology", "sanctification": "soteriology",
     "christ-natures": "christology", "millennium": "eschatology",
+    "death-penalty": "ethics",
 }
 EXTRA_LOCUS = {"id": "mary-saints", "title": "Mary, the Saints and Images", "after": "ecclesiology"}
 
@@ -64,6 +65,7 @@ RELATED_TOPIC = {
     "images": ["against-idols"], "saints": ["martyrdom-witness", "liturgy-prayer"],
     "spiritual-gifts": ["gifts-and-order", "spirit-prophecy"], "sanctification": ["spirit-sanctifies"],
     "christ-natures": ["two-natures-seed", "unity-of-christ"], "millennium": ["millennium-debate", "judgment-second-coming"],
+    "death-penalty": ["civil-authority"],
 }
 # Topics that sit near the question but do not answer it directly.
 LOOSE_RELATED = {"mary-sinlessness", "mary-end-of-life"}
@@ -93,6 +95,7 @@ SHORT_TITLE = {
     "sanctification": "Being made holy in this life",
     "christ-natures": "Christ's divine and human natures",
     "millennium": "The thousand years of Revelation 20",
+    "death-penalty": "The death penalty",
 }
 
 
@@ -101,7 +104,8 @@ def short_title(q: dict) -> str:
 
 
 # Editorial fields taken from doctrine_questions.json over the map's copy.
-_POS_KEYS = ("id", "name", "traditions", "rejected_by", "defined", "statement", "mark", "first_defined")
+_POS_KEYS = ("id", "name", "traditions", "rejected_by", "defined", "statement", "mark", "first_defined",
+             "tradition_labels")
 
 
 def load(data_path: Path) -> list[dict]:
@@ -266,6 +270,88 @@ def on_page_only(q: dict, dist: Path) -> dict:
     return dict(q, passages=kept, positions=positions)
 
 
+def _lane_witnesses(pos: dict, start: int, end: int) -> list[dict]:
+    """Definition quotes with an author and a year inside the timeline.
+    Scripture is a mark on the bar, not a dated father, so it is left out here."""
+    found = []
+    for d in pos.get("defined") or []:
+        if d.get("scripture") or not d.get("quote") or not d.get("author") or not d.get("year"):
+            continue
+        year = int(d["year"])
+        if start <= year <= end:
+            found.append(d)
+    return sorted(found, key=lambda d: int(d["year"]))
+
+
+def question_scale_end(q: dict, default_end: int) -> int:
+    """The fathers axis ends at 470. A question whose texts run past that year
+    uses a longer scale, or those texts stay a single arrow off the edge."""
+    years = [int(d["year"]) for pos in q.get("positions") or [] for d in (pos.get("defined") or [])
+             if d.get("year") and not d.get("scripture")]
+    if not years or max(years) <= default_end:
+        return default_end
+    latest = max(years)
+    return -(-(latest + 80) // 50) * 50
+
+
+def _bar_points(pos: dict, B) -> list[dict]:
+    """One mark per text on the bar. Scripture with no year sits at the left
+    edge and is labeled Scripture, not a made-up year."""
+    seen = set()
+    pts = []
+    for d in pos.get("defined") or []:
+        if not d.get("quote"):
+            continue
+        if d.get("scripture"):
+            year = int(d["year"]) if d.get("year") else int(B.TL_START)
+            author = d.get("author") or "Scripture"
+            period = "Scripture" if not d.get("year") else f"Scripture, c. {year}"
+        elif d.get("author") and d.get("year"):
+            year = int(d["year"])
+            if year < B.TL_START or year > B.TL_END:
+                continue
+            author = d["author"]
+            period = f"c. {year} AD"
+        else:
+            continue
+        key = (author, year)
+        if key in seen:
+            continue
+        seen.add(key)
+        pts.append({"id": d.get("source") or author, "kind": "belief", "year": year,
+                    "stance": "affirms", "author": author, "author_slug": B.slugify(author),
+                    "period": period, "uncertain": False, "href": d.get("url") or None})
+    return pts
+
+
+def _long_bands(start: int, end: int) -> list[tuple[int, int, str]]:
+    """Bands wide enough for a 13pt label. The three father eras are a sliver
+    on a scale that runs to the present, so they share one band."""
+    stops = [(start, 500, "The fathers"), (500, 1500, "Middle ages"),
+             (1500, 1850, "Reformation"), (1850, end, "Since 1900")]
+    return [(a, min(b, end), name) for a, b, name in stops if min(b, end) > a]
+
+
+def _long_backdrop(B, *, labels: bool) -> str:
+    parts = []
+    for i, (a, b, name) in enumerate(_long_bands(B.TL_START, B.TL_END)):
+        left = B.tl_pct(a)
+        width = round(B.tl_pct(b) - left, 2)
+        label = (f'<span class="tl-era-name"><span class="full">{escape(name)}</span>'
+                 f'<span class="short">{escape(name)}</span></span>') if labels else ""
+        parts.append(f'<span class="tl-era{" alt" if i % 2 else ""}" style="left:{left}%;width:{max(width, 0)}%">{label}</span>')
+    return f'<div class="tl-back" aria-hidden="true">{"".join(parts)}</div>'
+
+
+def _long_axis(B) -> str:
+    ticks = []
+    year = 500
+    while year < B.TL_END - 30:
+        ticks.append(f'<span class="tl-tick" style="left:{B.tl_pct(year)}%">{year}</span>')
+        year += 500
+    return f'<div class="tl-axis" aria-hidden="true">{"".join(ticks)}</div>'
+
+
 def _points(q: dict, pid: str, dist: Path, B) -> list[dict]:
     pts = []
     for p in q["passages"]:
@@ -294,7 +380,9 @@ def _trads(pos: dict) -> list[str]:
 
 
 def _trad_badges(pos: dict) -> str:
-    return "".join(f'<span class="btrad">{escape(TRAD_NAME.get(t, t))}</span>' for t in _trads(pos))
+    labels = pos.get("tradition_labels") or {}
+    return "".join(
+        f'<span class="btrad">{escape(labels.get(t) or TRAD_NAME.get(t, t))}</span>' for t in _trads(pos))
 
 
 OO_SOURCES = ("Oriental Orthodox placements rest mainly on Coptic and Ethiopian church texts. The Armenian texts checked "
@@ -349,6 +437,18 @@ def defined_marks(pos: dict, end: int) -> tuple[dict | None, dict | None]:
     return (inside[0] if inside else None), (after[0] if after else None)
 
 
+def defined_html(pos: dict) -> str:
+    """Every sourced definition, in the order given. The page used to show only
+    the first, which hid later texts in the same list."""
+    bits = []
+    for d in pos.get("defined") or []:
+        if not d or not d.get("quote"):
+            continue
+        bits.append(f'<blockquote class="bdef">{escape(d["quote"])}'
+                    f'<cite>{escape(d.get("source") or "")}</cite></blockquote>')
+    return "".join(bits)
+
+
 def def_label(mark: dict) -> str:
     return DEF_WORD[mark["kind"]] + (f" {mark['year']}" if mark.get("year") else "")
 
@@ -365,33 +465,48 @@ def _cap_html(pos: dict, cap: dict, cls: str) -> str:
             f'{escape(def_label(cap))}{arrow}</span>')
 
 
-def _tick_html(pos: dict, tick: dict, row: int, row_sm: int, lane_px: int, B) -> str:
+def _tick_html(pos: dict, tick: dict, row: int, row_sm: int, lane_px: int, B,
+               name_px: float = 7.3, name_px_sm: float = 6.4) -> str:
     """A diamond at the year it was defined, alone in the lane's last row so it
     never sits on a writer's name, with a faint line through the whole lane."""
     x = B.tl_pct(tick["year"])
     text = def_label(tick)
-    _, flip = B.tl_pack_row([], x, len(text), lane_px, 7.3)
-    _, flip_sm = B.tl_pack_row([], x, len(text), 350, 6.4)
+    _, flip = B.tl_pack_row([], x, len(text), lane_px, name_px)
+    _, flip_sm = B.tl_pack_row([], x, len(text), 350, name_px_sm)
     return (f'<span class="tl-defline" style="left:{x}%" aria-hidden="true"></span>'
             f'<span class="tl-pt tl-defpt named {tick["kind"]}{" flip" if flip else ""}{" flip-sm" if flip_sm else ""}" '
             f'style="left:{x}%;--row:{row};--row-sm:{row_sm}" title="{_def_title(pos)}">'
             f'<span class="dot" aria-hidden="true"></span><span class="nm">{escape(text)}</span></span>')
 
 
-def _lanes(q: dict, dist: Path, B, *, compact: bool) -> str:
+def _lanes(q: dict, dist: Path, B, *, compact: bool, long: bool = False) -> str:
     rows = []
     any_cap = False
     lane_px = 520 if compact else 960
     for pos in q["positions"]:
-        pts = _points(q, pos["id"], dist, B)
+        map_pts = _points(q, pos["id"], dist, B)
+        # Quotes fill a lane the work-search has not graded yet. A lane that
+        # already has graded passages keeps those marks and does not repeat
+        # the definition list inside the graphic.
+        pts = map_pts or _bar_points(pos, B)
+        # Question-page names are 13pt (beliefs.css). Compact cards stay at
+        # the site's 0.78rem, so they keep the narrower measure.
+        name_px, name_px_sm = (7.3, 6.4) if compact else (10.2, 10.2)
         marks, tally, stack, stack_sm = B.tl_marks_html(pts, lambda pt: pt.get("href") or None, labels=True,
-                                                        lane_px=lane_px, with_sm=True)
+                                                        lane_px=lane_px, with_sm=True,
+                                                        name_px=name_px, name_px_sm=name_px_sm)
         tick, cap = defined_marks(pos, B.TL_END)
+        # On the long scale the texts themselves are the marks. A diamond and
+        # an arrow would only repeat the same year.
+        if long:
+            tick = None
+            if not (cap and cap.get("year") and cap["year"] > B.TL_END):
+                cap = None
         rows_n, rows_sm = stack + 1, stack_sm + 1
         tick_html = ""
         if tick:
             row, row_sm = (stack + 1, stack_sm + 1) if marks else (0, 0)
-            tick_html = _tick_html(pos, tick, row, row_sm, lane_px, B)
+            tick_html = _tick_html(pos, tick, row, row_sm, lane_px, B, name_px, name_px_sm)
             rows_n, rows_sm = row + 1, row_sm + 1
         cap_line = cap_gut = ""
         if cap:
@@ -400,15 +515,26 @@ def _lanes(q: dict, dist: Path, B, *, compact: bool) -> str:
             cap_line = f'<span class="tl-defcap-line"><span class="sep"> · </span>{_cap_html(pos, cap, "")}</span>'
             cap_gut = "" if compact else _cap_html(pos, cap, "tl-defcap-gut")
         badges = f'<span class="btrads">{_trad_badges(pos)}</span>' if pos.get("traditions") else ""
+        if map_pts:
+            quotes = ""
+        else:
+            shown = (pos.get("defined") or [])[:1] if compact else (pos.get("defined") or [])
+            quotes = f'<div class="tl-quotes">{defined_html(dict(pos, defined=shown))}</div>' if shown else ""
         rows.append(
             f'<div class="tl-row" data-trads="{escape(" ".join(_trads(pos)))}">'
             f'<p class="tl-claim"><span class="tl-claim-text">{escape(pos["name"])}{badges}</span>'
             f'<span class="tl-tally">{_tally(tally)}{cap_line}</span></p>'
             f'<div class="tl-lane" style="--rows:{rows_n};--rows-sm:{rows_sm}">'
-            f'{B.tl_backdrop_html(labels=False)}{tick_html}{marks}{cap_gut}</div></div>')
-    era_strip = "" if compact else f'<div class="tl-eras">{B.tl_backdrop_html(labels=True)}</div>'
+            f'{_long_backdrop(B, labels=False) if long else B.tl_backdrop_html(labels=False)}'
+            f'{tick_html}{marks}{cap_gut}</div>{quotes}</div>')
+    if compact:
+        era_strip, axis = "", B.tl_axis_html()
+    elif long:
+        era_strip, axis = f'<div class="tl-eras">{_long_backdrop(B, labels=True)}</div>', _long_axis(B)
+    else:
+        era_strip, axis = f'<div class="tl-eras">{B.tl_backdrop_html(labels=True)}</div>', B.tl_axis_html()
     return (f'<div class="tl tl-pos{" tl-compact" if compact else ""}{" has-cap" if any_cap else ""}">'
-            f'{era_strip}{"".join(rows)}{B.tl_axis_html()}</div>')
+            f'{era_strip}{"".join(rows)}{axis}</div>')
 
 
 def _defs_list(q: dict, B) -> str:
@@ -446,6 +572,13 @@ def q_name(q: dict, pid: str) -> str:
 def story(q: dict, B, *, short: bool = False) -> str:
     """What the lanes show, in a sentence or two."""
     firsts = _firsts(q)
+    if not firsts:
+        witnessed = []
+        for pos in q["positions"]:
+            w = _lane_witnesses(pos, B.TL_START, B.TL_END)
+            if w:
+                witnessed.append((int(w[0]["year"]), pos["name"], w[0]["author"], False))
+        firsts = sorted(witnessed)
     named = {n for _, n, _, _ in firsts}
     missing = [p["name"] for p in q["positions"] if p["name"] not in named]
     if short:
@@ -514,8 +647,10 @@ LEGEND = ('<p class="tl-legend">'
           '<span class="tl-k"><span class="tl-key uncertain"></span>authorship uncertain</span></p>')
 
 
-def legend(q: dict, B) -> str:
+def legend(q: dict, B, *, defined_keys: bool = True) -> str:
     """LEGEND plus the definition keys this question uses."""
+    if not defined_keys:
+        return LEGEND
     marks = [m for pos in q["positions"] for m in defined_marks(pos, B.TL_END) if m]
     keys = []
     if any(m["kind"] not in ("condemned", "never") and m["year"] <= B.TL_END for m in marks):
@@ -535,17 +670,19 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
         q = on_page_only(q, dist)
         positions = []
         for pos in q["positions"]:
-            d = (pos.get("defined") or [None])[0]
-            quote = (f'<blockquote class="bdef">{escape(d["quote"])}<cite>{escape(d["source"])}</cite></blockquote>'
-                     if d else "")
+            quote = defined_html(pos)
             fine = (f'<p class="bfine">Formally defined: {escape(pos["first_defined"])}</p>'
                     if pos.get("first_defined") else "")
             first = pos.get("first_states")
             unsure = pos.get("first_uncertain")
+            witnesses = _lane_witnesses(pos, B.TL_START, B.TL_END)
+            witness = witnesses[0] if witnesses else None
             first_html = (f'<p class="bfirst">Earliest statement: <strong>{escape(B.display_author(first["author"]))}</strong>, c. {first["year"]}</p>'
                           if first else
                           f'<p class="bfirst none">No secure early statement. Earliest, from a work of uncertain authorship: '
                           f'{escape(unsure["author"])}, c. {unsure["year"]}.</p>' if unsure else
+                          f'<p class="bfirst">Earliest on this lane: <strong>{escape(witness["author"])}</strong>, c. {int(witness["year"])}</p>'
+                          if witness else
                           '<p class="bfirst none">No early passage in the works searched so far states it yet.</p>')
             positions.append(
                 f'<div class="bpos" data-trads="{escape(" ".join(_trads(pos)))}">'
@@ -569,22 +706,33 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
                          f'<p class="bptext">{escape(p["text"][:600])}{"…" if len(p["text"]) > 600 else ""}</p>'
                          f'<ul class="bpdec">{"".join(dec)}</ul><p class="bpsrc">{src}</p></li>')
         related = _excerpt_links(q, dist, topic_titles)
+        fathers_end = B.TL_END
+        scale_end = question_scale_end(q, fathers_end)
+        long = scale_end > fathers_end
+        old_end = B.TL_END
+        B.TL_END = scale_end
+        try:
+            page_legend = legend(q, B, defined_keys=not long)
+            page_lanes = _lanes(q, dist, B, compact=False, long=long)
+            page_story = story(q, B)
+        finally:
+            B.TL_END = old_end
         body = f"""
 <header class="ot-head">
   <p class="eyebrow"><a href="/explore/">Timeline</a></p>
   <h1>{escape(q["question"])}</h1>
-  <p class="tl-verdict">{story(q, B)}</p>
+  <p class="tl-verdict">{page_story}</p>
   {chips_html()}
   {notes_html(q)}
 </header>
 <section class="over-time" aria-label="Each position over time">
-  {legend(q, B)}
-  {_lanes(q, dist, B, compact=False)}
+  {page_legend}
+  {page_lanes}
   {related}
 </section>
 <section class="bpositions"><h2>The positions</h2>{''.join(positions)}</section>
 <section class="bshared"><h2>Common ground</h2><p>These are affirmed by more than one position, so a passage saying only this counts for none of them.</p><ul>{shared}</ul></section>
-<section class="bpassages"><h2>Every deciding passage, earliest first</h2><ol>{''.join(items) or '<li>No passage in the works searched so far decides between these positions yet.</li>'}</ol></section>
+<section class="bpassages"><h2>Every deciding passage, earliest first</h2><ol>{''.join(items) or ('<li>The quotes on the lanes above are the texts filed for these positions.</li>' if any(p.get('defined') for p in q['positions']) else '<li>No passage in the works searched so far decides between these positions yet.</li>')}</ol></section>
 <section class="bmethod">
   <h2>How this was made</h2>
   <p>Every whole work in the library on {escape(searched_on)} was searched for this question. Works added since then, and the short excerpts on the topic pages (many from Tertullian, Justin, Irenaeus and Ignatius), are not searched yet, so early witnesses may be missing from these lanes. Two AI models from different labs judged each passage against all the positions at once, seeing them only as letters, without names or churches. A third model settled disagreements, and Claude reviewers then checked every deciding verdict against the passage and, for the earliest dates, against the Greek or Latin. A writer's silence is never counted.</p>

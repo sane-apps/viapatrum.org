@@ -397,6 +397,148 @@ class Assemble(Fixture):
         self.assertTrue(audio["old"]["older_text"])
         self.assertFalse(audio["new"]["older_text"])
 
+    def ledger_from(self, data):
+        ledger = {}
+        for w in data["works"]:
+            for item in w["files"].values():
+                ledger[item["key"]] = item["sha256"]
+        for b in data["bundles"]:
+            ledger[b["key"]] = b["sha256"]
+        ls.LEDGER.write_text(json.dumps(ledger))
+        return ledger
+
+    def assemble_again(self):
+        out = io.StringIO()
+        with mock.patch("sys.stdout", out):
+            rc = ls.assemble(self.app)
+        return rc, json.loads(ls.CATALOG.read_text()), out.getvalue()
+
+    def test_uploaded_file_stays_when_the_local_copy_is_gone(self):
+        rc, data, log = self.build({"a": "Clean English."}, {})
+        self.assertEqual(rc, 0, log)
+        sha = data["works"][0]["files"]["epub"]["sha256"]
+        zip_sha = next(b["sha256"] for b in data["bundles"] if b["kind"] == "epub")
+        self.ledger_from(data)
+        (self.out / "epub" / "a.epub").unlink()
+        (self.out / "bundles" / "via-patrum-library-epub.zip").unlink()
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        self.assertEqual(self.files(data), {"a": ["epub"]})
+        epub = data["works"][0]["files"]["epub"]
+        self.assertEqual(epub["sha256"], sha)
+        self.assertTrue(epub["uploaded"])
+        kept = next(b for b in data["bundles"] if b["kind"] == "epub")
+        self.assertEqual(kept["sha256"], zip_sha)
+        self.assertTrue(kept["uploaded"])
+
+    def test_missing_file_with_a_different_ledger_sha_is_dropped(self):
+        rc, data, log = self.build({"a": "Clean English."}, {})
+        self.assertEqual(rc, 0, log)
+        ledger = self.ledger_from(data)
+        ledger["epub/a.epub"] = "nope"
+        ls.LEDGER.write_text(json.dumps(ledger))
+        (self.out / "epub" / "a.epub").unlink()
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        self.assertEqual(data["works"], [])
+
+    def test_uploaded_audiobook_stays_when_the_local_copy_is_gone(self):
+        rc, data, log = self.build({}, {}, audio={"a": (4, 4, [])})
+        self.assertEqual(rc, 0, log)
+        sha = data["works"][0]["files"]["audio"]["sha256"]
+        era = next(b for b in data["bundles"] if b["kind"] == "audio")
+        self.ledger_from(data)
+        (self.out / "audio" / "a.m4b").unlink()
+        (self.out / era["key"]).unlink()
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        self.assertEqual(self.files(data), {"a": ["audio"]})
+        audio = data["works"][0]["files"]["audio"]
+        self.assertEqual(audio["sha256"], sha)
+        self.assertEqual(audio["duration_s"], 600)
+        self.assertTrue(audio["uploaded"])
+        kept = [b for b in data["bundles"] if b["kind"] == "audio"]
+        self.assertEqual([b["key"] for b in kept], [era["key"]])
+        self.assertEqual(kept[0]["sha256"], era["sha256"])
+        self.assertTrue(kept[0]["uploaded"])
+
+    def test_uploaded_word_stays_when_the_local_zip_is_gone(self):
+        rc, data, log = self.build({}, {"a": "Clean English."})
+        self.assertEqual(rc, 0, log)
+        sha = data["works"][0]["files"]["word"]["sha256"]
+        self.ledger_from(data)
+        (self.out / "word" / "a.zip").unlink()
+        (self.out / "bundles" / "via-patrum-library-logos-word.zip").unlink()
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        self.assertEqual(self.files(data), {"a": ["word"]})
+        word = data["works"][0]["files"]["word"]
+        self.assertEqual(word["sha256"], sha)
+        self.assertTrue(word["uploaded"])
+        kept = next(b for b in data["bundles"] if b["kind"] == "word")
+        self.assertTrue(kept["uploaded"])
+
+    def test_ledger_matched_zip_is_kept_when_members_are_still_local(self):
+        rc, data, log = self.build({}, {}, audio={"a": (4, 4, [])})
+        self.assertEqual(rc, 0, log)
+        era = next(b for b in data["bundles"] if b["kind"] == "audio")
+        sha = era["sha256"]
+        self.ledger_from(data)
+        os.utime(self.out / "audio" / "a.m4b", None)  # newer than the zip, so a rebuild would run
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        kept = next(b for b in data["bundles"] if b["kind"] == "audio")
+        self.assertEqual(kept["sha256"], sha)
+        self.assertEqual(ls.sha256(self.out / era["key"]), sha)
+
+    def test_ledger_matched_library_zip_is_kept_when_members_are_still_local(self):
+        rc, data, log = self.build({"a": "Clean English."}, {})
+        self.assertEqual(rc, 0, log)
+        era = next(b for b in data["bundles"] if b["kind"] == "epub")
+        sha = era["sha256"]
+        self.ledger_from(data)
+        os.utime(self.out / "epub" / "a.epub", None)
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        kept = next(b for b in data["bundles"] if b["kind"] == "epub")
+        self.assertEqual(kept["sha256"], sha)
+        self.assertEqual(ls.sha256(self.out / era["key"]), sha)
+
+    def test_uploaded_zip_stays_listed_when_the_zip_file_is_gone(self):
+        rc, data, log = self.build({}, {}, audio={"a": (4, 4, [])})
+        self.assertEqual(rc, 0, log)
+        era = next(b for b in data["bundles"] if b["kind"] == "audio")
+        self.ledger_from(data)
+        (self.out / era["key"]).unlink()
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        kept = next(b for b in data["bundles"] if b["kind"] == "audio")
+        self.assertEqual(kept["sha256"], era["sha256"])
+        self.assertFalse((self.out / era["key"]).exists())
+
+    def test_uploaded_library_zip_stays_listed_when_the_zip_file_is_gone(self):
+        rc, data, log = self.build({"a": "Clean English."}, {})
+        self.assertEqual(rc, 0, log)
+        era = next(b for b in data["bundles"] if b["kind"] == "epub")
+        self.ledger_from(data)
+        (self.out / era["key"]).unlink()
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        kept = next(b for b in data["bundles"] if b["kind"] == "epub")
+        self.assertEqual(kept["sha256"], era["sha256"])
+        self.assertFalse((self.out / era["key"]).exists())
+
+    def test_changed_local_word_is_still_refused_when_the_upload_matches(self):
+        self.build({}, {"a": "New English."})
+        data = json.loads(ls.CATALOG.read_text())
+        self.ledger_from(data)
+        before = (self.out / "word" / "a.zip").stat().st_size
+        self.put("word/a.zip", word_zip_bytes("Old English."))
+        self.assertEqual((self.out / "word" / "a.zip").stat().st_size, before)
+        rc, data, log = self.assemble_again()
+        self.assertEqual(data["works"], [])
+        self.assertIn("not the file the word step recorded", log)
+
 
 class Upload(Fixture):
     def test_failed_size_check_stays_out_of_the_ledger(self):

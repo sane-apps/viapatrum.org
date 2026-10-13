@@ -52,7 +52,186 @@
         "year": 400,
         "summary": "The image is wounded and darkened, not simply erased — yet without grace the will does not use it aright for God.",
         "citation": "Contrast card (wounded image)"
+      },
+      {
+        "id": "augustine-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "year": 397,
+        "summary": "In On Christian Doctrine 2.8 he tells the reader to follow the greater number of catholic churches: prefer books received by all of them, and among books not received by all, prefer the greater number and those of greater authority. He then counts forty-four books: five of Moses, Joshua, Judges, Ruth, four of Kings, two of Chronicles, Job, Tobias, Esther, Judith, two of Maccabees, two of Ezra, the Psalms, three of Solomon (Proverbs, the Song of Songs, Ecclesiastes), Wisdom and Ecclesiasticus, the twelve prophets as one book, Isaiah, Jeremiah, Daniel, and Ezekiel. He thinks Jesus son of Sirach the likelier author of Wisdom and Ecclesiasticus, and he still counts both among the prophetic books because they have been received as authoritative. He says the authority of the Old Testament is contained in these forty-four books. He does not name Baruch. The chapter does not say he is setting a Hebrew canon aside.",
+        "citation": "On Christian Doctrine 2.8",
+        "work": "augustine-on-christian-doctrine",
+        "section": "2.13"
       }
     ]
+  },
+  {
+    "author": "Melito of Sardis",
+    "author_slug": "melito-of-sardis",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "melito-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "Eusebius copies Melito's letter to Onesimus. Melito says he went East and learned the books of the Old Testament. He names five books of Moses, in this order: Genesis, Exodus, Numbers, Leviticus, Deuteronomy. Then Joshua (he says Jesus Nave), Judges, Ruth, four books of Kingdoms, two of Chronicles, the Psalms of David, the Proverbs of Solomon, which he also calls Wisdom, Ecclesiastes, the Song of Songs, Job, Isaiah, Jeremiah, the twelve prophets in one book, Daniel, Ezekiel, and Esdras. In the Greek, Proverbs and Wisdom are one title, not two books. He does not name Esther, Lamentations, Tobit, Judith, Sirach, Baruch, the Maccabees, or a separate Wisdom of Solomon. Eusebius places him under Marcus Aurelius.",
+        "citation": "Melito to Onesimus, via Eusebius, Church History 4.26.14",
+        "work": "eusebius-church-history",
+        "section": "4.26",
+        "year": 170
+      }
+    ],
+    "period": "c. 170",
+    "year": 170
+  },
+  {
+    "author": "Origen of Alexandria",
+    "author_slug": "origen-of-alexandria",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "origen-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "Eusebius copies Origen on the first Psalm. Origen says the covenanted books, as the Hebrews hand them down, are twenty-two, the number of their letters. He names Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges and Ruth in one book, 1 and 2 Kingdoms in one, 3 and 4 Kingdoms in one, 1 and 2 Chronicles in one, 1 and 2 Esdras in one, Psalms, Proverbs, Ecclesiastes, the Song of Songs, Isaiah, Jeremiah with Lamentations and the Epistle in one book, Daniel, Ezekiel, Job, and Esther. He then says the Maccabees stand outside that number. The Epistle is inside Jeremiah, not a book added to the twenty-two. He does not name Wisdom, Sirach, Tobit, Judith, or Baruch.",
+        "citation": "Origen on Psalm 1, via Eusebius, Church History 6.25",
+        "work": "eusebius-church-history",
+        "section": "6.25",
+        "year": 250
+      }
+    ],
+    "period": "c. 250",
+    "year": 250
+  },
+  {
+    "author": "Cyril of Jerusalem",
+    "author_slug": "cyril-of-jerusalem",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "cyril-jerusalem-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "In Catechetical Lecture 4 he tells his hearers to read the twenty-two books translated by the seventy-two, and to have nothing to do with the writings he calls apocryphal. He names the five books of Moses, Joshua, Judges with Ruth as the seventh, 1 and 2 Kings as one book, 3 and 4 Kings as one, 1 and 2 Chronicles as one, 1 and 2 Esdras as one, and Esther. Then Job, Psalms, Proverbs, Ecclesiastes, and the Song of Songs. Then the twelve prophets as one book, Isaiah, Jeremiah including Baruch and Lamentations and the Epistle, Ezekiel, and Daniel as the twenty-second. He says that books the churches do not read should not be read even in private. He does not name Wisdom, Sirach, Tobit, Judith, or the Maccabees.",
+        "citation": "Catechetical Lecture 4.35-36",
+        "year": 350
+      }
+    ],
+    "period": "c. 350",
+    "year": 350
+  },
+  {
+    "author": "Council of Laodicea",
+    "author_slug": "council-of-laodicea",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "laodicea-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "Canon 59 says that no private psalms and no uncanonical books may be read in church, only the canonical books of the Old and New Testaments. It does not name the books. The Greek printed by Bruns in 1839 numbers canon 60 as an ordinary canon and does not mark it doubtful. The doubt note is in the English edition. That canon lists twenty-two books to be read: Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua, Judges and Ruth, Esther, four books of Kings as two, two of Chronicles, two of Esdras, Psalms, Proverbs, Ecclesiastes, the Song of Songs, Job, the twelve prophets, Isaiah, Jeremiah and Baruch with the Lamentations and the Epistle, Ezekiel, and Daniel. It does not name Tobit, Judith, Wisdom, Sirach, or the Maccabees. This edition's introduction leaves the meeting between 343 and 381 and gives up a closer date.",
+        "citation": "Canons 59 and 60, in this edition",
+        "work": "council-of-laodicea-canons",
+        "order": 362
+      }
+    ],
+    "period": "the canons do not date the synod"
+  },
+  {
+    "author": "Athanasius of Alexandria",
+    "author_slug": "athanasius-of-alexandria",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "athanasius-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "Festal Letter 39, for the year 367, counts twenty-two books as the Old Testament: the five books of Moses, Joshua, Judges, Ruth, four books of Kings reckoned as two, Chronicles as one, Ezra first and second as one, Psalms, Proverbs, Ecclesiastes, the Song of Songs, Job, the twelve prophets as one, Isaiah, Jeremiah with Baruch, Lamentations, and the epistle as one book, Ezekiel, and Daniel. He says that thus far is the Old Testament. He then names books that are not in the canon, which the fathers appointed to be read by those who newly join: the Wisdom of Solomon, the Wisdom of Sirach, Esther, Judith, Tobit, the Teaching of the Apostles, and the Shepherd. He does not name the Maccabees.",
+        "citation": "Festal Letter 39, for 367",
+        "year": 367
+      }
+    ],
+    "period": "367",
+    "year": 367
+  },
+  {
+    "author": "Jerome",
+    "author_slug": "jerome",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "jerome-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "In the preface to Samuel and Kings, addressed to Paula and Eustochium, Jerome counts twenty-two books, one for each Hebrew letter. The Law is the five books of Moses. The Prophets are eight: Joshua, Judges with Ruth, Samuel, Kings, Isaiah, Jeremiah, Ezekiel, and the twelve. The third group is nine: Job, Psalms, Solomon in three books (Proverbs, Ecclesiastes, the Song of Songs), Daniel, Chronicles, Ezra (which Greeks and Latins divide into two), and Esther. He says some count Ruth and Lamentations separately and reach twenty-four. Whatever is not in his list he places among the Apocrypha. He says Wisdom, the book of Jesus the son of Sirach, Judith, Tobias, and the Shepherd are not in the canon. He notes that 1 Maccabees is Hebrew and 2 Maccabees is Greek, and he does not put either in the twenty-two. He does not name Baruch. In the preface to Proverbs, Ecclesiastes, and the Song of Songs he says the church reads Judith, Tobit, and the books of Maccabees, but does not receive them among the canonical Scriptures, and that Wisdom and Ecclesiasticus may be read to build the people up, not to establish the church's doctrine. In the preface to Daniel he says the Hebrew book lacks Susanna, the hymn of the three young men, and Bel and the Dragon, and he sets those pieces in an appendix marked with an obelus. The prefaces themselves give no year.",
+        "citation": "Preface to Samuel and Kings; preface to Solomon; preface to Daniel",
+        "work": "jerome-prefaces-to-the-scriptures",
+        "year": 391
+      }
+    ],
+    "period": "the prefaces do not give a year",
+    "year": 391
+  },
+  {
+    "author": "Rufinus of Aquileia",
+    "author_slug": "rufinus-of-aquileia",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "rufinus-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "In his commentary on the Apostles' Creed he lists the Old Testament books the fathers handed down for proving the faith: five books of Moses, Joshua, Judges with Ruth, four books of Kings (which the Hebrews reckon as two), Chronicles, two books of Ezra (which the Hebrews reckon as one), Esther, Isaiah, Jeremiah, Ezekiel, Daniel, the twelve prophets as one book, Job, the Psalms, and three books of Solomon (Proverbs, Ecclesiastes, and the Song of Songs). He says these make up the Old Testament. He then names books the fathers call not canonical but ecclesiastical, to be read in the churches but not used to confirm doctrine: the Wisdom of Solomon, the Wisdom of the son of Sirach (which the Latins call Ecclesiasticus), Tobit, Judith, and the books of the Maccabees. In the New Testament he puts the Shepherd of Hermas, and the Two Ways (also called the Judgment of Peter), in that same class. Other writings, he says, they named Apocrypha, and they would not have those read in the churches. He does not name Baruch. The work does not date itself.",
+        "citation": "Commentary on the Apostles' Creed 37-38",
+        "work": "rufinus-commentary-on-the-apostles-creed",
+        "order": 392
+      }
+    ],
+    "period": "the work does not date itself"
+  },
+  {
+    "author": "Council of Carthage (419)",
+    "author_slug": "council-of-carthage-419",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "carthage-419-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "Canon 29 in the Italian manuscript form printed by Migne says nothing is to be read in church under the name of divine Scripture except the canonical Scriptures. The English collection numbers this same list as canon 24 (Greek 27). It names Genesis, Exodus, Leviticus, Numbers, Deuteronomy, Joshua the son of Nun, Judges, Ruth, four books of Kings, two of Chronicles, Job, the Psalter, the five books of Solomon, the twelve prophets, Isaiah, Jeremiah, Ezekiel, Daniel, Tobit, Judith, Esther, two books of Ezra, and two books of Maccabees. It does not name Baruch, and it does not say which five books it counts as Solomon's. It says these are what they received from the fathers to be read in church, and it asks Boniface and the other bishops of those parts to confirm the canon. This edition does not print a separate book list from the council of Hippo. Its introduction dates the meeting that adopted the code to 25 May 419.",
+        "citation": "Canon 29 in the Italian manuscript form printed by Migne (PL 56). The English collection numbers this list as canon 24 (Greek 27).",
+        "work": "council-of-carthage-419-canons",
+        "section": "29",
+        "year": 419
+      }
+    ],
+    "period": "25 May 419",
+    "year": 419
+  },
+  {
+    "author": "Council of Trent",
+    "author_slug": "council-of-trent",
+    "kind": "contrast",
+    "disclaimer": "The work is not yet in this library. This card says what that text names.",
+    "points": [
+      {
+        "id": "trent-canon-contrast",
+        "topic": "canon-rule-of-truth",
+        "claim_id": "ot-lists",
+        "summary": "On 8 April 1546 the council lists the Old Testament books it receives: the five books of Moses, Joshua, Judges, Ruth, four of Kings, two of Paralipomenon (Chronicles), Esdras first and second (the second called Nehemiah), Tobias, Judith, Esther, Job, the Psalms of David in 150 psalms, Proverbs, Ecclesiastes, the Song of Songs, Wisdom, Ecclesiasticus, Isaiah, Jeremiah with Baruch, Ezekiel, Daniel, the twelve minor prophets, and two books of Maccabees. It says that anyone who does not receive these books whole, with all their parts, as they are read in the Catholic Church and as they stand in the old Latin Vulgate, is under its anathema, that is, cut off. It does not name a third or fourth Esdras, or the Prayer of Manasseh, or Lamentations as a separate book.",
+        "citation": "Session 4, 8 April 1546",
+        "year": 1546
+      }
+    ],
+    "period": "8 April 1546",
+    "year": 1546
   }
 ]

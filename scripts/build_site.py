@@ -1118,9 +1118,13 @@ def author_slug_candidates(name: str | None, slug: str | None = None) -> list[st
 def author_dates_raw(name: str | None, slug: str | None = None) -> str:
     """Unformatted lifespan/floruit. Prefer data file, then authors.json.
 
-    data/author-dates.json is keyed by author slug; a bare name is looked up
-    through the slugs the site gives it (hub slug, aliases, accents folded).
+    An exact display name wins before any slug. Otherwise "Council of Carthage"
+    falls through to author_record, whose prefix match is the council of 256.
     """
+    shown = display_author(name) if name else ""
+    for exact in (name, shown):
+        if exact and exact in AUTHOR_DATES:
+            return AUTHOR_DATES[exact]
     for key in author_slug_candidates(name, slug):
         if key in AUTHOR_DATES:
             return AUTHOR_DATES[key]
@@ -1429,6 +1433,31 @@ def published_path_links(paths: list, live_slugs: set[str]) -> list:
     return out
 
 
+def _published_section_href(works_by_slug: dict, work, section) -> str | None:
+    """Reader URL for a list card. Empty when this build does not publish
+    that text with English, so the card never links to a blank page.
+    A section opens that chapter. A work with no section opens the work."""
+    slug, sid = str(work or ""), str(section or "")
+    w = works_by_slug.get(slug)
+    if not w:
+        return None
+    ready = []
+    for s in w.get("sections") or []:
+        eng = s.get("english") or []
+        if isinstance(eng, str):
+            eng = [eng]
+        if any(str(x).strip() for x in eng):
+            ready.append(s)
+    if not ready:
+        return None
+    if not sid:
+        return f"/works/{w['slug']}/"
+    for s in ready:
+        if str(s.get("section")) == sid:
+            return f"/works/{w['slug']}/{s['section']}/"
+    return None
+
+
 def build_explore_index(
     excerpts: list[dict],
     works: list[dict],
@@ -1528,16 +1557,21 @@ def build_explore_index(
                     "ref": f"contrast:{p['id']}",
                     "topic": p["topic"],
                     "claim_id": p["claim_id"],
-                    "stance": p["stance"],
+                    "stance": p.get("stance") or "",
                     "year": year,
+                    "order": p.get("order"),
                     "century": (year // 100) * 100 if year else None,
                     "era_band": card.get("era_band") or era_band(year),
                     "author": card["author"],
                     "author_slug": card["author_slug"],
-                    "period": card.get("period"),
+                    "period": p.get("period") or card.get("period"),
                     "title": p.get("citation") or p["id"],
                     "citation": p.get("citation"),
-                    "href": None,
+                    "work": str(p.get("work") or ""),
+                    "section": str(p.get("section") or ""),
+                    # A stored path would 404 while the chapter is still empty.
+                    # The link is added only when this build publishes that section.
+                    "href": _published_section_href(works_by_slug, p.get("work"), p.get("section")),
                     "summary": p.get("summary"),
                     "disclaimer": card.get("disclaimer"),
                     "note": p.get("note"),
@@ -7001,7 +7035,8 @@ def tl_short_name(name: str, others: set[str]) -> str:
     """'Ignatius' for Ignatius of Antioch unless another writer shares 'Ignatius'."""
     full = display_author(name)
     special = {"Justin Martyr": "Justin", "Letter to Diognetus": "Diognetus", "The Didache": "Didache",
-               "Minucius Felix": "Minucius", "Augustine of Hippo": "Augustine"}
+               "Minucius Felix": "Minucius", "Augustine of Hippo": "Augustine",
+               "Council of Trent": "Trent", "Council of Carthage (419)": "Carthage"}
     if full in special:
         return special[full]
     # "John Chrysostom (quoted by Cyril)": the lane label drops the note; the
@@ -7024,7 +7059,11 @@ def tl_pack_row(rows_end: list[float], x: float, n_chars: int, lane_px: float,
     2% more so it cannot read as the next writer's.
     """
     if not labels:
-        lo, hi, flip, gap = x, x + 2.4, False, 0.0
+        # A dot is 12px. A fixed 2.4% is a gap on a wide lane and an overlap
+        # on a phone, so close lists were packed onto one row and stacked.
+        span = 16 / lane_px * 100
+        gap = 2 / lane_px * 100
+        lo, hi, flip = x - span / 2, x + span / 2, False
     else:
         half = 12 / lane_px * 100
         width = (n_chars * px_per_char + 30) / lane_px * 100
@@ -7041,11 +7080,14 @@ def tl_pack_row(rows_end: list[float], x: float, n_chars: int, lane_px: float,
 
 
 def tl_marks_html(points: list[dict], anchor_for, *, labels: bool = True, lane_px: int = 960,
-                  with_sm: bool = False) -> tuple:
+                  with_sm: bool = False, record: bool = False,
+                  name_px: float = 7.3, name_px_sm: float = 6.4) -> tuple:
     """Positioned marks for one claim lane. With labels, one named marker per
     writer and stance (×n when a writer has several passages), packed into
     rows so names never collide on a ~960px lane. The tally counts writers, not
     passages, so it matches the headline ("3 of the 5 writers here teach").
+    A record lane is a list, not a yes or a no: one ink dot per list, and a
+    year past the axis keeps its short name even when the other names are dots.
     Each mark also carries --row-sm (and .flip-sm), the same packing for a
     phone-width lane; with_sm=True returns that row count as a fourth value."""
     writers = {"affirms": set(), "denies": set(), "qualified": set()}
@@ -7053,11 +7095,15 @@ def tl_marks_html(points: list[dict], anchor_for, *, labels: bool = True, lane_p
     for p in points:
         if not p.get("year"):
             continue
+        if record:
+            key = (p.get("author_slug") or p.get("author"), "", True)
+            groups.setdefault(key, []).append(p)
+            continue
         stance = p.get("stance") if p.get("stance") in STANCE_WORD else "affirms"
         writers[stance].add(p.get("author_slug") or p.get("author"))
         key = (p.get("author_slug") or p.get("author"), stance, p.get("kind") == "contrast") if labels else (p.get("id"), stance, False)
         groups.setdefault(key, []).append(p)
-    tally = {k: len(v) for k, v in writers.items()}
+    tally = {"affirms": 0, "qualified": 0, "denies": 0, "lists": len(groups)} if record else {k: len(v) for k, v in writers.items()}
     names = {p.get("author") or "" for p in points}
     rows_end: list[float] = []
     rows_sm: list[float] = []
@@ -7069,28 +7115,37 @@ def tl_marks_html(points: list[dict], anchor_for, *, labels: bool = True, lane_p
         who = display_author(first.get("author") or "")
         short = tl_short_name(first.get("author") or "", names)
         n = len(ps)
+        clamped = first["year"] > TL_END
+        # A crowded list row drops the names. A list past the axis still
+        # shows its year, or the edge mark would be a bare dot.
+        show = labels or (record and clamped)
         text = short + (f" ×{n}" if n > 1 else "")
-        if first["year"] > TL_END:
+        if clamped:
             text += f" ({first['year']})"
         # Desktop packing (0.78rem names), then the same at phone size
         # (~350px lane, 0.7rem names). Near the right edge the name sits left
         # of its mark (.flip / .flip-sm).
-        row, flip = tl_pack_row(rows_end, x, len(text), lane_px, 7.3, labels)
-        row_sm, flip_sm = tl_pack_row(rows_sm, x, len(text), 350, 6.4, labels)
+        row, flip = tl_pack_row(rows_end, x, len(text), lane_px, name_px, show)
+        row_sm, flip_sm = tl_pack_row(rows_sm, x, len(text), 350, name_px_sm, show)
         dates = author_dates_display(first.get("author") or "", first.get("author_slug")) or (first.get("period") or "")
-        label = f"{who} ({dates}) {STANCE_WORD[stance]} this" + (f", in {n} passages" if n > 1 else "")
+        if record:
+            label = f"{who} ({dates}). What this list names"
+        else:
+            label = f"{who} ({dates}) {STANCE_WORD[stance]} this" + (f", in {n} passages" if n > 1 else "")
         uncertain = all(q.get("uncertain") for q in ps)
         if uncertain:
             label += ", authorship uncertain"
-        if is_contrast:
-            label += ". Summary only; his works are not yet in the library"
+        # A published chapter drops the summary-only line. Other contrast
+        # marks keep it, including a list whose English is not in this build.
+        if (is_contrast or record) and not (record and first.get("href")):
+            label += ". Summary only; full text not yet in the library"
         href = anchor_for(first)
         tag = "a" if href else "span"
         href_attr = f' href="{escape(href)}"' if href else ""
-        kind = "contrast" if is_contrast else stance
-        name_html = f'<span class="nm">{escape(text)}</span>' if labels else ""
+        kind = "record" if record else ("contrast" if is_contrast else stance)
+        name_html = f'<span class="nm">{escape(text)}</span>' if show else ""
         marks.append(
-            f'<{tag} class="tl-pt {kind}{" named" if labels else ""}{" flip" if flip else ""}{" flip-sm" if flip_sm else ""}{" uncertain" if uncertain else ""}"'
+            f'<{tag} class="tl-pt {kind}{" named" if show else ""}{" flip" if flip else ""}{" flip-sm" if flip_sm else ""}{" uncertain" if uncertain else ""}"'
             f'{href_attr} style="left:{x}%;--row:{row};--row-sm:{row_sm}" '
             f'aria-label="{escape(label)}" title="{escape(label)}"><span class="dot" aria-hidden="true"></span>{name_html}</{tag}>'
         )
@@ -7103,6 +7158,22 @@ def tl_verdict_html(topic: dict, points: list[dict], turn: dict | None) -> str:
     claims = topic.get("claims") or []
     if not claims:
         return ""
+    for c in claims:
+        if not c.get("record"):
+            continue
+        dated = sorted(
+            (p for p in points if p.get("claim_id") == c.get("id") and p.get("year")),
+            key=lambda p: p["year"],
+        )
+        if not dated:
+            continue
+        a, b = dated[0], dated[-1]
+        return (
+            '<p class="tl-verdict">Lists from '
+            f'{escape(display_author(a.get("author") or ""))} ({a["year"]}) to '
+            f'{escape(display_author(b.get("author") or ""))} ({b["year"]}). '
+            "Each card names the books that list counts, and the books it does not name.</p>"
+        )
     main = claims[0]
     cps = [p for p in points if p.get("claim_id") == main.get("id") and p.get("kind") != "contrast"]
     teach = {p.get("author_slug") for p in cps if p.get("stance") in ("affirms", "qualified")}
@@ -7111,15 +7182,19 @@ def tl_verdict_html(topic: dict, points: list[dict], turn: dict | None) -> str:
     if not teach and not reject:
         return ""
     label = (main.get("label") or "").rstrip(".")
-    parts = [f"{len(teach)} of the {len(writers)} writers here teach: \u201c{escape(label)}.\u201d"]
+    n_writers = len(writers)
+    if n_writers == 1:
+        parts = [f"The one writer here teaches: \u201c{escape(label)}.\u201d"]
+    else:
+        parts = [f"{len(teach)} of the {n_writers} writers here teach: \u201c{escape(label)}.\u201d"]
     if reject:
         parts.append(f"{len(reject)} reject it.")
-    rivals = [c for c in claims[1:] if any(p.get("claim_id") == c.get("id") and p.get("stance") == "denies" for p in points)]
+    rivals = [c for c in claims[1:] if any(p.get("claim_id") == c.get("id") and p.get("stance") == "denies" and p.get("kind") != "contrast" for p in points)]
     if rivals:
         r = rivals[0].get("label", "").rstrip(".")
         parts.append(f"They answer a rival view: “{escape(r)}.”")
     contrast = sorted((p for p in points if p.get("kind") == "contrast"), key=lambda p: p.get("year") or 9999)
-    if contrast:
+    if contrast and tl_turn_year(points) is not None:
         c = contrast[0]
         parts.append(
             f'The turn comes with <a href="#turn">{escape(display_author(c.get("author") or ""))}, c. {c.get("year")}</a>.'
@@ -7141,11 +7216,18 @@ def tl_tally_html(tally: dict) -> str:
 
 
 def tl_turn_year(points: list[dict]) -> int | None:
+    """First later-writer summary year. Summaries straddling the library
+    evidence on both sides (canon lists) carry no single turn year."""
     years = sorted(p["year"] for p in points if p.get("kind") == "contrast" and p.get("year"))
-    return years[0] if years else None
+    if not years:
+        return None
+    lib = [p.get("year") for p in points if p.get("kind") != "contrast" and p.get("year")]
+    if lib and years[0] <= max(lib) and years[-1] > max(lib):
+        return None
+    return years[0]
 
 
-# A topic draws "Where they stood" only when at least this many library
+# A topic draws "Where they stood" only when at least this many dated
 # writers are marked on it; with one or two names a lane says nothing about
 # agreement. The Timeline overview uses the same rule, so its cards never
 # point at a timeline the topic page does not show.
@@ -7153,9 +7235,10 @@ TL_MIN_WRITERS = 3
 
 
 def tl_writer_count(points: list[dict]) -> int:
-    """Distinct in-library writers with a dated mark (later-writer summaries excluded)."""
+    """Distinct writers with a dated mark, library passages and later-writer
+    summaries alike. Summaries say whose reading they are on the card."""
     return len({p.get("author_slug") or p.get("author") for p in points
-                if p.get("kind") != "contrast" and p.get("year")})
+                if p.get("year")})
 
 
 # Words from notes to translators that must never reach a topic intro or description.
@@ -7189,14 +7272,28 @@ def tl_claims_html(topic: dict, points: list[dict], anchor_for, *, compact: bool
     if compact:
         claims = claims[:1]
     turn_year = tl_turn_year(points) if turn else None
+    saw_record = False
     for c in claims:
+        record = bool(c.get("record"))
         cps = [p for p in points if p.get("claim_id") == c.get("id")]
-        marks, tally, stack, stack_sm = tl_marks_html(cps, anchor_for, labels=True,
-                                                      lane_px=520 if compact else 960, with_sm=True)
+        lane_px = 520 if compact else 960
+        marks, tally, stack, stack_sm = tl_marks_html(
+            cps, anchor_for, labels=True, lane_px=lane_px, with_sm=True, record=record)
+        # Names on a list row stack into a staircase. Dots keep the row flat.
+        # A list past the axis still keeps its short name.
+        if record and (stack >= 3 or stack_sm >= 3):
+            marks, tally, stack, stack_sm = tl_marks_html(
+                cps, anchor_for, labels=False, lane_px=lane_px, with_sm=True, record=True)
         # A claim nobody has marked yet is not drawn ("no marks yet"). A row
         # with only a later writer's summary stays: it shows the later turn.
         if not any(p.get("year") for p in cps):
             continue
+        if record:
+            saw_record = True
+            n = len(cps)
+            tally_html = f'<span class="t-lists">{n} list{"s" if n != 1 else ""}</span>'
+        else:
+            tally_html = tl_tally_html(tally)
         turn_line = (
             f'<span class="tl-turn" style="left:{tl_pct(turn_year)}%" aria-hidden="true"></span>'
             if turn_year
@@ -7205,18 +7302,97 @@ def tl_claims_html(topic: dict, points: list[dict], anchor_for, *, compact: bool
         rows.append(
             f'<div class="tl-row">'
             f'<p class="tl-claim"><span class="tl-claim-text">{escape(c.get("label") or c.get("short") or "")}</span>'
-            f'<span class="tl-tally">{tl_tally_html(tally)}</span></p>'
+            f'<span class="tl-tally">{tally_html}</span></p>'
             f'<div class="tl-lane" style="--rows:{stack + 1};--rows-sm:{stack_sm + 1}">{tl_backdrop_html(labels=False)}{turn_line}{marks}</div>'
             f"</div>"
         )
     if not rows:
         return ""
     legend = "" if compact else TL_LEGEND
+    if saw_record and legend:
+        legend = legend.replace(
+            "</p>",
+            ' <span class="tl-k"><span class="tl-key record"></span>a list</span></p>',
+            1,
+        )
     era_strip = "" if compact else f'<div class="tl-eras">{tl_backdrop_html(labels=True)}</div>'
     verdict = "" if compact else tl_verdict_html(topic, points, turn)
     return (
         f'{verdict}<div class="tl{" tl-compact" if compact else ""}">'
         f"{legend}{era_strip}{''.join(rows)}{tl_axis_html()}</div>"
+    )
+
+
+def _contrast_dom_id(pt: dict) -> str:
+    cid = str(pt.get("id") or "")
+    if cid.startswith("contrast:"):
+        cid = cid[len("contrast:"):]
+    return cid
+
+
+def _list_sort_key(p: dict) -> tuple:
+    """Dated lists use their year. An undated list uses its order, so it can
+    sit between dated cards without a dot on the axis."""
+    y = p.get("year")
+    if not y:
+        y = p.get("order") if p.get("order") is not None else 9999
+    return (y, p.get("author") or "")
+
+
+def record_list_card_html(pt: dict) -> str:
+    """One list card. No teach/reject chip. The id is the anchor for its dot."""
+    bits = [b for b in ((pt.get("period") or ""), (pt.get("citation") or "")) if b]
+    href = pt.get("href") or ""
+    if href:
+        link = "Read this chapter" if pt.get("section") else "Read the work"
+        foot = f'<p class="meta"><a href="{escape(href)}">{link}</a></p>'
+    else:
+        foot = '<p class="meta">The work is not yet in this library. This card says what that text names.</p>'
+    return (
+        f'<article class="excerpt topic-card contrast-card" id="{escape(_contrast_dom_id(pt))}">'
+        f'<header><h2>{escape(display_author(pt.get("author") or ""))}</h2>'
+        f'<p class="meta">{escape(" · ".join(bits))}</p></header>'
+        f'<blockquote class="topic-lead"><p>{escape(pt.get("summary") or "")}</p></blockquote>'
+        f"{foot}"
+        f"</article>"
+    )
+
+
+def lists_section_html(points: list[dict], turn: dict | None, claims: list[dict]) -> str:
+    """Cards for a record claim, earliest first, with the rupture note in time."""
+    record_ids = {c.get("id") for c in (claims or []) if c.get("record")}
+    if not record_ids:
+        return ""
+    pts = [p for p in points
+           if p.get("kind") == "contrast" and p.get("summary") and p.get("claim_id") in record_ids]
+    if not pts:
+        return ""
+    pts.sort(key=_list_sort_key)
+    note = ""
+    ry = None
+    if turn and turn.get("body"):
+        ry = turn.get("year")
+        note = (
+            f'<aside class="turn-note" id="turn"><p class="eyebrow">In the lists</p>'
+            f'<h2>{escape(turn.get("title") or "Where the lists change")}</h2>'
+            f'<p>{escape(turn.get("body") or "")}</p></aside>'
+        )
+    parts: list[str] = []
+    placed = False
+    for pt in pts:
+        if note and not placed and ry is not None and _list_sort_key(pt)[0] >= ry:
+            parts.append(note)
+            placed = True
+        parts.append(record_list_card_html(pt))
+    if note and not placed:
+        parts.append(note)
+    return (
+        '<section class="voices" id="lists" aria-label="The lists">'
+        '<h2 class="voices-h">The lists, earliest first</h2>'
+        '<p class="tl-intro">Each card reports the books that text names. '
+        "A book it does not name is not counted here as rejected unless the text says so.</p>"
+        + "".join(parts)
+        + "</section>"
     )
 
 
@@ -9294,6 +9470,8 @@ def build() -> None:
         for x in rows:
             route_of.setdefault(x["id"], x["id"])
             route_of.setdefault(x["id"].split("--", 1)[0], x["id"])
+        topic_claims = (claims_by_topic.get(tid) or {}).get("claims") or []
+        record_ids = {c.get("id") for c in topic_claims if c.get("record")}
 
         def anchor_for(pt: dict) -> str | None:
             if pt.get("kind") == "excerpt":
@@ -9302,16 +9480,28 @@ def build() -> None:
                     return pt.get("href")
                 return f"#{rid}" if rid in on_page else f"/e/{rid}/"
             if pt.get("kind") == "contrast":
+                if pt.get("claim_id") in record_ids:
+                    cid = _contrast_dom_id(pt)
+                    return f"#{cid}" if cid else "#lists"
                 return "#turn"
             return pt.get("href")
 
         timeline = tl_claims_html(claims_by_topic[tid], tp, anchor_for, turn=_turn) if show_tl else ""
         _strip = "" if timeline else century_strip_html(primary)
+        if record_ids:
+            tl_intro = (
+                "Each row is one claim. On the list row, a mark is one list, not a yes or a no. "
+                "The cards below name the books."
+            )
+        else:
+            tl_intro = (
+                "Each row is one claim. Each name is a writer, placed at the date of the passage. "
+                "Select a name to read what they said."
+            )
         timeline_html = (
             f'<section class="over-time" id="over-time" aria-labelledby="over-time-h">'
             f'<h2 id="over-time-h">Where they stood</h2>'
-            f'<p class="tl-intro">Each row is one claim. Each name is a writer, placed at the date of the passage. '
-            f"Select a name to read what they said.</p>{timeline}</section>"
+            f'<p class="tl-intro">{tl_intro}</p>{timeline}</section>'
             if timeline
             # Timeline cards still link to #over-time. A strip with a single
             # century only repeats the passage count above it, so it is left out.
@@ -9326,9 +9516,15 @@ def build() -> None:
             + "</p>"
             if beliefs_for_topic.get(tid) else ""
         )
-        # Later writers summarised here (not yet in the library) join the voices.
+        # List cards have their own section. Other contrast cards still join the voices.
+        lists_html = lists_section_html(tp, _turn, topic_claims)
         contrast_cards = []
-        for pt in tp:
+        contrast_pts = sorted(
+            (p for p in tp if p.get("kind") == "contrast" and p.get("summary")
+             and p.get("claim_id") not in record_ids),
+            key=lambda p: (p.get("year") or 9999, p.get("author") or ""),
+        )
+        for pt in contrast_pts:
             if pt.get("kind") != "contrast" or not pt.get("summary"):
                 continue
             short = (claims_by_topic.get(tid, {}).get("claims") or [])
@@ -9338,10 +9534,13 @@ def build() -> None:
                 f'<article class="excerpt topic-card contrast-card">'
                 f'<header><h2>{escape(display_author(pt.get("author") or ""))}'
                 f' <span class="stance-chip {escape(pt.get("stance") or "affirms")}">{escape(verb)}: {escape(cl.get("label") or cl.get("short") or "")}</span></h2>'
-                f'<p class="meta">{escape(pt.get("period") or "")} · summary; his works are not yet in this library</p></header>'
+                f'<p class="meta">{escape(pt.get("period") or "")} · summary; full text not yet in this library</p></header>'
                 f'<blockquote class="topic-lead"><p>{escape(pt.get("summary") or "")}</p></blockquote></article>'
             )
+        # The list section already holds this topic's note. A second #turn would be a duplicate id.
+        turn_in_lists = bool(lists_html) and bool(_turn and _turn.get("body"))
         turn_html = (
+            "" if turn_in_lists else
             f'<aside class="turn-note" id="turn"><p class="eyebrow">A later turn</p>'
             f'<h2>{escape(_turn.get("title") or "A later turn")}</h2>'
             f'<p>{escape(_turn.get("body") or "")}</p></aside>'
@@ -9371,6 +9570,7 @@ def build() -> None:
 {era_html}{intro_html}
 {path_html}
 {timeline_html}
+{lists_html}
 <section class="voices" aria-label="What each writer said">
 <h2 class="voices-h">What each writer said, earliest first</h2>
 {''.join(voices)}

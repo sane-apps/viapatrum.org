@@ -2826,5 +2826,300 @@
     "note": "Divided. The Second Helvetic Confession (1566) condemns a golden age on earth before the judgment; the Savoy Declaration (1658) expects a more peaceable age for the churches in the latter days; Westminster is silent."
    }
   ]
- }
+ },
+{
+ "id": "death-penalty",
+ "question": "May the civil authority put a criminal to death?",
+ "positions": [
+  {
+   "id": "lawful-sword",
+   "name": "The magistrate may put the guilty to death",
+   "traditions": [
+    "catholic",
+    "orthodox",
+    "lutheran",
+    "reformed",
+    "anglican"
+   ],
+   "tradition_labels": {
+    "catholic": "Catholic, until 2018"
+   },
+   "rejected_by": [],
+   "defined": [
+    {
+     "source": "Genesis 9:6 (King James Version)",
+     "author": "Genesis 9:6",
+     "scripture": true,
+     "quote": "Whoso sheddeth man's blood, by man shall his blood be shed: for in the image of God made he man.",
+     "url": "https://www.biblegateway.com/passage/?search=Genesis+9%3A6&version=KJV"
+    },
+    {
+     "source": "Numbers 35:31 (King James Version)",
+     "author": "Numbers 35:31",
+     "scripture": true,
+     "quote": "Moreover ye shall take no satisfaction for the life of a murderer, which is guilty of death: but he shall be surely put to death.",
+     "url": "https://www.biblegateway.com/passage/?search=Numbers+35%3A31&version=KJV"
+    },
+    {
+     "source": "Romans 13:4 (King James Version)",
+     "author": "Romans 13:4",
+     "year": 57,
+     "scripture": true,
+     "quote": "for he beareth not the sword in vain: for he is the minister of God, a revenger to execute wrath upon him that doeth evil.",
+     "url": "https://www.biblegateway.com/passage/?search=Romans+13%3A4&version=KJV"
+    },
+    {
+     "source": "Acts 25:11 (King James Version)",
+     "author": "Acts 25:11",
+     "year": 60,
+     "scripture": true,
+     "quote": "if I be an offender, or have committed any thing worthy of death, I refuse not to die",
+     "url": "https://www.biblegateway.com/passage/?search=Acts+25%3A11&version=KJV"
+    },
+    {
+     "source": "Augustine, City of God, book 1, chapter 21 (413-426)",
+     "author": "Augustine",
+     "year": 413,
+     "quote": "These exceptions are of two kinds, being justified either by a general law, or by a special commission granted for a time to some individual. And in this latter case, he to whom authority is delegated, and who is but the sword in the hand of him who uses it, is not himself responsible for the death he deals. And, accordingly, they who have waged war in obedience to the divine command, or in conformity with His laws, have represented in their persons the public justice or the wisdom of government, and in this capacity have put to death wicked men; such persons have by no means violated the commandment, You shall not kill.",
+     "url": "https://www.newadvent.org/fathers/120101.htm"
+    },
+    {
+     "source": "Thomas Aquinas, Summa Theologiae II-II, question 64, article 3 (c. 1271)",
+     "author": "Aquinas",
+     "year": 1271,
+     "quote": "Now the care of the common good is entrusted to persons of rank having public authority: wherefore they alone, and not private individuals, can lawfully put evildoers to death.",
+     "url": "https://www.newadvent.org/summa/3064.htm"
+    },
+    {
+     "source": "Martin Luther, Large Catechism, Fifth Commandment, paragraph 181 (1529)",
+     "author": "Luther",
+     "year": 1529,
+     "quote": "Therefore God and government are not included in this commandment, nor is the power to kill, which they have, taken away. For God has delegated His authority to punish evil-doers to the government instead of parents, who aforetime (as we read in Moses) were required to bring their own children to judgment and sentence them to death. Therefore, what is here forbidden is forbidden to the individual in his relation to any one else, and not to the government.",
+     "url": "https://bookofconcord.org/large-catechism/ten-commandments/"
+    },
+    {
+     "source": "Catechism of the Council of Trent, Part III, Fifth Commandment (1566; English of Jeremiah Donovan, 1829)",
+     "author": "Trent",
+     "year": 1566,
+     "quote": "this prohibition does not apply to the civil magistrate, to whom is intrusted power of life and death, by the legal and judicious exercise of which he punishes the guilty and protects the innocent. The use of the civil sword, when wielded by the hand of justice, far from involving the crime of murder, is an act of paramount obedience to this commandment which prohibits murder.",
+     "url": "https://en.wikisource.org/wiki/The_Catechism_of_the_Council_of_Trent/Part_3:_The_Fifth_Commandment"
+    },
+    {
+     "source": "Thirty-Nine Articles, Article XXXVII (1571)",
+     "author": "Article 37",
+     "year": 1571,
+     "quote": "The Laws of the Realm may punish Christian men with death, for heinous and grievous offences.",
+     "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+    },
+    {
+     "source": "Westminster Larger Catechism, question 136 (1648)",
+     "author": "Westminster",
+     "year": 1648,
+     "quote": "The sins forbidden in the sixth commandment are, all taking away the life of ourselves, or of others, except in case of public justice, lawful war, or necessary defense",
+     "url": "https://www.ccel.org/ccel/anonymous/westminster2.i.vi.html"
+    },
+    {
+     "source": "John Paul II, Evangelium Vitae 56 (25 March 1995)",
+     "author": "John Paul II",
+     "year": 1995,
+     "quote": "the nature and extent of the punishment must be carefully evaluated and decided upon, and ought not go to the extreme of executing the offender except in cases of absolute necessity: in other words, when it would not be possible otherwise to defend society. Today however, as a result of steady improvements in the organization of the penal system, such cases are very rare, if not practically non-existent.",
+     "url": "https://www.vatican.va/content/john-paul-ii/en/encyclicals/documents/hf_jp-ii_enc_25031995_evangelium-vitae.html"
+    },
+    {
+     "source": "Catechism of the Catholic Church 2267, as archived 25 July 2017, before the August 2018 revision",
+     "author": "Catechism",
+     "year": 1997,
+     "quote": "The traditional teaching of the Church does not exclude, presupposing full ascertainment of the identity and responsibility of the offender, recourse to the death penalty, when this is the only practicable way to defend the lives of human beings effectively against the aggressor.",
+     "url": "https://web.archive.org/web/20170725212944/http://www.vatican.va/archive/ENG0015/__P7Z.HTM"
+    },
+    {
+     "source": "Russian Orthodox Church, Basis of the Social Concept, section IX.3 (2000)",
+     "author": "Russian Orthodox",
+     "year": 2000,
+     "quote": "The death penalty as a special punishment was recognised in the Old Testament. There are no indications to the need to abolish it in the New Testament or in the Tradition or in the historical legacy of the Orthodox Church either.",
+     "url": "https://old.mospat.ru/en/documents/social-concepts/ix/"
+    },
+    {
+     "source": "Russian Orthodox Church, Basis of the Social Concept, section IX.3 (2000)",
+     "author": "Russian Orthodox",
+     "year": 2000,
+     "quote": "Keeping in mind that mercy toward a fallen man is always more preferable than revenge, the Church welcomes these steps by state authorities. At the same time, she believes that the decision to abolish or not to apply death penalty should be made by society freely, considering the rate of crime and the state of law-enforcement and judiciary, and even more so, the need to protect the life of its well-intentioned members.",
+     "url": "https://old.mospat.ru/en/documents/social-concepts/ix/"
+    }
+   ],
+   "statement": "The civil authority may justly put a guilty person to death for a grave crime. A Christian may hold that office. The church does not carry the sentence out, and it may ask the judge for mercy.",
+   "mark": "The passage says the civil authority may justly put a criminal to death, or that this is not murder, or that the ruler's sword includes putting the guilty to death.",
+   "excluded_by": "The passage says the state may not put a criminal to death, or that the death penalty is unjust in itself. A passage that only says Christians may not serve as magistrate does not exclude this position.",
+   "first_defined": "Thomas Aquinas, Summa Theologiae, on homicide (1271); Luther, Large Catechism, Fifth Commandment (1529); Catechism of the Council of Trent, on the Fifth Commandment (1566); Thirty-Nine Articles (1571); Westminster Larger Catechism (1648); John Paul II, Evangelium Vitae (1995); Catechism of the Catholic Church, before the revision (1997); Russian Orthodox Church, Basis of the Social Concept (2000)",
+   "notes": "Catholic is on this lane as the teaching until 2018, not as the current teaching. The Roman Catechism, Aquinas, and paragraph 2267 before August 2018 are the Church's own words. Evangelium Vitae 56 (1995) still allows the penalty in absolute necessity. It does not say the penalty is inadmissible. The Augsburg Confession, Article XVI, says Christians may award just punishments, but it does not say death, so it is not quoted here."
+  },
+  {
+   "id": "christians-do-not-wield",
+   "name": "Christians do not bear the sword",
+   "traditions": [],
+   "rejected_by": [
+    "lutheran",
+    "reformed",
+    "anglican"
+   ],
+   "defined": [
+    {
+     "source": "Athenagoras, A Plea for the Christians, chapter 35 (c. 177)",
+     "author": "Athenagoras",
+     "year": 177,
+     "quote": "For when they know that we cannot endure even to see a man put to death, though justly; who of them can accuse us of murder or cannibalism?",
+     "url": "https://www.newadvent.org/fathers/0205.htm"
+    },
+    {
+     "source": "Athenagoras, A Plea for the Christians, chapter 35 (c. 177)",
+     "author": "Athenagoras",
+     "year": 177,
+     "quote": "But we, deeming that to see a man put to death is much the same as killing him, have abjured such spectacles. How, then, when we do not even look on, lest we should contract guilt and pollution, can we put people to death?",
+     "url": "https://www.newadvent.org/fathers/0205.htm"
+    },
+    {
+     "source": "Tertullian, On the Crown, chapter 11 (c. 211)",
+     "author": "Tertullian",
+     "year": 211,
+     "quote": "Shall it be held lawful to make an occupation of the sword, when the Lord proclaims that he who uses the sword shall perish by the sword? And shall the son of peace take part in the battle when it does not become him even to sue at law? And shall he apply the chain, and the prison, and the torture, and the punishment, who is not the avenger even of his own wrongs?",
+     "url": "https://www.newadvent.org/fathers/0304.htm"
+    },
+    {
+     "source": "Schleitheim Confession, Article VI (24 February 1527)",
+     "author": "Schleitheim",
+     "year": 1527,
+     "quote": "The sword is ordained of God outside the perfection of Christ. It punishes and puts to death the wicked, and guards and protects the good. In the Law the sword was ordained for the punishment of the wicked and for their death, and the same (sword) is (now) ordained to be used by the worldly magistrates. In the perfection of Christ, however, only the ban is used for a warning and for the excommunication of the one who has sinned, without putting the flesh to death.",
+     "url": "https://anabaptists.org/history/the-schleitheim-confession.html"
+    },
+    {
+     "source": "Schleitheim Confession, Article VI (24 February 1527)",
+     "author": "Schleitheim",
+     "year": 1527,
+     "quote": "Finally it will be observed that it is not appropriate for a Christian to serve as a magistrate because of these points: The government magistracy is according to the flesh, but the Christian's is according to the Spirit.",
+     "url": "https://anabaptists.org/history/the-schleitheim-confession.html"
+    }
+   ],
+   "statement": "The worldly magistrate may use the sword, including death. A Christian may not pronounce, demand, or carry out a death sentence, and may not serve as a magistrate or soldier who sheds blood. This does not say the penalty is unjust for the civil authority.",
+   "mark": "The passage says a believer may not pronounce, demand, or carry out a death sentence, or may not serve as a magistrate or soldier who sheds blood, without saying the penalty is unjust for the worldly authority.",
+   "excluded_by": "The passage says a Christian may lawfully sit as a judge of blood or carry out a just death sentence.",
+   "first_defined": "Schleitheim Confession (1527)",
+   "notes": "Schleitheim states this position and also states the lawful-sword mark in its opening sentences. Do not file it as a denial of the state's sword. Clergy abstaining from blood sentences is shared ground, not this position. Augustine asking a judge for mercy while leaving the sword in place is the lawful position, not this one."
+  },
+  {
+   "id": "inadmissible",
+   "name": "The death penalty is inadmissible",
+   "traditions": [
+    "catholic"
+   ],
+   "tradition_labels": {
+    "catholic": "Catholic, from 2018"
+   },
+   "rejected_by": [
+    "lutheran",
+    "reformed",
+    "anglican"
+   ],
+   "defined": [
+    {
+     "source": "Lactantius, Divine Institutes, book 6, chapter 20 (c. 313)",
+     "author": "Lactantius",
+     "year": 313,
+     "quote": "For when God forbids us to kill, He not only prohibits us from open violence, which is not even allowed by the public laws, but He warns us against the commission of those things which are esteemed lawful among men. Thus it will be neither lawful for a just man to engage in warfare, since his warfare is justice itself, nor to accuse any one of a capital charge, because it makes no difference whether you put a man to death by word, or rather by the sword, since it is the act of putting to death itself which is prohibited. Therefore, with regard to this precept of God, there ought to be no exception at all; but that it is always unlawful to put to death a man, whom God willed to be a sacred animal.",
+     "url": "https://www.newadvent.org/fathers/07016.htm"
+    },
+    {
+     "source": "Confession of Faith in a Mennonite Perspective, Article 22 (1995)",
+     "author": "Mennonite",
+     "year": 1995,
+     "quote": "Led by the Spirit, and beginning in the church, we witness to all people that violence is not the will of God. We witness against all forms of violence, including war among nations, hostility among races and classes, abuse of children and women, violence between men and women, abortion, and capital punishment.",
+     "url": "https://www.mennoniteusa.org/who-are-mennonites/what-we-believe/confession-of-faith/peace-justice-and-nonresistance/"
+    },
+    {
+     "source": "Catechism of the Catholic Church 2267, revised text. Pope Francis approved it on 11 May 2018; the rescript is dated 1 August 2018",
+     "author": "Catechism",
+     "year": 2018,
+     "quote": "Recourse to the death penalty on the part of legitimate authority, following a fair trial, was long considered an appropriate response to the gravity of certain crimes and an acceptable, albeit extreme, means of safeguarding the common good. Today, however, there is an increasing awareness that the dignity of the person is not lost even after the commission of very serious crimes. In addition, a new understanding has emerged of the significance of penal sanctions imposed by the state. Lastly, more effective systems of detention have been developed, which ensure the due protection of citizens but, at the same time, do not definitively deprive the guilty of the possibility of redemption. Consequently, the Church teaches, in the light of the Gospel, that “the death penalty is inadmissible because it is an attack on the inviolability and dignity of the person”, and she works with determination for its abolition worldwide.",
+     "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20180801_catechismo-penadimorte_en.html"
+    },
+    {
+     "source": "Pope Leo XIV, post of 10 October 2026, as quoted by Vatican News",
+     "author": "Leo XIV",
+     "year": 2026,
+     "quote": "The death penalty is inadmissible because it is an attack on the inviolability and dignity of the person. The common good can be safeguarded and the requirements of justice can be met without recourse to capital punishment: effective systems of detention have been developed that protect citizens while at the same time do not completely deprive those who are guilty of the possibility of redemption.",
+     "url": "https://www.vaticannews.va/en/pope/news/2026-10/pope-leo-xiv-tweet-death-penalty-inadmissible-dignity-person.html"
+    }
+   ],
+   "statement": "The death penalty itself is inadmissible. The church works for its abolition. This is a judgment on the penalty, not only a rule that Christians decline the office.",
+   "mark": "The passage says the death penalty itself is inadmissible, unjust, or to be abolished, not only that Christians decline the office.",
+   "excluded_by": "The passage says the civil authority may justly put a guilty person to death.",
+   "first_defined": "Confession of Faith in a Mennonite Perspective (1995); Catechism of the Catholic Church, revised text (2018); Pope Leo XIV, 10 October 2026",
+   "notes": "Catholic is listed here because of the 2018 catechism, restated by Leo XIV on 10 October 2026. The 1995 Mennonite article witnesses against capital punishment itself. Anabaptist is not badged on this lane: Schleitheim does not say the penalty is unjust for the worldly magistrate. The quoted sentence inside the 2018 paragraph is from Francis, address of 11 October 2017."
+  }
+ ],
+ "shared_ground": [
+  "Private murder is forbidden",
+  "Clergy do not pronounce or carry out a death sentence",
+  "The church may ask the judge for mercy",
+  "Necessary self-defense is not murder",
+  "Jesus' words against personal revenge, with no rule stated for the magistrate",
+  "You shall not kill, quoted with no statement about the magistrate",
+  "The sword named as a sign of state authority, without saying that it includes death"
+ ],
+ "queries": [
+  "death penalty",
+  "capital punishment",
+  "power of the sword",
+  "power of life and death magistrate",
+  "magistrate put to death",
+  "thou shalt not kill magistrate",
+  "Christians may not shed blood",
+  "sentence of blood",
+  "death penalty inadmissible abolition",
+  "lawful to kill a sinner public authority"
+ ],
+ "notes": "Added 2026-10-11. Three lanes on purpose: the state's sword, Christians declining the office, and the claim that the penalty itself is inadmissible. Do not merge the last two. Not checked, and not badged: Baptist, Methodist, Pentecostal, Oriental Orthodox, Church of the East. Do not quote the 1689 Confession, the United Methodist Social Principles, or an ELCA social statement until the sentence is fetched.",
+ "public_note": "The Catholic Church taught that the civil authority may put a guilty person to death. The Roman Catechism (1566) says the magistrate is entrusted with the power of life and death. Paragraph 2267, as printed through 1997 and still on the Vatican page in July 2017, said the traditional teaching of the Church does not exclude the death penalty. On 11 May 2018 Pope Francis approved the opposite paragraph. The rescript is dated 1 August 2018 and was published on 2 August 2018: the death penalty is inadmissible, and the Church works for its abolition worldwide. Pope Leo XIV repeated that sentence on 10 October 2026. Catholic on the first lane is the teaching until 2018. Catholic on the last lane is the new teaching. John Paul II, Evangelium Vitae 56 (1995), still allowed the penalty in a case of absolute necessity. He did not call it inadmissible.",
+ "tradition_notes": [
+  {
+   "tradition": "catholic",
+   "note": "Until 2018 the Catholic Church taught that the magistrate may put the guilty to death. The Roman Catechism (1566) and catechism paragraph 2267, as it stood through 1997, say so. In 2018 the Church changed that paragraph. The new text says the death penalty is inadmissible and that the Church works for its abolition. Leo XIV repeated that on 10 October 2026."
+  },
+  {
+   "tradition": "orthodox",
+   "note": "Placed from the Russian Orthodox Church, Basis of the Social Concept (2000), section IX. The death penalty was recognised in the Old Testament, and the Basis says the New Testament, Tradition, and the historical legacy of the Orthodox Church give no indication that it must be abolished. The same section says the Church has often asked for mercy, and that it welcomes abolition where a state chooses it, because mercy is preferable to revenge. Other Orthodox churches are not separately checked."
+  },
+  {
+   "tradition": "lutheran",
+   "note": "Placed from Luther's Large Catechism (1529), which says God has left the government the power to kill. The Augsburg Confession, Article XVI (1530), says Christians may hold civil office, sit as judges, and award just punishments, and it condemns Anabaptists who forbid those offices. Article XVI does not itself use the word death."
+  },
+  {
+   "tradition": "anglican",
+   "note": "Placed by Article XXXVII of the Thirty-Nine Articles (1571): the laws of the realm may punish Christian men with death for heinous and grievous offences. Later statements by particular provinces are not checked here."
+  },
+  {
+   "tradition": "anabaptist",
+   "note": "Divided. The Schleitheim Confession (1527) says the sword is ordained of God for worldly magistrates, and that Christians do not use it. The Confession of Faith in a Mennonite Perspective (1995), Article 22, witnesses against capital punishment itself."
+  },
+  {
+   "tradition": "baptist",
+   "note": "Not placed. No Baptist confession is quoted here yet. Baptist bodies differ, and Reformed Baptist confessions that follow Westminster are not quoted here."
+  },
+  {
+   "tradition": "methodist",
+   "note": "Not placed. No Methodist text checked yet."
+  },
+  {
+   "tradition": "pentecostal",
+   "note": "Not placed. No Pentecostal text checked yet."
+  },
+  {
+   "tradition": "oriental-orthodox",
+   "note": "Not placed. No text checked yet."
+  },
+  {
+   "tradition": "church-of-the-east",
+   "note": "Not placed. No text checked yet."
+  }
+ ]
+}
 ]

@@ -449,6 +449,12 @@
         "id": "secret-over-scripture",
         "label": "Secret tradition outweighs the public Scriptures",
         "short": "Secret over Scripture"
+      },
+      {
+        "id": "ot-lists",
+        "label": "What each list counts as the Old Testament",
+        "short": "The lists",
+        "record": true
       }
     ]
   },
