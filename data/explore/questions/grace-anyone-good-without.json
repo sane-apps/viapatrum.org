@@ -1,0 +1,180 @@
+{
+  "id": "grace-anyone-good-without",
+  "number": 28,
+  "group": "salvation",
+  "question": "What is grace, and can anyone do good without it?",
+  "short": "Can we do good without grace?",
+  "search": [
+    "grace",
+    "pelagius",
+    "pelagianism",
+    "semi-pelagian",
+    "prevenient grace",
+    "council of orange",
+    "free gift"
+  ],
+  "answers": [
+    {
+      "id": "needed",
+      "label": "No: grace must go first, even to begin to believe",
+      "short": "Grace needed",
+      "tag": "Needed"
+    },
+    {
+      "id": "nature",
+      "label": "Yes: our nature, God's gift, can keep his commands",
+      "short": "Nature can",
+      "tag": "Nature"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Pelagius, about 416, taught that a person can be without sin and keep God's commands easily, if he wishes. For him grace meant our God-given nature, the law, and Christ's teaching and example.",
+      "cites": [
+        "pelagius-in-proceedings-54"
+      ]
+    },
+    {
+      "text": "Augustine's prayer \"Give what you command, and command what you will\" sums up the opposite view: every good will is God's gift. The Council of Orange (529) made that the Western rule, and Trent repeated it.",
+      "cites": [
+        "augustine-confessions-10-40",
+        "orange-529-canon-6",
+        "trent-1547-justification-canon-3"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "pelagius-in-proceedings-54",
+      "author": "Pelagius (quoted by Augustine)",
+      "year": 416,
+      "date": "c. 416",
+      "work": "Letter, quoted in Augustine, On the Proceedings of Pelagius",
+      "locus": "30.54",
+      "lang": "la",
+      "answer": "nature",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "By the judgment of fourteen bishops our definition was approved, in which we said that a person can be without sin and easily keep God's commandments, if he wishes.",
+      "original": "quattuordecim episcoporum sententia definitio nostra comprobata est, qua diximus posse hominem sine peccato esse et dei mandata facile custodire, si uelit.",
+      "context": "Pelagius wrote this after a synod at Diospolis in Palestine (415) cleared him. Augustine's reply: \"if he wishes\" leaves out God's help. Pelagius said grace is given in our nature and in the law and teaching.",
+      "source": {
+        "book": "augustine-proceedings-of-pelagius",
+        "section": "54"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-confessions-10-40",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Confessions",
+      "locus": "10.29.40",
+      "lang": "la",
+      "answer": "needed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "All my hope is nowhere but in your great mercy. Give what you command, and command what you will. You command us to be continent. ... And as I knew, someone says, that no one can be continent unless God gives it, this too was wisdom, to know whose gift it is.",
+      "original": "Et tota spes mea non nisi in magna misericordia tua. da quod iubes et iube quod uis. imperas nobis continentiam. et cum scirem, ait quidam, quia nemo potest esse continens nisi deus det, et hoc ipsum erat sapientiae, scire cuius esset hoc donum.",
+      "context": "\"Give what you command\": the prayer Pelagius could not bear to hear read at Rome, as Augustine later recalled (On the Gift of Perseverance 20.53). The quotation inside is Wisdom 8:21.",
+      "source": {
+        "book": "augustine-confessions",
+        "section": "10.40"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "orange-529-canon-6",
+      "author": "Council of Orange",
+      "year": 529,
+      "date": "c. 529",
+      "work": "Canons",
+      "locus": "Canon 6",
+      "lang": "la",
+      "answer": "needed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says that mercy is given by God to us when, without God's grace, we believe, will, desire, try, labor, keep watch, study, ask, seek and knock, but does not confess that it is by the infusion and inspiration of the Holy Spirit in us that we believe, will, or are able to do all these things as we ought ... he resists the apostle (1 Corinthians 4:7; 15:10).",
+      "original": "Si quis sine gratia Dei credentibus, volentibus, desiderantibus, conantibus, laborantibus, vigilantibus, studentibus, petentibus, quaerentibus, pulsantibus nobis misericordiam dicit conferri divinitus, non autem ut credamus, velimus, vel haec omnia, sicut oportet, agere valeamus, per infusionem et inspirationem Sancti Spiritus in nobis fieri confitetur ... resistit Apostolo dicenti",
+      "context": "A small Gallic council, later approved by Pope Boniface II (531). It settled the West against the view that the first step toward God is ours.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 179"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1547-justification-canon-3",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 6, Canons on Justification",
+      "locus": "Canon 3",
+      "lang": "la",
+      "answer": "needed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "If anyone says that without the prevenient inspiration of the Holy Spirit and his help a person can believe, hope, love or repent as he ought, so that the grace of justification may be given to him: let him be anathema.",
+      "original": "Si quis dixerit, sine praeveniente Spiritus Sancti inspiratione atque eius adiutorio hominem credere, sperare, diligere aut poenitere posse, sicut oportet, ut ei iustificationis gratia conferatur: A. S.",
+      "context": "On this point Trent and the Reformers agreed: no one turns to God without grace going first.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 813"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Carthage",
+      "work": "Canons on grace",
+      "year": 418,
+      "why": "The African bishops' condemnation of Pelagius, approved by Rome. Not found in the Denzinger scan's text.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 101–108)"
+    },
+    {
+      "author": "John Cassian",
+      "work": "Conference 13",
+      "year": 426,
+      "why": "The view that the first stirrings of good will can be ours. Orange answers it.",
+      "action": "intake",
+      "source_hint": "Petschenig, CSEL 13 (1886)"
+    },
+    {
+      "author": "Pelagius",
+      "work": "Letter to Demetrias",
+      "year": 413,
+      "why": "Pelagius on human nature in his own words.",
+      "action": "intake",
+      "source_hint": "Migne PL 30 and 33"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "On Nature and Grace; On the Gift of Perseverance 20.53",
+      "year": 415,
+      "why": "Augustine's main replies. Migne PL 44 is fetched; PL 45 is not.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "grace-and-free-will"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

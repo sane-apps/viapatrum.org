@@ -43,6 +43,7 @@ def norm(s: str) -> str:
     s = unicodedata.normalize("NFD", s or "")
     s = "".join(c for c in s if not unicodedata.combining(c))
     s = s.lower().replace("ς", "σ").replace("ϲ", "σ").replace("v", "u").replace("j", "i")
+    s = s.replace("æ", "ae").replace("œ", "oe").replace("ſ", "s")
     s = re.sub(r"(\w)[-¬]\s+(\w)", r"\1\2", s)  # a word split across a scan's line break
     s = re.sub(r"[^\w\s]", " ", s)
     return re.sub(r"\s+", " ", s).strip()

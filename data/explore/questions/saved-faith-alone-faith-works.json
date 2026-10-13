@@ -1,0 +1,274 @@
+{
+  "id": "saved-faith-alone-faith-works",
+  "number": 27,
+  "group": "salvation",
+  "question": "Are we saved by faith alone, or by faith and works?",
+  "short": "Faith alone?",
+  "search": [
+    "faith alone",
+    "sola fide",
+    "justification",
+    "faith and works",
+    "james 2",
+    "works righteousness",
+    "justified by faith"
+  ],
+  "answers": [
+    {
+      "id": "faith",
+      "label": "By faith, not by our own works",
+      "short": "By faith",
+      "tag": "Faith"
+    },
+    {
+      "id": "works",
+      "label": "By faith that works; works also count",
+      "short": "Faith with works",
+      "tag": "Faith + works"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest writers say we are justified by faith, not by our own works, and that good works must still follow. Origen, in Rufinus's Latin, even says \"by faith alone\" of the thief on the cross.",
+      "cites": [
+        "1-clement-32",
+        "polycarp-philippians-1",
+        "origen-romans-3-9-sola-fide"
+      ]
+    },
+    {
+      "text": "Augustine held both lines: works do not come before justification, but a dead faith saves no one, and \"justified\" means \"made righteous\".",
+      "cites": [
+        "augustine-spirit-letter-45",
+        "augustine-faith-works-23"
+      ]
+    },
+    {
+      "text": "In the sixteenth century the churches divided over the words. Trent condemned \"faith alone\" in the sense of nothing else cooperating; Westminster taught righteousness counted, not infused; the Orthodox said faith working through love.",
+      "cites": [
+        "trent-1547-justification-canon-9",
+        "westminster-1646-11-1",
+        "dositheus-1672-decree-13"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "1-clement-32",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "32.4",
+      "lang": "grc",
+      "answer": "faith",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And we too, called through his will in Christ Jesus, are not justified through ourselves, nor through our own wisdom or understanding or godliness or works that we have done in holiness of heart, but through faith, through which the almighty God has justified all people from the beginning. To him be glory for ever and ever. Amen.",
+      "original": "καὶ ἡμεῖς οὖν, διὰ θελήματος αὐτοῦ ἐν Χριστῷ Ἰησοῦ κληθέντες, οὐ δἰ ἑαυτῶν δικαιούμεθα, οὐδὲ διὰ τῆς ἡμετέρας σοφίας ἢ συνέσεως ἢ εὐσεβείας ἢ ἔργων ὦν κατειργασάμεθα ἐν ὁσιότητι καρδίας, ἀλλὰ διὰ τῆς πίστεως, δἰ ἦς πάντας τοὺς ἀπ’ αἰῶνος ... παντοκράτωρ θεὸς ἐδικαίωσεν",
+      "context": "The next sentence asks at once: \"What then shall we do, brothers? Shall we stop doing good and abandon love? May the Master never let that happen to us.\" Clement holds faith and good works together.",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "polycarp-philippians-1",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "1.3",
+      "lang": "grc",
+      "answer": "faith",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... knowing that you are saved by grace, not by works (Ephesians 2:8–9), but by the will of God through Jesus Christ.",
+      "original": "εἰδότες, ὅτι χάριτί ἐστε σεσωσμένοι, οὐκ ἐξ ἔργων, ἀλλὰ θελήματι θεοῦ διὰ Ἰησοῦ Χριστοῦ.",
+      "context": "Polycarp quotes Ephesians to a church he is about to warn against greed (chapter 11).",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-romans-3-9-sola-fide",
+      "author": "Origen of Alexandria",
+      "year": 246,
+      "date": "c. 246",
+      "work": "Commentary on Romans (Rufinus's Latin)",
+      "locus": "3.9, on Romans 3:28",
+      "lang": "la",
+      "answer": "faith",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "... let us ask who has been justified by faith alone, without works. For an example, I think the thief is enough, who was crucified with Christ and cried to him from the cross: \"Lord Jesus, remember me when you come into your kingdom.\" Nothing else is recorded in the Gospels of his good works, but for this faith alone Jesus said to him: \"Truly I tell you, today you will be with me in paradise.\"",
+      "original": "quis sine operibus sola fide justificatus sit. Quantum igitur ad exemplum pertinet, sufficere arbitror illum latronem, qui cum Christo crucifixus clamavit ei de cruce: Domine ... Jesu, memento mei, cum veneris in regnum tuum ... Nec aliud quidquam describitur boni ope- ris ejus in Evangeliis, sed pro hac sola fide ait ei Jesus: »Amen dico tibi: hodie mecum eris in paradiso.",
+      "context": "\"By faith alone\" (sola fide), about 1,270 years before Luther. Origen's Greek is lost here; this is Rufinus's Latin of about 406, which abridges.",
+      "source": {
+        "witness": "books/origen-romans/sources/witnesses/lommatzsch-t6-1836_djvu.txt",
+        "ia": "origenous-ta-heuriskomena-panta-t.-6-1836",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 6 (1836), Commentary on Romans 3.9 (Rufinus)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-spirit-letter-45",
+      "author": "Augustine of Hippo",
+      "year": 412,
+      "date": "c. 412",
+      "work": "On the Spirit and the Letter",
+      "locus": "26.45",
+      "lang": "la",
+      "answer": "faith",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "He says that a person is justified freely by faith without the works of the law, and by \"freely\" he means only that works do not come before justification. ... What else does \"justified\" mean but \"made righteous\", by him who justifies the ungodly, so that from ungodly he becomes righteous?",
+      "original": "cum dicat gratis iustifieari hominem per fidem sine operibus legis nihilque aliud uelit intellegi in eo quod dicit \\'gratis\\', nisi quia iustificationem opera non praecedunt. ... quid est enim aliud \\'iustificati\\' quam \\'iusti facti\\', ab illo scilicet qui iustificat impium, ut ex impio fiat iustus?",
+      "context": "Both sides claim this passage. Works do not come before justification, which Protestants cite. But \"justified\" means \"made righteous\", which Catholic teaching follows.",
+      "source": {
+        "book": "augustine-spirit-and-the-letter",
+        "section": "45"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-faith-works-23",
+      "author": "Augustine of Hippo",
+      "year": 413,
+      "date": "c. 413",
+      "work": "On Faith and Works",
+      "locus": "14.23",
+      "lang": "la",
+      "answer": "works",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"What use is it, my brothers,\" says James, \"if someone says he has faith but has no works? Can faith save him?\" He also says that faith without works is dead. How long, then, will those deceive themselves who promise themselves eternal life from a dead faith!",
+      "original": "quid proderit, ait Iacobus, fratres mei, si fidem quis dicat se habere, opera autem non habeat? numquid poterit fides saluare eum? dicit etiam, quia fides sine operibus mortua est. quousque igitur falluntur, qui de fide mortua sibi uitam perpetuam pollicentur!",
+      "context": "Written against people who thought faith and baptism would save them however they lived.",
+      "source": {
+        "book": "augustine-on-faith-and-works",
+        "section": "23"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1547-justification-canon-9",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 6, Canons on Justification",
+      "locus": "Canon 9",
+      "lang": "la",
+      "answer": "works",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says that the ungodly is justified by faith alone, meaning that nothing else is required to cooperate in obtaining the grace of justification, and that it is in no way necessary for him to be prepared and disposed by a movement of his own will: let him be anathema.",
+      "original": "Si quis dixerit, sola fide impium iustificari, ita ut intelligat nihil aliud requiri, quod ad iustificationis gratiam consequendam cooperetur, et nulla ex parte necesse esse eum suae voluntatis motu praeparari atque disponi: A. S.",
+      "context": "Trent answers the Reformers. Its decree also says that no one can be justified without the grace of Christ (canon 1).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 819"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-11-1",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "11.1",
+      "lang": "en",
+      "answer": "faith",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "Those whom God effectually calleth, he also freely justifieth: not by infusing righteousness into them, but by pardoning their sins, and by accounting and accepting their persons as righteous; not for anything wrought in them, or done by them, but for Christ's sake alone.",
+      "original": "Those whom God effectually calleth, he also freely justifieth: not by infusing righteousness into them, but by pardoning their sins, and by accounting and accepting their persons as righteous; not for anything wrought in them, or done by them, but for Christ's sake alone",
+      "context": "The Reformed statement. Lutherans say the same in the Formula of Concord (1577).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dositheus-1672-decree-13",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 13",
+      "lang": "en",
+      "answer": "works",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "We believe a man to be not simply justified through faith alone, but through faith which works through love, that is to say, through faith and works.",
+      "original": "We believe a man to be not simply justified through faith alone, but through faith which works through love, that is to say, through faith and works.",
+      "context": "The Orthodox answer to Calvinist teaching, issued by a synod under Patriarch Dositheus.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 13 (1672)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Martin Luther",
+      "work": "Commentary on Galatians (1535); Smalcald Articles 2.1",
+      "year": 1535,
+      "why": "Luther's own case for faith alone.",
+      "action": "intake",
+      "source_hint": "Weimar Ausgabe 40 and 50"
+    },
+    {
+      "author": "Hilary of Poitiers",
+      "work": "Commentary on Matthew 8.6",
+      "year": 355,
+      "why": "\"Faith alone justifies\" (fides sola iustificat).",
+      "action": "intake",
+      "source_hint": "Migne PL 9"
+    },
+    {
+      "author": "Ambrosiaster",
+      "work": "Commentary on Romans 3:24 and 4:5",
+      "year": 380,
+      "why": "Several uses of \"by faith alone\".",
+      "action": "intake",
+      "source_hint": "Migne PL 17; Vogels CSEL 81 (copyright) as note"
+    },
+    {
+      "author": "Lutheran World Federation and Catholic Church",
+      "work": "Joint Declaration on the Doctrine of Justification",
+      "year": 1999,
+      "why": "The modern agreement that the sixteenth-century condemnations do not apply to each other's present teaching.",
+      "action": "search",
+      "source_hint": "vatican.va"
+    }
+  ],
+  "related": {
+    "timeline": "justification",
+    "topics": [
+      "justification-by-faith",
+      "faith-and-works"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

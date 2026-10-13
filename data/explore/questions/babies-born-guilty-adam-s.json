@@ -1,0 +1,273 @@
+{
+  "id": "babies-born-guilty-adam-s",
+  "number": 30,
+  "group": "salvation",
+  "question": "Are babies born guilty of Adam's sin? What is original sin?",
+  "short": "Original sin",
+  "search": [
+    "original sin",
+    "ancestral sin",
+    "inherited guilt",
+    "romans 5:12",
+    "pelagius",
+    "julian of eclanum",
+    "fall of adam",
+    "in whom all sinned"
+  ],
+  "answers": [
+    {
+      "id": "guilt",
+      "label": "Yes: we inherit Adam's sin and guilt, not only death",
+      "short": "Inherited guilt",
+      "tag": "Guilt"
+    },
+    {
+      "id": "death",
+      "label": "We inherit death and weakness from Adam, not his guilt",
+      "short": "Inherited death",
+      "tag": "Death"
+    },
+    {
+      "id": "none",
+      "label": "No: babies are born innocent; sin spreads by imitation",
+      "short": "Born innocent",
+      "tag": "None"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Third-century Africa already baptized newborns \"for another's sins\" (Cyprian), and Ambrose said all were in Adam and perished in him. Augustine built this into the doctrine of original sin.",
+      "cites": [
+        "cyprian-letter-64",
+        "ambrose-luke-7-234",
+        "augustine-city-of-god-13-14"
+      ]
+    },
+    {
+      "text": "The Pelagians, and above all Julian of Eclanum, denied it: babies are born innocent, and sin passes by imitation, not by birth.",
+      "cites": [
+        "pelagians-in-augustine-merits-1-9",
+        "julian-to-florus-1-123",
+        "julian-to-florus-2-146"
+      ]
+    },
+    {
+      "text": "The Greek East read Romans 5 differently: Adam's heirs are mortal and liable to punishment, but Chrysostom will not say another's sin makes us sinners. The West defined inherited sin at Orange (529) and Trent (1546).",
+      "cites": [
+        "chrysostom-romans-homily-10",
+        "trent-1546-original-sin-canon-2"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "cyprian-letter-64",
+      "author": "Cyprian of Carthage",
+      "year": 253,
+      "date": "c. 253",
+      "work": "Letter 64, to Fidus",
+      "locus": "64.5",
+      "lang": "la",
+      "answer": "guilt",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "If even the worst sinners, who sinned much against God before, receive forgiveness of sins when they later believe, and no one is kept from baptism and grace, how much less should an infant be kept back, who, newly born, has not sinned, except that, born of Adam according to the flesh, he has contracted the contagion of the ancient death by his first birth. He comes to receive forgiveness of sins more easily because the sins forgiven him are not his own but another's.",
+      "original": "si etiam grauissimis delictoribus et in Deum multum ante peccantibus, cum postea crediderint, remissa peccatorum datur et a baptismo adque gratia nemo prohibetur, quanto magis prohiberi non debet infans qui recens natus nihil peccauit, nisi quod secundum Adam. carnaliter natus contagium mortis antiquae prima natiuitate contraxit, qui ad remissam peccatorum accipiendam hoc ipso facilius accedit quod illi remittuntur non propria sed aliena peccata.",
+      "context": "A council of 66 bishops under Cyprian. Augustine later quoted this letter against the Pelagians.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "64.5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ambrose-luke-7-234",
+      "author": "Ambrose of Milan",
+      "year": 389,
+      "date": "c. 389",
+      "work": "Exposition of Luke",
+      "locus": "7.234",
+      "lang": "la",
+      "answer": "guilt",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Adam was, and in him we all were. Adam perished, and in him all perished.",
+      "original": "fuit Adam et in illo fuimus omnes: periit Adam et in illo omnes perierunt.",
+      "context": "Ambrose was Augustine's teacher in the faith, and Augustine cited him on this point.",
+      "source": {
+        "book": "ambrose-exposition-of-luke",
+        "section": "7.234"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-13-14",
+      "author": "Augustine of Hippo",
+      "year": 418,
+      "date": "c. 418",
+      "work": "City of God",
+      "locus": "13.14",
+      "lang": "la",
+      "answer": "guilt",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "God, the author of natures, not of faults, created man upright. But man, corrupted by his own will and justly condemned, begot corrupted and condemned offspring. For we were all in that one man, when we all were that one man who fell into sin through the woman who was made from him before sin.",
+      "original": "Deus enim creauit hominem rectum, naturarum auctor, non utique uitiorum; sed sponte deprauatus iusteque damnatus deprauatos damnatosque generauit. Omnes enim fuimus in illo uno, quando omnes fuimus ille unus, qui per feminam lapsus est in peccatum, quae de illo facta est ante peccatum.",
+      "context": "Augustine read Romans 5:12 in Latin, \"in whom all sinned\". The Greek can also mean \"because all sinned\".",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-13.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "pelagians-in-augustine-merits-1-9",
+      "author": "Pelagians (as Augustine reports)",
+      "year": 412,
+      "date": "c. 412",
+      "work": "Augustine, On the Merits and Forgiveness of Sins",
+      "locus": "1.9",
+      "lang": "la",
+      "answer": "none",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "They hold that the death mentioned there is not the body's, which they deny Adam earned by sinning, but the soul's, which happens in sin itself, and that sin itself passed from the first man to others not by descent but by imitation. That is why they refuse to believe that original sin is removed in infants by baptism, since they say there is none at all in newborns.",
+      "original": "\\'quod et mors ista, quae illic commemorata est, non sit corporis, quam nolunt Adam peccando meruisse, sed animae, quae in ipso peccato fit, et ipsum peccatum non propagatione in alios homines ex primo homine, sed imitatione transisse\\'. hinc enim etiam in paruulis nolunt credere per baptismum solui originale peccatum quod in nascentibus nullum esse omnino contendunt.",
+      "context": "Augustine's first anti-Pelagian book, written for the imperial official Marcellinus.",
+      "source": {
+        "book": "augustine-merits-and-forgiveness-of-sins",
+        "section": "1.9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "julian-to-florus-1-123",
+      "author": "Julian of Eclanum",
+      "year": 425,
+      "date": "c. 425",
+      "work": "To Florus, quoted in Augustine's Unfinished Work against Julian",
+      "locus": "1.123",
+      "lang": "la",
+      "answer": "none",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Evil, then, is not part of nature, and God cannot create guilty people or place them in the devil's kingdom. These conclusions show you to be a Manichaean, indeed worse than a Manichaean. They also make clear that humanity enters this world without sin, that the fruit of human fertility is under God's authority rather than the devil's, and that nature is innocent.",
+      "original": "Nec malum itaque naturale est, nec Deus creare reos potest, nec in regno diaboli collocare. Quibus collectis et tu Manichaeus, immo Manichaeo peior ostenderis; et sine peccato in hunc mundum humanitatis ingressus, et sub iure Dei, non diaboli, fructus fecunditatis, et naturalis innocentia claruerunt.",
+      "context": "Julian, a bishop deposed in 418, was the sharpest critic of Augustine's doctrine. His words survive only inside Augustine's reply.",
+      "source": {
+        "witness": "books/julian-of-eclanum/sources/ad_florum_1.json",
+        "edition": "Augustine, Opus imperfectum contra Iulianum 1.123 (Migne PL 45 text)",
+        "url": "https://www.augustinus.it/latino/incompiuta_giuliano/incompiuta_giuliano_1_libro.htm"
+      },
+      "translation": "site"
+    },
+    {
+      "id": "julian-to-florus-2-146",
+      "author": "Julian of Eclanum",
+      "year": 425,
+      "date": "c. 425",
+      "work": "To Florus, quoted in Augustine's Unfinished Work against Julian",
+      "locus": "2.146",
+      "lang": "la",
+      "answer": "none",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Just as no one earns the rewards of virtue unless, after Christ's incarnation, he strives toward them by imitating his holiness, so no one is held a transgressor in Adam unless he has sinned by imitating the first man.",
+      "original": "ut, sicut nemo praemia virtutis meretur, nisi qui ad ea post incarnationem tamen Christi sanctitatis eius imitatione contenderit, ita in Adam praevaricator nemo teneatur, nisi qui in transgressione legis, qua peccati est facta cognitio, primi hominis imitatione deliquerit.",
+      "context": "Julian's reading of Romans 5:19: sin spreads by imitation, as righteousness does.",
+      "source": {
+        "witness": "books/julian-of-eclanum/sources/ad_florum_2.json",
+        "edition": "Augustine, Opus imperfectum contra Iulianum 2.146 (Migne PL 45 text)",
+        "url": "https://www.augustinus.it/latino/incompiuta_giuliano/incompiuta_giuliano_2_libro.htm"
+      },
+      "translation": "site"
+    },
+    {
+      "id": "chrysostom-romans-homily-10",
+      "author": "John Chrysostom",
+      "year": 392,
+      "date": "c. 392",
+      "work": "Homilies on Romans",
+      "locus": "10.2–3, on Romans 5:19",
+      "lang": "grc",
+      "answer": "death",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What is the question? It is the saying that through one man's disobedience many were made sinners. That when he sinned and became mortal, those born of him should be mortal too is not strange. But that another should become a sinner from his disobedience, what sense would that make? ... What then does \"sinners\" mean here? To me it seems to mean liable to punishment and condemned to death.",
+      "original": "Τί ποτ' οὖν ἐστι τὸ ζήτημα; Τὸ λέγειν διὰ τῆς παρακοῆς τοῦ ἑνὸς ἁμαρτωλοὺς γενέσθαι πολλούς. Τὸ μὲν γὰρ ἁμαρτόντος ἐκείνου καὶ γενομένου θνητοῦ, καὶ τοὺς ἐξ αὐτοῦ τοιούτους εἶναι, οὐδὲν ἀπεικός· τὸ δὲ ἐκ τῆς παρακοῆς ἐκείνου ἕτερον ἁμαρτωλὸν γενέσθαι, ποίαν ἂν ἀκολουθίαν σχοίη; ... Τί οὖν ἐστιν ἐνταῦθα τὸ, Ἁμαρτωλοί; Ἐμοὶ δοκεῖ τὸ ὑπεύθυνοι κολάσει καὶ καταδεδικασμένοι θανάτῳ.",
+      "context": "The Eastern reading: from Adam we inherit death and its weakness. Orthodox writers today call it \"ancestral sin\" and do not speak of inherited guilt.",
+      "source": {
+        "book": "chrysostom-homiliae-romanos",
+        "section": "11.4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1546-original-sin-canon-2",
+      "author": "Council of Trent",
+      "year": 1546,
+      "date": "1546",
+      "work": "Session 5, Decree on Original Sin",
+      "locus": "Canon 2",
+      "lang": "la",
+      "answer": "guilt",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone asserts that Adam's sin harmed him alone and not his descendants ... or that, defiled by the sin of disobedience, he passed on only death and bodily punishments to the whole human race, but not sin, which is the death of the soul: let him be anathema, for he contradicts the apostle, who says: \"Through one man sin entered the world, and through sin death, and so death passed to all men, in whom all sinned\" (Romans 5:12).",
+      "original": "Si quis Adae praevaricationem sibi soli, et non eius propagini asserit nocuisse ... aut inquinatum illum per inoboedientiae peccatum mortem et poenas corporis tantum in omne genus humanum transfudisse, non autem et peccatum, quod mors est animae: A. S., cum contradicat Apostolo dicenti",
+      "context": "Trent repeats Orange (529), canon 2.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 789"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Theodore of Mopsuestia",
+      "work": "Against Those Who Say Men Sin by Nature",
+      "year": 420,
+      "why": "The Antiochene objection to Augustine. Fragments in Marius Mercator.",
+      "action": "intake",
+      "source_hint": "Migne PG 66; PL 48"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "Against Julian",
+      "year": 421,
+      "why": "Augustine's full reply. In the fetched Migne PL 44 scan; to be added.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt"
+    },
+    {
+      "author": "Orthodox Church",
+      "work": "A modern statement on ancestral sin",
+      "year": 1990,
+      "why": "The Eastern view in a church document rather than a single writer.",
+      "action": "search",
+      "source_hint": "Confession of Dositheus decree 6 (1672)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "original-sin",
+      "infant-baptism"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

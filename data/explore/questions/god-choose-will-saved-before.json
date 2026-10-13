@@ -1,0 +1,305 @@
+{
+  "id": "god-choose-will-saved-before",
+  "number": 31,
+  "group": "salvation",
+  "question": "Does God choose who will be saved before they are born?",
+  "short": "Predestination",
+  "search": [
+    "predestination",
+    "election",
+    "foreknowledge",
+    "calvinism",
+    "arminianism",
+    "reprobation",
+    "romans 8:29",
+    "romans 9",
+    "elect"
+  ],
+  "answers": [
+    {
+      "id": "foreknown",
+      "label": "He predestined those he foreknew would respond",
+      "short": "By foreknowledge",
+      "tag": "Foreknown"
+    },
+    {
+      "id": "grace",
+      "label": "He chooses freely by grace; no one is predestined to evil",
+      "short": "Chosen by grace",
+      "tag": "Grace"
+    },
+    {
+      "id": "double",
+      "label": "Some are predestined to life, others foreordained to death",
+      "short": "Double",
+      "tag": "Double"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Before Augustine, writers East and West read Romans 8:29 as predestination following foreknowledge: God foresaw who would respond.",
+      "cites": [
+        "justin-1apol-44",
+        "origen-romans-1-foreknowledge",
+        "diodorus-romans-8"
+      ]
+    },
+    {
+      "text": "Augustine, in his last years, taught that God chooses freely and that the number of the elect is fixed. The Council of Orange accepted his teaching on grace but condemned any predestination to evil.",
+      "cites": [
+        "augustine-rebuke-grace-13-39",
+        "orange-529-conclusion"
+      ]
+    },
+    {
+      "text": "After the Reformation, Reformed confessions taught that others are foreordained to death or passed by; Lutherans taught election to life only; the Orthodox kept foreknowledge.",
+      "cites": [
+        "westminster-1646-3-3",
+        "dort-1619-1-15",
+        "formula-concord-1577-11",
+        "dositheus-1672-decree-3"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-44",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "44.11",
+      "lang": "grc",
+      "answer": "foreknown",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "So when we say that future events were foretold, we do not say they happen by the necessity of fate. God foreknows what all people will do, and it is his decree that each will be repaid as his actions deserve.",
+      "original": "ὥστε ὃ φαμεν, πεπροφητεῦσθαι τὰ μέλλοντα γίνεσθαι, οὐ διὰ τὸ εἱμαρμένης ἀνάγκῃ πράττεσθαι λέγομεν· ἀλλὰ προγνώστου τοῦ θεοῦ ὄντος τῶν μελλόντων ὑπὸ πάντων ἀνθρώπων πραχθήσεσθαι, καὶ δόγματος ὄντος παρ᾿ αὐτὸν κατ᾿ ἀξίαν τῶν πράξεων ἕκαστον ἀμείψεσθαι",
+      "context": "Foreknowledge without fate: the common early answer.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "44"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-romans-1-foreknowledge",
+      "author": "Origen of Alexandria",
+      "year": 246,
+      "date": "c. 246",
+      "work": "Commentary on Romans (Rufinus's Latin)",
+      "locus": "Book 1, on Romans 1:1",
+      "lang": "la",
+      "answer": "foreknown",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"Those whom he foreknew he also predestined to be conformed to the image of his Son\" (Romans 8:29), showing plainly that those whom God foreknew would be such as to conform themselves to Christ in sufferings, he also predestined to be conformed to his image and glory. So God's foreknowledge comes first, by which he knows who will have labors and virtues in them, and predestination follows. Yet foreknowledge is not to be thought the cause of predestination.",
+      "original": "evidenter ostendens, quod eos, quos praescivit Deus tales futuros, ut Christo se in passionibus conformarent, ipsos etiam conformes ac similes imaginis ejus praedestinavit . et gloriae. Praecedit ergo praescientia Dei, per quam noscuntur, qui in' se laborés et virtutes habituri sint, et ita praedestinatio sequitur; nec tamen rursus praedestina- tionis causa putabitur praescientia.",
+      "context": "Written against Gnostics who said Paul was chosen by chance or because of a better nature.",
+      "source": {
+        "witness": "books/origen-romans/sources/witnesses/lommatzsch-t6-1836_djvu.txt",
+        "ia": "origenous-ta-heuriskomena-panta-t.-6-1836",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 6 (1836), Commentary on Romans, Book 1 (Rufinus)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "diodorus-romans-8",
+      "author": "Diodorus of Tarsus",
+      "year": 380,
+      "date": "c. 380",
+      "work": "Fragments on Romans",
+      "locus": "on Romans 8:29–30",
+      "lang": "grc",
+      "answer": "foreknown",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Whom then did God glorify here? Those he justified. And whom did he predestine? Those he foreknew, who are called according to purpose, that is, those who by their own purpose are worthy to be called and conformed to Christ.",
+      "original": "τίνας τοίνυν ἐνταῦθα ἐδόξασεν ὁ θεός; οὓς ἐδικαίωσεν. τίνας δὲ προώρισεν; οὓς προέγνω, τοὺς κατὰ πρόθεσιν κλητοὺς ὄντας, τοῦτ' ἔστι τοὺς διὰ τὴν ἰδίαν πρόθεσιν ἀξίους ὄντας κληθῆναι καὶ συμμορφωθῆναι Χριστῷ.",
+      "context": "Diodorus, teacher of Chrysostom, takes \"purpose\" in Romans 8:28 as the human person's purpose, not God's.",
+      "source": {
+        "book": "diodorus-fragmenta-romanos",
+        "section": "u02-rem-early"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-rebuke-grace-13-39",
+      "author": "Augustine of Hippo",
+      "year": 427,
+      "date": "c. 427",
+      "work": "On Rebuke and Grace",
+      "locus": "13.39",
+      "lang": "la",
+      "answer": "grace",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I speak of those who are predestined to the kingdom of God, whose number is so certain that no one is added to them and no one taken away. ... For if one is not to receive the crown unless another loses it, the number is certain.",
+      "original": "qui præde- Stinati sunt in regnum Dei, quortmm ita certus est nu- merus, ut nec addatur eis quisquam, net minuatur ex eis ... Si enim anus non est accepturus nisi iste perdiderit, certus est numerus.",
+      "context": "Augustine's late view: God chooses freely, not because of foreseen merit, and gives the chosen the gift of perseverance.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt",
+        "ia": "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_44",
+        "ocr_poor": true,
+        "edition": "Migne PL 44 (1845), De correptione et gratia 13.39"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "orange-529-conclusion",
+      "author": "Council of Orange",
+      "year": 529,
+      "date": "c. 529",
+      "work": "Conclusion of the faith",
+      "locus": "Conclusion",
+      "lang": "la",
+      "answer": "grace",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "That some are predestined to evil by divine power, we not only do not believe, but if there are any who wish to believe so great an evil, we say anathema to them with all abhorrence.",
+      "original": "Aliquos vero ad malum divina potestate praedestinatos esse, non solum non credimus, sed etiam, si sunt, qui tantum malum credere velint, cum omni detestatione illis anathema dicimus.",
+      "context": "Orange takes Augustine's teaching on grace and rejects any predestination to evil.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 200"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-3-3",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "3.3–4",
+      "lang": "en",
+      "answer": "double",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "By the decree of God, for the manifestation of his glory, some men and angels are predestinated unto everlasting life; and others foreordained to everlasting death. These angels and men, thus predestinated, and foreordained, are particularly and unchangeably designed, and their number so certain and definite, that it cannot be either increased or diminished.",
+      "original": "By the decree of God, for the manifestation of his glory, some men and angels are predestinated unto everlasting life; and others foreordained to everlasting death. 4. These angels and men, thus predestinated, and foreordained, are particularly and unchangeably designed, and their number so certain and definite, that it cannot be either increased or diminished.",
+      "context": "The number \"so certain\" echoes Augustine; \"foreordained to everlasting death\" goes further than Orange.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dort-1619-1-15",
+      "author": "Synod of Dort",
+      "year": 1619,
+      "date": "1619",
+      "work": "Canons of Dort",
+      "locus": "First Head, Article 15",
+      "lang": "en",
+      "answer": "double",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "not all people have been chosen but that some have not been chosen or have been passed by in God's eternal election",
+      "original": "not all people have been chosen but that some have not been chosen or have been passed by in God's eternal election",
+      "context": "Dort answered the Remonstrants (Arminians), who taught election based on foreseen faith.",
+      "source": {
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+        "edition": "Canons of Dort, First Head, Article 15 (1619)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "formula-concord-1577-11",
+      "author": "Formula of Concord (Lutheran)",
+      "year": 1577,
+      "date": "1577",
+      "work": "Formula of Concord, Epitome",
+      "locus": "XI.4",
+      "lang": "en",
+      "answer": "grace",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The predestination or eternal election of God, however, extends only over the godly, beloved children of God, being a cause of their salvation",
+      "original": "The predestination or eternal election of God, however, extends only over the godly, beloved children of God, being a cause of their salvation",
+      "context": "Lutherans teach election to salvation but no election to damnation.",
+      "source": {
+        "url": "https://bookofconcord.org/formula-of-concord-epitome/",
+        "edition": "Formula of Concord, Epitome, XI.4 (1577)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dositheus-1672-decree-3",
+      "author": "Synod of Jerusalem (Orthodox)",
+      "year": 1672,
+      "date": "1672",
+      "work": "Confession of Dositheus",
+      "locus": "Decree 3",
+      "lang": "en",
+      "answer": "foreknown",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "But since He foreknew the one would make a right use of their free-will, and the other a wrong, He predestinated the one, or condemned the other.",
+      "original": "But since He foreknew the one would make a right use of their free-will, and the other a wrong, He predestinated the one, or condemned the other.",
+      "context": "The Orthodox answer to Calvinist teaching.",
+      "source": {
+        "url": "https://www.crivoice.org/creeddositheus.html",
+        "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 3 (1672)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Gottschalk of Orbais",
+      "work": "Confessions; the councils of Quierzy (853) and Valence (855)",
+      "year": 850,
+      "why": "The ninth-century fight over double predestination. Quierzy and Valence are in the Denzinger scan.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 316–325)"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "On the Predestination of the Saints",
+      "year": 429,
+      "why": "\"Predestination is the preparation of grace.\" In the fetched Migne PL 44 scan.",
+      "action": "search",
+      "source_hint": "PL 44 col. 959"
+    },
+    {
+      "author": "Jacob Arminius",
+      "work": "Declaration of Sentiments",
+      "year": 1608,
+      "why": "Election based on foreseen faith, in Arminius's words.",
+      "action": "intake",
+      "source_hint": "Opera theologica (Leiden 1629)"
+    },
+    {
+      "author": "John Calvin",
+      "work": "Institutes 3.21–24",
+      "year": 1559,
+      "why": "Calvin on election and reprobation.",
+      "action": "intake",
+      "source_hint": "Corpus Reformatorum 30"
+    }
+  ],
+  "related": {
+    "timeline": "predestination",
+    "topics": [
+      "predestination"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

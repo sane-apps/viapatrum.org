@@ -1,0 +1,270 @@
+{
+  "id": "have-free-will",
+  "number": 29,
+  "group": "salvation",
+  "question": "Do we have free will?",
+  "short": "Free will?",
+  "search": [
+    "free will",
+    "free choice",
+    "liberum arbitrium",
+    "bondage of the will",
+    "determinism",
+    "fate",
+    "synergy",
+    "monergism"
+  ],
+  "answers": [
+    {
+      "id": "free",
+      "label": "Yes: we freely choose, and God never forces us",
+      "short": "Free",
+      "tag": "Free"
+    },
+    {
+      "id": "freed",
+      "label": "Free, but after the fall it needs grace to choose the good",
+      "short": "Freed by grace",
+      "tag": "Freed"
+    },
+    {
+      "id": "bound",
+      "label": "Fallen, the will is bound and dead to good until God frees it",
+      "short": "Bound",
+      "tag": "Bound"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Against pagan fate and Gnostic fixed natures, the early writers all defend free choice: Justin, Irenaeus, Tertullian, and later Chrysostom and Jerome. God draws, but not by force.",
+      "cites": [
+        "justin-1apol-43",
+        "irenaeus-ah-4-37",
+        "tertullian-marcion-2-6",
+        "chrysostom-john-homily-10",
+        "jerome-jeremiah-5-36"
+      ]
+    },
+    {
+      "text": "Augustine kept free choice but said it is healed and set free by grace; Trent defended it against Luther, saying the will cooperates with grace.",
+      "cites": [
+        "augustine-spirit-letter-52",
+        "trent-1547-justification-canons-4-5"
+      ]
+    },
+    {
+      "text": "The Reformers said the fallen will has lost all ability toward spiritual good until God frees it.",
+      "cites": [
+        "westminster-1646-9-3"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-43",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "43.2–6",
+      "lang": "grc",
+      "answer": "free",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If all things happen by fate, nothing at all is in our power. For if it is fated that this one is good and that one wicked, the one is not to be praised nor the other blamed. And again, unless the human race has power by free choice to flee what is shameful and choose what is good, it is not responsible for anything it does. But that by free choice it both acts rightly and goes wrong, we show this way: we see the same person turning to opposite things.",
+      "original": "εἰ μὴ τοῦτό ἐστιν, ἀλλὰ καθ᾿ εἱμαρμένην πάντα γίνεται, οὔτε τὸ ἐφ᾿ ἡμῖν ἐπτιν ὅλως· εἰ γὰρ εἵμαρται τόνδε τινὰ ἀγαθὸν εἶναι καὶ τόνδε φαῦλον, οὔθ᾿ οὗτος ἀπόδεκτος οὐδὲ ἐκεῖνος μεμπτέος. Καὶ αὖ εἰ μὴ προαιρέσει ἐλευθέρᾳ πρὸς τὸ φεύγειν τὰ αἰσχρὰ καὶ αἱρεῖσθαι τὰ καλὰ δύναμιν ἔχει τὸ ἀνθρώπειον γένος, ἀναίτιόν ἐστι τῶν ὁπωσδήποτε πραττομένων. Ἀλλ᾿ ὅτι ἐλευθέρᾳ προαιρέσει καὶ κατορθοῖ καὶ σφάλλεται, οὕτως ἀποδείκνυμεν. Τὸν αὐτὸν ἄνθρωπον τῶν ἐναντίων τὴν μετέλευσιν ποιούμενον ὁρῶμεν.",
+      "context": "Justin answers the pagan belief in fate. Free choice was the common Christian position against fate and against Gnostic \"natures\" fixed at birth.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "43"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-4-37",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "4.37.4–5",
+      "lang": "la",
+      "answer": "free",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Because man has been of free judgment from the beginning, and God, in whose likeness he was made, is of free judgment, he is always given counsel to hold fast to the good, which is brought to completion by obedience to God. And not only in works but also in faith the Lord kept the will of man free and in his own power, saying: \"According to your faith be it done to you.\"",
+      "original": "Sed quoniam liberae sententiae ab initio est homo, et liberae sententiae est Deus cuius ad similitudinem factus est, semper consilium datur ei continere bonum, quod perficitur ex ea quae est ad Deum obedientia. Et non tantum in operibus, sed etiam in fide, liberum et suae potestatis arbitrium hominis servavit Dominus, dicens: Secundum fidem tuam fiat tibi",
+      "context": "Irenaeus writes against Gnostics who said some people are saved by nature.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/latin/irenaeus_ah_4_37_5_harvey.txt",
+        "edition": "Harvey (1857), Latin"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-marcion-2-6",
+      "author": "Tertullian",
+      "year": 208,
+      "date": "c. 208",
+      "work": "Against Marcion",
+      "locus": "2.6.3–4",
+      "lang": "la",
+      "answer": "free",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "The image and likeness of God had to be made with free choice and power of its own, so that this very thing, freedom and power of choice, would count as God's image and likeness in it.",
+      "original": "oportebat igitur imaginem et similitudinem dei liberi arbitrii et suae potestatis institui, in qua hoc ipsum imago et similitudo dei deputaretur, arbitrii scilicet libertas et potestas.",
+      "context": "Marcion blamed the Creator for Adam's fall. Tertullian answers that freedom was the gift, and its misuse was Adam's.",
+      "source": {
+        "book": "tertullian-against-marcion",
+        "section": "2.6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-john-homily-10",
+      "author": "John Chrysostom",
+      "year": 391,
+      "date": "c. 391",
+      "work": "Homilies on John",
+      "locus": "on John 1:11",
+      "lang": "grc",
+      "answer": "free",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "God, who loves mankind and does good, does and arranges everything so that we may shine with virtue. Wanting us to be approved, he draws all who are willing, not by force or compulsion but by persuasion and kindness, and pulls them to himself. That is why, when he came, some received him and others did not. For he wants no servant who is unwilling or forced, but all willing and choosing.",
+      "original": "Φιλάνθρωπος ὢν ὁ Θεὸς, ἀγαπητὲ, καὶ εὐεργετικὸς, πάντα ποιεῖ καὶ πραγματεύεται, ὥστε ἡμᾶς κατ' ἀρετὴν λάμπειν· καὶ βουλόμενος ἡμᾶς εὐδοκίμους εἶναι, καὶ τοῦτο, βίᾳ μὲν οὐδένα οὐδὲ ἀνάγκῃ, πειθοῖ δὲ καὶ τῷ ποιεῖν εὖ τοὺς βουλομένους ἅπαντας ἕλκει, καὶ πρὸς ἑαυτὸν ἐπισπᾶται. Διὰ τοῦτο ἐλθόντα αὐτὸν οἱ μὲν ἔλαβον, οἱ δὲ οὐκ ἐδέξαντο. Οὐδένα γὰρ βούλεται ἄκοντα οὐδὲ ἠναγκασμένον ἔχειν οἰκέτην, ἀλλ' ἑκόντας ἅπαντας καὶ προαιρουμένους",
+      "context": "The Eastern way of holding grace and freedom together: God draws, but never by force.",
+      "source": {
+        "book": "chrysostom-homiliae-joannem",
+        "section": "49"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "jerome-jeremiah-5-36",
+      "author": "Jerome",
+      "year": 415,
+      "date": "c. 415",
+      "work": "Commentary on Jeremiah",
+      "locus": "on Jeremiah 26:3",
+      "lang": "la",
+      "answer": "free",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "\"Perhaps they will listen and turn.\" The doubtful word \"perhaps\" cannot fit the Lord's majesty, but he speaks in our way, so that man's free choice may be kept, and he may not be forced to do or not do anything by God's foreknowledge, as if by necessity. For a thing does not happen because God knows it will; he knows it, as one who foreknows the future, because it will happen.",
+      "original": "forsitan inquit, audiant et conuertantur. uerbum ambiguum \\'forsitan\\' maiestati domini non potest conuenire, sed nostro loquitur affectu. ut liberum homini seruetur arbitrium, ne ex praescientia eius quasi necessitate uel facere quid uel non facere cogatur; non enim ex eo, quod deus scit futurum aliquid, idcirco futurum est, sed quia futurum est, deus nouit quasi praescius futurorum.",
+      "context": "Jerome, an enemy of Pelagius, still says foreknowledge does not force the will.",
+      "source": {
+        "book": "jerome-commentary-on-jeremiah",
+        "section": "5.36"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-spirit-letter-52",
+      "author": "Augustine of Hippo",
+      "year": 412,
+      "date": "c. 412",
+      "work": "On the Spirit and the Letter",
+      "locus": "30.52",
+      "lang": "la",
+      "answer": "freed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Do we then make void free choice through grace? God forbid! Rather we establish free choice. For as the law is not made void but established through faith, so free choice is not made void but established through grace. ... Through grace comes the healing of the soul from the fault of sin, through the soul's health freedom of choice, through free choice the love of righteousness.",
+      "original": "Liberum ergo arbitrium euacuamus per gratiam ? absit, sed magis liberum arbitrium statuimus. sicut enim lex per fidem, sic liberum arbitrium per gratiam non euacuatur, sed statuitur. ... per gratiam sanatio animae a uitio peccati, per animae sanitatem libertas arbitrii, per liberum arbitrium iustitiae dilectio",
+      "context": "For Augustine grace does not remove free choice but heals it. Without grace the will is free only to sin.",
+      "source": {
+        "book": "augustine-spirit-and-the-letter",
+        "section": "52"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1547-justification-canons-4-5",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 6, Canons on Justification",
+      "locus": "Canons 4–5",
+      "lang": "la",
+      "answer": "freed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says that man's free choice, moved and stirred by God, does not cooperate at all by assenting to God who stirs and calls it ... but does nothing at all, like something lifeless, and is merely passive: let him be anathema. If anyone says that after Adam's sin man's free choice was lost and destroyed, or that it is a thing in name only, indeed a name without a reality, a fiction brought into the Church by Satan: let him be anathema.",
+      "original": "Si quis dixerit, liberum hominis arbitrium a Deo motum et excitatum nihil cooperari assentiendo Deo excitanti atque vocanti ... sed veluti inanime quoddam nihil omnino agere, mereque passive se habere: A. S. ... Can. 5. Si quis liberum hominis arbitrium post Adae peccatum amissum et exstinctum esse dixerit, aut rem esse de solo titulo, immo titulum sine re, figmentum denique a satana invectum in Ecclesiam: A. S.",
+      "context": "Aimed at Luther, who had called free choice \"a thing in name only\" (1520) and wrote On the Bondage of the Will (1525).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 814–815"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-9-3",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "9.3–4",
+      "lang": "en",
+      "answer": "bound",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "Man, by his fall into a state of sin, hath wholly lost all ability of will to any spiritual good accompanying salvation: so as, a natural man, being altogether averse from that good, and dead in sin, is not able, by his own strength, to convert himself, or to prepare himself thereunto. When God converts a sinner, and translates him into the state of grace, he freeth him from his natural bondage under sin.",
+      "original": "Man, by his fall into a state of sin, hath wholly lost all ability of will to any spiritual good accompanying salvation: so as, a natural man, being altogether averse from that good, and dead in sin, is not able, by his own strength, to convert himself, or to prepare himself thereunto. 4. When God converts a sinner, and translates him into the state of grace, he freeth him from his natural bondage under sin",
+      "context": "The Reformed form of Luther's \"bondage of the will\". The same chapter says the will is not forced by any necessity of nature (9.1).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Martin Luther",
+      "work": "On the Bondage of the Will",
+      "year": 1525,
+      "why": "The classic case for the bound will.",
+      "action": "intake",
+      "source_hint": "Weimar Ausgabe 18"
+    },
+    {
+      "author": "Desiderius Erasmus",
+      "work": "On Free Choice",
+      "year": 1524,
+      "why": "The book Luther answered.",
+      "action": "intake",
+      "source_hint": "Erasmi Opera (Leiden 1706) vol. 9"
+    },
+    {
+      "author": "Origen of Alexandria",
+      "work": "On First Principles 3.1",
+      "year": 225,
+      "why": "The first Christian treatise on free choice. The Greek is in the library's Philocalia 21; to be added with the full argument.",
+      "action": "search",
+      "source_hint": "origen-philocalia 21"
+    }
+  ],
+  "related": {
+    "topics": [
+      "grace-and-free-will"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
