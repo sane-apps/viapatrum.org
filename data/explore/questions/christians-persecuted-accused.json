@@ -1,0 +1,153 @@
+{
+  "id": "christians-persecuted-accused",
+  "number": 97,
+  "group": "world",
+  "question": "Why were Christians persecuted, and what were they accused of?",
+  "short": "Persecution",
+  "search": [
+    "persecution",
+    "roman persecution",
+    "atheism charge",
+    "thyestean feasts",
+    "nero",
+    "decius",
+    "diocletian",
+    "trajan pliny"
+  ],
+  "answers": [
+    {
+      "id": "charges",
+      "label": "Accused of atheism, cannibalism and incest",
+      "short": "The charges",
+      "tag": "Charges"
+    },
+    {
+      "id": "scapegoat",
+      "label": "Blamed for disasters as enemies of the gods",
+      "short": "Scapegoats",
+      "tag": "Scapegoat"
+    },
+    {
+      "id": "law",
+      "label": "Punished for the name itself, under Roman law",
+      "short": "The name",
+      "tag": "Law"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Rumor charged Christians with three crimes: atheism, cannibalism and incest (Athenagoras). The real offense was refusing the gods, whose anger was blamed for floods and plague: \"Christians to the lion!\"",
+      "cites": [
+        "athenagoras-plea-3",
+        "tertullian-apology-40"
+      ]
+    },
+    {
+      "text": "Trajan's rule (112) set the pattern for a century: do not hunt them, but punish the confessed name, and pardon anyone who sacrifices. Empire-wide persecutions came later, under Decius (250) and Diocletian (303).",
+      "cites": [
+        "trajan-to-pliny-10-97"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "athenagoras-plea-3",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "3.1",
+      "lang": "grc",
+      "answer": "charges",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Three charges are brought against us: atheism, Thyestean feasts, Oedipean intercourse. If these are true, spare no class of us; punish the crimes; destroy us root and branch with our wives and children, if any Christian lives like a beast.",
+      "original": "Τρία ἐπιφημίζουσιν ἡμῖν ἐγκλήματα, ἀθεότητα, Θυέστεια δεῖπνα, Οἰδιποδείους μίξεις. Ἀλλὰ εἰ μὲν ἀληθῆ ταῦτα, μηδενὸς γένους φείσησθε, ἐπεξέλθετε δὲ τοῖς ἀδικήμασι· σὺν γυναιξὶ καὶ παισὶ προῤῥίζους ἡμᾶς ἀποκτείνατε, εἴ γέ τις Χριστιανῶν ζῇ δίκην θηρίων.",
+      "context": "\"Thyestean feasts\" means cannibalism (a garbled picture of the Eucharist); \"Oedipean intercourse\" means incest (from \"brothers and sisters\" and the kiss of peace). \"Atheism\" meant refusing the gods.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-40",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "40.1–2",
+      "lang": "la",
+      "answer": "scapegoat",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "They think the Christians are the cause of every public disaster and every popular misfortune. If the Tiber rises to the walls, if the Nile does not rise over the fields, if the sky stands still, if the earth moves, if there is famine, if plague, at once the cry goes up: \"Christians to the lion!\" So many to one lion?",
+      "original": "quod existiment omnis publicae cladis, omnis popularis incommodi Christianos esse in causa[m]. [2] Si Tiberis ascendit in moenia, si Nilus non ascendit in arva, si caelum stetit, si terra movit, si fames, si lues, statim: \"Christianos ad leonem!\" acclamatur. Tantos ad unum?",
+      "context": "Neglect of the gods was thought to anger them and endanger the city.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trajan-to-pliny-10-97",
+      "author": "Emperor Trajan",
+      "year": 112,
+      "date": "c. 112",
+      "work": "Letter 10.97, to Pliny",
+      "locus": "10.97.1–2",
+      "lang": "la",
+      "answer": "law",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "They are not to be sought out. If they are reported and proved guilty, they must be punished, but in such a way that whoever denies he is a Christian and makes it plain by deed, that is, by worshiping our gods, shall obtain pardon for his repentance, however suspect he was in the past. Anonymous accusations must have no place in any charge; they are a very bad precedent and not of our age.",
+      "original": "Conquirendi non sunt; si deferantur et arguantur, puniendi sunt, ita tamen ut, qui negaverit se Christianum esse idque re ipsa manifestum fecerit, id est supplicando dis nostris, quamvis suspectus in praeteritum, veniam ex paenitentia impetret. Sine auctore vero propositi libelli <in> nullo crimine locum habere debent. Nam et pessimi exempli nec nostri saeculi est.",
+      "context": "The policy for over a century: no hunting, but death for the confessed name. Tertullian mocked it: if they are guilty, why not seek them; if innocent, why punish them (Apology 2.8)?",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Tacitus",
+      "work": "Annals 15.44",
+      "year": 115,
+      "why": "Nero blamed Christians for the fire of Rome (64), \"hatred of the human race\".",
+      "action": "intake",
+      "source_hint": "thelatinlibrary.com/tacitus/tac.ann15.shtml"
+    },
+    {
+      "author": "Eusebius of Caesarea",
+      "work": "Church History 8; Martyrs of Palestine",
+      "year": 313,
+      "why": "The Great Persecution as an eyewitness saw it. In the library.",
+      "action": "search",
+      "source_hint": "eusebius-martyrs-palestine"
+    },
+    {
+      "author": "Minucius Felix",
+      "work": "Octavius 8–9",
+      "year": 200,
+      "why": "The pagan case against Christians in full.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/minucius_octavius_migne_pl3_wikisource.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "persecution"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "id": "teach-about-same-sex-acts",
+  "number": 91,
+  "group": "life",
+  "question": "What did they teach about same-sex acts?",
+  "short": "Same-sex acts",
+  "search": [
+    "homosexuality",
+    "same-sex",
+    "sodomy",
+    "pederasty",
+    "romans 1:26",
+    "arsenokoitai",
+    "sexual ethics",
+    "against nature"
+  ],
+  "answers": [
+    {
+      "id": "sin",
+      "label": "Same-sex acts are sinful, against nature",
+      "short": "Sinful",
+      "tag": "Sin"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest writings forbid the pederasty common in Greek culture (\"you shall not corrupt boys\") and repeat Paul's lists.",
+      "cites": [
+        "didache-2-2-boys",
+        "polycarp-philippians-5-3"
+      ]
+    },
+    {
+      "text": "Later writers argued from nature and from Romans 1: Clement, Chrysostom and Augustine all call such acts \"against nature\". No early writer approves them.",
+      "cites": [
+        "clement-paedagogus-2-10",
+        "chrysostom-romans-homily-4",
+        "augustine-confessions-3-15"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-2-2-boys",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "2.2",
+      "lang": "grc",
+      "answer": "sin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You shall not murder; you shall not commit adultery; you shall not corrupt boys; you shall not commit sexual sin.",
+      "original": "οὐ φονεύσεις, οὐ μοιχεύσεις, οὐ παιδοφθορήσεις, οὐ πορνεύσεις",
+      "context": "\"Corrupt boys\" (paidophthoria) names the pederasty common in Greek culture. Barnabas 19.4 repeats it.",
+      "source": {
+        "book": "didache",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "polycarp-philippians-5-3",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "5.3",
+      "lang": "grc",
+      "answer": "sin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Neither the sexually immoral, nor the effeminate, nor men who lie with men will inherit the kingdom of God (1 Corinthians 6:9–10), nor those who do perverse things.",
+      "original": "οὔτε πόρνοι οὔτε μαλακοὶ οὔτε ἀρσενοκοῖται βασιλείαν θεοῦ κληρονομήσουσιν, οὔτε οἱ ποιοῦντες τὰ ἄτοπα.",
+      "context": "Polycarp quotes Paul's list to the young men of Philippi.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-paedagogus-2-10",
+      "author": "Clement of Alexandria",
+      "year": 195,
+      "date": "c. 195",
+      "work": "The Instructor",
+      "locus": "2.10.83",
+      "lang": "grc",
+      "answer": "sin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Seed, the substance that begins generation, must not be outraged, since it has the principles of nature sown in it; and to bring shame on the natural principles by turning them unreasonably to unnatural ways is utterly godless.",
+      "original": "οὐδὲ καθυβριστέον τὸ σπέρμα, ἀρχηγὸν γενέσεως οὐσίαν, συνεσπαρμένους ἔχουσαν τῆς φύσεως τοὺς λογισμούς· τοὺς δὲ κατὰ φύσιν λογισμοὺς ἀλόγως εἰς τοὺς παρὰ φύσιν καταισχύνειν πόρους ἄθεον κομιδῇ.",
+      "context": "Clement's argument from nature, close to the Stoics, covers all non-procreative acts.",
+      "source": {
+        "book": "clement-alexandria-paedagogus",
+        "section": "2.10"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "chrysostom-romans-homily-4",
+      "author": "John Chrysostom",
+      "year": 392,
+      "date": "c. 392",
+      "work": "Homilies on Romans",
+      "locus": "4.2, on Romans 1:26–27",
+      "lang": "grc",
+      "answer": "sin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What women who prostitute themselves suffer, these suffer too, or rather something more wretched. For with them, even if the union is unlawful, it is according to nature; but this is both unlawful and against nature.",
+      "original": "Ἃ γὰρ αἱ πορνευόμεναι πάσχουσι γυναῖκες, ταῦτα καὶ οὗτοι· μᾶλλον δὲ ἐκείνων ἀθλιώτερα. Ταῖς μὲν γὰρ εἰ καὶ παράνομος, ἀλλὰ κατὰ φύσιν ἡ μίξις· αὕτη δὲ καὶ παράνομος, καὶ παρὰ φύσιν.",
+      "context": "Chrysostom notes that Greek law and philosophers had tolerated such relations.",
+      "source": {
+        "book": "chrysostom-homiliae-romanos",
+        "section": "5.3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-confessions-3-15",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Confessions",
+      "locus": "3.8.15",
+      "lang": "la",
+      "answer": "sin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So the shameful acts that are against nature, such as those of the Sodomites, are everywhere and always to be detested and punished. Even if all nations did them, they would all be held guilty of the same crime by God's law, which did not make human beings to use one another in this way.",
+      "original": "itaque flagitia, quae sunt contra naturam, ubique ac semper detestanda atque punienda sunt, qualia Sodomitarum fuerunt. quae si omnes gentes facerent, eodem criminis diuina lege tenerentur, quae non sic fecit homines, ut hoc se uterentur modo.",
+      "context": "Augustine contrasts acts wrong by custom with acts wrong everywhere.",
+      "source": {
+        "book": "augustine-confessions",
+        "section": "3.15"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Athenagoras; Justin Martyr",
+      "work": "Plea 34; 1 Apology 27",
+      "year": 177,
+      "why": "Pagan practice contrasted with Christian.",
+      "action": "search",
+      "source_hint": "athenagoras-plea 34"
+    },
+    {
+      "author": "Council of Elvira; Basil",
+      "work": "Elvira canon 71; Basil Letter 217 canon 62",
+      "year": 306,
+      "why": "Church penalties.",
+      "action": "intake",
+      "source_hint": "Bruns (1839); Migne PG 32"
+    }
+  ],
+  "related": {
+    "topics": [
+      "sexual-ethics"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

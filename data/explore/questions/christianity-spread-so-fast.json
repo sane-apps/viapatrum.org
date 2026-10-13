@@ -1,0 +1,195 @@
+{
+  "id": "christianity-spread-so-fast",
+  "number": 96,
+  "group": "world",
+  "question": "How did Christianity spread so fast?",
+  "short": "How it spread",
+  "search": [
+    "growth of christianity",
+    "spread of christianity",
+    "evangelism",
+    "early church growth",
+    "conversion",
+    "rodney stark"
+  ],
+  "answers": [
+    {
+      "id": "everywhere",
+      "label": "It reached every city, class and region within a few generations",
+      "short": "Everywhere",
+      "tag": "Reach"
+    },
+    {
+      "id": "life",
+      "label": "Through ordinary lives and care for the needy",
+      "short": "Lives and care",
+      "tag": "Life"
+    },
+    {
+      "id": "martyrs",
+      "label": "Through the witness of the martyrs",
+      "short": "Martyrs",
+      "tag": "Martyrs"
+    }
+  ],
+  "overview": [
+    {
+      "text": "By about 112 a Roman governor found Christians of every age, rank and sex in cities and villages, and temples emptying. By about 200 Tertullian could claim they filled everything but the temples.",
+      "cites": [
+        "pliny-letter-10-96-numbers",
+        "tertullian-apology-37"
+      ]
+    },
+    {
+      "text": "Christians spread through ordinary life in every city and through their care for the poor, orphans, the old and prisoners. Persecution itself drew attention: \"the blood of Christians is seed\".",
+      "cites": [
+        "diognetus-5-1-5",
+        "tertullian-apology-39-care",
+        "tertullian-apology-50-b"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "pliny-letter-10-96-numbers",
+      "author": "Pliny the Younger (Roman governor)",
+      "year": 112,
+      "date": "c. 112",
+      "work": "Letter 10.96, to the emperor Trajan",
+      "locus": "10.96.9–10",
+      "lang": "la",
+      "answer": "everywhere",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "Many of every age, every rank, and both sexes are and will be brought into danger. The contagion of this superstition has spread not only through the cities but through villages and farms too. ... It is certain that temples almost deserted have begun to be frequented again.",
+      "original": "Multi enim omnis aetatis, omnis ordinis, utriusque sexus etiam vocantur in periculum et vocabuntur. Neque civitates tantum, sed vicos etiam atque agros superstitionis istius contagio pervagata est ... Certe satis constat prope iam desolata templa coepisse celebrari",
+      "context": "A hostile witness from Bithynia, eighty years after the crucifixion.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-37",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "37.4",
+      "lang": "la",
+      "answer": "everywhere",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We are of yesterday, and we have filled everything you have: cities, islands, forts, towns, market places, the very camps, tribes, town councils, the palace, the senate, the forum. We have left you only the temples.",
+      "original": "Hesterni sumus, et vestra omnia implevimus, urbes insulas castella municipia conciliabula castra ipsa tribus decurias palatium senatum forum; sola vobis reliquimus templa.",
+      "context": "Rhetoric, but meant to be believed by Roman readers.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "diognetus-5-1-5",
+      "author": "Letter to Diognetus",
+      "year": 150,
+      "date": "c. 150",
+      "work": "Letter to Diognetus",
+      "locus": "5.1–5",
+      "lang": "grc",
+      "answer": "life",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Christians are not distinguished from other people by country, language or customs. They do not live in cities of their own, speak a strange dialect, or follow an odd way of life. ... They live in Greek and barbarian cities, as each one's lot was cast, and follow local customs in dress, food and the rest of life, yet they show a wonderful and admittedly strange way of life. They live in their own countries, but as foreigners.",
+      "original": "Χριστιανοὶ γὰρ οὔτε γῇ οὔτε φωνῇ οὔτε ἔθεσι διακεκριμένοι τῶν λοιπῶν εἰσιν ἀνθρώπων. οὔτε γάρ που πόλεις ἰδίας κατοικοῦσιν οὔτε διαλέκτῳ τινὶ παρηλλαγμένῃ χρῶνται οὔτε βίον παράσημον ἀσκοῦσιν. ... κατοικοῦντες δὲ πόλεις ἑλληνίδας τε καὶ βαρβάρους, ὡς ἕκαστος ἐκληρώθη, καὶ τοῖς ἐγχωρίοις ἔθεσιν ἀκολουθοῦντες ἔν τε ἐσθῆτι καὶ διαίτῃ καὶ τῷ λοιπῷ βίῳ θαυμαστὴν καὶ ὁμολογουμένως παράδοξον ἐνδείκνυνται τὴν κατάστασιν τῆς ἑαυτῶν πολιτείας. πατρίδας οἰκοῦσιν ἰδίας, ἀλλ’",
+      "context": "The new faith spread through ordinary lives in every city.",
+      "source": {
+        "book": "diognetus-epistle",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-39-care",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "39.6–7",
+      "lang": "la",
+      "answer": "life",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It is spent ... to feed and bury the poor, for boys and girls without means or parents, for the old confined at home, for the shipwrecked, and for any in the mines, on the islands or in prison for the cause of God. ... \"See,\" they say, \"how they love one another.\"",
+      "original": "sed egenis alendis humandisque et pueris ac puellis re ac parentibus destitutis iamque domesticis senibus, item naufragis et si qui in metallis et si qui in insulis vel in custodiis, dumtaxat ex causa dei sectae",
+      "context": "Pagan observers noticed Christian care for outsiders too. Emperor Julian complained that the \"Galileans\" fed pagan poor as well as their own.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-50-b",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "50.13",
+      "lang": "la",
+      "answer": "martyrs",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Yet none of your more refined cruelty does any good; it is rather an attraction to the sect. We grow more numerous every time you mow us down: the blood of Christians is seed.",
+      "original": "Nec quicquam tamen proficit exquisitior quaeque crudelitas vestra; illecebra est magis sectae. Plures efficimur, quotiens metimur a vobis: semen est sanguis Christianorum.",
+      "context": "Martyrdom drew attention and converts.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Julian the Apostate",
+      "work": "Letter 22 to Arsacius",
+      "year": 362,
+      "why": "A pagan emperor admits that Christian charity to strangers spread the faith.",
+      "action": "intake",
+      "source_hint": "Bidez and Cumont (1922, copyright) as note; Hertlein (Teubner 1876)"
+    },
+    {
+      "author": "Eusebius of Caesarea",
+      "work": "Church History 3.37",
+      "year": 325,
+      "why": "Traveling evangelists of the second century.",
+      "action": "search",
+      "source_hint": "eusebius-church-history 3.37"
+    },
+    {
+      "author": "Origen of Alexandria",
+      "work": "Against Celsus 3.9",
+      "year": 248,
+      "why": "Christians travel to towns and villages to win others.",
+      "action": "search",
+      "source_hint": "origen-contra-celsum"
+    }
+  ],
+  "related": {
+    "topics": [
+      "mission"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

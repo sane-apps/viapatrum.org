@@ -1,0 +1,196 @@
+{
+  "id": "die-rather-than-offer-pinch",
+  "number": 95,
+  "group": "life",
+  "question": "Why die rather than offer a pinch of incense? What is martyrdom for?",
+  "short": "Martyrdom",
+  "search": [
+    "martyrdom",
+    "martyrs",
+    "persecution",
+    "incense to caesar",
+    "emperor cult",
+    "seed of the church",
+    "voluntary martyrdom",
+    "witness"
+  ],
+  "answers": [
+    {
+      "id": "witness",
+      "label": "To witness to Christ and not deny him; death joins the martyr to Christ",
+      "short": "Witness to Christ",
+      "tag": "Witness"
+    },
+    {
+      "id": "not-seek",
+      "label": "But one should not seek or provoke martyrdom",
+      "short": "Do not seek it",
+      "tag": "Not seek"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The Roman test was simple: a little incense and wine before the emperor's image, and a curse on Christ (Pliny, about 112). Christians would not, because that was worship and denial.",
+      "cites": [
+        "pliny-letter-10-96-test",
+        "martyrdom-polycarp-9"
+      ]
+    },
+    {
+      "text": "Martyrs saw death as witness and as union with Christ: Ignatius calls himself \"God's wheat\". Tertullian told Rome that the blood of Christians is seed.",
+      "cites": [
+        "ignatius-romans-4-1",
+        "tertullian-apology-50"
+      ]
+    },
+    {
+      "text": "The Church did not praise those who handed themselves over: the Smyrnaeans warn by the example of Quintus, who did so and then gave way.",
+      "cites": [
+        "martyrdom-polycarp-4"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "pliny-letter-10-96-test",
+      "author": "Pliny the Younger (Roman governor)",
+      "year": 112,
+      "date": "c. 112",
+      "work": "Letter 10.96, to the emperor Trajan",
+      "locus": "10.96.3–5",
+      "lang": "la",
+      "answer": "witness",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "I asked them in person whether they were Christians. Those who confessed I asked a second and third time, threatening punishment; those who persisted I ordered to be led away. For I did not doubt that, whatever it was they confessed, their stubbornness and unbending obstinacy deserved to be punished. ... Those who denied that they were or had been Christians, when they called on the gods after me, and offered incense and wine to your image, which I had ordered brought for this purpose with the statues of the gods, and moreover cursed Christ, none of which those who are really Christians can be forced to do, I thought should be released.",
+      "original": "Interrogavi ipsos an essent Christiani. Confitentes iterum ac tertio interrogavi supplicium minatus; perseverantes duci iussi. Neque enim dubitabam, qualecumque esset quod faterentur, pertinaciam certe et inflexibilem obstinationem debere puniri. ... Qui negabant esse se Christianos aut fuisse, cum praeeunte me deos appellarent et imagini tuae, quam propter hoc iusseram cum simulacris numinum afferri, ture ac vino supplicarent, praeterea male dicerent Christo, quorum nihil cogi posse dicuntur qui sunt re vera Christiani, dimittendos putavi.",
+      "context": "The test was a pinch of incense and wine before the emperor's image, and cursing Christ. The name itself was the crime.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "martyrdom-polycarp-9",
+      "author": "Martyrdom of Polycarp",
+      "year": 156,
+      "date": "c. 156",
+      "work": "Martyrdom of Polycarp",
+      "locus": "9.3",
+      "lang": "grc",
+      "answer": "witness",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "When the proconsul pressed him and said, \"Swear, and I will release you; curse Christ,\" Polycarp said: \"Eighty-six years I have served him, and he has done me no wrong. How can I blaspheme my King who saved me?\"",
+      "original": "ἐγκειμένου δὲ τοῦ ἀνθυπάτου καὶ λέγοντος: Ὄμοσον, καὶ ἀπολύω σε, λοιδόρησον τὸν Χριστόν, ἔφη ὁ Πολύκαρπος: Ὀγδοήκοντα καὶ ἓξ ἔτη δουλεύω αὐτῷ, καὶ οὐδέν με ἠδίκησεν: καὶ πῶς δύναμαι βλασφημῆσαι τὸν βασιλέα μου τὸν σώσαντά με;",
+      "context": "\"Martyr\" means \"witness\". Denying Christ would be calling him a liar.",
+      "source": {
+        "book": "martyrdom-polycarp",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ignatius-romans-4-1",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to the Romans",
+      "locus": "4.1–2",
+      "lang": "grc",
+      "answer": "witness",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I am writing to all the churches and telling everyone that I die for God willingly, unless you hinder me. I beg you, do not show me untimely kindness. Let me be food for the beasts, through which I can reach God. I am God's wheat, and I am ground by the teeth of the beasts so that I may be found pure bread of Christ. ... Then I will truly be a disciple of Jesus Christ.",
+      "original": "Ἐγὼ γράφω πάσαις ταῖς ἐκκλησίαις, καὶ ἐντέλλομαι πᾶσιν, ὅτι ἐγὼ ἑκὼν ὑπὲρ θεοῦ ἀποθνήσκω, ἐάνπερ ὑμεῖς μὴ κωλύσητε. παρακαλῶ ὑμᾶς, μὴ εὔνοια ἄκαιρος γένησθέ μοι. ἄφετέ με θηρίων εἶναι βοράν, δἰ ὦν ἔνεστιν θεοῦ ἐπιτυχεῖν. σῖτός εἰμι θεοῦ καὶ δἰ ὀδόντων θηρίων ἀλήθομαι, ἵνα καθαρὸς ἄρτος εὑρεθῶ τοῦ Χριστοῦ. ... τότε ἔσομαι μαθητὴς ἀληθῶς Ἰησοῦ Χριστοῦ",
+      "context": "Martyrdom as imitation of Christ's passion and as Eucharist (\"pure bread\").",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "4.4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-50",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "50.13",
+      "lang": "la",
+      "answer": "witness",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Yet none of your more refined cruelty does any good; it is rather an attraction to the sect. We grow more numerous every time you mow us down: the blood of Christians is seed.",
+      "original": "Nec quicquam tamen proficit exquisitior quaeque crudelitas vestra; illecebra est magis sectae. Plures efficimur, quotiens metimur a vobis: semen est sanguis Christianorum.",
+      "context": "The source of the saying \"the blood of the martyrs is the seed of the Church\".",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "martyrdom-polycarp-4",
+      "author": "Martyrdom of Polycarp",
+      "year": 156,
+      "date": "c. 156",
+      "work": "Martyrdom of Polycarp",
+      "locus": "4.1",
+      "lang": "grc",
+      "answer": "not-seek",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "One, named Quintus, a Phrygian lately come from Phrygia, lost his nerve when he saw the beasts. He was the one who had forced himself and some others to come forward of their own accord. The proconsul, pleading with him much, persuaded him to swear and to sacrifice. For this reason, brothers, we do not praise those who give themselves up, since the Gospel does not teach so.",
+      "original": "Εἷς δέ, ὀνόματι Κόϊντος, Φρύξ προσφάτως ἐληλυθὼς ἀπὸ τῆς Φρυγίας, ἰδὼν τὰ θηρία ἐδειλίασεν. οὗτος δὲ ἦν ὁ παραβιασάμενος ἑαυτόν τε καί τινας προσελθεῖν ἑκόντας. τοῦτον ὁ ἀνθύπατος πολλὰ ἐκλιπαρήσας ἔπεισεν ὀμόσαι καὶ ἐπιθῦσαι. διὰ τοῦτο οὖν, ἀδελφοί, οὐκ ἐπαινοῦμεν τοὺς προδιδόντας ἑαυτούς, ἐπειδὴ οὐχ οὕτως διδάσκει τὸ εὐαγγέλιον.",
+      "context": "Polycarp himself withdrew to a farm and waited to be found.",
+      "source": {
+        "book": "martyrdom-polycarp",
+        "section": "4"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Exhortation to Martyrdom",
+      "year": 235,
+      "why": "The theology of martyrdom. In the library with On Prayer; to be added.",
+      "action": "search",
+      "source_hint": "origen-prayer-martyrdom"
+    },
+    {
+      "author": "Clement of Alexandria",
+      "work": "Stromata 4.10",
+      "year": 200,
+      "why": "Against rushing into martyrdom.",
+      "action": "search",
+      "source_hint": "clement-alexandria-stromata 4.10"
+    },
+    {
+      "author": "Cyprian of Carthage",
+      "work": "On the Lapsed 8–9",
+      "year": 251,
+      "why": "Those who sacrificed or bought certificates under Decius.",
+      "action": "search",
+      "source_hint": "cyprian-on-the-lapsed"
+    }
+  ],
+  "related": {
+    "topics": [
+      "martyrdom"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

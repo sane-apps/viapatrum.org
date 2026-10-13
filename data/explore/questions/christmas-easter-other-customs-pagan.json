@@ -1,0 +1,170 @@
+{
+  "id": "christmas-easter-other-customs-pagan",
+  "number": 99,
+  "group": "world",
+  "question": "Are Christmas, Easter and other customs pagan in origin? When was Easter fixed?",
+  "short": "Pagan origins? Easter's date",
+  "search": [
+    "pagan origins",
+    "christmas december 25",
+    "sol invictus",
+    "easter date",
+    "quartodeciman",
+    "passover",
+    "ishtar",
+    "saturnalia",
+    "council of nicaea easter"
+  ],
+  "answers": [
+    {
+      "id": "christian",
+      "label": "The feasts come from Christian events and reckonings",
+      "short": "Christian roots",
+      "tag": "Christian"
+    },
+    {
+      "id": "date",
+      "label": "Easter's date was disputed until the Sunday rule prevailed",
+      "short": "Easter's date",
+      "tag": "Date"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Easter grew from Passover, not a pagan goddess. In the second century Asia kept it on 14 Nisan with the Jews, Rome on the following Sunday; Irenaeus kept the peace, and Nicaea (325) made the Sunday rule general.",
+      "cites": [
+        "polycrates-in-eusebius-5-24",
+        "irenaeus-letter-to-victor-b",
+        "nicaea-synodal-letter-easter-b"
+      ]
+    },
+    {
+      "text": "Pagans suspected sun worship in Christian customs even by 197; Tertullian replied that Sunday and facing east had Christian reasons. Christmas on 25 December is first attested in Rome in 336; whether it was set against a pagan feast or reckoned from the date of Christ's death is still debated.",
+      "cites": [
+        "tertullian-apology-16-sun"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "polycrates-in-eusebius-5-24",
+      "author": "Polycrates of Ephesus (quoted by Eusebius)",
+      "year": 190,
+      "date": "c. 190",
+      "work": "Letter to Victor of Rome, in Eusebius, Church History",
+      "locus": "5.24.2–3",
+      "lang": "grc",
+      "answer": "date",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "We keep the day exactly, neither adding nor taking away. For in Asia great lights have fallen asleep, who will rise on the day of the Lord's coming ... Philip of the twelve apostles, who sleeps at Hierapolis ... and John, who leaned on the Lord's breast ...",
+      "original": "ἡμεῖς οὖν ἀρρᾳδιούργητον ἄγομεν τὴν ἡμέραν, “μήτε προστιθέντες μήτε ἀφαιρούμενοι. καὶ γὰρ “κατὰ τὴν Ἀσίαν μεγάλα στοιχεῖα κεκοίμηται, ἅτινα “ἀναστήσεται τῇ ἡμέρᾳ τῆς παρουσίας τοῦ κυρίου ... Φίλιππον τὸν τῶν δώδεκα ἀπο- “στόλων ... ἔτι δὲ καὶ Ἰωάννης ὁ “ἐπὶ τὸ στῆθος τοῦ κυρίου ἀναπεσὼν",
+      "context": "The churches of Asia kept Easter on 14 Nisan, the Jewish Passover date, whatever the weekday, claiming John's authority. Rome kept the following Sunday. Victor tried to excommunicate Asia.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-letter-to-victor-b",
+      "author": "Irenaeus of Lyons",
+      "year": 190,
+      "date": "c. 190",
+      "work": "Letter to Victor of Rome, in Eusebius, Church History 5.24",
+      "locus": "5.24.12–13",
+      "lang": "grc",
+      "answer": "date",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The dispute is not only about the day, but also about the form of the fast itself. Some think they should fast one day, others two, others more; some measure their day as forty hours, day and night. Such variety among those who keep it did not arise in our time but long before us ... and all these nonetheless lived in peace, and we live in peace with one another; and the disagreement about the fast confirms the agreement in faith.",
+      "original": "Οὐδὲ γὰρ μόνον περὶ τῆς ἡμέρας ἐστὶν ἡ ἀμφισβήτησις, ἀλλὰ καὶ περὶ τοῦ εἴδους αὐτοῦ τῆς νηστείας. οἱ μὲν γὰρ οἴονται μίαν ἡμέραν δεῖν αὐτοὺς νηστεύειν· οἱ δὲ δύο, οἱ δὲ καὶ πλείονας. οἱ δὲ τεσσαράκοντα ὥρας ἡμερινάς τε καὶ νυκτερινὰς συμμετροῦσι τὴν ἡμέραν αὐτῶν. ... καὶ οὐδὲν ἔλαττον πάντες οὗτοι εἰρήνευσάν τε, καὶ εἰρηνεύομεν πρὸς ἀλλήλους· καὶ ἡ διαφωνία τῆς νηστείας, τὴν ὁμόνοιαν τῆς πίστεως συνίστησι.",
+      "context": "Irenaeus urged Victor not to cut off whole churches for keeping an ancient custom. Nicaea (325) later settled on the Sunday reckoning.",
+      "source": {
+        "book": "irenaeus-letter-victor",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "nicaea-synodal-letter-easter-b",
+      "author": "Council of Nicaea (synodal letter, in Socrates)",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Letter to the Church of Alexandria, in Socrates, Church History",
+      "locus": "1.9",
+      "lang": "grc",
+      "answer": "date",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "We also bring you the good news about agreement on the most holy Pascha: all the brothers in the East who used to keep it with the Jews will from now on keep it in agreement with the Romans, with us, and with all who have kept the Pascha with us from of old.",
+      "original": "Εὐαγγελιζόμεθα δὲ ὑμῖν, περὶ τῆς συμφωνίας τοῦ ἁγιωτάτου Πάσχα, ὅτι ὑμετέραις εὐχαῖς κατωρθώθη καὶ τοῦτο τὸ μέρος: ὥς τε πάντας τοὺς ἐν τῇ ἑῴᾳ ἀδελφοὺς, τοὺς μετὰ τῶν Ἰουδαίων τὸ πρότερον ποιοῦντας, συμφώνως Ῥωμαίοις καὶ ἡμῖν, καὶ πᾶσιν ὑμῖν τοῖς ἐξ ἀρχαίου μεθ̓ ἡμῶν φυλάττουσι τὸ Πάσχα, ἐκ τοῦ δεῦρο ἄγειν.",
+      "context": "East and West today still differ, because they use different calendars (Julian and Gregorian).",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-16-sun",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "16.9–11",
+      "lang": "la",
+      "answer": "christian",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Others, more humanely, think the Sun is our god ... Hence the suspicion, because it has become known that we pray toward the east. ... If we give the day of the Sun to joy, it is for a reason far from sun worship.",
+      "original": "denique inde suspicio, quod innotuerit nos ad orientis regionem precari. ... aeque si diem solis laetitiae indulgemus, alia longe ratione quam religione solis",
+      "context": "Pagans already suspected Christian customs of sun worship. Tertullian says the reasons were Christian: the resurrection on the first day, and Christ as the rising light.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Chronograph of 354",
+      "work": "Depositio martyrum",
+      "year": 336,
+      "why": "The first record of 25 December as Christ's birth, at Rome.",
+      "action": "intake",
+      "source_hint": "Mommsen, MGH Chronica minora 1 (1892)"
+    },
+    {
+      "author": "Pseudo-Cyprian",
+      "work": "On the Computation of Easter (De pascha computus)",
+      "year": 243,
+      "why": "Dates Christ's birth to 28 March from a calendar of creation: an early date-reckoning without any pagan feast.",
+      "action": "intake",
+      "source_hint": "Hartel, CSEL 3.3 (1871)"
+    },
+    {
+      "author": "Gregory I",
+      "work": "Letter to Mellitus (in Bede 1.30)",
+      "year": 601,
+      "why": "Pagan temples and feasts in England to be turned to Christian use.",
+      "action": "intake",
+      "source_hint": "Bede, Historia ecclesiastica (Plummer 1896)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "feasts-and-calendar"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

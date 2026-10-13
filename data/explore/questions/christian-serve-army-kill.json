@@ -1,0 +1,212 @@
+{
+  "id": "christian-serve-army-kill",
+  "number": 84,
+  "group": "life",
+  "question": "Could a Christian serve in the army or kill?",
+  "short": "Christians and war",
+  "search": [
+    "pacifism",
+    "just war",
+    "military service",
+    "christian soldiers",
+    "nonviolence",
+    "thou shalt not kill",
+    "conscientious objection"
+  ],
+  "answers": [
+    {
+      "id": "refuse",
+      "label": "No: Christians must not kill or serve as soldiers",
+      "short": "Refuse",
+      "tag": "Refuse"
+    },
+    {
+      "id": "just-war",
+      "label": "Yes, in a just war under lawful authority",
+      "short": "Just war",
+      "tag": "Just war"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Before Constantine, the writers who address it reject killing and military service: Tertullian (\"in disarming Peter, the Lord unbelted every soldier\"), Origen (we fight by prayer, not in the ranks), and Lactantius. Yet Christians did serve in the army, as Tertullian himself admits.",
+      "cites": [
+        "tertullian-on-idolatry-19",
+        "tertullian-crown-11",
+        "origen-contra-celsum-8-73",
+        "lactantius-divine-institutes-6-20-army"
+      ]
+    },
+    {
+      "text": "Augustine set out the just-war view: the evil in war is cruelty, lust for power and revenge, not the soldier's task. Most churches followed him.",
+      "cites": [
+        "augustine-against-faustus-22-74",
+        "westminster-larger-catechism-136"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "tertullian-on-idolatry-19",
+      "author": "Tertullian",
+      "year": 200,
+      "date": "c. 200",
+      "work": "On Idolatry",
+      "locus": "19.2–3",
+      "lang": "la",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "How will a Christian make war, indeed how will he serve as a soldier even in peace, without the sword, which the Lord took away? For although soldiers came to John and received a rule to keep, and a centurion believed, the Lord afterward, in disarming Peter, unbelted every soldier. No dress is lawful among us that is assigned to an unlawful act.",
+      "original": "quomodo autem bellabit, immo quomodo etiam in pace militabit sine gladio, quem dominus abstulit? nam etsi adierant milites ad Iohannem et formam obseruationis acceperant, si etiam centurio crediderat, omnem postea militem dominus in Petro exarmando discinxit. nullus habitus licitus est apud nos illicito actui adscriptus.",
+      "context": "Tertullian also objects to the soldier's oath and to idolatrous army rites.",
+      "source": {
+        "book": "tertullian-on-idolatry",
+        "section": "19"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-crown-11",
+      "author": "Tertullian",
+      "year": 211,
+      "date": "c. 211",
+      "work": "On the Crown",
+      "locus": "11.1–2",
+      "lang": "la",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Shall it be lawful to make one's living by the sword, when the Lord declares that he who uses the sword will perish by the sword? Shall the son of peace take part in battle, when it is not fitting for him even to go to law? Shall he administer chains, prison, torture and punishment, when he does not avenge even his own wrongs?",
+      "original": "Licebit in gladio conversari, domino pronuntiante gladio periturum. qui gladio fuerit usus? Et proelio operabitur filius pacis, cui nec litigare conveniet? Et vincula et carcerem et tormenta et supplicia administrabit, nec suarum ultor iniuriarum?",
+      "context": "Tertullian allows that soldiers converted in service face a hard case (11.4). Christians were already serving in the army by his time.",
+      "source": {
+        "book": "tertullian-on-the-crown",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-contra-celsum-8-73",
+      "author": "Origen of Alexandria",
+      "year": 248,
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "8.73",
+      "lang": "grc",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We, by our prayers, overthrow all the demons who stir up wars, break oaths and disturb the peace, and so help the emperors more than those who seem to fight. ... We fight for the emperor more than others; we do not serve in the army with him, even if he presses us, but we fight on his behalf, forming our own army of piety through our prayers to God.",
+      "original": "ἡμεῖς δὲ καὶ ταῖς εὐχαῖς πάντας δαίμονας. τοὺς ἐγείροντας τὰ πολεμικὰ καὶ ὅρκους συγχέοντας καὶ τὴν εἰρήνην ταράσσοντας, καθαιροῦντες μᾶλλον βοηθοῦμεν τοῖς βασιλεύουσιν ἤπερ οἱ δοκοῦντες στρατεύεσθαι. ... ἡμεῖς καὶ μᾶλλον ὑπερμαχοῦμεν τοῦ βασιλέως· καὶ οὐ συστρατευόμεθα μὲν αὐτῷ, κἂν ἐπείγῃ, στρατευόμεθα δὲ ὑπὲρ αὐτοῦ ἴδιον στρατόπεδον εὐσεβείας συγκροτοῦντες διὰ τῶν πρὸς τὸ θεῖον ἐντεύξεων.",
+      "context": "Origen answers Celsus's charge that Christians will not defend the empire.",
+      "source": {
+        "witness": "books/origen-contra-celsum/sources/cels_b8_working_greek.txt",
+        "edition": "Koetschau, GCS 3 (1899)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "lactantius-divine-institutes-6-20-army",
+      "author": "Lactantius",
+      "year": 313,
+      "date": "c. 313",
+      "work": "Divine Institutes",
+      "locus": "6.20.15–17",
+      "lang": "la",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "When God forbids us to kill, he forbids not only robbery, which is not allowed even by public laws, but also what people think lawful. So it will not be lawful for a just man to serve as a soldier, since his warfare is justice itself, nor to accuse anyone of a capital crime, for it makes no difference whether you kill with the sword or with a word. ... Killing a human being, whom God willed to be a sacred creature, is always wrong.",
+      "original": "non enim cum occidere deus uetat, latrocinari nos tantum prohibet, quod ne per leges quidem publicas licet, sed ea quoque ne fiant monet quae aput homines pro licitis habentur. ita neque militare iusto licebit, cuius militia est ipsa iustitia, neque uero accusare quemquam crimine capitali, quia nihil distat utrumne ferro an uerbo potius occidas ... quin occidere hominem sit semper nefas, quem deus sacrosanctum animal esse uoluit.",
+      "context": "Written just before Constantine's victory. Lactantius later tutored Constantine's son.",
+      "source": {
+        "book": "lactantius-divine-institutes",
+        "section": "6.20"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-against-faustus-22-74",
+      "author": "Augustine of Hippo",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Against Faustus",
+      "locus": "22.74",
+      "lang": "la",
+      "answer": "just-war",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What is blamed in war? That people die who will die some day anyway, so that the victors may live in peace? To blame that is for the timid, not the religious. The desire to harm, cruelty in revenge, a restless and implacable mind, savagery in rebellion, lust for domination and the like: these are what are rightly blamed in wars. ... Otherwise John, when soldiers came to be baptized and asked \"And what shall we do?\", would have told them to throw down their arms.",
+      "original": "quid enim culpatur in bello? an quia moriuntur quandoque morituri, ut domentur in pace uicturi? hoc reprehendere timidorum est. non religiosorum. nocendi cupiditas, ulciscendi crudelitas, inpacatus atque inplacabilis animus, feritas rebellandi, libido dominandi et si qua similia, haec sunt, quae in bellis iure culpantur",
+      "context": "The root of the Western just-war tradition: the wrong in war is in the heart and the cause, not in soldiering as such.",
+      "source": {
+        "book": "augustine-against-faustus",
+        "section": "22.74"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-larger-catechism-136",
+      "author": "Westminster Assembly",
+      "year": 1648,
+      "date": "1648",
+      "work": "Westminster Larger Catechism",
+      "locus": "Q. 136",
+      "lang": "en",
+      "answer": "just-war",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The sins forbidden in the sixth commandment are, all taking away the life of ourselves, or of others, except in case of public justice, lawful war, or necessary defense",
+      "original": "The sins forbidden in the sixth commandment are, all taking away the life of ourselves, or of others, except in case of public justice, lawful war, or necessary defense",
+      "context": "Most churches after Augustine allow lawful war. Mennonites and Quakers keep the early refusal.",
+      "source": {
+        "url": "https://www.ccel.org/ccel/anonymous/westminster2.i.vi.html",
+        "edition": "Westminster Larger Catechism, question 136 (1648)"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Hippolytus (attributed)",
+      "work": "Apostolic Tradition 16",
+      "year": 215,
+      "why": "A soldier under authority must not kill; a catechumen who wants to be a soldier is rejected.",
+      "action": "intake",
+      "source_hint": "Hauler (1900)"
+    },
+    {
+      "author": "Council of Arles",
+      "work": "Canon 3",
+      "year": 314,
+      "why": "Those who throw down their arms in peacetime are excommunicated.",
+      "action": "intake",
+      "source_hint": "Munier, CCSL 148 (copyright) as note; Bruns (1839)"
+    },
+    {
+      "author": "Basil of Caesarea",
+      "work": "Letter 188, canon 13",
+      "year": 374,
+      "why": "Soldiers who kill in war should abstain from communion for three years. In the PG 32 scan, poor OCR.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "war-and-peace"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

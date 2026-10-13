@@ -1,0 +1,157 @@
+{
+  "id": "accept-slavery",
+  "number": 90,
+  "group": "life",
+  "question": "Did the early church accept slavery?",
+  "short": "Slavery",
+  "search": [
+    "slavery",
+    "slaves",
+    "manumission",
+    "philemon",
+    "abolition",
+    "brothers in christ",
+    "gregory of nyssa slavery"
+  ],
+  "answers": [
+    {
+      "id": "accepted",
+      "label": "It accepted slavery as a fact but changed how slaves were treated",
+      "short": "Accepted",
+      "tag": "Accepted"
+    },
+    {
+      "id": "brothers",
+      "label": "Slaves and masters were equal brothers in Christ",
+      "short": "Brothers",
+      "tag": "Brothers"
+    },
+    {
+      "id": "condemned",
+      "label": "Owning human beings is a sin",
+      "short": "Condemned",
+      "tag": "Condemned"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The early church did not try to abolish slavery. Ignatius tells masters not to be proud, and slaves not to expect the church to buy their freedom, which shows some churches did.",
+      "cites": [
+        "ignatius-to-polycarp-4-3"
+      ]
+    },
+    {
+      "text": "Inside the Church, slaves and free were \"brothers\" (Minucius Felix), and a former slave could become bishop of Rome.",
+      "cites": [
+        "minucius-felix-octavius-31"
+      ]
+    },
+    {
+      "text": "Gregory of Nyssa, about 379, condemned owning human beings outright: for how many coins did you buy the image of God? He was almost alone in the ancient world.",
+      "cites": [
+        "gregory-nyssa-ecclesiastes-homily-4"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "ignatius-to-polycarp-4-3",
+      "author": "Ignatius of Antioch",
+      "year": 110,
+      "date": "c. 110",
+      "work": "Letter to Polycarp",
+      "locus": "4.3",
+      "lang": "grc",
+      "answer": "accepted",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Do not be haughty toward slaves, male or female; but neither let them be puffed up. Let them serve all the more for the glory of God, so that they may obtain a better freedom from God. Let them not desire to be set free at the common expense, so that they may not be found slaves of desire.",
+      "original": "δούλους καὶ δούλας μὴ ὑπερηφάνει: ἀλλὰ μηδὲ αὐτοὶ φυσιούσθωσαν, ἀλλ’ εἰς δόξαν θεοῦ πλέον δουλευέτωσαν, ἵνα κρείττονος ἐλευθερίας ἀπὸ θεοῦ τύχωσιν. μὴ ἐράτωσαν ἀπὸ τοῦ κοινοῦ ἐλευθεροῦσθαι, ἵνα μὴ δοῦλοι εὑρεθῶσιν ἐπιθυμίας.",
+      "context": "\"At the common expense\" shows that churches sometimes paid to free slaves. Ignatius discourages slaves from expecting it.",
+      "source": {
+        "book": "ignatius-letters",
+        "section": "7.4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "minucius-felix-octavius-31",
+      "author": "Minucius Felix",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Octavius",
+      "locus": "31.8",
+      "lang": "la",
+      "answer": "brothers",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "So we love one another with mutual love, which you resent, since we do not know how to hate; so we call one another brothers, which you envy, as children of one God and Father.",
+      "original": "sic mutuo, quod doletis, amore diligimus, quoniam odisse non novimus: sic nos, quod invidetis, fratres vocamus, ut unius Dei parentis",
+      "context": "Masters and slaves alike were \"brothers\" in the Church. Callistus, a former slave, became bishop of Rome about 217.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/minucius_octavius_migne_pl3_wikisource.txt",
+        "edition": "Migne PL 3 (Wikisource text)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-nyssa-ecclesiastes-homily-4",
+      "author": "Gregory of Nyssa",
+      "year": 379,
+      "date": "c. 379",
+      "work": "Homilies on Ecclesiastes",
+      "locus": "4, on Ecclesiastes 2:7",
+      "lang": "grc",
+      "answer": "condemned",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"I got me slaves and slave girls\" (Ecclesiastes 2:7). What do you mean? You condemn to slavery a human being, whose nature is free and self-governing, and you make laws against God, overturning his law for nature. ... \"I got me slaves and slave girls.\" For what price, tell me? What did you find among existing things worth as much as this nature? For how many obols did you value the image of God? For how many staters did you sell the nature God shaped? ... Only God could do this; or rather, not even God himself.",
+      "original": "Ἐκτησάμην δούλους καὶ παιδίσκας. τί λέγεις; δουλείᾳ καταδικάζεις τὸν ἄνθρωπον, οὗ ἐλευθέρα ἡ φύσις καὶ αὐτεξού σιος, καὶ ἀντινομοθετεῖς τῷ θεῷ, ἀνατρέπων αὐτοῦ τὸν ἐπὶ τῇ ... Ἐκτησάμην γὰρ δούλους καὶ παιδίσκας. ποίας, εἰπέ μοι, τιμῆς; τί εὗρες ἐν τοῖς οὖσι τῆς φύσεως ταύτης ἀντάξιον; πόσου κέρματος ἐτιμήσω τὸν λόγον; πόσοις ὀβολοῖς τὴν εἰκόνα τοῦ θεοῦ ἀντεστάθμησας; πόσων στατήρων τὴν θεόπλαστον φύσιν ἀπενεπόλησας; ... μόνου θεοῦ τὸ δυνηθῆναι τοῦτο, μᾶλλον δὲ οὐδὲ αὐτοῦ τοῦ θεοῦ.",
+      "context": "A Lenten sermon about 379. It is the only surviving ancient text that condemns slave-owning itself, not just its abuses.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-gregory-of-nyssa-pg-44-46-in-ecclesiasten.txt",
+        "edition": "Migne PG 44, Khazarzar text"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Lactantius",
+      "work": "Divine Institutes 5.15",
+      "year": 310,
+      "why": "\"Among us there are no slaves; we call them brothers in spirit.\" In the library; to be found.",
+      "action": "search",
+      "source_hint": "lactantius-divine-institutes 5.15"
+    },
+    {
+      "author": "Augustine of Hippo",
+      "work": "City of God 19.15",
+      "year": 426,
+      "why": "Slavery as a result of sin, not nature.",
+      "action": "intake",
+      "source_hint": "thelatinlibrary.com/augustine/civ19.shtml"
+    },
+    {
+      "author": "John Chrysostom",
+      "work": "Homilies on 1 Corinthians 40.5",
+      "year": 392,
+      "why": "Buy slaves to teach them a trade and set them free.",
+      "action": "search",
+      "source_hint": "chrysostom-homiliae-1-corinthios"
+    }
+  ],
+  "related": {
+    "topics": [
+      "slavery"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "id": "answer-pagans-jews",
+  "number": 98,
+  "group": "world",
+  "question": "How did they answer pagans and Jews?",
+  "short": "Answering critics",
+  "search": [
+    "apologetics",
+    "apologists",
+    "justin martyr",
+    "against celsus",
+    "dialogue with trypho",
+    "argument from prophecy",
+    "adversus judaeos"
+  ],
+  "answers": [
+    {
+      "id": "prophecy",
+      "label": "Fulfilled prophecy proves that Jesus is the Christ",
+      "short": "Prophecy",
+      "tag": "Prophecy"
+    },
+    {
+      "id": "philosophy",
+      "label": "Christ is the true philosophy, the Word the philosophers glimpsed",
+      "short": "True philosophy",
+      "tag": "Philosophy"
+    },
+    {
+      "id": "same-god",
+      "label": "To Jews: the same God, and the same Scriptures rightly read",
+      "short": "Same God",
+      "tag": "Scriptures"
+    }
+  ],
+  "overview": [
+    {
+      "text": "To pagans, the apologists argued from fulfilled prophecy, \"the greatest and truest proof\", and presented Christianity as the true philosophy: whatever was well said belongs to Christians.",
+      "cites": [
+        "justin-1apol-30",
+        "justin-2apol-13-b"
+      ]
+    },
+    {
+      "text": "To Jews, they argued over the meaning of the shared Scriptures: one God, who gave a new covenant. Justin's Dialogue is a courteous debate; later writings against the Jews were often harsh.",
+      "cites": [
+        "justin-dialogue-11"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-30",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "30",
+      "lang": "grc",
+      "answer": "prophecy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So that no one may answer us: \"What prevents the one you call Christ, a man born of men, from having done what we call his mighty works by magic, and so seeming to be the Son of God?\", we will now give our proof, not trusting those who merely assert, but necessarily persuaded by those who prophesied before the events, since we see with our own eyes things happening and having happened as they were foretold. This, we think, will seem to you too the greatest and truest proof.",
+      "original": "Ὅπως δὲ μή τις εἴπῃ ἀντιτιθεὶς ἡμῖν, τί κωλί ει καὶ τὸν παρ᾿ ἡμῖν λεγόμενον Χριστόν, ἄνθρωπον ἐξ ἀνθρώπων ὄντα, μαγικῇ τέχνῃ ἃς λέγομεν δυνάμεις πεποιηκέναι καὶ δόξαι διὰ τοῦτο υἱὸν θεοῦ εἶναι, τήν ἀπόδειξιν ἤδη ποιησόμεθα, οὐ τοῖς λέγουσι πιστεύοντες, ἀλλὰ τοῖς προφητεύουσι πρὶν ἢ γενέσθαι κατ᾿ ἀνάγκην πειθόμενοι, διὰ τὸ καὶ ὄψει ὡς προεφητεύθη ὁρᾶν γενόμενα καὶ γινόμενα, ἥπερ μεγίστη καὶ ἀληθεστάτη ἀπόδειξις καὶ ὑμῖν, ὡς νομίζομεν, φανήσεται.",
+      "context": "Fulfilled prophecy was the main argument to pagans, followed by the moral change in converts.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "30"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-2apol-13-b",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "Second Apology",
+      "locus": "13.4",
+      "lang": "grc",
+      "answer": "philosophy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Whatever has been well said among all people belongs to us Christians. For next to God we worship and love the Word, who is from the unbegotten and inexpressible God, since for our sake he became man, so that, sharing our sufferings, he might also bring healing.",
+      "original": "Ὅσα οὖν παρὰ καλῶς εἴρηται, ἡμῶν τᾶν Χριστιανῶν ἐστι· τὸν γὰρ ἀπὸ ἀγεννήτου καὶ ἀῤῥήτου θεοῦ λόγον μετὰ τὸν θεὸν προσκυνοῦμεν καὶ ἀγαπῶμεν, ἐπειδὴ καὶ δι᾿ ἡμᾶς ἄνθρωπος γέγονεν, ὅπως καὶ τῶν παθῶν τῶν ἡμετέρων συμμέτοχος γενόμενος καὶ ἴασιν ποιήσηται.",
+      "context": "To pagans: Christianity as the true philosophy, the full Word of which philosophers had seeds.",
+      "source": {
+        "book": "justin-second-apology",
+        "section": "13"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-dialogue-11",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "11.1–2",
+      "lang": "grc",
+      "answer": "same-god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "There will never be another God, Trypho, nor has there been from eternity, I said to him, but the one who made and ordered this universe. We do not think there is one God for us and another for you, but the very one who brought your fathers out of the land of Egypt with a mighty hand and an outstretched arm. ... But I have read, Trypho, that there would be a final law and a covenant.",
+      "original": "Οὕτε ἔσται ποτὲ ἄλλος θεός, ὦ Τρύφων, οὔτε ἦν ἀπ᾿ αἰῶνος, ἐγὼ οὕτως πρὸς αὐτόν, πλὴν τοῦ πονήσαντος καὶ διατάξαντος τόδε τὸ πᾶν. Οὐδὲ ἄλλον μὲν ἡμῶν, ἄλλον δὲ ὑμῶν ἡγούμεθα θεόν, ἀλλ᾿ αὐτὸν ἐκεῖνον τὸν ἐξαγαγόντα τοὺς πατέρας ὑμῶν ἐκ γῆς Αἰγύπτου ἐν χειρὶ κραταιᾷ καὶ βραχίονι ὑψηλῷ",
+      "context": "To Jews, the argument was over the reading of the same Scriptures. Justin's tone with Trypho is courteous; some later writers against the Jews were harsh.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "11"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Against Celsus",
+      "year": 248,
+      "why": "The fullest answer to a pagan critic, point by point. In the library.",
+      "action": "search",
+      "source_hint": "origen-contra-celsum"
+    },
+    {
+      "author": "Melito of Sardis",
+      "work": "On the Pascha",
+      "year": 170,
+      "why": "Early anti-Jewish rhetoric (\"God has been murdered\").",
+      "action": "intake",
+      "source_hint": "Bonner (1940); Chester Beatty papyrus"
+    },
+    {
+      "author": "Tertullian",
+      "work": "Against the Jews",
+      "year": 200,
+      "why": "In the library.",
+      "action": "search",
+      "source_hint": "tertullian-against-the-jews"
+    }
+  ],
+  "related": {
+    "topics": [
+      "apologetics"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "id": "think-greek-philosophy-reason",
+  "number": 100,
+  "group": "world",
+  "question": "What did they think of Greek philosophy and reason?",
+  "short": "Faith and philosophy",
+  "search": [
+    "faith and reason",
+    "greek philosophy",
+    "athens and jerusalem",
+    "platonism",
+    "spoiling the egyptians",
+    "logos",
+    "christian philosophy"
+  ],
+  "answers": [
+    {
+      "id": "ally",
+      "label": "Philosophy prepares for Christ, and its truths belong to Christians",
+      "short": "An ally",
+      "tag": "Ally"
+    },
+    {
+      "id": "enemy",
+      "label": "Philosophy breeds heresy; the gospel needs no more inquiry",
+      "short": "A danger",
+      "tag": "Danger"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Justin and Clement saw philosophy as a preparation: the Word sowed seeds of truth in it, and it was a schoolmaster to Christ for the Greeks.",
+      "cites": [
+        "justin-2apol-13-c",
+        "clement-stromata-1-5-b"
+      ]
+    },
+    {
+      "text": "Tertullian warned \"What has Athens to do with Jerusalem?\", against philosophy as the root of heresy. Augustine's answer became the common one: take the gold of Egypt, every truth the philosophers found, for the service of Christ.",
+      "cites": [
+        "tertullian-prescription-7",
+        "augustine-christian-doctrine-2-60"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-2apol-13-c",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "Second Apology",
+      "locus": "13.4",
+      "lang": "grc",
+      "answer": "ally",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Whatever has been well said among all people belongs to us Christians. For next to God we worship and love the Word, who is from the unbegotten and inexpressible God, since for our sake he became man, so that, sharing our sufferings, he might also bring healing.",
+      "original": "Ὅσα οὖν παρὰ καλῶς εἴρηται, ἡμῶν τᾶν Χριστιανῶν ἐστι· τὸν γὰρ ἀπὸ ἀγεννήτου καὶ ἀῤῥήτου θεοῦ λόγον μετὰ τὸν θεὸν προσκυνοῦμεν καὶ ἀγαπῶμεν, ἐπειδὴ καὶ δι᾿ ἡμᾶς ἄνθρωπος γέγονεν, ὅπως καὶ τῶν παθῶν τῶν ἡμετέρων συμμέτοχος γενόμενος καὶ ἴασιν ποιήσηται.",
+      "context": "Justin, a philosopher in his cloak, called Christianity \"the only sure and useful philosophy\" (Dialogue 8).",
+      "source": {
+        "book": "justin-second-apology",
+        "section": "13"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-stromata-1-5-b",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Stromata",
+      "locus": "1.5.28",
+      "lang": "grc",
+      "answer": "ally",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Philosophy was a schoolmaster to bring the Greek mind to Christ, as the law brought the Hebrews. So philosophy prepares the way for one who is made perfect by Christ.",
+      "original": "ἐπαιδαγώγει γὰρ καὶ αὕτη τὸ Ἑλληνικὸν ὡς ὁ νόμος τοὺς Ἑβραίους εἰς Χριστόν. προπαρασκευάζει τοίνυν ἡ φιλοσοφία προοδοποιοῦσα τὸν ὑπὸ Χριστοῦ τελειούμενον.",
+      "context": "The Alexandrian view.",
+      "source": {
+        "book": "clement-alexandria-stromata",
+        "section": "1.5"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-prescription-7",
+      "author": "Tertullian",
+      "year": 203,
+      "date": "c. 203",
+      "work": "Prescription against Heretics",
+      "locus": "7.9–13",
+      "lang": "la",
+      "answer": "enemy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What has Athens to do with Jerusalem? What has the Academy to do with the Church? What have heretics to do with Christians? Our teaching comes from the porch of Solomon, who himself taught that the Lord must be sought in simplicity of heart. Away with those who have produced a Stoic, Platonic and dialectical Christianity! We have no need of curiosity after Christ Jesus, nor of inquiry after the gospel.",
+      "original": "Quid ergo Athenis et Hierosolymis? quid academiae et ecclesiae? quid haereticis et Christianis? Nostra institutio de porticu Solomonis est, qui et ipse tradiderat dominum in simplicitate cordis esse quaerendum. Viderint qui Stoicum et Platonicum et dialecticum Christianismum protulerunt. Nobis curiositate opus non est post Christum Iesum, nec inquisitione post evangelium.",
+      "context": "Tertullian's target is philosophy as the source of heresy. He himself used Stoic ideas freely.",
+      "source": {
+        "book": "tertullian-prescription-against-heretics",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-christian-doctrine-2-60",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "On Christian Doctrine",
+      "locus": "2.40.60",
+      "lang": "la",
+      "answer": "ally",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If those who are called philosophers, especially the Platonists, have said anything true and in harmony with our faith, we should not fear it, but claim it for our use from them as from unjust owners. For as the Egyptians had not only idols and heavy burdens, which the people of Israel hated and fled, but also vessels and ornaments of gold and silver and clothing, which that people, leaving Egypt, took for themselves for a better use, by God's command ... so all the teachings of the Gentiles have not only false and superstitious inventions ... but also liberal disciplines more suited to the service of truth.",
+      "original": "Philosophi autem qui vocantur, si qua forte vera et fidei nostrae accomodata dixerunt, maxime Platonici, non solum formidanda non sunt, sed ab eis etiam tamquam ab iniustis possessoribus in usum nostrum vindicanda. Sicut enim Aegyptii non tantum idola habebant et onera gravia, quae populus Israel detestaretur et fugeret, sed etiam vasa atque ornamenta de auro et de argento et vestem, quae ille populus exiens de Aegypto sibi potius tamquam ad usum meliorem clanculo vindicavit, non auctoritate propria, sed praecepto Dei ... sic doctrinae omnes Gentilium non solum simulata et superstitiosa figmenta ... sed etiam liberales disciplinas usui veritatis aptiores",
+      "context": "\"Spoiling the Egyptians\": the image Origen had used before (Letter to Gregory).",
+      "source": {
+        "book": "augustine-on-christian-doctrine",
+        "section": "2.60"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Letter to Gregory (Philocalia 13)",
+      "year": 238,
+      "why": "Use Greek learning as Israel used the Egyptians' gold.",
+      "action": "search",
+      "source_hint": "origen-philocalia"
+    },
+    {
+      "author": "Basil of Caesarea",
+      "work": "Address to Young Men on Greek Literature",
+      "year": 370,
+      "why": "How to read the pagan classics with profit.",
+      "action": "intake",
+      "source_hint": "Migne PG 31"
+    },
+    {
+      "author": "Tatian",
+      "work": "Oration to the Greeks",
+      "year": 165,
+      "why": "The most hostile early view of Greek culture.",
+      "action": "intake",
+      "source_hint": "Schwartz, TU 4.1 (1888)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "faith-and-reason"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

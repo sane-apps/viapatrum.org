@@ -1,0 +1,170 @@
+{
+  "id": "virginity-valued-above-marriage",
+  "number": 88,
+  "group": "life",
+  "question": "Was virginity valued above marriage?",
+  "short": "Virginity and marriage",
+  "search": [
+    "virginity",
+    "celibacy",
+    "marriage",
+    "1 corinthians 7",
+    "evangelical counsels",
+    "jovinian",
+    "monasticism",
+    "encratism"
+  ],
+  "answers": [
+    {
+      "id": "higher",
+      "label": "Yes: consecrated virginity is the higher way, though marriage is good",
+      "short": "Virginity higher",
+      "tag": "Higher"
+    },
+    {
+      "id": "both-good",
+      "label": "Marriage is good and no less holy",
+      "short": "Both good",
+      "tag": "Both good"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From Justin on, lifelong virginity was honored, and by the fourth century writers called it the higher way: Methodius praised it, and Augustine called it a counsel, better but not commanded.",
+      "cites": [
+        "justin-1apol-15-virgins",
+        "methodius-symposium-10-1",
+        "augustine-holy-virginity-15"
+      ]
+    },
+    {
+      "text": "The same writers defended marriage against those who condemned it. Clement says marriage according to reason is no sin. The Reformers rejected the ranking.",
+      "cites": [
+        "clement-stromata-3-9"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-15-virgins",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "15.6",
+      "lang": "grc",
+      "answer": "higher",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And many men and women of sixty and seventy years, who were disciples of Christ from childhood, remain pure; and I boast that I could show such people in every race of mankind.",
+      "original": "Καὶ πολλοί τινες καὶ πολλαὶ ἑξηκοντοῦται καὶ ἑβδομηκοντοῦται, οἵ ἐκ παίδων ἐμαθητεύθησαν τῷ Χριστῷ, ἄφθοροι διαμένουσι· καὶ εὔχομαι κατὰ πᾶν γένος ἀνθρώπων τοιούτους δεῖξαι.",
+      "context": "Lifelong virginity is already a mark of Christians about 155.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-stromata-3-9",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Stromata",
+      "locus": "3.9.66–67",
+      "lang": "grc",
+      "answer": "both-good",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let no one think marriage according to reason a sin, unless he thinks bringing up children bitter (for to many childlessness is the most painful thing); and let him who finds the begetting of children bitter, because the necessary cares draw him away from divine things, not desire marriage if he cannot easily bear the single life.",
+      "original": "μήτ’ οὖν ἁμάρτημά τις ἡγείσθω τὸν γάμον τὸν κατὰ λόγον, εἰ μὴ πικρὰν ὑπολαμβάνει παιδοτροφίαν (πολλοῖς γὰρ ἔμπαλιν ἀτεκνία λυπηρότατον), μήτ’, ἂν πικρὰ ἡ παιδοποιία φαίνηταί τινι μεταπερισπῶσα τῶν θείων διὰ τὰς χρειώδεις ἀσχολίας, μὴ φέρων οὗτος εὐκόλως τὸν μονήρη βίον ἐπιθυμείτω γάμου",
+      "context": "Book 3 of the Stromata defends marriage against those who condemned it.",
+      "source": {
+        "book": "clement-alexandria-stromata",
+        "section": "3.9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "methodius-symposium-10-1",
+      "author": "Methodius of Olympus",
+      "year": 300,
+      "date": "c. 300",
+      "work": "Symposium",
+      "locus": "10.1",
+      "lang": "grc",
+      "answer": "higher",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... until virginity, succeeding the law, reigned over humankind by the commands of Christ.",
+      "original": "μέχρις ἡ παρθενία διαδεξαμένη τὸν νόμον Χριστοῦ ταγαῖς τῶν ἀνθρώπων ἐβασίλευσεν.",
+      "context": "A dialogue of ten virgins in praise of chastity, modeled on Plato's Symposium.",
+      "source": {
+        "book": "methodius-symposium",
+        "section": "10.1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-holy-virginity-15",
+      "author": "Augustine of Hippo",
+      "year": 401,
+      "date": "c. 401",
+      "work": "On Holy Virginity",
+      "locus": "15.15",
+      "lang": "la",
+      "answer": "higher",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"Are you free from a wife? Do not seek a wife\" (1 Corinthians 7:27) is a counsel, not a command; so it is allowed, but it is better not to do it. Then he adds at once: \"But if you marry, you have not sinned.\"",
+      "original": "illud autem, quod addidit: solutus es ab uxore? ne quaesieris uxorem, consilii sententia est, non praecepti; licet itaque facere, sed melius est non facere. denique continuo subiecit: et si acceperis uxorem, non peccasti",
+      "context": "Augustine wrote On the Good of Marriage at the same time, against Jovinian, who said virgins earned no more reward than married people.",
+      "source": {
+        "book": "augustine-on-holy-virginity",
+        "section": "15"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Jerome",
+      "work": "Against Jovinian",
+      "year": 393,
+      "why": "The sharpest ranking of virginity over marriage, against Jovinian.",
+      "action": "intake",
+      "source_hint": "Migne PL 23"
+    },
+    {
+      "author": "Council of Gangra",
+      "work": "Canons 1, 9–10",
+      "year": 340,
+      "why": "Anathemas on those who condemn marriage or despise the married.",
+      "action": "intake",
+      "source_hint": "Bruns (1839)"
+    },
+    {
+      "author": "Council of Trent; Augsburg Confession",
+      "work": "Session 24 canon 10; Article 23",
+      "year": 1563,
+      "why": "Virginity better than marriage; the Lutheran reply.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 980)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "virginity",
+      "marriage"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

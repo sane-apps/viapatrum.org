@@ -1,0 +1,202 @@
+{
+  "id": "wealth-almsgiving-lending-interest-taught",
+  "number": 89,
+  "group": "life",
+  "question": "Wealth, almsgiving and lending at interest: what was taught?",
+  "short": "Wealth and usury",
+  "search": [
+    "wealth",
+    "almsgiving",
+    "usury",
+    "interest",
+    "poverty",
+    "rich young ruler",
+    "charity",
+    "property"
+  ],
+  "answers": [
+    {
+      "id": "share",
+      "label": "Share with the needy; alms are owed, not optional",
+      "short": "Share",
+      "tag": "Share"
+    },
+    {
+      "id": "use",
+      "label": "Wealth is not evil; the love of it is",
+      "short": "Use rightly",
+      "tag": "Right use"
+    },
+    {
+      "id": "no-usury",
+      "label": "Lending at interest is forbidden",
+      "short": "No usury",
+      "tag": "No usury"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest manual tells Christians to share everything with a brother in need. Hermas turns fasting into money for widows and orphans.",
+      "cites": [
+        "didache-4-8",
+        "hermas-similitude-5-3"
+      ]
+    },
+    {
+      "text": "Clement of Alexandria taught that Jesus' \"sell what you have\" means banishing greed from the soul, not throwing money away.",
+      "cites": [
+        "clement-who-is-the-rich-man-11"
+      ]
+    },
+    {
+      "text": "Basil and Ambrose preached against lending at interest; the ban held in the West until the Reformation era.",
+      "cites": [
+        "basil-homily-psalm-14",
+        "ambrose-on-tobit-7"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-4-8",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "4.8",
+      "lang": "grc",
+      "answer": "share",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You shall not turn away the needy, but share all things with your brother, and not say they are your own. For if you are sharers in what is immortal, how much more in what is mortal?",
+      "original": "οὐκ ἀποστραφήσῃ τὸν ἐνδεόμενον, συγκοινωνήσεις δὲ πάντα τῷ ἀδελφῷ σοῦ καὶ οὐκ ἐρεῖς ἴδια εἶναι: εἰ γὰρ ἐν τῷ ἀθανάτῳ κοινωνοί ἐστε, πόσῳ μᾶλλον ἐν τοῖς θνητοῖς;",
+      "context": "Private property is not abolished; its use is shared.",
+      "source": {
+        "book": "didache",
+        "section": "4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "hermas-similitude-5-3",
+      "author": "Shepherd of Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "Shepherd of Hermas",
+      "locus": "Similitude 5.3.7",
+      "lang": "grc",
+      "answer": "share",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "On the day you fast you shall taste nothing but bread and water; and reckoning the cost of the food you would have eaten that day, you shall give it to a widow, an orphan or someone in need.",
+      "original": "ἐν ἐκείνῃ τῇ ἡμέρᾳ ᾗ νηστεύεις μηδὲν γεύσῃ εἰ μὴ ἄρτον καὶ ὕδωρ, καὶ ἐκ τῶν ἐδεσμάτων σου ὧν ἔμελλες τρώγειν συμψηφίσας τὴν ποσότητα τῆς δαπάνης ἐκείνης τῆς ἡμέρας ἧς ἔμελλες ποιεῖν, δώσεις αὐτὸ χήρᾳ ἢ ὀρφανῷ ἢ ὑστερουμένῳ",
+      "context": "Fasting and almsgiving joined: what is saved goes to the poor.",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "22"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "clement-who-is-the-rich-man-11",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Who Is the Rich Man That Is Saved?",
+      "locus": "11.2",
+      "lang": "grc",
+      "answer": "use",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"Sell what you have.\" What does this mean? Not, as some quickly take it, that he orders him to throw away the property he has and stand apart from his money, but to banish from his soul his notions about money, his attachment to it, his excessive desire, his anxious longing and sickness, the cares, the thorns of life that choke the seed of life.",
+      "original": "»πώλησον τὰ ὑπάρχοντά σου.« τί δὲ τοῦτό ἐστιν; οὐχ ὃ προχείρως δέχονταί τινες, τὴν ὑπάρχουσαν οὐσίαν ἀπορρῖψαι προστάσσει καὶ ἀποστῆναι τῶν χρημάτων, ἀλλὰ τὰ δόγματα τὰ περὶ χρημάτων ἐξορίσαι τῆς ψυχῆς, τὴν πρὸς αὐτὰ συμπάθειαν. τὴν ὑπεράγαν ἐπιθυμίαν, τὴν περὶ αὐτὰ πτοίαν καὶ νόσον, τὰς μερίμνας, τὰς ἀκάνθας τοῦ βίου, αἳ τὸ σπέρμα τῆς ζωῆς συμπνίγουσιν.",
+      "context": "The first Christian treatise on wealth. Riches are a tool; the danger is in the soul.",
+      "source": {
+        "book": "clement-alexandria-rich-man",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-homily-psalm-14",
+      "author": "Basil of Caesarea",
+      "year": 370,
+      "date": "c. 370",
+      "work": "Homily on Psalm 14, against usurers",
+      "locus": "1",
+      "lang": "grc",
+      "answer": "no-usury",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "He swears and curses himself that he has no money at all, and that he himself is looking for someone to lend to him ... But when the borrower mentions interest and names securities, then he lowers his brow and smiles, and remembers some family friendship.",
+      "original": "ἐξομνύμενος καὶ ἐπαρώμενος ἑαυτῷ, ἦ μὴν ἀπορεῖν παντε λῶς χρημάτων, καὶ περισκοπεῖν καὶ αὐτὸς εἴ τινα εὕροι τῶν δανειζόντων ... Ἐπειδὰν δὲ ὁ ζητῶν τὸ δάνειον τόκων μνησθῇ, καὶ ὑποθήκας ὀνομάσῃ, τότε καταβαλὼν τὴν ὀφρὺν προσεμειδίασε, καί που καὶ πατρῴας φιλίας ἀνεμνή",
+      "context": "Basil's sermon on Psalm 15:5 (\"who does not lend at interest\"). Ambrose reworked it in Latin (On Tobit).",
+      "source": {
+        "book": "basil-homiliae-psalmos",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "ambrose-on-tobit-7",
+      "author": "Ambrose of Milan",
+      "year": 377,
+      "date": "c. 377",
+      "work": "On Tobit",
+      "locus": "2.7",
+      "lang": "la",
+      "answer": "no-usury",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Usury, by which interest is sought, is an evil. ... That other kind of lending is rightly cursed: to give money at interest, which the law forbids.",
+      "original": "malum est enim faenus, quo quaeruntur usurae. ... aliud illud faenus est iure exsecrabile, dare in usuram pecuniam, quod lex prohibet.",
+      "context": "Lending to the needy is good; lending at interest is forbidden. The West kept the ban on usury through the Middle Ages.",
+      "source": {
+        "book": "ambrose-on-tobit",
+        "section": "7"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Council of Nicaea",
+      "work": "Canon 17",
+      "year": 325,
+      "why": "Clergy who lend at interest are to be deposed.",
+      "action": "intake",
+      "source_hint": "Bruns (1839)"
+    },
+    {
+      "author": "Basil of Caesarea",
+      "work": "Homily \"I will pull down my barns\" (Destruam)",
+      "year": 368,
+      "why": "\"The bread you keep belongs to the hungry.\" In the library as basil-homilia-lacisis.",
+      "action": "search",
+      "source_hint": "basil-homilia-lacisis"
+    },
+    {
+      "author": "John Calvin",
+      "work": "Letter on usury (to Sachinus)",
+      "year": 1545,
+      "why": "Calvin allowed moderate interest.",
+      "action": "intake",
+      "source_hint": "Corpus Reformatorum 38"
+    }
+  ],
+  "related": {
+    "topics": [
+      "wealth-and-poverty"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "id": "marriage-divorce-remarriage-allowed",
+  "number": 87,
+  "group": "life",
+  "question": "Marriage, divorce and remarriage: what was allowed?",
+  "short": "Divorce and remarriage",
+  "search": [
+    "divorce",
+    "remarriage",
+    "adultery",
+    "matthew 19:9",
+    "exception clause",
+    "indissolubility",
+    "second marriage",
+    "annulment"
+  ],
+  "answers": [
+    {
+      "id": "no-remarriage",
+      "label": "Separation for adultery is allowed, but no remarriage while the spouse lives",
+      "short": "No remarriage",
+      "tag": "No remarriage"
+    },
+    {
+      "id": "innocent",
+      "label": "The innocent party may divorce and remarry",
+      "short": "Innocent may remarry",
+      "tag": "Innocent party"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The earliest writers allow separation for adultery but not remarriage: Hermas says the husband must stay single so his wife can return if she repents. Justin and Athenagoras count remarriage after divorce as adultery.",
+      "cites": [
+        "hermas-mandate-4-1",
+        "justin-1apol-15-digamy",
+        "athenagoras-plea-33"
+      ]
+    },
+    {
+      "text": "Augustine held the bond lasts until death, and the Latin West made this law (Trent, 1563), while carefully not condemning the Greek practice.",
+      "cites": [
+        "augustine-adulterous-marriages-1-2",
+        "trent-1563-marriage-canon-7"
+      ]
+    },
+    {
+      "text": "The Orthodox allow a second marriage in some cases as a concession, and the Reformed allow the innocent party to remarry after adultery or desertion.",
+      "cites": [
+        "westminster-1646-24-5"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "hermas-mandate-4-1",
+      "author": "Shepherd of Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "Shepherd of Hermas",
+      "locus": "Mandate 4.1.4–8",
+      "lang": "grc",
+      "answer": "no-remarriage",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "\"Sir,\" I said, \"if a man has a wife who believes in the Lord, and he finds her in adultery, does the husband sin if he lives with her?\" \"As long as he does not know,\" he said, \"he does not sin. But if the husband knows her sin and the wife does not repent but continues in her fornication, and the husband lives with her, he becomes guilty of her sin.\" \"What then shall the husband do, sir?\" \"Let him put her away, and let the husband remain by himself. But if, having put away his wife, he marries another, he too commits adultery.\" \"And if, sir, after she is put away the wife repents and wants to return to her husband, shall she not be received?\" \"Indeed, if the husband does not receive her, he sins.\"",
+      "original": "Κύριε, φημί, εἰ γυναῖκα ἔχῃ τις πιστὴν ἐν κυρίῳ καὶ ταύτην εὕρῃ ἐν μοιχείᾳ τινί, ἆρα ἁμαρτάνει ὁ ἀνὴρ συνζῶν μετ’ αὐτῆς; Ἄχρι τῆς ἀγνοίας, φησίν, οὐχ ἁμαρτάνει: ἐὰν δὲ γνῷ ὁ ἀνὴρ τὴν ἁμαρτίαν αὐτῆς καὶ μὴ μετανοήσῃ ἡ γυνή, ἀλλ’ ἐπιμένῃ τῇ πορνείᾳ αὐτῆς καὶ συνζῇ ὁ ἀνὴρ μετ’ αὐτῆς, ἔνοχος γίνεται τῆς ἁμαρτίας αὐτῆς ... Ἀπολυσάτω, φησίν, αὐτὴν καὶ ὁ ἀνὴρ ἐφ̓ ἑαυτῷ μενέτω: ἐὰν δὲ ἀπολύσας τὴν γυναῖκα ἑτέραν γαμήσῃ, καὶ αὐτὸς μοιχᾶται. Ἐὰν οὖν, φημί, κύριε, μετὰ τὸ ἀπολυθῆναι τὴν γυναῖκα μετανοήσῃ ἡ γυνὴ καὶ θελήσῃ ἐπὶ τὸν ἑαυτῆς ἄνδρα ὑποστρέψαι, οὐ παραδεχθήσεται; Καὶ μήν, φησίν, ἐὰν μὴ παραδέξηται αὐτὴν ὁ ἀνήρ, ἁμαρτάνει",
+      "context": "Separation for adultery is allowed, but not remarriage, so that the door to repentance stays open. Hermas says the same applies to a wife.",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-15-digamy",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "15.5",
+      "lang": "grc",
+      "answer": "no-remarriage",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Just as those who make second marriages by human law are sinners in the eyes of our Teacher, so are those who look at a woman to lust after her.",
+      "original": "Ὥσπερ καὶ οἱ νόμῳ ἀνθρωπίνῳ διγαμίας ποιούμενοι ἁμαρτωλοὶ παρὰ τῷ· ἡμετέρῳ διδασκάλῳ εἰσί, καὶ οἱ προσβλέποντες γυναικὶ πρὸς τὸ ἐπιθυμῆσαι αὐτῆς",
+      "context": "\"Second marriages\" here probably means remarriage after divorce, which Roman law allowed.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athenagoras-plea-33",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "33.2–3",
+      "lang": "grc",
+      "answer": "no-remarriage",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... either to remain as one was born, or in one marriage; for a second marriage is a decent adultery. \"Whoever puts away his wife,\" he says, \"and marries another, commits adultery\": he does not allow a man to put away the woman whose virginity he ended, nor to marry again. For whoever deprives himself of his first wife, even if she has died, is an adulterer in disguise.",
+      "original": "ἢ οἷός τις ἐτέχθη μένειν ἢ ἐφ᾿ ἑνὶ γάμῳ· ὁ γὰρ δεύτερος εὐπρεπής ἐστι μοιχεία. Ὃς γὰρ ἂν ἀπολύσῃ, φησί, τὴν γυναῖκα αὐτοῦ καὶ γαμήσῃ ἄλλην, μοιχᾶται, οὔτε ἀπολύειν ἐπιτρέπων ἧς ἔπαυσέ τις τὴν παρθενίαν οὔτε ἐπιγαμεῖν. Ὁ γὰρ ἀποστερῶν ἑαυτὸν τῆς προτέρας γυναικός, καὶ εἰ τέθνηκε, μοιχός ἐστι παρακεκαλυμμένος",
+      "context": "Athenagoras goes further than most: even remarriage after a spouse's death. The Church did not adopt this; it allowed widows and widowers to remarry.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "33"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-adulterous-marriages-1-2",
+      "author": "Augustine of Hippo",
+      "year": 420,
+      "date": "c. 420",
+      "work": "On Adulterous Marriages",
+      "locus": "1.2",
+      "lang": "la",
+      "answer": "no-remarriage",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Because of so great an evil, a man may not put away his wife except for the cause of fornication. For then he does not make her an adulteress by putting her away, but puts away an adulteress.",
+      "original": "Propter hoc ergo tam magnum malum non licet homini dimittere uxorem nisi ex causa fornicationis. tunc enim non ipse dimittendo facit adulteram, sed dimittit adulteram.",
+      "context": "Augustine argues that even after such a separation neither may remarry while the other lives.",
+      "source": {
+        "book": "augustine-adulterous-marriages",
+        "section": "1.2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "trent-1563-marriage-canon-7",
+      "author": "Council of Trent",
+      "year": 1563,
+      "date": "1563",
+      "work": "Session 24, Canons on Marriage",
+      "locus": "Canon 7",
+      "lang": "la",
+      "answer": "no-remarriage",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says that the Church errs when she has taught and teaches, according to the teaching of the Gospel and the apostles, that the bond of marriage cannot be dissolved because of the adultery of one of the spouses, and that neither, not even the innocent one who gave no cause for adultery, can contract another marriage while the other spouse lives ... let him be anathema.",
+      "original": "Si quis dixerit, Ecclesiam errare, cum docuit et docet, iuxta evangelicam et apostolicam doctrinam propter adulterium alterius coniugum matrimonii vinculum non posse dissolvi, et utrumque, vel etiam innocentem, qui causam adulterio non dedit, non posse, altero coniuge vivente, aliud matrimonium contrahere",
+      "context": "Worded carefully so as not to condemn the Greek churches, which allowed remarriage after adultery.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 977"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-24-5",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "24.5–6",
+      "lang": "en",
+      "answer": "innocent",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "In the case of adultery after marriage, it is lawful for the innocent party to sue out a divorce: and, after the divorce, to marry another, as if the offending party were dead. ... nothing but adultery, or such willful desertion as can no way be remedied by the church, or civil magistrate, is cause sufficient of dissolving the bond of marriage.",
+      "original": "In the case of adultery after marriage, it is lawful for the innocent party to sue out a divorce: and, after the divorce, to marry another, as if the offending party were dead. 6. Although the corruption of man be such as is apt to study arguments unduly to put asunder those whom God hath joined together in marriage: yet, nothing but adultery, or such willful desertion as can no way be remedied by the church, or civil magistrate, is cause sufficient of dissolving the bond of marriage",
+      "context": "The Reformed view, close to the Orthodox practice of allowing remarriage in some cases.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Origen of Alexandria",
+      "work": "Commentary on Matthew 14.23",
+      "year": 246,
+      "why": "Some bishops, against Scripture, allowed a woman to remarry while her husband lived, to avoid worse.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-17-commentarium-in-evangelium-matthaei.txt"
+    },
+    {
+      "author": "Basil of Caesarea",
+      "work": "Letter 188, canon 9",
+      "year": 374,
+      "why": "Eastern custom treating husband and wife differently.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
+    },
+    {
+      "author": "Council of Carthage",
+      "work": "Canon 102 (407)",
+      "year": 407,
+      "why": "Neither divorced spouse may remarry; an imperial law should be sought.",
+      "action": "search",
+      "source_hint": "council-of-carthage-419-canons"
+    }
+  ],
+  "related": {
+    "topics": [
+      "marriage"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

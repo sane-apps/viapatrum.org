@@ -1,0 +1,172 @@
+{
+  "id": "fasting-long",
+  "number": 92,
+  "group": "life",
+  "question": "Fasting: when, how long, and why?",
+  "short": "Fasting",
+  "search": [
+    "fasting",
+    "lent",
+    "stations",
+    "wednesday and friday",
+    "easter fast",
+    "forty days",
+    "abstinence",
+    "almsgiving"
+  ],
+  "answers": [
+    {
+      "id": "weekly",
+      "label": "Every Wednesday and Friday",
+      "short": "Weekly fasts",
+      "tag": "Weekly"
+    },
+    {
+      "id": "before-easter",
+      "label": "Before Easter, later forty days (Lent)",
+      "short": "Before Easter",
+      "tag": "Easter"
+    },
+    {
+      "id": "why",
+      "label": "For humility, prayer and gifts to the poor",
+      "short": "Why fast",
+      "tag": "Purpose"
+    }
+  ],
+  "overview": [
+    {
+      "text": "The Didache sets Wednesday and Friday as fast days, and Tertullian calls them \"stations\", kept until mid-afternoon.",
+      "cites": [
+        "didache-8-1-fasting",
+        "tertullian-on-fasting-1-stations"
+      ]
+    },
+    {
+      "text": "Before Easter, churches fasted one day, two, or forty hours; Irenaeus says the difference only confirmed their agreement in faith. Lent's forty days came later.",
+      "cites": [
+        "irenaeus-letter-to-victor"
+      ]
+    },
+    {
+      "text": "Fasting was tied to humility, purity of heart, and almsgiving: Hermas says give the day's food money to a widow or orphan.",
+      "cites": [
+        "hermas-similitude-5-3-fast"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-8-1-fasting",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "8.1",
+      "lang": "grc",
+      "answer": "weekly",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Do not let your fasts be with the hypocrites: they fast on the second and fifth day of the week, but you fast on the fourth day and the day of Preparation.",
+      "original": "Αἱ δὲ νηστεῖαι ὑμῶν μὴ ἔστωσαν μετὰ τῶν ὑποκριτῶν. νηστεύουσι γὰρ δευτέρᾳ σαββάτων καὶ πέμπτῃ: ὑμεῖς δὲ νηστεύσατε τετράδα καὶ παρασκευήν.",
+      "context": "Wednesday and Friday, still the fast days in Orthodox practice.",
+      "source": {
+        "book": "didache",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-on-fasting-1-stations",
+      "author": "Tertullian",
+      "year": 213,
+      "date": "c. 213",
+      "work": "On Fasting",
+      "locus": "1.4",
+      "lang": "la",
+      "answer": "weekly",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "They charge us with keeping fasts of our own, with prolonging the station fasts until evening, and with observing dry diets, drying our food of all meat, all juice and all moister fruit, and neither eating nor drinking anything with wine.",
+      "original": "arguunt nos, quod ieiunia propria custodiamus, quod stationes plerumque in uesperam producamus, quod etiam xerophagias obseruemus siccantes cibum ab omni carne et omni iurulentia et uuidioribus quibusque pomis nec quid uinositatis uel edamus uel potemus",
+      "context": "\"Stations\" were the Wednesday and Friday fasts, normally kept until the ninth hour (3 pm). The Montanists made them stricter.",
+      "source": {
+        "book": "tertullian-on-fasting",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-letter-to-victor",
+      "author": "Irenaeus of Lyons",
+      "year": 190,
+      "date": "c. 190",
+      "work": "Letter to Victor of Rome, in Eusebius, Church History 5.24",
+      "locus": "5.24.12–13",
+      "lang": "grc",
+      "answer": "before-easter",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The dispute is not only about the day, but also about the form of the fast itself. Some think they should fast one day, others two, others more; some measure their day as forty hours, day and night. Such variety among those who keep it did not arise in our time but long before us ... and all these nonetheless lived in peace, and we live in peace with one another; and the disagreement about the fast confirms the agreement in faith.",
+      "original": "Οὐδὲ γὰρ μόνον περὶ τῆς ἡμέρας ἐστὶν ἡ ἀμφισβήτησις, ἀλλὰ καὶ περὶ τοῦ εἴδους αὐτοῦ τῆς νηστείας. οἱ μὲν γὰρ οἴονται μίαν ἡμέραν δεῖν αὐτοὺς νηστεύειν· οἱ δὲ δύο, οἱ δὲ καὶ πλείονας. οἱ δὲ τεσσαράκοντα ὥρας ἡμερινάς τε καὶ νυκτερινὰς συμμετροῦσι τὴν ἡμέραν αὐτῶν. ... καὶ οὐδὲν ἔλαττον πάντες οὗτοι εἰρήνευσάν τε, καὶ εἰρηνεύομεν πρὸς ἀλλήλους· καὶ ἡ διαφωνία τῆς νηστείας, τὴν ὁμόνοιαν τῆς πίστεως συνίστησι.",
+      "context": "The fast before Easter was short and varied in the second century. The forty days of Lent appear in the fourth.",
+      "source": {
+        "book": "irenaeus-letter-victor",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "hermas-similitude-5-3-fast",
+      "author": "Shepherd of Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "Shepherd of Hermas",
+      "locus": "Similitude 5.3.7",
+      "lang": "grc",
+      "answer": "why",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "On the day you fast you shall taste nothing but bread and water; and reckoning the cost of the food you would have eaten that day, you shall give it to a widow, an orphan or someone in need.",
+      "original": "ἐν ἐκείνῃ τῇ ἡμέρᾳ ᾗ νηστεύεις μηδὲν γεύσῃ εἰ μὴ ἄρτον καὶ ὕδωρ, καὶ ἐκ τῶν ἐδεσμάτων σου ὧν ἔμελλες τρώγειν συμψηφίσας τὴν ποσότητα τῆς δαπάνης ἐκείνης τῆς ἡμέρας ἧς ἔμελλες ποιεῖν, δώσεις αὐτὸ χήρᾳ ἢ ὀρφανῷ ἢ ὑστερουμένῳ",
+      "context": "The purpose of fasting: humility, purity of heart, and gifts to the poor.",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "22"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Athanasius of Alexandria",
+      "work": "Festal Letters 6 and 19",
+      "year": 334,
+      "why": "The forty days of Lent in Egypt.",
+      "action": "intake",
+      "source_hint": "Syriac (Cureton 1848); Greek fragments in Migne PG 26"
+    },
+    {
+      "author": "Council of Nicaea",
+      "work": "Canon 5",
+      "year": 325,
+      "why": "Synods to be held \"before Lent\" (tessarakoste): the first mention of the forty days.",
+      "action": "intake",
+      "source_hint": "Bruns (1839)"
+    }
+  ],
+  "related": {
+    "topics": [
+      "fasting"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "id": "christian-swear-oath-hold-public",
+  "number": 93,
+  "group": "life",
+  "question": "Could a Christian swear an oath or hold public office?",
+  "short": "Oaths and office",
+  "search": [
+    "oaths",
+    "swearing",
+    "matthew 5:34",
+    "public office",
+    "magistrate",
+    "christians in government",
+    "anabaptist"
+  ],
+  "answers": [
+    {
+      "id": "refuse",
+      "label": "No: do not swear, and keep clear of office bound up with idols and the sword",
+      "short": "Refuse",
+      "tag": "Refuse"
+    },
+    {
+      "id": "lawful",
+      "label": "Yes: lawful oaths and public office are allowed",
+      "short": "Lawful",
+      "tag": "Lawful"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Justin quotes \"do not swear at all\". Tertullian thought holding Roman office almost impossible without idolatry or bloodshed, and Origen said Christians govern the Church instead of the city.",
+      "cites": [
+        "justin-1apol-16-oaths",
+        "tertullian-on-idolatry-17",
+        "origen-contra-celsum-8-75"
+      ]
+    },
+    {
+      "text": "After Constantine, Christians held office and took oaths; the Reformed confessions call both lawful, while Anabaptists and Quakers kept the early refusal.",
+      "cites": [
+        "westminster-1646-23-2"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "justin-1apol-16-oaths",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "16.5",
+      "lang": "grc",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "About not swearing at all, but always speaking the truth, he commanded: \"Do not swear at all; let your yes be yes and your no no; anything more comes from the evil one\" (Matthew 5:34–37).",
+      "original": "Περὶ δὲ τοῦ μὴ ὀμνύναι ὅλως, τἀληθῆ δὲ λέγειν ἀεί, οὕτως παρεκελεύσατο· ,,Μὴ ὀμόσητε ὅλως· ἔστω δὲ ὑμῶν τὸ ναὶ ναί, καὶ τὸ οὒ οὔ· τὸ δὲ περισσὸν τούτων ἐκ τοῦ πονηροῦ“.",
+      "context": "Refusing the oath by the emperor's genius was also a mark of Christians at trial.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "16"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-on-idolatry-17",
+      "author": "Tertullian",
+      "year": 200,
+      "date": "c. 200",
+      "work": "On Idolatry",
+      "locus": "17.3",
+      "lang": "la",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let us grant that someone may hold an office in name only, so long as he does not sacrifice nor lend his authority to sacrifices, does not contract for victims, does not delegate the care of temples, does not manage their revenues, does not give shows ... does not swear; and further, in matters of power, does not judge anyone's life or honor (money matters you may allow), does not condemn, does not bind, imprison or torture anyone, if one can believe this possible.",
+      "original": "cedamus itaque succedere alicui posse, ut in quoquo honore in solo honoris nomine incedat neque sacrificet neque sacrificiis auctoritatem suam accommodet, non hostias locet, non curas templorum deleget, non uectigalia eorum procuret, non spectacula edat de suo aut de publico aut edendis praesit, nihil sollemne pronuntiet uel edicat, ne iuret quidem; iam uero quae sunt potestatis, neque iudicet de capite alicuius uel pudore — feras enim de pecunia — neque damnet neque praedamnet, neminem uinciat, neminem recludat aut torqueat, si haec credibile est fieri posse.",
+      "context": "Roman office was bound up with pagan sacrifice and the power of the sword.",
+      "source": {
+        "book": "tertullian-on-idolatry",
+        "section": "17"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-contra-celsum-8-75",
+      "author": "Origen of Alexandria",
+      "year": 248,
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "8.75",
+      "lang": "grc",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Celsus urges us to take office in our country, if that is needed for the safety of the laws and of piety. But we know that in each city there is another country, founded by the Word of God, and we call those able in word and sound in life to govern churches. ... Those who govern well among us are compelled by the great King.",
+      "original": "Προτρέπει δ᾿ ἡμᾶς Κέλσος καὶ ἐπὶ τὸ ἄρχειν τῆς πατρίδος, ἐὰν δέῃ καὶ τοῦτο ποιεῖν ἕνεκεν σωτηρίας νόμων καὶ εὐσεβείας. ἡμεῖς δὲ ἐν ἑκάστῃ πόλει ἄλλο σύστημα πατρίδος κτισθὲν λόγῳ θεοῦ ἐπιστάμενοι τοὺς δυνατοὺς λόγῳ καὶ βίῳ ὑγιεῖ χρωμένους ἄρχειν ἐπὶ τὸ ἄρχειν ἐκκλησιῶν παρακαλοῦμεν ... καὶ οἱ καλῶς ἄρχοντες ἡμῶν βιασθέντες ὑπάρχουσι. τοῦ μεγάλου βασιλέως ἀναγκάζοντος",
+      "context": "Christians served the city by leading the Church instead.",
+      "source": {
+        "witness": "books/origen-contra-celsum/sources/cels_b8_working_greek.txt",
+        "edition": "Koetschau, GCS 3 (1899)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "westminster-1646-23-2",
+      "author": "Westminster Assembly",
+      "year": 1646,
+      "date": "1646",
+      "work": "Westminster Confession of Faith",
+      "locus": "23.2",
+      "lang": "en",
+      "answer": "lawful",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "It is lawful for Christians to accept and execute the office of a magistrate, when called thereunto.",
+      "original": "It is lawful for Christians to accept and execute the office of a magistrate, when called thereunto",
+      "context": "The same confession calls a lawful oath \"a part of religious worship\" (22.1). Anabaptists and Quakers kept the refusal of oaths.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-westminster-confession.txt",
+        "edition": "Orthodox Presbyterian Church text"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Augustine of Hippo",
+      "work": "Sermon 180",
+      "year": 410,
+      "why": "Swearing is not forbidden as sin, but to be avoided.",
+      "action": "intake",
+      "source_hint": "Migne PL 38"
+    },
+    {
+      "author": "Schleitheim Confession",
+      "work": "Articles 6–7",
+      "year": 1527,
+      "why": "No office and no oaths for Christians.",
+      "action": "search",
+      "source_hint": "doctrine_questions death-penalty defined texts"
+    }
+  ],
+  "related": {
+    "topics": [
+      "church-and-state"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "id": "must-christians-obey-emperor-pray",
+  "number": 94,
+  "group": "life",
+  "question": "Must Christians obey the emperor, and pray for him?",
+  "short": "Christians and the emperor",
+  "search": [
+    "romans 13",
+    "render unto caesar",
+    "obey rulers",
+    "pray for the emperor",
+    "emperor worship",
+    "civil disobedience",
+    "church and state"
+  ],
+  "answers": [
+    {
+      "id": "honor",
+      "label": "Yes: honor, obey and pray for rulers",
+      "short": "Honor and pray",
+      "tag": "Honor"
+    },
+    {
+      "id": "no-worship",
+      "label": "But never worship or obey against God",
+      "short": "Not worship",
+      "tag": "Limits"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Even under persecuting emperors, Christians prayed for them: Clement's prayer for rulers, Polycarp's \"pray for kings\", Justin's promise of taxes paid first, Tertullian's \"a Christian is no one's enemy, least of all the emperor's\".",
+      "cites": [
+        "1-clement-61",
+        "polycarp-philippians-12-3",
+        "justin-1apol-17",
+        "tertullian-to-scapula-2"
+      ]
+    },
+    {
+      "text": "The limit was worship: honor the king by praying for him, not by worshiping him (Theophilus); honor rulers \"so far as it does us no harm\" (Polycarp before the proconsul).",
+      "cites": [
+        "theophilus-to-autolycus-1-11",
+        "martyrdom-polycarp-10"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "1-clement-61",
+      "author": "Clement of Rome",
+      "year": 96,
+      "date": "c. 96",
+      "work": "First Letter to the Corinthians",
+      "locus": "61.1",
+      "lang": "grc",
+      "answer": "honor",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You, Master, have given them the authority of kingship through your majestic and indescribable might, so that we, knowing the glory and honor you have given them, may be subject to them, in nothing resisting your will. Give them, Lord, health, peace, concord and stability, so that they may administer without offense the government you have given them.",
+      "original": "Σύ, δεσποτα, ἔδωκας τὴν ἐξουσίαν τῆς βασιλείας αὐτοῖς διὰ τοῦ μεγαλοπρεποῦς καὶ ἀνεκδιηγήτου κράτους σου, εἰς τὸ γινώσκοντας ἡμᾶς τὴν ὑπὸ σοῦ αὐτοῖς δεδομένην δόξαν καὶ τιμὴν ὑποτάσσεσθαι αὐτοῖς, μηδὲν ἐναντιουμένους τῷ θελήματί σου: οἶς δός, κύριε, ὑγίειαν, εἰρήνην, ὁμόνοιαν, εὐστάθειαν. εἰς τὸ διέπειν αὐτοὺς τὴν ὑπὸ σοῦ δεδομένην αὐτοῖς ἡγεμονίαν ἀπροσκόπως.",
+      "context": "A prayer for the emperors from the Roman church, written under Domitian, who persecuted it.",
+      "source": {
+        "book": "clement-rome-corinthians",
+        "section": "61"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "polycarp-philippians-12-3",
+      "author": "Polycarp of Smyrna",
+      "year": 135,
+      "date": "c. 135",
+      "work": "Letter to the Philippians",
+      "locus": "12.3",
+      "lang": "la",
+      "answer": "honor",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Pray for all the saints. Pray also for kings and powers and princes, and for those who persecute and hate you, and for the enemies of the cross, so that your fruit may be plain to all.",
+      "original": "Pro omnibus sanctis orate. Orate etiam pro regibus et potestatibus et principibus atque pro persequentibus et odientibus vos et pro inimicis crucis, ut fructus vester manifestus sit in omnibus",
+      "context": "This chapter survives only in Latin.",
+      "source": {
+        "book": "polycarp-philippians",
+        "section": "12"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-17",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "17.1–3",
+      "lang": "grc",
+      "answer": "honor",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Taxes and contributions we try to pay to your appointed officers everywhere before all others, as we were taught by him. ... \"Give to Caesar what is Caesar's and to God what is God's.\" So we worship God alone, but in other things we gladly serve you, acknowledging you as kings and rulers of men, and praying that with royal power you may also be found to have sound judgment.",
+      "original": "Φόρους δὲ καὶ εἰσφορὰς τοῖς ὑφ᾿ ὑμῶν τεταγμένοις πανταχοῦ πρὸ πάντων πειρώμεθα φέρειν, ὡς ἐδιδάχθημεν παρ᾿ αὐτοῦ. ... Ὅθεν θεὸν μὲν μόνον προσκυνοῦμεν, ὑμῖν δὲ πρὸς τὰ ἄλλα χαίροντες ὑπηρετοῦμεν, βασιλεῖς καὶ ἄρχοντας ἀνθρώπων ὁμολογοῦντες καὶ εὐχόμενοι μετὰ τῆς βασιλικῆς δυνάμεως καὶ σώφρονα τὸν λογισμὸν ἔχοντας ὑμᾶς εὑρεθῆναι.",
+      "context": "Addressed to Emperor Antoninus Pius.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "17"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-to-scapula-2",
+      "author": "Tertullian",
+      "year": 212,
+      "date": "c. 212",
+      "work": "To Scapula",
+      "locus": "2.6–7",
+      "lang": "la",
+      "answer": "honor",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "A Christian is no one's enemy, much less the emperor's, whom he knows to be appointed by his God, and so must love, revere and honor him, and wish him safe with the whole Roman empire, as long as the world stands. ... So we honor the emperor in the way that is lawful for us and good for him: as a man second to God, who has received whatever he is from God, and is less only than God.",
+      "original": "Christianus nullius est hostis, nedum imperatoris, quem sciens a deo suo constitui necesse est ut et ipsum diligat et revereatur et honoret et salvum velit cum toto Romano imperio, quousque saeculum stabit ... Colimus ergo et imperatorem sic quomodo et nobis licet et ipsi expedit, ut hominem a deo secundum et quicquid est a deo consecutum et solo deo minorem.",
+      "context": "Written to the proconsul of Africa during persecution.",
+      "source": {
+        "book": "tertullian-to-scapula",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "theophilus-to-autolycus-1-11",
+      "author": "Theophilus of Antioch",
+      "year": 180,
+      "date": "c. 180",
+      "work": "To Autolycus",
+      "locus": "1.11",
+      "lang": "grc",
+      "answer": "no-worship",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So I will rather honor the king, not by worshiping him, but by praying for him. I worship God, the true and real God, knowing that the king was made by him. You will say: Why do you not worship the king? Because he was made not to be worshiped but to be honored with lawful honor.",
+      "original": "Τοιγαροῦν μᾶλλον τιμήσω τὸν βασιλέα, οὐ προσκυνῶν αὐτῷ, ἀλλὰ εὐχόμενος ὑπὲρ αὐτοῦ. Θεῷ δὲ τῷ ὄντως Θεῷ καὶ ἀληθεῖ προσκυνῶ, εἰδὼς ὅτι ὁ βασιλεὺς ὑπ᾿ αὐτοῦ γέγονεν. ἐρεῖς οὖν μοι· διὰ τί οὐ προσκυνεῖς τὸν βασιλέα; ὅτι οὐκ εἰς τὸ προσκυνεῖσθαι γέγονεν, ἀλλὰ εἰς τὸ τιμᾶσθαι τῇ νομίμῳ τιμῇ",
+      "context": "The line between honor and worship was the line martyrs died on.",
+      "source": {
+        "book": "theophilus-autolycus",
+        "section": "1.11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "martyrdom-polycarp-10",
+      "author": "Martyrdom of Polycarp",
+      "year": 156,
+      "date": "c. 156",
+      "work": "Martyrdom of Polycarp",
+      "locus": "10.2",
+      "lang": "grc",
+      "answer": "no-worship",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For we have been taught to give honor, as is fitting, to rulers and authorities appointed by God, so far as it does us no harm; but as for these, I do not think them worthy that I should make my defense to them.",
+      "original": "δεδιδάγμεθα γὰρ ἀρχαῖς καὶ ἐξουσίαις ὑπὸ τοῦ θεοῦ τεταγμέναις τιμὴν κατὰ τὸ προσῆκον, τὴν μὴ βλάπτουσαν ἡμᾶς, ἀπονέμειν",
+      "context": "Polycarp to the proconsul, who demanded he swear by Caesar's fortune.",
+      "source": {
+        "book": "martyrdom-polycarp",
+        "section": "10"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Acts of the Scillitan Martyrs",
+      "work": "Acts",
+      "year": 180,
+      "why": "\"I do not recognize the empire of this world.\" The oldest Latin Christian text.",
+      "action": "intake",
+      "source_hint": "Robinson, Texts and Studies 1.2 (1891)"
+    },
+    {
+      "author": "Tertullian",
+      "work": "Apology 30–33",
+      "year": 197,
+      "why": "Christians pray for the emperors' long life and secure empire. In the fetched Apology.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "church-and-state"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

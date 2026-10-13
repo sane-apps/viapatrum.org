@@ -1,0 +1,224 @@
+{
+  "id": "may-state-put-criminal-death",
+  "number": 85,
+  "group": "life",
+  "question": "May the state put a criminal to death?",
+  "short": "The death penalty",
+  "search": [
+    "death penalty",
+    "capital punishment",
+    "romans 13",
+    "the sword",
+    "execution",
+    "inadmissible"
+  ],
+  "answers": [
+    {
+      "id": "lawful",
+      "label": "Yes: public authority may lawfully put criminals to death",
+      "short": "Lawful",
+      "tag": "Lawful sword"
+    },
+    {
+      "id": "no-sword",
+      "label": "Christians themselves do not take part in killing",
+      "short": "Christians abstain",
+      "tag": "Abstain"
+    },
+    {
+      "id": "inadmissible",
+      "label": "No: the death penalty is never admissible",
+      "short": "Inadmissible",
+      "tag": "Inadmissible"
+    }
+  ],
+  "overview": [
+    {
+      "text": "Early Christians would not take part: Athenagoras says they cannot bear to watch an execution, \"though just\"; Tertullian and Lactantius forbid Christians to judge or accuse on capital charges.",
+      "cites": [
+        "athenagoras-plea-35",
+        "tertullian-crown-11-b",
+        "lactantius-divine-institutes-6-20-b"
+      ]
+    },
+    {
+      "text": "Augustine held that public authority punishing criminals by death does not break \"You shall not kill\". The churches kept this, except the Anabaptists, until the Catholic Church in 2018 called the death penalty inadmissible.",
+      "cites": [
+        "augustine-city-of-god-1-21",
+        "thirty-nine-articles-37",
+        "schleitheim-1527-6",
+        "ccc-2267-2018"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "athenagoras-plea-35",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "35.1",
+      "lang": "grc",
+      "answer": "no-sword",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Who could accuse of murder or cannibalism people who, as they know, cannot bear even to see a man put to death, though justly?",
+      "original": "Οὓς γὰρ ἴσασιν οὐδ᾿ ἰδεῖν κἂν δικαίως φονευόμενον ὑπομένοντας, τούτων τίς ἂν κατείποι ἢ ἀνδροφονίαν ἢ ἀνθρωποβορίαν;",
+      "context": "\"Though justly\": even lawful execution. Christians stayed away from the gladiatorial games for the same reason.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "35"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-crown-11-b",
+      "author": "Tertullian",
+      "year": 211,
+      "date": "c. 211",
+      "work": "On the Crown",
+      "locus": "11.1–2",
+      "lang": "la",
+      "answer": "no-sword",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Shall it be lawful to make one's living by the sword, when the Lord declares that he who uses the sword will perish by the sword? Shall the son of peace take part in battle, when it is not fitting for him even to go to law? Shall he administer chains, prison, torture and punishment, when he does not avenge even his own wrongs?",
+      "original": "Licebit in gladio conversari, domino pronuntiante gladio periturum. qui gladio fuerit usus? Et proelio operabitur filius pacis, cui nec litigare conveniet? Et vincula et carcerem et tormenta et supplicia administrabit, nec suarum ultor iniuriarum?",
+      "context": "A Christian cannot administer \"chains, prison, torture and punishment\".",
+      "source": {
+        "book": "tertullian-on-the-crown",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "lactantius-divine-institutes-6-20-b",
+      "author": "Lactantius",
+      "year": 313,
+      "date": "c. 313",
+      "work": "Divine Institutes",
+      "locus": "6.20.15–17",
+      "lang": "la",
+      "answer": "no-sword",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It will not be lawful for a just man ... to accuse anyone of a capital crime, for it makes no difference whether you kill with the sword or with a word, since killing itself is forbidden.",
+      "original": "neque uero accusare quemquam crimine capitali, quia nihil distat utrumne ferro an uerbo potius occidas, quoniam occisio ipsa prohibetur.",
+      "context": "Lactantius forbids even bringing a capital charge.",
+      "source": {
+        "book": "lactantius-divine-institutes",
+        "section": "6.20"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-1-21",
+      "author": "Augustine of Hippo",
+      "year": 413,
+      "date": "c. 413",
+      "work": "City of God",
+      "locus": "1.21",
+      "lang": "la",
+      "answer": "lawful",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The same divine authority has made certain exceptions to the rule that it is not lawful to kill a man. Except those whom God orders to be killed, either by a law given or by an express command for a particular person at a particular time (and he does not kill who owes his service to the one who commands, as a sword is the instrument of the one using it); so those did not act against the commandment \"You shall not kill\" who waged wars at God's command, or who, acting as public authority according to its laws, that is, the command of most just reason, punished criminals with death.",
+      "original": "Quasdam uero exceptiones eadem ipsa diuina fecit auctoritas, ut non liceat hominem occidi. Sed his exceptis, quos Deus occidi iubet siue data lege siue ad personam pro tempore expressa iussione, (non autem ipse occidit, qui ministerium debet iubenti, sicut adminiculum gladius utenti; et ideo nequaquam contra hoc praeceptum fecerunt, quo dictum est: Non occides, qui Deo auctore bella gesserunt aut personam gerentes publicae potestatis secundum eius leges, hoc est iustissimae rationis imperium, sceleratos morte punierunt",
+      "context": "Augustine often pleaded with judges to spare criminals, but held that the state's sword is lawful.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-1.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "thirty-nine-articles-37",
+      "author": "Church of England",
+      "year": 1571,
+      "date": "1571",
+      "work": "Thirty-Nine Articles",
+      "locus": "Article XXXVII",
+      "lang": "en",
+      "answer": "lawful",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The Laws of the Realm may punish Christian men with death, for heinous and grievous offences.",
+      "original": "The Laws of the Realm may punish Christian men with death, for heinous and grievous offences.",
+      "context": "The Reformation churches kept the lawful sword.",
+      "source": {
+        "url": "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion",
+        "edition": "Thirty-Nine Articles, Article XXXVII (1571)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "schleitheim-1527-6",
+      "author": "Swiss Brethren (Anabaptist)",
+      "year": 1527,
+      "date": "1527",
+      "work": "Schleitheim Confession",
+      "locus": "Article VI",
+      "lang": "en",
+      "answer": "no-sword",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The sword is ordained of God outside the perfection of Christ. It punishes and puts to death the wicked, and guards and protects the good. In the Law the sword was ordained for the punishment of the wicked and for their death, and the same (sword) is (now) ordained to be used by the worldly magistrates. In the perfection of Christ, however, only the ban is used for a warning and for the excommunication of the one who has sinned, without putting the flesh to death.",
+      "original": "The sword is ordained of God outside the perfection of Christ. It punishes and puts to death the wicked, and guards and protects the good. In the Law the sword was ordained for the punishment of the wicked and for their death, and the same (sword) is (now) ordained to be used by the worldly magistrates. In the perfection of Christ, however, only the ban is used for a warning and for the excommunication of the one who has sinned, without putting the flesh to death.",
+      "context": "The Anabaptists accept the sword as ordained by God outside Christ's perfection, but Christians do not wield it.",
+      "source": {
+        "url": "https://anabaptists.org/history/the-schleitheim-confession.html",
+        "edition": "Schleitheim Confession, Article VI (24 February 1527)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "ccc-2267-2018",
+      "author": "Catechism of the Catholic Church (2018 revision)",
+      "year": 2018,
+      "date": "2018",
+      "work": "Catechism of the Catholic Church",
+      "locus": "2267 (2018)",
+      "lang": "en",
+      "answer": "inadmissible",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Recourse to the death penalty on the part of legitimate authority, following a fair trial, was long considered an appropriate response to the gravity of certain crimes and an acceptable, albeit extreme, means of safeguarding the common good. Today, however, there is an increasing awareness that the dignity of the person is not lost even after the commission of very serious crimes. In addition, a new understanding has emerged of the significance of penal sanctions imposed by the state. Lastly, more effective systems of detention have been developed, which ensure the due protection of citizens but, at the same time, do not definitively deprive the guilty of the possibility of redemption. Consequently, the Church teaches, in the light of the Gospel, that “the death penalty is inadmissible because it is an attack on the inviolability and dignity of the person”, and she works with determination for its abolition worldwide.",
+      "original": "Recourse to the death penalty on the part of legitimate authority, following a fair trial, was long considered an appropriate response to the gravity of certain crimes and an acceptable, albeit extreme, means of safeguarding the common good. Today, however, there is an increasing awareness that the dignity of the person is not lost even after the commission of very serious crimes. In addition, a new understanding has emerged of the significance of penal sanctions imposed by the state. Lastly, more effective systems of detention have been developed, which ensure the due protection of citizens but, at the same time, do not definitively deprive the guilty of the possibility of redemption. Consequently, the Church teaches, in the light of the Gospel, that “the death penalty is inadmissible because it is an attack on the inviolability and dignity of the person”, and she works with determination for its abolition worldwide.",
+      "context": "The Catholic Church changed its teaching in 2018: the death penalty is inadmissible.",
+      "source": {
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20180801_catechismo-penadimorte_en.html",
+        "edition": "Catechism of the Catholic Church 2267, revised text. Pope Francis approved it on 11 May 2018; the rescript is dated 1 August 2018"
+      },
+      "translation": "published"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Ambrose of Milan",
+      "work": "Letter 25 to Studius",
+      "year": 385,
+      "why": "A Christian judge may impose death, but mercy is better.",
+      "action": "intake",
+      "source_hint": "Migne PL 16"
+    }
+  ],
+  "related": {
+    "timeline": "death-penalty",
+    "topics": [
+      "death-penalty"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}

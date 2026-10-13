@@ -1,0 +1,184 @@
+{
+  "id": "say-about-abortion-exposing-infants",
+  "number": 86,
+  "group": "life",
+  "question": "What did they say about abortion and exposing infants?",
+  "short": "Abortion and exposure",
+  "search": [
+    "abortion",
+    "infanticide",
+    "exposure of infants",
+    "unborn",
+    "sanctity of life",
+    "pharmakeia",
+    "didache abortion"
+  ],
+  "answers": [
+    {
+      "id": "forbidden",
+      "label": "Both are murder and forbidden to Christians",
+      "short": "Forbidden",
+      "tag": "Forbidden"
+    }
+  ],
+  "overview": [
+    {
+      "text": "From the Didache (about 100) on, every early writer who mentions it treats abortion and the exposure of newborns as murder.",
+      "cites": [
+        "didache-2-2",
+        "athenagoras-plea-35-abortion",
+        "tertullian-apology-9-8"
+      ]
+    },
+    {
+      "text": "Exposure was legal and common in Rome. Christians were known for refusing it, and Justin notes that exposed children were raised for prostitution.",
+      "cites": [
+        "justin-1apol-27",
+        "diognetus-5-6"
+      ]
+    }
+  ],
+  "quotes": [
+    {
+      "id": "didache-2-2",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "2.2",
+      "lang": "grc",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "You shall not murder; you shall not commit adultery; you shall not corrupt boys; you shall not commit sexual sin; you shall not steal; you shall not practice magic; you shall not use potions; you shall not murder a child by abortion, nor kill one that is born.",
+      "original": "οὐ φονεύσεις, οὐ μοιχεύσεις, οὐ παιδοφθορήσεις, οὐ πορνεύσεις, οὐ κλέψεις, οὐ μαγεύσεις, οὐ φαρμακεύσεις, οὐ φονεύσεις τέκνον ἐν φθορᾷ, οὐδὲ γεννηθὲν ἀποκτενεῖς",
+      "context": "\"Potions\" (pharmakeia) included drugs used for abortion. The Letter of Barnabas (19.5) has the same command.",
+      "source": {
+        "book": "didache",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athenagoras-plea-35-abortion",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "35.6",
+      "lang": "grc",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We say that women who use drugs to bring on abortion commit murder and will give account to God for the abortion. How then could we commit murder? For it is not the same person who thinks that the fetus in the womb is a living being and therefore an object of God's care, and then kills it once it has come into life; nor who refuses to expose a born child, since those who expose children are child-murderers, and then destroys the one who has been reared.",
+      "original": "Καὶ οἳ τὰς τοῖς ἀμβλωθριδίοις χρωμένας ἀνδροφονεῖν τε καὶ λόγον ὑφέξειν τῆς ἐξαμβλώσεως τῷ θεῷ φαμεν, κατὰ ποῖον ἀνδροφονοῦμεν λόγον; Οὐ γὰρ τοῦ αὐτοῦ νομίζειν μὲν καὶ τὸ κατὰ γαστρὸς ζῶον εἶναι καὶ διὰ τοῦτο αὐτοῦ μέλειν τῷ θεῷ, καὶ παρεληλυθότα εἰς τὸν βίον φονεύειν, καὶ μὴ ἐκτιθέναι μὲν τὸ γεννηθέν, ὡς τῶν ἐκτιθέντων τεκνοκτονούντων, πάλιν δὲ τὸ τραφὲν ἀναιρεῖν",
+      "context": "Athenagoras answers the charge that Christians eat children.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "35"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-apology-9-8",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "9.8",
+      "lang": "la",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For us, murder being once forbidden, we may not destroy even the child conceived in the womb, while the blood is still being formed into a human being. To prevent birth is a quicker murder; it makes no difference whether you take away a life once born or destroy it as it comes to birth. He is a human being who is going to be one; the whole fruit is already in the seed.",
+      "original": "Nobis vero semel homicidio interdicto etiam conceptum utero, dum adhuc sanguis in hominem delib[er]atur, dissolvere non licet. Homicidii festinatio est prohibere nasci, nec refert, natam quis eripiat animam an nascentem disturbet. Homo est et qui est futurus; etiam fructus omnis iam in semine est.",
+      "context": "Written to Roman magistrates, contrasting Christian practice with Roman custom.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "justin-1apol-27",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "27.1",
+      "lang": "grc",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But we have been taught that to expose even newborn children is the act of wicked men, so that we may do no wrong and no impiety: first, because we see that almost all who are exposed, not only girls but boys too, are brought up for prostitution.",
+      "original": "Ἡμεῖς δέ ἵνα μηδὲν ἀδικῶμεν μηδὲ ἀσεβῶμεν, ἐκτιθέναι καὶ τὰ γεννώμενα πονηρῶν εἶναι δεδιδάγμεθα· πρῶτον μέν, ὅτι τοὺς πάντας σχεδὸν ὁρῶμεν ἐπὶ πορνείᾳ προάγοντας, οὖ μόνον τὰς κόρας ἀλλὰ καὶ τοὺς ἄρσενας",
+      "context": "Exposure of unwanted infants was legal and common in the Roman world.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "27"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "diognetus-5-6",
+      "author": "Letter to Diognetus",
+      "year": 150,
+      "date": "c. 150",
+      "work": "Letter to Diognetus",
+      "locus": "5.6–7",
+      "lang": "grc",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "They marry like everyone, they have children; but they do not expose their offspring. They share their table, but not their bed.",
+      "original": "γαμοῦσιν ὡς πάντες, τεκνογονοῦσιν: ἀλλ’ οὐ ῥίπτουσι τὰ γεννώμενα. τράπεζαν κοινὴν παρατίθενται, ἀλλ’ οὐ κοίτην.",
+      "context": "Not exposing infants is named as one of the marks of Christians.",
+      "source": {
+        "book": "diognetus-epistle",
+        "section": "5"
+      },
+      "translation": "dossier"
+    }
+  ],
+  "gaps": [
+    {
+      "author": "Basil of Caesarea",
+      "work": "Letter 188, canons 2 and 8",
+      "year": 374,
+      "why": "Penance for abortion; no distinction between a formed and unformed fetus.",
+      "action": "search",
+      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
+    },
+    {
+      "author": "Councils of Elvira and Ancyra",
+      "work": "Elvira canon 63; Ancyra canon 21",
+      "year": 314,
+      "why": "Church penalties for abortion.",
+      "action": "intake",
+      "source_hint": "Bruns (1839)"
+    },
+    {
+      "author": "Minucius Felix",
+      "work": "Octavius 30",
+      "year": 200,
+      "why": "Pagan practice of abortion and exposure contrasted. In the library's raw Octavius text.",
+      "action": "search",
+      "source_hint": "books/ante-nicene-topics/sources/raw/minucius_octavius_migne_pl3_wikisource.txt"
+    }
+  ],
+  "related": {
+    "topics": [
+      "abortion"
+    ]
+  },
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "reviewed": {
+    "by": "Claude (Opus 5.5)",
+    "at": "2026-10-13"
+  }
+}
