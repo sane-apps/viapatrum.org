@@ -142,6 +142,12 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.public_note("English follows X CLOSED + Y CLOSED. No modern English. Next: Z (PDF 584-)."),
                          "No modern English.")
 
+    def test_translator_gap_notes_in_source_panels_show_as_a_lacuna(self):
+        out = build_site.public_source_text("μὴ γνωσθέν [text rough; sense: x]. [T-ILLEGIBLE: probably y (per apparatus); not rendered.] τίς")
+        self.assertNotIn("ILLEGIBLE", out)
+        self.assertNotIn("rough", out)
+        self.assertIn("[…]", out)
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])

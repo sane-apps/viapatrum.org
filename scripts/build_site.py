@@ -2802,11 +2802,17 @@ _WORKSHEET_BRACKET = re.compile(
 )
 
 
+# A translator's note inside a source panel ("[T-ILLEGIBLE: probably mockery
+# of prayers ... (per apparatus); not rendered.]", "[text rough; sense: ...]")
+# shows readers a lacuna mark instead (2026-10-14 audit, Origen On Prayer).
+_SOURCE_GAP_NOTE = re.compile(r"\[(?:T-ILLEGIBLE|text rough)\b[^\]]*\]")
+
+
 def public_source_text(text: str) -> str:
     """Hide a worksheet bracket or page-lock in a displayed source paragraph."""
     if not isinstance(text, str) or not text:
         return ""
-    cleaned = _WORKSHEET_BRACKET.sub("", text)
+    cleaned = _WORKSHEET_BRACKET.sub("", _SOURCE_GAP_NOTE.sub("[…]", text))
     cleaned = scrub_worksheet_note(cleaned)
     if cleaned == text:
         return text
