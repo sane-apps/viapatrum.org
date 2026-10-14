@@ -244,6 +244,8 @@ EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
 SITE_NAME = "Via Patrum"
 SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
+# The iPhone and iPad app (App Store id 6818696772; 1.0 live on 2026-10-14).
+APP_STORE_URL = "https://apps.apple.com/app/via-patrum/id6818696772"
 SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
 BASE = ""
 
@@ -11139,9 +11141,9 @@ def build() -> None:
         DIST / "privacy" / "index.html",
         layout(
             "Privacy",
-            """<p class="eyebrow">Privacy</p>
+            f"""<p class="eyebrow">Privacy</p>
             <h1>Privacy</h1>
-            <p class="lede">Via Patrum does not collect personal data, on this website or in the Via Patrum app for iPhone and iPad.</p>
+            <p class="lede">Via Patrum does not collect personal data, on this website or in the <a href="{APP_STORE_URL}">Via Patrum app for iPhone and iPad</a>.</p>
             <h2>The app</h2>
             <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
             <h2>This website</h2>
