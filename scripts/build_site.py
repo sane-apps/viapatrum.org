@@ -1177,9 +1177,9 @@ AUTHOR_DISPLAY = {
     "Cyprian": "Cyprian of Carthage",
     "Hermas": "Hermas",
     "Shepherd of Hermas": "Hermas",
-    "Mathetes (Epistle to Diognetus)": "Letter to Diognetus",
-    "Anonymous (Diognetus)": "Letter to Diognetus",
-    "Anonymous (Epistle to Diognetus)": "Letter to Diognetus",
+    "Mathetes (Epistle to Diognetus)": "Mathetes",
+    "Anonymous (Diognetus)": "Mathetes",
+    "Anonymous (Epistle to Diognetus)": "Mathetes",
     "Alexander Monachus": "Alexander the Monk",
     "Barnabas (Epistle)": "Barnabas",
     "Didache": "The Didache",
@@ -6163,7 +6163,7 @@ VIA_PATRUM_ORG = {
     "name": "Via Patrum",
     "url": f"{SITE_ORIGIN}/",
     "logo": f"{SITE_ORIGIN}/assets/icons/icon-512.png",
-    "sameAs": ["https://github.com/sane-apps/translations"],
+    "sameAs": ["https://github.com/sane-apps/translations", "https://www.youtube.com/@viapatrums", "https://x.com/MrSaneApps"],
 }
 
 
@@ -9342,6 +9342,18 @@ def build() -> None:
                 if x.get("_reader_href")
                 else ""
             )
+            # The passage's home in structured data too: the work's Book node
+            # when the excerpt resolved to a library work, a bare name when not.
+            e_partof: dict = {"@type": "CreativeWork", "name": x.get("work") or e_cite}
+            _rh = x.get("_reader_href") or ""
+            if _rh.startswith("/works/") and x.get("_reader_title"):
+                _rslug = _rh.split("/")[2]
+                e_partof = {
+                    "@type": "Book",
+                    "@id": f"{SITE_ORIGIN}/works/{_rslug}/#book",
+                    "name": x["_reader_title"],
+                    "url": f"{SITE_ORIGIN}/works/{_rslug}/",
+                }
             ebody = f"""
 <article class="excerpt-page">
   <p class="eyebrow"><a href="/topics/{escape(tid)}/">{escape(meta['title'])}</a></p>
@@ -9379,7 +9391,7 @@ def build() -> None:
                                     "url": f"{SITE_ORIGIN}/authors/{author_hub_slug(x.get('author'))}/"},
                         "about": meta["title"],
                         "inLanguage": "en",
-                        "isPartOf": {"@type": "CreativeWork", "name": x.get("work") or e_cite},
+                        "isPartOf": e_partof,
                     }],
                 ),
             )
@@ -9770,6 +9782,8 @@ def build() -> None:
             "inLanguage": "en",
             "isAccessibleForFree": True,
             "publisher": {"@id": f"{SITE_ORIGIN}/#org"},
+            "isPartOf": {"@type": "CollectionPage", "@id": f"{SITE_ORIGIN}/works/#collection",
+                         "name": "The Via Patrum Library", "url": f"{SITE_ORIGIN}/works/"},
             "description": public_blurb(w.get("blurb") or "") or None,
         }
         if latin_sub or w_lang:
@@ -11178,10 +11192,25 @@ def build() -> None:
     (DIST / "_headers").write_text(pages_headers(), encoding="utf-8")
     (DIST / "robots.txt").write_text(
         # Data files, the API, paid downloads and the app feed are not pages.
+        # The library is open to search engines and AI crawlers alike. A bot
+        # with its own group follows that group instead of the wildcard, so
+        # the Disallow lines repeat in the named group on purpose.
+        "User-agent: GPTBot\nUser-agent: OAI-SearchBot\nUser-agent: ChatGPT-User\n"
+        "User-agent: ClaudeBot\nUser-agent: Claude-User\nUser-agent: PerplexityBot\n"
+        "User-agent: Perplexity-User\nUser-agent: Google-Extended\nUser-agent: CCBot\n"
+        "User-agent: Applebot-Extended\nUser-agent: Meta-ExternalAgent\n"
+        "Allow: /\nDisallow: /data/\nDisallow: /api/\nDisallow: /dl/\nDisallow: /app/\n\n"
         "User-agent: *\nAllow: /\nDisallow: /data/\nDisallow: /api/\nDisallow: /dl/\nDisallow: /app/\n"
         f"Sitemap: {SITE_ORIGIN}/sitemap.xml\n",
         encoding="utf-8",
     )
+    # llms.txt + llms-full.txt: the library's map for AI systems, kept as
+    # source files at the repo root and copied verbatim. Regenerate
+    # llms-full.txt when the catalogue changes; a stale index is worse than none.
+    for _llms_name in ("llms.txt", "llms-full.txt"):
+        _llms_src = ROOT / _llms_name
+        if _llms_src.is_file():
+            (DIST / _llms_name).write_text(_llms_src.read_text(encoding="utf-8"), encoding="utf-8")
     # Every page gets its own title: where two pages still share one, the later
     # ones add the opening words of their own description.
     import html as html_lib
@@ -11257,11 +11286,22 @@ def build() -> None:
         encoding="utf-8",
     )
     # One sitemap per section, joined by an index, all on the canonical host.
-    urls = sorted(
-        "/" + p.relative_to(DIST).as_posix().removesuffix("index.html")
-        for p in DIST.rglob("*.html")
-        if p.name != "404.html" and not p.relative_to(DIST).as_posix().startswith("assets/")
-    )
+    import datetime as _dt
+
+    url_files: dict[str, Path] = {}
+    for p in DIST.rglob("*.html"):
+        if p.name == "404.html" or p.relative_to(DIST).as_posix().startswith("assets/"):
+            continue
+        url_files["/" + p.relative_to(DIST).as_posix().removesuffix("index.html")] = p
+    urls = sorted(url_files)
+
+    def _lastmod(u: str) -> str:
+        # The build writes every page fresh, so the file's mtime is the day
+        # this content was built — the honest freshness signal we have.
+        try:
+            return _dt.datetime.fromtimestamp(url_files[u].stat().st_mtime).strftime("%Y-%m-%d")
+        except (KeyError, OSError):
+            return _dt.date.today().isoformat()
     groups: dict[str, list[str]] = defaultdict(list)
     noindex_routes = set(NONCANONICAL_ROUTES)
     for page in DIST.rglob("index.html"):
@@ -11276,14 +11316,14 @@ def build() -> None:
         (DIST / f"sitemap-{names.get(g, g)}.xml").write_text(
             '<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc></url>\n" for u in us)
+            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc><lastmod>{_lastmod(u)}</lastmod></url>\n" for u in us)
             + "</urlset>\n",
             encoding="utf-8",
         )
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc></sitemap>\n" for g in sorted(groups))
+        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc><lastmod>{max((_lastmod(u) for u in groups[g]), default=_dt.date.today().isoformat())}</lastmod></sitemap>\n" for g in sorted(groups))
         + "</sitemapindex>\n",
         encoding="utf-8",
     )
