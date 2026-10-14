@@ -6301,7 +6301,7 @@ def layout(
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
-      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li></ul>
+      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
     </nav>
     <nav aria-label="Support">
       <h2>Support</h2>
