@@ -148,6 +148,12 @@ class CleanupPassTest(unittest.TestCase):
         self.assertNotIn("rough", out)
         self.assertIn("[…]", out)
 
+    def test_a_section_that_repeats_an_earlier_one_is_dropped(self):
+        same = "Paul names his chains first to give weight to his request for Onesimus."
+        secs = [{"section": "a", "english": [same]}, {"section": "b", "english": [same + " "]},
+                {"section": "c", "english": ["Something else entirely, long enough to count."]}]
+        self.assertEqual([x["section"] for x in build_site.drop_repeated_sections(secs)], ["a", "c"])
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])

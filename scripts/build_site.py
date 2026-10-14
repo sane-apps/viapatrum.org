@@ -309,10 +309,6 @@ WORK_TOPICS: dict[str, list[str]] = {
     "le-blanc-theses-theologicae": ["justification", "protestant-roman", "ireneicism", "catholicism"],
     "strimesius-in-controversias-evangelicorum": ["ecclesiastical-peace", "protestant-unity", "ireneicism", "controversy"],
 }
-# Topic links for works that had none (data/work-topics.json, 2026-10-14).
-for _slug, _tids in (_json_load(ROOT / "data" / "work-topics.json", {}) or {}).items():
-    if isinstance(_tids, list) and _tids and not WORK_TOPICS.get(_slug):
-        WORK_TOPICS[_slug] = [str(t) for t in _tids]
 
 
 def slugify(s: str) -> str:
@@ -1108,6 +1104,10 @@ AUTHOR_BIOS = load_author_bios()
 # from each work's English; the book metadata is left as it is.
 WORK_BLURBS: dict[str, str] = {k: v for k, v in (_json_load(ROOT / "data" / "work-blurbs.json", {}) or {}).items()
                                if isinstance(v, str) and v.strip()}
+# Topic links for works that had none (data/work-topics.json, 2026-10-14).
+for _slug, _tids in (_json_load(ROOT / "data" / "work-topics.json", {}) or {}).items():
+    if isinstance(_tids, list) and _tids and not WORK_TOPICS.get(_slug):
+        WORK_TOPICS[_slug] = [str(t) for t in _tids]
 
 
 def load_author_dates() -> dict[str, str]:
@@ -8452,6 +8452,21 @@ def dead_withhold_slugs(loaded: set[str]) -> list[str]:
                   if slug not in loaded and not (BOOKS / slug).is_dir())
 
 
+def drop_repeated_sections(sections: list[dict]) -> list[dict]:
+    """A section whose English repeats an earlier section word for word.
+    Short scraps split into open/early/mid/close units showed one comment up
+    to four times (2026-10-14 audit: the Philemon notes, George's hymn)."""
+    seen: set[str] = set()
+    out = []
+    for sec in sections:
+        key = re.sub(r"\s+", " ", " ".join(eng_list(sec.get("english")))).strip().casefold()
+        if len(key) >= 40 and key in seen:
+            continue
+        seen.add(key)
+        out.append(sec)
+    return out
+
+
 def split_withheld(works: list[dict]) -> tuple[list[dict], list[str]]:
     """Drop works already marked withheld, and the named slugs above."""
     kept, held = [], []
@@ -8710,6 +8725,9 @@ def build() -> None:
         else:
             merged_works[work["slug"]] = work
     works = list(merged_works.values())
+    for w in works:
+        w["sections"] = drop_repeated_sections(w["sections"])
+        w["section_count"] = len(w["sections"])
     # Corpus progress for the Explore strip: totals over everything the
     # loaders considered, before the quality and publication gates hold
     # works back. A section counts as translated when it has English that
