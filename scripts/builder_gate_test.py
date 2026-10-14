@@ -220,7 +220,7 @@ class BuildGateTest(unittest.TestCase):
             other.wait()
 
     def test_ship_sh_rejects_a_live_pid_that_is_not_the_holder(self) -> None:
-        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": "1"}
+        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": "1", "SANE_HEAVY_LOCK": "off"}
         r = subprocess.run(["bash", str(self.tmp / "scripts/ship.sh"), "--dry-run"], cwd=self.tmp,
                            capture_output=True, text=True, timeout=60, env=env)
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
@@ -232,7 +232,7 @@ class BuildGateTest(unittest.TestCase):
         last = self.tmp / "outputs/ship-last"
         last.mkdir()
         (last / "keep").write_text("x")
-        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": str(self.sleeper.pid), "FATHERS_FREE_GB_TEST": "3"}
+        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": str(self.sleeper.pid), "FATHERS_FREE_GB_TEST": "3", "SANE_HEAVY_LOCK": "off"}
         r = subprocess.run(["bash", str(self.tmp / "scripts/ship.sh"), "--dry-run"], cwd=self.tmp,
                            capture_output=True, text=True, timeout=60, env=env)
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
@@ -252,7 +252,7 @@ class BuildGateTest(unittest.TestCase):
 
     def test_ship_sh_is_blocked_by_a_build(self) -> None:
         """ship.sh in a scratch root stops at the build lock, before any step."""
-        env = {k: v for k, v in os.environ.items() if k != "FATHERS_BUILD_LOCK_HELD"}
+        env = {**{k: v for k, v in os.environ.items() if k != "FATHERS_BUILD_LOCK_HELD"}, "SANE_HEAVY_LOCK": "off"}  # a live ship must not stall the dry run
         r = subprocess.run(["bash", str(self.tmp / "scripts/ship.sh"), "--dry-run"], cwd=self.tmp,
                            capture_output=True, text=True, timeout=60, env=env)
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)

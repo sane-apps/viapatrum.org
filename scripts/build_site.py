@@ -8431,6 +8431,7 @@ FORCED_WITHHOLD = {
     # studying heretics and philosophers (Eusebius, Church History 6.19).
     "diodorus-fragmenta": "Holds Dionysius of Corinth's letters, not Diodorus; a mislabeled second copy.",
     "origen-apocalypse-scholia-scrap": "Holds Origen's letter from Eusebius 6.19, not notes on the Apocalypse.",
+    "olympiodorus-contra-severum": "Only a heading survives (that he quoted Athanasius); no text to read.",
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
     # withheld 2026-10-09 pending Stephan promote call; densify in progress (Densify)
