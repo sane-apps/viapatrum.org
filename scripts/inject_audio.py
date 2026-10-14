@@ -105,6 +105,9 @@ def match_key(text: str) -> str:
     return norm(re.sub(r"\s+(?=[.,;:!?])", "", text)).lstrip(".,;: ")
 
 
+LISTENING_NOTE = re.compile(r"\s*This is a listening version\b", re.I)  # build_site._WESLEY_LISTENING_LINE
+
+
 def section_candidates(work: str) -> dict:
     """Map section id -> every (stem, first, last) that claims it.
 
@@ -133,9 +136,21 @@ def section_candidates(work: str) -> dict:
                     n += len(split_sentences(clean(para)))
                 if n <= 0:
                     continue
-                cand = (eng_file.stem, idx, idx + n - 1)
-                if cand not in found.get(sec, []):
-                    found.setdefault(sec, []).append(cand)
+                cands = [(eng_file.stem, idx, idx + n - 1)]
+                # A Wesley sermon opens with a spoken note ("This is a listening
+                # version of ...") that the page leaves out (build_site
+                # load_wesley_sermons). Offer the window without it, so the
+                # Bible-text page keeps its Play bar (16 sermons, 2026-10-14).
+                skip = 0
+                for para in row.get("english", []) or []:
+                    if not LISTENING_NOTE.match(para):
+                        break
+                    skip += len(split_sentences(clean(para)))
+                if 0 < skip < n:
+                    cands.append((eng_file.stem, idx + skip, idx + n - 1))
+                for cand in cands:
+                    if cand not in found.get(sec, []):
+                        found.setdefault(sec, []).append(cand)
                 idx += n
     return found
 
