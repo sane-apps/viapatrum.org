@@ -1154,6 +1154,9 @@ AUTHOR_SLUG_ALIASES = {
     # Certified books name authors in full; join the existing author pages.
     "irenaeus-of-lyons": "irenaeus",
     "anonymous-epistle-to-diognetus": "mathetes-epistle-to-diognetus",
+    # Certified On the Unity of the Church named him in full and opened a
+    # second hub beside the excerpt hub (2026-10-14 audit).
+    "cyprian-of-carthage": "cyprian",
 }
 
 
@@ -11298,6 +11301,7 @@ def build() -> None:
         "/authors/anonymous-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n"
         "/authors/anonymous-epistle-to-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n"
         "/authors/irenaeus-of-lyons/ /authors/irenaeus/ 301\n"
+        "/authors/cyprian-of-carthage/ /authors/cyprian/ 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))

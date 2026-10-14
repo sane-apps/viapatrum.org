@@ -116,6 +116,10 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.excerpt_paragraphs(x), ["it uses its own."])
         self.assertEqual(build_site.excerpt_paragraphs({"english": ["a", "b ******"]}), ["a", "b"])
 
+    def test_cyprian_has_one_author_page(self):
+        self.assertEqual(build_site.canonical_author_slug("cyprian-of-carthage", "Cyprian of Carthage"), "cyprian")
+        self.assertEqual(build_site.canonical_author_slug(None, "Cyprian of Carthage"), "cyprian")
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])
