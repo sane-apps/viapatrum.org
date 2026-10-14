@@ -8215,6 +8215,20 @@ def load_search_docs(data_dir: Path) -> list:
     return rows
 
 
+def held_source_files() -> set[tuple[str, str]]:
+    """(book folder, English stem) for every FORCED_WITHHOLD work, read from the
+    *_meta.json slugs, so pages built from the map (beliefs) can drop its words."""
+    held: set[tuple[str, str]] = set()
+    for meta_path in BOOKS.glob("*/translations/*_meta.json"):
+        try:
+            slug = json.loads(meta_path.read_text(encoding="utf-8")).get("slug")
+        except (OSError, ValueError, AttributeError):
+            continue
+        if slug in FORCED_WITHHOLD:
+            held.add((meta_path.parents[1].name, meta_path.name[: -len("_meta.json")] + "_english"))
+    return held
+
+
 def write_work_sources(path: Path, works: list[dict]) -> None:
     """Site slug -> {book folder, English stems} for every published work, so
     the audio drain can find the text behind a page (On Prayer had no map)."""
