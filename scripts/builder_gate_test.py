@@ -154,6 +154,15 @@ class CleanupPassTest(unittest.TestCase):
                 {"section": "c", "english": ["Something else entirely, long enough to count."]}]
         self.assertEqual([x["section"] for x in build_site.drop_repeated_sections(secs)], ["a", "c"])
 
+    def test_ignatius_letter_excerpts_find_the_letters_reader(self):
+        text = "truly of the line of David according to the flesh, Son of God by the will and power of God, truly born of a virgin"
+        work = {"slug": "ignatius-letters", "title": "The Letters of Ignatius: Ephesians", "author": "Ignatius of Antioch",
+                "author_slug": "ignatius-of-antioch", "sections": [{"section": "6.1", "english": [text]}]}
+        x = {"id": "t", "author": "Ignatius of Antioch", "work": "Epistle to the Smyrnaeans", "locus": "1", "english": [text]}
+        hit = build_site.excerpt_reader_sections([x], [work]).get("t")
+        self.assertIsNotNone(hit)
+        self.assertEqual(hit[1]["section"], "6.1")
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])

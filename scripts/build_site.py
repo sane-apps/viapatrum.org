@@ -6567,6 +6567,20 @@ def _sec_step(sid: str, d: int) -> str:
     return str(int(sid) + d) if sid.isdigit() else ""
 
 
+# One site work holds several letters, numbered by letter ("6.1" is Smyrnaeans
+# 1). Excerpts name the single letter and its chapter, so they never found the
+# reader (2026-10-14: 25 Ignatius excerpts kept older English).
+EXCERPT_LETTER_SECTIONS = {
+    ("ignatius-of-antioch", "ephesians"): ("ignatius-letters", "1"),
+    ("ignatius-of-antioch", "magnesians"): ("ignatius-letters", "2"),
+    ("ignatius-of-antioch", "trallians"): ("ignatius-letters", "3"),
+    ("ignatius-of-antioch", "romans"): ("ignatius-letters", "4"),
+    ("ignatius-of-antioch", "philadelphians"): ("ignatius-letters", "5"),
+    ("ignatius-of-antioch", "smyrnaeans"): ("ignatius-letters", "6"),
+    ("ignatius-of-antioch", "polycarp"): ("ignatius-letters", "7"),
+}
+
+
 def excerpt_reader_sections(excerpts: list[dict], works: list[dict]) -> dict[str, tuple[dict, dict, str]]:
     """Excerpt id -> (work, section, reader href) when the excerpt's chapter is
     published as a whole-work reader. The excerpt then shows the reader's own
@@ -6577,14 +6591,19 @@ def excerpt_reader_sections(excerpts: list[dict], works: list[dict]) -> dict[str
         a_slug = canonical_author_slug(w.get("author_slug"), w.get("author"))
         for t in (w.get("title") or "", public_reader_title(w.get("title") or "", slug=w["slug"])):
             by_key.setdefault(_work_key(a_slug, t, w.get("author") or ""), w)
+    by_slug = {w["slug"]: w for w in works}
     out: dict[str, tuple[dict, dict, str]] = {}
     for x in excerpts:
         key = _work_key(canonical_author_slug(None, x.get("author")), x.get("work") or "", x.get("author") or "")
         w = by_key.get(key)
+        locus = str(x.get("locus") or "").strip()
+        letter = next((v for (a, t), v in EXCERPT_LETTER_SECTIONS.items()
+                       if key[0] == a and key[1].split()[-1:] == [t]), None) if not w else None
+        if letter and letter[0] in by_slug and locus.isdigit():
+            w, locus = by_slug[letter[0]], f"{letter[1]}.{locus}"
         if not w or not key[1]:
             continue
         secs = {str(s["section"]): s for s in w.get("sections") or [] if s.get("english")}
-        locus = str(x.get("locus") or "").strip()
         # Exact key, or "Chapter N. Title". A dotted locus ("10.2", "3.24") is
         # a part of a section or a book.chapter, so it never maps to section N.
         m = re.match(r"Chapter\s+(\d+)(?!\d|\.\d)", locus)
