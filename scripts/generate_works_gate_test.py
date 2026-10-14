@@ -54,7 +54,8 @@ class MovedSlugTest(unittest.TestCase):
             r.write_text("/authors/irenaeus-of-lyons/ /authors/irenaeus/ 301\n"
                          "/authors/live-one/ /authors/x/ 301\n"
                          "/beliefs/:id/ /explore/:id/ 301\n"
-                         "/works/old/ /works/new/ 301\n")
+                         "/works/old/ /works/new/ 301\n"
+                         "/works/held/ /404.html 404\n")
             self.assertEqual(gate.moved_slugs(r, "authors", ["irenaeus", "live-one"]),
                              {"irenaeus-of-lyons": "/authors/irenaeus/"})
             self.assertEqual(gate.moved_slugs(r, "works", []), {"old": "/works/new/"})

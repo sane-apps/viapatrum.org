@@ -111,7 +111,8 @@ def live_slugs_from_works_dir(works_dir: Path) -> list[str]:
 
 def moved_slugs(redirects: Path, section: str, live: list[str]) -> dict[str, str]:
     """`/section/<old>/ /target/ 301` lines of _redirects whose old slug is not
-    live. Placeholders and splats stay with _redirects."""
+    live. Placeholders and splats stay with _redirects. Status lines that are
+    not redirects (ship.sh adds `/works/<held>/ /404.html 404`) stay 404s."""
     moved: dict[str, str] = {}
     try:
         lines = redirects.read_text(encoding="utf-8").splitlines()
@@ -121,6 +122,8 @@ def moved_slugs(redirects: Path, section: str, live: list[str]) -> dict[str, str
     for line in lines:
         parts = line.split()
         if len(parts) < 2 or not parts[0].startswith(prefix) or ":" in parts[0] or "*" in parts[0]:
+            continue
+        if len(parts) > 2 and not parts[2].startswith("3"):
             continue
         rest = parts[0][len(prefix):].strip("/")
         if rest and "/" not in rest and SLUG_RE.fullmatch(rest) and rest not in live_set:

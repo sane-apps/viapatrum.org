@@ -284,7 +284,7 @@ async function run(base,out) {
    const response=await visit(base+url,{waitUntil:"networkidle",timeout:30000});
    assert.equal(response.status(),200,label+" returned HTTP "+response.status());
    await page.locator("h1").first().waitFor();
-   if(label==="explore")await page.locator(".ot-card .tl-pt").first().waitFor();
+   if(label==="explore")await page.locator(".index .qt").first().waitFor();
    if(label==="topic")await page.locator("#over-time .tl-pt").first().waitFor();
    if(label==="scripture-verse"){
     // The verse desk must open from the hash and name the verse.
