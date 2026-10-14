@@ -21,6 +21,15 @@ def passage(year, book, text, verdict="states", reviewed=True):
 
 
 class OnPageTests(unittest.TestCase):
+    def test_a_passage_from_a_withheld_work_is_left_out(self):
+        # 2026-10-14: a held Cyril book had no page, so its words stayed on the Timeline.
+        B.HELD_FILES.add(("cyril-alexandria-adoration-1", "adoration15_english"))
+        try:
+            p = {"book": "cyril-alexandria-adoration-1", "file": "adoration15_english", "section": "10", "text": "x"}
+            self.assertFalse(B._on_page(Path("/nonexistent"), p))
+        finally:
+            B.HELD_FILES.clear()
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.dist = Path(self.tmp.name)

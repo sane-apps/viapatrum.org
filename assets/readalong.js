@@ -379,5 +379,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     players = $all(".rdl-player").map(initPlayer);
+    // The how-to line once per page, not under every passage (2026-10-14 audit).
+    $all(".rdl-hint").slice(1).forEach(function (h) { h.hidden = true; });
   });
 })();

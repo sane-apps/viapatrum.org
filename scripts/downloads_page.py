@@ -149,6 +149,10 @@ class Library:
     def has_audio(self) -> bool:
         return any("audio" in w["files"] for w in self.by_slug.values())
 
+    def audio_count(self) -> int:
+        """Works with a downloadable audiobook (at least 80% narrated)."""
+        return sum(1 for w in self.by_slug.values() if "audio" in w["files"])
+
     def __bool__(self) -> bool:
         # Live only with uploaded files AND a checkout link, which library_sync
         # go-live sets after Lemon Squeezy says the product is published.
@@ -401,7 +405,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 
 <section class="dl-faq" aria-labelledby="dl-faq-h">
   <h2 id="dl-faq-h">Questions</h2>
-  <details><summary>Is reading on the site still free?</summary><p>Yes. Every work, every Scripture link and every read-along recording stays free on this site and in the app. The pass is only for files you keep.</p></details>
+  <details><summary>Is reading on the site still free?</summary><p>Yes. Every work, every Scripture link and every read-along recording stays free on this site and in the <a href="https://apps.apple.com/app/via-patrum/id6818696772">app</a>. The pass is only for files you keep.</p></details>
   <details><summary>What happens when you add books?</summary><p>They are yours. New works{" and new recordings" if n["audio"] else ""} appear on the shelf as they are finished. Come back and download them with the same key.</p></details>
   {"<details><summary>How do I open these on a Kindle?</summary><p>Send the EPUB with Amazon's Send to Kindle (the app, the website, or email). Kindle converts it for you.</p></details>" if n["epub"] else ""}
   {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The README in each zip walks through it, and the cover and description are included.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}

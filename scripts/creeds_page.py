@@ -220,7 +220,7 @@ def build(dist: Path, layout, write, data_dir: Path = DATA) -> int:
 <header class="cr-head">
   <p class="eyebrow">Timeline</p>
   <h1>Creeds and churches</h1>
-  <p class="intro">Every major creed and confession, from the first summaries of the faith around AD 180 to today. For each one: when and where it was written, why, a short passage in its own words, and which churches hold it. Below the timeline, a card for each family of churches says where it came from.</p>
+  <p class="intro">Every major creed and confession, from the first summaries of the faith around 180 AD to today. For each one: when and where it was written, why, a short passage in its own words, and which churches hold it. Below the timeline, a card for each family of churches says where it came from.</p>
   <nav class="cr-jump" aria-label="On this page"><a href="#timeline">The creeds, in date order</a><a href="#churches">Where the churches came from</a></nav>
 </header>
 <section id="timeline" aria-label="The creeds, in date order">
@@ -239,6 +239,6 @@ def build(dist: Path, layout, write, data_dir: Path = DATA) -> int:
           layout("Creeds and churches", body,
                  crumb=[("Home", "/"), ("Timeline", "/explore/"), ("Creeds and churches", "")],
                  active="explore", styles=["/assets/creeds.css"], og_image="explore",
-                 description="Every major creed and confession from AD 180 to today: when, where and why each was written, "
+                 description="Every major creed and confession from 180 AD to today: when, where and why each was written, "
                              "a short passage, which churches hold it, and where each church came from."))
     return len(creeds)

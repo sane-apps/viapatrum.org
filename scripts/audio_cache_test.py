@@ -227,5 +227,22 @@ class NoAttachCacheTests(unittest.TestCase):
             inject_audio.inject_work("bk")
 
 
+class WesleyListeningNoteTests(unittest.TestCase):
+    def test_bible_text_page_also_matches_without_the_spoken_note(self):
+        with tempfile.TemporaryDirectory() as d:
+            folder = Path(d) / "w" / "translations"
+            folder.mkdir(parents=True)
+            (folder / "sermon_01_english.json").write_text(json.dumps([
+                {"section": "1", "english": ["This is a listening version of the sermon. Rendered in modern English.",
+                                             "Awake, you that sleep. Ephesians 5:14."]},
+                {"section": "2", "english": ["In speaking on these words."]}]))
+            with mock.patch.object(inject_audio, "BOOKS", Path(d)):
+                found = inject_audio.section_candidates("w")
+        whole = [c for c in found["1"] if c[1] == 0]
+        verse_only = [c for c in found["1"] if c[1] > 0]
+        self.assertTrue(whole and verse_only)
+        self.assertEqual(verse_only[0][2], whole[0][2])
+
+
 if __name__ == "__main__":
     unittest.main()

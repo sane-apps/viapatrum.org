@@ -223,12 +223,23 @@ def _plain(s: str) -> str:
     return re.sub(r"\s+\)", ")", re.sub(r"\(\s+", "(", s)).strip()
 
 
+# (book folder, English stem) of every withheld work, set by build(). A passage
+# from a held work has no page, so _on_page used to keep it: the baptism
+# question still quoted Cyril's held word-for-word draft (2026-10-14).
+HELD_FILES: set[tuple[str, str]] = set()
+
+
 def _on_page(dist: Path, p: dict) -> bool:
     """False when the passage's own section page is built but no longer says the
     words the map quotes. The map is rebuilt nightly; the English can change and
     ship in between (Amphilochius "Fire was kindled", 2026-10-06). Every whole
     sentence in the shown text must be on the page. A passage with no section
     page links nowhere and is left alone."""
+    if (p.get("book"), p.get("file")) in HELD_FILES:
+        if (p["book"], str(p["section"])) not in _OFF_PAGE:
+            _OFF_PAGE.add((p["book"], str(p["section"])))
+            print(f"beliefs: left out {p['book']}/{p.get('file')}: that work is withheld")
+        return False
     f = dist / "works" / p["book"] / str(p["section"]) / "index.html"
     if not f.is_file():
         return True
@@ -664,6 +675,9 @@ def legend(q: dict, B, *, defined_keys: bool = True) -> str:
 
 def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str, str]) -> int:
     qs = load(data_path)
+    if hasattr(B, "held_source_files"):
+        HELD_FILES.clear()
+        HELD_FILES.update(B.held_source_files())
     depth = searched_depth(data_path)
     searched_on = searched_date(data_path)
     for q in qs:

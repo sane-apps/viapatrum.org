@@ -116,8 +116,8 @@
 .tl .rail svg {display:block; overflow:visible;}
 .tl .rail .ax {stroke:var(--rule);}
 .tl .rail .eb {fill:var(--paper-2);}
-.tl .rail .et {fill:var(--gold); font:700 9px var(--ui); letter-spacing:.06em; text-transform:uppercase;}
-.tl .rail .yt {fill:var(--ink-faint); font:600 10px var(--ui);}
+.tl .rail .et {fill:var(--gold); font:700 11px var(--ui); letter-spacing:.06em; text-transform:uppercase;}
+.tl .rail .yt {fill:var(--ink-faint); font:600 11px var(--ui);}
 .tl .rail .life {stroke:var(--ink-faint); stroke-width:2; stroke-linecap:round; opacity:.45;}
 .tl .rail .rdot {cursor:pointer; stroke:var(--paper); stroke-width:1.5;}
 .tl .rail .rdot.ind {fill:var(--paper) !important; stroke-width:2.2;}
@@ -131,7 +131,6 @@
 .tl .gaps li {display:grid; grid-template-columns:4.2rem minmax(0,1fr); gap:0 1rem;}
 .tl .gaps li .yr {text-align:right; font:600 1rem var(--ui); color:var(--ink-faint); font-variant-numeric:tabular-nums;}
 .tl .gaps li b {font-weight:600;}
-.tl .gaps li .st {display:inline-block; font:700 .7rem var(--ui); letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin-left:.4rem;}
 .tl .gaps li p {margin:.15rem 0 0; color:var(--ink-soft); font-size:.94rem;}
 .tl .method p {color:var(--ink-soft); max-width:46rem;}
 .tl .kbdhint {font-size:.82rem; color:var(--ink-faint);}
@@ -144,7 +143,7 @@
   .tl .card, .tl .gaps li {grid-template-columns:2.9rem minmax(0,1fr); gap:0 .7rem;}
   .tl .card .yr {font-size:1rem;}
   .tl blockquote.q, .tl .card.key blockquote.q {font-size:1.06rem;}
-  .tl .g-era {font-size:.58rem;}
+  .tl .g-era {font-size:.7rem;}
   .tl .search kbd {display:none;}
 }
 .tl .group li > a { color:var(--ink); text-decoration:none; }

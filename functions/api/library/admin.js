@@ -24,7 +24,9 @@ async function allowed(token) {
   return true;
 }
 
-const OK_KEY = /^(epub|pdf|word|audio|bundles)\/[a-z0-9][a-z0-9._-]{0,180}\.(epub|pdf|zip|m4b)$/;
+// backup/: private archive copies (audiobook masters too big for the REST
+// API, 2026-10-14). functions/dl never serves this prefix.
+const OK_KEY = /^(epub|pdf|word|audio|bundles|backup)\/[a-z0-9][a-z0-9._-]{0,180}\.(epub|pdf|zip|m4b)$/;
 const TYPES = { epub: "application/epub+zip", pdf: "application/pdf", zip: "application/zip", m4b: "audio/mp4" };
 
 export async function onRequest({ request, env }) {

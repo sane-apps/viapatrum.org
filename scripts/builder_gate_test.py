@@ -108,6 +108,57 @@ class TitleAndDateTest(unittest.TestCase):
                                               "period": "c. 9th cent.?"}), "Unknown")
 
 
+class CleanupPassTest(unittest.TestCase):
+    """2026-10-14 site audit fixes (docs/WRAPUP_PLAN_2026-10-14.md, Phase 1)."""
+
+    def test_editor_gloss_after_asterisks_is_not_shown(self):
+        x = {"english": "it uses its own. ****** Sleep rests the flesh; the soul keeps moving."}
+        self.assertEqual(build_site.excerpt_paragraphs(x), ["it uses its own."])
+        self.assertEqual(build_site.excerpt_paragraphs({"english": ["a", "b ******"]}), ["a", "b"])
+
+    def test_cyprian_has_one_author_page(self):
+        self.assertEqual(build_site.canonical_author_slug("cyprian-of-carthage", "Cyprian of Carthage"), "cyprian")
+        self.assertEqual(build_site.canonical_author_slug(None, "Cyprian of Carthage"), "cyprian")
+
+    def test_text_authors_are_not_bylines(self):
+        self.assertEqual(build_site.title_by("The Martyrdom of Justin", "Acts of the Martyrs", "acts-of-the-martyrs"),
+                         "The Martyrdom of Justin (Acts of the Martyrs)")
+        self.assertEqual(build_site.title_by("On Prayer", "Origen of Alexandria", "origen"), "On Prayer by Origen of Alexandria")
+
+    def test_fragment_titles_follow_the_house_rule(self):
+        for slug in ("cyril-solutiones-vat-447", "dionysius-corinth-fragments"):
+            self.assertNotIn("(", build_site.PUBLIC_ENGLISH_TITLES[slug])
+
+    def test_intro_years_use_ad_and_bc(self):
+        self.assertEqual(build_site.bc_ad_prose("between 238 and 244 CE; 4 BCE"), "between 238 and 244 AD; 4 BC")
+        self.assertEqual(build_site.bc_ad_prose("the CEO in 1999"), "the CEO in 1999")
+
+    def test_builder_notes_leave_era_banners(self):
+        note = ("Le Blanc wrote in the mid-seventeenth century. This is not a patristic work. It is a public-domain "
+                "Latin Reformed retrieval on the same Fathers-site pipeline. The 1675 Pitt folio is Public Domain "
+                "Mark 1.0. Do not treat the site as ante-Nicene only.")
+        self.assertEqual(build_site.public_note(note),
+                         "Le Blanc wrote in the mid-seventeenth century. This is not a patristic work.")
+        self.assertEqual(build_site.public_note("English follows X CLOSED + Y CLOSED. No modern English. Next: Z (PDF 584-)."),
+                         "No modern English.")
+
+    def test_translator_gap_notes_in_source_panels_show_as_a_lacuna(self):
+        out = build_site.public_source_text("μὴ γνωσθέν [text rough; sense: x]. [T-ILLEGIBLE: probably y (per apparatus); not rendered.] τίς")
+        self.assertNotIn("ILLEGIBLE", out)
+        self.assertNotIn("rough", out)
+        self.assertIn("[…]", out)
+
+    def test_a_section_that_repeats_an_earlier_one_is_dropped(self):
+        same = "Paul names his chains first to give weight to his request for Onesimus."
+        secs = [{"section": "a", "english": [same]}, {"section": "b", "english": [same + " "]},
+                {"section": "c", "english": ["Something else entirely, long enough to count."]}]
+        self.assertEqual([x["section"] for x in build_site.drop_repeated_sections(secs)], ["a", "c"])
+
+    def test_long_text_after_a_lacuna_mark_stays(self):
+        tail = "text after a gap " * 20
+        self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])
+
+
 class BuildGateTest(unittest.TestCase):
     """build_site.py takes outputs/build.lock and keeps the 15 GB floor."""
 
@@ -169,7 +220,7 @@ class BuildGateTest(unittest.TestCase):
             other.wait()
 
     def test_ship_sh_rejects_a_live_pid_that_is_not_the_holder(self) -> None:
-        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": "1"}
+        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": "1", "SANE_HEAVY_LOCK": "off"}
         r = subprocess.run(["bash", str(self.tmp / "scripts/ship.sh"), "--dry-run"], cwd=self.tmp,
                            capture_output=True, text=True, timeout=60, env=env)
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
@@ -181,7 +232,7 @@ class BuildGateTest(unittest.TestCase):
         last = self.tmp / "outputs/ship-last"
         last.mkdir()
         (last / "keep").write_text("x")
-        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": str(self.sleeper.pid), "FATHERS_FREE_GB_TEST": "3"}
+        env = {**os.environ, "FATHERS_BUILD_LOCK_HELD": str(self.sleeper.pid), "FATHERS_FREE_GB_TEST": "3", "SANE_HEAVY_LOCK": "off"}
         r = subprocess.run(["bash", str(self.tmp / "scripts/ship.sh"), "--dry-run"], cwd=self.tmp,
                            capture_output=True, text=True, timeout=60, env=env)
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
@@ -201,7 +252,7 @@ class BuildGateTest(unittest.TestCase):
 
     def test_ship_sh_is_blocked_by_a_build(self) -> None:
         """ship.sh in a scratch root stops at the build lock, before any step."""
-        env = {k: v for k, v in os.environ.items() if k != "FATHERS_BUILD_LOCK_HELD"}
+        env = {**{k: v for k, v in os.environ.items() if k != "FATHERS_BUILD_LOCK_HELD"}, "SANE_HEAVY_LOCK": "off"}  # a live ship must not stall the dry run
         r = subprocess.run(["bash", str(self.tmp / "scripts/ship.sh"), "--dry-run"], cwd=self.tmp,
                            capture_output=True, text=True, timeout=60, env=env)
         self.assertEqual(r.returncode, 1, r.stdout + r.stderr)

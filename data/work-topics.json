@@ -1,0 +1,987 @@
+{
+ "acts-of-justin": [
+  "martyrdom-witness",
+  "civil-authority"
+ ],
+ "alexander-monachus-inventio-crucis-epitome": [
+  "liturgy-prayer"
+ ],
+ "ammonius-fragmenta-joannem": [
+  "father-son-spirit",
+  "incarnation-word-flesh",
+  "baptism-and-new-birth"
+ ],
+ "amphilochius-contra-haereticos": [
+  "heresy-schism",
+  "one-god-creator",
+  "against-docetism",
+  "resurrection-body"
+ ],
+ "amphilochius-epistula-synodalis": [
+  "father-son-spirit",
+  "canon-rule-of-truth"
+ ],
+ "amphilochius-iambi-seleucum": [
+  "canon-rule-of-truth"
+ ],
+ "amphilochius-in-illud-non-potest": [
+  "father-son-spirit"
+ ],
+ "amphilochius-in-illud-pater": [
+  "two-natures-seed",
+  "passion-resurrection"
+ ],
+ "amphilochius-in-lazarum": [
+  "resurrection-body",
+  "two-natures-seed"
+ ],
+ "amphilochius-in-mulierem-peccatricem": [
+  "salvation-by-christ",
+  "discipline-penance"
+ ],
+ "amphilochius-in-natalitia-domini": [
+  "incarnation-word-flesh",
+  "virgin-birth"
+ ],
+ "amphilochius-in-occursum-domini": [
+  "virgin-birth",
+  "sexual-marriage"
+ ],
+ "amphilochius-in-sabbati-sancti": [
+  "passion-resurrection",
+  "heaven-hell-intermediate"
+ ],
+ "amphilochius-in-zacchaeum": [
+  "salvation-by-christ",
+  "universal-call"
+ ],
+ "amphilochius-oratio-resurrectionem": [
+  "passion-resurrection",
+  "salvation-by-christ"
+ ],
+ "apollinaris-fragmenta-joannem": [
+  "incarnation-word-flesh",
+  "father-son-spirit"
+ ],
+ "apollinaris-fragmenta-matthaeum": [
+  "eucharist-thanksgiving",
+  "passion-resurrection"
+ ],
+ "apollinaris-fragmenta-psalmos": [
+  "hermeneutics-types",
+  "passion-resurrection",
+  "reward-and-judgment"
+ ],
+ "apollinaris-fragmenta-romanos": [
+  "law-and-gospel",
+  "faith-and-obedience",
+  "universal-call"
+ ],
+ "asterius-homilia-9": [
+  "martyrdom-witness"
+ ],
+ "asterius-homiliae": [
+  "wealth-alms",
+  "sexual-marriage",
+  "reward-and-judgment"
+ ],
+ "athanasius-epistula-adelphium": [
+  "incarnation-word-flesh",
+  "salvation-by-christ",
+  "heresy-schism"
+ ],
+ "athanasius-epistula-jovianum": [
+  "father-son-spirit",
+  "canon-rule-of-truth"
+ ],
+ "athanasius-epistula-monachos": [
+  "heresy-schism"
+ ],
+ "athenagoras-resurrection": [
+  "resurrection-body",
+  "reward-and-judgment"
+ ],
+ "baron-philosophia-theologiae-ancillans": [
+  "attributes-providence",
+  "father-son-spirit",
+  "two-natures-seed"
+ ],
+ "chrysostom-de-resurrectione-mortuorum": [
+  "resurrection-body",
+  "reward-and-judgment"
+ ],
+ "chrysostom-in-eustathium": [
+  "bishops-presbyters",
+  "heresy-schism",
+  "attributes-providence"
+ ],
+ "chrysostom-in-lucianum": [
+  "martyrdom-witness"
+ ],
+ "clement-alexandria-newly-baptized": [
+  "faith-and-obedience",
+  "providence-and-care"
+ ],
+ "clement-alexandria-rich-man": [
+  "wealth-alms",
+  "salvation-by-christ",
+  "discipline-penance"
+ ],
+ "crocius-syntagma": [
+  "scripture-inspiration",
+  "apostolic-tradition",
+  "canon-rule-of-truth"
+ ],
+ "cyprian-on-the-unity-of-the-church": [
+  "one-church",
+  "heresy-schism",
+  "bishops-presbyters"
+ ],
+ "cyril-ad-xystum": [
+  "two-natures-seed"
+ ],
+ "cyril-adoration-1": [
+  "law-and-gospel",
+  "hermeneutics-types",
+  "true-worship"
+ ],
+ "cyril-adoration-11": [
+  "hermeneutics-types",
+  "law-and-gospel"
+ ],
+ "cyril-adoration-12": [
+  "bishops-presbyters",
+  "hermeneutics-types",
+  "eucharist-thanksgiving"
+ ],
+ "cyril-adoration-13": [
+  "bishops-presbyters",
+  "hermeneutics-types"
+ ],
+ "cyril-adoration-14": [
+  "hermeneutics-types",
+  "heresy-schism",
+  "sexual-marriage"
+ ],
+ "cyril-adoration-15": [
+  "hermeneutics-types",
+  "salvation-by-christ",
+  "discipline-penance"
+ ],
+ "cyril-adoration-16": [
+  "true-worship",
+  "hermeneutics-types"
+ ],
+ "cyril-adoration-17": [
+  "hermeneutics-types",
+  "passion-resurrection",
+  "liturgy-prayer"
+ ],
+ "cyril-adoration-2": [
+  "law-and-gospel",
+  "salvation-by-christ",
+  "atonement-recapitulation"
+ ],
+ "cyril-adoration-3": [
+  "hermeneutics-types",
+  "baptism-and-new-birth",
+  "salvation-by-christ"
+ ],
+ "cyril-adoration-4": [
+  "hermeneutics-types",
+  "faith-and-obedience"
+ ],
+ "cyril-adoration-5": [
+  "hermeneutics-types",
+  "faith-and-obedience"
+ ],
+ "cyril-adoration-6": [
+  "against-idols",
+  "true-worship",
+  "fate-and-foreknowledge",
+  "free-will"
+ ],
+ "cyril-adoration-7": [
+  "love-neighbor-enemy",
+  "law-and-gospel"
+ ],
+ "cyril-adoration-8": [
+  "love-neighbor-enemy",
+  "wealth-alms",
+  "heresy-schism"
+ ],
+ "cyril-adoration-9": [
+  "hermeneutics-types",
+  "incarnation-word-flesh",
+  "one-church"
+ ],
+ "cyril-epistula-photium": [
+  "two-natures-seed"
+ ],
+ "cyril-epistula-theodosium": [
+  "two-natures-seed",
+  "incarnation-word-flesh"
+ ],
+ "cyril-jerusalem-epistula-constantium": [
+  "judgment-second-coming"
+ ],
+ "cyril-jerusalem-homilia-ego-vado": [
+  "two-natures-seed"
+ ],
+ "cyril-jerusalem-homilia-occursum": [
+  "incarnation-word-flesh"
+ ],
+ "cyril-matthew-fragments": [
+  "law-and-gospel",
+  "incarnation-word-flesh",
+  "hermeneutics-types"
+ ],
+ "cyril-recta-fide-arcadia": [
+  "two-natures-seed",
+  "incarnation-word-flesh",
+  "virgin-birth"
+ ],
+ "cyril-recta-fide-pulcheria": [
+  "two-natures-seed",
+  "incarnation-word-flesh",
+  "passion-resurrection"
+ ],
+ "didymus-commentarii-ecclesiasten": [
+  "wealth-alms",
+  "free-will",
+  "hermeneutics-types"
+ ],
+ "didymus-commentarii-job": [
+  "attributes-providence",
+  "reward-and-judgment"
+ ],
+ "didymus-commentarii-octateuchum": [
+  "one-god-creator",
+  "providence-and-care"
+ ],
+ "didymus-commentarii-psalmos": [
+  "attributes-providence",
+  "two-natures-seed",
+  "father-son-spirit"
+ ],
+ "didymus-commentarii-zacchariam": [
+  "hermeneutics-types",
+  "incarnation-word-flesh",
+  "reward-and-judgment"
+ ],
+ "didymus-contra-manichaeos": [
+  "sin-and-death",
+  "free-will",
+  "heresy-schism"
+ ],
+ "didymus-de-trinitate": [
+  "father-son-spirit",
+  "heresy-schism"
+ ],
+ "didymus-enarratio-catholicas": [
+  "faith-and-obedience",
+  "judgment-second-coming",
+  "heresy-schism"
+ ],
+ "didymus-fragmenta-2cor": [
+  "apostolic-mission",
+  "heresy-schism",
+  "wealth-alms"
+ ],
+ "didymus-fragmenta-joannem": [
+  "father-son-spirit",
+  "free-will"
+ ],
+ "didymus-fragmenta-proverbia": [
+  "hermeneutics-types"
+ ],
+ "didymus-fragmenta-psalmos": [
+  "scripture-inspiration",
+  "hermeneutics-types",
+  "reward-and-judgment"
+ ],
+ "didymus-fragmentum-hebraeos": [
+  "father-son-spirit",
+  "incarnation-word-flesh"
+ ],
+ "didymus-in-genesim": [
+  "one-god-creator",
+  "image-likeness",
+  "hermeneutics-types"
+ ],
+ "diodorus-fragmenta-romanos": [
+  "law-and-gospel",
+  "sin-and-death",
+  "grace-and-assistance"
+ ],
+ "diognetus-epistle": [
+  "against-idols",
+  "apologetic-method",
+  "salvation-by-christ"
+ ],
+ "dionysius-corinth-fragments": [
+  "wealth-alms",
+  "liturgy-prayer",
+  "bishops-presbyters",
+  "discipline-penance"
+ ],
+ "epiphanius-anacephalaeosis": [
+  "heresy-schism"
+ ],
+ "epiphanius-anaphora-graeca": [
+  "eucharist-thanksgiving",
+  "liturgy-prayer",
+  "two-natures-seed"
+ ],
+ "epiphanius-ancoratus": [
+  "father-son-spirit"
+ ],
+ "epiphanius-apophthegmata": [
+  "liturgy-prayer"
+ ],
+ "epiphanius-appendices-ad-indices-apostolorum-discipulorumque": [
+  "canon-rule-of-truth",
+  "apostolic-mission"
+ ],
+ "epiphanius-de-fide": [
+  "two-natures-seed"
+ ],
+ "epiphanius-de-mensuris": [
+  "spirit-prophecy"
+ ],
+ "epiphanius-de-prophetarum-vita-et-obitu": [
+  "spirit-prophecy",
+  "martyrdom-witness"
+ ],
+ "epiphanius-de-prophetarum-vita-et-obitu-recensio-altera": [
+  "spirit-prophecy",
+  "martyrdom-witness"
+ ],
+ "epiphanius-de-trinitate": [
+  "father-son-spirit",
+  "true-worship"
+ ],
+ "epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum": [
+  "spirit-prophecy"
+ ],
+ "epiphanius-epistula-ad-eusebium": [
+  "passion-resurrection",
+  "liturgy-prayer"
+ ],
+ "epiphanius-epistula-ad-joannem-hierosolymitanum": [
+  "against-idols",
+  "one-church"
+ ],
+ "epiphanius-epistula-ad-theodosium-imperatorem": [
+  "against-idols",
+  "apostolic-tradition"
+ ],
+ "epiphanius-fragmenta-precationis-et-exorcismi": [
+  "liturgy-prayer"
+ ],
+ "epiphanius-homilia-in-assumptionem-christi": [
+  "passion-resurrection",
+  "apologetic-method"
+ ],
+ "epiphanius-homilia-in-christi-resurrectionem": [
+  "passion-resurrection",
+  "liturgy-prayer"
+ ],
+ "epiphanius-homilia-in-divini-corporis-sepulturam": [
+  "passion-resurrection",
+  "heaven-hell-intermediate",
+  "atonement-recapitulation"
+ ],
+ "epiphanius-homilia-in-festo-palmarum": [
+  "liturgy-prayer"
+ ],
+ "epiphanius-homilia-in-laudes-mariae-deiparae": [
+  "virgin-birth",
+  "incarnation-word-flesh"
+ ],
+ "epiphanius-index-apostolorum": [
+  "apostolic-mission",
+  "martyrdom-witness"
+ ],
+ "epiphanius-index-discipulorum": [
+  "apostolic-mission",
+  "apostolic-succession"
+ ],
+ "epiphanius-liturgia-praesanctificatorum": [
+  "liturgy-prayer",
+  "eucharist-thanksgiving",
+  "baptism-and-new-birth"
+ ],
+ "epiphanius-notitiae-episcopatuum": [
+  "bishops-presbyters"
+ ],
+ "epiphanius-panarion": [
+  "one-church",
+  "father-son-spirit",
+  "heresy-schism"
+ ],
+ "epiphanius-testamentum-ad-cives": [
+  "against-idols",
+  "apostolic-tradition"
+ ],
+ "epiphanius-tractatus-contra-eos-qui-imagines-faciunt": [
+  "against-idols",
+  "true-worship"
+ ],
+ "epiphanius-tractatus-de-numerorum-mysteriis": [
+  "hermeneutics-types",
+  "father-son-spirit"
+ ],
+ "eusebius-emesa-fragmenta-romanos": [
+  "sin-and-death",
+  "free-will"
+ ],
+ "eusebius-emesa-fragmentum-1cor": [
+  "judgment-second-coming"
+ ],
+ "eusebius-letter-flacillus": [
+  "heresy-schism"
+ ],
+ "eustathius-allocutio-constantinum": [
+  "father-son-spirit",
+  "heresy-schism",
+  "civil-authority"
+ ],
+ "eustathius-commentarius-psalmum": [
+  "two-natures-seed",
+  "incarnation-word-flesh"
+ ],
+ "eustathius-commentarius-psalmum-92": [
+  "two-natures-seed",
+  "passion-resurrection"
+ ],
+ "eustathius-de-anima-contra-arianos": [
+  "incarnation-word-flesh",
+  "two-natures-seed",
+  "heaven-hell-intermediate"
+ ],
+ "eustathius-de-anima-contra-philosophos": [
+  "attributes-providence",
+  "apologetic-method"
+ ],
+ "eustathius-de-fide-contra-arianos": [
+  "two-natures-seed",
+  "salvation-by-christ"
+ ],
+ "eustathius-de-melchisedech": [
+  "hermeneutics-types",
+  "heresy-schism"
+ ],
+ "eustathius-fragmenta-varia": [
+  "two-natures-seed",
+  "one-church"
+ ],
+ "eustathius-hexaemeron": [
+  "one-god-creator",
+  "providence-and-care"
+ ],
+ "eustathius-homilia-lazarum": [
+  "two-natures-seed",
+  "incarnation-word-flesh"
+ ],
+ "eustathius-in-genesim-de-creatione": [
+  "image-likeness",
+  "father-son-spirit",
+  "one-god-creator"
+ ],
+ "eustathius-in-inscriptione-titulorum": [
+  "hermeneutics-types",
+  "against-idols"
+ ],
+ "eustathius-in-joseph": [
+  "sexual-marriage"
+ ],
+ "eustathius-in-proverbia": [
+  "hermeneutics-types",
+  "eucharist-thanksgiving"
+ ],
+ "eustathius-oratio-dominus-creavit": [
+  "father-son-spirit",
+  "two-natures-seed",
+  "heresy-schism"
+ ],
+ "eustathius-oratio-psalmorum-graduum": [
+  "two-natures-seed",
+  "father-son-spirit"
+ ],
+ "eustathius-orationes-contra-arianos": [
+  "father-son-spirit",
+  "heresy-schism"
+ ],
+ "evagrius-ad-eulogium": [
+  "liturgy-prayer",
+  "love-neighbor-enemy"
+ ],
+ "evagrius-de-malignis-cogitationibus": [
+  "liturgy-prayer",
+  "wealth-alms"
+ ],
+ "evagrius-de-octo-spiritibus": [
+  "wealth-alms",
+  "sexual-marriage"
+ ],
+ "evagrius-de-vitiis": [
+  "wealth-alms",
+  "liturgy-prayer"
+ ],
+ "evagrius-expositio-proverbia": [
+  "lxx-and-form",
+  "hermeneutics-types"
+ ],
+ "evagrius-gnosticus": [
+  "hermeneutics-types"
+ ],
+ "evagrius-institutio-monachos": [
+  "liturgy-prayer",
+  "wealth-alms",
+  "spirit-sanctifies"
+ ],
+ "evagrius-practicus": [
+  "free-will",
+  "liturgy-prayer"
+ ],
+ "evagrius-rerum-monachalium": [
+  "sexual-marriage",
+  "wealth-alms"
+ ],
+ "evagrius-scholia-ecclesiasten": [
+  "attributes-providence",
+  "hermeneutics-types"
+ ],
+ "evagrius-scholia-proverbia": [
+  "hermeneutics-types",
+  "reward-and-judgment"
+ ],
+ "evagrius-sententiae-virginem": [
+  "sexual-marriage",
+  "liturgy-prayer"
+ ],
+ "evagrius-spiritales-sententiae": [
+  "love-neighbor-enemy",
+  "wealth-alms"
+ ],
+ "gennadius-fragmenta-corinthios": [
+  "hermeneutics-types",
+  "baptism-and-new-birth"
+ ],
+ "gennadius-fragmenta-galatas": [
+  "law-and-gospel",
+  "salvation-by-christ"
+ ],
+ "gennadius-fragmenta-hebraeos": [
+  "scripture-inspiration",
+  "father-son-spirit",
+  "hermeneutics-types"
+ ],
+ "gennadius-fragmentum-2thess": [
+  "judgment-second-coming"
+ ],
+ "georgius-peccator-hymnus": [
+  "liturgy-prayer"
+ ],
+ "gregory-thaumaturgus-ad-tatianum-de-anima": [
+  "apologetic-method"
+ ],
+ "gregory-thaumaturgus-de-fide-xii": [
+  "incarnation-word-flesh",
+  "two-natures-seed"
+ ],
+ "gregory-thaumaturgus-epistula-canonica": [
+  "discipline-penance",
+  "sexual-marriage"
+ ],
+ "gregory-thaumaturgus-in-annuntiationem": [
+  "virgin-birth",
+  "incarnation-word-flesh"
+ ],
+ "gregory-thaumaturgus-jeremiah-fragments": [
+  "love-neighbor-enemy",
+  "law-and-gospel"
+ ],
+ "gregory-thaumaturgus-matthew-fragment": [
+  "love-neighbor-enemy"
+ ],
+ "gregory-thaumaturgus-ouden-eidolon": [
+  "against-idols",
+  "true-worship"
+ ],
+ "gregory-thaumaturgus-sententiae": [
+  "true-worship",
+  "one-god-creator"
+ ],
+ "gregory-thaumaturgus-sermo-in-omnes-sanctos": [
+  "martyrdom-witness"
+ ],
+ "hesychius-homilia-i-hypapante": [
+  "incarnation-word-flesh",
+  "virgin-birth",
+  "law-and-gospel"
+ ],
+ "hesychius-homilia-i-lazarum": [
+  "apostolic-mission",
+  "incarnation-word-flesh"
+ ],
+ "hesychius-homilia-i-longinum": [
+  "martyrdom-witness"
+ ],
+ "hesychius-homilia-i-maria-deipara": [
+  "virgin-birth",
+  "incarnation-word-flesh"
+ ],
+ "hesychius-homilia-ii-hypapante": [
+  "spirit-prophecy",
+  "passion-resurrection"
+ ],
+ "hesychius-homilia-ii-lazarum": [
+  "resurrection-body",
+  "judgment-second-coming"
+ ],
+ "hesychius-homilia-ii-longinum": [
+  "martyrdom-witness"
+ ],
+ "hesychius-homilia-ii-maria-deipara": [
+  "virgin-birth",
+  "apologetic-method"
+ ],
+ "hesychius-homilia-jejunio": [
+  "liturgy-prayer",
+  "wealth-alms"
+ ],
+ "hesychius-in-conceptionem-praecursoris": [
+  "martyrdom-witness",
+  "spirit-prophecy"
+ ],
+ "hesychius-in-lucam": [
+  "incarnation-word-flesh",
+  "apostolic-mission"
+ ],
+ "hesychius-in-petrum-paulum": [
+  "apostolic-mission"
+ ],
+ "hesychius-in-procopium": [
+  "martyrdom-witness"
+ ],
+ "hesychius-in-sanctos-martyres": [
+  "liturgy-prayer",
+  "wealth-alms"
+ ],
+ "ignatius-letters": [
+  "bishops-presbyters",
+  "one-church",
+  "against-docetism",
+  "martyrdom-witness"
+ ],
+ "irenaeus-letter-victor": [
+  "one-church",
+  "liturgy-prayer",
+  "apostolic-tradition"
+ ],
+ "john-damascus-de-theologia": [
+  "father-son-spirit",
+  "two-natures-seed"
+ ],
+ "john-damascus-de-unione": [
+  "two-natures-seed"
+ ],
+ "john-damascus-fragmenta-in-lucam": [
+  "spirit-and-baptism",
+  "reward-and-judgment"
+ ],
+ "le-blanc-theses-theologicae": [
+  "scripture-inspiration",
+  "faith-and-obedience"
+ ],
+ "marcellus-ancyranus-fragmenta": [
+  "father-son-spirit",
+  "incarnation-word-flesh",
+  "heresy-schism"
+ ],
+ "martyrdom-polycarp": [
+  "martyrdom-witness",
+  "civil-authority"
+ ],
+ "methodius-martyrs": [
+  "martyrdom-witness",
+  "grace-and-assistance"
+ ],
+ "minucius-felix-octavius": [
+  "apologetic-method",
+  "against-idols",
+  "one-god-creator"
+ ],
+ "novatian-on-the-public-shows": [
+  "against-idols"
+ ],
+ "oecumenius-fragmenta-philippenses": [
+  "law-and-gospel",
+  "bishops-presbyters"
+ ],
+ "oecumenius-fragmenta-titum": [
+  "faith-and-obedience",
+  "one-god-creator"
+ ],
+ "olympiodorus-fragmentum-gaudete": [
+  "martyrdom-witness"
+ ],
+ "origen-1-corinthians-fragments": [
+  "sexual-marriage",
+  "discipline-penance",
+  "heresy-schism"
+ ],
+ "origen-acta-homily-scrap": [
+  "spirit-prophecy",
+  "scripture-inspiration"
+ ],
+ "origen-adnotationes-exodus": [
+  "against-idols",
+  "attributes-providence"
+ ],
+ "origen-adnotationes-genesis": [
+  "attributes-providence",
+  "reward-and-judgment"
+ ],
+ "origen-adnotationes-joshua": [
+  "hermeneutics-types"
+ ],
+ "origen-adnotationes-judges": [
+  "lxx-and-form",
+  "attributes-providence"
+ ],
+ "origen-adnotationes-leviticus": [
+  "law-and-gospel",
+  "hermeneutics-types"
+ ],
+ "origen-adnotationes-numbers": [
+  "hermeneutics-types",
+  "lxx-and-form"
+ ],
+ "origen-de-resurrectione-scrap": [
+  "heaven-hell-intermediate",
+  "resurrection-body"
+ ],
+ "origen-ephesians-fragments": [
+  "grace-and-assistance",
+  "salvation-by-christ",
+  "one-church"
+ ],
+ "origen-hebrews-homily-scrap": [
+  "canon-rule-of-truth"
+ ],
+ "origen-homily-1samuel-28": [
+  "heaven-hell-intermediate",
+  "scripture-inspiration",
+  "spirit-prophecy"
+ ],
+ "origen-job-enarrationes": [
+  "attributes-providence",
+  "heresy-schism"
+ ],
+ "origen-job-homilies": [
+  "attributes-providence",
+  "resurrection-body"
+ ],
+ "origen-job-selecta": [
+  "heresy-schism",
+  "attributes-providence"
+ ],
+ "origen-lamentations-fragments": [
+  "hermeneutics-types",
+  "salvation-by-christ",
+  "attributes-providence"
+ ],
+ "origen-nt-fragments": [
+  "father-son-spirit",
+  "canon-rule-of-truth"
+ ],
+ "origen-osee-fragment": [
+  "scripture-inspiration",
+  "hermeneutics-types"
+ ],
+ "origen-proverbs-expositio": [
+  "two-ways",
+  "hermeneutics-types"
+ ],
+ "origen-proverbs-fragments": [
+  "father-son-spirit",
+  "hermeneutics-types",
+  "one-church"
+ ],
+ "origen-psalms-excerpta": [
+  "judgment-second-coming",
+  "martyrdom-witness",
+  "hermeneutics-types"
+ ],
+ "origen-psalms-fragments-greek": [
+  "hermeneutics-types",
+  "father-son-spirit",
+  "reward-and-judgment"
+ ],
+ "origen-regnorum-fragments": [
+  "attributes-providence",
+  "hermeneutics-types"
+ ],
+ "origen-ruth-scrap": [
+  "hermeneutics-types",
+  "law-and-gospel"
+ ],
+ "origen-selecta-judges": [
+  "spirit-prophecy",
+  "hermeneutics-types"
+ ],
+ "origen-song-commentary-liber-4": [
+  "hermeneutics-types",
+  "spirit-sanctifies",
+  "heresy-schism"
+ ],
+ "origen-song-homily-2": [
+  "hermeneutics-types"
+ ],
+ "philostorgius-he": [
+  "canon-rule-of-truth",
+  "heresy-schism"
+ ],
+ "photius-bibliotheca": [
+  "heresy-schism",
+  "apologetic-method"
+ ],
+ "photius-epigramma": [
+  "sexual-marriage"
+ ],
+ "photius-fragmentum-2tim": [
+  "bishops-presbyters"
+ ],
+ "placeus-de-imputatione": [
+  "sin-and-death"
+ ],
+ "polycarp-philippians": [
+  "faith-and-obedience",
+  "against-docetism",
+  "bishops-presbyters",
+  "discipline-penance"
+ ],
+ "polycrates-ephesus-letter-victor": [
+  "apostolic-tradition",
+  "liturgy-prayer"
+ ],
+ "procopius-gaza-refutatio-procli": [
+  "father-son-spirit",
+  "one-god-creator",
+  "apologetic-method"
+ ],
+ "second-clement": [
+  "discipline-penance",
+  "resurrection-body",
+  "judgment-second-coming"
+ ],
+ "severianus-de-caeco-nato": [
+  "faith-and-obedience",
+  "baptism-and-new-birth"
+ ],
+ "severianus-de-caeco-zacchaeo": [
+  "reward-and-judgment",
+  "wealth-alms"
+ ],
+ "severianus-de-tribus-pueris": [
+  "against-idols",
+  "martyrdom-witness",
+  "attributes-providence"
+ ],
+ "severianus-fragmenta-1thess": [
+  "resurrection-body",
+  "judgment-second-coming"
+ ],
+ "severianus-fragmenta-1tim": [
+  "two-natures-seed",
+  "incarnation-word-flesh"
+ ],
+ "severianus-fragmenta-2cor": [
+  "law-and-gospel",
+  "apostolic-mission"
+ ],
+ "severianus-fragmenta-2thess": [
+  "judgment-second-coming",
+  "heresy-schism"
+ ],
+ "severianus-fragmenta-2tim": [
+  "bishops-presbyters",
+  "wealth-alms"
+ ],
+ "severianus-fragmenta-colossenses": [
+  "law-and-gospel",
+  "true-worship",
+  "heresy-schism"
+ ],
+ "severianus-fragmenta-ephesios": [
+  "law-and-gospel",
+  "one-church",
+  "gifts-and-order"
+ ],
+ "severianus-fragmenta-galatas": [
+  "law-and-gospel",
+  "hermeneutics-types",
+  "baptism-and-new-birth"
+ ],
+ "severianus-fragmenta-hebraeos": [
+  "canon-rule-of-truth",
+  "father-son-spirit",
+  "hermeneutics-types"
+ ],
+ "severianus-fragmenta-philippenses": [
+  "law-and-gospel",
+  "bishops-presbyters"
+ ],
+ "severianus-fragmenta-romanos": [
+  "law-and-gospel",
+  "reward-and-judgment"
+ ],
+ "severianus-fragmenta-titum": [
+  "faith-and-obedience",
+  "one-god-creator"
+ ],
+ "severianus-in-1cor": [
+  "resurrection-body",
+  "sexual-marriage",
+  "gifts-and-order"
+ ],
+ "severianus-in-genesim": [
+  "one-god-creator",
+  "image-likeness"
+ ],
+ "severianus-in-illud-quando": [
+  "father-son-spirit"
+ ],
+ "severianus-in-job": [
+  "attributes-providence",
+  "reward-and-judgment"
+ ],
+ "tertullian-on-patience": [
+  "faith-and-obedience",
+  "love-neighbor-enemy"
+ ],
+ "tertullian-on-repentance": [
+  "discipline-penance",
+  "baptism-and-new-birth"
+ ],
+ "tertullian-to-scapula": [
+  "civil-authority",
+  "martyrdom-witness"
+ ],
+ "tertullian-to-the-martyrs": [
+  "martyrdom-witness"
+ ],
+ "theodorus-heracleensis-matthew-fragments": [
+  "old-and-new"
+ ],
+ "theophilus-alex-fragmenta-joannem": [
+  "heresy-schism"
+ ],
+ "theophilus-alex-fragmenta-matthaeum": [
+  "universal-call",
+  "hermeneutics-types"
+ ]
+}

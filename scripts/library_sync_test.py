@@ -519,6 +519,37 @@ class Assemble(Fixture):
         self.assertEqual(kept["sha256"], sha)
         self.assertEqual(ls.sha256(self.out / era["key"]), sha)
 
+    def shrink_kept(self, kind):
+        """The catalogue says the uploaded zip of this kind holds fewer books."""
+        data = json.loads(ls.CATALOG.read_text())
+        for b in data["bundles"]:
+            if b["kind"] == kind:
+                b["count"] -= 1
+        ls.CATALOG.write_text(json.dumps(data))
+
+    def test_kept_library_zip_that_lacks_books_is_rebuilt(self):
+        # 2026-10-14: "All 317 books as EPUB" stayed beside 319 EPUBs.
+        rc, data, log = self.build({"a": "Clean English."}, {})
+        self.assertEqual(rc, 0, log)
+        self.ledger_from(data)
+        self.shrink_kept("epub")
+        os.utime(self.out / "epub" / "a.epub", None)
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        zipped = next(b for b in data["bundles"] if b["kind"] == "epub")
+        self.assertEqual(zipped["count"], 1)
+
+    def test_kept_audio_zip_that_lacks_books_is_rebuilt(self):
+        rc, data, log = self.build({}, {}, audio={"a": (4, 4, [])})
+        self.assertEqual(rc, 0, log)
+        self.ledger_from(data)
+        self.shrink_kept("audio")
+        os.utime(self.out / "audio" / "a.m4b", None)
+        rc, data, log = self.assemble_again()
+        self.assertEqual(rc, 0, log)
+        zipped = next(b for b in data["bundles"] if b["kind"] == "audio")
+        self.assertEqual(zipped["count"], 1)
+
     def test_uploaded_zip_stays_listed_when_the_zip_file_is_gone(self):
         rc, data, log = self.build({}, {}, audio={"a": (4, 4, [])})
         self.assertEqual(rc, 0, log)

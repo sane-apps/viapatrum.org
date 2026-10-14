@@ -27,7 +27,7 @@
 .tl-pos.tl-compact .tl-claim-text { font-size: 0.92rem; }
 .tl-pos.tl-compact .tl-tally { font-size: 0.78rem; }
 .tl-pos.tl-compact .btrads { gap: 0.2rem; margin-left: 0.4rem; }
-.tl-pos.tl-compact .btrad { font-size: 0.62rem; padding: 0 0.25rem; }
+.tl-pos.tl-compact .btrad { font-size: 0.72rem; padding: 0 0.25rem; }
 /* Not a link, so not link blue and no box (Standing UX rule 2). */
 .ot-badge.divides { border: 0; color: var(--gold); }
 .ot-belief .tl-related { margin: 0.1rem 0 0; font-size: 0.85rem; color: var(--ink-soft); }

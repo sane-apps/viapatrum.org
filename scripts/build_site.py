@@ -244,6 +244,8 @@ EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
 SITE_NAME = "Via Patrum"
 SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
+# The iPhone and iPad app (App Store id 6818696772; 1.0 live on 2026-10-14).
+APP_STORE_URL = "https://apps.apple.com/app/via-patrum/id6818696772"
 SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
 BASE = ""
 
@@ -1096,6 +1098,23 @@ def load_author_bios() -> dict[str, dict]:
 
 AUTHOR_BIOS = load_author_bios()
 
+# Reader-facing summary lines and topic links for works whose metadata had
+# none (2026-10-14 audit: 104 showed citation stubs such as "Ammonius of
+# Alexandria, Fragmenta in Joannem (Greek)."; 261 linked no topic). Written
+# from each work's English; the book metadata is left as it is.
+WORK_BLURBS: dict[str, str] = {k: v for k, v in (_json_load(ROOT / "data" / "work-blurbs.json", {}) or {}).items()
+                               if isinstance(v, str) and v.strip()}
+# Plain-English section headings where the file kept a translator's shorthand
+# ("Bezalel = Christ from Judah; Eliab = apostles"), written from each
+# section's English (data/section-titles.json, 2026-10-14). slug -> {section: head}.
+SECTION_TITLES: dict[str, dict[str, str]] = {
+    k: {str(sk): sv for sk, sv in v.items() if isinstance(sv, str) and sv.strip()}
+    for k, v in (_json_load(ROOT / "data" / "section-titles.json", {}) or {}).items() if isinstance(v, dict)}
+# Topic links for works that had none (data/work-topics.json, 2026-10-14).
+for _slug, _tids in (_json_load(ROOT / "data" / "work-topics.json", {}) or {}).items():
+    if isinstance(_tids, list) and _tids and not WORK_TOPICS.get(_slug):
+        WORK_TOPICS[_slug] = [str(t) for t in _tids]
+
 
 def load_author_dates() -> dict[str, str]:
     """slug or display-name → short floruit/lifespan for Authors index."""
@@ -1154,6 +1173,9 @@ AUTHOR_SLUG_ALIASES = {
     # Certified books name authors in full; join the existing author pages.
     "irenaeus-of-lyons": "irenaeus",
     "anonymous-epistle-to-diognetus": "mathetes-epistle-to-diognetus",
+    # Certified On the Unity of the Church named him in full and opened a
+    # second hub beside the excerpt hub (2026-10-14 audit).
+    "cyprian-of-carthage": "cyprian",
 }
 
 
@@ -1201,6 +1223,15 @@ TEXT_AUTHOR_SLUGS = frozenset({
     "didache", "mathetes-epistle-to-diognetus", "acts-of-the-martyrs",
     "passion-of-perpetua-and-felicity", "chronicon-paschale",
 })
+
+
+def title_by(title: str, author: str, author_slug: str) -> str:
+    """'<title> by <writer>' for page titles. A text or a church is not a
+    writer: "The Martyrdom of Justin by Acts of the Martyrs" (2026-10-14 audit)
+    becomes "The Martyrdom of Justin (Acts of the Martyrs)"."""
+    if author_slug in TEXT_AUTHOR_SLUGS:
+        return title if author.casefold().removeprefix("the ") in title.casefold() else f"{title} ({author})"
+    return f"{title} by {author}"
 # Excerpt rows often carry the display name and no slug.
 TEXT_AUTHOR_NAMES = frozenset({
     "didache", "the didache", "letter to diognetus", "chronicon paschale",
@@ -1971,7 +2002,9 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "alexander-monachus-inventio-crucis-epitome": "Discovery of the Cross, Abridged",
     "cyril-fragmentum-baruch": "Fragment on Baruch",
     "cyril-fragmentum-proverbia": "Fragment on Proverbs",
-    "cyril-solutiones-vat-447": "Answers to Questions (a fragment)",
+    "cyril-solutiones-vat-447": "Fragment of the Answers to Questions",
+    # House rule: "Fragments of ...", not a lowercase (fragments) tag (2026-10-14 audit).
+    "dionysius-corinth-fragments": "Fragments of the Letters",
     "cyril-epistula-theodosium": "Letter to Theodosius",
     "cyril-ad-xystum": "Letter to Sixtus, Bishop of Rome",
     "cyril-de-synagogae-defectu": "On the Falling Away of the Synagogue",
@@ -2303,6 +2336,13 @@ def scrub_intro_worksheet(html_text: str) -> str:
     return re.sub(r"<p>\s*</p>\s*", "", out)
 
 
+def bc_ad_prose(text: str) -> str:
+    """Intros written as "244 CE" read "244 AD", as the rest of the site does
+    (house rule: BC and AD, never CE or BCE; 2026-10-14 audit)."""
+    text = re.sub(r"\b(\d{1,4})(\s|&nbsp;)BCE\b", r"\1\2BC", text)
+    return re.sub(r"\b(\d{1,4})(\s|&nbsp;)CE\b", r"\1\2AD", text)
+
+
 def work_intro_html(slug: str) -> str:
     """Shared book intro for a site work page; "" when unmapped."""
     book = work_book(slug)
@@ -2316,7 +2356,7 @@ def work_intro_html(slug: str) -> str:
         from pipeline.book_frontmatter import render_intro_html
         out = render_intro_html(str(BOOKS / book))
         # Build-room scope words ("tip densify") never reach readers.
-        return scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out))
+        return bc_ad_prose(scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out)))
     except (ImportError, ValueError, OSError):
         return ""
 
@@ -2779,11 +2819,17 @@ _WORKSHEET_BRACKET = re.compile(
 )
 
 
+# A translator's note inside a source panel ("[T-ILLEGIBLE: probably mockery
+# of prayers ... (per apparatus); not rendered.]", "[text rough; sense: ...]")
+# shows readers a lacuna mark instead (2026-10-14 audit, Origen On Prayer).
+_SOURCE_GAP_NOTE = re.compile(r"\[(?:T-ILLEGIBLE|text rough)\b[^\]]*\]")
+
+
 def public_source_text(text: str) -> str:
     """Hide a worksheet bracket or page-lock in a displayed source paragraph."""
     if not isinstance(text, str) or not text:
         return ""
-    cleaned = _WORKSHEET_BRACKET.sub("", text)
+    cleaned = _WORKSHEET_BRACKET.sub("", _SOURCE_GAP_NOTE.sub("[…]", text))
     cleaned = scrub_worksheet_note(cleaned)
     if cleaned == text:
         return text
@@ -2995,7 +3041,12 @@ def public_method(text: str) -> str:
 WORKSHEET_JARGON = re.compile(
     r"\b(?:scaffold\w*|densif\w*|tips?|exhausted|lemma-led|pinax|deepen\+?|remain|held|PHYS|worksheet|"
     r"bridge|rank[- ]?\d|closeout|packet|receipt|honest partial|partial through)\b"
-    r"|Man\.\s*Post", re.I)
+    r"|Man\.\s*Post"
+    # Notes written for builders, not readers (2026-10-14 audit: five era
+    # banners said "retrieval on the same Fathers-site pipeline ... Do not
+    # treat the site as ante-Nicene only"; le Blanc's history listed "CLOSED").
+    r"|Fathers-site pipeline|\bDo not treat the site\b|\bretrieval on the same\b|\bPublic Domain Mark\b"
+    r"|\bCLOSED\b|^Next:|\bPDF \d", re.I)
 
 
 NOTE_ABBREV = {"cap", "capp", "rom", "man", "post", "cf", "pg", "pl", "ed", "eds", "vol", "fr", "frr", "haer", "hom",
@@ -3713,7 +3764,9 @@ def author_catalog_html(works: list[dict]) -> str:
                 w.get("slug") or "",
             ),
         )
-        author = ww_sorted[0]["author"]
+        # The public name: the Works list showed "Anonymous (Epistle to
+        # Diognetus)" where every other page says Mathetes (2026-10-14 audit).
+        author = display_author(ww_sorted[0]["author"])
         period = author_dates_display(author, slug) or format_bc_ad(guessless_period(ww_sorted[0].get("period")))
         year = min(work_chrono_year(w) for w in ww_sorted)
         eras = sorted({work_era(w) for w in ww_sorted})
@@ -6298,7 +6351,7 @@ def layout(
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
-      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li></ul>
+      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
     </nav>
     <nav aria-label="Support">
       <h2>Support</h2>
@@ -6408,11 +6461,21 @@ def strip_source_chrome(text: str) -> str:
     return text[matches[-1].end():].strip()
 
 
+# A line of asterisks, then an editor's one-line gloss, ends 74 seed excerpts
+# ("****** Sleep rests the flesh; the immortal soul keeps moving ..."). Shown
+# as the Father's own words (2026-10-14 audit). A tail over 200 characters may
+# be text after a lacuna, so it stays. The source file is not edited.
+EDITOR_GLOSS_RE = re.compile(r"\s*\*{3,}\s*[^*]{0,200}$")
+
+
 def excerpt_paragraphs(x: dict) -> list[str]:
     """English paragraphs with source-site chrome removed and repeats dropped."""
     out: list[str] = []
     seen: set[str] = set()
-    for para in eng_list(x.get("english")):
+    paras = list(eng_list(x.get("english")))
+    if paras:
+        paras[-1] = EDITOR_GLOSS_RE.sub("", paras[-1])
+    for para in paras:
         cleaned = strip_source_chrome(para).strip()
         # Leftover edition chapter mark at the start ("X. \"I purposely pass over…").
         # Also "XIV. 1. And yet…" (chapter and paragraph marks, 28 pages).
@@ -8152,6 +8215,20 @@ def load_search_docs(data_dir: Path) -> list:
     return rows
 
 
+def held_source_files() -> set[tuple[str, str]]:
+    """(book folder, English stem) for every FORCED_WITHHOLD work, read from the
+    *_meta.json slugs, so pages built from the map (beliefs) can drop its words."""
+    held: set[tuple[str, str]] = set()
+    for meta_path in BOOKS.glob("*/translations/*_meta.json"):
+        try:
+            slug = json.loads(meta_path.read_text(encoding="utf-8")).get("slug")
+        except (OSError, ValueError, AttributeError):
+            continue
+        if slug in FORCED_WITHHOLD:
+            held.add((meta_path.parents[1].name, meta_path.name[: -len("_meta.json")] + "_english"))
+    return held
+
+
 def write_work_sources(path: Path, works: list[dict]) -> None:
     """Site slug -> {book folder, English stems} for every published work, so
     the audio drain can find the text behind a page (On Prayer had no map)."""
@@ -8364,6 +8441,17 @@ FORCED_WITHHOLD = {
     "cyril-adoration-14": _RECERT,
     "cyril-adoration-15": _RECERT,
     "cyril-adoration-16": _RECERT,
+    # The same Lamentations fragments twice under one title (2026-10-14 audit).
+    # origen-lamentations-fragments has all 118 from Klostermann; this book
+    # groups them into 20 and stays in the pipeline.
+    "origen-lamentationes-fragments": "Second translation of origen-lamentations-fragments; one copy is shown.",
+    # Wrong text under the name (2026-10-14 topic pass). "Diodorus, Fragments"
+    # is Dionysius of Corinth's letter to Soter, already live as
+    # dionysius-corinth-fragments. The Apocalypse "scrap" is Origen's letter on
+    # studying heretics and philosophers (Eusebius, Church History 6.19).
+    "diodorus-fragmenta": "Holds Dionysius of Corinth's letters, not Diodorus; a mislabeled second copy.",
+    "origen-apocalypse-scholia-scrap": "Holds Origen's letter from Eusebius 6.19, not notes on the Apocalypse.",
+    "olympiodorus-contra-severum": "Only a heading survives (that he quoted Athanasius); no text to read.",
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
     # withheld 2026-10-09 pending Stephan promote call; densify in progress (Densify)
@@ -8383,6 +8471,21 @@ def dead_withhold_slugs(loaded: set[str]) -> list[str]:
     A renamed slug would otherwise stop holding its work without a word."""
     return sorted(slug for slug in FORCED_WITHHOLD
                   if slug not in loaded and not (BOOKS / slug).is_dir())
+
+
+def drop_repeated_sections(sections: list[dict]) -> list[dict]:
+    """A section whose English repeats an earlier section word for word.
+    Short scraps split into open/early/mid/close units showed one comment up
+    to four times (2026-10-14 audit: the Philemon notes, George's hymn)."""
+    seen: set[str] = set()
+    out = []
+    for sec in sections:
+        key = re.sub(r"\s+", " ", " ".join(eng_list(sec.get("english")))).strip().casefold()
+        if len(key) >= 40 and key in seen:
+            continue
+        seen.add(key)
+        out.append(sec)
+    return out
 
 
 def split_withheld(works: list[dict]) -> tuple[list[dict], list[str]]:
@@ -8595,6 +8698,9 @@ def build() -> None:
             "BLOCKED: FORCED_WITHHOLD names no loaded work or book: " + ", ".join(_dead)
         )
     works, withheld = split_withheld(works)
+    for w in works:
+        if w.get("slug") in WORK_BLURBS:
+            w["blurb"] = WORK_BLURBS[w["slug"]]
     stale = stale_receipt_slugs(works)
     withheld = sorted(set(withheld) | set(stale))
     works = [w for w in works if w.get("slug") not in set(stale)]
@@ -8640,6 +8746,13 @@ def build() -> None:
         else:
             merged_works[work["slug"]] = work
     works = list(merged_works.values())
+    for w in works:
+        w["sections"] = drop_repeated_sections(w["sections"])
+        w["section_count"] = len(w["sections"])
+        retitled = SECTION_TITLES.get(str(w.get("slug")), {})
+        for sec in w["sections"]:
+            if str(sec.get("section")) in retitled:
+                sec["head"] = retitled[str(sec["section"])]
     # Corpus progress for the Explore strip: totals over everything the
     # loaders considered, before the quality and publication gates hold
     # works back. A section counts as translated when it has English that
@@ -9802,7 +9915,7 @@ def build() -> None:
         work_ld = {k: v for k, v in work_ld.items() if v is not None}
         work_desc = (
             public_blurb(w.get("blurb") or "")
-            or f"Read {pub_title} by {w_author} in new English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
+            or f"Read {title_by(pub_title, w_author, canonical_author_slug(w.get('author_slug'), w.get('author')))} in new English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
         )
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
         edition_short = scrub_worksheet_note(edition_short)
@@ -10113,7 +10226,7 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    f"{pub_title} by {w_author}",
+                    title_by(pub_title, w_author, canonical_author_slug(w.get("author_slug"), w.get("author"))),
                     f"""{work_mast}
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
                     {''.join(overview_toc)}
@@ -10188,7 +10301,7 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    f"{pub_title} by {w_author}",
+                    title_by(pub_title, w_author, canonical_author_slug(w.get("author_slug"), w.get("author"))),
                     reader_page(
                         f'<div class="reader">{blocks}</div>',
                         contents_html=contents_details(w["sections"]),
@@ -10612,7 +10725,7 @@ def build() -> None:
             "Listen to the Church Fathers: free audio in modern English",
             f"""<p class="eyebrow">Listen</p>
 <h1>Hear the Fathers read aloud</h1>
-<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{' To keep them, every audiobook is in the <a href="/downloads/">library pass</a>.' if LIBRARY else ''}</p>
+<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{f' To keep them, {LIBRARY.audio_count()} of these are audiobooks in the <a href="/downloads/">library pass</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
 <div class="ls-groups">{''.join(listen_groups)}</div>""",
             crumb=[("Home", "/"), ("Listen", "")],
             active="listen",
@@ -11097,9 +11210,9 @@ def build() -> None:
         DIST / "privacy" / "index.html",
         layout(
             "Privacy",
-            """<p class="eyebrow">Privacy</p>
+            f"""<p class="eyebrow">Privacy</p>
             <h1>Privacy</h1>
-            <p class="lede">Via Patrum does not collect personal data, on this website or in the Via Patrum app for iPhone and iPad.</p>
+            <p class="lede">Via Patrum does not collect personal data, on this website or in the <a href="{APP_STORE_URL}">Via Patrum app for iPhone and iPad</a>.</p>
             <h2>The app</h2>
             <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
             <h2>This website</h2>
@@ -11288,6 +11401,7 @@ def build() -> None:
         "/authors/anonymous-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n"
         "/authors/anonymous-epistle-to-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n"
         "/authors/irenaeus-of-lyons/ /authors/irenaeus/ 301\n"
+        "/authors/cyprian-of-carthage/ /authors/cyprian/ 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))

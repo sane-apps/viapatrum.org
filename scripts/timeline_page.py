@@ -23,9 +23,19 @@ ERAS = [(30, 150, "Apostolic Fathers"), (150, 325, "Before Nicaea"), (325, 451, 
 STRIP_ERAS = [(30, 150, "Apostolic"), (150, 325, "Before Nicaea"), (325, 500, "Nicaea and after"),
               (500, 1500, "Middle Ages"), (1500, 2030, "Reformation to today")]
 COLORS = ["var(--a1)", "var(--a2)", "var(--a3)", "var(--a4)"]
-GAP_STATUS = {"intake": "Text being fetched", "relock-source": "Text being re-checked",
-              "translate": "Queued for translation", "search": "Being searched"}
 LANG = {"grc": "Greek", "la": "Latin", "en": "English"}
+# A gap's "why" is a reader line plus the researcher's note ("The Latin was not
+# fetched", "In the PG 32 scan, poor OCR"). Readers saw both on 98 pages
+# (2026-10-14 audit); the notes stay in the dossier for the work queue.
+RESEARCH_NOTE = re.compile(
+    r"\b(fetch(ed)?|scan|OCR|Migne|P[GL] \d|search(ed)?|not found|to be (added|searched)|queued|"
+    r"Latin Library|Only English|in the library|intake|re-?lock|TEI|download)\b", re.I)
+
+
+def reader_why(text: str) -> str:
+    """The reader's half of a gap note: sentences without research jargon."""
+    parts = re.split(r"(?<=[.!?”\"])\s+(?=[A-Z“\"])", (text or "").strip())
+    return " ".join(p for p in parts if p and not RESEARCH_NOTE.search(p))
 POPULAR = ["infant-baptism", "eucharist-presence", "old-testament-canon"]
 TOPICS_LIVE: set[str] = set()  # filled by build() from dist/topics/
 
@@ -150,11 +160,12 @@ def question_page(d: dict, group_title: str, church_url: dict[str, str]) -> str:
     gaps = [g for g in d.get("gaps") or [] if g.get("action") != "skip"]
     gaps_html = ""
     if gaps:
-        gaps_html = ('<section class="gaps"><h2>Witnesses not in the library yet</h2><p class="sub">These matter for this question. '
-                     'Each is queued: the original text is being fetched or translated, and it will appear above when it is ready.</p><ul>'
+        gaps_html = ('<section class="gaps"><h2>Witnesses not in the library yet</h2><p class="sub">These writers also matter '
+                     'for this question. Their texts will join the timeline above once they are translated.</p><ul>'
                      + "".join(f'<li><span class="yr">{escape(str(g.get("year") or ""))}</span><div><b>{escape(g.get("author") or "")}</b>, '
-                               f'{escape(g.get("work") or "")}<span class="st">{GAP_STATUS.get(g.get("action"), "Queued")}</span>'
-                               f'<p>{escape(g.get("why") or "")}</p></div></li>' for g in gaps) + "</ul></section>")
+                               f'{escape(g.get("work") or "")}'
+                               + (f'<p>{escape(reader_why(g.get("why")))}</p>' if reader_why(g.get("why")) else "")
+                               + '</div></li>' for g in gaps) + "</ul></section>")
     rel = d.get("related") or {}
     links = []
     if rel.get("timeline") in church_url:
@@ -212,11 +223,11 @@ def index_page(data: dict) -> str:
     return f"""<div class="tl" id="tl-index">
 <section class="hero">
   <p class="kicker">Timeline</p>
-  <h1>Ask the early church</h1>
+  <h1>Ask the early Church</h1>
   <p class="lede">Type a question about what Christians believed. You get a short answer, then every witness in date order, in the writers' own words, each a click from the Greek or Latin and the full work.</p>
   <div class="search" id="searchbox" role="search">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-    <input id="q" type="search" autocomplete="off" placeholder="Did the early church baptize babies?" aria-label="Search the questions and the quotes" aria-controls="results">
+    <input id="q" type="search" autocomplete="off" placeholder="Did the early Church baptize babies?" aria-label="Search the questions and the quotes" aria-controls="results">
     <kbd>/</kbd>
     <div class="results" id="results" role="listbox" hidden></div>
   </div>
@@ -287,7 +298,7 @@ def build(dist: Path, layout, write, B, old_ids: set[str]) -> int:
             description=" ".join(o["text"] for o in d.get("overview") or [])[:300] or d["question"],
             canonical=f"/explore/{qid}/"))
     write(dist / "explore" / "index.html", layout(
-        "Ask the early church · Timeline", index_page(data),
+        "Ask the early Church · Timeline", index_page(data),
         crumb=[("Home", "/"), ("Timeline", "")], active="explore",
         styles=["/assets/timeline.css"], scripts=["/assets/timeline.js"],
         description="The 100 questions readers ask most about what the early Church believed, each answered from the writers' own words in date order, with the Greek or Latin one click away.",
