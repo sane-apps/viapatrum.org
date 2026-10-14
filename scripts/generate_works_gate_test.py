@@ -46,5 +46,21 @@ class GenerateWorksGateTest(unittest.TestCase):
             self.assertIn('const LIVE = new Set(["origen"]);', author.read_text(encoding="utf-8"))
 
 
+
+class MovedSlugTest(unittest.TestCase):
+    def test_redirect_lines_become_gate_redirects(self) -> None:
+        with tempfile.TemporaryDirectory() as d:
+            r = Path(d) / "_redirects"
+            r.write_text("/authors/irenaeus-of-lyons/ /authors/irenaeus/ 301\n"
+                         "/authors/live-one/ /authors/x/ 301\n"
+                         "/beliefs/:id/ /explore/:id/ 301\n"
+                         "/works/old/ /works/new/ 301\n")
+            self.assertEqual(gate.moved_slugs(r, "authors", ["irenaeus", "live-one"]),
+                             {"irenaeus-of-lyons": "/authors/irenaeus/"})
+            self.assertEqual(gate.moved_slugs(r, "works", []), {"old": "/works/new/"})
+            js = gate.write_gate(Path(d), ["irenaeus"], "authors", {"irenaeus-of-lyons": "/authors/irenaeus/"}).read_text()
+            self.assertIn('const MOVED = {"irenaeus-of-lyons":"/authors/irenaeus/"};', js)
+
+
 if __name__ == "__main__":
     unittest.main()
