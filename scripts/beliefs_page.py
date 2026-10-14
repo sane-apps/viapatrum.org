@@ -574,6 +574,7 @@ def _firsts(q: dict) -> list[tuple[int, str, str, bool]]:
 
 
 UNSURE = " (authorship uncertain)"
+CHART_MIN_PASSAGES = 4  # deciding passages before a question page draws its lanes
 
 
 def q_name(q: dict, pid: str) -> str:
@@ -627,6 +628,116 @@ def card_html(q: dict, dist: Path, B) -> str:
             f'<a href="{href}">{f"{n_dec} deciding passage" + ("s" if n_dec != 1 else "") if n_dec else "The positions"} →</a></p></article>')
 
 
+# --- /explore/churches/: one answer list (owner-approved sketch 2026-10-14) ---
+# The page used to draw one timeline lane per position for every question,
+# most of them empty ("no early passage yet"), with 9-10 px labels, beside
+# older topic cards. Now each question lists its answers in plain words: who
+# holds each one, the earliest witness our search found, and when a church
+# made it official. A church chip narrows every question to that church's answer.
+
+def _made_official(pos: dict) -> str:
+    first = str(pos.get("first_defined") or "").split(";")[0].strip()
+    return f"Formal statement: {first}" if first and _YEAR.search(first) else ""
+
+
+def _churches(pos: dict) -> str:
+    labels = pos.get("tradition_labels") or {}
+    return ", ".join(labels.get(t) or TRAD_NAME.get(t, t) for t in _trads(pos))
+
+
+QUESTIONS_DIR = Path(__file__).resolve().parents[1] / "data" / "explore" / "questions"
+
+
+def timeline_questions(qdir: Path = QUESTIONS_DIR) -> dict[str, str]:
+    """Belief id -> the 100-question Timeline page that quotes the early
+    witnesses (its dossier's related.timeline names the belief)."""
+    out: dict[str, str] = {}
+    for f in sorted(qdir.glob("*.json")):
+        try:
+            d = json.loads(f.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        t = (d.get("related") or {}).get("timeline")
+        if t and d.get("id"):
+            out.setdefault(t, d["id"])
+    return out
+
+
+def church_question_html(q: dict, dist: Path, B, early: str = "") -> str:
+    """One question as an answer list. The early witnesses are not repeated
+    here: this map counts only passages that decide between the answers, so
+    Ignatius on the Eucharist (common ground) counts for none, and a bare
+    'earliest witness: Cyril, c. 444' read as a contradiction of the Timeline
+    page quoting Ignatius and Justin (review 2026-10-14). One link goes to the
+    Timeline question, where the Fathers speak in their own words."""
+    q = on_page_only(q, dist)
+    rows = []
+    for pos in q["positions"]:
+        facts = "".join(f"<span>{escape(x)}</span>" for x in (_made_official(pos),) if x)
+        held = _churches(pos)
+        rows.append(f'<li class="cq-pos" data-trads="{escape(" ".join(_trads(pos)))}">'
+                    f'<p class="cq-line"><span class="cq-name">{escape(pos["name"])}</span>'
+                    + (f'<span class="cq-who">{escape(held)}</span>' if held else "")
+                    + "</p>" + (f'<p class="cq-facts">{facts}</p>' if facts else "") + "</li>")
+    notes = "".join(f'<p class="cq-note" data-trad="{escape(n["tradition"])}" hidden>{escape(n["note"])}</p>'
+                    for n in q.get("tradition_notes") or [])
+    early_link = (f'<p class="cq-early"><a data-tl href="/explore/{escape(early)}/">What the early Church said →</a></p>'
+                  if early else "")
+    return (f'<article class="cq" id="{escape(q["id"])}"><h3><a href="/explore/{escape(q["id"])}/">{escape(q["question"])}</a></h3>'
+            f'<ul class="cq-list">{"".join(rows)}</ul>{notes}'
+            f'<p class="cq-none" hidden>This church has no settled answer listed here.</p>{early_link}</article>')
+
+
+CHURCH_FILTER_JS = """<script>
+(function () {
+  var chips = document.querySelectorAll('.bchip');
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      var t = c.getAttribute('data-t');
+      chips.forEach(function (o) { o.setAttribute('aria-pressed', String(o === c)); });
+      document.querySelectorAll('.cq').forEach(function (q) {
+        var shown = 0;
+        q.querySelectorAll('.cq-pos').forEach(function (r) {
+          var on = !t || (' ' + r.getAttribute('data-trads') + ' ').indexOf(' ' + t + ' ') >= 0;
+          r.hidden = !on; if (on) shown++;
+        });
+        var note = t ? q.querySelector('.cq-note[data-trad="' + t + '"]') : null;
+        q.querySelectorAll('.cq-note').forEach(function (n) { n.hidden = n !== note; });
+        q.querySelector('.cq-none').hidden = !!(!t || shown || note);
+      });
+    });
+  });
+})();
+</script>"""
+
+
+def churches_index(qs: list[dict], dist: Path, B, groups: list[tuple[str, str]]) -> str:
+    """Body of /explore/churches/: the dividing questions by subject, as answer lists."""
+    early = timeline_questions()
+    by_group: dict[str, list[str]] = {}
+    for q in qs:
+        by_group.setdefault(LOCUS.get(q["id"], "mary-saints"), []).append(
+            church_question_html(q, dist, B, early.get(q["id"], "")))
+    sections, nav = [], []
+    for gid, title in groups:
+        if gid not in by_group:
+            continue
+        nav.append(f'<a href="#g-{escape(gid)}">{escape(title)}</a>')
+        sections.append(f'<section class="cq-group" id="g-{escape(gid)}"><h2>{escape(title)}</h2>{"".join(by_group[gid])}</section>')
+    return f"""
+<header class="ot-head cq-head">
+  <p class="eyebrow"><a href="/explore/">Timeline</a></p>
+  <h1>Where the churches stand</h1>
+  <p class="intro">The questions that still divide the churches. Each answer names the churches that hold it and the document that first set it down. Open a question to see each answer explained, or follow the link under it to what the early Church said.</p>
+  {chips_html()}
+  <p class="cq-jump">Jump to: {" · ".join(nav)}</p>
+</header>
+{"".join(sections)}
+<p class="intro fine"><a href="/creeds/">Creeds and churches</a> puts every creed and confession on one timeline.</p>
+{CHURCH_FILTER_JS}
+"""
+
+
 def chips_html() -> str:
     chips = "".join(f'<button type="button" class="bchip" data-t="{t}" aria-pressed="false">{n}</button>'
                     for t, n in TRADITIONS)
@@ -642,7 +753,7 @@ FILTER_JS = """<script>
     c.addEventListener('click', function () {
       var t = c.getAttribute('data-t');
       chips.forEach(function (o) { o.setAttribute('aria-pressed', String(o === c)); });
-      document.querySelectorAll('.tl-row[data-trads], .bdefs li[data-trads]').forEach(function (r) {
+      document.querySelectorAll('.tl-row[data-trads], .bdefs li[data-trads], .bpos[data-trads]').forEach(function (r) {
         var on = !t || (' ' + r.getAttribute('data-trads') + ' ').indexOf(' ' + t + ' ') >= 0;
         r.classList.toggle('dim', !on);
       });
@@ -680,6 +791,7 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
         HELD_FILES.update(B.held_source_files())
     depth = searched_depth(data_path)
     searched_on = searched_date(data_path)
+    early = timeline_questions()
     for q in qs:
         q = on_page_only(q, dist)
         positions = []
@@ -701,7 +813,8 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
             positions.append(
                 f'<div class="bpos" data-trads="{escape(" ".join(_trads(pos)))}">'
                 f'<h3>{escape(pos["name"])} {_trad_badges(pos)}</h3>'
-                f'<p class="bmark"><span>What sets it apart:</span> {escape(pos.get("mark") or "")}</p>'
+                + (f'<p class="bmark"><span>What it holds:</span> {escape(pos["statement"])}</p>' if pos.get("statement")
+                   else f'<p class="bmark"><span>What sets it apart:</span> {escape(pos.get("mark") or "")}</p>') +
                 f'{quote}{fine}{first_html}</div>')
         shared = "".join(f"<li>{escape(s)}</li>" for s in q.get("shared_ground") or [])
         names = {p["id"]: p["name"] for p in q["positions"]}
@@ -731,11 +844,18 @@ def build(dist: Path, data_path: Path, layout, write, B, topic_titles: dict[str,
             page_story = story(q, B)
         finally:
             B.TL_END = old_end
+        # A chart of one or two dots on mostly empty lanes said less than the
+        # sentence above it (review 2026-10-14). Draw it once there is a
+        # pattern to see; the positions and passages below carry the rest.
+        n_dec = sum(1 for p in q["passages"] if any(_deciding(p, pid) for pid in p["positions"]))
+        if n_dec < CHART_MIN_PASSAGES:
+            page_legend = page_lanes = ""
         body = f"""
 <header class="ot-head">
   <p class="eyebrow"><a href="/explore/">Timeline</a></p>
   <h1>{escape(q["question"])}</h1>
   <p class="tl-verdict">{page_story}</p>
+  {f'<p class="cq-early"><a data-tl href="/explore/{escape(early[q["id"]])}/">What the early Church said, in their own words →</a></p>' if q["id"] in early else ""}
   {chips_html()}
   {notes_html(q)}
 </header>

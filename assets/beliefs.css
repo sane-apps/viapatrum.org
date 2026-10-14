@@ -8,7 +8,7 @@
 .bchip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .bchip:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
 .tl-row[data-trads], .bdefs li[data-trads] { transition: opacity 0.2s; }
-.tl-row.dim, .bdefs li.dim { opacity: 0.25; }
+.tl-row.dim, .bdefs li.dim, .bpos.dim { opacity: 0.25; }
 /* Eleven churches (2026-10-06): on phones the label takes its own line, so the
    chips wrap as one even block under it. */
 @media (max-width: 640px) {
@@ -141,3 +141,26 @@
   .tl-pos.tl-compact .tl-claim { flex-wrap: wrap; }
   .tl-pos.tl-compact .tl-tally { flex-basis: 100%; }
 }
+
+/* /explore/churches/: answer lists (owner-approved redesign 2026-10-14).
+   One readable column; nothing smaller than 15 px. */
+.cq-group { max-width: 48rem; margin: 2.4rem 0 0; }
+.cq-group > h2 { font-size: 1.55rem; margin: 0 0 .4rem; padding-bottom: .4rem; border-bottom: 1px solid var(--rule); }
+.cq { padding: 1.1rem 0 1.2rem; border-bottom: 1px solid var(--rule); }
+.cq h3 { font-size: 1.22rem; line-height: 1.35; margin: 0 0 .65rem; }
+.cq h3 a { color: var(--ink); text-decoration: none; }
+.cq h3 a:hover, .cq h3 a:focus-visible { text-decoration: underline; }
+.cq-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .7rem; }
+.cq-pos { padding-left: .9rem; border-left: 3px solid var(--rule); }
+.cq-line { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .7rem; }
+.cq-name { font-weight: 650; font-size: 1.05rem; color: var(--ink); }
+.cq-who { font-size: .98rem; color: var(--ink-soft); }
+.cq-facts { margin: .15rem 0 0; font-size: .95rem; color: var(--ink-soft); line-height: 1.5; }
+.cq-note, .cq-none { margin: .6rem 0 0; font-size: .98rem; color: var(--ink-soft); }
+.cq-head .intro { max-width: 44rem; }
+.cq-jump { margin: 1rem 0 0; font-size: .98rem; color: var(--ink-soft); line-height: 1.7; }
+.cq-jump a { white-space: nowrap; }
+.cq-facts span { display: block; }
+.cq h3 { max-width: none; text-wrap: pretty; }
+.cq-early { margin: .75rem 0 0; font-size: 1rem; }
+.cq-early a { font-weight: 600; }

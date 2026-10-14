@@ -11028,100 +11028,25 @@ def build() -> None:
         DIST, ROOT, sys.modules[__name__], works=works, by_topic=by_topic, topic_meta=topic_meta,
         tax=tax, sc_entries=sc_entries, wrong_cites=wrong_cites))
 
-    # --- Over time: every question at a glance ---------------------------
-    ot_groups = []
+    # --- Where the churches stand (/explore/churches/ after timeline_page moves it) ---
+    # Owner-approved redesign 2026-10-14: the dividing questions only, as answer
+    # lists (beliefs_page.churches_index). The topic over-time cards that sat
+    # here live on each topic page (#over-time).
     _this = sys.modules[__name__]
-    belief_cards: dict[str, list[str]] = defaultdict(list)
-    for _q in belief_qs:
-        belief_cards[beliefs_page.LOCUS.get(_q["id"], "mary-saints")].append(beliefs_page.card_html(_q, DIST, _this))
-    ot_loci = []
+    church_groups = []
     for locus in tax.get("loci", []):
-        ot_loci.append(locus)
+        church_groups.append((locus["id"], public_locus_title(locus["id"], locus.get("title") or "")))
         if locus["id"] == beliefs_page.EXTRA_LOCUS["after"]:
-            ot_loci.append({"id": beliefs_page.EXTRA_LOCUS["id"], "title": beliefs_page.EXTRA_LOCUS["title"], "topics": []})
-    ot_titles = {}
-    for locus in ot_loci:
-        cards = [c for c in belief_cards.get(locus["id"], []) if "The positions →" not in c]
-        later = [c for c in belief_cards.get(locus["id"], []) if "The positions →" in c]
-        thin = []
-        for t in locus.get("topics", []):
-            tid = t["id"]
-            tp = points_by_topic.get(tid) or []
-            tc = claims_by_topic.get(tid)
-            # Same rule as the topic page: no card that links to a timeline
-            # the page does not draw. Those topics are listed below the cards.
-            if not tc or not tp or tl_writer_count(tp) < TL_MIN_WRITERS:
-                if tid in by_topic or tid in topic_to_works:
-                    thin.append(f'<a href="/topics/{escape(tid)}/">{escape(t["title"])}</a>')
-                continue
-            first_claim = (tc.get("claims") or [{}])[0]
-            n_writers = tl_writer_count(tp)
-            n_claims = len(tc.get("claims") or [])
-            turned = bool(rupture_for.get(tid)) or any(p.get("kind") == "contrast" for p in tp)
-            rejects = sum(1 for p in tp if p.get("stance") == "denies")
-
-            def ot_anchor(pt: dict, _tid: str = tid) -> str:
-                return f"/topics/{_tid}/#over-time"
-
-            badge = '<span class="ot-badge turn">A later turn</span>' if turned else ""
-            cards.append(
-                f'<article class="ot-card" id="{escape(tid)}">'
-                f'<h3><a href="/topics/{escape(tid)}/#over-time">{escape(t["title"])}</a></h3>'
-                f'<p class="ot-claim">{escape(first_claim.get("label") or "")}</p>'
-                f"{tl_claims_html(tc, tp, ot_anchor, compact=True, turn=rupture_for.get(tid))}"
-                f'<p class="ot-meta">{badge}<a href="/topics/{escape(tid)}/#over-time">'
-                # The mini lane draws the first claim only, so a multi-claim count
-                # says "across": the other writers sit on the topic page's other rows.
-                + (f"{n_writers} writers across {n_claims} claims →" if n_claims > 1 else f"{n_writers} writers →")
-                + "</a></p>"
-                f"</article>"
-            )
-        # Questions with no deciding passage yet go after the ones with lanes.
-        cards += later
-        thin_html = (
-            '<p class="tl-related ot-thin">Too few writers marked yet for a timeline: '
-            + " · ".join(thin) + "</p>"
-            if thin else ""
-        )
-        if cards or thin:
-            ot_titles[locus["id"]] = public_locus_title(locus["id"], locus.get("title") or "")
-            ot_groups.append(
-                f'<section class="ot-group" id="g-{escape(locus["id"])}">'
-                f'<h2>{escape(public_locus_title(locus["id"], locus.get("title") or ""))}</h2>'
-                + (f'<div class="ot-grid">{"".join(cards)}</div>' if cards else "")
-                + f"{thin_html}</section>"
-            )
-    ot_nav = "".join(f'<a href="#g-{escape(lid)}">{escape(title)}</a>' for lid, title in ot_titles.items())
-    explore_body = f"""
-<header class="ot-head">
-  <p class="eyebrow">Timeline</p>
-  <h1>How beliefs developed over time</h1>
-  <p class="intro">For every question, where each writer stood and when, from the apostles to the councils. Questions that divide the churches today get one lane per position, so you can see when each belief first appears. Open a question to see every writer and the passages.</p>
-  <p class="ot-creeds"><a href="/creeds/">Creeds and churches</a> puts every major creed and confession on one timeline, and says where each church came from.</p>
-  {beliefs_page.chips_html()}
-  {TL_LEGEND_UNCERTAIN}
-  <nav class="ot-nav" aria-label="Question groups">{ot_nav}</nav>
-</header>
-{''.join(ot_groups)}
-<p class="intro fine">The marks are our reading of each passage, for study. They are not a ranking of who was right.</p>
-{beliefs_page.FILTER_JS}
-<script>
-  // Old links (/explore/?topic=…) open the question's timeline.
-  (function () {{
-    var t = new URLSearchParams(location.search).get("topic");
-    if (t && /^[a-z0-9-]+$/.test(t)) location.replace("/topics/" + t + "/#over-time");
-  }})();
-</script>
-"""
+            church_groups.append((beliefs_page.EXTRA_LOCUS["id"], beliefs_page.EXTRA_LOCUS["title"]))
     write(
         DIST / "explore" / "index.html",
         layout(
-            "What the Church Fathers taught, over time",
-            explore_body,
-            crumb=[("Home", "/"), ("Timeline", "")],
+            "Where the churches stand",
+            beliefs_page.churches_index(belief_qs, DIST, _this, church_groups),
+            crumb=[("Home", "/"), ("Timeline", "/explore/"), ("Where the churches stand", "")],
             active="explore",
             styles=["/assets/beliefs.css"],
-            description="Every question the early Church answered, with where each writer stood over time, from the apostles to the councils, and the passages behind each mark.",
+            description="What each church teaches on the questions that divide them, the earliest Church Father who taught each answer, and when a church made it official.",
         ),
     )
 

@@ -176,37 +176,30 @@ test('free will: later turn sits in time order and the summary voice is labeled'
   assert.match(doc.querySelector('.contrast-card .meta').textContent,/not yet in this library/);
 });
 
-test('over time overview: every question with stances gets a card and a mini timeline', ()=>{
-  // Since 2026-10-13 the church-lane overview lives at /explore/churches/; /explore/ is the 100 reader questions.
+test('where the churches stand: one answer list per dividing question, no topic cards (redesign 2026-10-14)', ()=>{
+  // Owner-approved redesign: the dividing questions only, as answer lists; the topic
+  // over-time timelines live on each topic page (#over-time).
   const doc=page('explore/churches/index.html');
-  const data=JSON.parse(readFileSync(new URL('data/explore-index.json',DIST),'utf8'));
-  const withPoints=new Set(data.points.map(p=>p.topic));
-  const cards=doc.querySelectorAll('.ot-card:not(.ot-belief)');
-  // W3-topics (2026-10-06): a topic whose page draws no timeline (too few
-  // writers) gets no card; it is listed as a plain link below the cards.
-  for(const t of data.topics.filter(t=>withPoints.has(t.id))){
-    assert.ok(doc.getElementById(t.id)?.matches('.ot-card')||doc.querySelector(`a[href="/topics/${t.id}/"]`),'no card or link for '+t.id);
-  }
-  assert.ok(cards.length>=20,'expected most topics to have a card, got '+cards.length);
-  for(const c of cards){
-    assert.ok(c.querySelector('.tl-lane'),'mini timeline in '+c.id);
-    assert.match(c.querySelector('h3 a').getAttribute('href'),/^\/topics\/[a-z0-9-]+\/#over-time$/);
-  }
-  assert.ok(!doc.querySelector('script[src*="explore.js"]'),'old chart script retired');
-});
-
-test('beliefs live on the Timeline: a card per dividing question, no Beliefs tab (owner 2026-10-05)', ()=>{
-  const doc=page('explore/churches/index.html');
-  // The questions file decides which questions show (beliefs_page.load); the map adds passages.
+  assert.equal(doc.querySelector('h1').textContent,'Where the churches stand');
+  assert.equal(doc.querySelectorAll('.ot-card').length,0,'no topic or lane cards');
+  assert.equal(doc.querySelectorAll('.tl-lane, .tl-pos').length,0,'no lanes on the overview');
   const qs=JSON.parse(readFileSync(new URL('../data/explore/doctrine_questions.json',import.meta.url),'utf8'));
-  const cards=doc.querySelectorAll('.ot-card.ot-belief');
+  const cards=doc.querySelectorAll('article.cq');
   assert.equal(cards.length,qs.length);
   for(const c of cards){
     const href=c.querySelector('h3 a').getAttribute('href');
     assert.ok(href==='/explore/'+c.id+'/'||href==='/explore/churches/'+c.id+'/',href);
-    assert.match(readFileSync(new URL(href.slice(1)+'index.html',DIST),'utf8'),/class="tl tl-pos[" ]/,'lanes on '+c.id);
+    assert.match(readFileSync(new URL(href.slice(1)+'index.html',DIST),'utf8'),/class="bpositions"/,'positions on '+c.id);
+    assert.ok(c.querySelectorAll('.cq-pos[data-trads]').length>=2,'answers on '+c.id);
+    const early=c.querySelector('.cq-early a');
+    if(early){
+      const e=early.getAttribute('href');
+      assert.match(readFileSync(new URL(e.slice(1)+'index.html',DIST),'utf8'),/class="answer-box"/,'early link to a Timeline question: '+e);
+    }
   }
+  assert.ok(doc.querySelectorAll('.cq-early a').length>=20,'most questions link to what the early Church said');
   assert.ok(!doc.querySelector('a[href^="/beliefs"]'),'no Beliefs link');
+  assert.equal(doc.querySelector('a[href="/creeds/"]').textContent,'Creeds and churches');
   assert.match(readFileSync(new URL('_redirects',DIST),'utf8'),/^\/beliefs\/:id\/ \/explore\/:id\/ 301$/m);
 });
 
@@ -220,20 +213,20 @@ test('beliefs: eleven church chips, four new questions, new churches filter (own
   const doc=page('explore/churches/index.html');
   for(const id of ['spiritual-gifts','sanctification','christ-natures','millennium']){
     const card=doc.getElementById(id);
-    assert.ok(card?.matches('.ot-card.ot-belief'),'card for '+id);
+    assert.ok(card?.matches('article.cq'),'question '+id);
     assert.equal(card.querySelector('h3 a').getAttribute('href'),'/explore/'+id+'/');
     const q=page('explore/'+id+'/index.html');
-    assert.equal(q.querySelectorAll('.tl-pos:not(.tl-compact) .tl-row[data-trads]').length,3,'three lanes on '+id);
+    assert.equal(q.querySelectorAll('.bpos[data-trads]').length,3,'three positions on '+id);
   }
-  // A new church is placed (lane data-trads) and a divided one is named in a note line.
+  // A new church is placed and a divided one is named in a note line.
   const cn=page('explore/christ-natures/index.html');
-  assert.ok(cn.querySelector('.tl-row[data-trads~="oriental-orthodox"]'));
-  assert.ok(cn.querySelector('.tl-row[data-trads~="church-of-the-east"]'));
+  assert.ok(cn.querySelector('.bpos[data-trads~="oriental-orthodox"]'));
+  assert.ok(cn.querySelector('.bpos[data-trads~="church-of-the-east"]'));
   assert.match(cn.querySelector('.bnotes').textContent,/Coptic and Ethiopian/);
   const ep=page('explore/churches/eucharist-presence/index.html');
-  assert.ok(ep.querySelector('.tl-row[data-trads~="methodist"]'));
+  assert.ok(ep.querySelector('.tl-row[data-trads~="methodist"]'),'a question with enough passages keeps its chart');
   assert.match(ep.querySelector('.bnotes').textContent,/Anabaptist:\s*Divided\./);
-  assert.equal(doc.querySelector('.ot-creeds a').getAttribute('href'),'/creeds/');
+  assert.equal(ep.querySelector('a[data-tl]').getAttribute('href'),'/explore/eucharist-presence/','early link not moved');
 });
 
 test('timeline: 100 reader questions, static pages with quotes and the chart (owner 2026-10-13)', ()=>{

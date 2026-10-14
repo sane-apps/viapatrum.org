@@ -268,9 +268,12 @@ def move_church_views(dist: Path, old_ids: set[str], new_ids: set[str]) -> dict[
                 shutil.rmtree(ch / i)
             (ex / i).replace(ch / i)
     def fix(html: str) -> str:
+        # Links marked data-tl already point at the Timeline question of that id
+        # ("What the early Church said"); moving them would make them self-links.
+        html = html.replace('<a data-tl href="/explore/', '<a data-tl href="\x00TL/')
         for i in moved:
             html = html.replace(f'/explore/{i}/', f'/explore/{CHURCHES}/{i}/')
-        return html
+        return html.replace('<a data-tl href="\x00TL/', '<a data-tl href="/explore/')
     for f in [ch / "index.html", *[ch / i / "index.html" for i in moved]]:
         if f.is_file():
             html = fix(f.read_text(encoding="utf-8"))
