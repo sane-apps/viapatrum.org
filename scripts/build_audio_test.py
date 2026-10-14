@@ -47,6 +47,20 @@ class SplitterTests(unittest.TestCase):
         self.assert_boundaries_clean(text)
 
 
+class TimingRowTests(unittest.TestCase):
+    def test_silent_sentence_gets_width_on_any_path(self):
+        from build_audio import MIN_SENTENCE_S, timing_rows
+        rows = timing_rows(["One.", "...", "Two."], [(0.0, 1.0), (1.0, 1.0), (1.0, 2.0)], {})
+        self.assertAlmostEqual(rows[1]["e"] - rows[1]["s"], MIN_SENTENCE_S, places=3)
+        self.assertGreaterEqual(rows[2]["s"], rows[1]["e"])  # next sentence starts after it
+        self.assertEqual(rows[2]["e"], 2.0)
+
+    def test_quote_marks_and_normal_rows_kept(self):
+        from build_audio import timing_rows
+        rows = timing_rows(["A.", "B."], [(0.0, 1.0), (1.0, 2.5)], {1: "John 1:1"})
+        self.assertEqual(rows, [{"t": "A.", "s": 0.0, "e": 1.0}, {"t": "B.", "s": 1.0, "e": 2.5, "q": "John 1:1"}])
+
+
 class SpeechTextTests(unittest.TestCase):
     def test_read_text_strips_link_markup(self):
         self.assertEqual(

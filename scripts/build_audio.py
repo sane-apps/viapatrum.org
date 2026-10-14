@@ -458,8 +458,7 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
         "audio": "assets/audio/%s/%s.mp3" % (work, eng_file.stem),
         "voice": voice,
         "quote_voice": quote_voice or None,
-        "sentences": [dict({"t": s, "s": a, "e": b}, **({"q": sig[i]} if i in sig else {}))
-                      for i, (s, (a, b)) in enumerate(zip(sentences, offsets))],
+        "sentences": timing_rows(sentences, offsets, sig),
     }
     print("rendered %s: %d sentences -> %s" % (eng_file.stem, len(sentences), mp3.name), flush=True)
     _audit(work, eng_file.stem, len(sentences), len(plan), len(todo))
@@ -525,6 +524,13 @@ def min_width(rows: list[dict]) -> list[dict]:
     return rows
 
 
+def timing_rows(sentences: list[str], spans: list[tuple[float, float]], sig: dict) -> list[dict]:
+    """Manifest timing rows for one passage. Both render paths (local and
+    Worker) use this, so a silent sentence is widened on either path."""
+    return min_width([dict({"t": s, "s": a, "e": b}, **({"q": sig[i]} if i in sig else {}))
+                      for i, (s, (a, b)) in enumerate(zip(sentences, spans))])
+
+
 def _apply_worker_result(spec: dict, result: dict, manifest: dict) -> int:
     """Put one finished Worker result into the manifest. Returns the sentence count."""
     sentences, sig = spec["sentences"], spec["sig"]
@@ -534,8 +540,7 @@ def _apply_worker_result(spec: dict, result: dict, manifest: dict) -> int:
         "bytes": result["bytes"],
         "voice": spec.get("voice") or _voice_name(),
         "quote_voice": spec["quote_voice"] or None,
-        "sentences": min_width([dict({"t": s, "s": r["s"], "e": r["e"]}, **({"q": sig[i]} if i in sig else {}))
-                                for i, (s, r) in enumerate(zip(sentences, result["sentences"]))]),
+        "sentences": timing_rows(sentences, [(r["s"], r["e"]) for r in result["sentences"]], sig),
     }
     units, spoken = int(result.get("units", 0)), int(result.get("spoken", 0))
     # Characters actually spoken (the Worker's cache serves the rest), for the
