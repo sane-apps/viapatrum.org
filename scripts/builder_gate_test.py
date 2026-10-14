@@ -108,6 +108,19 @@ class TitleAndDateTest(unittest.TestCase):
                                               "period": "c. 9th cent.?"}), "Unknown")
 
 
+class CleanupPassTest(unittest.TestCase):
+    """2026-10-14 site audit fixes (docs/WRAPUP_PLAN_2026-10-14.md, Phase 1)."""
+
+    def test_editor_gloss_after_asterisks_is_not_shown(self):
+        x = {"english": "it uses its own. ****** Sleep rests the flesh; the soul keeps moving."}
+        self.assertEqual(build_site.excerpt_paragraphs(x), ["it uses its own."])
+        self.assertEqual(build_site.excerpt_paragraphs({"english": ["a", "b ******"]}), ["a", "b"])
+
+    def test_long_text_after_a_lacuna_mark_stays(self):
+        tail = "text after a gap " * 20
+        self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])
+
+
 class BuildGateTest(unittest.TestCase):
     """build_site.py takes outputs/build.lock and keeps the 15 GB floor."""
 

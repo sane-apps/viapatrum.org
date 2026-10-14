@@ -6408,11 +6408,21 @@ def strip_source_chrome(text: str) -> str:
     return text[matches[-1].end():].strip()
 
 
+# A line of asterisks, then an editor's one-line gloss, ends 74 seed excerpts
+# ("****** Sleep rests the flesh; the immortal soul keeps moving ..."). Shown
+# as the Father's own words (2026-10-14 audit). A tail over 200 characters may
+# be text after a lacuna, so it stays. The source file is not edited.
+EDITOR_GLOSS_RE = re.compile(r"\s*\*{3,}\s*[^*]{0,200}$")
+
+
 def excerpt_paragraphs(x: dict) -> list[str]:
     """English paragraphs with source-site chrome removed and repeats dropped."""
     out: list[str] = []
     seen: set[str] = set()
-    for para in eng_list(x.get("english")):
+    paras = list(eng_list(x.get("english")))
+    if paras:
+        paras[-1] = EDITOR_GLOSS_RE.sub("", paras[-1])
+    for para in paras:
         cleaned = strip_source_chrome(para).strip()
         # Leftover edition chapter mark at the start ("X. \"I purposely pass over…").
         # Also "XIV. 1. And yet…" (chapter and paragraph marks, 28 pages).
