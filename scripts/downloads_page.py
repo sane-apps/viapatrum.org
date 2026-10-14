@@ -149,6 +149,10 @@ class Library:
     def has_audio(self) -> bool:
         return any("audio" in w["files"] for w in self.by_slug.values())
 
+    def audio_count(self) -> int:
+        """Works with a downloadable audiobook (at least 80% narrated)."""
+        return sum(1 for w in self.by_slug.values() if "audio" in w["files"])
+
     def __bool__(self) -> bool:
         # Live only with uploaded files AND a checkout link, which library_sync
         # go-live sets after Lemon Squeezy says the product is published.

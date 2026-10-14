@@ -10656,7 +10656,7 @@ def build() -> None:
             "Listen to the Church Fathers: free audio in modern English",
             f"""<p class="eyebrow">Listen</p>
 <h1>Hear the Fathers read aloud</h1>
-<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{' To keep them, every audiobook is in the <a href="/downloads/">library pass</a>.' if LIBRARY else ''}</p>
+<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{f' To keep them, {LIBRARY.audio_count()} of these are audiobooks in the <a href="/downloads/">library pass</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
 <div class="ls-groups">{''.join(listen_groups)}</div>""",
             crumb=[("Home", "/"), ("Listen", "")],
             active="listen",
