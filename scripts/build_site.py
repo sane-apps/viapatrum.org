@@ -3016,7 +3016,12 @@ def public_method(text: str) -> str:
 WORKSHEET_JARGON = re.compile(
     r"\b(?:scaffold\w*|densif\w*|tips?|exhausted|lemma-led|pinax|deepen\+?|remain|held|PHYS|worksheet|"
     r"bridge|rank[- ]?\d|closeout|packet|receipt|honest partial|partial through)\b"
-    r"|Man\.\s*Post", re.I)
+    r"|Man\.\s*Post"
+    # Notes written for builders, not readers (2026-10-14 audit: five era
+    # banners said "retrieval on the same Fathers-site pipeline ... Do not
+    # treat the site as ante-Nicene only"; le Blanc's history listed "CLOSED").
+    r"|Fathers-site pipeline|\bDo not treat the site\b|\bretrieval on the same\b|\bPublic Domain Mark\b"
+    r"|\bCLOSED\b|^Next:|\bPDF \d", re.I)
 
 
 NOTE_ABBREV = {"cap", "capp", "rom", "man", "post", "cf", "pg", "pl", "ed", "eds", "vol", "fr", "frr", "haer", "hom",

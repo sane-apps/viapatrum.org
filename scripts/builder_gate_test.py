@@ -133,6 +133,15 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.bc_ad_prose("between 238 and 244 CE; 4 BCE"), "between 238 and 244 AD; 4 BC")
         self.assertEqual(build_site.bc_ad_prose("the CEO in 1999"), "the CEO in 1999")
 
+    def test_builder_notes_leave_era_banners(self):
+        note = ("Le Blanc wrote in the mid-seventeenth century. This is not a patristic work. It is a public-domain "
+                "Latin Reformed retrieval on the same Fathers-site pipeline. The 1675 Pitt folio is Public Domain "
+                "Mark 1.0. Do not treat the site as ante-Nicene only.")
+        self.assertEqual(build_site.public_note(note),
+                         "Le Blanc wrote in the mid-seventeenth century. This is not a patristic work.")
+        self.assertEqual(build_site.public_note("English follows X CLOSED + Y CLOSED. No modern English. Next: Z (PDF 584-)."),
+                         "No modern English.")
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])
