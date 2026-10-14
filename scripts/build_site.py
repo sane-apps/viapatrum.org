@@ -1204,6 +1204,15 @@ TEXT_AUTHOR_SLUGS = frozenset({
     "didache", "mathetes-epistle-to-diognetus", "acts-of-the-martyrs",
     "passion-of-perpetua-and-felicity", "chronicon-paschale",
 })
+
+
+def title_by(title: str, author: str, author_slug: str) -> str:
+    """'<title> by <writer>' for page titles. A text or a church is not a
+    writer: "The Martyrdom of Justin by Acts of the Martyrs" (2026-10-14 audit)
+    becomes "The Martyrdom of Justin (Acts of the Martyrs)"."""
+    if author_slug in TEXT_AUTHOR_SLUGS:
+        return title if author.casefold().removeprefix("the ") in title.casefold() else f"{title} ({author})"
+    return f"{title} by {author}"
 # Excerpt rows often carry the display name and no slug.
 TEXT_AUTHOR_NAMES = frozenset({
     "didache", "the didache", "letter to diognetus", "chronicon paschale",
@@ -1974,7 +1983,9 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "alexander-monachus-inventio-crucis-epitome": "Discovery of the Cross, Abridged",
     "cyril-fragmentum-baruch": "Fragment on Baruch",
     "cyril-fragmentum-proverbia": "Fragment on Proverbs",
-    "cyril-solutiones-vat-447": "Answers to Questions (a fragment)",
+    "cyril-solutiones-vat-447": "Fragment of the Answers to Questions",
+    # House rule: "Fragments of ...", not a lowercase (fragments) tag (2026-10-14 audit).
+    "dionysius-corinth-fragments": "Fragments of the Letters",
     "cyril-epistula-theodosium": "Letter to Theodosius",
     "cyril-ad-xystum": "Letter to Sixtus, Bishop of Rome",
     "cyril-de-synagogae-defectu": "On the Falling Away of the Synagogue",
@@ -8377,6 +8388,10 @@ FORCED_WITHHOLD = {
     "cyril-adoration-14": _RECERT,
     "cyril-adoration-15": _RECERT,
     "cyril-adoration-16": _RECERT,
+    # The same Lamentations fragments twice under one title (2026-10-14 audit).
+    # origen-lamentations-fragments has all 118 from Klostermann; this book
+    # groups them into 20 and stays in the pipeline.
+    "origen-lamentationes-fragments": "Second translation of origen-lamentations-fragments; one copy is shown.",
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
     # withheld 2026-10-09 pending Stephan promote call; densify in progress (Densify)
@@ -9815,7 +9830,7 @@ def build() -> None:
         work_ld = {k: v for k, v in work_ld.items() if v is not None}
         work_desc = (
             public_blurb(w.get("blurb") or "")
-            or f"Read {pub_title} by {w_author} in new English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
+            or f"Read {title_by(pub_title, w_author, canonical_author_slug(w.get('author_slug'), w.get('author')))} in new English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
         )
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
         edition_short = scrub_worksheet_note(edition_short)
@@ -10126,7 +10141,7 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    f"{pub_title} by {w_author}",
+                    title_by(pub_title, w_author, canonical_author_slug(w.get("author_slug"), w.get("author"))),
                     f"""{work_mast}
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
                     {''.join(overview_toc)}
@@ -10201,7 +10216,7 @@ def build() -> None:
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
-                    f"{pub_title} by {w_author}",
+                    title_by(pub_title, w_author, canonical_author_slug(w.get("author_slug"), w.get("author"))),
                     reader_page(
                         f'<div class="reader">{blocks}</div>',
                         contents_html=contents_details(w["sections"]),

@@ -120,6 +120,15 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.canonical_author_slug("cyprian-of-carthage", "Cyprian of Carthage"), "cyprian")
         self.assertEqual(build_site.canonical_author_slug(None, "Cyprian of Carthage"), "cyprian")
 
+    def test_text_authors_are_not_bylines(self):
+        self.assertEqual(build_site.title_by("The Martyrdom of Justin", "Acts of the Martyrs", "acts-of-the-martyrs"),
+                         "The Martyrdom of Justin (Acts of the Martyrs)")
+        self.assertEqual(build_site.title_by("On Prayer", "Origen of Alexandria", "origen"), "On Prayer by Origen of Alexandria")
+
+    def test_fragment_titles_follow_the_house_rule(self):
+        for slug in ("cyril-solutiones-vat-447", "dionysius-corinth-fragments"):
+            self.assertNotIn("(", build_site.PUBLIC_ENGLISH_TITLES[slug])
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])
