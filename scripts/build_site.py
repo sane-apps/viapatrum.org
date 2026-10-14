@@ -309,6 +309,10 @@ WORK_TOPICS: dict[str, list[str]] = {
     "le-blanc-theses-theologicae": ["justification", "protestant-roman", "ireneicism", "catholicism"],
     "strimesius-in-controversias-evangelicorum": ["ecclesiastical-peace", "protestant-unity", "ireneicism", "controversy"],
 }
+# Topic links for works that had none (data/work-topics.json, 2026-10-14).
+for _slug, _tids in (_json_load(ROOT / "data" / "work-topics.json", {}) or {}).items():
+    if isinstance(_tids, list) and _tids and not WORK_TOPICS.get(_slug):
+        WORK_TOPICS[_slug] = [str(t) for t in _tids]
 
 
 def slugify(s: str) -> str:
@@ -1097,6 +1101,13 @@ def load_author_bios() -> dict[str, dict]:
 
 
 AUTHOR_BIOS = load_author_bios()
+
+# Reader-facing summary lines and topic links for works whose metadata had
+# none (2026-10-14 audit: 104 showed citation stubs such as "Ammonius of
+# Alexandria, Fragmenta in Joannem (Greek)."; 261 linked no topic). Written
+# from each work's English; the book metadata is left as it is.
+WORK_BLURBS: dict[str, str] = {k: v for k, v in (_json_load(ROOT / "data" / "work-blurbs.json", {}) or {}).items()
+                               if isinstance(v, str) and v.strip()}
 
 
 def load_author_dates() -> dict[str, str]:
@@ -8414,6 +8425,12 @@ FORCED_WITHHOLD = {
     # origen-lamentations-fragments has all 118 from Klostermann; this book
     # groups them into 20 and stays in the pipeline.
     "origen-lamentationes-fragments": "Second translation of origen-lamentations-fragments; one copy is shown.",
+    # Wrong text under the name (2026-10-14 topic pass). "Diodorus, Fragments"
+    # is Dionysius of Corinth's letter to Soter, already live as
+    # dionysius-corinth-fragments. The Apocalypse "scrap" is Origen's letter on
+    # studying heretics and philosophers (Eusebius, Church History 6.19).
+    "diodorus-fragmenta": "Holds Dionysius of Corinth's letters, not Diodorus; a mislabeled second copy.",
+    "origen-apocalypse-scholia-scrap": "Holds Origen's letter from Eusebius 6.19, not notes on the Apocalypse.",
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
     # withheld 2026-10-09 pending Stephan promote call; densify in progress (Densify)
@@ -8645,6 +8662,9 @@ def build() -> None:
             "BLOCKED: FORCED_WITHHOLD names no loaded work or book: " + ", ".join(_dead)
         )
     works, withheld = split_withheld(works)
+    for w in works:
+        if w.get("slug") in WORK_BLURBS:
+            w["blurb"] = WORK_BLURBS[w["slug"]]
     stale = stale_receipt_slugs(works)
     withheld = sorted(set(withheld) | set(stale))
     works = [w for w in works if w.get("slug") not in set(stale)]
