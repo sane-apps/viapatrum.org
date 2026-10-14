@@ -1104,6 +1104,12 @@ AUTHOR_BIOS = load_author_bios()
 # from each work's English; the book metadata is left as it is.
 WORK_BLURBS: dict[str, str] = {k: v for k, v in (_json_load(ROOT / "data" / "work-blurbs.json", {}) or {}).items()
                                if isinstance(v, str) and v.strip()}
+# Plain-English section headings where the file kept a translator's shorthand
+# ("Bezalel = Christ from Judah; Eliab = apostles"), written from each
+# section's English (data/section-titles.json, 2026-10-14). slug -> {section: head}.
+SECTION_TITLES: dict[str, dict[str, str]] = {
+    k: {str(sk): sv for sk, sv in v.items() if isinstance(sv, str) and sv.strip()}
+    for k, v in (_json_load(ROOT / "data" / "section-titles.json", {}) or {}).items() if isinstance(v, dict)}
 # Topic links for works that had none (data/work-topics.json, 2026-10-14).
 for _slug, _tids in (_json_load(ROOT / "data" / "work-topics.json", {}) or {}).items():
     if isinstance(_tids, list) and _tids and not WORK_TOPICS.get(_slug):
@@ -8729,6 +8735,10 @@ def build() -> None:
     for w in works:
         w["sections"] = drop_repeated_sections(w["sections"])
         w["section_count"] = len(w["sections"])
+        retitled = SECTION_TITLES.get(str(w.get("slug")), {})
+        for sec in w["sections"]:
+            if str(sec.get("section")) in retitled:
+                sec["head"] = retitled[str(sec["section"])]
     # Corpus progress for the Explore strip: totals over everything the
     # loaders considered, before the quality and publication gates hold
     # works back. A section counts as translated when it has English that
