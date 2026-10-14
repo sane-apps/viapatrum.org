@@ -534,7 +534,8 @@ def audio_bundles(works: list[dict], prev: dict | None = None, ledger: dict | No
         key = f"bundles/{out.name}"
         # Kept as the uploaded zip (file still matches, or the file is already
         # gone). Either way this era is not rebuilt and needs no free space.
-        if retained_bundle(prev, key, ledger) and (not out.is_file() or ledger.get(key) == sha256(out)):
+        kept = retained_bundle(prev, key, ledger)
+        if kept and kept.get("count") == len(groups[k]) and (not out.is_file() or ledger.get(key) == sha256(out)):
             continue
         total = sum(p.stat().st_size for p, _ in groups[k])
         if total > ZIP_MAX:
@@ -553,7 +554,8 @@ def audio_bundles(works: list[dict], prev: dict | None = None, ledger: dict | No
         # R2 already has this zip. Keep that row when members are gone, when
         # the local zip is gone, or when the local zip still matches. Rebuilding
         # would change the sha and the next upload would replace the paid file.
-        if kept and (remote[k] or not zip_path.is_file() or ledger.get(key) == sha256(zip_path)):
+        current = kept is not None and kept.get("count") == len(groups[k]) + len(remote[k])
+        if kept and (remote[k] or (current and (not zip_path.is_file() or ledger.get(key) == sha256(zip_path)))):
             entries.append(kept)
             continue
         if remote[k]:
@@ -747,7 +749,11 @@ def assemble(app_dir: Path) -> int:
         # A partial zip would replace the full one. A zip R2 already has stays
         # when a member is gone, when the zip itself is gone, or when the local
         # zip still matches, so a newer file does not get uploaded over it.
-        if missing or (kept and (not zip_path.is_file() or uploaded.get(key) == sha256(zip_path))):
+        # A kept zip must still hold every book: the shelf listed 319 EPUBs
+        # beside a kept "All 317 books" zip (2026-10-14 audit). A shorter
+        # zip is rebuilt when every member is here.
+        current = not kept or kept.get("count") == len(files_by_kind[kind])
+        if missing or (kept and current and (not zip_path.is_file() or uploaded.get(key) == sha256(zip_path))):
             if kept:
                 bundles.append(kept)
             continue
