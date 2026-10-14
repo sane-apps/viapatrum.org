@@ -223,11 +223,11 @@ def index_page(data: dict) -> str:
     return f"""<div class="tl" id="tl-index">
 <section class="hero">
   <p class="kicker">Timeline</p>
-  <h1>Ask the early church</h1>
+  <h1>Ask the early Church</h1>
   <p class="lede">Type a question about what Christians believed. You get a short answer, then every witness in date order, in the writers' own words, each a click from the Greek or Latin and the full work.</p>
   <div class="search" id="searchbox" role="search">
     <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-    <input id="q" type="search" autocomplete="off" placeholder="Did the early church baptize babies?" aria-label="Search the questions and the quotes" aria-controls="results">
+    <input id="q" type="search" autocomplete="off" placeholder="Did the early Church baptize babies?" aria-label="Search the questions and the quotes" aria-controls="results">
     <kbd>/</kbd>
     <div class="results" id="results" role="listbox" hidden></div>
   </div>
@@ -298,7 +298,7 @@ def build(dist: Path, layout, write, B, old_ids: set[str]) -> int:
             description=" ".join(o["text"] for o in d.get("overview") or [])[:300] or d["question"],
             canonical=f"/explore/{qid}/"))
     write(dist / "explore" / "index.html", layout(
-        "Ask the early church · Timeline", index_page(data),
+        "Ask the early Church · Timeline", index_page(data),
         crumb=[("Home", "/"), ("Timeline", "")], active="explore",
         styles=["/assets/timeline.css"], scripts=["/assets/timeline.js"],
         description="The 100 questions readers ask most about what the early Church believed, each answered from the writers' own words in date order, with the Greek or Latin one click away.",

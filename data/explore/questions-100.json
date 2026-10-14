@@ -70,7 +70,7 @@
    "number": 3,
    "id": "old-testament-canon",
    "group": "bible",
-   "question": "Which Old Testament books did the early church use? Were Tobit, Wisdom and Maccabees Scripture to them?",
+   "question": "Which Old Testament books did the early Church use? Were Tobit, Wisdom and Maccabees Scripture to them?",
    "sources": [
     "VP",
     "GQ"
@@ -100,7 +100,7 @@
    "number": 6,
    "id": "rule-faith-appealed",
    "group": "bible",
-   "question": "What was \"the rule of faith\" the early church appealed to?",
+   "question": "What was \"the rule of faith\" the early Church appealed to?",
    "sources": [
     "GQ",
     "VP"
@@ -110,7 +110,7 @@
    "number": 7,
    "id": "believe-bible-inspired-without-error",
    "group": "bible",
-   "question": "Did the early church believe the Bible was inspired and without error?",
+   "question": "Did the early Church believe the Bible was inspired and without error?",
    "sources": [
     "LG",
     "OF"
@@ -186,7 +186,7 @@
    "number": 15,
    "id": "teach-that-son-subordinate-father",
    "group": "god",
-   "question": "Did the early church teach that the Son is subordinate to the Father?",
+   "question": "Did the early Church teach that the Son is subordinate to the Father?",
    "sources": [
     "CH"
    ]
@@ -420,7 +420,7 @@
    "number": 40,
    "id": "infant-baptism",
    "group": "baptism-supper",
-   "question": "Did the early church baptize infants?",
+   "question": "Did the early Church baptize infants?",
    "sources": [
     "VP",
     "CH"
@@ -457,7 +457,7 @@
    "number": 44,
    "id": "eucharist-presence",
    "group": "baptism-supper",
-   "question": "Did the early church believe the bread and wine become Christ's body and blood?",
+   "question": "Did the early Church believe the bread and wine become Christ's body and blood?",
    "sources": [
     "VP",
     "CA"
@@ -544,7 +544,7 @@
    "number": 53,
    "id": "apostolic-succession-teach",
    "group": "church",
-   "question": "What is apostolic succession, and did the early church teach it?",
+   "question": "What is apostolic succession, and did the early Church teach it?",
    "sources": [
     "VP",
     "CA"
@@ -891,7 +891,7 @@
    "number": 90,
    "id": "accept-slavery",
    "group": "life",
-   "question": "Did the early church accept slavery?",
+   "question": "Did the early Church accept slavery?",
    "sources": [
     "OF",
     "MS"

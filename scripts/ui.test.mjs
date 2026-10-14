@@ -238,7 +238,7 @@ test('beliefs: eleven church chips, four new questions, new churches filter (own
 
 test('timeline: 100 reader questions, static pages with quotes and the chart (owner 2026-10-13)', ()=>{
   const doc=page('explore/index.html');
-  assert.equal(doc.querySelector('.tl h1').textContent,'Ask the early church');
+  assert.equal(doc.querySelector('.tl h1').textContent,'Ask the early Church');
   const links=[...doc.querySelectorAll('.tl .group li > a')];
   assert.equal(links.length,100,'every question links to its page');
   assert.ok(doc.querySelector('#q[type="search"]'));
@@ -246,7 +246,7 @@ test('timeline: 100 reader questions, static pages with quotes and the chart (ow
   const s=JSON.parse(readFileSync(new URL('data/timeline-search.json',DIST),'utf8'));
   assert.equal(s.questions.length,100); assert.ok(s.quotes.length>500);
   const q=page('explore/infant-baptism/index.html');
-  assert.equal(q.querySelector('.tl h1').textContent,'Did the early church baptize infants?');
+  assert.equal(q.querySelector('.tl h1').textContent,'Did the early Church baptize infants?');
   assert.ok(q.querySelectorAll('.tl .card blockquote.q').length>=10,'quotes are in the HTML, not drawn by script');
   assert.ok(q.querySelector('.tl .card .orig[hidden]'),'original text is in the page');
   assert.ok(q.querySelector('#tl-data'));

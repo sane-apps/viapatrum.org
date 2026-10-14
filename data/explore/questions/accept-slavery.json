@@ -2,7 +2,7 @@
   "id": "accept-slavery",
   "number": 90,
   "group": "life",
-  "question": "Did the early church accept slavery?",
+  "question": "Did the early Church accept slavery?",
   "short": "Slavery",
   "search": [
     "slavery",
@@ -35,7 +35,7 @@
   ],
   "overview": [
     {
-      "text": "The early church did not try to abolish slavery. Ignatius tells masters not to be proud, and slaves not to expect the church to buy their freedom, which shows some churches did.",
+      "text": "The early Church did not try to abolish slavery. Ignatius tells masters not to be proud, and slaves not to expect the church to buy their freedom, which shows some churches did.",
       "cites": [
         "ignatius-to-polycarp-4-3"
       ]
