@@ -32,7 +32,9 @@ class GenerateWorksGateTest(unittest.TestCase):
             self.assertIn("status: 404", text)
             # Allowlist hit + empty /works path may use ASSETS; denied slugs must not.
             self.assertEqual(text.count("ASSETS.fetch(context.request)"), 2)
-            self.assertIn("return new Response(NOT_FOUND_HTML", text)
+            self.assertIn("return new Response(NOT_FOUND_HTML", text)  # fallback
+            self.assertIn('new URL("/404", context.request.url)', text)  # styled page first
+            self.assertIn("return notFound(context);", text)
             routes = gate.write_routes(stage)
             self.assertEqual(
                 json.loads(routes.read_text(encoding="utf-8")),

@@ -49,6 +49,27 @@ function pathSegments(params) {{
   return Array.isArray(raw) ? raw : [raw];
 }}
 
+const NOT_FOUND_HEADERS = {{
+  "content-type": "text/html; charset=utf-8",
+  "cache-control": "private, no-store",
+  "x-robots-tag": "noindex",
+}};
+
+// The site's own styled 404 page (nav, fonts, search), with status 404. The
+// bare page above is only the fallback if that asset cannot be read
+// (2026-10-14 audit: held and renamed works landed on an unstyled page).
+async function notFound(context) {{
+  try {{
+    const res = await context.env.ASSETS.fetch(new Request(new URL("/404", context.request.url), {{ method: "GET" }}));
+    if (res.status === 200) {{
+      return new Response(await res.text(), {{ status: 404, headers: NOT_FOUND_HEADERS }});
+    }}
+  }} catch (err) {{
+    // fall through to the bare page
+  }}
+  return new Response(NOT_FOUND_HTML, {{ status: 404, headers: NOT_FOUND_HEADERS }});
+}}
+
 export async function onRequest(context) {{
   const segments = pathSegments(context.params);
   if (segments.length === 0) {{
@@ -58,14 +79,7 @@ export async function onRequest(context) {{
   if (LIVE.has(slug)) {{
     return context.env.ASSETS.fetch(context.request);
   }}
-  return new Response(NOT_FOUND_HTML, {{
-    status: 404,
-    headers: {{
-      "content-type": "text/html; charset=utf-8",
-      "cache-control": "private, no-store",
-      "x-robots-tag": "noindex",
-    }},
-  }});
+  return notFound(context);
 }}
 """
 
