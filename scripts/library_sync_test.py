@@ -31,6 +31,21 @@ def docx_bytes(text: str) -> bytes:
     return buf.getvalue()
 
 
+class EraZips(unittest.TestCase):
+    def test_large_writers_get_their_own_zip(self):
+        # 2026-10-09: Cyril of Alexandria pushed Nicaea to Chalcedon past 2 GB.
+        self.assertEqual(ls.audio_zip_of({"author": "Cyril of Alexandria", "slug": "cyril-x", "year": 444}), "cyril-alexandria")
+        self.assertEqual(ls.audio_zip_of({"author": "Cyril of Jerusalem", "slug": "cyril-y", "year": 386}), "nicaea-to-chalcedon")
+        self.assertEqual(ls.audio_zip_of({"author": "Didymus the Blind", "slug": "didymus-fragmenta-psalmos", "year": 390}), "didymus-psalms")
+        self.assertEqual(ls.audio_zip_of({"author": "Hesychius of Jerusalem", "slug": "h", "year": 450}), "nicaea-to-chalcedon")
+        self.assertEqual(ls.audio_zip_of({"author": "John Wesley", "slug": "w", "year": 1739}), "after-chalcedon")
+
+    def test_every_routed_zip_is_declared(self):
+        keys = {k for k, _, _ in ls.AUDIO_ZIPS}
+        for author in ("Cyril of Alexandria", "Didymus the Blind", "Origen", "John Wesley"):
+            self.assertIn(ls.audio_zip_of({"author": author, "slug": "x", "year": 400}), keys)
+
+
 class Gate(unittest.TestCase):
     BAD = ["Homilia X CLOSEOUT", "True OET from PG 70 Greek", "Pass A ≠ Pass B", "Melito skipped; never",
            "PD.TN 3", "Unit 3 rem", "Locked Greek in translations/x_open_source.json", "Machine draft tip-checked"]

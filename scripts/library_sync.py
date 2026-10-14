@@ -455,14 +455,17 @@ def bundle(name: str, files: list[tuple[Path, str]]) -> Path | None:
 
 # Audiobooks as a few zips, one per era (2026-10-06 sketch item 8), instead
 # of 229 downloads in a row. Didymus the Blind alone is 2.2 GB, so he gets two
-# zips of his own. Years are the site's author_sort_year (app export), so the
+# zips of his own. Cyril of Alexandria (1 GB) pushed Nicaea to Chalcedon to
+# 2.65 GB on 2026-10-09 and blocked assemble for five days, so he has one too.
+# Years are the site's author_sort_year (app export), so the
 # zips match the era headings on /downloads/. Each zip stays at or under
 # ZIP_MAX so older unzip tools cope.
 AUDIO_ZIPS = (
     ("before-nicaea", "Before Nicaea", ""),
-    ("nicaea-to-chalcedon", "Nicaea to Chalcedon", "Didymus the Blind is in his own zips."),
+    ("nicaea-to-chalcedon", "Nicaea to Chalcedon", "Didymus the Blind and Cyril of Alexandria are in their own zips."),
     ("didymus-psalms", "Didymus the Blind on the Psalms", ""),
     ("didymus-other", "Didymus the Blind, other works", ""),
+    ("cyril-alexandria", "Cyril of Alexandria", ""),
     ("after-chalcedon", "After Chalcedon and later", ""),
 )
 ZIP_MAX = 2 * 1024 ** 3
@@ -473,6 +476,8 @@ def audio_zip_of(w: dict) -> str:
     """Which era zip a work's audiobook goes in."""
     if "didymus" in (w.get("author") or "").lower():
         return "didymus-psalms" if "psalm" in w["slug"] else "didymus-other"
+    if (w.get("author") or "").strip().lower() == "cyril of alexandria":
+        return "cyril-alexandria"
     y = w.get("year")
     y = 9999 if y is None else int(y)
     return "before-nicaea" if y < 325 else "nicaea-to-chalcedon" if y < 451 else "after-chalcedon"
