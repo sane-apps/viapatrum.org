@@ -30,5 +30,11 @@ if [ -z "$R" ] || [ $(( $(date +%s) - $(stat -f %m "$R") )) -ge 10800 ]; then
   R=$(ls -t "$RECEIPTS"/*-cf-_cf_deepgram_aura-2-en.json 2>/dev/null | head -1)
 fi
 export SANE_LLM_API_RECEIPT="$R"
+# Daily spending cap shared with the lanes (translations scripts/spend_guard.py,
+# owner 2026-10-14). Over it, or usage unread, narration waits a tick.
+if ! timeout 120 python3 "$HOME/SaneApps/clients/translations/scripts/spend_guard.py" check >/dev/null; then
+  echo "$(date -Iseconds) audio drain: waiting, $(python3 "$HOME/SaneApps/clients/translations/scripts/spend_guard.py" status)"
+  exit 0
+fi
 cd "$HOME/SaneApps/websites/fathers.saneapps.com" || exit 1
 exec /usr/bin/nice -n 10 "$HOME/Models/kokoro/.venv/bin/python" scripts/build_audio.py --drain
