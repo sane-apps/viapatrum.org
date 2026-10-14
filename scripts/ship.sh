@@ -6,6 +6,15 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
+# Mini heavy lock (SaneProcess FLEET_STATUS rule 7): ships, app verify and UI
+# gates take turns, so a ship never runs beside a release train. Re-runs this
+# script under the lock; the held marker stops a second wait.
+SANE_MASTER="$HOME/SaneApps/infra/SaneProcess/scripts/SaneMaster.rb"
+if [[ -z "${SANE_HEAVY_LOCK_HELD:-}" && "${SANE_HEAVY_LOCK:-}" != off && -f "$SANE_MASTER" ]]; then
+  RUBY_BIN=/opt/homebrew/opt/ruby/bin/ruby; [[ -x "$RUBY_BIN" ]] || RUBY_BIN=ruby
+  exec "$RUBY_BIN" "$SANE_MASTER" heavy_run --name "fathers-site-ship" -- "${BASH:-/bin/bash}" "$ROOT/scripts/ship.sh" ${@+"$@"}
+fi
+
 PAGES_PROJECT="fathers-site"
 PUBLIC_ORIGIN="https://viapatrum.org"
 PYTHON="${FATHERS_BUILD_PYTHON:-$HOME/SaneApps/clients/translations/.venv/bin/python}"
