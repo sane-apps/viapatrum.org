@@ -2317,6 +2317,13 @@ def scrub_intro_worksheet(html_text: str) -> str:
     return re.sub(r"<p>\s*</p>\s*", "", out)
 
 
+def bc_ad_prose(text: str) -> str:
+    """Intros written as "244 CE" read "244 AD", as the rest of the site does
+    (house rule: BC and AD, never CE or BCE; 2026-10-14 audit)."""
+    text = re.sub(r"\b(\d{1,4})(\s|&nbsp;)BCE\b", r"\1\2BC", text)
+    return re.sub(r"\b(\d{1,4})(\s|&nbsp;)CE\b", r"\1\2AD", text)
+
+
 def work_intro_html(slug: str) -> str:
     """Shared book intro for a site work page; "" when unmapped."""
     book = work_book(slug)
@@ -2330,7 +2337,7 @@ def work_intro_html(slug: str) -> str:
         from pipeline.book_frontmatter import render_intro_html
         out = render_intro_html(str(BOOKS / book))
         # Build-room scope words ("tip densify") never reach readers.
-        return scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out))
+        return bc_ad_prose(scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out)))
     except (ImportError, ValueError, OSError):
         return ""
 
@@ -3727,7 +3734,9 @@ def author_catalog_html(works: list[dict]) -> str:
                 w.get("slug") or "",
             ),
         )
-        author = ww_sorted[0]["author"]
+        # The public name: the Works list showed "Anonymous (Epistle to
+        # Diognetus)" where every other page says Mathetes (2026-10-14 audit).
+        author = display_author(ww_sorted[0]["author"])
         period = author_dates_display(author, slug) or format_bc_ad(guessless_period(ww_sorted[0].get("period")))
         year = min(work_chrono_year(w) for w in ww_sorted)
         eras = sorted({work_era(w) for w in ww_sorted})

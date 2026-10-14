@@ -129,6 +129,10 @@ class CleanupPassTest(unittest.TestCase):
         for slug in ("cyril-solutiones-vat-447", "dionysius-corinth-fragments"):
             self.assertNotIn("(", build_site.PUBLIC_ENGLISH_TITLES[slug])
 
+    def test_intro_years_use_ad_and_bc(self):
+        self.assertEqual(build_site.bc_ad_prose("between 238 and 244 CE; 4 BCE"), "between 238 and 244 AD; 4 BC")
+        self.assertEqual(build_site.bc_ad_prose("the CEO in 1999"), "the CEO in 1999")
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])
