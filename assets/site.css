@@ -2392,7 +2392,7 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .tl-verdict a { color: var(--rubric); }
 .tl-era { background: color-mix(in srgb, var(--paper-2) 55%, transparent); border-left: 1px solid var(--rule); }
 .tl-era.alt { background: color-mix(in srgb, var(--paper-2) 55%, transparent); }
-.tl-compact .tl-pt .nm { font-size: 0.72rem; }
+.tl-compact .tl-pt .nm { font-size: 0.78rem; }
 @media (min-width: 641px) { .tl-compact .tl-pt .nm { font-size: 0.78rem; } }
 .ot-meta a { color: var(--lapis); font-weight: 600; }
 .tl-era-name .short { display: none; }
@@ -2405,13 +2405,13 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
   .tl-pt.flip { flex-direction: row; transform: none; padding: 0 0.45rem 0 6px; }
   .tl-pt.flip-sm { flex-direction: row-reverse; transform: translateX(calc(-100% + 24px)); padding: 0 6px 0 0.45rem; }
 }
-.tl-axis { position: relative; height: 1.6rem; margin-top: 0.2rem; }
+.tl-axis { position: relative; height: 2.6rem; margin-top: 0.2rem; }
 .tl-tick { position: absolute; top: 0.25rem; transform: translateX(-50%); font-size: 0.75rem; color: var(--ink-soft); white-space: nowrap; font-variant-numeric: tabular-nums; }
-.tl-tick-nicaea { top: 0.25rem; color: var(--gold); font-weight: 650; }
+.tl-tick-nicaea { top: 1.35rem; color: var(--gold); font-weight: 650; }  /* own row: it sat on the 300 tick (2026-10-14 audit) */
 .tl-compact .tl-row { border-top: 0; padding: 0; }
 .tl-compact .tl-claim { display: none; }
 .tl-compact .tl-axis { height: 1.3rem; }
-.tl-compact .tl-tick { font-size: 0.7rem; }
+.tl-compact .tl-tick { font-size: 0.75rem; }
 .tl-compact .tl-tick-nicaea { display: none; }
 .tl-compact .tl-lane { background: color-mix(in srgb, var(--leaf) 70%, transparent); }
 
@@ -2450,8 +2450,8 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 @media (max-width: 600px) {
   /* Same era words as on wide screens; a long name wraps inside its band. */
   .tl-eras { height: 1.9rem; }
-  .tl-eras .tl-era-name { font-size: 0.62rem; letter-spacing: 0.04em; left: 0.25rem; right: 0.2rem; white-space: normal; line-height: 1.15; }
-  .tl-tick { font-size: 0.68rem; }
+  .tl-eras .tl-era-name { font-size: 0.72rem; letter-spacing: 0.04em; left: 0.25rem; right: 0.2rem; white-space: normal; line-height: 1.15; }
+  .tl-tick { font-size: 0.75rem; }
   .tl-tick-nicaea { display: none; }
   .over-time > h2, .voices-h { font-size: 1.45rem; }
 }
