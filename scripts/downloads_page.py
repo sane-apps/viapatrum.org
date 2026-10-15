@@ -20,6 +20,8 @@ import shutil
 from html import escape
 from pathlib import Path
 
+import logos_guide
+
 FORMATS = [
     ("epub", "EPUB", "For Apple Books, Kobo, Google Play Books, and Kindle (send it with Send to Kindle)."),
     ("pdf", "PDF", "A printed-book layout, 6 by 9 inches, with contents and page numbers. Good for study and printing."),
@@ -408,7 +410,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <details><summary>Is reading on the site still free?</summary><p>Yes. Every work, every Scripture link and every read-along recording stays free on this site and in the <a href="https://apps.apple.com/app/via-patrum/id6818696772">app</a>. The pass is only for files you keep.</p></details>
   <details><summary>What happens when you add books?</summary><p>They are yours. New works{" and new recordings" if n["audio"] else ""} appear on the shelf as they are finished. Come back and download them with the same key.</p></details>
   {"<details><summary>How do I open these on a Kindle?</summary><p>Send the EPUB with Amazon's Send to Kindle (the app, the website, or email). Kindle converts it for you.</p></details>" if n["epub"] else ""}
-  {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The README in each zip walks through it, and the cover and description are included.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
+  {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The cover and description are included. <a href='/downloads/logos/'>The Logos guide</a> covers adding the whole collection, or letting an AI assistant do it.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
   <details><summary>Where do I find my key later?</summary><p>It is in your receipt email from Lemon Squeezy, our payment provider. You can also look it up at <a href="https://app.lemonsqueezy.com/my-orders" rel="noopener">My Orders</a> with the email you paid with. Enter it here on any browser.</p></details>
   <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
   <details><summary>Can I get a refund?</summary><p>If something is wrong with a file, write to hi@saneapps.com and tell us what you see. We fix problems first; if we cannot, we refund.</p></details>
@@ -473,4 +475,11 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
                                      "url": "https://viapatrum.org/downloads/",
                                      # The page is built only with a checkout link (Library.__bool__).
                                      "availability": "https://schema.org/InStock"}}]))
+    if n["word"]:
+        write(dist / "downloads" / "logos" / "index.html",
+              layout("Add Via Patrum to Logos", logos_guide.page_body(n["word"]),
+                     crumb=[("Home", "/"), ("Downloads", "/downloads/"), ("Logos guide", "")], active="downloads",
+                     styles=["/assets/downloads.css"], scripts=["/assets/logos-guide.js"],
+                     description="How to build the Via Patrum Word files as Logos Personal Books: one book, "
+                                 "the whole collection, or with an AI assistant."))
     return len(works)

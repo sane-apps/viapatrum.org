@@ -59,6 +59,8 @@ import zipfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
+import logos_guide
+
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "outputs" / "downloads"
 TRANSLATIONS = Path.home() / "SaneApps/clients/translations"  # Logos docx helpers + verify gate
@@ -187,23 +189,8 @@ def gate_files(paths: list[Path]) -> dict[str, list[str]]:
 # --- word: Logos books from the site build ------------------------------
 
 WORD_MANIFEST = OUT / "manifest-word.json"
-WORD_README = """Word file for Logos Bible Software, from Via Patrum (viapatrum.org).
-
-To add this book to Logos:
-
-1. In Logos, open Tools, then Utilities, then Personal Books.
-2. Choose Add book and pick the Word file in this folder.
-3. Attach cover.jpg as the cover image.
-4. Paste the text in description.txt into the description field.
-5. Build the book.
-
-The English is the same as on the site. Scripture references are linked, so
-a click opens the passage in your Bible in Logos. Each passage is a Headword
-article, so it can be found by its title.
-
-New English translation, copyright 2026 SaneApps (CC BY 4.0). The source text
-is public domain.
-"""
+# One text with the /downloads/logos/ page (scripts/logos_guide.py).
+WORD_README = logos_guide.readme_text()
 
 
 def safe_folder(name: str) -> str:
@@ -393,6 +380,7 @@ def word_version() -> str:
     h.update(src[src.index(WORD_MARK):src.index("\ndef word(")].encode())
     h.update(WORKSHEET.pattern.encode())
     h.update((TRANSLATIONS / "pipeline" / "docx_helpers.py").read_bytes())
+    h.update(WORD_README.encode())  # its text lives in logos_guide.py
     return h.hexdigest()[:12]
 
 
@@ -429,6 +417,21 @@ def thumb(src: Path, slug: str) -> str:
     subprocess.run(["cwebp", "-quiet", "-q", "78", "-resize", "320", "0", str(tmp), "-o", str(dest)], check=True)
     tmp.unlink(missing_ok=True)
     return dest.name
+
+
+def logos_extras(word_zips: list[tuple[Path, str]]) -> list[tuple[Path, str]]:
+    """books.csv and the Logos guide for the all-books Word zip. Written only
+    when their text changes, so an unchanged shelf does not rebuild the zip."""
+    out = []
+    for name, text in ((logos_guide.CSV_NAME, logos_guide.books_csv(word_zips)),
+                       (logos_guide.GUIDE_NAME, logos_guide.guide_text(len(word_zips)))):
+        path = OUT / "word-extras" / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        data = text.encode("utf-8")  # bytes: the CSV's \r\n line ends must compare as written
+        if not path.is_file() or path.read_bytes() != data:
+            path.write_bytes(data)
+        out.append((path, name))
+    return out
 
 
 def bundle(name: str, files: list[tuple[Path, str]]) -> Path | None:
@@ -757,7 +760,10 @@ def assemble(app_dir: Path) -> int:
             if kept:
                 bundles.append(kept)
             continue
-        p = bundle(name, files_by_kind[kind])
+        members = files_by_kind[kind]
+        if kind == "word":
+            members = members + logos_extras(files_by_kind[kind])
+        p = bundle(name, members)
         if p:
             bundles.append({"kind": kind, "label": label, "key": key, "bytes": p.stat().st_size,
                             "count": len(files_by_kind[kind]), "name": name, "sha256": sha256(p)})

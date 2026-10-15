@@ -108,6 +108,34 @@ class Gate(unittest.TestCase):
             self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
 
 
+class LogosGuide(unittest.TestCase):
+    def test_guide_texts_pass_the_worksheet_gate(self):
+        import logos_guide as lg
+        for text in (lg.readme_text(), lg.guide_text(240), lg.ai_prompt(240), lg.page_body(240)):
+            self.assertEqual(ls.gate_hits(text), [], text[:60])
+        self.assertEqual(ls.WORD_README, lg.readme_text())
+
+    def test_books_csv_and_extras_written_once(self):
+        import csv
+        import logos_guide as lg
+        with tempfile.TemporaryDirectory() as d:
+            book = Path(d) / "b.zip"
+            with zipfile.ZipFile(book, "w") as z:
+                z.writestr("Ammonius - Fragments on John/README.txt", "x")
+                z.writestr("Ammonius - Fragments on John/description.txt", "Ammonius, Fragments on John.\n")
+                z.writestr("Ammonius - Fragments on John/Fragments on John.docx", b"x")
+            rows = list(csv.DictReader(io.StringIO(lg.books_csv([(book, "Fragments on John - Ammonius.zip")]))))
+            self.assertEqual(rows, [{"zip": "Fragments on John - Ammonius.zip", "folder": "Ammonius - Fragments on John",
+                                     "word_file": "Fragments on John.docx", "title": "Fragments on John",
+                                     "authors": "Ammonius", "description": "Ammonius, Fragments on John."}])
+            with mock.patch.object(ls, "OUT", Path(d)):
+                first = ls.logos_extras([(book, "Fragments on John - Ammonius.zip")])
+                stamps = [p.stat().st_mtime_ns for p, _ in first]
+                again = ls.logos_extras([(book, "Fragments on John - Ammonius.zip")])
+            self.assertEqual([a for _, a in again], [lg.CSV_NAME, lg.GUIDE_NAME])
+            self.assertEqual([p.stat().st_mtime_ns for p, _ in again], stamps)  # unchanged text, no rewrite
+
+
 class SiteCatalogue(unittest.TestCase):
     def test_missing_catalogue_blocks(self):
         with tempfile.TemporaryDirectory() as d:
@@ -829,9 +857,10 @@ class Copy(unittest.TestCase):
         def page(works):
             pages = {}
             with tempfile.TemporaryDirectory() as d:
-                dp.build(Path(d), lib_with(works), lambda title, body, **kw: body, lambda path, html: pages.__setitem__(path.name, html),
+                dp.build(Path(d), lib_with(works), lambda title, body, **kw: body, lambda path, html: pages.__setitem__(path.parent.name, html),
                          covers_dir=Path(d), sort_key=lambda w: w["slug"], author_dates=lambda *a: "")
-            return pages["index.html"]
+            self.assertIn("lg-prompt-text", pages["logos"])  # the Logos guide is written beside it
+            return pages["downloads"]
         self.assertNotIn("none linked yet", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf", "word"])]))
         self.assertIn("1 of the 2 works have a Word file", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf"])]))
 
