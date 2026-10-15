@@ -1944,7 +1944,9 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "hesychius-in-conceptionem-praecursoris": "On the Conception of the Venerable Forerunner",
     "hesychius-homilia-i-hypapante": "Homily I on the Presentation",
     "hesychius-homilia-ii-hypapante": "Homily II on the Presentation",
-    "hesychius-homilia-i-lazarum": "Homily I on Saint Lazarus",
+    # The PG file is labelled "Homilia i in sanctum Lazarum", but its own heading
+    # and text are the homily on James and David (work_brief title_en).
+    "hesychius-homilia-i-lazarum": "On James, the Brother of the Lord, and David",
     "hesychius-homilia-ii-lazarum": "Homily II on Saint Lazarus",
     "hesychius-homilia-ii-longinum": "Homily II on Saint Longinus the Centurion",
     "hesychius-homilia-i-longinum": "Homily I on Saint Longinus the Centurion",
@@ -2343,9 +2345,18 @@ def bc_ad_prose(text: str) -> str:
     return re.sub(r"\b(\d{1,4})(\s|&nbsp;)CE\b", r"\1\2AD", text)
 
 
+# A work whose book folder is shared with other works, when another folder
+# holds an intro written for that work alone. origen-lamentations-fragments
+# lives in origen-jeremiah-samuel, whose intro is about Jeremiah and 1 Samuel;
+# the held second translation of the same fragments has a Lamentations intro.
+WORK_INTRO_BOOK = {
+    "origen-lamentations-fragments": "origen-lamentationes-fragments",
+}
+
+
 def work_intro_html(slug: str) -> str:
     """Shared book intro for a site work page; "" when unmapped."""
-    book = work_book(slug)
+    book = WORK_INTRO_BOOK.get(slug or "") or work_book(slug)
     if book is None:
         return ""
     intro_path = BOOKS / book / "intro.md"

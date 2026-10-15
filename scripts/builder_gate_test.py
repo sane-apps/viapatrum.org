@@ -27,6 +27,14 @@ def chapter(book: str, chap: int):
     return BSB[book][str(chap)]
 
 
+class SharedBookIntroTest(unittest.TestCase):
+    def test_lamentations_gets_its_own_intro(self):
+        # Its book folder (origen-jeremiah-samuel) has a Jeremiah/1 Samuel intro.
+        html = build_site.work_intro_html("origen-lamentations-fragments")
+        self.assertIn("Lamentations", html)
+        self.assertNotIn("Homily on 1 Samuel", html)
+
+
 class VerseClipTest(unittest.TestCase):
     """Desks never name a verse past the chapter's end (66 desks on 50 pages)."""
 
