@@ -2064,6 +2064,13 @@ h1, h2, h3,
   text-decoration: none;
 }
 .vp-chips a:hover, .vp-chips a:focus-visible { border-color: var(--ink); text-decoration: none; }
+/* App Store link under the hero chips, and in the footer (owner 2026-10-16). Apple's badge, unaltered. */
+.vp-app { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem 0.8rem;
+  margin: 1.1rem 0 0; color: var(--ink-soft); font-size: 0.95rem; }
+.app-badge { display: inline-block; line-height: 0; border-radius: 7px; }
+.app-badge img { display: block; width: 120px; height: 40px; }
+.app-badge:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; }
+.footer-inner .app-badge { margin-top: 0.6rem; }
 .vp-doors {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));

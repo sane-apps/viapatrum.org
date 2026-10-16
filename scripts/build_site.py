@@ -245,7 +245,13 @@ SPONSORS = "https://github.com/sponsors/MrSaneApps"
 SITE_NAME = "Via Patrum"
 SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
 # The iPhone and iPad app (App Store id 6818696772; 1.0 live on 2026-10-14).
-APP_STORE_URL = "https://apps.apple.com/app/via-patrum/id6818696772"
+APP_STORE_ID = "6818696772"
+APP_STORE_URL = f"https://apps.apple.com/app/via-patrum/id{APP_STORE_ID}"
+# Apple's official black badge (developer.apple.com/app-store/marketing/guidelines),
+# unaltered, linked to the listing. Home hero + footer (owner 2026-10-16).
+APP_BADGE = (f'<a class="app-badge" href="{APP_STORE_URL}" rel="noopener">'
+             '<img src="/assets/app-store-badge.svg" width="120" height="40" '
+             'alt="Download on the App Store"></a>')
 SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
 BASE = ""
 
@@ -6313,6 +6319,7 @@ def layout(
 {f'<meta name="robots" content="{escape(robots)}">' if robots else ""}
 <link rel="manifest" href="/site.webmanifest">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">
 {jsonld_html(crumb, jsonld)}
 <link rel="preload" href="/assets/fonts/literata-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/source-sans-3-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -6368,6 +6375,11 @@ def layout(
     <nav aria-label="Support">
       <h2>Support</h2>
       <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li></ul>
+    </nav>
+    <nav aria-label="Get the app">
+      <h2>Get the app</h2>
+      <ul><li><a href="{APP_STORE_URL}" rel="noopener">iPhone and iPad app</a></li></ul>
+      {APP_BADGE}
     </nav>
   </div>
   <p class="footer-fine">New English from the Greek and Latin, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
@@ -9124,6 +9136,7 @@ def build() -> None:
     <button type="submit">Ask</button>
   </form>
   <ul class="vp-chips" aria-label="Popular topics">{chip_html}</ul>
+  <p class="vp-app"><span>Also free on iPhone and iPad</span>{APP_BADGE}</p>
 </section>
 
 <nav class="vp-doors" aria-label="Ways into the library">
