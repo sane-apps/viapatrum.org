@@ -112,7 +112,23 @@ def chunks(body: str) -> list[str]:
     return out or [prefix]
 
 
+def _spend_gate(caller: str, usd: float) -> None:
+    """spend_guard pre-call reservation (translations repo); raises when refused, fails closed."""
+    import sys as _sys
+    from pathlib import Path as _Path
+    _p = str(_Path.home() / "SaneApps/clients/translations/scripts")
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+    try:
+        import spend_guard
+    except Exception as e:  # noqa: BLE001
+        raise RuntimeError(f"spend guard refused ({caller}): guard unavailable: {type(e).__name__}: {e}")
+    spend_guard.gate(caller, usd)
+
+
 def _req(method: str, url: str, token: str, data: bytes | None = None, ctype: str = "application/json") -> dict:
+    if "/ai/run/" in url:  # Workers AI (embeddings): gated; Vectorize and R2 calls are not inference
+        _spend_gate("search_sync.ai", 0.001)
     req = urllib.request.Request(url, data=data, method=method,
                                  headers={"Authorization": f"Bearer {token}", "Content-Type": ctype})
     for attempt in range(5):

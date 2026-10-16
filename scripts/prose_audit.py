@@ -39,7 +39,23 @@ Reply with ONE JSON object only, no fences:
 {"fluency": 1-5, "issues": [{"quote": "<=25 words from passage>", "category": "<one>", "problem": "<=20 words>"}]}
 Empty issues array when the passage is clean. Judge the English as English; do not rewrite."""
 
+def _spend_gate(caller: str, usd: float) -> None:
+    """spend_guard pre-call reservation (translations repo); raises when refused, fails closed."""
+    import sys as _sys
+    from pathlib import Path as _Path
+    _p = str(_Path.home() / "SaneApps/clients/translations/scripts")
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+    try:
+        import spend_guard
+    except Exception as e:  # noqa: BLE001
+        raise RuntimeError(f"spend guard refused ({caller}): guard unavailable: {type(e).__name__}: {e}")
+    spend_guard.gate(caller, usd)
+
+
 def cf_call(model, user_text, token, timeout=90, system=None, max_tokens=2000):
+    _spend_gate("prose_audit.cf_call %s" % model,
+                (len(user_text) + len(system or SYSTEM)) / 4 * 1.0 / 1e6 + max_tokens * 4.0 / 1e6)
     url = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/ai/run/{model}"
     if "qwen3" in model and "/no_think" not in user_text:
         # Qwen3 hybrid thinking: schema has no thinking flag; /no_think in the

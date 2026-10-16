@@ -15,6 +15,11 @@ from unittest import mock
 
 import build_audio as B
 import cf_tts
+import sys as _sys  # noqa: E402
+_sys.path.insert(0, os.path.expanduser("~/SaneApps/clients/translations/scripts"))
+import spend_guard as _spend_guard  # noqa: E402
+# Offline: the gate itself is tested in test_spend_gate.py.
+_spend_guard.reserve = lambda caller, usd, now=None: (True, "test stub")
 
 REAL_VOICE_NAME = B._voice_name  # before any test patches it
 

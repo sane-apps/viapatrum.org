@@ -44,9 +44,24 @@ def _token() -> str:
         raise SystemExit("cf_tts: set CLOUDFLARE_API_TOKEN (env or keychain)")
 
 
+def _spend_gate(caller: str, usd: float) -> None:
+    """spend_guard pre-call reservation (translations repo); raises when refused, fails closed."""
+    import sys as _sys
+    from pathlib import Path as _Path
+    _p = str(_Path.home() / "SaneApps/clients/translations/scripts")
+    if _p not in _sys.path:
+        _sys.path.insert(0, _p)
+    try:
+        import spend_guard
+    except Exception as e:  # noqa: BLE001
+        raise RuntimeError(f"spend guard refused ({caller}): guard unavailable: {type(e).__name__}: {e}")
+    spend_guard.gate(caller, usd)
+
+
 def synth_mp3(text: str, speaker: str = SPEAKER) -> bytes:
     """One sentence -> audio bytes (lossless linear16/wav). Retries 429/5xx."""
     require_llm_receipt([MODEL], purpose="tts-render")  # cached after first check per process
+    _spend_gate("cf_tts.synth", 8 * len(text) * 0.030 / 1000)  # up to 8 attempts below
     tok = _token()
     url = "https://api.cloudflare.com/client/v4/accounts/%s/ai/run/%s" % (ACCT, MODEL)
     body = json.dumps({"text": text, "speaker": speaker, "encoding": "linear16",
@@ -223,6 +238,8 @@ def submit_passage(work: str, stem: str, sentences: list[dict], voice: str, quot
     handle = {"id": job_id, "n": len(sentences), "result": None, "old_error": None}
     handle["result"] = _work_object("results/%s.json" % job_id)
     if handle["result"] is None:
+        # The narrator Worker spends Aura-2 for this job: gate before queueing it.
+        _spend_gate("cf_tts.passage", sum(len(json.dumps(s, ensure_ascii=False)) for s in sentences) * 0.030 / 1000)
         # A failed earlier run left errors/<id>.json. Remove it first so the
         # first poll does not read the old failure; if R2 refuses the delete,
         # ignore that same error for STALE_ERROR_GRACE seconds instead.
