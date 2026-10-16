@@ -2017,7 +2017,8 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "origen-homily-1samuel-28": "Homily on Saul and the Medium of Endor",
     "origen-psalms-excerpta": "Excerpts on the Psalms",
     "origen-psalms-fragments-greek": "Fragments on the Psalms",
-    "cyril-fragmenta-contra-theodorum-2": "Fragments Against Theodore",
+    "cyril-fragmenta-contra-theodorum-2": "Fragments Against Theodore, Book 2",
+    "cyril-fragmenta-contra-theodorum-3": "Fragments Against Theodore, Book 3",
     "julian-letter-to-rome": "Fragments of the Letter to Rome",
     "julian-turbantius-fragments": "Fragments to Turbantius",
 }
