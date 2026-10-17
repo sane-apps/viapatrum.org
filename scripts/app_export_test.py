@@ -135,5 +135,35 @@ class ContentStreamFieldsTest(unittest.TestCase):
             FAKE_B = saved
 
 
+class UndatedAuthorTest(unittest.TestCase):
+    """build_site sorts an author no source dates at 9999 (Georgius Peccator).
+    The app showed that as the year "9,999" under "100th century"; the feed
+    flags him undated so the Timeline can group him under Undated."""
+
+    def authors(self, sort_year: int) -> list[dict]:
+        global FAKE_B
+        saved = FAKE_B
+        FAKE_B = SimpleNamespace(**{**vars(saved), "author_sort_year": lambda name, _x, key: sort_year})
+        try:
+            with tempfile.TemporaryDirectory() as tmp:
+                dist = Path(tmp) / "dist"
+                app_export.write(dist, Path(tmp), FAKE_B, works=[work()], by_topic={}, topic_meta={},
+                                 tax={"loci": []}, sc_entries={}, wrong_cites={})
+                return json.loads((dist / "app/v1/catalog.json").read_text(encoding="utf-8"))["authors"]
+        finally:
+            FAKE_B = saved
+
+    def test_sentinel_year_is_flagged_undated(self) -> None:
+        (a,) = self.authors(9999)
+        self.assertTrue(a["undated"])
+        self.assertEqual(a["year"], 9999)  # kept for app builds that predate "undated"
+
+    def test_dated_author_is_not_undated(self) -> None:
+        (a,) = self.authors(1641)
+        self.assertFalse(a["undated"])
+        self.assertEqual(a["year"], 1641)
+        self.assertIsInstance(a["year"], int)
+
+
 if __name__ == "__main__":
     unittest.main()

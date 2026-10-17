@@ -18,6 +18,8 @@ from types import ModuleType
 VERSION = 1
 
 
+UNDATED_YEAR = 9999  # build_site.author_sort_year for an author no source dates
+
 def _dump(path: Path, data) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -56,11 +58,17 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
         key = slug or b.author_hub_slug(name)
         if key not in authors:
             bio = (b.AUTHOR_BIOS.get(key) or {}).get("bio") or ""
+            year = b.author_sort_year(name, None, key)
             authors[key] = {
                 "slug": key,
                 "name": shown,
                 "dates": b.author_dates_display(name, key) or "",
-                "year": b.author_sort_year(name, None, key),
+                # 9999 is build_site's "no source dates him" sort key, not a year
+                # (2026-10-17: the app's Timeline showed Georgius Peccator as
+                # 9,999 under "100th century"). It stays for builds that
+                # predate "undated"; newer builds group him under Undated.
+                "year": year,
+                "undated": year >= UNDATED_YEAR,
                 "bio": bio,
             }
         return key
