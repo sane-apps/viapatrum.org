@@ -299,13 +299,19 @@ def author_dates(name: str) -> str:
 def plain_author(name: str) -> str:
     """'Hegesippus (as Eusebius reports)' -> 'Hegesippus'; 'Emperor Trajan' -> 'Trajan'."""
     n = re.sub(r"\s*\([^)]*\)", "", name)
-    n = re.sub(r",\s*(as|in)\s.*$", "", n)
+    n = re.sub(r",\s*(as|in|quoted by)\s.*$", "", n)
     n = re.sub(r"^(Emperor|Pope)\s+", "", n)
     return n.strip()
 
 
 def dates_for(name: str, dates: dict) -> str:
-    return author_dates(name) or author_dates(plain_author(name)) or dates.get(plain_author(name)) or ""
+    # "Celsus (pagan critic), quoted by Origen": the full name matched Origen,
+    # so Celsus (c. 178) showed Origen's c. 185-c. 254 (2026-10-17 scrub). A
+    # speaker reported by someone else is looked up by his own name only.
+    plain = plain_author(name)
+    if re.search(r",\s*(as|in|quoted by)\s", name):
+        return author_dates(plain) or dates.get(plain) or ""
+    return author_dates(name) or author_dates(plain) or dates.get(plain) or ""
 
 
 def life_span(name: str, dates: dict) -> tuple[int | None, int | None]:

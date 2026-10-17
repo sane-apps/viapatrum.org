@@ -1184,6 +1184,11 @@ AUTHOR_SLUG_ALIASES = {
     # Certified On the Unity of the Church named him in full and opened a
     # second hub beside the excerpt hub (2026-10-14 audit).
     "cyprian-of-carthage": "cyprian",
+    # The certified Didache names its author "Anonymous (Didache)" and opened
+    # /authors/anonymous-didache/ beside the excerpt hub /authors/didache/: two
+    # Didache rows in the app Timeline, and the work fell out of the Apostolic
+    # band on /works/ (APOSTOLIC_AUTHORS lists "didache"). 2026-10-17 scrub.
+    "anonymous-didache": "didache",
 }
 
 
@@ -11374,6 +11379,7 @@ def build() -> None:
         "/authors/anonymous-epistle-to-diognetus/ /authors/mathetes-epistle-to-diognetus/ 301\n"
         "/authors/irenaeus-of-lyons/ /authors/irenaeus/ 301\n"
         "/authors/cyprian-of-carthage/ /authors/cyprian/ 301\n"
+        "/authors/anonymous-didache/ /authors/didache/ 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))

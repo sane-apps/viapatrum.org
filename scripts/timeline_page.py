@@ -138,6 +138,13 @@ def spark(d: dict) -> str:
         f'<i style="left:{T(year(q)) * 100:.2f}%;background:{COLORS[ans_index(d, q["answer"])]}"></i>' for q in d["quotes"]) + "</span>"
 
 
+def cite_order(cites: list, qs: list, by_id: dict) -> list:
+    """Footnote numbers in a cluster read in order (1 2 3, not 3 1 2): the numbers
+    are the witnesses' places on the timeline, the dossier lists them as written
+    (2026-10-17 scrub: 42 clusters on 32 questions were out of order)."""
+    return sorted(cites, key=lambda c: qs.index(by_id[c]) if c in by_id else len(qs))
+
+
 def question_page(d: dict, group_title: str, church_url: dict[str, str]) -> str:
     qs = ordered(d)
     counts = [sum(1 for q in qs if q["answer"] == a["id"]) for a in d["answers"]]
@@ -145,7 +152,7 @@ def question_page(d: dict, group_title: str, church_url: dict[str, str]) -> str:
     overview = "".join(
         f'<p>{escape(o["text"])} <sup>' + "".join(
             f'<a href="#w-{escape(c)}" data-jump="{escape(c)}" title="{escape(by_id[c]["author"] + ", " + date_label(by_id[c])) if c in by_id else ""}">'
-            f'{qs.index(by_id[c]) + 1 if c in by_id else "?"}</a>' for c in o.get("cites") or []) + "</sup></p>"
+            f'{qs.index(by_id[c]) + 1 if c in by_id else "?"}</a>' for c in cite_order(o.get("cites") or [], qs, by_id)) + "</sup></p>"
         for o in d.get("overview") or [])
     answers = "".join(
         f'<button type="button" class="ans" aria-pressed="false" data-ans="{escape(a["id"])}" style="--c:{COLORS[i]}" title="{escape(a["label"])}">'
