@@ -252,6 +252,8 @@ APP_STORE_URL = f"https://apps.apple.com/app/via-patrum/id{APP_STORE_ID}"
 APP_BADGE = (f'<a class="app-badge" href="{APP_STORE_URL}" rel="noopener">'
              '<img src="/assets/app-store-badge.svg" width="120" height="40" '
              'alt="Download on the App Store"></a>')
+# The YouTube channel: the same readings as read-along video (owner 2026-10-17).
+YOUTUBE_URL = "https://www.youtube.com/@viapatrums"
 SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
 BASE = ""
 
@@ -6234,7 +6236,7 @@ VIA_PATRUM_ORG = {
     "name": "Via Patrum",
     "url": f"{SITE_ORIGIN}/",
     "logo": f"{SITE_ORIGIN}/assets/icons/icon-512.png",
-    "sameAs": ["https://github.com/sane-apps/translations", "https://www.youtube.com/@viapatrums", "https://x.com/MrSaneApps"],
+    "sameAs": ["https://github.com/sane-apps/translations", YOUTUBE_URL, "https://x.com/MrSaneApps"],
 }
 
 
@@ -6378,7 +6380,7 @@ def layout(
     </nav>
     <nav aria-label="Get the app">
       <h2>Get the app</h2>
-      <ul><li><a href="{APP_STORE_URL}" rel="noopener">iPhone and iPad app</a></li></ul>
+      <ul><li><a href="{APP_STORE_URL}" rel="noopener">iPhone and iPad app</a></li><li><a href="{YOUTUBE_URL}" rel="noopener">YouTube channel</a></li></ul>
       {APP_BADGE}
     </nav>
   </div>
@@ -9137,6 +9139,7 @@ def build() -> None:
   </form>
   <ul class="vp-chips" aria-label="Popular topics">{chip_html}</ul>
   <p class="vp-app"><span>Also free on iPhone and iPad</span>{APP_BADGE}</p>
+  <p class="vp-app"><span>Watch and listen on</span><a href="{YOUTUBE_URL}" rel="noopener">YouTube</a></p>
 </section>
 
 <nav class="vp-doors" aria-label="Ways into the library">
