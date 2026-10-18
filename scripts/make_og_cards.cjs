@@ -90,7 +90,7 @@ function sectionCards() {
     ['scripture', ['/scripture/'], 'Scripture', 'The Bible, through the Fathers’ eyes', 'Every book and chapter, with each Father who comments on it.'],
     ['listen', ['/listen/'], 'Listen', 'Hear the Fathers read aloud', 'Read-along audio in new English.'],
     ['games', ['/games/'], 'Games', 'Games from the Church Fathers', 'A daily fragment puzzle, and Ten Leopards: carry Ignatius’s letters on his road to Rome.'],
-    ['downloads', ['/downloads/'], 'The library, to keep', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. One payment; reading on the site stays free.'],
+    ['downloads', ['/downloads/'], 'Downloads', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. One payment; reading on the site stays free.'],
     ['ask', ['/ask/'], 'Ask', 'Ask the Fathers', 'Ask a question. Read the early writers’ own sentences, each linked to its passage.'],
     ['creeds', ['/creeds/'], 'Timeline', 'Creeds and churches', 'Every major creed and confession from AD 180 to today, and which churches hold it.'],
     ['privacy', ['/privacy/'], 'Privacy', 'No personal data, ever', 'Via Patrum collects no personal data, on the website or in the iPhone and iPad app.'],
@@ -148,6 +148,12 @@ function authorCards() {
   return out;
 }
 
+// A share card shows one sentence with no context, in a WhatsApp or X preview.
+// Skip sentences a stranger could misread, and ALL-CAPS headings; the card
+// takes the next sentence of the same passage. The translation is unchanged.
+const CARD_AVOID = new RegExp(JSON.parse(fs.readFileSync(path.join(__dirname, 'share_wording.json'), 'utf8')).card_avoid.join('|'), 'i');
+const cardOk = s => !CARD_AVOID.test(s) && !/^[^a-z]*[A-Z]{4,}[^a-z]*$/.test(s);
+
 function topicCards() {
   const out = [];
   for (const id of dirs('topics')) {
@@ -163,7 +169,7 @@ function topicCards() {
       const q = text(m[3]);
       const metaParts = text(m[2]).split(' · ');
       const ref = metaParts.length > 1 ? metaParts[metaParts.length - 1] : '';
-      if (q) quotes.push({ q, author: text(m[1]), ref });
+      if (q && cardOk(q)) quotes.push({ q, author: text(m[1]), ref });
     }
     // Prefer a whole sentence that fits; then one cut at a sentence end; then the first, word-trimmed.
     const count = (s, c) => s.split(c).length - 1;
@@ -208,7 +214,7 @@ function excerptCards() {
     const body = [...art.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => text(m[1]).replace(/^(?:\d+\.)+\d*\s*/, ''))
       .filter(Boolean).join(' ');
     const sentences = (body.match(/[^.!?]+[.!?]+[”"’]?/g) || []).map(x => x.trim());
-    const starts = x => /^[“"‘]?[A-Z]/.test(x);
+    const starts = x => /^[“"‘]?[A-Z]/.test(x) && cardOk(x);
     const quote = sentences.find(x => starts(x) && x.length >= 50 && x.length <= 150)
       || sentences.find(x => starts(x) && x.length >= 50) || '';
     if (!work || !author || !quote) continue;
