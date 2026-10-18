@@ -55,7 +55,7 @@ def build(dist: Path, layout, write) -> int:
     body = f"""
 <header class="gm-head">
   <p class="eyebrow">Games</p>
-  <h1>Play with the Fathers</h1>
+  <h1>Games from the Church Fathers</h1>
   <p class="intro">Every game here is built on the same new English as the library, so what you play is what the Fathers wrote. Free, no account, on phone or computer.</p>
 </header>
 <div class="gm-grid">{''.join(card(g, eager=i < 2) for i, g in enumerate(GAMES))}</div>
