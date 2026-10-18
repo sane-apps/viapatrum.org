@@ -122,5 +122,98 @@ class WorkPageDatesTest(unittest.TestCase):
         self.assertEqual(DATES["theodore-of-heraclea"], "fl. c. 328–355")
 
 
+BOOKS = Path.home() / "SaneApps/clients/translations/books"
+C_SLACK = 10  # years either side when either date says "c."
+
+
+def date_span(text, *, work=False):
+    """(lo, hi) for a date string, or None. BC years are negative.
+    "c. 310/320–403" is an uncertain start: (310, 403). A work's single year is
+    that year; an author's single year is a rough +-40 (d. X: X-80..X)."""
+    t = re.sub(r"\([^()]*\)", "", str(text or "")).strip()
+    if not t or "?" in t:
+        return None
+    if work and re.match(r"(d|b)\.", t):
+        return None          # a death or birth date is not a written date
+    bc_all = bool(re.search(r"\bBC\b", t)) and not re.search(r"\bAD\b", t)
+    cent = re.findall(r"\b(\d{1,2})(?:st|nd|rd|th)\s*(?:[–/-]\s*(\d{1,2})(?:st|nd|rd|th))?\s*c(?:ent(?:ury)?)?\b", t, re.I)
+    t2 = re.sub(r"\b(\d{1,4})/(\d{1,4})\b", lambda m: str(min(int(m.group(1)), int(m.group(2)))), t)
+    nums = []
+    for m in re.finditer(r"\b(\d{1,4})\b(?!\s*(?:st|nd|rd|th))(\s*BC)?", t2):
+        y = int(m.group(1)); nums.append(-y if (m.group(2) or bc_all) else y)
+    if not nums and cent:
+        a = int(cent[0][0]); b = int(cent[0][1] or a)
+        return ((a - 1) * 100, b * 100)
+    if not nums:
+        return None
+    if re.search(r"\d\s*BC\s*[–-]", t2) and len(nums) >= 2 and not bc_all:
+        nums[0] = -abs(nums[0])
+    if len(nums) >= 2:
+        return (min(nums[:2]), max(nums[:2]))
+    y = nums[0]
+    if work:
+        return (y, y)
+    if re.search(r"\bd\.", t):
+        return (y - 80, y)
+    if re.search(r"\bb\.", t):
+        return (y, y + 90)
+    return (y - 40, y + 40)
+
+
+class WrittenDateTest(unittest.TestCase):
+    """A work's written date (unit meta "period") falls inside its author's dates
+    in author-dates.json, fl. or lifespan, with 10 years' slack when either date
+    says "c." (2026-10-18, after the Theodore of Heraclea date fix). A death or birth date in "period" is not a
+    written date and counts as a violation. KNOWN lists the violations found on
+    2026-10-18, left for an editor to settle from sources: a new one fails, and
+    a settled one must come off the list."""
+
+    CATALOG = HERE.parent / "dist/app/v1/catalog.json"
+    KNOWN = {
+        # Printed after the author's death: "period" holds the edition year.
+        "baron-philosophia-theologiae-ancillans": "1658 Oxford reprint; Robert Baron d. c. 1639",
+        "placeus-de-imputatione": "1661 Saumur printing; Josue de la Place d. 1655",
+        # "period" holds the author's death date, not a written date.
+        "diodorus-fragmenta-romanos": "period 'd. c. 390'",
+    }
+
+    @unittest.skipUnless((HERE.parent / "dist/app/v1/catalog.json").is_file(), "no built catalog")
+    def test_written_dates_inside_author_dates(self):
+        public = {w["slug"]: w["author"] for w in json.loads(self.CATALOG.read_text(encoding="utf-8"))["works"]}
+        bad, checked = {}, 0
+        for meta in sorted(BOOKS.glob("*/translations/*_meta.json")):
+            try:
+                m = json.loads(meta.read_text(encoding="utf-8"))
+            except ValueError:
+                continue
+            slug, per = m.get("slug"), m.get("period")
+            if slug not in public or not per or slug in bad:
+                continue
+            ad = DATES.get(public[slug]) or DATES.get(m.get("author_slug") or "")
+            ay = date_span(ad)
+            if not ay or "?" in per:
+                continue  # undated author, or a work date marked as a guess
+            wy = date_span(per, work=True)
+            if not wy:
+                bad[slug] = f"{per!r} is not a written date"
+                continue
+            checked += 1
+            slack = C_SLACK if ("c." in per or "c." in ad) else 0
+            if wy[0] < ay[0] - slack or wy[1] > ay[1] + slack:
+                bad[slug] = f"written {per!r}, author {ad!r}"
+        self.assertGreater(checked, 150)
+        new = {k: v for k, v in bad.items() if k not in self.KNOWN}
+        self.assertEqual(new, {}, "written date outside the author's dates")
+        self.assertEqual(sorted(set(self.KNOWN) - set(bad)), [], "settled: take these off KNOWN")
+
+    def test_date_span(self):
+        self.assertEqual(date_span("c. 310/320–403"), (310, 403))
+        self.assertEqual(date_span("fl. c. 328–355"), (328, 355))
+        self.assertEqual(date_span("1661 (Saumur; 1621)", work=True), (1661, 1661))
+        self.assertEqual(date_span("c. 50 BC–AD 20"), (-50, 20))
+        self.assertIsNone(date_span("d. c. 390", work=True))
+        self.assertIsNone(date_span("c. 9th cent.?"))
+
+
 if __name__ == "__main__":
     unittest.main()
