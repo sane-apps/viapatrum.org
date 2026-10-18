@@ -140,9 +140,16 @@ test('home: favicon, today passage, deduped daily pool, one focus row, each link
     const key=(r.a+' '+r.c).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(t=>roman[t]||t).join(' ');
     assert.ok(!seen.has(key),'duplicate daily entry: '+r.c); seen.add(key);
   }
-  // One focus (owner 2026-10-18): listen, the app and games sit under the Ask box.
+  // One focus (owner 2026-10-18): four cards under the Ask box, in this order.
   const focus=doc.querySelector('.vp-focus');
-  assert.ok(focus,'listen / app / games row');
+  assert.ok(focus,'focus row');
+  assert.deepEqual([...focus.querySelectorAll(':scope > li > .k')].map(k=>k.textContent),['Listen','YouTube','App','Games'],'four cards in order');
+  const fcard=(i)=>focus.querySelectorAll(':scope > li')[i];
+  assert.deepEqual([...fcard(0).querySelectorAll('a')].map(a=>a.getAttribute('href')),['/listen/'],'Listen card has only its own link');
+  assert.ok([...fcard(1).querySelectorAll('a')].every(a=>a.getAttribute('href').startsWith('https://www.youtube.com/')),'YouTube card');
+  const yt=fcard(1).querySelector('a.yt-badge');
+  assert.ok(yt && yt.querySelector('svg rect[fill="#FF0000"]') && yt.textContent.trim()==='YouTube','YouTube card has the red play mark and the YouTube label');
+  assert.ok(fcard(2).querySelector('a.app-badge'),'App card keeps the badge');
   for(const sel of ['a[href="/listen/"]','a[href^="https://www.youtube.com/"]','a[href^="https://apps.apple.com/"]','a[href="https://play.viapatrum.org/daily"]','a[href="/games/"]'])
     assert.ok(focus.querySelector(sel),'first-screen link '+sel);
   assert.ok(!doc.querySelector('.vp-road, .vp-doors, .vp-chips, .vp-keep, .play-promo'),'old directory blocks gone');

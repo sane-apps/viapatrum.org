@@ -254,6 +254,12 @@ APP_BADGE = (f'<a class="app-badge" href="{APP_STORE_URL}" rel="noopener">'
              'alt="Download on the App Store"></a>')
 # The YouTube channel: the same readings as read-along video (owner 2026-10-17).
 YOUTUBE_URL = "https://www.youtube.com/@viapatrums"
+# The home YouTube card's button: the red play mark and the name, sized like the
+# App Store badge beside it, so it reads as YouTube at a glance (owner 2026-10-18).
+YOUTUBE_BADGE = (f'<a class="yt-badge" href="{YOUTUBE_URL}" rel="noopener" aria-label="Via Patrum on YouTube">'
+                 '<svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">'
+                 '<rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>'
+                 '<span>YouTube</span></a>')
 SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
 BASE = ""
 
@@ -9136,7 +9142,8 @@ def build() -> None:
     (DIST / "data" / "daily.json").write_text(json.dumps(daily[:400], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     play_daily = games_page.GAMES[0]
-    # One focus (owner 2026-10-18): read, listen, the app, games. Every other way in
+    # One focus (owner 2026-10-18): read, listen, the app, games; YouTube is its own
+    # card (owner 2026-10-18 2:50pm: "listen is one, app is one and YouTube is one games is one"). Every other way in
     # (Works, Fathers, Topics, Scripture, Timeline, Downloads) is in the menu once.
     home = f"""
 <div class="vp-home">
@@ -9147,10 +9154,11 @@ def build() -> None:
     <input id="home-q" name="q" type="search" maxlength="300" aria-label="Ask what the Fathers said" placeholder="{escape(hint_first)}" data-hints="{escape(json.dumps(hints, ensure_ascii=False))}" autocomplete="off">
     <button type="submit">Ask</button>
   </form>
-  <ul class="vp-focus" aria-label="Listen, the app and games">
-    <li><span class="k">Listen</span><span class="t">{n_audio} works read aloud</span><span class="l"><a href="/listen/">Listen here</a><a href="{YOUTUBE_URL}" rel="noopener">YouTube</a></span></li>
+  <ul class="vp-focus" aria-label="Listen, YouTube, the app and games">
+    <li><span class="k">Listen</span><span class="t">{n_audio} works read aloud</span><span class="l"><a href="/listen/">Listen here</a></span></li>
+    <li><span class="k">YouTube</span><span class="t">Read-along videos</span><span class="l">{YOUTUBE_BADGE}</span></li>
     <li><span class="k">App</span><span class="t">Free on iPhone and iPad</span><span class="l">{APP_BADGE}</span></li>
-    <li><span class="k">Games</span><span class="t">{escape(play_daily["title"])}, new each day</span><span class="l"><a href="{escape(play_daily["play"])}">Play today</a><a href="/games/">All games</a></span></li>
+    <li><span class="k">Games</span><span class="t">{escape(play_daily["kicker"].split(" · ")[0])}</span><span class="l"><a href="{escape(play_daily["play"])}">Play today</a><a href="/games/">All games</a></span></li>
   </ul>
 </section>
 

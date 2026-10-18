@@ -2802,22 +2802,31 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
 
 .home .vp-hero { gap: 0.75rem; padding: 1.2rem 0 0.4rem; }
 .home .vp-hero h1 { margin: 0; }
-.vp-focus { list-style: none; margin: 0.4rem 0 0; padding: 0; width: 100%; max-width: 46rem;
-  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; text-align: left; }
+.vp-focus { list-style: none; margin: 0.4rem 0 0; padding: 0; width: 100%; max-width: 60rem;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.6rem; text-align: left; }
 .vp-focus li { display: grid; gap: 0.15rem; align-content: start; padding: 0.75rem 0.9rem;
   border: 1px solid var(--rule, rgba(127,127,127,0.35)); border-radius: 12px; }
 .vp-focus .k { font: 650 0.75rem var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--rubric); }
 .vp-focus .t { color: var(--ink-soft); font-size: 0.95rem; }
 .vp-focus .l { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.9rem; margin-top: 0.3rem; font-weight: 650; }
 .vp-focus .app-badge img { display: block; height: 36px; width: auto; }
+.yt-badge { display: inline-flex; align-items: center; gap: 0.4rem; height: 36px; padding: 0 0.75rem 0 0.6rem; box-sizing: border-box;
+  border-radius: 7px; background: #000; border: 1px solid #a6a6a6; color: #fff; text-decoration: none;
+  font: 600 0.95rem/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; letter-spacing: -0.01em; }
+.yt-badge svg { display: block; flex: none; }
+.yt-badge:hover { background: #1a1a1a; color: #fff; }
+.yt-badge:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; }
 .home .vp-mission { margin-top: 2.5rem; }
 @media (max-width: 640px) {
   .home .vp-hero { padding-top: 0.6rem; gap: 0.6rem; }
   .home .vp-hero h1 { font-size: clamp(1.9rem, 8.4vw, 2.3rem); line-height: 1.08; }
   .home .vp-sub { font-size: 1rem; }
-  .vp-focus { grid-template-columns: minmax(0, 1fr); gap: 0.45rem; }
-  .vp-focus li { grid-template-columns: 4.6rem minmax(0, 1fr) auto; align-items: center; gap: 0 0.6rem; padding: 0.5rem 0.75rem; }
+  .vp-focus { grid-template-columns: minmax(0, 1fr); gap: 0.4rem; }
+  .vp-focus li { grid-template-columns: 4.9rem minmax(0, 1fr) auto; align-items: center; gap: 0 0.6rem; padding: 0.45rem 0.75rem; min-height: 48px; }
   .vp-focus .t { font-size: 0.85rem; line-height: 1.25; }
-  .vp-focus .l { margin: 0; flex-direction: column; align-items: flex-end; gap: 0.1rem; font-size: 0.92rem; }
+  .vp-focus .l { margin: 0; flex-direction: row; flex-wrap: nowrap; justify-content: flex-end; gap: 0 0.75rem; font-size: 0.92rem; white-space: nowrap; }
   .vp-focus .app-badge img { height: 32px; }
+  .vp-focus .yt-badge { height: 32px; font-size: 0.88rem; }
+  .vp-focus .yt-badge svg { width: 24px; height: 17px; }
 }
+@media (min-width: 641px) and (max-width: 900px) { .vp-focus { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
