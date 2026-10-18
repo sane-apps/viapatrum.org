@@ -135,6 +135,9 @@ def date_span(text, *, work=False):
         return None
     if work and re.match(r"(d|b)\.", t):
         return None          # a death or birth date is not a written date
+    if work and re.match(r"(before|by)\b", t):
+        y = re.search(r"\b(\d{1,4})\b", t)
+        return (-10**6, int(y.group(1))) if y else None   # only the latest year is known
     bc_all = bool(re.search(r"\bBC\b", t)) and not re.search(r"\bAD\b", t)
     cent = re.findall(r"\b(\d{1,2})(?:st|nd|rd|th)\s*(?:[–/-]\s*(\d{1,2})(?:st|nd|rd|th))?\s*c(?:ent(?:ury)?)?\b", t, re.I)
     t2 = re.sub(r"\b(\d{1,4})/(\d{1,4})\b", lambda m: str(min(int(m.group(1)), int(m.group(2)))), t)
@@ -165,17 +168,12 @@ class WrittenDateTest(unittest.TestCase):
     in author-dates.json, fl. or lifespan, with 10 years' slack when either date
     says "c." (2026-10-18, after the Theodore of Heraclea date fix). A death or birth date in "period" is not a
     written date and counts as a violation. KNOWN lists the violations found on
-    2026-10-18, left for an editor to settle from sources: a new one fails, and
-    a settled one must come off the list."""
+    2026-10-18 for an editor to settle from sources (all three settled the same
+    day: Baron by 1621, Placeus c. 1645-1655, Diodorus before c. 390). "before X"
+    and "by X" give only a latest year."""
 
     CATALOG = HERE.parent / "dist/app/v1/catalog.json"
-    KNOWN = {
-        # Printed after the author's death: "period" holds the edition year.
-        "baron-philosophia-theologiae-ancillans": "1658 Oxford reprint; Robert Baron d. c. 1639",
-        "placeus-de-imputatione": "1661 Saumur printing; Josue de la Place d. 1655",
-        # "period" holds the author's death date, not a written date.
-        "diodorus-fragmenta-romanos": "period 'd. c. 390'",
-    }
+    KNOWN: dict[str, str] = {}  # all three 2026-10-18 cases settled from their sources
 
     @unittest.skipUnless((HERE.parent / "dist/app/v1/catalog.json").is_file(), "no built catalog")
     def test_written_dates_inside_author_dates(self):
@@ -199,7 +197,8 @@ class WrittenDateTest(unittest.TestCase):
                 continue
             checked += 1
             slack = C_SLACK if ("c." in per or "c." in ad) else 0
-            if wy[0] < ay[0] - slack or wy[1] > ay[1] + slack:
+            open_start = wy[0] <= -10**5  # "before X": only the latest year is known
+            if (not open_start and wy[0] < ay[0] - slack) or wy[1] > ay[1] + slack:
                 bad[slug] = f"written {per!r}, author {ad!r}"
         self.assertGreater(checked, 150)
         new = {k: v for k, v in bad.items() if k not in self.KNOWN}
@@ -212,6 +211,8 @@ class WrittenDateTest(unittest.TestCase):
         self.assertEqual(date_span("1661 (Saumur; 1621)", work=True), (1661, 1661))
         self.assertEqual(date_span("c. 50 BC–AD 20"), (-50, 20))
         self.assertIsNone(date_span("d. c. 390", work=True))
+        self.assertEqual(date_span("before c. 390 (no closer date)", work=True), (-10**6, 390))
+        self.assertEqual(date_span("by 1621 (first printed)", work=True), (-10**6, 1621))
         self.assertIsNone(date_span("c. 9th cent.?"))
 
 
