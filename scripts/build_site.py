@@ -6273,6 +6273,12 @@ VIA_PATRUM_ORG = {
 }
 
 
+# The main navigation, in order. A page can leave out a link its own body
+# already gives (the home page shows Listen and Games up front, owner 2026-10-18).
+NAV_LINKS = (("works", "Works"), ("authors", "Fathers"), ("topics", "Topics"), ("scripture", "Scripture"),
+             ("listen", "Listen"), ("explore", "Timeline"), ("games", "Games"))
+
+
 def layout(
     title: str,
     body: str,
@@ -6288,6 +6294,7 @@ def layout(
     jsonld: list[dict] | None = None,
     robots: str = "",
     canonical: str = "",
+    nav_omit: tuple[str, ...] = (),
 ) -> str:
     crumbs = ""
     if crumb:
@@ -6371,13 +6378,8 @@ def layout(
     <a class="brand" href="/" aria-label="Via Patrum home">Via <span class="brand-p">Patrum</span></a>
     <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-      <a href="/works/"{nav_cls("works")}>Works</a>
-      <a href="/authors/"{nav_cls("authors")}>Fathers</a>
-      <a href="/topics/"{nav_cls("topics")}>Topics</a>
-      <a href="/scripture/"{nav_cls("scripture")}>Scripture</a>
-      <a href="/listen/"{nav_cls("listen")}>Listen</a>
-      <a href="/explore/"{nav_cls("explore")}>Timeline</a>
-      <a href="/games/"{nav_cls("games")}>Games</a>
+      {"".join(f'<a href="/{k}/"{nav_cls(k)}>{lbl}</a>' for k, lbl in NAV_LINKS if k not in nav_omit)}
+      <a class="nav-dl" href="/downloads/"{nav_cls("downloads")}>Downloads</a>
     </nav>
     <div class="header-tools">
       <form class="header-search" action="/works/" method="get" role="search">
@@ -9054,7 +9056,7 @@ def build() -> None:
             return ""
         return (
             f'<div class="vp-today-card" data-daily>'
-            f'<p class="eyebrow">Today · <a class="vp-daily-topic" href="{escape(r["th"])}">{escape(r["t"])}</a></p>'
+            f'<p class="eyebrow">Today · <span class="vp-daily-topic">{escape(r["t"])}</span></p>'
             f'<blockquote class="vp-quote"><p>&ldquo;<span class="vp-daily-q">{escape(r["q"])}</span>&rdquo;</p></blockquote>'
             f'<p class="vp-who"><strong class="vp-daily-a">{escape(r["a"])}</strong>'
             f' · <span class="vp-daily-d">{escape(r["d"])}</span> · <span class="vp-daily-c">{escape(r["c"])}</span></p>'
@@ -9117,99 +9119,52 @@ def build() -> None:
         a_slug = author_hub_slug(a_name)
         r = road.setdefault(a_slug, {"slug": a_slug, "name": display_author(a_name), "works": 0, "ex": 0})
         r["ex"] += len(rows)
-    road_rows = [r for r in road.values() if r["works"] or r["ex"] >= 12]
-    for r in road_rows:
-        r["year"] = author_sort_year(r["name"], None, r["slug"])
-    road_rows.sort(key=lambda r: (r["year"], alpha_key(r["name"])))
-    road_items = "".join(
-        f'<li class="{"has-works" if r["works"] else "excerpts-only"}"><a href="/authors/{escape(r["slug"])}/">'
-        f'<span class="dot" aria-hidden="true"></span><span class="n">{escape(r["name"])}</span>'
-        f'<span class="d">{escape(author_dates_display(r["name"], r["slug"]) or "")}</span></a></li>'
-        for r in road_rows
-        # A writer with no dates yet has no place on a dated road (rule 1b).
-        if author_era(r["year"]) not in ("later", "undated") and author_dates_display(r["name"], r["slug"])
-    )
-    # The road stops with the Fathers; later writers get one line under it (P18 sketch 4).
-    road_later = [r["name"] for r in road_rows if author_era(r["year"]) == "later"]
-    road_later_html = (
-        f'<p class="vp-road-later"><a href="/authors/#later"><span class="k">Later writers who read the Fathers:</span> '
-        f'{escape(", ".join(road_later))} <span aria-hidden="true">→</span></a></p>'
-        if road_later else ""
-    )
-
-    chips = [
-        ("free will", "/topics/free-will/"),
-        ("the Trinity", "/topics/father-son-spirit/"),
-        ("baptism", "/topics/baptism-and-new-birth/"),
-        ("the Eucharist", "/topics/eucharist-thanksgiving/"),
-        ("martyrdom", "/topics/martyrdom-witness/"),
-        ("wealth and alms", "/topics/wealth-alms/"),
-        ("the resurrection", "/topics/resurrection-body/"),
+    # Rotating hints inside the Ask field replace the topic chips (owner 2026-10-18:
+    # "search hints that scroll"). Only topics that exist are offered.
+    hint_topics = [
+        ("free will", "free-will"), ("the Trinity", "father-son-spirit"), ("baptism", "baptism-and-new-birth"),
+        ("the Eucharist", "eucharist-thanksgiving"), ("martyrdom", "martyrdom-witness"),
+        ("wealth and alms", "wealth-alms"), ("the resurrection", "resurrection-body"),
     ]
-    chip_html = "".join(
-        f'<li><a href="{escape(h)}">{escape(lbl)}</a></li>'
-        for lbl, h in chips
-        if h.strip("/").split("/")[-1] in topic_meta
-    )
-    n_questions = sum(1 for t in topic_meta if by_topic.get(t) or t in topic_to_works)
-    n_fathers = len(road)
+    # Short enough to show whole in a 390px phone field.
+    hints = [f"Ask about {lbl}…" for lbl, t in hint_topics if t in topic_meta]
+    hint_first = hints[0] if hints else "Ask the Fathers…"
     n_audio = sum(1 for w in works if w.get("has_audio"))
-    import beliefs_page as _bp_home
-    n_timeline = len(_bp_home.load(ROOT / "data" / "explore" / "doctrine_map.json"))
     (DIST / "data").mkdir(exist_ok=True)
     (DIST / "data" / "daily.json").write_text(json.dumps(daily[:400], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    play_daily = games_page.GAMES[0]
+    # One focus (owner 2026-10-18): read, listen, the app, games. Every other way in
+    # (Works, Fathers, Topics, Scripture, Timeline, Downloads) is in the menu once.
     home = f"""
 <div class="vp-home">
 <section class="vp-hero">
-  <p class="eyebrow">Free for the whole world</p>
   <h1>Read the early Church in its own words</h1>
-  <p class="vp-sub">{len(works)} works by the Fathers in faithful modern English, and more each week. Read them, hear them, and follow any passage to everything connected to it.</p>
+  <p class="vp-sub">{len(works)} works in faithful modern English. Free to read and hear.</p>
   <form class="vp-ask" action="/ask/" method="get" role="search">
-    <label class="vh" for="home-q">Ask what the Fathers said about…</label>
-    <input id="home-q" name="q" type="search" maxlength="300" placeholder="Ask what the Fathers said about…" autocomplete="off">
+    <input id="home-q" name="q" type="search" maxlength="300" aria-label="Ask what the Fathers said" placeholder="{escape(hint_first)}" data-hints="{escape(json.dumps(hints, ensure_ascii=False))}" autocomplete="off">
     <button type="submit">Ask</button>
   </form>
-  <ul class="vp-chips" aria-label="Popular topics">{chip_html}</ul>
-  <p class="vp-app"><span>Also free on iPhone and iPad</span>{APP_BADGE}</p>
-  <p class="vp-app"><span>Watch and listen on</span><a href="{YOUTUBE_URL}" rel="noopener">YouTube</a></p>
+  <ul class="vp-focus" aria-label="Listen, the app and games">
+    <li><span class="k">Listen</span><span class="t">{n_audio} works read aloud</span><span class="l"><a href="/listen/">Listen here</a><a href="{YOUTUBE_URL}" rel="noopener">YouTube</a></span></li>
+    <li><span class="k">App</span><span class="t">Free on iPhone and iPad</span><span class="l">{APP_BADGE}</span></li>
+    <li><span class="k">Games</span><span class="t">{escape(play_daily["title"])}, new each day</span><span class="l"><a href="{escape(play_daily["play"])}">Play today</a><a href="/games/">All games</a></span></li>
+  </ul>
 </section>
 
-<nav class="vp-doors" aria-label="Ways into the library">
-  <a href="/topics/"><h2>Topics</h2><p>{n_questions} topics the early Church taught on, from Scripture and God to the last things.</p><span class="go">Browse the topics →</span></a>
-  <a href="/scripture/"><h2>Scripture</h2><p>Pick a book and chapter of the Bible. See every Father who comments on it.</p><span class="go">Open the Bible →</span></a>
-  <a href="/authors/"><h2>Fathers</h2><p>{n_fathers} writers in date order, from Clement of Rome onward, with what each one wrote.</p><span class="go">Meet the Fathers →</span></a>
-  <a href="/works/"><h2>Works</h2><p>{len(works)} works to read straight through, earliest first.</p><span class="go">Browse the works →</span></a>
-  <a href="/listen/"><h2>Listen</h2><p>{n_audio} works read aloud, with the text following the voice.</p><span class="go">Start listening →</span></a>
-  <a href="/explore/"><h2>Timeline</h2><p>The 100 questions readers ask most about what the early Church believed, answered from the writers&rsquo; own words in date order.</p><span class="go">Open the timeline →</span></a>
-</nav>
-{'<a class="vp-keep" href="/downloads/"><span class="vp-keep-k">The library, to keep</span><span class="vp-keep-t">' + escape(LIBRARY.pitch()) + '</span><span class="go">See the library pass →</span></a>' if LIBRARY else ''}
-
-<section class="vp-today" aria-label="Today">
+<section class="vp-today" aria-label="Start reading">
   <div>{daily_card(first_daily)}</div>
   <div class="vp-shelf">
     <h2 class="vp-section-label">Start with these</h2>
     <ol>{''.join(shelf_items)}</ol>
-    <p class="vp-more"><a href="/works/">All {len(works)} works →</a></p>
   </div>
 </section>
 
-<section aria-label="The road of the Fathers">
-  <h2 class="vp-section-label">The road of the Fathers</h2>
-  <div class="vp-road-wrap"><ol class="vp-road">{road_items}</ol></div>
-  <p class="vp-road-note"><span class="dot-key" aria-hidden="true"></span>Whole works to read · other marks have passages under Topics.</p>
-  {road_later_html}
-</section>
-
-<div class="vp-two">
 <section class="vp-mission">
   <h2>Via Patrum, the Way of the Fathers</h2>
   <p class="vp-verse">&ldquo;Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.&rdquo; Jeremiah 6:16</p>
   <p>Two thousand years of Christian writing, most of it untranslated, out of print, or behind paywalls. We are putting all of it, every Father and every work, into faithful modern English and audio. Reading and listening here stay free for the whole world, forever.</p>
-  <p><a href="/about/">About the library</a> · <a href="/methodology/">How we translate</a></p>
 </section>
-{games_page.home_section()}
-</div>
 </div>
 """
     write(
@@ -9218,6 +9173,8 @@ def build() -> None:
             "Home",
             home,
             active="",
+            body_class="home",
+            nav_omit=("listen", "games"),
             jsonld=[
                 VIA_PATRUM_ORG,
                 {

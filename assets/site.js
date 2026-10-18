@@ -8,6 +8,24 @@
     });
   }
 
+  // Home Ask field: the hint inside it turns through a few topics (owner 2026-10-18).
+  // The field's name stays fixed (aria-label); the hint holds still while the field
+  // has focus or text, while the tab is hidden, and always under reduced motion.
+  const askQ = document.querySelector("#home-q[data-hints]");
+  if (askQ) {
+    let hints = [];
+    try { hints = JSON.parse(askQ.dataset.hints || "[]"); } catch (e) { hints = []; }
+    const still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (hints.length > 1 && !still) {
+      let i = 0;
+      setInterval(() => {
+        if (document.hidden || document.activeElement === askQ || askQ.value) return;
+        i = (i + 1) % hints.length;
+        askQ.placeholder = hints[i];
+      }, 2800);
+    }
+  }
+
   // Night reading: follow the system until the reader picks; remember the pick.
   const themeBtn = document.querySelector(".theme-toggle");
   if (themeBtn) {
@@ -64,7 +82,7 @@
         set(".vp-daily-d", r.d);
         set(".vp-daily-c", r.c);
         set(".vp-daily-topic", r.t);
-        dailyCard.querySelectorAll(".vp-daily-topic, .vp-daily-th").forEach((a) => a.setAttribute("href", r.th));
+        dailyCard.querySelectorAll(".vp-daily-th").forEach((a) => a.setAttribute("href", r.th));
         const read = dailyCard.querySelector(".vp-daily-h");
         if (read) read.setAttribute("href", r.h);
       }
