@@ -1865,7 +1865,7 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "eustathius-oratio-dominus-creavit": "Oration on “The Lord Created Me”",
     "eusebius-emesa-fragmentum-1cor": "Fragment on 1 Corinthians",
     "cyril-jerusalem-homilia-paralyticum": "Homily on the Paralytic",
-    "diodorus-fragmenta": "Fragments",
+    "dionysius-corinth-fragmenta": "Fragments",
     "diodorus-fragmenta-romanos": "Fragments on Romans",
     "amphilochius-in-sabbati-sancti": "On Holy Saturday",
     "amphilochius-oratio-resurrectionem": "Oration on the Resurrection of the Lord",
@@ -2091,7 +2091,7 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "eustathius-oratio-dominus-creavit": "Oratio in illud Dominus creavit me",
     "eusebius-emesa-fragmentum-1cor": "Fragmentum in epistulam i ad Corinthios",
     "cyril-jerusalem-homilia-paralyticum": "Homilia in paralyticum juxta piscinam jacentem",
-    "diodorus-fragmenta": "Fragmenta",
+    "dionysius-corinth-fragmenta": "Fragmenta",
     "diodorus-fragmenta-romanos": "Fragmenta in epistulam ad Romanos",
     "amphilochius-in-sabbati-sancti": "In diem sabbati sancti",
     "amphilochius-oratio-resurrectionem": "Oratio in resurrectionem domini",
@@ -8527,9 +8527,11 @@ FORCED_WITHHOLD = {
     "origen-lamentationes-fragments": "Second translation of origen-lamentations-fragments; one copy is shown.",
     # Wrong text under the name (2026-10-14 topic pass). "Diodorus, Fragments"
     # is Dionysius of Corinth's letter to Soter, already live as
-    # dionysius-corinth-fragments. The Apocalypse "scrap" is Origen's letter on
-    # studying heretics and philosophers (Eusebius, Church History 6.19).
-    "diodorus-fragmenta": "Holds Dionysius of Corinth's letters, not Diodorus; a mislabeled second copy.",
+    # dionysius-corinth-fragments; relabeled 2026-10-18 as
+    # dionysius-corinth-fragmenta (was diodorus-fragmenta), still a second copy.
+    # The Apocalypse "scrap" is Origen's letter on studying heretics and
+    # philosophers (Eusebius, Church History 6.19).
+    "dionysius-corinth-fragmenta": "Second copy of Dionysius of Corinth's letters (PG); dionysius-corinth-fragments is shown.",
     "origen-apocalypse-scholia-scrap": "Holds Origen's letter from Eusebius 6.19, not notes on the Apocalypse.",
     "olympiodorus-contra-severum": "Only a heading survives (that he quoted Athanasius); no text to read.",
     "pseudo-cyprian-to-vigilius": _RECERT,
@@ -11365,6 +11367,10 @@ def build() -> None:
         "/authors/irenaeus-of-lyons/ /authors/irenaeus/ 301\n"
         "/authors/cyprian-of-carthage/ /authors/cyprian/ 301\n"
         "/authors/anonymous-didache/ /authors/didache/ 301\n"
+        # diodorus-fragmenta held Dionysius of Corinth's letters (relabeled
+        # 2026-10-18, withheld second copy): send it to the shown copy.
+        "/works/diodorus-fragmenta/ /works/dionysius-corinth-fragments/ 301\n"
+        "/works/diodorus-fragmenta/* /works/dionysius-corinth-fragments/ 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))

@@ -30136,27 +30136,27 @@
       "section": "u05-rem-close",
       "payload_sha256": "7e0c042c7e0f81f82267df3dcb5a61e503804d9065bd8166d083a755b43093a3"
     },
-    "work:diodorus-fragmenta:u01-open": {
-      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
-      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+    "work:dionysius-corinth-fragmenta:u01-open": {
+      "packet": "books/dionysius-corinth-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/dionysius-corinth-fragmenta/reviews/audit/tip.review.json",
       "section": "u01-open",
       "payload_sha256": "97b30ba75ebbb3976b9219085e2b4c5a115ecf4e14db2b406acb251a6bd77133"
     },
-    "work:diodorus-fragmenta:u01-rem-early": {
-      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
-      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+    "work:dionysius-corinth-fragmenta:u01-rem-early": {
+      "packet": "books/dionysius-corinth-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/dionysius-corinth-fragmenta/reviews/audit/tip.review.json",
       "section": "u01-rem-early",
       "payload_sha256": "03d059f898fd93da75b37c28297e48c0b9591c2c548292cadcde97ae6f97f2bf"
     },
-    "work:diodorus-fragmenta:u01-rem-mid": {
-      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
-      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+    "work:dionysius-corinth-fragmenta:u01-rem-mid": {
+      "packet": "books/dionysius-corinth-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/dionysius-corinth-fragmenta/reviews/audit/tip.review.json",
       "section": "u01-rem-mid",
       "payload_sha256": "b0730eecb3ef60cb45d513a8a2d5f823a673cbf3b426ee92b4065fe6e9dace57"
     },
-    "work:diodorus-fragmenta:u01-rem-close": {
-      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
-      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json",
+    "work:dionysius-corinth-fragmenta:u01-rem-close": {
+      "packet": "books/dionysius-corinth-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/dionysius-corinth-fragmenta/reviews/audit/tip.review.json",
       "section": "u01-rem-close",
       "payload_sha256": "6f41e08ca8d5e7c0419197cc23a37ef8dd222a1ef4f552c05aa9f275cfdea1e6"
     },
@@ -41059,9 +41059,9 @@
       "packet": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.packet.json",
       "receipt": "books/apollinaris-fragmenta-romanos/reviews/audit/tip.review.json"
     },
-    "diodorus-fragmenta": {
-      "packet": "books/diodorus-fragmenta/reviews/audit/tip.packet.json",
-      "receipt": "books/diodorus-fragmenta/reviews/audit/tip.review.json"
+    "dionysius-corinth-fragmenta": {
+      "packet": "books/dionysius-corinth-fragmenta/reviews/audit/tip.packet.json",
+      "receipt": "books/dionysius-corinth-fragmenta/reviews/audit/tip.review.json"
     },
     "apollinaris-fragmenta-joannem": {
       "packet": "books/apollinaris-fragmenta-joannem/reviews/audit/tip.packet.json",
