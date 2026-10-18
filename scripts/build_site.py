@@ -2352,6 +2352,32 @@ def scrub_intro_worksheet(html_text: str) -> str:
     return re.sub(r"<p>\s*</p>\s*", "", out)
 
 
+def author_dates_prose(text: str) -> str:
+    """"Name (c. 412–450)" in an intro reads as author-dates.json has it
+    ("fl. c. 412–450"): book intros copied the dates once and kept them after
+    the data file changed (2026-10-17 recheck: 34 Eustathius, Theodore and
+    Hesychius pages). Only the label changes: a parenthesis is rewritten when
+    its years are the data file's years, so prose never contradicts it and a
+    different date in prose is left for the research gate to report."""
+    if not text or "(" not in text:
+        return text
+    def years(v: str) -> list[str]:
+        return re.findall(r"\d{2,4}", v)
+    for name, dates in AUTHOR_DATES.items():
+        if not name[:1].isupper() or name not in text or not years(str(dates)):
+            continue
+        rx = re.compile(re.escape(name) + r"(\s*\()([^()<>]*\d[^()<>]*)(\))")
+        def fix(m: re.Match, dates: str = str(dates)) -> str:
+            inner = m.group(2)
+            ad = " AD" if re.search(r"\bAD\s*$", inner) else ""
+            core = re.sub(r"\s*\bAD\s*$", "", inner).strip()
+            if years(core) != years(dates) or core == dates:
+                return m.group(0)
+            return f"{name}{m.group(1)}{dates}{ad}{m.group(3)}"
+        text = rx.sub(fix, text)
+    return text
+
+
 def bc_ad_prose(text: str) -> str:
     """Intros written as "244 CE" read "244 AD", as the rest of the site does
     (house rule: BC and AD, never CE or BCE; 2026-10-14 audit)."""
@@ -2381,7 +2407,7 @@ def work_intro_html(slug: str) -> str:
         from pipeline.book_frontmatter import render_intro_html
         out = render_intro_html(str(BOOKS / book))
         # Build-room scope words ("tip densify") never reach readers.
-        return bc_ad_prose(scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out)))
+        return author_dates_prose(bc_ad_prose(scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out))))
     except (ImportError, ValueError, OSError):
         return ""
 
@@ -3417,7 +3443,7 @@ def _fallback_blurb(folder: Path, title: str = "", author: str = "", max_chars: 
             names_work = re.search(r"\bthis (?:\w+ )?(?:letter|work|treatise|homily|sermon|book|dialogue|apology|epistle|oration|account|text)\b", sent, re.I) \
                 or any(w in sent.casefold() for w in words)
             if names_work and 20 <= len(sent) <= max_chars:
-                return sent
+                return author_dates_prose(sent)
     return ""
 
 
@@ -6154,7 +6180,9 @@ def author_panel(author: str, author_slug: str) -> str:
     href = f"/authors/{author_slug}/" if author_slug else "/authors/"
     bio_rec = AUTHOR_BIOS.get(author_slug or "") or {}
     bio = str(bio_rec.get("bio") or "").strip()
-    dates = str(bio_rec.get("dates") or "").strip()
+    # One source for dates (2026-10-17 recheck): author-dates.json via the same
+    # lookup as the header meta line; the bio's own "dates" only as its fallback.
+    dates = author_dates_display(author, author_slug).strip()
     display = str(bio_rec.get("name") or author).strip() or author
     if bio:
         head = escape(display)

@@ -81,5 +81,46 @@ class AuthorDatesTest(unittest.TestCase):
                 self.assertLess(int(y), 2000, (k, v))
 
 
+class WorkPageDatesTest(unittest.TestCase):
+    """Every date on a work page comes from author-dates.json (2026-10-17 recheck:
+    the Author box and book intros still said "c. 412-450" after the data file
+    said "fl. c. 412-450")."""
+
+    CATALOG = HERE.parent / "dist/app/v1/catalog.json"
+
+    def test_author_box_uses_author_dates(self):
+        for slug, name in [("hesychius-of-jerusalem", "Hesychius of Jerusalem"),
+                           ("eustathius-of-antioch", "Eustathius of Antioch"),
+                           ("theodore-of-heraclea", "Theodore of Heraclea")]:
+            html = build_site.author_panel(name, slug)
+            self.assertIn(f"({build_site.author_dates_display(name, slug)})", html, name)
+
+    def test_intro_dates_follow_the_data_file(self):
+        out = build_site.author_dates_prose("Hesychius of Jerusalem (c. 412–450) wrote this. "
+                                            "Eustathius of Antioch (c. 320–337 AD) too.")
+        self.assertIn("Hesychius of Jerusalem (fl. c. 412–450)", out)
+        self.assertIn("Eustathius of Antioch (fl. c. 320–337 AD)", out)
+
+    def test_other_years_in_prose_are_not_rewritten(self):
+        text = "Hesychius of Jerusalem (died after 451) and Origen (Against Celsus 1.32)."
+        self.assertEqual(build_site.author_dates_prose(text), text)
+
+    def test_every_work_page_of_the_three_authors(self):
+        if not self.CATALOG.is_file():
+            self.skipTest("no built catalog")
+        works = [w for w in json.loads(self.CATALOG.read_text(encoding="utf-8"))["works"]
+                 if w["author"] in ("hesychius-of-jerusalem", "eustathius-of-antioch", "theodore-of-heraclea")]
+        self.assertGreaterEqual(len(works), 30)
+        stale = re.compile(r"(?<!fl\. )c\. (320–337|335–355|412–450)|335–355")
+        for w in works:
+            intro = build_site.work_intro_html(w["slug"])
+            self.assertIsNone(stale.search(intro), (w["slug"], stale.search(intro) and intro[:300]))
+
+    def test_theodore_follows_the_repo_source(self):
+        # translations books/theodorus-heracleensis-matthew-fragments/research.json:
+        # "held office sometime between AD 328 and 355".
+        self.assertEqual(DATES["theodore-of-heraclea"], "fl. c. 328–355")
+
+
 if __name__ == "__main__":
     unittest.main()
