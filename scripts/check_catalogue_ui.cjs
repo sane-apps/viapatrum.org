@@ -233,14 +233,19 @@ async function run(base,out) {
   }
   await visit(base+"/works/",{waitUntil:"networkidle"});
   await page.setViewportSize({width:390,height:844});
+  // Phones: one header row, the links under Menu (owner 2026-10-18, home declutter).
   const nav=page.locator("#site-nav");
-  assert(await nav.isVisible(),"Primary nav missing on mobile");
-  assert((await page.locator("#site-nav a").count())>=5,"Primary nav links incomplete on mobile");
   const menu=page.locator(".nav-toggle");
-  assert.equal(await menu.isVisible(),false,"Menu toggle must stay hidden when top nav is always on");
+  assert(await menu.isVisible(),"Menu button missing on mobile");
+  assert.equal(await nav.isVisible(),false,"Mobile nav should stay folded until Menu is tapped");
+  await menu.click();
+  assert(await nav.isVisible(),"Menu did not open the primary nav");
+  assert.equal(await menu.getAttribute("aria-expanded"),"true","Menu aria-expanded not set");
+  assert((await page.locator("#site-nav a:visible").count())>=7,"Primary nav links incomplete on mobile");
   await shot("mobile-menu",390);
-  // Escape/focus still covered by scripts/ui.test.mjs; keep the handler wired in site.js.
-  receipt.checks.push({mobileNavAlwaysOn:true,readerContents:true});
+  await menu.click();
+  assert.equal(await nav.isVisible(),false,"Menu did not close the primary nav");
+  receipt.checks.push({mobileNavMenu:true,readerContents:true});
 
   // The build ships data/search shards and deletes the old single file.
   const manifest=JSON.parse(fs.readFileSync("dist/data/search/manifest.json","utf8"));
