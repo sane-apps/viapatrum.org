@@ -33,7 +33,7 @@ GAMES = [
         "text": "It is AD 110. You are Burrhus, a deacon of Ephesus. Carry Ignatius's letters past the soldiers on his road to Rome, and restore his words on the way.",
         "notes": ["Chapters I–III: Smyrna, Troas, the Via Egnatia", "Chapter IV, Rome, is on the road", "Three difficulty levels"],
         "play": f"{PLAY}/leopards",
-        "cta": "Begin the journey",
+        "cta": "Play Ten Leopards",
         "image": "/assets/games/leopards.webp",
         "alt": "The Ten Leopards title screen: a torchlit courtyard at night and the chapter list.",
     },

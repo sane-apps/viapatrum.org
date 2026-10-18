@@ -1675,8 +1675,31 @@ def build_explore_index(
     }
 
 
+# Reader-facing topic titles that read badly out of context (share cards,
+# "TODAY · <topic>" labels, link previews). Keyed by topic id; topics.yml keeps
+# its own titles. Wording pass 2026-10-17: plain speech, nothing a stranger
+# could misread.
+TOPIC_TITLE_OVERRIDES = {
+    "passion-resurrection": "Christ’s Death and Resurrection",
+    "sexual-marriage": "Marriage and Chastity",
+    "grace-and-assistance": "Grace and God’s Help",
+    "gifts-and-order": "Spiritual Gifts and Church Order",
+    "universal-call": "God’s Call to Everyone",
+}
+
+
+# Sentences never used as Today's passage or a share-card excerpt: they read
+# badly out of context. Shared with make_og_cards.cjs and share_wording_test.py.
+SHARE_CARD_AVOID = re.compile("|".join(json.loads((ROOT / "scripts" / "share_wording.json").read_text())["card_avoid"]), re.I)
+
+
 def load_topics_taxonomy() -> dict:
-    return yaml.safe_load((TOPICS_BOOK / "topics.yml").read_text())
+    tax = yaml.safe_load((TOPICS_BOOK / "topics.yml").read_text())
+    for locus in (tax or {}).get("loci") or []:
+        for t in locus.get("topics") or []:
+            if t.get("id") in TOPIC_TITLE_OVERRIDES:
+                t["title"] = TOPIC_TITLE_OVERRIDES[t["id"]]
+    return tax
 
 
 def load_topic_excerpts() -> list[dict]:
@@ -6495,7 +6518,7 @@ LOCUS_PUBLIC_TITLES = {
     "anthropology": "The Human Being",
     "soteriology": "Salvation",
     "ecclesiology": "The Church",
-    "sacraments": "Baptism and the Table",
+    "sacraments": "Baptism and the Eucharist",
     "eschatology": "The Last Things",
     "ethics": "How to Live",
 }
@@ -9033,6 +9056,8 @@ def build() -> None:
             _words = len(_lead.split())
             if _words < 14 or _words > 70:
                 continue
+            if SHARE_CARD_AVOID.search(_lead):
+                continue  # read out of context on the home page and in shares (scripts/share_wording.json)
             _author = display_author(_x.get("author") or "")
             _cite = public_citation(_home_citation(_x), _x.get("work") or "")
             _toks = re.findall(r"[a-z0-9]+", f"{_author} {_cite}".lower())

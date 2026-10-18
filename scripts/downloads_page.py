@@ -376,7 +376,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 <div class="dl-page" data-state="loading">
 <section class="dl-hero">
   <div class="dl-hero-copy">
-    <p class="eyebrow">The library, to keep</p>
+    <p class="eyebrow">Downloads</p>
     <h1>{"Books and recordings" if n["audio"] else "The books"}, <em>yours to keep.</em></h1>
     <p class="dl-lede">{lede(works, n, total_h, site_works)}. One payment of ${price}. Every book we add later is yours too.</p>
     <div class="dl-cta dl-when-locked">
@@ -445,7 +445,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <h2 id="dl-key-h">Enter your key</h2>
   <p>Your key is in your receipt email from Lemon Squeezy. It is a long code of letters and numbers in groups split by dashes.</p>
   <form class="dl-key-form" data-key-form>
-    <label class="vh" for="dl-key">Licence key</label>
+    <label class="vh" for="dl-key">License key</label>
     <input id="dl-key" name="key" autocomplete="off" spellcheck="false" placeholder="Paste your key" required>
     <button type="submit" class="dl-buy">Unlock</button>
   </form>
@@ -464,7 +464,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 
 """
     write(dist / "downloads" / "index.html",
-          layout("The library, to keep", body, crumb=[("Home", "/"), ("Downloads", "")], active="downloads",
+          layout("Downloads", body, crumb=[("Home", "/"), ("Downloads", "")], active="downloads",
                  styles=["/assets/downloads.css"], scripts=["/assets/downloads.js"],
                  description=f"{lede(works, n, total_h, site_works)}. One payment of ${price}; reading on the site stays free.",
                  jsonld=[{"@type": "Product", "name": "Via Patrum library pass",
