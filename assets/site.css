@@ -2776,3 +2776,48 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
 .vp-road-later a { color: var(--lapis); text-decoration: none; font-weight: 600; }
 .vp-road-later .k { color: var(--ink-soft); font-weight: 500; }
 .vp-road-later a:hover, .vp-road-later a:focus-visible { text-decoration: underline; text-underline-offset: 0.18em; }
+
+
+/* ── Home + phone header, decluttered (owner 2026-10-18) ──────────────────
+   Phones: one header row (brand, Menu, search, theme); the links open under
+   Menu. Home: the Ask box is the search, so the header search hides there. */
+.nav-dl { display: none; }
+.home .header-search { display: none; }
+@media (max-width: 800px) {
+  .header-inner { flex-wrap: nowrap; align-items: center; gap: 0.5rem; position: relative; }
+  .nav-toggle { display: inline-flex !important; align-items: center; min-height: 40px; padding: 0 0.85rem;
+    border: 1px solid var(--rule, currentColor); border-radius: 999px; background: none; color: var(--ink);
+    font: 650 0.9rem var(--font-body); order: 2; margin-left: auto; cursor: pointer; }
+  .header-tools { order: 3; margin-left: 0; gap: 0.4rem; }
+  .dl-btn { display: none; }
+  .site-nav, .site-nav.is-open { display: none; }
+  .site-nav.is-open { display: flex; flex-direction: column; flex-wrap: nowrap; position: absolute; top: 100%;
+    left: 0; right: 0; z-index: 50; gap: 0; padding: 0.4rem 1rem 0.8rem; background: var(--paper);
+    border-bottom: 1px solid var(--rule, currentColor); box-shadow: 0 10px 24px rgba(0,0,0,0.25); }
+  .site-nav.is-open a { min-height: 44px; display: flex; align-items: center; font-size: 1.05rem; }
+  .site-nav.is-open .nav-dl { display: flex; }
+  .header-search input { width: 7.5rem; }
+}
+@media (max-width: 380px) { .header-search input { width: 5.5rem; } }
+
+.home .vp-hero { gap: 0.75rem; padding: 1.2rem 0 0.4rem; }
+.home .vp-hero h1 { margin: 0; }
+.vp-focus { list-style: none; margin: 0.4rem 0 0; padding: 0; width: 100%; max-width: 46rem;
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.6rem; text-align: left; }
+.vp-focus li { display: grid; gap: 0.15rem; align-content: start; padding: 0.75rem 0.9rem;
+  border: 1px solid var(--rule, rgba(127,127,127,0.35)); border-radius: 12px; }
+.vp-focus .k { font: 650 0.75rem var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--rubric); }
+.vp-focus .t { color: var(--ink-soft); font-size: 0.95rem; }
+.vp-focus .l { display: flex; flex-wrap: wrap; align-items: center; gap: 0.3rem 0.9rem; margin-top: 0.3rem; font-weight: 650; }
+.vp-focus .app-badge img { display: block; height: 36px; width: auto; }
+.home .vp-mission { margin-top: 2.5rem; }
+@media (max-width: 640px) {
+  .home .vp-hero { padding-top: 0.6rem; gap: 0.6rem; }
+  .home .vp-hero h1 { font-size: clamp(1.9rem, 8.4vw, 2.3rem); line-height: 1.08; }
+  .home .vp-sub { font-size: 1rem; }
+  .vp-focus { grid-template-columns: minmax(0, 1fr); gap: 0.45rem; }
+  .vp-focus li { grid-template-columns: 4.6rem minmax(0, 1fr) auto; align-items: center; gap: 0 0.6rem; padding: 0.5rem 0.75rem; }
+  .vp-focus .t { font-size: 0.85rem; line-height: 1.25; }
+  .vp-focus .l { margin: 0; flex-direction: column; align-items: flex-end; gap: 0.1rem; font-size: 0.92rem; }
+  .vp-focus .app-badge img { height: 32px; }
+}

@@ -121,7 +121,7 @@ test('library progress line on About matches pipeline counts', ()=>{
   dom.window.close();
 });
 
-test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
+test('home: favicon, today passage, deduped daily pool, one focus row, each link once', ()=>{
   const html=readFileSync(new URL('index.html',DIST),'utf8');
   const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/'});
   const doc=dom.window.document;
@@ -140,11 +140,30 @@ test('home: favicon, today passage, deduped daily pool, road, Play kept', ()=>{
     const key=(r.a+' '+r.c).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(t=>roman[t]||t).join(' ');
     assert.ok(!seen.has(key),'duplicate daily entry: '+r.c); seen.add(key);
   }
-  assert.ok(doc.querySelectorAll('.vp-road li').length>=10,'road of the Fathers');
-  const play=doc.querySelector('.play-promo');
-  assert.ok(play&&play.querySelector('a[href="https://play.viapatrum.org/daily"]'),'Play section kept');
-  assert.ok(doc.querySelector('#site-nav a[href="/games/"]'),'Games nav kept (owner 2026-10-06: Play became Games)');
+  // One focus (owner 2026-10-18): listen, the app and games sit under the Ask box.
+  const focus=doc.querySelector('.vp-focus');
+  assert.ok(focus,'listen / app / games row');
+  for(const sel of ['a[href="/listen/"]','a[href^="https://www.youtube.com/"]','a[href^="https://apps.apple.com/"]','a[href="https://play.viapatrum.org/daily"]','a[href="/games/"]'])
+    assert.ok(focus.querySelector(sel),'first-screen link '+sel);
+  assert.ok(!doc.querySelector('.vp-road, .vp-doors, .vp-chips, .vp-keep, .play-promo'),'old directory blocks gone');
+  // Each destination once: nothing in the page body repeats itself or the menu.
+  const norm=(h)=>h.replace(/^https:\/\/viapatrum\.org/,'').replace(/[?#].*$/,'');
+  const body=[...doc.querySelectorAll('main a[href]')].map(a=>norm(a.getAttribute('href'))).filter(h=>!h.startsWith('#'));
+  const dup=body.filter((h,i)=>body.indexOf(h)!==i);
+  assert.deepEqual(dup,[],'repeated links in the home body');
+  const nav=[...doc.querySelectorAll('#site-nav a[href]')].map(a=>norm(a.getAttribute('href')));
+  assert.deepEqual(body.filter(h=>nav.includes(h)),[],'home body repeats the menu');
+  assert.ok(!doc.querySelector('.header-tools .header-search')||doc.body.classList.contains('home'),'home hides the header search (Ask is the search)');
+  // Ask hints: fixed accessible name, rotating hint list from real topics.
+  const q=doc.querySelector('#home-q');
+  assert.equal(q.getAttribute('aria-label'),'Ask what the Fathers said');
+  const hints=JSON.parse(q.dataset.hints);
+  assert.ok(hints.length>=5&&hints.every(h=>/^Ask about .+…$/.test(h)),'hints');
+  assert.equal(q.getAttribute('placeholder'),hints[0]);
   dom.window.close();
+  // Other pages keep the full menu.
+  const works=page('works/index.html');
+  for(const k of ['listen','games']) assert.ok(works.querySelector(`#site-nav a[href="/${k}/"]`),k+' in the menu off the home page');
 });
 
 const page=(p)=>new JSDOM(readFileSync(new URL(''+p,DIST),'utf8'),{url:'https://viapatrum.org/'+p.replace(/index\.html$/,'')}).window.document;
