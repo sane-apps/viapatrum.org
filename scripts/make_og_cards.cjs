@@ -89,7 +89,7 @@ function sectionCards() {
     ['help', ['/contribute/', '/help/'], 'Help translate', 'Help us', 'Donate, correct a passage, sponsor a book, or spread the word.'],
     ['scripture', ['/scripture/'], 'Scripture', 'The Bible, through the Fathers’ eyes', 'Every book and chapter, with each Father who comments on it.'],
     ['listen', ['/listen/'], 'Listen', 'Hear the Fathers read aloud', 'Read-along audio in new English.'],
-    ['games', ['/games/'], 'Games', 'Play with the Fathers', 'A daily fragment puzzle, and Ten Leopards: carry Ignatius’s letters on his road to Rome.'],
+    ['games', ['/games/'], 'Games', 'Games from the Church Fathers', 'A daily fragment puzzle, and Ten Leopards: carry Ignatius’s letters on his road to Rome.'],
     ['downloads', ['/downloads/'], 'The library, to keep', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. One payment; reading on the site stays free.'],
     ['ask', ['/ask/'], 'Ask', 'Ask the Fathers', 'Ask a question. Read the early writers’ own sentences, each linked to its passage.'],
     ['creeds', ['/creeds/'], 'Timeline', 'Creeds and churches', 'Every major creed and confession from AD 180 to today, and which churches hold it.'],

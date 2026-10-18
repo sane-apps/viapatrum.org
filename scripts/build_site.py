@@ -9136,7 +9136,8 @@ def build() -> None:
     (DIST / "data" / "daily.json").write_text(json.dumps(daily[:400], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     play_daily = games_page.GAMES[0]
-    # One focus (owner 2026-10-18): read, listen, the app, games. Every other way in
+    # One focus (owner 2026-10-18): read, listen, the app, games; YouTube is its own
+    # card (owner 2026-10-18 2:50pm: "listen is one, app is one and YouTube is one games is one"). Every other way in
     # (Works, Fathers, Topics, Scripture, Timeline, Downloads) is in the menu once.
     home = f"""
 <div class="vp-home">
@@ -9147,10 +9148,11 @@ def build() -> None:
     <input id="home-q" name="q" type="search" maxlength="300" aria-label="Ask what the Fathers said" placeholder="{escape(hint_first)}" data-hints="{escape(json.dumps(hints, ensure_ascii=False))}" autocomplete="off">
     <button type="submit">Ask</button>
   </form>
-  <ul class="vp-focus" aria-label="Listen, the app and games">
-    <li><span class="k">Listen</span><span class="t">{n_audio} works read aloud</span><span class="l"><a href="/listen/">Listen here</a><a href="{YOUTUBE_URL}" rel="noopener">YouTube</a></span></li>
+  <ul class="vp-focus" aria-label="Listen, YouTube, the app and games">
+    <li><span class="k">Listen</span><span class="t">{n_audio} works read aloud</span><span class="l"><a href="/listen/">Listen here</a></span></li>
+    <li><span class="k">YouTube</span><span class="t">Read-along videos</span><span class="l"><a href="{YOUTUBE_URL}" rel="noopener">Watch on YouTube</a></span></li>
     <li><span class="k">App</span><span class="t">Free on iPhone and iPad</span><span class="l">{APP_BADGE}</span></li>
-    <li><span class="k">Games</span><span class="t">{escape(play_daily["title"])}, new each day</span><span class="l"><a href="{escape(play_daily["play"])}">Play today</a><a href="/games/">All games</a></span></li>
+    <li><span class="k">Games</span><span class="t">{escape(play_daily["kicker"].split(" · ")[0])}</span><span class="l"><a href="{escape(play_daily["play"])}">Play today</a><a href="/games/">All games</a></span></li>
   </ul>
 </section>
 
