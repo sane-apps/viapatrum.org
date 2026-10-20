@@ -35,16 +35,25 @@
   ],
   "overview": [
     {
-      "text": "To pagans, the apologists argued from fulfilled prophecy, \"the greatest and truest proof\", and presented Christianity as the true philosophy: whatever was well said belongs to Christians.",
+      "text": "To pagans, the apologists argued from fulfilled prophecy, \"the greatest and truest proof\", and presented Christianity as the true philosophy: whatever was well said belongs to Christians. Origen, in the fullest surviving answer to a pagan critic, called this the teaching’s own proof, a demonstration of the Spirit and of power: the prophecies, and the mighty works whose traces still remained.",
       "cites": [
         "justin-1apol-30",
-        "justin-2apol-13-b"
+        "justin-2apol-13-b",
+        "origen-against-celsus-1-2"
       ]
     },
     {
-      "text": "To Jews, they argued over the meaning of the shared Scriptures: one God, who gave a new covenant. Justin's Dialogue is a courteous debate; later writings against the Jews were often harsh.",
+      "text": "To Jews, they argued over the meaning of the shared Scriptures: one God, who gave a new covenant, and who had promised Abraham that all nations would be blessed in his seed. Justin’s Dialogue is a courteous debate; later writings against the Jews were often harsh. Origen adds that Jews who believed in Jesus had not, he says, abandoned their ancestral law.",
       "cites": [
-        "justin-dialogue-11"
+        "justin-dialogue-11",
+        "tertullian-against-the-jews-1",
+        "origen-against-celsus-2-1"
+      ]
+    },
+    {
+      "text": "They also met the charge that Christians were ignorant and withdrew from common life. Origen challenged Celsus to read Paul’s letters with attention: he would marvel, he says, at a mind that in plain speech conceived great things, or expose himself by pretending to refute what he had not understood.",
+      "cites": [
+        "origen-against-celsus-3-20"
       ]
     }
   ],
@@ -111,32 +120,100 @@
         "section": "11"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "tertullian-against-the-jews-1",
+      "author": "Tertullian",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Against the Jews",
+      "locus": "1",
+      "lang": "la",
+      "answer": "same-god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Yet we have God himself as a fit promiser and a faithful guarantor, who promised Abraham that in his seed all the nations of the earth would be blessed, and that from the womb of Rebecca two peoples and two nations would come forth.",
+      "original": "Quamquam habeamus ipsum deum idoneum pollicitatorem et fidelem sponsorem, qui Abrahae promiserit quod in semine eius benedicerentur omnes nationes terrae, et quod ex utero Rebeccae duo populi et duae gentes essent processurae",
+      "context": "Written after a public debate with a Jewish proselyte, the treatise argues from the shared Scriptures that the nations were always meant to be admitted to God. Its second half, from chapter 8, reuses material also found in Against Marcion; this opening argument is its own.",
+      "source": {
+        "book": "tertullian-against-the-jews",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-against-celsus-1-2",
+      "author": "Origen of Alexandria",
+      "year": 248,
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "1.2",
+      "lang": "grc",
+      "answer": "prophecy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It must also be said in reply to this that the teaching has a proof of its own, more divine than Greek dialectic. This more divine proof the apostle calls a demonstration of the Spirit and of power: of the Spirit, through the prophecies, which are enough to convince the reader, above all in what concerns Christ; of power, through the wonderful mighty works, which must be shown to have happened both from many other considerations and from the fact that traces of them are still preserved among those who live by the will of the Word.",
+      "original": "λεκτέον δ᾿ ἔτι πρὸς τοῦτο ὅτι ἔστι τις οἰκεία ἀπόδειξις τοῦ λόγου, θειοτέρα παρὰ τὴν ἀπὸ διαλεκτικῆς Ἑλληνικήν. ταύτην δὲ τὴν θειοτέραν ὁ ἀπόστολος ὀνομάζει ἀπόδειξιν „πνεύματος καὶ δυνάμεως.“ [ὡς] „πνεύματος“ μὲν διὰ τὰς προφητείας ἱκανὰς πιστοποιῆσαι τὸν ἐντυγχάνοντα μάλιστα εἰς τὰ περὶ τοῦ Χριστοῦ, „δυνάμεως“ δὲ διὰ τὰς τεραστίους δυνάμεις, ἃς κατασκευαστέον γεγονέναι καὶ ἐκ πολλῶν μὲν ἄλλων καὶ ἐκ τοῦ ἴχνη δὲ αὐτῶν ἔτι σῴζεσθαι παρὰ τοῖς κατὰ τὸ βούλημα τοῦ λόγου βιοῦσι",
+      "context": "Origen wrote the eight books at Ambrose’s request, answering Celsus’s True Word (written about seventy years earlier) point by point. This is his stated method of proof, before the detailed arguments begin.",
+      "source": {
+        "book": "origen-contra-celsum",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-against-celsus-2-1",
+      "author": "Origen of Alexandria",
+      "year": 248,
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "2.1",
+      "lang": "grc",
+      "answer": "same-god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In the first volume of what we have dictated against the work Celsus entitled The True Word, we came to the end of the Jew’s speech, delivered in character, to Jesus. ... Those from the Jews who have believed in Jesus have not abandoned their ancestral law, for they live according to it.",
+      "original": "Ἐν τῷ πρώτῳ τόμῳ τῶν ὑπαγορευθέντων ἡμῖν πρὸς τὸν Κέλσου ἐπιγραφέντα ἀληθῆ λόγον καταλήξαντες εἰς τὴν τοῦ Ἰουδαίου πρὸς τὸν Ἰησοῦν προσωποποιΐαν ... οἱ ἀπὸ Ἰουδαίων εἰς τὸν Ἰησοῦν πιστεύοντες οὐ καταλελοίπασι τὸν πάτριον νόμον. βιοῦσι γὰρ κατ᾿ αὐτὸν",
+      "context": "The Jewish charges in books 1 and 2 are not a real Jewish voice: Celsus, a pagan, invented a Jewish spokesman and put the charges in his mouth, and Origen answers that character. Here he opens book 2, which answers the spokesman’s charges against Jews who had believed in Jesus.",
+      "source": {
+        "book": "origen-contra-celsum",
+        "section": "1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-against-celsus-3-20",
+      "author": "Origen of Alexandria",
+      "year": 248,
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "3.20",
+      "lang": "grc",
+      "answer": "philosophy",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "First make clear the letters of the man who said these things, and look closely at the intention of every word in them, for instance the letter to the Ephesians, the one to the Colossians, the one to the Thessalonians, the Philippian letter, and the one to the Romans. Show both things: that you have understood Paul’s words, and that you can point to some simple or foolish people in them. For if he gives himself to reading with attention, I am sure he will either marvel at the mind of the man, who in plain, unlearned speech conceived great things, or, if he does not marvel, he himself will appear ridiculous, whether he explains the man’s intention as if he had understood it, or tries to contradict and overturn what he imagined the man had meant.",
+      "original": "πρῶτον σαφήνισον τοῦ ταῦτα λέγοντος τὰς ἐπιστολὰς καὶ ἐνατενίσας τῷ βουλήματι ἑκάστης ἐν αὐταῖς λέξεως, φέρ᾿ εἰπεῖν τῇ πρὸς Ἐφεσίους καὶ πρὸς Κολασσαεῖς καὶ τῇ πρὸς Θεσσαλονικεῖς καὶ Φιλιππησίους καὶ πρὸς Ῥωμαίους. ἀμφότερα δεῖξον, καὶ ὅτι νενόηκας τοὺς Παύλου λόγους καὶ ὅτι παραστῆσαι ἔχεις εὐήθεις τινὰς ἢ ἠλιθίους. ἐὰν γὰρ ἐπιδῷ ἑαυτὸν τῇ μετὰ τοῦ προσέχειν ἀναγνώσει, εὖ οἶδ᾿ ὅτι ἢ θαυμάσεται τὸν νοῦν τοῦ ἀνδρὸς, ἐν ἰδιωτικῇ λέξει μεγάλα περινοοῦντος. ἢ μὴ θαυμάσας αὐτὸς καταγέλαστος φανεῖται, εἴτε διηγούμενος ὡς νενοηκὼς τὸ βούλημα τοῦ ἀνδρὸς ἢ καὶ ἀντιλέγειν καὶ ἀνατρέπειν πειρώμενος ἃ ἐφαντάσθη αὐτὸν νενοηκέναι",
+      "context": "Celsus had charged that Christians were uneducated and their teachers without wisdom. Origen answers by sending the critic to Paul’s own letters: the speech is plain, the thought, he argues, is not.",
+      "source": {
+        "book": "origen-contra-celsum",
+        "section": "1"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
     {
-      "author": "Origen of Alexandria",
-      "work": "Against Celsus",
-      "year": 248,
-      "why": "The fullest answer to a pagan critic, point by point. In the library.",
-      "action": "search",
-      "source_hint": "origen-contra-celsum"
-    },
-    {
       "author": "Melito of Sardis",
       "work": "On the Pascha",
       "year": 170,
-      "why": "Early anti-Jewish rhetoric (\"God has been murdered\").",
+      "why": "Early anti-Jewish rhetoric (\"God has been murdered\"). Sought in October 2026: no lawful open Greek text was located (Bonner's 1940 Harvard edition is lending-restricted on archive.org; the critical text, Perler, Sources Chretiennes 123, and Hall's 1979 English translation remain in copyright). To be revisited if an open Greek text surfaces. Deep re-hunt, 20 October 2026: archive.org holds Bonner only as a lending-restricted scan, and no other Greek copy (full sweep of its Melito texts); HathiTrust has the 1940 catalogue record but no open copy; Google Books shows no full view; Khazarzar's patristic library is the Migne PG tree, where the Peri Pascha was never printed (fragments only, PG 5); no transcription exists in the open Greek corpora or in code repositories (searched on the section 96 phrase itself); the Chester Beatty and Bodmer papyri are viewable as images only (CSNTM; Fondation Bodmer), with no edition text. The work was unknown before the twentieth century, so no public-domain edition exists anywhere: every printed Greek text (Bonner 1940; Testuz 1960; Perler, Sources Chretiennes 123, 1966; Hall 1979) is a modern edition still in copyright or restricted.",
       "action": "intake",
       "source_hint": "Bonner (1940); Chester Beatty papyrus"
-    },
-    {
-      "author": "Tertullian",
-      "work": "Against the Jews",
-      "year": 200,
-      "why": "In the library.",
-      "action": "search",
-      "source_hint": "tertullian-against-the-jews"
     }
   ],
   "related": {
@@ -146,7 +223,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

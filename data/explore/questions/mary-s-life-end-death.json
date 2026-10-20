@@ -44,7 +44,10 @@
       "text": "From the fifth century, stories of her \"passing\" (Transitus) spread, and by about 600 the Dormition was a feast across the empire. The Orthodox and Copts sing of her death and of her body taken up.",
       "cites": [
         "orthodox-kontakion-dormition",
-        "coptic-shenouda-assumption"
+        "coptic-shenouda-assumption",
+        "transitus-mariae-dormition-44",
+        "gregory-tours-gloria-martyrum-4",
+        "john-damascus-dormition-juvenal"
       ]
     },
     {
@@ -77,6 +80,48 @@
       "translation": "dossier"
     },
     {
+      "id": "transitus-mariae-dormition-44",
+      "author": "Transitus Mariae",
+      "year": 450,
+      "date": "c. 450",
+      "work": "The Passing of Mary",
+      "locus": "44",
+      "lang": "grc",
+      "answer": "dormition",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And the Lord, stretching out his undefiled hands, received her holy and blameless soul",
+      "original": "τοῦ κυρίου ἁπλώσαντος τὰς ἀχράντους αὐτοῦ χεῖρας ἐδέξατο τὴν ἁγίαν καὶ ἄμωμον αὐτῆς ψυχήν",
+      "context": "A legend of about the fifth century, the narrative root of the Dormition feast. It is the earliest surviving telling of Mary's end, not a historical record; in it the apostles are gathered to her and the Lord himself receives her soul.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-apocalypsesapocr02tiscuoft.txt",
+        "edition": "Tischendorf, Apocalypses Apocryphae (1866)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gregory-tours-gloria-martyrum-4",
+      "author": "Gregory of Tours",
+      "year": 590,
+      "date": "c. 590",
+      "work": "On the Glory of the Martyrs",
+      "locus": "ch. 4",
+      "lang": "la",
+      "answer": "dormition",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "At last, when the blessed Mary had completed the course of this life and was now being called from the world, all the apostles gathered from their several regions to her house. ... and behold, the Lord Jesus came with his angels, and receiving her soul, he handed it to Michael the archangel, and departed. ... And behold, the Lord stood by them again, and ordered the holy body he had taken up to be carried on a cloud into paradise: where now, her soul restored to her, she rejoices with his chosen ones and enjoys the good things of eternity, which will never come to an end.",
+      "original": "Denique impleto a beata Maria hujus vitæ cursu, cum jam vocaretur a sæculo, congregati sunt omnes apostoli de singulis regionibus ad domum ejus. ... et ecce Dominus Jesus advenit cum angelis suis, et accipiens animam ejus, tradidit Michaeli archangelo, et recessit. ... Et ecce iterum adstitit eis Dominus, susceptumque corpus sanctum in nube deferri jussit in paradisum: ubi nunc, resumpta anima, cum electis ejus exsultans, æternitatis bonis, nullo occasuris fine, perfruitur.",
+      "context": "The first Latin telling of her end. Gregory, bishop of Tours in Gaul, retells the Transitus story a century and a half after it began to circulate in the East: her soul is received by her Son, her body waits in the tomb, and then it too is carried to paradise. He is read here in Bordier's edition (Paris, 1857), the text of Ruinart collated on new manuscripts. Krusch's MGH edition has the same chapter division, but no open scan of it could be lawfully reached.",
+      "source": {
+        "book": "gregory-tours-gloria-martyrum",
+        "section": "4"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "orthodox-kontakion-dormition",
       "author": "Orthodox Church",
       "year": 600,
@@ -96,6 +141,27 @@
         "edition": "Kontakion of the Dormition (Orthodox Church in America)"
       },
       "translation": "published"
+    },
+    {
+      "id": "john-damascus-dormition-juvenal",
+      "author": "John of Damascus",
+      "year": 740,
+      "date": "c. 730–740",
+      "work": "Homilies on the Dormition",
+      "locus": "Homily 2.18 — Juvenal and the empty tomb",
+      "lang": "grc",
+      "answer": "dormition",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The facts of the end of the holy Mother of God Mary are not recorded in holy and God-inspired Scripture; but we have received from an ancient and most truthful tradition what took place at the time of her glorious falling asleep. ... Her all-hymned body they could not find at all; they found only her grave-cloths lying there. ... He himself was pleased, after her departure from this life, to honour her undefiled and unstained body with incorruption, and with a translation before the common and universal resurrection.",
+      "original": "Τῇ μὲν ἁγίᾳ καὶ θεοπνεύστῳ Γραφῇ οὐκ ἐμφέρεται τὰ κατὰ τὴν τελευτὴν τῆς ἁγίας Θεοτόκου Μαρίας· ἐξ ἀρχαίας δὲ καὶ ἀληθεστάτης παραδόσεως παρειλήφαμεν, ὅτι ἐν τῷ καιρῷ τῆς ἐνδόξου κοιμήσεως αὐτῆς ... Καὶ τὸ μὲν σῶμα αὐτῆς τὸ πανύμνητον οὐδαμῶς εὑρεῖν ἠδυνήθησαν, μόνα δὲ αὐτῆς τὰ ἐντάφια κείμενα εὑρόντες ... αὐτὸς εὐδόκησε καὶ μετὰ τὴν ἐντεῦθεν ἀποβίωσιν, τὸ ταύτης ἄχραντον καὶ ἀμίαντον σῶμα τῇ ἀφθαρσίᾳ τιμῆσαι, καὶ μεταθέσει πρὸ τῆς κοινῆς καὶ καθολικῆς ἀναστάσεως",
+      "context": "Preaching on the feast, John quotes the lost Euthymius History (book 3, ch. 40) word for word. The emperor Marcian and Pulcheria had asked Juvenal, Jerusalem's archbishop, to send Mary's body to Constantinople as the new capital's protection. Juvenal's answer is why there were no relics to send: the apostles had opened her tomb for Thomas and found it empty. John's Greek was read in Migne's PG 96 (Paris, 1860), openly posted on archive.org; an earlier pass wrongly recorded that no PG 96 text is openly posted.",
+      "source": {
+        "book": "john-damascus-homiliae-in-dormitionem",
+        "section": "2"
+      },
+      "translation": "dossier"
     },
     {
       "id": "coptic-shenouda-assumption",
@@ -140,32 +206,7 @@
       "translation": "published"
     }
   ],
-  "gaps": [
-    {
-      "author": "Transitus Mariae",
-      "work": "The Passing of Mary (Greek and Latin forms)",
-      "year": 450,
-      "why": "The legends behind the feast.",
-      "action": "intake",
-      "source_hint": "Tischendorf, Apocalypses apocryphae (1866)"
-    },
-    {
-      "author": "John of Damascus",
-      "work": "Homilies on the Dormition",
-      "year": 740,
-      "why": "Includes the story of Juvenal of Jerusalem and the empty tomb.",
-      "action": "intake",
-      "source_hint": "Migne PG 96"
-    },
-    {
-      "author": "Gregory of Tours",
-      "work": "Glory of the Martyrs 4",
-      "year": 590,
-      "why": "The first Latin account of Mary's body taken to paradise.",
-      "action": "intake",
-      "source_hint": "Krusch, MGH SRM 1.2 (1885)"
-    }
-  ],
+  "gaps": [],
   "related": {
     "timeline": "mary-end-of-life",
     "topics": [
