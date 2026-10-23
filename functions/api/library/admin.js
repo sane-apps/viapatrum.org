@@ -8,7 +8,12 @@
  *   POST create&key=    PUT part&key=&upload=&n=   POST complete&key=&upload= {parts}
  *   POST abort&key=&upload=   DELETE delete&key=
  */
-import { json } from "../../_lib/library.js";
+function json(body, status = 200, headers = {}) {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store", ...headers },
+  });
+}
 
 const PROJECT = "https://api.cloudflare.com/client/v4/accounts/2c267ab06352ba2522114c3081a8c5fa/pages/projects/fathers-site";
 const trusted = new Map(); // sha256(token) -> expiry ms
