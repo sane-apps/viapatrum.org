@@ -1,7 +1,8 @@
 /* Ask page (scripts/ask_page.py): sends the question to /api/ask and draws the
    answer, the writers' own sentences, then the passages. States: empty (no
    question), loading, answer, thin (the library is thin here), nothing found,
-   and error (the API is down: link to the library search instead). */
+   error (the API is down: link to the library search instead), and paused
+   (the server's AI_OFF switch: the same link, with a note that it is paused). */
 (function () {
   var page = document.querySelector(".ask-page");
   if (!page) return;
@@ -113,7 +114,11 @@
     out.innerHTML = '<p class="ask-loading">Finding what the writers say…</p>';
     status.textContent = "Finding what the writers say.";
     fetch("/api/ask?q=" + encodeURIComponent(q))
-      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (r) {
+        if (r.status === 503) return r.json().catch(function () { return {}; }).then(function (d) { if (d && d.paused) throw "paused"; throw new Error("HTTP 503"); });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
       .then(function (data) {
         if (mine !== seq) return;
         if (!data || data.error) throw new Error((data && data.error) || "no answer");
@@ -122,12 +127,14 @@
         var head = out.querySelector("h2[tabindex]");
         if (moveFocus && head) head.focus({ preventScroll: false });
       })
-      .catch(function () {
+      .catch(function (e) {
         if (mine !== seq) return;
-        out.innerHTML = '<section class="ask-error"><p class="ask-note">Ask is not answering right now. The library search still works.</p>' +
+        // AI_OFF on the server: say it is paused, not broken.
+        var note = e === "paused" ? "Ask is paused for now. The library search still works." : "Ask is not answering right now. The library search still works.";
+        out.innerHTML = '<section class="ask-error"><p class="ask-note">' + note + "</p>" +
           libraryLink(q, "Search the library for “" + q + "” →") + "</section>";
         out.setAttribute("aria-busy", "false");
-        status.textContent = "Ask is not answering right now. A link to the library search is shown.";
+        status.textContent = (e === "paused" ? "Ask is paused for now." : "Ask is not answering right now.") + " A link to the library search is shown.";
       });
   }
 

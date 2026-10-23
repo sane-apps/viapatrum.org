@@ -198,3 +198,49 @@ test('a one-word search reads the word index, not the text shards', async () => 
   assert.deepEqual(hits(), ['/works/a/#s1']);
   dom.window.close();
 });
+
+// By meaning (/api/search) costs a model run per call: 4 letters and a 600 ms
+// pause first; a paused API (AI_OFF) shows a note instead of vanishing (2026-10-23).
+test('meaning search waits for 4 letters; a paused API says so', async () => {
+  const meaningPage = page.replace('<div id="passage-hits"',
+    '<section id="meaning-hits" hidden><h2>By meaning</h2><p class="meta">Passages about what you asked.</p><ol id="meaning-results"></ol></section><div id="passage-hits"');
+  const asked = [];
+  let paused = false;
+  const dom = new JSDOM(meaningPage, { url: 'https://viapatrum.org/works/', runScripts: 'outside-only', pretendToBeVisual: true });
+  dom.window.fetch = async (u) => {
+    const p = String(u).replace(/^https?:\/\/[^/]+/, '');
+    if (p.startsWith('/api/search')) {
+      asked.push(new URL(p, 'https://x').searchParams.get('q'));
+      return paused
+        ? { ok: false, status: 503, json: async () => ({ error: 'Search by meaning is paused', paused: true }) }
+        : { ok: true, status: 200, json: async () => ({ results: [{ title: 'T', author: 'A', href: 'javascript:alert(1)', snippet: 's' }] }) };
+    }
+    const k = p.split('?')[0];
+    if (k in rows) return { ok: true, json: async () => structuredClone(rows[k]) };
+    return { ok: false, json: async () => ({}) };
+  };
+  dom.window.eval(script);
+  const doc = dom.window.document;
+  const q = doc.querySelector('#works-q');
+  const type = (v) => { q.value = v; q.dispatchEvent(new dom.window.Event('input')); };
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  type('gra'); await wait(800);
+  assert.deepEqual(asked, [], 'three letters send no meaning search');
+  type('grac'); await wait(400);
+  assert.deepEqual(asked, [], 'not before the 600 ms pause');
+  await wait(400);
+  assert.deepEqual(asked, ['grac']);
+  assert.equal(doc.querySelector('#meaning-results a').getAttribute('href'), '/works/', 'a non-site href is not linked');
+
+  paused = true;
+  type('grace'); await wait(900);
+  const hits = doc.querySelector('#meaning-hits');
+  assert.equal(hits.hidden, false, 'the block stays to say it is paused');
+  assert.match(hits.querySelector('p.meta').textContent, /paused/);
+  assert.equal(doc.querySelectorAll('#meaning-results li').length, 0);
+  paused = false;
+  type('graces'); await wait(900);
+  assert.equal(hits.querySelector('p.meta').textContent, 'Passages about what you asked.', 'note restored');
+  dom.window.close();
+});

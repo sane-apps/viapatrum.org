@@ -14,14 +14,15 @@
  * shape; each answer item's `ref` is its 1-based place in `passages`.
  *
  * Cached a day: Cache API keyed on the normalised question and the ETag of
- * the deployed /data/search-meta.json, plus cache-control for browsers. The
+ * the deployed /data/search-meta.json (searchMapTag in functions/_lib/search.js), plus cache-control for browsers. The
  * ETag changes when a deploy publishes or withholds a work, so an answer
  * cached before a withhold never links to a page that is now 404
  * (2026-10-07: a day-old Melchizedek answer did). Thin questions are logged (no IP, no user) to
  * R2 binding LIBRARY at ask-log/YYYY-MM-DD/<sha1(q)>.json so THRESHOLD can be
- * tuned and missing works found.
+ * tuned and missing works found (at most LOG_CAP a day per isolate).
+ * AI_OFF="1": cached answers still serve; a miss answers 503 {paused: true}.
  */
-import { CORS, RERANK, cleanTitle, json, loadMeta, passages, retrieve } from "../_lib/search.js";
+import { PAUSED, RERANK, aiOff, cleanTitle, json, loadMeta, passages, preflight, retrieve, searchMapTag, withCors } from "../_lib/search.js";
 import { THIN_NOTE, candidates, matchTopics, normaliseQuestion, normaliseScores, selectAnswer } from "../_lib/ask.js";
 
 const PASSAGES = 10;
@@ -30,19 +31,6 @@ const DAY = "public, max-age=86400";
 async function sha1(s) {
   const d = await crypto.subtle.digest("SHA-1", new TextEncoder().encode(s));
   return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, "0")).join("");
-}
-
-let deployTag; // one per isolate; a new deploy starts new isolates
-async function searchMapTag(env, url) {
-  if (deployTag === undefined) {
-    try {
-      const r = await env.ASSETS.fetch(new URL("/data/search-meta.json", url), { method: "HEAD" });
-      deployTag = (r.headers && r.headers.get && r.headers.get("etag")) || "";
-    } catch (e) {
-      deployTag = "";
-    }
-  }
-  return deployTag;
 }
 
 let topicsPromise = null;
@@ -54,9 +42,15 @@ function loadTopics(context) {
   return topicsPromise;
 }
 
+// At most LOG_CAP thin questions logged per isolate per day, so a flood of
+// random questions cannot pile up R2 writes (2026-10-23).
+export const LOG_CAP = 200;
+const logged = { day: "", n: 0 };
 async function logThin(env, q, best) {
   if (!env.LIBRARY) return;
   const at = new Date().toISOString();
+  if (logged.day !== at.slice(0, 10)) Object.assign(logged, { day: at.slice(0, 10), n: 0 });
+  if (++logged.n > LOG_CAP) return;
   // functions/dl only serves epub|pdf|word|audio|bundles keys, so ask-log/ is never downloadable.
   await env.LIBRARY.put(`ask-log/${at.slice(0, 10)}/${await sha1(q)}.json`, JSON.stringify({ q, at, best_score: best }), {
     httpMetadata: { contentType: "application/json" },
@@ -65,10 +59,10 @@ async function logThin(env, q, best) {
 
 export async function onRequest(context) {
   const { request, env } = context;
-  if (request.method === "OPTIONS") return new Response(null, { headers: CORS });
+  if (request.method === "OPTIONS") return preflight(request);
   const url = new URL(request.url);
   const q = normaliseQuestion(url.searchParams.get("q"));
-  if (!q) return json({ query: q, mode: "thin", answer: [], passages: [] });
+  if (!q) return withCors(json({ query: q, mode: "thin", answer: [], passages: [] }), request);
 
   const cache = typeof caches !== "undefined" ? caches.default : null;
   const tag = cache ? await searchMapTag(env, url) : "";
@@ -77,8 +71,10 @@ export async function onRequest(context) {
   const cacheKey = new Request(`${url.origin}/api/ask?kv=2&q=${encodeURIComponent(q)}&v=${encodeURIComponent(tag)}`, { method: "GET" });
   if (cache) {
     const hit = await cache.match(cacheKey);
-    if (hit) return hit;
+    if (hit) return withCors(hit, request);
   }
+  // Off switch: cached answers still serve; nothing new reaches a model.
+  if (aiOff(env)) return withCors(json({ error: PAUSED, paused: true }, 503, { "cache-control": "no-store" }), request);
 
   try {
     // Start the two asset fetches now: on a cold isolate they overlap the
@@ -86,7 +82,7 @@ export async function onRequest(context) {
     const metaP = loadMeta(context);
     const topicsP = loadTopics(context);
     const got = await retrieve(env, q, { passageRerank: false });
-    if (got.error) return json({ error: got.error }, got.status);
+    if (got.error) return withCors(json({ error: got.error, ...(got.paused ? { paused: true } : {}) }, got.status, { "cache-control": "no-store" }), request);
     const meta = await metaP;
     const list = passages(got.top, got.order, meta, PASSAGES);
     const cands = candidates(list, q, cleanTitle);
@@ -111,8 +107,9 @@ export async function onRequest(context) {
     if (cache && !degraded) later.push(cache.put(cacheKey, res.clone()));
     if (pick.mode === "thin" && !degraded) later.push(logThin(env, q, Math.round(pick.best * 1000) / 1000).catch(() => {}));
     if (later.length) context.waitUntil(Promise.all(later).catch(() => {}));
-    return res;
+    return withCors(res, request);
   } catch (e) {
-    return json({ error: "ask unavailable", detail: String((e && e.message) || e).slice(0, 200) }, 502);
+    console.error("ask failed:", String((e && e.message) || e).slice(0, 300));
+    return withCors(json({ error: "ask unavailable" }, 502, { "cache-control": "no-store" }), request);
   }
 }

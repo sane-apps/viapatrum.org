@@ -5,22 +5,46 @@
  *   AI  (Workers AI)   VEC (Vectorize index "viapatrum-search")
  * Retrieval (embed -> Vectorize -> rerank -> one result per passage, best
  * first) lives in functions/_lib/search.js and is shared with /api/ask.
+ *
+ * Cached a day like /api/ask (2026-10-23): Cache API keyed on the normalised
+ * query, n and the deploy tag, so a repeated search makes no model call.
+ * AI_OFF="1" answers 503 {paused: true} without any model call.
  */
-import { CORS, json, loadMeta, passages, retrieve } from "../_lib/search.js";
+import { PAUSED, aiOff, json, loadMeta, passages, preflight, retrieve, searchMapTag, withCors } from "../_lib/search.js";
+import { normaliseQuestion } from "../_lib/ask.js";
+
+const DAY = "public, max-age=86400";
 
 export async function onRequest(context) {
-  if (context.request.method === "OPTIONS") return new Response(null, { headers: CORS });
-  const url = new URL(context.request.url);
-  const q = (url.searchParams.get("q") || "").trim().slice(0, 300);
+  const { request, env } = context;
+  if (request.method === "OPTIONS") return preflight(request);
+  const url = new URL(request.url);
+  const q = normaliseQuestion(url.searchParams.get("q"));
   const n = Math.min(30, Math.max(1, parseInt(url.searchParams.get("n") || "20", 10) || 20));
-  if (!q) return json({ query: q, results: [] });
+  if (!q) return withCors(json({ query: q, results: [] }), request);
+  if (aiOff(env)) return withCors(json({ error: PAUSED, paused: true }, 503, { "cache-control": "no-store" }), request);
+
+  const cache = typeof caches !== "undefined" ? caches.default : null;
+  const tag = cache ? await searchMapTag(env, url) : "";
+  // kv bumps when the response shape changes, so a deploy never serves
+  // bodies cached by older code.
+  const cacheKey = new Request(`${url.origin}/api/search?kv=1&n=${n}&q=${encodeURIComponent(q)}&v=${encodeURIComponent(tag)}`, { method: "GET" });
+  if (cache) {
+    const hit = await cache.match(cacheKey);
+    if (hit) return withCors(hit, request);
+  }
+
   try {
-    const got = await retrieve(context.env, q);
-    if (got.error) return json({ error: got.error }, got.status);
-    const meta = await loadMeta(context);
+    const metaP = loadMeta(context);
+    const got = await retrieve(env, q);
+    if (got.error) return withCors(json({ error: got.error, ...(got.paused ? { paused: true } : {}) }, got.status, { "cache-control": "no-store" }), request);
+    const meta = await metaP;
     const results = passages(got.top, got.order, meta, n).map((p) => p.result);
-    return json({ query: q, results }, 200, { "cache-control": "public, max-age=300" });
+    const res = json({ query: q, results }, 200, { "cache-control": DAY });
+    if (cache) context.waitUntil(cache.put(cacheKey, res.clone()).catch(() => {}));
+    return withCors(res, request);
   } catch (e) {
-    return json({ error: "search unavailable", detail: String(e && e.message || e).slice(0, 200) }, 502);
+    console.error("search failed:", String((e && e.message) || e).slice(0, 300));
+    return withCors(json({ error: "search unavailable" }, 502, { "cache-control": "no-store" }), request);
   }
 }
