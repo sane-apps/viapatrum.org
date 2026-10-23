@@ -205,9 +205,9 @@ SUPPLIED_RE = re.compile(r"\[([^\[\]]{1,48})\]")
 ANGLE_RE = re.compile(r"(?<![<>])(?:(?<=\S)[<>]|[<>](?=\S))(?![<>])")
 # Worksheet status left inside a passage ("... believe JOHN CATENA CLOSEOUT.").
 CLOSEOUT_RE = re.compile(r"\s*\b(?:[A-Z]{2,}\s+){0,3}CLOSEOUT\b\.?")
-# A translator's pass note inside a passage ("(Greek transliterated in Pass
-# B.)", Strimesius 2026-10-23 review). Pass A/B are worksheet stages.
-PASS_NOTE_RE = re.compile(r"\s*\((?:[^()]*\s)?Pass [AB]\b[^()]*\)")
+# A translator's note about a pipeline pass ("(Greek transliterated in Pass B.)",
+# Strimesius 496): never reader text.
+PASS_NOTE_RE = re.compile(r"\s*\([^()]*\bPass [AB]\b[^()]*\)")
 
 
 def damage_mark(m: "re.Match[str]") -> str:

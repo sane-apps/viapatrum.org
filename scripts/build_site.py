@@ -3279,7 +3279,11 @@ WORKSHEET_JARGON = re.compile(
     # banners said "retrieval on the same Fathers-site pipeline ... Do not
     # treat the site as ante-Nicene only"; le Blanc's history listed "CLOSED").
     r"|Fathers-site pipeline|\bDo not treat the site\b|\bretrieval on the same\b|\bPublic Domain Mark\b"
-    r"|\bCLOSED\b|^Next:|\bPDF \d", re.I)
+    r"|\bCLOSED\b|^Next:|\bPDF \d"
+    # Scope status from the worksheets (2026-10-23: these kept 5 works' EPUB
+    # and PDF off the shelf): "Cap. 9 complete.", "Liber I still open.",
+    # "Not whole Philosophia (213 pp).", "Cap. 11 (CAPUT UNDECIMUM ...) begins."
+    r"|\bstill open\b|\bNot whole\b|\bCap\.\s*\d+\s+complete\b|(?-i:\bCAPUT\b)", re.I)
 
 
 NOTE_ABBREV = {"cap", "capp", "rom", "man", "post", "cf", "pg", "pl", "ed", "eds", "vol", "fr", "frr", "haer", "hom",
@@ -11659,7 +11663,7 @@ def build() -> None:
               <li class="help-option" id="download-library">
                 <p class="n">2</p>
                 <h2>Download the library</h2>
-                <p>Every book{' and audiobook' if LIBRARY.has_audio() else ''} to keep, free. Share the files with anyone who would read them.</p>
+                <p>The books{' and audiobooks' if LIBRARY.has_audio() else ''}, yours to keep, free. Share the files with anyone who would read them.</p>
                 <p><a class="btn" href="/downloads/">Go to the shelf</a></p>
               </li>""" if LIBRARY else "")
     try:

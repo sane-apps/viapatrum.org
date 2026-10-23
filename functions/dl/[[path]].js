@@ -54,7 +54,12 @@ function vpHuman(token) {
   var msg = document.getElementById("vp-msg");
   msg.textContent = "Starting your download…";
   fetch("/api/human", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ token: token }) })
-    .then(function (r) { if (!r.ok) throw 0; location.replace(location.href); })
+    .then(function (r) {
+      if (!r.ok) throw 0;
+      // The file downloads and this page stays open, so say what happened.
+      msg.textContent = "Your download should start now. If it does not, reload this page.";
+      location.replace(location.href);
+    })
     .catch(function () { msg.textContent = "The check did not pass. Reload the page to try again."; });
 }
 </script></body></html>`;

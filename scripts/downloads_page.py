@@ -49,6 +49,15 @@ def icon(name: str, cls: str = "dl-ic") -> str:
             f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
 
 
+# The shelf's down arrow is drawn once and reused by every file link: inline
+# copies were about 300 KB of the page, and a hidden padlock beside each one
+# (from the retired pass) another 320 KB (2026-10-23 review).
+ARROW_SPRITE = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">'
+                '<symbol id="dl-dn" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" '
+                f'stroke-linecap="round" stroke-linejoin="round">{ICONS["down"]}</g></symbol></svg>')
+ARROW = '<svg class="dl-dn" aria-hidden="true" focusable="false"><use href="#dl-dn"/></svg>'
+
+
 def size(n: int) -> str:
     if n >= 1 << 30:
         return f"{n / (1 << 30):.1f} GB"
@@ -98,8 +107,8 @@ OLDER_TEXT = "narrated from an earlier wording; the text on the site is newer"
 def short_audio(f: dict) -> str:
     """'§ 18 and 90 not narrated yet' for an audiobook that leaves sections
     out, or ''. The shelf must not show only the length of a partial
-    recording (2026-10-06 audit: 12 sold audiobooks were short)."""
-    if f.get("older_text"):  # build_audiobooks "text_mismatch": kept on sale, said plainly
+    recording (2026-10-06 audit: 12 audiobooks on the shelf were short)."""
+    if f.get("older_text"):  # build_audiobooks "text_mismatch": kept on the shelf, said plainly
         return OLDER_TEXT
     total, done = int(f.get("sections") or 0), int(f.get("narrated") or 0)
     if not total or done >= total:
@@ -199,7 +208,7 @@ class Library:
             scope += f'<p class="keep-scope">Audiobook: {escape(gap)}.</p>'
         return (f'<section class="keep" aria-labelledby="keep-h"><h2 id="keep-h">Keep this book <br><span class="keep-sub">free to download</span></h2>'
                 f'{scope}<ul>{links}</ul>'
-                f'<p><a href="/downloads/">Every book is on the shelf.</a></p></section>')
+                f'<p><a href="/downloads/">See the whole shelf.</a></p></section>')
 
 
 def _row(w: dict, author_dates, show_author: bool = True) -> str:
@@ -215,7 +224,7 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
         if k == "audio":
             part += f' data-bytes="{int(f["bytes"])}"'
         files.append(f'<a class="dl-f" href="/dl/{escape(f["key"])}" data-kind="{k}"{part}>'
-                     f'{icon("down", "dl-dn")}<span class="dl-fk">{LABEL[k]}</span>'
+                     f'{ARROW}<span class="dl-fk">{LABEL[k]}</span>'
                      f'<span class="dl-fm">{escape(meta)}</span></a>')
     dates = w.get("author_dates") or author_dates(w.get("author"), None) or ""
     byline = f'<p>{escape(w.get("author") or "")}{" · " + escape(dates) if dates else ""}</p>'
@@ -279,24 +288,32 @@ def shelf(works: list[dict], author_dates, year_of) -> str:
 
 def lede(works: list[dict], n: dict[str, int], total_h: int, site_works: int = 0) -> str:
     """'334 works as EPUB and PDF, 252 also as Word for Logos, and 226
-    audiobooks, 150 hours in all.' Counts, never 'every', for partial formats."""
+    audiobooks, 150 hours in all.' Counts, never 'every', for partial formats.
+    When the shelf has fewer works than the site, it says so first:
+    "347 of the site's 372 works: 343 as EPUB and PDF, ..." (2026-10-23: the
+    lede hid 25 live works with no files)."""
     have = len(works)
+    gap = site_works > have
     full = [NAME[k] for k in ("epub", "pdf", "word") if n[k] and n[k] == have]
-    whom = f"{have:,} of the site's {plural(site_works, 'work')}" if site_works > have else plural(have, "work")
-    bits = [f"{whom} as {join(full)}"] if full else []
-    for k in ("epub", "pdf", "word"):
-        if n[k] and NAME[k] not in full:
-            bits.append(f"{n[k]:,} {'also ' if full else ''}as {NAME[k]}" if bits else f"{plural(n[k], 'work')} as {NAME[k]}")
+    whom = f"{have:,} of the site's {plural(site_works, 'work')}" if gap else plural(have, "work")
+    if full:
+        bits = [f"{whom} as {join(full)}"]
+        bits += [f"{n[k]:,} also as {NAME[k]}" for k in ("epub", "pdf", "word") if n[k] and NAME[k] not in full]
+    else:
+        groups: list[tuple[int, list[str]]] = []  # equal counts share one bit: "343 as EPUB and PDF"
+        for k in ("epub", "pdf", "word"):
+            if n[k]:
+                if groups and groups[-1][0] == n[k]:
+                    groups[-1][1].append(NAME[k])
+                else:
+                    groups.append((n[k], [NAME[k]]))
+        bits = [f"{c:,} as {' and '.join(names)}" if gap or i else f"{plural(c, 'work')} as {' and '.join(names)}"
+                for i, (c, names) in enumerate(groups)]
     if n["audio"]:
         bits.append(f"{plural(n['audio'], 'audiobook')}, {plural(total_h, 'hour')} in all")
     # Each bit may hold its own "and" (EPUB and PDF), so bits join with ", and".
-    out = bits[0] if len(bits) == 1 else ", ".join(bits[:-1]) + ", and " + bits[-1]
-    # No format covers every book: say how many of the site's works are here
-    # before the per-format counts (2026-10-23: "343 works as EPUB" sat over a
-    # "347 works" tile, and the 25 works not yet on the shelf went unsaid).
-    if not full and site_works > have:
-        out = f"{whom} on the shelf: {out}"
-    return out
+    text = (bits[0] if len(bits) == 1 else ", ".join(bits[:-1]) + ", and " + bits[-1]) if bits else ""
+    return f"{whom}: {text}" if gap and not full else text
 
 
 def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key, author_dates,
@@ -368,7 +385,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 
     groups = shelf(works, author_dates, year_of)
     body = f"""
-<div class="dl-page">
+<div class="dl-page">{ARROW_SPRITE}
 <section class="dl-hero">
   <div class="dl-hero-copy">
     <p class="eyebrow">The library, to keep</p>
@@ -435,8 +452,9 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
                           "url": "https://viapatrum.org/downloads/", "image": image,
                           "isAccessibleForFree": True}]))
     if n["word"]:
+        word_zip = next((bundle_label(b) for b in bundles if b["kind"] == "word"), "")
         write(dist / "downloads" / "logos" / "index.html",
-              layout("Add Via Patrum to Logos", logos_guide.page_body(n["word"]),
+              layout("Add Via Patrum to Logos", logos_guide.page_body(n["word"], word_zip),
                      crumb=[("Home", "/"), ("Downloads", "/downloads/"), ("Logos guide", "")], active="downloads",
                      styles=["/assets/downloads.css"], scripts=["/assets/logos-guide.js"],
                      description="How to build the Via Patrum Word files as Logos Personal Books: one book, "

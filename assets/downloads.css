@@ -1,5 +1,6 @@
-/* Downloads: the free shelf page and the work-page "Keep this book" block.
-   Site tokens only, so light and dark themes follow. */
+/* Downloads: the free library shelf and the Logos guide (the work-page
+   "Keep this book" block is styled in site.css). Site tokens only, so light
+   and dark themes follow. */
 
 .dl-page { --dl-radius: 14px; --dl-shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 12px 32px -12px rgb(0 0 0 / 0.28); }
 
@@ -30,9 +31,6 @@
   text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 .dl-textbtn:hover { text-decoration-thickness: 2px; }
 .dl-fine { font-size: 0.92rem; color: var(--ink-soft); line-height: 1.55; max-width: 34rem; margin: 0; }
-.dl-unlocked { display: flex; align-items: center; gap: 0.6rem; margin: 0; font: 600 1.02rem var(--font-body); color: var(--ink); }
-.dl-unlocked .dl-ic { width: 1.4rem; height: 1.4rem; color: var(--affirm); flex: none; }
-.dl-hint { font-weight: 400; color: var(--ink-soft); }
 
 /* Fanned covers */
 .dl-stack:empty { display: none; }
@@ -50,10 +48,6 @@
 .dl-stack img:nth-child(3) { z-index: 5; } .dl-stack img:nth-child(2), .dl-stack img:nth-child(4) { z-index: 4; }
 .dl-hero:hover .dl-stack img:nth-child(1) { transform: translateX(-50%) rotate(-20deg) translateX(-46%); }
 .dl-hero:hover .dl-stack img:nth-child(5) { transform: translateX(-50%) rotate(20deg) translateX(46%); }
-
-.dl-need { display: flex; gap: 0.6rem; align-items: center; padding: 0.85rem 1rem; border-radius: 10px; margin: 0 0 1.5rem;
-  background: color-mix(in srgb, var(--gold) 14%, var(--leaf)); border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--rule)); font-size: 0.98rem; }
-.dl-need .dl-ic { width: 1.2rem; height: 1.2rem; flex: none; color: var(--gold); }
 
 /* Stats */
 .dl-stats { list-style: none; padding: 1.4rem 0; margin: 0 0 2.6rem; display: flex; flex-wrap: wrap; gap: 1rem 3rem;
@@ -110,7 +104,6 @@
 .dl-f:hover, .dl-f:focus-visible { border-color: var(--ink-soft); text-decoration: none; }
 .dl-fm { font-weight: 400; color: var(--ink-soft); font-size: 0.8rem; }
 .dl-dn { display: block; width: 0.95rem; height: 0.95rem; flex: none; color: var(--affirm); }
-.dl-f.is-done { border-color: color-mix(in srgb, var(--affirm) 50%, var(--rule)); }
 .dl-empty { padding: 2rem 0; color: var(--ink-soft); text-align: center; }
 .dl-scope { display: inline-block; margin-top: 0.3rem; font: 600 0.75rem/1.2 var(--font-body); letter-spacing: 0.02em; color: var(--rubric); }
 

@@ -3,7 +3,8 @@
 // Run: node --test scripts/human_check.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { humanCookies, isHuman, network, HUMAN_TTL_S } from '../functions/_lib/human.js';
+import { readFileSync } from 'node:fs';
+import { humanCookies, isHuman, network, HUMAN_TTL_S, SITEKEY } from '../functions/_lib/human.js';
 import { onRequestPost as human } from '../functions/api/human.js';
 import { onRequest as dl } from '../functions/dl/[[path]].js';
 
@@ -147,4 +148,11 @@ test('admin: with LIBRARY_ADMIN_TOKEN set, only that token passes; list stays on
   assert.equal((await call({ 'x-admin-token': TOKEN }, 'action=list&prefix=')).status, 400, 'no empty prefix');
   assert.equal((await call({ 'x-admin-token': TOKEN }, 'action=list&prefix=ask-log/')).status, 400);
   assert.deepEqual(listed, ['epub/']);
+});
+
+test('the page script uses the same Turnstile site key as the server', () => {
+  const page = readFileSync(new URL('../assets/human-check.js', import.meta.url), 'utf8');
+  const m = page.match(/SITEKEY = "([^"]+)"/);
+  assert.ok(m, 'assets/human-check.js names its SITEKEY');
+  assert.equal(m[1], SITEKEY);
 });

@@ -145,6 +145,50 @@ class SiteCatalogue(unittest.TestCase):
 
 
 
+class NoPass(unittest.TestCase):
+    """Downloads are free (owner 2026-10-22): no price, no checkout link and
+    no Lemon Squeezy commands are left in the shelf tools."""
+
+    def test_pass_commands_are_gone(self):
+        for cmd in ("set-checkout", "go-live"):
+            r = subprocess.run([sys.executable, str(HERE / "library_sync.py"), cmd], capture_output=True, text=True,
+                               env={**os.environ, "LIBRARY_STATE": tempfile.mkdtemp()}, timeout=60)
+            self.assertNotEqual(r.returncode, 0, cmd)
+            self.assertIn("invalid choice", r.stderr, cmd)
+
+    def test_no_price_in_the_catalogue_code(self):
+        src = (HERE / "library_sync.py").read_text(encoding="utf-8")
+        for word in ("PRICE_USD", "price_usd", "checkout_url", "lemonsqueezy"):
+            self.assertNotIn(word, src)
+
+
+class Voice(unittest.TestCase):
+    """Text inside the files uses the owner's voice: fresh English, never new English."""
+
+    def test_readme_and_narration_note(self):
+        import logos_guide as lg
+        import build_audiobooks as ba
+        for text in (lg.readme_text(), ba.NARRATION_NOTE, (HERE / "library_sync.py").read_text(encoding="utf-8")):
+            self.assertNotIn("New English translation", text)
+            self.assertNotIn("new English translation", text)
+        self.assertIn("fresh English", lg.readme_text())
+        self.assertIn("fresh English", ba.NARRATION_NOTE)
+        self.assertIn("A fresh English translation from Via Patrum.", (HERE / "library_sync.py").read_text(encoding="utf-8"))
+
+    def test_note_change_does_not_reencode_the_shelf(self):
+        """inputs_hash keeps the note every built file was keyed with, so a new
+        wording reaches the files through --retag, not a full re-encode."""
+        import hashlib
+        import build_audiobooks as ba
+        plan = {"title": "T", "author": "A", "slug": "s", "chapters": []}
+        h = hashlib.sha256()
+        h.update(ba.ENCODE_VERSION.encode())
+        h.update(json.dumps(["T", "A", "s", "The narration is a computer voice reading our new English."]).encode())
+        self.assertEqual(ba.inputs_hash(plan), h.hexdigest())
+        self.assertEqual(ba.tags_for(plan)["comment"], ba.note_for("s"))
+        self.assertTrue(ba.note_for("s").startswith(ba.NARRATION_NOTE))
+
+
 class LogosLinks(unittest.TestCase):
     def test_scripture_spans_become_bible_links(self):
         t = "as it is written (Luke 2:22–24) and (Lev 12:2)."
@@ -511,6 +555,23 @@ class Assemble(Fixture):
         self.assertEqual(kept[0]["sha256"], era["sha256"])
         self.assertTrue(kept[0]["uploaded"])
 
+    def test_low_disk_keeps_the_uploaded_audio_zip_and_still_writes_the_shelf(self):
+        """2026-10-20: too little disk for the era zips made assemble exit, so
+        library.json was never written and 25 new works got no downloads."""
+        rc, data, log = self.build({"a": "Clean English."}, {}, audio={"a": (4, 4, [])})
+        self.assertEqual(rc, 0, log)
+        era = next(b for b in data["bundles"] if b["kind"] == "audio")
+        self.ledger_from(data)
+        (self.out / era["key"]).unlink()  # a rebuild would need the full size free
+        with mock.patch.object(ls, "FREE_MIN", 10 ** 18):
+            rc, data, log = self.build({"a": "Clean English.", "b": "Clean English."}, {},
+                                       audio={"a": (4, 4, []), "b": (4, 4, [])})
+        self.assertEqual(rc, 0, log)
+        self.assertIn("WARN", log)
+        self.assertEqual(self.files(data), {"a": ["audio", "epub"], "b": ["audio", "epub"]})
+        kept = [b for b in data["bundles"] if b["kind"] == "audio"]
+        self.assertEqual([(b["key"], b["sha256"], b["count"]) for b in kept], [(era["key"], era["sha256"], 1)])
+
     def test_uploaded_word_stays_when_the_local_zip_is_gone(self):
         rc, data, log = self.build({}, {"a": "Clean English."})
         self.assertEqual(rc, 0, log)
@@ -769,11 +830,21 @@ class Copy(unittest.TestCase):
         # No format on every book: the shelf's share of the site comes first.
         split = [work("a", ["epub"]), work("b", ["pdf"])]
         self.assertEqual(dp.lede(split, dp.counts(split), 0, 5),
-                         "2 of the site's 5 works on the shelf: 1 work as EPUB, and 1 as PDF")
+                         "2 of the site's 5 works: 1 as EPUB and PDF")
         one = [work("a", ["epub", "pdf", "audio"])]
         self.assertEqual(dp.lede(one, dp.counts(one), 1), "1 work as EPUB and PDF, and 1 audiobook, 1 hour in all")
         many = [work(f"w{i}", ["epub", "pdf", "audio"]) for i in range(2)]
         self.assertEqual(dp.lede(many, dp.counts(many), 1203), "2 works as EPUB and PDF, and 2 audiobooks, 1,203 hours in all")
+
+    def test_lede_names_the_site_total_when_no_format_is_full(self):
+        """2026-10-23: 347 of 372 live works were on the shelf and no format
+        covered all 347, so the lede never said works were missing."""
+        works = [work("a", ["epub", "pdf", "word", "audio"]), work("b", ["epub", "pdf", "audio"]), work("c", ["audio"])]
+        n = dp.counts(works)
+        self.assertEqual(dp.lede(works, n, 4, 5),
+                         "3 of the site's 5 works: 2 as EPUB and PDF, 1 as Word for Logos, and 3 audiobooks, 4 hours in all")
+        self.assertEqual(dp.lede(works, n, 4), "2 works as EPUB and PDF, 1 as Word for Logos, and 3 audiobooks, 4 hours in all")
+        self.assertEqual(dp.lede(works, n, 4, 3), dp.lede(works, n, 4))
 
     def test_file_is_listed_only_when_the_ledger_holds_its_sha(self):
         """library.json says uploaded, but the bucket holds another version
@@ -871,7 +942,7 @@ class Copy(unittest.TestCase):
             self.assertIn("lg-prompt-text", pages["logos"])  # the Logos guide is written beside it
             return pages["downloads"]
         self.assertNotIn("none linked yet", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf", "word"])]))
-        self.assertIn("1 of the 2 works on the shelf have a Word file", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf"])]))
+        self.assertIn("1 of the 2 works have a Word file", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf"])]))
 
     def test_build_drops_unpublished_and_audio_bits(self):
         lib = lib_with([work("a", ["epub", "pdf"]), work("b", ["epub", "pdf"])])
@@ -894,6 +965,29 @@ class Copy(unittest.TestCase):
         self.assertNotIn("PreOrder", html)
         self.assertNotIn("word for word", html)
         self.assertNotIn("epub/b.x", files)
+
+    def test_shelf_has_no_pass_leftovers_and_one_arrow(self):
+        works = [work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf"])]
+        lib = lib_with(works, bundles=[{"kind": "word", "key": "bundles/w.zip", "bytes": 10, "count": 1, "name": "w.zip",
+                                        "uploaded": True}])
+        pages = {}
+        with tempfile.TemporaryDirectory() as d:
+            dp.build(Path(d), lib, lambda title, body, **kw: body, lambda path, html: pages.__setitem__(path.parent.name, html),
+                     covers_dir=Path(d), sort_key=lambda w: w["slug"], author_dates=lambda *a: "")
+        html = pages["downloads"]
+        self.assertNotIn("dl-lk", html)
+        self.assertNotIn("data-state", html)
+        self.assertNotIn("dl-buy", html)
+        self.assertNotIn("new, translated", html)
+        self.assertIn("fresh English translations", html)
+        self.assertEqual(html.count('<symbol id="dl-dn"'), 1)
+        self.assertEqual(html.count('<use href="#dl-dn"/>'), html.count('class="dl-f"'))
+        self.assertIn("All 1 Word books for Logos", html)
+        self.assertIn("<strong>All 1 Word books for Logos</strong>", pages["logos"])
+        self.assertNotIn("Every book for Logos (Word)", pages["logos"])
+        block = lib.work_block("a")
+        self.assertIn("See the whole shelf.", block)
+        self.assertNotIn("Every book is on the shelf", block)
 
 
 if __name__ == "__main__":
