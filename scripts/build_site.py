@@ -10,7 +10,7 @@ import re
 import shutil
 import subprocess
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from html import escape
 from pathlib import Path
 from urllib.parse import quote_plus
@@ -9142,6 +9142,14 @@ def build() -> None:
             f' · <span class="vp-daily-d">{escape(r["d"])}</span> · <span class="vp-daily-c">{escape(r["c"])}</span></p>'
             f'<div class="vp-actions"><a class="btn primary vp-daily-h" href="{escape(r["h"])}">Read the passage</a>'
             f'<a class="btn vp-daily-th" href="{escape(r["th"])}">What the others said</a></div>'
+            # Today's Scripture (owner 2026-10-23): a way into the Scripture reader from the home page.
+            f'<div class="vp-sc" data-daily-sc{"" if r.get("sr") else " hidden"}>'
+            f'<p class="eyebrow">Today&rsquo;s Scripture</p>'
+            f'<blockquote class="vp-quote vp-sc-q"><p>&ldquo;<span class="vp-sc-v">{escape(r.get("sv", ""))}</span>&rdquo;</p></blockquote>'
+            f'<p class="vp-who"><span class="vp-sc-r">{escape(r.get("sr", ""))}</span> · BSB</p>'
+            f'<div class="vp-actions"><a class="btn vp-sc-h" href="{escape(r.get("sh", "/scripture/"))}">'
+            f'Read <span class="vp-sc-ch">{escape(r.get("sch", ""))}</span> with the Fathers &rarr;</a></div>'
+            f"</div>"
             f"</div>"
         )
 
@@ -9249,6 +9257,7 @@ def build() -> None:
 </section>
 </div>
 """
+    _home_card_html = daily_card(first_daily)
     write(
         DIST / "index.html",
         layout(
@@ -9494,6 +9503,62 @@ def build() -> None:
             _n = re.findall(r"\d+", _r["verse"])
             if _n and _n[0] in _have:
                 SCRIPTURE_VERSES.add((_b, _c, _n[0]))
+
+    # Today's Scripture for each daily passage: the verse it cites (the one whose chapter
+    # the most Fathers cite), else the chapter the Fathers cite most on its topic.
+    _cites_by_href: dict[str, list[tuple[str, int, str]]] = defaultdict(list)
+    for (_b, _c), _rows in sc_entries.items():
+        if (_b, _c) not in sc_valid or not (base_bible["books"].get(_b) or {}).get(str(_c)):
+            continue
+        for _r in _rows:
+            _n = re.findall(r"\d+", _r["verse"])
+            if _n:
+                _cites_by_href[_r["href"].split("#")[0]].append((_b, _c, _n[0]))
+    _ex_by_id = {x["id"]: x for x in excerpts}
+
+    def _passage_cites(x: dict) -> list[tuple[str, int, str]]:
+        hrefs = {f"/e/{x['id']}/", x.get("_cite_href") or ""} - {""}
+        return [c for h in hrefs for c in _cites_by_href.get(h, [])]
+
+    def _verse_text(b: str, c: int, v: str) -> str:
+        for _v, _txt in (base_bible["books"].get(b) or {}).get(str(c), []):
+            if str(_v) == v:
+                _txt = " ".join(str(_txt).split())
+                return _txt if len(_txt) <= 220 else _txt[:217].rsplit(" ", 1)[0] + "…"
+        return ""
+
+    _topic_pick: dict[str, tuple[str, int, str]] = {}
+    for _tid, _rows in by_topic.items():
+        _count = Counter((b, c) for x in _rows if not x.get("_repeat") for b, c, _v in _passage_cites(x))
+        if _count:
+            (_b, _c), _n = _count.most_common(1)[0]
+            _verses = Counter(v for x in _rows for b, c, v in _passage_cites(x) if (b, c) == (_b, _c))
+            _topic_pick[_tid] = (_b, _c, _verses.most_common(1)[0][0])
+    _sc_from = Counter()
+    for _r in daily:
+        _x = _ex_by_id.get(_r["h"].strip("/").split("/")[-1]) or {}
+        _own = sorted(_passage_cites(_x), key=lambda c: -len(sc_entries.get((c[0], c[1]), [])))
+        _pick = next((c for c in _own if _verse_text(*c)), None)
+        _sc_from["passage" if _pick else "topic"] += 1
+        _pick = _pick or _topic_pick.get(_r["th"].strip("/").split("/")[-1])
+        if not _pick or not _verse_text(*_pick):
+            _sc_from["none"] += 1
+            continue
+        _b, _c, _v = _pick
+        _r.update({
+            "sv": _verse_text(_b, _c, _v),
+            "sr": f"{_b} {_c}:{_v}",
+            "sch": f"{_b} {_c}",
+            "sh": f"/scripture/{slugify(BIBLE_PUBLIC.get(_b, _b))}/{_c}/" + (f"#v{_v}" if (_b, _c, _v) in SCRIPTURE_VERSES else ""),
+        })
+    print(f"today's scripture: {_sc_from['passage']} from the passage's own cite, "
+          f"{_sc_from['topic'] - _sc_from['none']} from the topic, {_sc_from['none']} without", flush=True)
+    (DIST / "data" / "daily.json").write_text(json.dumps(daily[:400], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    if first_daily:
+        _home = (DIST / "index.html").read_text(encoding="utf-8")
+        if _home_card_html not in _home:
+            raise SystemExit("BLOCKED: home daily card not found to add Today's Scripture")
+        (DIST / "index.html").write_text(_home.replace(_home_card_html, daily_card(first_daily), 1), encoding="utf-8")
 
     explore_index = build_explore_index(excerpts, works, topic_meta)
     # Beliefs live on the Timeline (owner 2026-10-05), on the same scale.

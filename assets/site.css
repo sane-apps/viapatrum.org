@@ -2107,6 +2107,9 @@ h1, h2, h3,
 .vp-who strong { color: var(--ink); }
 .vp-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
 .vp-actions .btn { padding: 0.4rem 1rem; font-size: 0.92rem; }
+.vp-sc { margin-top: 1.4rem; padding-top: 1.1rem; border-top: 1px solid var(--rule); }
+.vp-sc[hidden] { display: none; }
+.vp-quote.vp-sc-q { font-size: 1.15rem; margin: 0.4rem 0 0.6rem; }
 .vp-shelf ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
 .vp-shelf li { border-bottom: 1px dotted var(--rule); }
 .vp-shelf a {

@@ -85,6 +85,18 @@
         dailyCard.querySelectorAll(".vp-daily-th").forEach((a) => a.setAttribute("href", r.th));
         const read = dailyCard.querySelector(".vp-daily-h");
         if (read) read.setAttribute("href", r.h);
+        // Today's Scripture: the verse the passage cites, or the topic's most-cited chapter.
+        const sc = dailyCard.querySelector("[data-daily-sc]");
+        if (sc) {
+          if (r.sr) {
+            set(".vp-sc-v", r.sv);
+            set(".vp-sc-r", r.sr);
+            set(".vp-sc-ch", r.sch);
+            const go = sc.querySelector(".vp-sc-h");
+            if (go) go.setAttribute("href", r.sh);
+          }
+          sc.hidden = !r.sr;
+        }
       }
     }).catch(() => {
       /* keep the passage the page shipped with */
