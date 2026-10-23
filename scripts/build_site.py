@@ -9027,10 +9027,13 @@ def build() -> None:
         author = x.get("author") or "Unknown"
         by_author[author].append(x)
 
+    # Repeats keep their own /e/ page (writer pages and the Scripture index link
+    # to them) but are left off the topic list and the app.
     _repeats = 0
     for tid in list(by_topic):
-        by_topic[tid], _gone = drop_repeated_passages(by_topic[tid])
-        _repeats += len(_gone)
+        for _gone in drop_repeated_passages(by_topic[tid])[1]:
+            _gone["_repeat"] = True
+            _repeats += 1
     print(f"topic passages: {_repeats} repeated copies left off topic pages", flush=True)
 
     for tid, rows in by_topic.items():
@@ -9049,7 +9052,8 @@ def build() -> None:
     def split_topic_rows(tid: str, rows: list[dict]) -> tuple[list[dict], list[dict]]:
         """(quoted on the page, listed below). A reviewed set of four or more
         leads the page; otherwise at most 12 quotes, each writer's earliest
-        passage first, and the rest are listed, not pasted."""
+        passage first, and the rest are listed, not pasted. Repeats are left off."""
+        rows = [r for r in rows if not r.get("_repeat")]
         by_date = sorted(rows, key=lambda r: (_passage_year(r), r.get("author") or "", r.get("id") or ""))
         stanced = stanced_by_topic.get(tid, set())
         matched = [x for x in by_date if _excerpt_is_stanced(x, stanced)]

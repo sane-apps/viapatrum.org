@@ -127,6 +127,8 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
                 continue
             excerpts = []
             for x in rows:
+                if x.get("_repeat"):  # the same passage in another translation (build_site.drop_repeated_passages)
+                    continue
                 paras = [p for p in (_paragraph(b, raw, None) for raw in b.excerpt_paragraphs(x)) if p]
                 if not paras:
                     continue
