@@ -17,7 +17,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 ROOT = Path(__file__).resolve().parents[1]
 # The theme is five verbs in a fixed order; no sixth label (review 2026-10-23).
-LABELS = {"How they spoke", "How they acted", "How they argued", "How they lived", "How they died"}
+LABELS = {"How they spoke", "How they acted", "How they argued", "How they lived", "How they died",
+          "How they read Scripture"}
 WAY = json.loads((ROOT / "data" / "way-verbs.json").read_text(encoding="utf-8"))
 
 
