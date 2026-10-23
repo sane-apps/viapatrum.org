@@ -72,7 +72,44 @@ class ListenCountTest(unittest.TestCase):
         self.assertEqual(build_site.playing_slugs(None, "didache"), {"didache"})
 
 
+class ExcerptDuplicateTest(unittest.TestCase):
+    def test_same_passage_has_one_main_page(self) -> None:
+        text = ["For how shall we not regard it fearful, if he that knows God shall not recognise the Lord. " * 2]
+        xs = [{"id": "clem_paed_1_9_benefit", "author": "Clement", "english": text},
+              {"id": "auto_paed_attributes_chapter_9_x", "author": "Clement", "english": text},
+              {"id": "auto_nov_one_chapter_31", "author": "Novatian", "english": ["one rendering " * 10]},
+              {"id": "novatian_trin_31_monarchy", "author": "Novatian", "english": ["another rendering " * 10]}]
+        self.assertEqual(build_site.excerpt_duplicates(xs), {
+            "auto_paed_attributes_chapter_9_x": "clem_paed_1_9_benefit",
+            "auto_nov_one_chapter_31": "novatian_trin_31_monarchy"})
+
+
+class BookInLocusTest(unittest.TestCase):
+    def test_stromata_book_file_names_its_book(self) -> None:
+        x = {"locus": "14", "citation": "Clement of Alexandria — Stromata 14",
+             "source": "sources/chapters/clement-of-alexandria-stromata-5.json"}
+        build_site.add_book_to_locus(x)
+        self.assertEqual((x["locus"], x["citation"]), ("5.14", "Clement of Alexandria — Stromata 5.14"))
+        y = {"locus": "14", "citation": "Clement — Stromata 14", "source": "sources/greek/clement_stromata.xml"}
+        build_site.add_book_to_locus(y)
+        self.assertEqual(y["locus"], "14")
+
+
 class TitleAndDateTest(unittest.TestCase):
+    def test_second_clement_files_with_the_apostolic_fathers(self) -> None:
+        self.assertEqual(build_site.era_band(150, "anonymous-2-clement", catalogue=True), "Apostolic")
+
+    def test_file_stem_title_is_not_a_latin_subtitle(self) -> None:
+        # 2026-10-23: "Montanus-Lucius", "Perpetua", "Lyons" sat under English H1s.
+        slug = "test-stem-subtitle"
+        build_site._BRIEF_TITLES[slug] = "The Passion of Montanus and Lucius"
+        build_site.STEM_TITLE_SLUGS.add(slug)
+        try:
+            self.assertEqual(build_site.public_reader_latin_subtitle("Montanus-Lucius", slug=slug), "")
+        finally:
+            build_site._BRIEF_TITLES.pop(slug, None)
+            build_site.STEM_TITLE_SLUGS.discard(slug)
+
     def test_brief_title_drops_a_word_the_catalogue_bans_in_the_h1(self) -> None:
         # 2026-10-08 13:49: the ship built, then died on this H1.
         slug = "test-scholia-heading"
@@ -132,6 +169,11 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.title_by("The Martyrdom of Justin", "Acts of the Martyrs", "acts-of-the-martyrs"),
                          "The Martyrdom of Justin (Acts of the Martyrs)")
         self.assertEqual(build_site.title_by("On Prayer", "Origen of Alexandria", "origen"), "On Prayer by Origen of Alexandria")
+        # The Diognetus author is "Letter to Diognetus"; the work is "The Epistle to Diognetus".
+        self.assertEqual(build_site.title_by("The Epistle to Diognetus", "Letter to Diognetus",
+                                             "mathetes-epistle-to-diognetus"), "The Epistle to Diognetus")
+        self.assertEqual(build_site.title_by("The Didache", "The Didache", "didache"), "The Didache")
+        self.assertIn(build_site.text_name_core("Letter to Diognetus"), "epistle to diognetus 7")
 
     def test_fragment_titles_follow_the_house_rule(self):
         for slug in ("cyril-solutiones-vat-447", "dionysius-corinth-fragments"):

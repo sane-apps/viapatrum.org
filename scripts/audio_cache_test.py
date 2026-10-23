@@ -244,5 +244,17 @@ class WesleyListeningNoteTests(unittest.TestCase):
         self.assertEqual(verse_only[0][2], whole[0][2])
 
 
+class DirectSlugCitePageTests(unittest.TestCase):
+    def test_ids_without_a_cite_page_do_not_claim_recordings(self):
+        with tempfile.TemporaryDirectory() as d:
+            works = Path(d) / "works" / "crocius-syntagma"
+            (works / "1.10.1").mkdir(parents=True)
+            (works / "1.10.1" / "index.html").write_text("<p>x</p>")
+            cands = {"1": [("liber1_cap10_english", 0, 3)], "1.10.1": [("x", 0, 1)]}
+            with mock.patch.dict(os.environ, {"FATHERS_DIST": d}):
+                got = inject_audio.locate_sites("crocius-syntagma", cands, {})
+            self.assertEqual(got, {"crocius-syntagma": {"1.10.1": [("x", 0, 1)]}})
+
+
 if __name__ == "__main__":
     unittest.main()

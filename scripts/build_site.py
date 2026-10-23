@@ -516,6 +516,7 @@ _BIBLE_BOOKS: tuple[tuple[str, str], ...] = (
     ("Ex", "Exodus"),
 )
 _BIBLE_CANON = {alias.lower(): canon for alias, canon in _BIBLE_BOOKS}
+_FULL_BOOK_NAMES = {canon.lower() for _alias, canon in _BIBLE_BOOKS} | {"psalms", "song of songs"}
 _SCRIPTURE_RE = re.compile(
     r"(?<![A-Za-z])"
     r"(?P<book>"
@@ -796,6 +797,13 @@ def _scripture_matches(text: str) -> list[tuple[int, int, str, str]]:
         if any(not (end <= left or start >= right) for left, right in occupied):
             continue
         book = re.sub(r"\s+", " ", match.group("book")).strip()
+        # A full book name with a full stop and no chapter:verse colon ends a
+        # sentence: "3. James. 4." (a list of apostles) and "psalms. 1.30" (a
+        # section mark) are not James 4 or Psalm 1:30 (2026-10-23). "Ps. 22:1",
+        # "Matt. 5:3" and the old style "Job. 19:30" stay.
+        if (book.endswith(".") and ":" not in match.group("verse")
+                and book.rstrip(".").strip().lower() in _FULL_BOOK_NAMES):
+            continue
         verse = re.sub(r"\s+", " ", match.group("verse")).strip()
         display = re.sub(r"\s+", " ", match.group(0)).strip()
         search_verse = verse.replace("–", "-").replace(".", ":")
@@ -1029,6 +1037,9 @@ APOSTOLIC_AUTHORS = frozenset({
     "clement-of-rome", "ignatius-of-antioch", "polycarp-of-smyrna", "barnabas", "didache",
     "hermas", "mathetes-epistle-to-diognetus", "church-of-smyrna", "papias-of-hierapolis",
     "quadratus",
+    # 2 Clement is in every Apostolic Fathers collection (Lake 1912, Holmes);
+    # it was filed Ante-Nicene until 2026-10-23.
+    "anonymous-2-clement",
 })
 # (filter key, chip label). Keys are single tokens: site.js splits data-era on spaces.
 CATALOGUE_ERAS = (("Apostolic", "Apostolic"), ("Ante-Nicene", "Ante-Nicene"), ("Nicene", "Nicene"),
@@ -1244,12 +1255,17 @@ AUTHOR_DISPLAY = {
     "Cyprian": "Cyprian of Carthage",
     "Hermas": "Hermas",
     "Shepherd of Hermas": "Hermas",
-    "Mathetes (Epistle to Diognetus)": "Mathetes",
-    "Anonymous (Diognetus)": "Mathetes",
-    "Anonymous (Epistle to Diognetus)": "Mathetes",
+    # The writer is unknown ("Mathetes" is only the letter's word for "a
+    # disciple"), so the text stands as author, as with the Didache. The mast,
+    # rail and hub gave three names until 2026-10-23.
+    "Mathetes (Epistle to Diognetus)": "Letter to Diognetus",
+    "Anonymous (Diognetus)": "Letter to Diognetus",
+    "Anonymous (Epistle to Diognetus)": "Letter to Diognetus",
     "Alexander Monachus": "Alexander the Monk",
     "Barnabas (Epistle)": "Barnabas",
     "Didache": "The Didache",
+    # The certified book's own name: the title read "The Didache (Anonymous (Didache))".
+    "Anonymous (Didache)": "The Didache",
     "Paulus Silentarius": "Paul the Silentiary",
     # PG 86a is a shelfmark, and this row is not Theodore of Heraclea.
     # No date is known. Do not invent one.
@@ -1270,12 +1286,19 @@ TEXT_AUTHOR_SLUGS = frozenset({
 })
 
 
+def text_name_core(name: str) -> str:
+    """The part of a text's name that its titles and cites share:
+    "Letter to Diognetus" and "The Epistle to Diognetus" both give "diognetus"."""
+    core = str(name or "").casefold().strip().removeprefix("the ")
+    return re.sub(r"^(letter|epistle) to ", "", core)
+
+
 def title_by(title: str, author: str, author_slug: str) -> str:
     """'<title> by <writer>' for page titles. A text or a church is not a
     writer: "The Martyrdom of Justin by Acts of the Martyrs" (2026-10-14 audit)
     becomes "The Martyrdom of Justin (Acts of the Martyrs)"."""
     if author_slug in TEXT_AUTHOR_SLUGS:
-        return title if author.casefold().removeprefix("the ") in title.casefold() else f"{title} ({author})"
+        return title if text_name_core(author) in title.casefold() else f"{title} ({author})"
     return f"{title} by {author}"
 # Excerpt rows often carry the display name and no slug.
 TEXT_AUTHOR_NAMES = frozenset({
@@ -1752,7 +1775,26 @@ def load_topic_excerpts() -> list[dict]:
             TOPIC_REDIRECTS[f"/e/{old}/"] = f"/e/{new}/"
     for old, new in aliases.items():
         TOPIC_REDIRECTS[f"/topics/{old}/"] = f"/topics/{new}/"
+    for x in items:
+        add_book_to_locus(x)
     return items
+
+
+# A topic link to a multi-book work named a chapter with no book: "Miscellanies
+# 14" is Stromata 5.14 (2026-10-23 audit). When the excerpt's source file is
+# one book of the work, its number goes before the chapter.
+_BOOK_SOURCE_FILE = re.compile(r"-stromata-(\d+)\.json$")
+
+
+def add_book_to_locus(x: dict) -> None:
+    loc = str(x.get("locus") or "").strip()
+    m = _BOOK_SOURCE_FILE.search(str(x.get("source") or ""))
+    if not m or not re.fullmatch(r"\d+", loc):
+        return
+    x["locus"] = f"{int(m.group(1))}.{loc}"
+    cite = str(x.get("citation") or "")
+    if re.search(rf"(?<![\d.]){loc}$", cite):
+        x["citation"] = cite[: -len(loc)] + x["locus"]
 
 
 # Old topic and excerpt addresses folded by topics.yml aliases -> new address.
@@ -2099,10 +2141,18 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "cyril-fragmenta-contra-theodorum-3": "Fragments Against Theodore, Book 3",
     "julian-letter-to-rome": "Fragments of the Letter to Rome",
     "julian-turbantius-fragments": "Fragments to Turbantius",
+    # Its only file stem gave "Dormition Homilies" (2026-10-23).
+    "john-damascus-homiliae-in-dormitionem": "Homilies on the Dormition of the Mother of God",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
 PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
+    # The file stem or a source-page label stood in the subtitle slot (2026-10-23:
+    # "Epistula_", "Dormition Homilies"). Hesychius's text is the homily on James
+    # and David; only its source label says Lazarus.
+    "procopius-gaza-epistula-altera": "Epistula altera",
+    "john-damascus-homiliae-in-dormitionem": "Homiliae in dormitionem Beatae Mariae Virginis",
+    "hesychius-homilia-i-lazarum": "In sanctum Iacobum fratrem Domini et Davidem",
     # Traditional names where the meta title only repeated the English (2026-10-06).
     "origen-homily-1samuel-28": "De engastrimytho",
     "anonymous-antimontanist": "Ad Avircium Marcellum contra Cataphrygas",
@@ -2534,12 +2584,19 @@ _LATIN_SLOT_ENGLISH = re.compile(
 )
 
 
+# Works whose title is only their file stem ("Montanus-Lucius", "Perpetua"):
+# a stem is not a traditional name, so no subtitle (2026-10-23).
+STEM_TITLE_SLUGS: set[str] = set()
+
+
 def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     """Latin secondary line when H1 leads English; empty when H1 is already that form."""
     h1 = public_reader_title(title, slug=slug)
     mapped = PUBLIC_LATIN_SUBTITLES.get(slug or "", "").strip()
     if mapped:
         return "" if mapped.lower() == h1.lower() else scrub_worksheet_note(mapped).strip()
+    if (slug or "") in STEM_TITLE_SLUGS:
+        return ""
     if english_title_for(slug):
         raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
         if raw and raw.lower() != h1.lower():
@@ -2697,8 +2754,10 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
     The period is left out when it only repeats the lifespan (same years, or a
     bare century) or the edition year ("John Wesley (1703–1791 AD) · 1771 Works").
     A long line first shortens the scope to "Part only", then drops the period."""
-    author = w.get("author") or ""
-    life = author_dates_display(author, w.get("author_slug"))
+    life = author_dates_display(w.get("author") or "", w.get("author_slug"))
+    # The public name, as on the rail and the author page (2026-10-23:
+    # "Anonymous (Epistle to Diognetus)" here, "Letter to Diognetus" there).
+    author = display_author(w.get("author") or "")
     # "Josué de la Place (Placeus)" already ends in brackets: no ") (".
     who = (f"{author}, {life}" if author.endswith(")") else f"{author} ({life})") if author and life else author
     # Notes on the date ("(Oxford reprint of 1621 St Andrews; Reformed)") go to About.
@@ -2743,7 +2802,10 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
 # it ("This volume gathers the six books To Florus ..." on To Turbantius).
 _INTRO_SCOPE_RE = re.compile(
     r"\s*\bThis (?:volume|book) (?:holds|gathers|contains|opens)\b.*?[.!?](?=\s+[A-Z\"“‘(]|\s*$)")
-INTRO_SCOPE_STALE = {"placeus-de-imputatione"}  # scope line predates the 712-section text
+INTRO_SCOPE_STALE = {
+    "placeus-de-imputatione",  # scope line predates the 712-section text
+    "crocius-syntagma",  # "This volume holds chapter 10 ..." predates all four books on the page
+}
 INTRO_LEDE_MAX_WORDS = 40
 
 
@@ -5615,8 +5677,97 @@ def load_origen_nt_fragments() -> list[dict]:
     return works
 
 
+def source_lastmod(slug: str, sources: dict | None = None) -> str:
+    """YYYY-MM-DD when a work's English files last changed, from the build's
+    work-sources map (else WORK_SOURCES); '' when they are not known."""
+    import datetime as _dt
+    src = (sources or {}).get(slug) or WORK_SOURCES.get(slug) or {}
+    trans = BOOKS / str(src.get("book") or "_") / "translations"
+    times = []
+    for stem in src.get("stems") or []:
+        path = trans / (stem if stem.endswith(".json") else f"{stem}.json")
+        try:
+            times.append(path.stat().st_mtime)
+        except OSError:
+            continue
+    return _dt.datetime.fromtimestamp(max(times)).strftime("%Y-%m-%d") if times else ""
+
+
+def about_shelf_line(library, works: list[dict]) -> str:
+    """The About download line, with the shelf's share of the live works when
+    some are not on it yet (2026-10-23: About said 343 books, Home 372 works)."""
+    live = {w["slug"] for w in works}
+    shelf = sum(1 for slug in library.by_slug if slug in live)
+    pitch = library.pitch()
+    if 0 < shelf < len(live):
+        return f"The shelf holds {shelf} of the {len(live)} works: {pitch[0].lower() + pitch[1:]}"
+    return pitch
+
+
 # Site slug -> {book, stems}, filled by loaders that know their files (data/work-sources.json).
 WORK_SOURCES: dict[str, dict] = {}
+
+# Chapter files of a multi-book treatise (crocius-syntagma: liber1_cap10_english.json)
+# each number their sections from 1. The tip loader kept only the first row per
+# bare id, so 600 of Crocius's 621 sections never reached the page (2026-10-23).
+# Such files load in Liber, then Cap order (a plain sort puts cap10 before cap2),
+# each section gets a book.chapter.section id, and each Liber is one reader book.
+_LIBER_CAP_STEM = re.compile(r"liber(\d+)_cap(\d+)")
+
+
+def _tip_file_order(path: Path) -> tuple:
+    m = _LIBER_CAP_STEM.fullmatch(path.name[: -len("_english.json")])
+    return (0, int(m.group(1)), int(m.group(2)), path.name) if m else (1, 0, 0, path.name)
+
+
+def _liber_cap_sections(stem: str, sections: list[dict]) -> list[dict]:
+    """Prefix each section id with its Liber and Cap; no-op for other stems."""
+    m = _LIBER_CAP_STEM.fullmatch(stem)
+    if not m:
+        return sections
+    book, cap = int(m.group(1)), int(m.group(2))
+    return [{**s, "section": f"{book}.{cap}.{s['section']}", "group": f"Book {book}"} for s in sections]
+
+
+def _add_section_groups(groups: list[dict], sections: list[dict]) -> None:
+    for s in sections:
+        title = s.get("group")
+        if not title:
+            continue
+        g = next((g for g in groups if g["title"] == title), None)
+        if g is None:
+            g = {"title": title, "sections": []}
+            groups.append(g)
+        g["sections"].append(str(s["section"]))
+
+
+def _new_groups(sections: list[dict]) -> list[dict]:
+    groups: list[dict] = []
+    _add_section_groups(groups, sections)
+    return groups
+
+
+# Cite pages that moved when a work's section ids changed: slug -> {old id: new id}.
+# The 21 Crocius pages live before 2026-10-23 were the first row per bare id in
+# file-name order: Book 1 chapter 10 §1-15, chapter 2 §16-17, chapter 4 §18-21.
+SECTION_MOVES: dict[str, dict[str, str]] = {
+    "crocius-syntagma": {
+        **{str(n): f"1.10.{n}" for n in range(1, 16)},
+        **{str(n): f"1.2.{n}" for n in (16, 17)},
+        **{str(n): f"1.4.{n}" for n in range(18, 22)},
+    },
+}
+
+
+def section_move_redirects(moves: dict[str, dict[str, str]], live_sections: dict[str, set]) -> str:
+    """_redirects lines for moved cite pages whose work and new page are live."""
+    out = []
+    for slug, table in sorted(moves.items()):
+        have = live_sections.get(slug) or set()
+        for old, new in sorted(table.items()):
+            if new in have and old not in have:
+                out.append(f"/works/{slug}/{old}/ /works/{slug}/{new}/ 301\n")
+    return "".join(out)
 
 
 def load_origen_pauline_fragments() -> list[dict]:
@@ -5629,7 +5780,7 @@ def load_origen_pauline_fragments() -> list[dict]:
         trans = folder / "translations"
         if not trans.is_dir():
             continue
-        for en_path in sorted(trans.glob("*_english.json")):
+        for en_path in sorted(trans.glob("*_english.json"), key=_tip_file_order):
             stem = en_path.name[: -len("_english.json")]
             if stem.startswith("_"):
                 continue
@@ -5652,6 +5803,8 @@ def load_origen_pauline_fragments() -> list[dict]:
                 if not meta and (folder / "book.yml").exists() else {}
             slug = meta.get("slug") or folder.name
             title = meta.get("title") or stem.replace("_", " ").title()
+            if not meta.get("title") and not any(w["slug"] == slug for w in works):
+                STEM_TITLE_SLUGS.add(slug)
             author = meta.get("author") or _yml.get("author") or "Origen of Alexandria"
             author_slug = canonical_author_slug(
                 meta.get("author_slug"),
@@ -5663,17 +5816,20 @@ def load_origen_pauline_fragments() -> list[dict]:
                     and author_slug not in UNDATED_AUTHORS:
                 author = "Acts of the Martyrs"
                 author_slug = canonical_author_slug(None, author)
-            sections = _origen_rows(rows, src_map)
+            sections = _liber_cap_sections(stem, _origen_rows(rows, src_map))
             _ws = WORK_SOURCES.setdefault(slug, {"book": folder.name, "stems": []})
             if _ws["book"] == folder.name:
                 _ws["stems"].append(f"{stem}_english")
             existing = next((w for w in works if w["slug"] == slug), None)
             if existing is not None:
                 seen = {str(s.get("section")) for s in existing["sections"]}
+                added = []
                 for sec in sections:
                     if str(sec.get("section")) not in seen:
                         existing["sections"].append(sec)
+                        added.append(sec)
                         seen.add(str(sec.get("section")))
+                _add_section_groups(existing["groups"], added)
                 existing["section_count"] = len(existing["sections"])
                 if meta.get("scope"):
                     existing["scope"] = str(meta["scope"]).strip()
@@ -5718,6 +5874,7 @@ def load_origen_pauline_fragments() -> list[dict]:
                     edition=meta.get("edition_short") or (_short_edition(folder) if folder in _CERTIFIED else "")
                     or meta.get("edition") or "",
                     sections=sections,
+                    groups=_new_groups(sections),
                     blurb=meta.get("work_blurb") or meta.get("blurb") or _fallback_blurb(folder, title, author),
                     scope=meta.get("scope") or "",
                     era_note=meta.get("era_note") or default_era,
@@ -6685,6 +6842,37 @@ def _work_key(author_slug: str, title: str, author: str) -> tuple[str, str]:
     # Drop the author's own name ("Polycarp to the Philippians") unless that
     # leaves nothing ("Mathetes (Epistle to Diognetus)", "Epistle to Diognetus").
     return author_slug, " ".join([w for w in words if w not in named] or words)
+
+
+# Two English renderings of one passage, too different for the text match in
+# excerpt_duplicates (2026-10-23 audit): second copy -> main page.
+EXCERPT_SAME_PASSAGE: dict[str, str] = {
+    "auto_nov_one_chapter_31": "novatian_trin_31_monarchy",  # On the Trinity 31
+    "tertullian_against_marcion_10_heaven-hell-in": "tertullian_marcion_5_10",  # Against Marcion 5.10
+}
+
+
+def excerpt_duplicates(excerpts: list[dict]) -> dict[str, str]:
+    """Excerpt id -> main excerpt id for the same passage by the same writer:
+    the same opening words (one passage filed under several questions), or a
+    pair named in EXCERPT_SAME_PASSAGE. The main page is the shortest id."""
+    primary: dict[str, str] = {}
+    groups: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for x in excerpts:
+        txt = re.sub(r"\W+", " ", strip_logos_markup(" ".join(excerpt_paragraphs(x))).lower()).strip()[:400]
+        if len(txt) > 80:
+            groups[((x.get("author") or "").lower(), txt)].append(x["id"])
+    for ids in groups.values():
+        if len(ids) > 1:
+            main = sorted(ids, key=lambda i: (len(i), i))[0]
+            for i in ids:
+                if i != main:
+                    primary[i] = main
+    have = {x["id"] for x in excerpts}
+    for dup, main in EXCERPT_SAME_PASSAGE.items():
+        if dup in have and main in have:
+            primary[dup] = primary.get(main, main)
+    return primary
 
 
 READER_MATCH_REJECTS: list[str] = []
@@ -9349,6 +9537,7 @@ def build() -> None:
         ),
     )
 
+    excerpt_primary = excerpt_duplicates(excerpts)
     # --- Scripture: book → chapter → every Father who cites it ------------
     # The Bibles load first: a citation is filed only under a chapter that
     # exists (2026-10-06 audit: Psalm 181, 2 John 5, Jude 25 had pages).
@@ -9448,6 +9637,8 @@ def build() -> None:
     for x in excerpts:
         if x.get("_cite_href"):
             continue   # shown from a whole-work reader: that section is listed already
+        if x["id"] in excerpt_primary:
+            continue   # a second copy of a passage: its main page is listed (Isaiah 1:2 twice, 2026-10-23)
         _title = public_citation(x.get("citation") or x["id"], x.get("work") or "")
         sc_collect(
             strip_logos_markup(" ".join(excerpt_paragraphs(x))),
@@ -9598,19 +9789,8 @@ def build() -> None:
 
     # The same passage filed under several questions: one main page, the rest
     # point to it (canonical) and stay out of the sitemap.
-    excerpt_primary: dict[str, str] = {}
-    _groups: dict[tuple[str, str], list[str]] = defaultdict(list)
-    for _x in excerpts:
-        _txt = re.sub(r"\W+", " ", strip_logos_markup(" ".join(excerpt_paragraphs(_x))).lower()).strip()[:400]
-        if len(_txt) > 80:
-            _groups[((_x.get("author") or "").lower(), _txt)].append(_x["id"])
-    for _ids in _groups.values():
-        if len(_ids) > 1:
-            _main = sorted(_ids, key=lambda i: (len(i), i))[0]
-            for _i in _ids:
-                if _i != _main:
-                    excerpt_primary[_i] = _main
-                    NONCANONICAL_ROUTES.add(f"/e/{_i}/")
+    for _i in excerpt_primary:
+        NONCANONICAL_ROUTES.add(f"/e/{_i}/")
 
     # --- Topic pages + excerpt pages ---
     for tid, rows in by_topic.items():
@@ -9656,6 +9836,13 @@ def build() -> None:
             )
             e_cite = excerpt_cite(x)
             e_author = display_author(x.get("author") or "")
+            # A text as author whose cite already names it: "Epistle to
+            # Diognetus 7", not "Letter to Diognetus, Epistle to Diognetus 7".
+            e_text_named = (
+                e_author.casefold() in TEXT_AUTHOR_NAMES
+                and text_name_core(e_author) in e_cite.casefold()
+            )
+            e_lead = e_cite if e_text_named else f"{e_author}, {e_cite}"
             e_dates = author_dates_display(x.get("author") or "") or format_bc_ad(x.get("period") or "")
             e_older = (
                 '<p class="meta older-source">English from the <em>Ante-Nicene Fathers</em> '
@@ -9685,7 +9872,7 @@ def build() -> None:
             ebody = f"""
 <article class="excerpt-page">
   <p class="eyebrow"><a href="/topics/{escape(tid)}/">{escape(meta['title'])}</a></p>
-  <h1>{escape(e_author)}, {escape(e_cite)}</h1>
+  <h1>{escape(e_lead)}</h1>
   <p class="meta"><a href="/authors/{escape(author_hub_slug(x.get('author')))}/">{escape(e_author)}</a> · {escape(e_dates)}</p>
   {e_older}{e_reader}
   <div class="body">{paras}</div>
@@ -9696,7 +9883,7 @@ def build() -> None:
             write(
                 DIST / "e" / x["id"] / "index.html",
                 layout(
-                    f"{e_author} on {meta['title']}: {e_cite}",
+                    f"{e_cite} on {meta['title']}" if e_text_named else f"{e_author} on {meta['title']}: {e_cite}",
                     ebody,
                     crumb=[
                         ("Home", "/"),
@@ -9713,7 +9900,7 @@ def build() -> None:
                     canonical=x.get("_cite_href") or (f"/e/{excerpt_primary[x['id']]}/" if x["id"] in excerpt_primary else ""),
                     jsonld=[{
                         "@type": "Quotation",
-                        "name": f"{e_author}, {e_cite}",
+                        "name": e_lead,
                         "text": meta_description(" ".join(paras_list), 300),
                         "creator": {"@type": author_schema_type(None, x.get("author")), "name": e_author,
                                     "url": f"{SITE_ORIGIN}/authors/{author_hub_slug(x.get('author'))}/"},
@@ -10428,6 +10615,15 @@ def build() -> None:
                 + "".join(f'<li><a href="{escape(h)}">{escape(t)}</a></li>' for t, h in topic_links)
                 + "</ul></details>"
             ) if topic_links else ""
+            # Old #s<id> links into a work that was one page before it split
+            # into books land on the passage in its book (SECTION_MOVES).
+            old_anchors = {old: sec_contents_href[new] for old, new in (SECTION_MOVES.get(w["slug"]) or {}).items()
+                           if new in sec_contents_href}
+            anchor_js = (
+                "<script>(function(){var m=" + json.dumps(old_anchors, sort_keys=True).replace("</", "<\\/")
+                + ";var h=decodeURIComponent(location.hash.slice(1));"
+                "if(h.charAt(0)==='s'&&m[h.slice(1)])location.replace(m[h.slice(1)]);})();</script>"
+            ) if old_anchors else ""
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
@@ -10436,7 +10632,7 @@ def build() -> None:
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
                     {''.join(overview_toc)}
                     <div class="hub-about">{book_about}{author_link}{hub_topics}</div>
-                    {disclosure_html(intro_note)}""",
+                    {disclosure_html(intro_note)}{anchor_js}""",
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=work_desc,
@@ -11332,12 +11528,12 @@ def build() -> None:
             <h2>What is here</h2>
             <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Timeline</strong> shows where writers agree and where a later turn comes.</p>
             {'''<h2>Books to keep</h2>
-            <p>''' + escape(LIBRARY.pitch()) + ''' Get them on the <a href="/downloads/">downloads page</a>.</p>''' if LIBRARY else ''}
+            <p>''' + escape(about_shelf_line(LIBRARY, works)) + ''' Get them on the <a href="/downloads/">downloads page</a>.</p>''' if LIBRARY else ''}
             {'''<h2>Logos</h2>
             <p>The same English is also in Word files for Logos Bible Software. Each book has a cover and a description. Download every part from the <a href="/logos/">Personal Books</a> page, then add the file in Logos yourself.</p>''' if logos_pack_manifest() and not logos_retired() else ''}
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
             <h2>How the English is made</h2>
-            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
+            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and fresh English replaces them as it is finished.</p>
             <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
             <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/topics/free-will/#over-time">free will over time</a>.</p>
@@ -11493,6 +11689,15 @@ def build() -> None:
         m = title_re.search(page.read_text(encoding="utf-8")[:4000])
         if m:
             seen_titles[m.group(1)].append(page)
+    # The appended words hide a source problem (nine Julian pages all "§4.2.2"):
+    # list each clash among work pages so it is fixed in the source.
+    work_clashes = {title: [p.relative_to(DIST).parent.as_posix() for p in pages]
+                    for title, pages in seen_titles.items()
+                    if len(pages) > 1 and all(p.relative_to(DIST).as_posix().startswith("works/") for p in pages)}
+    _tc_receipt = DIST.parent / f"{DIST.name}.title-clashes.json"
+    _tc_receipt.write_text(json.dumps(work_clashes, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"titles: {len(work_clashes)} work-page titles shared by {sum(map(len, work_clashes.values()))} pages, "
+          f"told apart by their opening words ({_tc_receipt.name})", flush=True)
     for title, pages in seen_titles.items():
         if len(pages) < 2:
             continue
@@ -11555,10 +11760,15 @@ def build() -> None:
         # 2026-10-18, withheld second copy): send it to the shown copy.
         "/works/diodorus-fragmenta/ /works/dionysius-corinth-fragments/ 301\n"
         "/works/diodorus-fragmenta/* /works/dionysius-corinth-fragments/ 301\n"
+        # The held second translation of the Lamentations fragments, listed
+        # publicly under the Latin spelling until 2026-10: send it to the shown copy.
+        "/works/origen-lamentationes-fragments/ /works/origen-lamentations-fragments/ 301\n"
+        "/works/origen-lamentationes-fragments/* /works/origen-lamentations-fragments/ 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))
         + dropped_section_redirects(WESLEY_DROPPED_SECTIONS, {w["slug"] for w in works})
+        + section_move_redirects(SECTION_MOVES, {w["slug"]: {str(s["section"]) for s in w["sections"]} for w in works})
         + logos_redirect,
         encoding="utf-8",
     )
@@ -11572,13 +11782,24 @@ def build() -> None:
         url_files["/" + p.relative_to(DIST).as_posix().removesuffix("index.html")] = p
     urls = sorted(url_files)
 
+    # lastmod is the day a work's English files last changed. The build writes
+    # every page fresh, so a page's own mtime was always the build day (16,108
+    # URLs dated 2026-10-23), and crawlers ignore a lastmod that always moves.
+    # Pages with no source files to date carry no lastmod.
+    _src_days: dict[str, str] = {}
+    _work_sources = (_json_load(DIST / "data" / "work-sources.json", {}) or {}).get("works") or {}
+
     def _lastmod(u: str) -> str:
-        # The build writes every page fresh, so the file's mtime is the day
-        # this content was built — the honest freshness signal we have.
-        try:
-            return _dt.datetime.fromtimestamp(url_files[u].stat().st_mtime).strftime("%Y-%m-%d")
-        except (KeyError, OSError):
-            return _dt.date.today().isoformat()
+        parts = u.strip("/").split("/")
+        if len(parts) < 2 or parts[0] != "works":
+            return ""
+        slug = parts[1]
+        if slug not in _src_days:
+            _src_days[slug] = source_lastmod(slug, _work_sources)
+        return _src_days[slug]
+
+    def _lastmod_tag(day: str) -> str:
+        return f"<lastmod>{day}</lastmod>" if day else ""
     groups: dict[str, list[str]] = defaultdict(list)
     noindex_routes = set(NONCANONICAL_ROUTES)
     for page in DIST.rglob("index.html"):
@@ -11593,14 +11814,14 @@ def build() -> None:
         (DIST / f"sitemap-{names.get(g, g)}.xml").write_text(
             '<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc><lastmod>{_lastmod(u)}</lastmod></url>\n" for u in us)
+            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc>{_lastmod_tag(_lastmod(u))}</url>\n" for u in us)
             + "</urlset>\n",
             encoding="utf-8",
         )
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc><lastmod>{max((_lastmod(u) for u in groups[g]), default=_dt.date.today().isoformat())}</lastmod></sitemap>\n" for g in sorted(groups))
+        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc>{_lastmod_tag(max((d for d in map(_lastmod, groups[g]) if d), default=''))}</sitemap>\n" for g in sorted(groups))
         + "</sitemapindex>\n",
         encoding="utf-8",
     )

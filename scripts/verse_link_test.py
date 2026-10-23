@@ -6,6 +6,7 @@ import unittest
 
 from build_site import _SCRIPTURE_RE as RX
 from build_site import scripture_html
+from build_site import _scripture_matches
 
 
 def verses(text: str) -> list[str]:
@@ -37,6 +38,24 @@ class VerseLinkTest(unittest.TestCase):
         html = scripture_html("Ps 29:6c")
         self.assertIn("search=Psalm+29%3A6&amp;", html)
         self.assertIn("Ps 29:6c</a>", html)
+
+
+class SentenceEndTest(unittest.TestCase):
+    """2026-10-23: list numbers and section marks became chapter links."""
+
+    def refs(self, text: str) -> list[str]:
+        return [search for _s, _e, _d, search in _scripture_matches(text)]
+
+    def test_full_name_ending_a_sentence_is_not_a_citation(self) -> None:
+        self.assertEqual(self.refs("2. Andrew, his brother. 3. James. 4. John"), [])
+        self.assertEqual(self.refs("9. Joshua. 10. Judges"), [])
+        self.assertEqual(self.refs("in many psalms. 1.30 What then"), [])
+        self.assertEqual(self.refs("the fourteen psalm. 17.116 Verse"), [])
+
+    def test_abbreviations_with_a_stop_still_link(self) -> None:
+        self.assertEqual(self.refs("as in Ps. 22:1 and Matt. 5:3"), ["Psalm 22:1", "Matthew 5:3"])
+        self.assertEqual(self.refs("James 4:7 and Psalm 1:3"), ["James 4:7", "Psalm 1:3"])
+        self.assertEqual(self.refs("as in Job. 19:30"), ["Job 19:30"])  # Crocius cites this way
 
 
 if __name__ == "__main__":

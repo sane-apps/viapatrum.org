@@ -290,7 +290,13 @@ def lede(works: list[dict], n: dict[str, int], total_h: int, site_works: int = 0
     if n["audio"]:
         bits.append(f"{plural(n['audio'], 'audiobook')}, {plural(total_h, 'hour')} in all")
     # Each bit may hold its own "and" (EPUB and PDF), so bits join with ", and".
-    return bits[0] if len(bits) == 1 else ", ".join(bits[:-1]) + ", and " + bits[-1]
+    out = bits[0] if len(bits) == 1 else ", ".join(bits[:-1]) + ", and " + bits[-1]
+    # No format covers every book: say how many of the site's works are here
+    # before the per-format counts (2026-10-23: "343 works as EPUB" sat over a
+    # "347 works" tile, and the 25 works not yet on the shelf went unsaid).
+    if not full and site_works > have:
+        out = f"{whom} on the shelf: {out}"
+    return out
 
 
 def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key, author_dates,
@@ -379,7 +385,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 </section>
 
 <ul class="dl-stats" aria-label="What is in the library">
-  <li><strong>{len(works)}</strong><span>works</span></li>
+  <li><strong>{len(works)}</strong><span>works on the shelf</span></li>
   {f'<li><strong>{n["audio"]}</strong><span>audiobooks</span></li><li><strong>{total_h:,}</strong><span>hours of narration</span></li>' if n['audio'] else ''}
   <li><strong>{sum(1 for v in n.values() if v)}</strong><span>formats</span></li>
 </ul>
@@ -394,8 +400,8 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <details><summary>Is everything free?</summary><p>Yes. Every work, every Scripture link, every read-along recording and every file on this shelf is free, on this site and in the <a href="https://apps.apple.com/app/via-patrum/id6818696772">app</a>. If the library helps you, you can <a href="{SPONSORS}" rel="noopener">give on GitHub Sponsors</a>.</p></details>
   <details><summary>What happens when you add books?</summary><p>New works{" and new recordings" if n["audio"] else ""} appear on the shelf as they are finished. Come back and download them.</p></details>
   {"<details><summary>How do I open these on a Kindle?</summary><p>Send the EPUB with Amazon's Send to Kindle (the app, the website, or email). Kindle converts it for you.</p></details>" if n["epub"] else ""}
-  {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The cover and description are included. <a href='/downloads/logos/'>The Logos guide</a> covers adding the whole collection, or letting an AI assistant do it.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
-  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
+  {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The cover and description are included. <a href='/downloads/logos/'>The Logos guide</a> covers adding the whole collection, or letting an AI assistant do it.{f" {n['word']} of the {len(works)} works on the shelf have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
+  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site: fresh English translations from the Greek and Latin, made with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
 </section>
 
 <section class="dl-shelf" id="shelf" aria-labelledby="dl-shelf-h">
