@@ -239,6 +239,7 @@ def build(dist: Path, layout, write, data_dir: Path = DATA) -> int:
           layout("Creeds and churches", body,
                  crumb=[("Home", "/"), ("Timeline", "/explore/"), ("Creeds and churches", "")],
                  active="explore", styles=["/assets/creeds.css"], og_image="explore",
-                 description="Every major creed and confession from 180 AD to today: when, where and why each was written, "
-                             "a short passage, which churches hold it, and where each church came from."))
+                 # Under the 158-character snippet limit, so it never ends in "…".
+                 description="The major creeds and confessions from 180 AD to today: when and why each was written, "
+                             "a short passage, and which churches hold it."))
     return len(creeds)

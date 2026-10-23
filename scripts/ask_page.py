@@ -75,7 +75,7 @@ def build(dist: Path, layout, write) -> int:
   </section>
 </div>
 <noscript><p class="intro">Ask needs JavaScript. You can still <a href="/works/">search the library</a>.</p></noscript>
-<p class="ask-how">How this works: if your question matches one of the hundred Timeline topics, that topic comes first. Then we find the passages closest to your question, and quote the sentences that answer it most directly, at most two from any one work. Where the library is thin, we say so and show the closest passages.</p>
+<p class="ask-how">How this works: if your question matches one of the hundred Timeline topics, that topic comes first. Then we find the passages closest to your question, and quote the sentences that answer it most directly, at most two from any one work. Where the library is thin, we say so and show the closest passages. We keep those questions, with no name or address, so we know which passages to add (<a href="/privacy/">Privacy</a>).</p>
 </div>
 """
     write(dist / "ask" / "index.html",

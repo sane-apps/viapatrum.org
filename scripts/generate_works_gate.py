@@ -97,7 +97,7 @@ export async function onRequest(context) {{
 
 ROUTES_JSON = {
     "version": 1,
-    "include": ["/works/*", "/authors/*", "/api/*", "/dl/*"],  # /api: search, ask, human check, library admin; /dl: free downloads (functions/dl)
+    "include": ["/works/*", "/authors/*", "/api/*", "/dl/*"],  # /api: search, Ask, download check; /dl: free downloads (functions/dl)
     "exclude": [],
 }
 
