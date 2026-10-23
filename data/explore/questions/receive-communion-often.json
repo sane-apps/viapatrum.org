@@ -142,6 +142,27 @@
       "translation": "dossier"
     },
     {
+      "id": "chrysostom-ephesians-homily-3-4",
+      "author": "John Chrysostom",
+      "year": 395,
+      "date": "c. 395",
+      "work": "Homilies on Ephesians",
+      "locus": "3.4",
+      "lang": "grc",
+      "answer": "yearly",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "I see many partaking of the body of Christ carelessly and as chance has it, and from habit and custom rather than from thought and consideration. If the season of holy Lent comes on, whoever one may be, he partakes of the mysteries; if the day of Epiphany comes on. ... In the other seasons, though often pure, you do not come; but at Pascha, though you have ventured something, you come. O the habit! O the presumption! In vain the daily sacrifice, in vain we have stood at the altar: no one partakes.",
+      "original": "Πολλοὺς ὁρῶ τοὺς σώματος τοῦ Χριστοῦ μετέχοντας ἁπλῶς καὶ ὡς ἔτυχε, καὶ συνηθείᾳ μᾶλλον καὶ νόμῳ, ἢ λογισμῷ καὶ διανοίᾳ. Ἂν ἐπιστῇ, φησὶν, ὁ τῆς ἁγίας Τεσσαρακοστῆς καιρὸς, οἷος ἐὰν ᾖ τις, μετέχει τῶν μυστηρίων, ἂν ἐπιστῇ ἡ τῶν Ἐπιφανίων ἡμέρα. ... Ἐν μὲν τοῖς ἄλλοις καιροῖς οὐδὲ καθαροὶ πολλάκις ὄντες προσέρχεσθε, ἐν δὲ τῷ Πάσχα, κἂν ᾖ τι τετολμημένον ὑμῖν, πρόσιτε. Ὢ τῆς συνηθείας! ὢ τῆς προλήψεως! εἰκῆ θυσία καθημερινὴ, εἰκῆ παρεστήκαμεν τῷ θυσιαστηρίῳ, οὐδεὶς ὁ μετέχων.",
+      "context": "The passage is Homily 3, subdivision 4, on Ephesians; in the library's PG-chunked sections it is section 4.6 (PG 62.28 to 29), because the section numbers run one ahead of the homily numbers. Chrysostom's own rule, stated just before, is that purity of soul, not a feast day, makes a person fit to come. The answer tags the practice he is rebuking, festival-only communion, not his prescription.",
+      "source": {
+        "book": "chrysostom-homiliae-ephesios",
+        "section": "4.6"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "lateran-iv-1215-canon-21",
       "author": "Fourth Lateran Council",
       "year": 1215,
@@ -181,14 +202,6 @@
       "why": "Some receive daily, some on certain days; follow your church's custom.",
       "action": "intake",
       "source_hint": "Goldbacher, CSEL 34 (1895)"
-    },
-    {
-      "author": "John Chrysostom",
-      "work": "Homilies on Ephesians 3.4",
-      "year": 395,
-      "why": "His complaint that many received only once a year.",
-      "action": "search",
-      "source_hint": "chrysostom-homiliae-ephesios"
     }
   ],
   "related": {

@@ -51,6 +51,14 @@
       "cites": [
         "gregory-nyssa-ecclesiastes-homily-4"
       ]
+    },
+    {
+      "text": "Lactantius says Christians have no slaves but call them brothers in spirit and fellow slaves in religion. Chrysostom urges the rich, if they truly care for slaves, to buy them, teach them a trade and set them free, yet he still allows a master one or two servants. The pattern remains brotherhood and regulation, not abolition, Gregory of Nyssa alone excepted.",
+      "cites": [
+        "lactantius-divine-institutes-5-15",
+        "chrysostom-1-corinthians-homily-40",
+        "augustine-city-of-god-19-15"
+      ]
     }
   ],
   "quotes": [
@@ -97,6 +105,27 @@
       "translation": "dossier"
     },
     {
+      "id": "lactantius-divine-institutes-5-15",
+      "author": "Lactantius",
+      "year": 310,
+      "date": "c. 310",
+      "work": "Divine Institutes",
+      "locus": "5.15",
+      "lang": "la",
+      "answer": "brothers",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And there is no other reason why we give one another the name of brothers, except that we believe we are equals. For since we measure all human things not by the body but by the spirit, although the condition of bodies is different, we nevertheless have no slaves, but we both regard and call them brothers in spirit, fellow slaves in religion.",
+      "original": "nec alia causa est cur nobis inuicem fratrum nomen inpertiamus, nisi quia pares esse nos credimus. nam cum omnia humana non corpore, sed spiritu metiamur, tametsi corporum sit diuersa condicio, nobis tamen serui non sunt, sed eos et habemus et dicimus spiritu fratres, religione conseruos.",
+      "context": "Lactantius answers an imagined objector who points to rich and poor, slaves and masters among Christians. He does not claim the legal institution had disappeared; his claim is how Christians regard and name one another.",
+      "source": {
+        "book": "lactantius-divine-institutes",
+        "section": "5.15"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "gregory-nyssa-ecclesiastes-homily-4",
       "author": "Gregory of Nyssa",
       "year": 379,
@@ -116,34 +145,51 @@
         "edition": "Migne PG 44, Khazarzar text"
       },
       "translation": "dossier"
-    }
-  ],
-  "gaps": [
-    {
-      "author": "Lactantius",
-      "work": "Divine Institutes 5.15",
-      "year": 310,
-      "why": "\"Among us there are no slaves; we call them brothers in spirit.\" In the library; to be found.",
-      "action": "search",
-      "source_hint": "lactantius-divine-institutes 5.15"
     },
     {
-      "author": "Augustine of Hippo",
-      "work": "City of God 19.15",
-      "year": 426,
-      "why": "Slavery as a result of sin, not nature.",
-      "action": "intake",
-      "source_hint": "thelatinlibrary.com/augustine/civ19.shtml"
-    },
-    {
+      "id": "chrysostom-1-corinthians-homily-40",
       "author": "John Chrysostom",
-      "work": "Homilies on 1 Corinthians 40.5",
       "year": 392,
-      "why": "Buy slaves to teach them a trade and set them free.",
-      "action": "search",
-      "source_hint": "chrysostom-homiliae-1-corinthios"
+      "date": "c. 392",
+      "work": "Homilies on 1 Corinthians",
+      "locus": "40.5",
+      "lang": "grc",
+      "answer": "accepted",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The race of slaves was not brought in for any need, since a slave would have been created along with Adam if it had been; it is the penalty of sin and the punishment of disobedience. ... So it is not necessary to own a slave; if it is necessary at all, let it be only one, or at most a second. ... For if you really cared for them, you would not keep anyone busy in your service, but would buy them, teach them trades so that they can support themselves, and let them go free.",
+      "original": "Οὐδὲ γὰρ χρείας ἕνεκεν τὸ τῶν δούλων ἐπεισήχθη γένος, ἐπεὶ μετὰ τοῦ Ἀδὰμ ἐπλάσθη ἂν καὶ δοῦλος· ἀλλ’ ἁμαρτίας ἐστὶ τὸ ἐπιτίμιον, καὶ τῆς παρακοῆς ἡ κόλασις. ... Ὥστε οὐκ ἀναγκαῖον τὸ δοῦλον ἔχειν· εἰ δὲ καὶ ἀναγκαῖον, ἕνα που μόνον, ἢ τὸ πολὺ δεύτερον. ... ἐπεὶ, εἰ κηδόμενος, μηδένα εἰς διακονίαν ἀπασχολήσῃς τὴν σὴν, ἀλλ’ ἀγοράσας, καὶ τέχνας διδάξας ὥστε ἀρκεῖν ἑαυτοῖς, ἄφες ἐλευθέρους.",
+      "context": "From the moral exhortation (section 5) of Homily 40 on 1 Corinthians, against keeping retinues of household slaves for show. Chrysostom still permits one or two servants and treats slavery as a penalty for sin; his counsel to buy in order to teach and free goes beyond mere regulation, but it is not a call to abolish the institution.",
+      "source": {
+        "book": "chrysostom-homiliae-1-corinthios",
+        "section": "16.237"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-19-15",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "19.15",
+      "lang": "la",
+      "answer": "accepted",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "This name was earned by guilt, not by nature. The origin of the word servi (slaves) in the Latin language is believed to be derived from this: those who could by the law of war have been killed were kept alive by the victors and became slaves (servi), named from being spared (a servando). The first cause of slavery, then, is sin, by which man was subjected to man by the bond of a shared condition; this does not happen except by God's judgment, with whom there is no injustice, and who knows how to distribute different punishments according to the merits of offenders. But no one, by the nature in which God first created man, is a slave either of man or of sin.",
+      "original": "Nomen itaque istud culpa meruit, non natura. Origo autem uocabuli seruorum in Latina lingua inde creditur ducta, quod hi, qui iure belli possent occidi, a uictoribus cum seruabantur serui fiebant, a seruando appellati ... Prima ergo seruitutis causa peccatum est, ut homo homini condicionis uinculo subderetur; quod non fit nisi Deo iudicante, apud quem non est iniquitas et nouit diuersas poenas meritis distribuere delinquentium. ... Nullus autem natura, in qua prius Deus hominem condidit, seruus est hominis aut peccati.",
+      "context": "Augustine denies that slavery is natural, against Aristotle: he treats it as a penal consequence of sin, imposed under God's just judgment, and he does not call for its abolition. The name servus, he says, preserves the memory that war captives who might lawfully have been killed were spared instead.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-19.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
     }
   ],
+  "gaps": [],
   "related": {
     "topics": [
       "slavery"
@@ -151,7 +197,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

@@ -50,8 +50,9 @@
       ]
     },
     {
-      "text": "Scholars compared copies on a large scale. Origen's Hexapla set translations side by side, and Augustine tells every reader to correct his copy first.",
+      "text": "Scholars compared copies on a large scale. Origen states plainly that the copies of the Gospels had come to differ greatly, by carelessness and by bold correction, and his Hexapla set translations side by side. Augustine tells every reader to correct his copy first.",
       "cites": [
+        "origen-matthew-15-14",
         "origen-africanus-hexapla",
         "augustine-christian-doctrine-2-14-21"
       ]
@@ -164,6 +165,27 @@
       "translation": "dossier"
     },
     {
+      "id": "origen-matthew-15-14",
+      "author": "Origen of Alexandria",
+      "year": 249,
+      "date": "c. 249",
+      "work": "Commentary on Matthew",
+      "locus": "15.14",
+      "lang": "grc",
+      "answer": "variants",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But as things are, it is clear that the difference among the copies has become great, whether from the carelessness of some scribes, or from the wicked daring of some in correcting what was written, or from those who, in correcting, added or took away what seemed good to them.",
+      "original": "νυνὶ δὲ δῆλον ὅτι πολλὴ γέγονεν ἡ τῶν ἀντιγράφων διαφορά, εἴτε ἀπὸ ῥᾳθυμίας τινῶν γραφέων, εἴτε ἀπὸ τόλμης τινῶν μοχθηρᾶς τῆς διορθώσεως τῶν γραφομένων, εἴτε καὶ ἀπὸ τῶν τὰ ἑαυτοῖς δοκοῦντα ἐν τῇ διορθώσει προστιθέντων ἢ ἀφαιρούντων.",
+      "context": "Origen is weighing why Matthew's list of commandments to the rich young man includes \"You shall love your neighbour as yourself\" where the other Gospels differ. The Matthew commentary witness in the store holds only books 10 and 11, which is why the passage was not found there; it stands in book 15, and the text here is Migne PG 13 from Khazarzar's second Matthew PDF (books 12-17), fetched for this dossier. Origen goes on: for the Old Testament he had healed the disagreement by judging from the other translations, the work of the Hexapla.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-origenes-pg-13-commentarium-in-evangelium-matthaei-libri-12-17.txt",
+        "edition": "Migne PG 13, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "augustine-christian-doctrine-2-14-21",
       "author": "Augustine of Hippo",
       "year": 397,
@@ -187,14 +209,6 @@
   ],
   "gaps": [
     {
-      "author": "Origen of Alexandria",
-      "work": "Commentary on Matthew 15.14",
-      "year": 249,
-      "why": "\"The differences among the copies have become great\", from careless or bold scribes. The passage was not found in the fetched Greek.",
-      "action": "search",
-      "source_hint": "Klostermann GCS 40 (1935, copyright) as note; Migne PG 13"
-    },
-    {
       "author": "Jerome",
       "work": "Preface to the Gospels, to Damasus",
       "year": 383,
@@ -210,7 +224,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

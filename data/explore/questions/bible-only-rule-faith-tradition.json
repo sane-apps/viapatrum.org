@@ -239,6 +239,27 @@
       "translation": "dossier"
     },
     {
+      "id": "augustine-fundamental-letter-5",
+      "author": "Augustine of Hippo",
+      "year": 397,
+      "date": "c. 397",
+      "work": "Against the Letter of Mani called Fundamental",
+      "locus": "5.6",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For my part, I would not believe the Gospel unless the authority of the Catholic Church moved me.",
+      "original": "ego uero euangelio non crederem, nisi me catholicae ecclesiae conmoueret auctoritas.",
+      "context": "Augustine turns the Manichaeans' own appeal to the Gospel back on them: he believed the Gospel on the preaching of the Catholic Church, so the authority that commended the Gospel to him is the same authority that tells him not to believe Mani. He asks why he should obey the Catholics when they say 'believe the Gospel' but not when they say 'do not believe the Manichaeans'. The locked library text spells the verb conmoueret.",
+      "source": {
+        "book": "augustine-against-the-fundamental-letter",
+        "section": "5"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "chrysostom-2-thessalonians-4",
       "author": "John Chrysostom",
       "year": 400,
@@ -256,6 +277,27 @@
       "source": {
         "book": "chrysostom-homiliae-2-thessalonicenses",
         "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "vincent-commonitorium-2-4",
+      "author": "Vincent of Lérins",
+      "year": 434,
+      "date": "434",
+      "work": "Commonitorium",
+      "locus": "2.4–5",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The canon of Scripture in itself fully and more than suffices for all things: why then must the authority of the Church's understanding be joined to it? Because plainly, on account of its very depth, not everyone takes sacred Scripture in one and the same sense, but one person interprets its words in one way and another in another, so that it seems almost as many opinions can be drawn out of it as there are people. ... Because of the great windings of error in its many forms, it is very necessary that the line of prophetic and apostolic interpretation be directed by the rule of the Church's catholic sense.",
+      "original": "scripturarum canon sibique ad omnia satis superque sufficiat, quid opus est ut ei ecclesiasticae intellegentiae iungatur auctoritas? Quia videlicet scripturam sacram pro ipsa sui altitudine non uno eodemque sensu universi accipiunt, sed eiusdem eloquia aliter atque aliter alius atque alius interpretatur, ut paene quot homines sunt, tot illinc sententiae erui posse videantur. ... multum necesse est propter tantos tam varii erroris anfractus, ut propheticae et apostolicae interpretationis linea secundum ecclesiastici et catholici sensus normam dirigatur.",
+      "context": "Vincent grants the objector's premise: the canon of Scripture is perfect (perfectus) and sufficient in itself. His point is about reading it. Because of its depth, Novatian, Sabellius, Donatus, Arius and the rest all expound it differently, so its interpretation must be ruled by the catholic sense of the Church, the test he states next: what has been believed everywhere, always and by all (2.6).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-commonitoriumofv00vinc.txt",
+        "edition": "Moxon, The Commonitorium of Vincent of Lerins (Cambridge, 1915)"
       },
       "translation": "dossier"
     },
@@ -323,24 +365,7 @@
       "translation": "published"
     }
   ],
-  "gaps": [
-    {
-      "author": "Vincent of Lérins",
-      "work": "Commonitory 2",
-      "year": 434,
-      "why": "Scripture is complete and sufficient, yet must be read by what has been believed everywhere, always and by all.",
-      "action": "intake",
-      "source_hint": "Migne PL 50; Moxon (1915)"
-    },
-    {
-      "author": "Augustine of Hippo",
-      "work": "Against the Letter of Mani called Fundamental 5",
-      "year": 397,
-      "why": "\"I would not believe the Gospel unless the authority of the Catholic Church moved me.\" The book is in the library but the line was not found.",
-      "action": "search",
-      "source_hint": "augustine-against-the-fundamental-letter"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "apostolic-tradition",

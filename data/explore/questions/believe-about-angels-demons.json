@@ -67,6 +67,27 @@
       "translation": "dossier"
     },
     {
+      "id": "justin-2apol-5-angels",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "Second Apology",
+      "locus": "5.1",
+      "lang": "grc",
+      "answer": "fallen",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But the angels, transgressing this appointed order, were overcome by intercourse with women and begot children, and these are the ones called demons.",
+      "original": "Οἱ δ᾽ ἄγγελοι, παραβάντες τήνδε τὴν τάξιν, γυναικῶν μίξεσιν ἡττήθησαν καὶ παῖδας ἐτέκνωσαν, οἵ εἰσιν οἱ λεγόμενοι δαίμονες.",
+      "context": "Justin is answering why the just suffer: God gave the care of human beings to angels, and the angels fell. The chapter numbering differs by edition: the passage is Second Apology 5 in the common numbering, chapter 4 in the library's edition.",
+      "source": {
+        "book": "justin-second-apology",
+        "section": "4"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "origen-on-prayer-11-angels",
       "author": "Origen of Alexandria",
       "year": 234,
@@ -133,14 +154,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Justin Martyr",
-      "work": "Second Apology 5",
-      "year": 155,
-      "why": "Angels' fall with women and the demons born from them.",
-      "action": "search",
-      "source_hint": "justin-second-apology"
-    },
     {
       "author": "Pseudo-Dionysius",
       "work": "Celestial Hierarchy",

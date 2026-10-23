@@ -1,248 +1,275 @@
 {
-  "id": "christ-one-nature-two-natures",
-  "number": 20,
-  "group": "christ",
-  "question": "Is Christ one nature or two natures in one person?",
-  "short": "One nature or two?",
-  "search": [
-    "chalcedon",
-    "two natures",
-    "hypostatic union",
-    "monophysite",
-    "miaphysite",
-    "nestorian",
-    "christology",
-    "oriental orthodox",
-    "eutyches"
-  ],
-  "answers": [
-    {
-      "id": "two",
-      "label": "Two natures, divine and human, in one person",
-      "short": "Two natures",
-      "tag": "Two"
-    },
-    {
-      "id": "one",
-      "label": "One incarnate nature of God the Word",
-      "short": "One nature",
-      "tag": "One"
-    },
-    {
-      "id": "east",
-      "label": "Two natures, each with its own reality, in one person (Church of the East)",
-      "short": "Two, with qnome",
-      "tag": "Qnome"
-    }
-  ],
-  "overview": [
-    {
-      "text": "Long before the councils, Tertullian spoke of Christ's twofold state, not confused but joined in one person. Gregory of Nazianzus put it as two natures, but not two sons.",
-      "cites": [
-        "tertullian-praxeas-27",
-        "gregory-nazianzus-letter-101-19"
-      ]
-    },
-    {
-      "text": "The fifth century split over how to say it. Chalcedon (451) taught two natures without confusion or division. The Oriental Orthodox kept Cyril's \"one incarnate nature\"; the Church of the East spoke of two natures with their own reality.",
-      "cites": [
-        "chalcedon-451",
-        "oriental-orthodox-one-nature",
-        "church-of-the-east-qnome"
-      ]
-    },
-    {
-      "text": "In recent decades, joint statements have found that these churches mean the same faith in different words.",
-      "cites": [
-        "catholic-assyrian-1994"
-      ]
-    }
-  ],
-  "quotes": [
-    {
-      "id": "tertullian-praxeas-27",
-      "author": "Tertullian",
-      "year": 213,
-      "date": "c. 213",
-      "work": "Against Praxeas",
-      "locus": "27.11",
-      "lang": "la",
-      "answer": "two",
-      "strength": "explicit",
-      "voice": "own",
-      "weight": "key",
-      "english": "We see a twofold state, not confused but joined in one person, God and the man Jesus. ... And so the property of each substance is kept safe, that the Spirit did its own things in him, that is, powers and works and signs, and the flesh underwent its own sufferings: hungry under the devil's temptation, thirsty with the Samaritan woman, weeping for Lazarus, troubled even to death, and at last dead.",
-      "original": "uidemus duplicem statum, non confusum ... sed coniunctum, in una persona, deum et hominem Iesum ... et adeo salua est utriusque proprietas substantiae, ut et spiritus res suas egerit in illo, id est uirtutes et opera et signa, et caro passiones suas functa sit.",
-      "context": "Over two centuries before Chalcedon, Tertullian already speaks of two substances, unconfused, in one person.",
-      "source": {
-        "book": "tertullian-against-praxeas",
-        "section": "27"
-      },
-      "translation": "dossier"
-    },
-    {
-      "id": "gregory-nazianzus-letter-101-19",
-      "author": "Gregory of Nazianzus",
-      "year": 382,
-      "date": "c. 382",
-      "work": "Letter 101, to Cledonius",
-      "locus": "101.19–20",
-      "lang": "grc",
-      "answer": "two",
-      "strength": "explicit",
-      "voice": "own",
-      "weight": "key",
-      "english": "There are two natures, God and man, since there are also soul and body; but not two sons, nor two gods. ... To put it briefly: the elements from which the Savior is made are one thing and another (since the invisible is not the same as the visible, nor the timeless as what is in time), but he is not one person and another. God forbid!",
-      "original": "Φύσεις μὲν γὰρ δύο Θεὸς καὶ ἄνθρωπος, ἐπεὶ καὶ ψυχὴ καὶ σῶμα· υἱοὶ δὲ οὐ δύο, οὐδὲ Θεοί. ... Καὶ εἰ δεῖ συντόμως εἰπεῖν, ἄλλο μὲν καὶ ἄλλο τὰ ἐξ ὧν ὁ Σωτὴρ (εἴπερ μὴ ταὐτὸν τὸ ἀόρατον τῷ ὁρατῷ καὶ τὸ ἄχρονον τῷ ὑπὸ χρόνον), οὐκ ἄλλος δὲ καὶ ἄλλος· μὴ γένοιτο.",
-      "context": "Gregory's \"two natures, one Son\" became the shared starting point of the later debate. Both Chalcedonians and their opponents quoted him.",
-      "source": {
-        "witness": "outputs/question-dossiers/witnesses/khaz-gregory-of-nazianzus-pg-35-38-epistulae-theologicae.txt",
-        "edition": "Migne PG 37, Khazarzar text"
-      },
-      "translation": "dossier"
-    },
-    {
-      "id": "chalcedon-451",
-      "author": "Council of Chalcedon",
-      "year": 451,
-      "date": "c. 451",
-      "work": "Definition of the Faith",
-      "locus": "Definition",
-      "lang": "en",
-      "answer": "two",
-      "strength": "explicit",
-      "voice": "council",
-      "weight": "key",
-      "english": "acknowledged in two natures which undergo no confusion, no change, no division, no separation",
-      "original": "acknowledged in two natures which undergo no confusion, no change, no division, no separation",
-      "context": "The council's definition. It was meant to rule out both merging the natures (Eutyches) and dividing Christ into two (as Nestorius was accused of doing).",
-      "source": {
-        "url": "https://www.papalencyclicals.net/councils/ecum04.htm",
-        "edition": "Council of Chalcedon, Definition of the Faith (451)"
-      },
-      "translation": "published"
-    },
-    {
-      "id": "westminster-1646-8-2",
-      "author": "Westminster Assembly",
-      "year": 1646,
-      "date": "1646",
-      "work": "Westminster Confession of Faith",
-      "locus": "8.2",
-      "lang": "en",
-      "answer": "two",
-      "strength": "explicit",
-      "voice": "confession",
-      "weight": "supporting",
-      "english": "So that two whole, perfect, and distinct natures, the Godhead and the manhood, were inseparably joined together in one person, without conversion, composition, or confusion.",
-      "original": "So that two whole, perfect, and distinct natures, the Godhead and the manhood, were inseparably joined together in one person, without conversion, composition, or confusion.",
-      "context": "Protestant confessions kept Chalcedon's wording.",
-      "source": {
-        "url": "https://www.opc.org/wcf.html",
-        "edition": "Westminster Confession of Faith (1646)"
-      },
-      "translation": "published"
-    },
-    {
-      "id": "oriental-orthodox-one-nature",
-      "author": "Ethiopian Orthodox Tewahedo Church",
-      "year": 1970,
-      "date": "1970",
-      "work": "The Faith of the Church",
-      "locus": "On the Incarnation",
-      "lang": "en",
-      "answer": "one",
-      "strength": "explicit",
-      "voice": "confession",
-      "weight": "key",
-      "english": "On this ground the Church of Ethiopia, with the other Oriental Orthodox Churches, affirms that Jesus Christ is not two natures, but one incarnate nature of God the Word.",
-      "original": "On this ground the Church of Ethiopia, with the other Oriental Orthodox Churches, affirms that Jesus Christ is not two natures, but one incarnate nature of God the Word.",
-      "context": "The Oriental Orthodox churches (Coptic, Ethiopian, Armenian, Syriac, Indian) follow Cyril's phrase \"one incarnate nature of God the Word\" and reject Chalcedon's \"in two natures\". They also reject any mixing of the natures.",
-      "source": {
-        "url": "http://www.ethiopianorthodox.org/english/dogma/faith.html",
-        "edition": "Ethiopian Orthodox Tewahedo Church, The Faith of the Church (text by V. C. Samuel, 1970)"
-      },
-      "translation": "published"
-    },
-    {
-      "id": "church-of-the-east-qnome",
-      "author": "Assyrian Church of the East",
-      "year": 2000,
-      "date": "present-day statement",
-      "work": "Diocese of California, FAQ",
-      "locus": "On Christology",
-      "lang": "en",
-      "answer": "east",
-      "strength": "explicit",
-      "voice": "confession",
-      "weight": "supporting",
-      "english": "The Church is diaphysite, and thus holds two natures in Christ—the Godhead or divine, and the human—which are preserved in their respective 'qnome', or substances. The two natures are united in the one Person of Filiation of the Son of God.",
-      "original": "The Church is diaphysite, and thus holds two natures in Christ—the Godhead or divine, and the human—which are preserved in their respective 'qnome', or substances. The two natures are united in the one Person of Filiation of the Son of God.",
-      "context": "The Church of the East did not accept Ephesus (431) and is often called \"Nestorian\", a name it rejects.",
-      "source": {
-        "url": "https://acoecalifornia.org/faq",
-        "edition": "Assyrian Church of the East, Diocese of California, FAQ"
-      },
-      "translation": "published"
-    },
-    {
-      "id": "catholic-assyrian-1994",
-      "author": "Catholic Church and Assyrian Church of the East",
-      "year": 1994,
-      "date": "1994",
-      "work": "Common Christological Declaration",
-      "locus": "Declaration text",
-      "lang": "en",
-      "answer": "east",
-      "strength": "explicit",
-      "voice": "confession",
-      "weight": "supporting",
-      "english": "In him has been preserved the difference of the natures of divinity and humanity, with all their properties, faculties and operations.",
-      "original": "In him has been preserved the difference of the natures of divinity and humanity, with all their properties, faculties and operations.",
-      "context": "In 1994 Rome and the Church of the East agreed that their different words express the same faith.",
-      "source": {
-        "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html",
-        "edition": "Common Christological Declaration, Catholic Church and Assyrian Church of the East (1994)"
-      },
-      "translation": "published"
-    }
-  ],
-  "gaps": [
-    {
-      "author": "Cyril of Alexandria",
-      "work": "Letters to Succensus; Second Letter to Nestorius",
-      "year": 433,
-      "why": "The phrase \"one incarnate nature of God the Word\" in Cyril's own words. His letters are not yet in the library.",
-      "action": "intake",
-      "source_hint": "Migne PG 77; Pusey (1875–1877)"
-    },
-    {
-      "author": "Leo I",
-      "work": "Tome to Flavian",
-      "year": 449,
-      "why": "\"Each form does what is proper to it in communion with the other.\" The Latin was not fetched.",
-      "action": "intake",
-      "source_hint": "Migne PL 54"
-    },
-    {
-      "author": "Severus of Antioch",
-      "work": "Letters",
-      "year": 520,
-      "why": "The leading non-Chalcedonian theologian. Survives in Syriac.",
-      "action": "intake",
-      "source_hint": "Brooks, Select Letters (1902–1904)"
-    }
-  ],
-  "related": {
-    "timeline": "christ-natures",
-    "topics": [
-      "two-natures-seed",
-      "unity-of-christ"
-    ]
+ "id": "christ-one-nature-two-natures",
+ "number": 20,
+ "group": "christ",
+ "question": "Is Christ one nature or two natures in one person?",
+ "short": "One nature or two?",
+ "search": [
+  "chalcedon",
+  "two natures",
+  "hypostatic union",
+  "monophysite",
+  "miaphysite",
+  "nestorian",
+  "christology",
+  "oriental orthodox",
+  "eutyches"
+ ],
+ "answers": [
+  {
+   "id": "two",
+   "label": "Two natures, divine and human, in one person",
+   "short": "Two natures",
+   "tag": "Two"
   },
-  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
-  "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+  {
+   "id": "one",
+   "label": "One incarnate nature of God the Word",
+   "short": "One nature",
+   "tag": "One"
+  },
+  {
+   "id": "east",
+   "label": "Two natures, each with its own reality, in one person (Church of the East)",
+   "short": "Two, with qnome",
+   "tag": "Qnome"
   }
+ ],
+ "overview": [
+  {
+   "text": "Long before the councils, Tertullian spoke of Christ's twofold state, not confused but joined in one person. Gregory of Nazianzus put it as two natures, but not two sons.",
+   "cites": [
+    "tertullian-praxeas-27",
+    "gregory-nazianzus-letter-101-19"
+   ]
+  },
+  {
+   "text": "The fifth century split over how to say it. Chalcedon (451) taught two natures without confusion or division. The Oriental Orthodox kept Cyril's \"one incarnate nature\"; the Church of the East spoke of two natures with their own reality.",
+   "cites": [
+    "chalcedon-451",
+    "oriental-orthodox-one-nature",
+    "church-of-the-east-qnome"
+   ]
+  },
+  {
+   "text": "Two centuries later the fight moved from natures to operations and wills. Sophronius of Jerusalem (634) held the Chalcedonian line: unconfused natures mean each nature keeps its own operation, since natures are known by their operations.",
+   "cites": [
+    "sophronius-synodical-letter-operations"
+   ]
+  },
+  {
+   "text": "In recent decades, joint statements have found that these churches mean the same faith in different words.",
+   "cites": [
+    "catholic-assyrian-1994"
+   ]
+  }
+ ],
+ "quotes": [
+  {
+   "id": "tertullian-praxeas-27",
+   "author": "Tertullian",
+   "year": 213,
+   "date": "c. 213",
+   "work": "Against Praxeas",
+   "locus": "27.11",
+   "lang": "la",
+   "answer": "two",
+   "strength": "explicit",
+   "voice": "own",
+   "weight": "key",
+   "english": "We see a twofold state, not confused but joined in one person, God and the man Jesus. ... And so the property of each substance is kept safe, that the Spirit did its own things in him, that is, powers and works and signs, and the flesh underwent its own sufferings: hungry under the devil's temptation, thirsty with the Samaritan woman, weeping for Lazarus, troubled even to death, and at last dead.",
+   "original": "uidemus duplicem statum, non confusum ... sed coniunctum, in una persona, deum et hominem Iesum ... et adeo salua est utriusque proprietas substantiae, ut et spiritus res suas egerit in illo, id est uirtutes et opera et signa, et caro passiones suas functa sit.",
+   "context": "Over two centuries before Chalcedon, Tertullian already speaks of two substances, unconfused, in one person.",
+   "source": {
+    "book": "tertullian-against-praxeas",
+    "section": "27"
+   },
+   "translation": "dossier"
+  },
+  {
+   "id": "gregory-nazianzus-letter-101-19",
+   "author": "Gregory of Nazianzus",
+   "year": 382,
+   "date": "c. 382",
+   "work": "Letter 101, to Cledonius",
+   "locus": "101.19–20",
+   "lang": "grc",
+   "answer": "two",
+   "strength": "explicit",
+   "voice": "own",
+   "weight": "key",
+   "english": "There are two natures, God and man, since there are also soul and body; but not two sons, nor two gods. ... To put it briefly: the elements from which the Savior is made are one thing and another (since the invisible is not the same as the visible, nor the timeless as what is in time), but he is not one person and another. God forbid!",
+   "original": "Φύσεις μὲν γὰρ δύο Θεὸς καὶ ἄνθρωπος, ἐπεὶ καὶ ψυχὴ καὶ σῶμα· υἱοὶ δὲ οὐ δύο, οὐδὲ Θεοί. ... Καὶ εἰ δεῖ συντόμως εἰπεῖν, ἄλλο μὲν καὶ ἄλλο τὰ ἐξ ὧν ὁ Σωτὴρ (εἴπερ μὴ ταὐτὸν τὸ ἀόρατον τῷ ὁρατῷ καὶ τὸ ἄχρονον τῷ ὑπὸ χρόνον), οὐκ ἄλλος δὲ καὶ ἄλλος· μὴ γένοιτο.",
+   "context": "Gregory's \"two natures, one Son\" became the shared starting point of the later debate. Both Chalcedonians and their opponents quoted him.",
+   "source": {
+    "witness": "outputs/question-dossiers/witnesses/khaz-gregory-of-nazianzus-pg-35-38-epistulae-theologicae.txt",
+    "edition": "Migne PG 37, Khazarzar text"
+   },
+   "translation": "dossier"
+  },
+  {
+   "id": "chalcedon-451",
+   "author": "Council of Chalcedon",
+   "year": 451,
+   "date": "c. 451",
+   "work": "Definition of the Faith",
+   "locus": "Definition",
+   "lang": "en",
+   "answer": "two",
+   "strength": "explicit",
+   "voice": "council",
+   "weight": "key",
+   "english": "acknowledged in two natures which undergo no confusion, no change, no division, no separation",
+   "original": "acknowledged in two natures which undergo no confusion, no change, no division, no separation",
+   "context": "The council's definition. It was meant to rule out both merging the natures (Eutyches) and dividing Christ into two (as Nestorius was accused of doing).",
+   "source": {
+    "url": "https://www.papalencyclicals.net/councils/ecum04.htm",
+    "edition": "Council of Chalcedon, Definition of the Faith (451)"
+   },
+   "translation": "published"
+  },
+  {
+   "id": "sophronius-synodical-letter-operations",
+   "author": "Sophronius of Jerusalem",
+   "year": 634,
+   "date": "634",
+   "work": "Synodical Letter",
+   "locus": "PG 87.3, cols 3172B-C",
+   "lang": "grc",
+   "answer": "two",
+   "strength": "explicit",
+   "voice": "own",
+   "weight": "key",
+   "english": "Just as, then, we believe in the union of each of the two essences and natures (the essences and natures from which the union in Christ has come to be for us without confusion, and has made him the one Christ and Son, wholly God, and the same one wholly man), so too we confess the natural operation of each, lest we confuse the natures that were united without confusion; since, according to those who are skilled in such matters, natures are known from their operations, and from their operations alone.",
+   "original": "Ὥσπερ οὖν τὴν ἑκατέρας οὐσίας καὶ φύσεως, ἐξ ὦν ἡμῖν ἀσυγχύτως ἐπὶ Χριστοῦ γέγονεν ἡ ἕνωσις, καὶ τὸν ἕνα Χριστὸν καὶ Υἱὸν ἀπετέλεσεν ὅλον Θεόν, ὅλον τὸν αὐτὸν πιστεύομεν ἄνθρωπον, ἑκατέραν φυσικὴν ὁμολογοῦμεν ἐνέργειαν, ἵνα μὴ τὰς ἀσυγχύτως ἑνωθείσας φύσεις συγχέωμεν, εἴπερ ἐκ τῶν ἐνεργειῶν καὶ μόνων κατὰ τοὺς τὰ τοιαῦτα δεινοὺς αἱ φύσεις γνωρίζονται.",
+   "context": "Writing to Sergius of Constantinople in 634, Sophronius refuses the compromise of one “composite” operation: because the two natures remain unconfused in the one Christ, each keeps its own natural operation — the argument the Sixth Ecumenical Council (680–681) later vindicated for Christ’s two wills as well. The Greek was transcribed from the page images of Migne PG 87.3 for the Via Patrum library (2026); the scan’s Greek OCR is unreliable and was not used.",
+   "source": {
+    "book": "sophronius-jerusalem-synodical-letter",
+    "section": "2"
+   },
+   "translation": "own"
+  },
+  {
+   "id": "westminster-1646-8-2",
+   "author": "Westminster Assembly",
+   "year": 1646,
+   "date": "1646",
+   "work": "Westminster Confession of Faith",
+   "locus": "8.2",
+   "lang": "en",
+   "answer": "two",
+   "strength": "explicit",
+   "voice": "confession",
+   "weight": "supporting",
+   "english": "So that two whole, perfect, and distinct natures, the Godhead and the manhood, were inseparably joined together in one person, without conversion, composition, or confusion.",
+   "original": "So that two whole, perfect, and distinct natures, the Godhead and the manhood, were inseparably joined together in one person, without conversion, composition, or confusion.",
+   "context": "Protestant confessions kept Chalcedon's wording.",
+   "source": {
+    "url": "https://www.opc.org/wcf.html",
+    "edition": "Westminster Confession of Faith (1646)"
+   },
+   "translation": "published"
+  },
+  {
+   "id": "oriental-orthodox-one-nature",
+   "author": "Ethiopian Orthodox Tewahedo Church",
+   "year": 1970,
+   "date": "1970",
+   "work": "The Faith of the Church",
+   "locus": "On the Incarnation",
+   "lang": "en",
+   "answer": "one",
+   "strength": "explicit",
+   "voice": "confession",
+   "weight": "key",
+   "english": "On this ground the Church of Ethiopia, with the other Oriental Orthodox Churches, affirms that Jesus Christ is not two natures, but one incarnate nature of God the Word.",
+   "original": "On this ground the Church of Ethiopia, with the other Oriental Orthodox Churches, affirms that Jesus Christ is not two natures, but one incarnate nature of God the Word.",
+   "context": "The Oriental Orthodox churches (Coptic, Ethiopian, Armenian, Syriac, Indian) follow Cyril's phrase \"one incarnate nature of God the Word\" and reject Chalcedon's \"in two natures\". They also reject any mixing of the natures.",
+   "source": {
+    "url": "http://www.ethiopianorthodox.org/english/dogma/faith.html",
+    "edition": "Ethiopian Orthodox Tewahedo Church, The Faith of the Church (text by V. C. Samuel, 1970)"
+   },
+   "translation": "published"
+  },
+  {
+   "id": "church-of-the-east-qnome",
+   "author": "Assyrian Church of the East",
+   "year": 2000,
+   "date": "present-day statement",
+   "work": "Diocese of California, FAQ",
+   "locus": "On Christology",
+   "lang": "en",
+   "answer": "east",
+   "strength": "explicit",
+   "voice": "confession",
+   "weight": "supporting",
+   "english": "The Church is diaphysite, and thus holds two natures in Christ—the Godhead or divine, and the human—which are preserved in their respective 'qnome', or substances. The two natures are united in the one Person of Filiation of the Son of God.",
+   "original": "The Church is diaphysite, and thus holds two natures in Christ—the Godhead or divine, and the human—which are preserved in their respective 'qnome', or substances. The two natures are united in the one Person of Filiation of the Son of God.",
+   "context": "The Church of the East did not accept Ephesus (431) and is often called \"Nestorian\", a name it rejects.",
+   "source": {
+    "url": "https://acoecalifornia.org/faq",
+    "edition": "Assyrian Church of the East, Diocese of California, FAQ"
+   },
+   "translation": "published"
+  },
+  {
+   "id": "catholic-assyrian-1994",
+   "author": "Catholic Church and Assyrian Church of the East",
+   "year": 1994,
+   "date": "1994",
+   "work": "Common Christological Declaration",
+   "locus": "Declaration text",
+   "lang": "en",
+   "answer": "east",
+   "strength": "explicit",
+   "voice": "confession",
+   "weight": "supporting",
+   "english": "In him has been preserved the difference of the natures of divinity and humanity, with all their properties, faculties and operations.",
+   "original": "In him has been preserved the difference of the natures of divinity and humanity, with all their properties, faculties and operations.",
+   "context": "In 1994 Rome and the Church of the East agreed that their different words express the same faith.",
+   "source": {
+    "url": "https://www.vatican.va/content/john-paul-ii/en/speeches/1994/november/documents/hf_jp-ii_spe_19941111_dichiarazione-cristologica.html",
+    "edition": "Common Christological Declaration, Catholic Church and Assyrian Church of the East (1994)"
+   },
+   "translation": "published"
+  }
+ ],
+ "gaps": [
+  {
+   "author": "Cyril of Alexandria",
+   "work": "Letters to Succensus; Second Letter to Nestorius",
+   "year": 433,
+   "why": "The phrase \"one incarnate nature of God the Word\" in Cyril's own words. His letters are not yet in the library.",
+   "action": "intake",
+   "source_hint": "Migne PG 77; Pusey (1875–1877)"
+  },
+  {
+   "author": "Leo I",
+   "work": "Tome to Flavian",
+   "year": 449,
+   "why": "\"Each form does what is proper to it in communion with the other.\" The Latin was not fetched.",
+   "action": "intake",
+   "source_hint": "Migne PL 54"
+  },
+  {
+   "author": "Severus of Antioch",
+   "work": "Letters",
+   "year": 520,
+   "why": "The leading non-Chalcedonian theologian. Survives in Syriac.",
+   "action": "intake",
+   "source_hint": "Brooks, Select Letters (1902–1904)"
+  }
+ ],
+ "related": {
+  "timeline": "christ-natures",
+  "topics": [
+   "two-natures-seed",
+   "unity-of-christ"
+  ]
+ },
+ "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+ "reviewed": {
+  "by": "Claude (Opus 5.5)",
+  "at": "2026-10-13"
+ }
 }

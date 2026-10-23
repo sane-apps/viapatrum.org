@@ -55,6 +55,48 @@
   ],
   "quotes": [
     {
+      "id": "didache-11-prophets",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "11",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Every apostle who comes to you is to be received as the Lord. But he must not stay more than one day; if there is need, a second as well. If he stays three days, he is a false prophet. ... Not everyone who speaks in the Spirit is a prophet, but only one who has the ways of the Lord. By their ways, then, the false prophet and the prophet will be known. ... Any prophet who teaches the truth but does not do what he teaches is a false prophet. ... If anyone says in the Spirit, 'Give me money' or anything else, do not listen to him.",
+      "original": "πᾶς δὲ ἀπόστολος ἐρχόμενος πρὸς ὑμᾶς δεχθήτω ὡς κύριος: οὐ μενεῖ δὲ εἰ μὴ ἡμέραν μίαν: ἐὰν δὲ ᾖ χρεία, καὶ τὴν ἄλλην: τρεῖς δὲ ἐὰν μείνῃ, ψευδοπροφήτης ἐστίν. ... οὐ πᾶς δὲ ὁ λαλῶν ἐν πνεύματι προφήτης ἐστίν, ἀλλ’ ἐὰν ἔχῃ τοὺς τρόπους κυρίου. ἀπὸ οὖν τῶν τρόπων γνωσθήσεται ὁ ψευδοπροφήτης καὶ ὁ προφήτης. ... πᾶς δὲ προφήτης διδάσκων τὴν ἀλήθειαν, εἰ ἃ διδάσκει οὐ ποιεῖ, ψευδοπροφήτης ἐστί. ... ὃς δ’ ἂν εἴπῃ ἐν πνεύματι: δός μοι ἀργύρια ἢ ἕτερά τινα, οὐκ ἀκούσεσθε αὐτοῦ",
+      "context": "About 100: travelling apostles and prophets are part of ordinary church life, and they are tested by conduct, not by their claims: how long they stay, whether they ask for money for themselves, whether they practice what they teach. A prophet speaking in the Spirit is not to be tested on the spot (11.7); if he asks for help for others in need, no one is to judge him (11.12).",
+      "source": {
+        "book": "didache",
+        "section": "11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "didache-13-prophets",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "13",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Every true prophet who wishes to settle among you deserves his food. ... So take the firstfruits of the produce of the winepress and the threshing floor, of cattle and sheep, and give the firstfruits to the prophets, for they are your high priests.",
+      "original": "Πᾶς δὲ προφήτης ἀληθινὸς θέλων καθῆσθαι πρὸς ὑμᾶς ἄξιός ἐστι τῆς τροφῆς αὐτοῦ. ... πᾶσαν οὖν ἀπαρχὴν γεννημάτων ληνοῦ καὶ ἅλωνος, βοῶν τε καὶ προβάτων λαβὼν δώσεις τὴν ἀπαρχὴν τοῖς προφήταις: αὐτοὶ γάρ εἰσιν οἱ ἀρχιερεῖς ὑμῶν.",
+      "context": "Settled prophets are supported like workers and true teachers (13.1-2), from the firstfruits of produce, animals, money and clothing, as the community's 'high priests'. If there is no prophet, the firstfruits go to the poor (13.4). Chapter 12 applies the same testing to any Christian traveller who wants to settle: he must work, or he is a 'Christ-monger'.",
+      "source": {
+        "book": "didache",
+        "section": "13"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "justin-dialogue-82",
       "author": "Justin Martyr",
       "year": 160,
@@ -210,14 +252,6 @@
       "why": "Tongues were a sign for the beginning; yet miracles still happen at the martyrs' shrines.",
       "action": "intake",
       "source_hint": "Migne PL 35; Dombart (Teubner)"
-    },
-    {
-      "author": "Didache",
-      "work": "Chapters 11–13 on prophets",
-      "year": 100,
-      "why": "How to test traveling prophets. In the library.",
-      "action": "search",
-      "source_hint": "didache 11"
     }
   ],
   "related": {

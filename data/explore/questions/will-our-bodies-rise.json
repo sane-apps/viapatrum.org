@@ -40,6 +40,14 @@
         "athenagoras-resurrection-3-b",
         "tertullian-resurrection-63-b"
       ]
+    },
+    {
+      "text": "Origen and Methodius then argued over what rises: Origen kept the body's form while its matter flows away, and Methodius answered that God melts his statue down only to cast the same work again. Augustine filled in the picture: every body restored whole, at the measure of its youth, with no deformity left.",
+      "cites": [
+        "origen-principiis-2-10",
+        "methodius-resurrection-statue",
+        "augustine-city-of-god-22-20"
+      ]
     }
   ],
   "quotes": [
@@ -126,32 +134,87 @@
         "section": "63"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "origen-principiis-2-10",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "2.10",
+      "lang": "la",
+      "answer": "spiritual",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Our bodies are to be thought of as falling into the earth like a grain. There is a principle lodged in them that holds the bodily substance together. However dead the bodies may be, and corrupted and scattered, at God's word that same principle, which is always kept safe in the body's substance, will raise them from the earth and restore and repair them, just as the power in a grain of wheat, after its corruption and death, repairs and restores the grain into the body of the stalk and the ear.",
+      "original": "Ita namque etiam nostra corpora velut granum cadere in terram putanda sunt: quibus insita ratio ea, quae substantiam continet corporalem, quamvis emortua fuerint corpora, et corrupta atque dispersa, verbo tamen Dei ratio illa ipsa, quae semper in substantia corporis salva est, erigat ea de terra, et restituat ac reparet, sicut ea virtus, quae est in grano frumenti, post corruptionem ejus et mortem reparat, ac restituit granum in culmi corpus et spicae.",
+      "context": "On First Principles 2.10, in Rufinus's Latin (the Greek of this chapter survives only in fragments, some of them quoted by Methodius against him). The abiding ratio, the body's form principle (in the Greek fragments its eidos), is what makes the risen body the same body, though Origen insists it rises spiritual, changed in glory. Quoted from the Lommatzsch witness in the store; the passage still wants a locked library section.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis Opera Omnia, tomus XXI (Berlin, 1847), De Principiis (Rufinus's Latin)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "methodius-resurrection-statue",
+      "author": "Methodius of Olympus",
+      "year": 300,
+      "date": "c. 300",
+      "work": "On the Resurrection",
+      "locus": "1.35-36 (quoted in Epiphanius, Panarion 64)",
+      "lang": "grc",
+      "answer": "same-flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "God, it seems to me, has arranged the same for us. He saw man, the fairest of his works, ruined by the envious plots of spite, and in his love for mankind he would not leave him so, but dissolved him back into matter, so that in the remoulding everything faulty in him would melt away and vanish. ... What the statue's being melted down is there, that here is the body's dying and dissolution; and what the matter's being shaped again and adorned is there, that here is rising again.",
+      "original": "ταὐτὸν γὰρ φαίνεται δή μοι καὶ ἐφ' ἡμῶν ὁ θεὸς διῳκονομηκέναι. τὸν γὰρ ἄνθρωπον, τὸ εὐπρεπέστατον ἑαυτοῦ τέχνημα, βασκάνοις ἐπιβουλαῖς φθόνου κεκακωμένον ἰδὼν οὐκ ἠνέσχετο τοιοῦτον καταλεῖψαι φιλάνθρωπος ὤν, ἀλλὰ διέλυσεν εἰς ὕλην πάλιν, ἵνα διὰ τῆς ἀναπλάσεως ἐκτακῶσι καὶ ἐξαφανισθῶσι πάντα τὰ ἐν αὐτῷ μωμήματα. ... τὸ γὰρ ἐκεῖ ἀναχωνευθῆναι τὸν ἀνδριάντα, τοῦτο ἐνταῦθα τὸ ἀποθανεῖν καὶ διαλυθῆναι τὸ σῶμα, τὸ δὲ ἐκεῖ ἀναμορφοποιηθῆναι τὴν ὕλην ἢ ἀνακοσμηθῆναι, τοῦτο ἐνταῦθα τὸ ἀναστῆναι",
+      "context": "Methodius answers Origen in a dialogue (the orthodox speaker is Eubulius). His image is a gold statue, marred by envy, melted down by its maker and cast again in its own form: dissolution is not loss, and the same work comes back without its blemishes. On the Resurrection survives complete only in an Old Slavonic translation; long Greek extracts, this one included, survive because Epiphanius quoted them against the Origenists in Panarion 64 (Migne PG 42). The library's Methodius texts are partly OCR and do not hold this passage.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 42, Panarion 64 (Methodius, On the Resurrection, quoted)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-22-20",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "22.20-21",
+      "lang": "la",
+      "answer": "same-flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The sum of it is this: in the resurrection of the flesh, the size of our bodies will for ever have the measures that the pattern of youth, implanted in each body and still to be perfected or already perfect, once had, with fitting beauty kept in the proportions of every member. ... Only let there be no deformity, no weakness, no slowness and no corruption. ... Whatever has perished from living bodies, or from corpses after death, will be restored.",
+      "original": "in resurrectione carnis in aeternum eas mensuras habeat corporum magnitudo, quas habebat perficiendae sive perfectae cuiusque indita corpori ratio iuventutis, in membrorum quoque omnium modulis congruo decore servato ... tantum absit omnis deformitas, omnis infirmitas, omnis tarditas omnisque corruptio ... Restituetur ergo quidquid de corporibus vivis vel post mortem de cadaveribus periit",
+      "context": "Augustine's last book works through the objectors' questions one by one: aborted children, bodies eaten or scattered, hair and nails, size and age (22.12-21). His settled answer: nothing of the body is lost to its Maker, defects are removed rather than preserved, and all rise at the measure of grown youth, about the age Christ reached.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-22.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
     {
       "author": "Origen of Alexandria",
-      "work": "On First Principles 2.10–11; fragment in Methodius",
+      "work": "On First Principles 2.10-11; fragment in Methodius",
       "year": 225,
-      "why": "The risen body as spiritual, keeping the body's form (eidos) but not its matter.",
+      "why": "Quoted from the Lommatzsch witness: origen-principiis-2-10. Still open: the library's origen-principiis book holds working summaries, not the text; lock the real De Principiis 2.10-11 text (Koetschau, GCS 22, 1913) as library sections.",
       "action": "relock-source",
-      "source_hint": "Lommatzsch vol. 21; Methodius, On the Resurrection (Bonwetsch, GCS 27)"
+      "source_hint": "Koetschau, GCS 22 (1913); Lommatzsch vol. 21 (quoted); Methodius, On the Resurrection (Bonwetsch, GCS 27)"
     },
     {
       "author": "Methodius of Olympus",
       "work": "On the Resurrection",
       "year": 300,
-      "why": "Against Origen: the same flesh rises. The library's Methodius texts are partly OCR.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/greek/methodius_tlg002.xml"
-    },
-    {
-      "author": "Augustine of Hippo",
-      "work": "City of God 22.12–21",
-      "year": 426,
-      "why": "What risen bodies will be like: age, size, beauty.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-22.txt"
+      "why": "Quoted from the Greek extract Epiphanius preserved in Panarion 64: methodius-resurrection-statue. Still open: On the Resurrection has no library book of its own; the complete text survives in Old Slavonic (Bonwetsch, GCS 27, 1917) and the library's Methodius files do not hold this passage.",
+      "action": "intake",
+      "source_hint": "Bonwetsch, GCS 27 (1917); Epiphanius, Panarion 64 (PG 42, quoted)"
     }
   ],
   "related": {
@@ -161,7 +224,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

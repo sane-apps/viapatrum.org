@@ -169,6 +169,29 @@
       "translation": "dossier"
     },
     {
+      "id": "trent-1551-penance-canon-6",
+      "author": "Council of Trent",
+      "year": 1551,
+      "date": "1551",
+      "work": "Session 14, Canons on Penance",
+      "locus": "Canon 6",
+      "lang": "la",
+      "answer": "priest",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone denies that sacramental confession was either instituted by divine law or is necessary for salvation by divine law; or says that the way of confessing secretly to a priest alone, which the Catholic Church has always observed from the beginning and observes now, is foreign to the institution and command of Christ, and is a human invention: let him be anathema.",
+      "original": "Si quis negaverit, confessionem sacramentalem vel institutam vel ad salutem necessariam esse iure divino; aut dixerit, modum secrete confitendi soli sacerdoti, quem Ecclesia catholica ab initio semper observavit et observat, alienum esse ab institutione et mandato Christi, et inventum esse humanum: A. S.",
+      "context": "Trent answers the Reformation: private confession to a priest is not a medieval invention but Christ's ordinance; the next canon (7) adds that all mortal sins must be confessed, by divine law.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 916"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "westminster-1646-15-6",
       "author": "Westminster Assembly",
       "year": 1646,
@@ -198,14 +221,6 @@
       "why": "Secret confession to the priest is enough; public reading of sins is forbidden.",
       "action": "intake",
       "source_hint": "Migne PL 54"
-    },
-    {
-      "author": "Council of Trent",
-      "work": "Session 14, canons on penance",
-      "year": 1551,
-      "why": "Confession of all mortal sins to a priest by divine law. Not found in the Denzinger scan's text.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 911–925)"
     },
     {
       "author": "Augsburg Confession",

@@ -44,9 +44,22 @@
       ]
     },
     {
-      "text": "The Church did not praise those who handed themselves over: the Smyrnaeans warn by the example of Quintus, who did so and then gave way.",
+      "text": "The Church did not praise those who handed themselves over: the Smyrnaeans warn by the example of Quintus, who did so and then gave way, and Clement calls the man who presents himself a partner in the persecutor's guilt.",
       "cites": [
-        "martyrdom-polycarp-4"
+        "martyrdom-polycarp-4",
+        "clement-stromata-4-10"
+      ]
+    },
+    {
+      "text": "Origen, writing to friends already under arrest, held up Eleazar and the Maccabean brothers, who would not escape death even by a pretended compliance.",
+      "cites": [
+        "origen-exhortation-22-eleazar"
+      ]
+    },
+    {
+      "text": "Not everyone refused: Cyprian records many who ran to sacrifice before they were even arrested, and his treatise wrestles with how the fallen could be received back.",
+      "cites": [
+        "cyprian-on-the-lapsed-8"
       ]
     }
   ],
@@ -136,6 +149,69 @@
       "translation": "dossier"
     },
     {
+      "id": "clement-stromata-4-10",
+      "author": "Clement of Alexandria",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Stromata (Miscellanies)",
+      "locus": "4.10",
+      "lang": "grc",
+      "answer": "not-seek",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But if the man who kills a man of God sins against God, the man who brings himself before the tribunal is guilty of his killer's act as well. Such is the man who does not draw back from persecution, but hands himself over to be caught through rashness. As far as it rests with him, he becomes a partner in the persecutor's wickedness.",
+      "original": "εἰ δὲ ὁ ἀναιρῶν ἄνθρωπον θεοῦ εἰς θεὸν ἁμαρτάνει, καὶ τοῦ ἀποκτειννύντος αὐτὸν ἔνοχος καθίσταται ὁ ἑαυτὸν προσάγων τῷ δικαστηρίῳ· οὗτος δ’ ἂν εἴη ὁ μὴ περιστελλόμενος τὸν διωγμόν, ἁλώσιμον διὰ θράσος παρέχων ἑαυτόν. οὗτός ἐστι τὸ ὅσον ἐφ’ ἑαυτῷ ὁ συνεργὸς γινόμενος τῇ τοῦ διώκοντος πονηρίᾳ",
+      "context": "Clement is explaining the command to flee to another city (Matthew 10:23). Flight is permitted and even required; volunteering for arrest makes the Christian share the guilt of the killing, and real martyrdom for Clement is a whole life of witness, not a rushed death.",
+      "source": {
+        "book": "clement-alexandria-stromata",
+        "section": "4.10"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-exhortation-22-eleazar",
+      "author": "Origen of Alexandria",
+      "year": 235,
+      "date": "235",
+      "work": "Exhortation to Martyrdom",
+      "locus": "22",
+      "lang": "grc",
+      "answer": "witness",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "key",
+      "english": "For even if I escape for the present the punishment inflicted by men, I shall not escape the hands of the Almighty, either alive or dead.",
+      "original": "εἰ γὰρ καὶ ἐπὶ τοῦ παρόντος ἐξελοῦμαι τὴν ἐξ ἀνθρώπων τιμωρίαν, ἀλλὰ τὰς τοῦ παντοχράτορος χεῖρας οὔτε ζῶν οὔτε ϑανὼν ἐχφεύξομαι.",
+      "context": "Origen, writing to Ambrose and Protoctetus under arrest in the persecution of Maximinus, quotes the words of Eleazar in 2 Maccabees 6. Eleazar refused even a pretended eating of pork arranged to save him; Origen sets him and the Maccabean brothers before his friends as the pattern of a death chosen rather than a feigned denial.",
+      "source": {
+        "book": "origen-prayer-martyrdom",
+        "section": "22"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-on-the-lapsed-8",
+      "author": "Cyprian of Carthage",
+      "year": 251,
+      "date": "251",
+      "work": "On the Lapsed",
+      "locus": "8",
+      "lang": "la",
+      "answer": "witness",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "They did not even wait to be arrested and taken up, to be questioned and then deny Christ. Many were defeated before the battle line, laid low without a struggle, and did not leave themselves even this much, that they should seem to have sacrificed to the idols unwillingly. Of their own accord they ran to the market place and hurried willingly to their death, as if it were something they had long desired, as if they were embracing an opportunity given to them that they would gladly have chosen.",
+      "original": "non expectauerunt saltim ut ascenderent adprehensi, ut interrogati negarent. ante aciem multi uicti, sine congressione prostrati nec hoc sibi reliquerunt ut sacrificare idolis uiderentur inuiti. ultro ad forum currere, ad mortem sponte properare, quasi hoc olim cuperent, quasi amplecterentur occasionem datam quam libenter optassent.",
+      "context": "The honest counterweight in this dossier. After the Decian edict of 250, Cyprian says many Christians sacrificed at once, before any arrest, questioning or pressure, and others bought certificates; his treatise asks how such fallen Christians can be restored, and it treats their haste as proof the fall was unforced.",
+      "source": {
+        "book": "cyprian-on-the-lapsed",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "martyrdom-polycarp-4",
       "author": "Martyrdom of Polycarp",
       "year": 156,
@@ -157,32 +233,7 @@
       "translation": "dossier"
     }
   ],
-  "gaps": [
-    {
-      "author": "Origen of Alexandria",
-      "work": "Exhortation to Martyrdom",
-      "year": 235,
-      "why": "The theology of martyrdom. In the library with On Prayer; to be added.",
-      "action": "search",
-      "source_hint": "origen-prayer-martyrdom"
-    },
-    {
-      "author": "Clement of Alexandria",
-      "work": "Stromata 4.10",
-      "year": 200,
-      "why": "Against rushing into martyrdom.",
-      "action": "search",
-      "source_hint": "clement-alexandria-stromata 4.10"
-    },
-    {
-      "author": "Cyprian of Carthage",
-      "work": "On the Lapsed 8–9",
-      "year": 251,
-      "why": "Those who sacrificed or bought certificates under Decius.",
-      "action": "search",
-      "source_hint": "cyprian-on-the-lapsed"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "martyrdom"
@@ -190,7 +241,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

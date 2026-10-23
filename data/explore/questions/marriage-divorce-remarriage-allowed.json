@@ -47,7 +47,9 @@
     {
       "text": "The Orthodox allow a second marriage in some cases as a concession, and the Reformed allow the innocent party to remarry after adultery or desertion.",
       "cites": [
-        "westminster-1646-24-5"
+        "westminster-1646-24-5",
+        "origen-matthew-14-23",
+        "basil-letter-188-canon-9"
       ]
     }
   ],
@@ -112,6 +114,52 @@
       "source": {
         "book": "athenagoras-plea",
         "section": "33"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-matthew-14-23",
+      "author": "Origen of Alexandria",
+      "year": 246,
+      "date": "c. 246",
+      "work": "Commentary on Matthew",
+      "locus": "14.23",
+      "lang": "grc",
+      "answer": "no-remarriage",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But now too, contrary to what is written, some of the rulers of the church have permitted a woman to marry while her husband is living... 'A wife is bound for as long as her husband lives'... and a woman married to another man while her husband lives 'will be called an adulteress'.",
+      "original": "ἀλλὰ καὶ νῦν παρὰ τὸ γεγραμμένον τινὲς καὶ τῶν προεστώτων τῆς ἐκκλησίας ἐπέτρεψαν γαμεῖν γυναικὶ ζῶντος τοῦ ἀνδρός ... Δέδεται γυνὴ ἐφ’ ὅσον χρόνον ζῇ ὁ ἀνὴρ αὐτῆς ... ἡ γαμηθεῖσα ἑτέρῳ ἀνδρὶ ζῶντος τοῦ ἀνδρὸς μοιχαλὶς χρηματίσει",
+      "context": "Origen reports the concession; he does not praise it. He adds that it was 'not altogether without reason', granted 'in comparison with greater evils', against what was ordained from the beginning. That sentence is too broken in the PG 13 scan to quote word for word, so it is reported here rather than quoted. The Greek witness named for this gap in the store (Khazarzar PG 11-17) in fact contains only Books 10 and 11 of the commentary, so the words quoted are read from the PG 13 scan text (poor OCR, columns interleaved), saved as a witness in Wave 3.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-013.txt",
+        "ia": "patrologiae_cursus_completus_gr_vol_013",
+        "ocr_poor": true,
+        "edition": "Migne PG 13 (scan text)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-letter-188-canon-9",
+      "author": "Basil of Caesarea",
+      "year": 374,
+      "date": "374",
+      "work": "Letter 188, to Amphilochius (First Canonical Letter)",
+      "locus": "Canon 9",
+      "lang": "grc",
+      "answer": "no-remarriage",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The Lord's ruling, followed through in its sense, fits men and women equally: no one may leave a marriage except for unchastity. But custom does not run that way. For women we find much strictness. ... Custom also orders wives to keep husbands who are adulterers and live in fornication. So a wife who leaves her husband and goes to another man is an adulteress; but the husband who was left is pardonable, and a woman who lives with such a man is not condemned.",
+      "original": "Ἡ δὲ τοῦ Κυρίου ἀπόφασις κατὰ μὲν τὴν τῆς ἐννοίας ἀκολουθίαν ἐξ ἴσου καὶ ἀνδράσι καὶ γυναιξὶν ἁρμόζει περὶ τοῦ μὴ ἐξεῖναι γάμου ἐξίστασθαι παρεκτὸς λόγου πορνείας. ... Ἡ δὲ συνήθεια οὐχ οὕτως ἔχει. Ἡ δὲ συνήθεια καὶ μοιχεύοντας ἄνδρας καὶ ἐν πορνείαις ὄντας κατέχεσθαι ὑπὸ γυναικῶν προστάσσει. ... Ὥστε ἡ καταλιποῦσα μοιχαλίς ἐστιν, εἰ ἐπ’ ἄλλον ἦλθεν ἄνδρα. ὁ δὲ καταλειφθεὶς συγγνωστός ἐστι, καὶ ἡ συνοικοῦσα τῷ τοιούτῳ οὐ κατακρίνεται.",
+      "context": "Basil states the Lord's rule as equal for both sexes, then records that church custom (synetheia) held wives to a stricter account than husbands, and let a deserted husband's new union pass without condemnation. A canon of discipline describing practice, and an early root of the East's more lenient custom. Quoted from the PG 32 scan (poor OCR).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true,
+        "edition": "Migne PG 32 (scan text)"
       },
       "translation": "dossier"
     },
@@ -183,28 +231,12 @@
   ],
   "gaps": [
     {
-      "author": "Origen of Alexandria",
-      "work": "Commentary on Matthew 14.23",
-      "year": 246,
-      "why": "Some bishops, against Scripture, allowed a woman to remarry while her husband lived, to avoid worse.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-17-commentarium-in-evangelium-matthaei.txt"
-    },
-    {
-      "author": "Basil of Caesarea",
-      "work": "Letter 188, canon 9",
-      "year": 374,
-      "why": "Eastern custom treating husband and wife differently.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
-    },
-    {
       "author": "Council of Carthage",
       "work": "Canon 102 (407)",
       "year": 407,
-      "why": "Neither divorced spouse may remarry; an imperial law should be sought.",
+      "why": "Neither divorced spouse may remarry; an imperial law should be sought. Still not quoted: no verifiable text on the mini. Tried in Wave 3 (Oct 2026): the Bruns witness file in the store is a 401 error page (165 bytes), and the archive.org Bruns item itself returns 401; the library's Carthage 419 book (PL 56 Italian form) does not contain this canon (searched dimissus, coniungantur, reconcilientur: absent; its canon 102 concerns widows on the church's stipend); Munier's CCSL 149 text is copyrighted.",
       "action": "search",
-      "source_hint": "council-of-carthage-419-canons"
+      "source_hint": "Bruns (1839), vol. 1, African code; needs an open scan of Bruns or of PL 56/67"
     }
   ],
   "related": {

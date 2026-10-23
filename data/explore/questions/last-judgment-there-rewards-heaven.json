@@ -38,7 +38,21 @@
     {
       "text": "Irenaeus, citing \"the presbyters\", read Jesus' \"many rooms\" (John 14:2) and the hundred-, sixty- and thirtyfold harvest as different dwellings in glory, though God will be seen everywhere.",
       "cites": [
-        "irenaeus-ah-5-36-1"
+        "irenaeus-ah-5-36-1",
+        "jerome-against-jovinian-2-23"
+      ]
+    },
+    {
+      "text": "Cyprian looks for the Lord to reckon his people and repay works of mercy with heavenly rewards, a white crown for works in peace and a purple one added in persecution.",
+      "cites": [
+        "cyprian-works-and-alms-26"
+      ]
+    },
+    {
+      "text": "Augustine expounds Revelation 20: the books are opened and the dead are judged according to their deeds; and in the final chapter the city will have degrees of honour and glory according to merit, with no envy, each content with a lesser gift.",
+      "cites": [
+        "augustine-city-of-god-20-14",
+        "augustine-city-of-god-22-30"
       ]
     }
   ],
@@ -106,32 +120,100 @@
         "ocr_poor": true
       },
       "translation": "dossier"
+    },
+    {
+      "id": "cyprian-works-and-alms-26",
+      "author": "Cyprian of Carthage",
+      "year": 253,
+      "date": "c. 253",
+      "work": "On Works and Almsgiving",
+      "locus": "26",
+      "lang": "la",
+      "answer": "by-works",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What will that glory of those who work be, dearest brothers, how great and how supreme the joy, when the Lord begins to number his people and, assigning the promised rewards to our merits and works, gives heavenly things for earthly, eternal for temporal, and great for small! ... The Lord will never fail our merits when it comes to reward: to those who conquer in peace he will give a white crown for their works, and in persecution he will double it with a purple one for their suffering.",
+      "original": "Quae illa erit, fratres carissimi, operantium gloria, quam grandis et summa laetitia, cum populum suum Dominus coeperit recensere et meritis adque operibus nostris praemia promissa contribuens pro terrenis caelestia, pro temporalibus sempiterna, pro modicis magna praestare ... nusquam Dominus meritis nostris ad praemium deerit, in pace uincentibus coronam candidam pro operibus dabit, in persecutione purpuream pro passione geminabit.",
+      "context": "The closing chapter of a treatise on almsgiving. The works in view are works of mercy to the poor, and the crowns are their reward at the Lord’s reckoning.",
+      "source": {
+        "book": "cyprian-on-works-and-alms",
+        "section": "26"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "jerome-against-jovinian-2-23",
+      "author": "Jerome",
+      "year": 393,
+      "date": "393",
+      "work": "Against Jovinian",
+      "locus": "2.23",
+      "lang": "en",
+      "answer": "degrees",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "or assign equal rewards to unequal deserts. ... If each is to rise in his own order, it follows that those who rise are of different degrees of merit. ... \"One star,\" he says, \"differeth from another star in glory\": this is not the distinction of sheep and goat, but of sheep and sheep, star and star.",
+      "original": "or assign equal rewards to unequal deserts. ... If each is to rise in his own order, it follows that those who rise are of different degrees of merit. ... \"One star,\" he says, \"differeth from another star in glory\": this is not the distinction of sheep and goat, but of sheep and sheep, star and star.",
+      "context": "Jovinian had taught that all who keep their baptism receive one equal reward. Jerome answers from 1 Corinthians 15 that the risen differ in glory, star from star, in the second book of Against Jovinian (393). Quoted here in Fremantle's standard translation; Jerome's Latin (Migne PL 23) is still to be quoted when a lawful open Latin text is secured.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-LettersAndSelectWorks.txt",
+        "edition": "Against Jovinianus, translated by W. H. Fremantle, in Nicene and Post-Nicene Fathers, 2nd series, vol. 6 (1893)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "augustine-city-of-god-20-14",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "20.1 and 20.14",
+      "lang": "la",
+      "answer": "by-works",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What the whole Church of the true God holds in its confession and profession, that Christ will come from heaven to judge the living and the dead, this we call the last day of the divine judgment, that is, the final time. ... And I saw, he says, the dead, great and small, and books were opened; and another book was opened, which is the book of life of each person; and the dead were judged from what was written in the books, according to their deeds.",
+      "original": "Quod ergo in confessione ac professione tenet omnis ecclesia Dei ueri Christum de caelo esse uenturum ad uiuos ac mortuos iudicandos, hunc diuini iudicii ultimum diem dicimus, id est nouissimum tempus. ... Et uidi, inquit mortuos magnos et pusillos, et aperti sunt libri; et alius liber apertus est, qui est uitae uniuscuiusque; et iudicati sunt mortui ex ipsis scripturis librorum secundum facta sua.",
+      "context": "Augustine opens book 20 with the Church’s confession, then in chapter 14 expounds John’s vision in Revelation 20. The words about the opened books are John’s, quoted and explained by Augustine.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-20.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-city-of-god-22-30",
+      "author": "Augustine of Hippo",
+      "year": 426,
+      "date": "c. 426",
+      "work": "City of God",
+      "locus": "22.30",
+      "lang": "la",
+      "answer": "degrees",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But what the degrees of honours and glories will be, according to the merits of the rewards, who is fit even to think, let alone to say? Yet that there will be such degrees is not to be doubted. ... So one person will have a gift less than another’s, in such a way that he will also have this gift, that he does not wish for more.",
+      "original": "Ceterum qui futuri sint pro meritis praemiorum etiam gradus honorum atque gloriarum, quis est idoneus cogitare, quanto magis dicere? Quod tamen futuri sint, non est ambigendum. ... Sic itaque habebit donum alius alio minus, ut hoc quoque donum habeat, ne uelit amplius.",
+      "context": "The final chapter of the City of God, on the eternal Sabbath. Augustine affirms degrees of honour and glory according to merit but refuses to specify them, and stresses that no one will envy a greater gift.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-22.txt",
+        "edition": "The Latin Library text (Dombart)"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
     {
       "author": "Jerome",
-      "work": "Against Jovinian 2.18–34",
+      "work": "Against Jovinian, Book 2, in Latin",
       "year": 393,
-      "why": "Degrees of reward, against Jovinian's equal reward for all.",
+      "why": "Book 2 is quoted in this dossier at 2.23 in Fremantle's English (NPNF II.6). The Latin text (Migne PL 23) is still wanted, to this dossier's original-language standard: no lawful open Latin text of Adversus Jovinianum was located in the October 2026 pass (the Latin Library, Perseus and intraText do not carry it).",
       "action": "intake",
       "source_hint": "Migne PL 23"
-    },
-    {
-      "author": "Augustine of Hippo",
-      "work": "City of God 20.1–5 and 22.30",
-      "year": 426,
-      "why": "The last judgment and the different degrees of honor in the city of God.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/url-augustine-city-of-god-20.txt"
-    },
-    {
-      "author": "Cyprian of Carthage",
-      "work": "On Works and Almsgiving 26",
-      "year": 253,
-      "why": "Rewards for works of mercy on the day of judgment.",
-      "action": "search",
-      "source_hint": "cyprian-on-works-and-alms"
     }
   ],
   "related": {
@@ -141,7 +223,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

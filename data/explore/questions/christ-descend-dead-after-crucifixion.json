@@ -22,10 +22,13 @@
   ],
   "overview": [
     {
-      "text": "From the second century Christians taught that Christ went down to the dead between his death and resurrection, to preach to them and raise the righteous of old.",
+      "text": "From the second century Christians taught that Christ went down to the dead between his death and resurrection, to preach to them and raise the righteous of old. Irenaeus is the fullest early witness: the Lord, he says, descended beneath the earth preaching his coming there and forgiving the righteous, prophets and patriarchs who had hoped in him, and he spent three days where the dead were, to draw them out and save them.",
       "cites": [
         "ignatius-magnesians-9",
-        "justin-dialogue-72"
+        "justin-dialogue-72",
+        "irenaeus-ah-4-27-2",
+        "irenaeus-ah-5-31-1",
+        "gospel-nicodemus-descent-21-24"
       ]
     },
     {
@@ -79,6 +82,71 @@
       "translation": "dossier"
     },
     {
+      "id": "irenaeus-ah-4-27-2",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "4.27.2",
+      "lang": "la",
+      "answer": "descended",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And for this reason the Lord descended into the regions beneath the earth, preaching his coming even to those there, with forgiveness of sins for those who believe in him. And all those believed in him who hoped in him, that is, who foretold his coming and served his arrangements, the righteous and the prophets and the patriarchs, to whom he forgave their sins just as he did to us.",
+      "original": "Et propter hoc Dominum in ea quae sunt sub terra descendisse, evangelisantem et illis adventum suum, remissione peccatorum exsistente his qui credunt in eum. Crediderunt autem in eum omnes qui sperabant in eum, id est, qui adventum eius praenuntiaverunt, et dispositionibus eius servierunt, iusti et prophetae et patriarchae, quibus similiter ut nobis remisit peccata.",
+      "context": "Irenaeus passes on a presbyter’s teaching on the sins of the men of old: their sins were written down for our instruction, and the Lord’s death brought them healing too. This part of Against Heresies survives in its ancient Latin translation, not in Greek.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-5-31-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "5.31.1",
+      "lang": "la",
+      "answer": "descended",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But as it is, he spent three days where the dead were, as the prophet says of him: The Lord remembered his holy dead, those who had slept before in the land of burial, and descended to them, to draw them out and to save them. And the apostle also says: He ascended; what does that mean, if not that he also descended into the lower parts of the earth?",
+      "original": "Nunc autem tribus diebus conversatus est ubi erant mortui, quemadmodum propheta ait de eo: Commemoratus est Dominus sanctorum mortuorum suorum, eorum qui ante dormierunt in terra sepelitionis, et descendit ad eos, extrahere eos, et salvare eos. Sed et Apostolus ait: Ascendit autem, quid est, nisi et descendit in inferiora terrae?",
+      "context": "Against teachers who denied the resurrection of the flesh and said the soul flies straight past heaven at death, Irenaeus argues that the Lord himself kept the law of the dead for three days. He goes on (5.31.2) that the disciples’ souls likewise wait in an invisible place appointed by God until the resurrection. The prophet quoted is the Jeremiah saying Justin also uses; the passage survives in Latin.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "gospel-nicodemus-descent-21-24",
+      "author": "Gospel of Nicodemus",
+      "year": 400,
+      "date": "c. 400",
+      "work": "Descent into Hell (Acts of Pilate, part 2)",
+      "locus": "21 and 24",
+      "lang": "grc",
+      "answer": "descended",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Lift up your gates, you rulers, and be lifted up, eternal gates, and the King of glory shall come in ... the bronze gates were shattered and the iron bars were crushed ... the King of glory stretched out his right hand ... and raised up Adam, the forefather",
+      "original": "Ἄρατε πύλας οἱ ἄρχοντες ὑμῶν, καὶ ἐπάρθητε πύλαι αἰώνιοι, καὶ εἰσελεύσεται ὁ βασιλεὺς τῆς δόξης ... αἱ χαλκαῖ πύλαι συνετρίβησαν καὶ οἱ σιδηροῖ μοχλοὶ συνεθλάσθησαν ... ἥπλωσεν ὁ βασιλεὺς τῆς δόξης τὴν δεξιὰν αὐτοῦ χεῖρα ... ἤγειρε τὸν προπάτορα Ἀδάμ",
+      "context": "A popular apocryphon, framed as the report of two men raised from the dead. It, not the New Testament, is the source of the medieval harrowing of hell, with the gates broken and Adam raised by the hand.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-evangeliaapocry03tiscgoog.txt",
+        "edition": "Tischendorf, Evangelia Apocrypha (2nd ed., 1876)"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "rufinus-creed-18",
       "author": "Rufinus of Aquileia",
       "year": 404,
@@ -98,34 +166,30 @@
         "section": "18"
       },
       "translation": "dossier"
-    }
-  ],
-  "gaps": [
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 4.27.2; 5.31.1",
-      "year": 180,
-      "why": "The Lord descended to the lower parts of the earth to preach to the dead.",
-      "action": "search",
-      "source_hint": "Harvey 1857 vol. 2"
     },
     {
-      "author": "Gospel of Nicodemus",
-      "work": "Descent into Hell",
-      "year": 400,
-      "why": "The popular account of the harrowing of hell.",
-      "action": "intake",
-      "source_hint": "Tischendorf, Evangelia apocrypha (1876)"
-    },
-    {
+      "id": "calvin-institutes-2-16-10",
       "author": "John Calvin",
-      "work": "Institutes 2.16.10",
       "year": 1559,
-      "why": "Read the phrase as Christ's suffering of God's wrath on the cross.",
-      "action": "intake",
-      "source_hint": "Corpus Reformatorum"
+      "date": "1559",
+      "work": "Institutes of the Christian Religion",
+      "locus": "2.16.10",
+      "lang": "en",
+      "answer": "descended",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Nothing had been done if Christ had only endured corporeal death. ... In order to interpose between us and God's anger, and satisfy his righteous judgment, it was necessary that he should feel the weight of divine vengeance.",
+      "original": "Nothing had been done if Christ had only endured corporeal death. ... In order to interpose between us and God's anger, and satisfy his righteous judgment, it was necessary that he should feel the weight of divine vengeance.",
+      "context": "Calvin keeps the creed's words but re-reads them: the descent is not a journey to free the dead (he calls the Limbus story a fable in the sections just before) but Christ bearing, on the cross, the weight of God's judgment and the horrors of eternal death in his soul.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-instituteschris00calvgoog.txt",
+        "edition": "Institutes of the Christian Religion, translated by Henry Beveridge (1845), Book 2, chapter 16, section 10"
+      },
+      "translation": "published"
     }
   ],
+  "gaps": [],
   "related": {
     "topics": [
       "heaven-hell-intermediate"
@@ -133,7 +197,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

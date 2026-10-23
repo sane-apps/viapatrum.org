@@ -39,17 +39,63 @@
       "text": "Rumor charged Christians with three crimes: atheism, cannibalism and incest (Athenagoras). The real offense was refusing the gods, whose anger was blamed for floods and plague: \"Christians to the lion!\"",
       "cites": [
         "athenagoras-plea-3",
-        "tertullian-apology-40"
+        "tertullian-apology-40",
+        "minucius-octavius-caecilius-charges-9",
+        "tacitus-annals-15-44"
       ]
     },
     {
-      "text": "Trajan's rule (112) set the pattern for a century: do not hunt them, but punish the confessed name, and pardon anyone who sacrifices. Empire-wide persecutions came later, under Decius (250) and Diocletian (303).",
+      "text": "Trajan's rule (112) set the pattern for a century: do not hunt them, but punish the confessed name, and pardon anyone who sacrifices. Empire-wide persecutions came later, under Decius (250) and Diocletian (303). Eusebius, an eyewitness in Palestine, saw churches razed and Scriptures burned under Diocletian's edict, and records martyrs there executed for refusing to sacrifice.",
       "cites": [
-        "trajan-to-pliny-10-97"
+        "trajan-to-pliny-10-97",
+        "eusebius-church-history-8-2-edict",
+        "eusebius-martyrs-procopius-1"
       ]
     }
   ],
   "quotes": [
+    {
+      "id": "trajan-to-pliny-10-97",
+      "author": "Emperor Trajan",
+      "year": 112,
+      "date": "c. 112",
+      "work": "Letter 10.97, to Pliny",
+      "locus": "10.97.1–2",
+      "lang": "la",
+      "answer": "law",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "They are not to be sought out. If they are reported and proved guilty, they must be punished, but in such a way that whoever denies he is a Christian and makes it plain by deed, that is, by worshiping our gods, shall obtain pardon for his repentance, however suspect he was in the past. Anonymous accusations must have no place in any charge; they are a very bad precedent and not of our age.",
+      "original": "Conquirendi non sunt; si deferantur et arguantur, puniendi sunt, ita tamen ut, qui negaverit se Christianum esse idque re ipsa manifestum fecerit, id est supplicando dis nostris, quamvis suspectus in praeteritum, veniam ex paenitentia impetret. Sine auctore vero propositi libelli <in> nullo crimine locum habere debent. Nam et pessimi exempli nec nostri saeculi est.",
+      "context": "The policy for over a century: no hunting, but death for the confessed name. Tertullian mocked it: if they are guilty, why not seek them; if innocent, why punish them (Apology 2.8)?",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tacitus-annals-15-44",
+      "author": "Tacitus",
+      "year": 115,
+      "date": "c. 115",
+      "work": "Annals",
+      "locus": "15.44.2–3",
+      "lang": "la",
+      "answer": "scapegoat",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "But neither human help, nor the emperor's generosity, nor appeasing the gods removed the infamy that the fire was believed to have been ordered. So, to scotch the rumor, Nero fastened the guilt on others and inflicted the most exquisite punishments on those whom the crowd called Christians, hated for their shameful acts. Christus, from whom the name comes, was executed by the procurator Pontius Pilate in the reign of Tiberius; and the deadly superstition, checked for the moment, broke out again, not only in Judea, the origin of that evil, but also in the city, where all atrocious and shameful things from everywhere flow together and are celebrated. Therefore those who confessed were first arrested; then, on their information, a huge multitude was convicted, not so much on the charge of arson as for hatred of the human race.",
+      "original": "Sed non ope humana, non largitionibus principis aut deum placamentis decedebat infamia, quin iussum incendium crederetur. ergo abolendo rumori Nero subdidit reos et quaesitissimis poenis adfecit, quos per flagitia invisos vulgus Chrestianos appellabat. auctor nominis eius Christus Tibero imperitante per procuratorem Pontium Pilatum supplicio adfectus erat; repressaque in praesens exitiablilis superstitio rursum erumpebat, non modo per Iudaeam, originem eius mali, sed per urbem etiam, quo cuncta undique atrocia aut pudenda confluunt celebranturque. igitur primum correpti qui fatebantur, deinde indicio eorum multitudo ingens haud proinde in crimine incendii quam odio humani generis convicti sunt.",
+      "context": "Tacitus describes Nero's scapegoating of the Christians after the great fire of Rome in AD 64. He despises the Christians and calls their faith a deadly superstition, yet he is the key pagan witness both to the execution of Christus under Pontius Pilate in the reign of Tiberius and to the conviction of Christians for hatred of the human race.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tacitus-annals-15.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
     {
       "id": "athenagoras-plea-3",
       "author": "Athenagoras",
@@ -93,53 +139,70 @@
       "translation": "dossier"
     },
     {
-      "id": "trajan-to-pliny-10-97",
-      "author": "Emperor Trajan",
-      "year": 112,
-      "date": "c. 112",
-      "work": "Letter 10.97, to Pliny",
-      "locus": "10.97.1–2",
+      "id": "minucius-octavius-caecilius-charges-9",
+      "author": "Caecilius (pagan speaker in Minucius Felix)",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Octavius",
+      "locus": "9",
       "lang": "la",
+      "answer": "charges",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "I hear that they venerate the consecrated head of a most vile beast [an ass], under some foolish persuasion — a religion worthy of such morals, and born from them! Others say they worship the genitals of their own chief priest and adore his nature as that of their parent: whether it is false I do not know, but it is certainly a suspicion that fits hidden, nocturnal rites. And whoever says that a man punished with the utmost penalty for a crime, and the deadly wood of the cross, form their ceremonies, assigns to depraved and criminal men altars that suit them, so that they worship what they deserve. ... An infant, covered with meal to deceive the unwary, is set before the one who is to be initiated into the rites. The infant is killed by the novice — lured by the surface of the meal as if to harmless blows — with blind and hidden wounds. His blood, oh abomination, they greedily lick up; his limbs they eagerly divide among themselves; by this victim they are bound together, and by this shared knowledge of the crime they pledge themselves to mutual silence.",
+      "original": "audio eos turpissimae pecudis caput [asini] consecratum inepta nescio qua persuasione uenerari: digna et nata religio talibus moribus! alii eos ferunt ipsius antistitis ac sacerdotis colere genitalia et quasi parentis sui adorare naturam: nescio an falsa, certe occultis ac nocturnis sacris adposita suspicio! et qui hominem summo supplicio pro facinore punitum et crucis ligna feralia eorum caerimonias fabulatur, congruentia perditis sceleratisque tribuit altaria, ut id colant quod merentur. ... infans farre contectus, ut decipiat incautos, adponitur ei qui sacris inbuatur. is infans a tirunculo fanis superficie quasi ad innoxios ictus prouocato caecis occultisque uulneribus occiditur. huius, pro nefas! sitienter sanguinem lambunt, huius certatim membra dispertiunt, hac foederantur hostia, hac conscientia sceleris ad silentium mutuum pignerantur.",
+      "context": "These are not Minucius's own charges: they are the speech of Caecilius, the pagan interlocutor in the dialogue, retailing rumour (“I hear”, “others say”, “whether it is false I do not know”). Octavius answers the speech at length from chapter 16 onward. The passage shows what educated pagans believed Christians did in secret.",
+      "source": {
+        "book": "minucius-felix-octavius",
+        "section": "9"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "eusebius-church-history-8-2-edict",
+      "author": "Eusebius of Caesarea",
+      "year": 313,
+      "date": "c. 313",
+      "work": "Church History",
+      "locus": "8.2",
+      "lang": "grc",
       "answer": "law",
       "strength": "explicit",
-      "voice": "reports",
+      "voice": "own",
       "weight": "key",
-      "english": "They are not to be sought out. If they are reported and proved guilty, they must be punished, but in such a way that whoever denies he is a Christian and makes it plain by deed, that is, by worshiping our gods, shall obtain pardon for his repentance, however suspect he was in the past. Anonymous accusations must have no place in any charge; they are a very bad precedent and not of our age.",
-      "original": "Conquirendi non sunt; si deferantur et arguantur, puniendi sunt, ita tamen ut, qui negaverit se Christianum esse idque re ipsa manifestum fecerit, id est supplicando dis nostris, quamvis suspectus in praeteritum, veniam ex paenitentia impetret. Sine auctore vero propositi libelli <in> nullo crimine locum habere debent. Nam et pessimi exempli nec nostri saeculi est.",
-      "context": "The policy for over a century: no hunting, but death for the confessed name. Tertullian mocked it: if they are guilty, why not seek them; if innocent, why punish them (Apology 2.8)?",
+      "english": "The houses of prayer thrown down from their height to the ground, together with their very foundations, and the divine and holy Scriptures handed over to fire in the middle of the marketplaces, we saw with our own eyes. ... Imperial letters were spread everywhere, ordering that the churches be razed to the ground and the Scriptures destroyed by fire, and proclaiming that those who held honours should be degraded, and household slaves, if they persisted in their profession of Christianity, should be deprived of their freedom.",
+      "original": "τῶν μὲν προσευκτηρίων τοὺς οἴκους ἐξ ὕψους εἰς ἔδαφος αὐτοῖς θεμελίοις καταρριπτουμένους, τὰς δὲ ἐνθέους καὶ ἱερὰς γραφὰς κατὰ μέσας ἀγορὰς πυρὶ παραδιδομένας αὐτοῖς ἐπείδομεν ὀφθαλμοῖς ... ἥπλωτο πανταχόσε βασιλικὰ γράμματα, τὰς μὲν ἐκκλησίας εἰς ἔδαφος φέρειν, τὰς δὲ γραφὰς ἀφανεῖς πυρὶ γενέσθαι προστάττοντα, καὶ τοὺς μὲν τιμῆς ἐπειλημμένους ἀτίμους, τοὺς δὲ ἐν οἰκετίαις, εἰ ἐπιμένοιεν τῇ τοῦ Χριστιανισμοῦ προθέσει, ἐλευθερίας στερεῖσθαι προαγορεύοντα.",
+      "context": "Eusebius was living in Palestine when Diocletian's first edict (303) opened the Great Persecution, and he writes as a contemporary eyewitness, not a later compiler. A second order soon followed in the same chapter: every church leader was to be imprisoned, then forced by every means to sacrifice.",
       "source": {
-        "witness": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt",
-        "edition": "The Latin Library text"
+        "book": "eusebius-church-history",
+        "section": "8.2"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "eusebius-martyrs-procopius-1",
+      "author": "Eusebius of Caesarea",
+      "year": 313,
+      "date": "c. 313",
+      "work": "Martyrs of Palestine",
+      "locus": "1",
+      "lang": "grc",
+      "answer": "law",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Ordered to sacrifice to the so-called gods, he said that he knew only one, to whom it was fitting to sacrifice as he himself wills; and when he was also ordered to pour a libation to the four emperors, he uttered a word that was not pleasing to them and was beheaded at once, having spoken that poetic line: “The rule of many is not good; let there be one ruler, one king.”",
+      "original": "θύειν τε τοῖς λεγομένοις προσταχθεὶς θεοῖς, ἔνα μόνον ἔφησεν εἰδέναι, ᾧ καθῆκεν ὡς αὐτὸς βούλεται θύειν· ὡς δὲ κἂν τοῖς βασιλεῦσι τέσσαρσι σπένδειν ἐκελεύετο, ῥῆμά τι φθεγξάμενος τῶν οὐ προσηνῶν αὐτοῖς αὐτίκα τὴν κεφαλὴν άποτέμνεται, τὸ ποιητικὸν εἰπὼν ἐκεῖνο “οὐκ ἀγαθὸν πολυκοιρανίη, εἷς κοίρανος ἔστω, εἶς βασιλεύς.”",
+      "context": "The speaker is Procopius, a reader from Scythopolis, the first martyr in Palestine under the edict, executed at Caesarea in 303. Eusebius collected these Palestinian cases as a contemporary in the region; here refusal to sacrifice, with no other crime proved, is itself the capital offence.",
+      "source": {
+        "book": "eusebius-martyrs-palestine",
+        "section": "1"
       },
       "translation": "dossier"
     }
   ],
-  "gaps": [
-    {
-      "author": "Tacitus",
-      "work": "Annals 15.44",
-      "year": 115,
-      "why": "Nero blamed Christians for the fire of Rome (64), \"hatred of the human race\".",
-      "action": "intake",
-      "source_hint": "thelatinlibrary.com/tacitus/tac.ann15.shtml"
-    },
-    {
-      "author": "Eusebius of Caesarea",
-      "work": "Church History 8; Martyrs of Palestine",
-      "year": 313,
-      "why": "The Great Persecution as an eyewitness saw it. In the library.",
-      "action": "search",
-      "source_hint": "eusebius-martyrs-palestine"
-    },
-    {
-      "author": "Minucius Felix",
-      "work": "Octavius 8–9",
-      "year": 200,
-      "why": "The pagan case against Christians in full.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/minucius_octavius_migne_pl3_wikisource.txt"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "persecution"
@@ -147,7 +210,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

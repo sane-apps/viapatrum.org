@@ -34,10 +34,12 @@
   ],
   "overview": [
     {
-      "text": "Second- and third-century writers speak of an order: the Son in \"second place\" and the Spirit \"third\" (Justin), the Son as a \"portion\" of the Father's whole substance (Tertullian). They also call the Son God.",
+      "text": "Second- and third-century writers speak of an order: the Son in \"second place\" and the Spirit \"third\" (Justin), the Son as a \"portion\" of the Father's whole substance (Tertullian). They also call the Son God. Novatian (c. 250) has all things subjected to the Son by the Father, and the Son himself, with them, subjected to the Father, handing back the whole authority of the divinity, while remaining God and Lord of everything else.",
       "cites": [
         "justin-1apol-13",
-        "tertullian-praxeas-9"
+        "tertullian-praxeas-9",
+        "novatian-trinity-31-18",
+        "origen-john-13-25"
       ]
     },
     {
@@ -92,6 +94,49 @@
       "translation": "dossier"
     },
     {
+      "id": "origen-john-13-25",
+      "author": "Origen of Alexandria",
+      "year": 235,
+      "date": "c. 235",
+      "work": "Commentary on John",
+      "locus": "13.25",
+      "lang": "grc",
+      "answer": "order",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "But we, believing the Savior when he says, \"The Father who sent me is greater than I\", say that the Savior and the Holy Spirit surpass all created things, not by comparison but by a surpassing excellence, and are themselves surpassed by the Father by as much again, or even more, as they surpass all the rest.",
+      "original": "ἀλλ᾽ ἡμεῖς πειθόμενοι τῷ σωτῆρι λέγοντι· ὁ πατὴρ ὁ πέμψας με μείζων μού ἐστι ... πάντων μὲν τῶν γενητῶν ὑπερέχειν οὐ συγκρίσει ἀλλ᾽ ὑπερβαλλούσῃ ὑπεροχῇ φαμὲν τὸν σωτῆρα καὶ τὸ πνεῦμα τὸ ἅγιον, ὑπερεχόμενον τοσοῦτον ἢ καὶ πλέον ἀπὸ τοῦ πατρός, ὅσῳ ὑπερέχει αὐτὸς καὶ τὸ ἅγιον πνεῦμα τῶν λοιπῶν",
+      "context": "The passage survives here only in the book's raw scan, whose OCR is rough and interleaves the critical apparatus; the words quoted follow the standard printed text. Origen is answering those who would over-exalt the Son against the Father, and he takes the Savior's word at face value.",
+      "source": {
+        "witness": "books/origen-john-later/sources/commentaryoforig01orig_ocr.txt",
+        "edition": "Preuschen, GCS 10 (1903), p. 249; the book's raw scan, passage not yet locked as a library section",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "novatian-trinity-31-18",
+      "author": "Novatian",
+      "year": 250,
+      "date": "c. 250",
+      "work": "On the Trinity",
+      "locus": "31.18–19",
+      "lang": "la",
+      "answer": "order",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "All things have been subjected to him by the Father, as to a Son; and while he himself, together with the things that have been subjected to him, is subjected to his Father, he is proved to be his Father’s Son, and is found to be Lord and God of everything else. So when all things are handed over, laid beneath him who is God, and the Son reports back to the Father everything he has received as subjected to him, he returns to the Father the whole authority of the divinity.",
+      "original": "subiectis enim ei quasi filio omnibus rebus a patre, dum ipse cum his, quae illi subiecta sunt, patri suo subicitur, patris quidem sui filius probatur; ceterorum autem et dominus et deus esse reperitur. ex quo dum huic qui est deus omnia substrata traduntur, et cuncta sibi subiecta filius accepta refert patri, totam divinitatis auctoritatem rursus patri remittit.",
+      "context": "From the closing summary chapter of Novatian’s treatise: the Son’s divinity is given by the Father and returned to him, so that God stays one, yet the Son is God over all creation. Read from the Fausset (1909) scan of the Latin, the library’s copy of the edition; On the Trinity is not yet locked as library sections.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/novatian_de_trinitate_fausset1909_djvu.txt",
+        "edition": "Fausset, Novatiani Romanae urbis presbyteri De Trinitate liber (Cambridge, 1909)"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "arius-in-athanasius-sub",
       "author": "Arius (quoted by Athanasius)",
       "year": 320,
@@ -134,24 +179,7 @@
       "translation": "dossier"
     }
   ],
-  "gaps": [
-    {
-      "author": "Origen of Alexandria",
-      "work": "Commentary on John 13.25",
-      "year": 235,
-      "why": "The Father exceeds the Son as much as the Son exceeds creatures. A key text for the subordination debate; the passage was not found in the library's Greek.",
-      "action": "search",
-      "source_hint": "Preuschen GCS 10 (1903)"
-    },
-    {
-      "author": "Novatian",
-      "work": "On the Trinity 31",
-      "year": 250,
-      "why": "The Son is subject to the Father. In the library's Fausset scan; not yet added.",
-      "action": "search",
-      "source_hint": "novatian_de_trinitate_fausset1909"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "father-son-spirit"
@@ -159,7 +187,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

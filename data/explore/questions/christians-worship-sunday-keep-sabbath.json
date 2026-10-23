@@ -172,6 +172,27 @@
         "section": "16"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "adventist-fundamental-beliefs-20",
+      "author": "Seventh-day Adventist Church",
+      "year": 1980,
+      "date": "1980",
+      "work": "Fundamental Beliefs",
+      "locus": "20, The Sabbath",
+      "lang": "en",
+      "answer": "both",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "The fourth commandment of God's unchangeable law requires the observance of this seventh-day Sabbath as the day of rest, worship, and ministry in harmony with the teaching and practice of Jesus, the Lord of the Sabbath.",
+      "original": "The fourth commandment of God's unchangeable law requires the observance of this seventh-day Sabbath as the day of rest, worship, and ministry in harmony with the teaching and practice of Jesus, the Lord of the Sabbath.",
+      "context": "The Adventist confession (adopted 1980, wording maintained since): the seventh day, not the first, is still the Sabbath, and Adventists keep it from Friday sunset to Saturday sunset.",
+      "source": {
+        "url": "https://adventist.org/beliefs/official/the-sabbath",
+        "edition": "Seventh-day Adventist Church, Fundamental Beliefs, 20: The Sabbath (official text, adventist.org)"
+      },
+      "translation": "published"
     }
   ],
   "gaps": [
@@ -190,14 +211,6 @@
       "why": "Christians met \"on a fixed day\". Used under question 48.",
       "action": "skip",
       "source_hint": "outputs/question-dossiers/witnesses/url-pliny-letters-10.txt"
-    },
-    {
-      "author": "Seventh-day Adventist Church",
-      "work": "Fundamental Beliefs 20",
-      "year": 1980,
-      "why": "The modern case for the seventh-day Sabbath.",
-      "action": "search",
-      "source_hint": "adventist.org"
     }
   ],
   "related": {

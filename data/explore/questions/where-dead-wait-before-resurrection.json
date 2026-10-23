@@ -30,17 +30,20 @@
   ],
   "overview": [
     {
-      "text": "Second-century writers stressed the resurrection: Justin calls those who say souls go to heaven at death, with no resurrection, no Christians at all. Tertullian has souls wait in the underworld, with only martyrs in paradise.",
+      "text": "Second-century writers stressed the resurrection: Justin calls those who say souls go to heaven at death, with no resurrection, no Christians at all, and Irenaeus has souls wait in the place appointed by God until the resurrection. Tertullian has souls wait in the underworld, with only martyrs in paradise.",
       "cites": [
         "justin-dialogue-80-souls",
+        "irenaeus-ah-5-31-2",
         "tertullian-on-the-soul-55"
       ]
     },
     {
-      "text": "By the third century Cyprian could speak of death as going home to paradise, where loved ones wait. Later teaching joined the two: the righteous are with Christ now and await the body's resurrection.",
+      "text": "By the third century Cyprian could speak of death as going home to paradise, where loved ones wait. In 1336 Benedict XII defined that the purified dead see God’s essence at once, before the resurrection; later teaching joined the two: the righteous are with Christ now and await the body’s resurrection.",
       "cites": [
         "cyprian-on-mortality-26",
-        "westminster-1646-32-1-b"
+        "benedict-xii-1336-benedictus-deus",
+        "westminster-1646-32-1-b",
+        "luther-genesis-lectures-25-8"
       ]
     }
   ],
@@ -63,6 +66,27 @@
       "source": {
         "book": "justin-dialogue-trypho",
         "section": "80"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-5-31-2",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "5.31.2",
+      "lang": "grc",
+      "answer": "waiting",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The souls go to the place appointed for them by God, and there they dwell until the resurrection, waiting for the resurrection; then, receiving their bodies back and rising whole, that is, bodily, just as the Lord also rose, they shall in this way come into the sight of God.",
+      "original": "Αἱ ψυχαὶ ἀπέρχονται εἰς τὸν τόπον τὸν ὡρισμένον αὐταῖς ἀπὸ τοῦ Θεοῦ κἀκεῖ μέχρι τῆς ἀναστάσεως φοιτῶσι περιμένουσαι τὴν ἀνάστασιν· ἔπειτα ἀπολαβοῦσαι τὰ σώματα καὶ ὁλοκλήρως ἀναστᾶσαι, τουτέστι σωματικῶς, καθὼς καὶ ὁ Κύριος ἀνέστη, οὕτως ἐλεύσονται εἰς τὴν ὄψιν τοῦ Θεοῦ.",
+      "context": "Irenaeus is opposing Gnostics who sent the saved soul straight up at death. Just before, he argues the Lord himself went to the place of the dead and rose bodily first; his disciples follow the same order. The passage survives in this Greek fragment and in the old Latin translation.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-5.txt",
+        "edition": "Greek fragment, Migne PG 7 (Massuet), Khazarzar text"
       },
       "translation": "dossier"
     },
@@ -109,6 +133,50 @@
       "translation": "dossier"
     },
     {
+      "id": "benedict-xii-1336-benedictus-deus",
+      "author": "Pope Benedict XII",
+      "year": 1336,
+      "date": "1336",
+      "work": "Benedictus Deus",
+      "locus": "Denzinger no. 530",
+      "lang": "la",
+      "answer": "heaven",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Immediately after their death, and after the purification already mentioned in those who needed such purification, even before they take up their bodies again and before the general judgment ... they were, are and will be in heaven, in the kingdom of heaven and in the heavenly paradise, with Christ, gathered into the company of the holy angels ... they saw and see the divine essence by a vision that is intuitive and also face to face, no creature coming between in the role of the object seen, but the divine essence showing itself to them directly, nakedly, clearly and openly ... the souls of those who have already died are truly blessed, and have life and eternal rest.",
+      "original": "mox post mortem suam et purgationem praefatam in illis, qui purgatione huiusmodi indigebant, etiam ante resumptionem suorum corporum et iudicium generale ... fuerunt, sunt et erunt in coelo, coelorum regno et paradiso coelesti cum Christo, sanctorum Angelorum consortio aggregatae ... viderunt et vident divinam essentiam visione intuitiva et etiam faciali, nulla mediante creatura in ratione obiecti visi se habente, sed divina essentia immediate se nude, clare et aperte eis ostendente ... eorum animae, qui iam decesserunt, sunt vere beatae et habent vitam et requiem aeternam",
+      "context": "The bull settled the dispute stirred by Pope John XXII, who had preached that the dead wait until the judgment to see God. Benedict defines the opposite for the purified: the sight of God at once, before the resurrection, while the body is still awaited. The scan of Denzinger is poorly OCRd, so the Latin follows the standard printed text.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 530"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "luther-genesis-lectures-25-8",
+      "author": "Martin Luther",
+      "year": 1541,
+      "date": "c. 1541",
+      "work": "Lectures on Genesis",
+      "locus": "on Genesis 25:8 (Weimar Ausgabe 43)",
+      "lang": "la",
+      "answer": "waiting",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "This, then, is the first place in all holy Scripture which testifies that the death of the saints is calm and precious in the sight of God: they do not taste death, but fall asleep most sweetly. ... The resting-places of souls are the word of God, that is, his promises, in which we fall asleep. ... we depart safe and quiet into the bosom of Christ.",
+      "original": "Hic igitur primus locus est in tota scriptura sancta, qui testatur sanctorum mortem esse placidam et preciosam in conspectu Dei: non gustare eos mortem, sed suavissime obdormire. ... receptacula animarum sunt verbum Dei sive promissiones, in quibus obdormimus ... nos securos et quietos emigrare in sinum Christi",
+      "context": "Luther on the death of Abraham, in the Genesis lectures printed in the Weimar Ausgabe: his fullest statement of the sleep of the dead. The search gap named his 1532 sermons, which are in German; this is the matching statement in the same Weimar edition, in Latin. The sleep is a rest held in God's word and promise until the resurrection.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-dmartinlutherswe143luth.txt",
+        "edition": "D. Martin Luthers Werke, kritische Gesamtausgabe (Weimar Ausgabe), vol. 43"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "westminster-1646-32-1-b",
       "author": "Westminster Assembly",
       "year": 1646,
@@ -130,32 +198,7 @@
       "translation": "published"
     }
   ],
-  "gaps": [
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 5.31.2",
-      "year": 180,
-      "why": "Souls go to an invisible place set by God and wait there for the resurrection.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
-    },
-    {
-      "author": "Benedict XII",
-      "work": "Benedictus Deus",
-      "year": 1336,
-      "why": "The souls of the blessed see God's essence at once, before the resurrection.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 530)"
-    },
-    {
-      "author": "Martin Luther",
-      "work": "Sermons on the sleep of the soul",
-      "year": 1532,
-      "why": "The sleep of souls until the last day.",
-      "action": "intake",
-      "source_hint": "Weimar Ausgabe"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "heaven-hell-intermediate"
@@ -163,7 +206,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

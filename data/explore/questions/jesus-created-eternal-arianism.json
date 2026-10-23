@@ -77,6 +77,27 @@
       "translation": "dossier"
     },
     {
+      "id": "tertullian-against-hermogenes-3",
+      "author": "Tertullian",
+      "year": 205,
+      "date": "c. 205",
+      "work": "Against Hermogenes",
+      "locus": "3",
+      "lang": "la",
+      "answer": "emitted",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For God is both Father and judge, yet he is not therefore always Father and judge, because he is always God. For he could not be Father before the Son, nor judge before the offence. There was, however, a time when neither the offence nor the Son existed, the one to make him judge, the other to make God Father.",
+      "original": "quia et pater deus est et iudex deus est, non tamen ideo pater et iudex semper, quia deus semper. nam nec pater potuit esse ante filium nec iudex ante delictum. fuit autem tempus, cum et delictum et filius non fuit, quod iudicem et qui patrem deum faceret.",
+      "context": "Against Hermogenes, who taught eternal matter, Tertullian distinguishes God's names: God is his name of substance, and is eternal; Lord and Father are titles that began when the things they name began. This belongs to the older scheme, seen in Theophilus, in which the Word was always within God and was uttered as Son for the making of the world; it is not yet Arius's teaching that the Son was made from nothing.",
+      "source": {
+        "book": "tertullian-against-hermogenes",
+        "section": "3"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "origen-first-principles-1-2-9",
       "author": "Origen of Alexandria",
       "year": 225,
@@ -149,14 +170,6 @@
       "why": "Arius's bishop explains the controversy. Preserved in Theodoret's Church History 1.4.",
       "action": "intake",
       "source_hint": "Theodoret HE, Parmentier GCS (1911)"
-    },
-    {
-      "author": "Tertullian",
-      "work": "Against Hermogenes 3",
-      "year": 205,
-      "why": "Says there was a time when God was not yet Father, though the Word was always with him. In the library; not yet added.",
-      "action": "search",
-      "source_hint": "tertullian-against-hermogenes"
     }
   ],
   "related": {

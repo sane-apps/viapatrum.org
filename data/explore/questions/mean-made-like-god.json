@@ -132,6 +132,27 @@
       "translation": "dossier"
     },
     {
+      "id": "maximus-ambiguum-41",
+      "author": "Maximus the Confessor",
+      "year": 640,
+      "date": "c. 640",
+      "work": "Ambigua to John",
+      "locus": "41 (PG 91, col. 1309)",
+      "lang": "grc",
+      "answer": "deified",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And finally, beyond all this, he will unite created nature with the uncreated through love (O the wonder of God's love for mankind!), and show them one and the same in the state of grace, having passed wholly through God as a whole, and become everything that God is, except identity in essence, and having received God himself, whole, in exchange for himself.",
+      "original": "καὶ τέλος ἐπὶ πᾶσι τούτοις, καὶ κτιστὴν φύσιν τῇ ἀκτίστῳ δι' ἀγάπης ἑνώσας (ὦ τοῦ θαύματος τῆς περὶ ἡμᾶς τοῦ Θεοῦ φιλανθρωπίας) ἓν καὶ ταὐτὸν δείξειε κατὰ τὴν ἕξιν τῆς χάριτος, ὅλος ὅλῳ περιχωρήσας ὁλικῶς τῷ Θεῷ, καὶ γενόμενος πᾶν εἴ τί περ ἐστὶν ὁ Θεός, χωρὶς τῆς κατ' οὐσίαν ταυτότητος, καὶ ὅλον αὐτὸν ἀντιλαβὼν ἑαυτοῦ τὸν Θεόν",
+      "context": "Maximus's Ambigua unpack hard sayings in Gregory of Nazianzus. Here the subject is man in Christ at the end of the ages: deified wholly, by grace, while the difference of essence remains.",
+      "source": {
+        "book": "maximus-pg91-tomos2-a3",
+        "section": "u26-rem-mid"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "augustine-city-of-god-21-15",
       "author": "Augustine of Hippo",
       "year": 426,
@@ -187,7 +208,7 @@
       "author": "Maximus the Confessor",
       "work": "Ambigua 7 and 10",
       "year": 630,
-      "why": "The fullest patristic account of deification. The library has Maximus in PG 91; to be searched.",
+      "why": "Ambiguum 41 is now quoted (see the quotes). Ambigua 7 and 10 themselves could not be pinned inside the library's PG 91 tomos chunking: the sections are not numbered by Ambiguum, and searches on the deification vocabulary surfaced Ambiguum 41 (PG 91, col. 1309) and the Quaestiones ad Thalassium instead.",
       "action": "search",
       "source_hint": "maximus-pg91 books"
     },

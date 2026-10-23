@@ -74,6 +74,27 @@
       "translation": "dossier"
     },
     {
+      "id": "alexander-alexandria-letter",
+      "author": "Alexander of Alexandria",
+      "year": 324,
+      "date": "c. 324",
+      "work": "Letter to Alexander of Thessalonica, in Theodoret, Church History",
+      "locus": "1.4",
+      "lang": "grc",
+      "answer": "theotokos",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Our Lord Jesus Christ, who truly, and not in appearance, bore a body from Mary the Mother of God, and came among the race of men at the consummation of the ages to abolish sin.",
+      "original": "ὁ Κύριος ἡμῶν Ἰησοῦς Χριστός, σῶμα φορέσας ἀληθῶς καὶ οὐ δοκήσει ἐκ τῆς Θεοτόκου Μαρίας, ἐπὶ συντελείᾳ τῶν αἰώνων εἰς ἀθέτησιν ἁμαρτίας ἐπιδημήσας τῷ γένει τῶν ἀνθρώπων",
+      "context": "Alexander writes against Arius (about 324), a century before Ephesus: an Alexandrian bishop already calls Mary Theotokos, Mother of God, in passing, as a matter of course. The letter survives because Theodoret quotes it whole in his Church History.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-theodoretus-of-cyrrhus-pg-80-84-historia-ecclesiastica.txt",
+        "edition": "Migne PG 82, Theodoret, Church History 1.4 (Khazarzar text)"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "gregory-nazianzus-letter-101-16",
       "author": "Gregory of Nazianzus",
       "year": 382,
@@ -258,14 +279,6 @@
       "why": "Nestorius in his own words, not only as his opponents quote him. The Bazaar survives in Syriac.",
       "action": "intake",
       "source_hint": "Loofs, Nestoriana (1905); Bedjan (1910)"
-    },
-    {
-      "author": "Alexander of Alexandria",
-      "work": "Letter to Alexander of Thessalonica",
-      "year": 324,
-      "why": "Uses Theotokos about a century before Ephesus. Greek in Theodoret, Church History 1.4.",
-      "action": "search",
-      "source_hint": "theodoret church history 1.4"
     }
   ],
   "related": {

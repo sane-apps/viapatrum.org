@@ -30,22 +30,67 @@
   ],
   "overview": [
     {
-      "text": "Origen hoped that even the devil would be restored, as Augustine reports. Gregory of Nyssa taught that evil will finally be wiped out, so that God may be \"all in all\".",
+      "text": "Origen taught in his own words that God's goodness will recall the whole creation to an end like its beginning, with even his enemies made subject; Augustine reports that he hoped even the devil would be restored. Gregory of Nyssa taught that evil will finally be wiped out, so that God may be \"all in all\".",
       "cites": [
+        "origen-principiis-1-6",
+        "origen-principiis-3-6",
         "origen-in-augustine-city-of-god-21-17",
         "gregory-nyssa-soul-resurrection-20",
         "gregory-nyssa-soul-resurrection-31"
       ]
     },
     {
-      "text": "His own brother Basil answered that if eternal punishment ends, so does eternal life. Augustine argued the same against the \"merciful ones\" of his day.",
+      "text": "His own brother Basil answered that if eternal punishment ends, so does eternal life. Augustine argued the same against the \"merciful ones\" of his day, and in 543 Justinian anathematized the teaching that punishment is only for a time.",
       "cites": [
         "basil-shorter-rules-267",
-        "augustine-city-of-god-21-17"
+        "augustine-city-of-god-21-17",
+        "justinian-543-anathema-9"
       ]
     }
   ],
   "quotes": [
+    {
+      "id": "origen-principiis-1-6",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "1.6.1-2",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We hold that the goodness of God, through his Christ, will recall the whole creation to one end, when even his enemies have been made subject to him. ... The end is always like the beginning: as there is one end for all, so there must have been one beginning for all; and as the many have one end, so from one beginning came the many differences and varieties, which are called back again, through the goodness of God and the subjection to Christ and the unity of the Holy Spirit, to one end that is like the beginning.",
+      "original": "In unum sane finem putamus quod bonitas Dei per Christum suum universam revocet creaturam, subactis et subiectis etiam inimicis ... Semper enim similis est finis initiis: et ideo sicut unus omnium finis, ita unum omnium intelligi debet initium; et sicut multorum unus finis, ita ab uno initio multae differentiae ac varietates, quae rursum per bonitatem Dei, et subjectionem Christi, atque unitatem Spiritus sancti in unum finem, qui sit initio similis, revocantur",
+      "context": "On First Principles survives whole only in Rufinus's Latin translation, which Origen's critics already accused of softening him; the Greek of this chapter is lost apart from fragments. Origen argues from the subjection of Christ's enemies (Psalm 110:1; 1 Corinthians 15:25-28) that to be subjected to Christ is to be saved. Quoted from Lommatzsch's 1847 reprint of the Delarue edition, the witness in the store; the library's First Principles book still holds working summaries in place of this text, so the passage still wants a locked library section.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis Opera Omnia, tomus XXI (Berlin, 1847), De Principiis (Rufinus's Latin)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-principiis-3-6",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "3.6.9",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So the end, restored to the beginning, and the outcome of things matched with their start, will bring back the state that rational nature had when it had no need to eat of the tree of the knowledge of good and evil: every sense of evil will be taken away and wiped perfectly clean, and the one good God alone will become all things to it, not in a few or in many, but in all he himself will be all. When there is nowhere death, nowhere the sting of death, nowhere any evil at all, then truly God will be all in all.",
+      "original": "Sic ergo finis ad principium reparatus, et rerum exitus collatus initiis, restituet illum statum, quem tunc habuit natura rationabilis, cum de ligno sciendi bonum et malum comedere non egebat, ut amoto omni malitiae sensu, et ad sincerum purumque deterso, solus qui est unus bonus Deus, hic ei fiat omnia, et non in paucis aliquibus, vel pluribus, sed in omnibus ipse sit omnia. Cum nusquam mors, nusquam aculeus mortis, nusquam omnino malum, tunc vere Deus omnia in omnibus erit.",
+      "context": "The closing words of the restoration chapter (numbered section 9 in Lommatzsch's print), again in Rufinus's Latin, glossing 1 Corinthians 15:28: God is all not in some but in all, when evil exists nowhere. Quoted from the same Lommatzsch witness; like 1.6, it still wants a locked library section.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis Opera Omnia, tomus XXI (Berlin, 1847), De Principiis (Rufinus's Latin)"
+      },
+      "translation": "dossier"
+    },
     {
       "id": "origen-in-augustine-city-of-god-21-17",
       "author": "Origen of Alexandria (as Augustine reports)",
@@ -150,6 +195,27 @@
         "edition": "The Latin Library text (Dombart)"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "justinian-543-anathema-9",
+      "author": "Emperor Justinian (Edict against Origen)",
+      "year": 543,
+      "date": "543",
+      "work": "Anathemas against Origen",
+      "locus": "Canon 9 (Denzinger 211)",
+      "lang": "la",
+      "answer": "not-all",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says or thinks that the punishment of demons and of ungodly men is only for a time, and will one day have an end, or that there will be a restoration and return of demons or of ungodly men, let him be anathema.",
+      "original": "Si quis dicit aut sentit, ad tempus esse daemonum et impiorum hominum supplicium, eiusque finem aliquando futurum, sive restitutionem et redintegrationem fore daemonum aut impiorum hominum, anathema sit.",
+      "context": "Justinian's edict of 543 against Origen, sent to Patriarch Menas of Constantinople: canon 9 of its canons against Origen, as printed in Denzinger's Enchiridion (11th edition, 1911), no. 211. The edition prints the Greek beside the Latin; the scan's Greek is badly garbled by OCR, so the quote follows its clean Latin. Whether the fifteen anathemas of the 553 council repeat this canon is disputed; the 543 edict is the secure text.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "edition": "Denzinger, Enchiridion Symbolorum, 11th ed. (1911), no. 211 (Latin)"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
@@ -157,17 +223,9 @@
       "author": "Origen of Alexandria",
       "work": "On First Principles 1.6 and 3.6",
       "year": 225,
-      "why": "The restoration in Origen's own words. The library book is needs-source.",
+      "why": "Quoted in Origen's own words (Rufinus's Latin) from the Lommatzsch witness: origen-principiis-1-6 and origen-principiis-3-6. Still open: the library's origen-principiis book holds working summaries, not the text; lock the real De Principiis text (Koetschau, GCS 22, 1913) as library sections.",
       "action": "relock-source",
-      "source_hint": "Koetschau, GCS 22 (1913); Lommatzsch vol. 21 (fetched)"
-    },
-    {
-      "author": "Emperor Justinian and the council of 543",
-      "work": "Anathemas against Origen, no. 9",
-      "year": 543,
-      "why": "\"If anyone says the punishment of demons and the ungodly is temporary ... let him be anathema.\" Not found in the Denzinger scan's text.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 211)"
+      "source_hint": "Koetschau, GCS 22 (1913); Lommatzsch vol. 21 (quoted)"
     },
     {
       "author": "Isaac of Nineveh",
@@ -186,7 +244,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

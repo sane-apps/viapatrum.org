@@ -129,6 +129,27 @@
       "translation": "dossier"
     },
     {
+      "id": "serapion-gospel-peter-docetists",
+      "author": "Serapion of Antioch",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Letter on the Gospel of Peter, quoted by Eusebius in Church History",
+      "locus": "6.12.6",
+      "lang": "grc",
+      "answer": "real",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "supporting",
+      "english": "We, brethren, receive Peter and the other apostles as Christ, but as men of experience we reject what is falsely written under their names, since we know that we did not receive such things. ... We were able, with the help of others who had practiced this gospel itself, that is, of the successors of those who began it, whom we call Docetists, to go through it, and to find most of it of the right word of the Saviour, but some things added apart.",
+      "original": "ἡμεῖς γὰρ, ἀδελφοί, καὶ Πέτρον καὶ τοὺς ἄλλους ἀποστόλους ἀποδεχόμεθα ὡς Χριστόν, τὰ δὲ ὀνόματι αὐτῶν ψευδεπίγραφα ὡς ἔμπειροι παραιτούμεθα, γινώσκοντες ὅτι τὰ τοιαῦτα οὐ παρελάβομεν. ... ἐδυνήθημεν γὰρ παρ᾽ ἄλλων τῶν ἀσκησάντων αὐτὸ τοῦτο τὸ εὐαγγέλιον, τουτέστι παρὰ τῶν διαδόχων τῶν καταρξαμένων αὐτοῦ, οὓς Δοκητὰς καλοῦμεν",
+      "context": "Serapion's own words, surviving only as quoted by Eusebius from his letter to the church at Rhossus. He had allowed the Gospel of Peter to be read there, then borrowed a copy from the successors of the people who began it, whom he names the Docetists, read it through, and found most of it sound but some things interpolated.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "6.12"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "tertullian-flesh-of-christ-5",
       "author": "Tertullian",
       "year": 206,
@@ -150,16 +171,7 @@
       "translation": "dossier"
     }
   ],
-  "gaps": [
-    {
-      "author": "Serapion of Antioch",
-      "work": "On the Gospel of Peter, in Eusebius, Church History 6.12.6",
-      "year": 200,
-      "why": "Names the Docetists as the users of the Gospel of Peter. In the library; to be added.",
-      "action": "search",
-      "source_hint": "eusebius-church-history 6.12"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "against-docetism"

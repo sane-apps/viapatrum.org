@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import {
   THRESHOLD, FLOOR, MAX_CANDIDATES, THIN_NOTE,
   splitSentences, stripPrefix, chunkSentences, citeOf, workKey,
-  candidates, normaliseScores, nearDuplicate, selectAnswer, normaliseQuestion,
+  candidates, normaliseScores, nearDuplicate, selectAnswer, normaliseQuestion, matchTopics,
 } from '../functions/_lib/ask.js';
 import { cleanTitle } from '../functions/_lib/search.js';
 
@@ -248,7 +248,8 @@ test('/api/ask: answer mode, passages in /api/search shape, one sentence rerank 
   assert.ok(body.answer.length >= 2 && body.answer.every((a) => a.ref >= 1 && a.ref <= body.passages.length));
   assert.equal(body.answer[0].author, 'Justin Martyr', 'dated writer first, undated Didache after');
   assert.deepEqual(Object.keys(body.passages[0]).sort(), ['author', 'href', 'kind', 'score', 'snippet', 'title']);
-  assert.equal(s.calls.filter((c) => c.model.includes('reranker')).length, 2, 'passage rerank + one sentence rerank');
+  assert.equal(s.calls.filter((c) => c.model.includes('reranker')).length, 1, 'ask skips the passage rerank (2026-10-20); one sentence rerank');
+  assert.deepEqual(body.topics, [], 'the stub serves no topics file: no topics');
   assert.ok(s.calls.at(-1).n <= MAX_CANDIDATES);
   assert.equal(res.headers.get('cache-control'), 'public, max-age=86400');
   assert.equal(res.headers.get('access-control-allow-origin'), '*');
@@ -302,4 +303,45 @@ test('/api/ask: the edge cache key carries the deployed search map ETag', async 
   } finally {
     globalThis.caches = saved;
   }
+});
+
+
+// --- Timeline topics ----------------------------------------------------------
+
+const TOPICS = [
+  { question: 'Do we have free will?', short: 'Free will?', href: '/explore/have-free-will/', also: ['free will', 'free choice', 'determinism', 'fate'] },
+  { question: 'Did they make images of Christ and the saints, and are icons idolatry?', short: 'Icons', href: '/explore/make-images-christ-saints-icons/', also: ['icons', 'iconoclasm', 'images of christ', 'idolatry'] },
+  { question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/', also: ['infant baptism', 'paedobaptism'] },
+  { question: 'Is Christ really present in the Eucharist?', short: 'Real presence', href: '/explore/eucharist-presence/', also: ['eucharist', 'real presence'] },
+];
+
+test('topics: the words of the question itself find their Timeline topic', () => {
+  assert.equal(matchTopics('free will', TOPICS)[0].href, '/explore/have-free-will/');
+  assert.equal(matchTopics('icons', TOPICS)[0].href, '/explore/make-images-christ-saints-icons/');
+  assert.equal(matchTopics('did the early church baptize infants', TOPICS)[0].href, '/explore/infant-baptism/');
+  assert.equal(matchTopics('What is the Eucharist?', TOPICS)[0].href, '/explore/eucharist-presence/');
+});
+
+test('topics: a curated phrase matches even when the question words differ', () => {
+  assert.equal(matchTopics('paedobaptism', TOPICS)[0].href, '/explore/infant-baptism/');
+  assert.equal(matchTopics('determinism', TOPICS)[0].href, '/explore/have-free-will/');
+});
+
+test('topics: unrelated words match nothing; at most three topics', () => {
+  assert.deepEqual(matchTopics('quantum bananas', TOPICS), []);
+  assert.deepEqual(matchTopics('what is the', TOPICS), []);
+  const many = Array.from({ length: 6 }, (_, i) => ({ question: `About prayer ${i}?`, short: '', href: `/explore/p${i}/`, also: ['prayer'] }));
+  assert.equal(matchTopics('prayer', many).length, 3);
+});
+
+
+test('/api/ask: matching Timeline topics ride along in the body', async () => {
+  const s = stubEnv({ rerankSentences: (text) => (/baptiz|water/i.test(text) ? 4 : -4) });
+  const assets = s.env.ASSETS.fetch;
+  const topics = [{ question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/', also: ['infant baptism', 'baptism'] }];
+  s.env.ASSETS.fetch = async (u, init) => (String(u).includes('ask-topics') ? { ok: true, json: async () => topics } : assets(u, init));
+  // Fresh module: topicsPromise is per-isolate state, already set by earlier tests.
+  const fresh = await import(`../functions/api/ask.js?v=topics-${Date.now()}`);
+  const { body } = await run(fresh.onRequest, 'https://viapatrum.org/api/ask?q=baptism', s.env);
+  assert.deepEqual(body.topics, [{ question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/' }]);
 });

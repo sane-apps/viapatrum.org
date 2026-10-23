@@ -57,16 +57,34 @@
       '<ol class="ask-plist">' + rows + "</ol></section>";
   }
 
+  // Timeline topics that match the question (from /api/ask): shown first,
+  // above the answer and the passages.
+  function topicsBlock(data) {
+    var ts = data.topics || [];
+    if (!ts.length) return "";
+    var items = ts.map(function (t) {
+      return '<li><a href="' + href(t.href) + '"><strong>' + esc(t.question) + '</strong><span class="go">Timeline topic \u2192</span></a></li>';
+    }).join("");
+    return '<section class="ask-topics" aria-labelledby="ask-tl"><h2 id="ask-tl" class="vp-section-label" tabindex="-1">On the Timeline</h2>' +
+      '<ul class="ask-tlist">' + items + "</ul></section>";
+  }
+
   function render(q, data) {
     var p = data.passages || [];
     data.passages = p;
     data.answer = data.answer || [];
+    var topics = topicsBlock(data);
     if (!p.length) {
+      if (topics) {
+        out.innerHTML = topics + '<section class="ask-none"><p class="ask-note">We found no passages for that question yet. Try other words, or search the whole library.</p>' +
+          libraryLink(q, "Search the library for \u201c" + q + "\u201d \u2192") + "</section>";
+        return "Timeline topic found. No passages found yet.";
+      }
       out.innerHTML = '<section class="ask-none"><p class="ask-note">We found no passages for that question yet. Try other words, or search the whole library.</p>' +
         libraryLink(q, "Search the library for “" + q + "” →") + "</section>";
       return "No passages found yet.";
     }
-    var html = "";
+    var html = topics;
     if (data.mode === "answer" && data.answer.length) {
       html += quotes(data);
     } else {

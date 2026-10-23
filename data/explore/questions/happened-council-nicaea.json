@@ -30,16 +30,19 @@
   ],
   "overview": [
     {
-      "text": "About 300 bishops met at Nicaea in 325, called by Constantine. They issued a creed confessing the Son \"from the substance of the Father ... of one substance with the Father\", and condemned Arius's sayings by name.",
+      "text": "About 300 bishops met at Nicaea in 325, called by Constantine. They issued a creed confessing the Son \"from the substance of the Father ... of one substance with the Father\", and condemned Arius's sayings by name. Eusebius of Caesarea, who was there, wrote home explaining that “from the substance” meant the Son is from the Father, not a part of him.",
       "cites": [
         "nicene-creed-325-b",
-        "nicene-creed-325-anathemas"
+        "nicene-creed-325-anathemas",
+        "eusebius-letter-homoousios-325"
       ]
     },
     {
       "text": "They also ended the Easter dispute, so that the East would keep Easter with Rome and Alexandria, and passed twenty canons on church order. They did not decide which books are in the Bible, a common myth.",
       "cites": [
-        "nicaea-synodal-letter-easter"
+        "nicaea-synodal-letter-easter",
+        "nicaea-canon-19-325",
+        "nicaea-canon-20-325"
       ]
     }
   ],
@@ -87,6 +90,27 @@
       "translation": "dossier"
     },
     {
+      "id": "eusebius-letter-homoousios-325",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Letter to his church (in Socrates, Church History)",
+      "locus": "1.8",
+      "lang": "grc",
+      "answer": "creed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And indeed “from the substance” was agreed by them to indicate that the Son is from the Father, but not as a part of him. In this sense it seemed good to us too to assent to the meaning, since pious teaching prescribes that the Son is from the Father, but is not a part of his substance.",
+      "original": "καὶ δὴ καὶ τὸ ἐκ τῆς οὐσίας ὡμολόγητο πρὸς αὐτῶν, δηλωτικὸν εἶναι τοῦ ἐκ μὲν τοῦ Πατρὸς εἶναι, οὐ μὴν ὡς μέρος ὑπάρχειν τοῦ Πατρός: ταύτῃ δὲ καὶ ἡμῖν ἐδόκει καλῶς ἔχειν συγκατατίθεσθαι τῇ διανοίᾳ, τῆς εὐσεβοῦς διδασκαλίας ὑπαγορευούσης ἐκ τοῦ Πατρὸς εἶναι τὸν υἱὸν, οὐ μὴν μέρος τῆς οὐσίας αὐτοῦ τυγχάνειν.",
+      "context": "Eusebius, a bishop present at Nicaea, wrote home to Caesarea explaining why he had signed, though he had hesitated over the unscriptural word homoousios (“of one substance”): in the sense agreed, it meant the Son is truly from the Father, not a physical part of him. His letter goes on in the same terms to defend “begotten, not made”.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.8"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "nicaea-synodal-letter-easter",
       "author": "Council of Nicaea (synodal letter, in Socrates)",
       "year": 325,
@@ -106,34 +130,72 @@
         "section": "1.9"
       },
       "translation": "dossier"
-    }
-  ],
-  "gaps": [
-    {
-      "author": "Eusebius of Caesarea",
-      "work": "Letter to his church, in Socrates 1.8",
-      "year": 325,
-      "why": "An eyewitness account of how the creed was drafted. In the library; to be added.",
-      "action": "search",
-      "source_hint": "socrates-ecclesiastical-history 1.8"
     },
     {
+      "id": "nicaea-canon-19-325",
       "author": "Council of Nicaea",
-      "work": "Twenty canons",
       "year": 325,
-      "why": "The canons themselves, in Greek.",
-      "action": "intake",
-      "source_hint": "Bruns (1839); Joannou (copyright) as note"
+      "date": "325",
+      "work": "Canons",
+      "locus": "Canon 19",
+      "lang": "grc",
+      "answer": "creed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "Concerning the Paulianists, who afterwards take refuge with the Catholic Church, the rule laid down is that they be rebaptized in every case. ... If any of them in former times were examined among the clergy, and are found blameless and beyond reproach, let them be rebaptized and then ordained by the bishop of the Catholic Church; but if the examination shows them unfit, they must be deposed.",
+      "original": "Περὶ τῶν Παυλιανιστῶν, εἶτα προσφυγόντων τῇ καθολικῇ ἐκκλησίᾳ, ὅρος ἐκτέθειται ἀναβαπτίζεσθαι αὐτοὺς ἐξάπαντος. ... Εἰ δέ τινες ἐν τῷ παρεληλυθότι χρόνῳ ἐν τῷ κλήρῳ ἐξητάσθησαν, εἰ μὲν ἄμεμπτοι καὶ ἀνεπίληπτοι φανεῖεν, ἀναβαπτισθέντες χειροτονείσθωσαν ὑπὸ τοῦ τῆς καθολικῆς ἐκκλησίας ἐπισκόπου· εἰ δὲ ἡ ἀνάκρισις ἀνεπιτηδείους αὐτοὺς εὑρίσκοι, καθαιρεῖσθαι αὐτοὺς προσήκει.",
+      "context": "The twenty canons policed the creed's border: the Paulianists, followers of the condemned Paul of Samosata, were treated as standing outside the faith, so their baptism counted for nothing and had to be done again. The council that wrote the creed also enforced it in discipline.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-canonsoffirstfou00brig.txt",
+        "edition": "Bright, The Canons of the First Four General Councils (2nd ed., Oxford, 1892), Greek text"
+      },
+      "translation": "dossier"
     },
     {
+      "id": "nicaea-canon-20-325",
+      "author": "Council of Nicaea",
+      "year": 325,
+      "date": "325",
+      "work": "Canons",
+      "locus": "Canon 20",
+      "lang": "grc",
+      "answer": "easter",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Since there are some who kneel on the Lord's day and on the days of Pentecost, so that everything may be observed uniformly in every parish, it has pleased the holy council that prayers be offered to God standing.",
+      "original": "Ἐπειδή τινές εἰσιν ἐν τῇ κυριακῇ γόνυ κλίνοντες, καὶ ἐν τῆς πεντηκοστῆς ἡμέραις, ὑπὲρ τοῦ πάντα ἐν πάσῃ παροικίᾳ ὁμοίως παραφυλάττεσθαι, ἑστῶτας ἔδοξε τῇ ἁγίᾳ συνόδῳ τὰς εὐχὰς ἀποδιδόναι τῷ Θεῴ.",
+      "context": "The last canon guards the Easter settlement in practice: kneeling, the posture of penitence and fasting, is ruled out on Sundays and through the fifty days of Pentecost, the season of the resurrection feast.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-canonsoffirstfou00brig.txt",
+        "edition": "Bright, The Canons of the First Four General Councils (2nd ed., Oxford, 1892), Greek text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "eusebius-vc-constantine-debate-339",
       "author": "Eusebius of Caesarea",
-      "work": "Life of Constantine 3.6–21",
       "year": 339,
-      "why": "Constantine at the council. In the library; to be added.",
-      "action": "search",
-      "source_hint": "eusebius-life-constantine 3"
+      "date": "c. 339",
+      "work": "Life of Constantine",
+      "locus": "3.13",
+      "lang": "grc",
+      "answer": "creed",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "While very many proposals were put forward by each party and much dispute arose at first, the emperor listened to all without resentment and received their proposals with sustained attention. Taking up in turn what was said by each party, he gently brought the stubbornly contentious together; and speaking to each man mildly — in Greek, for he was not unacquainted with it — he was sweet and pleasing, persuading some, shaming others by his words, praising those who spoke well, and driving all toward concord, until he made them of one mind and one belief on all the matters in dispute.",
+      "original": "πλείστων δῆτα ὑφ' ἑκατέρου τάγματος προτεινομένων πολλῆς τ' ἀμφιλογίας τὰ πρῶτα συνισταμένης, ἀνεξικάκως ἐπηκροᾶτο βασιλεὺς τῶν πάντων σχολῇ τε εὐτόνῳ τὰς προτάσεις ὑπεδέχετο, ἐν μέρει τ' ἀντιλαμβανόμενος τῶν παρ' ἑκατέρου τάγματος λεγομένων,ἠρέμα συνήγαγε τοὺς φιλονείκως ἐνισταμένους πράως τε ποιούμενος τὰς πρὸς ἕκαστον ὁμιλίας ἑλληνίζων τε τῇ φωνῇ, ὅτι μηδὲ ταύτης ἀμαθῶς εἶχεν, γλυκερός τις ἦν καὶ ἡδύς, τοὺς μὲν συμπείθων, τοὺς δὲ καταδυσωπῶν τῷ λόγῳ, τοὺς δ' εὖ λέγοντας ἐπαινῶν, πάντας τ' εἰς ὁμόνοιαν ἐλαύνων, εἰσόθ' ὁμογνώμονας καὶ ὁμοδόξους αὐτοὺς ἐπὶ τοῖς ἀμφισβητουμένοις ἅπασι κατεστήσατο,",
+      "context": "This is Eusebius's posthumous panegyric of Constantine, written after the emperor's death in 337 by a bishop who was present at Nicaea. It is our only narrative of the emperor's own part in the debates, and it idealizes him as peacemaker; the creed itself, quoted above, is the harder evidence.",
+      "source": {
+        "book": "eusebius-life-constantine",
+        "section": "3.13"
+      },
+      "translation": "dossier"
     }
   ],
+  "gaps": [],
   "related": {
     "topics": [
       "nicaea"
@@ -141,7 +203,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

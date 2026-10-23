@@ -83,6 +83,48 @@
       "translation": "dossier"
     },
     {
+      "id": "justin-1apol-27-exposure",
+      "author": "Justin Martyr",
+      "year": 155,
+      "date": "c. 155",
+      "work": "First Apology",
+      "locus": "27",
+      "lang": "grc",
+      "answer": "sin",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "And just as the ancients are said to have kept herds of oxen or goats or sheep or grazing horses, so now children too are kept only for shameful use; and likewise a multitude of females and of hermaphrodites and of doers of unspeakable things stands ready in every nation for this pollution.",
+      "original": "καὶ ὃν τρόπον λέγονται οἱ παλαιοὶ ἀγέλας βοῶν ἢ αἰγῶν ἢ προβάτων τρέφειν ἢ ἵππων φορβάδων, οὕτως νῦν καὶ παῖδας εἰς τὸ αἰσχρῶς χρῆσθαι μόνον· καὶ ὁμοίως θηλειῶν καὶ ἀνδρογύνων καὶ ἀῤῥητοποιῶν πλῆθος κατὰ πᾶν ἔθνος ἐπὶ τούτου τοῦ ἄγους ἕστηκε.",
+      "context": "Justin is denouncing the exposure of infants, a pagan practice, because exposed children are raised for prostitution. He calls the trade a pollution (ἄγος) and contrasts it with the Christian teaching that exposing children is wicked.",
+      "source": {
+        "book": "justin-first-apology",
+        "section": "27"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "athenagoras-plea-34",
+      "author": "Athenagoras",
+      "year": 177,
+      "date": "c. 177",
+      "work": "Plea for the Christians",
+      "locus": "34",
+      "lang": "grc",
+      "answer": "sin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For they have set up a market of prostitution and made unlawful resorts for the young for every shameful pleasure, not sparing even males, males working the dreadful things with males, and in every way outraging the bodies that are more modest and beautiful, dishonouring the fair work of God.",
+      "original": "Οἱ γὰρ ἀγορὰν στήσαντες πορνείας καὶ καταγωγὰς ἀθέσμους πεποιημένοι τοῖς νέοις πάσης αἰσχρᾶς ἡδονῆς καὶ μηδὲ τῶν ἀρσένων φειδόμενοι, ἄρσενες ἐν ἄρσεσι τὰ δεινὰ κατεργαζόμενοι",
+      "context": "Athenagoras turns the pagans' slanders back on their authors: adulterers and pederasts, he says, revile Christians, who live as eunuchs and in single marriage.",
+      "source": {
+        "book": "athenagoras-plea",
+        "section": "34"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "clement-paedagogus-2-10",
       "author": "Clement of Alexandria",
       "year": 195,
@@ -147,14 +189,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Athenagoras; Justin Martyr",
-      "work": "Plea 34; 1 Apology 27",
-      "year": 177,
-      "why": "Pagan practice contrasted with Christian.",
-      "action": "search",
-      "source_hint": "athenagoras-plea 34"
-    },
     {
       "author": "Council of Elvira; Basil",
       "work": "Elvira canon 71; Basil Letter 217 canon 62",

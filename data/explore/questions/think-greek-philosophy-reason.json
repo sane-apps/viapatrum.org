@@ -36,9 +36,10 @@
       ]
     },
     {
-      "text": "Tertullian warned \"What has Athens to do with Jerusalem?\", against philosophy as the root of heresy. Augustine's answer became the common one: take the gold of Egypt, every truth the philosophers found, for the service of Christ.",
+      "text": "Tertullian warned \"What has Athens to do with Jerusalem?\", against philosophy as the root of heresy. Augustine's answer became the common one: take the gold of Egypt, every truth the philosophers found, for the service of Christ. The image was Origen's first, in his letter to his pupil Gregory.",
       "cites": [
         "tertullian-prescription-7",
+        "origen-letter-gregory",
         "augustine-christian-doctrine-2-60"
       ]
     }
@@ -108,6 +109,27 @@
       "translation": "dossier"
     },
     {
+      "id": "origen-letter-gregory",
+      "author": "Origen of Alexandria",
+      "year": 238,
+      "date": "c. 238",
+      "work": "Letter to Gregory (Philocalia 13)",
+      "locus": "2",
+      "lang": "grc",
+      "answer": "ally",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And perhaps something like this is hinted at in what is written in Exodus in God's name, that the sons of Israel should be told to ask from their neighbours and fellow lodgers vessels of silver and gold and clothing, so that, by spoiling the Egyptians, they might find material for making the things taken over for the worship of God. For from what the sons of Israel spoiled from the Egyptians were made the things in the Holy of Holies: the ark with its cover, and the cherubim, and the mercy seat, and the golden jar in which the manna, the angels' bread, was kept.",
+      "original": "Καὶ τάχα τοιοῦτό τι αἰνίσσεται τὸ ἐν Ἐξόδῳ γεγραμμένον ἐκ προσώπου τοῦ θεοῦ, ἵνα λεχθῇ τοῖς υἱοῖς Ἰσραὴλ αἰτεῖν παρὰ γειτόνων καὶ συσκηνῶν σκεύη ἀργυρᾶ καὶ χρυσᾶ καὶ ἱματισμόν· ἵνα σκυλεύσαντες τοὺς Αἰγυπτίους εὕρωσιν ὕλην πρὸς τὴν κατασκευὴν τῶν παραλαμβανομένων εἰς τὴν πρὸς θεὸν λατρείαν. ἐκ γὰρ ὧν ἐσκύλευσαν τοὺς Αἰγυπτίους οἱ υἱοὶ Ἰσραὴλ τὰ ἐν τοῖς ἁγίοις τῶν ἁγίων κατεσκεύασται, ἡ κιβωτὸς μετὰ τοῦ ἐπιθέματος καὶ τὰ χερουβὶμ καὶ τὸ ἱλαστήριον καὶ ἡ χρυσῆ στάμνος, ἐν ᾗ ἀπέκειτο τὸ μάννα τῶν ἀγγέλων ὁ ἄρτος.",
+      "context": "Origen writes to his pupil Gregory, the future Gregory Thaumaturgus, urging him to take from Greek philosophy whatever can serve as general education or preparation for Christianity, as geometry and astronomy serve the reading of Scripture (section 1 of the letter). The Egyptians' gold is his warrant; his warning follows at once (section 3): few take Egypt's useful things and leave, but many, like Hadad the Edomite, end by making a golden calf. The letter is kept as chapter 13 of the Philocalia and printed in Migne PG 11; the text here is the Khazarzar witness, fetched because the library's Philocalia section holds only the letter's opening.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-epistula-ad-gregorium.txt",
+        "edition": "Migne PG 11 (Philocalia 13), Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "augustine-christian-doctrine-2-60",
       "author": "Augustine of Hippo",
       "year": 397,
@@ -130,14 +152,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Origen of Alexandria",
-      "work": "Letter to Gregory (Philocalia 13)",
-      "year": 238,
-      "why": "Use Greek learning as Israel used the Egyptians' gold.",
-      "action": "search",
-      "source_hint": "origen-philocalia"
-    },
     {
       "author": "Basil of Caesarea",
       "work": "Address to Young Men on Greek Literature",
@@ -162,7 +176,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

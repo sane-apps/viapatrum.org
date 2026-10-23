@@ -79,6 +79,31 @@
       "translation": "dossier"
     },
     {
+      "id": "justin-dialogue-90-91",
+      "author": "Justin Martyr",
+      "year": 160,
+      "date": "c. 160",
+      "work": "Dialogue with Trypho",
+      "locus": "90.4–5; 91.4",
+      "lang": "grc",
+      "answer": "types",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Moses himself prayed to God with his hands stretched out on either side, and Hur and Aaron held them up all day, so that he would not grow tired and let them droop. For if he gave up anything of this figure that imitated the cross, as it is written in the writings of Moses, the people were being defeated; but if he remained in this posture, Amalek was being conquered. ... And the setting up of the serpent, through the type and sign, against those who were biting Israel, is shown to have been done for the salvation of those who believed, because through the one who was going to be crucified, death was from then on proclaimed beforehand to the serpent, and salvation to those bitten by it and fleeing for refuge to the one who sent his crucified Son into the world.",
+      "original": "αὐτὸς Μωσῆς ηὔχετο τῷ θεῷ τὰς χεῖρας ἑκατέρως ἐκπετάσας, Ὢρ δὲ καὶ Ἀαρὼν ὑπεβάσταζον αὐτὰς πανῆμαρ, ἵνα μὴ κοπωθέντος αὐτοῦ χαλασθῶσιν. Εἰ γὰρ ἐνεδεδώκει τι τοῦ σχήματος τούτου τοῦ τὸν σταυρὸν μιμουμένου, ὡς γέγραπται ἐν ταῖς Μωσέως γραφαῖς ... ὁ λαὸς ἡττᾶτο· εἰ δὲ ἐν τῇ τάξει ἔμενε ταύτῃ, Ἀμαλὴκ ἐνικᾶτο ... Καὶ διὰ τοῦ τύπου δὲ καὶ σημείου τοῦ κατὰ τῶν δακόντων τὸν Ἰσραὴλ ὄφεων ἡ ἀνάθεσις φαίνεται γεγενημένη ἐπὶ σωτηρίᾳ τῶν πιστευόντων ... ὅτι διὰ τοῦ σταυροῦσθαι μέλλοντος θάνατος γενήσεσθαι ἔκτοτε προεκηρύσσετο τῷ ὄφει, σωτηρία δὲ τοῖς καταδακνομένοις ὑπ᾽ αὐτοῦ καὶ προσφεύγουσι τῷ τὸν ἐσταυρωμένον υἱὸν αὐτοῦ πέμψαντι εἰς τὸν κόσμον",
+      "context": "Justin has just won Trypho's agreement that the prophets revealed things in parables and types (90.1 to 2). Moses' outstretched hands and the bronze serpent are his worked examples of types of the cross.",
+      "source": {
+        "book": "justin-dialogue-trypho",
+        "section": "90",
+        "also": {
+          "book": "justin-dialogue-trypho",
+          "section": "91"
+        }
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "origen-first-principles-4-2-4",
       "author": "Origen of Alexandria",
       "year": 225,
@@ -159,14 +184,6 @@
       "why": "The four senses: Jerusalem as city, the Church, the soul, and heaven.",
       "action": "intake",
       "source_hint": "Petschenig, CSEL 13 (1886)"
-    },
-    {
-      "author": "Justin Martyr",
-      "work": "Dialogue with Trypho 90–91",
-      "year": 160,
-      "why": "Moses' raised arms and the bronze serpent as types of the cross. In the library, not yet added here.",
-      "action": "search",
-      "source_hint": "justin-dialogue-trypho"
     }
   ],
   "related": {

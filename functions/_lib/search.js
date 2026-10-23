@@ -45,8 +45,11 @@ export function snippet(text, doc, max = 320) {
   return t.length > max ? t.slice(0, max).replace(/\s+\S*$/, "") + "…" : t;
 }
 
-/** Embed, look up and rerank. Returns {top, order} or {error, status}. */
-export async function retrieve(env, q) {
+/** Embed, look up and rerank. Returns {top, order} or {error, status}.
+ * opts.passageRerank === false skips the passage rerank (vector order
+ * stands): /api/ask passes it (2026-10-20, speed) because it reranks the
+ * answer sentences itself; /api/search keeps the rerank. */
+export async function retrieve(env, q, opts = {}) {
   const { AI, VEC } = env;
   if (!AI || !VEC) return { error: "search not configured", status: 503 };
   const emb = await AI.run(EMBED, { queries: [q], instruction: INSTRUCTION });
@@ -57,7 +60,7 @@ export async function retrieve(env, q) {
   const matches = (found?.matches || []).filter((m) => m.metadata && m.metadata.k);
   const top = matches.slice(0, 20);
   let order = top.map((m, i) => ({ i, score: m.score }));
-  if (top.length > 1) {
+  if (top.length > 1 && opts.passageRerank !== false) {
     try {
       const rr = await AI.run(RERANK, { query: q, contexts: top.map((m) => ({ text: String(m.metadata.t || "").slice(0, 2000) })) });
       const ranked = (rr?.response || []).filter((r) => Number.isInteger(r.id));

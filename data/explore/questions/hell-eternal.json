@@ -44,17 +44,20 @@
       ]
     },
     {
-      "text": "Justin also records the view that souls live only as long as God wills, which later readers took as a hint that the wicked finally cease to be. Gregory of Nyssa hoped the fire would purify and end.",
+      "text": "Justin also records the view that souls live only as long as God wills, which later readers took as a hint that the wicked finally cease to be. Irenaeus likewise says souls, like everything made, endure only as long as God wills them to exist and endure. Gregory of Nyssa hoped the fire would purify and end.",
       "cites": [
         "justin-dialogue-5",
+        "irenaeus-ah-2-34",
         "gregory-nyssa-soul-resurrection-31-b"
       ]
     },
     {
-      "text": "Basil and Augustine argued that \"eternal\" punishment must last as long as \"eternal\" life. That became the common teaching of the churches.",
+      "text": "Basil and Augustine argued that eternal punishment must last as long as eternal life, and Irenaeus already calls the unbelievers' punishment not only temporal but made eternal, with the damned damned always. The Athanasian Creed closes by sending those who have done evil into eternal fire. That became the common teaching of the churches.",
       "cites": [
         "basil-shorter-rules-267-b",
-        "augustine-city-of-god-21-17-b"
+        "augustine-city-of-god-21-17-b",
+        "irenaeus-ah-4-28",
+        "athanasian-creed-quicumque"
       ]
     }
   ],
@@ -144,6 +147,50 @@
       "translation": "dossier"
     },
     {
+      "id": "irenaeus-ah-2-34",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "2.34.2–3",
+      "lang": "la",
+      "answer": "destroyed",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "So too anyone who thinks about souls and spirits, and in general about everything that has been made, will not go astray: everything that has been made has a beginning of its making, yet it endures for as long as God wills it to exist and to endure.",
+      "original": "sic et de animabus, et de spiritibus, et omnino de omnibus his quae facta sunt cogitans quis, minime peccabit: quando omnia quae facta sunt, initium quidem facturae suae habeant, perseverant autem quoadusque ea Deus et esse, et perseverare voluerit.",
+      "context": "Against teachers who said a soul that had a beginning must die with the body: for Irenaeus a made thing endures not by its own nature but by God's will, and he says the ungrateful man deprives himself of endurance into the age of the age. Readers have cited the passage both for conditional endurance and, with 4.28 below, for eternal punishment. This part of Against Heresies survives in its ancient Latin translation.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol1_harvgoog_djvu.txt",
+        "edition": "Harvey (1857), vol. 1, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-4-28",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "4.28.2",
+      "lang": "la",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So too the punishment of those who do not believe God's Word, and despise his coming, and turn backwards, has been increased: it is not only temporal, but has been made eternal. For those to whom the Lord says, Depart from me, you cursed, into the everlasting fire, will always be damned.",
+      "original": "sic et poena eorum qui non credunt Verbo Dei, et contemnunt eius adventum, et convertuntur retrorsum, adampliata est; non solum temporalis, sed et aeterna facta. Quibuscunque enim dixerit Dominus: Discedite a me maledicti in ignem perpetuum, isti erunt semper damnati",
+      "context": "Irenaeus argues that the God of the old and new covenants is one and the same: in the new covenant faith and obedience grow, and so does the punishment of unbelief. The Lord's words are Matthew 25:41. This part of Against Heresies survives in its ancient Latin translation.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "gregory-nyssa-soul-resurrection-31-b",
       "author": "Gregory of Nyssa",
       "year": 380,
@@ -205,6 +252,27 @@
         "edition": "The Latin Library text (Dombart)"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "athanasian-creed-quicumque",
+      "author": "Athanasian Creed",
+      "year": 500,
+      "date": "c. 500",
+      "work": "Quicumque vult (Athanasian Creed)",
+      "locus": "41–42",
+      "lang": "la",
+      "answer": "eternal",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "At his coming all people will rise again with their own bodies, and will give an account of their own deeds. And those who have done good will go into eternal life, and those who have done evil into eternal fire.",
+      "original": "ad cuius adventum omnes homines resurgere habent cum corporibus suis et reddituri sunt de factis propriis rationem: et qui bona egerunt, ibunt in vitam aeternam, qui vero mala, in ignem aeternum.",
+      "context": "The closing sentences of the creed long ascribed to Athanasius, in fact a Latin creed of about the fifth century, received in the Western liturgy. Only the operative sentences are quoted.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "edition": "Denzinger, Enchiridion Symbolorum, 11th ed. (1911), no. 40"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
@@ -215,22 +283,6 @@
       "why": "The clearest early statement that wicked souls are destroyed.",
       "action": "intake",
       "source_hint": "Reifferscheid, CSEL 4 (1875)"
-    },
-    {
-      "author": "Athanasian Creed",
-      "work": "Quicumque vult",
-      "year": 500,
-      "why": "\"Those who have done evil will go into eternal fire.\"",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 40)"
-    },
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 2.34 and 4.28",
-      "year": 180,
-      "why": "Souls live as long as God wills, and eternal fire for the unrepentant.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol1_harvgoog_djvu.txt"
     }
   ],
   "related": {
@@ -241,7 +293,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

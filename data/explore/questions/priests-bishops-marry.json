@@ -32,14 +32,23 @@
       "text": "The apostles included married men: Clement of Alexandria notes Peter and Philip had children. At Nicaea, as Socrates tells it, Paphnutius stopped a law separating clergy from their wives.",
       "cites": [
         "clement-stromata-3-6",
-        "paphnutius-nicaea-socrates-1-11"
+        "paphnutius-nicaea-socrates-1-11",
+        "trullo-canon-13-692"
       ]
     },
     {
-      "text": "In the Latin West, councils from about 306 required married bishops, priests and deacons to abstain from their wives, claiming apostolic custom.",
+      "text": "In the Latin West, councils from about 306 required married bishops, priests and deacons to abstain from their wives, claiming apostolic custom. Pope Siricius in 385 bound priests and levites to continence from the day of their ordination.",
       "cites": [
         "elvira-306-canon-33",
+        "siricius-himerius-7",
         "carthage-419-canon-3"
+      ]
+    },
+    {
+      "text": "In 1139 the Second Lateran Council went further: marriages contracted by clergy in major orders were declared no marriage at all. The Augsburg Confession (1530) replied that priests in the ancient Church were married men, and that a bishop should be the husband of one wife.",
+      "cites": [
+        "lateran-ii-1139-canon-7",
+        "augsburg-1530-23"
       ]
     }
   ],
@@ -62,27 +71,6 @@
       "source": {
         "book": "clement-alexandria-stromata",
         "section": "3.6"
-      },
-      "translation": "dossier"
-    },
-    {
-      "id": "paphnutius-nicaea-socrates-1-11",
-      "author": "Paphnutius at Nicaea (as Socrates reports)",
-      "year": 325,
-      "date": "c. 325",
-      "work": "Socrates, Church History",
-      "locus": "1.11.4–6",
-      "lang": "grc",
-      "answer": "married",
-      "strength": "explicit",
-      "voice": "reports",
-      "weight": "key",
-      "english": "The bishops wanted to bring a new law into the Church, that those in holy orders, bishops, presbyters and deacons, should not sleep with the wives they had married while still laymen. When this was being discussed, Paphnutius stood up in the middle of the assembly of bishops and cried out not to lay a heavy yoke on the clergy, saying that marriage itself is honorable and the bed undefiled (Hebrews 13:4) ... that it was enough for those already ordained not to marry afterward, according to the Church's ancient tradition, but not to be separated from the wife they had once married as laymen.",
-      "original": "Ἐδόκει τοῖς ἐπισκόποις νόμον νεαρὸν εἰς τὴν ἐκκλησίαν εἰσφέρειν, ὥστε τοὺς ἱερωμένους, λέγω δὲ ἐπισκόπους καὶ πρεσβυτέρους καὶ διακόνους, μὴ συγκαθεύδειν ταῖς γαμεταῖς, ἃς ἔτι λαϊκοὶ ὄντες ἠγάγοντο. Καὶ ἐπεὶ περὶ τούτου βουλεύεσθαι προὔκειτο, διαναστὰς ἐν μέσῳ τοῦ συλλόγου τῶν ἐπισκόπων ὁ Παφνούτιος ἐβόα μακρὰ, μὴ βαρὺν ζυγὸν ἐπιθεῖναι τοῖς ἱερωμένοις ἀνδράσι, τίμιον εἶναι τὸν γάμον αὐτὸν καὶ τὴν κοίτην ἀμίαντον ... ἀρκεῖσθαι τε τὸν φθάσαντα κλήρου τυχεῖν μηκέτι ἐπὶ γάμον ἔρχεσθαι, κατὰ τὴν τῆς ἐκκλησίας ἀρχαίαν παράδοσιν, μὴ μὴν ἀποζεύγνυσθαι ταύτης, ἣν ἅπαξ ἤδη πρότερον λαϊκὸς ὢν ἠγάγετο.",
-      "context": "Socrates writes a century later; some historians doubt the story. It matches the later Eastern rule: married men may be ordained, but no one marries after ordination.",
-      "source": {
-        "book": "socrates-ecclesiastical-history",
-        "section": "1.11"
       },
       "translation": "dossier"
     },
@@ -110,6 +98,50 @@
       "translation": "dossier"
     },
     {
+      "id": "paphnutius-nicaea-socrates-1-11",
+      "author": "Paphnutius at Nicaea (as Socrates reports)",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Socrates, Church History",
+      "locus": "1.11.4–6",
+      "lang": "grc",
+      "answer": "married",
+      "strength": "explicit",
+      "voice": "reports",
+      "weight": "key",
+      "english": "The bishops wanted to bring a new law into the Church, that those in holy orders, bishops, presbyters and deacons, should not sleep with the wives they had married while still laymen. When this was being discussed, Paphnutius stood up in the middle of the assembly of bishops and cried out not to lay a heavy yoke on the clergy, saying that marriage itself is honorable and the bed undefiled (Hebrews 13:4) ... that it was enough for those already ordained not to marry afterward, according to the Church's ancient tradition, but not to be separated from the wife they had once married as laymen.",
+      "original": "Ἐδόκει τοῖς ἐπισκόποις νόμον νεαρὸν εἰς τὴν ἐκκλησίαν εἰσφέρειν, ὥστε τοὺς ἱερωμένους, λέγω δὲ ἐπισκόπους καὶ πρεσβυτέρους καὶ διακόνους, μὴ συγκαθεύδειν ταῖς γαμεταῖς, ἃς ἔτι λαϊκοὶ ὄντες ἠγάγοντο. Καὶ ἐπεὶ περὶ τούτου βουλεύεσθαι προὔκειτο, διαναστὰς ἐν μέσῳ τοῦ συλλόγου τῶν ἐπισκόπων ὁ Παφνούτιος ἐβόα μακρὰ, μὴ βαρὺν ζυγὸν ἐπιθεῖναι τοῖς ἱερωμένοις ἀνδράσι, τίμιον εἶναι τὸν γάμον αὐτὸν καὶ τὴν κοίτην ἀμίαντον ... ἀρκεῖσθαι τε τὸν φθάσαντα κλήρου τυχεῖν μηκέτι ἐπὶ γάμον ἔρχεσθαι, κατὰ τὴν τῆς ἐκκλησίας ἀρχαίαν παράδοσιν, μὴ μὴν ἀποζεύγνυσθαι ταύτης, ἣν ἅπαξ ἤδη πρότερον λαϊκὸς ὢν ἠγάγετο.",
+      "context": "Socrates writes a century later; some historians doubt the story. It matches the later Eastern rule: married men may be ordained, but no one marries after ordination.",
+      "source": {
+        "book": "socrates-ecclesiastical-history",
+        "section": "1.11"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "siricius-himerius-7",
+      "author": "Siricius",
+      "year": 385,
+      "date": "385",
+      "work": "Letter to Himerius",
+      "locus": "7",
+      "lang": "la",
+      "answer": "continence",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We have learned that very many priests of Christ and levites, long after their consecration, have fathered children both from their own wives and even from shameful intercourse. ... By these decrees all of us, priests and levites, are bound by an unbreakable law, so that from the day of our ordination we devote both our hearts and our bodies to sobriety and chastity. ... Any bishop, presbyter or deacon who is hereafter found to be such a man, which we do not desire, must understand that every way to pardon through us is now shut to him.",
+      "original": "Plurimos enim sacerdotes Christi atque levitas, post longa consecrationis suae tempora, tam de coniugibus propriis, quam etiam de turpi coitu sobolem didicimus procreasse ... Quarum sanctionum omnes sacerdotes atque levitae insolubili lege constringimur, ut a die ordinationis nostrae, sobrietati ac pudicitiae et corda nostra mancipemus et corpora ... quilibet episcopus, presbyter atque diaconus, quod non optamus, deinceps fuerit talis inventus, iam nunc sibi omnem per nos indulgentiae aditum intelligat obseratum",
+      "context": "Pope Siricius to Himerius of Tarragona (10 February 385), the first papal decretal on the subject: he treats clerical continence as a rule already in force, and Denzinger’s own note says the same. Levites here are deacons. Read from the scan of Denzinger’s Enchiridion (11th ed., 1911), no. 89, whose OCR is poor in places; the words quoted follow the standard text. No locked Siricius text exists in the library.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), Siricius, Letter to Himerius, 7 (no. 89)"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "carthage-419-canon-3",
       "author": "Council of Carthage",
       "year": 419,
@@ -129,32 +161,79 @@
         "section": "3"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "trullo-canon-13-692",
+      "author": "Council in Trullo",
+      "year": 692,
+      "date": "692",
+      "work": "Canons",
+      "locus": "Canon 13",
+      "lang": "en",
+      "answer": "married",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Since we know it to be handed down as a rule of the Roman Church that those who are deemed worthy to be advanced to the diaconate or presbyterate should promise no longer to cohabit with their wives, we, preserving the ancient rule and apostolic perfection and order, will that the lawful marriages of men who are in holy orders be from this time forward firm, by no means dissolving their union with their wives nor depriving them of their mutual intercourse at a convenient time. ... if anyone shall have been found worthy to be ordained subdeacon, or deacon, or presbyter, he is by no means to be prohibited from admittance to such a rank, even if he shall live with a lawful wife.",
+      "original": "Since we know it to be handed down as a rule of the Roman Church that those who are deemed worthy to be advanced to the diaconate or presbyterate should promise no longer to cohabit with their wives, we, preserving the ancient rule and apostolic perfection and order, will that the lawful marriages of men who are in holy orders be from this time forward firm, by no means dissolving their union with their wives nor depriving them of their mutual intercourse at a convenient time. ... if anyone shall have been found worthy to be ordained subdeacon, or deacon, or presbyter, he is by no means to be prohibited from admittance to such a rank, even if he shall live with a lawful wife.",
+      "context": "The Eastern council of 692 knew Rome's custom of separating clergy from their wives and refused it, ordering that the marriages of men in holy orders stand firm. Quoted here in Percival's standard English translation; the council's Greek text is still to be quoted when a lawful open Greek edition is secured.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-trullo-canons-percival.txt",
+        "edition": "The Canons of the Council in Trullo, translated by H. R. Percival, in Nicene and Post-Nicene Fathers, 2nd series, vol. 14"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "lateran-ii-1139-canon-7",
+      "author": "Second Lateran Council",
+      "year": 1139,
+      "date": "1139",
+      "work": "Canons",
+      "locus": "Canon 7",
+      "lang": "la",
+      "answer": "continence",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Following in the footsteps of our predecessors, the Roman pontiffs Gregory VII, Urban and Paschal, we command that no one hear the Masses of those whom he knows to have wives or concubines. And so that the law of continence and the purity pleasing to God may spread among ecclesiastical persons and sacred orders, we decree that bishops, priests, deacons, subdeacons, canons regular, monks and professed lay brothers who, transgressing the holy resolve, have presumed to take wives to themselves, be separated. For we judge that a union of this kind, which is known to have been contracted against the Church’s rule, is not a marriage.",
+      "original": "Ad haec praedecessorum nostrorum Gregorii VII, Urbani et Paschalis Romanorum pontificum vestigiis inhaerentes, praecipimus ut nullus missas eorum audiat, quos uxores vel concubinas habere cognoverit. Ut autem lex continentiae et Deo placens munditia in ecclesiasticis personis et sacris ordinibus dilatetur, statuimus quatenus episcopi presbyteri diaconi subdiaconi regulares canonici et monachi atque conversi professi, qui sanctum transgredientes propositum uxores sibi copulare praesumpserint, separentur. Huiusmodi namque copulationem, quam contra ecclesiasticam regulam constat esse contractam, matrimonium non esse censemus.",
+      "context": "The step beyond continence: a marriage contracted by a cleric in major orders is declared no marriage at all, and the couple must separate (canon 6 also strips such clerics of office and benefice). Marriages made before ordination are not touched. Latin from the published conciliar text (Tanner, Decrees of the Ecumenical Councils, vol. 1); the web page’s Latin has a copying slip later in the canon, outside the span quoted here. Denzinger’s Enchiridion prints other Lateran II canons but not this one.",
+      "source": {
+        "url": "http://www.ldysinger.com/@magist/1139_Lateran2_ec10/02_lateran2.htm",
+        "edition": "Second Lateran Council, canon 7 (1139), Latin with English (Tanner, Decrees of the Ecumenical Councils, vol. 1)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augsburg-1530-23",
+      "author": "Augsburg Confession (Lutheran)",
+      "year": 1530,
+      "date": "1530",
+      "work": "Augsburg Confession",
+      "locus": "Article XXIII",
+      "lang": "en",
+      "answer": "married",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "It is also evident that in the ancient Church priests were married men. For Paul says, 1 Tim. 3:2, that a bishop should be chosen who is the husband of one wife.",
+      "original": "It is also evident that in the ancient Church priests were married men. For Paul says, 1 Tim. 3:2, that a bishop should be chosen who is the husband of one wife.",
+      "context": "The Lutheran defence of married clergy, from Scripture and the ancient Church’s practice; the same article says priests in Germany were first forced into celibacy about four hundred years before, in the Gregorian reform age. Quoted in the published English text; the Confession was presented in 1530 in Latin and German.",
+      "source": {
+        "url": "https://bookofconcord.org/augsburg-confession/",
+        "edition": "Augsburg Confession, Article XXIII (1530)"
+      },
+      "translation": "published"
     }
   ],
   "gaps": [
     {
-      "author": "Siricius",
-      "work": "Letter to Himerius 7",
-      "year": 385,
-      "why": "The first papal ruling on clerical continence.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 89)"
-    },
-    {
       "author": "Council in Trullo",
-      "work": "Canon 13",
+      "work": "Canon 13, in Greek",
       "year": 692,
-      "why": "The Eastern rule against Rome's: married priests keep their wives.",
+      "why": "Canon 13 is quoted in this dossier in Percival's English (NPNF II.14). The Greek text itself is still wanted, to this dossier's original-language standard: Bruns (1839) is lending-restricted on archive.org, Beveridge's Pandectae (1672) scans are unusable OCR, and no lawful open Greek text was located in the October 2026 pass.",
       "action": "intake",
-      "source_hint": "Joannou, Discipline générale antique (1962, copyright) as note; Bruns (1839)"
-    },
-    {
-      "author": "Second Lateran Council; Augsburg Confession",
-      "work": "Canon 7; Article 23",
-      "year": 1139,
-      "why": "The West forbade clergy to marry at all; the East kept married priests with celibate bishops; Lutherans defended married clergy.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 360)"
+      "source_hint": "Bruns, Canones Apostolorum et Conciliorum (1839); Joannou, Fonti (1962)"
     }
   ],
   "related": {
@@ -164,7 +243,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

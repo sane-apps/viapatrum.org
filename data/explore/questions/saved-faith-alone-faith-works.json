@@ -50,6 +50,12 @@
         "westminster-1646-11-1",
         "dositheus-1672-decree-13"
       ]
+    },
+    {
+      "text": "In 1999 Catholics and Lutherans confessed one sentence together: we are accepted by grace alone, in faith in Christ's saving work, and the old condemnations no longer strike the teaching the other church holds today.",
+      "cites": [
+        "jddj-1999-15"
+      ]
     }
   ],
   "quotes": [
@@ -223,6 +229,27 @@
         "edition": "Confession of Dositheus (Synod of Jerusalem), Decree 13 (1672)"
       },
       "translation": "published"
+    },
+    {
+      "id": "jddj-1999-15",
+      "author": "Lutheran World Federation and Catholic Church",
+      "year": 1999,
+      "date": "1999",
+      "work": "Joint Declaration on the Doctrine of Justification",
+      "locus": "15",
+      "lang": "en",
+      "answer": "faith",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Together we confess: By grace alone, in faith in Christ's saving work and not because of any merit on our part, we are accepted by God and receive the Holy Spirit, who renews our hearts while equipping and calling us to good works.",
+      "original": "Together we confess: By grace alone, in faith in Christ's saving work and not because of any merit on our part, we are accepted by God and receive the Holy Spirit, who renews our hearts while equipping and calling us to good works.",
+      "context": "Signed at Augsburg on 31 October 1999: the two churches confess the sentence together, and hold that the sixteenth century condemnations on justification do not apply to the teaching now confessed in common.",
+      "source": {
+        "url": "https://www.vatican.va/roman_curia/pontifical_councils/chrstuni/documents/rc_pc_chrstuni_doc_31101999_cathluthjointdeclaration_en.html",
+        "edition": "Joint Declaration on the Doctrine of Justification (1999), no. 15; official text (vatican.va)"
+      },
+      "translation": "published"
     }
   ],
   "gaps": [
@@ -249,14 +276,6 @@
       "why": "Several uses of \"by faith alone\".",
       "action": "intake",
       "source_hint": "Migne PL 17; Vogels CSEL 81 (copyright) as note"
-    },
-    {
-      "author": "Lutheran World Federation and Catholic Church",
-      "work": "Joint Declaration on the Doctrine of Justification",
-      "year": 1999,
-      "why": "The modern agreement that the sixteenth-century condemnations do not apply to each other's present teaching.",
-      "action": "search",
-      "source_hint": "vatican.va"
     }
   ],
   "related": {

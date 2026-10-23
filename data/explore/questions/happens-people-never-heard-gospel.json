@@ -166,6 +166,29 @@
       "translation": "dossier"
     },
     {
+      "id": "florence-1442-cantate-domino",
+      "author": "Council of Florence",
+      "year": 1442,
+      "date": "1442",
+      "work": "Cantate Domino (Decree for the Jacobites)",
+      "locus": "1442",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It firmly believes, professes and preaches that no one who does not exist within the Catholic Church, not only pagans, but also Jews or heretics and schismatics, can share in eternal life; but they will go into the eternal fire prepared for the devil and his angels (Matthew 25:41), unless before the end of life they are joined to her.",
+      "original": "Firmiter credit, profitetur et praedicat, nullos intra catholicam Ecclesiam non exsistentes, non solum paganos, sed nec Iudaeos aut haereticos atque schismaticos, aeternae vitae fieri posse participes; sed in ignem aeternum ituros, 'qui paratus est diabolo et angelis eius' [Mt 25,41], nisi ante finem vitae eidem fuerint aggregati.",
+      "context": "The decree that received the Copts (Jacobites) at Florence in 1442: the hardest form of 'no salvation outside the Church'. Later Catholic teaching (Pius IX and Vatican II, below) kept the rule and excepted ignorance that is not one's own fault.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 714"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "westminster-1646-10-4",
       "author": "Westminster Assembly",
       "year": 1646,
@@ -232,14 +255,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Council of Florence",
-      "work": "Cantate Domino (Decree for the Copts)",
-      "year": 1442,
-      "why": "\"No one outside the Catholic Church ... can share in eternal life.\" Not found in the Denzinger scan's text.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 714)"
-    },
     {
       "author": "Augustine of Hippo",
       "work": "Letter 102, question 2",

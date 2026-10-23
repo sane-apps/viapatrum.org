@@ -120,6 +120,27 @@
       "translation": "dossier"
     },
     {
+      "id": "theophilus-autolycus-2-16",
+      "author": "Theophilus of Antioch",
+      "year": 180,
+      "date": "c. 180",
+      "work": "To Autolycus",
+      "locus": "2.16",
+      "lang": "grc",
+      "answer": "regenerates",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "so that this too would be a sign that all who come to the truth, and are reborn and receive a blessing from God, are to receive repentance and forgiveness of sins through water and the washing of rebirth.",
+      "original": "ὅπως ᾖ καὶ τοῦτο εἰς δεῖγμα τοῦ μέλλειν λαμβάνειν τοὺς ἀνθρώπους μετάνοιαν καὶ ἄφεσιν ἁμαρτιῶν διὰ ὕδατος καὶ λουτροῦ παλιγγενεσίας πάντας τοὺς προσίοντας τῇ ἀληθείᾳ, καὶ ἀναγεννωμένους καὶ λαμβάνοντας εὐλογίαν παρὰ τοῦ Θεοῦ.",
+      "context": "On the fifth day of creation: the creatures made from the waters were blessed, and Theophilus reads that blessing as a figure of baptism.",
+      "source": {
+        "book": "theophilus-autolycus",
+        "section": "2.16"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "tertullian-baptism-1",
       "author": "Tertullian",
       "year": 203,
@@ -254,14 +275,6 @@
       "why": "The first Reformer to call baptism only a sign of commitment.",
       "action": "intake",
       "source_hint": "Corpus Reformatorum 91"
-    },
-    {
-      "author": "Theophilus of Antioch",
-      "work": "To Autolycus 2.16",
-      "year": 180,
-      "why": "Those reborn by water receive repentance and forgiveness. In the library.",
-      "action": "search",
-      "source_hint": "theophilus-autolycus"
     }
   ],
   "related": {

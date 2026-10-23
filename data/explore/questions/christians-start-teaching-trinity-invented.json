@@ -36,8 +36,9 @@
   ],
   "overview": [
     {
-      "text": "Christians baptized in the name of the Father, the Son and the Holy Spirit from the first generations, as Justin describes about 155.",
+      "text": "Christians baptized in the name of the Father, the Son and the Holy Spirit from the first generations: the Didache, about 100, already prescribes the threefold name, and Justin describes it about 155.",
       "cites": [
+        "didache-7-baptism",
         "justin-1apol-61"
       ]
     },
@@ -56,6 +57,27 @@
     }
   ],
   "quotes": [
+    {
+      "id": "didache-7-baptism",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "7.1",
+      "lang": "grc",
+      "answer": "practice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Now about baptism, baptize in this way: after saying all these things beforehand, baptize in the name of the Father and of the Son and of the Holy Spirit, in running water.",
+      "original": "Περὶ δὲ τοῦ βαπτίσματος, οὕτω βαπτίσατε: ταῦτα πάντα προειπόντες, βαπτίσατε εἰς τὸ ὄνομα τοῦ πατρὸς καὶ τοῦ υἱοῦ καὶ τοῦ ἁγίου πνεύματος ἐν ὕδατι ζῶντι.",
+      "context": "The earliest church manual, about a generation before Justin. The threefold name of Matthew 28:19 is already the fixed baptismal form; where running water is lacking, water is poured three times on the head (7.3).",
+      "source": {
+        "book": "didache",
+        "section": "7"
+      },
+      "translation": "dossier"
+    },
     {
       "id": "justin-1apol-61",
       "author": "Justin Martyr",
@@ -141,16 +163,7 @@
       "translation": "dossier"
     }
   ],
-  "gaps": [
-    {
-      "author": "The Didache",
-      "work": "Chapter 7",
-      "year": 100,
-      "why": "\"Baptize in the name of the Father and of the Son and of the Holy Spirit.\" In the library, not yet translated.",
-      "action": "translate",
-      "source_hint": "didache"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "father-son-spirit"

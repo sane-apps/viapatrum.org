@@ -53,6 +53,7 @@
       "text": "Yet the churches read the extra Greek books too. Origen defends the story of Susanna because every church of Christ reads it, and Cyprian quotes the Wisdom of Solomon alongside Deuteronomy.",
       "cites": [
         "origen-africanus",
+        "origen-africanus-copies",
         "cyprian-testimonies-3-15"
       ]
     },
@@ -65,11 +66,12 @@
       ]
     },
     {
-      "text": "Around 400 the Latin West gave two answers. Jerome and Rufinus read Wisdom, Sirach, Tobit, Judith and Maccabees in church but would not use them to prove doctrine. Augustine counts them in the canon, forty-four books in all.",
+      "text": "Around 400 the Latin West gave two answers. Jerome and Rufinus read Wisdom, Sirach, Tobit, Judith and Maccabees in church but would not use them to prove doctrine. Augustine counts them in the canon, forty-four books in all. Epiphanius, a generation earlier in the East, had put Wisdom and Sirach in the same middle place: useful, but not counted.",
       "cites": [
         "jerome-helmeted-prologue",
         "jerome-preface-solomon",
         "rufinus-creed-38",
+        "epiphanius-mensuris-4",
         "augustine-christian-doctrine-2-8-13"
       ]
     },
@@ -147,6 +149,27 @@
       "translation": "dossier"
     },
     {
+      "id": "origen-africanus-copies",
+      "author": "Origen of Alexandria",
+      "year": 240,
+      "date": "c. 240",
+      "work": "Letter to Africanus",
+      "locus": "6",
+      "lang": "grc",
+      "answer": "wider",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Is it time, then, if such things do not escape us, to set aside the copies in use in the churches, and to lay down the law for the brotherhood that they should put away the sacred books they carry about with them, and flatter the Jews and persuade them to share with us their pure copies, which have no forgery in them?",
+      "original": "Ὥρα τοίνυν, εἰ μὴ λανθάνει ἡμᾶς τὰ τοιαῦτα, ἀθετεῖν τὰ ἐν ταῖς Ἐκκλησίαις φερόμενα ἀντίγραφα, καὶ νομοθετῆσαι τῇ ἀδελφότητι, ἀποθέσθαι μὲν τὰς παρ' αὐτοῖς ἐπιφερομένας ἱερὰς βίβλους, κολακεύειν δὲ Ἰουδαίους, καὶ πείθειν, ἵνα μεταδῶσιν ἡμῖν τῶν καθαρῶν, καὶ μηδὲν πλάσμα ἐχόντων.",
+      "context": "The rhetorical question at the heart of the letter. Origen has just catalogued how the churches' copies differ from the Hebrew in Daniel, Job, Jeremiah and Genesis, and his answer is no: Providence, which gave the holy Scriptures for the building up of all Christ's churches, did not forget those bought at a price. The next sentence quotes Proverbs 22:28 (see origen-africanus). The library's working Greek skips these lines; the text here is the Migne print (PG 11.57-60), fetched as a witness.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-epistula-ad-africanum.txt",
+        "edition": "Migne PG 11.57-60 (De la Rue), Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "cyprian-testimonies-3-15",
       "author": "Cyprian of Carthage",
       "year": 249,
@@ -210,6 +233,27 @@
       "source": {
         "book": "hilary-homilies-on-the-psalms",
         "section": "pr.15"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "epiphanius-mensuris-4",
+      "author": "Epiphanius of Salamis",
+      "year": 375,
+      "date": "c. 375",
+      "work": "On Weights and Measures",
+      "locus": "4-5",
+      "lang": "grc",
+      "answer": "read",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "And so the twenty-two books were completed, matching the number of the twenty-two letters among the Hebrews. ... The two books in verse, Solomon's, called the Panaretos (the All-Virtuous), and the book of Jesus son of Sirach... these are useful and beneficial, but they are not counted in the number of the spoken books. For that reason they were not placed in the ark either, that is, in the ark of the covenant.",
+      "original": "Καὶ ἐκπληρώθησαν αἱ εἴκοσι δύο βίβλοι κατὰ τὸν ἀριθμὸν τῶν εἴκοσι δύο στοιχείων παρ' Ἑβραίοις ... Αἱ γὰρ στιχήρεις δύο βίβλοι, ἥ τε τοῦ Σολομῶντος, ἡ Πανάρετος λεγομένη, καὶ ἡ τοῦ Ἰησοῦ τοῦ υἱοῦ Σειράχ ... Καὶ αὗται χρήσιμοι μέν εἰσι καὶ ὠφέλιμοι, ἀλλ' εἰς ἀριθμὸν τῶν ῥητῶν οὐκ ἀναφέρονται. Διὸ οὐδὲ ἐν τῷ ἀαρὼν ἐνετέθησαν, τουτέστιν ἐν τῇ τῆς διαθήκης κιβωτῷ.",
+      "context": "Epiphanius counts the Old Testament in four sets of five plus Ezra and Esther: twenty-two books for the twenty-two Hebrew letters. Wisdom (Solomon's Panaretos, that is, the book of Proverbs-like sayings gathered as Wisdom) and Sirach stand outside the count: useful and beneficial, but not in the ark. He says the same in the Panarion (8.6). The text is Migne PG 43, fetched as a witness; the Panarion witness in the store covers PG 41-42 and does not include this work.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-43-de-mensuris-et-ponderibus.txt",
+        "edition": "Migne PG 43, Khazarzar text"
       },
       "translation": "dossier"
     },
@@ -416,14 +460,6 @@
       "source_hint": "Migne PG 37.1577–1600 (printed among Gregory of Nazianzus)"
     },
     {
-      "author": "Epiphanius of Salamis",
-      "work": "Panarion 8.6; On Weights and Measures 4",
-      "year": 375,
-      "why": "Calls Wisdom and Sirach useful but disputed. Epiphanius is in the library, but these passages were not found by search.",
-      "action": "search",
-      "source_hint": "epiphanius-panarion, epiphanius-de-mensuris"
-    },
-    {
       "author": "John of Damascus",
       "work": "Exact Exposition of the Orthodox Faith 4.17",
       "year": 740,
@@ -433,11 +469,11 @@
     },
     {
       "author": "Origen of Alexandria",
-      "work": "Letter to Africanus 4–6",
+      "work": "Letter to Africanus 4-6",
       "year": 240,
-      "why": "The library's Greek skips the lines where Origen asks whether the churches should throw out their copies. Re-lock from the Migne print.",
+      "why": "The lines the library's Greek skipped are now quoted from the Migne print witness: origen-africanus-copies. Still open: the library's working Greek (books/origen-letters/sources/africanus_working_greek.txt) jumps over section 6's question; re-lock that section from PG 11.48-60.",
       "action": "relock-source",
-      "source_hint": "Migne PG 11.48–60"
+      "source_hint": "Migne PG 11.48-60"
     }
   ],
   "related": {
@@ -449,7 +485,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

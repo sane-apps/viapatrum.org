@@ -109,6 +109,27 @@
       "translation": "dossier"
     },
     {
+      "id": "gregory-thaumaturgus-canon-11",
+      "author": "Gregory Thaumaturgus",
+      "year": 255,
+      "date": "c. 255",
+      "work": "Canonical Letter",
+      "locus": "Canon 11",
+      "lang": "grc",
+      "answer": "restored",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "The weeping is outside the gate of the house of prayer, where the sinner must stand and beg the faithful who enter to pray for him. The hearing is within the gate in the narthex, where the one who has sinned must stand as far as the catechumens, and then go out; for hearing the Scriptures and the teaching, as it says, let him be cast out and not be counted worthy of prayer. The kneeling is that he stand within the gate of the temple and go out with the catechumens. The standing with is that he stand with the faithful and not go out with the catechumens. Last, the partaking of the holy things.",
+      "original": "Ἡ πρόσκλαυσις ἔξω τῆς πύλης τοῦ εὐκτηρίου ἐστίν, ἔνθα ἑστῶτα τὸν ἁμαρτόντα, χρἠ τῶν εἰσιόντων δεῖσθαι πιστῶν, ὑπὲρ αὐτοῦ εὔχεσθαι. Ἡ ἀκρόασις ἔνδοθι τῆς πύλης ἐν τῷ νάρθηκι, ἔνθα ἑστάναι χρὴ τὸν ἡμαρτηκότα ἕως τῶν κατηχουμένων, καὶ ἐντεῦθεν ἐξέρχεσθαι, ἀκούων γάρ, φησί, τῶν Γραφῶν καὶ τῆς διδασκαλίας, ἐκβαλλέσθω καὶ μὴ ἀξιούσθω προσευχῆς. Ἡ δὲ ὑπόπτωσις, ἵνα ἔσωθεν τῆς πύλης τοῦ ναοῦ ἱστάμενος, μετᾶ τῶν κατηχουμένων ἐξέρχηται· ἡ σύστασις ἵνα συνίσταται τοῖς πιστοῖς καὶ μὴ ἐξέρχηται μετὰ τῶν κατηχουμένων. Τελευταῖον, ἡ μέθεξις τῶν ἁγιασμάτων.",
+      "context": "The grades of penance, ending in restored communion: weeping, hearing, kneeling, standing with, and at last partaking. The locked library section covers only Canon 1 of this letter, so Canon 11 is read from the Documenta Catholica Omnia copy text kept in the book's sources; its spellings (χρἠ, μετᾶ) are kept from that copy text.",
+      "source": {
+        "witness": "books/gregory-thaumaturgus-epistula-canonica/sources/canones_GR.txt",
+        "edition": "Documenta Catholica Omnia, Canones (Greek), Canon 11"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "gregory-nyssa-canonical-letter-b",
       "author": "Gregory of Nyssa",
       "year": 390,
@@ -152,14 +173,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Gregory Thaumaturgus",
-      "work": "Canonical Letter, canon 11",
-      "year": 255,
-      "why": "The four grades of penitents. In the library, one section.",
-      "action": "search",
-      "source_hint": "gregory-thaumaturgus-epistula-canonica"
-    },
     {
       "author": "Basil of Caesarea",
       "work": "Canonical Letters 188, 199, 217",

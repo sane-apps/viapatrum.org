@@ -60,7 +60,8 @@
       "text": "In the fourth century, councils and bishops wrote the lists down: Laodicea in Asia Minor, and in North Africa the councils of Hippo and Carthage, whose list Augustine follows. Augustine's rule is to follow what most churches, and above all the apostolic churches, received.",
       "cites": [
         "laodicea-60-nt",
-        "augustine-christian-doctrine-2-8-12"
+        "augustine-christian-doctrine-2-8-12",
+        "cyril-jerusalem-catechesis-4-36"
       ]
     },
     {
@@ -200,6 +201,27 @@
       "translation": "dossier"
     },
     {
+      "id": "cyril-jerusalem-catechesis-4-36",
+      "author": "Cyril of Jerusalem",
+      "year": 350,
+      "date": "c. 350",
+      "work": "Catechetical Lectures",
+      "locus": "4.36",
+      "lang": "grc",
+      "answer": "listed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Of the New Testament, the four Gospels only; the rest have false titles and are harmful. ... Have also the Acts of the twelve apostles; and besides these the seven catholic epistles, of James and Peter and John and Jude; and as the seal of all, and the last work of the disciples, the fourteen epistles of Paul. But let everything else be put in the second rank; and whatever is not read in the churches, do not read even by yourself.",
+      "original": "τῆς δὲ καινῆς διαθήκης τὰ τέσσαρα μόνα εὐαγγέλια, τὰ δὲ λοιπὰ ψευδεπίγραφα καὶ βλαβερὰ τυγχάνει. ... Ἔχου δὲ καὶ τὰς πράξεις τῶν δώδεκα ἀποστόλων· πρὸς τούτοις δὲ καὶ τὰς ἑπτὰ Ἰακώβου καὶ Πέτρου καὶ Ἰωάννου καὶ Ἰούδα καθολικὰς ἐπιστολάς· ἐπισφράγισμα δὲ τῶν πάντων, καὶ μαθητῶν τὸ τελευταῖον, τὰς Παύλου δεκατέσσαρας ἐπιστολάς· τὰ δὲ λοιπὰ πάντα ἐν δευτέρῳ κείσθω· καὶ ὅσα μὲν ἐν ἐκκλησίαις μὴ ἀναγινώσκεται, ταῦτα μηδὲ κατὰ σαυτὸν ἀναγίνωσκε.",
+      "context": "Cyril lectures Jerusalem's baptism candidates (about 350): study the books read in church, he says, and no others. His New Testament list, twenty six books, leaves out Revelation.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-catecheses-ad-illuminandos.txt",
+        "edition": "Migne PG 33, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "laodicea-60-nt",
       "author": "Council of Laodicea",
       "year": 363,
@@ -300,14 +322,6 @@
       "why": "The African list of both Testaments.",
       "action": "intake",
       "source_hint": "Bruns, Canones apostolorum et conciliorum (1839)"
-    },
-    {
-      "author": "Cyril of Jerusalem",
-      "work": "Catechetical Lecture 4.36",
-      "year": 350,
-      "why": "A New Testament list without Revelation. Its Greek is now fetched; the passage was not found by search.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/khaz-cyrillus-hierosolymitanus-pg-33-catecheses-ad-illuminandos.txt"
     },
     {
       "author": "Innocent I",
