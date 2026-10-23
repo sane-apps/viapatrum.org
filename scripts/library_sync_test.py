@@ -749,11 +749,11 @@ def work(slug, kinds, part_only="", scope=""):
 class Copy(unittest.TestCase):
     def test_pitch_says_every_only_for_full_formats(self):
         lib = lib_with([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf"])])
-        self.assertEqual(lib.pitch(), "Every book as EPUB and PDF, plus Word for Logos. One payment of $50.")
+        self.assertEqual(lib.pitch(), "Every book as EPUB and PDF, plus Word for Logos. Free to download.")
 
     def test_pitch_all_three(self):
         lib = lib_with([work("a", ["epub", "pdf", "word", "audio"])])
-        self.assertEqual(lib.pitch(), "Every book as EPUB, PDF and Word for Logos, plus audiobooks. One payment of $50.")
+        self.assertEqual(lib.pitch(), "Every book as EPUB, PDF and Word for Logos, plus audiobooks. Free to download.")
 
     def test_lede_counts(self):
         works = [work("a", ["epub", "pdf", "word", "audio"]), work("b", ["epub", "pdf"])]
@@ -781,9 +781,9 @@ class Copy(unittest.TestCase):
     def test_pitch_never_pairs_the_work_count_with_a_shorter_format(self):
         works = [work("a", ["epub", "pdf", "word", "audio"]), work("b", ["epub", "pdf", "audio"]), work("c", ["audio"])]
         self.assertEqual(lib_with(works).pitch(),
-                         "2 books as EPUB and PDF, 1 as Word for Logos and 3 audiobooks. One payment of $50.")
+                         "2 books as EPUB and PDF, 1 as Word for Logos and 3 audiobooks. Free to download.")
         one = [work("a", ["epub"]), work("b", ["audio"])]
-        self.assertEqual(lib_with(one).pitch(), "1 book as EPUB and 1 audiobook. One payment of $50.")
+        self.assertEqual(lib_with(one).pitch(), "1 book as EPUB and 1 audiobook. Free to download.")
 
     def test_dirty_file_is_hidden_not_its_format(self):
         lib = lib_with([work("a", ["epub", "word"]), work("b", ["epub", "word"])],
@@ -831,14 +831,13 @@ class Copy(unittest.TestCase):
         many = dp.short_audio({"sections": 99, "narrated": 90, "missing": [str(i) for i in range(1, 10)]})
         self.assertEqual(many, "§ 1, 2, 3, 4, 5 and 4 more not narrated yet")
 
-    def test_work_block_has_lock_price_and_part_only(self):
+    def test_work_block_is_free_and_says_part_only(self):
         lib = lib_with([work("a", ["epub"], part_only="homilies 5–6 of 50")])
         html = lib.work_block("a")
-        self.assertIn("keep-lk", html)
+        self.assertNotIn("keep-lk", html)
         self.assertNotIn('style="', html)
-        self.assertIn('Keep this book <br><span class="keep-sub">with the library pass</span>', html)
-        self.assertIn("Included in the $50 library pass.", html)
-        self.assertIn("Reading here stays free.", html)
+        self.assertIn('Keep this book <br><span class="keep-sub">free to download</span>', html)
+        self.assertNotIn("$", html)
         self.assertIn("Part only: homilies 5–6 of 50", html)
 
     def test_part_only_never_prints_internal_scope(self):
@@ -880,7 +879,7 @@ class Copy(unittest.TestCase):
         self.assertNotIn("0 audiobooks", html)
         self.assertNotIn("Audible", html)
         self.assertIn("1 of the site's 2 works as EPUB and PDF", html)
-        self.assertIn('"@type": "Product"', html)
+        self.assertIn('"@type": "Collection"', html)
         self.assertIn('"image": "https://viapatrum.org/', html)
         self.assertNotIn("PreOrder", html)
         self.assertNotIn("word for word", html)

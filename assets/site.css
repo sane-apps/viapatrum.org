@@ -2617,6 +2617,9 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .bx-tr { border: 0; overflow: visible; gap: 0.3rem; }
 .bx-tr button { border: 1px solid var(--rule); border-radius: 999px; }
 .bx-tr button + button { border-left: 1px solid var(--rule); }
+/* More: the rest of the licensed translations, styled as one more pill. */
+.bx-tr .bx-more { font: inherit; font-size: 0.85rem; font-weight: 650; padding: 0.35rem 0.7rem; min-height: 36px; border: 1px solid var(--rule); border-radius: 999px; background: var(--leaf); color: var(--ink); cursor: pointer; }
+.bx-tr .bx-more.is-on { background: var(--ink); color: var(--paper); }
 
 /* Licence and AI note: at the foot of a work, after the reading. */
 .work-disclosure { max-width: 46rem; margin: 2.2rem 0 1rem; padding-top: 1rem; border-top: 1px solid var(--rule); }

@@ -142,7 +142,43 @@
     window.addEventListener("hashchange", fromHash);
 
     // Translation switch: BSB ships in the page; others load per chapter.
-    const trButtons = Array.from(bx.querySelectorAll("[data-tr]"));
+    const trButtons = Array.from(bx.querySelectorAll("button[data-tr]"));
+    const more = bx.querySelector("[data-tr-more]");
+    const srcOf = (key) => trButtons.find((b) => b.dataset.tr === key) || (more && Array.from(more.options).find((o) => o.value === key));
+    const yvKey = (bx.querySelector("[data-yv-key]") || {}).dataset?.yvKey || "";
+    // YouVersion: one chapter per request; the version's notice comes from the API (cached per page).
+    const yvNotices = new Map();
+    const yvGet = (path) =>
+      fetch(`https://api.youversion.com/v1/${path}`, { headers: { "X-YVP-App-Key": yvKey } }).then((r) => {
+        if (!r.ok) throw new Error("missing");
+        return r.json();
+      });
+    // DOMParser gives an inert document: nothing in the API's HTML runs or loads.
+    const yvText = (html) =>
+      new DOMParser().parseFromString(html.replace(/<\/(div|p)>|<br\s*\/?>/g, " "), "text/html").body.textContent.replace(/\u00b6/g, "").replace(/\s+/g, " ").trim();
+    const yvChapter = async (id) => {
+      const body = await yvGet(`bibles/${id}/passages/${text.dataset.usfm}.${text.dataset.chap}?format=html&include_headings=false&include_notes=false`);
+      const parts = String(body.content || "").replace(/<span class="yv-vlbl">[^<]*<\/span>/g, "").split(/<span class="yv-v" v="(\d+)"><\/span>/);
+      const rows = [];
+      for (let i = 1; i < parts.length; i += 2) {
+        const t = yvText(parts[i + 1] || "");
+        if (!t) continue;
+        const last = rows[rows.length - 1];
+        if (last && last[0] === parts[i]) last[1] += " " + t;
+        else rows.push([parts[i], t]);
+      }
+      if (!rows.length) throw new Error("missing");
+      return rows;
+    };
+    const yvNotice = async (id) => {
+      if (!yvNotices.has(id)) {
+        yvNotices.set(id, yvGet(`bibles/${id}`).then((v) => {
+          const c = yvText(v.copyright || "");
+          return c && c.toLowerCase() !== "public domain" ? c : `${v.title}. Public domain.`;
+        }).catch(() => { yvNotices.delete(id); return ""; }));
+      }
+      return yvNotices.get(id);
+    };
     const original = text ? Array.from(text.querySelectorAll(".v")).map((el) => [el.dataset.v, el.querySelector(".vt").textContent]) : [];
     const originalMap = new Map(original);
     // Start from the BSB each time so no verse keeps a third version's words.
@@ -172,18 +208,31 @@
         trNote.hidden = !msg;
       }
     };
-    const press = (key) => trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
+    const press = (key) => {
+      trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
+      if (more) {
+        more.value = Array.from(more.options).some((o) => o.value === key) ? key : "";
+        more.classList.toggle("is-on", more.value !== "");
+      }
+    };
     const useTr = async (key) => {
       if (!text) return;
       const my = ++trSeq;
-      const btn = trButtons.find((b) => b.dataset.tr === key);
+      const btn = srcOf(key);
       press(key);
       noteTr("");
       if (key === "bsb") delete bx.dataset.loading;
       else bx.dataset.loading = key;
       try {
+        let notice = "";
         if (key === "bsb") paint(original);
-        else if (btn && btn.dataset.remote) {
+        else if (btn && btn.dataset.yv) {
+          const [rows, n] = await Promise.all([yvChapter(btn.dataset.yv), yvNotice(btn.dataset.yv)]);
+          if (my !== trSeq) return;
+          if (!n) throw new Error("no notice");
+          paint(rows);
+          notice = n;
+        } else if (btn && btn.dataset.remote) {
           const r = await fetch(`https://bolls.life/get-text/${btn.dataset.remote}/${text.dataset.booknum}/${text.dataset.chap}/`);
           if (my !== trSeq) return;
           if (!r.ok) throw new Error("missing");
@@ -211,7 +260,7 @@
         delete bx.dataset.loading;
         if (credit) {
           // Hosted versions are credited in the note below; loaded ones need their own notice.
-          credit.textContent = (btn && btn.dataset.remote && btn.dataset.credit) || "";
+          credit.textContent = notice || (btn && btn.dataset.remote && btn.dataset.credit) || "";
           credit.hidden = !credit.textContent;
         }
         try {
@@ -232,9 +281,10 @@
       }
     };
     trButtons.forEach((b) => b.addEventListener("click", () => useTr(b.dataset.tr)));
+    if (more) more.addEventListener("change", () => useTr(more.value || "bsb"));
     try {
       const saved = localStorage.getItem("vp-bible");
-      if (saved && saved !== "bsb" && trButtons.some((b) => b.dataset.tr === saved)) useTr(saved);
+      if (saved && saved !== "bsb" && srcOf(saved)) useTr(saved);
     } catch {
       /* default translation */
     }

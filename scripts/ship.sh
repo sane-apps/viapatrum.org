@@ -414,9 +414,9 @@ rollback_hint() {
 }
 
 downloads_guard() {
-  # The paid library: without a cookie, /dl/<file> must send people to
-  # /downloads/ (302) and /api/library/status must say locked. A 404 means the
-  # Function is not routed (paying readers blocked); a 200 or 206 is a leak.
+  # The free library (2026-10-22): without any cookie, HEAD /dl/<file> must be
+  # 200 with an attachment header. A 404 means the Function is not routed; a
+  # 302 means the old pass gate is still live.
   local lib="$STAGE/data/library-files.json"
   if [[ ! -f "$lib" ]]; then
     echo "  (no data/library-files.json in this build; downloads guard skipped)"
@@ -428,25 +428,22 @@ downloads_guard() {
     echo "  (library-files.json is empty; downloads guard skipped)"
     return 0
   fi
-  local ok=0 dl="" status=""
+  local ok=0 head=""
   for _ in $(seq 1 20); do
-    dl="$(curl --connect-timeout 5 --max-time 15 -sS -o /dev/null -w '%{http_code} %{redirect_url}' "${PUBLIC_ORIGIN}/dl/${key}" || echo 000)"
-    status="$(curl --connect-timeout 5 --max-time 15 -sS "${PUBLIC_ORIGIN}/api/library/status" || true)"
-    if [[ "$dl" == "302 "*"/downloads/?need="* ]] && python3 -c '
-import json, sys
-sys.exit(0 if json.loads(sys.stdin.read()).get("unlocked") is False else 1)' <<<"$status" 2>/dev/null; then
+    head="$(curl --connect-timeout 5 --max-time 15 -sS -I "${PUBLIC_ORIGIN}/dl/${key}" || echo 000)"
+    if grep -qE '^HTTP/[0-9.]+ 200' <<<"$head" && grep -qi '^content-disposition: attachment' <<<"$head"; then
       ok=1
       break
     fi
     sleep 2
   done
   if [[ "$ok" -ne 1 ]]; then
-    status="$(printf '%s' "$status" | tr -s '\n\t ' ' ' | cut -c1-160)"
-    echo "BLOCKED: paid downloads guard failed: GET /dl/${key} with no cookie -> '${dl}' (want 302 to /downloads/?need=); /api/library/status -> '${status}' (want unlocked:false)." >&2
+    head="$(printf '%s' "$head" | head -1 | tr -d '\r')"
+    echo "BLOCKED: free downloads guard failed: HEAD /dl/${key} with no cookie -> '${head}' (want 200 attachment)." >&2
     rollback_hint
     exit 1
   fi
-  echo "  OK /dl/${key} without a cookie -> 302 /downloads/; /api/library/status locked"
+  echo "  OK /dl/${key} without a cookie -> 200 attachment"
 }
 
 save_last_shipped() {  # $1 = epoch the injected audio was cut at
@@ -601,7 +598,7 @@ PY
     echo "  OK held probe /works/${held_probe}/ → 404"
   fi
 
-  step "Paid downloads guard (/dl/, /api/library)"
+  step "Free downloads guard (/dl/)"
   downloads_guard
 
   step "Verify live catalogue bytes and withdrawn routes"

@@ -8,6 +8,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 from collections import defaultdict
 from html import escape
@@ -242,6 +243,31 @@ MACARIUS_BOOK = BOOKS / "macarius-spiritual-homilies"
 WESLEY_BOOK = BOOKS / "john-wesley-sermons"
 EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
+
+# Book codes the YouVersion API uses, in BIBLE_ORDER's canonical order.
+USFM_ORDER = (
+    "GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN "
+    "HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH 1TI "
+    "2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV"
+).split()
+
+
+def youversion_web_key() -> str:
+    """The website's YouVersion App Key. It is public by design (the browser sends
+    it); it lives in the sane-env keychain as YOUVERSION_WEB_KEY, not in git.
+    Without it the YouVersion translations are left off the page."""
+    key = os.environ.get("YOUVERSION_WEB_KEY", "").strip()
+    if not key:
+        kc = Path.home() / "Library/Keychains/sane-env.keychain-db"
+        try:
+            subprocess.run(["/usr/bin/security", "unlock-keychain", "-p", "", str(kc)], capture_output=True, timeout=10)
+            key = subprocess.run(["/usr/bin/security", "find-generic-password", "-s", "sane-env", "-a", "YOUVERSION_WEB_KEY", "-w", str(kc)],
+                                 capture_output=True, text=True, timeout=10).stdout.strip()
+        except (OSError, subprocess.SubprocessError):
+            key = ""
+    if not key:
+        print("WARNING: YOUVERSION_WEB_KEY not found; NIV, NASB and the More menu are left off the Scripture pages.", file=sys.stderr)
+    return key
 SITE_NAME = "Via Patrum"
 SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
 # The iPhone and iPad app (App Store id 6818696772; 1.0 live on 2026-10-14).
@@ -6302,6 +6328,12 @@ def layout(
     canonical: str = "",
     nav_omit: tuple[str, ...] = (),
 ) -> str:
+    # Scripture pages carry licensed Bible text (YouVersion licences, 2026-10-22),
+    # which may not sit next to a request for gifts, so they get no Support column.
+    support_nav = f"""<nav aria-label="Support">
+      <h2>Support</h2>
+      <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li></ul>
+    </nav>"""
     crumbs = ""
     if crumb:
         parts = []
@@ -6415,10 +6447,7 @@ def layout(
       <h2>About</h2>
       <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
     </nav>
-    <nav aria-label="Support">
-      <h2>Support</h2>
-      <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li></ul>
-    </nav>
+    {'' if active == "scripture" else support_nav}
     <nav aria-label="Get the app">
       <h2>Get the app</h2>
       <ul><li><a href="{APP_STORE_URL}" rel="noopener">iPhone and iPad app</a></li><li><a href="{YOUTUBE_URL}" rel="noopener">YouTube channel</a></li></ul>
@@ -7946,8 +7975,8 @@ def logos_pack_manifest() -> dict:
 def logos_retired() -> bool:
     """The free /logos/ page and its zips are retired (owner 2026-10-07).
     The 2026-10-05 zips still held the 17 works withdrawn on 2026-10-07 and
-    worksheet notes; Logos Word files belong to the library pass (owner
-    2026-10-05). /logos/ now 301s to /downloads/."""
+    worksheet notes; Logos Word files live on the free downloads shelf
+    (owner 2026-10-05, free since 2026-10-22). /logos/ now 301s to /downloads/."""
     return True
 
 
@@ -10489,26 +10518,40 @@ def build() -> None:
         )
 
     # Licensed translations are not stored here: the reader's browser loads
-    # them from bolls.life when chosen, and the publisher's notice is shown.
+    # them per chapter when chosen, and the publisher's notice is shown.
+    # NIV and NASB come from the YouVersion Platform under its publisher
+    # licences (owner 2026-10-22; the notice is read from the API so it stays
+    # current). ESV and CSB still load from bolls.life until a licensed source
+    # is arranged (Crossway and API.Bible both need a paid or formal licence).
+    yv_key = youversion_web_key()
     remote_bibles = {
         "esv": ("ESV", "English Standard Version",
                 "Scripture quotations marked ESV are from the ESV\u00ae Bible (The Holy Bible, English Standard Version\u00ae), \u00a9 2001 by Crossway, a publishing ministry of Good News Publishers."),
-        "niv": ("NIV2011", "New International Version",
-                "Scripture quotations marked NIV are from THE HOLY BIBLE, NEW INTERNATIONAL VERSION\u00ae, NIV\u00ae Copyright \u00a9 1973, 1978, 1984, 2011 by Biblica, Inc.\u00ae"),
+        "niv": ("yv:111", "New International Version", ""),
         "csb": ("CSB17", "Christian Standard Bible",
                 "Scripture quotations marked CSB are from the Christian Standard Bible\u00ae, Copyright \u00a9 2017 by Holman Bible Publishers. Christian Standard Bible\u00ae and CSB\u00ae are federally registered trademarks of Holman Bible Publishers."),
-        "nasb": ("NASB", "New American Standard Bible (1995)",
-                 "Scripture quotations marked NASB are from the New American Standard Bible\u00ae, Copyright \u00a9 1960, 1971, 1977, 1995 by The Lockman Foundation."),
+        "nasb": ("yv:2692", "New American Standard Bible (2020)", ""),
     }
+    # Owner's list of established translations; no paraphrases (no TPT).
+    yv_more = [("nasb95", 100, "NASB 1995", "New American Standard Bible (1995)"), ("nirv", 110, "NIrV", "New International Reader's Version"),
+               ("amp", 1588, "AMP", "Amplified Bible"), ("asv", 12, "ASV", "American Standard Version"), ("gnv", 2163, "Geneva", "Geneva Bible (1599)")]
+
+    def remote_button(k: str, code: str, name: str, credit: str) -> str:
+        if code.startswith("yv:"):
+            return (f'<button type="button" data-tr="{k}" data-yv="{code[3:]}" aria-pressed="false" '
+                    f'title="{escape(name)}">{k.upper()}</button>') if yv_key else ""
+        return (f'<button type="button" data-tr="{k}" data-remote="{code}" aria-pressed="false" '
+                f'title="{escape(name)}" data-credit="{escape(credit + " Text provided by bolls.life.")}">{k.upper()}</button>')
+
     tr_buttons = "".join(
         f'<button type="button" data-tr="{k}" aria-pressed="{"true" if k == "bsb" else "false"}" '
         f'title="{escape(v["name"])}" data-credit="{escape(v["license"] if k == "net" else "")}">{escape(v["short"])}</button>'
         for k, v in bibles.items()
-    ) + "".join(
-        f'<button type="button" data-tr="{k}" data-remote="{code}" aria-pressed="false" '
-        f'title="{escape(name)}" data-credit="{escape(credit + " Text provided by bolls.life.")}">{k.upper()}</button>'
-        for k, (code, name, credit) in remote_bibles.items()
-    )
+    ) + "".join(remote_button(k, *v) for k, v in remote_bibles.items()) + (
+        '<label class="vh" for="bx-more">More translations</label>'
+        '<select id="bx-more" class="bx-more" data-tr-more><option value="">More</option>'
+        + "".join(f'<option value="{k}" data-yv="{i}" title="{escape(name)}">{escape(short)}</option>' for k, i, short, name in yv_more)
+        + "</select>" if yv_key else "")
     tr_credit = " · ".join(f"{escape(v['name'])} ({escape(v['short'])}): {escape(v['license'])}" for v in bibles.values())
 
     for book in BIBLE_ORDER:
@@ -10635,7 +10678,7 @@ def build() -> None:
                 + "</nav>"
             )
             text_html = (
-                f'<div class="bx-text" lang="en" data-book="{bslug}" data-booknum="{BIBLE_ORDER.index(book) + 1}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
+                f'<div class="bx-text" lang="en" data-book="{bslug}" data-booknum="{BIBLE_ORDER.index(book) + 1}" data-usfm="{USFM_ORDER[BIBLE_ORDER.index(book)]}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
                 if spans else (
                     '<div class="bx-text"><p class="desk-hint">This chapter is in the Greek Old Testament only, '
                     'so the Bibles here do not have its text.</p></div>' if (book, c) in EXTRA_CANON
@@ -10677,7 +10720,7 @@ def build() -> None:
   <h1>{escape(ref_name(book))} {c} <span class="bx-h-sub">with the Church Fathers</span></h1>
   <p class="lede">{lede}</p>
   {psalm_note}
-  <div class="bx-tools"><div class="bx-tr" role="group" aria-label="Bible translation">{tr_buttons}</div>{nav}</div>
+  <div class="bx-tools"{f' data-yv-key="{escape(yv_key)}"' if yv_key else ''}><div class="bx-tr" role="group" aria-label="Bible translation">{tr_buttons}</div>{nav}</div>
   <p class="bx-tr-credit" aria-live="polite" hidden></p>
 </header>
 <div class="bx-grid">
@@ -10772,7 +10815,7 @@ def build() -> None:
             "Listen to the Church Fathers: free audio in modern English",
             f"""<p class="eyebrow">Listen</p>
 <h1>Hear the Fathers read aloud</h1>
-<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{f' To keep them, {LIBRARY.audio_count()} of these are audiobooks in the <a href="/downloads/">library pass</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
+<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{f' To keep them, {LIBRARY.audio_count()} of these are free audiobooks on the <a href="/downloads/">downloads page</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
 <div class="ls-groups">{''.join(listen_groups)}</div>""",
             crumb=[("Home", "/"), ("Listen", "")],
             active="listen",
@@ -11078,15 +11121,15 @@ def build() -> None:
         ),
     )
 
-    # Library pass card (sketch item 7): only while the pass is on sale; the
-    # numbers after it shift by one. Price from library.json, never typed here.
+    # Library card (sketch item 7): only while the shelf has files; the
+    # numbers after it shift by one. Downloads are free since 2026-10-22.
     pass_n = 1 if LIBRARY else 0
     pass_card = (f"""
               <li class="help-option" id="library-pass">
                 <p class="n">2</p>
-                <h2>Get the library pass</h2>
-                <p>Every book{' and audiobook' if LIBRARY.has_audio() else ''} to keep, ${LIBRARY.price} once. It pays for more translation and narration. Reading and listening here stay free.</p>
-                <p><a class="btn" href="/downloads/">See the library pass</a></p>
+                <h2>Download the library</h2>
+                <p>Every book{' and audiobook' if LIBRARY.has_audio() else ''} to keep, free. Share the files with anyone who would read them.</p>
+                <p><a class="btn" href="/downloads/">Go to the shelf</a></p>
               </li>""" if LIBRARY else "")
     write(
         DIST / "contribute" / "index.html",
@@ -11160,7 +11203,7 @@ def build() -> None:
             <h2>What is here</h2>
             <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Timeline</strong> shows where writers agree and where a later turn comes.</p>
             {'''<h2>Books to keep</h2>
-            <p>''' + escape(LIBRARY.pitch()) + ''' See the <a href="/downloads/">library pass</a>. Reading and listening here stay free.</p>''' if LIBRARY else ''}
+            <p>''' + escape(LIBRARY.pitch()) + ''' Get them on the <a href="/downloads/">downloads page</a>.</p>''' if LIBRARY else ''}
             {'''<h2>Logos</h2>
             <p>The same English is also in Word files for Logos Bible Software. Each book has a cover and a description. Download every part from the <a href="/logos/">Personal Books</a> page, then add the file in Logos yourself.</p>''' if logos_pack_manifest() and not logos_retired() else ''}
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
@@ -11189,6 +11232,8 @@ def build() -> None:
             <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
             <h2>This website</h2>
             <p>The website uses no cookies and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <h2>Bibles read online</h2>
+            <p>When you choose the NIV, NASB, NIrV, Amplified, ASV or Geneva Bible, in the app or on this site, your device asks the <a href="https://platform.youversion.com/" rel="noopener">YouVersion Platform</a> for that chapter. On this site the ESV and CSB come from bolls.life the same way. Those services see the request, as any web server does, and have their own privacy policies (<a href="https://www.bible.com/privacy" rel="noopener">YouVersion</a>). The other Bibles are part of the app and this site and need no outside request.</p>
             <h2>Links you choose to open</h2>
             <p>Links to GitHub (to report a translation mistake) or to netbible.org open those sites, which have their own privacy policies.</p>
             <h2>Questions</h2>

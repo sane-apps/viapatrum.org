@@ -1,6 +1,8 @@
-"""Downloads: the library pass page and each work's "Keep this book" links
-(owner 2026-10-05: reading and listening stay free; one $50 payment unlocks
-every EPUB, PDF, Word for Logos file and audiobook, now and later).
+"""Downloads: the free library shelf and each work's "Keep this book" links
+(owner 2026-10-22: every EPUB, PDF, Word for Logos file and audiobook is a free
+download; gifts go through GitHub Sponsors. The $50 pass of 2026-10-05 is gone,
+which also lets the Scripture reader use the YouVersion licences, which forbid
+paywalls).
 
 Data: outputs/downloads/library.json from scripts/library_sync.py. Only files
 marked uploaded are linked, and only when the upload ledger next to it
@@ -10,9 +12,8 @@ newer than the ledger, is never listed as the current file. A file
 library_sync marked "dirty" (it failed the worksheet-note gate) is left out;
 the work's other formats stay. An
 audiobook that leaves sections out says which ones. Copy states real
-counts: "every" only where every work on the shelf has that format. Locked browsers that follow a /dl/ link are sent
-back here by functions/dl; assets/downloads.js shows the locked or unlocked
-state from /api/library/status and runs the Lemon Squeezy checkout.
+counts: "every" only where every work on the shelf has that format. functions/dl
+serves any listed file; assets/downloads.js runs the shelf search.
 """
 import json
 import re
@@ -21,6 +22,8 @@ from html import escape
 from pathlib import Path
 
 import logos_guide
+
+SPONSORS = "https://github.com/sponsors/MrSaneApps"
 
 FORMATS = [
     ("epub", "EPUB", "For Apple Books, Kobo, Google Play Books, and Kindle (send it with Send to Kindle)."),
@@ -144,10 +147,6 @@ class Library:
         # list form held the whole format, bundle included.
         return [b for b in self.data.get("bundles") or [] if self.current(b) and self.dirty.get(b.get("kind"), ()) is not None]
 
-    @property
-    def price(self) -> int:
-        return int(self.data.get("price_usd") or 50)
-
     def has_audio(self) -> bool:
         return any("audio" in w["files"] for w in self.by_slug.values())
 
@@ -156,9 +155,8 @@ class Library:
         return sum(1 for w in self.by_slug.values() if "audio" in w["files"])
 
     def __bool__(self) -> bool:
-        # Live only with uploaded files AND a checkout link, which library_sync
-        # go-live sets after Lemon Squeezy says the product is published.
-        return bool(self.by_slug) and bool(self.data.get("checkout_url"))
+        # Live once files are uploaded; downloads are free (2026-10-22).
+        return bool(self.by_slug)
 
     def pitch(self) -> str:
         """One honest line: "every" only for formats every listed work has."""
@@ -184,18 +182,15 @@ class Library:
             if n["audio"]:
                 bits.append(plural(n["audio"], "audiobook"))
             line = (", ".join(bits[:-1]) + " and " + bits[-1] if len(bits) > 1 else bits[0]) if bits else "Every download"
-        return line + f". One payment of ${int(self.data.get('price_usd') or 50)}."
+        return line + ". Free to download."
 
     def work_block(self, slug: str) -> str:
-        """Rail block on a work page: the formats this work comes in, each
-        marked with a lock so nobody mistakes it for a free download."""
+        """Rail block on a work page: the formats this work comes in, each a free download."""
         w = self.by_slug.get(slug) if self else None
         if not w:
             return ""
-        # Size from attributes only; .keep-lk in site.css sets the alignment.
-        lock = icon("lock", "keep-lk").replace("<svg ", '<svg width="12" height="12" ', 1)
         links = "".join(
-            f'<li><a class="keep-f" href="/dl/{escape(f["key"])}" data-kind="{k}">{icon(k)}<span>{lock} {LABEL[k]}</span>'
+            f'<li><a class="keep-f" href="/dl/{escape(f["key"])}" data-kind="{k}">{icon(k)}<span>{LABEL[k]}</span>'
             f'<small>{escape(hours(f["duration_s"]) if k == "audio" else size(f["bytes"]))}</small></a></li>'
             for k in KINDS if (f := w["files"].get(k)))
         part = part_only(w)
@@ -203,10 +198,9 @@ class Library:
         gap = short_audio(w["files"].get("audio") or {})
         if gap:
             scope += f'<p class="keep-scope">Audiobook: {escape(gap)}.</p>'
-        price = int(self.data.get("price_usd") or 50)
-        return (f'<section class="keep" aria-labelledby="keep-h"><h2 id="keep-h">Keep this book <br><span class="keep-sub">with the library pass</span></h2>'
+        return (f'<section class="keep" aria-labelledby="keep-h"><h2 id="keep-h">Keep this book <br><span class="keep-sub">free to download</span></h2>'
                 f'{scope}<ul>{links}</ul>'
-                f'<p><a href="/downloads/">Included in the ${price} library pass.</a> Reading here stays free.</p></section>')
+                f'<p><a href="/downloads/">Every book is on the shelf.</a></p></section>')
 
 
 def _row(w: dict, author_dates, show_author: bool = True) -> str:
@@ -332,8 +326,6 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
     n = counts(works)
     total_h = round(sum(w["files"]["audio"].get("duration_s", 0) for w in works if "audio" in w["files"]) / 3600)
     site_works = len(published) if published is not None else 0
-    price = int(data.get("price_usd") or 50)
-    checkout = data.get("checkout_url") or ""
     # Cover fan: audiobook covers first, then any cover, so the hero is never half empty.
     covered = sorted((w for w in works if w.get("thumb")), key=lambda w: "audio" not in w["files"])
     stack = "".join(f'<img src="/assets/covers/{escape(w["thumb"])}" alt="" width="200" height="300">' for w in covered[:5])
@@ -370,29 +362,21 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
         return k[0] if isinstance(k, tuple) and k and isinstance(k[0], int) else w.get("year")
 
     groups = shelf(works, author_dates, year_of)
-    buy = (f'<a class="dl-buy lemonsqueezy-button" href="{escape(checkout)}" data-buy>Get the library<span class="dl-price">${price}</span></a>'
-           if checkout else '<span class="dl-buy is-off">Opening soon</span>')
     body = f"""
-<div class="dl-page" data-state="loading">
+<div class="dl-page" data-state="unlocked">
 <section class="dl-hero">
   <div class="dl-hero-copy">
     <p class="eyebrow">The library, to keep</p>
     <h1>{"Books and recordings" if n["audio"] else "The books"}, <em>yours to keep.</em></h1>
-    <p class="dl-lede">{lede(works, n, total_h, site_works)}. One payment of ${price}. Every book we add later is yours too.</p>
-    <div class="dl-cta dl-when-locked">
-      {buy}
-      <button type="button" class="dl-textbtn" data-open-key>I already have a key</button>
-    </div>
-    <div class="dl-cta dl-when-unlocked">
-      <p class="dl-unlocked">{icon("down")}<span>Your library is unlocked on this browser <span class="dl-hint" data-key-hint></span></span></p>
+    <p class="dl-lede">{lede(works, n, total_h, site_works)}. Free to download. New books land here too.</p>
+    <div class="dl-cta">
       <a class="dl-buy dl-go" href="#shelf">Go to the shelf</a>
+      <a class="dl-textbtn" href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a>
     </div>
-    <p class="dl-fine">Reading and listening on this site stay free for everyone. The library pass is for keeping the books on your own devices, and it pays for more translation and narration.</p>
+    <p class="dl-fine">Reading, listening and downloads are free for everyone. Gifts pay for more translation and narration.</p>
   </div>
   <div class="dl-stack" aria-hidden="true">{stack}</div>
 </section>
-
-<p class="dl-need" data-need hidden>{icon("lock")}<span>That file is part of the library pass. Get the pass, or enter your key, and the download starts.</span></p>
 
 <ul class="dl-stats" aria-label="What is in the library">
   <li><strong>{len(works)}</strong><span>works</span></li>
@@ -407,20 +391,17 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 
 <section class="dl-faq" aria-labelledby="dl-faq-h">
   <h2 id="dl-faq-h">Questions</h2>
-  <details><summary>Is reading on the site still free?</summary><p>Yes. Every work, every Scripture link and every read-along recording stays free on this site and in the <a href="https://apps.apple.com/app/via-patrum/id6818696772">app</a>. The pass is only for files you keep.</p></details>
-  <details><summary>What happens when you add books?</summary><p>They are yours. New works{" and new recordings" if n["audio"] else ""} appear on the shelf as they are finished. Come back and download them with the same key.</p></details>
+  <details><summary>Is everything free?</summary><p>Yes. Every work, every Scripture link, every read-along recording and every file on this shelf is free, on this site and in the <a href="https://apps.apple.com/app/via-patrum/id6818696772">app</a>. If the library helps you, you can <a href="{SPONSORS}" rel="noopener">give on GitHub Sponsors</a>.</p></details>
+  <details><summary>What happens when you add books?</summary><p>New works{" and new recordings" if n["audio"] else ""} appear on the shelf as they are finished. Come back and download them.</p></details>
   {"<details><summary>How do I open these on a Kindle?</summary><p>Send the EPUB with Amazon's Send to Kindle (the app, the website, or email). Kindle converts it for you.</p></details>" if n["epub"] else ""}
   {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The cover and description are included. <a href='/downloads/logos/'>The Logos guide</a> covers adding the whole collection, or letting an AI assistant do it.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
-  <details><summary>Where do I find my key later?</summary><p>It is in your receipt email from Lemon Squeezy, our payment provider. You can also look it up at <a href="https://app.lemonsqueezy.com/my-orders" rel="noopener">My Orders</a> with the email you paid with. Enter it here on any browser.</p></details>
   <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
-  <details><summary>Can I get a refund?</summary><p>If something is wrong with a file, write to hi@saneapps.com and tell us what you see. We fix problems first; if we cannot, we refund.</p></details>
 </section>
 
 <section class="dl-shelf" id="shelf" aria-labelledby="dl-shelf-h">
   <div class="dl-shelf-head">
     <h2 id="dl-shelf-h">The shelf</h2>
-    <p class="dl-shelf-sub dl-when-locked">Every file below comes with the pass. Covers and titles link to the free reading page.</p>
-    <p class="dl-shelf-sub dl-when-unlocked">Select any format to download it. Files carry no copy protection.</p>
+    <p class="dl-shelf-sub">Select any format to download it. Files carry no copy protection. Covers and titles link to the reading page.</p>
   </div>
   <div class="dl-bundles" aria-label="Download everything">{bundle_html}</div>
   {zips_html}
@@ -437,44 +418,17 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <p class="dl-empty" hidden>No work matches that search.</p>
 </section>
 
-<p class="dl-account dl-when-unlocked">Using a shared computer? <button type="button" class="dl-textbtn" data-signout>Remove the key from this browser</button></p>
 </div>
-
-<dialog class="dl-dialog" id="dl-key-dialog" aria-labelledby="dl-key-h">
-  <form method="dialog" class="dl-x"><button aria-label="Close">×</button></form>
-  <h2 id="dl-key-h">Enter your key</h2>
-  <p>Your key is in your receipt email from Lemon Squeezy. It is a long code of letters and numbers in groups split by dashes.</p>
-  <form class="dl-key-form" data-key-form>
-    <label class="vh" for="dl-key">Licence key</label>
-    <input id="dl-key" name="key" autocomplete="off" spellcheck="false" placeholder="Paste your key" required>
-    <button type="submit" class="dl-buy">Unlock</button>
-  </form>
-  <p class="dl-err" role="alert" data-key-err></p>
-</dialog>
-
-<dialog class="dl-dialog dl-welcome" id="dl-welcome" aria-labelledby="dl-welcome-h">
-  <form method="dialog" class="dl-x"><button aria-label="Close">×</button></form>
-  <p class="eyebrow">Thank you</p>
-  <h2 id="dl-welcome-h">The library is yours.</h2>
-  <p data-welcome-msg>This browser is unlocked. Keep your key to unlock other devices:</p>
-  <p class="dl-keybox"><code data-welcome-key></code><button type="button" class="dl-textbtn" data-copy>Copy</button></p>
-  <p class="dl-fine" data-welcome-mail></p>
-  <form method="dialog"><button class="dl-buy">Go to the shelf</button></form>
-</dialog>
 
 """
     write(dist / "downloads" / "index.html",
           layout("The library, to keep", body, crumb=[("Home", "/"), ("Downloads", "")], active="downloads",
                  styles=["/assets/downloads.css"], scripts=["/assets/downloads.js"],
-                 description=f"{lede(works, n, total_h, site_works)}. One payment of ${price}; reading on the site stays free.",
-                 jsonld=[{"@type": "Product", "name": "Via Patrum library pass",
-                          "description": f"{lede(works, n, total_h)}, to keep. Reading on the site stays free.",
+                 description=f"{lede(works, n, total_h, site_works)}. Free to download.",
+                 jsonld=[{"@type": "Collection", "name": "Via Patrum library",
+                          "description": f"{lede(works, n, total_h)}, free to download.",
                           "url": "https://viapatrum.org/downloads/", "image": image,
-                          "brand": {"@type": "Brand", "name": "Via Patrum"},
-                          "offers": {"@type": "Offer", "price": f"{price}.00", "priceCurrency": "USD",
-                                     "url": "https://viapatrum.org/downloads/",
-                                     # The page is built only with a checkout link (Library.__bool__).
-                                     "availability": "https://schema.org/InStock"}}]))
+                          "isAccessibleForFree": True}]))
     if n["word"]:
         write(dist / "downloads" / "logos" / "index.html",
               layout("Add Via Patrum to Logos", logos_guide.page_body(n["word"]),

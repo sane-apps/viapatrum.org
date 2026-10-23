@@ -1,59 +1,11 @@
-/* Downloads page (scripts/downloads_page.py): locked/unlocked state, shelf
-   search over the writer groups, Lemon Squeezy checkout overlay, unlock right
-   after purchase, and key entry. Without JS the page still works: Buy opens
-   the hosted checkout, /dl/ links redirect here, and each writer group opens
-   with a tap. */
+/* Downloads page (scripts/downloads_page.py): shelf search over the writer
+   groups. Every file is a free download (2026-10-22); /dl/ links serve it
+   directly. Without JS each writer group opens with a tap. */
 (function () {
   var page = document.querySelector(".dl-page");
   if (!page) return;
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var params = new URLSearchParams(location.search);
-  var need = params.get("need");
-  var thanks = params.get("thanks");
-
-  function post(url, body) {
-    return fetch(url, { method: "POST", headers: { "content-type": "application/json" }, credentials: "same-origin", body: JSON.stringify(body || {}) })
-      .then(function (r) { return r.json().catch(function () { return {}; }).then(function (d) { d._status = r.status; return d; }); });
-  }
-
-  function setState(unlocked, hint) {
-    page.setAttribute("data-state", unlocked ? "unlocked" : "locked");
-    $$("[data-key-hint]").forEach(function (el) { el.textContent = hint ? "(key " + hint + ")" : ""; });
-    if (unlocked && need) startDownload(need);
-  }
-
-  function startDownload(path) {
-    if (!/^(epub|pdf|word|audio|bundles)\/[a-z0-9][a-z0-9._-]*$/.test(path)) return;
-    need = null;
-    var a = document.createElement("a");
-    a.href = "/dl/" + path;
-    a.rel = "nofollow";
-    document.body.appendChild(a);
-    a.click();
-    a.remove();
-    history.replaceState(null, "", location.pathname + "#shelf");
-  }
-
-  fetch("/api/library/status", { credentials: "same-origin", cache: "no-store" })
-    .then(function (r) { return r.json(); })
-    .then(function (d) {
-      setState(Boolean(d.unlocked), d.key_hint);
-      if (thanks && !d.unlocked) { keyDialog.showModal(); $("[data-key-err]").textContent = "Thank you. Paste the key from your receipt email to unlock this browser."; }
-    })
-    .catch(function () { setState(false); });
-
-  if (need) $("[data-need]").hidden = false;
-
-  /* Locked file buttons open the buy choice instead of a redirect round trip. */
-  page.addEventListener("click", function (e) {
-    var a = e.target.closest(".dl-f, a.dl-b");
-    if (!a || page.getAttribute("data-state") === "unlocked") return;
-    e.preventDefault();
-    need = a.getAttribute("href").replace(/^\/dl\//, "");
-    $("[data-need]").hidden = false;
-    $(".dl-hero").scrollIntoView({ behavior: "smooth", block: "start" });
-  });
 
   /* Shelf: one group per writer. Groups start closed (short on a phone) and
      open on wide screens; a search opens every group with a match and hides
@@ -92,71 +44,5 @@
       });
     });
     apply();
-  }
-
-  /* Key entry. */
-  var keyDialog = $("#dl-key-dialog");
-  $$("[data-open-key]").forEach(function (b) { b.addEventListener("click", function () { keyDialog.showModal(); $("#dl-key").focus(); }); });
-  var form = $("[data-key-form]");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var err = $("[data-key-err]"), btn = form.querySelector("button");
-    err.textContent = "";
-    btn.disabled = true;
-    post("/api/library/unlock", { key: form.key.value }).then(function (d) {
-      btn.disabled = false;
-      if (!d.ok) { err.textContent = d.reason || "That key did not work."; return; }
-      keyDialog.close();
-      setState(true, d.key_hint);
-    }).catch(function () { btn.disabled = false; err.textContent = "Network trouble. Please try again."; });
-  });
-
-  $$("[data-signout]").forEach(function (b) {
-    b.addEventListener("click", function () { post("/api/library/signout").then(function () { setState(false); }); });
-  });
-
-  /* Checkout: Lemon.js overlay; on success, unlock with the new order. */
-  var welcome = $("#dl-welcome");
-  function claim(order, tries) {
-    var a = (order && (order.attributes || (order.data && order.data.attributes))) || {};
-    var id = order && (order.id || (order.data && order.data.id));
-    return post("/api/library/claim", { order_id: String(id || ""), identifier: a.identifier || "" }).then(function (d) {
-      if (d.ok) {
-        setState(true, d.key_hint);
-        $("[data-welcome-key]").textContent = d.key;
-        $("[data-welcome-mail]").textContent = d.email ? "We also emailed it to " + d.email + "." : "It is also in your receipt email.";
-        if (window.LemonSqueezy && LemonSqueezy.Url) { try { LemonSqueezy.Url.Close(); } catch (e) { /* overlay may be gone */ } }
-        welcome.showModal();
-        return;
-      }
-      if (d.pending && tries < 15) return new Promise(function (r) { setTimeout(r, 2000); }).then(function () { return claim(order, tries + 1); });
-      keyDialog.showModal();
-      // Say what actually happened (red-team 2026-10-06): a pending, unpaid or
-      // wrong-product order used to read "Payment received" too.
-      $("[data-key-err]").textContent = d.pending
-        ? "Your payment is still being processed. Your key will be in your receipt email in a few minutes; enter it here to unlock."
-        : (d.reason || "We could not confirm this order.") + " If you were charged, enter the key from your receipt email, or write to hi@saneapps.com.";
-    });
-  }
-  $$("[data-copy]").forEach(function (b) {
-    b.addEventListener("click", function () {
-      var t = $("[data-welcome-key]").textContent;
-      (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(function () { b.textContent = "Copied"; }, function () { b.textContent = "Select and copy"; });
-    });
-  });
-  welcome.addEventListener("close", function () { $("#shelf").scrollIntoView({ behavior: "smooth" }); });
-
-  var buy = $("[data-buy]");
-  if (buy) {
-    var s = document.createElement("script");
-    s.src = "https://app.lemonsqueezy.com/js/lemon.js";
-    s.defer = true;
-    s.onload = function () {
-      if (window.createLemonSqueezy) window.createLemonSqueezy();
-      if (window.LemonSqueezy) LemonSqueezy.Setup({ eventHandler: function (ev) {
-        if (ev && ev.event === "Checkout.Success") claim(ev.data && (ev.data.order || ev.data), 0);
-      } });
-    };
-    document.head.appendChild(s);
   }
 })();

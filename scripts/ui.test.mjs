@@ -308,7 +308,7 @@ test('link hover system ships in built CSS', ()=>{
   assert.ok(!/scale\(/.test(css),'scale transform in CSS');
 });
 
-test('library pass: /downloads/ and Keep this book link only uploaded files (owner 2026-10-05)', ()=>{
+test('free library: /downloads/ and Keep this book link only uploaded files (owner 2026-10-22)', ()=>{
   let names;
   try { names=JSON.parse(readFileSync(new URL('data/library-files.json',DIST),'utf8')); } catch { return; } // no uploads yet: page not built
   const keys=Object.keys(names);
@@ -317,9 +317,23 @@ test('library pass: /downloads/ and Keep this book link only uploaded files (own
   const links=[...doc.querySelectorAll('a.dl-f, a.dl-b, a.keep-f')].map(a=>a.getAttribute('href'));
   assert.ok(links.length>0);
   for(const h of links){ assert.match(h,/^\/dl\//); assert.ok(names[h.slice(4)],'linked file is uploaded: '+h); }
-  assert.match(doc.querySelector('[data-buy]')?.getAttribute('href')||'',/^https:\/\/saneapps\.lemonsqueezy\.com\/checkout\/buy\//);
+  assert.equal(doc.querySelector('[data-buy], .lemonsqueezy-button, [data-open-key]'),null,'no checkout or key entry');
+  assert.ok(!/\$\d/.test(doc.querySelector('.dl-hero').textContent),'no price on the free shelf');
   assert.ok(doc.querySelector('script[src^="/assets/downloads.js"]'));
   assert.match(readFileSync(new URL('./generate_works_gate.py',import.meta.url),'utf8'),/"\/dl\/\*"/,'/dl/* is routed to functions');
+});
+
+test('scripture: no gift link beside licensed Bible text; YouVersion versions are wired (2026-10-22)', ()=>{
+  const doc=page('scripture/john/3/index.html');
+  assert.equal(doc.querySelector('a[href*="sponsors"]'),null,'no Sponsors link on a Scripture page');
+  assert.ok(page('about/index.html').querySelector('a[href*="sponsors"]'),'other pages keep the Sponsors link');
+  const tools=doc.querySelector('.bx-tools[data-yv-key]');
+  if(!tools) return; // built without the YouVersion key
+  assert.ok(doc.querySelector('button[data-tr="niv"][data-yv="111"]'),'NIV from YouVersion');
+  assert.equal(doc.querySelector('button[data-tr="niv"][data-remote]'),null,'NIV no longer from bolls.life');
+  assert.equal(doc.querySelector('.bx-text').dataset.usfm,'JHN');
+  const opts=[...doc.querySelectorAll('[data-tr-more] option[data-yv]')].map(o=>o.textContent);
+  assert.ok(opts.includes('NASB 1995')&&!opts.some(o=>/TPT|Passion/.test(o)),'More menu: established versions only');
 });
 
 test('scripture: only real chapters get pages; Greek Psalm numbers are refiled (audit 2026-10-06)', async ()=>{
