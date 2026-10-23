@@ -11011,18 +11011,20 @@ def build() -> None:
             f'{f" <span class=author-dates>{escape(dates)}</span>" if dates else ""}</h2>'
             f'<ul class="ls-list">{lis}</ul></section>'
         )
-    n_listen = sum(len(v) for v in listen_by_author.values())
+    # One number from one place: the home page's "N works read aloud".
+    n_listen = n_audio
+    assert n_listen == sum(len(v) for v in listen_by_author.values())
     write(
         DIST / "listen" / "index.html",
         layout(
-            "Listen to the Church Fathers: free audio in modern English",
+            "Listen to the Church Fathers, read aloud in fresh English",
             f"""<p class="eyebrow">Listen</p>
 <h1>Hear the Fathers read aloud</h1>
 <p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our fresh English translations.{f' To keep them, {LIBRARY.audio_count()} of these are free audiobooks on the <a href="/downloads/">downloads page</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
 <div class="ls-groups">{''.join(listen_groups)}</div>""",
             crumb=[("Home", "/"), ("Listen", "")],
             active="listen",
-            description=f"{n_listen} early Christian works with read-along audio in fresh English: press Play and the text follows the voice.",
+            description=f"{n_listen} works with read-along audio in fresh English translations: press Play and the text follows the voice.",
             og_image="listen",
         ),
     )
@@ -11540,13 +11542,39 @@ def build() -> None:
         f"Sitemap: {SITE_ORIGIN}/sitemap.xml\n",
         encoding="utf-8",
     )
-    # llms.txt + llms-full.txt: the library's map for AI systems, kept as
-    # source files at the repo root and copied verbatim. Regenerate
-    # llms-full.txt when the catalogue changes; a stale index is worse than none.
-    for _llms_name in ("llms.txt", "llms-full.txt"):
-        _llms_src = ROOT / _llms_name
-        if _llms_src.is_file():
-            (DIST / _llms_name).write_text(_llms_src.read_text(encoding="utf-8"), encoding="utf-8")
+    # llms.txt + llms-full.txt: the library's map for AI systems, written from
+    # this build's lists (2026-10-23: hand-kept root copies went ten days
+    # stale, with old counts and a paywall that no longer exists). Same
+    # counts as the home, Works and Fathers pages; a stale index is worse
+    # than none, so a bad one stops the build.
+    import html as html_lib
+    import llms_txt
+    _fathers_rows = []
+    for _h in author_links:
+        _m = re.search(r'/authors/([^/]+)/"><strong>(.*?)</strong>', _h)
+        if not _m:
+            continue
+        _d = re.search(r'class="author-dates">(.*?)</span>', _h)
+        _c = re.findall(r"<span>([^<]*)</span>", _h)
+        _fathers_rows.append((_m.group(1), html_lib.unescape(_m.group(2)),
+                              html_lib.unescape(_d.group(1)) if _d else "",
+                              html_lib.unescape(_c[-1]) if _c else ""))
+    _llms_topics = [(t["id"], t["title"]) for locus in tax.get("loci", []) for t in locus.get("topics", [])
+                    if by_topic.get(t["id"]) or t["id"] in topic_to_works]
+    _llms_books = [(slugify(book_name(b)), book_name(b)) for b in BIBLE_ORDER
+                   if (sc_books.get(b) or {}).get("refs") or base_bible["books"].get(b)]
+    _llms_lib = llms_txt.Library(
+        origin=SITE_ORIGIN,
+        works=[(w["slug"], public_reader_title(w["title"], slug=w["slug"]), display_author(w["author"])) for w in works],
+        writers=author_n, fathers=_fathers_rows, topics=_llms_topics, scripture=_llms_books,
+        passages=len(excerpts), audio=n_audio, questions=n_tl,
+    )
+    _live_slugs = {w["slug"] for w in works}
+    for _llms_name, _llms_text in zip(("llms.txt", "llms-full.txt"), llms_txt.build(_llms_lib)):
+        _bad = llms_txt.check(_llms_text, _live_slugs, SITE_ORIGIN)
+        if _bad:
+            raise SystemExit(f"BLOCKED: {_llms_name}: " + "; ".join(_bad[:5]))
+        (DIST / _llms_name).write_text(_llms_text, encoding="utf-8")
     # Every page gets its own title: where two pages still share one, the later
     # ones add the opening words of their own description.
     import html as html_lib
