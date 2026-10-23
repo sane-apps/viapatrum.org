@@ -1001,7 +1001,7 @@ def year_from_period(p: str | None, *, bound: str = "mid") -> int | None:
     span = re.search(r"\b(\d{1,4})\s*[–-]\s*(?:c\.\s*)?(\d{1,4})\b", p)
     if span:
         a, b = int(span.group(1)), int(span.group(2))
-        return b if bound == "end" else (a + b) // 2
+        return b if bound == "end" else a if bound == "start" else (a + b) // 2
     m = re.search(r"\b(\d{1,4})\b(?!\s*(?:st|nd|rd|th))", p, re.I)
     return int(m.group(1)) if m else None
 
@@ -1144,6 +1144,25 @@ AUTHOR_BIOS = load_author_bios()
 # from each work's English; the book metadata is left as it is.
 WORK_BLURBS: dict[str, str] = {k: v for k, v in (_json_load(ROOT / "data" / "work-blurbs.json", {}) or {}).items()
                                if isinstance(v, str) and v.strip()}
+# A work's own date when its writer's dates do not date it: the martyr acts
+# all filed under one group and showed its "c. 165" (2026-10-23 audit: Cyprian
+# 258, Irenaeus of Sirmium 304). data/work-dates.json, slug -> {date, source}.
+WORK_DATES: dict[str, str] = {
+    k: str(v["date"]).strip() for k, v in (_json_load(ROOT / "data" / "work-dates.json", {}) or {}).items()
+    if isinstance(v, dict) and str(v.get("date") or "").strip()}
+# Book intros keep a few sentences an old template wrote ("written by Acts of
+# the Martyrs (c. 165)", the heretic Montanus's "fl. c. 170" on a martyr of
+# 259). data/intro-fixes.json, slug -> [{from, to}], applied to the intro and
+# to the teaser taken from it; the book files stay as they are.
+INTRO_FIXES: dict[str, list[tuple[str, str]]] = {
+    k: [(str(f["from"]), str(f.get("to") or "")) for f in v if isinstance(f, dict) and f.get("from")]
+    for k, v in (_json_load(ROOT / "data" / "intro-fixes.json", {}) or {}).items() if isinstance(v, list)}
+
+
+def apply_intro_fixes(slug: str, text: str) -> str:
+    for old, new in INTRO_FIXES.get(slug or "", []):
+        text = text.replace(old, new)
+    return text
 # Plain-English section headings where the file kept a translator's shorthand
 # ("Bezalel = Christ from Judah; Eliab = apostles"), written from each
 # section's English (data/section-titles.json, 2026-10-14). slug -> {section: head}.
@@ -1254,12 +1273,21 @@ AUTHOR_DISPLAY = {
     # PG 86a is a shelfmark, and this row is not Theodore of Heraclea.
     # No date is known. Do not invent one.
     "Theodorus (PG 86a)": "Theodorus, not yet identified",
+    # The book's writer line. The site has a page for the text itself, which
+    # held its topic passages but not the whole work (2026-10-23 audit).
+    "Perpetua, Saturus, and the Redactor": "Passion of Perpetua and Felicity",
 }
 
 
 def display_author(name: str | None) -> str:
     n = str(name or "").strip()
     return AUTHOR_DISPLAY.get(n, n)
+
+
+# Groups of texts from many years: a work page shows the work's own date, not
+# the group's range ("Acts of the Martyrs · written 258 AD"), and the group
+# sorts by its first year.
+COLLECTION_AUTHOR_SLUGS = frozenset({"acts-of-the-martyrs"})
 
 
 # Author pages that stand for a text or a church, not a person: their copy
@@ -1431,7 +1459,10 @@ def author_sort_year(name: str | None, period: str | None = None, slug: str | No
     Lifespan midpoints pull Justin (born c. 100) before Hermas (fl. c. 140).
     Death-only sort_year values in authors.json pulled Irenaeus after Africanus.
     """
-    y = year_from_period(author_dates_raw(name, slug), bound="end")
+    # A group of texts sits at its first text: the martyr acts (c. 165–304)
+    # belong beside Justin, not after Cyprian.
+    collection = canonical_author_slug(slug, name) in COLLECTION_AUTHOR_SLUGS
+    y = year_from_period(author_dates_raw(name, slug), bound="start" if collection else "end")
     if y is not None:
         return y
     rec = author_record(name)
@@ -2470,7 +2501,7 @@ def work_intro_html(slug: str) -> str:
     try:
         sys.path.insert(0, str(BOOKS.parent))
         from pipeline.book_frontmatter import render_intro_html
-        out = render_intro_html(str(BOOKS / book))
+        out = apply_intro_fixes(slug, render_intro_html(str(BOOKS / book)))
         # Build-room scope words ("tip densify") never reach readers.
         return author_dates_prose(bc_ad_prose(scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out))))
     except (ImportError, ValueError, OSError):
@@ -2698,7 +2729,8 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
     bare century) or the edition year ("John Wesley (1703–1791 AD) · 1771 Works").
     A long line first shortens the scope to "Part only", then drops the period."""
     author = w.get("author") or ""
-    life = author_dates_display(author, w.get("author_slug"))
+    collection = (w.get("author_slug") or "") in COLLECTION_AUTHOR_SLUGS and bool(w.get("period"))
+    life = "" if collection else author_dates_display(author, w.get("author_slug"))
     # "Josué de la Place (Placeus)" already ends in brackets: no ") (".
     who = (f"{author}, {life}" if author.endswith(")") else f"{author} ({life})") if author and life else author
     # Notes on the date ("(Oxford reprint of 1621 St Andrews; Reformed)") go to About.
@@ -2737,6 +2769,16 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
         if len(line) <= MAST_META_MAX:
             return line, sc == full
     return line, not scope
+
+
+def blurb_repeats_intro(blurb: str, paras: list[str]) -> bool:
+    """True when an intro paragraph opens with the blurb's words."""
+    import html as _html
+
+    def norm(t: str) -> str:
+        return re.sub(r"[^\w]+", " ", _html.unescape(t or "")).strip().casefold()
+    b = norm(blurb)
+    return bool(b) and any(norm(p).startswith(b) for p in paras if p)
 
 
 # A book intro written for a whole volume can misdescribe one work drawn from
@@ -3503,7 +3545,7 @@ def _fallback_blurb(folder: Path, title: str = "", author: str = "", max_chars: 
     # Title words that are not the writer's name: "Scapula", not "Tertullian".
     words = {x.casefold() for x in re.findall(r"[A-Za-z]{5,}", public_reader_title(title))}
     words -= {x.casefold() for x in re.findall(r"[A-Za-z]{5,}", author)}
-    for para in intro.read_text(encoding="utf-8").split("\n\n"):
+    for para in apply_intro_fixes(folder.name, intro.read_text(encoding="utf-8")).split("\n\n"):
         for sent in note_sentences(_md_plain(para)):
             names_work = re.search(r"\bthis (?:\w+ )?(?:letter|work|treatise|homily|sermon|book|dialogue|apology|epistle|oration|account|text)\b", sent, re.I) \
                 or any(w in sent.casefold() for w in words)
@@ -5659,6 +5701,11 @@ def load_origen_pauline_fragments() -> list[dict]:
             )
             # A book.yml writer with no sourced dates ("Anonymous (Carthage)", "Perpetua,
             # Saturus, and the Redactor") files with the other martyr acts, which have them.
+            # A writer that has its own text page ("Perpetua, Saturus, and the
+            # Redactor" -> Passion of Perpetua and Felicity) files there instead.
+            if not meta and _yml.get("author") and display_author(author) != author:
+                author = display_author(author)
+                author_slug = canonical_author_slug(None, author)
             if not meta and _yml.get("author") and author_slug not in AUTHOR_DATES \
                     and author_slug not in UNDATED_AUTHORS:
                 author = "Acts of the Martyrs"
@@ -8605,6 +8652,11 @@ FORCED_WITHHOLD = {
     # origen-lamentations-fragments has all 118 from Klostermann; this book
     # groups them into 20 and stays in the pipeline.
     "origen-lamentationes-fragments": "Second translation of origen-lamentations-fragments; one copy is shown.",
+    # Two martyr acts were each live twice (2026-10-23 audit). The shown copy
+    # names its edition and follows the standard numbering; _redirects sends
+    # the old address there. The book folders stay as they are.
+    "polycarp": "Second translation of martyrdom-polycarp (Lake 1917); one copy is shown.",
+    "justin-companions": "Second translation of acts-of-justin (recension B); one copy is shown.",
     # Wrong text under the name (2026-10-14 topic pass). "Diodorus, Fragments"
     # is Dionysius of Corinth's letter to Soter, already live as
     # dionysius-corinth-fragments; relabeled 2026-10-18 as
@@ -8617,6 +8669,13 @@ FORCED_WITHHOLD = {
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
     # withheld 2026-10-09 pending Stephan promote call; densify in progress (Densify)
+}
+
+
+# Held second copies whose old address answers with the shown copy.
+SECOND_COPY_OF = {
+    "polycarp": "martyrdom-polycarp",
+    "justin-companions": "acts-of-justin",
 }
 
 
@@ -8863,6 +8922,8 @@ def build() -> None:
     for w in works:
         if w.get("slug") in WORK_BLURBS:
             w["blurb"] = WORK_BLURBS[w["slug"]]
+        if w.get("slug") in WORK_DATES:
+            w["period"] = WORK_DATES[w["slug"]]
     stale = stale_receipt_slugs(works)
     withheld = sorted(set(withheld) | set(stale))
     works = [w for w in works if w.get("slug") not in set(stale)]
@@ -10175,8 +10236,11 @@ def build() -> None:
         def about_details(*, with_lede: bool) -> str:
             paras = ([] if with_lede or not intro_lede else [intro_lede]) + intro_rest
             intro_bits = "".join(f'<p class="intro">{escape(p)}</p>' for p in paras)
+            # A teaser taken from the intro's first sentence is not printed
+            # twice (2026-10-23 audit: Perpetua, Montanus and Lucius).
+            shown_blurb = "" if blurb_repeats_intro(intro_text, [intro_lede, *intro_rest]) else blurb
             bits = "".join(
-                x for x in (first_banner, era, note, blurb, intro_bits, mast_left, history_html, confidence) if x
+                x for x in (first_banner, era, note, shown_blurb, intro_bits, mast_left, history_html, confidence) if x
             )
             return (
                 f'<details class="reader-about"><summary>About this text</summary>{bits}</details>'
@@ -11544,6 +11608,8 @@ def build() -> None:
         # 2026-10-18, withheld second copy): send it to the shown copy.
         "/works/diodorus-fragmenta/ /works/dionysius-corinth-fragments/ 301\n"
         "/works/diodorus-fragmenta/* /works/dionysius-corinth-fragments/ 301\n"
+        + "".join(f"/works/{a}/ /works/{b}/ 301\n/works/{a}/* /works/{b}/ 301\n"
+                  for a, b in sorted(SECOND_COPY_OF.items()))
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))
