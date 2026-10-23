@@ -6582,6 +6582,34 @@ NONCANONICAL_ROUTES: set[str] = set()
 OG_INDEX: dict[str, str] = _json_load(ASSETS / "og" / "index.json", {}) if (ASSETS / "og" / "index.json").exists() else {}
 
 
+_NOTE_MARK_RE = re.compile(r"\s*\[\d+\]\s*")
+_SECTION_NO_RE = re.compile(r"^(?:\d+\.)+\d*\s*")
+# An all-caps chapter heading run into the text: "AGAINST PLATO: THAT THE LIVING ARE NOT MADE FROM THE DEAD."
+_CAPS_HEADING_RE = re.compile(r"^[A-Z’' ,:;\-–—]{6,}[.:](?:\s+|$)")
+
+
+def excerpt_lead(paras) -> str:
+    """The opening words of an excerpt for its share text, without note marks
+    ("[1]"), a leading section number ("10.1.") or an all-caps heading."""
+    for p in paras or []:
+        t = strip_logos_markup(str(p or ""))
+        t = _NOTE_MARK_RE.sub(" ", t).strip()
+        t = _SECTION_NO_RE.sub("", t)
+        t = _CAPS_HEADING_RE.sub("", t)
+        t = re.sub(r"\s+", " ", t).strip()
+        if t:
+            return t
+    return ""
+
+
+def excerpt_share_title(author: str, cite: str, topic: str) -> str:
+    """"Minucius Felix, Octavius 27 · Against Idols". The topic title often reads
+    as a statement ("Where the Dead Wait"), so it cannot follow "on"; a quoted
+    opening on the cite ("Plea 15: “Let the…”") only makes the title long."""
+    cite = re.sub(r":\s*[“\"][^”\"]*[”\"]\s*$", "", cite or "").strip()
+    return " · ".join(x for x in (", ".join(x for x in (author, cite) if x), topic) if x)
+
+
 def meta_description(text: str, limit: int = 158) -> str:
     """A search snippet that ends cleanly: at a sentence end, else a word, with an ellipsis."""
     t = re.sub(r"\s+", " ", strip_logos_markup(str(text or ""))).strip()
@@ -6679,8 +6707,10 @@ def layout(
     full_title = f"{SITE_NAME} · The way of the Church Fathers" if title == "Home" else f"{title} · {SITE_NAME}"
     desc = meta_description(description)
     img = f"{SITE_ORIGIN}/assets/og/{card}.png"
-    share_url = f"{SITE_ORIGIN}/__ROUTE__"
-    alt = f"{title} on {SITE_NAME}"
+    # One address per page: a page that names another as canonical shares that address too.
+    share_url = f"{SITE_ORIGIN}{canonical}" if canonical else f"{SITE_ORIGIN}/__ROUTE__"
+    # The card shows the page title and the name, so the alt text says the same.
+    alt = full_title
     social = (
         f'<meta property="og:type" content="{escape(og_type)}">\n'
         f'<meta property="og:site_name" content="{escape(SITE_NAME)}">\n'
@@ -10046,7 +10076,7 @@ def build() -> None:
             write(
                 DIST / "e" / x["id"] / "index.html",
                 layout(
-                    f"{e_cite} on {meta['title']}" if e_text_named else f"{e_author} on {meta['title']}: {e_cite}",
+                    excerpt_share_title(e_author, e_cite, meta["title"]),
                     ebody,
                     crumb=[
                         ("Home", "/"),
@@ -10057,7 +10087,7 @@ def build() -> None:
                     active="topics",
                     # Title as written: lowering it broke divine names (god's, christ) and
                     # statement titles do not read after "on".
-                    description=f"{e_author}, {meta['title']}: " + strip_logos_markup((paras_list or [""])[0]),
+                    description=f"{e_author}, {meta['title']}: " + excerpt_lead(paras_list),
                     og_type="article",
                     # Shown from the reader: the same text as the cite page, which is canonical.
                     canonical=x.get("_cite_href") or (f"/e/{excerpt_primary[x['id']]}/" if x["id"] in excerpt_primary else ""),
@@ -11982,6 +12012,9 @@ def build() -> None:
         "/works/origen-lamentationes-fragments/* /works/origen-lamentations-fragments/ 301\n"
         + "".join(f"/works/{a}/ /works/{b}/ 301\n/works/{a}/* /works/{b}/ 301\n"
                   for a, b in sorted(SECOND_COPY_OF.items()))
+        # The /downloads/ search image was renamed on 2026-10-23; search engines
+        # still hold the old address from its JSON-LD.
+        "/assets/downloads-pass.jpg /assets/downloads-covers.jpg 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))

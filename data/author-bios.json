@@ -398,5 +398,15 @@
     "name": "Polycrates of Ephesus",
     "dates": "fl. c. 190 AD",
     "bio": "Bishop of Ephesus. About 190 he wrote for the bishops of Asia to Victor of Rome, defending their custom of keeping Pascha on the 14th day of the month and naming the apostles John and Philip, buried in Asia, as its source. Eusebius kept the letter."
+  },
+  "athanasius-of-alexandria": {
+    "name": "Athanasius of Alexandria",
+    "dates": "c. 293/298–373 AD",
+    "bio": "Bishop of Alexandria from 328 to 373. As a young deacon he attended the Council of Nicaea, and as bishop he defended its creed against the followers of Arius through five exiles. He taught that the Son is fully God, of one being with the Father, because only God can save us. His Life of Antony made the desert monks known across the Church."
+  },
+  "anonymous-2-clement": {
+    "name": "Anonymous (2 Clement)",
+    "dates": "fl. c. 150 AD",
+    "bio": "An unknown preacher of the second century. His sermon was copied with the letter of Clement of Rome, so it came to be called Second Clement, and it is the oldest whole Christian sermon to survive outside the New Testament. He calls his hearers to repent, keep the body pure and live for the world to come."
   }
 }

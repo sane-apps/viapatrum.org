@@ -317,13 +317,12 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
     for w in works:
         if w.get("thumb") and (covers_dir / w["thumb"]).is_file():
             shutil.copy2(covers_dir / w["thumb"], dest / w["thumb"])
-    # Share and search image for the shelf: the cover fan (source file name
-    # kept from its first use).
+    # Image for search results: a fan of sample book covers.
     product_img = covers_dir.parent / "marketing" / "ls-product.jpg"
     image = "https://viapatrum.org/assets/og/home.png"
     if product_img.is_file():
-        shutil.copy2(product_img, dist / "assets" / "downloads-shelf.jpg")
-        image = "https://viapatrum.org/assets/downloads-shelf.jpg"
+        shutil.copy2(product_img, dist / "assets" / "downloads-covers.jpg")
+        image = "https://viapatrum.org/assets/downloads-covers.jpg"
     # File names for Content-Disposition (functions/dl reads this map).
     (dist / "data").mkdir(exist_ok=True)
     (dist / "data" / "library-files.json").write_text(json.dumps(
