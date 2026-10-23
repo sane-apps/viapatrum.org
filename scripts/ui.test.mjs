@@ -575,17 +575,25 @@ test('scripture: verse text stays readable; the opener is a real button; closing
   assert.equal(doc.activeElement,open,'Escape returns focus to the verse');
   verse.querySelector('.vt').click();
   assert.equal(sec.hidden,false,'a mouse click on the verse still opens the desk');
+  assert.equal(doc.querySelector('#desk-status').textContent,'Isaiah 1:1, 2 passages in the Fathers, earliest first','one short status line when focus stays put');
   doc.querySelector('.desk-close').click();
   w.Element.prototype.scrollIntoView = () => {}; // the jump path scrolls; jsdom has no layout
-  doc.querySelector('.desk-jump').click();
-  assert.equal(doc.querySelector('#desk-status').textContent,'Isaiah 1:1, 2 passages in the Fathers, earliest first','one short status line');
+  const jump=doc.querySelector('.desk-jump');
+  jump.focus();jump.click();
+  assert.equal(sec.hidden,false);
+  assert.equal(doc.activeElement,sec.querySelector('h2'),'a Most cited jump hides its own list, so focus moves to the verse heading');
   doc.querySelector('.desk-close').click();
+  assert.equal(doc.activeElement,open,'closing after a jump returns focus to the verse');
   assert.equal(doc.querySelector('#desk-status').textContent,'');
+  w.history.replaceState(null,'','#v1');w.dispatchEvent(new w.HashChangeEvent('hashchange'));
+  assert.equal(sec.hidden,false,'a #v link opens the desk');
+  assert.equal(doc.querySelector('#desk-status').textContent,'','opening from the address bar says nothing extra');
+  doc.querySelector('.desk-close').click();
   assert.match(doc.querySelector('.desk-jump').textContent,/2 passages$/,'the count says what it counts');
   dom.window.close();
 });
 
-test('home: a quote that opens with its own quote mark gets no second one (a11y 2026-10-23)', async ()=>{
+test('home: a quote that opens or ends with its own quote mark gets no second one (a11y 2026-10-23)', async ()=>{
   const html=`<!doctype html><html><body><div class="vp-today-card" data-daily>
 <blockquote class="vp-quote"><p><span class="vp-qm">&ldquo;</span><span class="vp-daily-q">x</span><span class="vp-qm">&rdquo;</span></p></blockquote>
 <div class="vp-sc" data-daily-sc><blockquote class="vp-quote vp-sc-q"><p><span class="vp-qm">&ldquo;</span><span class="vp-sc-v">y</span><span class="vp-qm">&rdquo;</span></p></blockquote>
@@ -600,4 +608,12 @@ test('home: a quote that opens with its own quote mark gets no second one (a11y 
   assert.deepEqual(marks('.vp-sc-v'),[true,true],'verse with its own opening quote: outer marks hidden');
   assert.deepEqual(marks('.vp-daily-q'),[false,false],'plain passage keeps its marks');
   dom.window.close();
+  const closing={...row,q:'And He said, \u201cDo this in remembrance of Me.\u201d',sv:'It is written: \u201cAs surely as I live.\u201d'};
+  const dom2=mount(html,'/',async()=>({ok:true,json:async()=>Array.from({length:7},()=>closing)}));
+  await settle();
+  const doc2=dom2.window.document;
+  const marks2=(sel)=>[...doc2.querySelector(sel).parentElement.querySelectorAll('.vp-qm')].map(m=>m.hidden);
+  assert.deepEqual(marks2('.vp-daily-q'),[true,true],'passage that ends with its own closing quote: outer marks hidden');
+  assert.deepEqual(marks2('.vp-sc-v'),[true,true],'verse that ends with its own closing quote: outer marks hidden');
+  dom2.window.close();
 });

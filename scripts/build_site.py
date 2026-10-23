@@ -808,12 +808,17 @@ def _scripture_matches(text: str) -> list[tuple[int, int, str, str]]:
 
 
 OPEN_QUOTES = ("“", "‘", '"')
+CLOSE_QUOTES = ("”", "’", '"')
 
 
 def daily_quote_html(cls: str, text: str) -> str:
-    """Quote marks round a home quote, unless the text opens with its own (a BSB
-    verse that starts mid-speech would show ““What). site.js hides the same marks."""
-    own = str(text or "").lstrip().startswith(OPEN_QUOTES)
+    """Quote marks round a home quote, unless the text opens or ends with its own.
+    A BSB verse that starts mid-speech would show ““What; one that ends a speech
+    would show Me.””. Either way both outer marks go, so a lone outer mark never
+    pairs with the text's own (“It is written: “As I live... God.”).
+    site.js hides the same marks."""
+    t = str(text or "").strip()
+    own = t.startswith(OPEN_QUOTES) or t.endswith(CLOSE_QUOTES)
     hide = " hidden" if own else ""
     return (
         f'<span class="vp-qm"{hide}>&ldquo;</span><span class="{cls}">{escape(text or "")}</span>'

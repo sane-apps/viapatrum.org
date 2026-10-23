@@ -45,6 +45,13 @@ class DailyQuoteTest(unittest.TestCase):
             html = daily_quote_html("vp-daily-q", text)
             self.assertEqual(html.count('<span class="vp-qm" hidden>'), 2, text)
 
+    def test_text_with_own_closing_quote_hides_outer_marks(self) -> None:
+        # From the daily rows: a verse that closes a speech it opened mid-text.
+        for text in ("saying, “Do this in remembrance of Me.”", "It is written: “As I live.” ", "he said, ‘Come.’"):
+            html = daily_quote_html("vp-sc-v", text)
+            self.assertEqual(html.count('<span class="vp-qm" hidden>'), 2, text)
+            self.assertNotIn('<span class="vp-qm">', html, text)
+
     def test_text_is_escaped(self) -> None:
         self.assertIn("a &lt;b&gt;", daily_quote_html("vp-daily-q", "a <b>"))
 

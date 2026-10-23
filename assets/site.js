@@ -90,11 +90,11 @@
           const el = dailyCard.querySelector(sel);
           if (el) el.textContent = text;
         };
-        // Text that opens with its own quote mark drops the outer marks (as the builder does).
+        // Text that opens or ends with its own quote mark drops both outer marks (as the builder does).
         const quote = (sel, text) => {
           set(sel, text);
           const el = dailyCard.querySelector(sel);
-          const own = /^\s*["“‘]/.test(text || "");
+          const own = /^\s*["“‘]|["”’]\s*$/.test(text || "");
           if (el) el.parentElement.querySelectorAll(".vp-qm").forEach((m) => (m.hidden = own));
         };
         quote(".vp-daily-q", r.q);
@@ -172,7 +172,8 @@
       if (jump) {
         const el = bx.querySelector(`.v[data-v="${jump.dataset.v}"]`);
         if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
-        return show(jump.dataset.v);
+        // The jump button sits in the chapter list that show() hides: move focus with it.
+        return show(jump.dataset.v, { focus: true });
       }
       if (e.target.closest(".desk-back, .desk-close")) show(null);
     });
