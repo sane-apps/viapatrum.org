@@ -72,7 +72,8 @@ HEBREW_RUN = re.compile(f"[{HEBREW}](?:[{HEBREW}\\s]*[{HEBREW}])?")
 CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
 # Reader-UI sentences in the site's confidence note that make no sense in a book.
 UI_SENTENCES = re.compile(
-    r"\s*Open (?:Greek|Latin)[^.]*?(?:for the source text|source witness link\) for the source text)\.\s*")
+    r"\s*Open (?:Greek|Latin|the [^.]*? text under)[^.]*?"
+    r"(?:for the source text|source witness link\) for the source text|to see the source text|to compare)\.\s*")
 
 
 # ---------------------------------------------------------------- small DOM
@@ -219,7 +220,9 @@ def about_blocks(details: Node) -> tuple[list[dict], str]:
                 t = squash(c.text())
                 if not t:
                     continue
-                if "AI-assisted" in t and "certified" in t:
+                if "report-mistake" in cls:
+                    continue  # a mailto link; an ebook has its own back link
+                if ("AI-assisted" in t or "with AI help" in t) and "certified" in t:
                     ai_note = squash(UI_SENTENCES.sub(" ", t))
                 elif "banner" in cls:
                     blocks.append({"kind": "banner", "text": clean(t)})

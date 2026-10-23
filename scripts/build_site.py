@@ -2412,8 +2412,10 @@ _INTRO_WORKSHEET = re.compile(
 
 
 def scrub_intro_worksheet(html_text: str) -> str:
-    """Drop the worksheet sentences above; an emptied paragraph goes too."""
-    out = re.sub(r"<p>\s+", "<p>", _INTRO_WORKSHEET.sub("", html_text or ""))
+    """Drop the worksheet sentences above; an emptied paragraph goes too.
+    "the locked text in Patrologia Graeca 39" reads "the text in ..."."""
+    out = re.sub(r"\b([Tt]he) locked (?=(?:Greek |Latin )?text\b)", r"\1 ", html_text or "")
+    out = re.sub(r"<p>\s+", "<p>", _INTRO_WORKSHEET.sub("", out))
     return re.sub(r"<p>\s*</p>\s*", "", out)
 
 
@@ -2959,6 +2961,15 @@ def _strip_densify_head(m: "re.Match") -> str:
     return (nxt[0].upper() + nxt[1:]) if nxt else ""
 
 
+# Owner voice (2026-10-23): the library's English is "fresh", never "new".
+# Source notes still say "New English from the Greek base text" (38 works).
+_NEW_ENGLISH = re.compile(r"\b([Nn])ew English\b")
+
+
+def _fresh_english(m: "re.Match") -> str:
+    return ("F" if m.group(1) == "N" else "f") + "resh English"
+
+
 _BLURB_SCAFFOLD_RES = [
     # Build-room status heads with page-locks: drop the head, keep the topics.
     (re.compile(r"[Dd]ensify\s+COMPLETE\b[^:]{0,120}:\s*([A-Za-z]?)"), _strip_densify_head),
@@ -2971,10 +2982,12 @@ _BLURB_SCAFFOLD_RES = [
     (re.compile(r"\s*Cap\.\s*\d+\s+[A-Z][A-Za-z]*\s+PHYS\b.*$"), ""),
     (re.compile(r"\s*Liber\s+[IVX]+\s+(?:NOT FOUND|FOUND|CLOSED|CLOSEOUT|next\b).*$"), ""),
     (re.compile(r"\s*\bFINIS\b\.?.*$"), ""),
-    # Leftover provenance chatter (whole site is new English; "private study"
-    # is a license leftover, not reader information).
+    # Leftover provenance chatter (the whole site is fresh English; "private
+    # study" is a license leftover, not reader information).
     (re.compile(r"\bNew English for private study\.?\s*"), ""),
     (re.compile(r"\bNew English from locked Greek\.?\s*"), ""),
+    # Owner voice (2026-10-23): "fresh English", never "new English".
+    (_NEW_ENGLISH, _fresh_english),
     (re.compile(r";\s*[^;.]*?(?:\bANF\b|PD English)\s+exists\.?"), ""),
     # Edition cues collapse to plain language.
     (re.compile(r"\bfrom the \d{4} \w+ Latin\b"), "from the Latin"),
@@ -3155,7 +3168,7 @@ def public_method(text: str) -> str:
 # Words from the translation worksheets that mean nothing to a reader
 # (2026-10-05: found in About this text and copied into the paid ebooks).
 WORKSHEET_JARGON = re.compile(
-    r"\b(?:scaffold\w*|densif\w*|tips?|exhausted|lemma-led|pinax|deepen\+?|remain|held|PHYS|worksheet|"
+    r"\b(?:scaffold\w*|densif\w*|tips?|tipped|exhausted|lemma-led|pinax|deepen\+?|remain|held|PHYS|worksheet|"
     r"bridge|rank[- ]?\d|closeout|packet|receipt|honest partial|partial through)\b"
     r"|Man\.\s*Post"
     # Notes written for builders, not readers (2026-10-14 audit: five era
@@ -3194,6 +3207,7 @@ def public_note(text: str) -> str:
     t = re.sub(r"\bTEI\b", "digital text", t)
     t = re.sub(r"\bOCR\b", "machine-read text", t, flags=re.I)
     t = re.sub(r"\b([Cc])opy-text\b", lambda m: "Base text" if m.group(1) == "C" else "base text", t)
+    t = _NEW_ENGLISH.sub(_fresh_english, t)
     # Khazarzar is the scan site the Greek came from, not part of the edition.
     t = re.sub(r"\s*/\s*Khazarzar\b|\s*\(Khazarzar\)|\bKhazarzar\s+", " ", t)
     t = re.sub(r" {2,}", " ", t).replace(" .", ".")
@@ -3406,7 +3420,8 @@ def text_history_html(th: dict | None) -> str:
             note = public_note(str(j.get("note") or "")).strip()
             if not note:
                 continue
-            where = str(j.get("where") or "").strip()
+            # "Opening tip" is a worksheet scope label; the reader sees "Opening".
+            where = re.sub(r"\s*\btip(?:-page)?\b", "", str(j.get("where") or ""), flags=re.I).strip(" ;,")
             loc = f'<span class="where">{escape(where)}</span> — ' if where else ""
             items.append(f"<li>{loc}{escape(note)}</li>")
         if items:
@@ -6167,22 +6182,51 @@ def load_macarius_works() -> list[dict]:
         )
     ]
 
-CONFIDENCE_NOTE = (
-    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
-    "It is not a complete critical edition."
+# Plain, active wording (2026-10-23 copy review). build_ebooks finds this
+# note by "with AI help" + "certified"; keep both words.
+_CONFIDENCE_LEAD = (
+    "We made this study translation with AI help. "
+    "No scholar has yet certified it as faithful and complete. "
 )
 
+CONFIDENCE_NOTE = _CONFIDENCE_LEAD + "It is not a critical edition."
+
 CONFIDENCE_NOTE_WITH_GREEK = (
-    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
-    "Open Greek on each section for the source text. "
-    "This is not a complete critical edition."
+    _CONFIDENCE_LEAD + "Open Greek on any section to see the source text. It is not a critical edition."
 )
 
 CONFIDENCE_NOTE_WITH_LATIN = (
-    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
-    "Open Latin on each section (or the Latin source witness link) for the source text. "
-    "This is not a complete critical edition."
+    _CONFIDENCE_LEAD
+    + "Open Latin on any section, or the Latin source link, to see the source text. It is not a critical edition."
 )
+
+
+def confidence_note_english_original(witness_label: str) -> str:
+    """A work first written in English (Wesley) is not a translation: say
+    what was done to it and where the old text is."""
+    label = (witness_label or "").strip() or "original text"
+    return (
+        "We put this English text into updated wording with AI help. "
+        "No scholar has yet certified it as faithful and complete. "
+        f"Open the {label} under any part to compare."
+    )
+
+
+def report_mistake_href(title: str, where: str = "", url: str = "") -> str:
+    """mailto: link for "Report a mistake" (the app and the privacy page
+    promise one). The work title goes in the subject; anyone can send it."""
+    from urllib.parse import quote
+    subject = f"Mistake in {title}" + (f", {where}" if where else "")
+    body = (f"Page: {url}\n\n" if url else "") + "What looks wrong:\n\nWhat it should say:\n"
+    return f"mailto:hi@saneapps.com?subject={quote(subject)}&body={quote(body)}"
+
+
+def report_mistake_html(title: str, where: str = "", url: str = "", label: str = "Report a mistake",
+                        cls: str = "intro fine") -> str:
+    """One plain link, styled like the links beside it (About panel: "intro
+    fine"; under a passage: "meta", like the source link)."""
+    return (f'<p class="{cls} report-mistake"><a href="{escape(report_mistake_href(title, where, url))}">'
+            f"{escape(label)}</a></p>")
 
 
 def work_source_checked(work: dict, stale: set[str] | None = None) -> bool:
@@ -6225,9 +6269,9 @@ def _fallback_ruled(folder_name: str) -> bool:
 
 def confidence_text(base: str, checked: bool) -> str:
     lead = (
-        "This work has passed this project's source check. "
+        "This work has passed our source check. "
         if checked
-        else "This work has not yet been re-checked against its source. "
+        else "We have not yet re-checked this work against its source. "
     )
     return lead + base
 
@@ -6498,7 +6542,7 @@ def layout(
       {APP_BADGE}
     </nav>
   </div>
-  <p class="footer-fine">Fresh English translations from the Greek and Latin, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
+  <p class="footer-fine">Fresh English translations, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
 </footer>
 <script src="/assets/site.js?v={ASSET_VER}" defer></script>
 <script src="/assets/human-check.js?v={ASSET_VER}" defer></script>
@@ -7100,6 +7144,32 @@ def _favicon_ico_bytes() -> bytes:
 
 _WESLEY_NOT_IN_SERMON = re.compile(r"\bnot in the 1\d{3} sermon\b", re.I)
 _WESLEY_LISTENING_LINE = re.compile(r"\s*This is a listening version\b", re.I)
+# Wesley wrote in English: no "modern English" product claim, no "not an
+# ante-Nicene father" aside (2026-10-23 copy review). The metas keep their
+# wording; the site says it plainly.
+_WESLEY_ERA_ASIDE = re.compile(r"\s*It is an English sermon, not an ante-Nicene father\.?")
+_WESLEY_STOCK_BLURB = re.compile(r"^Rendered in modern English, to be read and heard\.")
+_WESLEY_METHOD_LEAD = re.compile(r"^Rendered in modern English\.\s*")
+
+
+def wesley_public_meta(meta: dict) -> dict:
+    """Era note, blurb and method for one Wesley sermon, in the site's voice."""
+    label = str(meta.get("witness_label") or "1872 text").strip()
+    year = (re.search(r"\b1\d{3}\b", label) or re.search(r"\b1\d{3}\b", str(meta.get("period") or "")))
+    year_s = year.group(0) if year else ""
+    blurb = str(meta.get("blurb") or "")
+    if not blurb or _WESLEY_STOCK_BLURB.match(blurb):
+        blurb = (f"Wesley's {year_s} text in updated English, to read and hear. "
+                 f"Open the {label} under each part to compare.") if year_s else ""
+    th = dict(meta.get("text_history") or {}) if isinstance(meta.get("text_history"), dict) else {}
+    if th.get("method"):
+        th["method"] = _WESLEY_METHOD_LEAD.sub("Wesley's own sermon in updated English wording. ", str(th["method"]))
+    return {
+        "era_note": _WESLEY_ERA_ASIDE.sub("", str(meta.get("era_note") or "")).strip(),
+        "blurb": blurb,
+        "text_history": th,
+        "witness_label": label,
+    }
 
 
 # (slug, section) of each Wesley opening dropped above. Their old /<n>/
@@ -7134,6 +7204,7 @@ def load_wesley_sermons() -> list[dict]:
             if isinstance(item, dict)
         }
         meta = _json_load(trans / f"{stem}_meta.json", {})
+        pub = wesley_public_meta(meta)
         slug = str(meta.get("slug") or f"john-wesley-{stem.replace('_', '-')}")
         if slug not in WORK_TOPICS and meta.get("topics"):
             WORK_TOPICS[slug] = list(meta["topics"])
@@ -7184,12 +7255,15 @@ def load_wesley_sermons() -> list[dict]:
                 status=str(meta.get("status") or "available"),
                 edition=str(meta.get("edition") or "1872 edition"),
                 sections=sections,
-                blurb=str(meta.get("blurb") or ""),
-                era_note=str(meta.get("era_note") or ""),
+                blurb=pub["blurb"],
+                era_note=pub["era_note"],
                 first_english=False,
-                text_history=meta.get("text_history") if isinstance(meta.get("text_history"), dict) else {},
+                text_history=pub["text_history"],
             )
         )
+        # Not a translation: the work page says what was done to it instead.
+        works[-1]["english_original"] = True
+        works[-1]["english_original_label"] = pub["witness_label"]
         if meta.get("edition_short"):
             works[-1]["edition_short"] = str(meta["edition_short"]).strip()
     return works
@@ -9087,7 +9161,7 @@ def build() -> None:
 
     def topic_count_label(primary: list[dict], rest: list[dict]) -> str:
         if rest:
-            return f"{len(primary)} quoted · {len(primary) + len(rest)} in all"
+            return f"{len(primary) + len(rest)} passages, {len(primary)} quoted here"
         return f"{len(primary)} passage{'s' if len(primary) != 1 else ''}"
 
     search_index: list[dict] = []
@@ -9306,7 +9380,7 @@ def build() -> None:
             n = len(by_topic.get(t["id"], []))
             if n == 0 and t["id"] not in topic_to_works:
                 continue
-            # Same count words as the topic page: "5 quoted · 102 in all".
+            # Same count words as the topic page: "102 passages, 5 quoted here".
             bits = [topic_count_label(*split_topic_rows(t["id"], by_topic[t["id"]]))] if n else []
             if t["id"] in topic_to_works:
                 bits.append(f"{len(topic_to_works[t['id']])} related work{'s' if len(topic_to_works[t['id']])!=1 else ''}")
@@ -9650,7 +9724,7 @@ def build() -> None:
             e_dates = author_dates_display(x.get("author") or "") or format_bc_ad(x.get("period") or "")
             e_older = (
                 '<p class="meta older-source">English from the <em>Ante-Nicene Fathers</em> '
-                "(1885–1896), public domain. A new translation from the original is on the way.</p>"
+                "(1885–1896), public domain. Our fresh English translation from the original is on the way.</p>"
                 if excerpt_is_anf(x)
                 else ""
             )
@@ -9681,6 +9755,7 @@ def build() -> None:
   {e_older}{e_reader}
   <div class="body">{paras}</div>
   {src_block}
+  {report_mistake_html(f"{e_author}, {e_cite}", url=f"{SITE_ORIGIN}/e/{x['id']}/", label="Report a mistake in this passage", cls="meta")}
   {cross}
 </article>
 """
@@ -9989,7 +10064,7 @@ def build() -> None:
             f"""<div class="works-browse" data-works-browse data-work-count="{len(works)}" data-author-count="{author_n}">
 <p class="eyebrow">Works</p>
 <h1>All works</h1>
-<p class="intro">Every work on the site, grouped by writer, earliest first. A work marked Part only is a portion of a longer book. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY and not logos_retired() else ''}</p>
+<p class="intro">Every work in the library, grouped by writer, earliest first: how the Fathers spoke and argued, in their own words. A work marked Part only is a portion of a longer book. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY and not logos_retired() else ''}</p>
 <div class="works-chrome">
   <label class="works-find"><span class="vh">Find in library</span>
     <input type="search" id="works-q" class="search-input" placeholder="Search titles, writers, or words…" autocomplete="off">
@@ -10030,7 +10105,7 @@ def build() -> None:
 <p class="intro fine" id="original-english">
   <span id="no-prior-english" class="anchor-alias" aria-hidden="true"></span>
   <span id="no-earlier-english" class="anchor-alias" aria-hidden="true"></span>
-  Translation sources and notes are in <strong>About this text</strong> on each work. A new translation does not by itself mean the work has never appeared in English.
+  Translation sources and notes are in <strong>About this text</strong> on each work. A fresh translation here does not by itself mean the work has never appeared in English.
 </p>
 </div>""",
             crumb=[("Home", "/"), ("Works", "")],
@@ -10069,7 +10144,11 @@ def build() -> None:
         has_greek = any(s.get("greek") for s in w["sections"])
         has_latin = any(s.get("latin") for s in w["sections"])
         has_latin_link = any(s.get("source_url") for s in w["sections"])
-        if has_greek:
+        if w.get("english_original") or w.get("author_slug") == "john-wesley":
+            conf = confidence_note_english_original(
+                w.get("english_original_label")
+                or next((str(x.get("witness_label") or "") for x in w["sections"] if x.get("witness_label")), ""))
+        elif has_greek:
             conf = CONFIDENCE_NOTE_WITH_GREEK
         elif has_latin or has_latin_link:
             conf = CONFIDENCE_NOTE_WITH_LATIN
@@ -10077,6 +10156,9 @@ def build() -> None:
             conf = CONFIDENCE_NOTE
         conf = confidence_text(conf, work_source_checked(w, set(stale)))
         confidence = f"<p class='intro fine'>{escape(conf)}</p>"
+        # The app and the privacy page promise a way to report a mistake.
+        report_link = report_mistake_html(
+            public_reader_title(w["title"], slug=w["slug"]), url=f"{SITE_ORIGIN}/works/{w['slug']}/")
         prior_mark = ""
         if w.get("first_english"):
             prior_mark = (
@@ -10176,7 +10258,8 @@ def build() -> None:
             paras = ([] if with_lede or not intro_lede else [intro_lede]) + intro_rest
             intro_bits = "".join(f'<p class="intro">{escape(p)}</p>' for p in paras)
             bits = "".join(
-                x for x in (first_banner, era, note, blurb, intro_bits, mast_left, history_html, confidence) if x
+                x for x in (first_banner, era, note, blurb, intro_bits, mast_left, history_html, confidence,
+                            report_link) if x
             )
             return (
                 f'<details class="reader-about"><summary>About this text</summary>{bits}</details>'
@@ -10575,7 +10658,7 @@ def build() -> None:
                     {note_html}
                     <div class="sec-layout">
                     <div class="sec-main"><div class="body">{paras}</div>
-                    {source}{src_block}</div>
+                    {source}{src_block}{report_mistake_html(pub_title, f"§{shown_section(s['section'], ordinals)}", f"{SITE_ORIGIN}/works/{w['slug']}/{s['section']}/", "Report a mistake in this passage", "meta")}</div>
                     <aside class="sec-rail">{cross}{book_about}</aside>
                     </div>
                     {nav}
@@ -10903,7 +10986,7 @@ def build() -> None:
 <p class="intro fine">References are found in the English of each passage. Many Fathers number the Psalms the old Greek way (their Psalm 21 is our Psalm 22); a Psalm reference is filed under our numbering when its words clearly match that psalm.</p>""",
             crumb=[("Home", "/"), ("Scripture", "")],
             active="scripture",
-            description=f"Every book of the Bible as the early Church Fathers read it: {sc_total:,} references across {len(sc_books)} books, chapter by chapter, in fresh English.",
+            description=f"The Bible as the early Church Fathers read it: {sc_total:,} references to {len(sc_books)} of the 66 books, chapter by chapter, with each passage in fresh English.",
             og_image="scripture",
         ),
     )
@@ -11189,7 +11272,7 @@ def build() -> None:
         layout(
             "Fathers",
             f"<p class=\"eyebrow\">Fathers</p><h1>The writers, in order</h1>"
-            f"<p class=\"intro\">Every writer in the library, earliest first. Works that are not by a named writer are listed at the end.</p>"
+            f"<p class=\"intro\">Every writer in the library, earliest first, so you can follow how the Fathers spoke, acted, argued, lived and died. Works that are not by a named writer are listed at the end.</p>"
             f"{''.join(_era_html)}",
             crumb=[("Home", "/"), ("Fathers", "")],
             active="authors",
@@ -11256,7 +11339,7 @@ def build() -> None:
         layout(
             "Help us",
             f"""<h1>Help us</h1>
-            <p class="intro">This library is free. If you want to help it keep growing, pick one of these. None of them is required to read.</p>
+            <p class="intro">This library is free, and it runs on gifts. If you want to help, pick one of these. None of them is required to read.</p>
 
             <ol class="help-list">
               <li class="help-option" id="donate">
@@ -11271,43 +11354,34 @@ def build() -> None:
                 <p>If you use a Mac, the SaneApps utilities are a one-time purchase with no subscription. They run on your machine. Buying one also supports this library.</p>
                 <p><a class="btn" href="https://saneapps.com" rel="noopener">SaneApps</a></p>
               </li>
-              <li class="help-option" id="ai">
-                <p class="n">{3 + pass_n}</p>
-                <h2>Point an AI at a slice</h2>
-                <p>If you use an AI coding assistant, it can translate one small slice of a book for review. Copy the starting instructions into it and change YourName to your name.</p>
-                <p><button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> <a class="btn" href="https://github.com/sane-apps/translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>
-                <details class="ai-prompt-box"><summary>Show the instructions</summary>
-                <pre id="ai-prompt"><code>{escape((BOOKS.parent / "docs/START_HERE.md").read_text())}</code></pre>
-                </details>
-              </li>
               <li class="help-option" id="corrections">
-                <p class="n">{4 + pass_n}</p>
-                <h2>Spot-check the Greek or Latin</h2>
-                <p>If you read the original language and a line of English looks wrong, send a short note. Name the work, the section, and what you think it should say.</p>
-                <p><a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml">Submit a correction</a></p>
+                <p class="n">{3 + pass_n}</p>
+                <h2>Report a mistake</h2>
+                <p>If a line of English looks wrong, tell us. Name the work, the section, and what you think it should say. Every work and passage has a <strong>Report a mistake</strong> link that fills in the work for you.</p>
+                <p><a class="btn primary" href="{escape(report_mistake_href("Via Patrum"))}">Email hi@saneapps.com</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml" rel="noopener">Send a correction on GitHub</a></p>
               </li>
-              <li class="help-option" id="code">
-                <p class="n">{5 + pass_n}</p>
-                <h2>Star and build</h2>
-                <p>The library and its translations are built in the open. Star the repos, open issues, send pull requests.</p>
-                <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations repo</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website repo</a></p>
+              <li class="help-option" id="help-wanted">
+                <p class="n">{4 + pass_n}</p>
+                <h2>Help we need</h2>
+                <p>If you read Greek or Latin, check a passage against the original and tell us what you find. Many works have not yet been re-checked against their source, and each work says so under About this text. If you write code, the website and the translations are built in the open, and issues and pull requests are welcome.</p>
+                <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations on GitHub</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website on GitHub</a></p>
               </li>
               <li class="help-option" id="sponsor-book">
-                <p class="n">{6 + pass_n}</p>
-                <h2>Sponsor a book</h2>
-                <p>Fund a work&apos;s translation and audiobook and it goes to the front of the queue, with credit to you. Name the book in your gift note, or nominate it first.</p>
-                <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Sponsor a book</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Nominate a book</a></p>
+                <p class="n">{5 + pass_n}</p>
+                <h2>Give for one book</h2>
+                <p>Want your gift to go to one work? Name it in your gift note, and it goes to finishing and checking that work. You can also suggest a book you would like to see here.</p>
+                <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Give on GitHub Sponsors</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Suggest a book</a></p>
               </li>
               <li class="help-option" id="spread">
-                <p class="n">{7 + pass_n}</p>
+                <p class="n">{6 + pass_n}</p>
                 <h2>Spread the word</h2>
                 <p>A link is the best help: send the library to someone who studies.</p>
-                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20Church%20Fathers%20in%20modern%20English%2C%20free%20for%20the%20world&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
+                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20way%20of%20the%20Church%20Fathers%2C%20in%20fresh%20English%20translations.%20Free%20for%20the%20whole%20world.&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
               </li>
             </ol>""",
             crumb=[("Home", "/"), ("Help us", "")],
             active="contribute",
-            description="Donate, point an AI at a slice, submit a correction, star the repos, sponsor a book, or spread the word",
+            description="Give to keep the library free, report a mistake, check the Greek or Latin, or share Via Patrum with someone who studies.",
         ),
     )
 
@@ -11321,14 +11395,14 @@ def build() -> None:
             <h1>About Via Patrum</h1>
             <p class="lede">Via Patrum means “the way of the Fathers”: how the Church Fathers spoke, acted, argued, lived and died. It is a free library of their writing in fresh English translations from the Greek and Latin, for anyone who wants to read the early Church in its own words.</p>
             <h2>What is here</h2>
-            <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Timeline</strong> shows where writers agree and where a later turn comes.</p>
+            <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Scripture</strong> shows where the Fathers quote or explain each book of the Bible. <strong>Timeline</strong> answers the questions readers ask most from the writers' own words, earliest first. <strong>Listen</strong> plays the works read aloud, and <strong>Games</strong> has a daily puzzle and a story game drawn from the texts.</p>
             {'''<h2>Books to keep</h2>
             <p>''' + escape(LIBRARY.pitch()) + ''' Get them on the <a href="/downloads/">downloads page</a>.</p>''' if LIBRARY else ''}
             {'''<h2>Logos</h2>
             <p>The same English is also in Word files for Logos Bible Software. Each book has a cover and a description. Download every part from the <a href="/logos/">Personal Books</a> page, then add the file in Logos yourself.</p>''' if logos_pack_manifest() and not logos_retired() else ''}
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
             <h2>How the English is made</h2>
-            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
+            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and our fresh English translations replace them as they are finished.</p>
             <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
             <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/topics/free-will/#over-time">free will over time</a>.</p>
@@ -11349,13 +11423,15 @@ def build() -> None:
             <h1>Privacy</h1>
             <p class="lede">Via Patrum does not collect personal data, on this website or in the <a href="{APP_STORE_URL}">Via Patrum app for iPhone and iPad</a>.</p>
             <h2>The app</h2>
-            <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
+            <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read or listen to is sent to us.</p>
             <h2>This website</h2>
-            <p>The website uses no cookies and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <p>The website has no ads, no analytics and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Before your first download, a short Cloudflare check makes sure you are a person and not a bot; passing it sets one cookie that lets downloads through for two hours and holds no name or address. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <h2>Search and Ask</h2>
+            <p>When you search, in the app or on this site, or ask a question on the Ask page, the words you type go to viapatrum.org, and Cloudflare, which runs the site, uses them to find matching passages. When Ask cannot answer a question well, we keep the question, with no name or address, so we know which passages to add.</p>
             <h2>Bibles read online</h2>
             <p>When you choose the NIV, NASB, NIrV, Amplified, ASV or Geneva Bible, in the app or on this site, your device asks the <a href="https://platform.youversion.com/" rel="noopener">YouVersion Platform</a> for that chapter. On this site the ESV and CSB come from bolls.life the same way. Those services see the request, as any web server does, and have their own privacy policies (<a href="https://www.bible.com/privacy" rel="noopener">YouVersion</a>). The other Bibles are part of the app and this site and need no outside request.</p>
             <h2>Links you choose to open</h2>
-            <p>Links to GitHub (to report a translation mistake) or to netbible.org open those sites, which have their own privacy policies.</p>
+            <p>A <strong>Report a mistake</strong> link opens your own email app, addressed to hi@saneapps.com; nothing is sent until you send it. Links to GitHub or to netbible.org open those sites, which have their own privacy policies.</p>
             <h2>Questions</h2>
             <p>Email <a href="mailto:hi@saneapps.com">hi@saneapps.com</a>.</p>""",
             crumb=[("Home", "/"), ("Privacy", "")],
@@ -11372,7 +11448,7 @@ def build() -> None:
             <p class="lede">How this library makes its English, and how far to trust a page.</p>
 
             <h2>Why this exists</h2>
-            <p>Via Patrum is a free library for study: what the early Church taught, topic by topic; whole works to read straight through; and a timeline of where each writer stood. It is not a critical edition. The aim is readable English that is honest about its sources.</p>
+            <p>Via Patrum, “the way of the Fathers”, is a free library for learning how the Church Fathers spoke, acted, argued, lived and died: what they taught, topic by topic; whole works to read straight through; and a timeline of where each writer stood. It is not a critical edition. The aim is readable English that is honest about its sources.</p>
 
             <h2>What you will find</h2>
             <p><strong>Topics</strong> gather what the Fathers said on one subject, earliest first. <strong>Works</strong> let you read a whole book straight through, with the Greek or Latin one tap away. <strong>Timeline</strong> shows where each writer stood on a claim, and when. New works go up as they pass the checks below.</p>
@@ -11409,9 +11485,9 @@ def build() -> None:
 
             <h2>Terms for scholars</h2>
             <ul>
-              <li><strong>Copy-text</strong>: the one printed edition the English follows.</li>
-              <li><strong>Witness</strong>: a manuscript or printed edition that records the text. Others compared with the copy-text are checks, not silent merges.</li>
-              <li><strong>Supplied text</strong>: a stretch missing from the copy-text and taken from another witness.</li>
+              <li><strong>Base text</strong>: the one printed edition the English follows (scholars call it the copy-text).</li>
+              <li><strong>Witness</strong>: a manuscript or printed edition that records the text. Others compared with the base text are checks, not silent merges.</li>
+              <li><strong>Supplied text</strong>: a stretch missing from the base text and taken from another witness.</li>
               <li><strong>Recension</strong>: a distinct ancient version of the same work.</li>
             </ul>
 
@@ -11451,7 +11527,7 @@ def build() -> None:
     # HTML keeps the Pages default (max-age=0, must-revalidate).
     (DIST / "_headers").write_text(pages_headers(), encoding="utf-8")
     (DIST / "robots.txt").write_text(
-        # Data files, the API, paid downloads and the app feed are not pages.
+        # Data files, the API, the download files and the app feed are not pages.
         # The library is open to search engines and AI crawlers alike. A bot
         # with its own group follows that group instead of the wildcard, so
         # the Disallow lines repeat in the named group on purpose.

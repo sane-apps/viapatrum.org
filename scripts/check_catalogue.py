@@ -367,10 +367,10 @@ assert "written c. 419–430 AD" in _written, _written
 assert site.display_author("Theodorus (PG 86a)") == "Theodorus, not yet identified"
 assert site.author_dates_display("Theodorus (PG 86a)", "theodorus-pg86a") == ""
 assert site.confidence_text(site.CONFIDENCE_NOTE, True).startswith(
-    "This work has passed this project's source check. ")
-assert "independently certified" in site.confidence_text(site.CONFIDENCE_NOTE, True)
+    "This work has passed our source check. ")
+assert "certified" in site.confidence_text(site.CONFIDENCE_NOTE, True)
 assert site.confidence_text(site.CONFIDENCE_NOTE, False).startswith(
-    "This work has not yet been re-checked against its source. ")
+    "We have not yet re-checked this work against its source. ")
 assert site.section_orientation_html({"orientation": "The preacher opens."}).startswith(
     '<p class="reader-note">')
 assert site.section_orientation_html({}) == ""

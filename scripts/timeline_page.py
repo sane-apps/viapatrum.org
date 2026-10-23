@@ -311,7 +311,7 @@ def build(dist: Path, layout, write, B, old_ids: set[str]) -> int:
         "Ask the early Church · Timeline", index_page(data),
         crumb=[("Home", "/"), ("Timeline", "")], active="explore",
         styles=["/assets/timeline.css"], scripts=["/assets/timeline.js"],
-        description="The 100 questions readers ask most about what the early Church believed, each answered from the writers' own words in date order, with the Greek or Latin one click away.",
+        description="The 100 questions readers ask most about what the early Church believed, each answered in the writers' own words, earliest first.",
         canonical="/explore/"))
     (dist / "data").mkdir(exist_ok=True)
     (dist / "data" / "timeline-search.json").write_text(

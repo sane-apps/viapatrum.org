@@ -305,12 +305,9 @@ async function run(base,out) {
   for(const label of ["about","methodology","help"]) {
    await visit(base+"/"+(label==="help"?"contribute":label)+"/",{waitUntil:"networkidle"});
    if(label==="methodology")await page.locator("h2").filter({hasText:"How it is checked"}).evaluate(e=>scrollTo(0,e.getBoundingClientRect().top+scrollY-100));
-   if(label==="help")await page.locator("#ai-prompt code").evaluate(e=>{
-    const node=e.firstChild,start=node.textContent.indexOf("Check exact author/work/source");
-    if(start<0)throw new Error("Source evidence instruction missing");
-    const range=document.createRange();range.setStart(node,start);range.setEnd(node,start+20);
-    scrollTo(0,range.getBoundingClientRect().top+scrollY-350);
-   });
+   // Help us is reader-facing (2026-10-23): no maintainer prompt; show the
+   // mistake report option.
+   if(label==="help")await page.locator("#corrections").evaluate(e=>scrollTo(0,e.getBoundingClientRect().top+scrollY-100));
    await shot(label,390);
   }
   await visit(base+"/works/julian-to-florus/1.27/",{waitUntil:"networkidle"});
