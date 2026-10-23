@@ -403,6 +403,17 @@ def word_zips(site: dict[str, dict]) -> dict[str, Path]:
         if e.get("sha256") != sha256(p):
             print(f"  refused word/{slug}.zip: not the file the word step recorded (run the word step)", flush=True)
             continue
+        # The zip's folder is "<writer> - <title>" (word_build_one).
+        writer = (site.get(slug) or {}).get("author") or ""
+        try:
+            with zipfile.ZipFile(p) as z:
+                top = next((n.split("/")[0] for n in z.namelist() if "/" in n), "")
+        except zipfile.BadZipFile:
+            top = ""
+        if writer and " - " in top and not plain_name(top).startswith(safe_folder(plain_name(f"{writer} - "))[:80]):
+            print(f"  refused word/{slug}.zip: built under {top.split(' - ')[0]!r}, the site has {writer!r}"
+                  " (run the word step with --force)", flush=True)
+            continue
         made[slug] = p
     return made
 
@@ -624,6 +635,21 @@ HOLD = {
 }
 
 
+def plain_name(text: str) -> str:
+    """A writer name as compared: build_ebooks curls quotes, the site does not."""
+    return re.sub(r"\s+", " ", (text or "").translate(str.maketrans("\u2018\u2019\u201c\u201d", "''\"\""))).strip()
+
+
+def writer_changed(recorded: dict, site_row: dict) -> str:
+    """Why a file built under another writer name or dates is not current,
+    or "" when its recorded writer matches the site's (or none was kept)."""
+    for key, label in (("author", "writer"), ("author_dates", "writer's dates")):
+        was, now = plain_name(recorded.get(key)), plain_name(site_row.get(key))
+        if was and now and was != now:
+            return f"built under the {label} {was!r}, the site has {now!r}"
+    return ""
+
+
 def section_marks(app_dir: Path, slug: str, ids: list) -> list[str]:
     """The section numbers a reader sees on the site for these section ids."""
     sections = load(app_dir / "works" / f"{slug}.json").get("sections") or []
@@ -664,6 +690,11 @@ def assemble(app_dir: Path) -> int:
         s = site[slug]
         book = books.get(slug) or {}
         b = {**s, **{k: v for k, v in book.items() if v}}
+        # The writer is the site's. The manifest keeps the name a file was
+        # built under, and five martyr acts went on the shelf as Origen's
+        # after the site had them right (2026-10-23 audit).
+        b.update({k: s[k] for k in ("author", "author_dates") if s.get(k)})
+        stale_writer = writer_changed(book, s)
         title = b.get("title") or slug
         author = b.get("author") or ""
         f = {}
@@ -681,6 +712,8 @@ def assemble(app_dir: Path) -> int:
             digest = sha256(p)
             if s.get("hash") and book.get("hash") != s["hash"]:
                 refused.append(f"{kind}/{slug}.{ext}: built from older English than the site (run build_ebooks)")
+            elif stale_writer:
+                refused.append(f"{kind}/{slug}.{ext}: {stale_writer} (run build_ebooks)")
             elif (book.get(kind) or {}).get("sha256") != digest:
                 refused.append(f"{kind}/{slug}.{ext}: not the file build_ebooks recorded (run build_ebooks)")
             else:
@@ -701,6 +734,7 @@ def assemble(app_dir: Path) -> int:
             # leaves the older file behind, and a different section count
             # means it was planned against another text.
             why = ("its last rebuild failed" if slug in audio_failed
+                   else writer_changed({"author": a.get("author")}, s) if writer_changed({"author": a.get("author")}, s)
                    else "planned for %s sections, the site has %s" % (a.get("sections_total"), s["sections"])
                    if s.get("sections") and a.get("sections_total") != s["sections"]
                    else "not the file build_audiobooks recorded" if p.stat().st_size != a.get("bytes") else "")

@@ -400,6 +400,34 @@ class Assemble(Fixture):
         self.assertEqual(json.loads((self.out / "library.json").read_text())["works"], [])
         self.assertIn("refused word/a.zip: not the file the word step recorded", out.getvalue())
 
+    def test_file_built_under_another_writer_is_refused(self):
+        # 2026-10-23 audit: martyr acts built before the site fixed their
+        # writer went on the shelf as Origen's; the row takes the site's writer.
+        self.build({"a": "New English.", "b": "New English."}, {})
+        man = json.loads((self.out / "manifest-books.json").read_text())
+        man["works"]["a"]["author"] = "Origen of Alexandria"
+        man["works"]["b"]["author"] = "Writer"
+        (self.out / "manifest-books.json").write_text(json.dumps(man))
+        buf = io.BytesIO()
+        with zipfile.ZipFile(buf, "w") as z:
+            z.writestr("Origen of Alexandria - C/README.txt", "Add the Word file in Logos.")
+            z.writestr("Origen of Alexandria - C/C.docx", docx_bytes("New English."))
+        p = self.put("word/c.zip", buf.getvalue())
+        (self.out / "manifest-word.json").write_text(json.dumps({"works": {"c": {
+            "key": "h-c:page:ver", "bytes": p.stat().st_size, "sha256": ls.sha256(p)}}}))
+        cat = json.loads((self.app / "catalog.json").read_text())
+        cat["works"].append({"slug": "c", "title": "C", "author": "x", "hash": "h-c", "sections": 4})
+        (self.app / "catalog.json").write_text(json.dumps(cat))
+        out = io.StringIO()
+        with mock.patch("sys.stdout", out):
+            ls.assemble(self.app)
+        data = json.loads((self.out / "library.json").read_text())
+        self.assertEqual(self.files(data), {"b": ["epub"]})
+        self.assertEqual(data["works"][0]["author"], "Writer")
+        self.assertIn("refused epub/a.epub: built under the writer 'Origen of Alexandria'", out.getvalue())
+        self.assertIn("refused word/c.zip: built under 'Origen of Alexandria'", out.getvalue())
+        self.assertEqual(ls.writer_changed({"author": "Gregory\u2019s"}, {"author": "Gregory's"}), "")
+
     def test_audio_lists_missing_sections_and_refuses_stale_files(self):
         rc, data, log = self.build({}, {}, audio={"short": (3, 4, ["u02"]), "full": (4, 4, []), "failed": (4, 4, []),
                                                   "reshaped": (4, 4, [])},

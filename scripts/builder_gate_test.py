@@ -375,5 +375,53 @@ class PublicationProcessTest(unittest.TestCase):
         self.assertEqual([row["section"] for row in out], ["1"])
 
 
+class MartyrActsTest(unittest.TestCase):
+    """2026-10-23 audit: every martyr act showed the group date c. 165, two
+    acts were live twice, and old intro templates named the wrong writer."""
+
+    def act(self, slug: str) -> dict:
+        return {"slug": slug, "author": "Acts of the Martyrs", "author_slug": "acts-of-the-martyrs",
+                "period": build_site.WORK_DATES[slug]}
+
+    def test_each_act_shows_its_own_date(self):
+        self.assertEqual(build_site.WORK_DATES["cyprian"], "258")
+        self.assertEqual(build_site.WORK_DATES["irenaeus"], "304")
+        self.assertEqual(build_site.mast_meta_line(self.act("cyprian"), "")[0],
+                         "Acts of the Martyrs · written 258 AD")
+        # Justin's year is the group's first year; it is still shown.
+        self.assertEqual(build_site.mast_meta_line(self.act("acts-of-justin"), "PG 6")[0],
+                         "Acts of the Martyrs · written c. 165 AD · PG 6")
+
+    def test_group_sorts_by_its_first_year(self):
+        self.assertEqual(build_site.author_dates_display("Acts of the Martyrs", "acts-of-the-martyrs"), "c. 165–304 AD")
+        self.assertEqual(build_site.author_sort_year("Acts of the Martyrs", slug="acts-of-the-martyrs"), 165)
+        self.assertEqual(build_site.author_sort_year("Cyril of Alexandria", slug="cyril-of-alexandria"), 444)
+
+    def test_second_copies_are_held_and_redirected(self):
+        for old, shown in build_site.SECOND_COPY_OF.items():
+            self.assertIn(old, build_site.FORCED_WITHHOLD)
+            self.assertNotIn(shown, build_site.FORCED_WITHHOLD)
+
+    def test_perpetua_files_under_its_own_page(self):
+        name = build_site.display_author("Perpetua, Saturus, and the Redactor")
+        self.assertEqual(build_site.canonical_author_slug(None, name), "passion-of-perpetua-and-felicity")
+
+    def test_intro_fixes_still_match_their_books(self):
+        for slug, fixes in build_site.INTRO_FIXES.items():
+            text = (build_site.BOOKS / slug / "intro.md").read_text(encoding="utf-8")
+            for old, new in fixes:
+                self.assertTrue(old in text or new in text, f"{slug}: {old[:50]!r} no longer in intro.md")
+        self.assertNotIn("(c. 165)", build_site.work_intro_html("conon-gardener"))
+        self.assertNotIn("fl. c. 170", build_site.work_intro_html("montanus-lucius"))
+        # Polycarp's dates are now c. 69–c. 155; the intro's old floruit must not survive.
+        self.assertNotIn("fl. c. 155", build_site.work_intro_html("polycarp-philippians"))
+
+    def test_teaser_is_not_printed_twice(self):
+        self.assertTrue(build_site.blurb_repeats_intro(
+            "This account was put together by Perpetua.", ["This account was put together by Perpetua. She wrote."]))
+        self.assertFalse(build_site.blurb_repeats_intro("Another line.", ["This account was put together."]))
+        self.assertFalse(build_site.blurb_repeats_intro("", ["Anything."]))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
