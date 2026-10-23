@@ -5657,6 +5657,12 @@ def load_origen_pauline_fragments() -> list[dict]:
                 meta.get("author_slug"),
                 author,
             )
+            # A book.yml writer with no sourced dates ("Anonymous (Carthage)", "Perpetua,
+            # Saturus, and the Redactor") files with the other martyr acts, which have them.
+            if not meta and _yml.get("author") and author_slug not in AUTHOR_DATES \
+                    and author_slug not in UNDATED_AUTHORS:
+                author = "Acts of the Martyrs"
+                author_slug = canonical_author_slug(None, author)
             sections = _origen_rows(rows, src_map)
             _ws = WORK_SOURCES.setdefault(slug, {"book": folder.name, "stems": []})
             if _ws["book"] == folder.name:
