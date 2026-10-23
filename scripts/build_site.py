@@ -1029,6 +1029,9 @@ APOSTOLIC_AUTHORS = frozenset({
     "clement-of-rome", "ignatius-of-antioch", "polycarp-of-smyrna", "barnabas", "didache",
     "hermas", "mathetes-epistle-to-diognetus", "church-of-smyrna", "papias-of-hierapolis",
     "quadratus",
+    # 2 Clement is in every Apostolic Fathers collection (Lake 1912, Holmes);
+    # it was filed Ante-Nicene until 2026-10-23.
+    "anonymous-2-clement",
 })
 # (filter key, chip label). Keys are single tokens: site.js splits data-era on spaces.
 CATALOGUE_ERAS = (("Apostolic", "Apostolic"), ("Ante-Nicene", "Ante-Nicene"), ("Nicene", "Nicene"),

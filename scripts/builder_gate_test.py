@@ -73,6 +73,9 @@ class ListenCountTest(unittest.TestCase):
 
 
 class TitleAndDateTest(unittest.TestCase):
+    def test_second_clement_files_with_the_apostolic_fathers(self) -> None:
+        self.assertEqual(build_site.era_band(150, "anonymous-2-clement", catalogue=True), "Apostolic")
+
     def test_file_stem_title_is_not_a_latin_subtitle(self) -> None:
         # 2026-10-23: "Montanus-Lucius", "Perpetua", "Lyons" sat under English H1s.
         slug = "test-stem-subtitle"
