@@ -5670,6 +5670,22 @@ def load_origen_nt_fragments() -> list[dict]:
     return works
 
 
+def source_lastmod(slug: str, sources: dict | None = None) -> str:
+    """YYYY-MM-DD when a work's English files last changed, from the build's
+    work-sources map (else WORK_SOURCES); '' when they are not known."""
+    import datetime as _dt
+    src = (sources or {}).get(slug) or WORK_SOURCES.get(slug) or {}
+    trans = BOOKS / str(src.get("book") or "_") / "translations"
+    times = []
+    for stem in src.get("stems") or []:
+        path = trans / (stem if stem.endswith(".json") else f"{stem}.json")
+        try:
+            times.append(path.stat().st_mtime)
+        except OSError:
+            continue
+    return _dt.datetime.fromtimestamp(max(times)).strftime("%Y-%m-%d") if times else ""
+
+
 def about_shelf_line(library, works: list[dict]) -> str:
     """The About download line, with the shelf's share of the live works when
     some are not on it yet (2026-10-23: About said 343 books, Home 372 works)."""
@@ -11741,13 +11757,24 @@ def build() -> None:
         url_files["/" + p.relative_to(DIST).as_posix().removesuffix("index.html")] = p
     urls = sorted(url_files)
 
+    # lastmod is the day a work's English files last changed. The build writes
+    # every page fresh, so a page's own mtime was always the build day (16,108
+    # URLs dated 2026-10-23), and crawlers ignore a lastmod that always moves.
+    # Pages with no source files to date carry no lastmod.
+    _src_days: dict[str, str] = {}
+    _work_sources = (_json_load(DIST / "data" / "work-sources.json", {}) or {}).get("works") or {}
+
     def _lastmod(u: str) -> str:
-        # The build writes every page fresh, so the file's mtime is the day
-        # this content was built — the honest freshness signal we have.
-        try:
-            return _dt.datetime.fromtimestamp(url_files[u].stat().st_mtime).strftime("%Y-%m-%d")
-        except (KeyError, OSError):
-            return _dt.date.today().isoformat()
+        parts = u.strip("/").split("/")
+        if len(parts) < 2 or parts[0] != "works":
+            return ""
+        slug = parts[1]
+        if slug not in _src_days:
+            _src_days[slug] = source_lastmod(slug, _work_sources)
+        return _src_days[slug]
+
+    def _lastmod_tag(day: str) -> str:
+        return f"<lastmod>{day}</lastmod>" if day else ""
     groups: dict[str, list[str]] = defaultdict(list)
     noindex_routes = set(NONCANONICAL_ROUTES)
     for page in DIST.rglob("index.html"):
@@ -11762,14 +11789,14 @@ def build() -> None:
         (DIST / f"sitemap-{names.get(g, g)}.xml").write_text(
             '<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc><lastmod>{_lastmod(u)}</lastmod></url>\n" for u in us)
+            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc>{_lastmod_tag(_lastmod(u))}</url>\n" for u in us)
             + "</urlset>\n",
             encoding="utf-8",
         )
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc><lastmod>{max((_lastmod(u) for u in groups[g]), default=_dt.date.today().isoformat())}</lastmod></sitemap>\n" for g in sorted(groups))
+        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc>{_lastmod_tag(max((d for d in map(_lastmod, groups[g]) if d), default=''))}</sitemap>\n" for g in sorted(groups))
         + "</sitemapindex>\n",
         encoding="utf-8",
     )
