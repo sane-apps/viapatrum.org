@@ -73,6 +73,17 @@ class ListenCountTest(unittest.TestCase):
 
 
 class TitleAndDateTest(unittest.TestCase):
+    def test_file_stem_title_is_not_a_latin_subtitle(self) -> None:
+        # 2026-10-23: "Montanus-Lucius", "Perpetua", "Lyons" sat under English H1s.
+        slug = "test-stem-subtitle"
+        build_site._BRIEF_TITLES[slug] = "The Passion of Montanus and Lucius"
+        build_site.STEM_TITLE_SLUGS.add(slug)
+        try:
+            self.assertEqual(build_site.public_reader_latin_subtitle("Montanus-Lucius", slug=slug), "")
+        finally:
+            build_site._BRIEF_TITLES.pop(slug, None)
+            build_site.STEM_TITLE_SLUGS.discard(slug)
+
     def test_brief_title_drops_a_word_the_catalogue_bans_in_the_h1(self) -> None:
         # 2026-10-08 13:49: the ship built, then died on this H1.
         slug = "test-scholia-heading"

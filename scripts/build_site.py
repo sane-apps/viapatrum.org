@@ -2099,10 +2099,18 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "cyril-fragmenta-contra-theodorum-3": "Fragments Against Theodore, Book 3",
     "julian-letter-to-rome": "Fragments of the Letter to Rome",
     "julian-turbantius-fragments": "Fragments to Turbantius",
+    # Its only file stem gave "Dormition Homilies" (2026-10-23).
+    "john-damascus-homiliae-in-dormitionem": "Homilies on the Dormition of the Mother of God",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
 PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
+    # The file stem or a source-page label stood in the subtitle slot (2026-10-23:
+    # "Epistula_", "Dormition Homilies"). Hesychius's text is the homily on James
+    # and David; only its source label says Lazarus.
+    "procopius-gaza-epistula-altera": "Epistula altera",
+    "john-damascus-homiliae-in-dormitionem": "Homiliae in dormitionem Beatae Mariae Virginis",
+    "hesychius-homilia-i-lazarum": "In sanctum Iacobum fratrem Domini et Davidem",
     # Traditional names where the meta title only repeated the English (2026-10-06).
     "origen-homily-1samuel-28": "De engastrimytho",
     "anonymous-antimontanist": "Ad Avircium Marcellum contra Cataphrygas",
@@ -2534,12 +2542,19 @@ _LATIN_SLOT_ENGLISH = re.compile(
 )
 
 
+# Works whose title is only their file stem ("Montanus-Lucius", "Perpetua"):
+# a stem is not a traditional name, so no subtitle (2026-10-23).
+STEM_TITLE_SLUGS: set[str] = set()
+
+
 def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     """Latin secondary line when H1 leads English; empty when H1 is already that form."""
     h1 = public_reader_title(title, slug=slug)
     mapped = PUBLIC_LATIN_SUBTITLES.get(slug or "", "").strip()
     if mapped:
         return "" if mapped.lower() == h1.lower() else scrub_worksheet_note(mapped).strip()
+    if (slug or "") in STEM_TITLE_SLUGS:
+        return ""
     if english_title_for(slug):
         raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
         if raw and raw.lower() != h1.lower():
@@ -5717,6 +5732,8 @@ def load_origen_pauline_fragments() -> list[dict]:
                 if not meta and (folder / "book.yml").exists() else {}
             slug = meta.get("slug") or folder.name
             title = meta.get("title") or stem.replace("_", " ").title()
+            if not meta.get("title") and not any(w["slug"] == slug for w in works):
+                STEM_TITLE_SLUGS.add(slug)
             author = meta.get("author") or _yml.get("author") or "Origen of Alexandria"
             author_slug = canonical_author_slug(
                 meta.get("author_slug"),
