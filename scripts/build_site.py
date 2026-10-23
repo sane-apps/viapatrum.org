@@ -292,20 +292,21 @@ BASE = ""
 # Work ↔ topic cross-refs (topic ids from ante-nicene-topics/topics.yml).
 WORK_TOPICS: dict[str, list[str]] = {
     "nemesius-de-natura-hominis": ["image-likeness", "free-will", "sin-and-death"],
-    "macarius-spiritual-homilies": ["monasticism", "spiritual-life", "prayer", "divine-image", "resurrection"],
-    "philostorgius-he": ["arianism", "ecclesiastical-history", "christology"],
-    "gregory-thaumaturgus-de-fide-xii": ["christology", "incarnation", "trinity"],
-    "gregory-thaumaturgus-ad-tatianum-de-anima": ["soul", "anthropology", "philosophy"],
-    "gregory-thaumaturgus-in-annuntiationem": ["annunciation", "incarnation", "virgin-mary"],
-    "gregory-thaumaturgus-sermo-in-omnes-sanctos": ["martyrdom", "resurrection", "christology"],
-    "gregory-thaumaturgus-panegyricus": ["origen", "education", "philosophy", "rhetoric"],
-    "gregory-thaumaturgus-ecclesiastes-metaphrase": ["ecclesiastes", "wisdom-literature", "vanity", "metaphrase"],
-    "gregory-thaumaturgus-epistula-canonica": ["penance", "canonical-epistle", "idolatry", "barbarian-invasion"],
-    "serapion-antioch-fragmenta": ["gospel-canon", "docetism", "apostolic-tradition", "heresy"],
-    "epiphanius-ancoratus": ["trinity", "holy-spirit", "christology", "monarchy-of-god"],
-    "epiphanius-de-mensuris": ["scripture", "weights-measures", "prophecy", "textual-criticism"],
-    "epiphanius-panarion": ["heresy", "church", "adam", "trinity", "panarion"],
-    "epiphanius-anacephalaeosis": ["heresy", "panarion", "recapitulation", "church"],
+    "macarius-spiritual-homilies": ["spirit-sanctifies", "liturgy-prayer", "image-likeness", "resurrection-body"],
+    "philostorgius-he": ["civil-authority", "heresy-schism"],
+    "gregory-thaumaturgus-de-fide-xii": ["two-natures-seed", "incarnation-word-flesh"],
+    "gregory-thaumaturgus-ad-tatianum-de-anima": ["image-likeness"],
+    "gregory-thaumaturgus-in-annuntiationem": ["virgin-birth", "incarnation-word-flesh"],
+    "gregory-thaumaturgus-sermo-in-omnes-sanctos": ["martyrdom-witness"],
+    # No topic fits the opening alone; [] also keeps the meta's non-topic tags out.
+    "gregory-thaumaturgus-panegyricus": [],
+    "gregory-thaumaturgus-ecclesiastes-metaphrase": [],
+    "gregory-thaumaturgus-epistula-canonica": ["discipline-penance", "against-idols"],
+    "serapion-antioch-fragmenta": ["canon-rule-of-truth", "against-docetism", "apostolic-tradition", "heresy-schism"],
+    "epiphanius-ancoratus": ["father-son-spirit", "spirit-sanctifies"],
+    "epiphanius-de-mensuris": ["spirit-prophecy", "scripture-inspiration"],
+    "epiphanius-panarion": ["heresy-schism", "father-son-spirit"],
+    "epiphanius-anacephalaeosis": ["heresy-schism"],
     "origen-on-prayer": ["liturgy-prayer"],
     "origen-exhortation-to-martyrdom": ["martyrdom-witness"],
     "origen-dialogue-heraclides": [
@@ -342,12 +343,12 @@ WORK_TOPICS: dict[str, list[str]] = {
     "julian-marriage-extracts": ["sin-and-death", "image-likeness"],
     "julian-letter-to-rome": ["free-will", "grace-and-assistance"],
     "julian-collective-letter": ["free-will", "grace-and-assistance", "sin-and-death"],
-    "crocius-syntagma": ["systematic-theology", "bremen-school", "irenicism", "reformed-orthodoxy"],
-    "davenant-dissertationes-duae": ["atonement", "predestination", "reprobation", "universal-grace"],
-    "baron-philosophia-theologiae-ancillans": ["philosophy", "theology", "being", "essence", "scholasticism"],
-    "placeus-de-imputatione": ["imputation", "original-sin", "adam", "covenant-theology"],
-    "le-blanc-theses-theologicae": ["justification", "protestant-roman", "ireneicism", "catholicism"],
-    "strimesius-in-controversias-evangelicorum": ["ecclesiastical-peace", "protestant-unity", "ireneicism", "controversy"],
+    "crocius-syntagma": ["scripture-inspiration", "canon-rule-of-truth", "apostolic-tradition"],
+    "davenant-dissertationes-duae": ["universal-call", "salvation-by-christ", "grace-and-assistance"],
+    "baron-philosophia-theologiae-ancillans": ["sin-and-death", "faith-and-obedience"],
+    "placeus-de-imputatione": ["sin-and-death"],
+    "le-blanc-theses-theologicae": ["faith-and-obedience", "grace-and-assistance", "free-will", "scripture-inspiration"],
+    "strimesius-in-controversias-evangelicorum": ["one-church", "eucharist-thanksgiving"],
 }
 
 
@@ -2330,6 +2331,86 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "philostorgius-he": "Historia ecclesiastica",
     "origen-regnorum-fragments": "Fragmenta in Regnorum",
     "origen-song-commentary-liber-4": "Commentarius in Canticum IV",
+    # Traditional names for translated works that showed none (2026-10-23),
+    # from each book.yml original_title, meta source title or standard catalogues.
+    "achatius": "Acta disputationis Achatii",
+    "acts-of-justin": "Martyrium Iustini et sociorum",
+    "athanasius-epistula-adelphium": "Epistula ad Adelphium",
+    "athanasius-epistula-afros": "Epistula ad Afros episcopos",
+    "athanasius-epistula-jovianum": "Epistula ad Jovianum",
+    "athanasius-epistula-maximum": "Epistula ad Maximum philosophum",
+    "athanasius-epistula-monachos": "Epistula ad monachos",
+    "athanasius-epistula-palladium": "Epistula ad Palladium",
+    "athanasius-scholia-job": "Scholia in Job",
+    "athanasius-tomus-antiochenos": "Tomus ad Antiochenos",
+    "augustine-care-for-the-dead": "De cura pro mortuis gerenda",
+    "augustine-divination-of-demons": "De divinatione daemonum",
+    "augustine-on-faith-and-the-creed": "De fide et symbolo",
+    "augustine-proceedings-with-emeritus": "Gesta cum Emerito",
+    "augustine-psalm-against-the-donatists": "Psalmus contra partem Donati",
+    "augustine-sermon-to-the-church-of-caesarea": "Sermo ad Caesariensis ecclesiae plebem",
+    "basil-homilia-ad-baptisma": "Homilia exhortatoria ad sanctum baptisma",
+    "basil-homilia-de-spiritu-sancto": "Homilia de Spiritu Sancto",
+    "basil-homilia-gratiarum-actione": "Homilia de gratiarum actione",
+    "basil-homilia-in-divites": "Homilia in divites",
+    "basil-homilia-in-psalmum-115": "Homilia in Psalmum CXV",
+    "basil-homilia-in-psalmum-28": "Homilia altera in Psalmum XXVIII",
+    "basil-homilia-invidia": "Homilia de invidia",
+    "basil-homilia-misericordia-judicio": "Homilia de misericordia et judicio",
+    "basil-homilia-tempore-famis": "Homilia dicta tempore famis et siccitatis",
+    "basil-homiliae-hexaemeron": "Homiliae in Hexaemeron",
+    "basil-in-barlaam": "Homilia in Barlaam martyrem",
+    "basil-in-ebriosos": "Homilia in ebriosos",
+    "basil-in-principio-erat-verbum": "Homilia in illud: In principio erat Verbum",
+    "basil-in-quadraginta-martyres": "Homilia in quadraginta martyres Sebastenses",
+    "basil-quod-rebus-mundanis": "Quod rebus mundanis adhaerendum non sit",
+    "chrysostom-catecheses-illuminandos": "Catecheses ad illuminandos",
+    "chrysostom-comparatio-regis-monachi": "Comparatio regis et monachi",
+    "chrysostom-de-resurrectione-mortuorum": "De resurrectione mortuorum",
+    "chrysostom-in-diem-natalem": "In diem natalem",
+    "chrysostom-in-eustathium": "In sanctum Eustathium Antiochenum",
+    "chrysostom-in-lucianum": "In sanctum Lucianum martyrem",
+    "chrysostom-in-romanum": "In sanctum Romanum",
+    "clement-alexandria-newly-baptized": "Πρὸς τοὺς νεωστὶ βεβαπτισμένους",
+    "cyprian": "Acta proconsularia Cypriani",
+    "cyprian-on-the-unity-of-the-church": "De ecclesiae catholicae unitate",
+    "cyril-fragmenta-acta-catholicas": "Fragmenta in Acta apostolorum et epistulas catholicas",
+    "cyril-fragmenta-contra-diodorum": "Fragmenta contra Diodorum",
+    "cyril-fragmenta-contra-theodorum-2": "Fragmenta ex libro II contra Theodorum Mopsuestenum",
+    "cyril-fragmenta-contra-theodorum-3": "Fragmenta ex libro III contra Theodorum Mopsuestenum",
+    "cyril-fragmenta-danielem": "Fragmenta in Danielem",
+    "cyril-fragmenta-hebraeos": "Fragmenta in epistulam ad Hebraeos",
+    "cyril-fragmenta-jeremiam": "Fragmenta in Jeremiam",
+    "cyril-fragmenta-numeros": "Fragmenta in Numeros",
+    "cyril-fragmentum-papyraceum": "Fragmentum papyraceum",
+    "cyril-fragmentum-psalmum": "Fragmentum in Psalmum",
+    "cyril-homilia-cyrini": "Homilia habita in ecclesia Cyrini",
+    "cyril-sermo-trium-puerorum": "Sermo de obitu sanctorum trium puerorum",
+    "didache": "Διδαχὴ τῶν δώδεκα ἀποστόλων",
+    "diognetus-epistle": "Πρὸς Διόγνητον",
+    "dionysius-corinth-fragments": "Epistularum fragmenta",
+    "eusebius-letter-flacillus": "Epistula ad Flacillum",
+    "gregory-thaumaturgus-expositio-fidei": "Expositio fidei",
+    "ignatius-letters": "Epistulae",
+    "john-damascus-homiliae-in-dormitionem": "Homiliae in dormitionem beatae Mariae Virginis",
+    "julian-collective-letter": "Epistula ad Rufum Thessalonicensem",
+    "julian-letter-to-rome": "Epistula ad Romanos",
+    "julian-to-florus": "Ad Florum",
+    "julian-turbantius-fragments": "Ad Turbantium",
+    "marcellus-de-incarnatione-contra-arianos": "De incarnatione et contra Arianos",
+    "martyrdom-polycarp": "Martyrium Polycarpi",
+    "maximus": "Acta Maximi",
+    "methodius-martyrs": "De martyribus",
+    "origen-1-corinthians-fragments": "Fragmenta in epistulam I ad Corinthios",
+    "origen-dialogue-heraclides": "Dialogus cum Heraclide",
+    "origen-ephesians-fragments": "Fragmenta in epistulam ad Ephesios",
+    "origen-exhortation-to-martyrdom": "Exhortatio ad martyrium",
+    "origen-homilies-jeremiah": "Homiliae in Jeremiam",
+    "origen-lamentations-fragments": "Fragmenta in Lamentationes",
+    "origen-on-pascha": "Περὶ Πάσχα",
+    "origen-on-prayer": "Περὶ εὐχῆς",
+    "polycarp": "Martyrium Polycarpi",
+    "second-clement": "Clementis ad Corinthios epistula secunda",
 }
 
 
@@ -3022,7 +3103,17 @@ def public_blurb(raw: str) -> str:
     t = t.strip(" \t;—–-,")
     if not t or _WORKSHEET_LEFT_I.search(t) or _WORKSHEET_LEFT_CS.search(t):
         return ""
+    if _CITATION_ONLY_BLURB.match(t):
+        return ""
     return t
+
+
+# A blurb that is only a catalogue line, "<Author>, <Latin title> (Greek)."
+# (cyril-homilia-cyrini showed one in About this text, 2026-10-23). An English
+# title ("Cyril of Alexandria, Dialogue 1 on the ... Trinity (Greek).") stays.
+_CITATION_ONLY_BLURB = re.compile(
+    r"^[^.,]{3,80},\s+(?:Homili\w*|Fragment\w*|Sermo\w*|Epistul\w*|Oratio\w*|Tractat\w*|Commentari\w*"
+    r"|Expositio\w*|Scholia|Excerpta|Selecta|De|In|Ad|Contra)\s[^.]{3,160}\s\((?:Greek|Latin)\)\.?$")
 
 
 def source_witness_html(sections, ordinals, *, ranged: str = "") -> str:
@@ -3612,8 +3703,10 @@ def _is_tautological_blurb(blurb: str) -> bool:
 
 _CATALOGUE_STUB = re.compile(
     r"\((?:catena\s+)?(?:Greek|Latin)[^)]*\)\.?\s*$"
-    r"|^[^.]{0,60},\s+(?:in|ex|de|ad|fragment\w*|homili\w*|commentari\w*|enarration\w*"
-    r"|selecta|scholia|excerpta|expositio)\b"
+    # The Latin title after the comma is capitalised; an English clause such as
+    # "To Turbantius, in four books" is not a stub (2026-10-23).
+    r"|^[^.]{0,60},\s+(?-i:(?:In|Ex|De|Ad|Fragment\w*|Homili\w*|Commentari\w*|Enarration\w*"
+    r"|Selecta|Scholia|Excerpta|Expositio))\b"
     # The old loader stub "<Author> Greek fragments." (capitalised name first).
     r"|(?-i:^(?!(?:Surviving|The|Some|Selected|Two|Three|Short|Early)\b)[A-Z][^.:;]{1,79} (?:Greek|Latin) fragments\.$)",
     re.I,
@@ -5618,6 +5711,38 @@ def load_origen_nt_fragments() -> list[dict]:
 # Site slug -> {book, stems}, filled by loaders that know their files (data/work-sources.json).
 WORK_SOURCES: dict[str, dict] = {}
 
+_WITNESS_LANG = {"lat": "Latin", "la": "Latin", "grc": "Greek", "gr": "Greek", "el": "Greek"}
+
+
+def _book_text_history(folder: Path, yml: dict) -> dict:
+    """About-this-text witnesses for a book with no *_meta.json (the martyr acts,
+    the Dormition homilies): its sources/manifest.json copy-text, else the
+    book.yml edition. Twelve such works named no printed source (2026-10-23,
+    Works reader SOP 9)."""
+    yml_ed = re.split(r"\s*;\s*scan\b", str((yml or {}).get("edition") or "").strip(), maxsplit=1, flags=re.I)[0].strip(" .;")
+    man = _json_load(folder / "sources" / "manifest.json", {}) or {}
+    out = []
+    for w in (man.get("witnesses") or []) if isinstance(man, dict) else []:
+        if not isinstance(w, dict):
+            continue
+        name = str(w.get("edition") or yml_ed or w.get("name") or "").strip()
+        if not name:
+            continue
+        role = str(w.get("role") or "").strip()
+        if role not in WITNESS_ROLE_LABEL:
+            role = "copy-text" if not out else "check"
+        url = next((str(w[k]) for k in ("url", "source") if str(w.get(k) or "").startswith("http")), "")
+        lang = str(w.get("language") or "").strip()
+        rec = {"name": name, "role": role, "language": _WITNESS_LANG.get(lang.lower(), lang)}
+        if url:
+            rec["url"] = url
+        out.append(rec)
+    if not out and yml_ed:
+        lang = str((yml or {}).get("language") or "").strip()
+        out.append({"name": yml_ed, "role": "copy-text",
+                    "language": lang if lang in ("Greek", "Latin") else ""})
+    return {"witnesses": out} if out else {}
+
 
 def load_origen_pauline_fragments() -> list[dict]:
     """Tip SERIES CLOSEOUT fragment hubs (Origen + other Rank-1 scraps; true OET)."""
@@ -5650,6 +5775,7 @@ def load_origen_pauline_fragments() -> list[dict]:
             # (Not its title: book.yml titles carry source notes such as "(Greek; PG 96)".)
             _yml = (yaml.safe_load((folder / "book.yml").read_text(encoding="utf-8")) or {}) \
                 if not meta and (folder / "book.yml").exists() else {}
+            text_history = _text_history_from_meta(meta) if meta else _book_text_history(folder, _yml)
             slug = meta.get("slug") or folder.name
             title = meta.get("title") or stem.replace("_", " ").title()
             author = meta.get("author") or _yml.get("author") or "Origen of Alexandria"
@@ -5723,7 +5849,7 @@ def load_origen_pauline_fragments() -> list[dict]:
                     era_note=meta.get("era_note") or default_era,
                     first_english=bool(meta.get("first_english", True)),
                     first_english_note=meta.get("first_english_note") or "",
-                    text_history=_text_history_from_meta(meta),
+                    text_history=text_history,
                 )
             )
             if meta.get("work_blurb"):
@@ -10707,7 +10833,7 @@ def build() -> None:
             f"{plural(b['refs'], 'passage')} by {plural(len(b['writers']), 'writer')} {'cites' if b['refs'] == 1 else 'cite'} {escape(book_name(book))}. "
             "Open a chapter to read it with the Fathers beside it."
             if b["refs"]
-            else f"Read {escape(book_name(book))} chapter by chapter. No passage in the library cites it yet."
+            else f"Read {escape(book_name(book))} chapter by chapter. This index has no references to it yet."
         )
         write(
             DIST / "scripture" / bslug / "index.html",
@@ -10900,7 +11026,7 @@ def build() -> None:
 <div class="sc-books">{sc_shelf(BIBLE_ORDER[:NT_START])}</div>
 <h2>New Testament</h2>
 <div class="sc-books">{sc_shelf(BIBLE_ORDER[NT_START:])}</div>
-<p class="intro fine">References are found in the English of each passage. Many Fathers number the Psalms the old Greek way (their Psalm 21 is our Psalm 22); a Psalm reference is filed under our numbering when its words clearly match that psalm.</p>""",
+<p class="intro fine">References are found in the English of each passage. Many Fathers number the Psalms the old Greek way (their Psalm 21 is our Psalm 22); a Psalm reference is filed under our numbering when its words clearly match that psalm. Citations of Tobit, Judith, Wisdom, Sirach, Baruch and 1 and 2 Maccabees, books the early Church also read, are not indexed here yet.</p>""",
             crumb=[("Home", "/"), ("Scripture", "")],
             active="scripture",
             description=f"Every book of the Bible as the early Church Fathers read it: {sc_total:,} references across {len(sc_books)} books, chapter by chapter, in fresh English.",

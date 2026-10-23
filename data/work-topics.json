@@ -1,4 +1,9 @@
 {
+ "achatius": [
+  "martyrdom-witness",
+  "against-idols",
+  "civil-authority"
+ ],
  "acts-of-justin": [
   "martyrdom-witness",
   "civil-authority"
@@ -16,6 +21,10 @@
   "one-god-creator",
   "against-docetism",
   "resurrection-body"
+ ],
+ "amphilochius-de-recens-baptizatis": [
+  "baptism-and-new-birth",
+  "spirit-and-baptism"
  ],
  "amphilochius-epistula-synodalis": [
   "father-son-spirit",
@@ -90,25 +99,151 @@
   "salvation-by-christ",
   "heresy-schism"
  ],
+ "athanasius-epistula-afros": [
+  "father-son-spirit",
+  "canon-rule-of-truth",
+  "heresy-schism"
+ ],
  "athanasius-epistula-jovianum": [
   "father-son-spirit",
   "canon-rule-of-truth"
  ],
+ "athanasius-epistula-maximum": [
+  "incarnation-word-flesh",
+  "two-natures-seed",
+  "passion-resurrection"
+ ],
  "athanasius-epistula-monachos": [
   "heresy-schism"
+ ],
+ "athanasius-epistula-palladium": [
+  "bishops-presbyters",
+  "one-church"
+ ],
+ "athanasius-scholia-job": [
+  "father-son-spirit",
+  "hermeneutics-types"
+ ],
+ "athanasius-tomus-antiochenos": [
+  "one-church",
+  "heresy-schism",
+  "father-son-spirit"
  ],
  "athenagoras-resurrection": [
   "resurrection-body",
   "reward-and-judgment"
+ ],
+ "augustine-care-for-the-dead": [
+  "heaven-hell-intermediate",
+  "liturgy-prayer"
+ ],
+ "augustine-divination-of-demons": [
+  "against-idols",
+  "attributes-providence",
+  "apologetic-method"
+ ],
+ "augustine-on-faith-and-the-creed": [
+  "canon-rule-of-truth",
+  "father-son-spirit",
+  "incarnation-word-flesh",
+  "resurrection-body"
+ ],
+ "augustine-proceedings-with-emeritus": [
+  "one-church",
+  "heresy-schism"
+ ],
+ "augustine-psalm-against-the-donatists": [
+  "one-church",
+  "heresy-schism"
+ ],
+ "augustine-sermon-to-the-church-of-caesarea": [
+  "one-church",
+  "heresy-schism",
+  "baptism-and-new-birth"
  ],
  "baron-philosophia-theologiae-ancillans": [
   "attributes-providence",
   "father-son-spirit",
   "two-natures-seed"
  ],
+ "basil-homilia-ad-baptisma": [
+  "baptism-and-new-birth",
+  "spirit-and-baptism"
+ ],
+ "basil-homilia-de-spiritu-sancto": [
+  "father-son-spirit",
+  "spirit-sanctifies",
+  "spirit-and-baptism"
+ ],
+ "basil-homilia-gratiarum-actione": [
+  "liturgy-prayer",
+  "providence-and-care"
+ ],
+ "basil-homilia-in-divites": [
+  "wealth-alms"
+ ],
+ "basil-homilia-in-psalmum-115": [
+  "faith-and-obedience",
+  "martyrdom-witness",
+  "liturgy-prayer"
+ ],
+ "basil-homilia-in-psalmum-28": [
+  "one-church",
+  "hermeneutics-types",
+  "baptism-and-new-birth"
+ ],
+ "basil-homilia-invidia": [
+  "love-neighbor-enemy"
+ ],
+ "basil-homilia-misericordia-judicio": [
+  "wealth-alms",
+  "reward-and-judgment"
+ ],
+ "basil-homilia-tempore-famis": [
+  "wealth-alms",
+  "discipline-penance",
+  "providence-and-care"
+ ],
+ "basil-homiliae-hexaemeron": [
+  "one-god-creator",
+  "attributes-providence",
+  "providence-and-care"
+ ],
+ "basil-in-barlaam": [
+  "martyrdom-witness"
+ ],
+ "basil-in-ebriosos": [
+  "two-ways",
+  "discipline-penance"
+ ],
+ "basil-in-principio-erat-verbum": [
+  "father-son-spirit",
+  "incarnation-word-flesh"
+ ],
+ "basil-in-quadraginta-martyres": [
+  "martyrdom-witness"
+ ],
+ "basil-quod-rebus-mundanis": [
+  "wealth-alms",
+  "providence-and-care"
+ ],
+ "chrysostom-catecheses-illuminandos": [
+  "baptism-and-new-birth",
+  "spirit-and-baptism",
+  "liturgy-prayer"
+ ],
+ "chrysostom-comparatio-regis-monachi": [
+  "wealth-alms",
+  "civil-authority"
+ ],
  "chrysostom-de-resurrectione-mortuorum": [
   "resurrection-body",
   "reward-and-judgment"
+ ],
+ "chrysostom-in-diem-natalem": [
+  "incarnation-word-flesh",
+  "virgin-birth",
+  "eucharist-thanksgiving"
  ],
  "chrysostom-in-eustathium": [
   "bishops-presbyters",
@@ -116,6 +251,9 @@
   "attributes-providence"
  ],
  "chrysostom-in-lucianum": [
+  "martyrdom-witness"
+ ],
+ "chrysostom-in-romanum": [
   "martyrdom-witness"
  ],
  "clement-alexandria-newly-baptized": [
@@ -127,10 +265,19 @@
   "salvation-by-christ",
   "discipline-penance"
  ],
+ "conon-gardener": [
+  "martyrdom-witness",
+  "against-idols"
+ ],
  "crocius-syntagma": [
   "scripture-inspiration",
   "apostolic-tradition",
   "canon-rule-of-truth"
+ ],
+ "cyprian": [
+  "martyrdom-witness",
+  "civil-authority",
+  "bishops-presbyters"
  ],
  "cyprian-on-the-unity-of-the-church": [
   "one-church",
@@ -246,6 +393,13 @@
   "incarnation-word-flesh",
   "passion-resurrection"
  ],
+ "didache": [
+  "two-ways",
+  "baptism-and-new-birth",
+  "eucharist-thanksgiving",
+  "bishops-presbyters",
+  "judgment-second-coming"
+ ],
  "didymus-commentarii-ecclesiasten": [
   "wealth-alms",
   "free-will",
@@ -360,6 +514,12 @@
  "epiphanius-de-trinitate": [
   "father-son-spirit",
   "true-worship"
+ ],
+ "epiphanius-de-xii-gemmis": [
+  "hermeneutics-types"
+ ],
+ "epiphanius-de-xii-gemmis-fragmenta": [
+  "hermeneutics-types"
  ],
  "epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum": [
   "spirit-prophecy"
@@ -517,6 +677,13 @@
   "liturgy-prayer",
   "love-neighbor-enemy"
  ],
+ "evagrius-capitula-xxxiii": [
+  "hermeneutics-types",
+  "sin-and-death"
+ ],
+ "evagrius-de-magistris": [
+  "discipline-penance"
+ ],
  "evagrius-de-malignis-cogitationibus": [
   "liturgy-prayer",
   "wealth-alms"
@@ -594,6 +761,10 @@
  "gregory-thaumaturgus-epistula-canonica": [
   "discipline-penance",
   "sexual-marriage"
+ ],
+ "gregory-thaumaturgus-expositio-fidei": [
+  "father-son-spirit",
+  "canon-rule-of-truth"
  ],
  "gregory-thaumaturgus-in-annuntiationem": [
   "virgin-birth",
@@ -676,10 +847,17 @@
   "against-docetism",
   "martyrdom-witness"
  ],
+ "irenaeus": [
+  "martyrdom-witness",
+  "civil-authority"
+ ],
  "irenaeus-letter-victor": [
   "one-church",
   "liturgy-prayer",
   "apostolic-tradition"
+ ],
+ "john-damascus-de-partibus-animae": [
+  "image-likeness"
  ],
  "john-damascus-de-theologia": [
   "father-son-spirit",
@@ -692,18 +870,44 @@
   "spirit-and-baptism",
   "reward-and-judgment"
  ],
+ "john-damascus-homiliae-in-dormitionem": [
+  "apostolic-tradition"
+ ],
+ "john-damascus-quid-est-homo": [
+  "image-likeness"
+ ],
+ "justin-companions": [
+  "martyrdom-witness",
+  "civil-authority"
+ ],
  "le-blanc-theses-theologicae": [
   "scripture-inspiration",
   "faith-and-obedience"
+ ],
+ "lyons-vienne-letter": [
+  "martyrdom-witness",
+  "discipline-penance",
+  "civil-authority"
  ],
  "marcellus-ancyranus-fragmenta": [
   "father-son-spirit",
   "incarnation-word-flesh",
   "heresy-schism"
  ],
+ "marcellus-de-incarnatione-contra-arianos": [
+  "father-son-spirit",
+  "incarnation-word-flesh"
+ ],
+ "marianus-james": [
+  "martyrdom-witness"
+ ],
  "martyrdom-polycarp": [
   "martyrdom-witness",
   "civil-authority"
+ ],
+ "maximus": [
+  "martyrdom-witness",
+  "against-idols"
  ],
  "methodius-martyrs": [
   "martyrdom-witness",
@@ -713,6 +917,11 @@
   "apologetic-method",
   "against-idols",
   "one-god-creator"
+ ],
+ "montanus-lucius": [
+  "martyrdom-witness",
+  "one-church",
+  "discipline-penance"
  ],
  "novatian-on-the-public-shows": [
   "against-idols"
@@ -841,6 +1050,11 @@
  "origen-song-homily-2": [
   "hermeneutics-types"
  ],
+ "perpetua-felicitas": [
+  "martyrdom-witness",
+  "spirit-prophecy",
+  "heaven-hell-intermediate"
+ ],
  "philostorgius-he": [
   "canon-rule-of-truth",
   "heresy-schism"
@@ -857,6 +1071,10 @@
  ],
  "placeus-de-imputatione": [
   "sin-and-death"
+ ],
+ "polycarp": [
+  "martyrdom-witness",
+  "civil-authority"
  ],
  "polycarp-philippians": [
   "faith-and-obedience",
