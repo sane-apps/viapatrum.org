@@ -11409,7 +11409,7 @@ def build() -> None:
             <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/topics/free-will/#over-time">free will over time</a>.</p>
             <h2>Help and support</h2>
-            <p>Want to help finish a text? See <a href="/contribute/">Help us</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
+            <p>To report a mistake or to help, see <a href="/contribute/">Help us</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
             crumb=[("Home", "/"), ("About", "")],
             active="about",
             description="Via Patrum is a free library of the Church Fathers in fresh English translations: how they spoke, acted, argued, lived and died. Topics, Fathers, whole works, and how they line up over time.",
