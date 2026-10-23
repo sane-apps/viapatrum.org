@@ -371,6 +371,8 @@ class MartyrActsTest(unittest.TestCase):
                 self.assertTrue(old in text or new in text, f"{slug}: {old[:50]!r} no longer in intro.md")
         self.assertNotIn("(c. 165)", build_site.work_intro_html("conon-gardener"))
         self.assertNotIn("fl. c. 170", build_site.work_intro_html("montanus-lucius"))
+        # Polycarp's dates are now c. 69–c. 155; the intro's old floruit must not survive.
+        self.assertNotIn("fl. c. 155", build_site.work_intro_html("polycarp-philippians"))
 
     def test_teaser_is_not_printed_twice(self):
         self.assertTrue(build_site.blurb_repeats_intro(
