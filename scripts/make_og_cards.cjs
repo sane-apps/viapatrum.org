@@ -418,6 +418,12 @@ async function main() {
   if (todo.length) {
     let chromium;
     try { ({ chromium } = require('/opt/homebrew/lib/node_modules/playwright')); } catch { ({ chromium } = require('playwright')); }
+    // A full redraw (a template change touches all ~16k cards) once lost every card when
+    // the browser died at card 892 (2026-10-23): restart it every 500 cards and save the
+    // cache as it goes, so a rerun picks up where it stopped.
+    const saveCache = () => { fs.mkdirSync(path.dirname(CACHE), { recursive: true }); fs.writeFileSync(CACHE, JSON.stringify(cache, null, 1) + '\n'); };
+    for (let start = 0; start < todo.length; start += 500) {
+    const batch = todo.slice(start, start + 500);
     const browser = await chromium.launch({ executablePath: BRAVE, headless: true });
     try {
       const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
@@ -427,7 +433,7 @@ async function main() {
       if (!families.some(f => f.includes('Cormorant')) || !families.some(f => f.includes('Literata'))) {
         throw new Error('Google Fonts did not load: ' + JSON.stringify(families));
       }
-      for (const c of todo) {
+      for (const c of batch) {
         const res = await page.evaluate(d => window.renderCard(d), c.data);
         if (res.overflow) warnings.push(`${c.file}: still overflows (title ${res.size}px, ${res.titleLines} lines)`);
         const dest = path.join(OUT, `${c.file}.${ext}`);
@@ -440,6 +446,9 @@ async function main() {
       }
     } finally {
       await browser.close();
+      saveCache();
+    }
+    if (todo.length > 500) console.log(`cards: ${Math.min(start + 500, todo.length)} of ${todo.length} drawn`);
     }
   }
 
