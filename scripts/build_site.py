@@ -1759,6 +1759,39 @@ def load_topic_excerpts() -> list[dict]:
 TOPIC_REDIRECTS: dict[str, str] = {}
 
 
+def _passage_words(x: dict) -> set[str]:
+    return set(re.findall(r"[a-z]+", str(x.get("english") or "").lower())[:150])
+
+
+def drop_repeated_passages(rows: list[dict]) -> tuple[list[dict], list[dict]]:
+    """One topic, one copy of a passage. A hand-picked excerpt and an auto one
+    can cite the same chapter in two translations, so the topic page and the
+    app showed it twice (17 topics, 2026-10-23). Same writer and citation, and
+    either the same reader section or mostly the same words, is a repeat. The
+    copy taken from the whole-work reader wins, then a hand-picked id."""
+    def rank(x: dict) -> tuple:
+        return (x.get("confidence") != "reader", str(x.get("id") or "").startswith("auto_"), str(x.get("id") or ""))
+
+    kept: list[dict] = []
+    dropped: list[dict] = []
+    for x in sorted(rows, key=rank):
+        key = (x.get("author") or "", public_citation(x.get("citation") or x.get("id") or "", x.get("work") or ""))
+        same = None
+        for k in kept:
+            if (k.get("author") or "", public_citation(k.get("citation") or k.get("id") or "", k.get("work") or "")) != key:
+                continue
+            if x.get("_cite_href") and x.get("_cite_href") == k.get("_cite_href"):
+                same = k
+                break
+            a, b = _passage_words(x), _passage_words(k)
+            if a and b and len(a & b) / len(a | b) >= 0.4:
+                same = k
+                break
+        (dropped if same else kept).append(x)
+    ids = {x.get("id") for x in kept}
+    return [x for x in rows if x.get("id") in ids], dropped
+
+
 def check_topic_ids(excerpts: list[dict], topic_meta: dict) -> None:
     """Stop the build when an excerpt's topic id is not in topics.yml.
 
@@ -8993,6 +9026,12 @@ def build() -> None:
         by_topic[tid].append(x)
         author = x.get("author") or "Unknown"
         by_author[author].append(x)
+
+    _repeats = 0
+    for tid in list(by_topic):
+        by_topic[tid], _gone = drop_repeated_passages(by_topic[tid])
+        _repeats += len(_gone)
+    print(f"topic passages: {_repeats} repeated copies left off topic pages", flush=True)
 
     for tid, rows in by_topic.items():
         rows.sort(
