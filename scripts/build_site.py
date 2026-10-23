@@ -5646,11 +5646,12 @@ def load_origen_pauline_fragments() -> list[dict]:
                 src_map[sec] = mapped
             meta = _json_load(trans / f"{stem}_meta.json", {})
             # Certified books without a *_meta.json (polycarp, justin-companions) fell
-            # through to "Origen of Alexandria" (2026-10-23): take book.yml's names first.
+            # through to "Origen of Alexandria" (2026-10-23): take book.yml's author first.
+            # (Not its title: book.yml titles carry source notes such as "(Greek; PG 96)".)
             _yml = (yaml.safe_load((folder / "book.yml").read_text(encoding="utf-8")) or {}) \
                 if not meta and (folder / "book.yml").exists() else {}
             slug = meta.get("slug") or folder.name
-            title = meta.get("title") or _yml.get("title") or stem.replace("_", " ").title()
+            title = meta.get("title") or stem.replace("_", " ").title()
             author = meta.get("author") or _yml.get("author") or "Origen of Alexandria"
             author_slug = canonical_author_slug(
                 meta.get("author_slug"),
