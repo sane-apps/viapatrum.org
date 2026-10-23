@@ -51,6 +51,8 @@ EXTRA_LOCUS = {"id": "mary-saints", "title": "Mary, the Saints and Images", "aft
 
 # The topic pages that cover the same ground. Their early excerpts are not yet
 # in the belief search (see the method note), so each question links to them.
+# unity-of-christ is the anti-Marcion claim (one Christ of the one God), not the
+# one-or-two-natures question, so christ-natures does not link it (2026-10-23).
 RELATED_TOPIC = {
     "eucharist-presence": ["eucharist-thanksgiving"], "eucharist-sacrifice": ["eucharist-thanksgiving"],
     "baptism-effect": ["baptism-and-new-birth"], "baptism-subjects": ["baptism-and-new-birth"],
@@ -64,7 +66,7 @@ RELATED_TOPIC = {
     "mary-sinlessness": ["virgin-birth"], "mary-end-of-life": ["virgin-birth"],
     "images": ["against-idols"], "saints": ["martyrdom-witness", "liturgy-prayer"],
     "spiritual-gifts": ["gifts-and-order", "spirit-prophecy"], "sanctification": ["spirit-sanctifies"],
-    "christ-natures": ["two-natures-seed", "unity-of-christ"], "millennium": ["millennium-debate", "judgment-second-coming"],
+    "christ-natures": ["two-natures-seed"], "millennium": ["millennium-debate", "judgment-second-coming"],
     "death-penalty": ["civil-authority"],
 }
 # Topics that sit near the question but do not answer it directly.
@@ -591,8 +593,6 @@ def story(q: dict, B, *, short: bool = False) -> str:
             if w:
                 witnessed.append((int(w[0]["year"]), pos["name"], w[0]["author"], False))
         firsts = sorted(witnessed)
-    named = {n for _, n, _, _ in firsts}
-    missing = [p["name"] for p in q["positions"] if p["name"] not in named]
     if short:
         if firsts:
             y, name, who, unsure = firsts[0]
@@ -601,16 +601,22 @@ def story(q: dict, B, *, short: bool = False) -> str:
                      for pid in p["positions"] if _deciding(p, pid) == "excludes")
         if dec:
             y, who, name = dec[0]
-            return f"No early passage states a position yet. Earliest mark: {B.display_author(who)}, c. {y}, rules out {name}."
+            return f"No passage checked so far states a position yet. Earliest mark: {B.display_author(who)}, c. {y}, rules out {name}."
         return "No passage in the works searched so far decides this yet."
     if not firsts:
         return ("No passage in the works searched so far states any of these positions yet. "
                 "The question is listed so its lanes fill in as more works are searched.")
-    parts = ["Earliest statement of each: " + "; ".join(
+    # Only the passages checked for this question count here; the Timeline
+    # question on the same subject reads other passages, so both say "so far"
+    # rather than "no early passage" (2026-10-23: OT canon and Eucharist pages
+    # contradicted their Timeline answers).
+    parts = ["Earliest statement of each found so far: " + "; ".join(
         f"<strong>{escape(n)}</strong>, {escape(B.display_author(w))}, c. {y}{UNSURE if u else ''}"
         for y, n, w, u in firsts) + "."]
-    if missing:
-        parts.append("No early passage yet states: " + ", ".join(escape(m) for m in missing) + ".")
+    # No "not yet stated" list: this question's passages are not the only
+    # ones on the subject, and a position listed as unstated here can be
+    # counted on the Timeline question one click away. Bring a list back
+    # only with an owner-approved position-to-answer map.
     return " ".join(parts)
 
 
