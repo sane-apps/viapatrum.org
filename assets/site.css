@@ -2836,3 +2836,15 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
   .vp-focus .yt-badge svg { width: 24px; height: 17px; }
 }
 @media (min-width: 641px) and (max-width: 900px) { .vp-focus { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Human check before the first download (assets/human-check.js). */
+.vp-human { border: 1px solid var(--rule); border-radius: 14px; background: var(--leaf); color: var(--ink);
+  padding: 1.4rem 1.4rem 1.1rem; width: min(26rem, calc(100vw - 2rem)); box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.5); }
+.vp-human::backdrop { background: rgb(0 0 0 / 0.55); }
+.vp-human h2 { font: 500 1.7rem/1.15 var(--font-display); margin: 0 0 0.5rem; }
+.vp-human p { margin: 0 0 0.9rem; font: 400 1rem/1.5 var(--font-body); color: var(--ink); }
+.vp-human-slot { min-height: 65px; margin: 0 0 0.6rem; }
+.vp-human-msg:empty { display: none; }
+.vp-human-x { font: 600 0.98rem var(--font-body); color: var(--ink); background: var(--paper-2); border: 1px solid var(--rule);
+  border-radius: 999px; padding: 0.5rem 1.1rem; cursor: pointer; }
+.vp-human-x:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }

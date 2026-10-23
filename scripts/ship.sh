@@ -866,6 +866,7 @@ step "UI, read-along and visual-gate tests"
 "$PYTHON" "$ROOT/scripts/builder_gate_test.py" PublicationProcessTest
 node --test "$ROOT/scripts/ui.test.mjs"
 node --test "$ROOT/scripts/readalong.test.mjs"
+node --test "$ROOT/scripts/human_check.test.mjs"
 node --test "$ROOT/scripts/check_visual_gate.test.cjs"
 
 step "Check all local links and reader anchors"

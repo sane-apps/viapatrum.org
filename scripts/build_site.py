@@ -6501,6 +6501,7 @@ def layout(
   <p class="footer-fine">Fresh English translations from the Greek and Latin, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
 </footer>
 <script src="/assets/site.js?v={ASSET_VER}" defer></script>
+<script src="/assets/human-check.js?v={ASSET_VER}" defer></script>
 {extra_js}</body>
 </html>
 """
