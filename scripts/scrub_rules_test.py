@@ -243,6 +243,25 @@ class OwnerVoiceTest(unittest.TestCase):
         self.assertIn('href="mailto:hi@saneapps.com?subject=Mistake%20in%20The%20Didache%2C%20%C2%A74&amp;body=', html)
         self.assertIn(">Report a mistake</a>", html)
 
+    def test_help_page_prints_only_the_public_start_here(self):
+        doc = ("# Start here\n\nYou are helping Via Patrum (https://viapatrum.org), a free library in "
+               "faithful, readable modern English.\n\n- Retranslation: a literal gloss first (Pass A), then "
+               "readable modern English (Pass B). The details are in \"Maintainer slices\" below and in `docs/SOP.md`.\n"
+               "- A maintainer reviews every pull request.\n\n---\n\n## Maintainer slices (internal lanes)\n\n"
+               "You are helping finish texts in new English for https://fathers.saneapps.com.\n"
+               "python3 scripts/claims.py start --agent YourName\n")
+        pub = build_site.public_start_here(doc)
+        self.assertIn("a free library in fresh English.", pub)
+        self.assertIn("then fresh English (Pass B). The details are in `docs/SOP.md`.", pub)
+        self.assertIn("A maintainer reviews", pub)
+        for leak in ("Maintainer slices", "claims.py", "fathers.saneapps.com", "modern English", "new English"):
+            self.assertNotIn(leak, pub)
+        # Anything still off-voice above the rule: print nothing, link only.
+        self.assertEqual(build_site.public_start_here("# Start here\n\nRun claims.py first.\n"), "")
+        live = build_site.BOOKS.parent / "docs/START_HERE.md"
+        if live.exists():
+            self.assertTrue(build_site.public_start_here(live.read_text(encoding="utf-8")))
+
     def test_wesley_meta_in_site_voice(self):
         meta = {"witness_label": "1771 text",
                 "blurb": "Rendered in modern English, to be read and heard. Open the 1771 text under each part to check the claims and the scripture.",

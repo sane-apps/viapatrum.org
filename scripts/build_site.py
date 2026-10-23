@@ -6221,6 +6221,33 @@ def report_mistake_href(title: str, where: str = "", url: str = "") -> str:
     return f"mailto:hi@saneapps.com?subject={quote(subject)}&body={quote(body)}"
 
 
+_MAINTAINER_SPLIT = re.compile(r"\n-{3,}\s*\n+\s*## Maintainer\b|\n## Maintainer\b")
+# Words that must never reach the Help us page from the contributor guide.
+_START_HERE_LEAKS = re.compile(
+    r"\b(?:[Nn]ew|[Mm]odern) English\b|fathers\.saneapps\.com|Maintainer|claims\.py|SESSION_HANDOFF|"
+    r"ai_promote|assert_tip_ready|\btip ship\b")
+
+
+def public_start_here(text: str) -> str:
+    """The contributor part of the translations repo's docs/START_HERE.md,
+    for the Help us page's "Point an AI at a slice" option. The file goes on
+    after a rule into maintainer lanes; those stay out. Returns "" when what
+    is left still holds a maintainer or off-voice word, so the page shows
+    only the GitHub link instead of printing it."""
+    public = _MAINTAINER_SPLIT.split(text or "", maxsplit=1)[0].rstrip().rstrip("-").rstrip()
+    # Owner voice (2026-10-23): "fresh English", never "modern" or "new".
+    public = re.sub(r"\b(?:faithful,\s*)?(?:readable\s+)?modern English\b", "fresh English", public)
+    public = _NEW_ENGLISH.sub(_fresh_english, public)
+    public = public.replace("https://fathers.saneapps.com", "https://viapatrum.org")
+    public = public.replace("fathers.saneapps.com", "viapatrum.org")
+    # It points to the maintainer section this page leaves out.
+    public = re.sub(r'\s*The details are in "Maintainer slices" below and in (`docs/SOP\.md`)\.',
+                    r" The details are in \1.", public)
+    if _START_HERE_LEAKS.search(public):
+        return ""
+    return public + "\n"
+
+
 def report_mistake_html(title: str, where: str = "", url: str = "", label: str = "Report a mistake",
                         cls: str = "intro fine") -> str:
     """One plain link, styled like the links beside it (About panel: "intro
@@ -6698,7 +6725,7 @@ def excerpt_check_note(x: dict) -> str:
         return ""
     notes = []
     if x.get("needs_recert"):
-        notes.append("This passage has not yet been re-checked against its source.")
+        notes.append("We have not yet re-checked this passage against its source.")
     src = x.get("latin") or x.get("greek") or x.get("source_text")
     if _words(src) >= 60 and _words(x.get("english")) < 0.6 * _words(src):
         notes.append("The English gives part of this chapter. The full original is below.")
@@ -11336,6 +11363,12 @@ def build() -> None:
                 <p>Every book{' and audiobook' if LIBRARY.has_audio() else ''} to keep, free. Share the files with anyone who would read them.</p>
                 <p><a class="btn" href="/downloads/">Go to the shelf</a></p>
               </li>""" if LIBRARY else "")
+    try:
+        start_here = public_start_here((BOOKS.parent / "docs/START_HERE.md").read_text(encoding="utf-8"))
+    except OSError:
+        start_here = ""
+    if not start_here:
+        print("WARN: Help us: docs/START_HERE.md missing or still off-voice; showing only the GitHub link")
     write(
         DIST / "contribute" / "index.html",
         layout(
@@ -11364,18 +11397,33 @@ def build() -> None:
               </li>
               <li class="help-option" id="help-wanted">
                 <p class="n">{4 + pass_n}</p>
-                <h2>Help we need</h2>
-                <p>If you read Greek or Latin, check a passage against the original and tell us what you find. Many works have not yet been re-checked against their source, and each work says so under About this text. If you write code, the website and the translations are built in the open, and issues and pull requests are welcome.</p>
+                <h2>Check the Greek or Latin</h2>
+                <p>If you read Greek or Latin, check a passage against the original and tell us what you find. Many works have not yet been re-checked against their source, and each work says so under About this text.</p>
+                <p><a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml" rel="noopener">Send what you find</a></p>
+              </li>
+              <li class="help-option" id="ai">
+                <p class="n">{5 + pass_n}</p>
+                <h2>Point an AI at a slice</h2>
+                <p>If you use an AI coding assistant, it can translate one small slice of a book for review. Copy the starting instructions into it, and it will take one open task on GitHub.</p>
+                <p>{'<button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> ' if start_here else ''}<a class="btn" href="https://github.com/sane-apps/translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>{f'''
+                <details class="ai-prompt-box"><summary>Show the instructions</summary>
+                <pre id="ai-prompt"><code>{escape(start_here)}</code></pre>
+                </details>''' if start_here else ''}
+              </li>
+              <li class="help-option" id="code">
+                <p class="n">{6 + pass_n}</p>
+                <h2>Star and build</h2>
+                <p>The library and its translations are built in the open. Star the repos, open issues, send pull requests.</p>
                 <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations on GitHub</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website on GitHub</a></p>
               </li>
               <li class="help-option" id="sponsor-book">
-                <p class="n">{5 + pass_n}</p>
+                <p class="n">{7 + pass_n}</p>
                 <h2>Give for one book</h2>
                 <p>Want your gift to go to one work? Name it in your gift note, and it goes to finishing and checking that work. You can also suggest a book you would like to see here.</p>
                 <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Give on GitHub Sponsors</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Suggest a book</a></p>
               </li>
               <li class="help-option" id="spread">
-                <p class="n">{6 + pass_n}</p>
+                <p class="n">{8 + pass_n}</p>
                 <h2>Spread the word</h2>
                 <p>A link is the best help: send the library to someone who studies.</p>
                 <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20way%20of%20the%20Church%20Fathers%2C%20in%20fresh%20English%20translations.%20Free%20for%20the%20whole%20world.&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
@@ -11383,7 +11431,7 @@ def build() -> None:
             </ol>""",
             crumb=[("Home", "/"), ("Help us", "")],
             active="contribute",
-            description="Give to keep the library free, report a mistake, check the Greek or Latin, or share Via Patrum with someone who studies.",
+            description="Give to keep the library free, report a mistake, check the Greek or Latin, point an AI at a slice, or share Via Patrum with someone who studies.",
         ),
     )
 
@@ -11427,7 +11475,7 @@ def build() -> None:
             <h2>The app</h2>
             <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read or listen to is sent to us.</p>
             <h2>This website</h2>
-            <p>The website has no ads, no analytics and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Before your first download, a short Cloudflare check makes sure you are a person and not a bot; passing it sets one cookie that lets downloads through for two hours and holds no name or address. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <p>The website has no ads, no analytics and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Before your first download, a short Cloudflare check makes sure you are a person and not a bot. Passing it sets two small cookies that let downloads through for two hours. They hold no name or address. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
             <h2>Search and Ask</h2>
             <p>When you search, in the app or on this site, or ask a question on the Ask page, the words you type go to viapatrum.org, and Cloudflare, which runs the site, uses them to find matching passages. When Ask cannot answer a question well, we keep the question, with no name or address, so we know which passages to add.</p>
             <h2>Bibles read online</h2>
