@@ -150,6 +150,22 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.public_note("English follows X CLOSED + Y CLOSED. No modern English. Next: Z (PDF 584-)."),
                          "No modern English.")
 
+    def test_scope_status_leaves_about_notes(self):
+        """2026-10-23: these About lines failed the shelf's worksheet gate and
+        kept five works' EPUB and PDF off the shelf."""
+        crocius = ("English follows the Latin of Liber I Cap. 10. No modern English was copied. Cap. 11 "
+                   "(CAPUT UNDECIMUM / De S. Theologiae distributione) begins. Cap. 9 complete. Liber I still open. "
+                   "No Internet Archive copy was located.")
+        self.assertEqual(build_site.public_note(crocius), "English follows the Latin of Liber I Cap. 10. No modern "
+                         "English was copied. No Internet Archive copy was located.")
+        self.assertEqual(build_site.public_note("Wing B887. Not whole Philosophia (213 pp). Exercitatio Tertia is included."),
+                         "Wing B887. Exercitatio Tertia is included.")
+        self.assertEqual(build_site.scrub_intro_worksheet("<p>His fragments, from the locked text in Patrologia Graeca 39.</p>"),
+                         "<p>His fragments, from the text in Patrologia Graeca 39.</p>")
+        html = build_site.text_history_html({"joins": [{"where": "Opening tip", "note": "Long-s expanded."}]})
+        self.assertIn('<span class="where">Opening</span>', html)
+        self.assertNotIn("tip", html)
+
     def test_translator_gap_notes_in_source_panels_show_as_a_lacuna(self):
         out = build_site.public_source_text("μὴ γνωσθέν [text rough; sense: x]. [T-ILLEGIBLE: probably y (per apparatus); not rendered.] τίς")
         self.assertNotIn("ILLEGIBLE", out)

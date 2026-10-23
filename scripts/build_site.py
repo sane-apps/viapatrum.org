@@ -2412,8 +2412,10 @@ _INTRO_WORKSHEET = re.compile(
 
 
 def scrub_intro_worksheet(html_text: str) -> str:
-    """Drop the worksheet sentences above; an emptied paragraph goes too."""
+    """Drop the worksheet sentences above; an emptied paragraph goes too.
+    "the locked text" is workroom talk for the checked source: "the text"."""
     out = re.sub(r"<p>\s+", "<p>", _INTRO_WORKSHEET.sub("", html_text or ""))
+    out = re.sub(r"\b(the) locked (text|Greek|Latin)\b", r"\1 \2", out, flags=re.I)
     return re.sub(r"<p>\s*</p>\s*", "", out)
 
 
@@ -3162,7 +3164,11 @@ WORKSHEET_JARGON = re.compile(
     # banners said "retrieval on the same Fathers-site pipeline ... Do not
     # treat the site as ante-Nicene only"; le Blanc's history listed "CLOSED").
     r"|Fathers-site pipeline|\bDo not treat the site\b|\bretrieval on the same\b|\bPublic Domain Mark\b"
-    r"|\bCLOSED\b|^Next:|\bPDF \d", re.I)
+    r"|\bCLOSED\b|^Next:|\bPDF \d"
+    # Scope status from the worksheets (2026-10-23: these kept 5 works' EPUB
+    # and PDF off the shelf): "Cap. 9 complete.", "Liber I still open.",
+    # "Not whole Philosophia (213 pp).", "Cap. 11 (CAPUT UNDECIMUM ...) begins."
+    r"|\bstill open\b|\bNot whole\b|\bCap\.\s*\d+\s+complete\b|(?-i:\bCAPUT\b)", re.I)
 
 
 NOTE_ABBREV = {"cap", "capp", "rom", "man", "post", "cf", "pg", "pl", "ed", "eds", "vol", "fr", "frr", "haer", "hom",
@@ -3406,7 +3412,8 @@ def text_history_html(th: dict | None) -> str:
             note = public_note(str(j.get("note") or "")).strip()
             if not note:
                 continue
-            where = str(j.get("where") or "").strip()
+            # "Opening tip" is worksheet scope; the reader needs "Opening".
+            where = re.sub(r"\s*\btip\b", "", str(j.get("where") or ""), flags=re.I).strip()
             loc = f'<span class="where">{escape(where)}</span> — ' if where else ""
             items.append(f"<li>{loc}{escape(note)}</li>")
         if items:

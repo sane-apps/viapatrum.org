@@ -205,6 +205,9 @@ SUPPLIED_RE = re.compile(r"\[([^\[\]]{1,48})\]")
 ANGLE_RE = re.compile(r"(?<![<>])(?:(?<=\S)[<>]|[<>](?=\S))(?![<>])")
 # Worksheet status left inside a passage ("... believe JOHN CATENA CLOSEOUT.").
 CLOSEOUT_RE = re.compile(r"\s*\b(?:[A-Z]{2,}\s+){0,3}CLOSEOUT\b\.?")
+# A translator's note about a pipeline pass ("(Greek transliterated in Pass B.)",
+# Strimesius 496): never reader text.
+PASS_NOTE_RE = re.compile(r"\s*\([^()]*\bPass [AB]\b[^()]*\)")
 
 
 def damage_mark(m: "re.Match[str]") -> str:
@@ -251,6 +254,7 @@ def clean_notation(text: str, at_start: bool = True, is_ref=None) -> str:
     # "word, [text breaks off]" does not print ",." or "..".
     text = re.sub(r"([?!])?[\s,;:.]*\x00", lambda m: (m.group(1) + " ") if m.group(1) else ". ", text)
     text = CLOSEOUT_RE.sub("", text)
+    text = PASS_NOTE_RE.sub("", text)
     text = SIGIL_RE.sub("", text)
     text = SUPPLIED_RE.sub(unwrap, text)
     text = re.sub(r"[ \t]{2,}", " ", text)

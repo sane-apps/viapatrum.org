@@ -41,6 +41,7 @@ CASES = {
     "damage": "they went [text garbled] into the city.",
     "damage kept": "a snare [The text is corrupt; 'a snare' is certain] was laid.",
     "less than": "Moral certainty < knowledge.",
+    "pass note": "teach His flesh as heavenly spiritual food. (Greek transliterated in Pass B.)",
 }
 
 
@@ -65,6 +66,7 @@ class SameWordsTest(unittest.TestCase):
                          "he set two gold talents; which could not be moved...; and I say so.")
         self.assertEqual(read_text(CASES["sigil"]), "The Lord said to them that it was so.")
         self.assertEqual(read_text(CASES["less than"]), "Moral certainty < knowledge.")
+        self.assertEqual(read_text(CASES["pass note"]), "teach His flesh as heavenly spiritual food.")
         self.assertIn("less than", speak_text(CASES["less than"]))
 
     def test_no_angle_brackets_on_page(self):
