@@ -593,8 +593,6 @@ def story(q: dict, B, *, short: bool = False) -> str:
             if w:
                 witnessed.append((int(w[0]["year"]), pos["name"], w[0]["author"], False))
         firsts = sorted(witnessed)
-    named = {n for _, n, _, _ in firsts}
-    missing = [p["name"] for p in q["positions"] if p["name"] not in named]
     if short:
         if firsts:
             y, name, who, unsure = firsts[0]
@@ -603,7 +601,7 @@ def story(q: dict, B, *, short: bool = False) -> str:
                      for pid in p["positions"] if _deciding(p, pid) == "excludes")
         if dec:
             y, who, name = dec[0]
-            return f"No early passage states a position yet. Earliest mark: {B.display_author(who)}, c. {y}, rules out {name}."
+            return f"No passage checked so far states a position yet. Earliest mark: {B.display_author(who)}, c. {y}, rules out {name}."
         return "No passage in the works searched so far decides this yet."
     if not firsts:
         return ("No passage in the works searched so far states any of these positions yet. "
@@ -615,9 +613,10 @@ def story(q: dict, B, *, short: bool = False) -> str:
     parts = ["Earliest statement of each found so far: " + "; ".join(
         f"<strong>{escape(n)}</strong>, {escape(B.display_author(w))}, c. {y}{UNSURE if u else ''}"
         for y, n, w, u in firsts) + "."]
-    if missing:
-        parts.append("Not yet found stated in the passages checked for this question: "
-                     + ", ".join(escape(m) for m in missing) + ".")
+    # No "not yet stated" list: this question's passages are not the only
+    # ones on the subject, and a position listed as unstated here can be
+    # counted on the Timeline question one click away. Bring a list back
+    # only with an owner-approved position-to-answer map.
     return " ".join(parts)
 
 
