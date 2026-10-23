@@ -508,7 +508,12 @@ def locate_sites(book: str, cands: dict, manifest: dict) -> dict:
     works = _dist() / "works"
     direct = works / book
     if direct.is_dir():
-        return {book: cands}
+        # Only ids with a cite page. Crocius's chapter files all number from 1,
+        # and its pages are book.chapter.section (2026-10-23): a claim on a page
+        # that does not exist used to mark every recording as used, so
+        # route_mapped_pages attached none of them by their words.
+        return {book: {sec: opts for sec, opts in cands.items()
+                       if _safe_sec(sec) and (direct / sec / "index.html").is_file()}}
     passages = manifest.get("passages") or {}
     if not works.is_dir():
         return {}

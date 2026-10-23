@@ -62,6 +62,19 @@ class MovedSlugTest(unittest.TestCase):
             js = gate.write_gate(Path(d), ["irenaeus"], "authors", {"irenaeus-of-lyons": "/authors/irenaeus/"}).read_text()
             self.assertIn('const MOVED = {"irenaeus-of-lyons":"/authors/irenaeus/"};', js)
 
+    def test_moved_cite_page_inside_live_work(self) -> None:
+        # Crocius cite pages /works/crocius-syntagma/3/ moved to /1.10.3/ (2026-10-23).
+        with tempfile.TemporaryDirectory() as d:
+            r = Path(d) / "_redirects"
+            r.write_text("/works/crocius-syntagma/3/ /works/crocius-syntagma/1.10.3/ 301\n"
+                         "/works/crocius-syntagma/:x/ /works/ 301\n"
+                         "/works/a/b/c/ /works/ 301\n")
+            moved = gate.moved_slugs(r, "works", ["crocius-syntagma"])
+            self.assertEqual(moved, {"crocius-syntagma/3": "/works/crocius-syntagma/1.10.3/"})
+            js = gate.write_gate(Path(d), ["crocius-syntagma"], "works", moved).read_text()
+            self.assertIn('segments.filter(Boolean).join("/")', js)
+            self.assertLess(js.index("MOVED, page"), js.index("LIVE.has(slug)"))
+
 
 if __name__ == "__main__":
     unittest.main()

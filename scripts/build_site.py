@@ -2743,7 +2743,10 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
 # it ("This volume gathers the six books To Florus ..." on To Turbantius).
 _INTRO_SCOPE_RE = re.compile(
     r"\s*\bThis (?:volume|book) (?:holds|gathers|contains|opens)\b.*?[.!?](?=\s+[A-Z\"“‘(]|\s*$)")
-INTRO_SCOPE_STALE = {"placeus-de-imputatione"}  # scope line predates the 712-section text
+INTRO_SCOPE_STALE = {
+    "placeus-de-imputatione",  # scope line predates the 712-section text
+    "crocius-syntagma",  # "This volume holds chapter 10 ..." predates all four books on the page
+}
 INTRO_LEDE_MAX_WORDS = 40
 
 
@@ -5618,6 +5621,68 @@ def load_origen_nt_fragments() -> list[dict]:
 # Site slug -> {book, stems}, filled by loaders that know their files (data/work-sources.json).
 WORK_SOURCES: dict[str, dict] = {}
 
+# Chapter files of a multi-book treatise (crocius-syntagma: liber1_cap10_english.json)
+# each number their sections from 1. The tip loader kept only the first row per
+# bare id, so 600 of Crocius's 621 sections never reached the page (2026-10-23).
+# Such files load in Liber, then Cap order (a plain sort puts cap10 before cap2),
+# each section gets a book.chapter.section id, and each Liber is one reader book.
+_LIBER_CAP_STEM = re.compile(r"liber(\d+)_cap(\d+)")
+
+
+def _tip_file_order(path: Path) -> tuple:
+    m = _LIBER_CAP_STEM.fullmatch(path.name[: -len("_english.json")])
+    return (0, int(m.group(1)), int(m.group(2)), path.name) if m else (1, 0, 0, path.name)
+
+
+def _liber_cap_sections(stem: str, sections: list[dict]) -> list[dict]:
+    """Prefix each section id with its Liber and Cap; no-op for other stems."""
+    m = _LIBER_CAP_STEM.fullmatch(stem)
+    if not m:
+        return sections
+    book, cap = int(m.group(1)), int(m.group(2))
+    return [{**s, "section": f"{book}.{cap}.{s['section']}", "group": f"Book {book}"} for s in sections]
+
+
+def _add_section_groups(groups: list[dict], sections: list[dict]) -> None:
+    for s in sections:
+        title = s.get("group")
+        if not title:
+            continue
+        g = next((g for g in groups if g["title"] == title), None)
+        if g is None:
+            g = {"title": title, "sections": []}
+            groups.append(g)
+        g["sections"].append(str(s["section"]))
+
+
+def _new_groups(sections: list[dict]) -> list[dict]:
+    groups: list[dict] = []
+    _add_section_groups(groups, sections)
+    return groups
+
+
+# Cite pages that moved when a work's section ids changed: slug -> {old id: new id}.
+# The 21 Crocius pages live before 2026-10-23 were the first row per bare id in
+# file-name order: Book 1 chapter 10 §1-15, chapter 2 §16-17, chapter 4 §18-21.
+SECTION_MOVES: dict[str, dict[str, str]] = {
+    "crocius-syntagma": {
+        **{str(n): f"1.10.{n}" for n in range(1, 16)},
+        **{str(n): f"1.2.{n}" for n in (16, 17)},
+        **{str(n): f"1.4.{n}" for n in range(18, 22)},
+    },
+}
+
+
+def section_move_redirects(moves: dict[str, dict[str, str]], live_sections: dict[str, set]) -> str:
+    """_redirects lines for moved cite pages whose work and new page are live."""
+    out = []
+    for slug, table in sorted(moves.items()):
+        have = live_sections.get(slug) or set()
+        for old, new in sorted(table.items()):
+            if new in have and old not in have:
+                out.append(f"/works/{slug}/{old}/ /works/{slug}/{new}/ 301\n")
+    return "".join(out)
+
 
 def load_origen_pauline_fragments() -> list[dict]:
     """Tip SERIES CLOSEOUT fragment hubs (Origen + other Rank-1 scraps; true OET)."""
@@ -5629,7 +5694,7 @@ def load_origen_pauline_fragments() -> list[dict]:
         trans = folder / "translations"
         if not trans.is_dir():
             continue
-        for en_path in sorted(trans.glob("*_english.json")):
+        for en_path in sorted(trans.glob("*_english.json"), key=_tip_file_order):
             stem = en_path.name[: -len("_english.json")]
             if stem.startswith("_"):
                 continue
@@ -5663,17 +5728,20 @@ def load_origen_pauline_fragments() -> list[dict]:
                     and author_slug not in UNDATED_AUTHORS:
                 author = "Acts of the Martyrs"
                 author_slug = canonical_author_slug(None, author)
-            sections = _origen_rows(rows, src_map)
+            sections = _liber_cap_sections(stem, _origen_rows(rows, src_map))
             _ws = WORK_SOURCES.setdefault(slug, {"book": folder.name, "stems": []})
             if _ws["book"] == folder.name:
                 _ws["stems"].append(f"{stem}_english")
             existing = next((w for w in works if w["slug"] == slug), None)
             if existing is not None:
                 seen = {str(s.get("section")) for s in existing["sections"]}
+                added = []
                 for sec in sections:
                     if str(sec.get("section")) not in seen:
                         existing["sections"].append(sec)
+                        added.append(sec)
                         seen.add(str(sec.get("section")))
+                _add_section_groups(existing["groups"], added)
                 existing["section_count"] = len(existing["sections"])
                 if meta.get("scope"):
                     existing["scope"] = str(meta["scope"]).strip()
@@ -5718,6 +5786,7 @@ def load_origen_pauline_fragments() -> list[dict]:
                     edition=meta.get("edition_short") or (_short_edition(folder) if folder in _CERTIFIED else "")
                     or meta.get("edition") or "",
                     sections=sections,
+                    groups=_new_groups(sections),
                     blurb=meta.get("work_blurb") or meta.get("blurb") or _fallback_blurb(folder, title, author),
                     scope=meta.get("scope") or "",
                     era_note=meta.get("era_note") or default_era,
@@ -10419,6 +10488,15 @@ def build() -> None:
                 + "".join(f'<li><a href="{escape(h)}">{escape(t)}</a></li>' for t, h in topic_links)
                 + "</ul></details>"
             ) if topic_links else ""
+            # Old #s<id> links into a work that was one page before it split
+            # into books land on the passage in its book (SECTION_MOVES).
+            old_anchors = {old: sec_contents_href[new] for old, new in (SECTION_MOVES.get(w["slug"]) or {}).items()
+                           if new in sec_contents_href}
+            anchor_js = (
+                "<script>(function(){var m=" + json.dumps(old_anchors, sort_keys=True).replace("</", "<\\/")
+                + ";var h=decodeURIComponent(location.hash.slice(1));"
+                "if(h.charAt(0)==='s'&&m[h.slice(1)])location.replace(m[h.slice(1)]);})();</script>"
+            ) if old_anchors else ""
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
@@ -10427,7 +10505,7 @@ def build() -> None:
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
                     {''.join(overview_toc)}
                     <div class="hub-about">{book_about}{author_link}{hub_topics}</div>
-                    {disclosure_html(intro_note)}""",
+                    {disclosure_html(intro_note)}{anchor_js}""",
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=work_desc,
@@ -11548,6 +11626,7 @@ def build() -> None:
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))
         + dropped_section_redirects(WESLEY_DROPPED_SECTIONS, {w["slug"] for w in works})
+        + section_move_redirects(SECTION_MOVES, {w["slug"]: {str(s["section"]) for s in w["sections"]} for w in works})
         + logos_redirect,
         encoding="utf-8",
     )
