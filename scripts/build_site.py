@@ -6307,6 +6307,34 @@ NONCANONICAL_ROUTES: set[str] = set()
 OG_INDEX: dict[str, str] = _json_load(ASSETS / "og" / "index.json", {}) if (ASSETS / "og" / "index.json").exists() else {}
 
 
+_NOTE_MARK_RE = re.compile(r"\s*\[\d+\]\s*")
+_SECTION_NO_RE = re.compile(r"^(?:\d+\.)+\d*\s*")
+# An all-caps chapter heading run into the text: "AGAINST PLATO: THAT THE LIVING ARE NOT MADE FROM THE DEAD."
+_CAPS_HEADING_RE = re.compile(r"^[A-Z’' ,:;\-–—]{6,}[.:](?:\s+|$)")
+
+
+def excerpt_lead(paras) -> str:
+    """The opening words of an excerpt for its share text, without note marks
+    ("[1]"), a leading section number ("10.1.") or an all-caps heading."""
+    for p in paras or []:
+        t = strip_logos_markup(str(p or ""))
+        t = _NOTE_MARK_RE.sub(" ", t).strip()
+        t = _SECTION_NO_RE.sub("", t)
+        t = _CAPS_HEADING_RE.sub("", t)
+        t = re.sub(r"\s+", " ", t).strip()
+        if t:
+            return t
+    return ""
+
+
+def excerpt_share_title(author: str, cite: str, topic: str) -> str:
+    """"Minucius Felix, Octavius 27 · Against Idols". The topic title often reads
+    as a statement ("Where the Dead Wait"), so it cannot follow "on"; a quoted
+    opening on the cite ("Plea 15: “Let the…”") only makes the title long."""
+    cite = re.sub(r":\s*[“\"][^”\"]*[”\"]\s*$", "", cite or "").strip()
+    return " · ".join(x for x in (", ".join(x for x in (author, cite) if x), topic) if x)
+
+
 def meta_description(text: str, limit: int = 158) -> str:
     """A search snippet that ends cleanly: at a sentence end, else a word, with an ellipsis."""
     t = re.sub(r"\s+", " ", strip_logos_markup(str(text or ""))).strip()
@@ -6404,8 +6432,10 @@ def layout(
     full_title = f"{SITE_NAME} · The way of the Church Fathers" if title == "Home" else f"{title} · {SITE_NAME}"
     desc = meta_description(description)
     img = f"{SITE_ORIGIN}/assets/og/{card}.png"
-    share_url = f"{SITE_ORIGIN}/__ROUTE__"
-    alt = f"{title} on {SITE_NAME}"
+    # One address per page: a page that names another as canonical shares that address too.
+    share_url = f"{SITE_ORIGIN}{canonical}" if canonical else f"{SITE_ORIGIN}/__ROUTE__"
+    # The card shows the page title and the name, so the alt text says the same.
+    alt = full_title
     social = (
         f'<meta property="og:type" content="{escape(og_type)}">\n'
         f'<meta property="og:site_name" content="{escape(SITE_NAME)}">\n'
@@ -9687,7 +9717,7 @@ def build() -> None:
             write(
                 DIST / "e" / x["id"] / "index.html",
                 layout(
-                    f"{e_author} on {meta['title']}: {e_cite}",
+                    excerpt_share_title(e_author, e_cite, meta["title"]),
                     ebody,
                     crumb=[
                         ("Home", "/"),
@@ -9698,7 +9728,7 @@ def build() -> None:
                     active="topics",
                     # Title as written: lowering it broke divine names (god's, christ) and
                     # statement titles do not read after "on".
-                    description=f"{e_author}, {meta['title']}: " + strip_logos_markup((paras_list or [""])[0]),
+                    description=f"{e_author}, {meta['title']}: " + excerpt_lead(paras_list),
                     og_type="article",
                     # Shown from the reader: the same text as the cite page, which is canonical.
                     canonical=x.get("_cite_href") or (f"/e/{excerpt_primary[x['id']]}/" if x["id"] in excerpt_primary else ""),
@@ -10932,7 +10962,7 @@ def build() -> None:
     write(
         DIST / "listen" / "index.html",
         layout(
-            "Listen to the Church Fathers: free audio in modern English",
+            "Listen to the Church Fathers: free audio in fresh English translations",
             f"""<p class="eyebrow">Listen</p>
 <h1>Hear the Fathers read aloud</h1>
 <p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our fresh English translations.{f' To keep them, {LIBRARY.audio_count()} of these are free audiobooks on the <a href="/downloads/">downloads page</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
@@ -11328,7 +11358,7 @@ def build() -> None:
             <p>The same English is also in Word files for Logos Bible Software. Each book has a cover and a description. Download every part from the <a href="/logos/">Personal Books</a> page, then add the file in Logos yourself.</p>''' if logos_pack_manifest() and not logos_retired() else ''}
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
             <h2>How the English is made</h2>
-            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
+            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and fresh English translations replace them as they are finished.</p>
             <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
             <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/topics/free-will/#over-time">free will over time</a>.</p>
