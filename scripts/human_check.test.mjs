@@ -130,3 +130,21 @@ test('/api/human: a pass for some other site is refused', async () => {
   const r = await human({ request: new Request('https://viapatrum.org/api/human', { method: 'POST', body: JSON.stringify({ token: 't' }) }), env: ENV });
   assert.equal(r.status, 403);
 });
+
+// --- /api/library/admin (upload route for library_sync.py) -------------------
+test('admin: with LIBRARY_ADMIN_TOKEN set, only that token passes; list stays on shelf prefixes', async () => {
+  const { onRequest: admin } = await import('../functions/api/library/admin.js');
+  const TOKEN = 'a'.repeat(40);
+  let outbound = 0;
+  globalThis.fetch = async () => { outbound++; return reply(200, {}); };
+  const listed = [];
+  const env = { LIBRARY_ADMIN_TOKEN: TOKEN, LIBRARY: { list: async (o) => { listed.push(o.prefix); return { objects: [], truncated: false }; } } };
+  const call = (headers, q = 'action=list&prefix=epub/') => admin({ request: new Request(`https://viapatrum.org/api/library/admin?${q}`, { headers }), env });
+  assert.equal((await call({ 'x-cf-token': 'c'.repeat(40) })).status, 403, 'a Cloudflare token no longer passes');
+  assert.equal(outbound, 0, 'no round trip to Cloudflare');
+  assert.equal((await call({ 'x-admin-token': 'b'.repeat(40) })).status, 403);
+  assert.equal((await call({ 'x-admin-token': TOKEN })).status, 200);
+  assert.equal((await call({ 'x-admin-token': TOKEN }, 'action=list&prefix=')).status, 400, 'no empty prefix');
+  assert.equal((await call({ 'x-admin-token': TOKEN }, 'action=list&prefix=ask-log/')).status, 400);
+  assert.deepEqual(listed, ['epub/']);
+});
