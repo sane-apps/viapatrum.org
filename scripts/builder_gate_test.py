@@ -84,6 +84,17 @@ class ExcerptDuplicateTest(unittest.TestCase):
             "auto_nov_one_chapter_31": "novatian_trin_31_monarchy"})
 
 
+class BookInLocusTest(unittest.TestCase):
+    def test_stromata_book_file_names_its_book(self) -> None:
+        x = {"locus": "14", "citation": "Clement of Alexandria — Stromata 14",
+             "source": "sources/chapters/clement-of-alexandria-stromata-5.json"}
+        build_site.add_book_to_locus(x)
+        self.assertEqual((x["locus"], x["citation"]), ("5.14", "Clement of Alexandria — Stromata 5.14"))
+        y = {"locus": "14", "citation": "Clement — Stromata 14", "source": "sources/greek/clement_stromata.xml"}
+        build_site.add_book_to_locus(y)
+        self.assertEqual(y["locus"], "14")
+
+
 class TitleAndDateTest(unittest.TestCase):
     def test_second_clement_files_with_the_apostolic_fathers(self) -> None:
         self.assertEqual(build_site.era_band(150, "anonymous-2-clement", catalogue=True), "Apostolic")

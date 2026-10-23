@@ -1768,7 +1768,26 @@ def load_topic_excerpts() -> list[dict]:
             TOPIC_REDIRECTS[f"/e/{old}/"] = f"/e/{new}/"
     for old, new in aliases.items():
         TOPIC_REDIRECTS[f"/topics/{old}/"] = f"/topics/{new}/"
+    for x in items:
+        add_book_to_locus(x)
     return items
+
+
+# A topic link to a multi-book work named a chapter with no book: "Miscellanies
+# 14" is Stromata 5.14 (2026-10-23 audit). When the excerpt's source file is
+# one book of the work, its number goes before the chapter.
+_BOOK_SOURCE_FILE = re.compile(r"-stromata-(\d+)\.json$")
+
+
+def add_book_to_locus(x: dict) -> None:
+    loc = str(x.get("locus") or "").strip()
+    m = _BOOK_SOURCE_FILE.search(str(x.get("source") or ""))
+    if not m or not re.fullmatch(r"\d+", loc):
+        return
+    x["locus"] = f"{int(m.group(1))}.{loc}"
+    cite = str(x.get("citation") or "")
+    if re.search(rf"(?<![\d.]){loc}$", cite):
+        x["citation"] = cite[: -len(loc)] + x["locus"]
 
 
 # Old topic and excerpt addresses folded by topics.yml aliases -> new address.
