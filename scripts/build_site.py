@@ -10139,7 +10139,7 @@ def build() -> None:
 <p class="intro fine" id="original-english">
   <span id="no-prior-english" class="anchor-alias" aria-hidden="true"></span>
   <span id="no-earlier-english" class="anchor-alias" aria-hidden="true"></span>
-  Translation sources and notes are in <strong>About this text</strong> on each work. A new translation does not by itself mean the work has never appeared in English.
+  Translation sources and notes are in <strong>About this text</strong> on each work. A fresh English translation here does not by itself mean the work has never appeared in English.
 </p>
 </div>""",
             crumb=[("Home", "/"), ("Works", "")],
@@ -11411,7 +11411,7 @@ def build() -> None:
                 <p class="n">{7 + pass_n}</p>
                 <h2>Spread the word</h2>
                 <p>A link is the best help: send the library to someone who studies.</p>
-                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20Church%20Fathers%20in%20modern%20English%2C%20free%20for%20the%20world&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
+                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20Church%20Fathers%20in%20fresh%20English%2C%20free%20for%20the%20world&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
               </li>
             </ol>""",
             crumb=[("Home", "/"), ("Help us", "")],
@@ -11461,6 +11461,8 @@ def build() -> None:
             <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
             <h2>This website</h2>
             <p>The website uses no cookies and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <h2>The games</h2>
+            <p>The games at <a href="https://play.viapatrum.org/">play.viapatrum.org</a> keep your progress and streak in your browser's own storage, which never leaves your device. Their pages load fonts from Google Fonts, and Ten Leopards loads game code from jsDelivr and Polyfork. Those services see the request, as any web server does, and have their own privacy policies.</p>
             <h2>Bibles read online</h2>
             <p>When you choose the NIV, NASB, NIrV, Amplified, ASV or Geneva Bible, in the app or on this site, your device asks the <a href="https://platform.youversion.com/" rel="noopener">YouVersion Platform</a> for that chapter. On this site the ESV and CSB come from bolls.life the same way. Those services see the request, as any web server does, and have their own privacy policies (<a href="https://www.bible.com/privacy" rel="noopener">YouVersion</a>). The other Bibles are part of the app and this site and need no outside request.</p>
             <h2>Links you choose to open</h2>
