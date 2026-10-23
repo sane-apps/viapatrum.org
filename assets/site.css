@@ -1423,10 +1423,9 @@ details.toc-group .toc {
 
 @media (max-width: 800px) {
   .split { grid-template-columns: 1fr; }
-  /* Primary nav stays visible at the top on phones — no Menu gate. */
-  .nav-toggle { display: none; }
+  /* Phone nav layout. Whether it shows is set by the Menu block near the end
+     (owner 2026-10-18): the links open under Menu. */
   .site-nav {
-    display: flex;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1434,7 +1433,6 @@ details.toc-group .toc {
     gap: 0.15rem 0.85rem;
     padding-top: 0.35rem;
   }
-  .site-nav.is-open { display: flex; }
   .header-inner { flex-wrap: wrap; }
   /* Navy chrome holds on phones — solid, no translucent wash. */
   .site-header {
@@ -1537,13 +1535,9 @@ details.toc-group .toc {
   .reader-quick a { display: inline-flex; align-items: center; min-height: 44px; }
 }
 @media (max-width: 800px) {
-  /* Compact always-on top nav; keep header non-sticky so it cannot bury § heads. */
+  /* Compact phone header; keep it non-sticky so it cannot bury § heads. */
   .site-header { position: relative; }
   :root { --header-offset: 1rem; }
-  .nav-toggle { display: none; }
-  .site-nav {
-    display: flex;
-  }
   .site-nav a {
     display: inline-flex;
     align-items: center;
@@ -2536,9 +2530,14 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .bx-text sup { display: inline-block; box-sizing: border-box; width: calc(var(--hang, 2.15rem) - 0.75rem); margin-right: 0.45rem; text-indent: 0; text-align: center; vertical-align: 0.12em; font-family: var(--font-body); font-size: 0.72rem; line-height: 1.45rem; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--gold); border-radius: 999px; }
 .bx-text .v.cited { cursor: pointer; }
 .bx-text .v.cited sup { color: var(--ink); background: color-mix(in srgb, var(--rubric) calc(14% + var(--heat, 0.5) * 46%), var(--leaf)); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--rubric) 55%, transparent); }
-.bx-text .v.cited:hover, .bx-text .v.cited:focus-visible { background: color-mix(in srgb, var(--rubric) 8%, transparent); outline: none; }
-.bx-text .v.cited:hover .vt, .bx-text .v.cited:focus-visible .vt { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--rubric) 70%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: 0.25em; }
-.bx-text .v.cited:focus-visible sup { box-shadow: 0 0 0 2px var(--lapis); }
+.bx-text .v.cited:hover { background: color-mix(in srgb, var(--rubric) 8%, transparent); outline: none; }
+.bx-text .v.cited:hover .vt { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--rubric) 70%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: 0.25em; }
+/* Kept apart from :hover: a browser without :has() drops the whole rule, not just this selector. */
+.bx-text .v.cited:has(.v-open:focus-visible) { background: color-mix(in srgb, var(--rubric) 8%, transparent); outline: none; }
+.bx-text .v.cited:has(.v-open:focus-visible) .vt { text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--rubric) 70%, transparent); text-decoration-thickness: 1.5px; text-underline-offset: 0.25em; }
+.bx-text .v.cited:has(.v-open:focus-visible) sup { box-shadow: 0 0 0 2px var(--lapis); }
+/* The verse opener is for keyboards and screen readers; keep its words out of copied text. */
+.bx-text .v-open { -webkit-user-select: none; user-select: none; }
 .bx-text .v.is-on { background: color-mix(in srgb, var(--rubric) 14%, transparent); }
 .bx-text .v.is-on sup { background: var(--rubric); color: var(--leaf); box-shadow: none; }
 .bx-desk { position: sticky; top: 4.5rem; max-height: calc(100vh - 5.5rem); overflow: auto; background: var(--leaf); border: 1px solid var(--rule); padding: 1.2rem 1.3rem; overscroll-behavior: contain; }
