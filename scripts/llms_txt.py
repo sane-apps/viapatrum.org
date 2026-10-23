@@ -61,7 +61,7 @@ def _intro(lib: Library) -> str:
     if lib.audio:
         bits.append(f", and {_plural(lib.audio, 'work')} {'has' if lib.audio == 1 else 'have'} free read-along audio")
     bits.append(
-        ". The English is made from the Greek and Latin with AI help and checked against the source; "
+        ". The translations are made from the Greek and Latin with AI help and checked against the source; "
         "each work page says whether it has passed that check. Where a passage still uses a public-domain "
         "translation (the Ante-Nicene Fathers, 1885–1896), the page says so. Modern copyrighted English is "
         "never used as a source."
