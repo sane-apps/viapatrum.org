@@ -629,9 +629,10 @@ def site_catalog(app_dir: Path) -> dict[str, dict]:
 
 
 # Published on the site but kept off the shelf until an editor fixes them.
-HOLD = {
-    "placeus-de-imputatione": "section titles still use worksheet shorthand (GAR/PLAC, 'tip'); needs an editorial pass",
-}
+# Placeus left on 2026-10-23: build_site.placeus_head cleans his section
+# titles on the page (0 of 699 carry GAR/PLAC/tip), the files are made from
+# that page, and the worksheet gate still checks every file.
+HOLD: dict[str, str] = {}
 
 
 def section_marks(app_dir: Path, slug: str, ids: list) -> list[str]:
