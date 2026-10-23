@@ -50,6 +50,17 @@ class PrintedSourceTest(unittest.TestCase):
         self.assertEqual(th["witnesses"], [{"name": "Lake (1912)", "role": "copy-text", "language": "Greek"}])
         self.assertEqual(build_site._book_text_history(Path("/nonexistent"), {}), {})
 
+    def test_yml_edition_names_copy_text_only(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            (Path(tmp) / "sources").mkdir()
+            (Path(tmp) / "sources" / "manifest.json").write_text(json.dumps({"witnesses": [
+                {"name": "scan a", "language": "latin"},
+                {"name": "Ruinart (1689)", "language": "latin"}]}), encoding="utf-8")
+            th = build_site._book_text_history(Path(tmp), {"edition": "Gebhardt (1902)"})
+        self.assertEqual([w["name"] for w in th["witnesses"]], ["Gebhardt (1902)", "Ruinart (1689)"])
+        self.assertEqual([w["role"] for w in th["witnesses"]], ["copy-text", "check"])
+
 
 class TopicIdsTest(unittest.TestCase):
     """A topic id that is not in topics.yml makes no Related topics link."""
@@ -61,6 +72,18 @@ class TopicIdsTest(unittest.TestCase):
         bad = {slug: [t for t in tids if t not in valid]
                for slug, tids in build_site.WORK_TOPICS.items() if any(t not in valid for t in tids)}
         self.assertEqual(bad, {})
+
+    def test_one_source_per_work(self):
+        """A work's picks live in data/work-topics.json or in WORK_TOPICS, not
+        both: the code entry wins, so a differing data entry would do nothing."""
+        src = (HERE / "build_site.py").read_text(encoding="utf-8")
+        start = src.index("WORK_TOPICS: dict[str, list[str]] = {")
+        block = src[start:src.index("\n}\n", start)]
+        data = json.loads((HERE.parent / "data" / "work-topics.json").read_text(encoding="utf-8"))
+        import re
+        both = [s for s in re.findall(r'^    "([^"]+)": \[', block, re.M)
+                if s in data and data[s]]
+        self.assertEqual(both, [])
 
     def test_data_file_fills_martyr_acts(self):
         self.assertIn("martyrdom-witness", build_site.WORK_TOPICS.get("perpetua-felicitas", []))

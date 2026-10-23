@@ -292,21 +292,9 @@ BASE = ""
 # Work ↔ topic cross-refs (topic ids from ante-nicene-topics/topics.yml).
 WORK_TOPICS: dict[str, list[str]] = {
     "nemesius-de-natura-hominis": ["image-likeness", "free-will", "sin-and-death"],
-    "macarius-spiritual-homilies": ["spirit-sanctifies", "liturgy-prayer", "image-likeness", "resurrection-body"],
-    "philostorgius-he": ["civil-authority", "heresy-schism"],
-    "gregory-thaumaturgus-de-fide-xii": ["two-natures-seed", "incarnation-word-flesh"],
-    "gregory-thaumaturgus-ad-tatianum-de-anima": ["image-likeness"],
-    "gregory-thaumaturgus-in-annuntiationem": ["virgin-birth", "incarnation-word-flesh"],
-    "gregory-thaumaturgus-sermo-in-omnes-sanctos": ["martyrdom-witness"],
     # No topic fits the opening alone; [] also keeps the meta's non-topic tags out.
     "gregory-thaumaturgus-panegyricus": [],
     "gregory-thaumaturgus-ecclesiastes-metaphrase": [],
-    "gregory-thaumaturgus-epistula-canonica": ["discipline-penance", "against-idols"],
-    "serapion-antioch-fragmenta": ["canon-rule-of-truth", "against-docetism", "apostolic-tradition", "heresy-schism"],
-    "epiphanius-ancoratus": ["father-son-spirit", "spirit-sanctifies"],
-    "epiphanius-de-mensuris": ["spirit-prophecy", "scripture-inspiration"],
-    "epiphanius-panarion": ["heresy-schism", "father-son-spirit"],
-    "epiphanius-anacephalaeosis": ["heresy-schism"],
     "origen-on-prayer": ["liturgy-prayer"],
     "origen-exhortation-to-martyrdom": ["martyrdom-witness"],
     "origen-dialogue-heraclides": [
@@ -343,12 +331,6 @@ WORK_TOPICS: dict[str, list[str]] = {
     "julian-marriage-extracts": ["sin-and-death", "image-likeness"],
     "julian-letter-to-rome": ["free-will", "grace-and-assistance"],
     "julian-collective-letter": ["free-will", "grace-and-assistance", "sin-and-death"],
-    "crocius-syntagma": ["scripture-inspiration", "canon-rule-of-truth", "apostolic-tradition"],
-    "davenant-dissertationes-duae": ["universal-call", "salvation-by-christ", "grace-and-assistance"],
-    "baron-philosophia-theologiae-ancillans": ["sin-and-death", "faith-and-obedience"],
-    "placeus-de-imputatione": ["sin-and-death"],
-    "le-blanc-theses-theologicae": ["faith-and-obedience", "grace-and-assistance", "free-will", "scripture-inspiration"],
-    "strimesius-in-controversias-evangelicorum": ["one-church", "eucharist-thanksgiving"],
 }
 
 
@@ -5725,7 +5707,8 @@ def _book_text_history(folder: Path, yml: dict) -> dict:
     for w in (man.get("witnesses") or []) if isinstance(man, dict) else []:
         if not isinstance(w, dict):
             continue
-        name = str(w.get("edition") or yml_ed or w.get("name") or "").strip()
+        # book.yml names the copy-text only; later witnesses keep their own names.
+        name = str(w.get("edition") or (yml_ed if not out else "") or w.get("name") or "").strip()
         if not name:
             continue
         role = str(w.get("role") or "").strip()

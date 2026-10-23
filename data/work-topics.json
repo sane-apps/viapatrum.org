@@ -164,7 +164,8 @@
  "baron-philosophia-theologiae-ancillans": [
   "attributes-providence",
   "father-son-spirit",
-  "two-natures-seed"
+  "two-natures-seed",
+  "sin-and-death"
  ],
  "basil-homilia-ad-baptisma": [
   "baptism-and-new-birth",
@@ -392,6 +393,11 @@
   "two-natures-seed",
   "incarnation-word-flesh",
   "passion-resurrection"
+ ],
+ "davenant-dissertationes-duae": [
+  "universal-call",
+  "salvation-by-christ",
+  "grace-and-assistance"
  ],
  "didache": [
   "two-ways",
@@ -882,12 +888,19 @@
  ],
  "le-blanc-theses-theologicae": [
   "scripture-inspiration",
-  "faith-and-obedience"
+  "faith-and-obedience",
+  "grace-and-assistance"
  ],
  "lyons-vienne-letter": [
   "martyrdom-witness",
   "discipline-penance",
   "civil-authority"
+ ],
+ "macarius-spiritual-homilies": [
+  "spirit-sanctifies",
+  "liturgy-prayer",
+  "image-likeness",
+  "resurrection-body"
  ],
  "marcellus-ancyranus-fragmenta": [
   "father-son-spirit",
@@ -1096,6 +1109,12 @@
   "resurrection-body",
   "judgment-second-coming"
  ],
+ "serapion-antioch-fragmenta": [
+  "canon-rule-of-truth",
+  "against-docetism",
+  "apostolic-tradition",
+  "heresy-schism"
+ ],
  "severianus-de-caeco-nato": [
   "faith-and-obedience",
   "baptism-and-new-birth"
@@ -1176,6 +1195,10 @@
  "severianus-in-job": [
   "attributes-providence",
   "reward-and-judgment"
+ ],
+ "strimesius-in-controversias-evangelicorum": [
+  "one-church",
+  "eucharist-thanksgiving"
  ],
  "tertullian-on-patience": [
   "faith-and-obedience",
