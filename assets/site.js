@@ -6,6 +6,19 @@
       const open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    // The phone Menu closes on Escape (focus back on the button) and on a tap outside it.
+    const closeMenu = (refocus) => {
+      if (!nav.classList.contains("is-open")) return;
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      if (refocus) toggle.focus();
+    };
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu(nav.contains(document.activeElement) || document.activeElement === toggle);
+    });
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) closeMenu(false);
+    });
   }
 
   // Home Ask field: the hint inside it turns through a few topics (owner 2026-10-18).
@@ -77,7 +90,14 @@
           const el = dailyCard.querySelector(sel);
           if (el) el.textContent = text;
         };
-        set(".vp-daily-q", r.q);
+        // Text that opens with its own quote mark drops the outer marks (as the builder does).
+        const quote = (sel, text) => {
+          set(sel, text);
+          const el = dailyCard.querySelector(sel);
+          const own = /^\s*["“‘]/.test(text || "");
+          if (el) el.parentElement.querySelectorAll(".vp-qm").forEach((m) => (m.hidden = own));
+        };
+        quote(".vp-daily-q", r.q);
         set(".vp-daily-a", r.a);
         set(".vp-daily-d", r.d);
         set(".vp-daily-c", r.c);
@@ -89,7 +109,7 @@
         const sc = dailyCard.querySelector("[data-daily-sc]");
         if (sc) {
           if (r.sr) {
-            set(".vp-sc-v", r.sv);
+            quote(".vp-sc-v", r.sv);
             set(".vp-sc-r", r.sr);
             set(".vp-sc-ch", r.sch);
             const go = sc.querySelector(".vp-sc-h");
@@ -110,24 +130,42 @@
     const home = desk && desk.querySelector('[data-for="chapter"]');
     const sections = desk ? Array.from(desk.querySelectorAll(".desk-verse")) : [];
     const text = bx.querySelector(".bx-text");
+    // One short line for screen readers; the desk itself is not a live region.
+    const status = desk && desk.querySelector("#desk-status");
+    let lastV = null;
     const show = (v, opts = {}) => {
       if (!desk) return;
       const target = v ? sections.find((sec) => sec.dataset.for === String(v)) : null;
+      const wasOpen = !!desk.querySelector(".desk-verse:not([hidden])");
       sections.forEach((sec) => (sec.hidden = sec !== target));
       if (home) home.hidden = !!target;
       desk.classList.toggle("is-verse", !!target);
       bx.querySelectorAll(".v.is-on").forEach((el) => el.classList.remove("is-on"));
       if (target) {
+        lastV = String(v);
         const verse = bx.querySelector(`.v[data-v="${v}"]`);
         if (verse) verse.classList.add("is-on");
         desk.scrollTop = 0;
         if (opts.push !== false) history.replaceState(null, "", `#v${v}`);
-        if (opts.focus) target.querySelector("h2")?.setAttribute("tabindex", "-1"), target.querySelector("h2")?.focus({ preventScroll: true });
-      } else if (opts.push !== false) {
-        history.replaceState(null, "", location.pathname + location.search);
+        const h2 = target.querySelector("h2");
+        if (opts.focus && h2) {
+          h2.setAttribute("tabindex", "-1");
+          h2.focus({ preventScroll: true });
+        } else if (status && opts.push !== false) {
+          const count = target.querySelector(".desk-count");
+          status.textContent = [h2 && h2.textContent, count && count.textContent].filter(Boolean).join(", ");
+        }
+      } else {
+        if (status) status.textContent = "";
+        if (opts.push !== false) history.replaceState(null, "", location.pathname + location.search);
+        // Closing hides the focused heading: put focus back on the verse the reader left.
+        const lost = document.activeElement === document.body || desk.contains(document.activeElement);
+        if (wasOpen && lost && lastV) bx.querySelector(`.v-open[data-v="${lastV}"]`)?.focus();
       }
     };
     bx.addEventListener("click", (e) => {
+      const open = e.target.closest(".v-open");
+      if (open) return show(open.dataset.v, { focus: true });
       const verse = e.target.closest(".v.cited");
       if (verse) return show(verse.dataset.v);
       const jump = e.target.closest(".desk-jump");
@@ -139,11 +177,6 @@
       if (e.target.closest(".desk-back, .desk-close")) show(null);
     });
     bx.addEventListener("keydown", (e) => {
-      const verse = e.target.closest(".v.cited");
-      if (verse && (e.key === "Enter" || e.key === " ")) {
-        e.preventDefault();
-        show(verse.dataset.v, { focus: true });
-      }
       if (e.key === "Escape") show(null);
     });
     const fromHash = () => {

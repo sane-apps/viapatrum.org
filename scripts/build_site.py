@@ -807,6 +807,34 @@ def _scripture_matches(text: str) -> list[tuple[int, int, str, str]]:
     return found
 
 
+OPEN_QUOTES = ("“", "‘", '"')
+
+
+def daily_quote_html(cls: str, text: str) -> str:
+    """Quote marks round a home quote, unless the text opens with its own (a BSB
+    verse that starts mid-speech would show ““What). site.js hides the same marks."""
+    own = str(text or "").lstrip().startswith(OPEN_QUOTES)
+    hide = " hidden" if own else ""
+    return (
+        f'<span class="vp-qm"{hide}>&ldquo;</span><span class="{cls}">{escape(text or "")}</span>'
+        f'<span class="vp-qm"{hide}>&rdquo;</span>'
+    )
+
+
+def scripture_verse_html(vnum, vtext: str, hits: int, vmax: int) -> str:
+    """One verse of a Scripture chapter. A cited verse keeps its text readable to
+    screen readers and gets a real button after it that opens the desk."""
+    body = f'<sup>{vnum}</sup><span class="vt">{escape(vtext)}</span>'
+    if not hits:
+        return f'<span class="v" id="v{vnum}" data-v="{vnum}">{body}</span> '
+    return (
+        f'<span class="v cited" id="v{vnum}" data-v="{vnum}" '
+        f'style="--heat:{round(0.25 + 0.75 * hits / vmax, 2)}">{body}'
+        f'<button type="button" class="v-open vh" data-v="{vnum}" aria-controls="desk">'
+        f'Verse {vnum}: {hits} passage{"s" if hits != 1 else ""} in the Fathers</button></span> '
+    )
+
+
 def scripture_html(text: str) -> str:
     """Escape prose and link chapter:verse citations the way Logos tags already link.
 
@@ -9149,7 +9177,7 @@ def build() -> None:
         return (
             f'<div class="vp-today-card" data-daily>'
             f'<p class="eyebrow">Today · <span class="vp-daily-topic">{escape(r["t"])}</span></p>'
-            f'<blockquote class="vp-quote"><p>&ldquo;<span class="vp-daily-q">{escape(r["q"])}</span>&rdquo;</p></blockquote>'
+            f'<blockquote class="vp-quote"><p>{daily_quote_html("vp-daily-q", r["q"])}</p></blockquote>'
             f'<p class="vp-who"><strong class="vp-daily-a">{escape(r["a"])}</strong>'
             f' · <span class="vp-daily-d">{escape(r["d"])}</span> · <span class="vp-daily-c">{escape(r["c"])}</span></p>'
             f'<div class="vp-actions"><a class="btn primary vp-daily-h" href="{escape(r["h"])}">Read the passage</a>'
@@ -9157,7 +9185,7 @@ def build() -> None:
             # Today's Scripture (owner 2026-10-23): a way into the Scripture reader from the home page.
             f'<div class="vp-sc" data-daily-sc{"" if r.get("sr") else " hidden"}>'
             f'<p class="eyebrow">Today&rsquo;s Scripture</p>'
-            f'<blockquote class="vp-quote vp-sc-q"><p>&ldquo;<span class="vp-sc-v">{escape(r.get("sv", ""))}</span>&rdquo;</p></blockquote>'
+            f'<blockquote class="vp-quote vp-sc-q"><p>{daily_quote_html("vp-sc-v", r.get("sv", ""))}</p></blockquote>'
             f'<p class="vp-who"><span class="vp-sc-r">{escape(r.get("sr", ""))}</span> · BSB</p>'
             f'<div class="vp-actions"><a class="btn vp-sc-h" href="{escape(r.get("sh", "/scripture/"))}">'
             f'Read <span class="vp-sc-ch">{escape(r.get("sch", ""))}</span> with the Fathers &rarr;</a></div>'
@@ -10741,15 +10769,7 @@ def build() -> None:
             vmax = max([len(v) for v in by_first.values()] + [1])
             spans = []
             for vnum, vtext in verses:
-                hits = by_first.get(str(vnum), [])
-                if hits:
-                    spans.append(
-                        f'<span class="v cited" id="v{vnum}" data-v="{vnum}" tabindex="0" role="button" '
-                        f'aria-controls="desk" aria-label="Verse {vnum}: {len(hits)} passage{"s" if len(hits) != 1 else ""} in the Fathers" '
-                        f'style="--heat:{round(0.25 + 0.75 * len(hits) / vmax, 2)}"><sup>{vnum}</sup><span class="vt">{escape(vtext)}</span></span> '
-                    )
-                else:
-                    spans.append(f'<span class="v" id="v{vnum}" data-v="{vnum}"><sup>{vnum}</sup><span class="vt">{escape(vtext)}</span></span> ')
+                spans.append(scripture_verse_html(vnum, vtext, len(by_first.get(str(vnum), [])), vmax))
             # Verses cited but missing from the base text (versification differences).
             extra = [v for v in by_first if not any(str(vn) == v for vn, _ in verses)]
             desk_sections = []
@@ -10768,7 +10788,7 @@ def build() -> None:
                 f'<li><button type="button" class="desk-jump" data-v="{escape(v)}">'
                 f'<span class="ref">{escape(ref_name(book))} {c}:{escape(v)}</span>'
                 f'<span class="bar" style="--w:{round(len(by_first[v]) / vmax, 2)}"></span>'
-                f'<span class="n">{len(by_first[v])}</span></button></li>'
+                f'<span class="n">{len(by_first[v])}<span class="vh"> passage{"s" if len(by_first[v]) != 1 else ""}</span></span></button></li>'
                 for v in cited_verses
             )
             writers = {r["author"] for r in rows}
@@ -10845,7 +10865,8 @@ def build() -> None:
 </header>
 <div class="bx-grid">
 {text_html}
-<aside class="bx-desk" id="desk" aria-label="What the Fathers said" aria-live="polite">
+<aside class="bx-desk" id="desk" aria-label="What the Fathers said">
+<p class="vh" role="status" id="desk-status"></p>
 <button type="button" class="desk-close" aria-label="Close">×</button>
 {desk_home}{''.join(desk_sections)}
 </aside>
