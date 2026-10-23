@@ -6791,6 +6791,37 @@ def _work_key(author_slug: str, title: str, author: str) -> tuple[str, str]:
     return author_slug, " ".join([w for w in words if w not in named] or words)
 
 
+# Two English renderings of one passage, too different for the text match in
+# excerpt_duplicates (2026-10-23 audit): second copy -> main page.
+EXCERPT_SAME_PASSAGE: dict[str, str] = {
+    "auto_nov_one_chapter_31": "novatian_trin_31_monarchy",  # On the Trinity 31
+    "tertullian_against_marcion_10_heaven-hell-in": "tertullian_marcion_5_10",  # Against Marcion 5.10
+}
+
+
+def excerpt_duplicates(excerpts: list[dict]) -> dict[str, str]:
+    """Excerpt id -> main excerpt id for the same passage by the same writer:
+    the same opening words (one passage filed under several questions), or a
+    pair named in EXCERPT_SAME_PASSAGE. The main page is the shortest id."""
+    primary: dict[str, str] = {}
+    groups: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for x in excerpts:
+        txt = re.sub(r"\W+", " ", strip_logos_markup(" ".join(excerpt_paragraphs(x))).lower()).strip()[:400]
+        if len(txt) > 80:
+            groups[((x.get("author") or "").lower(), txt)].append(x["id"])
+    for ids in groups.values():
+        if len(ids) > 1:
+            main = sorted(ids, key=lambda i: (len(i), i))[0]
+            for i in ids:
+                if i != main:
+                    primary[i] = main
+    have = {x["id"] for x in excerpts}
+    for dup, main in EXCERPT_SAME_PASSAGE.items():
+        if dup in have and main in have:
+            primary[dup] = primary.get(main, main)
+    return primary
+
+
 READER_MATCH_REJECTS: list[str] = []
 # Excerpt id -> work, for excerpts of a published work that match no single
 # section (Octavius 22's second excerpt). The page links the whole work.
@@ -9444,6 +9475,7 @@ def build() -> None:
         ),
     )
 
+    excerpt_primary = excerpt_duplicates(excerpts)
     # --- Scripture: book → chapter → every Father who cites it ------------
     # The Bibles load first: a citation is filed only under a chapter that
     # exists (2026-10-06 audit: Psalm 181, 2 John 5, Jude 25 had pages).
@@ -9543,6 +9575,8 @@ def build() -> None:
     for x in excerpts:
         if x.get("_cite_href"):
             continue   # shown from a whole-work reader: that section is listed already
+        if x["id"] in excerpt_primary:
+            continue   # a second copy of a passage: its main page is listed (Isaiah 1:2 twice, 2026-10-23)
         _title = public_citation(x.get("citation") or x["id"], x.get("work") or "")
         sc_collect(
             strip_logos_markup(" ".join(excerpt_paragraphs(x))),
@@ -9693,19 +9727,8 @@ def build() -> None:
 
     # The same passage filed under several questions: one main page, the rest
     # point to it (canonical) and stay out of the sitemap.
-    excerpt_primary: dict[str, str] = {}
-    _groups: dict[tuple[str, str], list[str]] = defaultdict(list)
-    for _x in excerpts:
-        _txt = re.sub(r"\W+", " ", strip_logos_markup(" ".join(excerpt_paragraphs(_x))).lower()).strip()[:400]
-        if len(_txt) > 80:
-            _groups[((_x.get("author") or "").lower(), _txt)].append(_x["id"])
-    for _ids in _groups.values():
-        if len(_ids) > 1:
-            _main = sorted(_ids, key=lambda i: (len(i), i))[0]
-            for _i in _ids:
-                if _i != _main:
-                    excerpt_primary[_i] = _main
-                    NONCANONICAL_ROUTES.add(f"/e/{_i}/")
+    for _i in excerpt_primary:
+        NONCANONICAL_ROUTES.add(f"/e/{_i}/")
 
     # --- Topic pages + excerpt pages ---
     for tid, rows in by_topic.items():

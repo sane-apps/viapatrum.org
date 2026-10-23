@@ -72,6 +72,18 @@ class ListenCountTest(unittest.TestCase):
         self.assertEqual(build_site.playing_slugs(None, "didache"), {"didache"})
 
 
+class ExcerptDuplicateTest(unittest.TestCase):
+    def test_same_passage_has_one_main_page(self) -> None:
+        text = ["For how shall we not regard it fearful, if he that knows God shall not recognise the Lord. " * 2]
+        xs = [{"id": "clem_paed_1_9_benefit", "author": "Clement", "english": text},
+              {"id": "auto_paed_attributes_chapter_9_x", "author": "Clement", "english": text},
+              {"id": "auto_nov_one_chapter_31", "author": "Novatian", "english": ["one rendering " * 10]},
+              {"id": "novatian_trin_31_monarchy", "author": "Novatian", "english": ["another rendering " * 10]}]
+        self.assertEqual(build_site.excerpt_duplicates(xs), {
+            "auto_paed_attributes_chapter_9_x": "clem_paed_1_9_benefit",
+            "auto_nov_one_chapter_31": "novatian_trin_31_monarchy"})
+
+
 class TitleAndDateTest(unittest.TestCase):
     def test_second_clement_files_with_the_apostolic_fathers(self) -> None:
         self.assertEqual(build_site.era_band(150, "anonymous-2-clement", catalogue=True), "Apostolic")
