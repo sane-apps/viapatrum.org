@@ -145,28 +145,6 @@ class SiteCatalogue(unittest.TestCase):
 
 
 
-class SetCheckout(unittest.TestCase):
-    def run_cli(self, env):
-        return subprocess.run([sys.executable, str(HERE / "library_sync.py"), "set-checkout", "https://example.test/buy"],
-                              capture_output=True, text=True, env=env, timeout=60)
-
-    def test_refused_for_production(self):
-        env = {k: v for k, v in os.environ.items() if k != "LIBRARY_STATE"}
-        before = (ls.OUT / "library.json").read_bytes() if (ls.OUT / "library.json").is_file() else None
-        r = self.run_cli(env)
-        self.assertNotEqual(r.returncode, 0)
-        self.assertIn("use go-live for production", r.stderr)
-        after = (ls.OUT / "library.json").read_bytes() if (ls.OUT / "library.json").is_file() else None
-        self.assertEqual(before, after)
-
-    def test_allowed_for_a_test_state(self):
-        with tempfile.TemporaryDirectory() as d:
-            (Path(d) / "library.json").write_text(json.dumps({"works": [], "checkout_url": ""}))
-            r = self.run_cli({**os.environ, "LIBRARY_STATE": d})
-            self.assertEqual(r.returncode, 0, r.stderr)
-            self.assertEqual(json.loads((Path(d) / "library.json").read_text())["checkout_url"], "https://example.test/buy")
-
-
 class LogosLinks(unittest.TestCase):
     def test_scripture_spans_become_bible_links(self):
         t = "as it is written (Luke 2:22–24) and (Lev 12:2)."
@@ -726,13 +704,13 @@ class Upload(Fixture):
         self.assertEqual(json.loads(ls.LEDGER.read_text()), {})
 
 
-def lib_with(works, bundles=(), dirty=None, checkout="https://example.test/buy", ledger=None):
+def lib_with(works, bundles=(), dirty=None, ledger=None):
     """A Library over a temp library.json. The upload ledger matches every
     listed file unless a ledger is given."""
     d = tempfile.mkdtemp()
     p = Path(d) / "library.json"
     bundles = [{"sha256": "s-" + b["key"], **b} for b in bundles]
-    p.write_text(json.dumps({"price_usd": 50, "checkout_url": checkout, "works": works, "bundles": bundles,
+    p.write_text(json.dumps({"works": works, "bundles": bundles,
                              "dirty": dirty or {}}))
     if ledger is None:
         ledger = {x["key"]: x["sha256"] for w in works for x in w["files"].values()} | {b["key"]: b["sha256"] for b in bundles}

@@ -40,7 +40,6 @@ ICONS = {
     "pdf": '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 15h5M10 18h3"/>',
     "word": '<path d="M4 6l8-3 8 3v12l-8 3-8-3z"/><path d="M8 9l1.5 6L12 10l2.5 5L16 9"/>',
     "audio": '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/>',
-    "lock": '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
     "down": '<path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/>',
 }
 
@@ -216,7 +215,7 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
         if k == "audio":
             part += f' data-bytes="{int(f["bytes"])}"'
         files.append(f'<a class="dl-f" href="/dl/{escape(f["key"])}" data-kind="{k}"{part}>'
-                     f'{icon("lock", "dl-lk")}{icon("down", "dl-dn")}<span class="dl-fk">{LABEL[k]}</span>'
+                     f'{icon("down", "dl-dn")}<span class="dl-fk">{LABEL[k]}</span>'
                      f'<span class="dl-fm">{escape(meta)}</span></a>')
     dates = w.get("author_dates") or author_dates(w.get("author"), None) or ""
     byline = f'<p>{escape(w.get("author") or "")}{" · " + escape(dates) if dates else ""}</p>'
@@ -312,12 +311,13 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
     for w in works:
         if w.get("thumb") and (covers_dir / w["thumb"]).is_file():
             shutil.copy2(covers_dir / w["thumb"], dest / w["thumb"])
-    # Product image for search results (the cover fan made for Lemon Squeezy).
+    # Share and search image for the shelf: the cover fan (source file name
+    # kept from its first use).
     product_img = covers_dir.parent / "marketing" / "ls-product.jpg"
     image = "https://viapatrum.org/assets/og/home.png"
     if product_img.is_file():
-        shutil.copy2(product_img, dist / "assets" / "downloads-pass.jpg")
-        image = "https://viapatrum.org/assets/downloads-pass.jpg"
+        shutil.copy2(product_img, dist / "assets" / "downloads-shelf.jpg")
+        image = "https://viapatrum.org/assets/downloads-shelf.jpg"
     # File names for Content-Disposition (functions/dl reads this map).
     (dist / "data").mkdir(exist_ok=True)
     (dist / "data" / "library-files.json").write_text(json.dumps(
@@ -363,14 +363,14 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 
     groups = shelf(works, author_dates, year_of)
     body = f"""
-<div class="dl-page" data-state="unlocked">
+<div class="dl-page">
 <section class="dl-hero">
   <div class="dl-hero-copy">
     <p class="eyebrow">The library, to keep</p>
     <h1>{"Books and recordings" if n["audio"] else "The books"}, <em>yours to keep.</em></h1>
     <p class="dl-lede">{lede(works, n, total_h, site_works)}. Free to download. New books land here too.</p>
     <div class="dl-cta">
-      <a class="dl-buy dl-go" href="#shelf">Go to the shelf</a>
+      <a class="dl-go" href="#shelf">Go to the shelf</a>
       <a class="dl-textbtn" href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a>
     </div>
     <p class="dl-fine">Reading, listening and downloads are free for everyone. Gifts pay for more translation and narration.</p>
