@@ -1244,12 +1244,17 @@ AUTHOR_DISPLAY = {
     "Cyprian": "Cyprian of Carthage",
     "Hermas": "Hermas",
     "Shepherd of Hermas": "Hermas",
-    "Mathetes (Epistle to Diognetus)": "Mathetes",
-    "Anonymous (Diognetus)": "Mathetes",
-    "Anonymous (Epistle to Diognetus)": "Mathetes",
+    # The writer is unknown ("Mathetes" is only the letter's word for "a
+    # disciple"), so the text stands as author, as with the Didache. The mast,
+    # rail and hub gave three names until 2026-10-23.
+    "Mathetes (Epistle to Diognetus)": "Letter to Diognetus",
+    "Anonymous (Diognetus)": "Letter to Diognetus",
+    "Anonymous (Epistle to Diognetus)": "Letter to Diognetus",
     "Alexander Monachus": "Alexander the Monk",
     "Barnabas (Epistle)": "Barnabas",
     "Didache": "The Didache",
+    # The certified book's own name: the title read "The Didache (Anonymous (Didache))".
+    "Anonymous (Didache)": "The Didache",
     "Paulus Silentarius": "Paul the Silentiary",
     # PG 86a is a shelfmark, and this row is not Theodore of Heraclea.
     # No date is known. Do not invent one.
@@ -2712,8 +2717,10 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
     The period is left out when it only repeats the lifespan (same years, or a
     bare century) or the edition year ("John Wesley (1703–1791 AD) · 1771 Works").
     A long line first shortens the scope to "Part only", then drops the period."""
-    author = w.get("author") or ""
-    life = author_dates_display(author, w.get("author_slug"))
+    life = author_dates_display(w.get("author") or "", w.get("author_slug"))
+    # The public name, as on the rail and the author page (2026-10-23:
+    # "Anonymous (Epistle to Diognetus)" here, "Letter to Diognetus" there).
+    author = display_author(w.get("author") or "")
     # "Josué de la Place (Placeus)" already ends in brackets: no ") (".
     who = (f"{author}, {life}" if author.endswith(")") else f"{author} ({life})") if author and life else author
     # Notes on the date ("(Oxford reprint of 1621 St Andrews; Reformed)") go to About.
