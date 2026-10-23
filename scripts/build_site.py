@@ -11648,6 +11648,15 @@ def build() -> None:
         m = title_re.search(page.read_text(encoding="utf-8")[:4000])
         if m:
             seen_titles[m.group(1)].append(page)
+    # The appended words hide a source problem (nine Julian pages all "§4.2.2"):
+    # list each clash among work pages so it is fixed in the source.
+    work_clashes = {title: [p.relative_to(DIST).parent.as_posix() for p in pages]
+                    for title, pages in seen_titles.items()
+                    if len(pages) > 1 and all(p.relative_to(DIST).as_posix().startswith("works/") for p in pages)}
+    _tc_receipt = DIST.parent / f"{DIST.name}.title-clashes.json"
+    _tc_receipt.write_text(json.dumps(work_clashes, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"titles: {len(work_clashes)} work-page titles shared by {sum(map(len, work_clashes.values()))} pages, "
+          f"told apart by their opening words ({_tc_receipt.name})", flush=True)
     for title, pages in seen_titles.items():
         if len(pages) < 2:
             continue
