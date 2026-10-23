@@ -252,7 +252,7 @@ test('/api/ask: answer mode, passages in /api/search shape, one sentence rerank 
   assert.deepEqual(body.topics, [], 'the stub serves no topics file: no topics');
   assert.ok(s.calls.at(-1).n <= MAX_CANDIDATES);
   assert.equal(res.headers.get('cache-control'), 'public, max-age=86400');
-  assert.equal(res.headers.get('access-control-allow-origin'), '*');
+  assert.equal(res.headers.get('access-control-allow-origin'), null, 'no CORS grant without a site Origin');
   assert.equal(s.puts.length, 0, 'answers are not logged');
 });
 
@@ -280,7 +280,7 @@ test('/api/ask: a failed sentence rerank is thin but neither cached nor logged',
 test('/api/search keeps its output after the retrieval move', async () => {
   const s = stubEnv({});
   const { res, body } = await run(search, 'https://viapatrum.org/api/search?q=baptism&n=5', s.env);
-  assert.equal(res.headers.get('cache-control'), 'public, max-age=300');
+  assert.equal(res.headers.get('cache-control'), 'public, max-age=86400');
   assert.deepEqual(Object.keys(body), ['query', 'results']);
   assert.deepEqual(body.results.map((r) => r.href), ['/e/d7/', '/e/j61/']);
   assert.deepEqual(Object.keys(body.results[0]), ['title', 'author', 'href', 'kind', 'score', 'snippet']);
@@ -344,4 +344,54 @@ test('/api/ask: matching Timeline topics ride along in the body', async () => {
   const fresh = await import(`../functions/api/ask.js?v=topics-${Date.now()}`);
   const { body } = await run(fresh.onRequest, 'https://viapatrum.org/api/ask?q=baptism', s.env);
   assert.deepEqual(body.topics, [{ question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/' }]);
+});
+
+
+// --- off switch, CORS, /api/search edge cache (2026-10-23) ---------------------
+
+test('AI_OFF=1: search and ask answer 503 paused without any model call', async () => {
+  for (const [fn, path] of [[search, 'search'], [ask, 'ask']]) {
+    const s = stubEnv({ rerankSentences: () => 4 });
+    s.env.AI_OFF = '1';
+    const { res, body } = await run(fn, `https://viapatrum.org/api/${path}?q=baptism`, s.env);
+    assert.equal(res.status, 503, path);
+    assert.equal(body.paused, true, path);
+    assert.equal(body.error, 'Search by meaning is paused');
+    assert.equal(res.headers.get('cache-control'), 'no-store');
+    assert.equal(s.calls.length, 0, `${path} made no AI call`);
+  }
+});
+
+test('CORS: only the site origins get an allow header; preflight is 204', async () => {
+  const s = stubEnv({});
+  const from = (origin) => search({ request: new Request('https://viapatrum.org/api/search?q=baptism', { headers: { origin } }), env: s.env, waitUntil: () => {} });
+  assert.equal((await from('https://viapatrum.org')).headers.get('access-control-allow-origin'), 'https://viapatrum.org');
+  assert.equal((await from('https://evil.example')).headers.get('access-control-allow-origin'), null);
+  const pre = await ask({ request: new Request('https://viapatrum.org/api/ask', { method: 'OPTIONS', headers: { origin: 'https://evil.example' } }), env: s.env });
+  assert.equal(pre.status, 204);
+  assert.equal(pre.headers.get('access-control-allow-origin'), null);
+});
+
+test('/api/search: cached by normalised query, n and deploy tag; a repeat makes no model call', async () => {
+  const store = new Map();
+  const saved = globalThis.caches;
+  globalThis.caches = { default: { match: async (req) => store.get(req.url)?.clone(), put: async (req, res) => { store.set(req.url, res); } } };
+  try {
+    const s = stubEnv({});
+    const assets = s.env.ASSETS.fetch;
+    s.env.ASSETS.fetch = async (u, init) => (init && init.method === 'HEAD'
+      ? { ok: true, headers: new Headers({ etag: '"build-1"' }) } : assets(u, init));
+    const first = await run(search, 'https://viapatrum.org/api/search?q=Baptism%20%20&n=5', s.env);
+    const calls = s.calls.length;
+    assert.ok(calls >= 1);
+    assert.equal(store.size, 1);
+    const [key] = store.keys();
+    assert.match(key, /\/api\/search\?kv=1&n=5&q=baptism&v=/);
+    assert.equal(store.get(key).headers.get('access-control-allow-origin'), null, 'the cached copy carries no CORS grant');
+    const again = await run(search, 'https://viapatrum.org/api/search?q=baptism&n=5', s.env);
+    assert.equal(s.calls.length, calls, 'repeat served from the cache');
+    assert.deepEqual(again.body, first.body);
+  } finally {
+    globalThis.caches = saved;
+  }
 });

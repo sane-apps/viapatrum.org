@@ -51,6 +51,36 @@ test('dl: files not on the shelf are still 404 before any check', async () => {
   assert.equal(r.status, 404);
 });
 
+// Shelf and bucket edge cases (moved from the retired library_pass.test.mjs).
+test('dl: an unreadable shelf map is a 503, not an open door', async () => {
+  // Fresh module: the shelf map is cached per isolate once read.
+  const { onRequest: fresh } = await import('../functions/dl/[[path]].js?v=no-shelf');
+  const c = dlContext('epub/a.epub', { cookie: await vph() });
+  c.env.ASSETS = { fetch: async () => reply(500, 'x') };
+  assert.equal((await fresh(c)).status, 503);
+});
+
+test('dl: a listed key missing from the bucket says it is not ready', async () => {
+  const c = dlContext('epub/a.epub', { cookie: await vph() });
+  c.env.LIBRARY = { get: async () => null, head: async () => null };
+  const r = await dl(c);
+  assert.equal(r.status, 404);
+  assert.match(await r.text(), /not ready yet/);
+});
+
+test('dl: a failed If-Match is 412 (the file changed); a failed If-None-Match is 304', async () => {
+  const stale = { size: 3, httpEtag: '"e"', writeHttpMetadata: () => {} }; // R2: onlyIf failed, no body
+  const ask = async (headers) => {
+    const c = dlContext('epub/a.epub', { cookie: await vph() });
+    c.request = new Request(c.request.url, { headers: { ...Object.fromEntries(c.request.headers), ...headers } });
+    c.env.LIBRARY = { get: async () => stale, head: async () => stale };
+    return (await dl(c)).status;
+  };
+  assert.equal(await ask({ 'if-match': '"old"' }), 412);
+  assert.equal(await ask({ 'if-unmodified-since': 'Tue, 01 Oct 2026 00:00:00 GMT' }), 412);
+  assert.equal(await ask({ 'if-none-match': '"e"' }), 304);
+});
+
 test('cookie: expired, forged, or signed with another secret is refused', async () => {
   const req = (c) => new Request('https://viapatrum.org/dl/x', { headers: { cookie: c, 'cf-connecting-ip': IP } });
   const old = await vph(ENV, Date.now() - (HUMAN_TTL_S + 5) * 1000);
@@ -99,4 +129,22 @@ test('/api/human: a pass for some other site is refused', async () => {
   globalThis.fetch = async () => reply(200, { success: true, hostname: 'evil.example' });
   const r = await human({ request: new Request('https://viapatrum.org/api/human', { method: 'POST', body: JSON.stringify({ token: 't' }) }), env: ENV });
   assert.equal(r.status, 403);
+});
+
+// --- /api/library/admin (upload route for library_sync.py) -------------------
+test('admin: with LIBRARY_ADMIN_TOKEN set, only that token passes; list stays on shelf prefixes', async () => {
+  const { onRequest: admin } = await import('../functions/api/library/admin.js');
+  const TOKEN = 'a'.repeat(40);
+  let outbound = 0;
+  globalThis.fetch = async () => { outbound++; return reply(200, {}); };
+  const listed = [];
+  const env = { LIBRARY_ADMIN_TOKEN: TOKEN, LIBRARY: { list: async (o) => { listed.push(o.prefix); return { objects: [], truncated: false }; } } };
+  const call = (headers, q = 'action=list&prefix=epub/') => admin({ request: new Request(`https://viapatrum.org/api/library/admin?${q}`, { headers }), env });
+  assert.equal((await call({ 'x-cf-token': 'c'.repeat(40) })).status, 403, 'a Cloudflare token no longer passes');
+  assert.equal(outbound, 0, 'no round trip to Cloudflare');
+  assert.equal((await call({ 'x-admin-token': 'b'.repeat(40) })).status, 403);
+  assert.equal((await call({ 'x-admin-token': TOKEN })).status, 200);
+  assert.equal((await call({ 'x-admin-token': TOKEN }, 'action=list&prefix=')).status, 400, 'no empty prefix');
+  assert.equal((await call({ 'x-admin-token': TOKEN }, 'action=list&prefix=ask-log/')).status, 400);
+  assert.deepEqual(listed, ['epub/']);
 });

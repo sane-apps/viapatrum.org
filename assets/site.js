@@ -672,7 +672,7 @@
         html = (titleExpanded ? hits : hits.slice(0, TITLE_CAP))
           .map(
             ({ e, n }) =>
-              `<li><a href="${escapeHtml(e.href)}"><strong class="work-title">${escapeHtml(e.title)}</strong><span>${escapeHtml(
+              `<li><a href="${escapeHtml(sitePath(e.href))}"><strong class="work-title">${escapeHtml(e.title)}</strong><span>${escapeHtml(
                 e.meta
               )}${n ? ` · ${plural(n, "matching passage", "matching passages")}` : ""}</span></a></li>`
           )
@@ -718,11 +718,19 @@
     };
 
     // Semantic search (/api/search): debounced, latest answer wins, hidden
-    // on error so exact-word results still stand alone.
+    // on error so exact-word results still stand alone. Each call costs a
+    // model run, so it waits for 4 letters and a 600 ms pause (2026-10-23).
+    // When the API says it is paused, the block says so instead of hiding.
+    const meaningNote = meaningHits && meaningHits.querySelector("p.meta");
+    const meaningNoteText = meaningNote ? meaningNote.textContent : "";
+    const meaningPaused = (paused) => {
+      if (meaningNote)
+        meaningNote.textContent = paused ? "Search by meaning is paused for now. The word search below still works." : meaningNoteText;
+    };
     const meaningSearch = (term) => {
       if (!meaningHits || !meaningResults) return;
       clearTimeout(meaningTimer);
-      if (term.length < 3) {
+      if (term.length < 4) {
         ++meaningSeq;
         meaningCount = 0;
         meaningPending = false;
@@ -736,17 +744,19 @@
       const seq = ++meaningSeq;
       meaningTimer = setTimeout(() => {
         fetch(`/api/search?q=${encodeURIComponent(term)}&n=20`)
-          .then((r) => (r.ok ? r.json() : { results: [] }))
+          .then((r) => (r.ok || r.status === 503 ? r.json().catch(() => ({ results: [] })) : { results: [] }))
           .then((data) => {
             if (seq !== meaningSeq) return;
-            const rows = (data && data.results) || [];
+            const paused = Boolean(data && data.paused);
+            const rows = (!paused && data && data.results) || [];
             meaningPending = false;
             meaningCount = rows.length;
-            meaningHits.hidden = rows.length === 0;
+            meaningPaused(paused);
+            meaningHits.hidden = rows.length === 0 && !paused;
             meaningResults.innerHTML = rows
               .map(
                 (h) =>
-                  `<li><a href="${escapeHtml(h.href)}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
+                  `<li><a href="${escapeHtml(sitePath(h.href))}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
                     h.author || ""
                   )}</span><em class="meaning-snippet">${escapeHtml(h.snippet || "")}</em></a></li>`
               )
@@ -760,7 +770,7 @@
             meaningHits.hidden = true;
             refresh();
           });
-      }, 350);
+      }, 600);
     };
 
     let lastVisible = [];
@@ -861,7 +871,7 @@
           passageResults.innerHTML = hits
             .map(
               (h) =>
-                `<li><a href="${escapeHtml(h.href)}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
+                `<li><a href="${escapeHtml(sitePath(h.href))}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
                   h.author || h.kind || ""
                 )}</span></a></li>`
             )
@@ -926,6 +936,13 @@
     }
 
     apply();
+  }
+
+  // Links from data are site paths only ("/works/..."), never another scheme
+  // or host (the same rule as assets/ask.js).
+  function sitePath(h) {
+    h = String(h || "");
+    return h.charAt(0) === "/" && h.charAt(1) !== "/" ? h : "/works/";
   }
 
   function escapeHtml(s) {

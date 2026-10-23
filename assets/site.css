@@ -1929,7 +1929,7 @@ h1, h2, h3,
   cursor: pointer;
 }
 .theme-toggle:hover, .theme-toggle:focus-visible { border-color: var(--ink); }
-/* The one paid thing, always in reach (owner 2026-10-06): a button beside
+/* Downloads (free), always in reach: a button beside
    search, not a nav section. The current page gets a ring, never an underline. */
 .dl-btn { display: inline-flex; align-items: center; min-height: 36px; padding: 0 0.85rem; border-radius: 999px;
   font-size: 0.85rem; font-weight: 650; white-space: nowrap; text-decoration: none;

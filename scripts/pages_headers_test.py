@@ -42,6 +42,18 @@ class PagesHeadersTest(unittest.TestCase):
         self.assertIn("Cache-Control: public, max-age=3600", self.rules["/data/daily.json"])
         self.assertEqual(self.rules["/data/search/manifest.json"][-1], "Cache-Control: public, max-age=0, must-revalidate")
 
+    def test_security_headers_on_every_page(self):
+        top = self.rules["/*"]
+        self.assertIn("Strict-Transport-Security: max-age=31536000; includeSubDomains", top)
+        self.assertIn("X-Frame-Options: SAMEORIGIN", top)
+        self.assertIn("Content-Security-Policy: frame-ancestors 'self'", top)
+        perms = next(h for h in top if h.startswith("Permissions-Policy:"))
+        for feature in ("camera=()", "microphone=()", "geolocation=()", "payment=()"):
+            self.assertIn(feature, perms)
+        # A script CSP would block the inline theme script and Turnstile.
+        csp = [h for h in top if h.startswith("Content-Security-Policy")]
+        self.assertFalse(any("script-src" in h or "default-src" in h for h in csp))
+
     def test_html_keeps_the_pages_default(self):
         self.assertFalse(any(h.startswith("Cache-Control") for h in self.rules["/*"]))
 

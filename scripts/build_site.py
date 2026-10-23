@@ -8318,7 +8318,12 @@ def search_grams_cover(grams: str, term: str) -> bool:
 def pages_headers() -> str:
     """dist/_headers. Every top-level asset is linked with ?v=ASSET_VER, a hash
     of all of them, so each one gets the year cache; a new asset needs no
-    hand-kept line (ask.css, creeds.css and favicon.svg were missed once)."""
+    hand-kept line (ask.css, creeds.css and favicon.svg were missed once).
+
+    Security headers on every page (2026-10-23): HSTS, no framing by other
+    sites, and no camera, microphone, location, payment or USB. No script CSP:
+    the theme script is inline and Turnstile loads its own script and frame.
+    Responses built by Functions (/api, /dl) do not get these."""
     _immutable = "".join(
         f"/assets/{a.name}\n  Cache-Control: public, max-age=31536000, immutable\n\n"
         for a in sorted(ASSETS.iterdir()) if a.is_file() and a.suffix in {".css", ".js", ".svg"})
@@ -8326,6 +8331,10 @@ def pages_headers() -> str:
         """/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
 
 """ + _immutable + """/assets/og/*
   Cache-Control: public, max-age=86400
@@ -11243,9 +11252,9 @@ def build() -> None:
 
     # Library card (sketch item 7): only while the shelf has files; the
     # numbers after it shift by one. Downloads are free since 2026-10-22.
-    pass_n = 1 if LIBRARY else 0
-    pass_card = (f"""
-              <li class="help-option" id="library-pass">
+    shelf_n = 1 if LIBRARY else 0
+    shelf_card = (f"""
+              <li class="help-option" id="download-library">
                 <p class="n">2</p>
                 <h2>Download the library</h2>
                 <p>Every book{' and audiobook' if LIBRARY.has_audio() else ''} to keep, free. Share the files with anyone who would read them.</p>
@@ -11264,15 +11273,15 @@ def build() -> None:
                 <h2>Donate</h2>
                 <p>A gift on GitHub Sponsors goes straight to keeping this work going.</p>
                 <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">GitHub Sponsors</a></p>
-              </li>{pass_card}
+              </li>{shelf_card}
               <li class="help-option" id="mac-app">
-                <p class="n">{2 + pass_n}</p>
+                <p class="n">{2 + shelf_n}</p>
                 <h2>Buy a Mac app</h2>
                 <p>If you use a Mac, the SaneApps utilities are a one-time purchase with no subscription. They run on your machine. Buying one also supports this library.</p>
                 <p><a class="btn" href="https://saneapps.com" rel="noopener">SaneApps</a></p>
               </li>
               <li class="help-option" id="ai">
-                <p class="n">{3 + pass_n}</p>
+                <p class="n">{3 + shelf_n}</p>
                 <h2>Point an AI at a slice</h2>
                 <p>If you use an AI coding assistant, it can translate one small slice of a book for review. Copy the starting instructions into it and change YourName to your name.</p>
                 <p><button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> <a class="btn" href="https://github.com/sane-apps/translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>
@@ -11281,25 +11290,25 @@ def build() -> None:
                 </details>
               </li>
               <li class="help-option" id="corrections">
-                <p class="n">{4 + pass_n}</p>
+                <p class="n">{4 + shelf_n}</p>
                 <h2>Spot-check the Greek or Latin</h2>
                 <p>If you read the original language and a line of English looks wrong, send a short note. Name the work, the section, and what you think it should say.</p>
                 <p><a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml">Submit a correction</a></p>
               </li>
               <li class="help-option" id="code">
-                <p class="n">{5 + pass_n}</p>
+                <p class="n">{5 + shelf_n}</p>
                 <h2>Star and build</h2>
                 <p>The library and its translations are built in the open. Star the repos, open issues, send pull requests.</p>
                 <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations repo</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website repo</a></p>
               </li>
               <li class="help-option" id="sponsor-book">
-                <p class="n">{6 + pass_n}</p>
+                <p class="n">{6 + shelf_n}</p>
                 <h2>Sponsor a book</h2>
                 <p>Fund a work&apos;s translation and audiobook and it goes to the front of the queue, with credit to you. Name the book in your gift note, or nominate it first.</p>
                 <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Sponsor a book</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Nominate a book</a></p>
               </li>
               <li class="help-option" id="spread">
-                <p class="n">{7 + pass_n}</p>
+                <p class="n">{7 + shelf_n}</p>
                 <h2>Spread the word</h2>
                 <p>A link is the best help: send the library to someone who studies.</p>
                 <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20Church%20Fathers%20in%20modern%20English%2C%20free%20for%20the%20world&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
@@ -11351,7 +11360,9 @@ def build() -> None:
             <h2>The app</h2>
             <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
             <h2>This website</h2>
-            <p>The website uses no cookies and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <p>The website uses no tracking scripts and no tracking cookies. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device.</p>
+            <p>Before a download, a quick check by Cloudflare Turnstile makes sure you are a person and not a bot. Turnstile looks at standard signals such as your IP address and browser (<a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener">Turnstile privacy notice</a>). Once you pass, the site sets two small cookies that last two hours, so your next downloads start at once. They hold no name or account and are not used to track you. Reading, listening and searching need no check and set no cookies.</p>
+            <p>Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
             <h2>Bibles read online</h2>
             <p>When you choose the NIV, NASB, NIrV, Amplified, ASV or Geneva Bible, in the app or on this site, your device asks the <a href="https://platform.youversion.com/" rel="noopener">YouVersion Platform</a> for that chapter. On this site the ESV and CSB come from bolls.life the same way. Those services see the request, as any web server does, and have their own privacy policies (<a href="https://www.bible.com/privacy" rel="noopener">YouVersion</a>). The other Bibles are part of the app and this site and need no outside request.</p>
             <h2>Links you choose to open</h2>

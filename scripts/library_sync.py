@@ -38,7 +38,9 @@ site build that made them (--app-dir, required: no build, no sync).
   python3 scripts/library_sync.py audio-zips --app-dir outputs/dl-test/dist-snapshot/app/v1
   python3 scripts/library_sync.py gate outputs/downloads/word/*.zip
   python3 scripts/library_sync.py upload --base https://viapatrum.org
-  (upload needs CLOUDFLARE_API_TOKEN: source ~/.config/nv/env)
+  (upload needs CLOUDFLARE_API_TOKEN: source ~/.config/nv/env; once the Pages
+  secret LIBRARY_ADMIN_TOKEN is set, the admin route needs that value in the
+  env too, sent as x-admin-token)
 """
 import argparse
 import atexit
@@ -71,7 +73,6 @@ CATALOG = STATE / "library.json"
 LEDGER = STATE / "uploaded.json"  # R2 key -> sha256 of what is up there
 PART = int(os.environ.get("LIBRARY_PART_MB") or 50) * 1024 * 1024  # R2 parts must be >= 5 MB
 LOCK = OUT / ".sync.lock"
-PRICE_USD = 50
 
 
 def lock() -> None:
@@ -771,8 +772,7 @@ def assemble(app_dir: Path) -> int:
     for item in [x for w in works for x in w["files"].values()] + bundles:
         item["uploaded"] = bool(item.get("sha256") and uploaded.get(item["key"]) == item["sha256"])
     hours = sum((w["files"].get("audio") or {}).get("duration_s", 0) for w in works) / 3600
-    data = {"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "price_usd": PRICE_USD,
-            "checkout_url": prev.get("checkout_url", ""), "dirty": dirty,
+    data = {"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "dirty": dirty,
             "counts": {"books": len(works), **{k: sum(1 for w in works if k in w["files"]) for k in ("epub", "pdf", "word", "audio")},
                        "audio_hours": round(hours)},
             "bundles": bundles, "works": works}
@@ -788,6 +788,9 @@ def assemble(app_dir: Path) -> int:
 def call(base: str, token: str, method: str, params: dict, data=None, timeout=900, ctype=None, extra=None) -> dict:
     url = f"{base}/api/library/admin?{urllib.parse.urlencode(params)}"
     headers = {"x-cf-token": token, "user-agent": "viapatrum-library-sync"}
+    # The admin route trusts only this once the Pages secret is set (2026-10-23).
+    if os.environ.get("LIBRARY_ADMIN_TOKEN"):
+        headers["x-admin-token"] = os.environ["LIBRARY_ADMIN_TOKEN"]
     if ctype:
         headers["content-type"] = ctype
     headers.update(extra or {})
@@ -955,10 +958,6 @@ def main() -> int:
     u.add_argument("--only", default="", help="comma list of kinds: epub,pdf,word,audio,bundles")
     u.add_argument("--jobs", type=int, default=6, help="parallel uploads (default 6)")
     u.add_argument("--direct", action="store_true", help="PUT straight to R2 with the REST API (files up to 280 MB); no deployed site needed")
-    c = sub.add_parser("set-checkout", help="test catalogues only (LIBRARY_STATE); production uses go-live")
-    c.add_argument("url")
-    g = sub.add_parser("go-live", help="check the Lemon Squeezy product is published, then set its checkout link")
-    g.add_argument("--product", default="1367367")
     a = ap.parse_args()
     if a.cmd == "gate":
         bad = {p: gate_hits(file_text(Path(p))) for p in a.paths}
@@ -967,10 +966,6 @@ def main() -> int:
             print(f"{p}: {len(h)} hit(s), e.g. {h[0]!r}")
         print(f"gate: {len(bad)} of {len(a.paths)} files with worksheet notes", flush=True)
         return 1 if bad else 0
-    if a.cmd == "set-checkout" and STATE == OUT:
-        # Production gets its link only from go-live, which first checks the
-        # Lemon Squeezy product is published (2026-10-06 review).
-        sys.exit("BLOCKED: set-checkout is for LIBRARY_STATE test catalogues; use go-live for production")
     lock()
     if a.cmd in ("assemble", "word", "audio-zips"):
         app_dir = Path(a.app_dir).resolve()
@@ -983,25 +978,6 @@ def main() -> int:
         if a.cmd == "audio-zips":
             return audio_zips(app_dir)
         return assemble(app_dir)
-    if a.cmd == "go-live":
-        key = os.environ.get("LEMONSQUEEZY_API_KEY", "")
-        if not key:
-            sys.exit("BLOCKED: no LEMONSQUEEZY_API_KEY (source ~/.config/nv/env)")
-        req = urllib.request.Request(f"https://api.lemonsqueezy.com/v1/products/{a.product}",
-                                     headers={"Accept": "application/vnd.api+json", "Authorization": f"Bearer {key}"})
-        attrs = json.load(urllib.request.urlopen(req, timeout=30))["data"]["attributes"]
-        if attrs.get("status") != "published":
-            sys.exit(f"NOT LIVE: Lemon Squeezy product {a.product} is '{attrs.get('status')}'. Publish it in the dashboard first.")
-        data = load(CATALOG) or {}
-        data["checkout_url"] = attrs["buy_now_url"] + "?embed=1"
-        save(CATALOG, data, ensure_ascii=False, indent=1)
-        print(f"checkout set: {data['checkout_url']}\nNext: ./scripts/ship.sh (the shelf goes live on that ship)")
-        return 0
-    if a.cmd == "set-checkout":
-        data = load(CATALOG) or {}
-        data["checkout_url"] = a.url
-        save(CATALOG, data, ensure_ascii=False, indent=1)
-        return 0
     return upload(a.base.rstrip("/"), a.only, a.direct, a.jobs)
 
 

@@ -420,7 +420,8 @@ test('status drops the zero part and the Writers heading follows writer matches'
   const author=doc(dom).querySelector('#works-list > li.author-entry').getAttribute('data-author');
   query(dom,author);await settle();await settle();
   assert.equal(doc(dom).querySelector('#writers-h').hidden,false);
-  query(dom,'zzzznonexistent');await settle();await settle();
+  // By meaning answers after a 600 ms pause (site.js): wait it out.
+  query(dom,'zzzznonexistent');await settle();await settle();await settle();
   assert.equal(doc(dom).querySelector('#writers-h').hidden,true);
   assert.equal(doc(dom).querySelector('#title-hits').hidden,true);
   assert.match(doc(dom).querySelector('#works-status').textContent,/^No works or passages match/);
@@ -498,6 +499,12 @@ test('ask: /ask/ page, home hero asks there, answer/thin/error states (owner 202
   dom=await open('grace',()=>({ok:false,status:502,json:async()=>({error:'x'})}));
   d=dom.window.document;
   assert.ok(d.querySelector('.ask-error a[href="/works/?q=grace"]'),'API down: fall back to the library search');
+  assert.doesNotMatch(d.querySelector('.ask-note').textContent,/paused/);
+  dom.window.close();
+  dom=await open('grace',()=>({ok:false,status:503,json:async()=>({error:'Search by meaning is paused',paused:true})}));
+  d=dom.window.document;
+  assert.match(d.querySelector('.ask-note').textContent,/Ask is paused for now/,'AI_OFF: says paused, not broken');
+  assert.ok(d.querySelector('.ask-error a[href="/works/?q=grace"]'),'paused: still links the library search');
   dom.window.close();
 });
 
