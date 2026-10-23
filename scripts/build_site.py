@@ -516,6 +516,7 @@ _BIBLE_BOOKS: tuple[tuple[str, str], ...] = (
     ("Ex", "Exodus"),
 )
 _BIBLE_CANON = {alias.lower(): canon for alias, canon in _BIBLE_BOOKS}
+_FULL_BOOK_NAMES = {canon.lower() for _alias, canon in _BIBLE_BOOKS} | {"psalms", "song of songs"}
 _SCRIPTURE_RE = re.compile(
     r"(?<![A-Za-z])"
     r"(?P<book>"
@@ -796,6 +797,13 @@ def _scripture_matches(text: str) -> list[tuple[int, int, str, str]]:
         if any(not (end <= left or start >= right) for left, right in occupied):
             continue
         book = re.sub(r"\s+", " ", match.group("book")).strip()
+        # A full book name with a full stop and no chapter:verse colon ends a
+        # sentence: "3. James. 4." (a list of apostles) and "psalms. 1.30" (a
+        # section mark) are not James 4 or Psalm 1:30 (2026-10-23). "Ps. 22:1",
+        # "Matt. 5:3" and the old style "Job. 19:30" stay.
+        if (book.endswith(".") and ":" not in match.group("verse")
+                and book.rstrip(".").strip().lower() in _FULL_BOOK_NAMES):
+            continue
         verse = re.sub(r"\s+", " ", match.group("verse")).strip()
         display = re.sub(r"\s+", " ", match.group(0)).strip()
         search_verse = verse.replace("–", "-").replace(".", ":")
