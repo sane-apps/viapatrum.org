@@ -169,6 +169,11 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.title_by("The Martyrdom of Justin", "Acts of the Martyrs", "acts-of-the-martyrs"),
                          "The Martyrdom of Justin (Acts of the Martyrs)")
         self.assertEqual(build_site.title_by("On Prayer", "Origen of Alexandria", "origen"), "On Prayer by Origen of Alexandria")
+        # The Diognetus author is "Letter to Diognetus"; the work is "The Epistle to Diognetus".
+        self.assertEqual(build_site.title_by("The Epistle to Diognetus", "Letter to Diognetus",
+                                             "mathetes-epistle-to-diognetus"), "The Epistle to Diognetus")
+        self.assertEqual(build_site.title_by("The Didache", "The Didache", "didache"), "The Didache")
+        self.assertIn(build_site.text_name_core("Letter to Diognetus"), "epistle to diognetus 7")
 
     def test_fragment_titles_follow_the_house_rule(self):
         for slug in ("cyril-solutiones-vat-447", "dionysius-corinth-fragments"):

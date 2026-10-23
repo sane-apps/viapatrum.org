@@ -1286,12 +1286,19 @@ TEXT_AUTHOR_SLUGS = frozenset({
 })
 
 
+def text_name_core(name: str) -> str:
+    """The part of a text's name that its titles and cites share:
+    "Letter to Diognetus" and "The Epistle to Diognetus" both give "diognetus"."""
+    core = str(name or "").casefold().strip().removeprefix("the ")
+    return re.sub(r"^(letter|epistle) to ", "", core)
+
+
 def title_by(title: str, author: str, author_slug: str) -> str:
     """'<title> by <writer>' for page titles. A text or a church is not a
     writer: "The Martyrdom of Justin by Acts of the Martyrs" (2026-10-14 audit)
     becomes "The Martyrdom of Justin (Acts of the Martyrs)"."""
     if author_slug in TEXT_AUTHOR_SLUGS:
-        return title if author.casefold().removeprefix("the ") in title.casefold() else f"{title} ({author})"
+        return title if text_name_core(author) in title.casefold() else f"{title} ({author})"
     return f"{title} by {author}"
 # Excerpt rows often carry the display name and no slug.
 TEXT_AUTHOR_NAMES = frozenset({
@@ -9820,6 +9827,13 @@ def build() -> None:
             )
             e_cite = excerpt_cite(x)
             e_author = display_author(x.get("author") or "")
+            # A text as author whose cite already names it: "Epistle to
+            # Diognetus 7", not "Letter to Diognetus, Epistle to Diognetus 7".
+            e_text_named = (
+                e_author.casefold() in TEXT_AUTHOR_NAMES
+                and text_name_core(e_author) in e_cite.casefold()
+            )
+            e_lead = e_cite if e_text_named else f"{e_author}, {e_cite}"
             e_dates = author_dates_display(x.get("author") or "") or format_bc_ad(x.get("period") or "")
             e_older = (
                 '<p class="meta older-source">English from the <em>Ante-Nicene Fathers</em> '
@@ -9849,7 +9863,7 @@ def build() -> None:
             ebody = f"""
 <article class="excerpt-page">
   <p class="eyebrow"><a href="/topics/{escape(tid)}/">{escape(meta['title'])}</a></p>
-  <h1>{escape(e_author)}, {escape(e_cite)}</h1>
+  <h1>{escape(e_lead)}</h1>
   <p class="meta"><a href="/authors/{escape(author_hub_slug(x.get('author')))}/">{escape(e_author)}</a> · {escape(e_dates)}</p>
   {e_older}{e_reader}
   <div class="body">{paras}</div>
@@ -9860,7 +9874,7 @@ def build() -> None:
             write(
                 DIST / "e" / x["id"] / "index.html",
                 layout(
-                    f"{e_author} on {meta['title']}: {e_cite}",
+                    f"{e_cite} on {meta['title']}" if e_text_named else f"{e_author} on {meta['title']}: {e_cite}",
                     ebody,
                     crumb=[
                         ("Home", "/"),
@@ -9877,7 +9891,7 @@ def build() -> None:
                     canonical=x.get("_cite_href") or (f"/e/{excerpt_primary[x['id']]}/" if x["id"] in excerpt_primary else ""),
                     jsonld=[{
                         "@type": "Quotation",
-                        "name": f"{e_author}, {e_cite}",
+                        "name": e_lead,
                         "text": meta_description(" ".join(paras_list), 300),
                         "creator": {"@type": author_schema_type(None, x.get("author")), "name": e_author,
                                     "url": f"{SITE_ORIGIN}/authors/{author_hub_slug(x.get('author'))}/"},
