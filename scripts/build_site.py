@@ -11710,6 +11710,10 @@ def build() -> None:
         # 2026-10-18, withheld second copy): send it to the shown copy.
         "/works/diodorus-fragmenta/ /works/dionysius-corinth-fragments/ 301\n"
         "/works/diodorus-fragmenta/* /works/dionysius-corinth-fragments/ 301\n"
+        # The held second translation of the Lamentations fragments, listed
+        # publicly under the Latin spelling until 2026-10: send it to the shown copy.
+        "/works/origen-lamentationes-fragments/ /works/origen-lamentations-fragments/ 301\n"
+        "/works/origen-lamentationes-fragments/* /works/origen-lamentations-fragments/ 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))
