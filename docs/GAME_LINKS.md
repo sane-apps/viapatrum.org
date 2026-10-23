@@ -18,7 +18,7 @@ people can see and play it. Any redesign must keep both entry points:
 ```html
 <section class="play-promo">
   <h2>Play</h2>
-  <p><strong>Fragment of the Day:</strong> restore one torn line from the Fathers each day, in our own new English. <strong>Ten Leopards:</strong> it is AD 110, and you carry Ignatius's letters past the guards on his road to Rome.</p>
+  <p><strong>Fragment of the Day:</strong> restore one torn line from the Fathers each day, in our own fresh English. <strong>Ten Leopards:</strong> it is AD 110, and you carry Ignatius's letters past the guards on his road to Rome.</p>
   <div class="hero-actions">
     <a class="btn primary" href="https://play.viapatrum.org/daily">Today's fragment</a>
     <a class="btn" href="https://play.viapatrum.org/leopards">Play Ten Leopards</a>

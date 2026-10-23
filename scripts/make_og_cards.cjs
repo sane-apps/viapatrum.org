@@ -79,16 +79,16 @@ const looksLikeDate = s => /\b(AD|BC)\b|\bfl\.|\bc\.\s*\d|\d{3,4}/.test(s || '')
 function sectionCards() {
   const verse = '“Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.”';
   const S = [
-    ['home', ['/'], 'Free for the whole world', 'Read the early Church in its own words', verse, 'Jeremiah 6:16'],
+    ['home', ['/'], 'Free for the whole world', 'The way of the Fathers', verse, 'Jeremiah 6:16'],
     ['topics', ['/topics/'], 'Topics', 'What did the early Church teach?', 'Each topic in the writers’ own words, with the passages to read.'],
     ['authors', ['/authors/'], 'Fathers', 'The writers, in order', 'Every writer in the library, earliest first, with dates and works.'],
-    ['works', ['/works/'], 'Works', 'All works', 'Whole works in faithful modern English, to read straight through.'],
+    ['works', ['/works/'], 'Works', 'All works', 'Whole works in fresh English, to read straight through.'],
     ['explore', ['/explore/'], 'Timeline', 'How the answers line up over time', 'What each early writer taught, claim by claim, century by century.'],
-    ['about', ['/about/'], 'About', 'About Via Patrum', 'A free library of early Christian writing in faithful modern English.'],
+    ['about', ['/about/'], 'About', 'About Via Patrum', 'The way of the Church Fathers, in fresh English translations.'],
     ['methodology', ['/methodology/'], 'For scholars', 'How we translate', 'Sources, two passes, and what stays off the reading page.'],
     ['help', ['/contribute/', '/help/'], 'Help translate', 'Help us', 'Donate, correct a passage, sponsor a book, or spread the word.'],
     ['scripture', ['/scripture/'], 'Scripture', 'The Bible, through the Fathers’ eyes', 'Every book and chapter, with each Father who comments on it.'],
-    ['listen', ['/listen/'], 'Listen', 'Hear the Fathers read aloud', 'Read-along audio in new English.'],
+    ['listen', ['/listen/'], 'Listen', 'Hear the Fathers read aloud', 'Read-along audio in fresh English.'],
     ['games', ['/games/'], 'Games', 'Play with the Fathers', 'A daily fragment puzzle, and Ten Leopards: carry Ignatius’s letters on his road to Rome.'],
     ['downloads', ['/downloads/'], 'The library, to keep', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. One payment; reading on the site stays free.'],
     ['ask', ['/ask/'], 'Ask', 'Ask the Fathers', 'Ask a question. Read the early writers’ own sentences, each linked to its passage.'],
@@ -321,14 +321,14 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-k
 <span style="font:700 20px 'Source Sans 3'">Aa</span><span style="font:600 20px 'Source Sans 3'">Aa</span></div>
 <script>
 const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const MOTTO = 'Read the early Church in its own words.';
+const MOTTO = 'The way of the Fathers, in their own words.';
 const LIMITS = { section: [100, 56], question: [72, 44], work: [96, 50], author: [104, 56], topic: [84, 46] };
 window.renderCard = async function (c) {
   const $ = s => document.querySelector(s);
   $('.head').textContent = c.eyebrow || '';
   const letter = (c.title || '').replace(/^[^A-Za-z]+/, '').charAt(0).toUpperCase();
   $('.initial').textContent = letter;
-  $('.motto').textContent = c.home ? 'Every Father, every work, in faithful modern English.' : MOTTO;
+  $('.motto').textContent = c.home ? 'Every Father, every work, in fresh English.' : MOTTO;
   let h = '<h1 class="title">' + esc(c.title) + '</h1>';
   if (c.kind === 'section' || c.kind === 'question') {
     if (c.line) h += '<div class="bar"></div><p class="line' + (c.home ? ' verse' : '') + ' fitq">' + esc(c.line) +

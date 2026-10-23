@@ -286,7 +286,7 @@ YOUTUBE_BADGE = (f'<a class="yt-badge" href="{YOUTUBE_URL}" rel="noopener" aria-
                  '<svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">'
                  '<rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>'
                  '<span>YouTube</span></a>')
-SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
+SITE_TAG = "The way of the Church Fathers, in their own words. Fresh English translations, free to read and hear."
 BASE = ""
 
 # Work ↔ topic cross-refs (topic ids from ante-nicene-topics/topics.yml).
@@ -2778,7 +2778,7 @@ ORIGINAL_ENGLISH_TITLE = (
 )
 ORIGINAL_ENGLISH_GLOSS = "No previous English translation."
 ORIGINAL_ENGLISH_INTRO = (
-    "These are original English translations: new English of works that had no "
+    "These are first English translations: fresh English of works that had no "
     "previous English translation."
 )
 # Hard deny-list: prior complete English exists. Meta cannot override.
@@ -3972,7 +3972,7 @@ def load_origen_works() -> list[dict]:
             text_history={
                 "method": (
                     "English follows Paul Koetschau, Origenes Werke II (GCS, 1899). "
-                    "Where orat_* OET tip slices are present, those sections use that new English "
+                    "Where orat_* OET tip slices are present, those sections use that fresh English "
                     "from the Greek (Pass A≠B). Archive OCR of GCS was checked elsewhere."
                 ),
                 "witnesses": [
@@ -6357,7 +6357,7 @@ def layout(
         "contribute": "help",
         "about": "about",
     }.get(active, "home")
-    full_title = f"{SITE_NAME} · The early Church in its own words" if title == "Home" else f"{title} · {SITE_NAME}"
+    full_title = f"{SITE_NAME} · The way of the Church Fathers" if title == "Home" else f"{title} · {SITE_NAME}"
     desc = meta_description(description)
     img = f"{SITE_ORIGIN}/assets/og/{card}.png"
     share_url = f"{SITE_ORIGIN}/__ROUTE__"
@@ -6437,7 +6437,7 @@ def layout(
   <div class="footer-inner">
     <div>
       <p class="footer-mark">Via <span>Patrum</span></p>
-      <p>The early Church in its own words, in faithful modern English. Free for the whole world.</p>
+      <p>The way of the Church Fathers, in their own words, in fresh English translations. Free for the whole world.</p>
     </div>
     <nav aria-label="Read">
       <h2>Read</h2>
@@ -6454,7 +6454,7 @@ def layout(
       {APP_BADGE}
     </nav>
   </div>
-  <p class="footer-fine">New English from the Greek and Latin, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
+  <p class="footer-fine">Fresh English translations from the Greek and Latin, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
 </footer>
 <script src="/assets/site.js?v={ASSET_VER}" defer></script>
 {extra_js}</body>
@@ -7945,7 +7945,7 @@ def person_page_meta(slug: str, name: str, *, works: int, passages: int) -> tupl
         bits.append(f"{works} work{'s' if works != 1 else ''} to read")
     if passages:
         bits.append(f"{passages} passage{'s' if passages != 1 else ''} by question")
-    desc = f"{shown}{', ' + dates if dates else ''}: {' and '.join(bits) or 'writings'} in new English, free. {bio}"
+    desc = f"{shown}{', ' + dates if dates else ''}: {' and '.join(bits) or 'writings'} in fresh English, free. {bio}"
     # These rows are works (Didache, the Passion, the chronicle), not writers.
     kind = author_schema_type(slug, name)
     person = {"@type": kind, "name": shown, "url": f"{SITE_ORIGIN}/authors/{slug}/"}
@@ -8702,7 +8702,7 @@ def build() -> None:
     (DIST / "site.webmanifest").write_text(json.dumps({
         "name": "Via Patrum",
         "short_name": "Via Patrum",
-        "description": "The early Church in its own words, in faithful modern English.",
+        "description": "The way of the Church Fathers, in their own words, in fresh English translations.",
         "start_url": "/",
         "display": "standalone",
         "background_color": "#f8f6f0",
@@ -9063,7 +9063,7 @@ def build() -> None:
             if not _excerpt_is_stanced(_x, _stanced):
                 continue
             if excerpt_is_anf(_x):
-                continue  # today's passage is always our own new English
+                continue  # today's passage is always our own fresh translation
             _lead = topic_lead_text(_x, keywords=topic_keywords(_meta))
             _words = len(_lead.split())
             if _words < 14 or _words > 70:
@@ -9102,7 +9102,7 @@ def build() -> None:
             f"</div>"
         )
 
-    # Start-here shelf: new English first, then works you can also hear.
+    # Start-here shelf: fresh translations first, then works you can also hear.
     # Hand-picked doors in first; then whole treatises a newcomer can finish.
     # Short classics a newcomer can finish, most with audio (2026-10-06 audit).
     SHELF_FIRST = [
@@ -9177,8 +9177,8 @@ def build() -> None:
     home = f"""
 <div class="vp-home">
 <section class="vp-hero">
-  <h1>Read the early Church in its own words</h1>
-  <p class="vp-sub">{len(works)} works in faithful modern English. Free to read and hear.</p>
+  <h1>The way of the Fathers</h1>
+  <p class="vp-sub">How the Church Fathers spoke, acted, argued, lived and died, in their own words. {len(works)} works in fresh English translations, free to read and hear.</p>
   <form class="vp-ask" action="/ask/" method="get" role="search">
     <input id="home-q" name="q" type="search" maxlength="300" aria-label="Ask what the Fathers said" placeholder="{escape(hint_first)}" data-hints="{escape(json.dumps(hints, ensure_ascii=False))}" autocomplete="off">
     <button type="submit">Ask</button>
@@ -9200,9 +9200,9 @@ def build() -> None:
 </section>
 
 <section class="vp-mission">
-  <h2>Via Patrum, the Way of the Fathers</h2>
+  <h2>Via Patrum, the way of the Fathers</h2>
   <p class="vp-verse">&ldquo;Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.&rdquo; Jeremiah 6:16</p>
-  <p>Two thousand years of Christian writing, most of it untranslated, out of print, or behind paywalls. We are putting all of it, every Father and every work, into faithful modern English and audio. Reading and listening here stay free for the whole world, forever.</p>
+  <p>Two thousand years of Christian writing, most of it untranslated, out of print, or behind paywalls. We are putting all of it, every Father and every work, into fresh English translations and audio, so anyone can learn how the Fathers spoke, acted, argued, lived and died. Reading and listening here stay free for the whole world, forever.</p>
 </section>
 </div>
 """
@@ -9230,7 +9230,7 @@ def build() -> None:
                     },
                 },
             ],
-            description=f"Read the early Church in its own words: {len(works)} works by the Fathers in faithful modern English, and more each week. Free to read and hear.",
+            description=f"The way of the Church Fathers: how they spoke, acted, argued, lived and died, in their own words. {len(works)} works in fresh English translations, and more each week. Free to read and hear.",
         ),
     )
 
@@ -9944,7 +9944,7 @@ def build() -> None:
                 f'<p class="banner first-english">'
                 f"<strong>{escape(ORIGINAL_ENGLISH_LABEL)}.</strong> {escape(detail)}</p>"
             )
-        intro_text = public_blurb(w.get("blurb") or "") or "New English, free to read. Open any section below."
+        intro_text = public_blurb(w.get("blurb") or "") or "Fresh English, free to read. Open any section below."
         blurb = f"<p class='intro'>{escape(intro_text)}</p>"
         has_greek = any(s.get("greek") for s in w["sections"])
         has_latin = any(s.get("latin") for s in w["sections"])
@@ -9991,7 +9991,7 @@ def build() -> None:
         work_ld = {k: v for k, v in work_ld.items() if v is not None}
         work_desc = (
             public_blurb(w.get("blurb") or "")
-            or f"Read {title_by(pub_title, w_author, canonical_author_slug(w.get('author_slug'), w.get('author')))} in new English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
+            or f"Read {title_by(pub_title, w_author, canonical_author_slug(w.get('author_slug'), w.get('author')))} in fresh English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
         )
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
         edition_short = scrub_worksheet_note(edition_short)
@@ -10601,7 +10601,7 @@ def build() -> None:
                 crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), "")],
                 active="scripture",
                 description=(
-                    f"What the early Church Fathers said about {book_name(book)}: {plural(b['refs'], 'passage')} by {plural(len(b['writers']), 'writer')}, chapter by chapter, in new English."
+                    f"What the early Church Fathers said about {book_name(book)}: {plural(b['refs'], 'passage')} by {plural(len(b['writers']), 'writer')}, chapter by chapter, in fresh English."
                     if b["refs"] else f"Read {book_name(book)} with the early Church Fathers beside it."
                 ),
                 og_image="scripture",
@@ -10731,12 +10731,12 @@ def build() -> None:
 </aside>
 </div>
 {nav}
-<p class="intro fine bx-credit">Bible text: {tr_credit}. Fathers' passages are our new English; the snippets show the sentence around each citation.</p>
+<p class="intro fine bx-credit">Bible text: {tr_credit}. Fathers' passages are our fresh translations; the snippets show the sentence around each citation.</p>
 </div>""",
                     crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), f"/scripture/{bslug}/"), (f"Chapter {c}", "")],
                     active="scripture",
                     description=(
-                        f"{ref_name(book)} {c} with the early Church Fathers beside it: {plural(len(rows), 'passage')} by {plural(len(writers), 'writer')}, verse by verse, in new English."
+                        f"{ref_name(book)} {c} with the early Church Fathers beside it: {plural(len(rows), 'passage')} by {plural(len(writers), 'writer')}, verse by verse, in fresh English."
                         if rows else f"Read {ref_name(book)} {c} in the Berean Standard Bible, with the early Church Fathers beside it."
                     ),
                     og_image="scripture",
@@ -10783,7 +10783,7 @@ def build() -> None:
 <p class="intro fine">References are found in the English of each passage. Many Fathers number the Psalms the old Greek way (their Psalm 21 is our Psalm 22); a Psalm reference is filed under our numbering when its words clearly match that psalm.</p>""",
             crumb=[("Home", "/"), ("Scripture", "")],
             active="scripture",
-            description=f"Every book of the Bible as the early Church Fathers read it: {sc_total:,} references across {len(sc_books)} books, chapter by chapter, in new English.",
+            description=f"Every book of the Bible as the early Church Fathers read it: {sc_total:,} references across {len(sc_books)} books, chapter by chapter, in fresh English.",
             og_image="scripture",
         ),
     )
@@ -10815,11 +10815,11 @@ def build() -> None:
             "Listen to the Church Fathers: free audio in modern English",
             f"""<p class="eyebrow">Listen</p>
 <h1>Hear the Fathers read aloud</h1>
-<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{f' To keep them, {LIBRARY.audio_count()} of these are free audiobooks on the <a href="/downloads/">downloads page</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
+<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our fresh English translations.{f' To keep them, {LIBRARY.audio_count()} of these are free audiobooks on the <a href="/downloads/">downloads page</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
 <div class="ls-groups">{''.join(listen_groups)}</div>""",
             crumb=[("Home", "/"), ("Listen", "")],
             active="listen",
-            description=f"{n_listen} early Christian works with read-along audio in new English: press Play and the text follows the voice.",
+            description=f"{n_listen} early Christian works with read-along audio in fresh English: press Play and the text follows the voice.",
             og_image="listen",
         ),
     )
@@ -11199,7 +11199,7 @@ def build() -> None:
             "About",
             f"""<p class="eyebrow">About</p>
             <h1>About Via Patrum</h1>
-            <p class="lede">Via Patrum means “the way of the Fathers.” It is a free library of early Christian writing in faithful modern English, for anyone who wants to read the early Church in its own words.</p>
+            <p class="lede">Via Patrum means “the way of the Fathers”: how the Church Fathers spoke, acted, argued, lived and died. It is a free library of their writing in fresh English translations from the Greek and Latin, for anyone who wants to read the early Church in its own words.</p>
             <h2>What is here</h2>
             <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Timeline</strong> shows where writers agree and where a later turn comes.</p>
             {'''<h2>Books to keep</h2>
@@ -11208,7 +11208,7 @@ def build() -> None:
             <p>The same English is also in Word files for Logos Bible Software. Each book has a cover and a description. Download every part from the <a href="/logos/">Personal Books</a> page, then add the file in Logos yourself.</p>''' if logos_pack_manifest() and not logos_retired() else ''}
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
             <h2>How the English is made</h2>
-            <p>The English is new, translated from the Greek and Latin with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
+            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
             <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
             <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/topics/free-will/#over-time">free will over time</a>.</p>
@@ -11216,7 +11216,7 @@ def build() -> None:
             <p>Want to help finish a text? See <a href="/contribute/">Help us</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
             crumb=[("Home", "/"), ("About", "")],
             active="about",
-            description="Via Patrum is a free library of early Christian writing in faithful modern English: topics, Fathers, whole works, and how they line up over time.",
+            description="Via Patrum is a free library of the Church Fathers in fresh English translations: how they spoke, acted, argued, lived and died. Topics, Fathers, whole works, and how they line up over time.",
         ),
     )
 
@@ -11270,7 +11270,7 @@ def build() -> None:
             <p>Each work names the printed edition its English follows, under <strong>About this text</strong>, and lists any other prints it was checked against. Where a stretch is missing from that edition and taken from another, the page says so. We do not call the result a manuscript, and we do not claim a combination that was not made.</p>
 
             <h2>Passages under Topics</h2>
-            <p>Some short passages under Topics still use English from the public-domain <em>Ante-Nicene Fathers</em> (1885–1896). Those pages say so. Where the same chapter is in a whole work here, the passage shows the new English and links to the work.</p>
+            <p>Some short passages under Topics still use English from the public-domain <em>Ante-Nicene Fathers</em> (1885–1896). Those pages say so. Where the same chapter is in a whole work here, the passage shows our fresh translation and links to the work.</p>
 
             <h2>Original English Translation</h2>
             <p>The badge <strong title="{escape(ORIGINAL_ENGLISH_TITLE)}">{escape(ORIGINAL_ENGLISH_LABEL)}</strong> means no complete English translation of the work existed before ours. It does not mean “this page is in English.”</p>
