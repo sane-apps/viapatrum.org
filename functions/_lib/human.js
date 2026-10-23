@@ -4,7 +4,11 @@
  * person once; /api/human checks its token with Cloudflare and sets a signed
  * cookie that lets /dl/ serve files for HUMAN_TTL_S. No accounts, no database.
  *
- *   vph = <expiry seconds> "." base64url(HMAC-SHA256(TURNSTILE_SECRET, "vp-dl-v1|" + expiry))
+ *   vph = <expiry seconds> "." base64url(HMAC-SHA256(K, "vp-dl-v2|" + expiry + "|" + net))
+ *   K   = SHA-256("vp-dl-cookie|" + TURNSTILE_SECRET), a key of its own
+ *   net = the reader's network: IPv4 /24 or IPv6 /48 (cf-connecting-ip). A
+ *         cookie copied to other machines elsewhere stops working; a phone
+ *         that changes networks sees the box again.
  *
  * vph_ok=1 rides alongside, readable by page script, so the shelf knows it
  * can skip the box. It proves nothing: /dl/ only trusts vph.
@@ -22,9 +26,24 @@ const HOSTS = new Set(["viapatrum.org", "fathers-site.pages.dev"]);
 const enc = new TextEncoder();
 const b64u = (bytes) => btoa(String.fromCharCode(...new Uint8Array(bytes))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
 
-async function mac(secret, exp) {
-  const key = await crypto.subtle.importKey("raw", enc.encode(secret), { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
-  return b64u(await crypto.subtle.sign("HMAC", key, enc.encode(`vp-dl-v1|${exp}`)));
+async function mac(secret, exp, net) {
+  const raw = await crypto.subtle.digest("SHA-256", enc.encode(`vp-dl-cookie|${secret}`));
+  const key = await crypto.subtle.importKey("raw", raw, { name: "HMAC", hash: "SHA-256" }, false, ["sign"]);
+  return b64u(await crypto.subtle.sign("HMAC", key, enc.encode(`vp-dl-v2|${exp}|${net}`)));
+}
+
+/** The reader's network prefix: IPv4 /24, IPv6 /48, "" when unknown. */
+export function network(request) {
+  const ip = (request.headers.get("cf-connecting-ip") || "").trim().toLowerCase();
+  if (/^\d+\.\d+\.\d+\.\d+$/.test(ip)) return ip.split(".").slice(0, 3).join(".");
+  if (ip.includes(":")) {
+    const [head, tail = ""] = ip.split("::");
+    const left = head ? head.split(":") : [];
+    const right = tail ? tail.split(":") : [];
+    const full = ip.includes("::") ? [...left, ...Array(8 - left.length - right.length).fill("0"), ...right] : left;
+    return full.slice(0, 3).map((h) => h.replace(/^0+(?=.)/, "")).join(":");
+  }
+  return "";
 }
 
 export const checkOn = (env) => Boolean(env && env.TURNSTILE_SECRET);
@@ -44,7 +63,7 @@ export async function isHuman(env, request, now = Date.now()) {
   const [exp, sig] = cookie(request, COOKIE).split(".");
   const n = Number(exp);
   if (!sig || !Number.isInteger(n) || n * 1000 <= now || n * 1000 > now + HUMAN_TTL_S * 1000 + 60_000) return false;
-  const want = await mac(env.TURNSTILE_SECRET, n);
+  const want = await mac(env.TURNSTILE_SECRET, n, network(request));
   if (want.length !== sig.length) return false;
   let diff = 0;
   for (let i = 0; i < want.length; i++) diff |= want.charCodeAt(i) ^ sig.charCodeAt(i);
@@ -52,9 +71,9 @@ export async function isHuman(env, request, now = Date.now()) {
 }
 
 /** Set-Cookie values for a person who just passed the box. */
-export async function humanCookies(env, now = Date.now()) {
+export async function humanCookies(env, request, now = Date.now()) {
   const exp = Math.floor(now / 1000) + HUMAN_TTL_S;
-  const sig = await mac(env.TURNSTILE_SECRET, exp);
+  const sig = await mac(env.TURNSTILE_SECRET, exp, network(request));
   const tail = `Path=/; Max-Age=${HUMAN_TTL_S}; Secure; SameSite=Lax`;
   return [`${COOKIE}=${exp}.${sig}; ${tail}; HttpOnly`, `vph_ok=1; ${tail}`];
 }

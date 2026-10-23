@@ -3,7 +3,7 @@
 // Run: node --test scripts/human_check.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { humanCookies, isHuman, HUMAN_TTL_S } from '../functions/_lib/human.js';
+import { humanCookies, isHuman, network, HUMAN_TTL_S } from '../functions/_lib/human.js';
 import { onRequestPost as human } from '../functions/api/human.js';
 import { onRequest as dl } from '../functions/dl/[[path]].js';
 
@@ -12,17 +12,20 @@ const SHELF = { 'epub/a.epub': 'A.epub' };
 
 const reply = (status, body) => new Response(JSON.stringify(body), { status });
 
-function dlContext(path, { cookie = '', method = 'GET', env = ENV } = {}) {
+const IP = '203.0.113.7';
+const at = (ip = IP) => new Request('https://viapatrum.org/', { headers: { 'cf-connecting-ip': ip } });
+
+function dlContext(path, { cookie = '', method = 'GET', env = ENV, ip = IP } = {}) {
   const body = new Uint8Array([1, 2, 3]);
   const object = { size: 3, body, httpEtag: '"e"', writeHttpMetadata: () => {} };
   return {
-    request: new Request(`https://viapatrum.org/dl/${path}`, { method, headers: cookie ? { cookie } : {} }),
+    request: new Request(`https://viapatrum.org/dl/${path}`, { method, headers: { 'cf-connecting-ip': ip, ...(cookie ? { cookie } : {}) } }),
     params: { path: path.split('/') },
     env: { ...env, ASSETS: { fetch: async () => reply(200, SHELF) }, LIBRARY: { get: async () => object, head: async () => object } },
   };
 }
 
-const vph = async (env = ENV, now = Date.now()) => (await humanCookies(env, now))[0].split(';')[0];
+const vph = async (env = ENV, now = Date.now(), ip = IP) => (await humanCookies(env, at(ip), now))[0].split(';')[0];
 
 test('dl: a GET without the cookie gets the Turnstile box, not the file', async () => {
   const r = await dl(dlContext('epub/a.epub'));
@@ -49,7 +52,7 @@ test('dl: files not on the shelf are still 404 before any check', async () => {
 });
 
 test('cookie: expired, forged, or signed with another secret is refused', async () => {
-  const req = (c) => new Request('https://viapatrum.org/dl/x', { headers: { cookie: c } });
+  const req = (c) => new Request('https://viapatrum.org/dl/x', { headers: { cookie: c, 'cf-connecting-ip': IP } });
   const old = await vph(ENV, Date.now() - (HUMAN_TTL_S + 5) * 1000);
   assert.equal(await isHuman(ENV, req(old)), false);
   const [exp] = (await vph()).slice(4).split('.');
@@ -58,6 +61,15 @@ test('cookie: expired, forged, or signed with another secret is refused', async 
   const far = Math.floor(Date.now() / 1000) + 30 * 24 * 3600; // a far-future expiry is refused even if signed
   assert.equal(await isHuman(ENV, req(`vph=${far}.x`)), false);
   assert.equal(await isHuman(ENV, req(await vph())), true);
+});
+
+test('cookie: a copy used from another network is refused; the same /24 is fine', async () => {
+  const c = await vph();
+  assert.equal((await dl(dlContext('epub/a.epub', { cookie: c, ip: '198.51.100.9' }))).status, 403);
+  assert.equal((await dl(dlContext('epub/a.epub', { cookie: c, ip: '203.0.113.200' }))).status, 200);
+  assert.equal(network(at('2001:db8:abcd:12::1')), '2001:db8:abcd');
+  assert.equal(network(at('2001:db8::1')), '2001:db8:0');
+  assert.equal(network(new Request('https://x/')), '');
 });
 
 test('cookie: with no TURNSTILE_SECRET the check is off and files serve', async () => {
@@ -71,7 +83,7 @@ test('/api/human: a good token sets the HttpOnly cookie; a bad one does not', as
     sent.push(init.body.get('response'));
     return reply(200, { success: init.body.get('response') === 'good', hostname: 'viapatrum.org' });
   };
-  const post = (token) => human({ request: new Request('https://viapatrum.org/api/human', { method: 'POST', body: JSON.stringify({ token }) }), env: ENV });
+  const post = (token) => human({ request: new Request('https://viapatrum.org/api/human', { method: 'POST', headers: { 'cf-connecting-ip': IP }, body: JSON.stringify({ token }) }), env: ENV });
   const ok = await post('good');
   assert.equal(ok.status, 200);
   const cookies = ok.headers.getSetCookie();

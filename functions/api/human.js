@@ -20,7 +20,7 @@ export async function onRequestPost({ request, env }) {
   }
   const ok = await verifyToken(env, token, request.headers.get("cf-connecting-ip"));
   if (!ok) return reply({ ok: false }, 403);
-  return reply({ ok: true }, 200, await humanCookies(env));
+  return reply({ ok: true }, 200, await humanCookies(env, request));
 }
 
 export const onRequest = () => new Response("Method not allowed", { status: 405, headers: { allow: "POST" } });
