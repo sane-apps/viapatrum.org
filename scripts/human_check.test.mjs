@@ -3,7 +3,8 @@
 // Run: node --test scripts/human_check.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { humanCookies, isHuman, network, HUMAN_TTL_S } from '../functions/_lib/human.js';
+import { readFileSync } from 'node:fs';
+import { humanCookies, isHuman, network, HUMAN_TTL_S, SITEKEY } from '../functions/_lib/human.js';
 import { onRequestPost as human } from '../functions/api/human.js';
 import { onRequest as dl } from '../functions/dl/[[path]].js';
 
@@ -99,4 +100,11 @@ test('/api/human: a pass for some other site is refused', async () => {
   globalThis.fetch = async () => reply(200, { success: true, hostname: 'evil.example' });
   const r = await human({ request: new Request('https://viapatrum.org/api/human', { method: 'POST', body: JSON.stringify({ token: 't' }) }), env: ENV });
   assert.equal(r.status, 403);
+});
+
+test('the page script uses the same Turnstile site key as the server', () => {
+  const page = readFileSync(new URL('../assets/human-check.js', import.meta.url), 'utf8');
+  const m = page.match(/SITEKEY = "([^"]+)"/);
+  assert.ok(m, 'assets/human-check.js names its SITEKEY');
+  assert.equal(m[1], SITEKEY);
 });

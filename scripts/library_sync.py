@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Library pass downloads: build the Word books, assemble the files, upload them.
+"""Library downloads: build the Word books, assemble the files, upload them.
 
-Owner 2026-10-05: one $50 payment unlocks every download (EPUB, PDF, Word for
-Logos, audiobooks); reading and listening on the site stay free. Files live in
-the private R2 bucket "viapatrum-downloads" and are served by functions/dl
-only to unlocked browsers. This script:
+Owner 2026-10-22: every download (EPUB, PDF, Word for Logos, audiobooks) is
+free, like reading and listening on the site. Files live in the private R2
+bucket "viapatrum-downloads" and functions/dl serves the ones the shelf lists
+(after the human check in functions/_lib/human.js). This script:
 
   word      one Word-for-Logos zip per work (docx + cover + description +
             README), built from the site build's app export and work pages,
@@ -19,7 +19,9 @@ only to unlocked browsers. This script:
             file passes the worksheet-note gate (WORKSHEET below); a file
             with a hit is left off the shelf and out of its bundle, and
             library.json "dirty" names it, while every other file is listed
-            and uploads. Also builds the audiobook era zips (AUDIO_ZIPS).
+            and uploads. Also builds the audiobook era zips (AUDIO_ZIPS);
+            with too little free disk it keeps the uploaded era zips and
+            still writes library.json.
   audio-zips  only the audiobook era zips, into the existing library.json
             (store-only, each at most 2 GB, not uploaded until upload runs;
             the page links a zip only once it is uploaded).
@@ -71,7 +73,6 @@ CATALOG = STATE / "library.json"
 LEDGER = STATE / "uploaded.json"  # R2 key -> sha256 of what is up there
 PART = int(os.environ.get("LIBRARY_PART_MB") or 50) * 1024 * 1024  # R2 parts must be >= 5 MB
 LOCK = OUT / ".sync.lock"
-PRICE_USD = 50
 
 
 def lock() -> None:
@@ -109,7 +110,7 @@ def save(path: Path, data, **kw) -> None:
 
 # --- assemble -----------------------------------------------------------
 
-# Translators' worksheet notes that must never reach a paid file (2026-10-06
+# Translators' worksheet notes that must never reach a download (2026-10-06
 # audit: 120 of 170 Word books from the old Logos packs carried them).
 # 2026-10-07 additions: editor instructions a fix wave wrote into the
 # English ("Add to translator_notes: ...", "Keep the English unchanged"),
@@ -132,7 +133,7 @@ def _markup_text(raw: bytes) -> str:
 
 
 def file_text(path: Path) -> str:
-    """Everything a buyer can read in one download file."""
+    """Everything a reader can read in one download file."""
     ext = path.suffix.lower()
     if ext == ".pdf":
         r = subprocess.run(["pdftotext", "-q", "-enc", "UTF-8", str(path), "-"], capture_output=True, timeout=600)
@@ -290,7 +291,7 @@ def word_build_one(job: dict) -> dict:
         desc = f"{author}{' (' + book['author_dates'] + ')' if book['author_dates'] else ''}, {title}."
         if book["intro"]:
             desc += " " + book["intro"][0]
-        desc += (" A new English translation from Via Patrum. Bible references are linked and open in Logos."
+        desc += (" A fresh English translation from Via Patrum. Bible references are linked and open in Logos."
                  f" The same English is free to read at {book['url']}")
         out = OUT / "word" / f"{slug}.zip"
         tmp = work_dir / f"{slug}.zip"
@@ -352,7 +353,7 @@ def word(app_dir: Path, only: str, jobs: int, force: bool, rekey: bool = False) 
             else:
                 man["works"].pop(r["slug"], None)
                 man["held"][r["slug"]] = r["why"]
-                (OUT / "word" / f"{r['slug']}.zip").unlink(missing_ok=True)  # never sell a stale build
+                (OUT / "word" / f"{r['slug']}.zip").unlink(missing_ok=True)  # never list a stale build
             if i % 25 == 0:
                 print(f"  {i}/{len(todo)}, {int(time.time() - started)}s", flush=True)
     man["generated"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
@@ -388,7 +389,7 @@ def word_zips(site: dict[str, dict]) -> dict[str, Path]:
     """slug -> Word zip, only for books the word step built and recorded from
     the English in this site build. The skip key starts with the catalogue
     hash of the text it was built from; a zip from older English is refused,
-    so it is never sold as current (2026-10-06 audit: Logos files still had
+    so it is never listed as current (2026-10-06 audit: Logos files still had
     the pre-recert wording)."""
     made = {}
     for slug, e in (load(WORD_MANIFEST).get("works") or {}).items():
@@ -407,7 +408,7 @@ def word_zips(site: dict[str, dict]) -> dict[str, Path]:
 
 
 def thumb(src: Path, slug: str) -> str:
-    """240x360 WebP cover for the download page (public; the cover is not paid)."""
+    """240x360 WebP cover for the download page."""
     dest = OUT / "thumbs" / f"{slug}.webp"
     dest.parent.mkdir(parents=True, exist_ok=True)
     if dest.is_file() and dest.stat().st_mtime >= src.stat().st_mtime:
@@ -487,10 +488,10 @@ def audio_zip_of(w: dict) -> str:
 
 
 def retained_row(prev: dict, slug: str, kind: str, ledger: dict) -> dict | None:
-    """The last catalogue row for this paid file, when R2 still holds that sha.
+    """The last catalogue row for this download, when R2 still holds that sha.
 
     Used only when the local file is gone. The row was hashed and gated
-    before that upload, so a later assemble can keep selling it."""
+    before that upload, so a later assemble can keep listing it."""
     for w in prev.get("works") or []:
         if w.get("slug") != slug:
             continue
@@ -546,8 +547,14 @@ def audio_bundles(works: list[dict], prev: dict | None = None, ledger: dict | No
         if groups[k] and (not out.is_file() or out.stat().st_size < total):
             need += total
     free = shutil.disk_usage(OUT).free
-    if need and free - need < FREE_MIN:
-        sys.exit(f"BLOCKED: {free / 1e9:.1f} GB free; the audiobook zips need {need / 1e9:.1f} GB and 15 GB must stay free")
+    # Too little disk: build no era zip this run and keep each uploaded one.
+    # Exiting here threw away the whole assemble, so library.json, the shelf
+    # and every new EPUB, PDF and Word file waited on 3 GB of audio zips
+    # (2026-10-20 to 10-23: 25 live works had no downloads).
+    low_disk = bool(need and free - need < FREE_MIN)
+    if low_disk:
+        print(f"  WARN {free / 1e9:.1f} GB free; the audiobook zips need {need / 1e9:.1f} GB and 15 GB must stay free."
+              " Keeping the uploaded era zips; free disk and rerun assemble to rebuild them.", flush=True)
     entries = []
     for i, (k, label, note) in enumerate(AUDIO_ZIPS, 1):
         name = f"via-patrum-audiobooks-{i}-{k}.zip"
@@ -556,13 +563,17 @@ def audio_bundles(works: list[dict], prev: dict | None = None, ledger: dict | No
         zip_path = OUT / "bundles" / name
         # R2 already has this zip. Keep that row when members are gone, when
         # the local zip is gone, or when the local zip still matches. Rebuilding
-        # would change the sha and the next upload would replace the paid file.
+        # would change the sha and the next upload would replace the uploaded file.
         current = kept is not None and kept.get("count") == len(groups[k]) + len(remote[k])
         if kept and (remote[k] or (current and (not zip_path.is_file() or ledger.get(key) == sha256(zip_path)))):
             entries.append(kept)
             continue
         if remote[k]:
             print(f"  {name}: local audiobooks missing and the uploaded zip is not in the ledger; left off this build", flush=True)
+            continue
+        if low_disk:
+            if kept:
+                entries.append(kept)
             continue
         p = bundle(name, sorted(groups[k], key=lambda x: x[1]))
         if p:
@@ -605,7 +616,7 @@ def site_catalog(app_dir: Path) -> dict[str, dict]:
     reach the shelf (2026-10-06 review).
 
     No catalogue means no sync: with nothing to filter by, a withheld or
-    retired work could go on sale (2026-10-06 audit)."""
+    retired work could reach the shelf (2026-10-06 audit)."""
     cat = load(app_dir / "catalog.json")
     if not cat.get("works"):
         sys.exit(f"BLOCKED: no site catalogue at {app_dir}/catalog.json (build the site, then pass --app-dir)")
@@ -617,7 +628,7 @@ def site_catalog(app_dir: Path) -> dict[str, dict]:
             for w in cat["works"]}
 
 
-# Published on the site but not sold until an editor fixes them.
+# Published on the site but kept off the shelf until an editor fixes them.
 HOLD = {
     "placeus-de-imputatione": "section titles still use worksheet shorthand (GAR/PLAC, 'tip'); needs an editorial pass",
 }
@@ -636,14 +647,14 @@ def assemble(app_dir: Path) -> int:
     audio_man = load(OUT / "manifest-audio.json")
     audio = audio_man.get("works") or {}
     audio_failed = audio_man.get("failed") or {}
-    # Owner 2026-10-06: an audiobook whose page text moved on stays on sale.
+    # Owner 2026-10-06: an audiobook whose page text moved on stays on the shelf.
     # The shelf says so (decided 2026-10-07) instead of implying it matches.
     audio_older = set(audio_man.get("text_mismatch") or {})
     words = word_zips(site)
     prev = load(CATALOG)
     uploaded = load(LEDGER)
     # Word-only books are listed from the zip on disk. Once that zip is gone,
-    # the slug has to come from the last catalogue or the paid file drops off.
+    # the slug has to come from the last catalogue or the download drops off.
     remote_slugs = set()
     for w in prev.get("works") or []:
         slug = w.get("slug") or ""
@@ -656,7 +667,7 @@ def assemble(app_dir: Path) -> int:
     works, refused = [], []
     for slug in sorted(set(books) | set(audio) | set(words) | remote_slugs):
         if slug not in site:
-            continue  # not published on the site (withheld or retired): never sell it
+            continue  # not published on the site (withheld or retired): never list it
         if slug in HOLD:
             print(f"  held from the shelf: {slug}: {HOLD[slug]}", flush=True)
             continue
@@ -668,7 +679,7 @@ def assemble(app_dir: Path) -> int:
         f = {}
         # EPUB and PDF only when built from this site build's English (the
         # manifest keeps the catalogue hash it was built from) and the file on
-        # disk is the one build_ebooks recorded (2026-10-06 audit: seven paid
+        # disk is the one build_ebooks recorded (2026-10-06 audit: seven
         # books were an older English than the site).
         for kind, ext in (("epub", "epub"), ("pdf", "pdf")):
             p = OUT / kind / f"{slug}.{ext}"
@@ -771,8 +782,7 @@ def assemble(app_dir: Path) -> int:
     for item in [x for w in works for x in w["files"].values()] + bundles:
         item["uploaded"] = bool(item.get("sha256") and uploaded.get(item["key"]) == item["sha256"])
     hours = sum((w["files"].get("audio") or {}).get("duration_s", 0) for w in works) / 3600
-    data = {"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "price_usd": PRICE_USD,
-            "checkout_url": prev.get("checkout_url", ""), "dirty": dirty,
+    data = {"generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "dirty": dirty,
             "counts": {"books": len(works), **{k: sum(1 for w in works if k in w["files"]) for k in ("epub", "pdf", "word", "audio")},
                        "audio_hours": round(hours)},
             "bundles": bundles, "works": works}
@@ -955,10 +965,6 @@ def main() -> int:
     u.add_argument("--only", default="", help="comma list of kinds: epub,pdf,word,audio,bundles")
     u.add_argument("--jobs", type=int, default=6, help="parallel uploads (default 6)")
     u.add_argument("--direct", action="store_true", help="PUT straight to R2 with the REST API (files up to 280 MB); no deployed site needed")
-    c = sub.add_parser("set-checkout", help="test catalogues only (LIBRARY_STATE); production uses go-live")
-    c.add_argument("url")
-    g = sub.add_parser("go-live", help="check the Lemon Squeezy product is published, then set its checkout link")
-    g.add_argument("--product", default="1367367")
     a = ap.parse_args()
     if a.cmd == "gate":
         bad = {p: gate_hits(file_text(Path(p))) for p in a.paths}
@@ -967,10 +973,6 @@ def main() -> int:
             print(f"{p}: {len(h)} hit(s), e.g. {h[0]!r}")
         print(f"gate: {len(bad)} of {len(a.paths)} files with worksheet notes", flush=True)
         return 1 if bad else 0
-    if a.cmd == "set-checkout" and STATE == OUT:
-        # Production gets its link only from go-live, which first checks the
-        # Lemon Squeezy product is published (2026-10-06 review).
-        sys.exit("BLOCKED: set-checkout is for LIBRARY_STATE test catalogues; use go-live for production")
     lock()
     if a.cmd in ("assemble", "word", "audio-zips"):
         app_dir = Path(a.app_dir).resolve()
@@ -983,25 +985,6 @@ def main() -> int:
         if a.cmd == "audio-zips":
             return audio_zips(app_dir)
         return assemble(app_dir)
-    if a.cmd == "go-live":
-        key = os.environ.get("LEMONSQUEEZY_API_KEY", "")
-        if not key:
-            sys.exit("BLOCKED: no LEMONSQUEEZY_API_KEY (source ~/.config/nv/env)")
-        req = urllib.request.Request(f"https://api.lemonsqueezy.com/v1/products/{a.product}",
-                                     headers={"Accept": "application/vnd.api+json", "Authorization": f"Bearer {key}"})
-        attrs = json.load(urllib.request.urlopen(req, timeout=30))["data"]["attributes"]
-        if attrs.get("status") != "published":
-            sys.exit(f"NOT LIVE: Lemon Squeezy product {a.product} is '{attrs.get('status')}'. Publish it in the dashboard first.")
-        data = load(CATALOG) or {}
-        data["checkout_url"] = attrs["buy_now_url"] + "?embed=1"
-        save(CATALOG, data, ensure_ascii=False, indent=1)
-        print(f"checkout set: {data['checkout_url']}\nNext: ./scripts/ship.sh (the shelf goes live on that ship)")
-        return 0
-    if a.cmd == "set-checkout":
-        data = load(CATALOG) or {}
-        data["checkout_url"] = a.url
-        save(CATALOG, data, ensure_ascii=False, indent=1)
-        return 0
     return upload(a.base.rstrip("/"), a.only, a.direct, a.jobs)
 
 

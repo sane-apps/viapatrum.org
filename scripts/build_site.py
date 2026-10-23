@@ -11248,7 +11248,7 @@ def build() -> None:
               <li class="help-option" id="library-pass">
                 <p class="n">2</p>
                 <h2>Download the library</h2>
-                <p>Every book{' and audiobook' if LIBRARY.has_audio() else ''} to keep, free. Share the files with anyone who would read them.</p>
+                <p>The books{' and audiobooks' if LIBRARY.has_audio() else ''}, yours to keep, free. Share the files with anyone who would read them.</p>
                 <p><a class="btn" href="/downloads/">Go to the shelf</a></p>
               </li>""" if LIBRARY else "")
     write(

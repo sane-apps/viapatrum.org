@@ -803,7 +803,7 @@ class AudiobookKeptOnSaleTests(unittest.TestCase):
             self.assertNotIn("old-voice", data["skipped"])
             self.assertEqual(data["text_mismatch"]["old-voice"]["sections_matching_now"], 0)
             self.assertIn("never-built", data["skipped"])
-            self.assertIn("text moved on, kept on sale: old-voice", buf.getvalue())
+            self.assertIn("text moved on, kept on the shelf: old-voice", buf.getvalue())
 
 
 if __name__ == "__main__":

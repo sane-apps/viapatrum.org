@@ -40,7 +40,6 @@ ICONS = {
     "pdf": '<path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/><path d="M10 12h5M10 15h5M10 18h3"/>',
     "word": '<path d="M4 6l8-3 8 3v12l-8 3-8-3z"/><path d="M8 9l1.5 6L12 10l2.5 5L16 9"/>',
     "audio": '<path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/>',
-    "lock": '<rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
     "down": '<path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/>',
 }
 
@@ -48,6 +47,15 @@ ICONS = {
 def icon(name: str, cls: str = "dl-ic") -> str:
     return (f'<svg class="{cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" '
             f'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{ICONS[name]}</svg>')
+
+
+# The shelf's down arrow is drawn once and reused by every file link: inline
+# copies were about 300 KB of the page, and a hidden padlock beside each one
+# (from the retired pass) another 320 KB (2026-10-23 review).
+ARROW_SPRITE = ('<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">'
+                '<symbol id="dl-dn" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" '
+                f'stroke-linecap="round" stroke-linejoin="round">{ICONS["down"]}</g></symbol></svg>')
+ARROW = '<svg class="dl-dn" aria-hidden="true" focusable="false"><use href="#dl-dn"/></svg>'
 
 
 def size(n: int) -> str:
@@ -99,8 +107,8 @@ OLDER_TEXT = "narrated from an earlier wording; the text on the site is newer"
 def short_audio(f: dict) -> str:
     """'§ 18 and 90 not narrated yet' for an audiobook that leaves sections
     out, or ''. The shelf must not show only the length of a partial
-    recording (2026-10-06 audit: 12 sold audiobooks were short)."""
-    if f.get("older_text"):  # build_audiobooks "text_mismatch": kept on sale, said plainly
+    recording (2026-10-06 audit: 12 audiobooks on the shelf were short)."""
+    if f.get("older_text"):  # build_audiobooks "text_mismatch": kept on the shelf, said plainly
         return OLDER_TEXT
     total, done = int(f.get("sections") or 0), int(f.get("narrated") or 0)
     if not total or done >= total:
@@ -200,7 +208,7 @@ class Library:
             scope += f'<p class="keep-scope">Audiobook: {escape(gap)}.</p>'
         return (f'<section class="keep" aria-labelledby="keep-h"><h2 id="keep-h">Keep this book <br><span class="keep-sub">free to download</span></h2>'
                 f'{scope}<ul>{links}</ul>'
-                f'<p><a href="/downloads/">Every book is on the shelf.</a></p></section>')
+                f'<p><a href="/downloads/">See the whole shelf.</a></p></section>')
 
 
 def _row(w: dict, author_dates, show_author: bool = True) -> str:
@@ -216,7 +224,7 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
         if k == "audio":
             part += f' data-bytes="{int(f["bytes"])}"'
         files.append(f'<a class="dl-f" href="/dl/{escape(f["key"])}" data-kind="{k}"{part}>'
-                     f'{icon("lock", "dl-lk")}{icon("down", "dl-dn")}<span class="dl-fk">{LABEL[k]}</span>'
+                     f'{ARROW}<span class="dl-fk">{LABEL[k]}</span>'
                      f'<span class="dl-fm">{escape(meta)}</span></a>')
     dates = w.get("author_dates") or author_dates(w.get("author"), None) or ""
     byline = f'<p>{escape(w.get("author") or "")}{" · " + escape(dates) if dates else ""}</p>'
@@ -280,18 +288,32 @@ def shelf(works: list[dict], author_dates, year_of) -> str:
 
 def lede(works: list[dict], n: dict[str, int], total_h: int, site_works: int = 0) -> str:
     """'334 works as EPUB and PDF, 252 also as Word for Logos, and 226
-    audiobooks, 150 hours in all.' Counts, never 'every', for partial formats."""
+    audiobooks, 150 hours in all.' Counts, never 'every', for partial formats.
+    When the shelf has fewer works than the site, it says so first:
+    "347 of the site's 372 works: 343 as EPUB and PDF, ..." (2026-10-23: the
+    lede hid 25 live works with no files)."""
     have = len(works)
+    gap = site_works > have
     full = [NAME[k] for k in ("epub", "pdf", "word") if n[k] and n[k] == have]
-    whom = f"{have:,} of the site's {plural(site_works, 'work')}" if site_works > have else plural(have, "work")
-    bits = [f"{whom} as {join(full)}"] if full else []
-    for k in ("epub", "pdf", "word"):
-        if n[k] and NAME[k] not in full:
-            bits.append(f"{n[k]:,} {'also ' if full else ''}as {NAME[k]}" if bits else f"{plural(n[k], 'work')} as {NAME[k]}")
+    whom = f"{have:,} of the site's {plural(site_works, 'work')}" if gap else plural(have, "work")
+    if full:
+        bits = [f"{whom} as {join(full)}"]
+        bits += [f"{n[k]:,} also as {NAME[k]}" for k in ("epub", "pdf", "word") if n[k] and NAME[k] not in full]
+    else:
+        groups: list[tuple[int, list[str]]] = []  # equal counts share one bit: "343 as EPUB and PDF"
+        for k in ("epub", "pdf", "word"):
+            if n[k]:
+                if groups and groups[-1][0] == n[k]:
+                    groups[-1][1].append(NAME[k])
+                else:
+                    groups.append((n[k], [NAME[k]]))
+        bits = [f"{c:,} as {' and '.join(names)}" if gap or i else f"{plural(c, 'work')} as {' and '.join(names)}"
+                for i, (c, names) in enumerate(groups)]
     if n["audio"]:
         bits.append(f"{plural(n['audio'], 'audiobook')}, {plural(total_h, 'hour')} in all")
     # Each bit may hold its own "and" (EPUB and PDF), so bits join with ", and".
-    return bits[0] if len(bits) == 1 else ", ".join(bits[:-1]) + ", and " + bits[-1]
+    text = (bits[0] if len(bits) == 1 else ", ".join(bits[:-1]) + ", and " + bits[-1]) if bits else ""
+    return f"{whom}: {text}" if gap and not full else text
 
 
 def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key, author_dates,
@@ -312,12 +334,12 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
     for w in works:
         if w.get("thumb") and (covers_dir / w["thumb"]).is_file():
             shutil.copy2(covers_dir / w["thumb"], dest / w["thumb"])
-    # Product image for search results (the cover fan made for Lemon Squeezy).
+    # Shelf image for search results: the cover fan in outputs/downloads/marketing.
     product_img = covers_dir.parent / "marketing" / "ls-product.jpg"
     image = "https://viapatrum.org/assets/og/home.png"
     if product_img.is_file():
-        shutil.copy2(product_img, dist / "assets" / "downloads-pass.jpg")
-        image = "https://viapatrum.org/assets/downloads-pass.jpg"
+        shutil.copy2(product_img, dist / "assets" / "downloads-shelf.jpg")
+        image = "https://viapatrum.org/assets/downloads-shelf.jpg"
     # File names for Content-Disposition (functions/dl reads this map).
     (dist / "data").mkdir(exist_ok=True)
     (dist / "data" / "library-files.json").write_text(json.dumps(
@@ -363,14 +385,14 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
 
     groups = shelf(works, author_dates, year_of)
     body = f"""
-<div class="dl-page" data-state="unlocked">
+<div class="dl-page">{ARROW_SPRITE}
 <section class="dl-hero">
   <div class="dl-hero-copy">
     <p class="eyebrow">The library, to keep</p>
     <h1>{"Books and recordings" if n["audio"] else "The books"}, <em>yours to keep.</em></h1>
     <p class="dl-lede">{lede(works, n, total_h, site_works)}. Free to download. New books land here too.</p>
     <div class="dl-cta">
-      <a class="dl-buy dl-go" href="#shelf">Go to the shelf</a>
+      <a class="dl-go" href="#shelf">Go to the shelf</a>
       <a class="dl-textbtn" href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a>
     </div>
     <p class="dl-fine">Reading, listening and downloads are free for everyone. Gifts pay for more translation and narration.</p>
@@ -395,7 +417,7 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
   <details><summary>What happens when you add books?</summary><p>New works{" and new recordings" if n["audio"] else ""} appear on the shelf as they are finished. Come back and download them.</p></details>
   {"<details><summary>How do I open these on a Kindle?</summary><p>Send the EPUB with Amazon's Send to Kindle (the app, the website, or email). Kindle converts it for you.</p></details>" if n["epub"] else ""}
   {f"<details><summary>How do I add the Word files to Logos?</summary><p>Unzip a book, then in Logos open Tools, Personal Books, Add book, and choose the Word file. The cover and description are included. <a href='/downloads/logos/'>The Logos guide</a> covers adding the whole collection, or letting an AI assistant do it.{f" {n['word']} of the {len(works)} works have a Word file: a Logos book needs at least one linked Bible reference, so works with none linked yet come as EPUB and PDF only." if n['word'] < len(works) else ""}</p></details>" if n["word"] else ""}
-  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site, which is new, translated from the Greek and Latin with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
+  <details><summary>Is this the same English as the site?</summary><p>Yes. Each file is made from the English on this site: our fresh English translations from the Greek and Latin, made with AI help and checked against the source. When we correct a text here, we rebuild its files, so a fresh download has the latest wording. Each file names its source edition and links back to its page here.{" A few audiobooks were narrated from an earlier wording; the shelf marks each one." if any((w["files"].get("audio") or {}).get("older_text") for w in works) else ""}</p></details>
 </section>
 
 <section class="dl-shelf" id="shelf" aria-labelledby="dl-shelf-h">
@@ -430,8 +452,9 @@ def build(dist: Path, lib: Library, layout, write, *, covers_dir: Path, sort_key
                           "url": "https://viapatrum.org/downloads/", "image": image,
                           "isAccessibleForFree": True}]))
     if n["word"]:
+        word_zip = next((bundle_label(b) for b in bundles if b["kind"] == "word"), "")
         write(dist / "downloads" / "logos" / "index.html",
-              layout("Add Via Patrum to Logos", logos_guide.page_body(n["word"]),
+              layout("Add Via Patrum to Logos", logos_guide.page_body(n["word"], word_zip),
                      crumb=[("Home", "/"), ("Downloads", "/downloads/"), ("Logos guide", "")], active="downloads",
                      styles=["/assets/downloads.css"], scripts=["/assets/logos-guide.js"],
                      description="How to build the Via Patrum Word files as Logos Personal Books: one book, "

@@ -68,7 +68,7 @@ def books(n: int) -> str:
 
 
 def ai_prompt(n_books: int) -> str:
-    """One block a buyer can paste to an AI assistant that can use their computer."""
+    """One block a reader can paste to an AI assistant that can use their computer."""
     return f"""Please add the Via Patrum books to Logos Bible Software for me as Personal Books.
 
 Files: a folder with {CSV_NAME} and one zip per book ({books(n_books)}). Unzip every book zip.
@@ -138,14 +138,14 @@ The English is the same as on the site. Scripture references are linked, so
 a click opens the passage in your Bible in Logos. Each passage is a Headword
 article, so it can be found by its title.
 
-New English translation, copyright 2026 SaneApps (CC BY 4.0). The source text
-is public domain.
+The fresh English translation is copyright 2026 SaneApps (CC BY 4.0). The
+source text is public domain.
 """
 
 
 def books_csv(zips: list[tuple[Path, str]]) -> str:
     """books.csv for the all-books zip, read from the book zips themselves so
-    every name matches what the buyer unzips."""
+    every name matches what the reader unzips."""
     out = io.StringIO()
     w = csv.writer(out)
     w.writerow(["zip", "folder", "word_file", "title", "authors", "description"])
@@ -161,8 +161,11 @@ def books_csv(zips: list[tuple[Path, str]]) -> str:
     return out.getvalue()
 
 
-def page_body(n_books: int) -> str:
-    """Body HTML for /downloads/logos/."""
+def page_body(n_books: int, bundle: str = "") -> str:
+    """Body HTML for /downloads/logos/. bundle: the all-Word zip's button text
+    on the shelf, so the guide names the button readers see (2026-10-23:
+    it named "Every book for Logos (Word)" while the shelf said "All 263
+    Word books for Logos")."""
     e = html.escape
     def ol(items):
         return "<ol>" + "".join(f"<li>{e(s)}</li>" for s in items) + "</ol>"
@@ -183,7 +186,7 @@ def page_body(n_books: int) -> str:
 
 <section aria-labelledby="lg-all">
   <h2 id="lg-all">The whole collection, {books(n_books)}</h2>
-  <p>Download <strong>Every book for Logos (Word)</strong> from the <a href="/downloads/#shelf">shelf</a>. By hand it takes
+  <p>{f"Download <strong>{e(bundle)}</strong> from the" if bundle else "Download the Word books from the"} <a href="/downloads/#shelf">shelf</a>. By hand it takes
   about two minutes a book, so most people spread it over several sittings.</p>
   {ol(COLLECTION)}
 </section>
