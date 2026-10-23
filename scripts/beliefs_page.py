@@ -51,6 +51,8 @@ EXTRA_LOCUS = {"id": "mary-saints", "title": "Mary, the Saints and Images", "aft
 
 # The topic pages that cover the same ground. Their early excerpts are not yet
 # in the belief search (see the method note), so each question links to them.
+# unity-of-christ is the anti-Marcion claim (one Christ of the one God), not the
+# one-or-two-natures question, so christ-natures does not link it (2026-10-23).
 RELATED_TOPIC = {
     "eucharist-presence": ["eucharist-thanksgiving"], "eucharist-sacrifice": ["eucharist-thanksgiving"],
     "baptism-effect": ["baptism-and-new-birth"], "baptism-subjects": ["baptism-and-new-birth"],
@@ -64,7 +66,7 @@ RELATED_TOPIC = {
     "mary-sinlessness": ["virgin-birth"], "mary-end-of-life": ["virgin-birth"],
     "images": ["against-idols"], "saints": ["martyrdom-witness", "liturgy-prayer"],
     "spiritual-gifts": ["gifts-and-order", "spirit-prophecy"], "sanctification": ["spirit-sanctifies"],
-    "christ-natures": ["two-natures-seed", "unity-of-christ"], "millennium": ["millennium-debate", "judgment-second-coming"],
+    "christ-natures": ["two-natures-seed"], "millennium": ["millennium-debate", "judgment-second-coming"],
     "death-penalty": ["civil-authority"],
 }
 # Topics that sit near the question but do not answer it directly.
@@ -606,11 +608,16 @@ def story(q: dict, B, *, short: bool = False) -> str:
     if not firsts:
         return ("No passage in the works searched so far states any of these positions yet. "
                 "The question is listed so its lanes fill in as more works are searched.")
-    parts = ["Earliest statement of each: " + "; ".join(
+    # Only the passages checked for this question count here; the Timeline
+    # question on the same subject reads other passages, so both say "so far"
+    # rather than "no early passage" (2026-10-23: OT canon and Eucharist pages
+    # contradicted their Timeline answers).
+    parts = ["Earliest statement of each found so far: " + "; ".join(
         f"<strong>{escape(n)}</strong>, {escape(B.display_author(w))}, c. {y}{UNSURE if u else ''}"
         for y, n, w, u in firsts) + "."]
     if missing:
-        parts.append("No early passage yet states: " + ", ".join(escape(m) for m in missing) + ".")
+        parts.append("Not yet found stated in the passages checked for this question: "
+                     + ", ".join(escape(m) for m in missing) + ".")
     return " ".join(parts)
 
 

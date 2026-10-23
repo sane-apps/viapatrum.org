@@ -202,6 +202,7 @@ class OverlayTests(unittest.TestCase):
         self.assertIn("Athenagoras", told)
         self.assertIn("Lactantius", told)
         self.assertNotIn("No early passage yet states", told)
+        self.assertNotIn("Not yet found stated", told)
 
 
 if __name__ == "__main__":
