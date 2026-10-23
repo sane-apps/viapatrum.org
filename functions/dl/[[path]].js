@@ -92,7 +92,12 @@ export async function onRequest(context) {
     h.set("content-length", String(obj.size));
     return new Response(null, { status: 200, headers: h });
   }
-  if (!("body" in obj) || !obj.body) return new Response(null, { status: 304, headers: h }); // onlyIf failed
+  if (!("body" in obj) || !obj.body) {
+    // onlyIf failed. If-Match / If-Unmodified-Since failing means the file
+    // changed: 412, so a resuming download manager starts over (RFC 9110).
+    const changed = request.headers.has("if-match") || request.headers.has("if-unmodified-since");
+    return new Response(null, { status: changed ? 412 : 304, headers: h });
+  }
   const r = obj.range;
   if (r && request.headers.has("range")) {
     const suffix = typeof r.suffix === "number";

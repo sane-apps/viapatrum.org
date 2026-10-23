@@ -1,21 +1,38 @@
 /**
  * /api/library/admin?action=... : upload tool for scripts/library_sync.py.
- * Needs header x-cf-token: a Cloudflare API token that can read this Pages
- * project (the same token ship.sh deploys with), checked with Cloudflare and
- * cached briefly. No extra secret to store. Big files go up in parts
- * (R2 multipart), so a 2 GB audiobook bundle needs no S3 keys.
+ * Big files go up in parts (R2 multipart), so a 2 GB audiobook bundle needs
+ * no S3 keys.
  *   GET  list&prefix=   GET head&key=   PUT put&key=
  *   POST create&key=    PUT part&key=&upload=&n=   POST complete&key=&upload= {parts}
  *   POST abort&key=&upload=   DELETE delete&key=
+ *
+ * Auth (2026-10-23): header x-admin-token must equal the Pages secret
+ * LIBRARY_ADMIN_TOKEN (compared in constant time). Until that secret is set,
+ * the older check stays: header x-cf-token is a Cloudflare API token that can
+ * read this Pages project, checked with Cloudflare and cached briefly. That
+ * older check also passes read-only tokens, so set the secret and it stops.
  */
-import { json } from "../../_lib/library.js";
+const json = (body, status = 200) =>
+  new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store" } });
 
 const PROJECT = "https://api.cloudflare.com/client/v4/accounts/2c267ab06352ba2522114c3081a8c5fa/pages/projects/fathers-site";
 const trusted = new Map(); // sha256(token) -> expiry ms
+const enc = new TextEncoder();
 
-async function allowed(token) {
+/** Constant-time compare of two strings (equal length first). */
+export function sameToken(a, b) {
+  const x = enc.encode(String(a || ""));
+  const y = enc.encode(String(b || ""));
+  if (!x.length || x.length !== y.length) return false;
+  if (crypto.subtle && typeof crypto.subtle.timingSafeEqual === "function") return crypto.subtle.timingSafeEqual(x, y);
+  let diff = 0;
+  for (let i = 0; i < x.length; i++) diff |= x[i] ^ y[i];
+  return diff === 0;
+}
+
+async function cfTokenAllowed(token) {
   if (!/^[A-Za-z0-9_-]{30,200}$/.test(token)) return false;
-  const h = [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token)))]
+  const h = [...new Uint8Array(await crypto.subtle.digest("SHA-256", enc.encode(token)))]
     .map((b) => b.toString(16).padStart(2, "0")).join("");
   if ((trusted.get(h) || 0) > Date.now()) return true;
   const r = await fetch(PROJECT, { headers: { authorization: `Bearer ${token}` } }).catch(() => null);
@@ -24,22 +41,32 @@ async function allowed(token) {
   return true;
 }
 
+export async function allowed(env, request) {
+  const secret = String((env && env.LIBRARY_ADMIN_TOKEN) || "");
+  if (secret) return secret.length >= 32 && sameToken(request.headers.get("x-admin-token") || "", secret);
+  return cfTokenAllowed(request.headers.get("x-cf-token") || "");
+}
+
 // backup/: private archive copies (audiobook masters too big for the REST
 // API, 2026-10-14). functions/dl never serves this prefix.
 const OK_KEY = /^(epub|pdf|word|audio|bundles|backup)\/[a-z0-9][a-z0-9._-]{0,180}\.(epub|pdf|zip|m4b)$/;
+// list only walks the shelf and backup prefixes (never ask-log/).
+const LIST_PREFIX = /^(epub|pdf|word|audio|bundles|backup)\/[a-z0-9._/-]{0,180}$/;
 const TYPES = { epub: "application/epub+zip", pdf: "application/pdf", zip: "application/zip", m4b: "audio/mp4" };
 
 export async function onRequest({ request, env }) {
-  if (!(await allowed(request.headers.get("x-cf-token") || ""))) return json({ error: "forbidden" }, 403);
+  if (!(await allowed(env, request))) return json({ error: "forbidden" }, 403);
   if (!env.LIBRARY) return json({ error: "no R2 binding" }, 503);
   const u = new URL(request.url);
   const action = u.searchParams.get("action");
   const key = u.searchParams.get("key") || "";
   if (action === "list") {
+    const prefix = u.searchParams.get("prefix") || "";
+    if (!LIST_PREFIX.test(prefix)) return json({ error: "bad prefix" }, 400);
     const out = [];
     let cursor;
     for (let i = 0; i < 50; i++) {
-      const page = await env.LIBRARY.list({ prefix: u.searchParams.get("prefix") || "", cursor, include: ["customMetadata"] });
+      const page = await env.LIBRARY.list({ prefix, cursor, include: ["customMetadata"] });
       for (const o of page.objects) out.push({ key: o.key, size: o.size, sha256: (o.customMetadata || {}).sha256 || "" });
       if (!page.truncated) break;
       cursor = page.cursor;
