@@ -760,6 +760,10 @@ class Copy(unittest.TestCase):
         n = dp.counts(works)
         self.assertEqual(dp.lede(works, n, 3), "2 works as EPUB and PDF, 1 also as Word for Logos, and 1 audiobook, 3 hours in all")
         self.assertEqual(dp.lede(works[1:], dp.counts(works[1:]), 0, 3), "1 of the site's 3 works as EPUB and PDF")
+        # No format on every book: the shelf's share of the site comes first.
+        split = [work("a", ["epub"]), work("b", ["pdf"])]
+        self.assertEqual(dp.lede(split, dp.counts(split), 0, 5),
+                         "2 of the site's 5 works on the shelf: 1 work as EPUB, and 1 as PDF")
         one = [work("a", ["epub", "pdf", "audio"])]
         self.assertEqual(dp.lede(one, dp.counts(one), 1), "1 work as EPUB and PDF, and 1 audiobook, 1 hour in all")
         many = [work(f"w{i}", ["epub", "pdf", "audio"]) for i in range(2)]
@@ -861,7 +865,7 @@ class Copy(unittest.TestCase):
             self.assertIn("lg-prompt-text", pages["logos"])  # the Logos guide is written beside it
             return pages["downloads"]
         self.assertNotIn("none linked yet", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf", "word"])]))
-        self.assertIn("1 of the 2 works have a Word file", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf"])]))
+        self.assertIn("1 of the 2 works on the shelf have a Word file", page([work("a", ["epub", "pdf", "word"]), work("b", ["epub", "pdf"])]))
 
     def test_build_drops_unpublished_and_audio_bits(self):
         lib = lib_with([work("a", ["epub", "pdf"]), work("b", ["epub", "pdf"])])

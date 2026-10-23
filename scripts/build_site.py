@@ -5670,6 +5670,17 @@ def load_origen_nt_fragments() -> list[dict]:
     return works
 
 
+def about_shelf_line(library, works: list[dict]) -> str:
+    """The About download line, with the shelf's share of the live works when
+    some are not on it yet (2026-10-23: About said 343 books, Home 372 works)."""
+    live = {w["slug"] for w in works}
+    shelf = sum(1 for slug in library.by_slug if slug in live)
+    pitch = library.pitch()
+    if 0 < shelf < len(live):
+        return f"The shelf holds {shelf} of the {len(live)} works: {pitch[0].lower() + pitch[1:]}"
+    return pitch
+
+
 # Site slug -> {book, stems}, filled by loaders that know their files (data/work-sources.json).
 WORK_SOURCES: dict[str, dict] = {}
 
@@ -11478,12 +11489,12 @@ def build() -> None:
             <h2>What is here</h2>
             <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Timeline</strong> shows where writers agree and where a later turn comes.</p>
             {'''<h2>Books to keep</h2>
-            <p>''' + escape(LIBRARY.pitch()) + ''' Get them on the <a href="/downloads/">downloads page</a>.</p>''' if LIBRARY else ''}
+            <p>''' + escape(about_shelf_line(LIBRARY, works)) + ''' Get them on the <a href="/downloads/">downloads page</a>.</p>''' if LIBRARY else ''}
             {'''<h2>Logos</h2>
             <p>The same English is also in Word files for Logos Bible Software. Each book has a cover and a description. Download every part from the <a href="/logos/">Personal Books</a> page, then add the file in Logos yourself.</p>''' if logos_pack_manifest() and not logos_retired() else ''}
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
             <h2>How the English is made</h2>
-            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
+            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and fresh English replaces them as it is finished.</p>
             <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
             <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/topics/free-will/#over-time">free will over time</a>.</p>
