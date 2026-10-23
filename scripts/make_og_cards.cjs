@@ -22,6 +22,7 @@
 //   --out=DIR          draw into DIR instead of assets/og (sample runs; its own cache, no pruning of assets/og)
 //   --list             print the card text and exit (no drawing)
 //   --plan             print how many cards would be drawn and exit (writes nothing)
+//   --prune-all        let one run move more than 100 unused cards to outputs/og-retired
 //
 // Run on the Mini: nice -n 10 node scripts/make_og_cards.cjs
 'use strict';
@@ -228,7 +229,9 @@ function excerptCards() {
     const shouting = x => !/[a-z]/.test(x);
     // Verse with no sentence end (Commodian) still gets its own card: its opening words.
     const quote = sentences.find(x => starts(x) && !shouting(x) && x.length >= 50 && x.length <= 150)
-      || sentences.find(x => starts(x) && !shouting(x) && x.length >= 50) || body;
+      || sentences.find(x => starts(x) && !shouting(x) && x.length >= 50)
+      // No whole sentence: the body may open mid-sentence ("and his coming…"); mark the cut.
+      || (starts(body) ? body : '…' + body);
     if (!work || !author || !quote) continue;
     // The title already names the writer: "Arnobius, Against the Nations" -> "Against the Nations".
     const workName = work.startsWith(author) ? work.slice(author.length).replace(/^[,:\s]+/, '') : work;
@@ -371,7 +374,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-k
 <script>
 const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const MOTTO = 'The way of the Fathers, in their own words.';
-const SKIP_INITIAL = new Set(['the', 'a', 'an', 'on', 'to', 'in', 'against', 'fragments', 'fragment', 'letter', 'letters']);
+const SKIP_INITIAL = new Set(['the', 'a', 'an', 'on', 'to', 'in', 'of', 'from', 'and', 'for', 'upon', 'against', 'fragments', 'fragment', 'letter', 'letters']);
 const LIMITS = { section: [100, 56], question: [72, 44], work: [96, 50], author: [104, 56], topic: [84, 46] };
 window.renderCard = async function (c) {
   const $ = s => document.querySelector(s);
@@ -432,14 +435,24 @@ function fit(c) {
 
 // ---------- main ----------
 
+// Why retiring unused cards is unsafe this run, or '' when it is fine.
+const RETIRE_MAX = 100;
+function retireLimit(unused, excerpts, pruneAll) {
+  if (!unused) return '';
+  if (!excerpts) return 'dist/ has no excerpt pages';
+  if (unused > RETIRE_MAX && !pruneAll) return `more than ${RETIRE_MAX}; pass --prune-all to move them`;
+  return '';
+}
+
 async function main() {
   const t0 = Date.now();
   const works = workCards(), authors = authorCards(), topics = topicCards();
   // A half-built dist/ would shrink index.json; refuse instead.
+  const excerpts = excerptCards();
   if (!works.length || !authors.length || !topics.length) {
     throw new Error(`dist/ looks incomplete (works ${works.length}, authors ${authors.length}, topics ${topics.length}); build the site first`);
   }
-  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards(), ...exploreCards(), ...churchesCards(), ...excerptCards()];
+  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards(), ...exploreCards(), ...churchesCards(), ...excerpts];
   const all = cards;
   if (ONLY) cards = cards.filter(c => ONLY.has(c.kind));
   if (SLUGS) cards = cards.filter(c => SLUGS.has(c.slug));
@@ -520,21 +533,30 @@ async function main() {
   // A card no page points to (a held or withdrawn work) would still be served and
   // name that work: move it out of the deploy folder (2026-10-23, 49 such cards).
   const used = new Set(Object.values(sorted).map(v => v.replace(/^\/assets\/og\//, '')));
-  let retired = 0;
+  const unused = [];
   const walk = rel => {
     for (const e of fs.readdirSync(path.join(OUT, rel), { withFileTypes: true })) {
       const r = rel ? `${rel}/${e.name}` : e.name;
       if (e.isDirectory()) walk(r);
-      else if (/\.(png|jpg)$/.test(e.name) && !used.has(r)) {
-        const dest = path.join(RETIRED, r);
-        fs.mkdirSync(path.dirname(dest), { recursive: true });
-        fs.renameSync(path.join(OUT, r), dest);
-        delete cache[r.replace(/\.(png|jpg)$/, '')];
-        retired++;
-      }
+      else if (/\.(png|jpg)$/.test(e.name) && !used.has(r)) unused.push(r);
     }
   };
   if (!args.dist) walk('');
+  let retired = 0;
+  // A partial build (no excerpts, no Scripture pages) would make most cards look unused.
+  // Move only a handful; a bigger cut needs --prune-all after a look at the list.
+  const limit = retireLimit(unused.length, excerpts.length, !!args['prune-all']);
+  if (limit) {
+    console.warn(`WARN cards: ${unused.length} cards look unused; not moving them (${limit}). First few: ${unused.slice(0, 5).join(', ')}`);
+  } else {
+    for (const r of unused) {
+      const dest = path.join(RETIRED, r);
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.renameSync(path.join(OUT, r), dest);
+      delete cache[r.replace(/\.(png|jpg)$/, '')];
+      retired++;
+    }
+  }
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(cache, null, 1) + '\n');
 
@@ -545,4 +567,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });
-module.exports = { workDate, cleanPara, sectionCards, WAY, TEMPLATE };
+module.exports = { workDate, cleanPara, sectionCards, retireLimit, WAY, TEMPLATE };

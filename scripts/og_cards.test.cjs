@@ -2,7 +2,7 @@
 'use strict';
 const test = require('node:test');
 const assert = require('node:assert');
-const { workDate, cleanPara, sectionCards, WAY, TEMPLATE } = require('./make_og_cards.cjs');
+const { workDate, cleanPara, sectionCards, retireLimit, WAY, TEMPLATE } = require('./make_og_cards.cjs');
 
 test('work date slot takes only the date the work was written, never the edition', () => {
   assert.strictEqual(workDate(['Cyprian of Carthage (c. 200–258 AD)', 'Hartel (1868)']), '');
@@ -28,7 +28,19 @@ test('section cards carry the free library and house style', () => {
   assert.doesNotMatch(TEMPLATE, /Read free/);
 });
 
-test('every way label is one of the six', () => {
-  const ok = new Set(['How they spoke', 'How they acted', 'How they argued', 'How they lived', 'How they died', 'How they read Scripture']);
+test('every way label is one of the five verbs', () => {
+  const ok = new Set(['How they spoke', 'How they acted', 'How they argued', 'How they lived', 'How they died']);
   assert.deepStrictEqual(Object.entries(WAY).filter(([, v]) => !ok.has(v)), []);
+});
+
+test('the big letter skips small words like of and from', () => {
+  for (const w of ['the', 'of', 'from', 'and', 'for', 'upon', 'fragment', 'letters']) assert.match(TEMPLATE, new RegExp(`SKIP_INITIAL = new Set\\([^)]*'${w}'`));
+});
+
+test('a partial dist cannot retire hundreds of cards', () => {
+  assert.strictEqual(retireLimit(49, 1925, false), '');
+  assert.notStrictEqual(retireLimit(1900, 1925, false), '');
+  assert.strictEqual(retireLimit(1900, 1925, true), '');
+  assert.notStrictEqual(retireLimit(5, 0, true), '');
+  assert.strictEqual(retireLimit(0, 0, false), '');
 });

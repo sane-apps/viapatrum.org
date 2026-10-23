@@ -11574,6 +11574,9 @@ def build() -> None:
         # 2026-10-18, withheld second copy): send it to the shown copy.
         "/works/diodorus-fragmenta/ /works/dionysius-corinth-fragments/ 301\n"
         "/works/diodorus-fragmenta/* /works/dionysius-corinth-fragments/ 301\n"
+        # The /downloads/ search image was renamed on 2026-10-23; search engines
+        # still hold the old address from its JSON-LD.
+        "/assets/downloads-pass.jpg /assets/downloads-covers.jpg 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))

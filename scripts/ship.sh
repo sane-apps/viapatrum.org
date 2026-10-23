@@ -842,7 +842,9 @@ if [[ "$SKIP_BUILD" -eq 0 ]]; then
   # them in, then point each page at its card with ?v=<hash> so X and iMessage
   # drop old cached images.
   PATH="/opt/homebrew/opt/node@24/bin:$PATH" nice -n 10 node "$ROOT/scripts/make_og_cards.cjs" || echo "WARN: share cards not redrawn"
-  rsync -a "$ROOT/assets/og/" "$ROOT/dist/assets/og/"
+  # --delete: dist/assets/og is only a copy, and cards that make_og_cards just
+  # retired (held or withdrawn works) must not stay in the deploy.
+  rsync -a --delete "$ROOT/assets/og/" "$ROOT/dist/assets/og/"
   "$PYTHON" "$ROOT/scripts/og_apply.py"
 
   step "Read-along audio"
