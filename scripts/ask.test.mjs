@@ -402,4 +402,6 @@ test('pages.dev hosts make no AI call (outside the zone rate limit)', async () =
   assert.equal(aiBlocked({}, new URL('https://fathers-site.pages.dev/api/ask?q=grace')), true);
   assert.equal(aiBlocked({}, new URL('https://viapatrum.org/api/search?q=grace')), false);
   assert.equal(aiBlocked({ AI_OFF: '1' }, new URL('https://viapatrum.org/api/search?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://fathers-site.pages.dev./api/search?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://VIAPATRUM.ORG./api/search?q=grace')), false);
 });
