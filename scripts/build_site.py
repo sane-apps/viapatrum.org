@@ -9680,7 +9680,7 @@ def build() -> None:
             f'<p class="vp-who"><strong class="vp-daily-a">{escape(r["a"])}</strong>'
             f' · <span class="vp-daily-d">{escape(r["d"])}</span> · <span class="vp-daily-c">{escape(r["c"])}</span></p>'
             f'<div class="vp-actions"><a class="btn primary vp-daily-h" href="{escape(r["h"])}">Read the passage</a>'
-            f'<a class="btn vp-daily-th" href="{escape(r["th"])}">What the others said</a></div>'
+            f'<a class="btn vp-daily-th" href="{escape(r["th"])}">What other Fathers said</a></div>'
             # Today's Scripture (owner 2026-10-23): a way into the Scripture reader from the home page.
             f'<div class="vp-sc" data-daily-sc{"" if r.get("sr") else " hidden"}>'
             f'<p class="eyebrow">Today&rsquo;s Scripture</p>'
