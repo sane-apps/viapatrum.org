@@ -10,7 +10,7 @@
  * query, n and the deploy tag, so a repeated search makes no model call.
  * AI_OFF="1" answers 503 {paused: true} without any model call.
  */
-import { PAUSED, aiOff, json, loadMeta, passages, preflight, retrieve, searchMapTag, withCors } from "../_lib/search.js";
+import { PAUSED, aiBlocked, json, loadMeta, passages, preflight, retrieve, searchMapTag, withCors } from "../_lib/search.js";
 import { normaliseQuestion } from "../_lib/ask.js";
 
 const DAY = "public, max-age=86400";
@@ -22,7 +22,7 @@ export async function onRequest(context) {
   const q = normaliseQuestion(url.searchParams.get("q"));
   const n = Math.min(30, Math.max(1, parseInt(url.searchParams.get("n") || "20", 10) || 20));
   if (!q) return withCors(json({ query: q, results: [] }), request);
-  if (aiOff(env)) return withCors(json({ error: PAUSED, paused: true }, 503, { "cache-control": "no-store" }), request);
+  if (aiBlocked(env, url)) return withCors(json({ error: PAUSED, paused: true }, 503, { "cache-control": "no-store" }), request);
 
   const cache = typeof caches !== "undefined" ? caches.default : null;
   const tag = cache ? await searchMapTag(env, url) : "";

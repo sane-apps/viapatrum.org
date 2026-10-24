@@ -22,7 +22,7 @@
  * tuned and missing works found (at most LOG_CAP a day per isolate).
  * AI_OFF="1": cached answers still serve; a miss answers 503 {paused: true}.
  */
-import { PAUSED, RERANK, aiOff, cleanTitle, json, loadMeta, passages, preflight, retrieve, searchMapTag, withCors } from "../_lib/search.js";
+import { PAUSED, RERANK, aiBlocked, cleanTitle, json, loadMeta, passages, preflight, retrieve, searchMapTag, withCors } from "../_lib/search.js";
 import { THIN_NOTE, candidates, matchTopics, normaliseQuestion, normaliseScores, selectAnswer } from "../_lib/ask.js";
 
 const PASSAGES = 10;
@@ -74,7 +74,7 @@ export async function onRequest(context) {
     if (hit) return withCors(hit, request);
   }
   // Off switch: cached answers still serve; nothing new reaches a model.
-  if (aiOff(env)) return withCors(json({ error: PAUSED, paused: true }, 503, { "cache-control": "no-store" }), request);
+  if (aiBlocked(env, url)) return withCors(json({ error: PAUSED, paused: true }, 503, { "cache-control": "no-store" }), request);
 
   try {
     // Start the two asset fetches now: on a cold isolate they overlap the

@@ -395,3 +395,11 @@ test('/api/search: cached by normalised query, n and deploy tag; a repeat makes 
     globalThis.caches = saved;
   }
 });
+
+test('pages.dev hosts make no AI call (outside the zone rate limit)', async () => {
+  const { aiBlocked } = await import('../functions/_lib/search.js');
+  assert.equal(aiBlocked({}, new URL('https://eb1291ef.fathers-site.pages.dev/api/search?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://fathers-site.pages.dev/api/ask?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://viapatrum.org/api/search?q=grace')), false);
+  assert.equal(aiBlocked({ AI_OFF: '1' }, new URL('https://viapatrum.org/api/search?q=grace')), true);
+});

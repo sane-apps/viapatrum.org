@@ -31,6 +31,10 @@ export function withCors(res, request) {
 // AI_OFF="1" makes /api/search and /api/ask answer 503 without any model call.
 export const PAUSED = "Search by meaning is paused";
 export const aiOff = (env) => String((env && env.AI_OFF) || "") === "1";
+// *.pages.dev addresses (every old deployment too) sit outside the
+// viapatrum.org zone's per-IP rate limit, so they make no AI calls; the
+// site and the app use viapatrum.org (2026-10-23).
+export const aiBlocked = (env, url) => aiOff(env) || String((url && url.hostname) || "").endsWith(".pages.dev");
 
 // Changes when a deploy publishes or withholds a work: the ETag of the
 // deployed /data/search-meta.json. Cache keys carry it, so a cached answer
