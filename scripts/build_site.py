@@ -9112,17 +9112,8 @@ FORCED_WITHHOLD = {
     # The letter to Africanus is a section of origen-letters, not its own work.
     # Naming the part slug held nothing: the loader never emits it.
     "origen-song-homily-1": _RECERT,
-    "cyril-adoration-10": _RECERT,
-    # 2026-10-14 site audit: word-for-word Greek published as English
-    # ("bring-forward ... gift-bearings", "pomegranate-lets", 13-18 hyphen
-    # calques per 1,000 words in 14-16 against under 1 elsewhere), and some
-    # Scripture references beside the wrong verses. Re-translate, then release.
-    "cyril-adoration-11": _RECERT,
-    "cyril-adoration-12": _RECERT,
-    "cyril-adoration-13": _RECERT,
-    "cyril-adoration-14": _RECERT,
-    "cyril-adoration-15": _RECERT,
-    "cyril-adoration-16": _RECERT,
+    # cyril-adoration-10..16 released 2026-10-23: re-translated from the Greek by Claude
+    # (translate + independent clause review; old word-for-word English replaced).
     # The same Lamentations fragments twice under one title (2026-10-14 audit).
     # origen-lamentations-fragments has all 118 from Klostermann; this book
     # groups them into 20 and stays in the pipeline.
