@@ -483,7 +483,8 @@ AUDIO_ZIPS = (
     ("didymus-psalms", "Didymus the Blind on the Psalms", ""),
     ("didymus-other", "Didymus the Blind, other works", ""),
     ("cyril-alexandria", "Cyril of Alexandria", ""),
-    ("after-chalcedon", "After Chalcedon and later", ""),
+    ("after-chalcedon", "After Chalcedon", ""),
+    ("later-writers", "Later writers who read the Fathers", ""),
 )
 ZIP_MAX = 2 * 1024 ** 3
 FREE_MIN = 15 * 1000 ** 3  # never zip below this much free disk (2026-10-06 disk-full crash)
@@ -497,6 +498,10 @@ def audio_zip_of(w: dict) -> str:
         return "cyril-alexandria"
     y = w.get("year")
     y = 9999 if y is None else int(y)
+    # 2026-10-23: one After Chalcedon zip reached 2.19 GB; the site's own era
+    # break at 1500 (AUTHOR_ERAS) splits it.
+    if y >= 1500:
+        return "later-writers"
     return "before-nicaea" if y < 325 else "nicaea-to-chalcedon" if y < 451 else "after-chalcedon"
 
 

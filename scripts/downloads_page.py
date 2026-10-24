@@ -245,7 +245,7 @@ def _row(w: dict, author_dates, show_author: bool = True) -> str:
 # Shelf eras (2026-10-06 sketch item 6): the same breaks as the audiobook era
 # zips in library_sync.AUDIO_ZIPS. (end year, heading, span)
 ERAS = ((325, "Before Nicaea", "to 325 AD"), (451, "Nicaea to Chalcedon", "325 to 451 AD"),
-        (None, "After Chalcedon and later", "from 451 AD"))
+        (1500, "After Chalcedon", "451 to 1500 AD"), (None, "Later writers who read the Fathers", "from 1500 AD"))
 
 
 def era_of(year) -> str:
