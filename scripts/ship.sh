@@ -510,13 +510,21 @@ deploy_and_verify() {  # $1 = audio cut epoch for the shipped-site receipt
 
   step "Cloudflare Pages deploy (${PAGES_PROJECT})"
   DEPLOY_LOG="$(mktemp /tmp/fathers-ship-deploy.XXXXXX)"
+  # A deploy is safe to repeat: Pages skips files it already holds by hash.
+  # Up to 3 tries 30 s apart for network blips (2026-10-23: "getaddrinfo
+  # ENOTFOUND api.cloudflare.com" halfway through, then "fetch failed").
   set +e
-  bounded 1800 npx --yes "$WRANGLER" pages deploy "$STAGE" \
-    --project-name "$PAGES_PROJECT" \
-    --commit-dirty=true \
-    --cwd "$ROOT" \
-    2>&1 9>&- | tee "$DEPLOY_LOG"
-  DEPLOY_RC=${PIPESTATUS[0]}
+  for DEPLOY_TRY in 1 2 3; do
+    bounded 1800 npx --yes "$WRANGLER" pages deploy "$STAGE" \
+      --project-name "$PAGES_PROJECT" \
+      --commit-dirty=true \
+      --cwd "$ROOT" \
+      2>&1 9>&- | tee "$DEPLOY_LOG"
+    DEPLOY_RC=${PIPESTATUS[0]}
+    [[ "$DEPLOY_RC" -eq 0 || "$DEPLOY_RC" -eq 124 || "$DEPLOY_TRY" -eq 3 ]] && break
+    echo "WARN: wrangler deploy failed (rc=${DEPLOY_RC}, try ${DEPLOY_TRY} of 3); retrying in 30 s" >&2
+    sleep 30
+  done
   set -e
   if [[ "$DEPLOY_RC" -ne 0 ]]; then
     [[ "$DEPLOY_RC" -eq 124 ]] && echo "BLOCKED: wrangler deploy hit the 30 min limit" >&2
