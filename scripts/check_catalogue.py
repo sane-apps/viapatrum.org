@@ -227,7 +227,7 @@ assert eust_meta["slug"] in site.FORCED_WITHHOLD
 named_holds = [
     "evagrius-sententiae-monachos", "didymus-fragmenta-romanos", "macarius-spiritual-homilies",
     "origen-ezekiel-fragments", "origen-philocalia", "origen-romans-catena", "origen-de-principiis",
-    "origen-letters", "origen-song-homily-1", "cyril-adoration-10",
+    "origen-letters", "origen-song-homily-1",
     "pseudo-cyprian-to-vigilius", "didymus-dialexis-montanistae",
 ]
 kept_named, held_named = site.split_withheld(
