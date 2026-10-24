@@ -4561,6 +4561,8 @@ def load_cyril_works() -> list[dict]:
                     edition=meta.get("edition") or "Migne PG 68",
                     sections=sections,
                     blurb=meta.get("blurb") or "English from the Greek, for study.",
+                    # Part-only works must say so (check_catalogue "scope set but not shown").
+                    scope=meta.get("scope") or "",
                     era_note=era,
                     first_english=bool(meta.get("first_english", True)),
                     first_english_note=meta.get("first_english_note") or "",
