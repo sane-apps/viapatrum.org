@@ -138,7 +138,9 @@ def build_body(qs: dict[str, dict], dist: Path) -> str:
         for w, what, href in TIMELINE)
 
     davenant_work = link_if("/works/davenant-dissertationes-duae/", "/works/davenant-dissertationes-duae/",
-                            "Davenant's Two Dissertations (1650), the opening chapters in fresh English")
+                            "Davenant\u2019s Two Dissertations (1650)")
+    davenant_related = link_if("/works/davenant-dissertationes-duae/", "/works/davenant-dissertationes-duae/",
+                               "Davenant\u2019s Two Dissertations (1650): the opening chapters in fresh English")
     related = [
         link_if("/topics/atonement-recapitulation/", "/topics/atonement-recapitulation/", "Christ Undoes Adam\u2019s Fall: what the early Fathers taught about Christ\u2019s work"),
         link_if("/topics/salvation-by-christ/", "/topics/salvation-by-christ/", "Salvation in Christ"),
@@ -148,7 +150,7 @@ def build_body(qs: dict[str, dict], dist: Path) -> str:
         link_if("/creeds/", "/creeds/#c-dort-1619", "The Canons of Dort on the Creeds and churches page"),
         link_if("/creeds/", "/creeds/#c-westminster-1646", "The Westminster Confession on the Creeds and churches page"),
         link_if("/creeds/", "/creeds/#c-heidelberg-1563", "The Heidelberg Catechism on the Creeds and churches page"),
-        davenant_work,
+        davenant_related,
     ]
     related_html = "".join(f"<li>{r}</li>" for r in related)
 
@@ -293,7 +295,7 @@ def build_body(qs: dict[str, dict], dist: Path) -> str:
   <h4>John Davenant</h4>
   <p>The Church of England sent delegates to Dort. One was John Davenant (1572 to 1641), a Cambridge theologian and later Bishop of Salisbury. Davenant held that Christ died for all in a sense, and he argued that the Canons allowed this. He explained his view in his <em>Dissertation on the Death of Christ</em>:</p>
   {Q("q45", "q46")}
-  <p>Davenant did not deny that Christ had a special purpose for the elect. His point was that this is <em>in addition to</em> the universal remedy, not in place of it. The library holds the opening chapters of his later <em>Two Dissertations</em> in fresh English: {davenant_work}.</p>
+  <p>Davenant did not deny that Christ had a special purpose for the elect. His point was that this is <em>in addition to</em> the universal remedy, not in place of it. The library holds the opening chapters of his later <em>Two Dissertations</em> in fresh English. Read {davenant_work}.</p>
   <p><strong>The point to be fair about.</strong> Whether the Canons allow Davenant&#8217;s view is itself disputed. Davenant said they did. Others said they did not. This page leaves the Canons&#8217; intent open. It reports that Dort kept unconditional election, and also taught that Christ&#8217;s death is enough for the whole world.</p>
 
   <h3>Saumur in France</h3>
