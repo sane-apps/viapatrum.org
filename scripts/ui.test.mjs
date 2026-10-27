@@ -305,6 +305,31 @@ test('creeds and churches page: timeline, eleven cards, reviewed dates (owner 20
   assert.equal(doc.querySelector('.crumbs a[href="/explore/"]').textContent,'Timeline');
 });
 
+test('history page: Did Christ die for all? (owner approved 2026-10-27, preview first)', ()=>{
+  const doc=page('history/christ-died-for-all/index.html');
+  assert.equal(doc.querySelectorAll('h1').length,1);
+  assert.equal(doc.querySelector('h1').textContent,'Did Christ die for all?');
+  assert.ok(doc.querySelector('link[href^="/assets/history.css"]'));
+  assert.equal(doc.querySelectorAll('#site-nav a[href="/history/christ-died-for-all/"]').length,0,'stays under Timeline, not a nav item');
+  assert.equal(doc.querySelector('.crumbs a[href="/explore/"]').textContent,'Timeline');
+  assert.equal(doc.querySelectorAll('.hp-quote').length>=40,true,'verified quotations are shown');
+  assert.ok(doc.querySelectorAll('.hp-review').length>=7,'unchecked topics say Under review');
+  for(const q of doc.querySelectorAll('.hp-quote')){
+    assert.ok(q.querySelector('figcaption a[href^="https://"]'),'each quotation links its source');
+    assert.ok(q.querySelector('figcaption cite').textContent.length>3,'each quotation names its work');
+  }
+  const html=doc.documentElement.outerHTML;
+  assert.doesNotMatch(html,/[\u2014\u2013]/,'no em or en dashes on the page');
+  assert.doesNotMatch(doc.querySelector('main').textContent,/Quod ergo|Christus ergo est sacerdos|Graebner|Speculum Christianum/,'unverified wording stays out');
+  assert.match(doc.querySelector('.hp-fair').textContent,/and those only/);
+  assert.ok(doc.querySelectorAll('.hp-timeline li').length>=12);
+  assert.match(doc.querySelector('meta[property="og:image"]').content,/\/assets\/og\/christ-died-for-all\.png(\?v=[a-f0-9]+)?$/);
+  const tl=page('explore/index.html');
+  assert.ok(tl.querySelector('a[href="/history/christ-died-for-all/"]'),'linked once, from the Timeline page');
+  assert.ok(readFileSync(new URL('assets/og/christ-died-for-all.png',DIST)).length>10000);
+  assert.match(readFileSync(new URL('sitemap-pages.xml',DIST),'utf8'),/<loc>https:\/\/viapatrum\.org\/history\/christ-died-for-all\/<\/loc>/);
+});
+
 test('favicon files ship in dist', ()=>{
   assert.ok(readFileSync(new URL('favicon.ico',DIST)).length>100);
   assert.match(readFileSync(new URL('assets/favicon.svg',DIST),'utf8'),/<svg/);

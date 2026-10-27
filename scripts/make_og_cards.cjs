@@ -108,6 +108,7 @@ function sectionCards() {
     ['downloads', ['/downloads/', '/downloads/logos/'], 'The library, to keep', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. Free to download, like everything here.'],
     ['ask', ['/ask/'], 'Ask', 'Ask the Fathers', 'Ask a question. Read the early writers’ own sentences, each linked to its passage.'],
     ['creeds', ['/creeds/'], 'Timeline', 'Creeds and churches', 'Every major creed and confession from 180 AD to today, and which churches hold it.'],
+    ['christ-died-for-all', ['/history/christ-died-for-all/'], 'Timeline', 'Did Christ die for all?', 'How Christians have answered, from Scripture to the Reformed debate, in their own words.'],
     ['privacy', ['/privacy/'], 'Privacy', 'No personal data, ever', 'Via Patrum collects no personal data, on the website or in the iPhone and iPad app.'],
   ];
   return S.map(([slug, pages, eyebrow, title, line, cite]) => ({
