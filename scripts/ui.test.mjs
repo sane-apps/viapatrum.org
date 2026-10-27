@@ -34,7 +34,7 @@ const longPassage = index.find(r=>r.kind==='work'&&(r.text||'').length>600);
 const searchPhrase = longPassage.text.slice(450,510);
 const settle = () => new Promise(resolve => setTimeout(resolve, 260));
 function mount(html, path='/works/', fetcher=site) {
-  const dom=new JSDOM(html,{url:`https://fathers.saneapps.com${path}`,runScripts:'outside-only',pretendToBeVisual:true});
+  const dom=new JSDOM(html,{url:`https://viapatrum.org${path}`,runScripts:'outside-only',pretendToBeVisual:true});
   dom.window.fetch=fetcher;
   dom.window.eval(script);
   return dom;
@@ -130,7 +130,7 @@ test('author catalog loads the passage shards once',async()=>{
 test('library progress line on About matches pipeline counts', ()=>{
   const html=readFileSync(new URL('about/index.html',DIST),'utf8');
   const q=JSON.parse(readFileSync(new URL('data/progress.json',DIST),'utf8'));
-  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/about/'});
+  const dom=new JSDOM(html,{url:'https://viapatrum.org/about/'});
   const s=dom.window.document.querySelector('#explore-progress');assert.ok(s);
   assert.match(s.textContent,new RegExp(`${q.published_works} works live`));
   const fmt=n=>Number(n).toLocaleString("en-US");
@@ -141,7 +141,7 @@ test('library progress line on About matches pipeline counts', ()=>{
 
 test('home: favicon, today passage, deduped daily pool, one focus row, each link once', ()=>{
   const html=readFileSync(new URL('index.html',DIST),'utf8');
-  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/'});
+  const dom=new JSDOM(html,{url:'https://viapatrum.org/'});
   const doc=dom.window.document;
   assert.ok(doc.querySelector('link[rel="icon"]'),'favicon link present');
   assert.match(doc.querySelector('link[rel="icon"]').getAttribute('href'),/\/assets\/favicon\.svg/);
