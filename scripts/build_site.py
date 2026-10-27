@@ -9267,6 +9267,13 @@ def build() -> None:
     # into a memory warning. The marker has to be rewritten after rmtree.
     (DIST / ".metadata_never_index").write_text("")
     shutil.copytree(ASSETS, DIST / "assets")
+    # Podcast feed: the canonical feed source lives in the repo at
+    # data/podcast/feed.xml and is served verbatim at /podcast/feed.xml.
+    # Update that file (never dist/) when episodes change.
+    _podcast_feed = ROOT / "data" / "podcast" / "feed.xml"
+    if _podcast_feed.exists():
+        (DIST / "podcast").mkdir(parents=True, exist_ok=True)
+        shutil.copy2(_podcast_feed, DIST / "podcast" / "feed.xml")
     (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
     for _icon in ("apple-touch-icon.png",):
         if (ASSETS / "icons" / _icon).exists():
