@@ -133,17 +133,32 @@
         "section": "29"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "cyril-third-letter-anathema-12",
+      "author": "Cyril of Alexandria",
+      "year": 430,
+      "date": "430",
+      "work": "Third Letter to Nestorius",
+      "locus": "Anathema 12",
+      "lang": "la",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "If anyone does not confess that the Word of God suffered in the flesh and was crucified in the flesh, and tasted death in the flesh, and became the firstborn from the dead (Colossians 1:18), inasmuch as he is life and the giver of life as God: let him be anathema.",
+      "original": "Si quis non confitetur, Dei Verbum passum carne et crucifixum carne, et mortem carne gustasse, factumque primogenitum ex mortuis [Col 1,18], secundum quod vita est et vivificator ut Deus: A. S.",
+      "context": "The last of the Twelve Anathemas Cyril attached to his Third Letter to Nestorius (430), received at Ephesus (431): the impassible Word truly suffered, in the flesh. Quoted in the old Latin version printed by Denzinger; the Greek opens 'If anyone does not confess that the Word of God suffered in the flesh'.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 124 (Latin version)"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
-    {
-      "author": "Cyril of Alexandria",
-      "work": "Third Letter to Nestorius, anathema 12",
-      "year": 430,
-      "why": "\"The Word of God suffered in the flesh.\" Probably in the library under another title; not found by search.",
-      "action": "search",
-      "source_hint": "cyril-alexandria epistulae"
-    },
     {
       "author": "Gregory Thaumaturgus",
       "work": "To Theopompus, on God's impassibility",

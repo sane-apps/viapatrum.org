@@ -139,6 +139,29 @@
       "translation": "dossier"
     },
     {
+      "id": "carthage-418-canons-6-7",
+      "author": "Council of Carthage",
+      "year": 418,
+      "date": "418",
+      "work": "Canons against the Pelagians",
+      "locus": "Canons 6 and 7",
+      "lang": "la",
+      "answer": "not-in-life",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It was also resolved: as Saint John the apostle says, 'If we say that we have no sin, we deceive ourselves, and the truth is not in us' (1 John 1:8); whoever thinks this should be taken to mean that we ought to say we have sin out of humility, and not because it is truly so, let him be anathema. ... It was also resolved: whoever says that in the Lord's Prayer the saints say 'Forgive us our debts' (Matthew 6:12) not for themselves, because this petition is no longer necessary for them, but for the other sinners among their people, let him be anathema.",
+      "original": "Item placuit, quod ait S. Ioannes Apostolus: Si dixerimus, quia peccatum non habemus, nos ipsos seducimus, et veritas in nobis non est: quisquis sic accipiendum putaverit, ut dicat propter humilitatem oportere dici, nos habere peccatum, non quia vere ita est, A. S. ... Item placuit, ut quicunque dixerit, in oratione dominica ideo dicere sanctos: Dimitte nobis debita nostra, ut non pro seipsis hoc dicant, quia non est eis iam necessaria ista petitio, sed pro aliis qui sunt in suo populo peccatores, A. S.",
+      "context": "Carthage (418), canons 6 and 7 of the anti-Pelagian decrees: even the saints pray 'forgive us' for themselves, because even the saints still sin.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), nos. 106 and 107"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "westminster-1646-13-2",
       "author": "Westminster Assembly",
       "year": 1646,
@@ -224,14 +247,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Council of Carthage",
-      "work": "Canons 6–8",
-      "year": 418,
-      "why": "Condemns saying that the saints pray \"forgive us our debts\" only out of humility.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 106–108)"
-    },
     {
       "author": "Macarius (Symeon)",
       "work": "Fifty Spiritual Homilies",

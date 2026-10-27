@@ -36,17 +36,22 @@
   ],
   "overview": [
     {
-      "text": "Images of Christ and the apostles existed by the third century (catacomb paintings; Eusebius saw some), but bishops such as Eusebius and Epiphanius distrusted them as pagan custom.",
+      "text": "Images of Christ and the apostles existed by the third century (catacomb paintings; Eusebius saw some), but a Spanish synod at Elvira (c. 306) forbade pictures of what is worshipped on church walls, and bishops such as Eusebius and Epiphanius distrusted them as pagan custom.",
       "cites": [
+        "elvira-canon-36",
         "eusebius-church-history-7-18",
+        "eusebius-letter-to-constantia",
         "epiphanius-against-image-makers"
       ]
     },
     {
-      "text": "After the iconoclast controversy, the Second Council of Nicaea (787) taught that icons are venerated, not worshiped, because, as Basil had said, \"the honor paid to the image passes to the original\".",
+      "text": "After the iconoclast controversy, the Second Council of Nicaea (787) did far more than permit icons: it ordered them set forth in churches, on the sacred vessels and vestments, in houses and by the wayside, decreed them 'due salutation and honourable reverence' with incense and lights, and attached deposition for clergy and excommunication for laity to rejecting them, anathematizing those who 'do not salute the holy and venerable images' (its synodal letter glosses anathema as 'complete separation from God'). It claimed the practice as a tradition 'handed down to us, whether in writing or verbally', resting on Basil's sentence that 'the honor paid to the image passes to the original'. But the florilegium of patristic texts read into its Acts contains no pre-controversy text approving the veneration of images: its genuine early witnesses show paintings that existed and taught, or give analogies (the Son as the Father's image; the emperor's portrait); the texts that actually commend saluting and embracing images are 6th-7th century (Leontius of Neapolis) or now recognised as spurious; and the first systematic defence of the practice is John of Damascus, c. 730.",
       "cites": [
         "nicaea-ii-787-definition",
-        "basil-holy-spirit-18-45"
+        "nicaea-ii-787-anathemas",
+        "basil-holy-spirit-18-45",
+        "john-damascus-divine-images",
+        "hieria-754-definition"
       ]
     },
     {
@@ -58,6 +63,27 @@
     }
   ],
   "quotes": [
+    {
+      "id": "elvira-canon-36",
+      "author": "Council of Elvira",
+      "year": 306,
+      "date": "c. 306",
+      "work": "Canons of Elvira",
+      "locus": "Canon 36",
+      "lang": "la",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It has been resolved that there shall be no pictures in a church, lest what is worshipped and adored be depicted on the walls.",
+      "original": "Placuit picturas in ecclesia esse non debere, ne quod colitur et adoratur in parietibus depingatur.",
+      "context": "Canon 36 of 81 disciplinary canons from a local Spanish synod at Illiberis (Elvira, near Granada). The wording is exact: it does not forbid pictures lest they become objects of worship; it forbids depicting on church walls the very thing that is worshipped and adored. It says nothing about portable icons, kissing, lamps or incense, and it is a local ruling, not an ecumenical definition; its date (traditionally c. 306) and the integrity of the collection are disputed. Either way, one Western episcopate c. 300 thought wall-pictures of the worshipped object were a problem to legislate against, which also means such pictures existed or were being introduced.",
+      "source": {
+        "url": "http://ldysinger.com/@magist/0305_Elvira/01_elvira.htm",
+        "edition": "Canons of Elvira, canon 36 (Lauchert/Hefele recension), Latin with English"
+      },
+      "translation": "dossier"
+    },
     {
       "id": "eusebius-church-history-7-18",
       "author": "Eusebius of Caesarea",
@@ -78,6 +104,27 @@
         "section": "7.18"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "eusebius-letter-to-constantia",
+      "author": "Eusebius of Caesarea (attributed)",
+      "year": 337,
+      "date": "c. 337",
+      "work": "Letter to Constantia",
+      "locus": "fragments (PG 20, 1545ff)",
+      "lang": "en",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What sort of image of Christ are you seeking? Is it the true and unalterable one which bears His essential characteristics, or the one which He took up for our sake when He assumed the form of a servant? ... Who, then, would be able to represent by means of dead colors and inanimate delineations (skiagraphiai) the glistening, flashing radiance of such dignity and glory, when even His superhuman disciples could not bear to behold Him in this guise and fell on their faces...? ... Have you ever heard anything of the kind either yourself in church or from another person? Are not such things banished and excluded from churches all over the world? ... To depict purely the human form of Christ before its transformation is to break the commandment of God and to fall into pagan error. ... I took it away from her and kept it in my house, as I thought it improper that such things ever be exhibited to others, lest we appear, like idol worshippers, to carry our God around in an image.",
+      "original": "What sort of image of Christ are you seeking? Is it the true and unalterable one which bears His essential characteristics, or the one which He took up for our sake when He assumed the form of a servant? ... Who, then, would be able to represent by means of dead colors and inanimate delineations (skiagraphiai) the glistening, flashing radiance of such dignity and glory, when even His superhuman disciples could not bear to behold Him in this guise and fell on their faces...? ... Have you ever heard anything of the kind either yourself in church or from another person? Are not such things banished and excluded from churches all over the world? ... To depict purely the human form of Christ before its transformation is to break the commandment of God and to fall into pagan error. ... I took it away from her and kept it in my house, as I thought it improper that such things ever be exhibited to others, lest we appear, like idol worshippers, to carry our God around in an image.",
+      "context": "Constantia, sister of Constantine, had asked Eusebius to send her an image of Christ; the letter refuses. Its authenticity is honestly disputed: it survives only in fragments quoted by the iconoclast Council of Hieria (754), requoted for refutation at Nicaea II (Session 6), and in Patriarch Nicephorus, and there is no scholarly consensus. Mango, Gwynn and Jensen treat a genuine Eusebian core as plausible; Sode and Speck doubt any coherent original can be reconstructed from the fragments, and Bigham argues the transmitted letter is doctored, since its rigorist second-commandment reading sits awkwardly beside Eusebius's uncondemning report of images in Church History 7.18. Nicaea II did not dismiss the letter as a forgery; it disqualified its author, arguing Eusebius was of one mind with those who followed the Arian superstition.",
+      "source": {
+        "url": "https://www.roger-pearse.com/weblog/2021/06/14/eusebius-letter-to-constantia-an-english-translation-by-cyril-mango/comment-page-1/",
+        "edition": "Eusebius, Letter to Constantia, trans. Cyril Mango, The Art of the Byzantine Empire 312-1453 (1972), pp. 16-18"
+      },
+      "translation": "published"
     },
     {
       "id": "epiphanius-against-image-makers",
@@ -124,23 +171,107 @@
       "translation": "dossier"
     },
     {
+      "id": "gregory-serenus-letters",
+      "author": "Gregory the Great",
+      "year": 600,
+      "date": "599-600",
+      "work": "Letters to Serenus of Marseille",
+      "locus": "Registrum 9.209; 11.10",
+      "lang": "en",
+      "answer": "allowed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It has come to our ears that your Fraternity, seeing certain adorers of images, broke and threw down these same images in Churches. And we commend you indeed for your zeal against anything made with hands being an object of adoration; but we signify to you that you ought not to have broken these images. For pictorial representation is made use of in Churches for this reason; that such as are ignorant of letters may at least read by looking at the walls what they cannot read in books. Your Fraternity therefore should have both preserved the images and prohibited the people from adoration of them. ... And indeed in that thou forbadest them to be adored, we altogether praise thee; but we blame thee for having broken them. ... For to adore a picture is one thing, but to learn through the story of a picture what is to be adored is another. For what writing presents to readers, this a picture presents to the unlearned who behold, since in it even the ignorant see what they ought to follow; in it the illiterate read. Hence, and chiefly to the nations, a picture is instead of reading.",
+      "original": "It has come to our ears that your Fraternity, seeing certain adorers of images, broke and threw down these same images in Churches. And we commend you indeed for your zeal against anything made with hands being an object of adoration; but we signify to you that you ought not to have broken these images. For pictorial representation is made use of in Churches for this reason; that such as are ignorant of letters may at least read by looking at the walls what they cannot read in books. Your Fraternity therefore should have both preserved the images and prohibited the people from adoration of them. ... And indeed in that thou forbadest them to be adored, we altogether praise thee; but we blame thee for having broken them. ... For to adore a picture is one thing, but to learn through the story of a picture what is to be adored is another. For what writing presents to readers, this a picture presents to the unlearned who behold, since in it even the ignorant see what they ought to follow; in it the illiterate read. Hence, and chiefly to the nations, a picture is instead of reading.",
+      "context": "Serenus, bishop of Marseille, had smashed church images after seeing people adore them. Gregory praises the prohibition of adoration twice and calls adoration of a picture sin, rebukes the breaking as something no priest had ever been heard to do, and authorizes images for one function only: teaching those who cannot read (the key sentence in Latin, CCSL 140A: 'Idcirco enim pictura in ecclesiis adhibetur, ut hi qui litteras nesciunt saltem in parietibus videndo legant, quae legere in codicibus non valent'). He nowhere commends salutation, kissing, lamps or incense before images. The letters also prove that by 599 there were 'certain adorers of images' at Marseille for Serenus to see: popular practice ahead of any theology.",
+      "source": {
+        "url": "https://www.newadvent.org/fathers/360209105.htm",
+        "edition": "Gregory the Great, Registrum 9.209 (599) and 11.10 (600), trans. Barmby, NPNF2-13"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "john-damascus-divine-images",
+      "author": "John of Damascus",
+      "year": 730,
+      "date": "c. 730",
+      "work": "Three Treatises on the Divine Images",
+      "locus": "Treatise I.4, I.16",
+      "lang": "en",
+      "answer": "venerated",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In former times, God, who is without form or body, could never be depicted. But now when God is seen in the flesh conversing with men, I make an image of the God whom I see. ... I do not draw an image of the immortal Godhead. I paint the visible flesh of God, for it is impossible to represent a spirit. ... I do not worship matter; I worship the Creator of matter who became matter for my sake, who willed to take His abode in matter; who worked out my salvation through matter. I will not cease from honouring that matter which works my salvation. I venerate it, though not as God. ... Either do away with the veneration and worship due to all these things, or submit to the tradition of the Church in the worship of images, honouring God and His friends.",
+      "original": "In former times, God, who is without form or body, could never be depicted. But now when God is seen in the flesh conversing with men, I make an image of the God whom I see. ... I do not draw an image of the immortal Godhead. I paint the visible flesh of God, for it is impossible to represent a spirit. ... I do not worship matter; I worship the Creator of matter who became matter for my sake, who willed to take His abode in matter; who worked out my salvation through matter. I will not cease from honouring that matter which works my salvation. I venerate it, though not as God. ... Either do away with the veneration and worship due to all these things, or submit to the tradition of the Church in the worship of images, honouring God and His friends.",
+      "context": "Written from Mar Saba (c. 726-730) against Leo III's iconoclasm, this is the first systematic theological defence of venerating images. It rests on a distinction John states himself: 'I adore Him alone with the worship of latreia... The worship of latreia is one thing, and the worship which is given to merit another'; and on Basil's sentence that 'the honour given to the image is referred to the original.' His appended florilegium of the fathers is weaker than the system: its genuine early texts prove analogies (the Son as the Father's image, the emperor's portrait) and didactic painting, not cult acts toward icons, while the texts that directly describe embracing and greeting images (Leontius of Neapolis, Stephen of Bostra, the Pseudo-Athanasian Questions to Antiochus) are 6th-7th century, the practice of John's own recent past.",
+      "source": {
+        "url": "http://khazarzar.skeptik.net/pgm/PG_Migne/John%20of%20Damascus_PG%2094-96/extras/apologia_icons-damascenos.pdf",
+        "edition": "John of Damascus, On the Divine Images, trans. Mary H. Allies (1898); paragraphing checked against Louth (2003); Greek ed. Kotter (1975)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "hieria-754-definition",
+      "author": "Council of Hieria",
+      "year": 754,
+      "date": "754",
+      "work": "Definition (Horos)",
+      "locus": "as quoted in Nicaea II, Session 6",
+      "lang": "en",
+      "answer": "rejected",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "He makes an image and calls it Christ. The name Christ signifies God and man. Consequently it is an image of God and man, and consequently he has in his foolish mind, in his representation of the created flesh, depicted the Godhead which cannot be represented, and thus mingled what should not be mingled. Thus he is guilty of a double blasphemy — the one in making an image of the Godhead, and the other by mingling the Godhead and manhood. Those fall into the same blasphemy who venerate the image. ... The only admissible figure of the humanity of Christ, however, is bread and wine in the holy Supper. ... Supported by the Holy Scriptures and the Fathers, we declare unanimously, in the name of the Holy Trinity, that there shall be rejected and removed and cursed out of the Christian Church every likeness which is made out of any material and color whatever by the evil art of painters. Whoever in future dares to make such a thing, or to venerate it, or set it up in a church, or in a private house, shall be, if bishop, presbyter, or deacon, deposed; if monk or layman, anathematised.",
+      "original": "He makes an image and calls it Christ. The name Christ signifies God and man. Consequently it is an image of God and man, and consequently he has in his foolish mind, in his representation of the created flesh, depicted the Godhead which cannot be represented, and thus mingled what should not be mingled. Thus he is guilty of a double blasphemy — the one in making an image of the Godhead, and the other by mingling the Godhead and manhood. Those fall into the same blasphemy who venerate the image. ... The only admissible figure of the humanity of Christ, however, is bread and wine in the holy Supper. ... Supported by the Holy Scriptures and the Fathers, we declare unanimously, in the name of the Holy Trinity, that there shall be rejected and removed and cursed out of the Christian Church every likeness which is made out of any material and color whatever by the evil art of painters. Whoever in future dares to make such a thing, or to venerate it, or set it up in a church, or in a private house, shall be, if bishop, presbyter, or deacon, deposed; if monk or layman, anathematised.",
+      "context": "338 bishops under Constantine V, meeting at Hieria and Blachernae, Constantinople (754). The definition survives only as quoted, section by section, for refutation in Nicaea II, Session 6. Its argument is a Christological dilemma: to paint Christ's flesh apart from his Godhead is Nestorian; to paint it together with the Godhead is to depict what cannot be depicted and to mingle the natures (Monophysite). The symmetry should not be hidden: 754 and 787 each claimed Scripture, the Fathers and the ecumenical councils, and each anathematized the other side.",
+      "source": {
+        "url": "https://www.newadvent.org/fathers/3819.htm",
+        "edition": "Council of Hieria, Definition, as quoted in the Acts of the Second Council of Nicaea, Session 6, trans. Percival, NPNF2-14"
+      },
+      "translation": "published"
+    },
+    {
       "id": "nicaea-ii-787-definition",
       "author": "Second Council of Nicaea",
       "year": 787,
       "date": "c. 787",
       "work": "Definition",
-      "locus": "Horos",
+      "locus": "Horos, Session 7",
       "lang": "en",
       "answer": "venerated",
       "strength": "explicit",
       "voice": "council",
       "weight": "key",
-      "english": "the honour paid to an image traverses it, reaching the model, and he who venerates the image, venerates the person represented in that image.",
-      "original": "the honour paid to an image traverses it, reaching the model, and he who venerates the image, venerates the person represented in that image.",
-      "context": "The council ended the first iconoclasm. It distinguished veneration (proskynesis) of images from worship (latreia), due to God alone.",
+      "english": "To make our confession short, we keep unchanged all the ecclesiastical traditions handed down to us, whether in writing or verbally, one of which is the making of pictorial representations. ... We, therefore, following the royal pathway and the divinely inspired authority of our Holy Fathers and the traditions of the Catholic Church (for, as we all know, the Holy Spirit indwells her), define with all certitude and accuracy that just as the figure of the precious and life-giving Cross, so also the venerable and holy images, as well in painting and mosaic as of other fit materials, should be set forth in the holy churches of God, and on the sacred vessels and on the vestments and on hangings and in pictures both in houses and by the wayside, to wit, the figure of our Lord God and Saviour Jesus Christ, of our spotless Lady, the Mother of God, of the honourable Angels, of all Saints and of all pious people. For by so much more frequently as they are seen in artistic representation, by so much more readily are men lifted up to the memory of their prototypes, and to a longing after them; and to these should be given due salutation and honourable reverence (aspasmon kai timētikēn proskynēsin), not indeed that true worship of faith (latreian) which pertains alone to the divine nature; but to these, as to the figure of the precious and life-giving Cross and to the Book of the Gospels and to the other holy objects, incense and lights may be offered according to ancient pious custom. For the honour which is paid to the image passes on to that which the image represents, and he who reveres the image reveres in it the subject represented.",
+      "original": "To make our confession short, we keep unchanged all the ecclesiastical traditions handed down to us, whether in writing or verbally, one of which is the making of pictorial representations. ... We, therefore, following the royal pathway and the divinely inspired authority of our Holy Fathers and the traditions of the Catholic Church (for, as we all know, the Holy Spirit indwells her), define with all certitude and accuracy that just as the figure of the precious and life-giving Cross, so also the venerable and holy images, as well in painting and mosaic as of other fit materials, should be set forth in the holy churches of God, and on the sacred vessels and on the vestments and on hangings and in pictures both in houses and by the wayside, to wit, the figure of our Lord God and Saviour Jesus Christ, of our spotless Lady, the Mother of God, of the honourable Angels, of all Saints and of all pious people. For by so much more frequently as they are seen in artistic representation, by so much more readily are men lifted up to the memory of their prototypes, and to a longing after them; and to these should be given due salutation and honourable reverence (aspasmon kai timētikēn proskynēsin), not indeed that true worship of faith (latreian) which pertains alone to the divine nature; but to these, as to the figure of the precious and life-giving Cross and to the Book of the Gospels and to the other holy objects, incense and lights may be offered according to ancient pious custom. For the honour which is paid to the image passes on to that which the image represents, and he who reveres the image reveres in it the subject represented.",
+      "context": "The council ended the first iconoclasm and made the practice mandatory, not optional. The Definition itself decrees that those who 'reject some of those things which the Church hath received (e.g., the Book of the Gospels, or the image of the cross, or the pictorial icons, or the holy reliques of a martyr)', if they are bishops or clerics, are to be deposed, and if monks or laity, cut off from communion. Its distinction is between honourable reverence (proskynesis) toward the images, as toward the Cross and the Gospel book, and the true worship of faith (latreia), which 'pertains alone to the divine nature'. The concluding principle is Basil, On the Holy Spirit 18.45, quoted verbatim; in Basil it concerns the Son as the Father's image, with the emperor's portrait as the example, not painted icons.",
       "source": {
-        "url": "https://www.papalencyclicals.net/councils/ecum07.htm",
-        "edition": "Second Council of Nicaea, Definition (787)"
+        "url": "https://www.newadvent.org/fathers/3819.htm",
+        "edition": "Second Council of Nicaea, Definition (Horos), trans. Percival, NPNF2-14"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "nicaea-ii-787-anathemas",
+      "author": "Second Council of Nicaea",
+      "year": 787,
+      "date": "787",
+      "work": "Acts of the Second Council of Nicaea",
+      "locus": "Session 1 confessions; Session 7 acclamations",
+      "lang": "en",
+      "answer": "venerated",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "Let them who do not venerate the holy and venerable images be anathema! ... To those who have a doubtful mind and do not confess with their whole hearts that they venerate the sacred images, anathema! ... We salute the venerable images. We place under anathema those who do not do this. Anathema to those who do not salute the holy and venerable images. Anathema to those who call the sacred images idols. Anathema to those who say that Christians resort to the sacred images as to gods. Anathema to those who dare to say that at any time the Catholic Church received idols.",
+      "original": "Let them who do not venerate the holy and venerable images be anathema! ... To those who have a doubtful mind and do not confess with their whole hearts that they venerate the sacred images, anathema! ... We salute the venerable images. We place under anathema those who do not do this. Anathema to those who do not salute the holy and venerable images. Anathema to those who call the sacred images idols. Anathema to those who say that Christians resort to the sacred images as to gods. Anathema to those who dare to say that at any time the Catholic Church received idols.",
+      "context": "The Session 1 anathematisms are the confessions of returning iconoclast bishops (such as Basil of Ancyra and Theodore of Myra), received and applauded by the council; the acclamations followed the signing of the Definition. The council's Synodal Letter to Constantine VI and Irene glosses its own sanction: whoever does not so believe 'but undertakes to debate the matter further and is evil affected with regard to the veneration due the sacred images, such an one our holy ecumenical council anathematises. Now anathema is nothing less than complete separation from God.' Veneration was thus mandatory on pain of exclusion from the Church, and the 'doubtful mind' anathema reaches even inward non-compliance.",
+      "source": {
+        "url": "https://www.newadvent.org/fathers/3819.htm",
+        "edition": "Second Council of Nicaea, Acts, Sessions 1 and 7 and Synodal Letter, trans. Percival, NPNF2-14"
       },
       "translation": "published"
     },
@@ -189,28 +320,12 @@
   ],
   "gaps": [
     {
-      "author": "Council of Elvira",
-      "work": "Canon 36",
-      "year": 306,
-      "why": "\"There shall be no pictures in church.\"",
+      "author": "Council of Hieria",
+      "work": "Definition (Horos), complete text",
+      "year": 754,
+      "why": "The definition survives only in the excerpts its opponents chose to quote for refutation at Nicaea II (Session 6); no independent or complete text exists against which to check what was omitted.",
       "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt"
-    },
-    {
-      "author": "John of Damascus",
-      "work": "Three Treatises on the Divine Images",
-      "year": 730,
-      "why": "The main defense of icons: since God became visible, he can be depicted.",
-      "action": "intake",
-      "source_hint": "Kotter (copyright) as note; Migne PG 94"
-    },
-    {
-      "author": "Gregory I",
-      "work": "Letters 9.209 and 11.10, to Serenus",
-      "year": 600,
-      "why": "Images as books for those who cannot read; not to be worshiped or destroyed.",
-      "action": "intake",
-      "source_hint": "Ewald and Hartmann, MGH (1891–1899)"
+      "source_hint": "Krannich, Schubert & Sode, Die ikonoklastische Synode von Hiereia 754 (2002)"
     }
   ],
   "related": {
@@ -219,9 +334,9 @@
       "icons"
     ]
   },
-  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from. Entries added 20 October 2026 from the icon-veneration research dossier of that date (Elvira canon 36; Eusebius, Letter to Constantia; Gregory I to Serenus; John of Damascus; Hieria 754; the Nicaea II anathemas and the expanded Definition) quote the published translations named in each entry's source (Percival, Barmby, Allies, Mango); Elvira's canon is quoted in its Latin (Lauchert/Hefele recension) with the translation made for this dossier.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (research dossier 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

@@ -36,11 +36,12 @@
   ],
   "overview": [
     {
-      "text": "From the Didache on, the Eucharist is called a sacrifice, the pure offering among the nations foretold by Malachi. Clement speaks of presbyters who \"offered the gifts\".",
+      "text": "From the Didache on, the Eucharist is called a sacrifice, the pure offering among the nations foretold by Malachi. Clement speaks of presbyters who offered the gifts, and Irenaeus calls it the new oblation of the new covenant, which the Church, receiving it from the apostles, offers in the whole world.",
       "cites": [
         "didache-14",
         "1-clement-44",
-        "justin-dialogue-41"
+        "justin-dialogue-41",
+        "irenaeus-ah-4-17-5"
       ]
     },
     {
@@ -123,6 +124,28 @@
       "source": {
         "book": "justin-dialogue-trypho",
         "section": "41"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-4-17-5",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "4.17.5–4.18.1",
+      "lang": "la",
+      "answer": "offering",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "To offer to God the firstfruits of his own creatures, not as if he stood in need of them, but so that they themselves should be neither unfruitful nor ungrateful ... and he gave thanks, saying: This is my body. And the cup likewise, which is from the creature that belongs to us, he confessed to be his blood, and he taught the new oblation of the new covenant; which the Church, receiving it from the apostles, offers in the whole world to God, who gives us our food, the firstfruits of his gifts in the new covenant ... of which Malachi, among the twelve prophets, spoke beforehand.",
+      "original": "primitias Deo offerre ex suis creaturis, non quasi indigenti, sed ut ipsi nec infructuosi nec ingrati sint ... et gratias egit, dicens: Hoc est meum corpus. Et calicem similiter, qui est ex ea creatura, quae est secundum nos, suum sanguinem confessus est, et novi Testamenti novam docuit oblationem; quam Ecclesia ab Apostolis accipiens, in universo mundo offert Deo, ei qui alimenta nobis praestat, primitias suorum munerum in novo Testamento ... de quo in duodecim prophetis Malachias sic praesignificavit",
+      "context": "Christ, Irenaeus says, counselled his disciples to offer God the firstfruits of his creatures, and at the supper took the bread that is from creation and the cup and called them his body and blood. The section that follows (4.18.1) quotes Malachi 1:10-11 on the pure offering among the nations. This part of Against Heresies survives in its ancient Latin translation; in the Harvey scan the passage is broken up by the edition's footnotes, so the quote is pieced from three stretches of the same pages, each verified separately.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
       },
       "translation": "dossier"
     },
@@ -297,14 +320,6 @@
   ],
   "gaps": [
     {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 4.17.5–4.18.1",
-      "year": 180,
-      "why": "\"The new oblation of the new covenant.\" Not found in the library's Harvey text.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
-    },
-    {
       "author": "Augustine of Hippo",
       "work": "City of God 10.20",
       "year": 417,
@@ -321,7 +336,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

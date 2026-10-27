@@ -35,11 +35,14 @@
       ]
     },
     {
-      "text": "In the second century, Hegesippus, Irenaeus and Tertullian used lists of bishops from the apostles to prove that the churches still held the apostles' teaching, against the Gnostics' secret traditions.",
+      "text": "In the second century, Hegesippus, Irenaeus and Tertullian used lists of bishops from the apostles to prove that the churches still held the apostles' teaching, against the Gnostics' secret traditions. Irenaeus adds that the presbyters who hold the succession received the sure gift of truth with it, and Cyprian, in the Novatianist schism, says the bishop is in the Church and the Church in the bishop, and that a bishop who succeeded no one, sprung from himself, is no bishop at all.",
       "cites": [
         "hegesippus-in-eusebius-4-22",
         "irenaeus-ah-3-3-3",
-        "tertullian-prescription-32"
+        "tertullian-prescription-32",
+        "irenaeus-ah-4-26-2",
+        "cyprian-letter-66-8",
+        "cyprian-letter-69-3"
       ]
     },
     {
@@ -116,6 +119,28 @@
       "translation": "dossier"
     },
     {
+      "id": "irenaeus-ah-4-26-2",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "4.26.2",
+      "lang": "la",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "So we must obey the presbyters who are in the Church, those who hold the succession from the apostles, as we have shown, who with the succession of the episcopate have received the sure gift of truth, according to the Father's good pleasure.",
+      "original": "Quapropter eis qui in Ecclesia sunt presbyteris obaudire oportet, his qui successionem habent ab Apostolis, sicut ostendimus; qui cum episcopatus successione charisma veritatis certum secundum placitum Patris acceperunt",
+      "context": "Irenaeus goes on that those who break away from the principal succession are to be held suspect, as heretics, schismatics, or the proud. This part of Against Heresies survives in its ancient Latin translation, not in Greek.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "tertullian-prescription-32",
       "author": "Tertullian",
       "year": 203,
@@ -133,6 +158,48 @@
       "source": {
         "book": "tertullian-prescription-against-heretics",
         "section": "32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-66-8",
+      "author": "Cyprian of Carthage",
+      "year": 254,
+      "date": "c. 254",
+      "work": "Letter 66, to Florentius Pupianus",
+      "locus": "66.8",
+      "lang": "la",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The bishop is in the Church and the Church is in the bishop, and anyone who is not with the bishop is not in the Church. ... The Church, which is catholic and one, is not cut or divided.",
+      "original": "episcopum in ecclesia esse et ecclesiam in episcopo et qui cum episcopo non sit in ecclesia non esse ... ecclesia quae catholica una est scissa non sit neque diuisa",
+      "context": "Cyprian's most quoted sentence on the episcopate, written to a layman drawn toward the Novatianist schism: those who creep about in secret, without peace with God's priests, flatter themselves that they are in communion.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "66.8"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "cyprian-letter-69-3",
+      "author": "Cyprian of Carthage",
+      "year": 254,
+      "date": "c. 254",
+      "work": "Letter 69, to Magnus",
+      "locus": "69.3",
+      "lang": "la",
+      "answer": "succession",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Novatian is not in the Church and cannot be counted a bishop, since, setting aside the gospel and apostolic tradition, he sprang from himself and succeeded no one.",
+      "original": "Nouatianus in ecclesia non est nec episcopus conputari potest, qui euangelica et apostolica traditione contempta nemini succedens a se ipso ortus est.",
+      "context": "From the same Novatianist dispute: only the one Church has the living water and the power to baptize, and Cornelius, not Novatian, had succeeded Fabian by lawful ordination. Cyprian ends the section: no one can have or hold the Church who has not been ordained in the Church.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "69.3"
       },
       "translation": "dossier"
     },
@@ -200,24 +267,7 @@
       "translation": "published"
     }
   ],
-  "gaps": [
-    {
-      "author": "Cyprian of Carthage",
-      "work": "Letter 66 and 69",
-      "year": 254,
-      "why": "The bishop in the Church and the Church in the bishop.",
-      "action": "search",
-      "source_hint": "cyprian-letters 66"
-    },
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 4.26.2",
-      "year": 180,
-      "why": "Presbyters with \"the sure gift of truth\" through succession.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-liber-4.txt"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "apostolic-succession"
@@ -225,7 +275,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

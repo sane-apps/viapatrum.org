@@ -32,7 +32,16 @@
       "text": "\"Heresy\" means choice. Ignatius calls it a foreign plant mixed with Christ like poison in honeyed wine; Tertullian defines the heretic as one who chooses his own teaching instead of what the apostles handed on.",
       "cites": [
         "ignatius-trallians-6",
-        "tertullian-prescription-6"
+        "tertullian-prescription-6",
+        "aquinas-st-2-2-11-1"
+      ]
+    },
+    {
+      "text": "Irenaeus adds the test of publicity: error never shows itself bare, but dressed to seem truer than truth, and its teachers, when appealed to the apostolic tradition kept through the succession of presbyters, claim to be wiser than the apostles themselves.",
+      "cites": [
+        "irenaeus-ah-1-preface-error",
+        "irenaeus-ah-3-2-tradition",
+        "vincent-commonitorium-2-6"
       ]
     },
     {
@@ -61,6 +70,49 @@
       "source": {
         "book": "ignatius-letters",
         "section": "3.6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-1-preface-error",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "Preface 2",
+      "lang": "grc",
+      "answer": "choice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For error by itself is not put on show, lest once stripped bare it be exposed; but decked out cunningly in a plausible garment, it makes itself seem, by its outward appearance, even truer than the truth itself to the inexperienced.",
+      "original": "ἡ γὰρ πλάνη καθ᾽ αὑτὴν μὲν οὐκ ἐπιδείκνυται, ἵνα μὴ γυμνωθεῖσα γένηται κατάφωρος· πιθανῷ δὲ περιβλήματι πανούργως κοσμουμένη, καὶ αὐτῆς τῆς ἀληθείας ἀληθεστέραν ἑαυτὴν παρέχει φαίνεσθαι διὰ τῆς ἔξωθεν φαντασίας τοῖς ἀπειροτέροις",
+      "context": "The preface to the whole work. The heretical teaching persuades because it is dressed to look like truth; Irenaeus says it must therefore be stripped and shown false, not merely denounced. The Greek of the preface is preserved in the PG 7 text.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-libri-1-2.txt",
+        "edition": "Migne PG 7, Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-3-2-tradition",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.2.2",
+      "lang": "la",
+      "answer": "choice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Yet when we appeal to them with that tradition again, the one from the apostles, which is preserved in the churches through the successions of the presbyters, they oppose the tradition, claiming that they, wiser not only than the presbyters but also than the apostles, have found the unmixed truth.",
+      "original": "Cum autem ad eam iterum traditionem, quae est ab Apostolis, quae per successiones Presbyterorum in Ecclesiis custoditur, provocamus eos, adversantur traditioni, dicentes se non solum Presbyteris, sed etiam Apostolis exsistentes sapientiores, sinceram invenisse veritatem",
+      "context": "For Irenaeus the mark of the heretic is a rival, self found truth set against the public apostolic tradition. He adds that anyone can inspect that tradition in every church and count the bishops the apostles appointed (3.3), and that the truth is therefore not to be sought elsewhere (3.4). The Greek of Book 3 is lost here; the passage survives in the Latin translation.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/chapters/irenaeus-against-heresies.json",
+        "ia": "10606565bsb",
+        "edition": "Harvey (1857), vol. 2, Book 3.2 (Latin)"
       },
       "translation": "dossier"
     },
@@ -105,34 +157,51 @@
         "section": "18"
       },
       "translation": "dossier"
-    }
-  ],
-  "gaps": [
+    },
     {
+      "id": "vincent-commonitorium-2-6",
       "author": "Vincent of Lérins",
-      "work": "Commonitorium 2.6",
       "year": 434,
-      "why": "\"What has been believed everywhere, always, and by all\": the classic test.",
-      "action": "intake",
-      "source_hint": "Moxon (1915); Migne PL 50"
+      "date": "434",
+      "work": "Commonitorium",
+      "locus": "2.6",
+      "lang": "la",
+      "answer": "choice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In the Catholic Church itself, the greatest care must be taken that we hold what has been believed everywhere, always, and by all. ... what the very force of the name and its meaning declares, taking in, as it does, nearly all things together.",
+      "original": "In ipsa item catholica ecclesia magnopere curandum est ut id teneamus quod ubique, quod semper, quod ab omnibus creditum est ... quod ipsa vis nominis ratioque declarat, quae omnia fere universaliter comprehendit",
+      "context": "Vincent's canon, written about 434, three years after the Council of Ephesus: a teaching is unmasked as a private choice when it fails the triple test of universality, antiquity, and consent. It became the classic rule for telling the faith the Church received from what a teacher invents.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-commonitoriumofv00vinc.txt",
+        "edition": "Moxon, The Commonitorium of Vincent of Lerins (Cambridge, 1915)"
+      },
+      "translation": "dossier"
     },
     {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies, Book 1 preface and 3.2–4",
-      "year": 180,
-      "why": "Heresy as secret tradition against the public succession.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/khaz-irenaeus-lugdunensis-pg-07-adversus-haereses-libri-1-2.txt"
-    },
-    {
+      "id": "aquinas-st-2-2-11-1",
       "author": "Thomas Aquinas",
-      "work": "Summa Theologiae II-II q. 11",
       "year": 1270,
-      "why": "The medieval definition of heresy.",
-      "action": "intake",
-      "source_hint": "Leonine edition (1895)"
+      "date": "c. 1270",
+      "work": "Summa Theologiae",
+      "locus": "II-II, q. 11, a. 1",
+      "lang": "la",
+      "answer": "choice",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "because he does not choose the things truly handed down by Christ, but the things his own mind suggests to him. ... And so heresy is a species of unbelief, belonging to those who profess the faith of Christ but corrupt its dogmas.",
+      "original": "quia non eligit ea quae sunt vere a Christo tradita, sed ea quae sibi propria mens suggerit. ... Et ideo haeresis est infidelitatis species pertinens ad eos qui fidem Christi profitentur, sed eius dogmata corrumpunt.",
+      "context": "Thomas builds the definition from the word itself: heresy (haeresis) is a choosing. The heretic means to assent to Christ, but picks what to believe by his own mind instead of what Christ handed down; unbelief of that kind, in someone who professes the faith of Christ, is heresy.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-aquinas-summa-theologiae-lt.txt",
+        "edition": "Summa Theologiae, Latin text (Leonine), via Documenta Catholica Omnia"
+      },
+      "translation": "dossier"
     }
   ],
+  "gaps": [],
   "related": {
     "topics": [
       "heresy"
@@ -140,7 +209,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

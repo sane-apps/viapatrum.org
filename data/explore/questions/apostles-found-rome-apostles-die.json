@@ -36,8 +36,9 @@
       ]
     },
     {
-      "text": "By about 170–200, writers name their graves on the Vatican hill and the Ostian Way, and say both planted the churches of Rome and Corinth.",
+      "text": "Irenaeus, about 180, opens the third book of Against Heresies with Peter and Paul preaching at Rome and founding the church there. By about 170 to 200, writers name their graves on the Vatican hill and the Ostian Way, and say both planted the churches of Rome and Corinth.",
       "cites": [
+        "irenaeus-ah-3-1-1",
         "gaius-in-eusebius-2-25",
         "dionysius-corinth-in-eusebius-2-25"
       ]
@@ -47,6 +48,13 @@
       "cites": [
         "origen-in-eusebius-3-1",
         "tertullian-prescription-36"
+      ]
+    },
+    {
+      "text": "Eusebius, about 325, gathers the traditions into one account: Thomas drew Parthia, Andrew Scythia, and John Asia, dying at Ephesus; and Paul, after a first release at Rome, was martyred when he came to the city a second time.",
+      "cites": [
+        "eusebius-he-3-1-lots",
+        "eusebius-he-2-22-paul"
       ]
     }
   ],
@@ -90,6 +98,27 @@
       "source": {
         "book": "ignatius-letters",
         "section": "4.4"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-3-1-1",
+      "author": "Irenaeus of Lyons (quoted by Eusebius)",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies, quoted in Eusebius, Church History",
+      "locus": "3.1.1",
+      "lang": "grc",
+      "answer": "rome",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Matthew published a written Gospel among the Hebrews in their own language, while Peter and Paul were preaching at Rome and founding the church there.",
+      "original": "ὁ μὲν δὴ Ματθαῖος ἐν τοῖς Ἑβραίοις τῇ ἰδίᾳ αὐτῶν διαλέκτῳ καὶ γραφὴν ἐξήνεγκεν εὐαγγελίου, τοῦ Πέτρου καὶ τοῦ Παύλου ἐν Ῥώμῃ εὐαγγελιζομένων καὶ θεμελιούντων τὴν ἐκκλησίαν.",
+      "context": "The opening of Book 3 of Against Heresies, quoted word for word by Eusebius to establish where the four Gospels came from. Irenaeus wrote about a century after the events; the Greek of this sentence survives in Eusebius's quotation (Migne PG 7 prints the same Greek).",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.8"
       },
       "translation": "dossier"
     },
@@ -176,17 +205,51 @@
         "section": "36"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "eusebius-he-3-1-lots",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Church History",
+      "locus": "3.1.1",
+      "lang": "grc",
+      "answer": "deaths",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Thomas, as the tradition holds, received Parthia as his lot, Andrew Scythia, and John Asia, and John stayed among them until he died at Ephesus.",
+      "original": "Θωμᾶς μὲν, ὡς ἡ παράδοσις περιέχει, τὴν Παρθίαν εἴληχεν, Ἀνδρέας δὲ τὴν Σκυθίαν, Ἰωάννης τὴν Ἀσίαν, πρὸς οὓς καὶ διατρίψας ἐν Ἐφέσῳ τελευτᾷ.",
+      "context": "Eusebius opens his third book with the fields the apostles were said to have drawn by lot. He then quotes Origen word for word on Peter and Paul (already quoted on this page).",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.1"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "eusebius-he-2-22-paul",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Church History",
+      "locus": "2.22.2",
+      "lang": "grc",
+      "answer": "deaths",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "And coming to the same city a second time, he was perfected by martyrdom in his own season.",
+      "original": "δεύτερον δ’ ἐπιβάντα τῇ αὐτῇ πόλει τῷ κατ’ αὐτὸν τελειωθῆναι μαρτυρίῳ.",
+      "context": "Eusebius argues from the second letter to Timothy that Paul was released after his first defence at Rome, sent out again to preach, and only on a second stay in the city was martyred under Nero. Luke's Acts, he notes, covers only the first two years.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "2.22"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 3.1.1",
-      "year": 180,
-      "why": "Peter and Paul preaching at Rome and founding the church.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
-    },
     {
       "author": "Acts of Peter",
       "work": "Martyrdom of Peter 37–38",
@@ -194,14 +257,6 @@
       "why": "The legend of the upside-down cross and \"Quo vadis\".",
       "action": "intake",
       "source_hint": "Lipsius and Bonnet, Acta apostolorum apocrypha (1891)"
-    },
-    {
-      "author": "Eusebius of Caesarea",
-      "work": "Church History 3.1 and 2.22",
-      "year": 325,
-      "why": "Where the other apostles preached and died.",
-      "action": "search",
-      "source_hint": "eusebius-church-history 3.1"
     }
   ],
   "related": {
@@ -211,7 +266,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

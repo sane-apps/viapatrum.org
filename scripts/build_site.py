@@ -8,8 +8,9 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from html import escape
 from pathlib import Path
 from urllib.parse import quote_plus
@@ -242,6 +243,31 @@ MACARIUS_BOOK = BOOKS / "macarius-spiritual-homilies"
 WESLEY_BOOK = BOOKS / "john-wesley-sermons"
 EXPLORE_DATA = ROOT / "data" / "explore"
 SPONSORS = "https://github.com/sponsors/MrSaneApps"
+
+# Book codes the YouVersion API uses, in BIBLE_ORDER's canonical order.
+USFM_ORDER = (
+    "GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN "
+    "HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH 1TI "
+    "2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV"
+).split()
+
+
+def youversion_web_key() -> str:
+    """The website's YouVersion App Key. It is public by design (the browser sends
+    it); it lives in the sane-env keychain as YOUVERSION_WEB_KEY, not in git.
+    Without it the YouVersion translations are left off the page."""
+    key = os.environ.get("YOUVERSION_WEB_KEY", "").strip()
+    if not key:
+        kc = Path.home() / "Library/Keychains/sane-env.keychain-db"
+        try:
+            subprocess.run(["/usr/bin/security", "unlock-keychain", "-p", "", str(kc)], capture_output=True, timeout=10)
+            key = subprocess.run(["/usr/bin/security", "find-generic-password", "-s", "sane-env", "-a", "YOUVERSION_WEB_KEY", "-w", str(kc)],
+                                 capture_output=True, text=True, timeout=10).stdout.strip()
+        except (OSError, subprocess.SubprocessError):
+            key = ""
+    if not key:
+        print("WARNING: YOUVERSION_WEB_KEY not found; NIV, NASB and the More menu are left off the Scripture pages.", file=sys.stderr)
+    return key
 SITE_NAME = "Via Patrum"
 SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
 # The iPhone and iPad app (App Store id 6818696772; 1.0 live on 2026-10-14).
@@ -260,26 +286,15 @@ YOUTUBE_BADGE = (f'<a class="yt-badge" href="{YOUTUBE_URL}" rel="noopener" aria-
                  '<svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">'
                  '<rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>'
                  '<span>YouTube</span></a>')
-SITE_TAG = "The early Church in its own words, in faithful modern English. Free to read and hear."
+SITE_TAG = "The way of the Church Fathers, in their own words. Fresh English translations, free to read and hear."
 BASE = ""
 
 # Work ↔ topic cross-refs (topic ids from ante-nicene-topics/topics.yml).
 WORK_TOPICS: dict[str, list[str]] = {
     "nemesius-de-natura-hominis": ["image-likeness", "free-will", "sin-and-death"],
-    "macarius-spiritual-homilies": ["monasticism", "spiritual-life", "prayer", "divine-image", "resurrection"],
-    "philostorgius-he": ["arianism", "ecclesiastical-history", "christology"],
-    "gregory-thaumaturgus-de-fide-xii": ["christology", "incarnation", "trinity"],
-    "gregory-thaumaturgus-ad-tatianum-de-anima": ["soul", "anthropology", "philosophy"],
-    "gregory-thaumaturgus-in-annuntiationem": ["annunciation", "incarnation", "virgin-mary"],
-    "gregory-thaumaturgus-sermo-in-omnes-sanctos": ["martyrdom", "resurrection", "christology"],
-    "gregory-thaumaturgus-panegyricus": ["origen", "education", "philosophy", "rhetoric"],
-    "gregory-thaumaturgus-ecclesiastes-metaphrase": ["ecclesiastes", "wisdom-literature", "vanity", "metaphrase"],
-    "gregory-thaumaturgus-epistula-canonica": ["penance", "canonical-epistle", "idolatry", "barbarian-invasion"],
-    "serapion-antioch-fragmenta": ["gospel-canon", "docetism", "apostolic-tradition", "heresy"],
-    "epiphanius-ancoratus": ["trinity", "holy-spirit", "christology", "monarchy-of-god"],
-    "epiphanius-de-mensuris": ["scripture", "weights-measures", "prophecy", "textual-criticism"],
-    "epiphanius-panarion": ["heresy", "church", "adam", "trinity", "panarion"],
-    "epiphanius-anacephalaeosis": ["heresy", "panarion", "recapitulation", "church"],
+    # No topic fits the opening alone; [] also keeps the meta's non-topic tags out.
+    "gregory-thaumaturgus-panegyricus": [],
+    "gregory-thaumaturgus-ecclesiastes-metaphrase": [],
     "origen-on-prayer": ["liturgy-prayer"],
     "origen-exhortation-to-martyrdom": ["martyrdom-witness"],
     "origen-dialogue-heraclides": [
@@ -316,12 +331,6 @@ WORK_TOPICS: dict[str, list[str]] = {
     "julian-marriage-extracts": ["sin-and-death", "image-likeness"],
     "julian-letter-to-rome": ["free-will", "grace-and-assistance"],
     "julian-collective-letter": ["free-will", "grace-and-assistance", "sin-and-death"],
-    "crocius-syntagma": ["systematic-theology", "bremen-school", "irenicism", "reformed-orthodoxy"],
-    "davenant-dissertationes-duae": ["atonement", "predestination", "reprobation", "universal-grace"],
-    "baron-philosophia-theologiae-ancillans": ["philosophy", "theology", "being", "essence", "scholasticism"],
-    "placeus-de-imputatione": ["imputation", "original-sin", "adam", "covenant-theology"],
-    "le-blanc-theses-theologicae": ["justification", "protestant-roman", "ireneicism", "catholicism"],
-    "strimesius-in-controversias-evangelicorum": ["ecclesiastical-peace", "protestant-unity", "ireneicism", "controversy"],
 }
 
 
@@ -490,6 +499,7 @@ _BIBLE_BOOKS: tuple[tuple[str, str], ...] = (
     ("Ex", "Exodus"),
 )
 _BIBLE_CANON = {alias.lower(): canon for alias, canon in _BIBLE_BOOKS}
+_FULL_BOOK_NAMES = {canon.lower() for _alias, canon in _BIBLE_BOOKS} | {"psalms", "song of songs"}
 _SCRIPTURE_RE = re.compile(
     r"(?<![A-Za-z])"
     r"(?P<book>"
@@ -770,6 +780,13 @@ def _scripture_matches(text: str) -> list[tuple[int, int, str, str]]:
         if any(not (end <= left or start >= right) for left, right in occupied):
             continue
         book = re.sub(r"\s+", " ", match.group("book")).strip()
+        # A full book name with a full stop and no chapter:verse colon ends a
+        # sentence: "3. James. 4." (a list of apostles) and "psalms. 1.30" (a
+        # section mark) are not James 4 or Psalm 1:30 (2026-10-23). "Ps. 22:1",
+        # "Matt. 5:3" and the old style "Job. 19:30" stay.
+        if (book.endswith(".") and ":" not in match.group("verse")
+                and book.rstrip(".").strip().lower() in _FULL_BOOK_NAMES):
+            continue
         verse = re.sub(r"\s+", " ", match.group("verse")).strip()
         display = re.sub(r"\s+", " ", match.group(0)).strip()
         search_verse = verse.replace("–", "-").replace(".", ":")
@@ -779,6 +796,39 @@ def _scripture_matches(text: str) -> list[tuple[int, int, str, str]]:
         found.append((start, end, display, f"{_canon_book(book)} {search_verse}"))
     found.sort()
     return found
+
+
+OPEN_QUOTES = ("“", "‘", '"')
+CLOSE_QUOTES = ("”", "’", '"')
+
+
+def daily_quote_html(cls: str, text: str) -> str:
+    """Quote marks round a home quote, unless the text opens or ends with its own.
+    A BSB verse that starts mid-speech would show ““What; one that ends a speech
+    would show Me.””. Either way both outer marks go, so a lone outer mark never
+    pairs with the text's own (“It is written: “As I live... God.”).
+    site.js hides the same marks."""
+    t = str(text or "").strip()
+    own = t.startswith(OPEN_QUOTES) or t.endswith(CLOSE_QUOTES)
+    hide = " hidden" if own else ""
+    return (
+        f'<span class="vp-qm"{hide}>&ldquo;</span><span class="{cls}">{escape(text or "")}</span>'
+        f'<span class="vp-qm"{hide}>&rdquo;</span>'
+    )
+
+
+def scripture_verse_html(vnum, vtext: str, hits: int, vmax: int) -> str:
+    """One verse of a Scripture chapter. A cited verse keeps its text readable to
+    screen readers and gets a real button after it that opens the desk."""
+    body = f'<sup>{vnum}</sup><span class="vt">{escape(vtext)}</span>'
+    if not hits:
+        return f'<span class="v" id="v{vnum}" data-v="{vnum}">{body}</span> '
+    return (
+        f'<span class="v cited" id="v{vnum}" data-v="{vnum}" '
+        f'style="--heat:{round(0.25 + 0.75 * hits / vmax, 2)}">{body}'
+        f'<button type="button" class="v-open vh" data-v="{vnum}" aria-controls="desk">'
+        f'Verse {vnum}: {hits} passage{"s" if hits != 1 else ""} in the Fathers</button></span> '
+    )
 
 
 def scripture_html(text: str) -> str:
@@ -975,7 +1025,7 @@ def year_from_period(p: str | None, *, bound: str = "mid") -> int | None:
     span = re.search(r"\b(\d{1,4})\s*[–-]\s*(?:c\.\s*)?(\d{1,4})\b", p)
     if span:
         a, b = int(span.group(1)), int(span.group(2))
-        return b if bound == "end" else (a + b) // 2
+        return b if bound == "end" else a if bound == "start" else (a + b) // 2
     m = re.search(r"\b(\d{1,4})\b(?!\s*(?:st|nd|rd|th))", p, re.I)
     return int(m.group(1)) if m else None
 
@@ -1003,6 +1053,9 @@ APOSTOLIC_AUTHORS = frozenset({
     "clement-of-rome", "ignatius-of-antioch", "polycarp-of-smyrna", "barnabas", "didache",
     "hermas", "mathetes-epistle-to-diognetus", "church-of-smyrna", "papias-of-hierapolis",
     "quadratus",
+    # 2 Clement is in every Apostolic Fathers collection (Lake 1912, Holmes);
+    # it was filed Ante-Nicene until 2026-10-23.
+    "anonymous-2-clement",
 })
 # (filter key, chip label). Keys are single tokens: site.js splits data-era on spaces.
 CATALOGUE_ERAS = (("Apostolic", "Apostolic"), ("Ante-Nicene", "Ante-Nicene"), ("Nicene", "Nicene"),
@@ -1118,6 +1171,25 @@ AUTHOR_BIOS = load_author_bios()
 # from each work's English; the book metadata is left as it is.
 WORK_BLURBS: dict[str, str] = {k: v for k, v in (_json_load(ROOT / "data" / "work-blurbs.json", {}) or {}).items()
                                if isinstance(v, str) and v.strip()}
+# A work's own date when its writer's dates do not date it: the martyr acts
+# all filed under one group and showed its "c. 165" (2026-10-23 audit: Cyprian
+# 258, Irenaeus of Sirmium 304). data/work-dates.json, slug -> {date, source}.
+WORK_DATES: dict[str, str] = {
+    k: str(v["date"]).strip() for k, v in (_json_load(ROOT / "data" / "work-dates.json", {}) or {}).items()
+    if isinstance(v, dict) and str(v.get("date") or "").strip()}
+# Book intros keep a few sentences an old template wrote ("written by Acts of
+# the Martyrs (c. 165)", the heretic Montanus's "fl. c. 170" on a martyr of
+# 259). data/intro-fixes.json, slug -> [{from, to}], applied to the intro and
+# to the teaser taken from it; the book files stay as they are.
+INTRO_FIXES: dict[str, list[tuple[str, str]]] = {
+    k: [(str(f["from"]), str(f.get("to") or "")) for f in v if isinstance(f, dict) and f.get("from")]
+    for k, v in (_json_load(ROOT / "data" / "intro-fixes.json", {}) or {}).items() if isinstance(v, list)}
+
+
+def apply_intro_fixes(slug: str, text: str) -> str:
+    for old, new in INTRO_FIXES.get(slug or "", []):
+        text = text.replace(old, new)
+    return text
 # Plain-English section headings where the file kept a translator's shorthand
 # ("Bezalel = Christ from Judah; Eliab = apostles"), written from each
 # section's English (data/section-titles.json, 2026-10-14). slug -> {section: head}.
@@ -1218,22 +1290,36 @@ AUTHOR_DISPLAY = {
     "Cyprian": "Cyprian of Carthage",
     "Hermas": "Hermas",
     "Shepherd of Hermas": "Hermas",
-    "Mathetes (Epistle to Diognetus)": "Mathetes",
-    "Anonymous (Diognetus)": "Mathetes",
-    "Anonymous (Epistle to Diognetus)": "Mathetes",
+    # The writer is unknown ("Mathetes" is only the letter's word for "a
+    # disciple"), so the text stands as author, as with the Didache. The mast,
+    # rail and hub gave three names until 2026-10-23.
+    "Mathetes (Epistle to Diognetus)": "Letter to Diognetus",
+    "Anonymous (Diognetus)": "Letter to Diognetus",
+    "Anonymous (Epistle to Diognetus)": "Letter to Diognetus",
     "Alexander Monachus": "Alexander the Monk",
     "Barnabas (Epistle)": "Barnabas",
     "Didache": "The Didache",
+    # The certified book's own name: the title read "The Didache (Anonymous (Didache))".
+    "Anonymous (Didache)": "The Didache",
     "Paulus Silentarius": "Paul the Silentiary",
     # PG 86a is a shelfmark, and this row is not Theodore of Heraclea.
     # No date is known. Do not invent one.
     "Theodorus (PG 86a)": "Theodorus, not yet identified",
+    # The book's writer line. The site has a page for the text itself, which
+    # held its topic passages but not the whole work (2026-10-23 audit).
+    "Perpetua, Saturus, and the Redactor": "Passion of Perpetua and Felicity",
 }
 
 
 def display_author(name: str | None) -> str:
     n = str(name or "").strip()
     return AUTHOR_DISPLAY.get(n, n)
+
+
+# Groups of texts from many years: a work page shows the work's own date, not
+# the group's range ("Acts of the Martyrs · written 258 AD"), and the group
+# sorts by its first year.
+COLLECTION_AUTHOR_SLUGS = frozenset({"acts-of-the-martyrs"})
 
 
 # Author pages that stand for a text or a church, not a person: their copy
@@ -1244,12 +1330,19 @@ TEXT_AUTHOR_SLUGS = frozenset({
 })
 
 
+def text_name_core(name: str) -> str:
+    """The part of a text's name that its titles and cites share:
+    "Letter to Diognetus" and "The Epistle to Diognetus" both give "diognetus"."""
+    core = str(name or "").casefold().strip().removeprefix("the ")
+    return re.sub(r"^(letter|epistle) to ", "", core)
+
+
 def title_by(title: str, author: str, author_slug: str) -> str:
     """'<title> by <writer>' for page titles. A text or a church is not a
     writer: "The Martyrdom of Justin by Acts of the Martyrs" (2026-10-14 audit)
     becomes "The Martyrdom of Justin (Acts of the Martyrs)"."""
     if author_slug in TEXT_AUTHOR_SLUGS:
-        return title if author.casefold().removeprefix("the ") in title.casefold() else f"{title} ({author})"
+        return title if text_name_core(author) in title.casefold() else f"{title} ({author})"
     return f"{title} by {author}"
 # Excerpt rows often carry the display name and no slug.
 TEXT_AUTHOR_NAMES = frozenset({
@@ -1405,7 +1498,10 @@ def author_sort_year(name: str | None, period: str | None = None, slug: str | No
     Lifespan midpoints pull Justin (born c. 100) before Hermas (fl. c. 140).
     Death-only sort_year values in authors.json pulled Irenaeus after Africanus.
     """
-    y = year_from_period(author_dates_raw(name, slug), bound="end")
+    # A group of texts sits at its first text: the martyr acts (c. 165–304)
+    # belong beside Justin, not after Cyprian.
+    collection = canonical_author_slug(slug, name) in COLLECTION_AUTHOR_SLUGS
+    y = year_from_period(author_dates_raw(name, slug), bound="start" if collection else "end")
     if y is not None:
         return y
     rec = author_record(name)
@@ -1749,11 +1845,63 @@ def load_topic_excerpts() -> list[dict]:
             TOPIC_REDIRECTS[f"/e/{old}/"] = f"/e/{new}/"
     for old, new in aliases.items():
         TOPIC_REDIRECTS[f"/topics/{old}/"] = f"/topics/{new}/"
+    for x in items:
+        add_book_to_locus(x)
     return items
+
+
+# A topic link to a multi-book work named a chapter with no book: "Miscellanies
+# 14" is Stromata 5.14 (2026-10-23 audit). When the excerpt's source file is
+# one book of the work, its number goes before the chapter.
+_BOOK_SOURCE_FILE = re.compile(r"-stromata-(\d+)\.json$")
+
+
+def add_book_to_locus(x: dict) -> None:
+    loc = str(x.get("locus") or "").strip()
+    m = _BOOK_SOURCE_FILE.search(str(x.get("source") or ""))
+    if not m or not re.fullmatch(r"\d+", loc):
+        return
+    x["locus"] = f"{int(m.group(1))}.{loc}"
+    cite = str(x.get("citation") or "")
+    if re.search(rf"(?<![\d.]){loc}$", cite):
+        x["citation"] = cite[: -len(loc)] + x["locus"]
 
 
 # Old topic and excerpt addresses folded by topics.yml aliases -> new address.
 TOPIC_REDIRECTS: dict[str, str] = {}
+
+
+def _passage_words(x: dict) -> set[str]:
+    return set(re.findall(r"[a-z]+", str(x.get("english") or "").lower())[:150])
+
+
+def drop_repeated_passages(rows: list[dict]) -> tuple[list[dict], list[dict]]:
+    """One topic, one copy of a passage. A hand-picked excerpt and an auto one
+    can cite the same chapter in two translations, so the topic page and the
+    app showed it twice (17 topics, 2026-10-23). Same writer and citation, and
+    either the same reader section or mostly the same words, is a repeat. The
+    copy taken from the whole-work reader wins, then a hand-picked id."""
+    def rank(x: dict) -> tuple:
+        return (x.get("confidence") != "reader", str(x.get("id") or "").startswith("auto_"), str(x.get("id") or ""))
+
+    kept: list[dict] = []
+    dropped: list[dict] = []
+    for x in sorted(rows, key=rank):
+        key = (x.get("author") or "", public_citation(x.get("citation") or x.get("id") or "", x.get("work") or ""))
+        same = None
+        for k in kept:
+            if (k.get("author") or "", public_citation(k.get("citation") or k.get("id") or "", k.get("work") or "")) != key:
+                continue
+            if x.get("_cite_href") and x.get("_cite_href") == k.get("_cite_href"):
+                same = k
+                break
+            a, b = _passage_words(x), _passage_words(k)
+            if a and b and len(a & b) / len(a | b) >= 0.4:
+                same = k
+                break
+        (dropped if same else kept).append(x)
+    ids = {x.get("id") for x in kept}
+    return [x for x in rows if x.get("id") in ids], dropped
 
 
 def check_topic_ids(excerpts: list[dict], topic_meta: dict) -> None:
@@ -2063,10 +2211,18 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "cyril-fragmenta-contra-theodorum-3": "Fragments Against Theodore, Book 3",
     "julian-letter-to-rome": "Fragments of the Letter to Rome",
     "julian-turbantius-fragments": "Fragments to Turbantius",
+    # Its only file stem gave "Dormition Homilies" (2026-10-23).
+    "john-damascus-homiliae-in-dormitionem": "Homilies on the Dormition of the Mother of God",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
 PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
+    # The file stem or a source-page label stood in the subtitle slot (2026-10-23:
+    # "Epistula_", "Dormition Homilies"). Hesychius's text is the homily on James
+    # and David; only its source label says Lazarus.
+    "procopius-gaza-epistula-altera": "Epistula altera",
+    "john-damascus-homiliae-in-dormitionem": "Homiliae in dormitionem Beatae Mariae Virginis",
+    "hesychius-homilia-i-lazarum": "In sanctum Iacobum fratrem Domini et Davidem",
     # Traditional names where the meta title only repeated the English (2026-10-06).
     "origen-homily-1samuel-28": "De engastrimytho",
     "anonymous-antimontanist": "Ad Avircium Marcellum contra Cataphrygas",
@@ -2294,6 +2450,86 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "philostorgius-he": "Historia ecclesiastica",
     "origen-regnorum-fragments": "Fragmenta in Regnorum",
     "origen-song-commentary-liber-4": "Commentarius in Canticum IV",
+    # Traditional names for translated works that showed none (2026-10-23),
+    # from each book.yml original_title, meta source title or standard catalogues.
+    "achatius": "Acta disputationis Achatii",
+    "acts-of-justin": "Martyrium Iustini et sociorum",
+    "athanasius-epistula-adelphium": "Epistula ad Adelphium",
+    "athanasius-epistula-afros": "Epistula ad Afros episcopos",
+    "athanasius-epistula-jovianum": "Epistula ad Jovianum",
+    "athanasius-epistula-maximum": "Epistula ad Maximum philosophum",
+    "athanasius-epistula-monachos": "Epistula ad monachos",
+    "athanasius-epistula-palladium": "Epistula ad Palladium",
+    "athanasius-scholia-job": "Scholia in Job",
+    "athanasius-tomus-antiochenos": "Tomus ad Antiochenos",
+    "augustine-care-for-the-dead": "De cura pro mortuis gerenda",
+    "augustine-divination-of-demons": "De divinatione daemonum",
+    "augustine-on-faith-and-the-creed": "De fide et symbolo",
+    "augustine-proceedings-with-emeritus": "Gesta cum Emerito",
+    "augustine-psalm-against-the-donatists": "Psalmus contra partem Donati",
+    "augustine-sermon-to-the-church-of-caesarea": "Sermo ad Caesariensis ecclesiae plebem",
+    "basil-homilia-ad-baptisma": "Homilia exhortatoria ad sanctum baptisma",
+    "basil-homilia-de-spiritu-sancto": "Homilia de Spiritu Sancto",
+    "basil-homilia-gratiarum-actione": "Homilia de gratiarum actione",
+    "basil-homilia-in-divites": "Homilia in divites",
+    "basil-homilia-in-psalmum-115": "Homilia in Psalmum CXV",
+    "basil-homilia-in-psalmum-28": "Homilia altera in Psalmum XXVIII",
+    "basil-homilia-invidia": "Homilia de invidia",
+    "basil-homilia-misericordia-judicio": "Homilia de misericordia et judicio",
+    "basil-homilia-tempore-famis": "Homilia dicta tempore famis et siccitatis",
+    "basil-homiliae-hexaemeron": "Homiliae in Hexaemeron",
+    "basil-in-barlaam": "Homilia in Barlaam martyrem",
+    "basil-in-ebriosos": "Homilia in ebriosos",
+    "basil-in-principio-erat-verbum": "Homilia in illud: In principio erat Verbum",
+    "basil-in-quadraginta-martyres": "Homilia in quadraginta martyres Sebastenses",
+    "basil-quod-rebus-mundanis": "Quod rebus mundanis adhaerendum non sit",
+    "chrysostom-catecheses-illuminandos": "Catecheses ad illuminandos",
+    "chrysostom-comparatio-regis-monachi": "Comparatio regis et monachi",
+    "chrysostom-de-resurrectione-mortuorum": "De resurrectione mortuorum",
+    "chrysostom-in-diem-natalem": "In diem natalem",
+    "chrysostom-in-eustathium": "In sanctum Eustathium Antiochenum",
+    "chrysostom-in-lucianum": "In sanctum Lucianum martyrem",
+    "chrysostom-in-romanum": "In sanctum Romanum",
+    "clement-alexandria-newly-baptized": "Πρὸς τοὺς νεωστὶ βεβαπτισμένους",
+    "cyprian": "Acta proconsularia Cypriani",
+    "cyprian-on-the-unity-of-the-church": "De ecclesiae catholicae unitate",
+    "cyril-fragmenta-acta-catholicas": "Fragmenta in Acta apostolorum et epistulas catholicas",
+    "cyril-fragmenta-contra-diodorum": "Fragmenta contra Diodorum",
+    "cyril-fragmenta-contra-theodorum-2": "Fragmenta ex libro II contra Theodorum Mopsuestenum",
+    "cyril-fragmenta-contra-theodorum-3": "Fragmenta ex libro III contra Theodorum Mopsuestenum",
+    "cyril-fragmenta-danielem": "Fragmenta in Danielem",
+    "cyril-fragmenta-hebraeos": "Fragmenta in epistulam ad Hebraeos",
+    "cyril-fragmenta-jeremiam": "Fragmenta in Jeremiam",
+    "cyril-fragmenta-numeros": "Fragmenta in Numeros",
+    "cyril-fragmentum-papyraceum": "Fragmentum papyraceum",
+    "cyril-fragmentum-psalmum": "Fragmentum in Psalmum",
+    "cyril-homilia-cyrini": "Homilia habita in ecclesia Cyrini",
+    "cyril-sermo-trium-puerorum": "Sermo de obitu sanctorum trium puerorum",
+    "didache": "Διδαχὴ τῶν δώδεκα ἀποστόλων",
+    "diognetus-epistle": "Πρὸς Διόγνητον",
+    "dionysius-corinth-fragments": "Epistularum fragmenta",
+    "eusebius-letter-flacillus": "Epistula ad Flacillum",
+    "gregory-thaumaturgus-expositio-fidei": "Expositio fidei",
+    "ignatius-letters": "Epistulae",
+    "john-damascus-homiliae-in-dormitionem": "Homiliae in dormitionem beatae Mariae Virginis",
+    "julian-collective-letter": "Epistula ad Rufum Thessalonicensem",
+    "julian-letter-to-rome": "Epistula ad Romanos",
+    "julian-to-florus": "Ad Florum",
+    "julian-turbantius-fragments": "Ad Turbantium",
+    "marcellus-de-incarnatione-contra-arianos": "De incarnatione et contra Arianos",
+    "martyrdom-polycarp": "Martyrium Polycarpi",
+    "maximus": "Acta Maximi",
+    "methodius-martyrs": "De martyribus",
+    "origen-1-corinthians-fragments": "Fragmenta in epistulam I ad Corinthios",
+    "origen-dialogue-heraclides": "Dialogus cum Heraclide",
+    "origen-ephesians-fragments": "Fragmenta in epistulam ad Ephesios",
+    "origen-exhortation-to-martyrdom": "Exhortatio ad martyrium",
+    "origen-homilies-jeremiah": "Homiliae in Jeremiam",
+    "origen-lamentations-fragments": "Fragmenta in Lamentationes",
+    "origen-on-pascha": "Περὶ Πάσχα",
+    "origen-on-prayer": "Περὶ εὐχῆς",
+    "polycarp": "Martyrium Polycarpi",
+    "second-clement": "Clementis ad Corinthios epistula secunda",
 }
 
 
@@ -2376,8 +2612,10 @@ _INTRO_WORKSHEET = re.compile(
 
 
 def scrub_intro_worksheet(html_text: str) -> str:
-    """Drop the worksheet sentences above; an emptied paragraph goes too."""
-    out = re.sub(r"<p>\s+", "<p>", _INTRO_WORKSHEET.sub("", html_text or ""))
+    """Drop the worksheet sentences above; an emptied paragraph goes too.
+    "the locked text in Patrologia Graeca 39" reads "the text in ..."."""
+    out = re.sub(r"\b([Tt]he) locked (?=(?:Greek |Latin )?text\b)", r"\1 ", html_text or "")
+    out = re.sub(r"<p>\s+", "<p>", _INTRO_WORKSHEET.sub("", out))
     return re.sub(r"<p>\s*</p>\s*", "", out)
 
 
@@ -2434,7 +2672,7 @@ def work_intro_html(slug: str) -> str:
     try:
         sys.path.insert(0, str(BOOKS.parent))
         from pipeline.book_frontmatter import render_intro_html
-        out = render_intro_html(str(BOOKS / book))
+        out = apply_intro_fixes(slug, render_intro_html(str(BOOKS / book)))
         # Build-room scope words ("tip densify") never reach readers.
         return author_dates_prose(bc_ad_prose(scrub_intro_worksheet(re.sub(r"\s*\btip\s+densify(?:\s+of)?\b", "", out))))
     except (ImportError, ValueError, OSError):
@@ -2498,12 +2736,19 @@ _LATIN_SLOT_ENGLISH = re.compile(
 )
 
 
+# Works whose title is only their file stem ("Montanus-Lucius", "Perpetua"):
+# a stem is not a traditional name, so no subtitle (2026-10-23).
+STEM_TITLE_SLUGS: set[str] = set()
+
+
 def public_reader_latin_subtitle(title: str, *, slug: str = "") -> str:
     """Latin secondary line when H1 leads English; empty when H1 is already that form."""
     h1 = public_reader_title(title, slug=slug)
     mapped = PUBLIC_LATIN_SUBTITLES.get(slug or "", "").strip()
     if mapped:
         return "" if mapped.lower() == h1.lower() else scrub_worksheet_note(mapped).strip()
+    if (slug or "") in STEM_TITLE_SLUGS:
+        return ""
     if english_title_for(slug):
         raw = _TIP_TITLE_SUFFIX.sub("", (title or "").strip()).strip(" -–—")
         if raw and raw.lower() != h1.lower():
@@ -2661,8 +2906,11 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
     The period is left out when it only repeats the lifespan (same years, or a
     bare century) or the edition year ("John Wesley (1703–1791 AD) · 1771 Works").
     A long line first shortens the scope to "Part only", then drops the period."""
-    author = w.get("author") or ""
-    life = author_dates_display(author, w.get("author_slug"))
+    # The public name, as on the rail and the author page (2026-10-23:
+    # "Anonymous (Epistle to Diognetus)" here, "Letter to Diognetus" there).
+    author = display_author(w.get("author") or "")
+    collection = (w.get("author_slug") or "") in COLLECTION_AUTHOR_SLUGS and bool(w.get("period"))
+    life = "" if collection else author_dates_display(w.get("author") or "", w.get("author_slug"))
     # "Josué de la Place (Placeus)" already ends in brackets: no ") (".
     who = (f"{author}, {life}" if author.endswith(")") else f"{author} ({life})") if author and life else author
     # Notes on the date ("(Oxford reprint of 1621 St Andrews; Reformed)") go to About.
@@ -2703,11 +2951,24 @@ def mast_meta_line(w: dict, edition_label: str, scope: str = "") -> tuple[str, b
     return line, not scope
 
 
+def blurb_repeats_intro(blurb: str, paras: list[str]) -> bool:
+    """True when an intro paragraph opens with the blurb's words."""
+    import html as _html
+
+    def norm(t: str) -> str:
+        return re.sub(r"[^\w]+", " ", _html.unescape(t or "")).strip().casefold()
+    b = norm(blurb)
+    return bool(b) and any(norm(p).startswith(b) for p in paras if p)
+
+
 # A book intro written for a whole volume can misdescribe one work drawn from
 # it ("This volume gathers the six books To Florus ..." on To Turbantius).
 _INTRO_SCOPE_RE = re.compile(
     r"\s*\bThis (?:volume|book) (?:holds|gathers|contains|opens)\b.*?[.!?](?=\s+[A-Z\"“‘(]|\s*$)")
-INTRO_SCOPE_STALE = {"placeus-de-imputatione"}  # scope line predates the 712-section text
+INTRO_SCOPE_STALE = {
+    "placeus-de-imputatione",  # scope line predates the 712-section text
+    "crocius-syntagma",  # "This volume holds chapter 10 ..." predates all four books on the page
+}
 INTRO_LEDE_MAX_WORDS = 40
 
 
@@ -2775,7 +3036,7 @@ ORIGINAL_ENGLISH_TITLE = (
 )
 ORIGINAL_ENGLISH_GLOSS = "No previous English translation."
 ORIGINAL_ENGLISH_INTRO = (
-    "These are original English translations: new English of works that had no "
+    "These are first English translations: fresh English of works that had no "
     "previous English translation."
 )
 # Hard deny-list: prior complete English exists. Meta cannot override.
@@ -2923,6 +3184,15 @@ def _strip_densify_head(m: "re.Match") -> str:
     return (nxt[0].upper() + nxt[1:]) if nxt else ""
 
 
+# Owner voice (2026-10-23): the library's English is "fresh", never "new".
+# Source notes still say "New English from the Greek base text" (38 works).
+_NEW_ENGLISH = re.compile(r"\b([Nn])ew English\b")
+
+
+def _fresh_english(m: "re.Match") -> str:
+    return ("F" if m.group(1) == "N" else "f") + "resh English"
+
+
 _BLURB_SCAFFOLD_RES = [
     # Build-room status heads with page-locks: drop the head, keep the topics.
     (re.compile(r"[Dd]ensify\s+COMPLETE\b[^:]{0,120}:\s*([A-Za-z]?)"), _strip_densify_head),
@@ -2935,10 +3205,12 @@ _BLURB_SCAFFOLD_RES = [
     (re.compile(r"\s*Cap\.\s*\d+\s+[A-Z][A-Za-z]*\s+PHYS\b.*$"), ""),
     (re.compile(r"\s*Liber\s+[IVX]+\s+(?:NOT FOUND|FOUND|CLOSED|CLOSEOUT|next\b).*$"), ""),
     (re.compile(r"\s*\bFINIS\b\.?.*$"), ""),
-    # Leftover provenance chatter (whole site is new English; "private study"
-    # is a license leftover, not reader information).
+    # Leftover provenance chatter (the whole site is fresh English; "private
+    # study" is a license leftover, not reader information).
     (re.compile(r"\bNew English for private study\.?\s*"), ""),
     (re.compile(r"\bNew English from locked Greek\.?\s*"), ""),
+    # Owner voice (2026-10-23): "fresh English", never "new English".
+    (_NEW_ENGLISH, _fresh_english),
     (re.compile(r";\s*[^;.]*?(?:\bANF\b|PD English)\s+exists\.?"), ""),
     # Edition cues collapse to plain language.
     (re.compile(r"\bfrom the \d{4} \w+ Latin\b"), "from the Latin"),
@@ -2986,7 +3258,17 @@ def public_blurb(raw: str) -> str:
     t = t.strip(" \t;—–-,")
     if not t or _WORKSHEET_LEFT_I.search(t) or _WORKSHEET_LEFT_CS.search(t):
         return ""
+    if _CITATION_ONLY_BLURB.match(t):
+        return ""
     return t
+
+
+# A blurb that is only a catalogue line, "<Author>, <Latin title> (Greek)."
+# (cyril-homilia-cyrini showed one in About this text, 2026-10-23). An English
+# title ("Cyril of Alexandria, Dialogue 1 on the ... Trinity (Greek).") stays.
+_CITATION_ONLY_BLURB = re.compile(
+    r"^[^.,]{3,80},\s+(?:Homili\w*|Fragment\w*|Sermo\w*|Epistul\w*|Oratio\w*|Tractat\w*|Commentari\w*"
+    r"|Expositio\w*|Scholia|Excerpta|Selecta|De|In|Ad|Contra)\s[^.]{3,160}\s\((?:Greek|Latin)\)\.?$")
 
 
 def source_witness_html(sections, ordinals, *, ranged: str = "") -> str:
@@ -3119,14 +3401,18 @@ def public_method(text: str) -> str:
 # Words from the translation worksheets that mean nothing to a reader
 # (2026-10-05: found in About this text and copied into the paid ebooks).
 WORKSHEET_JARGON = re.compile(
-    r"\b(?:scaffold\w*|densif\w*|tips?|exhausted|lemma-led|pinax|deepen\+?|remain|held|PHYS|worksheet|"
+    r"\b(?:scaffold\w*|densif\w*|tips?|tipped|exhausted|lemma-led|pinax|deepen\+?|remain|held|PHYS|worksheet|"
     r"bridge|rank[- ]?\d|closeout|packet|receipt|honest partial|partial through)\b"
     r"|Man\.\s*Post"
     # Notes written for builders, not readers (2026-10-14 audit: five era
     # banners said "retrieval on the same Fathers-site pipeline ... Do not
     # treat the site as ante-Nicene only"; le Blanc's history listed "CLOSED").
     r"|Fathers-site pipeline|\bDo not treat the site\b|\bretrieval on the same\b|\bPublic Domain Mark\b"
-    r"|\bCLOSED\b|^Next:|\bPDF \d", re.I)
+    r"|\bCLOSED\b|^Next:|\bPDF \d"
+    # Scope status from the worksheets (2026-10-23: these kept 5 works' EPUB
+    # and PDF off the shelf): "Cap. 9 complete.", "Liber I still open.",
+    # "Not whole Philosophia (213 pp).", "Cap. 11 (CAPUT UNDECIMUM ...) begins."
+    r"|\bstill open\b|\bNot whole\b|\bCap\.\s*\d+\s+complete\b|(?-i:\bCAPUT\b)", re.I)
 
 
 NOTE_ABBREV = {"cap", "capp", "rom", "man", "post", "cf", "pg", "pl", "ed", "eds", "vol", "fr", "frr", "haer", "hom",
@@ -3158,6 +3444,7 @@ def public_note(text: str) -> str:
     t = re.sub(r"\bTEI\b", "digital text", t)
     t = re.sub(r"\bOCR\b", "machine-read text", t, flags=re.I)
     t = re.sub(r"\b([Cc])opy-text\b", lambda m: "Base text" if m.group(1) == "C" else "base text", t)
+    t = _NEW_ENGLISH.sub(_fresh_english, t)
     # Khazarzar is the scan site the Greek came from, not part of the edition.
     t = re.sub(r"\s*/\s*Khazarzar\b|\s*\(Khazarzar\)|\bKhazarzar\s+", " ", t)
     t = re.sub(r" {2,}", " ", t).replace(" .", ".")
@@ -3370,7 +3657,8 @@ def text_history_html(th: dict | None) -> str:
             note = public_note(str(j.get("note") or "")).strip()
             if not note:
                 continue
-            where = str(j.get("where") or "").strip()
+            # "Opening tip" is a worksheet scope label; the reader sees "Opening".
+            where = re.sub(r"\s*\btip(?:-page)?\b", "", str(j.get("where") or ""), flags=re.I).strip(" ;,")
             loc = f'<span class="where">{escape(where)}</span> — ' if where else ""
             items.append(f"<li>{loc}{escape(note)}</li>")
         if items:
@@ -3467,7 +3755,7 @@ def _fallback_blurb(folder: Path, title: str = "", author: str = "", max_chars: 
     # Title words that are not the writer's name: "Scapula", not "Tertullian".
     words = {x.casefold() for x in re.findall(r"[A-Za-z]{5,}", public_reader_title(title))}
     words -= {x.casefold() for x in re.findall(r"[A-Za-z]{5,}", author)}
-    for para in intro.read_text(encoding="utf-8").split("\n\n"):
+    for para in apply_intro_fixes(folder.name, intro.read_text(encoding="utf-8")).split("\n\n"):
         for sent in note_sentences(_md_plain(para)):
             names_work = re.search(r"\bthis (?:\w+ )?(?:letter|work|treatise|homily|sermon|book|dialogue|apology|epistle|oration|account|text)\b", sent, re.I) \
                 or any(w in sent.casefold() for w in words)
@@ -3576,8 +3864,10 @@ def _is_tautological_blurb(blurb: str) -> bool:
 
 _CATALOGUE_STUB = re.compile(
     r"\((?:catena\s+)?(?:Greek|Latin)[^)]*\)\.?\s*$"
-    r"|^[^.]{0,60},\s+(?:in|ex|de|ad|fragment\w*|homili\w*|commentari\w*|enarration\w*"
-    r"|selecta|scholia|excerpta|expositio)\b"
+    # The Latin title after the comma is capitalised; an English clause such as
+    # "To Turbantius, in four books" is not a stub (2026-10-23).
+    r"|^[^.]{0,60},\s+(?-i:(?:In|Ex|De|Ad|Fragment\w*|Homili\w*|Commentari\w*|Enarration\w*"
+    r"|Selecta|Scholia|Excerpta|Expositio))\b"
     # The old loader stub "<Author> Greek fragments." (capitalised name first).
     r"|(?-i:^(?!(?:Surviving|The|Some|Selected|Two|Three|Short|Early)\b)[A-Z][^.:;]{1,79} (?:Greek|Latin) fragments\.$)",
     re.I,
@@ -3969,7 +4259,7 @@ def load_origen_works() -> list[dict]:
             text_history={
                 "method": (
                     "English follows Paul Koetschau, Origenes Werke II (GCS, 1899). "
-                    "Where orat_* OET tip slices are present, those sections use that new English "
+                    "Where orat_* OET tip slices are present, those sections use that fresh English "
                     "from the Greek (Pass A≠B). Archive OCR of GCS was checked elsewhere."
                 ),
                 "witnesses": [
@@ -4294,6 +4584,8 @@ def load_cyril_works() -> list[dict]:
                     edition=meta.get("edition") or "Migne PG 68",
                     sections=sections,
                     blurb=meta.get("blurb") or "English from the Greek, for study.",
+                    # Part-only works must say so (check_catalogue "scope set but not shown").
+                    scope=meta.get("scope") or "",
                     era_note=era,
                     first_english=bool(meta.get("first_english", True)),
                     first_english_note=meta.get("first_english_note") or "",
@@ -5579,8 +5871,131 @@ def load_origen_nt_fragments() -> list[dict]:
     return works
 
 
+def source_lastmod(slug: str, sources: dict | None = None) -> str:
+    """YYYY-MM-DD when a work's English files last changed, from the build's
+    work-sources map (else WORK_SOURCES); '' when they are not known."""
+    import datetime as _dt
+    src = (sources or {}).get(slug) or WORK_SOURCES.get(slug) or {}
+    trans = BOOKS / str(src.get("book") or "_") / "translations"
+    times = []
+    for stem in src.get("stems") or []:
+        path = trans / (stem if stem.endswith(".json") else f"{stem}.json")
+        try:
+            times.append(path.stat().st_mtime)
+        except OSError:
+            continue
+    return _dt.datetime.fromtimestamp(max(times)).strftime("%Y-%m-%d") if times else ""
+
+
+def about_shelf_line(library, works: list[dict]) -> str:
+    """The About download line, with the shelf's share of the live works when
+    some are not on it yet (2026-10-23: About said 343 books, Home 372 works)."""
+    live = {w["slug"] for w in works}
+    shelf = sum(1 for slug in library.by_slug if slug in live)
+    pitch = library.pitch()
+    if 0 < shelf < len(live):
+        return f"The shelf holds {shelf} of the {len(live)} works: {pitch[0].lower() + pitch[1:]}"
+    return pitch
+
+
 # Site slug -> {book, stems}, filled by loaders that know their files (data/work-sources.json).
 WORK_SOURCES: dict[str, dict] = {}
+
+# Chapter files of a multi-book treatise (crocius-syntagma: liber1_cap10_english.json)
+# each number their sections from 1. The tip loader kept only the first row per
+# bare id, so 600 of Crocius's 621 sections never reached the page (2026-10-23).
+# Such files load in Liber, then Cap order (a plain sort puts cap10 before cap2),
+# each section gets a book.chapter.section id, and each Liber is one reader book.
+_LIBER_CAP_STEM = re.compile(r"liber(\d+)_cap(\d+)")
+
+
+def _tip_file_order(path: Path) -> tuple:
+    m = _LIBER_CAP_STEM.fullmatch(path.name[: -len("_english.json")])
+    return (0, int(m.group(1)), int(m.group(2)), path.name) if m else (1, 0, 0, path.name)
+
+
+def _liber_cap_sections(stem: str, sections: list[dict]) -> list[dict]:
+    """Prefix each section id with its Liber and Cap; no-op for other stems."""
+    m = _LIBER_CAP_STEM.fullmatch(stem)
+    if not m:
+        return sections
+    book, cap = int(m.group(1)), int(m.group(2))
+    return [{**s, "section": f"{book}.{cap}.{s['section']}", "group": f"Book {book}"} for s in sections]
+
+
+def _add_section_groups(groups: list[dict], sections: list[dict]) -> None:
+    for s in sections:
+        title = s.get("group")
+        if not title:
+            continue
+        g = next((g for g in groups if g["title"] == title), None)
+        if g is None:
+            g = {"title": title, "sections": []}
+            groups.append(g)
+        g["sections"].append(str(s["section"]))
+
+
+def _new_groups(sections: list[dict]) -> list[dict]:
+    groups: list[dict] = []
+    _add_section_groups(groups, sections)
+    return groups
+
+
+# Cite pages that moved when a work's section ids changed: slug -> {old id: new id}.
+# The 21 Crocius pages live before 2026-10-23 were the first row per bare id in
+# file-name order: Book 1 chapter 10 §1-15, chapter 2 §16-17, chapter 4 §18-21.
+SECTION_MOVES: dict[str, dict[str, str]] = {
+    "crocius-syntagma": {
+        **{str(n): f"1.10.{n}" for n in range(1, 16)},
+        **{str(n): f"1.2.{n}" for n in (16, 17)},
+        **{str(n): f"1.4.{n}" for n in range(18, 22)},
+    },
+}
+
+
+def section_move_redirects(moves: dict[str, dict[str, str]], live_sections: dict[str, set]) -> str:
+    """_redirects lines for moved cite pages whose work and new page are live."""
+    out = []
+    for slug, table in sorted(moves.items()):
+        have = live_sections.get(slug) or set()
+        for old, new in sorted(table.items()):
+            if new in have and old not in have:
+                out.append(f"/works/{slug}/{old}/ /works/{slug}/{new}/ 301\n")
+    return "".join(out)
+
+
+_WITNESS_LANG = {"lat": "Latin", "la": "Latin", "grc": "Greek", "gr": "Greek", "el": "Greek"}
+
+
+def _book_text_history(folder: Path, yml: dict) -> dict:
+    """About-this-text witnesses for a book with no *_meta.json (the martyr acts,
+    the Dormition homilies): its sources/manifest.json copy-text, else the
+    book.yml edition. Twelve such works named no printed source (2026-10-23,
+    Works reader SOP 9)."""
+    yml_ed = re.split(r"\s*;\s*scan\b", str((yml or {}).get("edition") or "").strip(), maxsplit=1, flags=re.I)[0].strip(" .;")
+    man = _json_load(folder / "sources" / "manifest.json", {}) or {}
+    out = []
+    for w in (man.get("witnesses") or []) if isinstance(man, dict) else []:
+        if not isinstance(w, dict):
+            continue
+        # book.yml names the copy-text only; later witnesses keep their own names.
+        name = str(w.get("edition") or (yml_ed if not out else "") or w.get("name") or "").strip()
+        if not name:
+            continue
+        role = str(w.get("role") or "").strip()
+        if role not in WITNESS_ROLE_LABEL:
+            role = "copy-text" if not out else "check"
+        url = next((str(w[k]) for k in ("url", "source") if str(w.get(k) or "").startswith("http")), "")
+        lang = str(w.get("language") or "").strip()
+        rec = {"name": name, "role": role, "language": _WITNESS_LANG.get(lang.lower(), lang)}
+        if url:
+            rec["url"] = url
+        out.append(rec)
+    if not out and yml_ed:
+        lang = str((yml or {}).get("language") or "").strip()
+        out.append({"name": yml_ed, "role": "copy-text",
+                    "language": lang if lang in ("Greek", "Latin") else ""})
+    return {"witnesses": out} if out else {}
 
 
 def load_origen_pauline_fragments() -> list[dict]:
@@ -5593,7 +6008,7 @@ def load_origen_pauline_fragments() -> list[dict]:
         trans = folder / "translations"
         if not trans.is_dir():
             continue
-        for en_path in sorted(trans.glob("*_english.json")):
+        for en_path in sorted(trans.glob("*_english.json"), key=_tip_file_order):
             stem = en_path.name[: -len("_english.json")]
             if stem.startswith("_"):
                 continue
@@ -5609,24 +6024,46 @@ def load_origen_pauline_fragments() -> list[dict]:
                     mapped["greek"] = mapped.get("text")
                 src_map[sec] = mapped
             meta = _json_load(trans / f"{stem}_meta.json", {})
+            # Certified books without a *_meta.json (polycarp, justin-companions) fell
+            # through to "Origen of Alexandria" (2026-10-23): take book.yml's author first.
+            # (Not its title: book.yml titles carry source notes such as "(Greek; PG 96)".)
+            _yml = (yaml.safe_load((folder / "book.yml").read_text(encoding="utf-8")) or {}) \
+                if not meta and (folder / "book.yml").exists() else {}
+            text_history = _text_history_from_meta(meta) if meta else _book_text_history(folder, _yml)
             slug = meta.get("slug") or folder.name
             title = meta.get("title") or stem.replace("_", " ").title()
-            author = meta.get("author") or "Origen of Alexandria"
+            if not meta.get("title") and not any(w["slug"] == slug for w in works):
+                STEM_TITLE_SLUGS.add(slug)
+            author = meta.get("author") or _yml.get("author") or "Origen of Alexandria"
             author_slug = canonical_author_slug(
                 meta.get("author_slug"),
                 author,
             )
-            sections = _origen_rows(rows, src_map)
+            # A book.yml writer with no sourced dates ("Anonymous (Carthage)", "Perpetua,
+            # Saturus, and the Redactor") files with the other martyr acts, which have them.
+            # A writer that has its own text page ("Perpetua, Saturus, and the
+            # Redactor" -> Passion of Perpetua and Felicity) files there instead.
+            if not meta and _yml.get("author") and display_author(author) != author:
+                author = display_author(author)
+                author_slug = canonical_author_slug(None, author)
+            if not meta and _yml.get("author") and author_slug not in AUTHOR_DATES \
+                    and author_slug not in UNDATED_AUTHORS:
+                author = "Acts of the Martyrs"
+                author_slug = canonical_author_slug(None, author)
+            sections = _liber_cap_sections(stem, _origen_rows(rows, src_map))
             _ws = WORK_SOURCES.setdefault(slug, {"book": folder.name, "stems": []})
             if _ws["book"] == folder.name:
                 _ws["stems"].append(f"{stem}_english")
             existing = next((w for w in works if w["slug"] == slug), None)
             if existing is not None:
                 seen = {str(s.get("section")) for s in existing["sections"]}
+                added = []
                 for sec in sections:
                     if str(sec.get("section")) not in seen:
                         existing["sections"].append(sec)
+                        added.append(sec)
                         seen.add(str(sec.get("section")))
+                _add_section_groups(existing["groups"], added)
                 existing["section_count"] = len(existing["sections"])
                 if meta.get("scope"):
                     existing["scope"] = str(meta["scope"]).strip()
@@ -5671,12 +6108,13 @@ def load_origen_pauline_fragments() -> list[dict]:
                     edition=meta.get("edition_short") or (_short_edition(folder) if folder in _CERTIFIED else "")
                     or meta.get("edition") or "",
                     sections=sections,
+                    groups=_new_groups(sections),
                     blurb=meta.get("work_blurb") or meta.get("blurb") or _fallback_blurb(folder, title, author),
                     scope=meta.get("scope") or "",
                     era_note=meta.get("era_note") or default_era,
                     first_english=bool(meta.get("first_english", True)),
                     first_english_note=meta.get("first_english_note") or "",
-                    text_history=_text_history_from_meta(meta),
+                    text_history=text_history,
                 )
             )
             if meta.get("work_blurb"):
@@ -6120,22 +6558,78 @@ def load_macarius_works() -> list[dict]:
         )
     ]
 
-CONFIDENCE_NOTE = (
-    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
-    "It is not a complete critical edition."
+# Plain, active wording (2026-10-23 copy review). build_ebooks finds this
+# note by "with AI help" + "certified"; keep both words.
+_CONFIDENCE_LEAD = (
+    "We made this study translation with AI help. "
+    "No scholar has yet certified it as faithful and complete. "
 )
 
+CONFIDENCE_NOTE = _CONFIDENCE_LEAD + "It is not a critical edition."
+
 CONFIDENCE_NOTE_WITH_GREEK = (
-    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
-    "Open Greek on each section for the source text. "
-    "This is not a complete critical edition."
+    _CONFIDENCE_LEAD + "Open Greek on any section to see the source text. It is not a critical edition."
 )
 
 CONFIDENCE_NOTE_WITH_LATIN = (
-    "This is an AI-assisted study translation. Source fidelity and completeness have not been independently certified. "
-    "Open Latin on each section (or the Latin source witness link) for the source text. "
-    "This is not a complete critical edition."
+    _CONFIDENCE_LEAD
+    + "Open Latin on any section, or the Latin source link, to see the source text. It is not a critical edition."
 )
+
+
+def confidence_note_english_original(witness_label: str) -> str:
+    """A work first written in English (Wesley) is not a translation: say
+    what was done to it and where the old text is."""
+    label = (witness_label or "").strip() or "original text"
+    return (
+        "We put this English text into updated wording with AI help. "
+        "No scholar has yet certified it as faithful and complete. "
+        f"Open the {label} under any part to compare."
+    )
+
+
+def report_mistake_href(title: str, where: str = "", url: str = "") -> str:
+    """mailto: link for "Report a mistake" (the app and the privacy page
+    promise one). The work title goes in the subject; anyone can send it."""
+    from urllib.parse import quote
+    subject = f"Mistake in {title}" + (f", {where}" if where else "")
+    body = (f"Page: {url}\n\n" if url else "") + "What looks wrong:\n\nWhat it should say:\n"
+    return f"mailto:hi@saneapps.com?subject={quote(subject)}&body={quote(body)}"
+
+
+_MAINTAINER_SPLIT = re.compile(r"\n-{3,}\s*\n+\s*## Maintainer\b|\n## Maintainer\b")
+# Words that must never reach the Help us page from the contributor guide.
+_START_HERE_LEAKS = re.compile(
+    r"\b(?:[Nn]ew|[Mm]odern) English\b|fathers\.saneapps\.com|Maintainer|claims\.py|SESSION_HANDOFF|"
+    r"ai_promote|assert_tip_ready|\btip ship\b")
+
+
+def public_start_here(text: str) -> str:
+    """The contributor part of the translations repo's docs/START_HERE.md,
+    for the Help us page's "Point an AI at a slice" option. The file goes on
+    after a rule into maintainer lanes; those stay out. Returns "" when what
+    is left still holds a maintainer or off-voice word, so the page shows
+    only the GitHub link instead of printing it."""
+    public = _MAINTAINER_SPLIT.split(text or "", maxsplit=1)[0].rstrip().rstrip("-").rstrip()
+    # Owner voice (2026-10-23): "fresh English", never "modern" or "new".
+    public = re.sub(r"\b(?:faithful,\s*)?(?:readable\s+)?modern English\b", "fresh English", public)
+    public = _NEW_ENGLISH.sub(_fresh_english, public)
+    public = public.replace("https://fathers.saneapps.com", "https://viapatrum.org")
+    public = public.replace("fathers.saneapps.com", "viapatrum.org")
+    # It points to the maintainer section this page leaves out.
+    public = re.sub(r'\s*The details are in "Maintainer slices" below and in (`docs/SOP\.md`)\.',
+                    r" The details are in \1.", public)
+    if _START_HERE_LEAKS.search(public):
+        return ""
+    return public + "\n"
+
+
+def report_mistake_html(title: str, where: str = "", url: str = "", label: str = "Report a mistake",
+                        cls: str = "intro fine") -> str:
+    """One plain link, styled like the links beside it (About panel: "intro
+    fine"; under a passage: "meta", like the source link)."""
+    return (f'<p class="{cls} report-mistake"><a href="{escape(report_mistake_href(title, where, url))}">'
+            f"{escape(label)}</a></p>")
 
 
 def work_source_checked(work: dict, stale: set[str] | None = None) -> bool:
@@ -6178,9 +6672,9 @@ def _fallback_ruled(folder_name: str) -> bool:
 
 def confidence_text(base: str, checked: bool) -> str:
     lead = (
-        "This work has passed this project's source check. "
+        "This work has passed our source check. "
         if checked
-        else "This work has not yet been re-checked against its source. "
+        else "We have not yet re-checked this work against its source. "
     )
     return lead + base
 
@@ -6260,6 +6754,34 @@ NONCANONICAL_ROUTES: set[str] = set()
 OG_INDEX: dict[str, str] = _json_load(ASSETS / "og" / "index.json", {}) if (ASSETS / "og" / "index.json").exists() else {}
 
 
+_NOTE_MARK_RE = re.compile(r"\s*\[\d+\]\s*")
+_SECTION_NO_RE = re.compile(r"^(?:\d+\.)+\d*\s*")
+# An all-caps chapter heading run into the text: "AGAINST PLATO: THAT THE LIVING ARE NOT MADE FROM THE DEAD."
+_CAPS_HEADING_RE = re.compile(r"^[A-Z’' ,:;\-–—]{6,}[.:](?:\s+|$)")
+
+
+def excerpt_lead(paras) -> str:
+    """The opening words of an excerpt for its share text, without note marks
+    ("[1]"), a leading section number ("10.1.") or an all-caps heading."""
+    for p in paras or []:
+        t = strip_logos_markup(str(p or ""))
+        t = _NOTE_MARK_RE.sub(" ", t).strip()
+        t = _SECTION_NO_RE.sub("", t)
+        t = _CAPS_HEADING_RE.sub("", t)
+        t = re.sub(r"\s+", " ", t).strip()
+        if t:
+            return t
+    return ""
+
+
+def excerpt_share_title(author: str, cite: str, topic: str) -> str:
+    """"Minucius Felix, Octavius 27 · Against Idols". The topic title often reads
+    as a statement ("Where the Dead Wait"), so it cannot follow "on"; a quoted
+    opening on the cite ("Plea 15: “Let the…”") only makes the title long."""
+    cite = re.sub(r":\s*[“\"][^”\"]*[”\"]\s*$", "", cite or "").strip()
+    return " · ".join(x for x in (", ".join(x for x in (author, cite) if x), topic) if x)
+
+
 def meta_description(text: str, limit: int = 158) -> str:
     """A search snippet that ends cleanly: at a sentence end, else a word, with an ellipsis."""
     t = re.sub(r"\s+", " ", strip_logos_markup(str(text or ""))).strip()
@@ -6325,6 +6847,12 @@ def layout(
     canonical: str = "",
     nav_omit: tuple[str, ...] = (),
 ) -> str:
+    # Scripture pages carry licensed Bible text (YouVersion licences, 2026-10-22),
+    # which may not sit next to a request for gifts, so they get no Support column.
+    support_nav = f"""<nav aria-label="Support">
+      <h2>Support</h2>
+      <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li></ul>
+    </nav>"""
     crumbs = ""
     if crumb:
         parts = []
@@ -6348,11 +6876,13 @@ def layout(
         "contribute": "help",
         "about": "about",
     }.get(active, "home")
-    full_title = f"{SITE_NAME} · The early Church in its own words" if title == "Home" else f"{title} · {SITE_NAME}"
+    full_title = f"{SITE_NAME} · The way of the Church Fathers" if title == "Home" else f"{title} · {SITE_NAME}"
     desc = meta_description(description)
     img = f"{SITE_ORIGIN}/assets/og/{card}.png"
-    share_url = f"{SITE_ORIGIN}/__ROUTE__"
-    alt = f"{title} on {SITE_NAME}"
+    # One address per page: a page that names another as canonical shares that address too.
+    share_url = f"{SITE_ORIGIN}{canonical}" if canonical else f"{SITE_ORIGIN}/__ROUTE__"
+    # The card shows the page title and the name, so the alt text says the same.
+    alt = full_title
     social = (
         f'<meta property="og:type" content="{escape(og_type)}">\n'
         f'<meta property="og:site_name" content="{escape(SITE_NAME)}">\n'
@@ -6428,7 +6958,7 @@ def layout(
   <div class="footer-inner">
     <div>
       <p class="footer-mark">Via <span>Patrum</span></p>
-      <p>The early Church in its own words, in faithful modern English. Free for the whole world.</p>
+      <p>The way of the Church Fathers, in their own words, in fresh English translations. Free for the whole world.</p>
     </div>
     <nav aria-label="Read">
       <h2>Read</h2>
@@ -6438,19 +6968,17 @@ def layout(
       <h2>About</h2>
       <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
     </nav>
-    <nav aria-label="Support">
-      <h2>Support</h2>
-      <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li></ul>
-    </nav>
+    {'' if active == "scripture" else support_nav}
     <nav aria-label="Get the app">
       <h2>Get the app</h2>
       <ul><li><a href="{APP_STORE_URL}" rel="noopener">iPhone and iPad app</a></li><li><a href="{YOUTUBE_URL}" rel="noopener">YouTube channel</a></li></ul>
       {APP_BADGE}
     </nav>
   </div>
-  <p class="footer-fine">New English from the Greek and Latin, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
+  <p class="footer-fine">Fresh English translations, made with AI help. Each work page says whether it has been checked against its source. A study library, not a critical edition.</p>
 </footer>
 <script src="/assets/site.js?v={ASSET_VER}" defer></script>
+<script src="/assets/human-check.js?v={ASSET_VER}" defer></script>
 {extra_js}</body>
 </html>
 """
@@ -6603,7 +7131,7 @@ def excerpt_check_note(x: dict) -> str:
         return ""
     notes = []
     if x.get("needs_recert"):
-        notes.append("This passage has not yet been re-checked against its source.")
+        notes.append("We have not yet re-checked this passage against its source.")
     src = x.get("latin") or x.get("greek") or x.get("source_text")
     if _words(src) >= 60 and _words(x.get("english")) < 0.6 * _words(src):
         notes.append("The English gives part of this chapter. The full original is below.")
@@ -6634,6 +7162,37 @@ def _work_key(author_slug: str, title: str, author: str) -> tuple[str, str]:
     # Drop the author's own name ("Polycarp to the Philippians") unless that
     # leaves nothing ("Mathetes (Epistle to Diognetus)", "Epistle to Diognetus").
     return author_slug, " ".join([w for w in words if w not in named] or words)
+
+
+# Two English renderings of one passage, too different for the text match in
+# excerpt_duplicates (2026-10-23 audit): second copy -> main page.
+EXCERPT_SAME_PASSAGE: dict[str, str] = {
+    "auto_nov_one_chapter_31": "novatian_trin_31_monarchy",  # On the Trinity 31
+    "tertullian_against_marcion_10_heaven-hell-in": "tertullian_marcion_5_10",  # Against Marcion 5.10
+}
+
+
+def excerpt_duplicates(excerpts: list[dict]) -> dict[str, str]:
+    """Excerpt id -> main excerpt id for the same passage by the same writer:
+    the same opening words (one passage filed under several questions), or a
+    pair named in EXCERPT_SAME_PASSAGE. The main page is the shortest id."""
+    primary: dict[str, str] = {}
+    groups: dict[tuple[str, str], list[str]] = defaultdict(list)
+    for x in excerpts:
+        txt = re.sub(r"\W+", " ", strip_logos_markup(" ".join(excerpt_paragraphs(x))).lower()).strip()[:400]
+        if len(txt) > 80:
+            groups[((x.get("author") or "").lower(), txt)].append(x["id"])
+    for ids in groups.values():
+        if len(ids) > 1:
+            main = sorted(ids, key=lambda i: (len(i), i))[0]
+            for i in ids:
+                if i != main:
+                    primary[i] = main
+    have = {x["id"] for x in excerpts}
+    for dup, main in EXCERPT_SAME_PASSAGE.items():
+        if dup in have and main in have:
+            primary[dup] = primary.get(main, main)
+    return primary
 
 
 READER_MATCH_REJECTS: list[str] = []
@@ -7049,6 +7608,32 @@ def _favicon_ico_bytes() -> bytes:
 
 _WESLEY_NOT_IN_SERMON = re.compile(r"\bnot in the 1\d{3} sermon\b", re.I)
 _WESLEY_LISTENING_LINE = re.compile(r"\s*This is a listening version\b", re.I)
+# Wesley wrote in English: no "modern English" product claim, no "not an
+# ante-Nicene father" aside (2026-10-23 copy review). The metas keep their
+# wording; the site says it plainly.
+_WESLEY_ERA_ASIDE = re.compile(r"\s*It is an English sermon, not an ante-Nicene father\.?")
+_WESLEY_STOCK_BLURB = re.compile(r"^Rendered in modern English, to be read and heard\.")
+_WESLEY_METHOD_LEAD = re.compile(r"^Rendered in modern English\.\s*")
+
+
+def wesley_public_meta(meta: dict) -> dict:
+    """Era note, blurb and method for one Wesley sermon, in the site's voice."""
+    label = str(meta.get("witness_label") or "1872 text").strip()
+    year = (re.search(r"\b1\d{3}\b", label) or re.search(r"\b1\d{3}\b", str(meta.get("period") or "")))
+    year_s = year.group(0) if year else ""
+    blurb = str(meta.get("blurb") or "")
+    if not blurb or _WESLEY_STOCK_BLURB.match(blurb):
+        blurb = (f"Wesley's {year_s} text in updated English, to read and hear. "
+                 f"Open the {label} under each part to compare.") if year_s else ""
+    th = dict(meta.get("text_history") or {}) if isinstance(meta.get("text_history"), dict) else {}
+    if th.get("method"):
+        th["method"] = _WESLEY_METHOD_LEAD.sub("Wesley's own sermon in updated English wording. ", str(th["method"]))
+    return {
+        "era_note": _WESLEY_ERA_ASIDE.sub("", str(meta.get("era_note") or "")).strip(),
+        "blurb": blurb,
+        "text_history": th,
+        "witness_label": label,
+    }
 
 
 # (slug, section) of each Wesley opening dropped above. Their old /<n>/
@@ -7083,6 +7668,7 @@ def load_wesley_sermons() -> list[dict]:
             if isinstance(item, dict)
         }
         meta = _json_load(trans / f"{stem}_meta.json", {})
+        pub = wesley_public_meta(meta)
         slug = str(meta.get("slug") or f"john-wesley-{stem.replace('_', '-')}")
         if slug not in WORK_TOPICS and meta.get("topics"):
             WORK_TOPICS[slug] = list(meta["topics"])
@@ -7133,12 +7719,15 @@ def load_wesley_sermons() -> list[dict]:
                 status=str(meta.get("status") or "available"),
                 edition=str(meta.get("edition") or "1872 edition"),
                 sections=sections,
-                blurb=str(meta.get("blurb") or ""),
-                era_note=str(meta.get("era_note") or ""),
+                blurb=pub["blurb"],
+                era_note=pub["era_note"],
                 first_english=False,
-                text_history=meta.get("text_history") if isinstance(meta.get("text_history"), dict) else {},
+                text_history=pub["text_history"],
             )
         )
+        # Not a translation: the work page says what was done to it instead.
+        works[-1]["english_original"] = True
+        works[-1]["english_original_label"] = pub["witness_label"]
         if meta.get("edition_short"):
             works[-1]["edition_short"] = str(meta["edition_short"]).strip()
     return works
@@ -7939,7 +8528,7 @@ def person_page_meta(slug: str, name: str, *, works: int, passages: int) -> tupl
         bits.append(f"{works} work{'s' if works != 1 else ''} to read")
     if passages:
         bits.append(f"{passages} passage{'s' if passages != 1 else ''} by question")
-    desc = f"{shown}{', ' + dates if dates else ''}: {' and '.join(bits) or 'writings'} in new English, free. {bio}"
+    desc = f"{shown}{', ' + dates if dates else ''}: {' and '.join(bits) or 'writings'} in fresh English, free. {bio}"
     # These rows are works (Didache, the Passion, the chronicle), not writers.
     kind = author_schema_type(slug, name)
     person = {"@type": kind, "name": shown, "url": f"{SITE_ORIGIN}/authors/{slug}/"}
@@ -7969,8 +8558,8 @@ def logos_pack_manifest() -> dict:
 def logos_retired() -> bool:
     """The free /logos/ page and its zips are retired (owner 2026-10-07).
     The 2026-10-05 zips still held the 17 works withdrawn on 2026-10-07 and
-    worksheet notes; Logos Word files belong to the library pass (owner
-    2026-10-05). /logos/ now 301s to /downloads/."""
+    worksheet notes; Logos Word files live on the free downloads shelf
+    (owner 2026-10-05, free since 2026-10-22). /logos/ now 301s to /downloads/."""
     return True
 
 
@@ -8267,7 +8856,12 @@ def search_grams_cover(grams: str, term: str) -> bool:
 def pages_headers() -> str:
     """dist/_headers. Every top-level asset is linked with ?v=ASSET_VER, a hash
     of all of them, so each one gets the year cache; a new asset needs no
-    hand-kept line (ask.css, creeds.css and favicon.svg were missed once)."""
+    hand-kept line (ask.css, creeds.css and favicon.svg were missed once).
+
+    Security headers on every page (2026-10-23): HSTS, no framing by other
+    sites, and no camera, microphone, location, payment or USB. No script CSP:
+    the theme script is inline and Turnstile loads its own script and frame.
+    Responses built by Functions (/api, /dl) do not get these."""
     _immutable = "".join(
         f"/assets/{a.name}\n  Cache-Control: public, max-age=31536000, immutable\n\n"
         for a in sorted(ASSETS.iterdir()) if a.is_file() and a.suffix in {".css", ".js", ".svg"})
@@ -8275,6 +8869,10 @@ def pages_headers() -> str:
         """/*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
 
 """ + _immutable + """/assets/og/*
   Cache-Control: public, max-age=86400
@@ -8539,21 +9137,17 @@ FORCED_WITHHOLD = {
     # The letter to Africanus is a section of origen-letters, not its own work.
     # Naming the part slug held nothing: the loader never emits it.
     "origen-song-homily-1": _RECERT,
-    "cyril-adoration-10": _RECERT,
-    # 2026-10-14 site audit: word-for-word Greek published as English
-    # ("bring-forward ... gift-bearings", "pomegranate-lets", 13-18 hyphen
-    # calques per 1,000 words in 14-16 against under 1 elsewhere), and some
-    # Scripture references beside the wrong verses. Re-translate, then release.
-    "cyril-adoration-11": _RECERT,
-    "cyril-adoration-12": _RECERT,
-    "cyril-adoration-13": _RECERT,
-    "cyril-adoration-14": _RECERT,
-    "cyril-adoration-15": _RECERT,
-    "cyril-adoration-16": _RECERT,
+    # cyril-adoration-10..16 released 2026-10-23: re-translated from the Greek by Claude
+    # (translate + independent clause review; old word-for-word English replaced).
     # The same Lamentations fragments twice under one title (2026-10-14 audit).
     # origen-lamentations-fragments has all 118 from Klostermann; this book
     # groups them into 20 and stays in the pipeline.
     "origen-lamentationes-fragments": "Second translation of origen-lamentations-fragments; one copy is shown.",
+    # Two martyr acts were each live twice (2026-10-23 audit). The shown copy
+    # names its edition and follows the standard numbering; _redirects sends
+    # the old address there. The book folders stay as they are.
+    "polycarp": "Second translation of martyrdom-polycarp (Lake 1917); one copy is shown.",
+    "justin-companions": "Second translation of acts-of-justin (recension B); one copy is shown.",
     # Wrong text under the name (2026-10-14 topic pass). "Diodorus, Fragments"
     # is Dionysius of Corinth's letter to Soter, already live as
     # dionysius-corinth-fragments; relabeled 2026-10-18 as
@@ -8566,6 +9160,13 @@ FORCED_WITHHOLD = {
     "pseudo-cyprian-to-vigilius": _RECERT,
     "didymus-dialexis-montanistae": _RECERT,
     # withheld 2026-10-09 pending Stephan promote call; densify in progress (Densify)
+}
+
+
+# Held second copies whose old address answers with the shown copy.
+SECOND_COPY_OF = {
+    "polycarp": "martyrdom-polycarp",
+    "justin-companions": "acts-of-justin",
 }
 
 
@@ -8689,6 +9290,13 @@ def build() -> None:
     # into a memory warning. The marker has to be rewritten after rmtree.
     (DIST / ".metadata_never_index").write_text("")
     shutil.copytree(ASSETS, DIST / "assets")
+    # Podcast feed: the canonical feed source lives in the repo at
+    # data/podcast/feed.xml and is served verbatim at /podcast/feed.xml.
+    # Update that file (never dist/) when episodes change.
+    _podcast_feed = ROOT / "data" / "podcast" / "feed.xml"
+    if _podcast_feed.exists():
+        (DIST / "podcast").mkdir(parents=True, exist_ok=True)
+        shutil.copy2(_podcast_feed, DIST / "podcast" / "feed.xml")
     (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
     for _icon in ("apple-touch-icon.png",):
         if (ASSETS / "icons" / _icon).exists():
@@ -8696,7 +9304,7 @@ def build() -> None:
     (DIST / "site.webmanifest").write_text(json.dumps({
         "name": "Via Patrum",
         "short_name": "Via Patrum",
-        "description": "The early Church in its own words, in faithful modern English.",
+        "description": "The way of the Church Fathers, in their own words, in fresh English translations.",
         "start_url": "/",
         "display": "standalone",
         "background_color": "#f8f6f0",
@@ -8812,6 +9420,8 @@ def build() -> None:
     for w in works:
         if w.get("slug") in WORK_BLURBS:
             w["blurb"] = WORK_BLURBS[w["slug"]]
+        if w.get("slug") in WORK_DATES:
+            w["period"] = WORK_DATES[w["slug"]]
     stale = stale_receipt_slugs(works)
     withheld = sorted(set(withheld) | set(stale))
     works = [w for w in works if w.get("slug") not in set(stale)]
@@ -8988,6 +9598,15 @@ def build() -> None:
         author = x.get("author") or "Unknown"
         by_author[author].append(x)
 
+    # Repeats keep their own /e/ page (writer pages and the Scripture index link
+    # to them) but are left off the topic list and the app.
+    _repeats = 0
+    for tid in list(by_topic):
+        for _gone in drop_repeated_passages(by_topic[tid])[1]:
+            _gone["_repeat"] = True
+            _repeats += 1
+    print(f"topic passages: {_repeats} repeated copies left off topic pages", flush=True)
+
     for tid, rows in by_topic.items():
         rows.sort(
             key=lambda r: (
@@ -9004,7 +9623,8 @@ def build() -> None:
     def split_topic_rows(tid: str, rows: list[dict]) -> tuple[list[dict], list[dict]]:
         """(quoted on the page, listed below). A reviewed set of four or more
         leads the page; otherwise at most 12 quotes, each writer's earliest
-        passage first, and the rest are listed, not pasted."""
+        passage first, and the rest are listed, not pasted. Repeats are left off."""
+        rows = [r for r in rows if not r.get("_repeat")]
         by_date = sorted(rows, key=lambda r: (_passage_year(r), r.get("author") or "", r.get("id") or ""))
         stanced = stanced_by_topic.get(tid, set())
         matched = [x for x in by_date if _excerpt_is_stanced(x, stanced)]
@@ -9026,7 +9646,7 @@ def build() -> None:
 
     def topic_count_label(primary: list[dict], rest: list[dict]) -> str:
         if rest:
-            return f"{len(primary)} quoted · {len(primary) + len(rest)} in all"
+            return f"{len(primary) + len(rest)} passages, {len(primary)} quoted here"
         return f"{len(primary)} passage{'s' if len(primary) != 1 else ''}"
 
     search_index: list[dict] = []
@@ -9057,7 +9677,7 @@ def build() -> None:
             if not _excerpt_is_stanced(_x, _stanced):
                 continue
             if excerpt_is_anf(_x):
-                continue  # today's passage is always our own new English
+                continue  # today's passage is always our own fresh translation
             _lead = topic_lead_text(_x, keywords=topic_keywords(_meta))
             _words = len(_lead.split())
             if _words < 14 or _words > 70:
@@ -9090,15 +9710,23 @@ def build() -> None:
         return (
             f'<div class="vp-today-card" data-daily>'
             f'<p class="eyebrow">Today · <span class="vp-daily-topic">{escape(r["t"])}</span></p>'
-            f'<blockquote class="vp-quote"><p>&ldquo;<span class="vp-daily-q">{escape(r["q"])}</span>&rdquo;</p></blockquote>'
+            f'<blockquote class="vp-quote"><p>{daily_quote_html("vp-daily-q", r["q"])}</p></blockquote>'
             f'<p class="vp-who"><strong class="vp-daily-a">{escape(r["a"])}</strong>'
             f' · <span class="vp-daily-d">{escape(r["d"])}</span> · <span class="vp-daily-c">{escape(r["c"])}</span></p>'
             f'<div class="vp-actions"><a class="btn primary vp-daily-h" href="{escape(r["h"])}">Read the passage</a>'
-            f'<a class="btn vp-daily-th" href="{escape(r["th"])}">What the others said</a></div>'
+            f'<a class="btn vp-daily-th" href="{escape(r["th"])}">What other Fathers said</a></div>'
+            # Today's Scripture (owner 2026-10-23): a way into the Scripture reader from the home page.
+            f'<div class="vp-sc" data-daily-sc{"" if r.get("sr") else " hidden"}>'
+            f'<p class="eyebrow">Today&rsquo;s Scripture</p>'
+            f'<blockquote class="vp-quote vp-sc-q"><p>{daily_quote_html("vp-sc-v", r.get("sv", ""))}</p></blockquote>'
+            f'<p class="vp-who"><span class="vp-sc-r">{escape(r.get("sr", ""))}</span> · BSB</p>'
+            f'<div class="vp-actions"><a class="btn vp-sc-h" href="{escape(r.get("sh", "/scripture/"))}">'
+            f'Read <span class="vp-sc-ch">{escape(r.get("sch", ""))}</span> with the Fathers &rarr;</a></div>'
+            f"</div>"
             f"</div>"
         )
 
-    # Start-here shelf: new English first, then works you can also hear.
+    # Start-here shelf: fresh translations first, then works you can also hear.
     # Hand-picked doors in first; then whole treatises a newcomer can finish.
     # Short classics a newcomer can finish, most with audio (2026-10-06 audit).
     SHELF_FIRST = [
@@ -9173,8 +9801,8 @@ def build() -> None:
     home = f"""
 <div class="vp-home">
 <section class="vp-hero">
-  <h1>Read the early Church in its own words</h1>
-  <p class="vp-sub">{len(works)} works in faithful modern English. Free to read and hear.</p>
+  <h1>The way of the Fathers</h1>
+  <p class="vp-sub">How the Church Fathers spoke, acted, argued, lived and died, in their own words. {len(works)} works in fresh English translations, free to read and hear.</p>
   <form class="vp-ask" action="/ask/" method="get" role="search">
     <input id="home-q" name="q" type="search" maxlength="300" aria-label="Ask what the Fathers said" placeholder="{escape(hint_first)}" data-hints="{escape(json.dumps(hints, ensure_ascii=False))}" autocomplete="off">
     <button type="submit">Ask</button>
@@ -9196,12 +9824,13 @@ def build() -> None:
 </section>
 
 <section class="vp-mission">
-  <h2>Via Patrum, the Way of the Fathers</h2>
+  <h2>Via Patrum, the way of the Fathers</h2>
   <p class="vp-verse">&ldquo;Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.&rdquo; Jeremiah 6:16</p>
-  <p>Two thousand years of Christian writing, most of it untranslated, out of print, or behind paywalls. We are putting all of it, every Father and every work, into faithful modern English and audio. Reading and listening here stay free for the whole world, forever.</p>
+  <p>Two thousand years of Christian writing, most of it untranslated, out of print, or behind paywalls. We are putting all of it, every Father and every work, into fresh English translations and audio, so anyone can learn how the Fathers spoke, acted, argued, lived and died. Reading and listening here stay free for the whole world, forever.</p>
 </section>
 </div>
 """
+    _home_card_html = daily_card(first_daily)
     write(
         DIST / "index.html",
         layout(
@@ -9226,7 +9855,7 @@ def build() -> None:
                     },
                 },
             ],
-            description=f"Read the early Church in its own words: {len(works)} works by the Fathers in faithful modern English, and more each week. Free to read and hear.",
+            description=f"The way of the Church Fathers: how they spoke, acted, argued, lived and died, in their own words. {len(works)} works in fresh English translations, and more each week. Free to read and hear.",
         ),
     )
 
@@ -9238,7 +9867,7 @@ def build() -> None:
             n = len(by_topic.get(t["id"], []))
             if n == 0 and t["id"] not in topic_to_works:
                 continue
-            # Same count words as the topic page: "5 quoted · 102 in all".
+            # Same count words as the topic page: "102 passages, 5 quoted here".
             bits = [topic_count_label(*split_topic_rows(t["id"], by_topic[t["id"]]))] if n else []
             if t["id"] in topic_to_works:
                 bits.append(f"{len(topic_to_works[t['id']])} related work{'s' if len(topic_to_works[t['id']])!=1 else ''}")
@@ -9272,6 +9901,7 @@ def build() -> None:
         ),
     )
 
+    excerpt_primary = excerpt_duplicates(excerpts)
     # --- Scripture: book → chapter → every Father who cites it ------------
     # The Bibles load first: a citation is filed only under a chapter that
     # exists (2026-10-06 audit: Psalm 181, 2 John 5, Jude 25 had pages).
@@ -9371,6 +10001,8 @@ def build() -> None:
     for x in excerpts:
         if x.get("_cite_href"):
             continue   # shown from a whole-work reader: that section is listed already
+        if x["id"] in excerpt_primary:
+            continue   # a second copy of a passage: its main page is listed (Isaiah 1:2 twice, 2026-10-23)
         _title = public_citation(x.get("citation") or x["id"], x.get("work") or "")
         sc_collect(
             strip_logos_markup(" ".join(excerpt_paragraphs(x))),
@@ -9448,6 +10080,62 @@ def build() -> None:
             if _n and _n[0] in _have:
                 SCRIPTURE_VERSES.add((_b, _c, _n[0]))
 
+    # Today's Scripture for each daily passage: the verse it cites (the one whose chapter
+    # the most Fathers cite), else the chapter the Fathers cite most on its topic.
+    _cites_by_href: dict[str, list[tuple[str, int, str]]] = defaultdict(list)
+    for (_b, _c), _rows in sc_entries.items():
+        if (_b, _c) not in sc_valid or not (base_bible["books"].get(_b) or {}).get(str(_c)):
+            continue
+        for _r in _rows:
+            _n = re.findall(r"\d+", _r["verse"])
+            if _n:
+                _cites_by_href[_r["href"].split("#")[0]].append((_b, _c, _n[0]))
+    _ex_by_id = {x["id"]: x for x in excerpts}
+
+    def _passage_cites(x: dict) -> list[tuple[str, int, str]]:
+        hrefs = {f"/e/{x['id']}/", x.get("_cite_href") or ""} - {""}
+        return [c for h in hrefs for c in _cites_by_href.get(h, [])]
+
+    def _verse_text(b: str, c: int, v: str) -> str:
+        for _v, _txt in (base_bible["books"].get(b) or {}).get(str(c), []):
+            if str(_v) == v:
+                _txt = " ".join(str(_txt).split())
+                return _txt if len(_txt) <= 220 else _txt[:217].rsplit(" ", 1)[0] + "…"
+        return ""
+
+    _topic_pick: dict[str, tuple[str, int, str]] = {}
+    for _tid, _rows in by_topic.items():
+        _count = Counter((b, c) for x in _rows if not x.get("_repeat") for b, c, _v in _passage_cites(x))
+        if _count:
+            (_b, _c), _n = _count.most_common(1)[0]
+            _verses = Counter(v for x in _rows for b, c, v in _passage_cites(x) if (b, c) == (_b, _c))
+            _topic_pick[_tid] = (_b, _c, _verses.most_common(1)[0][0])
+    _sc_from = Counter()
+    for _r in daily:
+        _x = _ex_by_id.get(_r["h"].strip("/").split("/")[-1]) or {}
+        _own = sorted(_passage_cites(_x), key=lambda c: -len(sc_entries.get((c[0], c[1]), [])))
+        _pick = next((c for c in _own if _verse_text(*c)), None)
+        _sc_from["passage" if _pick else "topic"] += 1
+        _pick = _pick or _topic_pick.get(_r["th"].strip("/").split("/")[-1])
+        if not _pick or not _verse_text(*_pick):
+            _sc_from["none"] += 1
+            continue
+        _b, _c, _v = _pick
+        _r.update({
+            "sv": _verse_text(_b, _c, _v),
+            "sr": f"{_b} {_c}:{_v}",
+            "sch": f"{_b} {_c}",
+            "sh": f"/scripture/{slugify(BIBLE_PUBLIC.get(_b, _b))}/{_c}/" + (f"#v{_v}" if (_b, _c, _v) in SCRIPTURE_VERSES else ""),
+        })
+    print(f"today's scripture: {_sc_from['passage']} from the passage's own cite, "
+          f"{_sc_from['topic'] - _sc_from['none']} from the topic, {_sc_from['none']} without", flush=True)
+    (DIST / "data" / "daily.json").write_text(json.dumps(daily[:400], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    if first_daily:
+        _home = (DIST / "index.html").read_text(encoding="utf-8")
+        if _home_card_html not in _home:
+            raise SystemExit("BLOCKED: home daily card not found to add Today's Scripture")
+        (DIST / "index.html").write_text(_home.replace(_home_card_html, daily_card(first_daily), 1), encoding="utf-8")
+
     explore_index = build_explore_index(excerpts, works, topic_meta)
     # Beliefs live on the Timeline (owner 2026-10-05), on the same scale.
     import beliefs_page
@@ -9465,19 +10153,8 @@ def build() -> None:
 
     # The same passage filed under several questions: one main page, the rest
     # point to it (canonical) and stay out of the sitemap.
-    excerpt_primary: dict[str, str] = {}
-    _groups: dict[tuple[str, str], list[str]] = defaultdict(list)
-    for _x in excerpts:
-        _txt = re.sub(r"\W+", " ", strip_logos_markup(" ".join(excerpt_paragraphs(_x))).lower()).strip()[:400]
-        if len(_txt) > 80:
-            _groups[((_x.get("author") or "").lower(), _txt)].append(_x["id"])
-    for _ids in _groups.values():
-        if len(_ids) > 1:
-            _main = sorted(_ids, key=lambda i: (len(i), i))[0]
-            for _i in _ids:
-                if _i != _main:
-                    excerpt_primary[_i] = _main
-                    NONCANONICAL_ROUTES.add(f"/e/{_i}/")
+    for _i in excerpt_primary:
+        NONCANONICAL_ROUTES.add(f"/e/{_i}/")
 
     # --- Topic pages + excerpt pages ---
     for tid, rows in by_topic.items():
@@ -9523,10 +10200,17 @@ def build() -> None:
             )
             e_cite = excerpt_cite(x)
             e_author = display_author(x.get("author") or "")
+            # A text as author whose cite already names it: "Epistle to
+            # Diognetus 7", not "Letter to Diognetus, Epistle to Diognetus 7".
+            e_text_named = (
+                e_author.casefold() in TEXT_AUTHOR_NAMES
+                and text_name_core(e_author) in e_cite.casefold()
+            )
+            e_lead = e_cite if e_text_named else f"{e_author}, {e_cite}"
             e_dates = author_dates_display(x.get("author") or "") or format_bc_ad(x.get("period") or "")
             e_older = (
                 '<p class="meta older-source">English from the <em>Ante-Nicene Fathers</em> '
-                "(1885–1896), public domain. A new translation from the original is on the way.</p>"
+                "(1885–1896), public domain. Our fresh English translation from the original is on the way.</p>"
                 if excerpt_is_anf(x)
                 else ""
             )
@@ -9552,18 +10236,19 @@ def build() -> None:
             ebody = f"""
 <article class="excerpt-page">
   <p class="eyebrow"><a href="/topics/{escape(tid)}/">{escape(meta['title'])}</a></p>
-  <h1>{escape(e_author)}, {escape(e_cite)}</h1>
+  <h1>{escape(e_lead)}</h1>
   <p class="meta"><a href="/authors/{escape(author_hub_slug(x.get('author')))}/">{escape(e_author)}</a> · {escape(e_dates)}</p>
   {e_older}{e_reader}
   <div class="body">{paras}</div>
   {src_block}
+  {report_mistake_html(f"{e_author}, {e_cite}", url=f"{SITE_ORIGIN}/e/{x['id']}/", label="Report a mistake in this passage", cls="meta")}
   {cross}
 </article>
 """
             write(
                 DIST / "e" / x["id"] / "index.html",
                 layout(
-                    f"{e_author} on {meta['title']}: {e_cite}",
+                    excerpt_share_title(e_author, e_cite, meta["title"]),
                     ebody,
                     crumb=[
                         ("Home", "/"),
@@ -9574,13 +10259,13 @@ def build() -> None:
                     active="topics",
                     # Title as written: lowering it broke divine names (god's, christ) and
                     # statement titles do not read after "on".
-                    description=f"{e_author}, {meta['title']}: " + strip_logos_markup((paras_list or [""])[0]),
+                    description=f"{e_author}, {meta['title']}: " + excerpt_lead(paras_list),
                     og_type="article",
                     # Shown from the reader: the same text as the cite page, which is canonical.
                     canonical=x.get("_cite_href") or (f"/e/{excerpt_primary[x['id']]}/" if x["id"] in excerpt_primary else ""),
                     jsonld=[{
                         "@type": "Quotation",
-                        "name": f"{e_author}, {e_cite}",
+                        "name": e_lead,
                         "text": meta_description(" ".join(paras_list), 300),
                         "creator": {"@type": author_schema_type(None, x.get("author")), "name": e_author,
                                     "url": f"{SITE_ORIGIN}/authors/{author_hub_slug(x.get('author'))}/"},
@@ -9865,7 +10550,7 @@ def build() -> None:
             f"""<div class="works-browse" data-works-browse data-work-count="{len(works)}" data-author-count="{author_n}">
 <p class="eyebrow">Works</p>
 <h1>All works</h1>
-<p class="intro">Every work on the site, grouped by writer, earliest first. A work marked Part only is a portion of a longer book. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY and not logos_retired() else ''}</p>
+<p class="intro">Every work in the library, grouped by writer, earliest first: how the Fathers spoke and argued, in their own words. A work marked Part only is a portion of a longer book. Search finds titles, writers, and words inside the passages.{' Word files you can add in Logos yourself are on the <a href="/logos/">Personal Books</a> page.' if logos_pack_manifest() and not LIBRARY and not logos_retired() else ''}</p>
 <div class="works-chrome">
   <label class="works-find"><span class="vh">Find in library</span>
     <input type="search" id="works-q" class="search-input" placeholder="Search titles, writers, or words…" autocomplete="off">
@@ -9906,7 +10591,7 @@ def build() -> None:
 <p class="intro fine" id="original-english">
   <span id="no-prior-english" class="anchor-alias" aria-hidden="true"></span>
   <span id="no-earlier-english" class="anchor-alias" aria-hidden="true"></span>
-  Translation sources and notes are in <strong>About this text</strong> on each work. A new translation does not by itself mean the work has never appeared in English.
+  Translation sources and notes are in <strong>About this text</strong> on each work. A fresh English translation here does not by itself mean the work has never appeared in English.
 </p>
 </div>""",
             crumb=[("Home", "/"), ("Works", "")],
@@ -9940,12 +10625,16 @@ def build() -> None:
                 f'<p class="banner first-english">'
                 f"<strong>{escape(ORIGINAL_ENGLISH_LABEL)}.</strong> {escape(detail)}</p>"
             )
-        intro_text = public_blurb(w.get("blurb") or "") or "New English, free to read. Open any section below."
+        intro_text = public_blurb(w.get("blurb") or "") or "Fresh English, free to read. Open any section below."
         blurb = f"<p class='intro'>{escape(intro_text)}</p>"
         has_greek = any(s.get("greek") for s in w["sections"])
         has_latin = any(s.get("latin") for s in w["sections"])
         has_latin_link = any(s.get("source_url") for s in w["sections"])
-        if has_greek:
+        if w.get("english_original") or w.get("author_slug") == "john-wesley":
+            conf = confidence_note_english_original(
+                w.get("english_original_label")
+                or next((str(x.get("witness_label") or "") for x in w["sections"] if x.get("witness_label")), ""))
+        elif has_greek:
             conf = CONFIDENCE_NOTE_WITH_GREEK
         elif has_latin or has_latin_link:
             conf = CONFIDENCE_NOTE_WITH_LATIN
@@ -9953,6 +10642,9 @@ def build() -> None:
             conf = CONFIDENCE_NOTE
         conf = confidence_text(conf, work_source_checked(w, set(stale)))
         confidence = f"<p class='intro fine'>{escape(conf)}</p>"
+        # The app and the privacy page promise a way to report a mistake.
+        report_link = report_mistake_html(
+            public_reader_title(w["title"], slug=w["slug"]), url=f"{SITE_ORIGIN}/works/{w['slug']}/")
         prior_mark = ""
         if w.get("first_english"):
             prior_mark = (
@@ -9987,7 +10679,7 @@ def build() -> None:
         work_ld = {k: v for k, v in work_ld.items() if v is not None}
         work_desc = (
             public_blurb(w.get("blurb") or "")
-            or f"Read {title_by(pub_title, w_author, canonical_author_slug(w.get('author_slug'), w.get('author')))} in new English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
+            or f"Read {title_by(pub_title, w_author, canonical_author_slug(w.get('author_slug'), w.get('author')))} in fresh English, free, with the {('Greek' if w_lang == 'grc' else 'Latin') if w_lang else 'original'} one tap away."
         )
         edition_short, edition_ids = split_edition_for_reader(w.get("edition") or "")
         edition_short = scrub_worksheet_note(edition_short)
@@ -10051,8 +10743,12 @@ def build() -> None:
         def about_details(*, with_lede: bool) -> str:
             paras = ([] if with_lede or not intro_lede else [intro_lede]) + intro_rest
             intro_bits = "".join(f'<p class="intro">{escape(p)}</p>' for p in paras)
+            # A teaser taken from the intro's first sentence is not printed
+            # twice (2026-10-23 audit: Perpetua, Montanus and Lucius).
+            shown_blurb = "" if blurb_repeats_intro(intro_text, [intro_lede, *intro_rest]) else blurb
             bits = "".join(
-                x for x in (first_banner, era, note, blurb, intro_bits, mast_left, history_html, confidence) if x
+                x for x in (first_banner, era, note, shown_blurb, intro_bits, mast_left, history_html, confidence,
+                            report_link) if x
             )
             return (
                 f'<details class="reader-about"><summary>About this text</summary>{bits}</details>'
@@ -10295,6 +10991,15 @@ def build() -> None:
                 + "".join(f'<li><a href="{escape(h)}">{escape(t)}</a></li>' for t, h in topic_links)
                 + "</ul></details>"
             ) if topic_links else ""
+            # Old #s<id> links into a work that was one page before it split
+            # into books land on the passage in its book (SECTION_MOVES).
+            old_anchors = {old: sec_contents_href[new] for old, new in (SECTION_MOVES.get(w["slug"]) or {}).items()
+                           if new in sec_contents_href}
+            anchor_js = (
+                "<script>(function(){var m=" + json.dumps(old_anchors, sort_keys=True).replace("</", "<\\/")
+                + ";var h=decodeURIComponent(location.hash.slice(1));"
+                "if(h.charAt(0)==='s'&&m[h.slice(1)])location.replace(m[h.slice(1)]);})();</script>"
+            ) if old_anchors else ""
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
@@ -10303,7 +11008,7 @@ def build() -> None:
                     <nav class="book-jump" aria-label="Books">{jump}</nav>
                     {''.join(overview_toc)}
                     <div class="hub-about">{book_about}{author_link}{hub_topics}</div>
-                    {disclosure_html(intro_note)}""",
+                    {disclosure_html(intro_note)}{anchor_js}""",
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
                     active="works",
                     description=work_desc,
@@ -10451,7 +11156,7 @@ def build() -> None:
                     {note_html}
                     <div class="sec-layout">
                     <div class="sec-main"><div class="body">{paras}</div>
-                    {source}{src_block}</div>
+                    {source}{src_block}{report_mistake_html(pub_title, f"§{shown_section(s['section'], ordinals)}", f"{SITE_ORIGIN}/works/{w['slug']}/{s['section']}/", "Report a mistake in this passage", "meta")}</div>
                     <aside class="sec-rail">{cross}{book_about}</aside>
                     </div>
                     {nav}
@@ -10514,26 +11219,40 @@ def build() -> None:
         )
 
     # Licensed translations are not stored here: the reader's browser loads
-    # them from bolls.life when chosen, and the publisher's notice is shown.
+    # them per chapter when chosen, and the publisher's notice is shown.
+    # NIV and NASB come from the YouVersion Platform under its publisher
+    # licences (owner 2026-10-22; the notice is read from the API so it stays
+    # current). ESV and CSB still load from bolls.life until a licensed source
+    # is arranged (Crossway and API.Bible both need a paid or formal licence).
+    yv_key = youversion_web_key()
     remote_bibles = {
         "esv": ("ESV", "English Standard Version",
                 "Scripture quotations marked ESV are from the ESV\u00ae Bible (The Holy Bible, English Standard Version\u00ae), \u00a9 2001 by Crossway, a publishing ministry of Good News Publishers."),
-        "niv": ("NIV2011", "New International Version",
-                "Scripture quotations marked NIV are from THE HOLY BIBLE, NEW INTERNATIONAL VERSION\u00ae, NIV\u00ae Copyright \u00a9 1973, 1978, 1984, 2011 by Biblica, Inc.\u00ae"),
+        "niv": ("yv:111", "New International Version", ""),
         "csb": ("CSB17", "Christian Standard Bible",
                 "Scripture quotations marked CSB are from the Christian Standard Bible\u00ae, Copyright \u00a9 2017 by Holman Bible Publishers. Christian Standard Bible\u00ae and CSB\u00ae are federally registered trademarks of Holman Bible Publishers."),
-        "nasb": ("NASB", "New American Standard Bible (1995)",
-                 "Scripture quotations marked NASB are from the New American Standard Bible\u00ae, Copyright \u00a9 1960, 1971, 1977, 1995 by The Lockman Foundation."),
+        "nasb": ("yv:2692", "New American Standard Bible (2020)", ""),
     }
+    # Owner's list of established translations; no paraphrases (no TPT).
+    yv_more = [("nasb95", 100, "NASB 1995", "New American Standard Bible (1995)"), ("nirv", 110, "NIrV", "New International Reader's Version"),
+               ("amp", 1588, "AMP", "Amplified Bible"), ("asv", 12, "ASV", "American Standard Version"), ("gnv", 2163, "Geneva", "Geneva Bible (1599)")]
+
+    def remote_button(k: str, code: str, name: str, credit: str) -> str:
+        if code.startswith("yv:"):
+            return (f'<button type="button" data-tr="{k}" data-yv="{code[3:]}" aria-pressed="false" '
+                    f'title="{escape(name)}">{k.upper()}</button>') if yv_key else ""
+        return (f'<button type="button" data-tr="{k}" data-remote="{code}" aria-pressed="false" '
+                f'title="{escape(name)}" data-credit="{escape(credit + " Text provided by bolls.life.")}">{k.upper()}</button>')
+
     tr_buttons = "".join(
         f'<button type="button" data-tr="{k}" aria-pressed="{"true" if k == "bsb" else "false"}" '
         f'title="{escape(v["name"])}" data-credit="{escape(v["license"] if k == "net" else "")}">{escape(v["short"])}</button>'
         for k, v in bibles.items()
-    ) + "".join(
-        f'<button type="button" data-tr="{k}" data-remote="{code}" aria-pressed="false" '
-        f'title="{escape(name)}" data-credit="{escape(credit + " Text provided by bolls.life.")}">{k.upper()}</button>'
-        for k, (code, name, credit) in remote_bibles.items()
-    )
+    ) + "".join(remote_button(k, *v) for k, v in remote_bibles.items()) + (
+        '<label class="vh" for="bx-more">More translations</label>'
+        '<select id="bx-more" class="bx-more" data-tr-more><option value="">More</option>'
+        + "".join(f'<option value="{k}" data-yv="{i}" title="{escape(name)}">{escape(short)}</option>' for k, i, short, name in yv_more)
+        + "</select>" if yv_key else "")
     tr_credit = " · ".join(f"{escape(v['name'])} ({escape(v['short'])}): {escape(v['license'])}" for v in bibles.values())
 
     for book in BIBLE_ORDER:
@@ -10569,7 +11288,7 @@ def build() -> None:
             f"{plural(b['refs'], 'passage')} by {plural(len(b['writers']), 'writer')} {'cites' if b['refs'] == 1 else 'cite'} {escape(book_name(book))}. "
             "Open a chapter to read it with the Fathers beside it."
             if b["refs"]
-            else f"Read {escape(book_name(book))} chapter by chapter. No passage in the library cites it yet."
+            else f"Read {escape(book_name(book))} chapter by chapter. This index has no references to it yet."
         )
         write(
             DIST / "scripture" / bslug / "index.html",
@@ -10583,7 +11302,7 @@ def build() -> None:
                 crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), "")],
                 active="scripture",
                 description=(
-                    f"What the early Church Fathers said about {book_name(book)}: {plural(b['refs'], 'passage')} by {plural(len(b['writers']), 'writer')}, chapter by chapter, in new English."
+                    f"What the early Church Fathers said about {book_name(book)}: {plural(b['refs'], 'passage')} by {plural(len(b['writers']), 'writer')}, chapter by chapter, in fresh English."
                     if b["refs"] else f"Read {book_name(book)} with the early Church Fathers beside it."
                 ),
                 og_image="scripture",
@@ -10603,15 +11322,7 @@ def build() -> None:
             vmax = max([len(v) for v in by_first.values()] + [1])
             spans = []
             for vnum, vtext in verses:
-                hits = by_first.get(str(vnum), [])
-                if hits:
-                    spans.append(
-                        f'<span class="v cited" id="v{vnum}" data-v="{vnum}" tabindex="0" role="button" '
-                        f'aria-controls="desk" aria-label="Verse {vnum}: {len(hits)} passage{"s" if len(hits) != 1 else ""} in the Fathers" '
-                        f'style="--heat:{round(0.25 + 0.75 * len(hits) / vmax, 2)}"><sup>{vnum}</sup><span class="vt">{escape(vtext)}</span></span> '
-                    )
-                else:
-                    spans.append(f'<span class="v" id="v{vnum}" data-v="{vnum}"><sup>{vnum}</sup><span class="vt">{escape(vtext)}</span></span> ')
+                spans.append(scripture_verse_html(vnum, vtext, len(by_first.get(str(vnum), [])), vmax))
             # Verses cited but missing from the base text (versification differences).
             extra = [v for v in by_first if not any(str(vn) == v for vn, _ in verses)]
             desk_sections = []
@@ -10630,7 +11341,7 @@ def build() -> None:
                 f'<li><button type="button" class="desk-jump" data-v="{escape(v)}">'
                 f'<span class="ref">{escape(ref_name(book))} {c}:{escape(v)}</span>'
                 f'<span class="bar" style="--w:{round(len(by_first[v]) / vmax, 2)}"></span>'
-                f'<span class="n">{len(by_first[v])}</span></button></li>'
+                f'<span class="n">{len(by_first[v])}<span class="vh"> passage{"s" if len(by_first[v]) != 1 else ""}</span></span></button></li>'
                 for v in cited_verses
             )
             writers = {r["author"] for r in rows}
@@ -10660,7 +11371,7 @@ def build() -> None:
                 + "</nav>"
             )
             text_html = (
-                f'<div class="bx-text" lang="en" data-book="{bslug}" data-booknum="{BIBLE_ORDER.index(book) + 1}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
+                f'<div class="bx-text" lang="en" data-book="{bslug}" data-booknum="{BIBLE_ORDER.index(book) + 1}" data-usfm="{USFM_ORDER[BIBLE_ORDER.index(book)]}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
                 if spans else (
                     '<div class="bx-text"><p class="desk-hint">This chapter is in the Greek Old Testament only, '
                     'so the Bibles here do not have its text.</p></div>' if (book, c) in EXTRA_CANON
@@ -10702,23 +11413,24 @@ def build() -> None:
   <h1>{escape(ref_name(book))} {c} <span class="bx-h-sub">with the Church Fathers</span></h1>
   <p class="lede">{lede}</p>
   {psalm_note}
-  <div class="bx-tools"><div class="bx-tr" role="group" aria-label="Bible translation">{tr_buttons}</div>{nav}</div>
+  <div class="bx-tools"{f' data-yv-key="{escape(yv_key)}"' if yv_key else ''}><div class="bx-tr" role="group" aria-label="Bible translation">{tr_buttons}</div>{nav}</div>
   <p class="bx-tr-credit" aria-live="polite" hidden></p>
 </header>
 <div class="bx-grid">
 {text_html}
-<aside class="bx-desk" id="desk" aria-label="What the Fathers said" aria-live="polite">
+<aside class="bx-desk" id="desk" aria-label="What the Fathers said">
+<p class="vh" role="status" id="desk-status"></p>
 <button type="button" class="desk-close" aria-label="Close">×</button>
 {desk_home}{''.join(desk_sections)}
 </aside>
 </div>
 {nav}
-<p class="intro fine bx-credit">Bible text: {tr_credit}. Fathers' passages are our new English; the snippets show the sentence around each citation.</p>
+<p class="intro fine bx-credit">Bible text: {tr_credit}. Fathers' passages are our fresh translations; the snippets show the sentence around each citation.</p>
 </div>""",
                     crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), f"/scripture/{bslug}/"), (f"Chapter {c}", "")],
                     active="scripture",
                     description=(
-                        f"{ref_name(book)} {c} with the early Church Fathers beside it: {plural(len(rows), 'passage')} by {plural(len(writers), 'writer')}, verse by verse, in new English."
+                        f"{ref_name(book)} {c} with the early Church Fathers beside it: {plural(len(rows), 'passage')} by {plural(len(writers), 'writer')}, verse by verse, in fresh English."
                         if rows else f"Read {ref_name(book)} {c} in the Berean Standard Bible, with the early Church Fathers beside it."
                     ),
                     og_image="scripture",
@@ -10762,10 +11474,10 @@ def build() -> None:
 <div class="sc-books">{sc_shelf(BIBLE_ORDER[:NT_START])}</div>
 <h2>New Testament</h2>
 <div class="sc-books">{sc_shelf(BIBLE_ORDER[NT_START:])}</div>
-<p class="intro fine">References are found in the English of each passage. Many Fathers number the Psalms the old Greek way (their Psalm 21 is our Psalm 22); a Psalm reference is filed under our numbering when its words clearly match that psalm.</p>""",
+<p class="intro fine">References are found in the English of each passage. Many Fathers number the Psalms the old Greek way (their Psalm 21 is our Psalm 22); a Psalm reference is filed under our numbering when its words clearly match that psalm. Citations of Tobit, Judith, Wisdom, Sirach, Baruch and 1 and 2 Maccabees, books the early Church also read, are not indexed here yet.</p>""",
             crumb=[("Home", "/"), ("Scripture", "")],
             active="scripture",
-            description=f"Every book of the Bible as the early Church Fathers read it: {sc_total:,} references across {len(sc_books)} books, chapter by chapter, in new English.",
+            description=f"The Bible as the early Church Fathers read it: {sc_total:,} references to {len(sc_books)} of the 66 books, chapter by chapter, with each passage in fresh English.",
             og_image="scripture",
         ),
     )
@@ -10790,18 +11502,20 @@ def build() -> None:
             f'{f" <span class=author-dates>{escape(dates)}</span>" if dates else ""}</h2>'
             f'<ul class="ls-list">{lis}</ul></section>'
         )
-    n_listen = sum(len(v) for v in listen_by_author.values())
+    # One number from one place: the home page's "N works read aloud".
+    n_listen = n_audio
+    assert n_listen == sum(len(v) for v in listen_by_author.values())
     write(
         DIST / "listen" / "index.html",
         layout(
-            "Listen to the Church Fathers: free audio in modern English",
+            "Listen to the Church Fathers, read aloud in fresh English",
             f"""<p class="eyebrow">Listen</p>
 <h1>Hear the Fathers read aloud</h1>
-<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our new English.{f' To keep them, {LIBRARY.audio_count()} of these are audiobooks in the <a href="/downloads/">library pass</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
+<p class="lede">{n_listen} works have read-along audio: press Play on any passage and the text follows the voice. The narration is a computer voice reading our fresh English translations.{f' To keep them, {LIBRARY.audio_count()} of these are free audiobooks on the <a href="/downloads/">downloads page</a>.' if LIBRARY and LIBRARY.audio_count() else ''}</p>
 <div class="ls-groups">{''.join(listen_groups)}</div>""",
             crumb=[("Home", "/"), ("Listen", "")],
             active="listen",
-            description=f"{n_listen} early Christian works with read-along audio in new English: press Play and the text follows the voice.",
+            description=f"{n_listen} works with read-along audio in fresh English translations: press Play and the text follows the voice.",
             og_image="listen",
         ),
     )
@@ -11051,7 +11765,7 @@ def build() -> None:
         layout(
             "Fathers",
             f"<p class=\"eyebrow\">Fathers</p><h1>The writers, in order</h1>"
-            f"<p class=\"intro\">Every writer in the library, earliest first. Works that are not by a named writer are listed at the end.</p>"
+            f"<p class=\"intro\">Every writer in the library, earliest first, so you can follow how the Fathers spoke, acted, argued, lived and died. Works that are not by a named writer are listed at the end.</p>"
             f"{''.join(_era_html)}",
             crumb=[("Home", "/"), ("Fathers", "")],
             active="authors",
@@ -11103,22 +11817,28 @@ def build() -> None:
         ),
     )
 
-    # Library pass card (sketch item 7): only while the pass is on sale; the
-    # numbers after it shift by one. Price from library.json, never typed here.
-    pass_n = 1 if LIBRARY else 0
-    pass_card = (f"""
-              <li class="help-option" id="library-pass">
+    # Library card (sketch item 7): only while the shelf has files; the
+    # numbers after it shift by one. Downloads are free since 2026-10-22.
+    shelf_n = 1 if LIBRARY else 0
+    shelf_card = (f"""
+              <li class="help-option" id="download-library">
                 <p class="n">2</p>
-                <h2>Get the library pass</h2>
-                <p>Every book{' and audiobook' if LIBRARY.has_audio() else ''} to keep, ${LIBRARY.price} once. It pays for more translation and narration. Reading and listening here stay free.</p>
-                <p><a class="btn" href="/downloads/">See the library pass</a></p>
+                <h2>Download the library</h2>
+                <p>The books{' and audiobooks' if LIBRARY.has_audio() else ''}, yours to keep, free. Share the files with anyone who would read them.</p>
+                <p><a class="btn" href="/downloads/">Go to the shelf</a></p>
               </li>""" if LIBRARY else "")
+    try:
+        start_here = public_start_here((BOOKS.parent / "docs/START_HERE.md").read_text(encoding="utf-8"))
+    except OSError:
+        start_here = ""
+    if not start_here:
+        print("WARN: Help us: docs/START_HERE.md missing or still off-voice; showing only the GitHub link")
     write(
         DIST / "contribute" / "index.html",
         layout(
             "Help us",
             f"""<h1>Help us</h1>
-            <p class="intro">This library is free. If you want to help it keep growing, pick one of these. None of them is required to read.</p>
+            <p class="intro">This library is free, and it runs on gifts. If you want to help, pick one of these. None of them is required to read.</p>
 
             <ol class="help-list">
               <li class="help-option" id="donate">
@@ -11126,50 +11846,56 @@ def build() -> None:
                 <h2>Donate</h2>
                 <p>A gift on GitHub Sponsors goes straight to keeping this work going.</p>
                 <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">GitHub Sponsors</a></p>
-              </li>{pass_card}
+              </li>{shelf_card}
               <li class="help-option" id="mac-app">
-                <p class="n">{2 + pass_n}</p>
+                <p class="n">{2 + shelf_n}</p>
                 <h2>Buy a Mac app</h2>
                 <p>If you use a Mac, the SaneApps utilities are a one-time purchase with no subscription. They run on your machine. Buying one also supports this library.</p>
                 <p><a class="btn" href="https://saneapps.com" rel="noopener">SaneApps</a></p>
               </li>
-              <li class="help-option" id="ai">
-                <p class="n">{3 + pass_n}</p>
-                <h2>Point an AI at a slice</h2>
-                <p>If you use an AI coding assistant, it can translate one small slice of a book for review. Copy the starting instructions into it and change YourName to your name.</p>
-                <p><button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> <a class="btn" href="https://github.com/sane-apps/translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>
-                <details class="ai-prompt-box"><summary>Show the instructions</summary>
-                <pre id="ai-prompt"><code>{escape((BOOKS.parent / "docs/START_HERE.md").read_text())}</code></pre>
-                </details>
-              </li>
               <li class="help-option" id="corrections">
-                <p class="n">{4 + pass_n}</p>
-                <h2>Spot-check the Greek or Latin</h2>
-                <p>If you read the original language and a line of English looks wrong, send a short note. Name the work, the section, and what you think it should say.</p>
-                <p><a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml">Submit a correction</a></p>
+                <p class="n">{3 + shelf_n}</p>
+                <h2>Report a mistake</h2>
+                <p>If a line of English looks wrong, tell us. Name the work, the section, and what you think it should say. Every work and passage has a <strong>Report a mistake</strong> link that fills in the work for you.</p>
+                <p><a class="btn primary" href="{escape(report_mistake_href("Via Patrum"))}">Email hi@saneapps.com</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml" rel="noopener">Send a correction on GitHub</a></p>
+              </li>
+              <li class="help-option" id="help-wanted">
+                <p class="n">{4 + shelf_n}</p>
+                <h2>Check the Greek or Latin</h2>
+                <p>If you read Greek or Latin, check a passage against the original and tell us what you find. Many works have not yet been re-checked against their source, and each work says so under About this text.</p>
+                <p><a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml" rel="noopener">Send what you find</a></p>
+              </li>
+              <li class="help-option" id="ai">
+                <p class="n">{5 + shelf_n}</p>
+                <h2>Point an AI at a slice</h2>
+                <p>If you use an AI coding assistant, it can translate one small slice of a book for review. Copy the starting instructions into it, and it will take one open task on GitHub.</p>
+                <p>{'<button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> ' if start_here else ''}<a class="btn" href="https://github.com/sane-apps/translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>{f'''
+                <details class="ai-prompt-box"><summary>Show the instructions</summary>
+                <pre id="ai-prompt"><code>{escape(start_here)}</code></pre>
+                </details>''' if start_here else ''}
               </li>
               <li class="help-option" id="code">
-                <p class="n">{5 + pass_n}</p>
+                <p class="n">{6 + shelf_n}</p>
                 <h2>Star and build</h2>
                 <p>The library and its translations are built in the open. Star the repos, open issues, send pull requests.</p>
-                <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations repo</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website repo</a></p>
+                <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations on GitHub</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website on GitHub</a></p>
               </li>
               <li class="help-option" id="sponsor-book">
-                <p class="n">{6 + pass_n}</p>
-                <h2>Sponsor a book</h2>
-                <p>Fund a work&apos;s translation and audiobook and it goes to the front of the queue, with credit to you. Name the book in your gift note, or nominate it first.</p>
-                <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Sponsor a book</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Nominate a book</a></p>
+                <p class="n">{7 + shelf_n}</p>
+                <h2>Give for one book</h2>
+                <p>Want your gift to go to one work? Name it in your gift note, and it goes to finishing and checking that work. You can also suggest a book you would like to see here.</p>
+                <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Give on GitHub Sponsors</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Suggest a book</a></p>
               </li>
               <li class="help-option" id="spread">
-                <p class="n">{7 + pass_n}</p>
+                <p class="n">{8 + shelf_n}</p>
                 <h2>Spread the word</h2>
                 <p>A link is the best help: send the library to someone who studies.</p>
-                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20Church%20Fathers%20in%20modern%20English%2C%20free%20for%20the%20world&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
+                <p><a class="btn" href="https://x.com/intent/post?text=Via%20Patrum%3A%20the%20way%20of%20the%20Church%20Fathers%2C%20in%20fresh%20English%20translations.%20Free%20for%20the%20whole%20world.&url=https%3A%2F%2Fviapatrum.org%2F" rel="noopener">Share on X</a></p>
               </li>
             </ol>""",
             crumb=[("Home", "/"), ("Help us", "")],
             active="contribute",
-            description="Donate, point an AI at a slice, submit a correction, star the repos, sponsor a book, or spread the word",
+            description="Give to keep the library free, report a mistake, check the Greek or Latin, point an AI at a slice, or share Via Patrum with someone who studies.",
         ),
     )
 
@@ -11181,24 +11907,24 @@ def build() -> None:
             "About",
             f"""<p class="eyebrow">About</p>
             <h1>About Via Patrum</h1>
-            <p class="lede">Via Patrum means “the way of the Fathers.” It is a free library of early Christian writing in faithful modern English, for anyone who wants to read the early Church in its own words.</p>
+            <p class="lede">Via Patrum means “the way of the Fathers”: how the Church Fathers spoke, acted, argued, lived and died. It is a free library of their writing in fresh English translations from the Greek and Latin, for anyone who wants to read the early Church in its own words.</p>
             <h2>What is here</h2>
-            <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Timeline</strong> shows where writers agree and where a later turn comes.</p>
+            <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Scripture</strong> shows where the Fathers quote or explain each book of the Bible. <strong>Timeline</strong> answers the questions readers ask most from the writers' own words, earliest first. <strong>Listen</strong> plays the works read aloud, and <strong>Games</strong> has a daily puzzle and a story game drawn from the texts.</p>
             {'''<h2>Books to keep</h2>
-            <p>''' + escape(LIBRARY.pitch()) + ''' See the <a href="/downloads/">library pass</a>. Reading and listening here stay free.</p>''' if LIBRARY else ''}
+            <p>''' + escape(about_shelf_line(LIBRARY, works)) + ''' Get them on the <a href="/downloads/">downloads page</a>.</p>''' if LIBRARY else ''}
             {'''<h2>Logos</h2>
             <p>The same English is also in Word files for Logos Bible Software. Each book has a cover and a description. Download every part from the <a href="/logos/">Personal Books</a> page, then add the file in Logos yourself.</p>''' if logos_pack_manifest() and not logos_retired() else ''}
             <p id="explore-progress">So far: {len(works)} works live · {corpus_translated_sections:,} of {corpus_total_sections:,} sections translated · {len(held_works)} held for review before they go up.</p>
             <h2>How the English is made</h2>
-            <p>The English is new, translated from the Greek and Latin with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and new English replaces them as it is finished.</p>
+            <p>The English is a fresh translation from the Greek and Latin, made with AI help and checked against the source. Each work names the printed edition it follows and lists any other prints it was checked against, under <strong>About this text</strong>. It is a study library, not a critical edition. Some passages under Topics still use the public-domain <em>Ante-Nicene Fathers</em> English from the 1880s; those pages say so, and our fresh English translations replace them as they are finished.</p>
             <p>The full method, for scholars, is on <a href="/methodology/">How we translate</a>.</p>
             <h2>Reading the Timeline marks</h2>
             <p>The marks that say a writer teaches or rejects a point are our reading of the passage, for study. They are not a ranking of who was right. Start with <a href="/topics/free-will/#over-time">free will over time</a>.</p>
             <h2>Help and support</h2>
-            <p>Want to help finish a text? See <a href="/contribute/">Help us</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
+            <p>To report a mistake or to help, see <a href="/contribute/">Help us</a>. If the library helps you, you can <a href="{SPONSORS}">support it on GitHub Sponsors</a>.</p>""",
             crumb=[("Home", "/"), ("About", "")],
             active="about",
-            description="Via Patrum is a free library of early Christian writing in faithful modern English: topics, Fathers, whole works, and how they line up over time.",
+            description="Via Patrum is a free library of the Church Fathers in fresh English translations: how they spoke, acted, argued, lived and died. Topics, Fathers, whole works, and how they line up over time.",
         ),
     )
 
@@ -11211,11 +11937,19 @@ def build() -> None:
             <h1>Privacy</h1>
             <p class="lede">Via Patrum does not collect personal data, on this website or in the <a href="{APP_STORE_URL}">Via Patrum app for iPhone and iPad</a>.</p>
             <h2>The app</h2>
-            <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read, search or listen to is sent to us.</p>
+            <p>The app has no account, no sign-in, no ads, no analytics and no tracking. It downloads the library and audio from viapatrum.org and keeps them on your device so you can read and listen offline. Your reading settings stay on your device. Nothing you read or listen to is sent to us.</p>
             <h2>This website</h2>
-            <p>The website uses no cookies and no tracking scripts. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device. Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <p>The website uses no tracking scripts and no tracking cookies. It remembers your light or dark theme and your Bible choice in your browser's own storage, which never leaves your device.</p>
+            <p>Before a download, a quick check by Cloudflare Turnstile makes sure you are a person and not a bot. Turnstile looks at standard signals such as your IP address and browser (<a href="https://www.cloudflare.com/turnstile-privacy-policy/" rel="noopener">Turnstile privacy notice</a>). Once you pass, the site sets two small cookies that last two hours, so your next downloads start at once. They hold no name or account and are not used to track you. Reading, listening and searching need no check and set no cookies.</p>
+            <p>Like any web host, Cloudflare, which serves the site, briefly keeps standard request logs for security and reliability.</p>
+            <h2>Search and Ask</h2>
+            <p>When you search, in the app or on this site, or ask a question on the Ask page, the words you type go to viapatrum.org, and Cloudflare, which runs the site, uses them to find matching passages. When Ask cannot answer a question well, we keep the question, with no name or address, so we know which passages to add.</p>
+            <h2>The games</h2>
+            <p>The games at <a href="https://play.viapatrum.org/">play.viapatrum.org</a> keep your progress and streak in your browser's own storage, which never leaves your device. Their pages load fonts from Google Fonts, and Ten Leopards loads game code from jsDelivr and Polyfork. Those services see the request, as any web server does, and have their own privacy policies.</p>
+            <h2>Bibles read online</h2>
+            <p>When you choose the NIV, NASB, NIrV, Amplified, ASV or Geneva Bible, in the app or on this site, your device asks the <a href="https://platform.youversion.com/" rel="noopener">YouVersion Platform</a> for that chapter. On this site the ESV and CSB come from bolls.life the same way. Those services see the request, as any web server does, and have their own privacy policies (<a href="https://www.bible.com/privacy" rel="noopener">YouVersion</a>). The other Bibles are part of the app and this site and need no outside request.</p>
             <h2>Links you choose to open</h2>
-            <p>Links to GitHub (to report a translation mistake) or to netbible.org open those sites, which have their own privacy policies.</p>
+            <p>A <strong>Report a mistake</strong> link opens your own email app, addressed to hi@saneapps.com; nothing is sent until you send it. Links to GitHub or to netbible.org open those sites, which have their own privacy policies.</p>
             <h2>Questions</h2>
             <p>Email <a href="mailto:hi@saneapps.com">hi@saneapps.com</a>.</p>""",
             crumb=[("Home", "/"), ("Privacy", "")],
@@ -11232,7 +11966,7 @@ def build() -> None:
             <p class="lede">How this library makes its English, and how far to trust a page.</p>
 
             <h2>Why this exists</h2>
-            <p>Via Patrum is a free library for study: what the early Church taught, topic by topic; whole works to read straight through; and a timeline of where each writer stood. It is not a critical edition. The aim is readable English that is honest about its sources.</p>
+            <p>Via Patrum, “the way of the Fathers”, is a free library for learning how the Church Fathers spoke, acted, argued, lived and died: what they taught, topic by topic; whole works to read straight through; and a timeline of where each writer stood. It is not a critical edition. The aim is readable English that is honest about its sources.</p>
 
             <h2>What you will find</h2>
             <p><strong>Topics</strong> gather what the Fathers said on one subject, earliest first. <strong>Works</strong> let you read a whole book straight through, with the Greek or Latin one tap away. <strong>Timeline</strong> shows where each writer stood on a claim, and when. New works go up as they pass the checks below.</p>
@@ -11250,7 +11984,7 @@ def build() -> None:
             <p>Each work names the printed edition its English follows, under <strong>About this text</strong>, and lists any other prints it was checked against. Where a stretch is missing from that edition and taken from another, the page says so. We do not call the result a manuscript, and we do not claim a combination that was not made.</p>
 
             <h2>Passages under Topics</h2>
-            <p>Some short passages under Topics still use English from the public-domain <em>Ante-Nicene Fathers</em> (1885–1896). Those pages say so. Where the same chapter is in a whole work here, the passage shows the new English and links to the work.</p>
+            <p>Some short passages under Topics still use English from the public-domain <em>Ante-Nicene Fathers</em> (1885–1896). Those pages say so. Where the same chapter is in a whole work here, the passage shows our fresh translation and links to the work.</p>
 
             <h2>Original English Translation</h2>
             <p>The badge <strong title="{escape(ORIGINAL_ENGLISH_TITLE)}">{escape(ORIGINAL_ENGLISH_LABEL)}</strong> means no complete English translation of the work existed before ours. It does not mean “this page is in English.”</p>
@@ -11269,9 +12003,9 @@ def build() -> None:
 
             <h2>Terms for scholars</h2>
             <ul>
-              <li><strong>Copy-text</strong>: the one printed edition the English follows.</li>
-              <li><strong>Witness</strong>: a manuscript or printed edition that records the text. Others compared with the copy-text are checks, not silent merges.</li>
-              <li><strong>Supplied text</strong>: a stretch missing from the copy-text and taken from another witness.</li>
+              <li><strong>Base text</strong>: the one printed edition the English follows (scholars call it the copy-text).</li>
+              <li><strong>Witness</strong>: a manuscript or printed edition that records the text. Others compared with the base text are checks, not silent merges.</li>
+              <li><strong>Supplied text</strong>: a stretch missing from the base text and taken from another witness.</li>
               <li><strong>Recension</strong>: a distinct ancient version of the same work.</li>
             </ul>
 
@@ -11311,7 +12045,7 @@ def build() -> None:
     # HTML keeps the Pages default (max-age=0, must-revalidate).
     (DIST / "_headers").write_text(pages_headers(), encoding="utf-8")
     (DIST / "robots.txt").write_text(
-        # Data files, the API, paid downloads and the app feed are not pages.
+        # Data files, the API, the download files and the app feed are not pages.
         # The library is open to search engines and AI crawlers alike. A bot
         # with its own group follows that group instead of the wildcard, so
         # the Disallow lines repeat in the named group on purpose.
@@ -11324,13 +12058,39 @@ def build() -> None:
         f"Sitemap: {SITE_ORIGIN}/sitemap.xml\n",
         encoding="utf-8",
     )
-    # llms.txt + llms-full.txt: the library's map for AI systems, kept as
-    # source files at the repo root and copied verbatim. Regenerate
-    # llms-full.txt when the catalogue changes; a stale index is worse than none.
-    for _llms_name in ("llms.txt", "llms-full.txt"):
-        _llms_src = ROOT / _llms_name
-        if _llms_src.is_file():
-            (DIST / _llms_name).write_text(_llms_src.read_text(encoding="utf-8"), encoding="utf-8")
+    # llms.txt + llms-full.txt: the library's map for AI systems, written from
+    # this build's lists (2026-10-23: hand-kept root copies went ten days
+    # stale, with old counts and a paywall that no longer exists). Same
+    # counts as the home, Works and Fathers pages; a stale index is worse
+    # than none, so a bad one stops the build.
+    import html as html_lib
+    import llms_txt
+    _fathers_rows = []
+    for _h in author_links:
+        _m = re.search(r'/authors/([^/]+)/"><strong>(.*?)</strong>', _h)
+        if not _m:
+            continue
+        _d = re.search(r'class="author-dates">(.*?)</span>', _h)
+        _c = re.findall(r"<span>([^<]*)</span>", _h)
+        _fathers_rows.append((_m.group(1), html_lib.unescape(_m.group(2)),
+                              html_lib.unescape(_d.group(1)) if _d else "",
+                              html_lib.unescape(_c[-1]) if _c else ""))
+    _llms_topics = [(t["id"], t["title"]) for locus in tax.get("loci", []) for t in locus.get("topics", [])
+                    if by_topic.get(t["id"]) or t["id"] in topic_to_works]
+    _llms_books = [(slugify(book_name(b)), book_name(b)) for b in BIBLE_ORDER
+                   if (sc_books.get(b) or {}).get("refs") or base_bible["books"].get(b)]
+    _llms_lib = llms_txt.Library(
+        origin=SITE_ORIGIN,
+        works=[(w["slug"], public_reader_title(w["title"], slug=w["slug"]), display_author(w["author"])) for w in works],
+        writers=author_n, fathers=_fathers_rows, topics=_llms_topics, scripture=_llms_books,
+        passages=len(excerpts), audio=n_audio, questions=n_tl,
+    )
+    _live_slugs = {w["slug"] for w in works}
+    for _llms_name, _llms_text in zip(("llms.txt", "llms-full.txt"), llms_txt.build(_llms_lib)):
+        _bad = llms_txt.check(_llms_text, _live_slugs, SITE_ORIGIN)
+        if _bad:
+            raise SystemExit(f"BLOCKED: {_llms_name}: " + "; ".join(_bad[:5]))
+        (DIST / _llms_name).write_text(_llms_text, encoding="utf-8")
     # Every page gets its own title: where two pages still share one, the later
     # ones add the opening words of their own description.
     import html as html_lib
@@ -11342,6 +12102,15 @@ def build() -> None:
         m = title_re.search(page.read_text(encoding="utf-8")[:4000])
         if m:
             seen_titles[m.group(1)].append(page)
+    # The appended words hide a source problem (nine Julian pages all "§4.2.2"):
+    # list each clash among work pages so it is fixed in the source.
+    work_clashes = {title: [p.relative_to(DIST).parent.as_posix() for p in pages]
+                    for title, pages in seen_titles.items()
+                    if len(pages) > 1 and all(p.relative_to(DIST).as_posix().startswith("works/") for p in pages)}
+    _tc_receipt = DIST.parent / f"{DIST.name}.title-clashes.json"
+    _tc_receipt.write_text(json.dumps(work_clashes, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(f"titles: {len(work_clashes)} work-page titles shared by {sum(map(len, work_clashes.values()))} pages, "
+          f"told apart by their opening words ({_tc_receipt.name})", flush=True)
     for title, pages in seen_titles.items():
         if len(pages) < 2:
             continue
@@ -11404,10 +12173,20 @@ def build() -> None:
         # 2026-10-18, withheld second copy): send it to the shown copy.
         "/works/diodorus-fragmenta/ /works/dionysius-corinth-fragments/ 301\n"
         "/works/diodorus-fragmenta/* /works/dionysius-corinth-fragments/ 301\n"
+        # The held second translation of the Lamentations fragments, listed
+        # publicly under the Latin spelling until 2026-10: send it to the shown copy.
+        "/works/origen-lamentationes-fragments/ /works/origen-lamentations-fragments/ 301\n"
+        "/works/origen-lamentationes-fragments/* /works/origen-lamentations-fragments/ 301\n"
+        + "".join(f"/works/{a}/ /works/{b}/ 301\n/works/{a}/* /works/{b}/ 301\n"
+                  for a, b in sorted(SECOND_COPY_OF.items()))
+        # The /downloads/ search image was renamed on 2026-10-23; search engines
+        # still hold the old address from its JSON-LD.
+        + "/assets/downloads-pass.jpg /assets/downloads-covers.jpg 301\n"
         + beliefs_page.REDIRECTS
         + games_page.REDIRECTS
         + "".join(f"{a} {b} 301\n" for a, b in sorted(TOPIC_REDIRECTS.items()))
         + dropped_section_redirects(WESLEY_DROPPED_SECTIONS, {w["slug"] for w in works})
+        + section_move_redirects(SECTION_MOVES, {w["slug"]: {str(s["section"]) for s in w["sections"]} for w in works})
         + logos_redirect,
         encoding="utf-8",
     )
@@ -11421,13 +12200,24 @@ def build() -> None:
         url_files["/" + p.relative_to(DIST).as_posix().removesuffix("index.html")] = p
     urls = sorted(url_files)
 
+    # lastmod is the day a work's English files last changed. The build writes
+    # every page fresh, so a page's own mtime was always the build day (16,108
+    # URLs dated 2026-10-23), and crawlers ignore a lastmod that always moves.
+    # Pages with no source files to date carry no lastmod.
+    _src_days: dict[str, str] = {}
+    _work_sources = (_json_load(DIST / "data" / "work-sources.json", {}) or {}).get("works") or {}
+
     def _lastmod(u: str) -> str:
-        # The build writes every page fresh, so the file's mtime is the day
-        # this content was built — the honest freshness signal we have.
-        try:
-            return _dt.datetime.fromtimestamp(url_files[u].stat().st_mtime).strftime("%Y-%m-%d")
-        except (KeyError, OSError):
-            return _dt.date.today().isoformat()
+        parts = u.strip("/").split("/")
+        if len(parts) < 2 or parts[0] != "works":
+            return ""
+        slug = parts[1]
+        if slug not in _src_days:
+            _src_days[slug] = source_lastmod(slug, _work_sources)
+        return _src_days[slug]
+
+    def _lastmod_tag(day: str) -> str:
+        return f"<lastmod>{day}</lastmod>" if day else ""
     groups: dict[str, list[str]] = defaultdict(list)
     noindex_routes = set(NONCANONICAL_ROUTES)
     for page in DIST.rglob("index.html"):
@@ -11442,14 +12232,14 @@ def build() -> None:
         (DIST / f"sitemap-{names.get(g, g)}.xml").write_text(
             '<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc><lastmod>{_lastmod(u)}</lastmod></url>\n" for u in us)
+            + "".join(f"  <url><loc>{SITE_ORIGIN}{escape(u)}</loc>{_lastmod_tag(_lastmod(u))}</url>\n" for u in us)
             + "</urlset>\n",
             encoding="utf-8",
         )
     (DIST / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc><lastmod>{max((_lastmod(u) for u in groups[g]), default=_dt.date.today().isoformat())}</lastmod></sitemap>\n" for g in sorted(groups))
+        + "".join(f"  <sitemap><loc>{SITE_ORIGIN}/sitemap-{names.get(g, g)}.xml</loc>{_lastmod_tag(max((d for d in map(_lastmod, groups[g]) if d), default=''))}</sitemap>\n" for g in sorted(groups))
         + "</sitemapindex>\n",
         encoding="utf-8",
     )

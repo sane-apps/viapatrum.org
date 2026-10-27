@@ -40,12 +40,14 @@
       "cites": [
         "papias-in-eusebius-3-39",
         "justin-dialogue-80",
+        "irenaeus-ah-5-33",
         "tertullian-marcion-3-24"
       ]
     },
     {
-      "text": "From the third century, Alexandrian writers opposed the earthly reign, and Augustine, who once held it, read the thousand years as the Church's present age. That became the teaching of the great churches.",
+      "text": "From the third century, Origen and the other Alexandrian writers opposed the earthly reign, and Augustine, who once held it, read the thousand years as the Church's present age. That became the teaching of the great churches.",
       "cites": [
+        "origen-principiis-2-11",
         "dionysius-alexandria-nepos-eusebius-7-24",
         "augustine-city-of-god-20-7",
         "ccc-676",
@@ -104,6 +106,28 @@
       "translation": "dossier"
     },
     {
+      "id": "irenaeus-ah-5-33",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "5.33.2-3",
+      "lang": "la",
+      "answer": "reign",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The blessing just spoken of, then, belongs without contradiction to the times of the kingdom, when the just, rising from the dead, will reign, and when creation, renewed and set free, will bear fruit in abundance of every kind of food, from the dew of heaven and the richness of the earth. ... The days will come when vines will grow, each with ten thousand branches.",
+      "original": "Praedicta itaque benedictio ad tempora Regni sine contradictione pertinet, quando regnabunt justi surgentes a mortuis: quando et creatura renovata, et liberata, multitudinem fructificabit universae escae, ex rore caeli, et ex fertilitate terrae ... Venient dies, in quibus vineae nascentur, singulae decem millia palmitum habentes",
+      "context": "Irenaeus reads Jacob's blessing (Genesis 27) as a promise for the kingdom: Jacob never received it in this life, so it waits for the resurrection, when the just reign in a renewed creation. The saying about the vines, and the wheat and the animals at peace that follow, he passes on from the presbyters who had heard John the Lord's disciple; Papias, whom he names just after (5.33.4), wrote it in his fourth book. Book 5 survives in its ancient Latin translation; the text here is Harvey's edition (1857), whose OCR is poor.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "tertullian-marcion-3-24",
       "author": "Tertullian",
       "year": 208,
@@ -121,6 +145,27 @@
       "source": {
         "book": "tertullian-against-marcion",
         "section": "3.24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-principiis-2-11",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "2.11.2",
+      "lang": "la",
+      "answer": "church",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Some, refusing the labour of understanding, and following the bare surface of the letter of the law, and indulging their own pleasure and lust, disciples of the letter only, think the promises to come should be expected in bodily pleasure and luxury. That is why they long for flesh again after the resurrection, flesh of a kind that will never lack the power to eat and drink and do everything that belongs to flesh and blood, and they do not follow the apostle Paul's teaching about the resurrection of a spiritual body.",
+      "original": "Quidam ergo laborem quodammodo intelligentiae recusantes, et superficiem quandam legis literae consectantes, et magis delectationi suae quodammodo ac libidini indulgentes, solius literae discipuli, arbitrantur repromissiones futuras in voluptate et luxuria corporis exspectandas: et propterea praecipue carnes iterum desiderant post resurrectionem tales, quibus manducandi et bibendi, et omnia quae carnis et sanguinis sunt, agendi nunquam desit facultas, apostoli Pauli de resurrectione spiritualis corporis sententiam non sequentes.",
+      "context": "Origen names no one, but the target is the earthly kingdom read by the letter: a rebuilt earthly Jerusalem, marriages and children after the resurrection, eating and drinking without end. Against it he sets Paul: the body rises spiritual (1 Corinthians 15:44), and the saints' food in the kingdom will be the bread of life, wisdom itself (2.11.3). In Rufinus's Latin, from the Lommatzsch witness in the store; the passage still wants a locked library section.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis Opera Omnia, tomus XXI (Berlin, 1847), De Principiis (Rufinus's Latin)"
       },
       "translation": "dossier"
     },
@@ -253,20 +298,12 @@
   ],
   "gaps": [
     {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 5.32–36",
-      "year": 180,
-      "why": "The fullest early account of the earthly kingdom, citing Papias.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
-    },
-    {
       "author": "Origen of Alexandria",
       "work": "On First Principles 2.11.2",
       "year": 225,
-      "why": "Against those who expect bodily pleasures in the kingdom.",
+      "why": "Quoted from the Lommatzsch witness: origen-principiis-2-11. Still open: the library's origen-principiis book holds working summaries, not the text; lock the real De Principiis text (Koetschau, GCS 22, 1913) as library sections.",
       "action": "relock-source",
-      "source_hint": "Koetschau GCS 22 (1913); Lommatzsch vol. 21"
+      "source_hint": "Koetschau GCS 22 (1913); Lommatzsch vol. 21 (quoted)"
     },
     {
       "author": "John Nelson Darby",
@@ -285,7 +322,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

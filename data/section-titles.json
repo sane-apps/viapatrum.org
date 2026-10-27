@@ -1,11 +1,11 @@
 {
  "crocius-syntagma": {
-  "11": "Public confessions of the Church and private writings of its teachers",
-  "10": "Limits of natural reasoning and the authority of Church councils",
-  "15": "Against ranking pagan learning above Scripture, with Eusebius on the Artemonites",
-  "3": "Nature as proof or explanation of what Scripture teaches",
-  "13": "Rules for drawing doctrine from Scripture and the limits of logic",
-  "14": "Pagan witnesses to the faith, and doubts about the Sibyls and Trismegistus"
+  "1.10.11": "Public confessions of the Church and private writings of its teachers",
+  "1.10.10": "Limits of natural reasoning and the authority of Church councils",
+  "1.10.15": "Against ranking pagan learning above Scripture, with Eusebius on the Artemonites",
+  "1.10.3": "Nature as proof or explanation of what Scripture teaches",
+  "1.10.13": "Rules for drawing doctrine from Scripture and the limits of logic",
+  "1.10.14": "Pagan witnesses to the faith, and doubts about the Sibyls and Trismegistus"
  },
  "cyril-adoration-17": {
   "32": "The law leads to Christ, our true Sabbath rest",
@@ -66,31 +66,6 @@
   "2": "The stolen calf and sheep as souls stolen from the Church",
   "5": "The soul wedded to Christ and the betrothed learner of the faith",
   "25": "Cities of refuge and the death of Christ the great High Priest"
- },
- "cyril-adoration-9": {
-  "32": "Bezalel as a figure of Christ, and Eliab of the apostles",
-  "20": "Christ's death once for all, and the altar's horns as the cross",
-  "18": "The compound incense as Christ, God and man in one",
-  "27": "The widening court as the Church spreading through the world",
-  "9": "God known above the mercy seat, and the bread of the Presence",
-  "11": "The golden lampstand as Christ, and its seven lamps as gifts",
-  "7": "The mercy seat as Christ our propitiation",
-  "29": "Pure olive oil as true teaching that keeps Christ's light burning",
-  "16": "The incense altar as Christ, with its horns as the cross",
-  "6": "The ark as the Virgin-born temple of the Word",
-  "28": "Silver and bronze as the Gospel, and oil for the lamps",
-  "17": "The ark and mercy seat as Christ humbled and exalted",
-  "10": "The bread for the priests, and the golden lampstand as Christ",
-  "8": "The cherubim and Seraphim around Christ, and God beyond sight",
-  "31": "Holy things not for dogs, and incense no one may copy",
-  "30": "The holy anointing oil, and why only God sanctifies",
-  "24": "The ten curtains as the Churches united in Christ",
-  "3": "No gods of silver, and the altar of earth as Emmanuel",
-  "12": "Zechariah's lampstand and the seven eyes of the Lord",
-  "13": "The two olive branches as believers from Israel and the nations",
-  "5": "God accepts small gifts, and the sanctuary as the Church",
-  "14": "The law's altar without gold, before the Spirit was given",
-  "25": "Christ in the colors of the curtains and as the Church's pillar"
  },
  "eustathius-orationes-contra-arianos": {
   "frag-open": "How the Arians cut Scripture, and why begotten is not created"
@@ -361,5 +336,8 @@
   "687": "Chapter 10: The threat of Genesis 2:17 does not impute the eating to all",
   "691": "Chapter 10: Not every penalty came by a law's threat",
   "697": "Chapter 10: The threat and the command both address Adam alone"
+ },
+ "cyril-homilia-cyrini": {
+  "hom-rem-early": "Where and when it was preached, on Isaiah 25:8"
  }
 }

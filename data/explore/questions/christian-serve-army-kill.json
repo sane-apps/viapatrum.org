@@ -131,6 +131,29 @@
       "translation": "dossier"
     },
     {
+      "id": "basil-letter-188-canon-13",
+      "author": "Basil of Caesarea",
+      "year": 374,
+      "date": "374",
+      "work": "Letter 188, to Amphilochius (First Canonical Letter)",
+      "locus": "Canon 13",
+      "lang": "grc",
+      "answer": "just-war",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "key",
+      "english": "Our fathers did not count those who killed in war among murderers, granting pardon, I think, to those who fought in defence of chastity and religion. ... Yet perhaps it is well to counsel them, since their hands are not clean, to abstain for three years from communion alone.",
+      "original": "Τοὺς ἐν πολέμῳ ἀνελόντας οἱ πατέρες ἡμῶν ἐν τοῖς φόνοις οὐκ ἐλογίσαντο, συγγνώμην, οἶμαι, διδόντες τοῖς ὑπὲρ σωφροσύνης καὶ εὐσεβείας ἀμυνομένοις. ... Τάχα δὲ καλῶς ἔχει συμβουλεύειν, ὡς τὰς χεῖρας μὴ καθαροὺς ὄντας, τριῶν ἐτῶν τῆς κοινωνίας μόνης ἀπέχεσθαι.",
+      "context": "From the same letter (374). Killing in war is not classed as murder, yet the hands are not clean either: Basil's tentative counsel ('perhaps it is well') became the Eastern pattern, three years away from communion. A disciplinary canon, not a theory of war. Quoted from the PG 32 scan (poor OCR).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true,
+        "edition": "Migne PG 32 (scan text)"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "augustine-against-faustus-22-74",
       "author": "Augustine of Hippo",
       "year": 400,
@@ -189,14 +212,6 @@
       "why": "Those who throw down their arms in peacetime are excommunicated.",
       "action": "intake",
       "source_hint": "Munier, CCSL 148 (copyright) as note; Bruns (1839)"
-    },
-    {
-      "author": "Basil of Caesarea",
-      "work": "Letter 188, canon 13",
-      "year": 374,
-      "why": "Soldiers who kill in war should abstain from communion for three years. In the PG 32 scan, poor OCR.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
     }
   ],
   "related": {

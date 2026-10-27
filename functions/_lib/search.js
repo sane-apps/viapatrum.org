@@ -7,7 +7,53 @@
 export const EMBED = "@cf/qwen/qwen3-embedding-0.6b";
 export const RERANK = "@cf/baai/bge-reranker-base";
 const INSTRUCTION = "Given a question about early Christian writings, retrieve passages that discuss it";
-export const CORS = { "access-control-allow-origin": "*", "access-control-allow-methods": "GET, OPTIONS" };
+// Browsers may read these answers only from the site's own pages (2026-10-23:
+// "*" let any website build a search box on our AI bill). The site calls the
+// API same-origin and the app uses URLSession, so neither needs the header.
+export const ORIGINS = new Set(["https://viapatrum.org", "https://www.viapatrum.org", "https://fathers.saneapps.com"]);
+export function cors(request) {
+  const origin = (request && request.headers && request.headers.get("origin")) || "";
+  if (!ORIGINS.has(origin)) return { vary: "Origin" };
+  return { "access-control-allow-origin": origin, "access-control-allow-methods": "GET, OPTIONS", vary: "Origin" };
+}
+/** Preflight: 204, with the allow headers only for the site's own origins. */
+export const preflight = (request) => new Response(null, { status: 204, headers: cors(request) });
+/** The same response with this request's CORS headers (a cached copy carries none). */
+export function withCors(res, request) {
+  const out = new Response(res.body, res);
+  out.headers.delete("access-control-allow-origin");
+  out.headers.delete("access-control-allow-methods");
+  for (const [k, v] of Object.entries(cors(request))) out.headers.set(k, v);
+  return out;
+}
+
+// Off switch (2026-10-23, Workers AI bills the card): Pages variable
+// AI_OFF="1" makes /api/search and /api/ask answer 503 without any model call.
+export const PAUSED = "Search by meaning is paused";
+export const aiOff = (env) => String((env && env.AI_OFF) || "") === "1";
+// Only viapatrum.org makes AI calls: *.pages.dev addresses (every old
+// deployment too) sit outside the zone's per-IP rate limit. An allowlist,
+// not a suffix test, so 'x.pages.dev.' cannot slip through (2026-10-23).
+export const AI_HOST = "viapatrum.org";
+export const aiBlocked = (env, url) =>
+  aiOff(env) || String((url && url.hostname) || "").toLowerCase().replace(/\.+$/, "") !== AI_HOST;
+
+// Changes when a deploy publishes or withholds a work: the ETag of the
+// deployed /data/search-meta.json. Cache keys carry it, so a cached answer
+// never links to a page that is now 404 (2026-10-07). One per isolate; a new
+// deploy starts new isolates.
+let deployTag;
+export async function searchMapTag(env, url) {
+  if (deployTag === undefined) {
+    try {
+      const r = await env.ASSETS.fetch(new URL("/data/search-meta.json", url), { method: "HEAD" });
+      deployTag = (r.headers && r.headers.get && r.headers.get("etag")) || "";
+    } catch (e) {
+      deployTag = "";
+    }
+  }
+  return deployTag;
+}
 
 let metaPromise = null;
 export function loadMeta(context) {
@@ -21,7 +67,7 @@ export function loadMeta(context) {
 export function json(body, status = 200, extra = {}) {
   return new Response(JSON.stringify(body), {
     status,
-    headers: { "content-type": "application/json; charset=utf-8", ...CORS, ...extra },
+    headers: { "content-type": "application/json; charset=utf-8", ...extra },
   });
 }
 
@@ -45,8 +91,12 @@ export function snippet(text, doc, max = 320) {
   return t.length > max ? t.slice(0, max).replace(/\s+\S*$/, "") + "…" : t;
 }
 
-/** Embed, look up and rerank. Returns {top, order} or {error, status}. */
-export async function retrieve(env, q) {
+/** Embed, look up and rerank. Returns {top, order} or {error, status}.
+ * opts.passageRerank === false skips the passage rerank (vector order
+ * stands): /api/ask passes it (2026-10-20, speed) because it reranks the
+ * answer sentences itself; /api/search keeps the rerank. */
+export async function retrieve(env, q, opts = {}) {
+  if (aiOff(env)) return { error: PAUSED, status: 503, paused: true };
   const { AI, VEC } = env;
   if (!AI || !VEC) return { error: "search not configured", status: 503 };
   const emb = await AI.run(EMBED, { queries: [q], instruction: INSTRUCTION });
@@ -57,7 +107,7 @@ export async function retrieve(env, q) {
   const matches = (found?.matches || []).filter((m) => m.metadata && m.metadata.k);
   const top = matches.slice(0, 20);
   let order = top.map((m, i) => ({ i, score: m.score }));
-  if (top.length > 1) {
+  if (top.length > 1 && opts.passageRerank !== false) {
     try {
       const rr = await AI.run(RERANK, { query: q, contexts: top.map((m) => ({ text: String(m.metadata.t || "").slice(0, 2000) })) });
       const ranked = (rr?.response || []).filter((r) => Number.isInteger(r.id));

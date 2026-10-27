@@ -7,7 +7,14 @@ by code; no model writes any of it (LLM_VENDOR_API_SOP.md, model role
 boundary). assets/ask.js draws the states (empty, loading, answer, thin,
 nothing found, error) and assets/ask.css styles them. The home hero search
 sends its question here.
+
+Timeline topics (owner 2026-10-20): build() also writes
+dist/data/ask-topics.json from the Timeline dossiers
+(data/explore/questions/*.json: the question, its short name and its
+curated search phrases), so functions/api/ask.js can surface the matching
+Timeline topic above the passages. New dossiers join automatically.
 """
+import json
 from html import escape
 from pathlib import Path
 from urllib.parse import quote_plus
@@ -21,8 +28,32 @@ EXAMPLES = [
     "How should a Christian pray?",
 ]
 
+QUESTIONS_DIR = Path(__file__).resolve().parent.parent / "data" / "explore" / "questions"
+
+
+def topics_index() -> list[dict]:
+    """One row per Timeline dossier: question, short name, page, search phrases."""
+    out = []
+    if QUESTIONS_DIR.is_dir():
+        for path in sorted(QUESTIONS_DIR.glob("*.json")):
+            d = json.loads(path.read_text(encoding="utf-8"))
+            question = str(d.get("question") or "").strip()
+            slug = str(d.get("id") or "").strip()
+            if not question or not slug:
+                continue
+            out.append({
+                "question": question,
+                "short": str(d.get("short") or "").strip(),
+                "href": f"/explore/{slug}/",
+                "also": [str(s).strip() for s in (d.get("search") or []) if str(s).strip()],
+            })
+    out.sort(key=lambda t: t["question"])
+    return out
+
 
 def build(dist: Path, layout, write) -> int:
+    write(dist / "data" / "ask-topics.json",
+          json.dumps(topics_index(), ensure_ascii=False, indent=1) + "\n")
     chips = "".join(f'<li><a href="/ask/?q={quote_plus(q)}">{escape(q)}</a></li>' for q in EXAMPLES)
     body = f"""
 <div class="ask-page">
@@ -44,7 +75,7 @@ def build(dist: Path, layout, write) -> int:
   </section>
 </div>
 <noscript><p class="intro">Ask needs JavaScript. You can still <a href="/works/">search the library</a>.</p></noscript>
-<p class="ask-how">How this works: we find the passages closest to your question, then quote the sentences that answer it most directly, at most two from any one work. Where the library is thin, we say so and show the closest passages.</p>
+<p class="ask-how">How this works: if your question matches one of the hundred Timeline topics, that topic comes first. Then we find the passages closest to your question, and quote the sentences that answer it most directly, at most two from any one work. Where the library is thin, we say so and show the closest passages. We keep those questions, with no name or address, so we know which passages to add (<a href="/privacy/">Privacy</a>).</p>
 </div>
 """
     write(dist / "ask" / "index.html",

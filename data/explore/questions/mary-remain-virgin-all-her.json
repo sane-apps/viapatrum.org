@@ -46,6 +46,48 @@
   ],
   "quotes": [
     {
+      "id": "tertullian-flesh-of-christ-23",
+      "author": "Tertullian",
+      "year": 206,
+      "date": "c. 206",
+      "work": "On the Flesh of Christ",
+      "locus": "23",
+      "lang": "la",
+      "answer": "other-children",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For she gave birth, who gave birth from her own flesh, and did not give birth, who gave birth not from a man's seed; and she is a virgin so far as a man is concerned, not a virgin so far as childbirth is concerned. ... In any case she is to be called not a virgin rather than a virgin, by a kind of leap mother before she was wed.",
+      "original": "Peperit enim, quae ex sua carne, et non peperit, quae non ex viri semine, et virgo, quantum a viro, non virgo, quantum a partu ... Utique magis non virgo dicenda est quam virgo, saltu quodam mater ante quam nupta.",
+      "context": "Tertullian's ground here is the birth itself: Mary's womb was opened in bearing Christ, so he will not call her a virgin intact after the birth. That is an argument about the parturition, not by itself about later children; the Monogamy passage below takes the next step.",
+      "source": {
+        "book": "tertullian-on-the-flesh-of-christ",
+        "section": "23"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "tertullian-monogamy-8",
+      "author": "Tertullian",
+      "year": 217,
+      "date": "c. 217",
+      "work": "On Monogamy",
+      "locus": "8",
+      "lang": "la",
+      "answer": "other-children",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "And indeed a virgin brought forth Christ, once to be married after the birth, so that both titles of holiness might be marked off in Christ's reckoning, through a mother both virgin and the wife of one husband.",
+      "original": "Et Christum quidem virgo enixa est, semel nuptura post partum, ut uterque titulus sanctitatis in Christi censu dispungeretur, per matrem et virginem et univiram.",
+      "context": "In praise of one marriage, Tertullian says Mary bore Christ as a virgin and was once to be married after the birth: that is, to live with Joseph as a wife. Taken with On the Flesh of Christ 23, it shows Tertullian did not teach that Mary remained a virgin all her life.",
+      "source": {
+        "book": "tertullian-on-monogamy",
+        "section": "8"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "origen-matthew-10-17",
       "author": "Origen of Alexandria",
       "year": 246,
@@ -159,14 +201,6 @@
       "why": "The brothers as cousins, against Helvidius.",
       "action": "intake",
       "source_hint": "Migne PL 23"
-    },
-    {
-      "author": "Tertullian",
-      "work": "On the Flesh of Christ 23; On Monogamy 8",
-      "year": 208,
-      "why": "Tertullian seems to have thought Mary bore other children. In the library; to be read.",
-      "action": "search",
-      "source_hint": "tertullian-on-the-flesh-of-christ 23"
     },
     {
       "author": "Protoevangelium of James",

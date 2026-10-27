@@ -36,11 +36,12 @@
   ],
   "overview": [
     {
-      "text": "Against pagan fate and Gnostic fixed natures, the early writers all defend free choice: Justin, Irenaeus, Tertullian, and later Chrysostom and Jerome. God draws, but not by force.",
+      "text": "Against pagan fate and Gnostic fixed natures, the early writers all defend free choice: Justin, Irenaeus, Tertullian, and later Chrysostom and Jerome. Origen gave the defence its first full treatise. God draws, but not by force.",
       "cites": [
         "justin-1apol-43",
         "irenaeus-ah-4-37",
         "tertullian-marcion-2-6",
+        "origen-principiis-3-1",
         "chrysostom-john-homily-10",
         "jerome-jeremiah-5-36"
       ]
@@ -120,6 +121,27 @@
       "source": {
         "book": "tertullian-against-marcion",
         "section": "2.6"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-principiis-3-1",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "3.1.1 (Philocalia 21)",
+      "lang": "grc",
+      "answer": "free",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The preaching of the Church includes the teaching that God judges justly. Believed as true, it stirs its hearers to live well and to flee sin in every way, plainly because they agree that what deserves praise or blame is in our power. Come, then, let us also deal briefly, and on its own, with free will, a question as necessary as any can be.",
+      "original": "Ἐπεὶ δὲ ἐν τῷ κηρύγματι τῷ ἐκκλησιαστικῷ περιέχεται ὁ περὶ κρίσεως δικαίας θεοῦ λόγος, ὅστις καὶ τοὺς ἀκούοντας, πιστευθεὶς εἶναι ἀληθής, προκαλεῖται ἐπὶ τὸ καλῶς βιοῦν καὶ παντὶ τρόπῳ φεύγειν τήν ἁμαρτίαν, δηλονότι συγκατατιθεμένους τὸ ἐφ᾽ ἡμῖν εἶναι τὰ ἐπαίνου καὶ ψόγου ἄξια· φέρε καὶ τὰ περὶ τοῦ αὐτεξουσίου ἰδία ὀλίγα διαλάβωμεν, ἀναγκαιοτάτου ὡς ἔνι μάλιστα προβλήματος.",
+      "context": "The opening of the first Christian treatise on free choice. The Greek of On First Principles 3.1 survives because Basil of Caesarea and Gregory of Nazianzus kept it in the Philocalia (chapter 21); the library's Philocalia book holds this opening in Robinson's 1893 text. Origen goes on to sort living things by where their movement comes from, and to answer the hardening of Pharaoh.",
+      "source": {
+        "book": "origen-philocalia",
+        "section": "21"
       },
       "translation": "dossier"
     },
@@ -247,14 +269,6 @@
       "why": "The book Luther answered.",
       "action": "intake",
       "source_hint": "Erasmi Opera (Leiden 1706) vol. 9"
-    },
-    {
-      "author": "Origen of Alexandria",
-      "work": "On First Principles 3.1",
-      "year": 225,
-      "why": "The first Christian treatise on free choice. The Greek is in the library's Philocalia 21; to be added with the full argument.",
-      "action": "search",
-      "source_hint": "origen-philocalia 21"
     }
   ],
   "related": {
@@ -264,7 +278,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

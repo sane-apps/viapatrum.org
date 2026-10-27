@@ -157,6 +157,27 @@
         "section": "4"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "vincent-commonitorium-2-6",
+      "author": "Vincent of Lérins",
+      "year": 434,
+      "date": "434",
+      "work": "Commonitorium",
+      "locus": "2.6",
+      "lang": "la",
+      "answer": "universal",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "In the Catholic Church itself, the greatest care must be taken that we hold what has been believed everywhere, always, and by all. ... what the very force of the name and its meaning declares, taking in, as it does, nearly all things together.",
+      "original": "In ipsa item catholica ecclesia magnopere curandum est ut id teneamus quod ubique, quod semper, quod ab omnibus creditum est ... quod ipsa vis nominis ratioque declarat, quae omnia fere universaliter comprehendit",
+      "context": "Vincent, writing in 434, gives the classic test of the name itself: a belief is catholic when it is the belief of the whole Church in every place, from the beginning, and by the consent of all, because the word catholic itself means taking in nearly all things together. A local or new teaching that fails the test is not catholic, however loudly it claims the name.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-commonitoriumofv00vinc.txt",
+        "edition": "Moxon, The Commonitorium of Vincent of Lerins (Cambridge, 1915)"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
@@ -167,14 +188,6 @@
       "why": "\"Christian is my name, Catholic my surname.\"",
       "action": "intake",
       "source_hint": "Migne PL 13"
-    },
-    {
-      "author": "Vincent of Lérins",
-      "work": "Commonitorium 2.6",
-      "year": 434,
-      "why": "What is truly \"catholic\": everywhere, always, by all.",
-      "action": "intake",
-      "source_hint": "Migne PL 50"
     }
   ],
   "related": {

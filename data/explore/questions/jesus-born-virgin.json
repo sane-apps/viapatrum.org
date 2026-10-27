@@ -36,9 +36,10 @@
       ]
     },
     {
-      "text": "Christians defended it from Isaiah 7:14 in its Greek form. Jewish teachers replied that the Hebrew says \"young woman\", and the pagan Celsus spread a slander about a soldier, which shows the Christian claim was widely known.",
+      "text": "Christians defended it from Isaiah 7:14 in its Greek form. Irenaeus names the rival translators, Theodotion and Aquila, who rendered young woman, and the Ebionites who followed them in denying the virgin birth. Jewish teachers replied that the Hebrew says young woman, and the pagan Celsus spread a slander about a soldier, which shows the Christian claim was widely known.",
       "cites": [
         "justin-1apol-33",
+        "irenaeus-ah-3-21-1",
         "trypho-in-justin-dialogue-67",
         "celsus-in-origen-1-32"
       ]
@@ -130,6 +131,27 @@
       "translation": "dossier"
     },
     {
+      "id": "irenaeus-ah-3-21-1",
+      "author": "Irenaeus of Lyons (quoted by Eusebius)",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies, quoted in Eusebius, Church History",
+      "locus": "3.21.1",
+      "lang": "grc",
+      "answer": "virgin",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "God became man, and the Lord himself saved us, giving the sign of the Virgin. But it is not as some now dare to translate the Scripture, Behold, a young woman shall conceive and bear a son, as Theodotion the Ephesian translated it, and Aquila of Pontus, both Jewish proselytes, whom the Ebionites followed in saying that he was begotten of Joseph.",
+      "original": "ὁ θεὸς οὖν ἄνθρωπος ἐγένετο, καὶ αὐτὸς κύριος ἔσωσεν ἡμᾶς, δοὺς τὸ τῆς παρθένου σημεῖον· ἀλλ’ οὐχ ὡς ἔνιοι φασι τῶν νῦν τολμώντων μεθερμηνεύειν τὴν γραφήν, Ἰδοὺ ἡ νεᾶνις ἐν γαστρὶ ἕξει καὶ τέξεται υἱόν, ὡς Θεοδοτίων ἡρμήνευσεν ὁ Ἐφέσιος, καὶ Ἀκύλας ὁ Ποντικός, ἀμφότεροι Ἰουδαῖοι προσήλυτοι, οἷς κατακολουθήσαντες οἱ Ἐβιωναῖοι ἐξ Ἰωσὴφ αὐτὸν γεγενῆσθαι φάσκουσι.",
+      "context": "Irenaeus defends the old Greek version of Isaiah 7:14, which reads virgin (parthenos), against the newer Jewish versions of Theodotion and Aquila, which read young woman (neanis). Eusebius quotes the passage in full; the Greek of Against Heresies 3.21 survives in his quotation.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "5.8"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "tertullian-veiling-1-virgin",
       "author": "Tertullian",
       "year": 207,
@@ -153,14 +175,6 @@
   ],
   "gaps": [
     {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 3.21.1",
-      "year": 180,
-      "why": "Names Theodotion and Aquila, who rendered \"young woman\", and the Ebionites who denied the virgin birth. Greek in Eusebius 5.8.10.",
-      "action": "search",
-      "source_hint": "eusebius-church-history 5.8"
-    },
-    {
       "author": "Aristides of Athens",
       "work": "Apology 15",
       "year": 125,
@@ -176,7 +190,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

@@ -44,7 +44,9 @@
     {
       "text": "The council of Constantinople in 381 confessed the Spirit as Lord and giver of life, worshipped and glorified together with the Father and the Son. Its text is listed below as a gap.",
       "cites": [
-        "gregory-nazianzus-oration-31-10"
+        "gregory-nazianzus-oration-31-10",
+        "basil-holy-spirit-15-35",
+        "constantinople-creed-381"
       ]
     }
   ],
@@ -113,6 +115,29 @@
       "translation": "dossier"
     },
     {
+      "id": "basil-holy-spirit-15-35",
+      "author": "Basil of Caesarea",
+      "year": 375,
+      "date": "375",
+      "work": "On the Holy Spirit",
+      "locus": "15.35",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For if the Lord, in handing down the saving baptism, clearly commanded his disciples to baptize all nations in the name of the Father and of the Son and of the Holy Spirit, not disdaining fellowship with him, while these men say that he must not be ranked with the Father and the Son, how do they not plainly set themselves against the ordinance of God?",
+      "original": "εἰ γὰρ ὁ μὲν Κύριος σαφῶς ἐν τῇ παραδόσει τοῦ σωτηρίου βαπτίσματος προσέταξε τοῖς μαθηταῖς βαπτίζειν πάντα τὰ ἔθνη εἰς ὄνομα Πατρὸς καὶ Υἱοῦ καὶ Ἁγίου Πνεύματος, οὐκ ἀπαξιῶν τὴν πρὸς αὐτὸ κοινωνίαν, οὗτοι δὲ μὴ χρῆναι αὐτὸ Πατρὶ καὶ Υἱῷ συντάσσειν λέγουσι, πῶς οὐχὶ τῇ τοῦ Θεοῦ διαταγῇ προδήλως ἀνθίστανται;",
+      "context": "Written in 375 against the Pneumatomachians ('Spirit fighters'). The whole argument of these chapters (15 to 19) is that the Spirit is ranked and glorified with the Father and the Son; the baptismal formula is Basil's anchor. Quoted from the PG 32 scan (poor OCR, which often reads kappa as chi); the wording is checked against Johnston's 1892 edition.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true,
+        "edition": "Migne PG 32 (archive.org OCR); checked against Johnston, The Book of Saint Basil on the Holy Spirit (Oxford, 1892)"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "gregory-nazianzus-oration-31-10",
       "author": "Gregory of Nazianzus",
       "year": 380,
@@ -132,26 +157,31 @@
         "section": "10"
       },
       "translation": "dossier"
-    }
-  ],
-  "gaps": [
-    {
-      "author": "Council of Constantinople",
-      "work": "Creed of 381",
-      "year": 381,
-      "why": "The creed's article on the Spirit. Its Greek is in the site's Creeds data but not yet in the library.",
-      "action": "intake",
-      "source_hint": "Acts of Chalcedon, Schwartz ACO (copyright) as note; Hahn, Bibliothek der Symbole (1897)"
     },
     {
-      "author": "Basil of Caesarea",
-      "work": "On the Holy Spirit 16–19",
-      "year": 375,
-      "why": "The Spirit shares the Father's and Son's honor. Fetched (Migne 32); passages to be added.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
+      "id": "constantinople-creed-381",
+      "author": "Council of Constantinople",
+      "year": 381,
+      "date": "381",
+      "work": "Creed of Constantinople",
+      "locus": "Article on the Holy Spirit",
+      "lang": "grc",
+      "answer": "god",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "And in the Holy Spirit, the Lord and giver of life, who proceeds from the Father, who with the Father and the Son is worshipped and glorified together, who spoke through the prophets.",
+      "original": "καὶ εἰς τὸ πνεῦμα τὸ ἅγιον, τὸ κύριον καὶ τὸ ζωοποιόν, τὸ ἐκ τοῦ πατρὸς ἐκπορευόμενον, τὸ σὺν πατρὶ καὶ υἱῷ συμπροσκυνούμενον καὶ συνδοξαζόμενον, τὸ λαλῆσαν διὰ τῶν προφητῶν",
+      "context": "The creed's answer to the Spirit fighters: it does not call the Spirit God in so many words, but confesses him as Lord and giver of life, worshipped and glorified together with the Father and the Son. Text as read at Chalcedon, printed by Bright (1892).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-canonsoffirstfou00brig.txt",
+        "ocr_poor": true,
+        "edition": "Bright, The Canons of the First Four General Councils (2nd ed., Oxford, 1892), Greek text"
+      },
+      "translation": "dossier"
     }
   ],
+  "gaps": [],
   "related": {
     "topics": [
       "father-son-spirit",

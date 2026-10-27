@@ -36,11 +36,34 @@
       "text": "A synod at Alexandria in 362 had already said the Savior's body was not without soul or mind. Gregory of Nazianzus answered with the rule that what Christ did not take on, he did not heal: the whole of Adam fell, so the whole was assumed.",
       "cites": [
         "athanasius-tome-antiochenes-7",
-        "gregory-nazianzus-letter-101-32"
+        "gregory-nazianzus-letter-101-32",
+        "constantinople-canon-1-381"
       ]
     }
   ],
   "quotes": [
+    {
+      "id": "origen-first-principles-2-6-3",
+      "author": "Origen of Alexandria",
+      "year": 225,
+      "date": "c. 225",
+      "work": "On First Principles",
+      "locus": "2.6.3–5",
+      "lang": "la",
+      "answer": "full",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "With this substance of a soul, then, mediating between God and flesh (for it was not possible for the nature of God to be mingled with a body without a mediator), there is born, as we have said, the God-man, that mediating substance being present, for which it was not contrary to nature to take a body. ... that there is a rational soul in Christ, we have shown above. ... The nature of that soul was the same as the nature of all souls; this cannot be doubted, for otherwise it could not even be called a soul, if it was not truly a soul.",
+      "original": "Hac ergo substantia animae inter Deum carnemque mediante, non enim possibile erat Dei naturam corpori sine mediatore misceri, nascitur, ut diximus, Deus homo, illa substantia media exsistente, cui utique contra naturam non erat corpus assumere. ... rationabilem animam esse in Christo supra ostendimus ... Naturam quidem animae illius hanc fuisse, quae est omnium animarum, non potest dubitari: alioquin nec dici anima potuit, si vere non fuit anima.",
+      "context": "Origen's account of the incarnation, a century and a half before Apollinaris: Christ's soul, clinging inseparably to the Word from the beginning, is the mediator by which the Word is joined to flesh, and it is a true rational soul of the same nature as every soul. On First Principles survives in full mainly in Rufinus's Latin translation, which sometimes smooths Origen; the passage is read here in that Latin.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 21 (1847), De principiis 2.6.3–5",
+        "ia": "origenous-ta-heuriskomena-panta-t.-21-1847"
+      },
+      "translation": "dossier"
+    },
     {
       "id": "athanasius-tome-antiochenes-7",
       "author": "Athanasius of Alexandria (council of Alexandria)",
@@ -85,6 +108,27 @@
       "translation": "dossier"
     },
     {
+      "id": "constantinople-canon-1-381",
+      "author": "Council of Constantinople",
+      "year": 381,
+      "date": "381",
+      "work": "Canons",
+      "locus": "Canon 1",
+      "lang": "grc",
+      "answer": "full",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "that every heresy should be anathematized, and in particular that of the Eunomians, that is, the Anomoeans, and that of the Arians, that is, the Eudoxians, and that of the Semi-Arians, that is, the Pneumatomachians, and that of the Sabellians, and that of the Marcellians, and that of the Photinians, and that of the Apollinarians.",
+      "original": "ἀναθεματισθῆναι πᾶσαν αἵρεσιν, καὶ ἰδικῶς τὴν τῶν Εὐνομιανῶν, εἴτουν Ἀνομοίων, καὶ τὴν τῶν Ἀρειανῶν, εἴτουν Εὐδοξιανῶν, καὶ τὴν τῶν Ἡμιαρειανῶν, εἴτουν Πνευματομάχων, καὶ τὴν τῶν Σαβελλιανῶν, καὶ τὴν τῶν Μαρκελλιανῶν, καὶ τὴν τῶν Φωτεινιανῶν, καὶ τὴν τῶν Ἀπολλιναριστῶν.",
+      "context": "The first canon of Constantinople (381) first confirms the faith of Nicaea and then names the condemned teachings one by one. Apollinaris, who made the Word take the place of Christ's human mind, is named in the council's own anathema.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-canonsoffirstfou00brig.txt",
+        "edition": "Bright, The Canons of the First Four General Councils (2nd ed., Oxford, 1892), Greek text"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "gregory-nazianzus-letter-101-32",
       "author": "Gregory of Nazianzus",
       "year": 382,
@@ -106,24 +150,7 @@
       "translation": "dossier"
     }
   ],
-  "gaps": [
-    {
-      "author": "Origen of Alexandria",
-      "work": "On First Principles 2.6.3–5",
-      "year": 225,
-      "why": "Christ's human soul as the link between the Word and the flesh. In the Lommatzsch text; to be added.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-origenous-ta-heuriskomena-panta-t-21-1847.txt"
-    },
-    {
-      "author": "Council of Constantinople",
-      "work": "Canon 1",
-      "year": 381,
-      "why": "Condemns the Apollinarians by name.",
-      "action": "intake",
-      "source_hint": "Bruns (1839)"
-    }
-  ],
+  "gaps": [],
   "related": {
     "topics": [
       "incarnation-word-flesh",

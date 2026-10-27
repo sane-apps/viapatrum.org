@@ -89,6 +89,52 @@
   ],
   "quotes": [
     {
+      "id": "didache-9-10-eucharist",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "9.1–10.6",
+      "lang": "grc",
+      "answer": "sign",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Now about the Eucharist, give thanks in this way. First, over the cup: 'We thank you, our Father, for the holy vine of David your servant, which you made known to us through Jesus your servant: yours is the glory for ever.' ... Over the broken bread: 'We thank you, our Father, for the life and knowledge which you made known to us through Jesus your servant: yours is the glory for ever.' ... 'Just as this broken bread was scattered over the hills and was gathered together and became one, so let your church be gathered from the ends of the earth into your kingdom.' ... 'But to us you have freely given spiritual food and drink and eternal life through your servant.'",
+      "original": "Περὶ δὲ τῆς εὐχαριστίας, οὕτως εὐχαριστήσατε: πρῶτον περὶ τοῦ ποτηρίου: Εὐχαριστοῦμέν σοι, πάτερ ἡμῶν, ὑπὲρ τῆς ἁγίας ἀμπέλου Δαυεὶδ τοῦ παιδός σου, ἦς ἐγνώρισας ἡμῖν διὰ Ἰησοῦ τοῦ παιδός σου: σοὶ ἡ δόξα εἰς τοὺς αἰῶνας. ... Εὐχαριστοῦμέν σοι, πάτερ ἡμῶν, ὑπὲρ τῆς ζωῆς καὶ γνώσεως, ἦς ἐγνώρισας ἡμῖν διὰ Ἰησοῦ τοῦ παιδός σου. σοὶ ἡ δόξα εἰς τοὺς αἰῶνας. ... ὥσπερ ἦν τοῦτο τὸ κλάσμα διεσκορπισμένον ἐπάνω τῶν ὀρέων καὶ συναχθὲν ἐγένετο ἕν, οὕτω συναχθήτω σου ἡ ἐκκλησία ἀπὸ τῶν περάτων τῆς γῆς εἰς τὴν σὴν βασιλείαν. ... ἡμῖν δὲ ἐχαρίσω πνευματικὴν τροφὴν καὶ ποτὸν καὶ ζωὴν αἰώνιον διὰ τοῦ παιδός σου",
+      "context": "The oldest Eucharistic prayers that survive (about 100). They thank God for life, knowledge and the gathering of the church, and call what Christians receive 'spiritual food and drink'. They do not say that the bread becomes Christ's body, and they do not treat the meal as a bare reminder either: the question later centuries argued over is not asked here. Only the baptized may eat or drink (9.5). Filed under 'sign' only as the nearest heading; the text itself takes no side in the later debate.",
+      "source": {
+        "book": "didache",
+        "section": "9",
+        "also": {
+          "book": "didache",
+          "section": "10"
+        }
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "didache-14-sacrifice",
+      "author": "Didache",
+      "year": 100,
+      "date": "c. 100",
+      "work": "Didache",
+      "locus": "14.1–3",
+      "lang": "grc",
+      "answer": "sign",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "On the Lord's own day, gather together, break bread and give thanks, having first confessed your sins, so that your sacrifice may be pure. Anyone who has a quarrel with his companion must not join you until they are reconciled, so that your sacrifice may not be defiled. For this is what was spoken by the Lord: 'In every place and time, offer me a pure sacrifice, for I am a great king, says the Lord, and my name is wonderful among the nations.'",
+      "original": "Κατὰ κυριακὴν δὲ κυρίου συναχθέντες κλάσατε ἄρτον καὶ εὐχαριστήσατε, προεξομολογησάμενοι τὰ παραπτώματα ὑμῶν, ὅπως καθαρὰ ἡ θυσία ὑμῶν ᾖ. πᾶς δὲ ἔχων τὴν ἀμφιβολίαν μετὰ τοῦ ἑταίρου αὐτοῦ μὴ συνελθέτω ὑμῖν, ἕως ... διαλλαγῶσιν, ἵνα μὴ κοινωθῇ ἡ θυσία ὑμῶν. αὕτη γάρ ἐστιν ἡ ῥηθεῖσα ὑπὸ κυρίον: Ἐν παντὶ τόπῳ καὶ χρόνῳ προσφέρειν μοι θυσίαν καθαράν. ὅτι βασιλεὺς μέγας εἰμί, λέγει κύριος, καὶ τὸ ὄνομά μου θαυμαστὸν ἐν τοῖς ἔθνεσι.",
+      "context": "Chapter 14 calls the Sunday breaking of bread a sacrifice, quoting Malachi 1:11 and 14, and puts confession and reconciliation before it. It still says nothing about what the bread is or becomes.",
+      "source": {
+        "book": "didache",
+        "section": "14"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "ignatius-smyrnaeans-7",
       "author": "Ignatius of Antioch",
       "year": 110,
@@ -563,14 +609,6 @@
       "why": "First official use of transubstantiation.",
       "action": "intake",
       "source_hint": "Mansi, vol. 22"
-    },
-    {
-      "author": "The Didache",
-      "work": "Chapters 9, 10 and 14",
-      "year": 100,
-      "why": "The oldest Eucharistic prayers. They give thanks over the cup and bread and call the Eucharist a sacrifice, but do not say what the bread becomes. In the library, not yet translated.",
-      "action": "translate",
-      "source_hint": "didache"
     }
   ],
   "related": {

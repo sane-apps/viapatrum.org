@@ -29,11 +29,12 @@
   ],
   "overview": [
     {
-      "text": "From the first letters after the New Testament, Christians call the Scriptures true and given through the Holy Spirit. Clement of Rome says nothing false is written in them.",
+      "text": "From the first letters after the New Testament, Christians call the Scriptures true and given through the Holy Spirit. Clement of Rome says nothing false is written in them, and Irenaeus leaves the questions he cannot answer in the Scriptures to God rather than seek another god.",
       "cites": [
         "1-clement-45",
         "athenagoras-plea-9",
-        "theophilus-autolycus-2-9"
+        "theophilus-autolycus-2-9",
+        "irenaeus-ah-2-28-2"
       ]
     },
     {
@@ -115,6 +116,28 @@
       "translation": "dossier"
     },
     {
+      "id": "irenaeus-ah-2-28-2",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "2.28.2",
+      "lang": "la",
+      "answer": "inspired",
+      "strength": "indirect",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "But if we cannot find the answers to all the questions raised in the Scriptures, we must not seek another God besides him who is; for this is the greatest impiety. We must leave such things to God, who also made us.",
+      "original": "Si autem omnium quae in Scripturis requiruntur absolutiones non possumus invenire, alterum tamen Deum, praeter eum qui est, non requiramus. Impietas enim haec maxima est. Cedere autem haec talia debemus Deo, qui et nos fecit",
+      "context": "Against Gnostics who used hard passages to invent another god: the difficulties are left to God, and our faith is kept safe. The next clause of this section calls the Scriptures perfect, spoken by the Word of God and his Spirit, but it is not quoted here: in the Harvey scan the OCR misreads that clause's key words (Scripture for Scripturae, perfectze for perfectae, dictz for dictae), and only about three quarters of its words can be verified in the scan. This part of Against Heresies survives in its ancient Latin translation.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol1_harvgoog_djvu.txt",
+        "edition": "Harvey (1857), vol. 1, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "justin-dialogue-65",
       "author": "Justin Martyr",
       "year": 160,
@@ -165,14 +188,6 @@
       "why": "\"I firmly believe that none of their authors erred in writing anything.\" Augustine's letters are not in the library yet.",
       "action": "intake",
       "source_hint": "Maurist text, Migne PL 33"
-    },
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 2.28.2",
-      "year": 180,
-      "why": "\"The Scriptures are perfect, since they were spoken by the Word of God and his Spirit.\" The Latin was not found in the Harvey scan by search.",
-      "action": "search",
-      "source_hint": "Harvey 1857 vol. 1"
     }
   ],
   "related": {
@@ -182,7 +197,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

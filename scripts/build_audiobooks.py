@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build one chapter-marked M4B audiobook per narrated, published work.
 
-Why: reading and read-along listening stay free; the one-time download unlock
-(owner 2026-10-05) includes a full audiobook file for every narrated work. A
-paid file must only carry narration that matches the words on the page today,
+Why: reading and read-along listening stay free, and so do the downloads
+(owner 2026-10-22): every narrated work gets a full audiobook file. A
+download must only carry narration that matches the words on the page today,
 so this script decides "narrated" exactly the way scripts/inject_audio.py
 attaches a Play bar: the section's recorded sentence window must have the cite
 page's words (exact first, then inject_audio.match_key). Stale recordings
@@ -27,7 +27,8 @@ How:
      section heads shown on the site, tags, faststart, M4B brand.
   5. Cover art outputs/downloads/covers/<slug>-square.jpg is embedded when it
      exists; a final pass (-c copy) attaches covers that appeared later.
-     --covers-only runs just that pass.
+     --covers-only runs just that pass. --retag rewrites only the comment and
+     description tags of built files (-c copy) when NARRATION_NOTE changes.
 
 Restart-safe: inputs_hash (ordered source list with sizes/mtimes, windows,
 titles, tags, encode settings) is stored per work in
@@ -86,8 +87,12 @@ BITRATE = "64k"
 ENCODE_VERSION = "m4b-v2 fade aac_at cbr %s sr%d I%.0f lim%.3f gap%.1f" % (
     BITRATE, SR, TARGET_LUFS, LIMIT, GAP_S)
 YEAR = "2026"
-# Same words as the Listen page (build_site.py, /listen/ lede).
-NARRATION_NOTE = "The narration is a computer voice reading our new English."
+# Same voice as the Listen page (build_site.py, /listen/ lede).
+NARRATION_NOTE = "The narration is a computer voice reading our fresh English translation."
+# inputs_hash() keeps hashing the note every built file was keyed with, so a
+# wording change never re-encodes the shelf (2026-10-23 review: one edit would
+# have rebuilt every audiobook). Built files get a new note with --retag.
+HASHED_NOTE = "The narration is a computer voice reading our new English."
 
 FFMPEG = ia._tool("ffmpeg")
 FFPROBE = ia._tool("ffprobe")
@@ -331,7 +336,7 @@ def source_id(ch: dict) -> str:
 def inputs_hash(plan: dict) -> str:
     h = hashlib.sha256()
     h.update(ENCODE_VERSION.encode())
-    h.update(json.dumps([plan["title"], plan["author"], plan["slug"], NARRATION_NOTE]).encode())
+    h.update(json.dumps([plan["title"], plan["author"], plan["slug"], HASHED_NOTE]).encode())
     for ch in plan["chapters"]:
         if ch["r2"]:
             sig = [ch["r2"], ch["r2_bytes"]]
@@ -424,9 +429,12 @@ def ffmeta_escape(text: str) -> str:
     return re.sub(r"([=;#\\\n])", r"\\\1", str(text))
 
 
+def note_for(slug: str) -> str:
+    return "%s https://viapatrum.org/works/%s/" % (NARRATION_NOTE, slug)
+
+
 def tags_for(plan: dict) -> dict:
-    url = "https://viapatrum.org/works/%s/" % plan["slug"]
-    note = "%s %s" % (NARRATION_NOTE, url)
+    note = note_for(plan["slug"])
     return {"title": plan["title"], "album": plan["title"], "artist": plan["author"] or "Via Patrum",
             "album_artist": "Via Patrum", "genre": "Audiobook", "date": YEAR,
             "comment": note, "description": note, "media_type": "2"}
@@ -627,6 +635,49 @@ def attach_cover(path: Path, cover: Path) -> None:
     os.replace(tmp, path)
 
 
+def file_note(path: Path) -> str:
+    p = subprocess.run([FFPROBE, "-v", "error", "-show_entries", "format_tags=comment", "-of",
+                        "default=nw=1:nk=1", str(path)], capture_output=True, text=True, timeout=120)
+    return p.stdout.strip()
+
+
+def retag(path: Path, note: str) -> None:
+    """Rewrite the comment and description tags, keeping audio, chapters,
+    cover and every other tag (stream copy, no re-encode)."""
+    tmp = path.with_name("." + path.name + ".tag.part")
+    p = run([FFMPEG, "-v", "error", "-y", "-i", str(path), "-map", "0:a", "-map", "0:v?", "-c", "copy",
+             "-map_metadata", "0", "-map_chapters", "0", "-metadata", "comment=" + note,
+             "-metadata", "description=" + note, "-movflags", "+faststart", "-brand", "M4B ",
+             "-f", "ipod", str(tmp)], timeout=900)
+    if p.returncode or not tmp.is_file():
+        if tmp.exists():
+            tmp.unlink()
+        raise RuntimeError("retag %s: %s" % (path.name, p.stderr.decode()[-300:]))
+    os.replace(tmp, path)
+
+
+def retag_pass(manifest: dict, man_path: Path, out_dir: Path) -> int:
+    """Give built files the current NARRATION_NOTE. Each rewritten file gets a
+    new sha256, so the next library_sync upload sends it again."""
+    done = same = missing = 0
+    for slug, e in sorted(manifest["works"].items()):
+        f = out_dir.parent / e["file"]
+        if not f.is_file():
+            missing += 1
+            continue
+        note = note_for(slug)
+        if file_note(f) == note:
+            same += 1
+            continue
+        retag(f, note)
+        e.update({"bytes": f.stat().st_size, "sha256": sha256(f)})
+        done += 1
+        with _manifest_lock:
+            write_manifest(man_path, manifest)
+    log("retag: %d rewritten, %d already current, %d not on disk" % (done, same, missing))
+    return 0
+
+
 # ---------------------------------------------------------------- manifest
 
 def read_manifest(path: Path) -> dict:
@@ -764,6 +815,7 @@ def main(argv: list) -> int:
     ap.add_argument("--min-coverage", type=float, default=0.8)
     ap.add_argument("--plan", action="store_true", help="print coverage, build nothing")
     ap.add_argument("--covers-only", action="store_true")
+    ap.add_argument("--retag", action="store_true", help="only refresh the narration note tags of built files")
     ap.add_argument("--verify", action="store_true", help="probe built files, build nothing")
     ap.add_argument("--force", action="store_true", help="rebuild even when inputs are unchanged")
     args = ap.parse_args(argv)
@@ -788,6 +840,8 @@ def main(argv: list) -> int:
 
     if args.covers_only:
         return covers_pass(manifest, man_path, out_dir)
+    if args.retag:
+        return retag_pass(manifest, man_path, out_dir)
 
     t_start = time.monotonic()
     plans, stats = plan_all(args.app_dir.resolve(), set(manifest["works"]))
@@ -807,7 +861,7 @@ def main(argv: list) -> int:
         if p["coverage"] < 1.0:
             log("  %-60s %3d/%-3d %5.1f%%%s" % (p["slug"], p["narrated"], p["total"], p["coverage"] * 100,
                                                 "" if p in eligible else "  SKIP"))
-    # Owner 2026-10-06: nothing comes off sale. A built audiobook whose page
+    # Owner 2026-10-06: nothing comes off the shelf. A built audiobook whose page
     # text moved on (too little narration still matches to rebuild it) keeps
     # its file and is listed in manifest-audio.json "text_mismatch" for the
     # owner, instead of being deleted.
@@ -820,7 +874,7 @@ def main(argv: list) -> int:
                 "voice": old.get("voice"), "sections_in_file": old.get("sections_narrated"),
                 "sections_total": p["total"], "sections_matching_now": p["narrated"]}
     for slug, row in sorted(mismatch.items()):
-        log("  text moved on, kept on sale: %-48s file %s sections, %d of %d match the page now"
+        log("  text moved on, kept on the shelf: %-48s file %s sections, %d of %d match the page now"
             % (slug, row["sections_in_file"], row["sections_matching_now"], row["sections_total"]))
     if args.plan:
         return 0
@@ -828,7 +882,7 @@ def main(argv: list) -> int:
     with _manifest_lock:
         for p in short:
             if p["slug"] in manifest["works"]:
-                continue  # kept on sale (see mismatch above)
+                continue  # kept on the shelf (see mismatch above)
             manifest["skipped"][p["slug"]] = {
                 "title": p["title"], "sections_total": p["total"], "sections_narrated": p["narrated"],
                 "reason": "under %.0f%% of sections narrated" % (args.min_coverage * 100)}

@@ -18,7 +18,7 @@ GAMES = [
         "title": "Fragment of the Day",
         "kicker": "A daily puzzle · about 2 minutes",
         "pitch": "restore one torn line from the Fathers each day.",
-        "text": "One line from the Church Fathers, torn in a few places. Put the right words back. A new fragment every day, from our own new English.",
+        "text": "One line from the Church Fathers, torn in a few places. Put the right words back. A new fragment every day, from our own fresh translations.",
         "notes": ["New every day", "Keep a streak", "Share your result"],
         "play": f"{PLAY}/daily",
         "cta": "Play today's fragment",
@@ -56,7 +56,7 @@ def build(dist: Path, layout, write) -> int:
 <header class="gm-head">
   <p class="eyebrow">Games</p>
   <h1>Games from the Church Fathers</h1>
-  <p class="intro">Every game here is built on the same new English as the library, so what you play is what the Fathers wrote. Free, no account, on phone or computer.</p>
+  <p class="intro">Every game here is built on the same fresh English as the library, so what you play is what the Fathers wrote. Free, no account, on phone or computer.</p>
 </header>
 <div class="gm-grid">{''.join(card(g, eager=i < 2) for i, g in enumerate(GAMES))}</div>
 <p class="intro fine gm-more">More games are on the way. Each new one appears here.</p>

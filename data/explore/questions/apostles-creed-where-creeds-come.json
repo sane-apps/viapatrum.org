@@ -51,7 +51,8 @@
     {
       "text": "Councils fixed the wording for disputed points, starting with Nicaea in 325.",
       "cites": [
-        "nicene-creed-325"
+        "nicene-creed-325",
+        "constantinople-creed-381"
       ]
     },
     {
@@ -147,6 +148,49 @@
       "translation": "dossier"
     },
     {
+      "id": "marcellus-old-roman-creed",
+      "author": "Marcellus of Ancyra",
+      "year": 340,
+      "date": "c. 340",
+      "work": "Letter to Julius of Rome, in Epiphanius, Panarion",
+      "locus": "72.3",
+      "lang": "grc",
+      "answer": "baptism",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I believe in God Almighty; and in Christ Jesus, his only-begotten Son, our Lord, who was born of the Holy Spirit and the Virgin Mary, who was crucified under Pontius Pilate and buried, and on the third day rose from the dead, ascended into the heavens, and sits at the right hand of the Father, whence he comes to judge living and dead; and in the Holy Spirit, a holy church, forgiveness of sins, resurrection of the flesh, eternal life.",
+      "original": "πιστεύω οὖν εἰς θεὸν παντοκράτορα· καὶ εἰς Χριστὸν Ἰησοῦν, τὸν υἱὸν αὐτοῦ τὸν μονογενῆ, τὸν κύριον ἡμῶν, τὸν γεννηθέντα ἐκ πνεύματος ἁγίου καὶ Μαρίας τῆς παρθένου, τὸν ἐπὶ Ποντίου Πιλάτου σταυρωθέντα καὶ ταφέντα, καὶ τῇ τρίτῃ ἡμέρᾳ ἀναστάντα ἐκ τῶν νεκρῶν, ἀναβάντα εἰς τοὺς οὐρανούς, καὶ καθήμενον ἐν δεξιᾷ τοῦ πατρός, ὅθεν ἔρχεται κρίνειν ζῶντας καὶ νεκρούς· καὶ εἰς τὸ ἅγιον πνεῦμα, ἁγίαν ἐκκλησίαν, ἄφεσιν ἁμαρτιῶν, σαρκὸς ἀνάστασιν, ζωὴν αἰώνιον.",
+      "context": "Marcellus, exiled for opposing Arianism, sent his confession of faith to Pope Julius (about 340). It is the earliest surviving full text of the Roman baptismal creed, the ancestor of the Apostles' Creed; note that it ends with the resurrection of the flesh, not of the dead.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 42 (Epiphanius, Panarion 72.3), Khazarzar text"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "constantinople-creed-381",
+      "author": "Council of Constantinople",
+      "year": 381,
+      "date": "381",
+      "work": "Creed of Constantinople",
+      "locus": "Creed",
+      "lang": "grc",
+      "answer": "council",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "We believe in one God, the Father Almighty, maker of heaven and earth, and of all things visible and invisible. And in one Lord Jesus Christ, the only-begotten Son of God, begotten of the Father before all ages, Light from Light, true God from true God, begotten, not made, of one being with the Father, through whom all things were made; who for us humans and for our salvation came down from the heavens and was made flesh by the Holy Spirit and the Virgin Mary, and became human; was crucified for us under Pontius Pilate, and suffered and was buried, and rose on the third day according to the Scriptures, and ascended into the heavens, and sits at the right hand of the Father, and will come again with glory to judge living and dead, whose kingdom will have no end. And in the Holy Spirit, the Lord and giver of life, who proceeds from the Father, who with the Father and the Son is worshipped and glorified together, who spoke through the prophets. In one holy, catholic and apostolic Church. We confess one baptism for the forgiveness of sins. We look for the resurrection of the dead and the life of the age to come. Amen.",
+      "original": "πιστεύομεν εἰς ἕνα θεὸν πατέρα παντοκράτορα, ποιητὴν οὐρανοῦ καὶ γῆς ὁρατῶν τε πάντων καὶ ἀοράτων· καὶ εἰς ἕνα κύριον Ἰησοῦν Χριστὸν τὸν υἱὸν τοῦ θεοῦ τὸν μονογενῆ, τὸν ἐκ τοῦ πατρὸς γεννηθέντα πρὸ πάντων τῶν αἰώνων, φῶς ἐκ φωτός, θεὸν ἀληθινὸν ἐκ θεοῦ ἀληθινοῦ, γεννηθέντα οὐ ποιηθέντα, ὁμοούσιον τῷ πατρί, δι' οὗ τὰ πάντα ἐγένετο· τὸν δι' ἡμᾶς τοὺς ἀνθρώπους καὶ διὰ τὴν ἡμετέραν σωτηρίαν κατελθόντα ἐκ τῶν οὐρανῶν καὶ σαρκωθέντα ἐκ πνεύματος ἁγίου καὶ Μαρίας τῆς παρθένου καὶ ἐνανθρωπήσαντα, σταυρωθέντα τε ὑπὲρ ἡμῶν ἐπὶ Ποντίου Πιλάτου, καὶ παθόντα καὶ ταφέντα, καὶ ἀναστάντα τῇ τρίτῃ ἡμέρᾳ κατὰ τὰς γραφάς, καὶ ἀνελθόντα εἰς τοὺς οὐρανούς, καὶ καθεζόμενον ἐν δεξιᾷ τοῦ πατρός, καὶ πάλιν ἐρχόμενον μετὰ δόξης κρῖναι ζῶντας καὶ νεκρούς, οὗ τῆς βασιλείας οὐκ ἔσται τέλος· καὶ εἰς τὸ πνεῦμα τὸ ἅγιον, τὸ κύριον καὶ τὸ ζωοποιόν, τὸ ἐκ τοῦ πατρὸς ἐκπορευόμενον, τὸ σὺν πατρὶ καὶ υἱῷ συμπροσκυνούμενον καὶ συνδοξαζόμενον, τὸ λαλῆσαν διὰ τῶν προφητῶν· εἰς μίαν ἁγίαν καθολικὴν καὶ ἀποστολικὴν ἐκκλησίαν· ὁμολογοῦμεν ἓν βάπτισμα εἰς ἄφεσιν ἁμαρτιῶν· προσδοκῶμεν ἀνάστασιν νεκρῶν καὶ ζωὴν τοῦ μέλλοντος αἰῶνος. ἀμήν.",
+      "context": "The creed as read out at Chalcedon (451) and still sung by the churches: Nicaea's faith with the article on the Spirit filled out. Whether the council of 381 itself issued the creed in exactly this form is debated; the text here follows the Chalcedon acts as printed by Bright (1892).",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-canonsoffirstfou00brig.txt",
+        "ocr_poor": true,
+        "edition": "Bright, The Canons of the First Four General Councils (2nd ed., Oxford, 1892), Greek text"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "rufinus-creed-2",
       "author": "Rufinus of Aquileia",
       "year": 404,
@@ -170,28 +214,12 @@
   ],
   "gaps": [
     {
-      "author": "Marcellus of Ancyra",
-      "work": "Letter to Julius of Rome, in Epiphanius, Panarion 72.3",
-      "year": 340,
-      "why": "The Old Roman Creed in Greek, the earliest full text.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt"
-    },
-    {
       "author": "Hippolytus (attributed)",
       "work": "Apostolic Tradition 21",
       "year": 215,
       "why": "The three baptismal questions in their earliest form.",
       "action": "intake",
       "source_hint": "Hauler (1900)"
-    },
-    {
-      "author": "Council of Constantinople",
-      "work": "Creed of 381",
-      "year": 381,
-      "why": "The Nicene Creed as churches say it today.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 86)"
     }
   ],
   "related": {

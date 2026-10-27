@@ -151,7 +151,7 @@
   },
   "polycarp-of-smyrna": {
     "name": "Polycarp of Smyrna",
-    "dates": "fl. c. 155 AD",
+    "dates": "c. 69–c. 155 AD",
     "bio": "Bishop of Smyrna, said to have known the apostle John. His letter to the Philippians survives, and the account of his martyrdom around 155 is the oldest Christian martyr story outside the New Testament."
   },
   "gregory-thaumaturgus": {
@@ -226,7 +226,7 @@
   },
   "asterius-of-amasea": {
     "name": "Asterius of Amasea",
-    "dates": "c. 375–405 AD",
+    "dates": "c. 350–c. 410 AD",
     "bio": "Bishop of Amasea in Pontus around 400 and a vivid preacher. His sermon describing a painting of the martyr Euphemia was read out at the Second Council of Nicaea in 787."
   },
   "augustine-of-hippo": {
@@ -382,8 +382,8 @@
   },
   "acts-of-the-martyrs": {
     "name": "Acts of the Martyrs",
-    "dates": "c. 165 AD",
-    "bio": "Name for the early accounts of martyrs' trials and deaths that the churches kept and read. The one here records the trial of Justin and six companions before Rusticus, prefect of Rome, about 165."
+    "dates": "c. 165–304 AD",
+    "bio": "Name for the early accounts of martyrs' trials and deaths that the churches kept and read aloud: court records, letters, and stories told by friends who saw them die. The ones here run from Justin and six companions at Rome, about 165, to Irenaeus, bishop of Sirmium, in 304. They come from Rome, Gaul, North Africa, Asia Minor and the Balkans."
   },
   "georgius-peccator": {
     "name": "Georgius Peccator",
@@ -398,5 +398,15 @@
     "name": "Polycrates of Ephesus",
     "dates": "fl. c. 190 AD",
     "bio": "Bishop of Ephesus. About 190 he wrote for the bishops of Asia to Victor of Rome, defending their custom of keeping Pascha on the 14th day of the month and naming the apostles John and Philip, buried in Asia, as its source. Eusebius kept the letter."
+  },
+  "athanasius-of-alexandria": {
+    "name": "Athanasius of Alexandria",
+    "dates": "c. 293/298–373 AD",
+    "bio": "Bishop of Alexandria from 328 to 373. As a young deacon he attended the Council of Nicaea, and as bishop he defended its creed against the followers of Arius through five exiles. He taught that the Son is fully God, of one being with the Father, because only God can save us. His Life of Antony made the desert monks known across the Church."
+  },
+  "anonymous-2-clement": {
+    "name": "Anonymous (2 Clement)",
+    "dates": "fl. c. 150 AD",
+    "bio": "The unknown preacher of the oldest complete Christian sermon outside the New Testament, from about 150. It was long copied with Clement of Rome's letter, so it is called Second Clement. He calls his hearers to repent while there is time, to keep their baptism pure and to show their faith in deeds, and he teaches that the flesh will rise and be judged."
   }
 }

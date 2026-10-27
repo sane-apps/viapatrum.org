@@ -19,8 +19,10 @@
 //   --slug=SLUG        only cards whose slug matches (repeatable via commas)
 //   --format=png|jpg   default png
 //   --dist=DIR         read another built site (default dist/)
+//   --out=DIR          draw into DIR instead of assets/og (sample runs; its own cache, no pruning of assets/og)
 //   --list             print the card text and exit (no drawing)
 //   --plan             print how many cards would be drawn and exit (writes nothing)
+//   --prune-all        let one run move more than 100 unused cards to outputs/og-retired
 //
 // Run on the Mini: nice -n 10 node scripts/make_og_cards.cjs
 'use strict';
@@ -30,8 +32,13 @@ const path = require('path');
 const crypto = require('crypto');
 
 const ROOT = path.resolve(__dirname, '..');
-const OUT = path.join(ROOT, 'assets', 'og');
-const CACHE = path.join(ROOT, 'outputs', 'og-cards-cache.json');
+const argOut = process.argv.slice(2).find(a => a.startsWith('--out='));
+const OUT = argOut ? path.resolve(argOut.slice(6)) : path.join(ROOT, 'assets', 'og');
+const CACHE = argOut ? path.join(OUT, 'og-cards-cache.json') : path.join(ROOT, 'outputs', 'og-cards-cache.json');
+// Cards no page uses any more (a held or withdrawn work, a renamed excerpt) move here, not to the bin.
+const RETIRED = argOut ? path.join(OUT, '..', path.basename(OUT) + '-retired') : path.join(ROOT, 'outputs', 'og-retired');
+// How each work shows the way of the Fathers: slug -> "How they spoke" and so on (scripts/way_verbs_test.py).
+const WAY = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'way-verbs.json'), 'utf8'));
 const BRAVE = '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser';
 const sha1 = s => crypto.createHash('sha1').update(s).digest('hex');
 // Until 2026-10-06 the cache keyed on a hash of this whole file, so any edit
@@ -74,25 +81,33 @@ function firstSentence(s) {
   const m = s.match(/^.*?[.!?](?=\s+[A-Z“"‘(]|$)/);
   return m ? m[0] : s;
 }
-const looksLikeDate = s => /\b(AD|BC)\b|\bfl\.|\bc\.\s*\d|\d{3,4}/.test(s || '');
+// The work's own date. The meta line also names the printed edition ("Hartel (1868)",
+// "Cambridge 1650"); that is not a date of the work, so only "written …" counts.
+const workDate = parts => parts.slice(1).find(p => /^written\b/.test(p)) || '';
+// The opening words of an excerpt: no note marks ("[1]"), section numbers ("10.1.")
+// or all-caps chapter headings run into the text ("ON DREAMS. We are…").
+function cleanPara(s) {
+  return s.replace(/\s*\[\d+\]\s*/g, ' ').trim().replace(/^(?:\d+\.)+\d*\s*/, '')
+    .replace(/^[A-Z’' ,:;–—-]{6,}[.:](?:\s+|$)/, '').replace(/\s+/g, ' ').trim();
+}
 
 function sectionCards() {
   const verse = '“Stand by the roads, and look, and ask for the ancient paths, where the good way is; and walk in it.”';
   const S = [
-    ['home', ['/'], 'Free for the whole world', 'Read the early Church in its own words', verse, 'Jeremiah 6:16'],
+    ['home', ['/'], 'Free for the whole world', 'The way of the Fathers', verse, 'Jeremiah 6:16'],
     ['topics', ['/topics/'], 'Topics', 'What did the early Church teach?', 'Each topic in the writers’ own words, with the passages to read.'],
     ['authors', ['/authors/'], 'Fathers', 'The writers, in order', 'Every writer in the library, earliest first, with dates and works.'],
-    ['works', ['/works/'], 'Works', 'All works', 'Whole works in faithful modern English, to read straight through.'],
+    ['works', ['/works/'], 'Works', 'All works', 'Whole works in fresh English, to read straight through.'],
     ['explore', ['/explore/'], 'Timeline', 'How the answers line up over time', 'What each early writer taught, claim by claim, century by century.'],
-    ['about', ['/about/'], 'About', 'About Via Patrum', 'A free library of early Christian writing in faithful modern English.'],
+    ['about', ['/about/'], 'About', 'About Via Patrum', 'The way of the Church Fathers, in fresh English translations.'],
     ['methodology', ['/methodology/'], 'For scholars', 'How we translate', 'Sources, two passes, and what stays off the reading page.'],
-    ['help', ['/contribute/', '/help/'], 'Help translate', 'Help us', 'Donate, correct a passage, sponsor a book, or spread the word.'],
+    ['help', ['/contribute/', '/help/'], 'Help us', 'Keep the way of the Fathers free', 'Donate, correct a passage, sponsor a book, or spread the word.'],
     ['scripture', ['/scripture/'], 'Scripture', 'The Bible, through the Fathers’ eyes', 'Every book and chapter, with each Father who comments on it.'],
-    ['listen', ['/listen/'], 'Listen', 'Hear the Fathers read aloud', 'Read-along audio in new English.'],
+    ['listen', ['/listen/'], 'Listen', 'Hear the Fathers read aloud', 'Read-along audio in fresh English.'],
     ['games', ['/games/'], 'Games', 'Games from the Church Fathers', 'A daily fragment puzzle, and Ten Leopards: carry Ignatius’s letters on his road to Rome.'],
-    ['downloads', ['/downloads/'], 'Downloads', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. One payment; reading on the site stays free.'],
+    ['downloads', ['/downloads/', '/downloads/logos/'], 'Downloads', 'Books and recordings, yours to keep', 'EPUB, PDF, Word for Logos and audiobooks. Free to download, like everything here.'],
     ['ask', ['/ask/'], 'Ask', 'Ask the Fathers', 'Ask a question. Read the early writers’ own sentences, each linked to its passage.'],
-    ['creeds', ['/creeds/'], 'Timeline', 'Creeds and churches', 'Every major creed and confession from AD 180 to today, and which churches hold it.'],
+    ['creeds', ['/creeds/'], 'Timeline', 'Creeds and churches', 'Every major creed and confession from 180 AD to today, and which churches hold it.'],
     ['privacy', ['/privacy/'], 'Privacy', 'No personal data, ever', 'Via Patrum collects no personal data, on the website or in the iPhone and iPad app.'],
   ];
   return S.map(([slug, pages, eyebrow, title, line, cite]) => ({
@@ -119,12 +134,14 @@ function workCards() {
     const meta = text(first(after, /<p class="meta">([\s\S]*?)<\/p>/) || '');
     const parts = meta.split(' · ').map(s => s.trim()).filter(Boolean);
     const author = parts[0] || '';
-    const dates = looksLikeDate(parts[1]) ? parts[1] : '';
+    const dates = workDate(parts);
     const books = fs.readdirSync(dir).filter(n => /^book-\d+$/.test(n)).sort((a, b) => a.slice(5) - b.slice(5));
+    const way = WAY[slug] || 'Works';
+    if (!WAY[slug]) console.warn(`WARN works/${slug}: no entry in data/way-verbs.json`);
     out.push({
       kind: 'work', slug, file: `works/${slug}`,
       pages: [`/works/${slug}/`, ...books.map(b => `/works/${slug}/${b}/`)],
-      data: { kind: 'work', eyebrow: books.length > 1 ? `Read free · ${books.length} books` : 'Read free', title, author, dates },
+      data: { kind: 'work', eyebrow: books.length > 1 ? `${way} · ${books.length} books` : way, title, author, dates },
     });
   }
   return out;
@@ -166,7 +183,7 @@ function topicCards() {
     const re = /<article class="excerpt topic-card"[\s\S]*?<h2><a [^>]*>([\s\S]*?)<\/a>[\s\S]*?<p class="meta">([\s\S]*?)<\/p>[\s\S]*?<blockquote class="topic-lead">([\s\S]*?)<\/blockquote>/g;
     let m;
     while ((m = re.exec(html)) && quotes.length < 12) {
-      const q = text(m[3]);
+      const q = cleanPara(text(m[3]));
       const metaParts = text(m[2]).split(' · ');
       const ref = metaParts.length > 1 ? metaParts[metaParts.length - 1] : '';
       if (q && cardOk(q)) quotes.push({ q, author: text(m[1]), ref });
@@ -211,18 +228,24 @@ function excerptCards() {
     const meta = text(first(art, /<p class="meta">([\s\S]*?)<\/p>/) || '');
     const [author, dates] = meta.split(' · ');
     // Drop section numbers ("10.1."); start the quote on a whole sentence.
-    const body = [...art.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => text(m[1]).replace(/^(?:\d+\.)+\d*\s*/, ''))
+    const body = [...art.matchAll(/<p>([\s\S]*?)<\/p>/g)].map(m => cleanPara(text(m[1])))
       .filter(Boolean).join(' ');
     const sentences = (body.match(/[^.!?]+[.!?]+[”"’]?/g) || []).map(x => x.trim());
     const starts = x => /^[“"‘]?[A-Z]/.test(x) && cardOk(x);
-    const quote = sentences.find(x => starts(x) && x.length >= 50 && x.length <= 150)
-      || sentences.find(x => starts(x) && x.length >= 50) || '';
+    const shouting = x => !/[a-z]/.test(x);
+    // Verse with no sentence end (Commodian) still gets its own card: its opening words.
+    const quote = sentences.find(x => starts(x) && !shouting(x) && x.length >= 50 && x.length <= 150)
+      || sentences.find(x => starts(x) && !shouting(x) && x.length >= 50)
+      // No whole sentence: the body may open mid-sentence ("and his coming…"); mark the cut.
+      || (starts(body) ? body : '…' + body);
     if (!work || !author || !quote) continue;
     // The title already names the writer: "Arnobius, Against the Nations" -> "Against the Nations".
     const workName = work.startsWith(author) ? work.slice(author.length).replace(/^[,:\s]+/, '') : work;
     out.push({
       kind: 'excerpt', slug, file: `e/${slug}`, pages: [`/e/${slug}/`],
-      data: { kind: 'topic', eyebrow: topic, title: author, quote: trimTo(quote, 140),
+      // A verse line cut at a comma reads as a mistake; close it with an ellipsis.
+      data: { kind: 'topic', eyebrow: topic, title: author,
+              quote: trimTo(quote, 140).replace(/[\s,;:\-–—]+$/, '…').replace(/^(.*[^.!?…”"’])$/, '$1…'),
               cite: [workName, dates].filter(Boolean).join(' · ') },
     });
   }
@@ -233,6 +256,7 @@ function excerptCards() {
 function exploreCards() {
   const out = [];
   for (const id of dirs('explore')) {
+    if (id === 'churches') continue; // churchesCards()
     const html = read(path.join(DIST, 'explore', id, 'index.html'));
     if (!html) continue;
     const title = text(first(html, /<h1[^>]*>([\s\S]*?)<\/h1>/));
@@ -241,6 +265,34 @@ function exploreCards() {
       kind: 'question', slug: id, file: `explore/${id}`, pages: [`/explore/${id}/`],
       data: { kind: 'question', eyebrow: 'Timeline · What the early Church said', title,
               line: 'Every early writer on it, claim by claim, in date order.' },
+    });
+  }
+  return out;
+}
+
+// /explore/churches/: the church-lane overview and the belief pages moved under it
+// (timeline_page.move_church_views). Before 2026-10-23 they showed the Timeline
+// question card of the same id, or the question template on the overview.
+function churchesCards() {
+  const out = [];
+  const hub = read(path.join(DIST, 'explore', 'churches', 'index.html'));
+  if (hub) {
+    const title = text(first(hub, /<h1[^>]*>([\s\S]*?)<\/h1>/) || '') || 'Where the churches stand';
+    out.push({
+      kind: 'question', slug: 'churches', file: 'explore/churches', pages: ['/explore/churches/'],
+      data: { kind: 'question', eyebrow: 'Timeline', title,
+              line: 'What each church teaches on the questions that divide them, and the earliest Father who taught each answer.' },
+    });
+  }
+  for (const id of dirs('explore/churches')) {
+    const html = read(path.join(DIST, 'explore', 'churches', id, 'index.html'));
+    if (!html) continue;
+    const title = text(first(html, /<h1[^>]*>([\s\S]*?)<\/h1>/) || '');
+    if (!title) continue;
+    out.push({
+      kind: 'question', slug: `churches-${id}`, file: `explore/churches/${id}`, pages: [`/explore/churches/${id}/`],
+      data: { kind: 'question', eyebrow: 'Where the churches stand', title,
+              line: 'Each church’s answer, and the early writers who taught it, earliest first.' },
     });
   }
   return out;
@@ -310,13 +362,13 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-k
 .bio{font:400 26px/1.42 'Literata',serif;color:var(--ink-soft);margin-top:16px;max-width:920px;text-wrap:pretty}
 .quote{margin-top:28px;padding-left:26px;border-left:3px solid var(--rubric);max-width:920px}
 .quote p{font:italic 400 26px/1.42 'Literata',serif;color:var(--ink);text-wrap:pretty}
-.cite{margin-top:12px;font:700 15px/1.2 'Source Sans 3',sans-serif;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
+.cite{margin-top:12px;font:700 19px/1.2 'Source Sans 3',sans-serif;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
 .line{font:400 29px/1.4 'Literata',serif;color:var(--ink-soft);max-width:900px;text-wrap:pretty}
 .line.verse{font-style:italic;color:var(--ink)}
 .foot{margin-top:26px;display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-top:1px solid rgba(216,180,95,.5);padding-top:16px}
 .mark{font:700 38px/1 'Cormorant Garamond',serif;color:var(--ink);letter-spacing:.005em;white-space:nowrap}
 .mark span{color:var(--rubric)}
-.motto{font:italic 400 19px/1 'Literata',serif;color:var(--ink-soft);white-space:nowrap}
+.motto{font:italic 400 22px/1 'Literata',serif;color:var(--ink-soft);white-space:nowrap}
 .warm{position:absolute;left:-9999px;top:0}
 </style></head><body>
 <div class="card"><div class="leaf"><div class="frame"></div><div class="initial"></div>
@@ -327,14 +379,18 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;font-k
 <span style="font:700 20px 'Source Sans 3'">Aa</span><span style="font:600 20px 'Source Sans 3'">Aa</span></div>
 <script>
 const esc = s => String(s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const MOTTO = 'Read the early Church in its own words.';
+const MOTTO = 'The way of the Fathers, in their own words.';
+const SKIP_INITIAL = new Set(['the', 'a', 'an', 'on', 'to', 'in', 'of', 'from', 'and', 'for', 'upon', 'against', 'fragments', 'fragment', 'letter', 'letters']);
 const LIMITS = { section: [100, 56], question: [72, 44], work: [96, 50], author: [104, 56], topic: [84, 46] };
 window.renderCard = async function (c) {
   const $ = s => document.querySelector(s);
   $('.head').textContent = c.eyebrow || '';
-  const letter = (c.title || '').replace(/^[^A-Za-z]+/, '').charAt(0).toUpperCase();
-  $('.initial').textContent = letter;
-  $('.motto').textContent = c.home ? 'Every Father, every work, in faithful modern English.' : MOTTO;
+  // The big letter is the first word that means something: not "The", "On", "Letter"…
+  const words = (c.title || '').replace(/[^A-Za-z\s’'-]/g, ' ').split(/\s+/).filter(Boolean);
+  const key = words.find(w => !SKIP_INITIAL.has(w.toLowerCase())) || words[0] || '';
+  $('.initial').textContent = key.charAt(0).toUpperCase();
+  $('.initial').style.display = '';
+  $('.motto').textContent = c.home ? 'How they spoke, acted, argued, lived and died.' : MOTTO;
   let h = '<h1 class="title">' + esc(c.title) + '</h1>';
   if (c.kind === 'section' || c.kind === 'question') {
     if (c.line) h += '<div class="bar"></div><p class="line' + (c.home ? ' verse' : '') + ' fitq">' + esc(c.line) +
@@ -376,20 +432,33 @@ function fit(c) {
       q.textContent = words.join(' ').replace(/[\s,;:.\-–—]+$/, '') + '…';
     }
   }
-  return { size, titleLines: lines(t), overflow: over() };
+  // A title of three lines fills the right side; the letter would sit behind the words.
+  const titleLines = lines(t);
+  if (titleLines >= 3) document.querySelector('.initial').style.display = 'none';
+  return { size, titleLines, overflow: over() };
 }
 </script></body></html>`;
 
 // ---------- main ----------
 
+// Why retiring unused cards is unsafe this run, or '' when it is fine.
+const RETIRE_MAX = 100;
+function retireLimit(unused, excerpts, pruneAll) {
+  if (!unused) return '';
+  if (!excerpts) return 'dist/ has no excerpt pages';
+  if (unused > RETIRE_MAX && !pruneAll) return `more than ${RETIRE_MAX}; pass --prune-all to move them`;
+  return '';
+}
+
 async function main() {
   const t0 = Date.now();
   const works = workCards(), authors = authorCards(), topics = topicCards();
   // A half-built dist/ would shrink index.json; refuse instead.
+  const excerpts = excerptCards();
   if (!works.length || !authors.length || !topics.length) {
     throw new Error(`dist/ looks incomplete (works ${works.length}, authors ${authors.length}, topics ${topics.length}); build the site first`);
   }
-  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards(), ...exploreCards(), ...excerptCards()];
+  let cards = [...sectionCards(), ...works, ...authors, ...topics, ...scriptureCards(), ...exploreCards(), ...churchesCards(), ...excerpts];
   const all = cards;
   if (ONLY) cards = cards.filter(c => ONLY.has(c.kind));
   if (SLUGS) cards = cards.filter(c => SLUGS.has(c.slug));
@@ -424,6 +493,12 @@ async function main() {
   if (todo.length) {
     let chromium;
     try { ({ chromium } = require('/opt/homebrew/lib/node_modules/playwright')); } catch { ({ chromium } = require('playwright')); }
+    // A full redraw (a template change touches all ~16k cards) once lost every card when
+    // the browser died at card 892 (2026-10-23): restart it every 500 cards and save the
+    // cache as it goes, so a rerun picks up where it stopped.
+    const saveCache = () => { fs.mkdirSync(path.dirname(CACHE), { recursive: true }); fs.writeFileSync(CACHE, JSON.stringify(cache, null, 1) + '\n'); };
+    for (let start = 0; start < todo.length; start += 500) {
+    const batch = todo.slice(start, start + 500);
     const browser = await chromium.launch({ executablePath: BRAVE, headless: true });
     try {
       const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 1 });
@@ -433,7 +508,7 @@ async function main() {
       if (!families.some(f => f.includes('Cormorant')) || !families.some(f => f.includes('Literata'))) {
         throw new Error('Google Fonts did not load: ' + JSON.stringify(families));
       }
-      for (const c of todo) {
+      for (const c of batch) {
         const res = await page.evaluate(d => window.renderCard(d), c.data);
         if (res.overflow) warnings.push(`${c.file}: still overflows (title ${res.size}px, ${res.titleLines} lines)`);
         const dest = path.join(OUT, `${c.file}.${ext}`);
@@ -446,6 +521,9 @@ async function main() {
       }
     } finally {
       await browser.close();
+      saveCache();
+    }
+    if (todo.length > 500) console.log(`cards: ${Math.min(start + 500, todo.length)} of ${todo.length} drawn`);
     }
   }
 
@@ -458,13 +536,41 @@ async function main() {
   }
   const sorted = Object.fromEntries(Object.keys(index).sort().map(k => [k, index[k]]));
   fs.writeFileSync(path.join(OUT, 'index.json'), JSON.stringify(sorted, null, 1) + '\n');
+  // A card no page points to (a held or withdrawn work) would still be served and
+  // name that work: move it out of the deploy folder (2026-10-23, 49 such cards).
+  const used = new Set(Object.values(sorted).map(v => v.replace(/^\/assets\/og\//, '')));
+  const unused = [];
+  const walk = rel => {
+    for (const e of fs.readdirSync(path.join(OUT, rel), { withFileTypes: true })) {
+      const r = rel ? `${rel}/${e.name}` : e.name;
+      if (e.isDirectory()) walk(r);
+      else if (/\.(png|jpg)$/.test(e.name) && !used.has(r)) unused.push(r);
+    }
+  };
+  if (!args.dist) walk('');
+  let retired = 0;
+  // A partial build (no excerpts, no Scripture pages) would make most cards look unused.
+  // Move only a handful; a bigger cut needs --prune-all after a look at the list.
+  const limit = retireLimit(unused.length, excerpts.length, !!args['prune-all']);
+  if (limit) {
+    console.warn(`WARN cards: ${unused.length} cards look unused; not moving them (${limit}). First few: ${unused.slice(0, 5).join(', ')}`);
+  } else {
+    for (const r of unused) {
+      const dest = path.join(RETIRED, r);
+      fs.mkdirSync(path.dirname(dest), { recursive: true });
+      fs.renameSync(path.join(OUT, r), dest);
+      delete cache[r.replace(/\.(png|jpg)$/, '')];
+      retired++;
+    }
+  }
   fs.mkdirSync(path.dirname(CACHE), { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(cache, null, 1) + '\n');
 
   const counts = {};
   for (const c of all) counts[c.kind] = (counts[c.kind] || 0) + 1;
-  console.log(`cards: ${JSON.stringify(counts)} · drawn ${rendered}, skipped ${cards.length - todo.length} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  console.log(`cards: ${JSON.stringify(counts)} · drawn ${rendered}, skipped ${cards.length - todo.length}, retired ${retired} · ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   for (const w of warnings) console.warn('WARN ' + w);
 }
 
-main().catch(e => { console.error(e); process.exit(1); });
+if (require.main === module) main().catch(e => { console.error(e); process.exit(1); });
+module.exports = { workDate, cleanPara, sectionCards, retireLimit, WAY, TEMPLATE };

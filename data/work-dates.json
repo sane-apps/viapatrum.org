@@ -1,0 +1,46 @@
+{
+ "acts-of-justin": {
+  "date": "c. 165",
+  "source": "Junius Rusticus was prefect of Rome c. 162-168 (text names him). Musurillo, Acts of the Christian Martyrs (1972): c. 165."
+ },
+ "lyons-vienne-letter": {
+  "date": "177",
+  "source": "Eusebius, Church History 5 preface: the seventeenth year of Marcus Aurelius. Musurillo, Acts of the Christian Martyrs (1972): 177."
+ },
+ "scillitan-martyrs": {
+  "date": "180",
+  "source": "The text dates the hearing at Carthage to 17 July in the consulship of Praesens and Claudianus, 180. Musurillo, Acts of the Christian Martyrs (1972)."
+ },
+ "perpetua-felicitas": {
+  "date": "203",
+  "source": "The text names the procurator Hilarianus and the games for Geta Caesar's birthday, 7 March 203. Musurillo, Acts of the Christian Martyrs (1972)."
+ },
+ "achatius": {
+  "date": "c. 250",
+  "source": "The text sets the hearing under the Emperor Decius (249-251). Knopf and Krueger, Ausgewaehlte Maertyrerakten: the Decian persecution, 250."
+ },
+ "maximus": {
+  "date": "c. 250",
+  "source": "The text names Decius, his decree and the proconsul Optimus of Asia. Knopf and Krueger, Ausgewaehlte Maertyrerakten: 250."
+ },
+ "conon-gardener": {
+  "date": "c. 250",
+  "source": "The text gives no emperor or year. Musurillo, Acts of the Christian Martyrs (1972), sets it in the Decian persecution, c. 250-251."
+ },
+ "cyprian": {
+  "date": "258",
+  "source": "The text dates the first hearing to the consulship of Valerian (4th) and Gallienus (3rd), 257, and the death to 14 September under Tuscus and Bassus, 258. Musurillo, Acts of the Christian Martyrs (1972)."
+ },
+ "montanus-lucius": {
+  "date": "c. 259",
+  "source": "Carthage, under Valerian, soon after Cyprian's death in 258 (the text names him as their teacher). Musurillo, Acts of the Christian Martyrs (1972): 259."
+ },
+ "marianus-james": {
+  "date": "c. 259",
+  "source": "Numidia, near Cirta, under Valerian, after Cyprian's death in 258 (the text names him). Musurillo, Acts of the Christian Martyrs (1972): 259."
+ },
+ "irenaeus": {
+  "date": "304",
+  "source": "The text sets it under Diocletian and Maximian, before Probus, governor of Pannonia; the passion is kept on 6 April 304. Knopf and Krueger, Ausgewaehlte Maertyrerakten: 304."
+ }
+}

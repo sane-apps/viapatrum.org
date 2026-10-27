@@ -80,3 +80,12 @@
   .ask-answer { padding: 0.9rem 0.95rem 0.4rem; }
   .ask-plist > li { grid-template-columns: 2rem 1fr; }
 }
+
+/* Timeline topics on Ask (owner 2026-10-20): the matching topic comes first. */
+.ask-topics { margin-bottom: 1.75rem; }
+.ask-tlist { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+.ask-tlist > li { border-top: 1px solid var(--rule); padding: 0.75rem 0; }
+.ask-tlist a { display: grid; gap: 0.15rem; color: var(--ink); text-decoration: none; min-width: 0; }
+.ask-tlist a strong { color: var(--lapis); font-weight: 650; font-size: 1.05rem; }
+.ask-tlist a:hover strong, .ask-tlist a:focus-visible strong { text-decoration: underline; }
+.ask-tlist .go { color: var(--lapis); font-size: 0.9rem; font-weight: 650; }

@@ -34,7 +34,7 @@ const longPassage = index.find(r=>r.kind==='work'&&(r.text||'').length>600);
 const searchPhrase = longPassage.text.slice(450,510);
 const settle = () => new Promise(resolve => setTimeout(resolve, 260));
 function mount(html, path='/works/', fetcher=site) {
-  const dom=new JSDOM(html,{url:`https://fathers.saneapps.com${path}`,runScripts:'outside-only',pretendToBeVisual:true});
+  const dom=new JSDOM(html,{url:`https://viapatrum.org${path}`,runScripts:'outside-only',pretendToBeVisual:true});
   dom.window.fetch=fetcher;
   dom.window.eval(script);
   return dom;
@@ -74,13 +74,31 @@ test('invalid filters fall back to All and empty author search hides rows',async
   assert.equal(dom.window.document.querySelectorAll('#works-list > li.author-entry:not([hidden])').length,total);
   dom.window.close();
 });
-test('mobile primary nav stays available without hamburger discovery',()=>{
+test('phone Menu opens the primary nav; Escape and a tap outside close it (AGENTS rule 4)',()=>{
   const dom=mount(reader);const doc=dom.window.document;const toggle=doc.querySelector('.nav-toggle');
   const nav=doc.querySelector('#site-nav');
   assert.ok(nav);
   assert.ok(toggle);
+  assert.equal(toggle.textContent.trim(),'Menu','labelled Menu, not a bare icon');
   assert.equal(toggle.getAttribute('aria-expanded')||'false','false');
   assert.ok(doc.querySelectorAll('#site-nav a').length>=5);
+  const key=(k)=>doc.dispatchEvent(new dom.window.KeyboardEvent('keydown',{key:k,bubbles:true}));
+  toggle.click();
+  assert.ok(nav.classList.contains('is-open'));
+  assert.equal(toggle.getAttribute('aria-expanded'),'true');
+  nav.querySelector('a').focus();
+  key('Escape');
+  assert.ok(!nav.classList.contains('is-open'),'Escape closes the Menu');
+  assert.equal(toggle.getAttribute('aria-expanded'),'false');
+  assert.equal(doc.activeElement,toggle,'focus returns to Menu');
+  toggle.click();
+  assert.ok(nav.classList.contains('is-open'));
+  nav.querySelector('a').addEventListener('click',(e)=>e.preventDefault());
+  nav.querySelector('a').click();
+  assert.ok(nav.classList.contains('is-open'),'a tap inside the Menu keeps it open');
+  doc.querySelector('main, h1').click();
+  assert.ok(!nav.classList.contains('is-open'),'a tap outside closes the Menu');
+  assert.equal(toggle.getAttribute('aria-expanded'),'false');
   dom.window.close();
 });
 test('Contents jump target exists on reader pages',()=>{
@@ -112,7 +130,7 @@ test('author catalog loads the passage shards once',async()=>{
 test('library progress line on About matches pipeline counts', ()=>{
   const html=readFileSync(new URL('about/index.html',DIST),'utf8');
   const q=JSON.parse(readFileSync(new URL('data/progress.json',DIST),'utf8'));
-  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/about/'});
+  const dom=new JSDOM(html,{url:'https://viapatrum.org/about/'});
   const s=dom.window.document.querySelector('#explore-progress');assert.ok(s);
   assert.match(s.textContent,new RegExp(`${q.published_works} works live`));
   const fmt=n=>Number(n).toLocaleString("en-US");
@@ -123,7 +141,7 @@ test('library progress line on About matches pipeline counts', ()=>{
 
 test('home: favicon, today passage, deduped daily pool, one focus row, each link once', ()=>{
   const html=readFileSync(new URL('index.html',DIST),'utf8');
-  const dom=new JSDOM(html,{url:'https://fathers.saneapps.com/'});
+  const dom=new JSDOM(html,{url:'https://viapatrum.org/'});
   const doc=dom.window.document;
   assert.ok(doc.querySelector('link[rel="icon"]'),'favicon link present');
   assert.match(doc.querySelector('link[rel="icon"]').getAttribute('href'),/\/assets\/favicon\.svg/);
@@ -308,7 +326,7 @@ test('link hover system ships in built CSS', ()=>{
   assert.ok(!/scale\(/.test(css),'scale transform in CSS');
 });
 
-test('library pass: /downloads/ and Keep this book link only uploaded files (owner 2026-10-05)', ()=>{
+test('free library: /downloads/ and Keep this book link only uploaded files (owner 2026-10-22)', ()=>{
   let names;
   try { names=JSON.parse(readFileSync(new URL('data/library-files.json',DIST),'utf8')); } catch { return; } // no uploads yet: page not built
   const keys=Object.keys(names);
@@ -317,9 +335,23 @@ test('library pass: /downloads/ and Keep this book link only uploaded files (own
   const links=[...doc.querySelectorAll('a.dl-f, a.dl-b, a.keep-f')].map(a=>a.getAttribute('href'));
   assert.ok(links.length>0);
   for(const h of links){ assert.match(h,/^\/dl\//); assert.ok(names[h.slice(4)],'linked file is uploaded: '+h); }
-  assert.match(doc.querySelector('[data-buy]')?.getAttribute('href')||'',/^https:\/\/saneapps\.lemonsqueezy\.com\/checkout\/buy\//);
+  assert.equal(doc.querySelector('[data-buy], .lemonsqueezy-button, [data-open-key]'),null,'no checkout or key entry');
+  assert.ok(!/\$\d/.test(doc.querySelector('.dl-hero').textContent),'no price on the free shelf');
   assert.ok(doc.querySelector('script[src^="/assets/downloads.js"]'));
   assert.match(readFileSync(new URL('./generate_works_gate.py',import.meta.url),'utf8'),/"\/dl\/\*"/,'/dl/* is routed to functions');
+});
+
+test('scripture: no gift link beside licensed Bible text; YouVersion versions are wired (2026-10-22)', ()=>{
+  const doc=page('scripture/john/3/index.html');
+  assert.equal(doc.querySelector('a[href*="sponsors"]'),null,'no Sponsors link on a Scripture page');
+  assert.ok(page('about/index.html').querySelector('a[href*="sponsors"]'),'other pages keep the Sponsors link');
+  const tools=doc.querySelector('.bx-tools[data-yv-key]');
+  if(!tools) return; // built without the YouVersion key
+  assert.ok(doc.querySelector('button[data-tr="niv"][data-yv="111"]'),'NIV from YouVersion');
+  assert.equal(doc.querySelector('button[data-tr="niv"][data-remote]'),null,'NIV no longer from bolls.life');
+  assert.equal(doc.querySelector('.bx-text').dataset.usfm,'JHN');
+  const opts=[...doc.querySelectorAll('[data-tr-more] option[data-yv]')].map(o=>o.textContent);
+  assert.ok(opts.includes('NASB 1995')&&!opts.some(o=>/TPT|Passion/.test(o)),'More menu: established versions only');
 });
 
 test('scripture: only real chapters get pages; Greek Psalm numbers are refiled (audit 2026-10-06)', async ()=>{
@@ -406,7 +438,8 @@ test('status drops the zero part and the Writers heading follows writer matches'
   const author=doc(dom).querySelector('#works-list > li.author-entry').getAttribute('data-author');
   query(dom,author);await settle();await settle();
   assert.equal(doc(dom).querySelector('#writers-h').hidden,false);
-  query(dom,'zzzznonexistent');await settle();await settle();
+  // By meaning answers after a 600 ms pause (site.js): wait it out.
+  query(dom,'zzzznonexistent');await settle();await settle();await settle();
   assert.equal(doc(dom).querySelector('#writers-h').hidden,true);
   assert.equal(doc(dom).querySelector('#title-hits').hidden,true);
   assert.match(doc(dom).querySelector('#works-status').textContent,/^No works or passages match/);
@@ -484,6 +517,12 @@ test('ask: /ask/ page, home hero asks there, answer/thin/error states (owner 202
   dom=await open('grace',()=>({ok:false,status:502,json:async()=>({error:'x'})}));
   d=dom.window.document;
   assert.ok(d.querySelector('.ask-error a[href="/works/?q=grace"]'),'API down: fall back to the library search');
+  assert.doesNotMatch(d.querySelector('.ask-note').textContent,/paused/);
+  dom.window.close();
+  dom=await open('grace',()=>({ok:false,status:503,json:async()=>({error:'Search by meaning is paused',paused:true})}));
+  d=dom.window.document;
+  assert.match(d.querySelector('.ask-note').textContent,/Ask is paused for now/,'AI_OFF: says paused, not broken');
+  assert.ok(d.querySelector('.ask-error a[href="/works/?q=grace"]'),'paused: still links the library search');
   dom.window.close();
 });
 
@@ -506,4 +545,82 @@ test('word index finds what a text scan finds, without the text shards', async (
     assert.ok(!seen.some((u) => /\/data\/search\/\d/.test(u)), `${term} fetched a text shard`);
     dom.window.close();
   }
+});
+
+// Fixture mirrors scripture_verse_html + the desk in build_site.py (scripture_a11y_test.py checks that side).
+const bxFixture = `<!doctype html><html><body><main><div class="bx" data-bx><div class="bx-grid">
+<div class="bx-text" data-book="isaiah" data-chap="1"><p>
+<span class="v cited" id="v1" data-v="1" style="--heat:1"><sup>1</sup><span class="vt">This is the vision.</span><button type="button" class="v-open vh" data-v="1" aria-controls="desk">Verse 1: 2 passages in the Fathers</button></span>
+<span class="v" id="v2" data-v="2"><sup>2</sup><span class="vt">Listen, O heavens.</span></span>
+</p></div>
+<aside class="bx-desk" id="desk" aria-label="What the Fathers said">
+<p class="vh" role="status" id="desk-status"></p>
+<button type="button" class="desk-close" aria-label="Close">×</button>
+<section class="desk-home" data-for="chapter"><h2>Isaiah 1</h2>
+<ul class="desk-bars"><li><button type="button" class="desk-jump" data-v="1"><span class="ref">Isaiah 1:1</span><span class="bar"></span><span class="n">2<span class="vh"> passages</span></span></button></li></ul></section>
+<section class="desk-verse" data-for="1" hidden><h2>Isaiah 1:1</h2><p class="desk-count">2 passages in the Fathers, earliest first</p>
+<button type="button" class="desk-back">Back to the chapter</button></section>
+</aside></div></div></main></body></html>`;
+
+test('scripture: verse text stays readable; the opener is a real button; closing the desk returns focus (a11y 2026-10-23)', ()=>{
+  const dom=mount(bxFixture,'/scripture/isaiah/1/');const w=dom.window;const doc=w.document;
+  const verse=doc.querySelector('.v.cited');
+  assert.equal(verse.getAttribute('role'),null,'no role=button hiding the verse text');
+  assert.equal(verse.getAttribute('aria-label'),null,'no aria-label replacing the verse text');
+  assert.equal(doc.querySelector('.bx-desk').getAttribute('aria-live'),null,'the desk is not one big live region');
+  const open=verse.querySelector('button.v-open');
+  open.focus();open.click();
+  const sec=doc.querySelector('.desk-verse[data-for="1"]');
+  assert.equal(sec.hidden,false);
+  assert.equal(doc.activeElement,sec.querySelector('h2'),'keyboard open moves focus to the verse heading');
+  sec.querySelector('.desk-back').click();
+  assert.equal(sec.hidden,true);
+  assert.equal(doc.activeElement,open,'Back to the chapter returns focus to the verse');
+  open.click();
+  doc.activeElement.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+  assert.equal(sec.hidden,true);
+  assert.equal(doc.activeElement,open,'Escape returns focus to the verse');
+  verse.querySelector('.vt').click();
+  assert.equal(sec.hidden,false,'a mouse click on the verse still opens the desk');
+  assert.equal(doc.querySelector('#desk-status').textContent,'Isaiah 1:1, 2 passages in the Fathers, earliest first','one short status line when focus stays put');
+  doc.querySelector('.desk-close').click();
+  w.Element.prototype.scrollIntoView = () => {}; // the jump path scrolls; jsdom has no layout
+  const jump=doc.querySelector('.desk-jump');
+  jump.focus();jump.click();
+  assert.equal(sec.hidden,false);
+  assert.equal(doc.activeElement,sec.querySelector('h2'),'a Most cited jump hides its own list, so focus moves to the verse heading');
+  doc.querySelector('.desk-close').click();
+  assert.equal(doc.activeElement,open,'closing after a jump returns focus to the verse');
+  assert.equal(doc.querySelector('#desk-status').textContent,'');
+  w.history.replaceState(null,'','#v1');w.dispatchEvent(new w.HashChangeEvent('hashchange'));
+  assert.equal(sec.hidden,false,'a #v link opens the desk');
+  assert.equal(doc.querySelector('#desk-status').textContent,'','opening from the address bar says nothing extra');
+  doc.querySelector('.desk-close').click();
+  assert.match(doc.querySelector('.desk-jump').textContent,/2 passages$/,'the count says what it counts');
+  dom.window.close();
+});
+
+test('home: a quote that opens or ends with its own quote mark gets no second one (a11y 2026-10-23)', async ()=>{
+  const html=`<!doctype html><html><body><div class="vp-today-card" data-daily>
+<blockquote class="vp-quote"><p><span class="vp-qm">&ldquo;</span><span class="vp-daily-q">x</span><span class="vp-qm">&rdquo;</span></p></blockquote>
+<div class="vp-sc" data-daily-sc><blockquote class="vp-quote vp-sc-q"><p><span class="vp-qm">&ldquo;</span><span class="vp-sc-v">y</span><span class="vp-qm">&rdquo;</span></p></blockquote>
+<span class="vp-sc-r"></span><span class="vp-sc-ch"></span><a class="vp-sc-h" href="/scripture/"></a></div></div></body></html>`;
+  const row={q:'Plain words of a Father.',a:'A',d:'d',c:'c',h:'/e/x/',t:'t',th:'/topics/t/',sv:'\u201cWhat good to Me is your multitude of sacrifices?',sr:'Isaiah 1:11',sch:'Isaiah 1',sh:'/scripture/isaiah/1/#v11'};
+  const rows=Array.from({length:7},()=>row);
+  const dom=mount(html,'/',async()=>({ok:true,json:async()=>rows}));
+  await settle();
+  const doc=dom.window.document;
+  const marks=(sel)=>[...doc.querySelector(sel).parentElement.querySelectorAll('.vp-qm')].map(m=>m.hidden);
+  assert.equal(doc.querySelector('.vp-sc-v').textContent,row.sv);
+  assert.deepEqual(marks('.vp-sc-v'),[true,true],'verse with its own opening quote: outer marks hidden');
+  assert.deepEqual(marks('.vp-daily-q'),[false,false],'plain passage keeps its marks');
+  dom.window.close();
+  const closing={...row,q:'And He said, \u201cDo this in remembrance of Me.\u201d',sv:'It is written: \u201cAs surely as I live.\u201d'};
+  const dom2=mount(html,'/',async()=>({ok:true,json:async()=>Array.from({length:7},()=>closing)}));
+  await settle();
+  const doc2=dom2.window.document;
+  const marks2=(sel)=>[...doc2.querySelector(sel).parentElement.querySelectorAll('.vp-qm')].map(m=>m.hidden);
+  assert.deepEqual(marks2('.vp-daily-q'),[true,true],'passage that ends with its own closing quote: outer marks hidden');
+  assert.deepEqual(marks2('.vp-sc-v'),[true,true],'verse that ends with its own closing quote: outer marks hidden');
+  dom2.window.close();
 });

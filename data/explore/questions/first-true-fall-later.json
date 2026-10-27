@@ -44,7 +44,9 @@
     {
       "text": "The Reformers said the Church had always existed but had grown corrupt. Later restorationist movements said it fell away entirely and had to be restored.",
       "cites": [
-        "westminster-1646-25-5"
+        "westminster-1646-25-5",
+        "joseph-smith-history-1-19",
+        "alexander-campbell-christian-system-preface"
       ]
     }
   ],
@@ -67,6 +69,27 @@
       "source": {
         "book": "eusebius-church-history",
         "section": "3.32"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "irenaeus-ah-3-4-1",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.4.1",
+      "lang": "la",
+      "answer": "continuous",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What if the apostles had not even left us Scriptures? Would we not have had to follow the order of the tradition they handed on to those to whom they entrusted the churches? Many barbarian peoples who believe in Christ assent to this order. They have salvation written in their hearts by the Spirit without paper or ink, and carefully keep the ancient tradition, believing in one God, maker of heaven and earth.",
+      "original": "Quid autem si neque Apostoli quidem Scripturas reliquissent nobis, nonne oportebat ordinem sequi traditionis, quam tradiderunt iis quibus committebant ecclesias? Cui ordinationi assentiunt multae gentes barbarorum eorum qui in Christum credunt, sine charta vel atramento scriptam habentes per Spiritum in cordibus suis salutem, et veterem traditionem diligenter custodientes, in unum Deum credentes fabricatorem caeli et terrae",
+      "context": "For Irenaeus the apostles' teaching was never lost and never needed restoring: it was handed on publicly to the churches they founded and kept there, so that even peoples who had no writings held it whole. The passage survives in the ancient Latin translation; the Greek of Book 3 is lost here.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Book 3.4.1 (Latin)"
       },
       "translation": "dossier"
     },
@@ -111,34 +134,51 @@
         "edition": "Orthodox Presbyterian Church text"
       },
       "translation": "published"
-    }
-  ],
-  "gaps": [
+    },
     {
+      "id": "joseph-smith-history-1-19",
       "author": "Joseph Smith",
-      "work": "History (Times and Seasons, 1842), 1:19",
       "year": 1838,
-      "why": "The Latter-day Saint view of a general apostasy, in its public-domain first printing.",
-      "action": "intake",
-      "source_hint": "Times and Seasons 3 (1842), archive.org"
+      "date": "written 1838, printed 1842",
+      "work": "History",
+      "locus": "1:19",
+      "lang": "en",
+      "answer": "fell",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I was answered that I must join none of them ... were all wrong ... abomination in his sight ... were all corrupt",
+      "original": "I was answered that I must join none of them ... were all wrong ... abomination in his sight ... were all corrupt",
+      "context": "Smith's account of his 1820 vision, written in 1838 and first printed here; it is the founding Latter-day Saint claim of a general apostasy. The 1842 printing survives in a rough scan with interleaved columns, so the quotation is given in the cleanest verified spans.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-TimesAndSeasonsVol3.txt",
+        "edition": "Times and Seasons 3, no. 9 (1 March 1842)"
+      },
+      "translation": "published"
     },
     {
+      "id": "alexander-campbell-christian-system-preface",
       "author": "Alexander Campbell",
-      "work": "The Christian System",
       "year": 1839,
-      "why": "The Restoration Movement's case for returning to the primitive church.",
-      "action": "intake",
-      "source_hint": "archive.org (1839 edition)"
-    },
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 3.4.1",
-      "year": 180,
-      "why": "If the apostles had left no writings, we would follow the tradition they handed to the churches.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
+      "date": "1839",
+      "work": "The Christian System",
+      "locus": "Preface",
+      "lang": "en",
+      "answer": "fell",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Since the full development of the great apostacy foretold by Prophets and Apostles, numerous attempts at reformation have been made. ... Since that time, the first effort known to us to abandon the whole controversy about creeds and reformations, and to restore primitive Christianity, or to build alone upon the Apostles and Prophets, Jesus Christ himself the chief corner, has been made.",
+      "original": "Since the full development of the great apostacy foretold by Prophets and Apostles, numerous attempts at reformation have been made. ... Since that time, the first effort known to us to abandon the whole controversy about creeds and reformations, and to restore primitive Christianity, or to build alone upon the Apostles and Prophets, Jesus Christ himself the chief corner, has been made.",
+      "context": "The Preface sets out the Restoration Movement's programme: a great apostacy had occurred, and primitive Christianity was to be restored. Campbell's remedy was union of Christians by restoring the primitive order of the New Testament church, not founding a new sect.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-christiansystem010camp.txt",
+        "edition": "The Christian System (2nd edition, 1839)"
+      },
+      "translation": "published"
     }
   ],
+  "gaps": [],
   "related": {
     "topics": [
       "apostolic-tradition"

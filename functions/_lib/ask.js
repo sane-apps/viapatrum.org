@@ -250,3 +250,42 @@ export function selectAnswer(cands, scores, opts = {}) {
     })),
   };
 }
+
+// --- Timeline topics ---------------------------------------------------------
+
+export const TOPIC_LIMIT = 3;
+
+/**
+ * Timeline topics matching a question, best first, at most TOPIC_LIMIT.
+ * `topics` rows come from /data/ask-topics.json (scripts/ask_page.py builds
+ * it from data/explore/questions/*.json): {question, short, href, also},
+ * where `also` is the dossier's own curated search phrases. A topic matches
+ * when the question is one of its phrases (or the topic's own question), or
+ * when enough of the question's content words appear in the topic's words.
+ * Pure, like the rest of this file, so scripts/ask.test.mjs can test it.
+ */
+export function matchTopics(q, topics) {
+  const nq = normaliseQuestion(q);
+  if (!nq || !Array.isArray(topics)) return [];
+  const qt = queryTerms(q);
+  const scored = [];
+  for (const t of topics) {
+    if (!t || !t.question || !t.href) continue;
+    const phrases = [...(t.also || []), t.short || "", t.question].map((x) => normaliseQuestion(x));
+    const phraseHit = phrases.includes(nq);
+    const inQuestion = new Set(terms(`${t.question} ${t.short || ""}`));
+    const inAll = new Set(terms([t.question, t.short || "", ...(t.also || [])].join(" ")));
+    const hitQ = qt.filter((w) => inQuestion.has(w)).length;
+    const hit = qt.filter((w) => inAll.has(w)).length;
+    const frac = qt.length ? hit / qt.length : 0;
+    if (!phraseHit && !(hit >= 2 && frac >= 0.5) && !(hit >= 1 && frac === 1)) continue;
+    scored.push({
+      question: t.question,
+      short: t.short || "",
+      href: t.href,
+      rank: (phraseHit ? 4 : 0) + hitQ * 2 + hit + frac,
+    });
+  }
+  scored.sort((a, b) => b.rank - a.rank || a.question.localeCompare(b.question));
+  return scored.slice(0, TOPIC_LIMIT).map(({ question, short, href }) => ({ question, short, href }));
+}

@@ -146,6 +146,27 @@
       "translation": "dossier"
     },
     {
+      "id": "hermas-vision-2-4-presbyters",
+      "author": "Shepherd of Hermas",
+      "year": 140,
+      "date": "c. 140",
+      "work": "Shepherd of Hermas",
+      "locus": "Vision 2.4.3",
+      "lang": "grc",
+      "answer": "two",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "You will write two little books and send one to Clement and one to Grapte. Clement will send his to the cities abroad, for that has been entrusted to him; Grapte will instruct the widows and orphans. And you shall read yours to this city, with the presbyters who preside over the church.",
+      "original": "γράψεις οὖν δύο βιβλαρίδια καὶ πέμψεις ἓν Κλήμεντι καὶ ἓν Γραπτῇ. πέμψει οὖν Κλήμης εἰς τὰς ἔξω πόλεις, ἐκείνῳ γὰρ ἐπιτέτραπται· Γραπτὴ δὲ νουθετήσει τὰς χήρας καὶ τοὺς ὀρφανούς. σὺ δὲ ἀναγνώσῃ εἰς ταύτην τὴν πόλιν μετὰ τῶν πρεσβυτέρων τῶν προϊσταμένων τῆς ἐκκλησίας.",
+      "context": "At Rome the church is led by the plural presbyters who preside over it; no single bishop of the city appears in the Vision. In Vision 3.9.7 the same leaders are addressed as those who lead the church and love the first seats (τοῖς προηγουμένοις τῆς ἐκκλησίας καὶ τοῖς πρωτοκαθεδρίταις). The library's Hermas is the Greek text.",
+      "source": {
+        "book": "hermas-shepherd",
+        "section": "2"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "bcp-1662-ordinal",
       "author": "Church of England",
       "year": 1662,
@@ -217,14 +238,6 @@
       "why": "\"A presbyter is the same as a bishop\": the patristic text the Reformed cited.",
       "action": "intake",
       "source_hint": "Hilberg, CSEL 56 (1918); Migne PL 26"
-    },
-    {
-      "author": "Hermas",
-      "work": "Vision 2.4.3; 3.9.7",
-      "year": 140,
-      "why": "Rome governed by \"the presbyters who preside over the church\".",
-      "action": "search",
-      "source_hint": "hermas-shepherd"
     }
   ],
   "related": {

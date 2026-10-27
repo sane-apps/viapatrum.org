@@ -1,7 +1,8 @@
 /* Ask page (scripts/ask_page.py): sends the question to /api/ask and draws the
    answer, the writers' own sentences, then the passages. States: empty (no
    question), loading, answer, thin (the library is thin here), nothing found,
-   and error (the API is down: link to the library search instead). */
+   error (the API is down: link to the library search instead), and paused
+   (the server's AI_OFF switch: the same link, with a note that it is paused). */
 (function () {
   var page = document.querySelector(".ask-page");
   if (!page) return;
@@ -57,16 +58,34 @@
       '<ol class="ask-plist">' + rows + "</ol></section>";
   }
 
+  // Timeline topics that match the question (from /api/ask): shown first,
+  // above the answer and the passages.
+  function topicsBlock(data) {
+    var ts = data.topics || [];
+    if (!ts.length) return "";
+    var items = ts.map(function (t) {
+      return '<li><a href="' + href(t.href) + '"><strong>' + esc(t.question) + '</strong><span class="go">Timeline topic \u2192</span></a></li>';
+    }).join("");
+    return '<section class="ask-topics" aria-labelledby="ask-tl"><h2 id="ask-tl" class="vp-section-label" tabindex="-1">On the Timeline</h2>' +
+      '<ul class="ask-tlist">' + items + "</ul></section>";
+  }
+
   function render(q, data) {
     var p = data.passages || [];
     data.passages = p;
     data.answer = data.answer || [];
+    var topics = topicsBlock(data);
     if (!p.length) {
+      if (topics) {
+        out.innerHTML = topics + '<section class="ask-none"><p class="ask-note">We found no passages for that question yet. Try other words, or search the whole library.</p>' +
+          libraryLink(q, "Search the library for \u201c" + q + "\u201d \u2192") + "</section>";
+        return "Timeline topic found. No passages found yet.";
+      }
       out.innerHTML = '<section class="ask-none"><p class="ask-note">We found no passages for that question yet. Try other words, or search the whole library.</p>' +
         libraryLink(q, "Search the library for “" + q + "” →") + "</section>";
       return "No passages found yet.";
     }
-    var html = "";
+    var html = topics;
     if (data.mode === "answer" && data.answer.length) {
       html += quotes(data);
     } else {
@@ -95,7 +114,11 @@
     out.innerHTML = '<p class="ask-loading">Finding what the writers say…</p>';
     status.textContent = "Finding what the writers say.";
     fetch("/api/ask?q=" + encodeURIComponent(q))
-      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (r) {
+        if (r.status === 503) return r.json().catch(function () { return {}; }).then(function (d) { if (d && d.paused) throw "paused"; throw new Error("HTTP 503"); });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      })
       .then(function (data) {
         if (mine !== seq) return;
         if (!data || data.error) throw new Error((data && data.error) || "no answer");
@@ -104,12 +127,14 @@
         var head = out.querySelector("h2[tabindex]");
         if (moveFocus && head) head.focus({ preventScroll: false });
       })
-      .catch(function () {
+      .catch(function (e) {
         if (mine !== seq) return;
-        out.innerHTML = '<section class="ask-error"><p class="ask-note">Ask is not answering right now. The library search still works.</p>' +
+        // AI_OFF on the server: say it is paused, not broken.
+        var note = e === "paused" ? "Ask is paused for now. The library search still works." : "Ask is not answering right now. The library search still works.";
+        out.innerHTML = '<section class="ask-error"><p class="ask-note">' + note + "</p>" +
           libraryLink(q, "Search the library for “" + q + "” →") + "</section>";
         out.setAttribute("aria-busy", "false");
-        status.textContent = "Ask is not answering right now. A link to the library search is shown.";
+        status.textContent = (e === "paused" ? "Ask is paused for now." : "Ask is not answering right now.") + " A link to the library search is shown.";
       });
   }
 

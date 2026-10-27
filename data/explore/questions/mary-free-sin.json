@@ -35,15 +35,17 @@
   ],
   "overview": [
     {
-      "text": "Several early writers speak of Mary's faults: Tertullian counts her among the unbelieving relatives, and Chrysostom speaks of vainglory and asking at the wrong time.",
+      "text": "Several early writers speak of Mary's faults: Tertullian counts her among the unbelieving relatives, Origen reads Simeon's sword as Mary herself scandalized at the Passion, and Chrysostom speaks of vainglory and asking at the wrong time.",
       "cites": [
         "tertullian-flesh-of-christ-7",
+        "origen-luke-homily-17",
         "chrysostom-matthew-homily-44"
       ]
     },
     {
-      "text": "Augustine, against Pelagius, excepted Mary alone from any talk of sin, for the Lord's honor. That became the common view, East and West.",
+      "text": "Long before, Irenaeus had set Mary against Eve: what the virgin Eve bound by unbelief, the virgin Mary loosed by faith. Augustine, against Pelagius, excepted Mary alone from any talk of sin, for the Lord's honor. That became the common view, East and West.",
       "cites": [
+        "irenaeus-ah-3-22-4",
         "augustine-nature-and-grace-36-42",
         "trent-1547-canon-23-mary",
         "dositheus-1672-decree-6"
@@ -57,6 +59,28 @@
     }
   ],
   "quotes": [
+    {
+      "id": "irenaeus-ah-3-22-4",
+      "author": "Irenaeus of Lyons",
+      "year": 180,
+      "date": "c. 180",
+      "work": "Against Heresies",
+      "locus": "3.22.4",
+      "lang": "la",
+      "answer": "sinless",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For what the virgin Eve bound by unbelief, the virgin Mary loosed by faith.",
+      "original": "Quod enim alligavit virgo Eva per incredulitatem, hoc virgo Maria solvit per fidem.",
+      "context": "The sentence before this one says that the knot of Eve's disobedience was loosed by Mary's obedience: Eve, seduced, became the cause of death for the whole race, and Mary, believing the angel, became the cause of salvation. It is the earliest statement of Mary as the new Eve. This part of Against Heresies survives in its ancient Latin translation.",
+      "source": {
+        "witness": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt",
+        "edition": "Harvey (1857), vol. 2, Latin",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
     {
       "id": "tertullian-flesh-of-christ-7",
       "author": "Tertullian",
@@ -75,6 +99,28 @@
       "source": {
         "book": "tertullian-on-the-flesh-of-christ",
         "section": "7"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-luke-homily-17",
+      "author": "Origen of Alexandria",
+      "year": 233,
+      "date": "c. 233",
+      "work": "Homilies on Luke",
+      "locus": "17.6–7",
+      "lang": "la",
+      "answer": "faults",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What are we to think? When the apostles were scandalized, was the mother of the Lord free from scandal? If she did not suffer scandal in the Lord's Passion, Jesus did not die for her sins. ... Yes, Mary too was scandalized at that time. ... The sword of unbelief will pass through you, and you will be struck by the blade of doubt.",
+      "original": "Quid putamus, quod scandalizatis apostolis mater Domini a scandalo fuerit immunis? Si scandalum in Domini passione non passa est, non est mortuus Jesus pro peccatis ejus. ... utique et Maria illo tempore scandalizata est. ... pertransibit infidelitatis gladius, et ambiguitatis mucrone ferieris",
+      "context": "On Luke 2:35, Simeon's sword. Origen argues from the Lord's word that all would be scandalized that night, Peter included, and from Romans 3:23, quoted in the homily, that all sinned and need God's glory: Mary, he says, was scandalized at the cross, and the sword that pierced her soul was unbelief and doubt. The homilies survive in Jerome's Latin translation; a Greek fragment of this passage also survives.",
+      "source": {
+        "witness": "books/origen-luke-homilies/sources/witnesses/lommatzsch-t5-1835_djvu.txt",
+        "edition": "Lommatzsch, Origenis opera omnia, vol. 5 (1835), Homily 17",
+        "ia": "origenous-ta-heuriskomena-panta-t.-5-1835"
       },
       "translation": "dossier"
     },
@@ -188,28 +234,12 @@
   ],
   "gaps": [
     {
-      "author": "Origen of Alexandria",
-      "work": "Homilies on Luke 17.6–7",
-      "year": 233,
-      "why": "Simeon's sword as Mary's doubt at the cross. In the library's Luke witnesses.",
-      "action": "search",
-      "source_hint": "books/origen-luke-homilies/sources/witnesses/rauer-gcs49-1930_djvu.txt"
-    },
-    {
       "author": "Ephrem the Syrian",
       "work": "Carmina Nisibena 27.8",
       "year": 360,
       "why": "\"You and your mother alone are wholly beautiful; no stain is in you.\" Syriac.",
       "action": "intake",
       "source_hint": "Bickell, Carmina Nisibena (1866)"
-    },
-    {
-      "author": "Irenaeus of Lyons",
-      "work": "Against Heresies 3.22.4",
-      "year": 180,
-      "why": "Mary as the new Eve, whose obedience untied Eve's knot.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/irenaeus_ah_harvey1857_vol2_bsb10606565_djvu.txt"
     }
   ],
   "related": {
@@ -220,7 +250,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

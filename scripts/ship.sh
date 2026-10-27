@@ -414,9 +414,9 @@ rollback_hint() {
 }
 
 downloads_guard() {
-  # The paid library: without a cookie, /dl/<file> must send people to
-  # /downloads/ (302) and /api/library/status must say locked. A 404 means the
-  # Function is not routed (paying readers blocked); a 200 or 206 is a leak.
+  # The free library (2026-10-22): without any cookie, HEAD /dl/<file> must be
+  # 200 with an attachment header. A 404 means the Function is not routed; a
+  # 302 means the old pass gate is still live.
   local lib="$STAGE/data/library-files.json"
   if [[ ! -f "$lib" ]]; then
     echo "  (no data/library-files.json in this build; downloads guard skipped)"
@@ -428,25 +428,22 @@ downloads_guard() {
     echo "  (library-files.json is empty; downloads guard skipped)"
     return 0
   fi
-  local ok=0 dl="" status=""
+  local ok=0 head=""
   for _ in $(seq 1 20); do
-    dl="$(curl --connect-timeout 5 --max-time 15 -sS -o /dev/null -w '%{http_code} %{redirect_url}' "${PUBLIC_ORIGIN}/dl/${key}" || echo 000)"
-    status="$(curl --connect-timeout 5 --max-time 15 -sS "${PUBLIC_ORIGIN}/api/library/status" || true)"
-    if [[ "$dl" == "302 "*"/downloads/?need="* ]] && python3 -c '
-import json, sys
-sys.exit(0 if json.loads(sys.stdin.read()).get("unlocked") is False else 1)' <<<"$status" 2>/dev/null; then
+    head="$(curl --connect-timeout 5 --max-time 15 -sS -I "${PUBLIC_ORIGIN}/dl/${key}" || echo 000)"
+    if grep -qE '^HTTP/[0-9.]+ 200' <<<"$head" && grep -qi '^content-disposition: attachment' <<<"$head"; then
       ok=1
       break
     fi
     sleep 2
   done
   if [[ "$ok" -ne 1 ]]; then
-    status="$(printf '%s' "$status" | tr -s '\n\t ' ' ' | cut -c1-160)"
-    echo "BLOCKED: paid downloads guard failed: GET /dl/${key} with no cookie -> '${dl}' (want 302 to /downloads/?need=); /api/library/status -> '${status}' (want unlocked:false)." >&2
+    head="$(printf '%s' "$head" | head -1 | tr -d '\r')"
+    echo "BLOCKED: free downloads guard failed: HEAD /dl/${key} with no cookie -> '${head}' (want 200 attachment)." >&2
     rollback_hint
     exit 1
   fi
-  echo "  OK /dl/${key} without a cookie -> 302 /downloads/; /api/library/status locked"
+  echo "  OK /dl/${key} without a cookie -> 200 attachment"
 }
 
 save_last_shipped() {  # $1 = epoch the injected audio was cut at
@@ -513,13 +510,21 @@ deploy_and_verify() {  # $1 = audio cut epoch for the shipped-site receipt
 
   step "Cloudflare Pages deploy (${PAGES_PROJECT})"
   DEPLOY_LOG="$(mktemp /tmp/fathers-ship-deploy.XXXXXX)"
+  # A deploy is safe to repeat: Pages skips files it already holds by hash.
+  # Up to 3 tries 30 s apart for network blips (2026-10-23: "getaddrinfo
+  # ENOTFOUND api.cloudflare.com" halfway through, then "fetch failed").
   set +e
-  bounded 1800 npx --yes "$WRANGLER" pages deploy "$STAGE" \
-    --project-name "$PAGES_PROJECT" \
-    --commit-dirty=true \
-    --cwd "$ROOT" \
-    2>&1 9>&- | tee "$DEPLOY_LOG"
-  DEPLOY_RC=${PIPESTATUS[0]}
+  for DEPLOY_TRY in 1 2 3; do
+    bounded 1800 npx --yes "$WRANGLER" pages deploy "$STAGE" \
+      --project-name "$PAGES_PROJECT" \
+      --commit-dirty=true \
+      --cwd "$ROOT" \
+      2>&1 9>&- | tee "$DEPLOY_LOG"
+    DEPLOY_RC=${PIPESTATUS[0]}
+    [[ "$DEPLOY_RC" -eq 0 || "$DEPLOY_RC" -eq 124 || "$DEPLOY_TRY" -eq 3 ]] && break
+    echo "WARN: wrangler deploy failed (rc=${DEPLOY_RC}, try ${DEPLOY_TRY} of 3); retrying in 30 s" >&2
+    sleep 30
+  done
   set -e
   if [[ "$DEPLOY_RC" -ne 0 ]]; then
     [[ "$DEPLOY_RC" -eq 124 ]] && echo "BLOCKED: wrangler deploy hit the 30 min limit" >&2
@@ -601,7 +606,7 @@ PY
     echo "  OK held probe /works/${held_probe}/ → 404"
   fi
 
-  step "Paid downloads guard (/dl/, /api/library)"
+  step "Free downloads guard (/dl/)"
   downloads_guard
 
   step "Verify live catalogue bytes and withdrawn routes"
@@ -845,7 +850,9 @@ if [[ "$SKIP_BUILD" -eq 0 ]]; then
   # them in, then point each page at its card with ?v=<hash> so X and iMessage
   # drop old cached images.
   PATH="/opt/homebrew/opt/node@24/bin:$PATH" nice -n 10 node "$ROOT/scripts/make_og_cards.cjs" || echo "WARN: share cards not redrawn"
-  rsync -a "$ROOT/assets/og/" "$ROOT/dist/assets/og/"
+  # --delete: dist/assets/og is only a copy, and cards that make_og_cards just
+  # retired (held or withdrawn works) must not stay in the deploy.
+  rsync -a --delete "$ROOT/assets/og/" "$ROOT/dist/assets/og/"
   "$PYTHON" "$ROOT/scripts/og_apply.py"
 
   step "Read-along audio"
@@ -869,6 +876,7 @@ step "UI, read-along and visual-gate tests"
 "$PYTHON" "$ROOT/scripts/builder_gate_test.py" PublicationProcessTest
 node --test "$ROOT/scripts/ui.test.mjs"
 node --test "$ROOT/scripts/readalong.test.mjs"
+node --test "$ROOT/scripts/human_check.test.mjs"
 node --test "$ROOT/scripts/check_visual_gate.test.cjs"
 
 step "Check all local links and reader anchors"

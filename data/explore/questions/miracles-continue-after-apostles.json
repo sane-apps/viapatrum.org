@@ -108,6 +108,27 @@
       "translation": "dossier"
     },
     {
+      "id": "gregory-nyssa-vita-thaumaturgi-17",
+      "author": "Gregory of Nyssa",
+      "year": 380,
+      "date": "c. 380",
+      "work": "Life of Gregory the Wonderworker",
+      "locus": "17 (PG 46.932–933)",
+      "lang": "grc",
+      "answer": "continue",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "For immediately, not long after, the staff, rooted into the banks, became a tree. ... Such was the power of Gregory the Great, or rather of God working the wonders in him.",
+      "original": "Εὐθὺς γὰρ οὐ μετὰ πολὺν χρόνον ἡ μὲν βακτηρία, ταῖς ὄχθαις ἐῤῥιζωθεῖσα, δένδρον ἐγένετο. ... Τοιαύτη τοῦ μεγάλου Γρηγορίου ἡ δύναμις, μᾶλλον δὲ τοῦ Θεοῦ τοῦ ἐνεργοῦντος ἐν ἐκείνῳ τὰ θαύματα.",
+      "context": "Gregory the Wonderworker (c. 213 to c. 270), bishop of Neocaesarea a century after the apostles, prays at the flooding river Lycus and plants his staff on the bank; it grows into a tree which, Gregory of Nyssa says, still turns the river back in flood. The Life presents his wonders, the dried lake, the moved rock and this river among them, as God's power working in a post-apostolic bishop.",
+      "source": {
+        "book": "gregory-nyssa-vita-gregorii-thaumaturgi",
+        "section": "17"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "chrysostom-1-corinthians-homily-29-b",
       "author": "John Chrysostom",
       "year": 392,
@@ -137,14 +158,6 @@
       "why": "His change of mind on present miracles.",
       "action": "intake",
       "source_hint": "Dombart (Teubner); Migne PL 32"
-    },
-    {
-      "author": "Gregory of Nyssa",
-      "work": "Life of Gregory the Wonderworker",
-      "year": 380,
-      "why": "The great third-century wonderworker. In the library; to be added.",
-      "action": "search",
-      "source_hint": "gregory-nyssa-vita-gregorii-thaumaturgi"
     },
     {
       "author": "Athanasius",

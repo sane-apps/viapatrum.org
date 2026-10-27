@@ -110,6 +110,27 @@
       "translation": "dossier"
     },
     {
+      "id": "tertullian-apology-30-4",
+      "author": "Tertullian",
+      "year": 197,
+      "date": "c. 197",
+      "work": "Apology",
+      "locus": "30.4",
+      "lang": "la",
+      "answer": "honor",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "We, the Christians, look upward with hands outstretched, because they are innocent, with head bare, because we are not ashamed, and lastly without a prompter, because we pray from the heart; we are always praying for all the emperors: long life for them, a secure empire, a safe household, brave armies, a faithful senate, an upright people, a quiet world, and whatever else a man and a Caesar would wish.",
+      "original": "Illuc suspicientes Christiani manibus expansis, quia innocuis, capite nudo, quia non erubescimus, denique sine monitore, quia de pectore oramus, precantes sumus semper pro omnibus imperatoribus vitam illis prolixam, imperium securum, domum tutam, exercitus fortes, senatum fidelem, populum probum, orbem quietum, quaecumque hominis et Caesaris vota sunt.",
+      "context": "In the defence against the charge of treason (Apology 30 to 33): Christians will not sacrifice to the emperors, but they pray to the true God for them, and swear by their safety rather than by their genii. Read from The Latin Library text, as elsewhere in this dossier.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt",
+        "edition": "The Latin Library text"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "tertullian-to-scapula-2",
       "author": "Tertullian",
       "year": 212,
@@ -181,14 +202,6 @@
       "why": "\"I do not recognize the empire of this world.\" The oldest Latin Christian text.",
       "action": "intake",
       "source_hint": "Robinson, Texts and Studies 1.2 (1891)"
-    },
-    {
-      "author": "Tertullian",
-      "work": "Apology 30–33",
-      "year": 197,
-      "why": "Christians pray for the emperors' long life and secure empire. In the fetched Apology.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/url-tertullian-apology.txt"
     }
   ],
   "related": {

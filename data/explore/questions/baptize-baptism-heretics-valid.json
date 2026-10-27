@@ -141,6 +141,48 @@
       "translation": "dossier"
     },
     {
+      "id": "anonymous-on-rebaptism-10",
+      "author": "Anonymous",
+      "year": 256,
+      "date": "c. 256",
+      "work": "On Rebaptism",
+      "locus": "10",
+      "lang": "la",
+      "answer": "valid",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Therefore help should be given to those who repent and are corrected by the teaching of the truth and by their own faith, which was afterwards set right and their heart purified, only by the baptism of the Spirit, that is, by the laying on of the bishop's hand and the giving of the Holy Spirit.",
+      "original": "idcircoque paenitentiam agentibus correctisque per doctrinam ueritatis et per fidem ipsorum, quae postea emendata est purificato corde eorum, tantummodo baptismate spiritali id est manus impositione episcopi et spiritus sancti subministratione subueniri debeat.",
+      "context": "The anonymous author, answering Cyprian in the rebaptism controversy, defends the old custom: a baptism in the name of Jesus, though given in heresy, is not repeated; what the returning heretic still lacks is the Spirit, given by the bishop's hand. The work circulated with Cyprian's writings and is ascribed to him in the manuscripts.",
+      "source": {
+        "book": "pseudo-cyprian-on-rebaptism",
+        "section": "10"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "firmilian-cyprian-letter-75-8",
+      "author": "Firmilian of Caesarea",
+      "year": 256,
+      "date": "c. 256",
+      "work": "Letter to Cyprian (Letter 75 among Cyprian's letters)",
+      "locus": "75.8",
+      "lang": "la",
+      "answer": "rebaptize",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Since Stephen and those who agree with him claim that forgiveness of sins and a second birth can proceed through heretics' baptism, among whom even they confess the Holy Spirit is not, let them consider and understand that a spiritual birth cannot be without the Spirit. ... What then of this: when we see that Paul baptized his disciples again with a spiritual baptism after John's baptism, do we hesitate to baptize those who come to the Church from heresy after their unlawful and profane dipping?",
+      "original": "Et quoniam Stephanus et qui illi consentiunt contendunt dimissionem peccatorum et secundam natiuitatem in haereticorum baptisma posse procedere, apud quos etiam ipsi confitentur spiritum sanctum non esse, considerent et intellegant spiritalem natiuitatem sine spiritu esse non posse ... quale est autem ut cum Paulum post Iohannis baptisma iterato discipulos suos baptizasse uideamus, nos eos qui ab haeresi ad ecclesiam ueniunt post inlicitam et profanam eorum tinctionem baptizare dubitemus?",
+      "context": "Firmilian, bishop of Caesarea in Cappadocia, writes to Cyprian in full agreement with the African council of 256: heretical baptism is no baptism, so those who come from heresy are to be baptized. His letter survives as Letter 75 in Cyprian's collection.",
+      "source": {
+        "book": "cyprian-letters",
+        "section": "75.8"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "augustine-on-baptism-4-24",
       "author": "Augustine of Hippo",
       "year": 400,
@@ -170,22 +212,6 @@
       "why": "Converts are asked the creed; if baptized in the Trinity they receive only the laying on of hands.",
       "action": "intake",
       "source_hint": "Munier, CCSL 148 (copyright) as note; Bruns (1839)"
-    },
-    {
-      "author": "Anonymous",
-      "work": "On Rebaptism",
-      "year": 256,
-      "why": "A contemporary answer to Cyprian. In the library as pseudo-cyprian-on-rebaptism.",
-      "action": "search",
-      "source_hint": "pseudo-cyprian-on-rebaptism"
-    },
-    {
-      "author": "Firmilian of Caesarea",
-      "work": "Letter 75, in Cyprian's letters",
-      "year": 256,
-      "why": "The Eastern bishop who sided with Cyprian.",
-      "action": "search",
-      "source_hint": "cyprian-letters 75"
     }
   ],
   "related": {

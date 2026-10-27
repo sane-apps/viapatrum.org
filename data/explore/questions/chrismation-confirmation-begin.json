@@ -119,6 +119,28 @@
       "translation": "dossier"
     },
     {
+      "id": "innocent-i-decentius-3",
+      "author": "Innocent I",
+      "year": 416,
+      "date": "416",
+      "work": "Letter to Decentius (Epistle 25)",
+      "locus": "3",
+      "lang": "la",
+      "answer": "sacrament",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "But that infants are to be sealed, it is manifest, may be done by none other than the bishop. For presbyters, though they are second priests, do not have the summit of the priesthood. That this office belongs to bishops alone, either to seal or to give the Paraclete Spirit, not only ecclesiastical custom shows, but also that reading of the Acts of the Apostles which asserts that Peter and John were sent to give the Holy Spirit to those already baptized. ... For it is permitted to presbyters, whether apart from the bishop or in the bishop's presence, when they baptize, to anoint the baptized with chrism, but with chrism that has been consecrated by the bishop; not however to sign the forehead with the same oil, which is owed to bishops alone, when they give the Paraclete Spirit.",
+      "original": "De consignandis vero infantibus manifestum est non ab alio quam ab episcopo fieri licere. Nam presbyteri, licet secundi sint sacerdotes, pontificatus tamen apicem non habent. Hoc autem pontificium solis deberi episcopis, ut vel consignent, vel Paracletum Spiritum tradant, non solum consuetudo ecclesiastica demonstrat, verum et illa lectio Actuum Apostolorum, quae asserit Petrum et Ioannem esse directos, qui iam baptizatis traderent Spiritum Sanctum. ... Nam presbyteris sive extra episcopum, sive praesente episcopo cum baptizant, chrismate baptizatos ungere licet; sed quod ab episcopo fuerit consecratum, non tamen frontem ex eodem oleo signare, quod solis debetur episcopis, cum tradunt Spiritum Paracletum.",
+      "context": "Innocent answers Bishop Decentius of Gubbio on the sacraments (19 March 416). There is no Innocent book in the library, so the passage is read from Denzinger's text of the letter, as the gap's source hint directed. The Western separation is growing here: presbyters may anoint with chrism the bishop has blessed, but the signing of the forehead, in giving the Spirit, is the bishop's alone.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 98"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "trent-1547-confirmation-canon-1",
       "author": "Council of Trent",
       "year": 1547,
@@ -164,14 +186,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Innocent I",
-      "work": "Letter to Decentius 3",
-      "year": 416,
-      "why": "Only bishops may sign the forehead with chrism.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 98)"
-    },
     {
       "author": "Hippolytus (attributed)",
       "work": "Apostolic Tradition 21–22",

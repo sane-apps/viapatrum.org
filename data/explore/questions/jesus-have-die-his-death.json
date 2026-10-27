@@ -50,8 +50,9 @@
       ]
     },
     {
-      "text": "Some pictured a ransom that tricked the devil (Gregory of Nyssa). Gregory of Nazianzus questioned whether any ransom was paid to the devil or demanded by the Father. No council defined one theory.",
+      "text": "Origen, earliest of all, pictured a ransom paid to the evil one who held us, and Gregory of Nyssa pictured a ransom that tricked the devil. Gregory of Nazianzus questioned whether any ransom was paid to the devil or demanded by the Father. No council defined one theory.",
       "cites": [
+        "origen-matthew-16-8",
         "gregory-nyssa-catechetical-21",
         "gregory-nazianzus-oration-45-22"
       ]
@@ -118,6 +119,27 @@
       "source": {
         "witness": "books/ante-nicene-topics/sources/latin/irenaeus_ah_3_18_7_harvey.txt",
         "edition": "Harvey (1857), Latin"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "origen-matthew-16-8",
+      "author": "Origen of Alexandria",
+      "year": 249,
+      "date": "c. 249",
+      "work": "Commentary on Matthew",
+      "locus": "16.8",
+      "lang": "grc",
+      "answer": "ransom",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "To whom did he give his life as a ransom for many? Surely not to God. Was it not to the evil one? For he held us fast, until the ransom should be given to him for us, the life of Jesus, he being deceived and imagining he could master it, and not seeing that he could not bear the torment of holding it.",
+      "original": "τίνι δὲ ἔδωκε τὴν ψυχὴν αὐτοῦ λύτρον ἀντὶ πολλῶν; οὐ γὰρ δὴ τῷ θεῷ· μήτι οὖν τῷ πονηρῷ; ... οὗτος γὰρ ἐκράτει ἡμῶν, ἕως δοθῇ τὸ ὑπὲρ ἡμῶν αὐτῷ λύτρον ἡ τοῦ Ἰησοῦ ψυχή ... ἀπατηθέντι ὡς δυναμένῳ αὐτῆς κυριεῦσαι καὶ οὐχ ὁρῶντι ὅτι οὐ φέρει τὴν ἐπὶ τῷ κατέχειν αὐτὴν βάσανον.",
+      "context": "The earliest surviving statement of the ransom paid to the devil, on Matthew 20:28. Origen's point is the deception: the evil one took a life he could not hold, and death, having seemingly mastered Jesus, is mastered by him. The Matthew commentary witness in the store holds only books 10 and 11; book 16 is in Migne PG 13, from Khazarzar's second Matthew PDF (books 12-17), fetched for this dossier.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-origenes-pg-13-commentarium-in-evangelium-matthaei-libri-12-17.txt",
+        "edition": "Migne PG 13, Khazarzar text"
       },
       "translation": "dossier"
     },
@@ -193,14 +215,6 @@
       "why": "The satisfaction theory, which shaped later Catholic and Protestant views.",
       "action": "intake",
       "source_hint": "Migne PL 158; Schmitt (copyright) as note"
-    },
-    {
-      "author": "Origen of Alexandria",
-      "work": "Commentary on Matthew 16.8",
-      "year": 249,
-      "why": "The ransom paid to the devil, in its earliest form.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/khaz-origenes-pg-11-17-commentarium-in-evangelium-matthaei.txt"
     }
   ],
   "related": {
@@ -212,7 +226,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

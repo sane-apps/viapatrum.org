@@ -9,7 +9,7 @@ import assert from 'node:assert/strict';
 import {
   THRESHOLD, FLOOR, MAX_CANDIDATES, THIN_NOTE,
   splitSentences, stripPrefix, chunkSentences, citeOf, workKey,
-  candidates, normaliseScores, nearDuplicate, selectAnswer, normaliseQuestion,
+  candidates, normaliseScores, nearDuplicate, selectAnswer, normaliseQuestion, matchTopics,
 } from '../functions/_lib/ask.js';
 import { cleanTitle } from '../functions/_lib/search.js';
 
@@ -248,10 +248,11 @@ test('/api/ask: answer mode, passages in /api/search shape, one sentence rerank 
   assert.ok(body.answer.length >= 2 && body.answer.every((a) => a.ref >= 1 && a.ref <= body.passages.length));
   assert.equal(body.answer[0].author, 'Justin Martyr', 'dated writer first, undated Didache after');
   assert.deepEqual(Object.keys(body.passages[0]).sort(), ['author', 'href', 'kind', 'score', 'snippet', 'title']);
-  assert.equal(s.calls.filter((c) => c.model.includes('reranker')).length, 2, 'passage rerank + one sentence rerank');
+  assert.equal(s.calls.filter((c) => c.model.includes('reranker')).length, 1, 'ask skips the passage rerank (2026-10-20); one sentence rerank');
+  assert.deepEqual(body.topics, [], 'the stub serves no topics file: no topics');
   assert.ok(s.calls.at(-1).n <= MAX_CANDIDATES);
   assert.equal(res.headers.get('cache-control'), 'public, max-age=86400');
-  assert.equal(res.headers.get('access-control-allow-origin'), '*');
+  assert.equal(res.headers.get('access-control-allow-origin'), null, 'no CORS grant without a site Origin');
   assert.equal(s.puts.length, 0, 'answers are not logged');
 });
 
@@ -279,7 +280,7 @@ test('/api/ask: a failed sentence rerank is thin but neither cached nor logged',
 test('/api/search keeps its output after the retrieval move', async () => {
   const s = stubEnv({});
   const { res, body } = await run(search, 'https://viapatrum.org/api/search?q=baptism&n=5', s.env);
-  assert.equal(res.headers.get('cache-control'), 'public, max-age=300');
+  assert.equal(res.headers.get('cache-control'), 'public, max-age=86400');
   assert.deepEqual(Object.keys(body), ['query', 'results']);
   assert.deepEqual(body.results.map((r) => r.href), ['/e/d7/', '/e/j61/']);
   assert.deepEqual(Object.keys(body.results[0]), ['title', 'author', 'href', 'kind', 'score', 'snippet']);
@@ -302,4 +303,105 @@ test('/api/ask: the edge cache key carries the deployed search map ETag', async 
   } finally {
     globalThis.caches = saved;
   }
+});
+
+
+// --- Timeline topics ----------------------------------------------------------
+
+const TOPICS = [
+  { question: 'Do we have free will?', short: 'Free will?', href: '/explore/have-free-will/', also: ['free will', 'free choice', 'determinism', 'fate'] },
+  { question: 'Did they make images of Christ and the saints, and are icons idolatry?', short: 'Icons', href: '/explore/make-images-christ-saints-icons/', also: ['icons', 'iconoclasm', 'images of christ', 'idolatry'] },
+  { question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/', also: ['infant baptism', 'paedobaptism'] },
+  { question: 'Is Christ really present in the Eucharist?', short: 'Real presence', href: '/explore/eucharist-presence/', also: ['eucharist', 'real presence'] },
+];
+
+test('topics: the words of the question itself find their Timeline topic', () => {
+  assert.equal(matchTopics('free will', TOPICS)[0].href, '/explore/have-free-will/');
+  assert.equal(matchTopics('icons', TOPICS)[0].href, '/explore/make-images-christ-saints-icons/');
+  assert.equal(matchTopics('did the early church baptize infants', TOPICS)[0].href, '/explore/infant-baptism/');
+  assert.equal(matchTopics('What is the Eucharist?', TOPICS)[0].href, '/explore/eucharist-presence/');
+});
+
+test('topics: a curated phrase matches even when the question words differ', () => {
+  assert.equal(matchTopics('paedobaptism', TOPICS)[0].href, '/explore/infant-baptism/');
+  assert.equal(matchTopics('determinism', TOPICS)[0].href, '/explore/have-free-will/');
+});
+
+test('topics: unrelated words match nothing; at most three topics', () => {
+  assert.deepEqual(matchTopics('quantum bananas', TOPICS), []);
+  assert.deepEqual(matchTopics('what is the', TOPICS), []);
+  const many = Array.from({ length: 6 }, (_, i) => ({ question: `About prayer ${i}?`, short: '', href: `/explore/p${i}/`, also: ['prayer'] }));
+  assert.equal(matchTopics('prayer', many).length, 3);
+});
+
+
+test('/api/ask: matching Timeline topics ride along in the body', async () => {
+  const s = stubEnv({ rerankSentences: (text) => (/baptiz|water/i.test(text) ? 4 : -4) });
+  const assets = s.env.ASSETS.fetch;
+  const topics = [{ question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/', also: ['infant baptism', 'baptism'] }];
+  s.env.ASSETS.fetch = async (u, init) => (String(u).includes('ask-topics') ? { ok: true, json: async () => topics } : assets(u, init));
+  // Fresh module: topicsPromise is per-isolate state, already set by earlier tests.
+  const fresh = await import(`../functions/api/ask.js?v=topics-${Date.now()}`);
+  const { body } = await run(fresh.onRequest, 'https://viapatrum.org/api/ask?q=baptism', s.env);
+  assert.deepEqual(body.topics, [{ question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/' }]);
+});
+
+
+// --- off switch, CORS, /api/search edge cache (2026-10-23) ---------------------
+
+test('AI_OFF=1: search and ask answer 503 paused without any model call', async () => {
+  for (const [fn, path] of [[search, 'search'], [ask, 'ask']]) {
+    const s = stubEnv({ rerankSentences: () => 4 });
+    s.env.AI_OFF = '1';
+    const { res, body } = await run(fn, `https://viapatrum.org/api/${path}?q=baptism`, s.env);
+    assert.equal(res.status, 503, path);
+    assert.equal(body.paused, true, path);
+    assert.equal(body.error, 'Search by meaning is paused');
+    assert.equal(res.headers.get('cache-control'), 'no-store');
+    assert.equal(s.calls.length, 0, `${path} made no AI call`);
+  }
+});
+
+test('CORS: only the site origins get an allow header; preflight is 204', async () => {
+  const s = stubEnv({});
+  const from = (origin) => search({ request: new Request('https://viapatrum.org/api/search?q=baptism', { headers: { origin } }), env: s.env, waitUntil: () => {} });
+  assert.equal((await from('https://viapatrum.org')).headers.get('access-control-allow-origin'), 'https://viapatrum.org');
+  assert.equal((await from('https://evil.example')).headers.get('access-control-allow-origin'), null);
+  const pre = await ask({ request: new Request('https://viapatrum.org/api/ask', { method: 'OPTIONS', headers: { origin: 'https://evil.example' } }), env: s.env });
+  assert.equal(pre.status, 204);
+  assert.equal(pre.headers.get('access-control-allow-origin'), null);
+});
+
+test('/api/search: cached by normalised query, n and deploy tag; a repeat makes no model call', async () => {
+  const store = new Map();
+  const saved = globalThis.caches;
+  globalThis.caches = { default: { match: async (req) => store.get(req.url)?.clone(), put: async (req, res) => { store.set(req.url, res); } } };
+  try {
+    const s = stubEnv({});
+    const assets = s.env.ASSETS.fetch;
+    s.env.ASSETS.fetch = async (u, init) => (init && init.method === 'HEAD'
+      ? { ok: true, headers: new Headers({ etag: '"build-1"' }) } : assets(u, init));
+    const first = await run(search, 'https://viapatrum.org/api/search?q=Baptism%20%20&n=5', s.env);
+    const calls = s.calls.length;
+    assert.ok(calls >= 1);
+    assert.equal(store.size, 1);
+    const [key] = store.keys();
+    assert.match(key, /\/api\/search\?kv=1&n=5&q=baptism&v=/);
+    assert.equal(store.get(key).headers.get('access-control-allow-origin'), null, 'the cached copy carries no CORS grant');
+    const again = await run(search, 'https://viapatrum.org/api/search?q=baptism&n=5', s.env);
+    assert.equal(s.calls.length, calls, 'repeat served from the cache');
+    assert.deepEqual(again.body, first.body);
+  } finally {
+    globalThis.caches = saved;
+  }
+});
+
+test('pages.dev hosts make no AI call (outside the zone rate limit)', async () => {
+  const { aiBlocked } = await import('../functions/_lib/search.js');
+  assert.equal(aiBlocked({}, new URL('https://eb1291ef.fathers-site.pages.dev/api/search?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://fathers-site.pages.dev/api/ask?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://viapatrum.org/api/search?q=grace')), false);
+  assert.equal(aiBlocked({ AI_OFF: '1' }, new URL('https://viapatrum.org/api/search?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://fathers-site.pages.dev./api/search?q=grace')), true);
+  assert.equal(aiBlocked({}, new URL('https://VIAPATRUM.ORG./api/search?q=grace')), false);
 });

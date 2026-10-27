@@ -45,7 +45,15 @@
       "cites": [
         "diognetus-5-1-5",
         "tertullian-apology-39-care",
-        "tertullian-apology-50-b"
+        "tertullian-apology-50-b",
+        "julian-letter-22-arsacius"
+      ]
+    },
+    {
+      "text": "The writers also name the mechanism: traveling evangelists. Origen says Christians made it their work to go round cities, villages and farms to win others, and Eusebius says the generation after the apostles sowed the word across the whole inhabited world.",
+      "cites": [
+        "origen-contra-celsum-3-9",
+        "eusebius-church-history-3-37"
       ]
     }
   ],
@@ -154,34 +162,72 @@
         "edition": "The Latin Library text"
       },
       "translation": "dossier"
-    }
-  ],
-  "gaps": [
-    {
-      "author": "Julian the Apostate",
-      "work": "Letter 22 to Arsacius",
-      "year": 362,
-      "why": "A pagan emperor admits that Christian charity to strangers spread the faith.",
-      "action": "intake",
-      "source_hint": "Bidez and Cumont (1922, copyright) as note; Hertlein (Teubner 1876)"
     },
     {
-      "author": "Eusebius of Caesarea",
-      "work": "Church History 3.37",
-      "year": 325,
-      "why": "Traveling evangelists of the second century.",
-      "action": "search",
-      "source_hint": "eusebius-church-history 3.37"
-    },
-    {
+      "id": "origen-contra-celsum-3-9",
       "author": "Origen of Alexandria",
-      "work": "Against Celsus 3.9",
       "year": 248,
-      "why": "Christians travel to towns and villages to win others.",
-      "action": "search",
-      "source_hint": "origen-contra-celsum"
+      "date": "c. 248",
+      "work": "Against Celsus",
+      "locus": "3.9",
+      "lang": "grc",
+      "answer": "everywhere",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "It is clear from this: Christians, so far as it lies with them, do not fail to sow the word everywhere in the inhabited world. Some, at least, have made it their work to go round not only cities but also villages and country estates, in order to make others too devout toward God.",
+      "original": "δῆλον ἐκ τοῦ τὸ ὅσον ἐφ᾿ ἑαυτοῖς Χριστιανοὺς μὴ ἀμελεῖν τοῦ πανταχοῦ τῆς οἰκουμένης ἐπισπείρειν τὸν λόγον, τινὲς γοῦν ἔργον πεποίηνται ἐκπεριέρχεσθαι οὐ μόνον πόλεις ἀλλὰ καὶ κώμας καὶ ἐπαύλεις, ἵνα καὶ ἄλλους εὐσεβεῖς τῷ θεῷ κατασκευάσωσι.",
+      "context": "Origen is answering Celsus, who had claimed Christians would not want everyone to become Christian. He adds that these traveling teachers sometimes refuse even food, and take only what they strictly need.",
+      "source": {
+        "witness": "books/origen-contra-celsum/sources/cels_b3_working_greek.txt",
+        "edition": "Koetschau, GCS 2 (1899), working Greek in the library"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "eusebius-church-history-3-37",
+      "author": "Eusebius of Caesarea",
+      "year": 325,
+      "date": "c. 325",
+      "work": "Church History",
+      "locus": "3.37",
+      "lang": "grc",
+      "answer": "everywhere",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "These distinguished disciples built on the foundations of the churches that the apostles had laid in every place, increasing the preaching and sowing the saving seeds of the kingdom of heaven in breadth across the whole inhabited world. ... distributing their possessions to the needy; then, setting out on journeys abroad, they did the work of evangelists, eager to preach Christ to those who had never yet heard the word of faith, and to hand over the writing of the divine Gospels.",
+      "original": "οἳ καὶ, ἅτε τηλικῶνδε ὄντες διαπρεπεῖς μαθηταὶ, τοὺς κατὰ πάντα τόπον τῶν ἐκκλησιῶν προκαταβληθέντας ὑπὸ τῶν ἀποστόλων θεμελίους ἐπῳκοδόμουν, αὔξοντες εἰς πλέον τὸ κήρυγμα καὶ τὰ σωτήρια σπέρματα τῆς τῶν οὐρανῶν βασιλείας ἀνὰ πᾶσαν εἰς πλάτος ἐπισπείροντες τὴν οἰκουμένην. ... ἐνδεέσι νέμοντες τὰς οὐσίας, ἔπειτα δὲ ἀποδημίας στελλόμενοι ἔργον ἐπετέλουν εὐαγγελιστῶν, τοῖς ἔτι πάμπαν ἀνηκόοις τοῦ τῆς πίστεως λόγου κηρύττειν τὸν Χριστὸν φιλοτιμούμενοι καὶ τὴν τῶν θείων εὐαγγελίων παραδιδόναι γραφήν.",
+      "context": "Eusebius describes the generation after the apostles. The evangelists first gave their own property away, then traveled; he goes on to credit the power of the Spirit still working wonders through them, with crowds converted at a first hearing.",
+      "source": {
+        "book": "eusebius-church-history",
+        "section": "3.37"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "julian-letter-22-arsacius",
+      "author": "Julian the Apostate",
+      "year": 362,
+      "date": "362",
+      "work": "Letter 22, to Arsacius",
+      "locus": "22",
+      "lang": "grc",
+      "answer": "life",
+      "strength": "explicit",
+      "voice": "opponent",
+      "weight": "key",
+      "english": "Why do we not notice that their benevolence to strangers, their care for the graves of the dead and the pretended holiness of their lives have most increased atheism? ... The impious Galileans feed, besides their own, ours as well.",
+      "original": "οὐδὲ ἀποβλέπομεν, ὡς μάλιστα τὴν ἀθεότητα συνηύξησεν ἡ περὶ τοὺς ξένους φιλανθρωπία καὶ ἡ περὶ τὰς ταφὰς τῶν νεκρῶν προμήθεια καὶ ἡ πεπλασμένη σεμνότης κατὰ τὸν βίον ... τρέφουσι δὲ οἱ δυσσεβεῖς Γαλιλαῖοι πρὸς τοῖς ἑαυτῶν καὶ τοὺς ἡμετέρους",
+      "context": "Julian is the pagan emperor trying to build a pagan rival to Christian charity. In this official letter to his high priest of Galatia he concedes why the Galileans were winning converts, and his word for Christianity in the letter is atheism.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-Emperor_Julian_Works_Loeb.txt",
+        "edition": "Loeb Classical Library, Wright (1923)"
+      },
+      "translation": "dossier"
     }
   ],
+  "gaps": [],
   "related": {
     "topics": [
       "mission"
@@ -189,7 +235,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 1 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

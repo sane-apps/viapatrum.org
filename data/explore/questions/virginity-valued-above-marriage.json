@@ -40,7 +40,8 @@
     {
       "text": "The same writers defended marriage against those who condemned it. Clement says marriage according to reason is no sin. The Reformers rejected the ranking.",
       "cites": [
-        "clement-stromata-3-9"
+        "clement-stromata-3-9",
+        "augsburg-confession-23"
       ]
     }
   ],
@@ -128,6 +129,50 @@
         "section": "15"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "augsburg-confession-23",
+      "author": "Augsburg Confession (Lutheran)",
+      "year": 1530,
+      "date": "1530",
+      "work": "Augsburg Confession",
+      "locus": "Article 23",
+      "lang": "en",
+      "answer": "both-good",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "God hath commanded to honor marriage. The laws in all well ordered commonwealths, even among the heathen, have adorned marriage with very great honors.",
+      "original": "God hath commanded to honor marriage. The laws in all well ordered commonwealths, even among the heathen, have adorned marriage with very great honors.",
+      "context": "Article 23, on the marriage of priests: the Lutheran reply to compulsory celibacy. Marriage is God's command and an honoured estate; a vow cannot set aside God's ordinance.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-creedsofchristen028262mbp.txt",
+        "edition": "Augsburg Confession, Article 23 (1530), as printed in Schaff, Creeds of Christendom, vol. 3 (1919)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "trent-1563-marriage-canon-10",
+      "author": "Council of Trent",
+      "year": 1563,
+      "date": "1563",
+      "work": "Session 24, Canons on Matrimony",
+      "locus": "Canon 10",
+      "lang": "la",
+      "answer": "higher",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "If anyone says that the married state is to be preferred to the state of virginity or celibacy, and that it is not better and more blessed to remain in virginity or celibacy than to be joined in marriage: let him be anathema.",
+      "original": "Si quis dixerit, statum coniugalem anteponendum esse statui virginitatis vel coelibatus, et non esse melius ac beatius manere in virginitate aut coelibatu, quam iungi matrimonio: A. S.",
+      "context": "Trent's answer to the Reformation on this point (1563): marriage is honoured, but the celibate state, freely kept for the kingdom, is the better and more blessed one.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 981"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
@@ -146,14 +191,6 @@
       "why": "Anathemas on those who condemn marriage or despise the married.",
       "action": "intake",
       "source_hint": "Bruns (1839)"
-    },
-    {
-      "author": "Council of Trent; Augsburg Confession",
-      "work": "Session 24 canon 10; Article 23",
-      "year": 1563,
-      "why": "Virginity better than marriage; the Lutheran reply.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 980)"
     }
   ],
   "related": {

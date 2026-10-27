@@ -28,11 +28,13 @@
   ],
   "overview": [
     {
-      "text": "Cyprian, in the 250s, coined the rule: \"there is no salvation outside the Church\"; one cannot have God as Father without the Church as mother. Augustine accepted it.",
+      "text": "Origen had already put it as Rahab's house: outside this house, that is, outside the Church, no one is saved. Cyprian, in the 250s, coined the rule: \"there is no salvation outside the Church\"; one cannot have God as Father without the Church as mother. Augustine accepted it, and the Council of Florence in 1442 gave it its hardest conciliar form.",
       "cites": [
+        "origen-joshua-3-5",
         "cyprian-unity-6-b",
         "cyprian-letter-73-21-b",
-        "augustine-on-baptism-4-24-b"
+        "augustine-on-baptism-4-24-b",
+        "florence-1442-cantate-domino"
       ]
     },
     {
@@ -45,6 +47,27 @@
     }
   ],
   "quotes": [
+    {
+      "id": "origen-joshua-3-5",
+      "author": "Origen of Alexandria",
+      "year": 240,
+      "date": "c. 240",
+      "work": "Homilies on Joshua",
+      "locus": "3.5",
+      "lang": "la",
+      "answer": "no",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Let no one, then, persuade himself, let no one deceive himself: outside this house, that is, outside the Church, no one is saved. If anyone goes outside, he becomes guilty of his own death.",
+      "original": "Nemo ergo sibi persuadeat, nemo semet ipsum decipiat: extra hanc domum, id est extra ecclesiam, nemo salvatur; si quis foras exierit, mortis suae ipse fit reus.",
+      "context": "On Rahab's house in Jericho (Joshua 2): everyone in the house, marked with the scarlet cord, is saved when the city falls. Origen reads the house as the Church and the cord as the sign of Christ's blood, in the sentences just before this one. The homilies survive in Rufinus's Latin; the text is Baehrens's edition (GCS 30, 1921), read from the raw scan text in the library's Joshua book, whose locked sections still hold working summaries, so this passage still wants a locked library section.",
+      "source": {
+        "witness": "books/origen-joshua-homilies/sources/josh_hom3_baehrens_raw.txt",
+        "edition": "Baehrens, GCS 30 (1921), Homilies on Joshua 3.5 (Rufinus's Latin)"
+      },
+      "translation": "dossier"
+    },
     {
       "id": "cyprian-unity-6-b",
       "author": "Cyprian of Carthage",
@@ -105,6 +128,27 @@
       "source": {
         "book": "augustine-on-baptism",
         "section": "4.24"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "florence-1442-cantate-domino",
+      "author": "Council of Florence",
+      "year": 1442,
+      "date": "1442",
+      "work": "Cantate Domino (Decree for the Jacobites)",
+      "locus": "Denzinger 714",
+      "lang": "la",
+      "answer": "no",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It firmly believes, professes and preaches that no one outside the Catholic Church, not only pagans but also Jews and heretics and schismatics, can share in eternal life, but will go into the eternal fire prepared for the devil and his angels, unless before the end of life they are joined to her. ... No one, however great his almsgiving, even if he sheds his blood for Christ's name, can be saved unless he stays in the bosom and unity of the Catholic Church.",
+      "original": "Firmiter credit, profitetur et praedicat, nullos extra catholicam Ecclesiam exsistentes, non solum paganos, sed nec Iudaeos aut haereticos atque schismaticos, aeternae vitae fieri posse participes; sed in ignem aeternum ituros, qui paratus est diabolo et angelis eius, nisi ante finem vitae eidem fuerint aggregati ... Neminemque, quantascunque eleemosynas fecerit, etsi pro Christi nomine sanguinem effuderit, posse salvari, nisi in catholicae Ecclesiae gremio et unitate permanserit.",
+      "context": "The bull Cantate Domino (4 February 1442), the decree for the Jacobites (the Coptic Christians of Egypt) at the Council of Florence, as printed in Denzinger's Enchiridion (11th edition, 1911), no. 714. It restates, in its strictest conciliar form, the rule Origen pictured and Cyprian coined, drawing on Fulgentius of Ruspe.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "edition": "Denzinger, Enchiridion Symbolorum, 11th ed. (1911), no. 714"
       },
       "translation": "dossier"
     },
@@ -179,9 +223,9 @@
       "author": "Origen of Alexandria",
       "work": "Homilies on Joshua 3.5",
       "year": 240,
-      "why": "\"Outside this house, that is, outside the Church, no one is saved.\" The library's Joshua source is a working summary, not the text.",
+      "why": "Quoted from Baehrens's raw scan text in the library's Joshua book: origen-joshua-3-5. Still open: the book's locked sections hold working summaries; lock the Baehrens GCS 30 text of Homily 3 as a library section.",
       "action": "relock-source",
-      "source_hint": "Lommatzsch vol. 11 (archive.org); Baehrens GCS 30 (1921)"
+      "source_hint": "Baehrens GCS 30 (1921) (quoted from the book's raw scan text)"
     },
     {
       "author": "Fulgentius of Ruspe",
@@ -190,14 +234,6 @@
       "why": "The strictest form of the rule, quoted by Florence.",
       "action": "intake",
       "source_hint": "Migne PL 65"
-    },
-    {
-      "author": "Council of Florence",
-      "work": "Cantate Domino",
-      "year": 1442,
-      "why": "Pagans, Jews, heretics and schismatics outside the Church go into eternal fire.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (no. 714)"
     }
   ],
   "related": {
@@ -207,7 +243,7 @@
   },
   "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark (Wave 3 research fill 2026-10-20)",
+    "at": "2026-10-20"
   }
 }

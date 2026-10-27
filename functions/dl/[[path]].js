@@ -1,10 +1,11 @@
 /**
- * GET /dl/<kind>/<file> -> a download from the private R2 bucket, for
- * browsers unlocked with a library pass (functions/_lib/library.js).
- * Locked browsers are sent to /downloads/ with the file they wanted.
- * Range requests work, so big audiobooks resume.
+ * GET /dl/<kind>/<file> -> a download from the private R2 bucket. Every file
+ * on the shelf is free (2026-10-22; the library pass and its key check are
+ * gone). Range requests work, so big audiobooks resume. A GET needs the
+ * human-check cookie (functions/_lib/human.js); without it the reader gets a
+ * Turnstile box that starts the file once it passes. HEAD stays open.
  */
-import { session } from "../_lib/library.js";
+import { SITEKEY, isHuman } from "../_lib/human.js";
 
 // key -> "Title - Author (Via Patrum).epub", from /data/library-files.json.
 // That map is also the shelf: downloads_page.py writes only the files this
@@ -36,6 +37,35 @@ function page(status, title, text, extra = {}) {
 const NOT_ON_SHELF = () => page(404, "That file is not on the shelf",
   "This file is not part of the library right now. The work may be under correction, or its file has a new name. Everything on the shelf is listed on the downloads page.");
 
+// The box for a reader who arrives without the cookie (a link from outside the
+// shelf, or the cookie ran out). It passes most people without a click.
+function humanPage() {
+  const body = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>One moment · Via Patrum</title><link rel="stylesheet" href="/assets/site.css">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script></head>
+<body><main class="wrap" style="max-width:40rem;margin:4rem auto;padding:0 1rem"><h1>One moment</h1>
+<p>Please confirm you are a person. This keeps bots from emptying the shelf. Your download starts as soon as the check passes.</p>
+<div class="cf-turnstile" data-sitekey="${SITEKEY}" data-callback="vpHuman" data-error-callback="vpHumanFail" data-action="download"></div>
+<p id="vp-msg" role="status" aria-live="polite"></p>
+<p><a href="/downloads/#shelf">Back to the shelf</a></p></main>
+<script>
+function vpHumanFail() { document.getElementById("vp-msg").textContent = "The check did not load. Reload the page to try again."; }
+function vpHuman(token) {
+  var msg = document.getElementById("vp-msg");
+  msg.textContent = "Starting your download…";
+  fetch("/api/human", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ token: token }) })
+    .then(function (r) {
+      if (!r.ok) throw 0;
+      // The file downloads and this page stays open, so say what happened.
+      msg.textContent = "Your download should start now. If it does not, reload this page.";
+      location.replace(location.href);
+    })
+    .catch(function () { msg.textContent = "The check did not pass. Reload the page to try again."; });
+}
+</script></body></html>`;
+  return new Response(body, { status: 403, headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store", "x-robots-tag": "noindex" } });
+}
+
 const OK_PATH = /^(epub|pdf|word|audio|bundles)\/[a-z0-9][a-z0-9._-]{0,180}\.(epub|pdf|zip|m4b)$/;
 
 export async function onRequest(context) {
@@ -46,13 +76,7 @@ export async function onRequest(context) {
   const shelf = await names(context);
   if (!shelf) return page(503, "Please try again", "We could not read the shelf just now. Please try again in a minute.", { "retry-after": "30" });
   if (!Object.prototype.hasOwnProperty.call(shelf, path)) return NOT_ON_SHELF();
-  const s = await session(request, env);
-  if (!s.unlocked) {
-    const to = new URL(`/downloads/?need=${encodeURIComponent(path)}`, request.url);
-    const h = new Headers({ location: to.toString(), "cache-control": "no-store" });
-    if (s.setCookie) h.append("set-cookie", s.setCookie);
-    return new Response(null, { status: 302, headers: h });
-  }
+  if (request.method === "GET" && !(await isHuman(env, request))) return humanPage();
   if (!env.LIBRARY) return new Response("Downloads are not switched on yet.", { status: 503 });
   const obj = request.method === "HEAD"
     ? await env.LIBRARY.head(path)
@@ -69,12 +93,16 @@ export async function onRequest(context) {
   h.set("x-robots-tag", "noindex");
   const name = shelf[path] || (obj.customMetadata && obj.customMetadata.filename) || path.split("/").pop();
   h.set("content-disposition", `attachment; filename="${name.replace(/[^\x20-\x7e]/g, "_").replace(/"/g, "'")}"; filename*=UTF-8''${encodeURIComponent(name)}`);
-  if (s.setCookie) h.append("set-cookie", s.setCookie);
   if (request.method === "HEAD") {
     h.set("content-length", String(obj.size));
     return new Response(null, { status: 200, headers: h });
   }
-  if (!("body" in obj) || !obj.body) return new Response(null, { status: 304, headers: h }); // onlyIf failed
+  if (!("body" in obj) || !obj.body) {
+    // onlyIf failed. If-Match / If-Unmodified-Since failing means the file
+    // changed: 412, so a resuming download manager starts over (RFC 9110).
+    const changed = request.headers.has("if-match") || request.headers.has("if-unmodified-since");
+    return new Response(null, { status: changed ? 412 : 304, headers: h });
+  }
   const r = obj.range;
   if (r && request.headers.has("range")) {
     const suffix = typeof r.suffix === "number";

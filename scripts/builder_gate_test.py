@@ -72,7 +72,44 @@ class ListenCountTest(unittest.TestCase):
         self.assertEqual(build_site.playing_slugs(None, "didache"), {"didache"})
 
 
+class ExcerptDuplicateTest(unittest.TestCase):
+    def test_same_passage_has_one_main_page(self) -> None:
+        text = ["For how shall we not regard it fearful, if he that knows God shall not recognise the Lord. " * 2]
+        xs = [{"id": "clem_paed_1_9_benefit", "author": "Clement", "english": text},
+              {"id": "auto_paed_attributes_chapter_9_x", "author": "Clement", "english": text},
+              {"id": "auto_nov_one_chapter_31", "author": "Novatian", "english": ["one rendering " * 10]},
+              {"id": "novatian_trin_31_monarchy", "author": "Novatian", "english": ["another rendering " * 10]}]
+        self.assertEqual(build_site.excerpt_duplicates(xs), {
+            "auto_paed_attributes_chapter_9_x": "clem_paed_1_9_benefit",
+            "auto_nov_one_chapter_31": "novatian_trin_31_monarchy"})
+
+
+class BookInLocusTest(unittest.TestCase):
+    def test_stromata_book_file_names_its_book(self) -> None:
+        x = {"locus": "14", "citation": "Clement of Alexandria — Stromata 14",
+             "source": "sources/chapters/clement-of-alexandria-stromata-5.json"}
+        build_site.add_book_to_locus(x)
+        self.assertEqual((x["locus"], x["citation"]), ("5.14", "Clement of Alexandria — Stromata 5.14"))
+        y = {"locus": "14", "citation": "Clement — Stromata 14", "source": "sources/greek/clement_stromata.xml"}
+        build_site.add_book_to_locus(y)
+        self.assertEqual(y["locus"], "14")
+
+
 class TitleAndDateTest(unittest.TestCase):
+    def test_second_clement_files_with_the_apostolic_fathers(self) -> None:
+        self.assertEqual(build_site.era_band(150, "anonymous-2-clement", catalogue=True), "Apostolic")
+
+    def test_file_stem_title_is_not_a_latin_subtitle(self) -> None:
+        # 2026-10-23: "Montanus-Lucius", "Perpetua", "Lyons" sat under English H1s.
+        slug = "test-stem-subtitle"
+        build_site._BRIEF_TITLES[slug] = "The Passion of Montanus and Lucius"
+        build_site.STEM_TITLE_SLUGS.add(slug)
+        try:
+            self.assertEqual(build_site.public_reader_latin_subtitle("Montanus-Lucius", slug=slug), "")
+        finally:
+            build_site._BRIEF_TITLES.pop(slug, None)
+            build_site.STEM_TITLE_SLUGS.discard(slug)
+
     def test_brief_title_drops_a_word_the_catalogue_bans_in_the_h1(self) -> None:
         # 2026-10-08 13:49: the ship built, then died on this H1.
         slug = "test-scholia-heading"
@@ -132,6 +169,11 @@ class CleanupPassTest(unittest.TestCase):
         self.assertEqual(build_site.title_by("The Martyrdom of Justin", "Acts of the Martyrs", "acts-of-the-martyrs"),
                          "The Martyrdom of Justin (Acts of the Martyrs)")
         self.assertEqual(build_site.title_by("On Prayer", "Origen of Alexandria", "origen"), "On Prayer by Origen of Alexandria")
+        # The Diognetus author is "Letter to Diognetus"; the work is "The Epistle to Diognetus".
+        self.assertEqual(build_site.title_by("The Epistle to Diognetus", "Letter to Diognetus",
+                                             "mathetes-epistle-to-diognetus"), "The Epistle to Diognetus")
+        self.assertEqual(build_site.title_by("The Didache", "The Didache", "didache"), "The Didache")
+        self.assertIn(build_site.text_name_core("Letter to Diognetus"), "epistle to diognetus 7")
 
     def test_fragment_titles_follow_the_house_rule(self):
         for slug in ("cyril-solutiones-vat-447", "dionysius-corinth-fragments"):
@@ -149,6 +191,22 @@ class CleanupPassTest(unittest.TestCase):
                          "Le Blanc wrote in the mid-seventeenth century. This is not a patristic work.")
         self.assertEqual(build_site.public_note("English follows X CLOSED + Y CLOSED. No modern English. Next: Z (PDF 584-)."),
                          "No modern English.")
+
+    def test_scope_status_leaves_about_notes(self):
+        """2026-10-23: these About lines failed the shelf's worksheet gate and
+        kept five works' EPUB and PDF off the shelf."""
+        crocius = ("English follows the Latin of Liber I Cap. 10. No modern English was copied. Cap. 11 "
+                   "(CAPUT UNDECIMUM / De S. Theologiae distributione) begins. Cap. 9 complete. Liber I still open. "
+                   "No Internet Archive copy was located.")
+        self.assertEqual(build_site.public_note(crocius), "English follows the Latin of Liber I Cap. 10. No modern "
+                         "English was copied. No Internet Archive copy was located.")
+        self.assertEqual(build_site.public_note("Wing B887. Not whole Philosophia (213 pp). Exercitatio Tertia is included."),
+                         "Wing B887. Exercitatio Tertia is included.")
+        self.assertEqual(build_site.scrub_intro_worksheet("<p>His fragments, from the locked text in Patrologia Graeca 39.</p>"),
+                         "<p>His fragments, from the text in Patrologia Graeca 39.</p>")
+        html = build_site.text_history_html({"joins": [{"where": "Opening tip", "note": "Long-s expanded."}]})
+        self.assertIn('<span class="where">Opening</span>', html)
+        self.assertNotIn("tip", html)
 
     def test_translator_gap_notes_in_source_panels_show_as_a_lacuna(self):
         out = build_site.public_source_text("μὴ γνωσθέν [text rough; sense: x]. [T-ILLEGIBLE: probably y (per apparatus); not rendered.] τίς")
@@ -331,6 +389,54 @@ class PublicationProcessTest(unittest.TestCase):
         }
         out = build_site._origen_rows(rows, src)
         self.assertEqual([row["section"] for row in out], ["1"])
+
+
+class MartyrActsTest(unittest.TestCase):
+    """2026-10-23 audit: every martyr act showed the group date c. 165, two
+    acts were live twice, and old intro templates named the wrong writer."""
+
+    def act(self, slug: str) -> dict:
+        return {"slug": slug, "author": "Acts of the Martyrs", "author_slug": "acts-of-the-martyrs",
+                "period": build_site.WORK_DATES[slug]}
+
+    def test_each_act_shows_its_own_date(self):
+        self.assertEqual(build_site.WORK_DATES["cyprian"], "258")
+        self.assertEqual(build_site.WORK_DATES["irenaeus"], "304")
+        self.assertEqual(build_site.mast_meta_line(self.act("cyprian"), "")[0],
+                         "Acts of the Martyrs · written 258 AD")
+        # Justin's year is the group's first year; it is still shown.
+        self.assertEqual(build_site.mast_meta_line(self.act("acts-of-justin"), "PG 6")[0],
+                         "Acts of the Martyrs · written c. 165 AD · PG 6")
+
+    def test_group_sorts_by_its_first_year(self):
+        self.assertEqual(build_site.author_dates_display("Acts of the Martyrs", "acts-of-the-martyrs"), "c. 165–304 AD")
+        self.assertEqual(build_site.author_sort_year("Acts of the Martyrs", slug="acts-of-the-martyrs"), 165)
+        self.assertEqual(build_site.author_sort_year("Cyril of Alexandria", slug="cyril-of-alexandria"), 444)
+
+    def test_second_copies_are_held_and_redirected(self):
+        for old, shown in build_site.SECOND_COPY_OF.items():
+            self.assertIn(old, build_site.FORCED_WITHHOLD)
+            self.assertNotIn(shown, build_site.FORCED_WITHHOLD)
+
+    def test_perpetua_files_under_its_own_page(self):
+        name = build_site.display_author("Perpetua, Saturus, and the Redactor")
+        self.assertEqual(build_site.canonical_author_slug(None, name), "passion-of-perpetua-and-felicity")
+
+    def test_intro_fixes_still_match_their_books(self):
+        for slug, fixes in build_site.INTRO_FIXES.items():
+            text = (build_site.BOOKS / slug / "intro.md").read_text(encoding="utf-8")
+            for old, new in fixes:
+                self.assertTrue(old in text or new in text, f"{slug}: {old[:50]!r} no longer in intro.md")
+        self.assertNotIn("(c. 165)", build_site.work_intro_html("conon-gardener"))
+        self.assertNotIn("fl. c. 170", build_site.work_intro_html("montanus-lucius"))
+        # Polycarp's dates are now c. 69–c. 155; the intro's old floruit must not survive.
+        self.assertNotIn("fl. c. 155", build_site.work_intro_html("polycarp-philippians"))
+
+    def test_teaser_is_not_printed_twice(self):
+        self.assertTrue(build_site.blurb_repeats_intro(
+            "This account was put together by Perpetua.", ["This account was put together by Perpetua. She wrote."]))
+        self.assertFalse(build_site.blurb_repeats_intro("Another line.", ["This account was put together."]))
+        self.assertFalse(build_site.blurb_repeats_intro("", ["Anything."]))
 
 
 if __name__ == "__main__":

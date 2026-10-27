@@ -87,6 +87,75 @@
       "translation": "dossier"
     },
     {
+      "id": "augustine-nature-and-grace-68",
+      "author": "Augustine of Hippo",
+      "year": 415,
+      "date": "415",
+      "work": "On Nature and Grace",
+      "locus": "68",
+      "lang": "la",
+      "answer": "needed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For we do not deny that human nature can be without sin, nor should we in any way deny that it can be perfected, since we do not deny that it can make progress; but we say that this comes about by the grace of God through Jesus Christ our Lord, with his help, so that it may be righteous and blessed, by the one who created it to be.",
+      "original": "Non enim abnuimus humanam naturam posse esse sine peccato, aut ullo modo negare debemus perfici posse, quam proficere non negamus, sed gratia Dei per Jesum Christum Dominum nostrum: eo adjuvante fieri dicimus, ut iusta et beata sit, a quo creata est ut sit.",
+      "context": "Augustine answers Pelagius's book On Nature: sinlessness itself is not denied. What is denied is that our nature can reach it without grace.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt",
+        "ia": "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_44",
+        "ocr_poor": true,
+        "edition": "Migne PL 44 (1845), De natura et gratia 68"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "carthage-418-canon-5",
+      "author": "Council of Carthage",
+      "year": 418,
+      "date": "418",
+      "work": "Canons against the Pelagians",
+      "locus": "Canon 5",
+      "lang": "la",
+      "answer": "needed",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "key",
+      "english": "It was also resolved: whoever says that the grace of justification is given us so that what we are commanded to do by free choice we may more easily fulfil through grace, as if, even if grace were not given, we could, not easily indeed, but still could, fulfil the divine commandments without it, let him be anathema. For the Lord was speaking of the fruits of the commandments when he did not say, 'Without me you can do things with difficulty', but said, 'Without me you can do nothing' (John 15:5).",
+      "original": "Item placuit, ut quicunque dixerit, ideo nobis gratiam iustificationis dari, ut, quod facere per liberum iubemur arbitrium, facilius possimus implere per gratiam, tamquam et si gratia non daretur, non quidem facile, sed tamen possimus etiam sine illa implere divina mandata, A. S. ... De fructibus enim mandatorum Dominus loquebatur, ubi non ait: Sine me difficilius potestis facere, sed ait: Sine me nihil potestis facere.",
+      "context": "The African bishops at Carthage (418) condemned Pelagius's teaching canon by canon; Pope Zosimus approved the canons, and they became the West's rule on grace before Orange.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 105"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "augustine-perseverance-20-53",
+      "author": "Augustine of Hippo",
+      "year": 429,
+      "date": "429",
+      "work": "On the Gift of Perseverance",
+      "locus": "20.53",
+      "lang": "la",
+      "answer": "needed",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "In them I said to our God, and I said it often: 'Give what you command, and command what you will.' ... What, then, does God command first and most of all, if not that we believe in him? So this too he himself gives, if it was rightly said to him, 'Give what you command.'",
+      "original": "in eis certe dixi Deo nostro, et saepe dixi: Da quod iubes, et iube quod vis... Quid vero primitus et maxime Deus iubet, nisi ut credamus in eum? Et hoc ergo ipse dat, si bene illi dictum est, Da quod iubes.",
+      "context": "Augustine, near the end of his life, recalls that Pelagius at Rome could not bear to hear the prayer from his Confessions quoted. Even faith, the first thing God commands, is God's gift.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-45.txt",
+        "ia": "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_45",
+        "ocr_poor": true,
+        "edition": "Migne PL 44 (1845), De dono perseverantiae 20.53"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "orange-529-canon-6",
       "author": "Council of Orange",
       "year": 529,
@@ -135,14 +204,6 @@
   ],
   "gaps": [
     {
-      "author": "Council of Carthage",
-      "work": "Canons on grace",
-      "year": 418,
-      "why": "The African bishops' condemnation of Pelagius, approved by Rome. Not found in the Denzinger scan's text.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 101–108)"
-    },
-    {
       "author": "John Cassian",
       "work": "Conference 13",
       "year": 426,
@@ -157,14 +218,6 @@
       "why": "Pelagius on human nature in his own words.",
       "action": "intake",
       "source_hint": "Migne PL 30 and 33"
-    },
-    {
-      "author": "Augustine of Hippo",
-      "work": "On Nature and Grace; On the Gift of Perseverance 20.53",
-      "year": 415,
-      "why": "Augustine's main replies. Migne PL 44 is fetched; PL 45 is not.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt"
     }
   ],
   "related": {

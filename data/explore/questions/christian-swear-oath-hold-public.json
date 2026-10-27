@@ -39,7 +39,9 @@
     {
       "text": "After Constantine, Christians held office and took oaths; the Reformed confessions call both lawful, while Anabaptists and Quakers kept the early refusal.",
       "cites": [
-        "westminster-1646-23-2"
+        "westminster-1646-23-2",
+        "schleitheim-1527-article-6",
+        "schleitheim-1527-article-7"
       ]
     }
   ],
@@ -108,6 +110,48 @@
       "translation": "dossier"
     },
     {
+      "id": "schleitheim-1527-article-6",
+      "author": "Swiss Brethren (Anabaptist)",
+      "year": 1527,
+      "date": "1527",
+      "work": "Schleitheim Confession",
+      "locus": "Article 6",
+      "lang": "en",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Finally it will be observed that it is not appropriate for a Christian to serve as a magistrate because of these points: The government magistracy is according to the flesh, but the Christian's is according to the Spirit.",
+      "original": "Finally it will be observed that it is not appropriate for a Christian to serve as a magistrate because of these points: The government magistracy is according to the flesh, but the Christian's is according to the Spirit.",
+      "context": "Article 6, on the sword: the magistrate's office belongs to the order of the flesh, outside the perfection of Christ.",
+      "source": {
+        "url": "https://anabaptists.org/history/the-schleitheim-confession.html",
+        "edition": "Schleitheim Confession, Article VI (24 February 1527)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "schleitheim-1527-article-7",
+      "author": "Swiss Brethren (Anabaptist)",
+      "year": 1527,
+      "date": "1527",
+      "work": "Schleitheim Confession",
+      "locus": "Article 7",
+      "lang": "en",
+      "answer": "refuse",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "supporting",
+      "english": "Christ, who teaches the perfection of the Law, prohibits all swearing to His followers, whether true or false, neither by heaven, nor by the earth, nor by Jerusalem, nor by our head, and that for the reason He shortly thereafter gives, For you are not able to make one hair white or black.",
+      "original": "Christ, who teaches the perfection of the Law, prohibits all swearing to His followers, whether true or false, neither by heaven, nor by the earth, nor by Jerusalem, nor by our head, and that for the reason He shortly thereafter gives, For you are not able to make one hair white or black.",
+      "context": "Article 7, on the oath: the Anabaptist answer takes Christ's 'do not swear at all' (Matthew 5:34) as a standing prohibition. The English follows the long reprinted Schleitheim text, as elsewhere on this site.",
+      "source": {
+        "url": "https://anabaptists.org/history/the-schleitheim-confession.html",
+        "edition": "Schleitheim Confession, Article VII (24 February 1527)"
+      },
+      "translation": "published"
+    },
+    {
       "id": "westminster-1646-23-2",
       "author": "Westminster Assembly",
       "year": 1646,
@@ -137,14 +181,6 @@
       "why": "Swearing is not forbidden as sin, but to be avoided.",
       "action": "intake",
       "source_hint": "Migne PL 38"
-    },
-    {
-      "author": "Schleitheim Confession",
-      "work": "Articles 6–7",
-      "year": 1527,
-      "why": "No office and no oaths for Christians.",
-      "action": "search",
-      "source_hint": "doctrine_questions death-penalty defined texts"
     }
   ],
   "related": {

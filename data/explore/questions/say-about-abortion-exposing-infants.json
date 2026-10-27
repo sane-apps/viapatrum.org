@@ -103,6 +103,27 @@
       "translation": "dossier"
     },
     {
+      "id": "minucius-felix-octavius-30-abortion",
+      "author": "Minucius Felix",
+      "year": 200,
+      "date": "c. 200",
+      "work": "Octavius",
+      "locus": "30.5–6",
+      "lang": "la",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "For I see that you expose your children to wild beasts and birds, or strangle them in a wretched kind of death. There are women who, by drinking drugs, quench in their very womb the beginning of a future human being, and commit parricide before they give birth.",
+      "original": "uos enim uideo procreatos filios nunc feris et auibus exponere, nunc adstrangulatos misero mortis genere elidere: sunt quae in ipsis uisceribus medicaminibus epotis originem futuri hominis extinguant et parricidium faciant, antequam pariant.",
+      "context": "A Christian spokesman answers pagan charges by turning them back: exposure and abortion are pagan practices, learned, he says, from the gods themselves. The same chapter says Christians may not even watch a killing.",
+      "source": {
+        "book": "minucius-felix-octavius",
+        "section": "30"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "justin-1apol-27",
       "author": "Justin Martyr",
       "year": 155,
@@ -143,17 +164,55 @@
         "section": "5"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "basil-letter-188-canon-2",
+      "author": "Basil of Caesarea",
+      "year": 374,
+      "date": "374",
+      "work": "Letter 188, to Amphilochius (First Canonical Letter)",
+      "locus": "Canon 2",
+      "lang": "grc",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "A woman who deliberately destroys what she has conceived is liable to the penalty for murder. With us there is no fine distinction between what is fully formed and what is not yet formed. ... For here vengeance is taken not only for what was to be born, but also for the woman herself, who plotted against herself. ... In addition there is the destruction of the embryo, a second murder, at least in the intention of those who dare these things. ... Their penance, though, must not be extended until death: they are to be received with the measure of ten years, and their cure is to be determined not by time but by the manner of their repentance.",
+      "original": "Φθείρασα κατ’ ἐπιτήδευσιν, φόνου δίκην ὑπέχει. Ἀκριβολογία δὲ ἐκμεμορφωμένου καὶ ἀνεξικονίστου παρ’ ἡμῖν οὐκ ἔστιν. ... Ἐνταῦθα γὰρ ἐκδικεῖται οὐ μόνον τὸ γεννηθησόμενον, ἀλλὰ καὶ αὐτὴ ἡ ἑαυτῇ ἐπιβουλεύσασα. Πρόσεστι δὲ τούτῳ καὶ ἡ φθορὰ τοῦ ἐμβρύου, ἕτερος φόνος κατὰ γε τὴν ἐπίνοιαν τῶν ταῦτα τολμώντων. ... Δεῖ μέντοι μὴ μέχρι τῆς ἐξόδου παρατείνειν αὐτῶν τὴν ἐξομολόγησιν, ἀλλὰ δέχεσθαι μὲν τὸ μέτρον τῶν δέκα ἐτῶν, ὁρίζειν δὲ μὴ χρόνῳ, ἀλλὰ τρόπῳ τῆς μετανοίας τὴν θεραπείαν.",
+      "context": "Basil's first canonical letter to Amphilochius of Iconium (374), answering questions of church discipline. The older penance for abortion ran until death; Basil fixes ten years, graded by repentance. The wording for the formed and unformed pair varies slightly between editions; PG 32 reads 'fully formed and not yet imaged'. Quoted from the PG 32 scan, whose OCR is poor and often reads kappa as chi.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true,
+        "edition": "Migne PG 32 (scan text)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "basil-letter-188-canon-8-abortion",
+      "author": "Basil of Caesarea",
+      "year": 374,
+      "date": "374",
+      "work": "Letter 188, to Amphilochius (First Canonical Letter)",
+      "locus": "Canon 8 (close)",
+      "lang": "grc",
+      "answer": "forbidden",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "And so those who give drugs that cause abortion are themselves murderesses, as are those who receive the poisons that kill the embryo.",
+      "original": "Καὶ αἱ τοίνυν τὰ ἀμβλωθρίδια διδοῦσαι φάρμακα φονεύτριαι εἰσὶ καὶ αὐταί, καὶ αἱ δεχόμεναι τὰ ἐμβρυοκτόνα δηλητήρια.",
+      "context": "Canon 8 sorts killings into voluntary and involuntary, and closes by placing abortion under the same heading of murder: the woman who supplies the drug and the woman who takes it are both counted murderers. Basil uses the same rare word for the drugs (amblothridia) as Athenagoras.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt",
+        "ia": "patrologiae_cursus_completus_gr_vol_032",
+        "ocr_poor": true,
+        "edition": "Migne PG 32 (scan text)"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
-    {
-      "author": "Basil of Caesarea",
-      "work": "Letter 188, canons 2 and 8",
-      "year": 374,
-      "why": "Penance for abortion; no distinction between a formed and unformed fetus.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-032.txt"
-    },
     {
       "author": "Councils of Elvira and Ancyra",
       "work": "Elvira canon 63; Ancyra canon 21",
@@ -161,14 +220,6 @@
       "why": "Church penalties for abortion.",
       "action": "intake",
       "source_hint": "Bruns (1839)"
-    },
-    {
-      "author": "Minucius Felix",
-      "work": "Octavius 30",
-      "year": 200,
-      "why": "Pagan practice of abortion and exposure contrasted. In the library's raw Octavius text.",
-      "action": "search",
-      "source_hint": "books/ante-nicene-topics/sources/raw/minucius_octavius_migne_pl3_wikisource.txt"
     }
   ],
   "related": {

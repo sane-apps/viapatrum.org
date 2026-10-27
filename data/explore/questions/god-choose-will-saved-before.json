@@ -150,6 +150,29 @@
       "translation": "dossier"
     },
     {
+      "id": "augustine-predestination-of-saints-10-19",
+      "author": "Augustine of Hippo",
+      "year": 429,
+      "date": "429",
+      "work": "On the Predestination of the Saints",
+      "locus": "10.19",
+      "lang": "la",
+      "answer": "grace",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Between grace and predestination there is only this difference: predestination is the preparation of grace, while grace is now the gift itself.",
+      "original": "Inter gratiam porro et praedestinationem hoc tantum interest, quod praedestinatio est gratiae praeparatio, gratia vero iam ipsa donatio.",
+      "context": "Augustine's last word on the question, written to Prosper and Hilary in Gaul: predestination is not God rewarding foreseen merit, but God preparing the grace he will give.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-bim-early-english-books-1641-1700-patrologiae-cursus-completus-1845-44.txt",
+        "ia": "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_44",
+        "ocr_poor": true,
+        "edition": "Migne PL 44 (1845), De praedestinatione sanctorum 10.19"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "orange-529-conclusion",
       "author": "Council of Orange",
       "year": 529,
@@ -169,6 +192,29 @@
         "ia": "enchiridionsymbo00denz",
         "ocr_poor": true,
         "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 200"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "quierzy-853-chapter-1",
+      "author": "Council of Quierzy",
+      "year": 853,
+      "date": "853",
+      "work": "Chapters on predestination",
+      "locus": "Chapter 1",
+      "lang": "la",
+      "answer": "grace",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "The rest, whom in the judgment of his justice he left in the mass of perdition, he foreknew would perish, but he did not predestine them in order that they should perish; the punishment, though, because he is just, he predestined for them eternally. And so we speak of only one predestination of God, which has to do either with the gift of grace or with the requital of justice.",
+      "original": "ceteros autem, quos iustitiae iudicio in massa perditionis reliquit, perituros praescivit, sed non ut perirent praedestinavit; poenam autem illis, quia iustus est, praedestinavit aeternam. Ac per hoc unam Dei praedestinationem tantummodo dicimus, quae aut ad donum pertinet gratiae aut ad retributionem iustitiae.",
+      "context": "Quierzy (853), under Hincmar of Reims, answered Gottschalk of Orbais, who taught a twin predestination to life and to death. The stricter Council of Valence (855) sharpened the wording but kept the point: God foreknows evil, he does not predestine it.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), no. 316"
       },
       "translation": "dossier"
     },
@@ -258,22 +304,6 @@
     }
   ],
   "gaps": [
-    {
-      "author": "Gottschalk of Orbais",
-      "work": "Confessions; the councils of Quierzy (853) and Valence (855)",
-      "year": 850,
-      "why": "The ninth-century fight over double predestination. Quierzy and Valence are in the Denzinger scan.",
-      "action": "search",
-      "source_hint": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt (nos. 316–325)"
-    },
-    {
-      "author": "Augustine of Hippo",
-      "work": "On the Predestination of the Saints",
-      "year": 429,
-      "why": "\"Predestination is the preparation of grace.\" In the fetched Migne PL 44 scan.",
-      "action": "search",
-      "source_hint": "PL 44 col. 959"
-    },
     {
       "author": "Jacob Arminius",
       "work": "Declaration of Sentiments",

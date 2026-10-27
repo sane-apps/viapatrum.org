@@ -160,6 +160,31 @@
         "edition": "The Latin Library text"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "basil-longer-rules-37",
+      "author": "Basil of Caesarea",
+      "year": 370,
+      "date": "c. 370",
+      "work": "Longer Rules (Regulae fusius tractatae)",
+      "locus": "37",
+      "lang": "grc",
+      "answer": "hours",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "The appointed times of prayer in the brotherhoods must not be passed over, times which we have necessarily chosen... Dawn first, so that the first movements of the soul and of the mind may be offerings to God... At the third hour, to rise for prayer and gather the brotherhood together... reminded of the gift of the Spirit, given to the apostles at the third hour, to worship all with one accord... At the sixth hour we judged prayer to be necessary, in imitation of the saints... The ninth hour has been handed down to us by the apostles themselves in Acts as necessary for prayer... When the day is complete, thanksgiving for what was given us in it... Midnight was handed down to us by Paul and Silas as necessary for prayer... And we must rise for prayer before dawn.",
+      "original": "παρορᾶσθαι δεῖ τοὺς διατετυπωμένους καιροὺς τῶν προσευχῶν ἐν ταῖς ἀδελφότησιν, οὓς ἀναγκαίως ἐξελεξάμεθα ... τὸν μὲν ὄρθρον, ὥστε τὰ πρῶτα κινήματα τῆς ψυχῆς καὶ τοῦ νοῦ ἀναθήματα εἶναι Θεοῦ ... κατὰ τὴν τρίτην ὥραν εἰς τὴν προσευχὴν ἀνίστασθαι, καὶ ἐπισυνάγειν τὴν ἀδελφότητα ... τῆς τοῦ Πνεύματος δωρεᾶς, τῆς κατὰ τὴν τρίτην ὥραν τοῖς ἀποστόλοις δεδομένης, προσκυνῆσαι πάντας ὁμοθυμαδόν ... Ἐν δὲ τῇ ἕκτῃ ὥρᾳ κατὰ μίμησιν τῶν ἁγίων ἀναγκαίαν εἶναι τὴν προσευχὴν ἐκρίναμεν ... Ἡ δὲ ἐννάτη παρ’ αὐτῶν ἡμῖν τῶν ἀποστόλων ἐν ταῖς Πράξεσιν ἀναγκαία εἰς προσευχὴν παραδέδοται ... Συμπληρωθείσης δὲ τῆς ἡμέρας, ἡ εὐχαριστία περὶ τῶν ἐν αὐτῇ δεδομένων ἡμῖν ... Τὸ δὲ μεσονύκτιον Παῦλος καὶ Σίλας ἡμῖν ἀναγκαῖον εἰς προσευχὴν παραδεδώκασιν ... χρὴ προφθάσαντας τὸν ὄρθρον εἰς τὴν προσευχὴν διανίστασθαι",
+      "context": "Basil's rule for monastic communities (the Asceticon). Question 37 asks about the times of prayer; in the library's locked text the answer begins at the end of the preceding section, so the quote is drawn from sections 36 and 37 together. The day is framed by prayer at dawn, the third, sixth and ninth hours, at the day's end, at midnight and before dawn: the skeleton of the later daily office.",
+      "source": {
+        "book": "basil-regulae-fusius",
+        "section": "36",
+        "also": {
+          "book": "basil-regulae-fusius",
+          "section": "37"
+        }
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
@@ -170,14 +195,6 @@
       "why": "The hours of prayer including midnight.",
       "action": "intake",
       "source_hint": "Hauler (1900)"
-    },
-    {
-      "author": "Basil of Caesarea",
-      "work": "Longer Rules 37",
-      "year": 370,
-      "why": "The monastic hours. In the library as basil-regulae-fusius; to be searched.",
-      "action": "search",
-      "source_hint": "books/basil-regulae-fusius/sources/asceticon_magnum_khazarzar.txt"
     }
   ],
   "related": {

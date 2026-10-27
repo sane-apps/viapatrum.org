@@ -47,7 +47,7 @@ function fakeAudioClass() {
 async function mount() {
   const { FakeAudio, instances } = fakeAudioClass();
   const dom = new JSDOM(page, {
-    url: 'https://fathers.saneapps.com/works/john-wesley-salvation-by-faith/2/',
+    url: 'https://viapatrum.org/works/john-wesley-salvation-by-faith/2/',
     runScripts: 'outside-only',
     pretendToBeVisual: true,
   });

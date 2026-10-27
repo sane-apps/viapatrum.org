@@ -286,7 +286,7 @@ def move_church_views(dist: Path, old_ids: set[str], new_ids: set[str]) -> dict[
             html = fix(f.read_text(encoding="utf-8"))
             if f == ch / "index.html":
                 html = re.sub(r'(<link rel="canonical" href="[^"]*?/explore/)(")', r'\1churches/\2', html)
-                html = re.sub(r'(<meta property="og:url" content="[^"]*?/explore/)(")', r'\1churches/\2', html)
+                html = re.sub(r'(<meta (?:property="og:url"|name="twitter:url") content="[^"]*?/explore/)(")', r'\1churches/\2', html)
                 html = html.replace("<h1>How beliefs developed over time</h1>", "<h1>Where the churches stand</h1>")
             f.write_text(html, encoding="utf-8")
     return {i: (f"/explore/{CHURCHES}/{i}/" if i in moved else f"/explore/{i}/") for i in old_ids}
@@ -311,7 +311,7 @@ def build(dist: Path, layout, write, B, old_ids: set[str]) -> int:
         "Ask the early Church · Timeline", index_page(data),
         crumb=[("Home", "/"), ("Timeline", "")], active="explore",
         styles=["/assets/timeline.css"], scripts=["/assets/timeline.js"],
-        description="The 100 questions readers ask most about what the early Church believed, each answered from the writers' own words in date order, with the Greek or Latin one click away.",
+        description="The 100 questions readers ask most about what the early Church believed, each answered in the writers' own words, earliest first.",
         canonical="/explore/"))
     (dist / "data").mkdir(exist_ok=True)
     (dist / "data" / "timeline-search.json").write_text(

@@ -40,7 +40,16 @@
       "text": "The open quarrels came over the filioque added to the Western creed (see question 16) and over papal claims: Photius in 867, the mutual excommunications of 1054, the sack of Constantinople in 1204. Florence (1439) tried to reunite them on Rome's terms and failed.",
       "cites": [
         "florence-1439-laetentur",
-        "moscow-2013-primacy-b"
+        "moscow-2013-primacy-b",
+        "photius-encyclical-2",
+        "humbert-bull-1054",
+        "choniates-history-sack-1204"
+      ]
+    },
+    {
+      "text": "In 1965 Paul VI and Athenagoras I together lifted the anathemas of 1054 and committed them to oblivion, though the division itself remained.",
+      "cites": [
+        "paul-vi-athenagoras-1965"
       ]
     }
   ],
@@ -88,6 +97,70 @@
       "translation": "dossier"
     },
     {
+      "id": "photius-encyclical-2",
+      "author": "Photius of Constantinople",
+      "year": 867,
+      "date": "867",
+      "work": "Encyclical Letter to the Eastern Patriarchs",
+      "locus": "2",
+      "lang": "grc",
+      "answer": "doctrine",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "They tried to falsify the holy Creed ... by coining the new teaching that the Holy Spirit proceeds not from the Father only, but also from the Son",
+      "original": "κιβδηλεύειν ἐπεχείρησαν ... τὸ Πνεῦμα τὸ ἅγιον οὐκ ἐκ τοῦ Πατρὸς μόνον, ἀλλά γε καὶ ἐκ τοῦ Υἱοῦ, ἐκπορεύεσθαι καινολογήσαντες",
+      "context": "The first Eastern charge sheet against Rome, sent to the other patriarchs in 867. The filioque heads the list of Latin errors: Photius is charging the Frankish missionaries in Bulgaria with falsifying the Creed itself.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-gfwtoupistolame00photgoog.txt",
+        "edition": "Valettas, Photiou Epistolai (1864)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "humbert-bull-1054",
+      "author": "Humbert of Silva Candida",
+      "year": 1054,
+      "date": "1054",
+      "work": "Bull of Excommunication",
+      "locus": "1054",
+      "lang": "la",
+      "answer": "authority",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Michael, a usurping patriarch, a neophyte ... and all their followers in the errors and presumptions named above: let them be anathema Maranatha ... with the devil and his angels",
+      "original": "Michaél abusivus patriarcha neophytus ... et omnes sequaces eorum in praefatis erroribus et praesumptionibus, sint anathema Maranatha ... cum diabolo et angelis ejus",
+      "context": "Laid on the altar of Hagia Sophia on 16 July 1054. Cerularius and his synod answered with their own anathemas days later; the mutual sentences were lifted only in 1965.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-Will1861ActaEtScripta.txt",
+        "edition": "Will, Acta et scripta (1861)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "choniates-history-sack-1204",
+      "author": "Niketas Choniates",
+      "year": 1206,
+      "date": "c. 1206",
+      "work": "History",
+      "locus": "on the sack of 1204",
+      "lang": "grc",
+      "answer": "authority",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Mules and pack animals, laden, were led in as far as the sanctuary of the church ... a wretched little woman, heaped with sins ... let out a loose and broken song",
+      "original": "ἡμίονοί τε καὶ ὑποζύγια σεσαγμένα μέχρι τῶν ἀδύτων εἰσήγοντο τοῦ νεὼ ... γυναικάριόν τι σεσωρευμένον ἁμαρτίαις ... κεχλασμένον ἀφῆκε μέλος",
+      "context": "A Byzantine official who lived through the sack of April 1204; his account is a chief reason 1204, more than 1054, fixed the separation in Greek memory. In the full passage the woman is seated on the patriarchal throne in Hagia Sophia. The 1835 scan is rough and some words are hard to read in it; the words quoted follow the standard printed text.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-nicetaechoniata00chongoog.txt",
+        "edition": "Bekker, Corpus Scriptorum Historiae Byzantinae (1835)",
+        "ocr_poor": true
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "florence-1439-laetentur",
       "author": "Council of Florence",
       "year": 1439,
@@ -105,6 +178,27 @@
       "source": {
         "url": "https://www.papalencyclicals.net/councils/ecum17.htm",
         "edition": "Council of Florence, Laetentur Caeli (1439)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "paul-vi-athenagoras-1965",
+      "author": "Paul VI and Athenagoras I",
+      "year": 1965,
+      "date": "7 December 1965",
+      "work": "Joint Catholic-Orthodox Declaration",
+      "locus": "4.B",
+      "lang": "en",
+      "answer": "authority",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "They likewise regret and remove both from memory and from the midst of the Church the sentences of excommunication which followed these events ... and they commit these excommunications to oblivion.",
+      "original": "They likewise regret and remove both from memory and from the midst of the Church the sentences of excommunication which followed these events ... and they commit these excommunications to oblivion.",
+      "context": "Read simultaneously in Rome and Istanbul on 7 December 1965, at the close of the Second Vatican Council. It lifted the mutual sentences of 1054, but it did not restore communion: the declaration itself says this gesture was not sufficient to end the old and more recent differences between the two churches (para. 5). Copy saved as outputs/question-dossiers/witnesses/url-paul-vi-athenagoras-1965-declaration.txt.",
+      "source": {
+        "url": "https://www.vatican.va/content/paul-vi/en/speeches/1965/documents/hf_p-vi_spe_19651207_common-declaration.html",
+        "edition": "Joint Catholic-Orthodox Declaration of Pope Paul VI and Ecumenical Patriarch Athenagoras I (7 December 1965), official text, vatican.va"
       },
       "translation": "published"
     },
@@ -130,40 +224,7 @@
       "translation": "published"
     }
   ],
-  "gaps": [
-    {
-      "author": "Photius of Constantinople",
-      "work": "Encyclical Letter to the Eastern Patriarchs",
-      "year": 867,
-      "why": "The first Eastern charge sheet against Rome, led by the filioque. The fetched 1651 scan has only a poor Latin version.",
-      "action": "intake",
-      "source_hint": "Valettas, Photiou Epistolai (1864); Migne PG 102"
-    },
-    {
-      "author": "Humbert of Silva Candida and Michael Cerularius",
-      "work": "Bull of excommunication and synodal edict",
-      "year": 1054,
-      "why": "The documents of 1054.",
-      "action": "intake",
-      "source_hint": "Will, Acta et scripta (1861)"
-    },
-    {
-      "author": "Niketas Choniates",
-      "work": "History, on the sack of 1204",
-      "year": 1206,
-      "why": "The Greek eyewitness of the Fourth Crusade.",
-      "action": "intake",
-      "source_hint": "Bekker, CSHB (1835)"
-    },
-    {
-      "author": "Paul VI and Athenagoras I",
-      "work": "Joint Catholic-Orthodox Declaration",
-      "year": 1965,
-      "why": "Lifted the anathemas of 1054.",
-      "action": "search",
-      "source_hint": "vatican.va"
-    }
-  ],
+  "gaps": [],
   "related": {
     "timeline": "spirit-procession",
     "topics": [

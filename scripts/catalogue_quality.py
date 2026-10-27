@@ -24,14 +24,13 @@ SOURCE_CONTAMINATION = re.compile(
 # English words, with summary-like sources; see docs/IA.md audit and
 # outputs/catalogue-audit/short-whole-work-review.json. These need source
 # review, not a claim that every short ancient text is invalid.
+# Released 2026-10-24: origen-contra-celsum preface + books 1-8. The old
+# summaries were replaced by a whole translation from Koetschau (GCS 2-3,
+# Perseus TEI): 628/628 source chapters match the TEI text (3 differ only in
+# &lt;/&gt; entity encoding), every chapter has English, 628 justifications
+# pass check_pass_ab. Evidence: clients/translations/books/origen-contra-celsum/
+# SESSION_HANDOFF.md and the site SESSION_HANDOFF.md (2026-10-24).
 SCOPE_REVIEW_HOLD = frozenset({
-    'origen-contra-celsum-book-2',
-    'origen-contra-celsum-book-3',
-    'origen-contra-celsum-book-4',
-    'origen-contra-celsum-book-5',
-    'origen-contra-celsum-book-6',
-    'origen-contra-celsum-book-7',
-    'origen-contra-celsum-book-8',
     'origen-de-principiis-book-2',
     'origen-de-principiis-book-3',
     'origen-de-principiis-book-4',
@@ -163,8 +162,6 @@ EXTENDED_REVIEW_HOLD = {
     'cyril-trinity-dialogue-5': 'Dialogue presented as complete with only opening/remainder slices; full source coverage unverified in contaminated dialogue series.',
     'cyril-trinity-dialogue-6': 'Dialogue presented as complete with only opening/remainder slices; full source coverage unverified in contaminated dialogue series.',
     'cyril-trinity-dialogue-7': 'Dialogue presented as complete with only opening/remainder slices; full source coverage unverified in contaminated dialogue series.',
-    'origen-contra-celsum-book-1': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
-    'origen-contra-celsum-preface': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
     'origen-de-principiis': 'Sampled source blocks or third-person summaries presented as full work/series; section-range coverage and reading translation require source review.',
     'origen-exodus-homily-1': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
     'origen-exodus-homily-2': 'Condensed homily/commentary family: very short source and English sections presented as complete; exact edition alignment requires review after confirmed Genesis X source mismatch.',
@@ -613,7 +610,7 @@ def self_check() -> None:
         pass
     else:
         raise AssertionError("Duplicate work slugs must be merged before quality checks")
-    assert partition_catalogue([work("origen-contra-celsum-book-2", ["Summary."])])[1]
+    assert partition_catalogue([work("origen-de-principiis-book-2", ["Summary."])])[1]
     assert partition_catalogue([work("genuine-short-fragment", ["One surviving sentence."])])[0]
     assert [row["slug"] for row in held] == ["mixed", "drafts", "empty"]
     assert [row["flagged_section_count"] for row in held] == [1, 2, 1]

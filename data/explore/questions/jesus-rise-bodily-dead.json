@@ -119,14 +119,35 @@
         "section": "63"
       },
       "translation": "dossier"
+    },
+    {
+      "id": "methodius-resurrection",
+      "author": "Methodius of Olympus",
+      "year": 300,
+      "date": "c. 300",
+      "work": "On the Resurrection (quoted in Epiphanius, Panarion 64)",
+      "locus": "Book 1",
+      "lang": "grc",
+      "answer": "flesh",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "A human being is most truly said, according to nature, to be neither soul without body nor body without soul, but the being put together from the union of soul and body into one beautiful form; and from this it is clear that man was made immortal, beyond all corruption and disease.",
+      "original": "ἄνθρωπος ἀληθέστατα λέγεται κατὰ φύσιν οὔτε ψυχὴ χωρὶς σώματος, οὔτ' αὖ σῶμα χωρὶς ψυχῆς, ἀλλὰ τὸ ἐκ συστάσεως ψυχῆς καὶ σώματος εἰς μίαν τὴν τοῦ καλοῦ μορφὴν συντεθέν· ὅθεν ἐντεῦθεν ἀθάνατον δὴ τὸν ἄνθρωπον γεγονέναι φαίνεται, φθορᾶς τε ἁπάσης καὶ νόσων ἐκτός.",
+      "context": "Methodius's dialogue answered Origen's spiritualised resurrection body: man is the soul and body together, so death must give back the composite, not a spirit alone. The work survives whole only in Old Slavonic; long stretches of the Greek are quoted word for word by Epiphanius (Panarion 64), who treats it as the refutation of Origen.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/khaz-epiphanius-pg-41-43-panarion.txt",
+        "edition": "Migne PG 42, Panarion 64 (Methodius, On the Resurrection, quoted), Khazarzar text"
+      },
+      "translation": "dossier"
     }
   ],
   "gaps": [
     {
       "author": "Origen and Methodius",
-      "work": "On the Resurrection",
+      "work": "On the Resurrection (Origen's lost work)",
       "year": 300,
-      "why": "Origen taught a spiritual body; Methodius answered him. The library's Methodius books are not yet searched for this.",
+      "why": "Methodius's answer is now quoted, from the Greek Epiphanius preserved in Panarion 64. Origen's own On the Resurrection is lost apart from fragments and the reports inside Methodius's reply; the library's Methodius books (Symposium, On Free Will, and fragments) do not contain the dialogue, which survives whole only in Old Slavonic (Bonwetsch, GCS 27).",
       "action": "search",
       "source_hint": "methodius books; Bonwetsch GCS 27 (1917)"
     }

@@ -6,6 +6,19 @@
       const open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
+    // The phone Menu closes on Escape (focus back on the button) and on a tap outside it.
+    const closeMenu = (refocus) => {
+      if (!nav.classList.contains("is-open")) return;
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+      if (refocus) toggle.focus();
+    };
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu(nav.contains(document.activeElement) || document.activeElement === toggle);
+    });
+    document.addEventListener("click", (e) => {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) closeMenu(false);
+    });
   }
 
   // Home Ask field: the hint inside it turns through a few topics (owner 2026-10-18).
@@ -77,7 +90,14 @@
           const el = dailyCard.querySelector(sel);
           if (el) el.textContent = text;
         };
-        set(".vp-daily-q", r.q);
+        // Text that opens or ends with its own quote mark drops both outer marks (as the builder does).
+        const quote = (sel, text) => {
+          set(sel, text);
+          const el = dailyCard.querySelector(sel);
+          const own = /^\s*["“‘]|["”’]\s*$/.test(text || "");
+          if (el) el.parentElement.querySelectorAll(".vp-qm").forEach((m) => (m.hidden = own));
+        };
+        quote(".vp-daily-q", r.q);
         set(".vp-daily-a", r.a);
         set(".vp-daily-d", r.d);
         set(".vp-daily-c", r.c);
@@ -85,6 +105,18 @@
         dailyCard.querySelectorAll(".vp-daily-th").forEach((a) => a.setAttribute("href", r.th));
         const read = dailyCard.querySelector(".vp-daily-h");
         if (read) read.setAttribute("href", r.h);
+        // Today's Scripture: the verse the passage cites, or the topic's most-cited chapter.
+        const sc = dailyCard.querySelector("[data-daily-sc]");
+        if (sc) {
+          if (r.sr) {
+            quote(".vp-sc-v", r.sv);
+            set(".vp-sc-r", r.sr);
+            set(".vp-sc-ch", r.sch);
+            const go = sc.querySelector(".vp-sc-h");
+            if (go) go.setAttribute("href", r.sh);
+          }
+          sc.hidden = !r.sr;
+        }
       }
     }).catch(() => {
       /* keep the passage the page shipped with */
@@ -98,40 +130,54 @@
     const home = desk && desk.querySelector('[data-for="chapter"]');
     const sections = desk ? Array.from(desk.querySelectorAll(".desk-verse")) : [];
     const text = bx.querySelector(".bx-text");
+    // One short line for screen readers; the desk itself is not a live region.
+    const status = desk && desk.querySelector("#desk-status");
+    let lastV = null;
     const show = (v, opts = {}) => {
       if (!desk) return;
       const target = v ? sections.find((sec) => sec.dataset.for === String(v)) : null;
+      const wasOpen = !!desk.querySelector(".desk-verse:not([hidden])");
       sections.forEach((sec) => (sec.hidden = sec !== target));
       if (home) home.hidden = !!target;
       desk.classList.toggle("is-verse", !!target);
       bx.querySelectorAll(".v.is-on").forEach((el) => el.classList.remove("is-on"));
       if (target) {
+        lastV = String(v);
         const verse = bx.querySelector(`.v[data-v="${v}"]`);
         if (verse) verse.classList.add("is-on");
         desk.scrollTop = 0;
         if (opts.push !== false) history.replaceState(null, "", `#v${v}`);
-        if (opts.focus) target.querySelector("h2")?.setAttribute("tabindex", "-1"), target.querySelector("h2")?.focus({ preventScroll: true });
-      } else if (opts.push !== false) {
-        history.replaceState(null, "", location.pathname + location.search);
+        const h2 = target.querySelector("h2");
+        if (opts.focus && h2) {
+          h2.setAttribute("tabindex", "-1");
+          h2.focus({ preventScroll: true });
+        } else if (status && opts.push !== false) {
+          const count = target.querySelector(".desk-count");
+          status.textContent = [h2 && h2.textContent, count && count.textContent].filter(Boolean).join(", ");
+        }
+      } else {
+        if (status) status.textContent = "";
+        if (opts.push !== false) history.replaceState(null, "", location.pathname + location.search);
+        // Closing hides the focused heading: put focus back on the verse the reader left.
+        const lost = document.activeElement === document.body || desk.contains(document.activeElement);
+        if (wasOpen && lost && lastV) bx.querySelector(`.v-open[data-v="${lastV}"]`)?.focus();
       }
     };
     bx.addEventListener("click", (e) => {
+      const open = e.target.closest(".v-open");
+      if (open) return show(open.dataset.v, { focus: true });
       const verse = e.target.closest(".v.cited");
       if (verse) return show(verse.dataset.v);
       const jump = e.target.closest(".desk-jump");
       if (jump) {
         const el = bx.querySelector(`.v[data-v="${jump.dataset.v}"]`);
         if (el) el.scrollIntoView({ block: "center", behavior: "smooth" });
-        return show(jump.dataset.v);
+        // The jump button sits in the chapter list that show() hides: move focus with it.
+        return show(jump.dataset.v, { focus: true });
       }
       if (e.target.closest(".desk-back, .desk-close")) show(null);
     });
     bx.addEventListener("keydown", (e) => {
-      const verse = e.target.closest(".v.cited");
-      if (verse && (e.key === "Enter" || e.key === " ")) {
-        e.preventDefault();
-        show(verse.dataset.v, { focus: true });
-      }
       if (e.key === "Escape") show(null);
     });
     const fromHash = () => {
@@ -142,7 +188,43 @@
     window.addEventListener("hashchange", fromHash);
 
     // Translation switch: BSB ships in the page; others load per chapter.
-    const trButtons = Array.from(bx.querySelectorAll("[data-tr]"));
+    const trButtons = Array.from(bx.querySelectorAll("button[data-tr]"));
+    const more = bx.querySelector("[data-tr-more]");
+    const srcOf = (key) => trButtons.find((b) => b.dataset.tr === key) || (more && Array.from(more.options).find((o) => o.value === key));
+    const yvKey = (bx.querySelector("[data-yv-key]") || {}).dataset?.yvKey || "";
+    // YouVersion: one chapter per request; the version's notice comes from the API (cached per page).
+    const yvNotices = new Map();
+    const yvGet = (path) =>
+      fetch(`https://api.youversion.com/v1/${path}`, { headers: { "X-YVP-App-Key": yvKey } }).then((r) => {
+        if (!r.ok) throw new Error("missing");
+        return r.json();
+      });
+    // DOMParser gives an inert document: nothing in the API's HTML runs or loads.
+    const yvText = (html) =>
+      new DOMParser().parseFromString(html.replace(/<\/(div|p)>|<br\s*\/?>/g, " "), "text/html").body.textContent.replace(/\u00b6/g, "").replace(/\s+/g, " ").trim();
+    const yvChapter = async (id) => {
+      const body = await yvGet(`bibles/${id}/passages/${text.dataset.usfm}.${text.dataset.chap}?format=html&include_headings=false&include_notes=false`);
+      const parts = String(body.content || "").replace(/<span class="yv-vlbl">[^<]*<\/span>/g, "").split(/<span class="yv-v" v="(\d+)"><\/span>/);
+      const rows = [];
+      for (let i = 1; i < parts.length; i += 2) {
+        const t = yvText(parts[i + 1] || "");
+        if (!t) continue;
+        const last = rows[rows.length - 1];
+        if (last && last[0] === parts[i]) last[1] += " " + t;
+        else rows.push([parts[i], t]);
+      }
+      if (!rows.length) throw new Error("missing");
+      return rows;
+    };
+    const yvNotice = async (id) => {
+      if (!yvNotices.has(id)) {
+        yvNotices.set(id, yvGet(`bibles/${id}`).then((v) => {
+          const c = yvText(v.copyright || "");
+          return c && c.toLowerCase() !== "public domain" ? c : `${v.title}. Public domain.`;
+        }).catch(() => { yvNotices.delete(id); return ""; }));
+      }
+      return yvNotices.get(id);
+    };
     const original = text ? Array.from(text.querySelectorAll(".v")).map((el) => [el.dataset.v, el.querySelector(".vt").textContent]) : [];
     const originalMap = new Map(original);
     // Start from the BSB each time so no verse keeps a third version's words.
@@ -172,18 +254,31 @@
         trNote.hidden = !msg;
       }
     };
-    const press = (key) => trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
+    const press = (key) => {
+      trButtons.forEach((b) => b.setAttribute("aria-pressed", b.dataset.tr === key ? "true" : "false"));
+      if (more) {
+        more.value = Array.from(more.options).some((o) => o.value === key) ? key : "";
+        more.classList.toggle("is-on", more.value !== "");
+      }
+    };
     const useTr = async (key) => {
       if (!text) return;
       const my = ++trSeq;
-      const btn = trButtons.find((b) => b.dataset.tr === key);
+      const btn = srcOf(key);
       press(key);
       noteTr("");
       if (key === "bsb") delete bx.dataset.loading;
       else bx.dataset.loading = key;
       try {
+        let notice = "";
         if (key === "bsb") paint(original);
-        else if (btn && btn.dataset.remote) {
+        else if (btn && btn.dataset.yv) {
+          const [rows, n] = await Promise.all([yvChapter(btn.dataset.yv), yvNotice(btn.dataset.yv)]);
+          if (my !== trSeq) return;
+          if (!n) throw new Error("no notice");
+          paint(rows);
+          notice = n;
+        } else if (btn && btn.dataset.remote) {
           const r = await fetch(`https://bolls.life/get-text/${btn.dataset.remote}/${text.dataset.booknum}/${text.dataset.chap}/`);
           if (my !== trSeq) return;
           if (!r.ok) throw new Error("missing");
@@ -211,7 +306,7 @@
         delete bx.dataset.loading;
         if (credit) {
           // Hosted versions are credited in the note below; loaded ones need their own notice.
-          credit.textContent = (btn && btn.dataset.remote && btn.dataset.credit) || "";
+          credit.textContent = notice || (btn && btn.dataset.remote && btn.dataset.credit) || "";
           credit.hidden = !credit.textContent;
         }
         try {
@@ -232,9 +327,10 @@
       }
     };
     trButtons.forEach((b) => b.addEventListener("click", () => useTr(b.dataset.tr)));
+    if (more) more.addEventListener("change", () => useTr(more.value || "bsb"));
     try {
       const saved = localStorage.getItem("vp-bible");
-      if (saved && saved !== "bsb" && trButtons.some((b) => b.dataset.tr === saved)) useTr(saved);
+      if (saved && saved !== "bsb" && srcOf(saved)) useTr(saved);
     } catch {
       /* default translation */
     }
@@ -610,7 +706,7 @@
         html = (titleExpanded ? hits : hits.slice(0, TITLE_CAP))
           .map(
             ({ e, n }) =>
-              `<li><a href="${escapeHtml(e.href)}"><strong class="work-title">${escapeHtml(e.title)}</strong><span>${escapeHtml(
+              `<li><a href="${escapeHtml(sitePath(e.href))}"><strong class="work-title">${escapeHtml(e.title)}</strong><span>${escapeHtml(
                 e.meta
               )}${n ? ` · ${plural(n, "matching passage", "matching passages")}` : ""}</span></a></li>`
           )
@@ -656,11 +752,19 @@
     };
 
     // Semantic search (/api/search): debounced, latest answer wins, hidden
-    // on error so exact-word results still stand alone.
+    // on error so exact-word results still stand alone. Each call costs a
+    // model run, so it waits for 4 letters and a 600 ms pause (2026-10-23).
+    // When the API says it is paused, the block says so instead of hiding.
+    const meaningNote = meaningHits && meaningHits.querySelector("p.meta");
+    const meaningNoteText = meaningNote ? meaningNote.textContent : "";
+    const meaningPaused = (paused) => {
+      if (meaningNote)
+        meaningNote.textContent = paused ? "Search by meaning is paused for now. The word search below still works." : meaningNoteText;
+    };
     const meaningSearch = (term) => {
       if (!meaningHits || !meaningResults) return;
       clearTimeout(meaningTimer);
-      if (term.length < 3) {
+      if (term.length < 4) {
         ++meaningSeq;
         meaningCount = 0;
         meaningPending = false;
@@ -674,17 +778,19 @@
       const seq = ++meaningSeq;
       meaningTimer = setTimeout(() => {
         fetch(`/api/search?q=${encodeURIComponent(term)}&n=20`)
-          .then((r) => (r.ok ? r.json() : { results: [] }))
+          .then((r) => (r.ok || r.status === 503 ? r.json().catch(() => ({ results: [] })) : { results: [] }))
           .then((data) => {
             if (seq !== meaningSeq) return;
-            const rows = (data && data.results) || [];
+            const paused = Boolean(data && data.paused);
+            const rows = (!paused && data && data.results) || [];
             meaningPending = false;
             meaningCount = rows.length;
-            meaningHits.hidden = rows.length === 0;
+            meaningPaused(paused);
+            meaningHits.hidden = rows.length === 0 && !paused;
             meaningResults.innerHTML = rows
               .map(
                 (h) =>
-                  `<li><a href="${escapeHtml(h.href)}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
+                  `<li><a href="${escapeHtml(sitePath(h.href))}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
                     h.author || ""
                   )}</span><em class="meaning-snippet">${escapeHtml(h.snippet || "")}</em></a></li>`
               )
@@ -698,7 +804,7 @@
             meaningHits.hidden = true;
             refresh();
           });
-      }, 350);
+      }, 600);
     };
 
     let lastVisible = [];
@@ -799,7 +905,7 @@
           passageResults.innerHTML = hits
             .map(
               (h) =>
-                `<li><a href="${escapeHtml(h.href)}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
+                `<li><a href="${escapeHtml(sitePath(h.href))}"><strong>${escapeHtml(h.title)}</strong><span>${escapeHtml(
                   h.author || h.kind || ""
                 )}</span></a></li>`
             )
@@ -864,6 +970,13 @@
     }
 
     apply();
+  }
+
+  // Links from data are site paths only ("/works/..."), never another scheme
+  // or host (the same rule as assets/ask.js).
+  function sitePath(h) {
+    h = String(h || "");
+    return h.charAt(0) === "/" && h.charAt(1) !== "/" ? h : "/works/";
   }
 
   function escapeHtml(s) {

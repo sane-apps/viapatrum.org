@@ -216,5 +216,105 @@ class WrittenDateTest(unittest.TestCase):
         self.assertIsNone(date_span("c. 9th cent.?"))
 
 
+
+class OwnerVoiceTest(unittest.TestCase):
+    """2026-10-23 copy review: "fresh English", plain trust note, a way to
+    report a mistake, and Wesley's English sermons not called translations."""
+
+    def test_new_english_reads_fresh(self):
+        self.assertEqual(build_site.public_note("New English from the Greek base text; no published English used as wording."),
+                         "Fresh English from the Greek base text; no published English used as wording.")
+        self.assertEqual(build_site.public_blurb("Codices 1-17 in new English from Bekker 1824 Greek."),
+                         "Codices 1-17 in fresh English from Bekker 1824 Greek.")
+        self.assertIn("New Testament", build_site.public_note("Quotes the New Testament."))
+
+    def test_trust_note_is_active_and_ebooks_still_find_it(self):
+        note = build_site.confidence_text(build_site.CONFIDENCE_NOTE_WITH_GREEK, False)
+        self.assertTrue(note.startswith("We have not yet re-checked this work against its source."))
+        self.assertNotIn("AI-assisted", note)
+        self.assertIn("with AI help", note)
+        self.assertIn("certified", note)
+        wes = build_site.confidence_note_english_original("1771 text")
+        self.assertNotIn("translation", wes)
+        self.assertIn("Open the 1771 text", wes)
+
+    def test_report_mistake_link(self):
+        html = build_site.report_mistake_html("The Didache", "§4", "https://viapatrum.org/works/didache/4/")
+        self.assertIn('href="mailto:hi@saneapps.com?subject=Mistake%20in%20The%20Didache%2C%20%C2%A74&amp;body=', html)
+        self.assertIn(">Report a mistake</a>", html)
+
+    def test_help_page_prints_only_the_public_start_here(self):
+        doc = ("# Start here\n\nYou are helping Via Patrum (https://viapatrum.org), a free library in "
+               "faithful, readable modern English.\n\n- Retranslation: a literal gloss first (Pass A), then "
+               "readable modern English (Pass B). The details are in \"Maintainer slices\" below and in `docs/SOP.md`.\n"
+               "- A maintainer reviews every pull request.\n\n---\n\n## Maintainer slices (internal lanes)\n\n"
+               "You are helping finish texts in new English for https://fathers.saneapps.com.\n"
+               "python3 scripts/claims.py start --agent YourName\n")
+        pub = build_site.public_start_here(doc)
+        self.assertIn("a free library in fresh English.", pub)
+        self.assertIn("then fresh English (Pass B). The details are in `docs/SOP.md`.", pub)
+        self.assertIn("A maintainer reviews", pub)
+        for leak in ("Maintainer slices", "claims.py", "fathers.saneapps.com", "modern English", "new English"):
+            self.assertNotIn(leak, pub)
+        # Anything still off-voice above the rule: print nothing, link only.
+        self.assertEqual(build_site.public_start_here("# Start here\n\nRun claims.py first.\n"), "")
+        live = build_site.BOOKS.parent / "docs/START_HERE.md"
+        if live.exists():
+            self.assertTrue(build_site.public_start_here(live.read_text(encoding="utf-8")))
+
+    def test_wesley_meta_in_site_voice(self):
+        meta = {"witness_label": "1771 text",
+                "blurb": "Rendered in modern English, to be read and heard. Open the 1771 text under each part to check the claims and the scripture.",
+                "era_note": "John Wesley lived from 1703 to 1791. This sermon is in his 1771 Works. It is an English sermon, not an ante-Nicene father.",
+                "text_history": {"method": "Rendered in modern English. The 1771 panel is the text of the Works."}}
+        pub = build_site.wesley_public_meta(meta)
+        self.assertEqual(pub["era_note"], "John Wesley lived from 1703 to 1791. This sermon is in his 1771 Works.")
+        self.assertNotIn("modern English", pub["blurb"] + pub["text_history"]["method"])
+        self.assertIn("1771", pub["blurb"])
+
+    def test_every_wesley_sermon_has_its_own_summary(self):
+        blurbs = json.loads((HERE.parent / "data/work-blurbs.json").read_text(encoding="utf-8"))
+        wes = {k: v for k, v in blurbs.items() if k.startswith("john-wesley-")}
+        self.assertEqual(len(wes), 44)
+        self.assertEqual(len(set(wes.values())), 44)
+
+    def test_worksheet_words_stay_out(self):
+        self.assertEqual(build_site.public_note("Jerome attests it. Vossius Argumentum is not part of the tipped text."),
+                         "Jerome attests it.")
+        th = {"joins": [{"where": "Opening tip", "note": "Column joins expanded."}]}
+        self.assertIn('<span class="where">Opening</span>', build_site.text_history_html(th))
+        self.assertEqual(build_site.scrub_intro_worksheet("<p>From the locked text in PG 39.</p>"),
+                         "<p>From the text in PG 39.</p>")
+
+
+class LlmsTxtTest(unittest.TestCase):
+    def lib(self):
+        import llms_txt
+        return llms_txt, llms_txt.Library(
+            origin="https://viapatrum.org",
+            works=[("didache", "The Didache", "The Didache"), ("polycarp-philippians", "To the Philippians", "Polycarp of Smyrna")],
+            writers=2, fathers=[("didache", "The Didache", "c. 100 AD", "1 work")],
+            topics=[("baptism", "Baptism")], scripture=[("genesis", "Genesis")],
+            passages=10, audio=1, questions=100)
+
+    def test_counts_and_links_come_from_the_build(self):
+        llms_txt, lib = self.lib()
+        short, full = llms_txt.build(lib)
+        self.assertIn("2 works by 2 writers", short)
+        self.assertIn("## All works (2)", full)
+        self.assertIn("(https://viapatrum.org/works/polycarp-philippians/)", full)
+        self.assertIn("fresh English translations", short)
+        self.assertIn("spoke, acted, argued, lived and died", short)
+        for text in (short, full):
+            self.assertEqual(llms_txt.check(text, {"didache", "polycarp-philippians"}, lib.origin), [])
+        self.assertNotIn("origen-on-prayer", short)  # key works only while live
+
+    def test_check_stops_paywall_words_and_dead_links(self):
+        llms_txt, lib = self.lib()
+        bad = llms_txt.check("Downloads need a paid library pass. https://viapatrum.org/works/gone/", {"didache"}, lib.origin)
+        self.assertTrue(any("paid" in b for b in bad))
+        self.assertIn("no page for /works/gone/", bad)
+
+
 if __name__ == "__main__":
     unittest.main()

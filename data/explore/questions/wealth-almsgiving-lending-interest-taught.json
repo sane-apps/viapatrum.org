@@ -121,6 +121,29 @@
       "translation": "dossier"
     },
     {
+      "id": "basil-destruam-7",
+      "author": "Basil of Caesarea",
+      "year": 368,
+      "date": "c. 368",
+      "work": "Homily on the Words 'I Will Pull Down My Barns' (Destruam horrea mea)",
+      "locus": "7",
+      "lang": "grc",
+      "answer": "share",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "What other name does the man deserve who does not clothe the naked, though he could do it? The bread you keep belongs to the hungry; the cloak you store away in your chests belongs to the naked; the shoe rotting at your house belongs to the shoeless; the silver you have buried belongs to the needy. So you wrong as many people as those you could have helped.",
+      "original": "ὃ δὲ τὸν γυμνὸν μὴ ἐνδύων, δυνάμενος τοῦτο ποιεῖν, ἄλλης τινὸς ἐστὶ προσηγορίας ἄξιος; Τοῦ πεινῶντός ἐστιν ὁ ἄρτος, ὃν σὺ κατέχεις. τοῦ γυμνητεύοντος τὸ ἱμάτιον, ὃ σὺ φυλάσσεις ἐν ἀποθήκαις. τοῦ ἀνυποδέτου τὸ ὑπόδημα, ὃ παρὰ σοὶ κατασήπεται. τοῦ χρήζοντος τὸ ἀργύριον, ὃ κατορύξας ἔχεις. Ὥστε τοσούτους ἀδικεῖς, ὅσοις παρέχειν ἐδύνασο.",
+      "context": "From Basil's sermon on the rich fool of Luke 12. Keeping back a surplus is not thrift but injustice, owed to each person it could have fed or clothed. The gap note pointed to the library book basil-homilia-lacisis, but that book is the different Homily Spoken at Lacizae and does not contain this text, and the Destruam homily is not a locked library book; the words are therefore quoted from the Migne PG 31 scan (OCR poor in places), saved as a witness in Wave 3.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-patrologiae-cursus-completus-gr-vol-031.txt",
+        "ia": "patrologiae_cursus_completus_gr_vol_031",
+        "ocr_poor": true,
+        "edition": "Migne PG 31 (scan text)"
+      },
+      "translation": "dossier"
+    },
+    {
       "id": "basil-homily-psalm-14",
       "author": "Basil of Caesarea",
       "year": 370,
@@ -171,14 +194,6 @@
       "why": "Clergy who lend at interest are to be deposed.",
       "action": "intake",
       "source_hint": "Bruns (1839)"
-    },
-    {
-      "author": "Basil of Caesarea",
-      "work": "Homily \"I will pull down my barns\" (Destruam)",
-      "year": 368,
-      "why": "\"The bread you keep belongs to the hungry.\" In the library as basil-homilia-lacisis.",
-      "action": "search",
-      "source_hint": "basil-homilia-lacisis"
     },
     {
       "author": "John Calvin",
