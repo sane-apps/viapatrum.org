@@ -238,7 +238,8 @@ function excerptCards() {
       || sentences.find(x => starts(x) && !shouting(x) && x.length >= 50)
       // No whole sentence: the body may open mid-sentence ("and his coming…"); mark the cut.
       || (starts(body) ? body : '…' + body);
-    if (!work || !author || !quote) continue;
+    // The cut-in fallback must pass the same wording check as a whole sentence.
+    if (!work || !author || !quote || !cardOk(quote)) continue;
     // The title already names the writer: "Arnobius, Against the Nations" -> "Against the Nations".
     const workName = work.startsWith(author) ? work.slice(author.length).replace(/^[,:\s]+/, '') : work;
     out.push({
