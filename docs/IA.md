@@ -46,6 +46,7 @@ Update `WORK_TOPICS` when a new treatise lands. Topic ids must match
 |------|---------|
 | `/explore/` | Topic river timeline (stance lanes × time) |
 | `/explore/?topic=&author=&zoom=` | Deep link filters |
+| `/history/christ-died-for-all/` | Did Christ die for all? A history of the question (verified quotations only; linked from the Timeline page, no nav item) |
 
 Explore data: `data/explore/{claims,stances,contrast,ruptures}.json` → `dist/data/explore-index.json`.
 Primary model: **topic river**. Compare mode: up to 3 authors. Century aggregation by default when crowded; Years on demand. Contrast cards for authors not yet fully in the corpus (e.g. Augustine).

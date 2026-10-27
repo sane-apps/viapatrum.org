@@ -1,0 +1,64 @@
+/* Did Christ die for all? (/history/christ-died-for-all/). Loaded only on that page.
+   Mobile first: one column, then wider rules from 640px and 900px. */
+
+.hp-head { max-width: 42rem; margin-bottom: 1.2rem; }
+.hp-head h1 { margin-bottom: 0.15rem; }
+.hp-sub { margin: 0 0 0.7rem; font: italic 1.2rem/1.35 var(--font-display); color: var(--ink-soft); }
+.hp-jump { display: flex; flex-wrap: wrap; gap: 0 1.1rem; margin: 0.8rem 0 0; }
+.hp-jump a { font-weight: 600; padding: 0.5rem 0; }
+
+.hp-fair, .hp-section, .hp-head { scroll-margin-top: 5.5rem; }
+.hp-fair {
+  max-width: 44rem;
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  border-radius: 8px;
+  padding: 0.9rem 1rem 1rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.hp-fair h2 { margin: 0 0 0.5rem; font-size: 1.35rem; }
+.hp-fair p { margin: 0.5rem 0; }
+.hp-fair ul { margin: 0.3rem 0 0.5rem; padding-left: 1.2rem; display: grid; gap: 0.4rem; }
+.hp-fine { font-size: 0.9rem; color: var(--ink-soft); max-width: 42rem; }
+
+.hp-section { margin: 0 0 1rem; padding-top: 0.4rem; }
+.hp-section > h2 { font-size: 1.7rem; margin: 1.8rem 0 0.4rem; }
+.hp-section > h2 span { display: block; font: 600 0.82rem var(--font-body); letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.15rem; }
+.hp-section h3 { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.2; margin: 1.6rem 0 0.4rem; scroll-margin-top: 5.5rem; }
+.hp-section h4 { margin: 1.1rem 0 0.25rem; font: 600 0.82rem var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink); }
+.hp-section p, .hp-section li { max-width: 42rem; }
+.hp-summary { font-size: 1.05rem; }
+
+.hp-timeline { list-style: none; margin: 0.6rem 0 0; padding: 0; max-width: 44rem; }
+.hp-timeline li { display: grid; gap: 0.05rem; padding: 0.55rem 0 0.55rem 0.9rem; border-left: 3px solid var(--gold); margin-left: 0.2rem; }
+.hp-when { font: 600 0.92rem/1.35 var(--font-body); color: var(--gold); }
+.hp-what { line-height: 1.4; }
+
+.hp-two { padding-left: 1.2rem; display: grid; gap: 0.5rem; }
+.hp-verses { list-style: none; margin: 0.4rem 0 0.4rem; padding: 0; display: grid; gap: 0.75rem; }
+.hp-verses li { padding-left: 0.85rem; border-left: 3px solid var(--rule); font-family: var(--font-read); line-height: 1.55; }
+.hp-verses strong { font-family: var(--font-body); }
+.hp-sides { display: grid; gap: 0.5rem; margin: 0.6rem 0; }
+.hp-sides > div { background: var(--leaf); border: 1px solid var(--rule); border-radius: 8px; padding: 0.4rem 1rem 0.7rem; }
+.hp-sides h4 { margin-top: 0.7rem; }
+
+.hp-quote { margin: 0.9rem 0; padding: 0.15rem 0 0.15rem 0.85rem; border-left: 3px solid var(--gold); scroll-margin-top: 5.5rem; }
+.hp-quote blockquote { margin: 0; max-width: 40rem; font: italic 1.05rem/1.6 var(--font-read); color: var(--ink); overflow-wrap: break-word; }
+.hp-quote figcaption { margin-top: 0.35rem; max-width: 40rem; font-size: 0.88rem; line-height: 1.45; color: var(--ink-soft); overflow-wrap: anywhere; }
+.hp-quote figcaption a { font-weight: 600; }
+
+.hp-review { max-width: 42rem; margin: 1rem 0; padding: 0.55rem 0.9rem; background: var(--paper-2); border: 1px solid var(--rule); border-left: 3px solid var(--partly); border-radius: 8px; font-size: 0.95rem; }
+.hp-review p { margin: 0; }
+.hp-review strong { color: var(--partly); }
+
+.hp-related { padding-left: 1.2rem; display: grid; gap: 0.45rem; }
+
+@media (min-width: 640px) {
+  .hp-timeline li { grid-template-columns: 9.5rem 1fr; gap: 0.2rem 1rem; }
+  .hp-when { padding-top: 0.05rem; }
+}
+@media (min-width: 900px) {
+  .hp-sides { grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .hp-fair { padding: 1.1rem 1.3rem 1.2rem; }
+}

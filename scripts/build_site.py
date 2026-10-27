@@ -27,6 +27,7 @@ import downloads_page  # noqa: E402  (library pass: /downloads/ + "Keep this boo
 import games_page  # noqa: E402  (/games/: every game, owner 2026-10-06)
 import ask_page  # noqa: E402  (/ask/: answers in the writers' own sentences, owner 2026-10-06)
 import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, owner 2026-10-06)
+import history_page  # noqa: E402  (/history/christ-died-for-all/: history of the question, owner 2026-10-27; preview first)
 import timeline_page  # noqa: E402  (/explore/: 100 reader questions from checked dossiers, owner 2026-10-13)
 
 # FATHERS_DIST: build somewhere else to test without touching the ship staging dir.
@@ -12038,6 +12039,7 @@ def build() -> None:
                                {q["id"] for q in beliefs_page.load(ROOT / "data" / "explore" / "doctrine_map.json")})
     print(f"timeline: {n_tl} questions on /explore/", flush=True)
     print(f"creeds: {creeds_page.build(DIST, layout, write)} on /creeds/", flush=True)
+    print(f"history: {history_page.build(DIST, layout, write)} quotes on {history_page.URL}", flush=True)
 
     # /data/search/* shard names carry a hash of their bytes, so browsers may
     # keep them for a year; manifest.json names the current shards and is

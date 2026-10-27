@@ -240,7 +240,7 @@ def index_page(data: dict) -> str:
   </div>
   <div class="chips">{chips}</div>
 </section>
-<p class="legend-note">The {len(D)} questions readers ask most, by subject: {n_quotes} quotes from {n_writers} writers and councils. Each question shows its witnesses as dots on a line from the year 30 to today. <a href="/explore/churches/">Where the churches stand</a> shows each church's position, question by question, and <a href="/creeds/">Creeds and churches</a> puts every major creed on one timeline.</p>
+<p class="legend-note">The {len(D)} questions readers ask most, by subject: {n_quotes} quotes from {n_writers} writers and councils. Each question shows its witnesses as dots on a line from the year 30 to today. <a href="/explore/churches/">Where the churches stand</a> shows each church's position, question by question. <a href="/creeds/">Creeds and churches</a> puts every major creed on one timeline, and <a href="/history/christ-died-for-all/">Did Christ die for all?</a> follows one question through church history.</p>
 <section class="index" aria-label="All questions">{"".join(groups)}</section>
 </div>"""
 
