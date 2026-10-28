@@ -20,7 +20,7 @@ __pycache__/
 venv/
 
 # Local receipts / visual audits (keep out of source history)
-/outputs/
+/outputs
 
 # OS / editor
 .DS_Store
