@@ -11,7 +11,10 @@
     "particular redemption",
     "god wills all to be saved",
     "unlimited atonement",
-    "for whom did christ die"
+    "for whom did christ die",
+    "did christ die for all",
+    "did jesus die for everyone",
+    "christ died for all"
   ],
   "answers": [
     {
@@ -47,6 +50,27 @@
       "text": "In the ninth century a council at Quierzy taught that God wills all without exception to be saved, and that Christ suffered for every human being.",
       "cites": [
         "quierzy-853-chapters-3-4"
+      ]
+    },
+    {
+      "text": "The schoolmen's formula, which the Reformers inherited, held the two halves together: Christ offered himself for all as to the sufficiency of the price, and for the elect only as to its efficacy. Luther preached that Christ bore all the sins of all men in his body; Bullinger wrote that the Lord has died for all and excludes no one but the self-excluding unbeliever; Ursinus, the Catechism's chief author, taught that Christ willed to die for all in general as to sufficiency, and for the elect alone as to efficacy.",
+      "cites": [
+        "lombard-sentences-sufficiency",
+        "luther-galatians-1535",
+        "bullinger-apocalypse-1557",
+        "ursinus-catechism-q40"
+      ]
+    },
+    {
+      "text": "At Dort the Canons taught both that the death is abundantly sufficient to expiate the sins of the whole world and that its saving efficacy was intended for the elect, those only. Davenant, a British delegate at Dort, went further in print: we hesitate not to assert that Christ died for all men. Calamy claimed the same sense on the floor at Westminster; the French synod at Alençon accepted the formula from the Saumur teachers; Trent taught that he died for all; and Joseph Hall held the death for all and the special intention for the elect together.",
+      "cites": [
+        "dort-1619-head2-art3",
+        "dort-1619-head2-art8",
+        "davenant-dissertation-1650",
+        "calamy-westminster-1645",
+        "alencon-1637-declaration",
+        "trent-1547-died-for-all",
+        "hall-via-media-1660"
       ]
     }
   ],
@@ -180,6 +204,323 @@
         "edition": "Orthodox Presbyterian Church text"
       },
       "translation": "published"
+    },
+    {
+      "id": "lombard-sentences-sufficiency",
+      "author": "Peter Lombard",
+      "year": 1158,
+      "date": "c. 1158",
+      "work": "The Sentences",
+      "locus": "Book 3, distinction 20, chapter 5",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Christ is therefore priest, and himself both victim and price of our reconciliation; who offered himself on the altar of the cross, not to the devil, but to the Trinity, for all, as far as the sufficiency of the price goes; but for the elect only as far as its efficacy goes, because he brought about salvation only for the predestined.",
+      "original": "Christus ergo est sacerdos, idemque et hostia, pretium nostrae reconciliationis; qui se in ara crucis, non Diabolo, sed Trinitati obtulit pro omnibus, quantum ad pretii sufficientiam; sed pro electis tantum quantum ad efficaciam, quia praedestinatis tantum salutem effecit.",
+      "context": "The schoolmen's formula, quoted by both sides for five hundred years: the price is sufficient for all, effective for the elect.",
+      "source": {
+        "url": "https://archive.org/details/erasmushislifea02drumgoog",
+        "edition": "Sentences 3.20.5.1; Latin as quoted in Drummond, Erasmus, his life and character (1873)"
+      },
+      "translation": "dossier"
+    },
+    {
+      "id": "luther-galatians-1535",
+      "author": "Martin Luther",
+      "year": 1535,
+      "date": "1535",
+      "work": "Lectures on Galatians",
+      "locus": "on Galatians 3:13",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "and briefly, which hath and beareth all the sins of all men in his body; not that he himself committed them, but for that he received them, being committed or done of us, and laid them upon his own body, that he might make satisfaction for them with his own blood.",
+      "original": "and briefly, which hath and beareth all the sins of all men in his body; not that he himself committed them, but for that he received them, being committed or done of us, and laid them upon his own body, that he might make satisfaction for them with his own blood.",
+      "context": "Luther on the curse of Galatians 3:13: Christ bore it by bearing the sins of all men in his own body.",
+      "source": {
+        "url": "https://archive.org/details/cu31924029294133",
+        "edition": "A commentary on Saint Paul's Epistle to the Galatians (London, 1832), p. 213"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "melanchthon-loci-1543",
+      "author": "Philip Melanchthon",
+      "year": 1543,
+      "date": "1543",
+      "work": "Loci Communes",
+      "locus": "Locus 7, on the Gospel",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "supporting",
+      "english": "As it is necessary to know that the Gospel is a gratuitous promise, so it is necessary to know that the Gospel is an universal promise, that is, that reconciliation is offered and promised to all mankind. It is necessary to hold that this promise is universal, in opposition to any dangerous imaginations on predestination, lest we should reason that this promise pertains to a few others and not to ourselves.",
+      "original": "As it is necessary to know that the Gospel is a gratuitous promise, so it is necessary to know that the Gospel is an universal promise, that is, that reconciliation is offered and promised to all mankind. It is necessary to hold that this promise is universal, in opposition to any dangerous imaginations on predestination, lest we should reason that this promise pertains to a few others and not to ourselves.",
+      "context": "Melanchthon's rule for preaching the promise, quoted with approval by Davenant: hold the promise universal, or hearers will reason that it is not for them.",
+      "source": {
+        "url": "https://archive.org/details/expositionofepis02dave",
+        "edition": "As quoted by John Davenant, Dissertation on the Death of Christ, ch. 10 (Allport translation, 1832), p. 337"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "trent-1547-died-for-all",
+      "author": "Council of Trent",
+      "year": 1547,
+      "date": "1547",
+      "work": "Session 6, Decree on Justification",
+      "locus": "Chapter 3",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "But, though He died for all, yet do not all receive the benefit of his death, but those only unto whom the merit of his passion is communicated.",
+      "original": "Verum, etsi ille pro omnibus mortuus est, non omnes tamen mortis ejus beneficium recipiunt; sed ii dumtaxat, quibus meritum passionis ejus communicatur.",
+      "context": "Rome's decree holds both halves in one sentence: he died for all, and the benefit reaches those to whom his merit is applied.",
+      "source": {
+        "witness": "outputs/question-dossiers/witnesses/ia-enchiridionsymbo00denz.txt",
+        "ia": "enchiridionsymbo00denz",
+        "ocr_poor": true,
+        "edition": "Denzinger, Enchiridion symbolorum, 11th ed. (1911), Decree on Justification, ch. 3"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "bullinger-apocalypse-1557",
+      "author": "Heinrich Bullinger",
+      "year": 1557,
+      "date": "1557",
+      "work": "A Hundred Sermons upon the Apocalipse",
+      "locus": "on Revelation 5:9",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "for the Lord has died for all: but that all are not made partakers of this redemption, it is through their own fault. For the Lord excludes no man, but him only which through his own unbelief, and misbelief excludes himself.",
+      "original": "for the Lord has died for all: but that all are not made partakers of this redemption, it is through their own fault. For the Lord excludes no man, but him only which through his own unbelief, and misbelief excludes himself.",
+      "context": "Bullinger, Zurich's reformer and the author of the Second Helvetic Confession: no one is shut out except by his own unbelief.",
+      "source": {
+        "url": "https://archive.org/details/bim_early-english-books-1475-1640_a-hundred-sermons-uppon-_bullinger-henry_1573",
+        "edition": "A Hundred Sermons upon the Apocalipse (London, 1573), pp. 79-80; the Latin sermons were first published at Basel in 1557"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "musculus-loci-1560",
+      "author": "Wolfgang Musculus",
+      "year": 1560,
+      "date": "1560",
+      "work": "Loci communes",
+      "locus": "On the redemption of the human race",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "supporting",
+      "english": "that reprobates and men deplorably wicked, do not receive it, neither comes to pass through any defect of the grace of God, nor is it meet that for the sons of perdition's sake, that it should lose the glory and title of a universal redemption, inasmuch as it is prepared for all, and all are called unto it.",
+      "original": "that reprobates and men deplorably wicked, do not receive it, neither comes to pass through any defect of the grace of God, nor is it meet that for the sons of perdition's sake, that it should lose the glory and title of a universal redemption, inasmuch as it is prepared for all, and all are called unto it.",
+      "context": "Musculus of Bern, in his chapter on the redemption of the human race. His Latin survives as John Goodwin quoted and translated it in 1651.",
+      "source": {
+        "url": "https://archive.org/details/bim_early-english-books-1641-1700_-_goodwin-john_1651",
+        "edition": "English from John Goodwin, Redemption Redeemed (London, 1651), p. 649, note"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "vermigli-common-places-1583",
+      "author": "Peter Martyr Vermigli",
+      "year": 1583,
+      "date": "1583",
+      "work": "The Common Places",
+      "locus": "Part 3, chapter 1, section 44",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "Which we also will easily grant, if only the worthiness of the death of Christ be considered: for as touching it, it might be sufficient for all the sinners of the world. But although in itself it be sufficient; yet it neither had, nor hath, nor shall have effect in all men.",
+      "original": "Which we also will easily grant, if only the worthiness of the death of Christ be considered: for as touching it, it might be sufficient for all the sinners of the world. But although in itself it be sufficient; yet it neither had, nor hath, nor shall have effect in all men.",
+      "context": "Vermigli, the Italian reformer who taught at Oxford and Zurich, grants the sufficiency for all in the same breath as he denies the effect in all.",
+      "source": {
+        "url": "https://archive.org/details/bim_early-english-books-1475-1640_the-common-places-of-_vermigli-pietro-martine_1583",
+        "edition": "The Common Places, trans. Anthony Marten (London, 1583), Part 3, ch. 1, section 44"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "ursinus-catechism-q40",
+      "author": "Zacharias Ursinus",
+      "year": 1584,
+      "date": "1584",
+      "work": "Commentary on the Heidelberg Catechism",
+      "locus": "on Question 40",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "Therefore, as he died for all, in respect to the sufficiency of his ransom; and for the faithful alone in respect to the efficacy of the same, so also he willed to die for all in general, as touching the sufficiency of his merit, that is, he willed to merit by his death, grace, righteousness, and life in the most abundant manner for all; because he would not that any thing should be wanting as far as he and his merits are concerned, so that all the wicked who perish may be without excuse.",
+      "original": "Therefore, as he died for all, in respect to the sufficiency of his ransom; and for the faithful alone in respect to the efficacy of the same, so also he willed to die for all in general, as touching the sufficiency of his merit, that is, he willed to merit by his death, grace, righteousness, and life in the most abundant manner for all; because he would not that any thing should be wanting as far as he and his merits are concerned, so that all the wicked who perish may be without excuse.",
+      "context": "Ursinus, chief author of the Heidelberg Catechism, in his lectures on it: Christ willed to die for all as to the sufficiency of his merit, and for the elect alone as to its efficacy.",
+      "source": {
+        "url": "https://archive.org/details/commentaryofdrza00ursi",
+        "edition": "Commentary on the Heidelberg Catechism, trans. G. W. Williard, 3rd American ed. (1851), pp. 223-224"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "zanchi-thesis-13",
+      "author": "Girolamo Zanchi",
+      "year": 1592,
+      "date": "1592",
+      "work": "De praedestinatione sanctorum",
+      "locus": "thesis 13",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "quoted",
+      "weight": "supporting",
+      "english": "It is not false that Christ died for all men: for the passion of Christ is offered to all in the Gospel. But he died effectually for the elect alone, because indeed they only are made partakers of the efficacy of the passion of Christ.",
+      "original": "It is not false that Christ died for all men: for the passion of Christ is offered to all in the Gospel. But he died effectually for the elect alone, because indeed they only are made partakers of the efficacy of the passion of Christ.",
+      "context": "Zanchi as Davenant quotes him. Zanchi also taught that Christ, as to his purpose, neither prayed nor suffered but for the elect only: the offer is to all, the effect for the elect.",
+      "source": {
+        "url": "https://archive.org/details/expositionofepis02dave",
+        "edition": "As quoted by John Davenant, Dissertation on the Death of Christ (Allport translation, 1832)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dort-1619-head2-art3",
+      "author": "Synod of Dort",
+      "year": 1619,
+      "date": "1619",
+      "work": "Canons of Dort",
+      "locus": "Second Head, Article 3",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "This death of the Son of God is the only and most perfect sacrifice and satisfaction for sins; it is of infinite value and price, abundantly sufficient to expiate the sins of the whole world.",
+      "original": "This death of the Son of God is the only and most perfect sacrifice and satisfaction for sins; it is of infinite value and price, abundantly sufficient to expiate the sins of the whole world.",
+      "context": "Dort on the worth of the death, in the same Second Head that confines its saving efficacy to the elect (Article 8). The Latin calls it abundantly sufficient to expiate the sins of the whole world.",
+      "source": {
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+        "edition": "Canons of Dort, Second Head, Article 3 (1619)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "dort-1619-head2-art8",
+      "author": "Synod of Dort",
+      "year": 1619,
+      "date": "1619",
+      "work": "Canons of Dort",
+      "locus": "Second Head, Article 8",
+      "lang": "en",
+      "answer": "elect",
+      "strength": "explicit",
+      "voice": "confession",
+      "weight": "key",
+      "english": "For this was the sovereign counsel and most gracious will and purpose of God the Father, that the quickening and saving efficacy of the most precious death of His Son should extend to all the elect... it was the will of God that Christ, by the blood of the cross, whereby He confirmed the new covenant, should effectually redeem out of every people, tribe, nation, and language, all those, and those only, who were from eternity chosen to salvation, and given to Him by the Father.",
+      "original": "For this was the sovereign counsel and most gracious will and purpose of God the Father, that the quickening and saving efficacy of the most precious death of His Son should extend to all the elect... it was the will of God that Christ, by the blood of the cross, whereby He confirmed the new covenant, should effectually redeem out of every people, tribe, nation, and language, all those, and those only, who were from eternity chosen to salvation, and given to Him by the Father.",
+      "context": "Dort on the purpose of the death: its saving efficacy was intended for the elect, all those, and those only. Read with Article 3 above on its worth.",
+      "source": {
+        "url": "https://www.crcna.org/welcome/beliefs/confessions/canons-dort",
+        "edition": "Canons of Dort, Second Head, Article 8 (1619)"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "alencon-1637-declaration",
+      "author": "Synod of Alençon",
+      "year": 1637,
+      "date": "1637",
+      "work": "Acts of the National Synod of Alençon",
+      "locus": "Article 18",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "council",
+      "weight": "supporting",
+      "english": "Jesus Christ died for all men sufficiently, but for the elect only effectually.",
+      "original": "Jesus Christ died for all men sufficiently, but for the elect only effectually.",
+      "context": "The declaration of Moïse Amyraut and Paul Testard of Saumur, accepted by the French national synod, which dismissed them honorably. The same synod banned their word 'equally' for the extent of Christ's dying.",
+      "source": {
+        "url": "https://archive.org/details/bim_early-english-books-1641-1700_synodicon-in-gallia-refo_quick-john_1692",
+        "edition": "John Quick, Synodicon in Gallia Reformata (London, 1692), vol. 2, pp. 352-357"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "calamy-westminster-1645",
+      "author": "Edmund Calamy",
+      "year": 1645,
+      "date": "1645",
+      "work": "Speech at the Westminster Assembly",
+      "locus": "Session 522, 22 October 1645",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "I am far from universal redemption in the Arminian sense; but that that I hold is in the sense of our divines in the Synod of Dort, that Christ did pay a price for all, absolute intention for the elect, conditional intention for the reprobate in case they do believe, that all men should be salvabiles, non obstante lapsu Adami . . . that Jesus Christ did not only die sufficiently for all, but God did intend, in giving of Christ, and Christ in giving Himself, did intend to put all men in a state of salvation in case they do believe.",
+      "original": "I am far from universal redemption in the Arminian sense; but that that I hold is in the sense of our divines in the Synod of Dort, that Christ did pay a price for all, absolute intention for the elect, conditional intention for the reprobate in case they do believe, that all men should be salvabiles, non obstante lapsu Adami . . . that Jesus Christ did not only die sufficiently for all, but God did intend, in giving of Christ, and Christ in giving Himself, did intend to put all men in a state of salvation in case they do believe.",
+      "context": "Calamy on the Assembly floor, claiming the sense of the British divines at Dort. The Minutes record no vote on the question.",
+      "source": {
+        "url": "https://archive.org/details/minutesofsession00west",
+        "edition": "Minutes of the Sessions of the Westminster Assembly of Divines, ed. Mitchell and Struthers (1874), p. 152"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "davenant-dissertation-1650",
+      "author": "John Davenant",
+      "year": 1650,
+      "date": "1650",
+      "work": "Dissertation on the Death of Christ",
+      "locus": "chapter 4",
+      "lang": "la",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "key",
+      "english": "And on this account we hesitate not to assert that Christ died for all men, inasmuch as he endured death, by the merit and virtue of which all men individually who obey the Gospel may be delivered from death and obtain eternal salvation.",
+      "original": "Atque hanc ob causam non dubitamus asserere Christum pro omnibus hominibus fuisse mortuum, quatenus mortem sustinuit cujus merito & virtute omnes & singuli mortales Evangelio obedientes possint à morte liberari, & salutem æternam adipisci.",
+      "context": "Davenant, Bishop of Salisbury and a British delegate at Dort, in lectures from the Dort period, first published at Cambridge in 1650.",
+      "source": {
+        "book": "davenant-dissertationes-duae",
+        "section": "29"
+      },
+      "translation": "published"
+    },
+    {
+      "id": "hall-via-media-1660",
+      "author": "Joseph Hall",
+      "year": 1660,
+      "date": "1660",
+      "work": "Via Media",
+      "locus": "in The Shaking of the Olive-Tree, p. 380",
+      "lang": "en",
+      "answer": "all",
+      "strength": "explicit",
+      "voice": "own",
+      "weight": "supporting",
+      "english": "... supposing the death of Christ for all men, and Gods conditionate intention of the general grace of his Evangelical promise, adds moreover the special intention of God, to apply the benefit of Christs death by a more abundant, and effectual grace absolutly, certainly and infallibly to the Elect alone, without any diminution of that his sufficient, and common favour",
+      "original": "... supposing the death of Christ for all men, and Gods conditionate intention of the general grace of his Evangelical promise, adds moreover the special intention of God, to apply the benefit of Christs death by a more abundant, and effectual grace absolutly, certainly and infallibly to the Elect alone, without any diminution of that his sufficient, and common favour",
+      "context": "Joseph Hall, bishop and a British delegate at Dort, stating the Church of England position he defended: a death for all, and a special intention for the elect, held together.",
+      "source": {
+        "url": "https://archive.org/details/shakingolivetre00hallgoog",
+        "edition": "Via Media, in The Shaking of the Olive-Tree (London, 1660), p. 380"
+      },
+      "translation": "published"
     }
   ],
   "gaps": [
@@ -192,20 +533,36 @@
       "source_hint": "Migne PL 51"
     },
     {
-      "author": "Synod of Dort",
-      "work": "Canons, Second Head, Article 8",
-      "year": 1619,
-      "why": "Christ's death effective for the elect alone.",
-      "action": "intake",
-      "source_hint": "Acta Synodi Dordrechtanae (1620)"
-    },
-    {
       "author": "Augustine of Hippo",
       "work": "Enchiridion 103",
       "year": 421,
       "why": "\"All\" as all kinds of people.",
       "action": "intake",
       "source_hint": "Migne PL 40"
+    },
+    {
+      "author": "Moïse Amyraut",
+      "work": "Brief traité de la prédestination",
+      "year": 1634,
+      "why": "The Saumur teacher whose formula the Synod of Alencon accepted: God wills the salvation of all, provided they believe.",
+      "action": "intake",
+      "source_hint": "Saumur, 1634 edition"
+    },
+    {
+      "author": "Theodore Beza",
+      "work": "Colloquy of Montbéliard",
+      "year": 1586,
+      "why": "Beza refused the old formula as ambiguous and held that Christ did not die for all in intention or in effect, while granting the death's all-sufficiency.",
+      "action": "intake",
+      "source_hint": "Acta colloquii Montis Belligartensis (1587)"
+    },
+    {
+      "author": "John Calvin",
+      "work": "Commentary on 1 Timothy",
+      "year": 1556,
+      "why": "\"All\" as all kinds and ranks of people; the gospel is proclaimed to all without exception.",
+      "action": "intake",
+      "source_hint": "Calvin Translation Society edition"
     }
   ],
   "related": {
@@ -213,9 +570,9 @@
       "predestination"
     ]
   },
-  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. Each line names the printed edition it was read from.",
+  "method": "Every early quote was read in its Greek or Latin and translated for this page by Claude (Opus 5.5) on 13 October 2026. The medieval and Reformation witnesses were added on 30 October 2026 from the site's quote verification report of 27 October 2026; each was checked against the printed edition named in its line, and the English wordings are the published translations named there. Each line names the printed edition it was read from.",
   "reviewed": {
-    "by": "Claude (Opus 5.5)",
-    "at": "2026-10-13"
+    "by": "Spark, from the quote verification report of 27 October 2026",
+    "at": "2026-10-30"
   }
 }
