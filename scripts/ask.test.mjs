@@ -6,12 +6,16 @@
 // Run: node --test scripts/ask.test.mjs
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import {
   THRESHOLD, FLOOR, MAX_CANDIDATES, THIN_NOTE,
   splitSentences, stripPrefix, chunkSentences, citeOf, workKey,
   candidates, normaliseScores, nearDuplicate, selectAnswer, normaliseQuestion, matchTopics,
 } from '../functions/_lib/ask.js';
-import { cleanTitle } from '../functions/_lib/search.js';
+import { cleanTitle, planWide, sha1Hex, vectorKeyMap, WIDE_CHUNKS } from '../functions/_lib/search.js';
+
+// Vector ids are sha1(document key) truncated to 24 hex chars + "-<chunk>".
+const vid = (key, n = 0) => `${createHash('sha1').update(key).digest('hex').slice(0, 24)}-${n}`;
 
 // A passages() row (functions/_lib/search.js) built from one passage text.
 function passage({ title, author, href, kind = 'excerpt', year = null, dates = '', text, n = 0 }) {
@@ -213,8 +217,8 @@ function stubEnv({ rerankSentences }) {
   };
   const t = (k, s) => `${meta[k].title} (${meta[k].author}): ${s}`;
   const matches = [
-    { id: 'aaa-0', score: 0.7, metadata: { k: 'excerpt__d7.md', t: t('excerpt__d7.md', P.didache7.chunks[0].text.split('): ')[1]) } },
-    { id: 'bbb-0', score: 0.6, metadata: { k: 'excerpt__j61.md', t: t('excerpt__j61.md', P.justin61.chunks[0].text.split('): ')[1]) } },
+    { id: vid('excerpt__d7.md'), score: 0.7, metadata: { k: 'excerpt__d7.md', t: t('excerpt__d7.md', P.didache7.chunks[0].text.split('): ')[1]) } },
+    { id: vid('excerpt__j61.md'), score: 0.6, metadata: { k: 'excerpt__j61.md', t: t('excerpt__j61.md', P.justin61.chunks[0].text.split('): ')[1]) } },
   ];
   const puts = [];
   const calls = [];
@@ -227,7 +231,14 @@ function stubEnv({ rerankSentences }) {
         if (input.contexts.length === 2 && !rerankSentences) return { response: [{ id: 0, score: 3 }, { id: 1, score: 2 }] };
         return { response: input.contexts.map((c, id) => ({ id, score: rerankSentences(c.text) })) };
       } },
-      VEC: { query: async () => ({ matches }) },
+      VEC: {
+        // Like the real binding: returnMetadata "none" strips metadata;
+        // getByIds returns the full vectors for the ids asked for.
+        query: async (vector, opts) => (opts && opts.returnMetadata === 'none'
+          ? { matches: matches.map(({ id, score }) => ({ id, score })) }
+          : { matches }),
+        getByIds: async (ids) => matches.filter((m) => ids.includes(m.id)),
+      },
       ASSETS: { fetch: async () => ({ ok: true, json: async () => meta }) },
       LIBRARY: { put: async (key, body) => { puts.push({ key, body: JSON.parse(body) }); } },
     },
@@ -343,7 +354,7 @@ test('/api/ask: matching Timeline topics ride along in the body', async () => {
   // Fresh module: topicsPromise is per-isolate state, already set by earlier tests.
   const fresh = await import(`../functions/api/ask.js?v=topics-${Date.now()}`);
   const { body } = await run(fresh.onRequest, 'https://viapatrum.org/api/ask?q=baptism', s.env);
-  assert.deepEqual(body.topics, [{ question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/' }]);
+  assert.deepEqual(body.topics, [{ question: 'Did the early Church baptize infants?', short: 'Infant baptism', href: '/explore/infant-baptism/', kind: 'topic' }]);
 });
 
 
@@ -404,4 +415,75 @@ test('pages.dev hosts make no AI call (outside the zone rate limit)', async () =
   assert.equal(aiBlocked({ AI_OFF: '1' }, new URL('https://viapatrum.org/api/search?q=grace')), true);
   assert.equal(aiBlocked({}, new URL('https://fathers-site.pages.dev./api/search?q=grace')), true);
   assert.equal(aiBlocked({}, new URL('https://VIAPATRUM.ORG./api/search?q=grace')), false);
+});
+
+// --- Wide retrieval, History articles, R2 answer cache (2026-10-30) -----------
+
+test('sha1Hex matches node:crypto, and vectorKeyMap resolves id prefixes', () => {
+  for (const key of ['excerpt__d7.md', 'work__davenant-dissertationes-duae_28.md', 'excerpt__augustine-on-the-psalms_psalm-50-met.md']) {
+    assert.equal(sha1Hex(key), createHash('sha1').update(key).digest('hex'), key);
+  }
+  const meta = { 'excerpt__d7.md': { href: '/e/d7/' }, 'excerpt__j61.md': { href: '/e/j61/' } };
+  const map = vectorKeyMap(meta);
+  assert.equal(map[vid('excerpt__j61.md').slice(0, 24)], 'excerpt__j61.md');
+});
+
+test('planWide: one long work crowding the top cannot fill the passage list', () => {
+  // The Davenant failure: every chunk of the classic top 20 belonged to two
+  // sections of one work. Wide matches keep coming past them, and the plan
+  // must reach the other writers while capping the crowding work at two.
+  const meta = {
+    'work__dav-28.md': { title: 'John Davenant, Two Dissertations 28', author: 'John Davenant', href: '/works/davenant-two-dissertations/28/', kind: 'work', year: 1641 },
+    'work__dav-192.md': { title: 'John Davenant, Two Dissertations 192', author: 'John Davenant', href: '/works/davenant-two-dissertations/192/', kind: 'work', year: 1641 },
+    'work__dav-77.md': { title: 'John Davenant, Two Dissertations 77', author: 'John Davenant', href: '/works/davenant-two-dissertations/77/', kind: 'work', year: 1641 },
+    'excerpt__aug.md': { title: 'Augustine of Hippo, On Grace 1', author: 'Augustine of Hippo', href: '/e/aug/', kind: 'excerpt', year: 418 },
+    'excerpt__chrys.md': { title: 'John Chrysostom, Homilies on John 25', author: 'John Chrysostom', href: '/e/chrys/', kind: 'excerpt', year: 391 },
+  };
+  const m = (key, n, score) => ({ id: vid(key, n), score });
+  const matches = [];
+  for (let i = 0; i < 10; i++) matches.push(m('work__dav-28.md', i, 0.99 - i * 0.001));
+  for (let i = 0; i < 10; i++) matches.push(m('work__dav-192.md', i, 0.98 - i * 0.001));
+  matches.push(m('excerpt__aug.md', 0, 0.9), m('excerpt__chrys.md', 0, 0.89), m('work__dav-77.md', 0, 0.88));
+  const plan = planWide(matches, meta, vectorKeyMap(meta), 10);
+  assert.deepEqual(plan.map((p) => p.key), ['work__dav-28.md', 'work__dav-192.md', 'excerpt__aug.md', 'excerpt__chrys.md'],
+    'two Davenant sections, then the other writers; the third Davenant section is capped out');
+  assert.equal(plan[0].chunkIds.length, WIDE_CHUNKS, 'chunk texts fetched per passage are capped');
+  assert.ok(Math.abs(plan[0].score - 0.99) < 1e-9, 'a passage keeps its best chunk score');
+});
+
+test('topics: a History article matches its asked wordings and is labelled an article', () => {
+  const rows = [...TOPICS, {
+    question: 'Did Christ die for all?', short: 'A history of the question', href: '/history/christ-died-for-all/', kind: 'article',
+    also: ['did jesus die for everyone', 'did christ die for all', 'limited atonement', 'extent of the atonement'],
+  }];
+  const hit = matchTopics('did jesus die for everyone', rows);
+  assert.equal(hit[0].href, '/history/christ-died-for-all/');
+  assert.equal(hit[0].kind, 'article');
+  assert.equal(matchTopics('limited atonement', rows)[0].kind, 'article');
+  assert.equal(matchTopics('What is the Eucharist?', TOPICS)[0].kind, 'topic', 'dossier rows are topics');
+});
+
+test('/api/ask: without getByIds the classic retrieval path still answers', async () => {
+  const s = stubEnv({ rerankSentences: (text) => (/baptiz|water/i.test(text) ? 4 : -4) });
+  delete s.env.VEC.getByIds;
+  const { body } = await run(ask, 'https://viapatrum.org/api/ask?q=baptism', s.env);
+  assert.equal(body.mode, 'answer');
+  assert.equal(body.passages.length, 2);
+});
+
+test('/api/ask: a repeat question is served from the R2 answer cache with no model call', async () => {
+  const s = stubEnv({ rerankSentences: (text) => (/baptiz|water/i.test(text) ? 4 : -4) });
+  const store = new Map();
+  s.env.LIBRARY = {
+    get: async (key) => (store.has(key) ? { json: async () => store.get(key) } : null),
+    put: async (key, body) => { store.set(key, JSON.parse(body)); },
+  };
+  const fresh = await import(`../functions/api/ask.js?v=r2-${Date.now()}`);
+  const first = await run(fresh.onRequest, 'https://viapatrum.org/api/ask?q=baptism', s.env);
+  assert.equal(first.body.mode, 'answer');
+  assert.ok([...store.keys()].some((k) => k.startsWith('ask-cache/')), 'the answer was stored in R2');
+  const callsAfterFirst = s.calls.length;
+  const second = await run(fresh.onRequest, 'https://viapatrum.org/api/ask?q=baptism', s.env);
+  assert.equal(s.calls.length, callsAfterFirst, 'the repeat made no model call');
+  assert.deepEqual(second.body, first.body);
 });

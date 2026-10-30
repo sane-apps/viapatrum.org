@@ -8,6 +8,7 @@
   if (!page) return;
   var form = page.querySelector(".ask-form");
   var input = page.querySelector("#ask-q");
+  var button = form.querySelector('button[type="submit"]');
   var out = page.querySelector("#ask-out");
   var status = page.querySelector("#ask-status");
   var empty = out.innerHTML;
@@ -58,13 +59,14 @@
       '<ol class="ask-plist">' + rows + "</ol></section>";
   }
 
-  // Timeline topics that match the question (from /api/ask): shown first,
-  // above the answer and the passages.
+  // Timeline topics and History articles that match the question (from
+  // /api/ask): shown first, above the answer and the passages.
   function topicsBlock(data) {
     var ts = data.topics || [];
     if (!ts.length) return "";
     var items = ts.map(function (t) {
-      return '<li><a href="' + href(t.href) + '"><strong>' + esc(t.question) + '</strong><span class="go">Timeline topic \u2192</span></a></li>';
+      var kind = t.kind === "article" ? "History article \u2192" : "Timeline topic \u2192";
+      return '<li><a href="' + href(t.href) + '"><strong>' + esc(t.question) + '</strong><span class="go">' + kind + "</span></a></li>";
     }).join("");
     return '<section class="ask-topics" aria-labelledby="ask-tl"><h2 id="ask-tl" class="vp-section-label" tabindex="-1">On the Timeline</h2>' +
       '<ul class="ask-tlist">' + items + "</ul></section>";
@@ -98,21 +100,36 @@
       : "The library is thin on this. Showing the " + p.length + " closest passages.";
   }
 
+  // Loading state (2026-10-30): a spinner, a labelled line, skeleton rows
+  // where the passages will land, and the Ask button disabled with an
+  // "Asking…" label. The old state was one quiet italic line, which read
+  // as nothing happening. settle() runs on every exit path of ask().
+  function showLoading() {
+    if (button) { button.disabled = true; button.textContent = "Asking\u2026"; }
+    out.setAttribute("aria-busy", "true");
+    out.innerHTML = '<div class="ask-loading" role="presentation">' +
+      '<p class="ask-loading-line"><span class="ask-spinner" aria-hidden="true"></span>Finding what the writers say\u2026</p>' +
+      '<div class="ask-skel" aria-hidden="true"><span></span><span></span><span></span></div></div>';
+    status.textContent = "Finding what the writers say.";
+  }
+  function settle() {
+    out.setAttribute("aria-busy", "false");
+    if (button) { button.disabled = false; button.textContent = "Ask"; }
+  }
+
   function ask(q, moveFocus) {
     var mine = ++seq;
     q = String(q || "").trim().slice(0, 300);
     input.value = q;
     if (!q) {
       out.innerHTML = empty;
-      out.setAttribute("aria-busy", "false");
+      settle();
       status.textContent = "";
       document.title = "Ask the Fathers · Via Patrum";
       return;
     }
     document.title = q + " · Ask the Fathers · Via Patrum";
-    out.setAttribute("aria-busy", "true");
-    out.innerHTML = '<p class="ask-loading">Finding what the writers say…</p>';
-    status.textContent = "Finding what the writers say.";
+    showLoading();
     fetch("/api/ask?q=" + encodeURIComponent(q))
       .then(function (r) {
         if (r.status === 503) return r.json().catch(function () { return {}; }).then(function (d) { if (d && d.paused) throw "paused"; throw new Error("HTTP 503"); });
@@ -123,7 +140,7 @@
         if (mine !== seq) return;
         if (!data || data.error) throw new Error((data && data.error) || "no answer");
         status.textContent = render(q, data);
-        out.setAttribute("aria-busy", "false");
+        settle();
         var head = out.querySelector("h2[tabindex]");
         if (moveFocus && head) head.focus({ preventScroll: false });
       })
@@ -133,7 +150,7 @@
         var note = e === "paused" ? "Ask is paused for now. The library search still works." : "Ask is not answering right now. The library search still works.";
         out.innerHTML = '<section class="ask-error"><p class="ask-note">' + note + "</p>" +
           libraryLink(q, "Search the library for “" + q + "” →") + "</section>";
-        out.setAttribute("aria-busy", "false");
+        settle();
         status.textContent = (e === "paused" ? "Ask is paused for now." : "Ask is not answering right now.") + " A link to the library search is shown.";
       });
   }

@@ -13,6 +13,12 @@ dist/data/ask-topics.json from the Timeline dossiers
 (data/explore/questions/*.json: the question, its short name and its
 curated search phrases), so functions/api/ask.js can surface the matching
 Timeline topic above the passages. New dossiers join automatically.
+
+History articles (2026-10-30): the long reads under /history/ are not
+dossiers, so they are listed in ARTICLES below and join the same index
+with kind "article". "Did Christ die for all?" never surfaced for
+questions like "did jesus die for everyone" before, because only the
+dossiers were indexed. Add a row here when a new History article ships.
 """
 import json
 from html import escape
@@ -30,9 +36,34 @@ EXAMPLES = [
 
 QUESTIONS_DIR = Path(__file__).resolve().parent.parent / "data" / "explore" / "questions"
 
+# History long reads (scripts/history_page.py builds /history/<slug>/).
+# kind "article" tells the Ask page to label the row as an article; the
+# "also" phrases are the wordings readers actually ask with.
+ARTICLES = [
+    {
+        "question": "Did Christ die for all?",
+        "short": "A history of the question",
+        "href": "/history/christ-died-for-all/",
+        "also": [
+            "did jesus die for everyone",
+            "did christ die for everyone",
+            "did jesus die for all",
+            "did christ die for all",
+            "christ died for all",
+            "extent of the atonement",
+            "limited atonement",
+            "unlimited atonement",
+            "universal atonement",
+            "particular redemption",
+            "for whom did christ die",
+            "who did christ die for",
+        ],
+    },
+]
+
 
 def topics_index() -> list[dict]:
-    """One row per Timeline dossier: question, short name, page, search phrases."""
+    """One row per Timeline dossier, plus the History articles."""
     out = []
     if QUESTIONS_DIR.is_dir():
         for path in sorted(QUESTIONS_DIR.glob("*.json")):
@@ -46,7 +77,10 @@ def topics_index() -> list[dict]:
                 "short": str(d.get("short") or "").strip(),
                 "href": f"/explore/{slug}/",
                 "also": [str(s).strip() for s in (d.get("search") or []) if str(s).strip()],
+                "kind": "topic",
             })
+    for a in ARTICLES:
+        out.append({**a, "kind": "article"})
     out.sort(key=lambda t: t["question"])
     return out
 
@@ -75,7 +109,7 @@ def build(dist: Path, layout, write) -> int:
   </section>
 </div>
 <noscript><p class="intro">Ask needs JavaScript. You can still <a href="/works/">search the library</a>.</p></noscript>
-<p class="ask-how">How this works: if your question matches one of the hundred Timeline topics, that topic comes first. Then we find the passages closest to your question, and quote the sentences that answer it most directly, at most two from any one work. Where the library is thin, we say so and show the closest passages. We keep those questions, with no name or address, so we know which passages to add (<a href="/privacy/">Privacy</a>).</p>
+<p class="ask-how">How this works: if your question matches one of the hundred Timeline topics, or one of our History articles, that page comes first. Then we find the passages closest to your question, and quote the sentences that answer it most directly, at most two from any one work. Where the library is thin, we say so and show the closest passages. We keep those questions, with no name or address, so we know which passages to add (<a href="/privacy/">Privacy</a>).</p>
 </div>
 """
     write(dist / "ask" / "index.html",

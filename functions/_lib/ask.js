@@ -256,10 +256,11 @@ export function selectAnswer(cands, scores, opts = {}) {
 export const TOPIC_LIMIT = 3;
 
 /**
- * Timeline topics matching a question, best first, at most TOPIC_LIMIT.
- * `topics` rows come from /data/ask-topics.json (scripts/ask_page.py builds
- * it from data/explore/questions/*.json): {question, short, href, also},
- * where `also` is the dossier's own curated search phrases. A topic matches
+ * Timeline topics (and History articles) matching a question, best first,
+ * at most TOPIC_LIMIT. `topics` rows come from /data/ask-topics.json
+ * (scripts/ask_page.py builds it from data/explore/questions/*.json plus
+ * its ARTICLES table): {question, short, href, also, kind}, where `also`
+ * is the row's own curated search phrases. A topic matches
  * when the question is one of its phrases (or the topic's own question), or
  * when enough of the question's content words appear in the topic's words.
  * Pure, like the rest of this file, so scripts/ask.test.mjs can test it.
@@ -283,9 +284,12 @@ export function matchTopics(q, topics) {
       question: t.question,
       short: t.short || "",
       href: t.href,
+      // Rows built by scripts/ask_page.py carry kind "topic" (a Timeline
+      // dossier) or "article" (a History long read); the page labels them.
+      kind: t.kind === "article" ? "article" : "topic",
       rank: (phraseHit ? 4 : 0) + hitQ * 2 + hit + frac,
     });
   }
   scored.sort((a, b) => b.rank - a.rank || a.question.localeCompare(b.question));
-  return scored.slice(0, TOPIC_LIMIT).map(({ question, short, href }) => ({ question, short, href }));
+  return scored.slice(0, TOPIC_LIMIT).map(({ question, short, href, kind }) => ({ question, short, href, kind }));
 }
