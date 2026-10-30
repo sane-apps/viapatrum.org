@@ -145,15 +145,76 @@ def cite_order(cites: list, qs: list, by_id: dict) -> list:
     return sorted(cites, key=lambda c: qs.index(by_id[c]) if c in by_id else len(qs))
 
 
+def ov_refs(cites: list, qs: list, by_id: dict) -> str:
+    """The reference numbers after a summary statement: the same links to the
+    witness cards below as the old paragraph form, in timeline order."""
+    return " <sup>" + "".join(
+        f'<a href="#w-{escape(c)}" data-jump="{escape(c)}" title="{escape(by_id[c]["author"] + ", " + date_label(by_id[c])) if c in by_id else ""}">'
+        f'{qs.index(by_id[c]) + 1 if c in by_id else "?"}</a>' for c in cite_order(cites, qs, by_id)) + "</sup>"
+
+
+def ov_heading(cites: list, by_id: dict) -> str:
+    """Witness-first heading for one summary block (owner 2026-10-30: the name
+    first, highlighted, then what they believed): the cited writers in the
+    order the statement names them, each with the date of the cited quote,
+    a range when a writer is cited from two dates."""
+    seen: list[str] = []
+    found: dict[str, list] = {}
+    for c in cites:
+        q = by_id.get(c)
+        if not q:
+            continue
+        if q["author"] not in found:
+            seen.append(q["author"])
+            found[q["author"]] = []
+        found[q["author"]].append(q)
+    names = []
+    for a in seen:
+        labels: list[str] = []
+        for q in sorted(found[a], key=year):
+            lab = date_label(q)
+            if lab not in labels:
+                labels.append(lab)
+        lab = labels[0] if len(labels) == 1 else f"{labels[0]}–{labels[-1]}"
+        names.append(f"<b>{escape(a)}</b> <span class=\"ov-d\">{escape(lab)}</span>")
+    return " · ".join(names)
+
+
+def ov_ans(d: dict, cites: list, by_id: dict) -> str:
+    """The answer pill on a block whose witnesses all give the same answer."""
+    ids = {by_id[c]["answer"] for c in cites if c in by_id}
+    if len(ids) != 1:
+        return ""
+    i = ans_index(d, next(iter(ids)))
+    return (f'<span class="ov-ans" style="--c:{COLORS[i]}"><span class="sw"></span>'
+            f'{escape(d["answers"][i]["short"])}</span>')
+
+
+def ov_block(d: dict, text: str, cites: list, qs: list, by_id: dict) -> str:
+    """One witness-first summary block: the heading, then the statement, then
+    the reference numbers. A dossier line may carry `parts` (the same
+    statement split at its own clause boundaries, its cites partitioned to
+    match); each part renders as its own block. A line without parts renders
+    as one block under its witnesses' heading, so every dossier shares the
+    one form and future dossiers inherit it."""
+    head = ov_heading(cites, by_id)
+    who = f'<p class="ov-who">{head}{ov_ans(d, cites, by_id)}</p>' if head else ""
+    return (f'<div class="ov">{who}'
+            f'<p class="ov-t">{escape(text)}{ov_refs(cites, qs, by_id)}</p></div>')
+
+
 def question_page(d: dict, group_title: str, church_url: dict[str, str]) -> str:
     qs = ordered(d)
     counts = [sum(1 for q in qs if q["answer"] == a["id"]) for a in d["answers"]]
     by_id = {q["id"]: q for q in qs}
-    overview = "".join(
-        f'<p>{escape(o["text"])} <sup>' + "".join(
-            f'<a href="#w-{escape(c)}" data-jump="{escape(c)}" title="{escape(by_id[c]["author"] + ", " + date_label(by_id[c])) if c in by_id else ""}">'
-            f'{qs.index(by_id[c]) + 1 if c in by_id else "?"}</a>' for c in cite_order(o.get("cites") or [], qs, by_id)) + "</sup></p>"
-        for o in d.get("overview") or [])
+    blocks = []
+    for o in d.get("overview") or []:
+        if o.get("parts"):
+            blocks += [ov_block(d, pt["text"], pt.get("cites") or [], qs, by_id)
+                       for pt in o["parts"]]
+        else:
+            blocks.append(ov_block(d, o["text"], o.get("cites") or [], qs, by_id))
+    overview = "".join(blocks)
     answers = "".join(
         f'<button type="button" class="ans" aria-pressed="false" data-ans="{escape(a["id"])}" style="--c:{COLORS[i]}" title="{escape(a["label"])}">'
         f'<span class="sw"></span>{escape(a["short"])} <span class="ct">{counts[i]}</span></button>' for i, a in enumerate(d["answers"]))

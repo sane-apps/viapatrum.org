@@ -44,6 +44,20 @@
       "cites": [
         "augustine-against-julian-4-8-44",
         "westminster-1646-3-6"
+      ],
+      "parts": [
+        {
+          "text": "Augustine, defending predestination, read \"all\" as all the saved, or all kinds of people.",
+          "cites": [
+            "augustine-against-julian-4-8-44"
+          ]
+        },
+        {
+          "text": "The Reformed confessions followed him: Christ redeemed the elect only.",
+          "cites": [
+            "westminster-1646-3-6"
+          ]
+        }
       ]
     },
     {
@@ -59,6 +73,32 @@
         "luther-galatians-1535",
         "bullinger-apocalypse-1557",
         "ursinus-catechism-q40"
+      ],
+      "parts": [
+        {
+          "text": "The schoolmen's formula, which the Reformers inherited, held the two halves together: Christ offered himself for all as to the sufficiency of the price, and for the elect only as to its efficacy.",
+          "cites": [
+            "lombard-sentences-sufficiency"
+          ]
+        },
+        {
+          "text": "Luther preached that Christ bore all the sins of all men in his body.",
+          "cites": [
+            "luther-galatians-1535"
+          ]
+        },
+        {
+          "text": "Bullinger wrote that the Lord has died for all and excludes no one but the self-excluding unbeliever.",
+          "cites": [
+            "bullinger-apocalypse-1557"
+          ]
+        },
+        {
+          "text": "Ursinus, the Catechism's chief author, taught that Christ willed to die for all in general as to sufficiency, and for the elect alone as to efficacy.",
+          "cites": [
+            "ursinus-catechism-q40"
+          ]
+        }
       ]
     },
     {
@@ -71,6 +111,45 @@
         "alencon-1637-declaration",
         "trent-1547-died-for-all",
         "hall-via-media-1660"
+      ],
+      "parts": [
+        {
+          "text": "At Dort the Canons taught both that the death is abundantly sufficient to expiate the sins of the whole world and that its saving efficacy was intended for the elect, those only.",
+          "cites": [
+            "dort-1619-head2-art3",
+            "dort-1619-head2-art8"
+          ]
+        },
+        {
+          "text": "Davenant, a British delegate at Dort, went further in print: we hesitate not to assert that Christ died for all men.",
+          "cites": [
+            "davenant-dissertation-1650"
+          ]
+        },
+        {
+          "text": "Calamy claimed the same sense on the floor at Westminster.",
+          "cites": [
+            "calamy-westminster-1645"
+          ]
+        },
+        {
+          "text": "The French synod at Alençon accepted the formula from the Saumur teachers.",
+          "cites": [
+            "alencon-1637-declaration"
+          ]
+        },
+        {
+          "text": "Trent taught that he died for all.",
+          "cites": [
+            "trent-1547-died-for-all"
+          ]
+        },
+        {
+          "text": "And Joseph Hall held the death for all and the special intention for the elect together.",
+          "cites": [
+            "hall-via-media-1660"
+          ]
+        }
       ]
     }
   ],

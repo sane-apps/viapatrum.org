@@ -60,6 +60,13 @@
 .tl .answer-box h2 {font:700 .78rem var(--ui); letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin:0;}
 .tl .answer-box p {margin:0; font:400 1.04rem/1.6 var(--read);}
 .tl .answer-box sup a {font:700 .7rem var(--ui); text-decoration:none; padding:0 .12rem;}
+.tl .answer-box .ov {display:grid; gap:.12rem;}
+.tl .answer-box .ov + .ov {border-top:1px solid var(--rule); padding-top:.55rem;}
+.tl .answer-box .ov-who {font:600 .95rem/1.35 var(--ui); color:var(--ink);}
+.tl .answer-box .ov-who b {color:var(--gold); font-weight:700;}
+.tl .answer-box .ov-d {color:var(--ink-faint); font-weight:400; font-size:.88em; white-space:nowrap;}
+.tl .answer-box .ov-ans {display:inline-flex; align-items:center; gap:.35rem; font:600 .74rem var(--ui); color:var(--ink); border:1.5px solid var(--rule); border-radius:999px; padding:.13rem .55rem .13rem .45rem; margin-left:.45rem; vertical-align:.14em; white-space:nowrap;}
+.tl .answer-box .ov-ans .sw {width:9px; height:9px; border-radius:50%; background:var(--c);}
 .tl .answers {display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; margin:.3rem 0 0;}
 .tl .answers .lbl {font-weight:600; font-size:.92rem; margin-right:.2rem;}
 .tl .ans {display:inline-flex; align-items:center; gap:.45rem; font:600 .88rem var(--ui); border:1.5px solid var(--rule); background:var(--leaf); border-radius:999px; padding:.34rem .75rem .34rem .55rem; cursor:pointer;}
