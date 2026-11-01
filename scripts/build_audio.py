@@ -21,7 +21,9 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-BOOKS = Path.home() / "SaneApps/clients/translations/books"
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from published_books import books_root  # noqa: E402  narrate committed text only (published_books.py)
+BOOKS = books_root()
 OUT = ROOT / "outputs" / "audio"
 
 
@@ -824,22 +826,28 @@ def _memory_heat() -> int:
 
 
 def _ship_busy() -> bool:
-    """True when a site ship holds outputs/ship.lock."""
+    """True when a site ship holds outputs/ship.lock, or a build, ship, e2e,
+    auto-ship shelf or Logos compile holds outputs/build.lock: they read the
+    manifests and the published text, so the drain waits (re-audit 2026-10-07).
+    A child of the build.lock holder (FATHERS_BUILD_LOCK_HELD set, e.g. the
+    auto ship's audiobook shelf step) checks only ship.lock."""
     import fcntl
     import os
-    lock = ROOT / "outputs" / "ship.lock"
-    if not lock.exists():
-        return False
-    fd = os.open(str(lock), os.O_RDONLY)
-    try:
-        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-    except BlockingIOError:
-        return True
-    else:
-        fcntl.flock(fd, fcntl.LOCK_UN)
-        return False
-    finally:
-        os.close(fd)
+    names = ("ship.lock",) if os.environ.get("FATHERS_BUILD_LOCK_HELD") else ("ship.lock", "build.lock")
+    for name in names:
+        lock = ROOT / "outputs" / name
+        if not lock.exists():
+            continue
+        fd = os.open(str(lock), os.O_RDONLY)
+        try:
+            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError:
+            return True
+        else:
+            fcntl.flock(fd, fcntl.LOCK_UN)
+        finally:
+            os.close(fd)
+    return False
 
 
 def render_next() -> int:

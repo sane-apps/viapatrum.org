@@ -28,7 +28,8 @@ from build_audio import split_sentences
 from speak_text import legacy_read_text, read_text
 
 ROOT = Path(__file__).resolve().parent.parent
-BOOKS = Path.home() / "SaneApps/clients/translations/books"
+from published_books import books_root  # committed text only (scripts/published_books.py)
+BOOKS = books_root()
 
 
 def _dist() -> Path:
