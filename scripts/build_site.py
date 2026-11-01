@@ -45,7 +45,10 @@ def _asset_version() -> str:
 
 
 ASSET_VER = _asset_version()
-BOOKS = Path.home() / "SaneApps/clients/translations/books"
+# One promotion point (2026-10-07): committed translations only, never the
+# working tree the lanes write into. See scripts/published_books.py.
+from published_books import books_root  # noqa: E402
+BOOKS = books_root()
 TOPICS_BOOK = BOOKS / "ante-nicene-topics"
 ORIGEN_BOOK = BOOKS / "origen-prayer-martyrdom"
 ORIGEN_CONTRA_CELSUM_BOOK = BOOKS / "origen-contra-celsum"
@@ -142,12 +145,13 @@ def _certified_books() -> set:
     through the tip loader with no hand-kept glob: on 2026-10-04 ten certified
     early works (Martyrdom of Polycarp, Diognetus, Athenagoras, Tertullian ...)
     were missing from the site because nobody had added their names above."""
+    # Fail closed (re-audit 2026-10-07): a build that quietly drops every
+    # certified work would ship them as 404s through the works gate.
     try:
         sys.path.insert(0, str(BOOKS.parent / "scripts"))
         import work_pipeline as _wp
-    except Exception as e:  # the site still builds; say why nothing was added
-        print(f"certified books: work_pipeline unavailable ({type(e).__name__}: {e}); none added")
-        return set()
+    except Exception as e:
+        raise SystemExit(f"BLOCKED: certified books: work_pipeline unavailable ({type(e).__name__}: {e})") from e
     # Books another loader already reads stay with that loader (a second copy
     # with different metadata breaks the build: "Conflicting authors").
     import fnmatch
@@ -163,7 +167,8 @@ def _certified_books() -> set:
             if _wp.certified(book.name):
                 out.add(book)
         except Exception as e:
-            print(f"certified books: {book.name} skipped ({type(e).__name__}: {e})")
+            raise SystemExit(f"BLOCKED: certified books: {book.name} could not be checked "
+                             f"({type(e).__name__}: {e})") from e
     print(f"certified books: {len(out)} with a current receipt and no other loader")
     return out
 

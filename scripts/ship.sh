@@ -20,7 +20,8 @@ LAST="$ROOT/outputs/ship-last"
 # INJECT_STATE_DIR exported by a test shell would send the build and the
 # inject elsewhere while every gate and the deploy read $ROOT/dist.
 # --audio-only passes FATHERS_DIST="$STAGE" on its own inject call.
-unset FATHERS_DIST INJECT_STATE_DIR
+# FATHERS_BOOKS is set below from the published (committed) translations only.
+unset FATHERS_DIST INJECT_STATE_DIR FATHERS_BOOKS
 STATE_DIR="$ROOT/outputs"
 R2_PENDING="$STATE_DIR/audio-r2-pending.jsonl"   # the last full build's upload list
 # --audio-only keeps its rows apart, so a later --skip-build still syncs the
@@ -65,7 +66,14 @@ Ctrl-C during a long step (deploy, live checks) stops that step and the ship.
 An audio upload to R2 that is still running when a ship fails keeps going in
 the background (3 h limit); the next ship waits for it.
 
+The text is the translations repo's committed main, never its working tree:
+a full ship first moves ~/SaneApps/.worktrees/translations-published to main's
+tip (scripts/published_books.py). Lanes commit a book when it certifies.
+--audio-only reuses that tree and blocks if its books changed since the last ship.
+
 Requires: translations venv with PyYAML; CLOUDFLARE_API_TOKEN (or source ~/.config/nv/env).
+Progress: every stage prints "==> HH:MM:SS (+N min) <stage>"; outputs/ship-status.json
+holds the stage, elapsed and expected minutes, and the result when it ends.
 Timings: outputs/ship-timings.jsonl (one line per run).
 USAGE
 }
@@ -191,13 +199,56 @@ SHIP_T0="$(date +%s)"
 STEP_NAME=""
 STEP_T0="$SHIP_T0"
 STEP_LOG=""
+# Live monitoring (global AGENTS.md rule, 2026-10-07): each stage line carries
+# the clock and elapsed minutes, and outputs/ship-status.json says where the
+# ship is, what it expects in all, and how it ended.
+STATUS_FILE="$ROOT/outputs/ship-status.json"
+# Expected minutes: median of the last 5 good runs of this mode.
+EXPECT_MIN="$(python3 - "$ROOT/outputs/ship-timings.jsonl" "$MODE" <<'PY' 2>/dev/null || echo 0
+import json, statistics, sys
+rows = []
+try:
+    for line in open(sys.argv[1], encoding="utf-8"):
+        try:
+            r = json.loads(line)
+        except ValueError:
+            continue
+        if r.get("mode") == sys.argv[2] and r.get("rc") == 0:
+            rows.append(r["secs"])
+except OSError:
+    pass
+print(round(statistics.median(rows[-5:]) / 60) if rows else 0)
+PY
+)"
+write_status() {  # write_status <state> [rc]
+  local now; now="$(date +%s)"
+  STATE="$1" RC="${2:-}" STAGE_NAME="$STEP_NAME" MODE_="$MODE" PID_="$$" EXPECT_="$EXPECT_MIN" \
+  ELAPSED="$(( (now - SHIP_T0) / 60 ))" STAGE_ELAPSED="$(( (now - STEP_T0) / 60 ))" \
+  STARTED="$SHIP_T0" python3 - "$STATUS_FILE" <<'PY' 2>/dev/null || true
+import datetime, json, os, sys
+e = os.environ
+row = {"state": e["STATE"], "mode": e["MODE_"], "pid": int(e["PID_"]), "stage": e["STAGE_NAME"],
+       "started": datetime.datetime.fromtimestamp(int(e["STARTED"])).astimezone().isoformat(timespec="seconds"),
+       "at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+       "elapsed_min": int(e["ELAPSED"]), "stage_elapsed_min": int(e["STAGE_ELAPSED"]),
+       "expect_total_min": int(e["EXPECT_"] or 0)}
+if e["RC"]:
+    row["rc"] = int(e["RC"])
+tmp = sys.argv[1] + ".tmp"
+with open(tmp, "w", encoding="utf-8") as fh:
+    json.dump(row, fh, indent=1)
+os.replace(tmp, sys.argv[1])
+PY
+}
 step() {
   local now; now="$(date +%s)"
   if [[ -n "$STEP_NAME" ]]; then STEP_LOG+="${STEP_NAME}"$'\t'"$((now - STEP_T0))"$'\n'; fi
   STEP_NAME="$*"
   STEP_T0="$now"
-  echo "==> $(date +%T) $*"
+  echo "==> $(date +%T) (+$(( (now - SHIP_T0) / 60 )) min) $*"
+  write_status running
 }
+echo "==> $(date +%T) ship ${MODE} started (pid $$); expect about ${EXPECT_MIN} min (outputs/ship-timings.jsonl); status: outputs/ship-status.json"
 
 record_timings() {
   local rc="$1" now; now="$(date +%s)"
@@ -251,7 +302,11 @@ cleanup() {
   # free), so delete it outright, and only when it is our own mktemp path.
   case "$STAGE" in /tmp/fathers-ship.?*) rm -rf -- "$STAGE" "$STAGE.catalogue-quality.json" ;; esac
   case "$GATE_FN_DIR" in /tmp/fathers-gate.?*) rm -rf -- "$GATE_FN_DIR" ;; esac
+  local last_stage="$STEP_NAME"
   record_timings "$rc"
+  STEP_NAME="$last_stage"   # the status names the stage the ship ended in
+  if [[ "$rc" -eq 0 ]]; then write_status ok 0; else write_status failed "$rc"; fi
+  echo "==> $(date +%T) (+$(( ($(date +%s) - SHIP_T0) / 60 )) min) ship ${MODE} ended rc=${rc}"
   [[ -n "$LOCK_PID" ]] && kill "$LOCK_PID" 2>/dev/null
   [[ -n "$BUILD_LOCK_PID" ]] && kill "$BUILD_LOCK_PID" 2>/dev/null
   exec 9>&-
@@ -399,6 +454,23 @@ finish_pending_swap() {  # audio-only rows -> AO_PENDING; the full list goes bac
 
 sha_of() { shasum -a 256 "$1" 2>/dev/null | cut -d' ' -f1; }
 
+BOOKS_TREE=""
+use_published_books() {  # use_published_books sync|current
+  local out
+  if ! out="$(python3 "$ROOT/scripts/published_books.py" "$1")"; then
+    echo "BLOCKED: no committed translations to build from (scripts/published_books.py $1 failed)" >&2
+    exit 1
+  fi
+  FATHERS_BOOKS="$(sed -n 's/^BOOKS=//p' <<<"$out")"
+  BOOKS_TREE="$(sed -n 's/^BOOKS_TREE=//p' <<<"$out")"
+  if [[ ! -d "$FATHERS_BOOKS" || -z "$BOOKS_TREE" ]]; then
+    echo "BLOCKED: scripts/published_books.py $1 gave no books folder ($out)" >&2
+    exit 1
+  fi
+  export FATHERS_BOOKS
+  echo "  books: committed translations, books tree ${BOOKS_TREE:0:12} ($FATHERS_BOOKS)"
+}
+
 rollback_hint() {
   echo "  The site is live. Roll back: Cloudflare dashboard > Workers & Pages > ${PAGES_PROJECT} > Deployments >" >&2
   echo "  the previous production deployment > Rollback. Deployment ids: npx --yes ${WRANGLER} pages deployment list --project-name ${PAGES_PROJECT}" >&2
@@ -469,13 +541,14 @@ write_last_receipt() {  # dir cut verified
   # inject_sha / readalong_sha: --audio-only reuses this site's player JS and
   # markup, so it blocks when either changed in the repo since this ship.
   CUT="$2" VERIFIED="$3" CSS="$CSS_HASH" FN_SHA="$(functions_sha)" PAGES="${PAGES_URL:-}" SHIP_MODE="$MODE" \
-  INJECT_SHA="$INJECT_PY_SHA" READALONG_SHA="$(sha_of "$1/dist/assets/readalong.js")" \
+  INJECT_SHA="$INJECT_PY_SHA" READALONG_SHA="$(sha_of "$1/dist/assets/readalong.js")" BOOKS_TREE_="$BOOKS_TREE" \
   python3 - "$1/receipt.json" <<'PY'
 import datetime, json, os, sys
 json.dump({"shipped_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
            "audio_cut": float(os.environ["CUT"]), "verified": os.environ["VERIFIED"] == "1",
            "css_hash": os.environ["CSS"], "functions_sha": os.environ["FN_SHA"],
            "inject_sha": os.environ["INJECT_SHA"], "readalong_sha": os.environ["READALONG_SHA"],
+           "books_tree": os.environ["BOOKS_TREE_"],
            "pages_url": os.environ["PAGES"], "mode": os.environ["SHIP_MODE"]},
           open(sys.argv[1], "w"), indent=2)
 PY
@@ -627,11 +700,18 @@ if [[ "$AUDIO_ONLY" -eq 1 ]]; then
     echo "BLOCKED: no copy of the last shipped site in $LAST; run a full ship first" >&2
     exit 1
   fi
-  read -r LAST_VERIFIED LAST_CUT LAST_FN LAST_INJECT LAST_READALONG <<<"$(python3 -c '
+  read -r LAST_VERIFIED LAST_CUT LAST_FN LAST_INJECT LAST_READALONG LAST_BOOKS <<<"$(python3 -c '
 import json, sys
 r = json.load(open(sys.argv[1]))
 print(int(bool(r.get("verified"))), r.get("audio_cut", 0), r.get("functions_sha") or "-",
-      r.get("inject_sha") or "-", r.get("readalong_sha") or "-")' "$LAST/receipt.json")"
+      r.get("inject_sha") or "-", r.get("readalong_sha") or "-", r.get("books_tree") or "-")' "$LAST/receipt.json")"
+  # inject_audio reads the English the shipped pages were built from: the
+  # published tree as the last ship left it, never a newer commit.
+  use_published_books current
+  if [[ "$BOOKS_TREE" != "$LAST_BOOKS" ]]; then
+    echo "BLOCKED: the committed translations changed since the last ship (books tree ${LAST_BOOKS:0:12} -> ${BOOKS_TREE:0:12}, or the receipt predates this check); run a full ship" >&2
+    exit 1
+  fi
   if [[ "$LAST_VERIFIED" != "1" ]]; then
     echo "BLOCKED: the last deploy did not pass its live checks; run a full ship" >&2
     exit 1
@@ -752,9 +832,14 @@ fi
 # An --audio-only run killed mid-inject leaves the full list aside: put it back.
 if [[ -f "$PENDING_BACKUP" ]]; then mv -f "$PENDING_BACKUP" "$R2_PENDING"; fi
 
+# One promotion point: build, inject and every gate read the committed
+# translations (main), never the working tree the lanes write into.
+step "Committed translations (published tree at main)"
+use_published_books sync
+
 # Cheap content gates first: a bad receipt fails in seconds, not after the build.
 step "Research receipts (intros sourced, dates agree)"
-"$PYTHON" "$HOME/SaneApps/clients/translations/scripts/check_research.py"
+"$PYTHON" "$FATHERS_BOOKS/../scripts/check_research.py"
 
 step "Build"
 # The build attaches players and writes the R2 list. Set the host first so
@@ -794,16 +879,20 @@ if [[ "$SKIP_BUILD" -ne 0 ]]; then
   AUDIO_CUT="$(python3 -c 'import os,sys; print(int(os.stat(sys.argv[1]).st_mtime))' "$BUILD_QUALITY")"
 fi
 
-step "Catalogue regressions"
-"$PYTHON" "$ROOT/scripts/check_catalogue.py"
-# Shrink guard: a build that holds many works at once is a gate bug, not a
-# release (2026-10-07: one build held all 682 and published 0). More than
-# SHIP_MAX_DROP works gone from the live site needs ALLOW_SHRINK=1. The live
-# catalogue is the baseline; outputs/ship-last is the fallback when offline.
-"$PYTHON" - "$LAST/dist/app/v1/catalog.json" "$ROOT/dist/app/v1/catalog.json" "${SHIP_MAX_DROP:-10}" "${ALLOW_SHRINK:-0}" <<'PY'
+catalogue_gate() {
+  step "Catalogue regressions"
+  "$PYTHON" "$ROOT/scripts/check_catalogue.py"
+  # Shrink guard: a build that holds many works at once is a gate bug, not a
+  # release (2026-10-07: one build held all 682 and published 0). Every work
+  # that leaves the live site must be one this build held (held_works names the
+  # reason); a work that simply vanished blocks. More than SHIP_MAX_DROP gone
+  # also blocks. ALLOW_SHRINK=1 lets an intended drop through. The live
+  # catalogue is the baseline; outputs/ship-last is the fallback when offline.
+  "$PYTHON" - "$LAST/dist/app/v1/catalog.json" "$ROOT/dist/app/v1/catalog.json" "${SHIP_MAX_DROP:-10}" "${ALLOW_SHRINK:-0}" "$SHIP_QUALITY" <<'PY'
 import json, sys, urllib.request
 from pathlib import Path
 last, new, max_drop, allow = Path(sys.argv[1]), Path(sys.argv[2]), int(sys.argv[3]), sys.argv[4] == "1"
+held = {w["slug"] for w in json.loads(Path(sys.argv[5]).read_text()).get("held_works", [])}
 try:
     req = urllib.request.Request("https://viapatrum.org/app/v1/catalog.json", headers={"user-agent": "viapatrum-ship"})
     with urllib.request.urlopen(req, timeout=30) as r:
@@ -815,14 +904,23 @@ except Exception as e:  # noqa: BLE001
 was = {w["slug"] for w in base["works"]}
 now = {w["slug"] for w in json.loads(new.read_text())["works"]} if new.is_file() else set()
 gone = sorted(was - now)
+vanished = [s for s in gone if s not in held]
 print(f"  works: {len(was)} on {where}, {len(now)} now ({len(gone)} gone, {len(now - was)} new)")
 if gone:
-    print("  gone: " + ", ".join(gone))
-if len(gone) > max_drop and not allow:
+    print("  gone: " + ", ".join(f"{s} (held)" if s in held else s for s in gone))
+if allow:
+    sys.exit(0)
+if vanished:
+    sys.exit(f"BLOCKED: {len(vanished)} live works left the site without a hold: {', '.join(vanished[:10])}. "
+             "A rename needs a redirect; rerun with ALLOW_SHRINK=1 if the drop is intended.")
+if len(gone) > max_drop:
     sys.exit(f"BLOCKED: {len(gone)} works would leave the site (limit {max_drop}). "
              "Check the build's held_works; rerun with ALLOW_SHRINK=1 if the holds are intended.")
 PY
-CATALOGUE_PRINT="$(dist_fingerprint)"
+  # Taken after every change to dist/: the stage step re-checks only if dist
+  # changed since (it used to re-run check_catalogue on every full ship).
+  CATALOGUE_PRINT="$(dist_fingerprint)"
+}
 
 if [[ "$SKIP_BUILD" -eq 0 ]]; then
   step "Search export"
@@ -838,17 +936,21 @@ if [[ "$SKIP_BUILD" -eq 0 ]]; then
   PATH="/opt/homebrew/opt/node@24/bin:$PATH" nice -n 10 node "$ROOT/scripts/make_og_cards.cjs" || echo "WARN: share cards not redrawn"
   rsync -a "$ROOT/assets/og/" "$ROOT/dist/assets/og/"
   "$PYTHON" "$ROOT/scripts/og_apply.py"
-
-  step "Read-along audio"
   # Players are attached at the end of build_site.py, which also writes
   # the R2 list. Do not delete that list. Drop any local mp3 a build
   # copied when AUDIO_BASE was unset. Audio stays on R2, not in Pages.
   find "$ROOT/dist/assets/audio" -name "*.mp3" -delete 2>/dev/null || true
+
+  catalogue_gate
+
+  step "Read-along audio"
   if [[ "$DRY_RUN" -eq 0 ]]; then
     start_r2_sync
   else
     echo "  (dry-run: audio not uploaded to R2)"
   fi
+else
+  catalogue_gate
 fi
 
 CSS_HASH="$(css_hash_of "$ROOT/dist")"
@@ -925,11 +1027,12 @@ fi
 
 step "Stage the upload"
 # Upload a private snapshot, never the mutable dist being used by another editor.
-node "$ROOT/scripts/verify_chrome.cjs"
+# The catalogue and chrome checks above ran on this exact dist unless it changed since.
 if [[ "$(dist_fingerprint)" != "$CATALOGUE_PRINT" ]]; then
+  node "$ROOT/scripts/verify_chrome.cjs"
   "$PYTHON" "$ROOT/scripts/check_catalogue.py"
 else
-  echo "  dist unchanged since the catalogue gate; not re-run"
+  echo "  dist unchanged since the catalogue and browser checks; not re-run"
 fi
 STAGE="$(mktemp -d /tmp/fathers-ship.XXXXXX)"
 # APFS clone: instant, and copy-on-write keeps the stage private.
