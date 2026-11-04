@@ -38,3 +38,4 @@ secrets.*
 
 node_modules/
 /dist.*.json
+/.ebook-build
