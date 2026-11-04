@@ -1,7 +1,7 @@
 // Plays a page's read-along player headless and checks the highlighted
 // sentence follows the audio. Usage: node readalong_check.cjs <page-url> <png>
 const path = require("path");
-const { chromium } = require(path.join(process.env.HOME, "SaneApps/websites/fathers.saneapps.com/node_modules/playwright"));
+const { chromium } = require(path.join(process.env.HOME, "SaneApps/websites/viapatrum.org/node_modules/playwright"));
 (async () => {
   const [url, png] = process.argv.slice(2);
   const browser = await chromium.launch({ executablePath: "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser", headless: true, args: ["--autoplay-policy=no-user-gesture-required"] });

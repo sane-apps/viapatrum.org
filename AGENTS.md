@@ -1,4 +1,4 @@
-# AGENTS — fathers.saneapps.com
+# AGENTS — viapatrum.org
 
 ## Active quality incident — 2026-09-13
 Do not restore build_site.py from old commits to add corpus globs. That removed the publication gate and restored 568 held works, including generated scaffolds and false complete translations. Preserve catalogue_quality.py integration and use scripts/ship.sh with mandatory catalogue/browser checks. A larger catalogue is not proof of quality. The specific conflicting upload from Cursor process group 35630 was stopped before completion; source data and other work are preserved. Coordinate through SESSION_HANDOFF.md before changing this builder.
@@ -10,7 +10,7 @@ Do not restore build_site.py from old commits to add corpus globs. That removed 
 1. Before editing on Air, pull Mini → Air (`rsync` with a `/./` path anchor). Never assume Air is current.
 2. Never push a whole Air `build_site.py` (or other large tree files) onto Mini without comparing checksums first. Blind `scp`/`rsync` from Air already wiped densify loaders once (2026-09-22) — restore was from Mini git HEAD.
 3. Prefer: edit on Mini over SSH, or pull → edit Air → push **only the files you changed** after `md5` parity check on siblings.
-4. Forbidden: `rsync --relative` of absolute `/Users/...` paths into the repo (creates nested `Users/` junk). Use `rsync -av --relative mini:…/fathers.saneapps.com/./path mini:…/fathers.saneapps.com/` or explicit destination paths.
+4. Forbidden: `rsync --relative` of absolute `/Users/...` paths into the repo (creates nested `Users/` junk). Use `rsync -av --relative mini:…/viapatrum.org/./path mini:…/viapatrum.org/` or explicit destination paths.
 5. Do not deploy a local `dist/` that has fewer published works than live without an explicit hold/publish reason — publication-review on Mini is what keeps densify tips online.
 
 
@@ -35,7 +35,7 @@ Do not regress: tip-suffix strip, ESTC/identifiers in About, publication gate + 
 - No “Verified only” filter or confidence badges on Topics. Put a short translation-confidence note on each **work** intro.
 - Julian (and any post-Nicene corpus) must show an era banner — do not silently call the whole site ante-Nicene only.
 - Donate: GitHub Sponsors `MrSaneApps`. Reading and listening on the site stay free, and so does the app. Downloads (Logos Word files, EPUB, PDF, audiobook files) are free too (owner 2026-10-22; the $50 Lemon Squeezy unlock of 2026-10-05 is retired so the Scripture reader can use YouVersion's licences, which forbid paywalls). No donation asks on Scripture pages. Beliefs live inside the Timeline (`/explore/`), never as their own tab.
-- Deploy to Cloudflare Pages `fathers-site`; hostname `fathers.saneapps.com`.
+- Deploy to Cloudflare Pages `fathers-site`; hostname `viapatrum.org` (fathers.saneapps.com 301s there and must keep doing so).
 - Withdrawn works: never rely on missing assets alone. `ship.sh` regenerates a `/works/*` Pages Function allowlist (`scripts/generate_works_gate.py`) so custom-domain preservation cache cannot resurrect held URLs.
 - Prefer `./scripts/ship.sh` (build → smoke → deploy → print CSS `?v=`).
 - **Original English Translation** = no previous complete English translation. Only a documented bibliographic review may enable it in FIRST_ENGLISH_NOTES; inherited metadata flags and absence from ANF are insufficient. No repeated provenance badges on catalogue rows. Details: `/methodology/`.

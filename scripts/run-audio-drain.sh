@@ -36,5 +36,5 @@ if ! timeout 120 python3 "$HOME/SaneApps/clients/translations/scripts/spend_guar
   echo "$(date -Iseconds) audio drain: waiting, $(python3 "$HOME/SaneApps/clients/translations/scripts/spend_guard.py" status)"
   exit 0
 fi
-cd "$HOME/SaneApps/websites/fathers.saneapps.com" || exit 1
+cd "$HOME/SaneApps/websites/viapatrum.org" || exit 1
 exec /usr/bin/nice -n 10 "$HOME/Models/kokoro/.venv/bin/python" scripts/build_audio.py --drain

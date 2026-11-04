@@ -6,7 +6,7 @@
 # script exits), refuses to build below 15 GB free, replaces only its own dist.
 # Exit: 0 built, 2 lock timeout, 3 disk low, 4 bad dist path, else the build's own code.
 set -u
-ROOT="$HOME/SaneApps/websites/fathers.saneapps.com"
+ROOT="$HOME/SaneApps/websites/viapatrum.org"
 DIST="${1:?dist dir}"; LOG="${2:?log file}"
 case "$DIST" in "$ROOT"/outputs/pkg-*/dist) ;; *) echo "DIST must be $ROOT/outputs/pkg-<name>/dist"; exit 4;; esac
 deadline=$((SECONDS + 2700))
