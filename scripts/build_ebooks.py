@@ -56,6 +56,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+WORK_ROOT = ROOT / ".ebook-build"  # Typst scratch data; must be a real folder inside ROOT
 TEMPLATES = ROOT / "scripts" / "book_templates"
 FONTS = ROOT / "scripts" / "book_templates" / "fonts"  # not in assets/: the site would deploy them
 SITE = "https://viapatrum.org"
@@ -851,7 +852,9 @@ def build_one(job: dict) -> dict:
     t0 = time.time()
     out = Path(job["out"])
     slug = job["work"]["slug"]
-    work_dir = out / ".build" / slug
+    # Typst only reads data under --root (the repo). outputs/ is a symlink to SaneBulk since 2026-10-28, so the
+    # scratch data stays on the repo disk; finished files still go to --out (2026-11-04).
+    work_dir = WORK_ROOT / slug
     if work_dir.exists():
         shutil.rmtree(work_dir)
     work_dir.mkdir(parents=True)
@@ -872,7 +875,11 @@ def build_one(job: dict) -> dict:
         pdf = out / "pdf" / f"{slug}.pdf"
         tmp_pdf = work_dir / "book.pdf"
         typst(["--input", f"data={rel}", str(TEMPLATES / "book.typ"), str(tmp_pdf)], timeout=3600)
-        tmp_pdf.replace(pdf)
+        # The scratch folder and outputs/ (SaneBulk) are on different disks: copy beside the target, then rename.
+        part = pdf.with_suffix(".tmp.pdf")
+        shutil.copyfile(tmp_pdf, part)
+        part.replace(pdf)
+        tmp_pdf.unlink()
         # EPUB.
         epub = out / "epub" / f"{slug}.epub"
         write_epub(book, cover, epub, {k: Path(v) for k, v in job["fonts"].items()}, work_dir)
@@ -1021,8 +1028,6 @@ def main() -> int:
     app_dir = (ROOT / args.app_dir).resolve() if not Path(args.app_dir).is_absolute() else Path(args.app_dir)
     site_dir = Path(args.site_dir).resolve() if args.site_dir else app_dir.parent.parent
     out = (ROOT / args.out).resolve() if not Path(args.out).is_absolute() else Path(args.out)
-    if not out.is_relative_to(ROOT):
-        sys.exit("--out must sit inside the repo (Typst reads book data from the repo root).")
     take_lock(out)
     for d in ("epub", "pdf", "covers", ".build"):
         (out / d).mkdir(parents=True, exist_ok=True)
