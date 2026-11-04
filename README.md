@@ -1,9 +1,9 @@
-# fathers.saneapps.com
+# viapatrum.org
 
 Public Fathers library: **Topics** (ante-Nicene dogmatics map) and **Works**
 (treatises and surviving fragments, including Origen and Julian of Eclanum).
 
-- Live: https://fathers.saneapps.com
+- Live: https://viapatrum.org
 - Donate: https://github.com/sponsors/MrSaneApps
 - IA: `docs/IA.md`
 

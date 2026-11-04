@@ -1,4 +1,4 @@
-# Information architecture — fathers.saneapps.com
+# Information architecture — viapatrum.org
 
 Public library of Fathers reading: **topics** (ante-Nicene dogmatics map) and
 **works** (full treatises). Canonical book trees live under
@@ -112,9 +112,9 @@ No paywall. Do not put prices on this site.
 ## Build / deploy
 
 ```bash
-cd ~/SaneApps/websites/fathers.saneapps.com
+cd ~/SaneApps/websites/viapatrum.org
 ~/SaneApps/clients/translations/.venv/bin/python scripts/build_site.py
 npx wrangler pages deploy dist --project-name fathers-site
 ```
 
-Hostname: `fathers.saneapps.com`. Mini-first for visual proof after deploy.
+Hostname: `viapatrum.org` (fathers.saneapps.com 301s there). Mini-first for visual proof after deploy.

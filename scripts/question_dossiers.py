@@ -264,7 +264,7 @@ def cmd_queue() -> int:
             intake.append({"question": stem, "action": "relock-source", **r,
                            "why": "The book's source JSON does not hold this passage. Lock the real text from the witness scan, then translate."})
     (TR / "docs" / "question-priority.json").write_text(json.dumps({
-        "_note": "Written by websites/fathers.saneapps.com/scripts/question_dossiers.py queue. Library books the Timeline "
+        "_note": "Written by websites/viapatrum.org/scripts/question_dossiers.py queue. Library books the Timeline "
                  "question dossiers quote that are not live yet, in question order. work_pipeline queue takes these first.",
         "books": need}, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     (TR / "docs" / "question-intake.json").write_text(json.dumps({
