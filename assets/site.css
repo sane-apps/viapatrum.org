@@ -2810,23 +2810,25 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
 .vp-focus { list-style: none; margin: 0.5rem 0 0; padding: 0; width: 100%; max-width: 60rem;
   display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem 0.75rem; }
 .vp-focus li { display: flex; }
-/* One badge shape for all four (owner 2026-11-04): black, 40px, the proportions of Apple's official badge. */
-.vp-badge { display: inline-flex; align-items: center; gap: 0.5rem; height: 40px; padding: 0 0.9rem 0 0.65rem;
-  box-sizing: border-box; border-radius: 7px; background: #000; border: 1px solid #a6a6a6; color: #fff;
+/* One badge size for all four (owner 2026-11-04: "make them all the same size"): 132x44, Apple's official badge
+   scaled evenly (never stretched), and ours drawn to the same box. */
+.vp-badge { display: inline-flex; align-items: center; gap: 0.5rem; width: 132px; height: 44px; padding: 0 0.5rem 0 0.7rem;
+  box-sizing: border-box; border-radius: 9px; background: #000; border: 1px solid #a6a6a6; color: #fff;
   text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
 .vp-badge svg { display: block; flex: none; }
 .vp-badge-txt { display: flex; flex-direction: column; line-height: 1; text-align: left; }
-.vp-badge-txt small { font-size: 0.62rem; font-weight: 500; letter-spacing: 0.01em; margin-bottom: 2px; }
-.vp-badge-txt b { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
+/* Type sized and weighted like Apple's badge at 44px: small line ~10px, main line ~19px medium. */
+.vp-badge-txt small { font-size: 10px; font-weight: 500; letter-spacing: 0.01em; margin-bottom: 1px; }
+.vp-badge-txt b { font-size: 19px; font-weight: 500; letter-spacing: -0.02em; }
 .vp-badge:hover { background: #1a1a1a; color: #fff; }
 .vp-badge:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; }
-.vp-focus .app-badge img { display: block; height: 40px; width: auto; }
+.vp-focus .app-badge img { display: block; width: 132px; height: 44px; }
 .home .vp-mission { margin-top: 2.5rem; }
 @media (max-width: 640px) {
   .home .vp-hero { padding-top: 0.6rem; gap: 0.6rem; }
   .home .vp-hero h1 { font-size: clamp(1.9rem, 8.4vw, 2.3rem); line-height: 1.08; }
   .home .vp-sub { font-size: 1rem; }
-  .vp-focus { gap: 0.5rem 0.55rem; }
+  .vp-focus { display: grid; grid-template-columns: repeat(2, 132px); justify-content: center; gap: 0.55rem; }
 }
 
 /* Human check before the first download (assets/human-check.js). */

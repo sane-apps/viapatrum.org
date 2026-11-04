@@ -305,8 +305,8 @@ ICON_GAMES = ('<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true
               '<circle cx="15.5" cy="15.5" r="1.6" fill="#fff"/></svg>')
 YOUTUBE_BADGE = vp_badge(YOUTUBE_URL, ICON_YOUTUBE, "Watch on", "YouTube", cls="yt-badge",
                          label="Via Patrum on YouTube", external=True)
-LISTEN_BADGE = vp_badge("/listen/", ICON_LISTEN, "Read aloud, free", "Listen")
-GAMES_BADGE = vp_badge("/games/", ICON_GAMES, "Daily puzzle and more", "Games")
+LISTEN_BADGE = vp_badge("/listen/", ICON_LISTEN, "Read aloud", "Listen")
+GAMES_BADGE = vp_badge("/games/", ICON_GAMES, "Play", "Games")
 SITE_TAG = "The way of the Church Fathers, in their own words. Fresh English translations, free to read and hear."
 BASE = ""
 
