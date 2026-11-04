@@ -158,18 +158,22 @@ test('home: favicon, today passage, deduped daily pool, one focus row, each link
     const key=(r.a+' '+r.c).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(t=>roman[t]||t).join(' ');
     assert.ok(!seen.has(key),'duplicate daily entry: '+r.c); seen.add(key);
   }
-  // One focus (owner 2026-10-18): four cards under the Ask box, in this order.
+  // One focus (owner 2026-10-18), as one row of four badges (owner 2026-11-04): one link each, in this order.
   const focus=doc.querySelector('.vp-focus');
   assert.ok(focus,'focus row');
-  assert.deepEqual([...focus.querySelectorAll(':scope > li > .k')].map(k=>k.textContent),['Listen','YouTube','App','Games'],'four cards in order');
-  const fcard=(i)=>focus.querySelectorAll(':scope > li')[i];
-  assert.deepEqual([...fcard(0).querySelectorAll('a')].map(a=>a.getAttribute('href')),['/listen/'],'Listen card has only its own link');
-  assert.ok([...fcard(1).querySelectorAll('a')].every(a=>a.getAttribute('href').startsWith('https://www.youtube.com/')),'YouTube card');
-  const yt=fcard(1).querySelector('a.yt-badge');
-  assert.ok(yt && yt.querySelector('svg rect[fill="#FF0000"]') && yt.textContent.trim()==='YouTube','YouTube card has the red play mark and the YouTube label');
-  assert.ok(fcard(2).querySelector('a.app-badge'),'App card keeps the badge');
-  for(const sel of ['a[href="/listen/"]','a[href^="https://www.youtube.com/"]','a[href^="https://apps.apple.com/"]','a[href="https://play.viapatrum.org/daily"]','a[href="/games/"]'])
-    assert.ok(focus.querySelector(sel),'first-screen link '+sel);
+  const items=[...focus.querySelectorAll(':scope > li')];
+  assert.equal(items.length,4,'four badges');
+  assert.ok(items.every(li=>li.querySelectorAll('a').length===1),'each badge is exactly one link');
+  const hrefs=items.map(li=>li.querySelector('a').getAttribute('href'));
+  assert.equal(hrefs[0],'/listen/');
+  assert.ok(hrefs[1].startsWith('https://www.youtube.com/'),'YouTube badge');
+  assert.ok(hrefs[2].startsWith('https://apps.apple.com/'),'App Store badge');
+  assert.equal(hrefs[3],'/games/','Games badge goes to the page that lists every game');
+  const yt=items[1].querySelector('a.yt-badge');
+  assert.ok(yt && yt.querySelector('svg rect[fill="#FF0000"]') && yt.querySelector('b').textContent==='YouTube','YouTube badge keeps the red play mark and the name');
+  assert.ok(items[2].querySelector('a.app-badge img[src="/assets/app-store-badge.svg"]'),'Apple badge unaltered');
+  assert.deepEqual(items.filter((_,k)=>k!==2).map(li=>li.querySelector('.vp-badge-txt b').textContent),['Listen','YouTube','Games'],'badge names');
+  assert.ok(!focus.querySelector('.k, .t, .l'),'old card labels and descriptions gone');
   assert.ok(!doc.querySelector('.vp-road, .vp-doors, .vp-chips, .vp-keep, .play-promo'),'old directory blocks gone');
   // Each destination once: nothing in the page body repeats itself or the menu.
   const norm=(h)=>h.replace(/^https:\/\/viapatrum\.org/,'').replace(/[?#].*$/,'');

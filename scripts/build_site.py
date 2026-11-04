@@ -281,12 +281,32 @@ APP_BADGE = (f'<a class="app-badge" href="{APP_STORE_URL}" rel="noopener">'
              'alt="Download on the App Store"></a>')
 # The YouTube channel: the same readings as read-along video (owner 2026-10-17).
 YOUTUBE_URL = "https://www.youtube.com/@viapatrums"
-# The home YouTube card's button: the red play mark and the name, sized like the
-# App Store badge beside it, so it reads as YouTube at a glance (owner 2026-10-18).
-YOUTUBE_BADGE = (f'<a class="yt-badge" href="{YOUTUBE_URL}" rel="noopener" aria-label="Via Patrum on YouTube">'
-                 '<svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">'
-                 '<rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>'
-                 '<span>YouTube</span></a>')
+# Home badges (owner 2026-11-04: "keep the youtube and apple logos ... make a single image for the others").
+# One row of four black badges, each one link, all the height of Apple's official App Store badge.
+# YouTube keeps its red play mark; Listen and Games use the site's own plain white icons so they never pass
+# for store badges.
+def vp_badge(href, icon, small, big, cls="", label="", external=False):
+    rel = ' rel="noopener"' if external else ""
+    aria = f' aria-label="{label}"' if label else ""
+    return (f'<a class="vp-badge{(" " + cls) if cls else ""}" href="{href}"{rel}{aria}>{icon}'
+            f'<span class="vp-badge-txt"><small>{small}</small><b>{big}</b></span></a>')
+
+
+ICON_YOUTUBE = ('<svg viewBox="0 0 28 20" width="28" height="20" aria-hidden="true" focusable="false">'
+                '<rect width="28" height="20" rx="5" fill="#FF0000"/><path d="M11 5.5v9l8-4.5z" fill="#fff"/></svg>')
+ICON_LISTEN = ('<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" '
+               'stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'
+               '<path d="M3 18v-6a9 9 0 0 1 18 0v6"/>'
+               '<path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/>'
+               '<path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>')
+ICON_GAMES = ('<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">'
+              '<rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="#fff" stroke-width="2"/>'
+              '<circle cx="8.5" cy="8.5" r="1.6" fill="#fff"/><circle cx="12" cy="12" r="1.6" fill="#fff"/>'
+              '<circle cx="15.5" cy="15.5" r="1.6" fill="#fff"/></svg>')
+YOUTUBE_BADGE = vp_badge(YOUTUBE_URL, ICON_YOUTUBE, "Watch on", "YouTube", cls="yt-badge",
+                         label="Via Patrum on YouTube", external=True)
+LISTEN_BADGE = vp_badge("/listen/", ICON_LISTEN, "Read aloud, free", "Listen")
+GAMES_BADGE = vp_badge("/games/", ICON_GAMES, "Daily puzzle and more", "Games")
 SITE_TAG = "The way of the Church Fathers, in their own words. Fresh English translations, free to read and hear."
 BASE = ""
 
@@ -9795,9 +9815,8 @@ def build() -> None:
     (DIST / "data").mkdir(exist_ok=True)
     (DIST / "data" / "daily.json").write_text(json.dumps(daily[:400], ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
-    play_daily = games_page.GAMES[0]
-    # One focus (owner 2026-10-18): read, listen, the app, games; YouTube is its own
-    # card (owner 2026-10-18 2:50pm: "listen is one, app is one and YouTube is one games is one"). Every other way in
+    # One focus (owner 2026-10-18): listen, YouTube, the app, games, each its own way in. Since 2026-11-04 they are
+    # one row of four badges, one link each (owner: "make it all look cohesive"). Every other way in
     # (Works, Fathers, Topics, Scripture, Timeline, Downloads) is in the menu once.
     home = f"""
 <div class="vp-home">
@@ -9809,10 +9828,10 @@ def build() -> None:
     <button type="submit">Ask</button>
   </form>
   <ul class="vp-focus" aria-label="Listen, YouTube, the app and games">
-    <li><span class="k">Listen</span><span class="t">{n_audio} works read aloud</span><span class="l"><a href="/listen/">Listen here</a></span></li>
-    <li><span class="k">YouTube</span><span class="t">Read-along videos</span><span class="l">{YOUTUBE_BADGE}</span></li>
-    <li><span class="k">App</span><span class="t">Free on iPhone and iPad</span><span class="l">{APP_BADGE}</span></li>
-    <li><span class="k">Games</span><span class="t">{escape(play_daily["kicker"].split(" · ")[0])}</span><span class="l"><a href="{escape(play_daily["play"])}">Play today</a><a href="/games/">All games</a></span></li>
+    <li>{LISTEN_BADGE}</li>
+    <li>{YOUTUBE_BADGE}</li>
+    <li>{APP_BADGE}</li>
+    <li>{GAMES_BADGE}</li>
   </ul>
 </section>
 
