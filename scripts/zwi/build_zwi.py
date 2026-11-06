@@ -256,7 +256,7 @@ def render_html(w: dict) -> str:
         lines += s["paras_html"]
         lines.append("</section>")
     lines.append(f'<p class="source">From Via Patrum: <a href="{SITE}/works/{w["slug"]}/">'
-                 f'{SITE}/works/{w["slug"]}/</a>. Licence: CC BY 4.0. Credit: Via Patrum (SaneApps).</p>')
+                 f'{SITE}/works/{w["slug"]}/</a>. Licence: CC BY 4.0. Credit: Via Patrum.</p>')
     lines += ["</body>", "</html>", ""]
     return "\n".join(lines)
 
@@ -273,7 +273,7 @@ def render_txt(w: dict) -> str:
             out.append(book)
         out.append(f"{s['title_text']} {s['range']}".strip())
         out += s["paras_text"]
-    out.append(f"From Via Patrum: {SITE}/works/{w['slug']}/. Licence: CC BY 4.0. Credit: Via Patrum (SaneApps).")
+    out.append(f"From Via Patrum: {SITE}/works/{w['slug']}/. Licence: CC BY 4.0. Credit: Via Patrum.")
     return "\n\n".join(out) + "\n"
 
 
