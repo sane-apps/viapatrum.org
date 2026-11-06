@@ -117,4 +117,4 @@ cd ~/SaneApps/websites/viapatrum.org
 npx wrangler pages deploy dist --project-name fathers-site
 ```
 
-Hostname: `viapatrum.org` (fathers.saneapps.com 301s there). Mini-first for visual proof after deploy.
+Hostname: `viapatrum.org` (fathers.saneapps.com 301s there). Check visuals after each deploy.

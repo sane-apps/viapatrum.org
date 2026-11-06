@@ -42,3 +42,6 @@ node_modules/
 
 # Maintainer notes; kept on the maintainers machines, not in the public repo
 /SESSION_HANDOFF.md
+/AGENTS.local.md
+/docs/WRAPUP_PLAN_2026-10-14.md
+/docs/GPU_RENDER_COSTS.md

@@ -3,16 +3,9 @@
 ## Active quality incident — 2026-09-13
 Do not restore build_site.py from old commits to add corpus globs. That removed the publication gate and restored 568 held works, including generated scaffolds and false complete translations. Preserve catalogue_quality.py integration and use scripts/ship.sh with mandatory catalogue/browser checks. A larger catalogue is not proof of quality. The specific conflicting upload from Cursor process group 35630 was stopped before completion; source data and other work are preserved. Coordinate through SESSION_HANDOFF.md before changing this builder.
 
-## Machine sync (permanent)
+## Maintainer notes
 
-**Mini is the source of truth** for this repo (densify, publication-review, builds, `scripts/ship.sh`). Air orchestrates only.
-
-1. Before editing on Air, pull Mini → Air (`rsync` with a `/./` path anchor). Never assume Air is current.
-2. Never push a whole Air `build_site.py` (or other large tree files) onto Mini without comparing checksums first. Blind `scp`/`rsync` from Air already wiped densify loaders once (2026-09-22) — restore was from Mini git HEAD.
-3. Prefer: edit on Mini over SSH, or pull → edit Air → push **only the files you changed** after `md5` parity check on siblings.
-4. Forbidden: `rsync --relative` of absolute `/Users/...` paths into the repo (creates nested `Users/` junk). Use `rsync -av --relative mini:…/viapatrum.org/./path mini:…/viapatrum.org/` or explicit destination paths.
-5. Do not deploy a local `dist/` that has fewer published works than live without an explicit hold/publish reason — publication-review on Mini is what keeps densify tips online.
-
+Maintainers: read `AGENTS.local.md` beside this file if it exists. It holds machine rules and is not in the public repo.
 
 ## Standing UX rules (read first — every session)
 
@@ -42,7 +35,7 @@ Do not regress: tip-suffix strip, ESTC/identifiers in About, publication gate + 
 - Public catalogue gate: merge duplicate work batches, then run `partition_catalogue`. Hold scaffold/contaminated/scope-review entries before generating readers, search, author hubs, or related links. Preserve source files; release named holds only after edition comparison. Passing this gate does not certify fidelity or completeness.
 - Works hierarchy: author headings group chronology/author views; title view shows the work first, then author. Dates and section counts remain secondary. Show status only for unfinished translations.
 - Never hand-edit `dist/`; only `scripts/build_site.py` + `assets/` (+ data/books), then rebuild. See `docs/DIST.md`.
-- Mini-first for live visual verification after deploy.
+- Check live visuals after each deploy.
 - Read `docs/IA.md` before changing URL structure.
 - Build with the translations venv (PyYAML). Agents and test runs build only through `scripts/pkg_build.sh <ROOT>/outputs/pkg-<name>/dist <log>` (absolute dist): one build at a time on the 8 GB Mini, waits for `outputs/build.lock`, refuses under 15 GB free. Delete that dist when done. `build_site.py` and `scripts/ship.sh` take the same lock and floor themselves, so a second build or ship exits BLOCKED instead of filling the disk (2026-10-06: six parallel builds filled it and killed every job).
 - Keep the game entry points (nav `Games` → /games/, which lists every game, + the home Games section; owner 2026-10-06) through any redesign. See `docs/GAME_LINKS.md`.
