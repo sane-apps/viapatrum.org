@@ -6841,7 +6841,7 @@ VIA_PATRUM_ORG = {
     "name": "Via Patrum",
     "url": f"{SITE_ORIGIN}/",
     "logo": f"{SITE_ORIGIN}/assets/icons/icon-512.png",
-    "sameAs": ["https://github.com/sane-apps/translations", YOUTUBE_URL, "https://x.com/MrSaneApps"],
+    "sameAs": ["https://github.com/sane-apps/fathers.saneapps.com", "https://github.com/sane-apps/translations", YOUTUBE_URL, "https://x.com/MrSaneApps"],
 }
 
 
@@ -6987,7 +6987,7 @@ def layout(
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
-      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
+      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Our code and process on GitHub</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
     </nav>
     {'' if active == "scripture" else support_nav}
     <nav aria-label="Get the app">
