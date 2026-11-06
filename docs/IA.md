@@ -105,7 +105,7 @@ No GTG jargon. No “complete critical edition” claims. Do not surface interna
 1. Donate — GitHub Sponsors (`https://github.com/sponsors/MrSaneApps`). Header Support is the same link.
 2. Buy a Mac app — https://saneapps.com (one-time, no subscription; not SaneCite/SaneLot).
 3. Point an AI — copy `docs/START_HERE.md` into the model (site Copy prompt). GitHub: link to that file.
-4. Spot-check Greek or Latin — GitHub issue template `correction.yml` on `sane-apps/translations`.
+4. Spot-check Greek or Latin — GitHub issue template `correction.yml` on `sane-apps/viapatrum-translations`.
 
 No paywall. Do not put prices on this site.
 
