@@ -11928,6 +11928,10 @@ def build() -> None:
             f"""<p class="eyebrow">About</p>
             <h1>About Via Patrum</h1>
             <p class="lede">Via Patrum means “the way of the Fathers”: how the Church Fathers spoke, acted, argued, lived and died. It is a free library of their writing in fresh English translations from the Greek and Latin, for anyone who wants to read the early Church in its own words.</p>
+            <figure class="about-endorsement">
+              <blockquote><p>I am a fan.</p></blockquote>
+              <figcaption>Larry Sanger, co-founder of Wikipedia</figcaption>
+            </figure>
             <h2>What is here</h2>
             <p><strong>Topics</strong> gather what the Fathers taught on one subject, earliest first. <strong>Fathers</strong> lists every writer in date order with what each one wrote. <strong>Works</strong> lets you read a whole book straight through, with the Greek or Latin one tap away and audio for many of them. <strong>Scripture</strong> shows where the Fathers quote or explain each book of the Bible. <strong>Timeline</strong> answers the questions readers ask most from the writers' own words, earliest first. <strong>Listen</strong> plays the works read aloud, and <strong>Games</strong> has a daily puzzle and a story game drawn from the texts.</p>
             {'''<h2>Books to keep</h2>
