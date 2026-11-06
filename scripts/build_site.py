@@ -6841,7 +6841,7 @@ VIA_PATRUM_ORG = {
     "name": "Via Patrum",
     "url": f"{SITE_ORIGIN}/",
     "logo": f"{SITE_ORIGIN}/assets/icons/icon-512.png",
-    "sameAs": ["https://github.com/sane-apps/fathers.saneapps.com", "https://github.com/sane-apps/translations", YOUTUBE_URL, "https://x.com/MrSaneApps"],
+    "sameAs": ["https://github.com/sane-apps/viapatrum.org", "https://github.com/sane-apps/viapatrum-translations", YOUTUBE_URL, "https://x.com/MrSaneApps"],
 }
 
 
@@ -6987,7 +6987,7 @@ def layout(
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
-      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Our code and process on GitHub</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
+      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="https://github.com/sane-apps/viapatrum.org" rel="noopener">Our code and process on GitHub</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
     </nav>
     {'' if active == "scripture" else support_nav}
     <nav aria-label="Get the app">
@@ -11877,19 +11877,19 @@ def build() -> None:
                 <p class="n">{3 + shelf_n}</p>
                 <h2>Report a mistake</h2>
                 <p>If a line of English looks wrong, tell us. Name the work, the section, and what you think it should say. Every work and passage has a <strong>Report a mistake</strong> link that fills in the work for you.</p>
-                <p><a class="btn primary" href="{escape(report_mistake_href("Via Patrum"))}">Email hi@saneapps.com</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml" rel="noopener">Send a correction on GitHub</a></p>
+                <p><a class="btn primary" href="{escape(report_mistake_href("Via Patrum"))}">Email hi@saneapps.com</a> <a class="btn" href="https://github.com/sane-apps/viapatrum-translations/issues/new?template=correction.yml" rel="noopener">Send a correction on GitHub</a></p>
               </li>
               <li class="help-option" id="help-wanted">
                 <p class="n">{4 + shelf_n}</p>
                 <h2>Check the Greek or Latin</h2>
                 <p>If you read Greek or Latin, check a passage against the original and tell us what you find. Many works have not yet been re-checked against their source, and each work says so under About this text.</p>
-                <p><a class="btn" href="https://github.com/sane-apps/translations/issues/new?template=correction.yml" rel="noopener">Send what you find</a></p>
+                <p><a class="btn" href="https://github.com/sane-apps/viapatrum-translations/issues/new?template=correction.yml" rel="noopener">Send what you find</a></p>
               </li>
               <li class="help-option" id="ai">
                 <p class="n">{5 + shelf_n}</p>
                 <h2>Point an AI at a slice</h2>
                 <p>If you use an AI coding assistant, it can translate one small slice of a book for review. Copy the starting instructions into it, and it will take one open task on GitHub.</p>
-                <p>{'<button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> ' if start_here else ''}<a class="btn" href="https://github.com/sane-apps/translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>{f'''
+                <p>{'<button type="button" class="btn primary" data-copy="#ai-prompt">Copy the instructions</button> ' if start_here else ''}<a class="btn" href="https://github.com/sane-apps/viapatrum-translations/blob/main/docs/START_HERE.md" rel="noopener">Read them on GitHub</a></p>{f'''
                 <details class="ai-prompt-box"><summary>Show the instructions</summary>
                 <pre id="ai-prompt"><code>{escape(start_here)}</code></pre>
                 </details>''' if start_here else ''}
@@ -11898,13 +11898,13 @@ def build() -> None:
                 <p class="n">{6 + shelf_n}</p>
                 <h2>Star and build</h2>
                 <p>The library and its translations are built in the open. Star the repos, open issues, send pull requests.</p>
-                <p><a class="btn" href="https://github.com/sane-apps/translations" rel="noopener">Translations on GitHub</a> <a class="btn" href="https://github.com/sane-apps/fathers.saneapps.com" rel="noopener">Website on GitHub</a></p>
+                <p><a class="btn" href="https://github.com/sane-apps/viapatrum-translations" rel="noopener">Translations on GitHub</a> <a class="btn" href="https://github.com/sane-apps/viapatrum.org" rel="noopener">Website on GitHub</a></p>
               </li>
               <li class="help-option" id="sponsor-book">
                 <p class="n">{7 + shelf_n}</p>
                 <h2>Give for one book</h2>
                 <p>Want your gift to go to one work? Name it in your gift note, and it goes to finishing and checking that work. You can also suggest a book you would like to see here.</p>
-                <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Give on GitHub Sponsors</a> <a class="btn" href="https://github.com/sane-apps/translations/issues/new" rel="noopener">Suggest a book</a></p>
+                <p><a class="btn primary" href="https://github.com/sponsors/MrSaneApps" rel="noopener">Give on GitHub Sponsors</a> <a class="btn" href="https://github.com/sane-apps/viapatrum-translations/issues/new" rel="noopener">Suggest a book</a></p>
               </li>
               <li class="help-option" id="spread">
                 <p class="n">{8 + shelf_n}</p>
@@ -11998,7 +11998,7 @@ def build() -> None:
             <h2>How it is checked</h2>
             <p>Two AI checkers from different makers each compare the English with the Greek or Latin, without seeing the first draft. They look for missing or added words, reversed meaning, the wrong speaker and wrong Bible references. A problem counts when both find it, or when one finds it and the other agrees on review. Confirmed problems are fixed and the section is checked again.</p>
             <p>Then two AI readers from different makers read the whole work in English, as a first-time reader would, looking for terms that drift, garbled sentences and wrong references. The record of a finished work is tied to the exact Greek or Latin and English that were checked, so any later change needs a new check.</p>
-            <p>These are AI checks, not a scholar's line-by-line review, and not every work here has been through every step yet: older works are being taken through them now. If a line looks wrong, please <a href="https://github.com/sane-apps/translations/issues/new?template=correction.yml">send a correction</a>.</p>
+            <p>These are AI checks, not a scholar's line-by-line review, and not every work here has been through every step yet: older works are being taken through them now. If a line looks wrong, please <a href="https://github.com/sane-apps/viapatrum-translations/issues/new?template=correction.yml">send a correction</a>.</p>
 
             <h2>Sources</h2>
             <p>Each work names the printed edition its English follows, under <strong>About this text</strong>, and lists any other prints it was checked against. Where a stretch is missing from that edition and taken from another, the page says so. We do not call the result a manuscript, and we do not claim a combination that was not made.</p>

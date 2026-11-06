@@ -39,3 +39,6 @@ secrets.*
 node_modules/
 /dist.*.json
 /.ebook-build
+
+# Maintainer notes; kept on the maintainers machines, not in the public repo
+/SESSION_HANDOFF.md
