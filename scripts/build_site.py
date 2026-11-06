@@ -8895,7 +8895,12 @@ def pages_headers() -> str:
   Content-Security-Policy: frame-ancestors 'self'
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
 
-""" + _immutable + """/assets/og/*
+""" + _immutable + """/.well-known/psqr
+  Content-Type: application/json
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600
+
+/assets/og/*
   Cache-Control: public, max-age=86400
 
 /data/search/*
@@ -9319,6 +9324,12 @@ def build() -> None:
         (DIST / "podcast").mkdir(parents=True, exist_ok=True)
         shutil.copy2(_podcast_feed, DIST / "podcast" / "feed.xml")
     (DIST / "favicon.ico").write_bytes(_favicon_ico_bytes())
+    # DID:PSQR public identity for the signed ZWI archives made for ZWIBook (Larry Sanger, 6 Nov 2026):
+    # served at exactly /.well-known/psqr as application/json (see pages_headers). Public key only.
+    _psqr = ROOT / "data" / "well-known" / "psqr.json"
+    if _psqr.exists():
+        (DIST / ".well-known").mkdir(parents=True, exist_ok=True)
+        shutil.copy2(_psqr, DIST / ".well-known" / "psqr")
     for _icon in ("apple-touch-icon.png",):
         if (ASSETS / "icons" / _icon).exists():
             shutil.copy(ASSETS / "icons" / _icon, DIST / _icon)
