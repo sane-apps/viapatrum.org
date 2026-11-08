@@ -810,6 +810,8 @@ fi
 
 step "Catalogue regressions"
 "$PYTHON" "$ROOT/scripts/check_catalogue.py"
+# Reference ratchet (2026-11-08): impossible Bible references may only go down.
+"$PYTHON" "$HOME/SaneApps/clients/translations/scripts/ref_ratchet.py"
 # Shrink guard: a build that holds many works at once is a gate bug, not a
 # release (2026-10-07: one build held all 682 and published 0). More than
 # SHIP_MAX_DROP works gone from the live site needs ALLOW_SHRINK=1. The live
