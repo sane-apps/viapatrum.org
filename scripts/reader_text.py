@@ -219,6 +219,9 @@ def damage_mark(m: "re.Match[str]") -> str:
     return DAMAGE_MARK
 
 
+FRAGMENT_LABEL_RE = re.compile(r"John \d{1,2}:\d{1,2}(?:[-–]\d{1,2})?")
+
+
 def clean_notation(text: str, at_start: bool = True, is_ref=None) -> str:
     """Drop manuscript sigla and leftover brackets. Keep the words they supplied.
 
@@ -241,6 +244,10 @@ def clean_notation(text: str, at_start: bool = True, is_ref=None) -> str:
 
     def unwrap(m: "re.Match[str]") -> str:
         inner = m.group(1).strip()
+        # A catena fragment label, "[John 7:22-23]" at the start of a fragment (8 Nov 2026), stays bracketed so it
+        # reads as a label, not as part of the sentence.
+        if FRAGMENT_LABEL_RE.fullmatch(inner):
+            return m.group(0)
         if is_ref(inner):
             return inner
         if re.fullmatch(r"[A-Za-z][A-Za-z'’\- ]{0,47}", inner) and 1 <= len(inner.split()) <= 6:

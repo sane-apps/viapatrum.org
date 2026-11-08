@@ -69,6 +69,13 @@ class SameWordsTest(unittest.TestCase):
         self.assertEqual(read_text(CASES["pass note"]), "teach His flesh as heavenly spiritual food.")
         self.assertIn("less than", speak_text(CASES["less than"]))
 
+    def test_fragment_label_keeps_brackets(self):
+        self.assertEqual(reader_text.clean_notation("(Acts 6:2). [John 12:13-15] With palms they escorted him."),
+                         "(Acts 6:2). [John 12:13-15] With palms they escorted him.")
+        self.assertEqual(reader_text.clean_notation("as he said [Matthew 5:3] here"), "as he said Matthew 5:3 here")
+        html = build_site.render_reader_html("[John 7:22-23] Wishing to introduce the circumcision")
+        self.assertIn("[<a", html)
+
     def test_no_angle_brackets_on_page(self):
         for name in ("supplied", "angle tail"):
             with self.subTest(name):
