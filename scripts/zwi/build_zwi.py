@@ -9,9 +9,20 @@ the title block, "About this text", and every passage in reading order. It drops
 (navigation, audio players, source panels, download and report links, external witness links).
 
 Output: <out>/stage/<slug>/{article.html, article.txt, metadata.json, media.json, data/colicon.png}
-plus <out>/build_report.json. sign_zwi.mjs then adds signature.json and zips each folder.
+plus <out>/build_report.json and <out>/work_ids.json. sign_zwi.mjs then adds signature.json; pack_zwi.py zips.
 
-Usage: build_zwi.py --dist <site dist> --out <dir> [--only slug,slug] [--first-published json]
+ZWI 1.5 (docs.encyclosphere.org zwi-format, 7 Nov 2026): numeric TimeCreated/LastModified, a Work object, and
+re-signing as a new version. With --previous <dir of the last published .zwi files>, each work that already has a
+signed archive becomes a new version of it, per the spec's "Re-signing" section: that archive's signature.json,
+metadata.json and media.json (media.json only when its token has "media") go byte for byte into
+history/<n>/, its history folders are carried over unchanged, TimeCreated stays as it was, and metadata gets a
+VersionNote. sign_zwi.mjs then adds "previous" (SHA-1 of history/<n>/signature.json) to the token.
+
+Work.ID is pinned: --work-ids <json> maps slug -> ID. IDs already in it never change; new works get a derived ID
+(author short name + English title) and the file is rewritten with them.
+
+Usage: build_zwi.py --dist <site dist> --out <dir> --colicon <png> --first-published <json>
+                    [--previous <dir>] [--work-ids <json>] [--only slug,slug]
 Needs beautifulsoup4 (html.parser backend).
 """
 from __future__ import annotations
@@ -25,6 +36,8 @@ import re
 import shutil
 import sys
 import time
+import unicodedata
+import zipfile
 from pathlib import Path
 
 from bs4 import BeautifulSoup, NavigableString, Tag
@@ -48,6 +61,54 @@ LANGS = ("Greek", "Latin", "Syriac", "Coptic", "Armenian", "Hebrew")
 # Checked by hand 6 Nov 2026 where neither the page nor the edition name gives the language.
 LANG_OVERRIDES = {"photius-bibliotheca": "Greek", "crocius-syntagma": "Latin"}
 ENGLISH_SOURCE_PREFIXES = ("john-wesley-",)  # 1771/1872 English sermons: modern readings, not translations
+
+ZWI_VERSION = 1.5
+# Work.Lang codes, as the spec asks: ISO 639-1 where it has the language, else ISO 639-3 (ancient forms).
+LANG_CODES = {"Greek": "grc", "Latin": "la", "Syriac": "syc", "Coptic": "cop", "Armenian": "xcl",
+              "Hebrew": "hbo", "English": "en"}
+# Work.Lang is the language the work was WRITTEN in. These we translate from a Latin version of a Greek original
+# (checked 8 Nov 2026: Rufinus's and Jerome's Latin of Origen; the Latin column of the 1622 Gregory Thaumaturgus,
+# whose Greek column is OCR-damaged).
+ORIGINAL_LANG_OVERRIDES = {
+    "origen-song-commentary-liber-4": "Greek",
+    "origen-song-homily-2": "Greek",
+    "gregory-thaumaturgus-ad-tatianum-de-anima": "Greek",
+    "gregory-thaumaturgus-de-fide-xii": "Greek",
+    "gregory-thaumaturgus-in-annuntiationem": "Greek",
+}
+# Site author lines that name a work or a group, not a person: Work.Author is left out ("unknown").
+UNKNOWN_AUTHORS = {"Acts of the Martyrs", "The Didache", "Letter to Diognetus", "Passion of Perpetua and Felicity"}
+# Work.ID author part: the first word of the name, except where that word is shared by other Fathers.
+AUTHOR_SHORT = {
+    "Alexander the Monk": "alexander-monachus",
+    "Church of Smyrna": "church-of-smyrna",
+    "Clement of Alexandria": "clement-of-alexandria",
+    "Cyril of Jerusalem": "cyril-of-jerusalem",
+    "Dionysius of Corinth": "dionysius-of-corinth",
+    "Eusebius of Caesarea": "eusebius-of-caesarea",
+    "Eusebius of Emesa": "eusebius-of-emesa",
+    "Georgius Peccator": "georgius-peccator",
+    "Gregory Thaumaturgus": "gregory-thaumaturgus",
+    "John Chrysostom": "chrysostom",
+    "John Davenant": "davenant",
+    "John of Damascus": "john-damascene",
+    "John Wesley": "wesley",
+    "Josué de la Place": "placeus",
+    "Julian of Eclanum": "julian-of-eclanum",
+    "Julius Africanus": "africanus",
+    "Louis Le Blanc de Beaulieu": "le-blanc",
+    "Ludwig Crocius": "crocius",
+    "Minucius Felix": "minucius-felix",
+    "Robert Baron": "baron",
+    "Samuel Strimesius": "strimesius",
+    "Theodore of Heraclea": "theodore-of-heraclea",
+    "Theophilus of Alexandria": "theophilus-of-alexandria",
+}
+TITLE_DROP_LEADING = {"on", "the", "a", "an"}
+# Latin-letter original titles that are Greek written out, not Latin.
+TRANSLITERATED_GREEK = {"Eis to ouden eidolon en kosmo"}
+ENGLISH_WORDS = re.compile(r"\b(the|of|and|on|to|against|letter|martyrdom|passion|homily)\b", re.I)
+WORK_ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
 
 def sha1(data: bytes) -> str:
@@ -277,8 +338,216 @@ def render_txt(w: dict) -> str:
     return "\n\n".join(out) + "\n"
 
 
+# ---------------------------------------------------------------- ZWI 1.5 Work object
+
+def split_author(who: str) -> tuple[str | None, str]:
+    """Site author line -> (name or None if unknown, dates text). 'Basil of Caesarea (c. 330–379 AD)'."""
+    who = (who or "").strip()
+    m = re.fullmatch(r"(.+?) \(([^()]*\d[^()]*)\)", who) or re.fullmatch(r"(.+?),\s*([^,]*\d[^,]*)", who)
+    name, dates = (m.group(1).strip(), m.group(2).strip()) if m else (who, "")
+    name = re.sub(r"\s*\([^)]*\)", "", name).strip()  # 'Josué de la Place (Placeus)' -> 'Josué de la Place'
+    if not name or who in UNKNOWN_AUTHORS or name in UNKNOWN_AUTHORS or name.startswith("Anonymous"):
+        return None, dates
+    return name, dates
+
+
+def _year(part: str, era: str | None) -> tuple[int, bool] | None:
+    m = re.fullmatch(r"(c\.\s*)?(\d{1,4})(?:\s*(BC|AD))?", part.strip())
+    if not m:
+        return None  # '310/320', 'early 6th century', ... : not one known year
+    n = int(m.group(2))
+    if n == 0:
+        return None
+    return (-n if (m.group(3) or era) == "BC" else n), bool(m.group(1))
+
+
+def parse_author_dates(text: str) -> dict:
+    """'c. 330–379 AD' -> {'Born': 330, 'BornCirca': True, 'Died': 379}. Leaves out what is not known:
+    'fl.' dates and centuries give nothing; a single year gives nothing (it may be a date of writing);
+    'c. 310/320' gives no Born. 'd. c. 110' -> {'Died': 110, 'DiedCirca': True}. BC years are negative."""
+    s = re.sub(r"\s+", " ", (text or "").strip())
+    if not s or re.search(r"\bfl\.", s) or "century" in s:
+        return {}
+    era = None
+    m = re.fullmatch(r"(.*?)\s*\b(BC|AD)", s)
+    if m:
+        s, era = m.group(1), m.group(2)
+    out: dict = {}
+
+    def put(key: str, y) -> None:
+        if y:
+            out[key] = y[0]
+            if y[1]:
+                out[key + "Circa"] = True
+
+    m = re.fullmatch(r"(d|b)\.\s*(.+)", s)
+    if m:
+        put("Died" if m.group(1) == "d" else "Born", _year(m.group(2), era))
+        return out
+    parts = re.split(r"\s*[–—-]\s*", s)
+    if len(parts) != 2:
+        return {}
+    born_era = era if not re.search(r"\b(BC|AD)\b", parts[0]) else None
+    put("Born", _year(parts[0], born_era if era == "BC" else None))
+    put("Died", _year(parts[1], era))
+    if "Born" in out and "Died" in out and out["Born"] > out["Died"]:
+        return {}
+    return out
+
+
+def ascii_words(text: str) -> list[str]:
+    t = unicodedata.normalize("NFKD", text or "")
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    t = re.sub(r"[’'`]", "", t).lower()
+    return [w for w in re.split(r"[^a-z0-9]+", t) if w]
+
+
+def author_short(name: str | None) -> str:
+    if not name:
+        return ""
+    if name in AUTHOR_SHORT:
+        return AUTHOR_SHORT[name]
+    words = ascii_words(name)
+    return words[0] if words else ""
+
+
+def derive_work_id(title: str, author: str | None) -> str:
+    """Author short name + English title without a leading On/The/A/An:
+    ('On Care for the Dead', 'Augustine of Hippo') -> 'augustine-care-for-the-dead' (the spec's own example)."""
+    if author and title.startswith(author + ":"):
+        title = title[len(author) + 1:]
+    words = ascii_words(title)
+    while len(words) > 1 and words[0] in TITLE_DROP_LEADING:
+        words = words[1:]
+    short = author_short(author)
+    if short and words[:len(short.split("-"))] == short.split("-"):
+        short = ""  # title already starts with the author's name
+    return "-".join(([short] if short else []) + words)
+
+
+def assign_work_ids(rows: list[dict], pinned: dict) -> dict:
+    """slug -> unique Work.ID. Pinned IDs are kept; a clash among new IDs adds the slug's own last word(s)."""
+    ids = {s: pinned[s] for s in (r["slug"] for r in rows) if s in pinned}
+    taken = set(pinned.values())
+    for r in sorted(rows, key=lambda r: r["slug"]):
+        if r["slug"] in ids:
+            continue
+        base = r["derived_id"]
+        cand, extra = base, [w for w in r["slug"].split("-") if w not in base.split("-")]
+        i = 0
+        while cand in taken:
+            cand = f"{base}-{'-'.join(extra[:i + 1])}" if i < len(extra) else f"{base}-{i - len(extra) + 2}"
+            i += 1
+        ids[r["slug"]] = cand
+        taken.add(cand)
+    for s, v in ids.items():
+        if not WORK_ID_RE.match(v):
+            raise ValueError(f"bad Work.ID for {s}: {v!r}")
+    if len(set(ids.values())) != len(ids):
+        raise ValueError("Work.IDs are not unique")
+    return ids
+
+
+def title_lang(title: str) -> str:
+    if re.search(r"[Ͱ-Ͽἀ-῿]", title) or title in TRANSLITERATED_GREEK:
+        return "grc"
+    if re.search(r"[܀-ݏ]", title):
+        return "syc"
+    return "la"
+
+
+def original_title(dist: Path, slug: str, latin: str, translations: Path) -> str:
+    """The site's original-language title line; else book.yml original_title for a one-work book, unless it is
+    English ('Martyrdom of Conon the Gardener')."""
+    if latin:
+        return latin
+    try:
+        sources = json.loads((dist / "data" / "work-sources.json").read_text())["works"]
+        book = sources[slug]["book"]
+        if sum(1 for v in sources.values() if v.get("book") == book) != 1:
+            return ""
+        yml = (translations / "books" / book / "book.yml").read_text(encoding="utf-8")
+    except (OSError, KeyError, ValueError):
+        return ""
+    m = re.search(r"^original_title:\s*(.+?)\s*$", yml, re.M)
+    t = m.group(1).strip().strip("\"'") if m else ""
+    return "" if (not t or ENGLISH_WORDS.search(t) or ":" in t) else t
+
+
+def work_object(slug: str, mast: dict, lang: str | None, english_source: bool, other: str,
+                work_id: str) -> dict:
+    name, dates = split_author(mast["who"])
+    orig = "English" if english_source else (ORIGINAL_LANG_OVERRIDES.get(slug) or lang)
+    work: dict = {"ID": work_id, "Title": {"Title": mast["title"], "Lang": "en"}}
+    if other and not english_source and other != mast["title"]:
+        work["OtherTitles"] = [{"Title": other, "Lang": title_lang(other)}]
+    if orig in LANG_CODES:
+        work["Lang"] = LANG_CODES[orig]
+    if name:
+        work["Author"] = name
+        ad = parse_author_dates(dates)
+        if ad:
+            work["AuthorDates"] = ad
+    return work
+
+
+# ---------------------------------------------------------------- re-signing (spec: "Re-signing")
+
+def to_epoch(v) -> int | None:
+    """TimeCreated/LastModified/iat as a number, or (older files) digits or ISO 8601 text."""
+    if isinstance(v, bool):
+        return None
+    if isinstance(v, (int, float)):
+        return int(v)
+    if isinstance(v, str):
+        if re.fullmatch(r"\d+", v.strip()):
+            return int(v)
+        try:
+            import datetime as dt
+            d = dt.datetime.fromisoformat(v.strip().replace("Z", "+00:00"))
+            return int((d if d.tzinfo else d.replace(tzinfo=dt.timezone.utc)).timestamp())
+        except ValueError:
+            return None
+    return None
+
+
+def token_payload(sig_bytes: bytes) -> dict:
+    import base64
+    p64 = json.loads(sig_bytes)["token"].split(".")[1]
+    return json.loads(base64.urlsafe_b64decode(p64 + "=" * (-len(p64) % 4)))
+
+
+def previous_version(zwi: Path) -> dict:
+    """Files of the last signed version, byte for byte, as the new history: {relpath: bytes}, plus its metadata."""
+    with zipfile.ZipFile(zwi) as z:
+        names = [n for n in z.namelist() if not n.endswith("/")]
+        files = {n: z.read(n) for n in names}
+    old_hist = {n: b for n, b in files.items() if n.startswith("history/")}
+    nums = sorted({int(n.split("/")[1]) for n in old_hist})
+    if nums != list(range(1, len(nums) + 1)):
+        raise ValueError(f"{zwi.name}: history folders are not 1..n")
+    n = len(nums) + 1
+    hist = dict(old_hist)
+    hist[f"history/{n}/signature.json"] = files["signature.json"]
+    hist[f"history/{n}/metadata.json"] = files["metadata.json"]
+    if "media" in token_payload(files["signature.json"]):
+        hist[f"history/{n}/media.json"] = files["media.json"]
+    meta = json.loads(files["metadata.json"])
+    return {"history": hist, "n": n, "meta": meta}
+
+
+def version_note(old_content: dict, art_html: bytes, art_txt: bytes) -> tuple[str, str]:
+    """One sentence for VersionNote, and a short code for the report."""
+    head = "Re-signed to ZWI 1.5: adds the Work field and numeric times"
+    if old_content.get("article.txt") != sha1(art_txt):
+        return f"{head}; the article text also changed since the previous version.", "text_changed"
+    if old_content.get("article.html") != sha1(art_html):
+        return f"{head}; the article HTML changed, its text did not.", "html_changed"
+    return f"{head}; text unchanged.", "unchanged"
+
+
 def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict, now: int,
-               translations: Path) -> dict:
+               translations: Path, previous: dict | None = None, work_id: str = "") -> dict:
     work_dir = dist / "works" / slug
     hub = BeautifulSoup((work_dir / "index.html").read_text(encoding="utf-8"), "html.parser")
     mast = parse_mast(hub)
@@ -327,8 +596,21 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
     edition = f" of {ed_clean}" if ed_clean else ""
     short_ed = mast["meta"].split(" · ")[-1] if " · " in mast["meta"] else ""
     lang_part = f" from the {lang}{edition}" if lang else (f" from {mast['edition']}" if mast["edition"] else "")
+    other = "" if english_source else original_title(dist, slug, mast["latin"], translations)
+    work = work_object(slug, mast, lang, english_source, other, work_id or derive_work_id(
+        mast["title"], split_author(mast["who"])[0]))
+    if previous:
+        created = to_epoch(previous["meta"].get("TimeCreated"))
+        if created is None:
+            raise ValueError("previous version has no readable TimeCreated")
+        note, change = version_note(previous["meta"].get("Content", {}), art_html, art_txt)
+        for rel, data in previous["history"].items():
+            (stage / rel).parent.mkdir(parents=True, exist_ok=True)
+            (stage / rel).write_bytes(data)
+    else:
+        created, note, change = now, "", "first_version"
     meta = {
-        "ZWIversion": 1.3,
+        "ZWIversion": ZWI_VERSION,
         "Title": mast["title"],
         "ShortTitle": mast["title"],
         "CreatorNames": [creator_name(mast), "Via Patrum [Editor]" if english_source else "Via Patrum [Translator]"],
@@ -338,8 +620,8 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
         "Primary": "article.html",
         "Content": {"article.html": sha1(art_html), "article.txt": sha1(art_txt)},
         "PublicationDate": first_pub.get(slug),
-        "TimeCreated": str(now),
-        "LastModified": str(now),
+        "TimeCreated": created,
+        "LastModified": now,
         "Topics": topics_for(hub),
         "ShortDescription": short_desc(about),
         "Description": description(sections),
@@ -348,14 +630,36 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
         "License": "CC BY 4.0",
         "SourceURL": f"{SITE}/works/{slug}/",
         "GeneratorName": "Via Patrum",
+        "Work": work,
     }
+    if note:
+        meta["VersionNote"] = note
     (stage / "metadata.json").write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return {"slug": slug, "sections": len(sections), "site_sections": sum(site_counts),
             "paragraphs": sum(len(s["paras_text"]) for s in sections),
             "empty_sections": [s["id"] for s in sections if not s["paras_text"]],
             "lang": lang, "english_source": english_source, "edition": mast["edition"], "status": status, "creator": meta["CreatorNames"][0],
             "topics": len(meta["Topics"]), "publication_date": meta["PublicationDate"],
-            "books": len([1 for lbl, _ in reader_pages(work_dir) if lbl])}
+            "books": len([1 for lbl, _ in reader_pages(work_dir) if lbl]),
+            "derived_id": derive_work_id(mast["title"], split_author(mast["who"])[0]), "work": work,
+            "author_line": mast["who"], "history_folders": previous["n"] if previous else 0,
+            "change": change, "time_created": created}
+
+
+def coverage(report: list[dict]) -> dict:
+    """How many works got each Work subfield (the spec says: leave out what is not known)."""
+    c: dict = {}
+    for r in report:
+        w = r["work"]
+        for k in ("ID", "Title", "OtherTitles", "Lang", "Author", "AuthorDates"):
+            c[k] = c.get(k, 0) + (k in w)
+        for k in ("Born", "BornCirca", "Died", "DiedCirca"):
+            c["AuthorDates." + k] = c.get("AuthorDates." + k, 0) + (k in w.get("AuthorDates", {}))
+        for t in w.get("OtherTitles", []):
+            c["OtherTitles.Lang=" + t["Lang"]] = c.get("OtherTitles.Lang=" + t["Lang"], 0) + 1
+        if "Lang" in w:
+            c["Lang=" + w["Lang"]] = c.get("Lang=" + w["Lang"], 0) + 1
+    return dict(sorted(c.items()))
 
 
 def main() -> int:
@@ -364,11 +668,14 @@ def main() -> int:
     ap.add_argument("--out", required=True, type=Path)
     ap.add_argument("--colicon", required=True, type=Path)
     ap.add_argument("--first-published", required=True, type=Path)
+    ap.add_argument("--previous", type=Path, help="dir of the last published signed <slug>.zwi files")
+    ap.add_argument("--work-ids", type=Path, help="pinned slug -> Work.ID map (read, then rewritten with new IDs)")
     ap.add_argument("--only", default="")
     ap.add_argument("--translations", type=Path, default=Path.home() / "SaneApps/clients/translations")
     a = ap.parse_args()
     colicon = a.colicon.read_bytes()
     first_pub = json.loads(a.first_published.read_text())
+    pinned = json.loads(a.work_ids.read_text()) if a.work_ids and a.work_ids.exists() else {}
     slugs = sorted(d.name for d in (a.dist / "works").iterdir() if d.is_dir() and not d.name.startswith("."))
     if a.only:
         want = set(a.only.split(","))
@@ -377,11 +684,28 @@ def main() -> int:
     report, errors = [], []
     for i, slug in enumerate(slugs, 1):
         try:
-            report.append(build_work(a.dist, slug, a.out, colicon, first_pub, now, a.translations))
+            prev_zwi = a.previous / f"{slug}.zwi" if a.previous else None
+            previous = previous_version(prev_zwi) if prev_zwi and prev_zwi.exists() else None
+            report.append(build_work(a.dist, slug, a.out, colicon, first_pub, now, a.translations,
+                                     previous, pinned.get(slug, "")))
         except Exception as e:  # report every failure; do not stop the run
             errors.append({"slug": slug, "error": f"{type(e).__name__}: {e}"})
         if i % 50 == 0:
             print(f"{i}/{len(slugs)}", file=sys.stderr)
+    # Work.IDs: unique across the collection, pinned ones kept. Rewrite any metadata whose ID moved.
+    ids = assign_work_ids(report, pinned)
+    for r in report:
+        if r["work"]["ID"] != ids[r["slug"]]:
+            r["work"]["ID"] = ids[r["slug"]]
+            mp = a.out / "stage" / r["slug"] / "metadata.json"
+            meta = json.loads(mp.read_text(encoding="utf-8"))
+            meta["Work"]["ID"] = ids[r["slug"]]
+            mp.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    all_ids = {**pinned, **ids}
+    a.out.mkdir(parents=True, exist_ok=True)
+    (a.out / "work_ids.json").write_text(json.dumps(dict(sorted(ids.items())), indent=1) + "\n", encoding="utf-8")
+    if a.work_ids:
+        a.work_ids.write_text(json.dumps(dict(sorted(all_ids.items())), indent=1) + "\n", encoding="utf-8")
     summary = {"works": len(slugs), "built": len(report), "errors": errors,
                "no_language": [r["slug"] for r in report if not r["lang"] and not r["english_source"]],
                "english_source": [r["slug"] for r in report if r["english_source"]],
@@ -389,11 +713,18 @@ def main() -> int:
                "empty_sections": {r["slug"]: r["empty_sections"] for r in report if r["empty_sections"]},
                "no_publication_date": [r["slug"] for r in report if not r["publication_date"]],
                "no_status": [r["slug"] for r in report if not r["status"]],
-               "no_topics": [r["slug"] for r in report if not r["topics"]]}
-    a.out.mkdir(parents=True, exist_ok=True)
-    (a.out / "build_report.json").write_text(json.dumps({"summary": summary, "works": report}, indent=1,
-                                                         ensure_ascii=False), encoding="utf-8")
+               "no_topics": [r["slug"] for r in report if not r["topics"]],
+               "resigned": [r["slug"] for r in report if r["history_folders"]],
+               "first_signature": [r["slug"] for r in report if not r["history_folders"]],
+               "text_changed": [r["slug"] for r in report if r["change"] == "text_changed"],
+               "html_changed_only": [r["slug"] for r in report if r["change"] == "html_changed"],
+               "id_differs_from_slug": [r["slug"] for r in report if ids[r["slug"]] != r["slug"]],
+               "new_work_ids": [s for s in ids if s not in pinned]}
+    (a.out / "build_report.json").write_text(json.dumps({"summary": summary, "work_coverage": coverage(report),
+                                                         "works": report}, indent=1, ensure_ascii=False),
+                                             encoding="utf-8")
     print(json.dumps({k: (v if isinstance(v, int) else len(v)) for k, v in summary.items()}))
+    print(json.dumps({"work_coverage": coverage(report)}))
     return 1 if errors else 0
 
 

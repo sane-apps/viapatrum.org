@@ -6,23 +6,35 @@
 //   payload {"iss":"Via Patrum","address":"https://viapatrum.org","iat":<s>,"metadata":<sha1>,"media":<sha1>}
 // and writes signature.json. Packing into .zwi is pack_zwi.py; checking is check_zwi.py.
 //
+// Re-signing (ZWI 1.5, "Re-signing: a new version of a signed ZWI file"): when the folder has history/1..n/
+// (build_zwi.py --previous puts the last signed version there, byte for byte), the payload also gets
+//   previous: <SHA-1 of history/<n>/signature.json>
+// The folder must then hold history/1..n with no gaps, each with signature.json and metadata.json, and its own
+// metadata.json must have a VersionNote; otherwise it is refused. A folder with a VersionNote but no history is
+// refused too. --resign refuses any folder without history, so a re-sign run can never start a fresh chain.
+//
 // The private key (a JWK) comes from the VIAPATRUM_PSQR_PUBLISH_JWK env var (Keychain loader), or, until it is in
 // the Keychain, from --key-file. It is never printed or written anywhere.
 //
-// Usage: node sign_zwi.mjs --stage <dir> [--key-file <path>] [--only slug,slug]
+// Usage: node sign_zwi.mjs --stage <dir> [--key-file <path>] [--only slug,slug] [--resign]
 import { createHash, createPrivateKey, sign } from "node:crypto";
-import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const KID = "did:psqr:viapatrum.org#publish";
 const ISS = "Via Patrum";
 const ADDRESS = "https://viapatrum.org";
 
+const FLAGS = new Set(["resign"]);
 const args = Object.fromEntries(
-  process.argv.slice(2).reduce((acc, a, i, arr) => (a.startsWith("--") ? [...acc, [a.slice(2), arr[i + 1]]] : acc), []),
+  process.argv.slice(2).reduce(
+    (acc, a, i, arr) =>
+      a.startsWith("--") ? [...acc, [a.slice(2), FLAGS.has(a.slice(2)) ? true : arr[i + 1]]] : acc,
+    [],
+  ),
 );
 if (!args.stage) {
-  console.error("usage: sign_zwi.mjs --stage <dir> [--key-file <path>] [--only slug,slug]");
+  console.error("usage: sign_zwi.mjs --stage <dir> [--key-file <path>] [--only slug,slug] [--resign]");
   process.exit(2);
 }
 
@@ -49,18 +61,52 @@ const slugs = readdirSync(args.stage)
   .filter((s) => !only || only.has(s))
   .sort();
 
+// SHA-1 of the newest kept signature, or null when the folder has no history. Throws on a malformed history.
+function previousHash(dir, meta) {
+  const hist = join(dir, "history");
+  if (!existsSync(hist)) {
+    if (meta.VersionNote !== undefined) throw new Error("VersionNote but no history/");
+    return null;
+  }
+  const names = readdirSync(hist).filter((s) => !s.startsWith("."));
+  const nums = names.map((s) => (/^[1-9][0-9]*$/.test(s) ? Number(s) : NaN)).sort((a, b) => a - b);
+  if (!nums.length || nums.some((v, i) => v !== i + 1)) throw new Error(`history folders not 1..n: ${names}`);
+  for (const k of nums) {
+    for (const f of ["signature.json", "metadata.json"]) {
+      if (!existsSync(join(hist, String(k), f))) throw new Error(`history/${k}/${f} missing`);
+    }
+  }
+  if (typeof meta.VersionNote !== "string" || !meta.VersionNote.trim()) throw new Error("history/ but no VersionNote");
+  return sha1(readFileSync(join(hist, String(nums.length), "signature.json")));
+}
+
 let n = 0;
+let chained = 0;
+const refused = [];
 for (const slug of slugs) {
   const dir = join(args.stage, slug);
+  const metaBytes = readFileSync(join(dir, "metadata.json"));
+  let previous;
+  try {
+    previous = previousHash(dir, JSON.parse(metaBytes));
+    if (args.resign && !previous) throw new Error("--resign: no history/");
+  } catch (e) {
+    refused.push(`${slug}: ${e.message}`);
+    continue;
+  }
   const iat = Math.floor(Date.now() / 1000);
   const header = { alg: "ES384", jwk: publicJwk, kid: KID, typ: "JWT" };
   const payload = {
     iss: ISS,
     address: ADDRESS,
     iat,
-    metadata: sha1(readFileSync(join(dir, "metadata.json"))),
+    metadata: sha1(metaBytes),
     media: sha1(readFileSync(join(dir, "media.json"))),
   };
+  if (previous) {
+    payload.previous = previous;
+    chained += 1;
+  }
   const input = `${b64u(JSON.stringify(header))}.${b64u(JSON.stringify(payload))}`;
   // ES384 JWS signatures are raw r||s (IEEE P1363), 96 bytes, not DER.
   const sig = sign("sha384", Buffer.from(input), { key, dsaEncoding: "ieee-p1363" });
@@ -76,4 +122,8 @@ for (const slug of slugs) {
   writeFileSync(join(dir, "signature.json"), JSON.stringify(signature, null, 2) + "\n");
   n += 1;
 }
-console.log(JSON.stringify({ signed: n, kid: KID }));
+console.log(JSON.stringify({ signed: n, with_previous: chained, refused: refused.length, kid: KID }));
+if (refused.length) {
+  for (const r of refused.slice(0, 20)) console.error("REFUSED " + r);
+  process.exit(1);
+}

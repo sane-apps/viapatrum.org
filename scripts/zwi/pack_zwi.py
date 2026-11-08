@@ -2,6 +2,7 @@
 """Zip each signed staged folder into <out>/<slug>.zwi with every file at the top level of the ZIP.
 
 Usage: pack_zwi.py --stage <dir> --out <dir> [--only slug,slug]
+history/<n>/ folders (ZWI 1.5 re-signing) are packed as they are, after signature.json.
 Refuses a folder without signature.json (sign first with sign_zwi.mjs).
 """
 from __future__ import annotations
