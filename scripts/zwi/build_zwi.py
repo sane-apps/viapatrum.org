@@ -109,6 +109,33 @@ TITLE_DROP_LEADING = {"on", "the", "a", "an"}
 TRANSLITERATED_GREEK = {"Eis to ouden eidolon en kosmo"}
 ENGLISH_WORDS = re.compile(r"\b(the|of|and|on|to|against|letter|martyrdom|passion|homily)\b", re.I)
 WORK_ID_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+# One work split across several site works (or two versions of one work): every file carries the SAME Work
+# block, because Work describes the work, not the file (spec: "the same in every file of the work").
+# The file's own Title still names its part. Checked by hand 8 Nov 2026; see each "why".
+WORK_GROUPS = [
+    {"title": "On Adoration and Worship in Spirit and Truth", "other": ("Περὶ προσκυνήσεως", "grc"),
+     "members": [f"cyril-adoration-{i}" for i in range(1, 18)],
+     "why": "the 17 books of one treatise, one site work per book"},
+    {"title": "Against Celsus", "other": ("Contra Celsum", "la"),
+     "members": ["origen-contra-celsum-preface"] + [f"origen-contra-celsum-book-{i}" for i in range(1, 9)],
+     "why": "the preface and 8 books of one treatise"},
+    {"title": "Against Theodore of Mopsuestia", "other": ("Contra Theodorum Mopsuestenum", "la"),
+     "members": ["cyril-fragmenta-contra-theodorum-2", "cyril-fragmenta-contra-theodorum-3"],
+     "why": "fragments of books 2 and 3 of one work"},
+    {"title": "On the Lives and Deaths of the Prophets", "other": ("De prophetarum vita et obitu", "la"),
+     "members": ["epiphanius-de-prophetarum-vita-et-obitu", "epiphanius-de-prophetarum-vita-et-obitu-recensio-altera"],
+     "why": "two ancient recensions (versions) of one work"},
+    {"title": "On the Twelve Gems", "other": ("De xii gemmis", "la"),
+     "members": ["epiphanius-de-xii-gemmis", "epiphanius-de-xii-gemmis-fragmenta"],
+     "why": "the work and further fragments of the same work"},
+    {"title": "Commentary on the Song of Songs", "other": ("Commentarius in Canticum", "la"),
+     "members": ["origen-song-commentary-liber-4"],
+     "why": "book IV of a longer commentary: the Work is the whole commentary, so later books share its ID"},
+    {"title": "Homilies on the Song of Songs", "other": None,
+     "members": ["origen-song-homily-2"],
+     "why": "homily II of a set of two: the Work is the set, so homily I would share its ID"},
+]
+GROUP_OF = {slug: g for g in WORK_GROUPS for slug in g["members"]}
 
 
 def sha1(data: bytes) -> str:
@@ -426,25 +453,44 @@ def derive_work_id(title: str, author: str | None) -> str:
 
 
 def assign_work_ids(rows: list[dict], pinned: dict) -> dict:
-    """slug -> unique Work.ID. Pinned IDs are kept; a clash among new IDs adds the slug's own last word(s)."""
-    ids = {s: pinned[s] for s in (r["slug"] for r in rows) if s in pinned}
-    taken = set(pinned.values())
+    """slug -> Work.ID: one ID per WORK. Files of one WORK_GROUPS work share it; every other work's ID is unique.
+    A group's ID comes from its title in WORK_GROUPS, which is its pin (old per-file pins give way). Other works
+    keep their pinned ID; a clash among new IDs adds the slug's own last word(s)."""
+    units: dict[str, list[dict]] = {}
     for r in sorted(rows, key=lambda r: r["slug"]):
-        if r["slug"] in ids:
+        units.setdefault(r.get("group") or "slug:" + r["slug"], []).append(r)
+    ids: dict[str, str] = {}
+    unit_id: dict[str, str] = {}
+    for key, members in units.items():
+        if key.startswith("slug:") and members[0]["slug"] in pinned:
+            unit_id[key] = pinned[members[0]["slug"]]
+    for key, members in units.items():
+        if not key.startswith("slug:"):
+            if members[0]["derived_id"] in unit_id.values():
+                raise ValueError(f"group {key}: ID {members[0]['derived_id']} is already another work's")
+            unit_id[key] = members[0]["derived_id"]
+    taken = set(unit_id.values())
+    for key, members in units.items():
+        if key in unit_id:
             continue
-        base = r["derived_id"]
-        cand, extra = base, [w for w in r["slug"].split("-") if w not in base.split("-")]
+        base = members[0]["derived_id"]
+        if any(m["derived_id"] != base for m in members):
+            raise ValueError(f"group {key}: members derive different IDs")
+        cand, extra = base, [w for w in members[0]["slug"].split("-") if w not in base.split("-")]
         i = 0
         while cand in taken:
             cand = f"{base}-{'-'.join(extra[:i + 1])}" if i < len(extra) else f"{base}-{i - len(extra) + 2}"
             i += 1
-        ids[r["slug"]] = cand
+        unit_id[key] = cand
         taken.add(cand)
+    for key, members in units.items():
+        for m in members:
+            ids[m["slug"]] = unit_id[key]
     for s, v in ids.items():
         if not WORK_ID_RE.match(v):
             raise ValueError(f"bad Work.ID for {s}: {v!r}")
-    if len(set(ids.values())) != len(ids):
-        raise ValueError("Work.IDs are not unique")
+    if len(set(unit_id.values())) != len(unit_id):
+        raise ValueError("two works share a Work.ID")
     return ids
 
 
@@ -478,8 +524,13 @@ def work_object(slug: str, mast: dict, lang: str | None, english_source: bool, o
                 work_id: str) -> dict:
     name, dates = split_author(mast["who"])
     orig = "English" if english_source else (ORIGINAL_LANG_OVERRIDES.get(slug) or lang)
-    work: dict = {"ID": work_id, "Title": {"Title": mast["title"], "Lang": "en"}}
-    if other and not english_source and other != mast["title"]:
+    group = GROUP_OF.get(slug)
+    title = group["title"] if group else mast["title"]
+    work: dict = {"ID": work_id, "Title": {"Title": title, "Lang": "en"}}
+    if group:
+        if group["other"]:
+            work["OtherTitles"] = [{"Title": group["other"][0], "Lang": group["other"][1]}]
+    elif other and not english_source and other != mast["title"]:
         work["OtherTitles"] = [{"Title": other, "Lang": title_lang(other)}]
     if orig in LANG_CODES:
         work["Lang"] = LANG_CODES[orig]
@@ -597,8 +648,9 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
     short_ed = mast["meta"].split(" · ")[-1] if " · " in mast["meta"] else ""
     lang_part = f" from the {lang}{edition}" if lang else (f" from {mast['edition']}" if mast["edition"] else "")
     other = "" if english_source else original_title(dist, slug, mast["latin"], translations)
-    work = work_object(slug, mast, lang, english_source, other, work_id or derive_work_id(
-        mast["title"], split_author(mast["who"])[0]))
+    derived = derive_work_id(GROUP_OF[slug]["title"] if slug in GROUP_OF else mast["title"],
+                             split_author(mast["who"])[0])
+    work = work_object(slug, mast, lang, english_source, other, work_id or derived)
     if previous:
         created = to_epoch(previous["meta"].get("TimeCreated"))
         if created is None:
@@ -641,7 +693,7 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
             "lang": lang, "english_source": english_source, "edition": mast["edition"], "status": status, "creator": meta["CreatorNames"][0],
             "topics": len(meta["Topics"]), "publication_date": meta["PublicationDate"],
             "books": len([1 for lbl, _ in reader_pages(work_dir) if lbl]),
-            "derived_id": derive_work_id(mast["title"], split_author(mast["who"])[0]), "work": work,
+            "derived_id": derived, "work": work, "group": GROUP_OF[slug]["title"] if slug in GROUP_OF else None,
             "author_line": mast["who"], "history_folders": previous["n"] if previous else 0,
             "change": change, "time_created": created}
 
@@ -701,6 +753,12 @@ def main() -> int:
             meta = json.loads(mp.read_text(encoding="utf-8"))
             meta["Work"]["ID"] = ids[r["slug"]]
             mp.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    by_id: dict[str, list[dict]] = {}
+    for r in report:
+        by_id.setdefault(r["work"]["ID"], []).append(r)
+    for wid, rs in by_id.items():
+        if any(json.dumps(x["work"], sort_keys=True) != json.dumps(rs[0]["work"], sort_keys=True) for x in rs):
+            raise ValueError(f"files of work {wid} have different Work blocks")
     all_ids = {**pinned, **ids}
     a.out.mkdir(parents=True, exist_ok=True)
     (a.out / "work_ids.json").write_text(json.dumps(dict(sorted(ids.items())), indent=1) + "\n", encoding="utf-8")
@@ -719,11 +777,15 @@ def main() -> int:
                "text_changed": [r["slug"] for r in report if r["change"] == "text_changed"],
                "html_changed_only": [r["slug"] for r in report if r["change"] == "html_changed"],
                "id_differs_from_slug": [r["slug"] for r in report if ids[r["slug"]] != r["slug"]],
-               "new_work_ids": [s for s in ids if s not in pinned]}
+               "new_work_ids": [s for s in ids if pinned.get(s) != ids[s]],
+               "works_distinct": len(set(ids.values())),
+               "groups": {wid: [r["slug"] for r in rs] for wid, rs in sorted(by_id.items()) if len(rs) > 1
+                          or rs[0].get("group")}}
     (a.out / "build_report.json").write_text(json.dumps({"summary": summary, "work_coverage": coverage(report),
                                                          "works": report}, indent=1, ensure_ascii=False),
                                              encoding="utf-8")
     print(json.dumps({k: (v if isinstance(v, int) else len(v)) for k, v in summary.items()}))
+    print(json.dumps({"groups": {k: len(v) for k, v in summary["groups"].items()}}))
     print(json.dumps({"work_coverage": coverage(report)}))
     return 1 if errors else 0
 

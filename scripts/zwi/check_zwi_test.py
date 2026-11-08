@@ -281,6 +281,15 @@ class Fields15(unittest.TestCase):
         self.assertIn("ZWIversion is 1.3, not 1.5", errs)
 
 
+class Collection(unittest.TestCase):
+    def test_files_of_one_work_share_the_block(self):
+        other = {**WORK, "Title": {"Title": "Book 2", "Lang": "en"}}
+        self.assertEqual(C.check_work_consistency({"a": WORK, "b": dict(WORK), "c": {**WORK, "ID": "other"}}), {})
+        errs = C.check_work_consistency({"a": WORK, "b": other})
+        self.assertEqual(list(errs), ["b"])
+        self.assertIn("differs from the Work block in a", errs["b"][0])
+
+
 @unittest.skipUnless(shutil.which("node"), "node not installed")
 class EndToEnd(unittest.TestCase):
     """build_zwi.previous_version -> sign_zwi.mjs -> pack_zwi.py -> check_zwi, with a test key."""

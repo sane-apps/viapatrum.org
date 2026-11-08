@@ -26,7 +26,8 @@ Per archive:
      (same count as the site's reader sections) and none is empty.
   With --previous <dir of the last published .zwi>: a work that had an archive there must carry it as its newest
   history folder, byte for byte (the spec's "compare with the first publisher's copy").
-Collection: exactly one archive for each published work (dist/works/*), none extra.
+Collection: exactly one archive for each published work (dist/works/*), none extra; files that share a Work.ID
+carry the same Work block (Work describes the work, so its facts are the same in every file of it).
 
 Usage:
   check_zwi.py --archives <dir> --dist <site dist> (--identity <identity.json> | --identity-url <url>)
@@ -452,6 +453,21 @@ def check_against_previous(files: dict, previous: bytes) -> list[str]:
     return errs
 
 
+def check_work_consistency(works: dict) -> dict[str, list[str]]:
+    """slug -> Work block. Every file of one Work.ID must have the same block. Returns slug -> errors."""
+    by_id: dict[str, list[str]] = {}
+    for slug, w in works.items():
+        if isinstance(w, dict) and isinstance(w.get("ID"), str):
+            by_id.setdefault(w["ID"], []).append(slug)
+    errs: dict[str, list[str]] = {}
+    for wid, slugs in by_id.items():
+        first = json.dumps(works[slugs[0]], sort_keys=True)
+        for s in slugs[1:]:
+            if json.dumps(works[s], sort_keys=True) != first:
+                errs.setdefault(s, []).append(f"Work {wid} differs from the Work block in {slugs[0]}")
+    return errs
+
+
 def tamper_cases(data: bytes) -> dict[str, bytes]:
     """Known-bad copies: each must fail."""
     z = zipfile.ZipFile(io.BytesIO(data))
@@ -536,7 +552,7 @@ def main() -> int:
             ok = ok and bool(errs)
         print("SELFTEST", "PASS" if ok else "FAIL")
         return 0 if ok else 1
-    results, warns, versions, with_history = {}, {}, {}, 0
+    results, warns, versions, with_history, works = {}, {}, {}, 0, {}
     for slug in published:
         if slug not in archives:
             results[slug] = ["no archive"]
@@ -547,16 +563,23 @@ def main() -> int:
         if w:
             warns[slug] = w
         z = zipfile.ZipFile(io.BytesIO(data))
-        v = str(json.loads(z.read("metadata.json")).get("ZWIversion"))
+        zmeta = json.loads(z.read("metadata.json"))
+        v = str(zmeta.get("ZWIversion"))
+        if "Work" in zmeta:
+            works[slug] = zmeta["Work"]
         versions[v] = versions.get(v, 0) + 1
         with_history += any(n.startswith("history/") for n in z.namelist())
+    for slug, e in check_work_consistency(works).items():
+        results[slug] = results.get(slug, []) + e
     extra = sorted(set(archives) - set(published))
     failed = {s: e for s, e in results.items() if e}
     summary = {"public_key_from": source, "published_works": len(published), "archives": len(archives),
                "passed": len(published) - len(failed), "failed": len(failed), "extra_archives": extra,
                "zwi_versions": versions, "with_history": with_history,
                "compared_with_previous": str(a.previous) if a.previous else None,
-               "unverifiable_history": len(warns)}
+               "unverifiable_history": len(warns), "distinct_work_ids": len({w.get("ID") for w in works.values()}),
+               "works_in_several_files": sum(1 for i in {w.get("ID") for w in works.values()}
+                                             if sum(1 for w in works.values() if w.get("ID") == i) > 1)}
     print(json.dumps(summary, indent=1))
     for s, e in list(failed.items())[:20]:
         print(f"FAIL {s}: {'; '.join(e[:3])}")

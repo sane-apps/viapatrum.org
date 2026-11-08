@@ -74,6 +74,32 @@ class WorkId(unittest.TestCase):
                          {"x-fragmenta-b": "x-fragments", "x-fragmenta-a": "x-fragments-fragmenta"})
 
 
+class Groups(unittest.TestCase):
+    def test_group_shares_one_id_and_stays_unique(self):
+        rows = [{"slug": "cyril-adoration-1", "derived_id": "cyril-adoration", "group": "Adoration"},
+                {"slug": "cyril-adoration-2", "derived_id": "cyril-adoration", "group": "Adoration"},
+                {"slug": "cyril-other", "derived_id": "cyril-adoration", "group": None}]
+        ids = B.assign_work_ids(rows, {})
+        self.assertEqual(ids["cyril-adoration-1"], ids["cyril-adoration-2"])
+        self.assertNotEqual(ids["cyril-other"], ids["cyril-adoration-1"])
+
+    def test_old_per_file_pins_give_way_to_the_group(self):
+        rows = [{"slug": "a-1", "derived_id": "a-work", "group": "A"},
+                {"slug": "a-2", "derived_id": "a-work", "group": "A"}]
+        self.assertEqual(set(B.assign_work_ids(rows, {"a-1": "a-work-book-1", "a-2": "a-work-book-2"}).values()),
+                         {"a-work"})
+        self.assertEqual(set(B.assign_work_ids(rows[:1], {"a-1": "a-work-book-1"}).values()), {"a-work"})
+
+    def test_group_work_block_names_the_work(self):
+        mast = {"who": "Origen of Alexandria (c. 185–c. 254 AD)", "title": "Against Celsus, Book III"}
+        w = B.work_object("origen-contra-celsum-book-3", mast, "Greek", False, "", "origen-against-celsus")
+        self.assertEqual(w["Title"], {"Title": "Against Celsus", "Lang": "en"})
+        self.assertEqual(w["OtherTitles"], [{"Title": "Contra Celsum", "Lang": "la"}])
+        members = [m for g in B.WORK_GROUPS for m in g["members"]]
+        self.assertEqual(len(members), len(set(members)))
+        self.assertEqual(B.derive_work_id("Against Celsus", "Origen of Alexandria"), "origen-against-celsus")
+
+
 class Titles(unittest.TestCase):
     def test_title_lang(self):
         self.assertEqual(B.title_lang("Περὶ εὐχῆς"), "grc")
