@@ -28,8 +28,9 @@ test('section cards carry the free library and house style', () => {
   assert.doesNotMatch(TEMPLATE, /Read free/);
 });
 
-test('every way label is one of the five verbs', () => {
-  const ok = new Set(['How they spoke', 'How they acted', 'How they argued', 'How they lived', 'How they died']);
+test('every way label is one of the six ways', () => {
+  const ok = new Set(['How they spoke', 'How they acted', 'How they argued', 'How they lived', 'How they died',
+    'How they read Scripture']);
   assert.deepStrictEqual(Object.entries(WAY).filter(([, v]) => !ok.has(v)), []);
 });
 

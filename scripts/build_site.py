@@ -2646,9 +2646,12 @@ def author_dates_prose(text: str) -> str:
     the data file changed (2026-10-17 recheck: 34 Eustathius, Theodore and
     Hesychius pages). Only the label changes: a parenthesis is rewritten when
     its years are the data file's years, so prose never contradicts it and a
-    different date in prose is left for the research gate to report."""
+    different date in prose is left for the research gate to report.
+    "(active c. 412–450)" is the same floruit and reads "(fl. c. 412–450)"
+    (2026-11-07: the Hesychius Pascha intro showed both on one page)."""
     if not text or "(" not in text:
         return text
+    text = re.sub(r"\(active (c\. \d)", r"(fl. \1", text)
     def years(v: str) -> list[str]:
         return re.findall(r"\d{2,4}", v)
     for name, dates in AUTHOR_DATES.items():
