@@ -774,6 +774,12 @@ step "Build"
 # The build attaches players and writes the R2 list. Set the host first so
 # it does not copy mp3s into dist.
 export AUDIO_BASE="${AUDIO_BASE:-https://audio.viapatrum.org}"
+# Listen bar (owner "go" 8 Nov 2026): the KJV read aloud (Deep Dive Bible, CC0) and our word timings
+# (scripts/kjv_audio). Every ship, auto ships included, needs the folder or chapter pages lose the bar.
+export KJV_AUDIO_DIR="${KJV_AUDIO_DIR:-/Volumes/SaneBulk/viapatrum/kjv-audio-ddb-20261108}"
+if [[ ! -d "$KJV_AUDIO_DIR/timings" ]]; then
+  echo "WARN: KJV audio not found at $KJV_AUDIO_DIR (SaneBulk unmounted?); chapter pages ship without the Listen bar" >&2
+fi
 if [[ "$SKIP_BUILD" -eq 0 ]]; then
   nice -n 10 "$PYTHON" "$ROOT/scripts/build_site.py"
   AUDIO_CUT="$(date +%s)"
