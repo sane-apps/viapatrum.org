@@ -1930,6 +1930,13 @@ h1, h2, h3,
   background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
 .dl-btn:hover, .dl-btn:focus-visible { background: var(--paper); color: var(--ink); }
 .dl-btn.is-active { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--rubric); }
+/* Donate (GitHub Sponsors): filled rubric pill beside Downloads in the
+   header tools (restored 2026-11-09); on phones it rides in the Menu as
+   .nav-donate, the same pattern as .nav-dl. */
+.donate-btn { display: inline-flex; align-items: center; min-height: 36px; padding: 0 0.85rem; border-radius: 999px;
+  font-size: 0.85rem; font-weight: 650; white-space: nowrap; text-decoration: none;
+  background: var(--rubric); color: var(--paper); border: 1px solid var(--rubric); }
+.donate-btn:hover, .donate-btn:focus-visible { background: var(--paper); color: var(--rubric); }
 .nav-toggle { display: none !important; }
 .crumbs { color: var(--ink-soft); }
 .crumbs a { color: var(--lapis); }
@@ -2826,6 +2833,7 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
    Phones: one header row (brand, Menu, search, theme); the links open under
    Menu. Home: the Ask box is the search, so the header search hides there. */
 .nav-dl { display: none; }
+.nav-donate { display: none; }
 .home .header-search { display: none; }
 @media (max-width: 800px) {
   .header-inner { flex-wrap: nowrap; align-items: center; gap: 0.5rem; position: relative; }
@@ -2834,12 +2842,14 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
     font: 650 0.9rem var(--font-body); order: 2; margin-left: auto; cursor: pointer; }
   .header-tools { order: 3; margin-left: 0; gap: 0.4rem; }
   .dl-btn { display: none; }
+  .donate-btn { display: none; }
   .site-nav, .site-nav.is-open { display: none; }
   .site-nav.is-open { display: flex; flex-direction: column; flex-wrap: nowrap; position: absolute; top: 100%;
     left: 0; right: 0; z-index: 50; gap: 0; padding: 0.4rem 1rem 0.8rem; background: var(--paper);
     border-bottom: 1px solid var(--rule, currentColor); box-shadow: 0 10px 24px rgba(0,0,0,0.25); }
   .site-nav.is-open a { min-height: 44px; display: flex; align-items: center; font-size: 1.05rem; }
   .site-nav.is-open .nav-dl { display: flex; }
+  .site-nav.is-open .nav-donate { display: flex; }
   .header-search input { width: 7.5rem; }
 }
 @media (max-width: 380px) { .header-search input { width: 5.5rem; } }

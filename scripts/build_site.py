@@ -6885,6 +6885,15 @@ def layout(
       <h2>Support</h2>
       <ul><li><a href="{SPONSORS}" rel="noopener">Give on GitHub Sponsors</a></li></ul>
     </nav>"""
+    # Header Donate button, restored 2026-11-09: the redesign (4e496bd2)
+    # dropped the old nav Support pill. Same licence rule as the Support
+    # column above: no gift ask on Scripture pages.
+    donate_btn = "" if active == "scripture" else (
+        f'<a class="donate-btn" href="{SPONSORS}" rel="noopener">Donate</a>'
+    )
+    nav_donate = "" if active == "scripture" else (
+        f'<a class="nav-donate" href="{SPONSORS}" rel="noopener">Donate</a>'
+    )
     crumbs = ""
     if crumb:
         parts = []
@@ -6971,6 +6980,7 @@ def layout(
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       {"".join(f'<a href="/{k}/"{nav_cls(k)}>{lbl}</a>' for k, lbl in NAV_LINKS if k not in nav_omit)}
       <a class="nav-dl" href="/downloads/"{nav_cls("downloads")}>Downloads</a>
+      {nav_donate}
     </nav>
     <div class="header-tools">
       <form class="header-search" action="/works/" method="get" role="search">
@@ -6978,6 +6988,7 @@ def layout(
         <input id="site-q" name="q" type="search" placeholder="Search…" autocomplete="off">
       </form>
       <a class="dl-btn{' is-active' if active == 'downloads' else ''}" href="/downloads/"{' aria-current="page"' if active == 'downloads' else ''}>Downloads</a>
+      {donate_btn}
       <button type="button" class="theme-toggle" aria-label="Switch light or dark reading" title="Light or dark">☾</button>
     </div>
   </div>
