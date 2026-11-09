@@ -2687,6 +2687,7 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .edition-log li:first-child { border-top: 0; }
 .edition-log time { display: block; font-weight: 650; color: var(--gold); font-size: 0.76rem; letter-spacing: 0.02em; }
 
+.changes-page { max-width: 46rem; }
 .changes-feed { margin: 0.4rem 0 1.6rem; font-size: 0.92rem; }
 .changes-day { margin: 0 0 1.8rem; }
 .changes-day h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.8rem; font-family: var(--font-display);

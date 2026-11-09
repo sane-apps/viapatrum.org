@@ -454,7 +454,7 @@ themselves, never written by hand.{since}</p>
                    f'<ul class="changes-list">{items}</ul></section>')
     if len(days) > DAYS_ON_PAGE:
         out.append(f'<p class="changes-older">Older days are in the <a href="{FEED_PATH}">feed</a>.</p>')
-    return "\n".join(out)
+    return '<div class="changes-page">\n' + "\n".join(out) + "\n</div>"
 
 
 FEED_ITEMS = 60

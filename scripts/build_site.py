@@ -11892,9 +11892,18 @@ def build() -> None:
                                                     .read_text(encoding="utf-8"))["sections"])):
             raise SystemExit(f"BLOCKED: edition hash for {w['slug']} differs from its exported English")
     editions.write_log(DIST / "app" / "v1" / "editions.json", edition_log)
+    def edition_author(w: dict) -> str:
+        """'Origen of Alexandria (c. 185–c. 254 AD)': the writer with his dates, as on the work's mast."""
+        name = display_author(w.get("author") or "")
+        life = "" if (w.get("author_slug") or "") in COLLECTION_AUTHOR_SLUGS else \
+            author_dates_display(w.get("author") or "", w.get("author_slug"))
+        if not (name and life):
+            return name
+        return f"{name}, {life}" if name.endswith(")") else f"{name} ({life})"
+
     edition_works = {
         w["slug"]: {"title": public_reader_title(w["title"], slug=w["slug"]),
-                    "author": display_author(w.get("author") or ""),
+                    "author": edition_author(w),
                     "sort": (author_sort_year(w.get("author"), None, None), alpha_key(w.get("author") or ""),
                              alpha_key(w["title"]))}
         for w in works if w["slug"] in exported}
