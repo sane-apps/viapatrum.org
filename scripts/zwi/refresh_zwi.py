@@ -62,15 +62,48 @@ def write_catalog(out: Path, files: list[Path]) -> None:
     (out / "catalog.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
-def publish(dist: Path) -> int:
-    """Copy the live set into dist/zwi/ and write /zwi/catalog.json. Returns the count."""
+# One download of the whole current set (owner 9 Nov 2026: "sync everything we can so we avoid drift"). The dated
+# GitHub releases are snapshots; this bundle, catalog.json and SHA256SUMS.txt are rebuilt on every ship from the
+# same live set, so an importer never has to rely on a snapshot. Cloudflare Pages serves files up to 25 MiB.
+BUNDLE = "via-patrum-zwi-latest.zip"
+BUNDLE_MAX = 24 * 1024 * 1024
+
+
+def write_bundle(out: Path, files: list[Path], limit: int = BUNDLE_MAX) -> bool:
+    """SHA256SUMS.txt for every archive, then the latest bundle (archives + catalog + sums, stored as they are:
+    a .zwi is already compressed). Over the size limit the bundle is skipped with a WARN; the sums and the
+    catalog still go out, so nothing points at a missing file."""
+    import hashlib
+    import zipfile
+    sums = "".join(f"{hashlib.sha256(f.read_bytes()).hexdigest()}  {f.name}\n" for f in files)
+    (out / "SHA256SUMS.txt").write_text(sums, encoding="utf-8")
+    dest, tmp = out / BUNDLE, out / (BUNDLE + ".tmp")
+    total = sum(f.stat().st_size for f in files)
+    if total > limit:
+        dest.unlink(missing_ok=True)
+        print(f"WARN: zwi bundle skipped: {total / 1048576:.1f} MiB of archives is over the {limit / 1048576:.0f} MiB "
+              "file limit; catalog.json and SHA256SUMS.txt still list every archive", flush=True)
+        return False
+    with zipfile.ZipFile(tmp, "w", zipfile.ZIP_STORED) as z:
+        for f in files:
+            z.write(f, f.name)
+        z.write(out / "catalog.json", "catalog.json")
+        z.write(out / "SHA256SUMS.txt", "SHA256SUMS.txt")
+    os.replace(tmp, dest)
+    return True
+
+
+def publish(dist: Path, live: Path | None = None) -> int:
+    """Copy the live set into dist/zwi/, write /zwi/catalog.json, SHA256SUMS.txt and the latest bundle. Returns the count."""
+    live = live or LIVE
     out = dist / "zwi"
     out.mkdir(parents=True, exist_ok=True)
-    files = sorted(LIVE.glob("*.zwi")) if LIVE.is_dir() else []
+    files = sorted(live.glob("*.zwi")) if live.is_dir() else []
     for f in files:
         shutil.copy2(f, out / f.name)
     if files:
         write_catalog(out, files)
+        write_bundle(out, [out / f.name for f in files])
     return len(files)
 
 

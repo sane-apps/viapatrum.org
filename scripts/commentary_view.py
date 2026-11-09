@@ -113,6 +113,32 @@ def filter_comments(commentary: dict[str, list[dict]], texts: dict[tuple[str, st
     return kept, stats
 
 
+def write_live(dist: Path, commentary: dict[str, list[dict]], kept: dict[str, list[dict]], stats: dict,
+               folder: Path = COMMENTARY_DIR) -> list[Path]:
+    """/data/commentary/<book>.json: the comments the site shows today, in the release format (owner 9 Nov 2026:
+    avoid drift). The dated GitHub release is a snapshot; this file is rebuilt every ship from the same filter the
+    pages use, so an importer gets exactly what readers see. "live" says what was left out and why."""
+    import json
+    written = []
+    out_dir = dist / "data" / "commentary"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    for f in sorted(folder.glob("*.json")):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        book = str(data.get("book") or "").strip()
+        shown = kept.get(book, [])
+        total = len(commentary.get(book, []))
+        data["comments"] = shown
+        data["comment_count"] = len(shown)
+        data["live"] = {"shown": len(shown), "of": total, "left_out": total - len(shown),
+                        "why_left_out": "a comment is left out while its words are no longer word for word in the "
+                                        "current translation, or its passage is not published",
+                        "source": "https://viapatrum.org/data/commentary/" + f.name}
+        dest = out_dir / f.name
+        dest.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+        written.append(dest)
+    return written
+
+
 def log_line(stats: dict) -> str:
     return (f"commentary: {stats['shown']} of {stats['total']} comments shown; "
             f"{stats['stale']} skipped (no longer word for word in the passage), "

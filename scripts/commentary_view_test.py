@@ -51,6 +51,26 @@ class LoadTest(unittest.TestCase):
         self.assertEqual(len(data.get("John", [])), 605)
 
 
+class WriteLiveTest(unittest.TestCase):
+    """/data/commentary/<book>.json holds exactly what the pages show (owner 9 Nov 2026: avoid drift)."""
+
+    def test_live_file_matches_the_filter(self) -> None:
+        with tempfile.TemporaryDirectory() as d:
+            src, dist = Path(d) / "src", Path(d) / "dist"
+            src.mkdir()
+            kept_c = {"id": "a", "comment": "In the beginning", "work_slug": "w", "section": "1"}
+            stale_c = {"id": "b", "comment": "words no longer here", "work_slug": "w", "section": "1"}
+            (src / "john.json").write_text(json.dumps({"book": "John", "comment_count": 2, "comments": [kept_c, stale_c]}))
+            allc = cv.load_commentary(src)
+            kept, stats = cv.filter_comments(allc, {("w", "1"): "In the beginning was the Word"})
+            cv.write_live(dist, allc, kept, stats, folder=src)
+            live = json.loads((dist / "data" / "commentary" / "john.json").read_text())
+            self.assertEqual([c["id"] for c in live["comments"]], ["a"])
+            self.assertEqual(live["comment_count"], 1)
+            self.assertEqual(live["live"]["left_out"], 1)
+            self.assertEqual(live["live"]["of"], 2)
+
+
 class WordForWordTest(unittest.TestCase):
     def test_current_comment_is_kept(self) -> None:
         self.assertTrue(cv.word_for_word(comment()["comment"], PASSAGE))
