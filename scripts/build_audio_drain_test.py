@@ -138,6 +138,42 @@ class DrainFailureTests(unittest.TestCase):
             self.assertEqual(json.loads((env.out / ".failures.json").read_text()), {})
 
 
+class NarrationBudgetTests(unittest.TestCase):
+    """Owner 9 Nov 2026: cost before speed. NARRATION_USD_PER_DAY stops the drain once today's spend reaches it."""
+
+    def test_spend_is_counted_and_the_drain_stops_at_the_cap(self):
+        with Env() as env, mock.patch.dict(os.environ, {"NARRATION_USD_PER_DAY": "0.05"}):
+            for name in ("a-book", "b-book", "c-book"):
+                _book(env.books, name, {name + "_english": ["Word %d here." % i for i in range(10)]})
+                env.publish(name)
+            calls = []
+
+            def render_book(work):  # each book "speaks" 1,000 characters = $0.03
+                calls.append(work)
+                B._RUN["spoken_chars"] = B._RUN.get("spoken_chars", 0) + 1000
+
+            words = mock.patch.object(B, "_work_words", lambda w: (100, False))
+            with mock.patch.object(B, "render_book", render_book), words:
+                self.assertEqual(B.drain(budget_s=60), 0)
+            self.assertEqual(len(calls), 2, "stops before the third book once $0.06 >= $0.05")
+            self.assertAlmostEqual(B._narration_spent(), 0.06, places=4)
+            calls.clear()
+            with mock.patch.object(B, "render_book", render_book), mock.patch.object(B, "_work_words", lambda w: (100, False)):
+                B.drain(budget_s=60)
+            self.assertEqual(calls, [], "nothing more today")
+
+    def test_no_cap_set_means_no_stop(self):
+        with Env() as env, mock.patch.dict(os.environ, {"NARRATION_USD_PER_DAY": ""}):
+            for name in ("a-book", "b-book"):
+                _book(env.books, name, {name + "_english": ["Word %d here." % i for i in range(10)]})
+                env.publish(name)
+            calls = []
+            with mock.patch.object(B, "render_book", lambda w: calls.append(w)), \
+                 mock.patch.object(B, "_work_words", lambda w: (100, False)):
+                B.drain(budget_s=60)
+            self.assertEqual(len(calls), 2)
+
+
 class DrainExitTests(unittest.TestCase):
     """P7 2026-10-06: the drain waits for a ship and says when it did not run clean."""
 
