@@ -128,10 +128,12 @@ WORK_GROUPS = [
     {"title": "On the Twelve Gems", "other": ("De xii gemmis", "la"),
      "members": ["epiphanius-de-xii-gemmis", "epiphanius-de-xii-gemmis-fragmenta"],
      "why": "the work and further fragments of the same work"},
-    {"title": "Commentary on the Song of Songs", "other": ("Commentarius in Canticum", "la"),
+    {"title": "Commentary on the Song of Songs", "id": "origen-song-of-songs",  # ZWIBook's key for the work
+     "other": ("Commentarius in Canticum", "la"),
      "members": ["origen-song-commentary-liber-4"],
      "why": "book IV of a longer commentary: the Work is the whole commentary, so later books share its ID"},
-    {"title": "Homilies on the Song of Songs", "other": None,
+    {"title": "Homilies on the Song of Songs", "id": "origen-homilies-song-of-songs",  # ZWIBook's key for the work
+     "other": None,
      "members": ["origen-song-homily-2"],
      "why": "homily II of a set of two: the Work is the set, so homily I would share its ID"},
 ]
@@ -683,6 +685,8 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
     other = "" if english_source else original_title(dist, slug, mast["latin"], translations)
     derived = derive_work_id(GROUP_OF[slug]["title"] if slug in GROUP_OF else mast["title"],
                              split_author(mast["who"])[0])
+    if slug in GROUP_OF and GROUP_OF[slug].get("id"):  # an explicit Work ID (ZWIBook's key, 9 Nov 2026)
+        derived = GROUP_OF[slug]["id"]
     work = work_object(slug, mast, lang, english_source, other, work_id or derived)
     site_edition = edition_of(dist, slug)  # (ISO date, notes) from scripts/editions.py, or ("", [])
     if previous:
