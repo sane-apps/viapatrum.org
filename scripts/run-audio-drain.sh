@@ -30,9 +30,14 @@ if [ -z "$R" ] || [ $(( $(date +%s) - $(stat -f %m "$R") )) -ge 10800 ]; then
   R=$(ls -t "$RECEIPTS"/*-cf-_cf_deepgram_aura-2-en.json 2>/dev/null | head -1)
 fi
 export SANE_LLM_API_RECEIPT="$R"
+# Named caller (owner 9 Nov 2026: "we just need to be wise and careful ... speed isnt priority accuracy and
+# cost are ... run daily jobs in efficent ways so it fills in over time"). The name lets the owner's
+# ~/.sane/CLOUDFLARE_AI_ALLOW lines lift CLOUDFLARE_AI_OFF for this job only (spend_guard and llm_vendor_gate);
+# NARRATION_USD_PER_DAY caps what the drain speaks each day (build_audio.py), under spend_guard's own caps.
+export SANE_CF_CALLER=fathers-audio-next NARRATION_USD_PER_DAY="${NARRATION_USD_PER_DAY:-5}"
 # Daily spending cap shared with the lanes (translations scripts/spend_guard.py,
 # owner 2026-10-14). Over it, or usage unread, narration waits a tick.
-if ! timeout 120 python3 "$HOME/SaneApps/clients/translations/scripts/spend_guard.py" check >/dev/null; then
+if ! timeout 120 python3 "$HOME/SaneApps/clients/translations/scripts/spend_guard.py" check --caller "$SANE_CF_CALLER" >/dev/null; then
   echo "$(date -Iseconds) audio drain: waiting, $(python3 "$HOME/SaneApps/clients/translations/scripts/spend_guard.py" status)"
   exit 0
 fi

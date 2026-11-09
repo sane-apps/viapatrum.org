@@ -1,0 +1,202 @@
+/* Charts (/charts/). Loaded only on those pages. The Fathers chart follows the
+   site's manuscript palette: lapis bars (things you can open), gold dots for
+   works, rubric red for the councils and the lane names. Prefix fc- because
+   creeds.css already uses ch-. */
+
+.fc-head { max-width: 44rem; margin-bottom: 1rem; }
+.fc-head h1 { font-family: var(--font-display); letter-spacing: -0.02em; margin: 0 0 0.4rem; }
+.fc-head .intro { margin: 0.4rem 0; }
+
+.fc-chart {
+  --row: 2.85rem;
+  --lane-h: 1.9rem;
+  margin: 1rem 0 2rem;
+  max-width: 100%;
+}
+.fc-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem 1.5rem;
+  margin: 0 0 0.6rem;
+}
+.fc-key {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.1rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+.fc-key li { display: flex; align-items: center; gap: 0.4rem; }
+.fc-k { display: inline-block; flex: none; }
+.fc-k-life { width: 1.6rem; height: 0.5rem; border-radius: 3px; background: var(--lapis); }
+.fc-k-fl { width: 1.6rem; height: 0.5rem; border-radius: 3px; background: color-mix(in srgb, var(--lapis) 30%, var(--leaf)); box-shadow: inset 0 0 0 1px var(--lapis); }
+.fc-k-point { width: 0.5rem; height: 0.5rem; border-radius: 2px; background: var(--lapis); }
+.fc-k-dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: var(--gold); }
+
+.fc-zoom { display: flex; align-items: center; gap: 0.35rem; }
+.fc-zoom[hidden] { display: none; }
+.fc-zoom-l { font-size: 0.85rem; font-weight: 600; color: var(--ink-soft); margin-right: 0.15rem; }
+.fc-zoom button {
+  font: 600 1.15rem/1 var(--font-body);
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 1px solid var(--rule);
+  border-radius: 0.45rem;
+  background: var(--leaf);
+  color: var(--ink);
+  cursor: pointer;
+}
+.fc-zoom button:hover:not(:disabled) { border-color: var(--lapis); color: var(--lapis); }
+.fc-zoom button:disabled { opacity: 0.4; cursor: default; }
+.fc-zoom button:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+
+/* The chart scrolls sideways inside its own box; the page never does. */
+.fc-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--leaf);
+}
+.fc-scroll:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 2px; }
+.fc-canvas {
+  position: relative;
+  width: calc((var(--y1) - var(--y0)) * var(--px) + 14rem);
+  padding-bottom: 0.2rem;
+  /* A faint rule at every century, starting at AD 100. */
+  background-image: repeating-linear-gradient(to right, var(--rule) 0 1px, transparent 1px calc(100 * var(--px)));
+  background-position: calc((100 - var(--y0)) * var(--px)) 0;
+  background-repeat: no-repeat;
+  background-size: calc((var(--y1) - 100) * var(--px) + 1px) 100%;
+}
+
+.fc-axis { position: relative; height: 1.7rem; }
+.fc-tick {
+  position: absolute;
+  top: 0.35rem;
+  left: calc((var(--s) - var(--y0)) * var(--px));
+  transform: translateX(-50%);
+  padding: 0 0.3rem;
+  background: var(--leaf);
+  font: 600 0.75rem/1.2 var(--font-body);
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
+
+.fc-lane { position: relative; border-top: 1px solid var(--rule); }
+.fc-lane-h {
+  margin: 0;
+  height: var(--lane-h);
+  display: flex;
+  align-items: center;
+  font: 650 0.74rem/1 var(--font-body);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rubric);
+}
+/* The lane name stays in view while the chart scrolls sideways. */
+.fc-lane-h span { position: sticky; left: 0; padding: 0.15rem 0.6rem; background: var(--leaf); border-radius: 0 4px 4px 0; }
+.fc-rows { position: relative; height: calc(var(--rows) * var(--row) + 0.35rem); }
+
+.fc-bar, .fc-council {
+  position: absolute;
+  top: calc(var(--r) * var(--row));
+  left: calc((var(--s) - var(--y0)) * var(--px));
+  display: block;
+  width: max-content;
+  color: var(--ink);
+  text-decoration: none;
+  border-radius: 4px;
+}
+.fc-name { display: block; width: max-content; font: 600 0.8rem/1.2 var(--font-body); white-space: nowrap; }
+.fc-dates { display: block; width: max-content; font: 400 0.72rem/1.2 var(--font-body); color: var(--ink-soft); white-space: nowrap; }
+.fc-line {
+  display: block;
+  position: relative;
+  margin-top: 0.2rem;
+  height: 0.5rem;
+  width: calc((var(--e) - var(--s)) * var(--px));
+  min-width: 0.5rem;
+  border-radius: 3px;
+  background: var(--lapis);
+}
+.fc-bar.is-fl .fc-line { background: color-mix(in srgb, var(--lapis) 30%, var(--leaf)); box-shadow: inset 0 0 0 1px var(--lapis); }
+.fc-dot {
+  position: absolute;
+  top: 50%;
+  left: calc((var(--d) - var(--s)) * var(--px));
+  width: 0.6rem;
+  height: 0.6rem;
+  margin: -0.3rem 0 0 -0.3rem;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 2px var(--leaf);
+}
+.fc-bar:hover .fc-name, .fc-council:hover .fc-name { color: var(--lapis); text-decoration: underline; }
+.fc-bar:focus-visible, .fc-council:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
+.fc-bar:focus-visible .fc-name, .fc-council:focus-visible .fc-name { color: var(--lapis); }
+
+.fc-council { margin-left: -0.3rem; padding-top: 0.35rem; }
+.fc-diamond {
+  display: inline-block;
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-right: 0.45rem;
+  background: var(--rubric);
+  transform: rotate(45deg);
+  vertical-align: 0.05rem;
+}
+.fc-council .fc-dates { padding-left: 1rem; }
+.fc-lane-councils .fc-lane-h { color: var(--rubric); }
+/* A faint red rule down the chart at each council. */
+.fc-rule {
+  position: absolute;
+  top: 1.7rem;
+  bottom: 0;
+  left: calc((var(--s) - var(--y0)) * var(--px));
+  width: 1px;
+  background: color-mix(in srgb, var(--rubric) 35%, transparent);
+  pointer-events: none;
+}
+
+.fc-list { margin: 2rem 0 1rem; border-top: 1px solid var(--rule); padding-top: 1rem; }
+.fc-list summary { cursor: pointer; }
+.fc-list summary h2 { display: inline; font-family: var(--font-display); font-size: 1.6rem; margin: 0; }
+.fc-list summary:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
+.fc-list h3 { font-size: 1rem; margin: 1.2rem 0 0.3rem; color: var(--rubric); }
+.fc-list ul { margin: 0; padding-left: 1.2rem; }
+.fc-list li { margin: 0.2rem 0; color: var(--ink-soft); }
+
+.fc-off { margin: 1.5rem 0 0; max-width: var(--measure); }
+.fc-off h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 0 0 0.5rem; }
+.fc-off ul { padding-left: 1.2rem; }
+.fc-off li { margin: 0.35rem 0; }
+
+.fc-cards { list-style: none; margin: 1rem 0 2rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr)); gap: 1rem; }
+.fc-card {
+  display: block;
+  height: 100%;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--rubric);
+  border-radius: 8px;
+  background: var(--leaf);
+  color: var(--ink);
+  text-decoration: none;
+}
+.fc-card strong { display: block; font-family: var(--font-display); font-size: 1.45rem; line-height: 1.15; color: var(--lapis); margin-bottom: 0.3rem; }
+.fc-card span { display: block; color: var(--ink-soft); font-size: 0.95rem; }
+.fc-card:hover strong { text-decoration: underline; }
+.fc-card:focus-visible { outline: 2px solid var(--gold-deep); outline-offset: 3px; }
+
+.fc-hint { display: none; margin: 0; font-size: 0.85rem; color: var(--ink-soft); }
+@media (max-width: 800px) {
+  .fc-tools { flex-direction: column; align-items: flex-start; }
+  .fc-hint { display: block; }
+}

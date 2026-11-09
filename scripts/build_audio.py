@@ -1323,6 +1323,44 @@ def _next_item() -> str:
 USD_PER_1K_CHARS = 0.030
 
 
+# Narration budget (owner 9 Nov 2026: "speed isnt priority accuracy and cost are ... run daily jobs in efficient
+# ways so it fills in over time"). NARRATION_USD_PER_DAY caps everything the drain speaks in a day (stale
+# re-reads, new books, quotes); unset means no cap of its own (spend_guard's caps still apply). One batch can
+# run past the cap by its own size; the next starts tomorrow.
+def _narration_cap() -> float | None:
+    try:
+        v = os.environ.get("NARRATION_USD_PER_DAY")
+        return float(v) if v else None
+    except ValueError:
+        return None
+
+
+def _narration_path() -> Path:
+    return OUT / ".narration-spend.json"
+
+
+def _narration_spent(day: str | None = None) -> float:
+    import time
+    try:
+        return float(json.loads(_narration_path().read_text(encoding="utf-8")).get(day or time.strftime("%Y-%m-%d"), 0.0))
+    except (OSError, ValueError, AttributeError):
+        return 0.0
+
+
+def _narration_add(usd: float, day: str | None = None) -> float:
+    import time
+    day = day or time.strftime("%Y-%m-%d")
+    try:
+        data = json.loads(_narration_path().read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        data = {}
+    data[day] = round(float(data.get(day, 0.0)) + usd, 4)
+    tmp = _narration_path().with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, indent=1), encoding="utf-8")
+    os.replace(tmp, _narration_path())
+    return data[day]
+
+
 def _revoice_on() -> bool:
     return os.environ.get("AUDIO_REVOICE") == "1" and os.environ.get("KOKORO_ENGINE") in CF_ENGINES
 
@@ -1819,6 +1857,13 @@ def drain(budget_s: int = 3 * 3600) -> int:
                 continue
             failed_before = _RUN["failed"]
             _RUN["batch"] = None
+            cap = _narration_cap()
+            if cap is not None and _narration_spent() >= cap:
+                _say("audio drain: today's narration budget is spent ($%.2f of $%.2f, NARRATION_USD_PER_DAY); "
+                     "resumes tomorrow" % (_narration_spent(), cap))
+                idle = True
+                break
+            chars_before = _RUN.get("spoken_chars", 0)
             try:
                 what = _next_item()
             except NarratorBlocked as e:  # a run problem: blame no item
@@ -1843,6 +1888,10 @@ def drain(budget_s: int = 3 * 3600) -> int:
                 _RUN["done"].add(key)
                 _record_failure(key, e)
                 continue
+            finally:  # count what this item spoke, whether it passed, failed or stopped
+                spent = (_RUN.get("spoken_chars", 0) - chars_before) / 1000 * USD_PER_1K_CHARS
+                if spent > 0:
+                    _narration_add(spent)
             if what == "idle":
                 idle = True
                 _say("audio drain: nothing left to read")
