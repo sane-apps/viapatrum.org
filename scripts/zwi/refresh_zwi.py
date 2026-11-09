@@ -39,15 +39,39 @@ def run(cmd: list[str], **kw) -> subprocess.CompletedProcess:
     return subprocess.run(cmd, capture_output=True, text=True, **kw)
 
 
+def catalog_entry(f: Path) -> dict:
+    """One row of /zwi/catalog.json, read from the signed archive itself."""
+    import hashlib
+    import zipfile
+    with zipfile.ZipFile(f) as z:
+        m = json.loads(z.read("metadata.json"))
+        versions = 1 + len({n.split("/")[1] for n in z.namelist() if n.startswith("history/")})
+    w = m.get("Work") or {}
+    return {"slug": f.stem, "url": f"https://viapatrum.org/zwi/{f.name}", "sha256": hashlib.sha256(f.read_bytes()).hexdigest(),
+            "bytes": f.stat().st_size, "version": versions, "zwi_version": m.get("ZWIversion"), "title": m.get("Title"),
+            "work_id": w.get("ID"), "work_title": (w.get("Title") or {}).get("Title"), "lang": w.get("Lang") or m.get("Lang"),
+            "last_modified": m.get("LastModified"), "page": m.get("SourceURL"), "license": m.get("License")}
+
+
+def write_catalog(out: Path, files: list[Path]) -> None:
+    """/zwi/catalog.json: every signed archive with its hash and version, so an importer (ZWIBook) can fetch only
+    what changed since its last run. One ship updates Via Patrum and every library that reads this list."""
+    rows = [catalog_entry(f) for f in files]
+    data = {"schema": "viapatrum-zwi-catalog-1", "publisher": "Via Patrum", "key": KEY_URL,
+            "generated": int(time.time()), "count": len(rows), "archives": rows}
+    (out / "catalog.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
 def publish(dist: Path) -> int:
-    """Copy the live set into dist/zwi/. Returns the count."""
+    """Copy the live set into dist/zwi/ and write /zwi/catalog.json. Returns the count."""
     out = dist / "zwi"
     out.mkdir(parents=True, exist_ok=True)
-    n = 0
-    for f in sorted(LIVE.glob("*.zwi")) if LIVE.is_dir() else []:
+    files = sorted(LIVE.glob("*.zwi")) if LIVE.is_dir() else []
+    for f in files:
         shutil.copy2(f, out / f.name)
-        n += 1
-    return n
+    if files:
+        write_catalog(out, files)
+    return len(files)
 
 
 def refresh(dist: Path, dry: bool) -> str:

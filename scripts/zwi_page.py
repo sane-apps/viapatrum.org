@@ -46,6 +46,10 @@ def body(n: int) -> str:
         <code>scripts/zwi/check_zwi.py</code> in the public
         <a href="https://github.com/sane-apps/viapatrum.org" rel="noopener">viapatrum.org repository</a>.</li>
   </ol>
+  <h2>For libraries</h2>
+  <p>A machine-readable list of every archive, with its SHA-256, version and Work ID, is at
+  <a href="/zwi/catalog.json"><code>/zwi/catalog.json</code></a>. It is rewritten each time the site is published,
+  so an importer can fetch only the archives that changed.</p>
   <h2>Versions</h2>
   <p>When a work's text changes, its archive is made and signed again as a new version. The earlier signature,
   details and media list are kept inside the new archive under <code>history/</code>, so the record of every
