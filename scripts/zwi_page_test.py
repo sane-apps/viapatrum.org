@@ -19,6 +19,9 @@ class ZwiPage(unittest.TestCase):
             self.assertIn('href="/zwi/didache.zwi"', line)
             self.assertIn('class="intro fine zwi-signed"', line)
             self.assertIn('href="/zwi/"', line)
+            # The slug stays in the link target, never in the text a reader sees.
+            visible = line.replace('href="/zwi/didache.zwi"', "").replace('download="didache.zwi"', "")
+            self.assertNotIn("didache", visible)
 
     def test_page_written_with_count(self):
         with tempfile.TemporaryDirectory() as t:

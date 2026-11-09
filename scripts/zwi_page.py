@@ -23,8 +23,9 @@ def signed_html(slug: str, live: Path = LIVE) -> str:
     if not has_archive(slug, live):
         return ""
     name = f"{slug}.zwi"
-    return (f'<p class="intro fine zwi-signed">Signed copy: <a href="/zwi/{escape(name)}" download>{escape(name)}</a>'
-            f' (ZWI 1.5 · <a href="/zwi/">how to verify</a>)</p>')
+    # The file name is a slug; readers see plain words (check_catalogue keeps slugs out of visible text).
+    return (f'<p class="intro fine zwi-signed">Signed copy: <a href="/zwi/{escape(name)}" download="{escape(name)}">'
+            f'download the ZWI file</a> (ZWI 1.5 · <a href="/zwi/">how to verify</a>)</p>')
 
 
 def body(n: int) -> str:
