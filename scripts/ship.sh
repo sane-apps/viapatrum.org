@@ -2,6 +2,9 @@
 # One-command Fathers site ship: gates → build → gates → Pages deploy → live checks.
 # Runs under /bin/bash 3.2 too (fathers_e2e.sh): no coproc, mapfile or ${x,,}.
 set -euo pipefail
+# The whole script is one { ... } block (owner 9 Nov 2026 incident, twice in one day): bash parses it entirely
+# before running anything, so editing or merging ship.sh while a ship runs cannot shift what the running ship reads.
+{
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
@@ -561,8 +564,10 @@ deploy_and_verify() {  # $1 = audio cut epoch for the shipped-site receipt
   fi
 
   step "Smoke live origin (bounded)"
+  # Up to 5 min (owner 9 Nov 2026 ships): Cloudflare takes minutes to point the domain at a new deploy, and the old
+  # 16 s window failed every ship of the day as "did not verify" while the deploy was fine.
   local live_ok=0 live_code live_html
-  for _ in $(seq 1 8); do
+  for _ in $(seq 1 30); do
     live_code="$(curl --connect-timeout 5 --max-time 20 -sS -o /dev/null -w '%{http_code}' "${PUBLIC_ORIGIN}/" || echo 000)"
     if [[ "$live_code" == "200" ]]; then
       live_html="$(curl --connect-timeout 5 --max-time 20 -fsS "${PUBLIC_ORIGIN}/" || true)"
@@ -571,7 +576,7 @@ deploy_and_verify() {  # $1 = audio cut epoch for the shipped-site receipt
         break
       fi
     fi
-    sleep 2
+    sleep 10
   done
   if [[ "$live_ok" -ne 1 ]]; then
     echo "BLOCKED: upload completed, but live ${PUBLIC_ORIGIN} did not verify site.css?v=${CSS_HASH}; investigate propagation." >&2
@@ -769,6 +774,11 @@ if [[ -f "$PENDING_BACKUP" ]]; then mv -f "$PENDING_BACKUP" "$R2_PENDING"; fi
 # Cheap content gates first: a bad receipt fails in seconds, not after the build.
 step "Research receipts (intros sourced, dates agree)"
 "$PYTHON" "$HOME/SaneApps/clients/translations/scripts/check_research.py"
+
+step "Promises (outputs/viapatrum/COMMITMENTS.md)"
+# Owner 9 Nov 2026 ("sync everything we can so we avoid drift"): a promise past its date raises an agent alert.
+# Never blocks: readers still get corrections while a promise is late.
+"$PYTHON" "$ROOT/scripts/commitments_check.py" --alert || echo "WARN: a Via Patrum promise is overdue or untracked (outputs/agent-alerts/viapatrum-commitments.md)"
 
 step "Build"
 # The build attaches players and writes the R2 list. Set the host first so
@@ -989,3 +999,5 @@ test -f "$ROOT/functions/works/[[path]].js"
 test -f "$STAGE/_routes.json"
 
 deploy_and_verify "$AUDIO_CUT"
+exit $?
+}

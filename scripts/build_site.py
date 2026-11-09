@@ -11280,6 +11280,8 @@ def build() -> None:
     if commentary_stats["total"]:
         print(commentary_view.log_line(commentary_stats), flush=True)
     commentary_verses = {book: commentary_view.by_verse(cs) for book, cs in commentary_kept.items()}
+    # /data/commentary/<book>.json: exactly what the pages show, rebuilt every ship (owner 9 Nov 2026: avoid drift).
+    commentary_view.write_live(DIST, commentary_all, commentary_kept, commentary_stats)
 
     sc_books: dict[str, dict] = {}
     for (book, chap), rows in sc_entries.items():
