@@ -221,8 +221,8 @@ def about_blocks(details: Node) -> tuple[list[dict], str]:
                 t = squash(c.text())
                 if not t:
                     continue
-                if "report-mistake" in cls:
-                    continue  # a mailto link; an ebook has its own back link
+                if "report-mistake" in cls or "zwi-signed" in cls:
+                    continue  # a mailto link or the site's ZWI download; an ebook has its own back link
                 if ("AI-assisted" in t or "with AI help" in t) and "certified" in t:
                     ai_note = squash(UI_SENTENCES.sub(" ", t))
                 elif "banner" in cls:

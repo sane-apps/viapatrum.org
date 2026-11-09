@@ -244,7 +244,7 @@ def check_status(about: Tag | None) -> str:
 def build_about_html(about: Tag, slug: str) -> str:
     about = BeautifulSoup(str(about), "html.parser").find("details")
     about.find("summary").decompose()
-    for p in about.select("p.report-mistake"):
+    for p in about.select("p.report-mistake, p.zwi-signed"):
         p.decompose()
     for p in about.select("p.intro.fine"):
         if text_of(p) == "Printed text used":

@@ -867,6 +867,16 @@ if [[ "$SKIP_BUILD" -eq 0 ]]; then
   else
     echo "  (dry-run: audio not uploaded to R2)"
   fi
+
+  step "Signed ZWI archives"
+  # Owner-approved 2026-11-08: every work page links its own signed ZWI (only when the live set has it), and
+  # dist/zwi/ carries the live set. Re-signs only works whose page changed; never blocks a ship (prints WARN
+  # and still publishes the last good set, so every link resolves for the link check below).
+  if [[ "$DRY_RUN" -eq 0 ]]; then
+    nice -n 10 python3 "$ROOT/scripts/zwi/refresh_zwi.py" --dist "$ROOT/dist" || echo "WARN: zwi refresh failed"
+  else
+    nice -n 10 python3 "$ROOT/scripts/zwi/refresh_zwi.py" --dist "$ROOT/dist" --dry-run || true
+  fi
 fi
 
 CSS_HASH="$(css_hash_of "$ROOT/dist")"

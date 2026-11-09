@@ -24,6 +24,7 @@ except ImportError as e:
 
 ROOT = Path(__file__).resolve().parents[1]
 import downloads_page  # noqa: E402  (library pass: /downloads/ + "Keep this book")
+import zwi_page  # noqa: E402  (signed ZWI per work: /zwi/ + the About line, owner 2026-11-08)
 import games_page  # noqa: E402  (/games/: every game, owner 2026-10-06)
 import ask_page  # noqa: E402  (/ask/: answers in the writers' own sentences, owner 2026-10-06)
 import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, owner 2026-10-06)
@@ -10783,7 +10784,7 @@ def build() -> None:
             shown_blurb = "" if blurb_repeats_intro(intro_text, [intro_lede, *intro_rest]) else blurb
             bits = "".join(
                 x for x in (first_banner, era, note, shown_blurb, intro_bits, mast_left, history_html, confidence,
-                            report_link) if x
+                            report_link, zwi_page.signed_html(w["slug"])) if x
             )
             return (
                 f'<details class="reader-about"><summary>About this text</summary>{bits}</details>'
@@ -12065,6 +12066,7 @@ def build() -> None:
         author_dates=author_dates_display,
         published={w["slug"]: public_reader_title(w["title"], slug=w["slug"]) for w in works})
     print(f"downloads: {n_dl} works on the shelf", flush=True)
+    print(f"zwi: /zwi/ lists {zwi_page.build(DIST, layout, write)} signed archives", flush=True)
 
     # Beliefs on the Timeline (owner 2026-10-05): one page per dividing question.
     n_beliefs = beliefs_page.build(DIST, ROOT / "data" / "explore" / "doctrine_map.json", layout, write,
