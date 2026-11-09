@@ -29,6 +29,7 @@ import ask_page  # noqa: E402  (/ask/: answers in the writers' own sentences, ow
 import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, owner 2026-10-06)
 import history_page  # noqa: E402  (/history/christ-died-for-all/: history of the question, owner 2026-10-27; preview first)
 import timeline_page  # noqa: E402  (/explore/: 100 reader questions from checked dossiers, owner 2026-10-13)
+import charts_page  # noqa: E402  (/charts/: the Fathers through time, after Adams 1871, owner 2026-11-08)
 
 # FATHERS_DIST: build somewhere else to test without touching the ship staging dir.
 DIST = Path(os.environ["FATHERS_DIST"]) if os.environ.get("FATHERS_DIST") else ROOT / "dist"
@@ -6848,7 +6849,7 @@ VIA_PATRUM_ORG = {
 # The main navigation, in order. A page can leave out a link its own body
 # already gives (the home page shows Listen and Games up front, owner 2026-10-18).
 NAV_LINKS = (("works", "Works"), ("authors", "Fathers"), ("topics", "Topics"), ("scripture", "Scripture"),
-             ("listen", "Listen"), ("explore", "Timeline"), ("games", "Games"))
+             ("listen", "Listen"), ("explore", "Timeline"), ("charts", "Charts"), ("games", "Games"))
 
 
 def layout(
@@ -6983,7 +6984,7 @@ def layout(
     </div>
     <nav aria-label="Read">
       <h2>Read</h2>
-      <ul><li><a href="/topics/">Topics</a></li><li><a href="/scripture/">Scripture</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/listen/">Listen</a></li><li><a href="/explore/">Timeline</a></li><li><a href="/games/">Games</a></li>{'<li><a href="/downloads/">Downloads</a></li>' if LIBRARY else ''}</ul>
+      <ul><li><a href="/topics/">Topics</a></li><li><a href="/scripture/">Scripture</a></li><li><a href="/authors/">Fathers</a></li><li><a href="/works/">Works</a></li><li><a href="/listen/">Listen</a></li><li><a href="/explore/">Timeline</a></li><li><a href="/charts/">Charts</a></li><li><a href="/games/">Games</a></li>{'<li><a href="/downloads/">Downloads</a></li>' if LIBRARY else ''}</ul>
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
@@ -12074,6 +12075,8 @@ def build() -> None:
     print(f"timeline: {n_tl} questions on /explore/", flush=True)
     print(f"creeds: {creeds_page.build(DIST, layout, write)} on /creeds/", flush=True)
     print(f"history: {history_page.build(DIST, layout, write)} quotes on {history_page.URL}", flush=True)
+    print(f"charts: {charts_page.build(DIST, layout, write, author_links, works, sys.modules[__name__])} "
+          f"Fathers on {charts_page.URL}", flush=True)
 
     # /data/search/* shard names carry a hash of their bytes, so browsers may
     # keep them for a year; manifest.json names the current shards and is
