@@ -1,0 +1,4494 @@
+{
+ "schema": "viapatrum-editions-1",
+ "seed": {
+  "date": "2026-11-08",
+  "receipts": "/Users/stephansmac/SaneApps/outputs/viapatrum/references-20261108",
+  "refs": 4520,
+  "tally": {
+   "fix not shown": 185,
+   "reverted": 59,
+   "sentence not found": 780,
+   "verified": 4520
+  },
+  "why": "The text of every work published on 9 Nov 2026 (outputs/ship-last, shipped 9 Nov 1:47 AM) is the text its signed ZWI archive carried on 8 Nov 2026: the ZWI refresh in that ship found no text change, and every archive was last signed on 8 Nov (402 at 5:29 PM, 2 at 9:25 PM). So each work's English has stood since 8 Nov at the latest, and 8 Nov is the edition date we can prove. Earlier history is not recorded. Notes come only from the 8 Nov Scripture reference sweep receipts, counting a fix only when the shipped text still shows it (editions.verified_fixes).",
+  "works_with_notes": 109
+ },
+ "works": {
+  "achatius": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1f2703eaa014dece",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "acts-of-justin": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "09ab9951bd555c42",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "africanus-cesti": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "40c391ef63a2337c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "alexander-monachus-inventio-crucis-epitome": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "728835e00fa94f0b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "ammonius-fragmenta-joannem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "30010b020d7fe182",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "amphilochius-contra-haereticos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 9
+    },
+    "date": "2026-11-08",
+    "hash": "7874076720716176",
+    "kind": "first",
+    "notes": [
+     "9 Scripture references corrected"
+    ]
+   }
+  ],
+  "amphilochius-de-recens-baptizatis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c638c1332f1f4e33",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "amphilochius-epistula-synodalis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f9a0fd6f818421b7",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "amphilochius-iambi-seleucum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5b069bcd81d70dfd",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "amphilochius-in-illud-non-potest": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3cf84caf924d54d0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "amphilochius-in-illud-pater": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6b6ff09dced4674d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "amphilochius-in-lazarum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "3ab925211d1ca1c0",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "amphilochius-in-mulierem-peccatricem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 4
+    },
+    "date": "2026-11-08",
+    "hash": "d0ab4c6440351102",
+    "kind": "first",
+    "notes": [
+     "4 Scripture references corrected"
+    ]
+   }
+  ],
+  "amphilochius-in-natalitia-domini": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "b85c90c12b169d70",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "amphilochius-in-occursum-domini": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "f3b869dc849e72e1",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "amphilochius-in-sabbati-sancti": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3a8b18db142c92cc",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "amphilochius-in-zacchaeum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "c933fe9ce0f4b7c0",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "amphilochius-oratio-resurrectionem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bb5ddf5705512320",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "apollinaris-fragmenta-joannem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 27
+    },
+    "date": "2026-11-08",
+    "hash": "b52ba13fe3049628",
+    "kind": "first",
+    "notes": [
+     "27 Scripture references corrected"
+    ]
+   }
+  ],
+  "apollinaris-fragmenta-matthaeum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 17
+    },
+    "date": "2026-11-08",
+    "hash": "76bde8ba4ccb80c0",
+    "kind": "first",
+    "notes": [
+     "17 Scripture references corrected"
+    ]
+   }
+  ],
+  "apollinaris-fragmenta-psalmos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 263
+    },
+    "date": "2026-11-08",
+    "hash": "9217f3103754a088",
+    "kind": "first",
+    "notes": [
+     "263 Scripture references corrected"
+    ]
+   }
+  ],
+  "apollinaris-fragmenta-romanos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 17
+    },
+    "date": "2026-11-08",
+    "hash": "2d5b8297f4a87933",
+    "kind": "first",
+    "notes": [
+     "17 Scripture references corrected"
+    ]
+   }
+  ],
+  "arethas-epigrammata": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bba04bc309558a1a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "asterius-homilia-9": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d328e494ef6bbf08",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "asterius-homiliae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 30
+    },
+    "date": "2026-11-08",
+    "hash": "e8eaadc0ce7c1b04",
+    "kind": "first",
+    "notes": [
+     "30 Scripture references corrected"
+    ]
+   }
+  ],
+  "athanasius-epistula-adelphium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "949725d5031995c2",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "athanasius-epistula-afros": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8b8c95c46a853db9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "athanasius-epistula-jovianum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f8c430b63c6dc2ef",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "athanasius-epistula-maximum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "25ea043efd197816",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "athanasius-epistula-monachos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "27e8727818c9b43f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "athanasius-epistula-palladium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "9713f6b6b5a84c0f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "athanasius-scholia-job": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e43aabb097ddbcb2",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "athanasius-tomus-antiochenos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ada5a60bc927031a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "athenagoras-resurrection": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b279fcda6f749f15",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "augustine-care-for-the-dead": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "8796a1696a0cfa12",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "augustine-divination-of-demons": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "3ef62c69bd3b835d",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "augustine-on-faith-and-the-creed": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e265abd89c3c2200",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "augustine-proceedings-with-emeritus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1ebc234810ecff8a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "augustine-psalm-against-the-donatists": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e60812f1e62c119a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "augustine-sermon-to-the-church-of-caesarea": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "1df265c1048b9f10",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "baron-philosophia-theologiae-ancillans": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8a275f0a8f4b4a10",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-homilia-ad-baptisma": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "38ebe1d40fd987f0",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "basil-homilia-de-spiritu-sancto": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "afa44a44ee1aea3c",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "basil-homilia-gratiarum-actione": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7c14d48554e38d56",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-homilia-in-divites": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6926704f67bb77b7",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-homilia-in-psalmum-115": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "4fffcce90a2af20b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-homilia-in-psalmum-28": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8c63bc1a591f25b2",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-homilia-invidia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "0cfbc059aa6ef1d0",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "basil-homilia-misericordia-judicio": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "90e0ceaf1e0f5e76",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-homilia-tempore-famis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1287f9fd4fbec728",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-homiliae-hexaemeron": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "dfb4f9037166c1a7",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-in-barlaam": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "1de7bf8a3813adbd",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "basil-in-ebriosos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "6afa848edb374672",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "basil-in-principio-erat-verbum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "9f862d10d7bb0c25",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-in-quadraginta-martyres": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6312166f594ef291",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "basil-quod-rebus-mundanis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "51ba786d8c42419c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "chrysostom-catecheses-illuminandos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1d162dc61b39fd4c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "chrysostom-comparatio-regis-monachi": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c255202b71e1b775",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "chrysostom-de-resurrectione-mortuorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7e61e4b1fb4dbaf0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "chrysostom-in-diem-natalem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8d8b2585d6054b50",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "chrysostom-in-eustathium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1b1211a7b6c88f93",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "chrysostom-in-lucianum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0e609dba7fe5276a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "chrysostom-in-romanum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b5e6086193aa9dd8",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "clement-alexandria-newly-baptized": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "010f57d8e1e172b2",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "clement-alexandria-rich-man": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3b771a5be562eb6a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "conon-gardener": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0c8b5d5f283cf36a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "crocius-syntagma": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 33
+    },
+    "date": "2026-11-08",
+    "hash": "2e94416551bac2f7",
+    "kind": "first",
+    "notes": [
+     "33 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyprian": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1f1036c9a04df9f5",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyprian-on-the-unity-of-the-church": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "98b9af0a14794382",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-ad-calosyrium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c5453b3d5b164058",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-ad-carthaginiense": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c3144b17115d4fde",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-ad-episcopos-libyae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3add5eb21478e8f7",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-ad-optimum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "15b698e8c8066d73",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-ad-xystum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b6603b856e9f6401",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-1": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3fca04a5559014d8",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-10": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ea00638e86d2f998",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-11": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "5240c76713783ba9",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-12": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "77cd53f868364435",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-13": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a9392303b11e4c1f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-14": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "fec1db573c8cb64b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-15": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bf81a9e205948dc4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-16": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "880ec0ebeb4c4d38",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-17": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "63b4c5665aee8180",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-adoration-2": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 8
+    },
+    "date": "2026-11-08",
+    "hash": "b7f0bac37675319b",
+    "kind": "first",
+    "notes": [
+     "8 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-3": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 9
+    },
+    "date": "2026-11-08",
+    "hash": "d7503c8a5c71c7da",
+    "kind": "first",
+    "notes": [
+     "9 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-4": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 19
+    },
+    "date": "2026-11-08",
+    "hash": "a2975e58c315cd0c",
+    "kind": "first",
+    "notes": [
+     "19 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-5": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 5
+    },
+    "date": "2026-11-08",
+    "hash": "94695741185d85e6",
+    "kind": "first",
+    "notes": [
+     "5 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-6": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 11
+    },
+    "date": "2026-11-08",
+    "hash": "355fa8e406423968",
+    "kind": "first",
+    "notes": [
+     "11 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-7": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 11
+    },
+    "date": "2026-11-08",
+    "hash": "40291e2b07e0f15f",
+    "kind": "first",
+    "notes": [
+     "11 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-8": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 12
+    },
+    "date": "2026-11-08",
+    "hash": "53152ab797cfdcf5",
+    "kind": "first",
+    "notes": [
+     "12 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-adoration-9": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "153ce61debf59a29",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-de-synagogae-defectu": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "29373547d6676222",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-dialogus-nestorio": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "13921c3548ecea6d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-epistula-domnum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c12ab6300fd69664",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-epistula-photium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e66b2025bfb7454e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-epistula-theodosium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6cf4945fcd9365c9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-1-corinthios": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "18f623adb0009bfb",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "cyril-fragmenta-2-corinthios": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0ecd2b2764ef89aa",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-acta-catholicas": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 7
+    },
+    "date": "2026-11-08",
+    "hash": "e7eeda4ceb196231",
+    "kind": "first",
+    "notes": [
+     "7 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-fragmenta-canticum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0e6b493cbf786c70",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-contra-diodorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f7c5c579e8a0917f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-contra-theodorum-2": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "de63339b0e8c88e3",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-contra-theodorum-3": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b636956de91de199",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-danielem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "daf007bd2bc53b89",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-fragmenta-ezechielem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0ac21cd7ecb165d2",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-hebraeos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 14
+    },
+    "date": "2026-11-08",
+    "hash": "7f79d0391270eac2",
+    "kind": "first",
+    "notes": [
+     "14 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-fragmenta-jeremiam": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b13df9921783ecb4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-numeros": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c8720f4d9edca5a3",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-regum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b41429ea3985b931",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmenta-romanos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "08aeca916e87dffd",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmentum-baruch": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bb1213e410577a7f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmentum-papyraceum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8e99533a92e9325e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-fragmentum-proverbia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "95fbbc1f9c6267a9",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "cyril-fragmentum-psalmum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0631ed89522c771d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-homilia-cyrini": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "dfe73cf01074f5f9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-isaiah": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "29b8de727d1a66d0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-jerusalem-epistula-constantium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7adcb10d938dc37e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-jerusalem-homilia-ego-vado": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "56fe2b8099849d72",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-jerusalem-homilia-occursum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 5
+    },
+    "date": "2026-11-08",
+    "hash": "b047ba0c1ef7f361",
+    "kind": "first",
+    "notes": [
+     "5 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-matthew-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 25
+    },
+    "date": "2026-11-08",
+    "hash": "d05535c5dae30e7b",
+    "kind": "first",
+    "notes": [
+     "25 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-recta-fide-arcadia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 3
+    },
+    "date": "2026-11-08",
+    "hash": "8982c8384c43e0b3",
+    "kind": "first",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
+   }
+  ],
+  "cyril-recta-fide-pulcheria": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "0b0251529cf7d128",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "cyril-sermo-trium-puerorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "85f5dc36b622da37",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "cyril-solutiones-vat-447": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "729dc917644f4b23",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "davenant-dissertationes-duae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0122211267df1a87",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "didache": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c34cdba3ca8d151c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "didymus-commentarii-ecclesiasten": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 140
+    },
+    "date": "2026-11-08",
+    "hash": "e1a0c8170e268a6d",
+    "kind": "first",
+    "notes": [
+     "140 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-commentarii-job": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 341
+    },
+    "date": "2026-11-08",
+    "hash": "e02d3aa082625007",
+    "kind": "first",
+    "notes": [
+     "341 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-commentarii-octateuchum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "3ac4b0295a05f784",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-commentarii-psalmos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 856
+    },
+    "date": "2026-11-08",
+    "hash": "da7016eab4d22a76",
+    "kind": "first",
+    "notes": [
+     "856 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-commentarii-zacchariam": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 395
+    },
+    "date": "2026-11-08",
+    "hash": "1a9b407459639b2f",
+    "kind": "first",
+    "notes": [
+     "395 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-contra-manichaeos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 3
+    },
+    "date": "2026-11-08",
+    "hash": "6d47c184627f5358",
+    "kind": "first",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-de-trinitate": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 180
+    },
+    "date": "2026-11-08",
+    "hash": "11518c5b0ecc8144",
+    "kind": "first",
+    "notes": [
+     "180 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-enarratio-catholicas": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 18
+    },
+    "date": "2026-11-08",
+    "hash": "0105656b117e5d10",
+    "kind": "first",
+    "notes": [
+     "18 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-fragmenta-2cor": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 10
+    },
+    "date": "2026-11-08",
+    "hash": "f30be9fff633749e",
+    "kind": "first",
+    "notes": [
+     "10 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-fragmenta-joannem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 4
+    },
+    "date": "2026-11-08",
+    "hash": "537099d6b579babf",
+    "kind": "first",
+    "notes": [
+     "4 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-fragmenta-proverbia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 10
+    },
+    "date": "2026-11-08",
+    "hash": "91a9efe0c912669f",
+    "kind": "first",
+    "notes": [
+     "10 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-fragmenta-psalmos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1108
+    },
+    "date": "2026-11-08",
+    "hash": "0afe3f500c860873",
+    "kind": "first",
+    "notes": [
+     "1,108 Scripture references corrected"
+    ]
+   }
+  ],
+  "didymus-fragmentum-hebraeos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "dabfe2e7794fad3f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "didymus-in-genesim": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 212
+    },
+    "date": "2026-11-08",
+    "hash": "e5954f5def8cc6e9",
+    "kind": "first",
+    "notes": [
+     "212 Scripture references corrected"
+    ]
+   }
+  ],
+  "diodorus-fragmenta-romanos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 16
+    },
+    "date": "2026-11-08",
+    "hash": "55fd64fa5c2b0538",
+    "kind": "first",
+    "notes": [
+     "16 Scripture references corrected"
+    ]
+   }
+  ],
+  "diognetus-epistle": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7c17de4d9f46222a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "dionysius-corinth-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b792cfb4c3aa43c1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-anacephalaeosis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "968627bc22aa499d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-anaphora-graeca": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0b5618d89d53b0d9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-ancoratus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "eed8ea1b22d0238b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-apophthegmata": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "a381436d8769010e",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "epiphanius-appendices-ad-indices-apostolorum-discipulorumque": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "cdd2974ff11cf415",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-de-fide": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2adaf6fd7951dc12",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-de-mensuris": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b75fbbd37389db4e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-de-prophetarum-vita-et-obitu": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6650e021a245ca26",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-de-prophetarum-vita-et-obitu-recensio-altera": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d016528cc04aad1d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-de-trinitate": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "20750ead4fcbe1e5",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-de-xii-gemmis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "501cddd3afadb040",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-de-xii-gemmis-fragmenta": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "01722113606b79d3",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-enumeratio-lxxii-prophetarum-et-prophetissarum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b85b1c079a882121",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-epistula-ad-eusebium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ead130b45f7d5131",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-epistula-ad-joannem-hierosolymitanum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "415f23619e855a9e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-epistula-ad-theodosium-imperatorem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "198a06a211258c8e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-fragmenta-precationis-et-exorcismi": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "59755e201c2c23a8",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-homilia-in-assumptionem-christi": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e6c6730c7ce7c109",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-homilia-in-christi-resurrectionem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e7c0bfd72a4fa6cb",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-homilia-in-divini-corporis-sepulturam": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7a103edb8a9f75e1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-homilia-in-festo-palmarum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "a531238fa68454bf",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "epiphanius-homilia-in-laudes-mariae-deiparae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "78bcccde655fee81",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-index-apostolorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d3cf3abd97ea2bf3",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-index-discipulorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f857cb9f45a184a4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-liturgia-praesanctificatorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e61bb485aaab37f6",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-notitiae-episcopatuum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "9d786c979fc0293f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-panarion": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c0649fa74829b3eb",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-testamentum-ad-cives": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3fca83a25f00406f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-testimonia-ex-divinis-et-sacris-scripturis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "807f9f8f678503aa",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-tractatus-contra-eos-qui-imagines-faciunt": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "abdd19de3dd5bb31",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "epiphanius-tractatus-de-numerorum-mysteriis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "da9331676e4e8484",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eusebius-emesa-fragmenta-romanos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "982d9ad56144ed30",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eusebius-emesa-fragmentum-1cor": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "59b171c0433616b6",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eusebius-letter-flacillus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d07f5711ec744894",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-allocutio-constantinum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8824d6df0476ce29",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-commentarius-psalmum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2089f17848eefe18",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-commentarius-psalmum-92": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "49f613cb38adb182",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-de-anima-contra-arianos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5cb0c61a78d1d1bb",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-de-anima-contra-philosophos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ce8a274fa1c04d57",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-de-fide-contra-arianos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3fca97593fb7e822",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-de-melchisedech": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "09b99c674b451957",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "eustathius-fragmenta-varia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a3a2f8751842785b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-hexaemeron": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 5
+    },
+    "date": "2026-11-08",
+    "hash": "351b300b240ccfce",
+    "kind": "first",
+    "notes": [
+     "5 Scripture references corrected"
+    ]
+   }
+  ],
+  "eustathius-homilia-lazarum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 7
+    },
+    "date": "2026-11-08",
+    "hash": "e31d1a249a252cf9",
+    "kind": "first",
+    "notes": [
+     "7 Scripture references corrected"
+    ]
+   }
+  ],
+  "eustathius-in-ecclesiasten": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "950ea6e5a47b38a5",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-in-genesim-de-creatione": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ac63763741cc6a6d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-in-inscriptione-titulorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "c46f35dd0af113c7",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "eustathius-in-joseph": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "cb7b4915d562f914",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-in-proverbia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "18749247af42726c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-oratio-dominus-creavit": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e1a132a3d56af97f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-oratio-psalmorum-graduum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ffd646d2ff06a02e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "eustathius-orationes-contra-arianos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c69def96b1ae5192",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "evagrius-ad-eulogium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "c7c1ae918f05d6c5",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-capitula-xxxiii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0b27a52ae898e5ad",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "evagrius-de-magistris": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e2cc58f2b636b72a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "evagrius-de-malignis-cogitationibus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "430209b64e466586",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "evagrius-de-octo-spiritibus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "936462b833e5304e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "evagrius-de-vitiis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a98ae77e08c0c474",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "evagrius-expositio-proverbia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 59
+    },
+    "date": "2026-11-08",
+    "hash": "0fa4cebc32727344",
+    "kind": "first",
+    "notes": [
+     "59 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-gnosticus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "452a0561066290ed",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-institutio-monachos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "88b361d3ace419c7",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-practicus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6ad08ebbc923da28",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "evagrius-rerum-monachalium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 3
+    },
+    "date": "2026-11-08",
+    "hash": "cf84c99c2c045652",
+    "kind": "first",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-scholia-ecclesiasten": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 40
+    },
+    "date": "2026-11-08",
+    "hash": "15f9087830390c1e",
+    "kind": "first",
+    "notes": [
+     "40 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-scholia-proverbia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 101
+    },
+    "date": "2026-11-08",
+    "hash": "ac88eb05544b77ed",
+    "kind": "first",
+    "notes": [
+     "101 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-sententiae-virginem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "4c153b0b85ab3886",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "evagrius-spiritales-sententiae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a84afda8f4116100",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gennadius-fragmenta-corinthios": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6c708c74a94aa92a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gennadius-fragmenta-galatas": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "7c54c8794e6ce8ad",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "gennadius-fragmenta-hebraeos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3ae979980df487b5",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gennadius-fragmentum-2thess": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "83786bcfe3e70ae0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "georgius-peccator-hymnus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c5a1ecacc2fc7f2c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-ad-tatianum-de-anima": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "916c27fc4560985c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-de-fide-xii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3581714a69fddc7e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-ecclesiastes-metaphrase": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0a4ed02b7b164cd1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-epistula-canonica": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "40402759fe72b9ef",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-expositio-fidei": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2ac9180527b48a49",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-in-annuntiationem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bd2c0021e5918192",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-jeremiah-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d59294bc0a250d64",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-matthew-fragment": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "81c8d7ffcb03dbe1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-ouden-eidolon": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ff0874eebe6ce392",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-panegyricus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6f10638fabba6af2",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-sententiae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "800576ae25905943",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "gregory-thaumaturgus-sermo-in-omnes-sanctos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bd30f1a98b1bb48d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-i-hypapante": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "89aa1acc12832b94",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-i-lazarum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "97f594e2c38606f0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-i-longinum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "522b1e96502657b7",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "hesychius-homilia-i-maria-deipara": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a843a25d134c3f8a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-i-pascha": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f85464f183799033",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-ii-hypapante": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "dc76faa8851d2e0c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-ii-lazarum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "4017e91da4e10c60",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "hesychius-homilia-ii-longinum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "24c403261996eb19",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-ii-maria-deipara": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "d2941c7130a9f924",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "hesychius-homilia-ii-pascha": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3570d7365346e429",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-homilia-jejunio": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "376f03c47238f77b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-in-andream": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ea729256b700fdb3",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-in-antonium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "8d38696847eff778",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "hesychius-in-conceptionem-praecursoris": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2f1d41662d3f9fbe",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-in-lazarum-ramos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "45cd1745ac7a9984",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-in-lucam": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "4e7cd3fc415c26aa",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "hesychius-in-petrum-paulum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 3
+    },
+    "date": "2026-11-08",
+    "hash": "31f09e1699ee445d",
+    "kind": "first",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
+   }
+  ],
+  "hesychius-in-procopium": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "591334a44feea6db",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "hesychius-in-sanctos-martyres": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6daf1e8b7c0173e0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "hesychius-in-stephanum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "fdbbeb124e64a8d4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "ignatius-letters": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3e511693ccf7ad7e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "irenaeus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "cf81af34d5de985b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "irenaeus-letter-victor": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6f487c5c5d33f839",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-damascus-de-partibus-animae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bb66be007edaf55f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-damascus-de-theologia": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "18a222e4044de8a6",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-damascus-de-unione": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b2c75826b8621fc0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-damascus-fragmenta-in-lucam": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "547db48c5ccad606",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-damascus-homiliae-in-dormitionem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "92e5ffc372608f9d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-damascus-quid-est-homo": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "16ed1659ef058b61",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-a-caution-against-bigotry": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "07c2c40af6191817",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-awake-thou-that-sleepest": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2b712db76a5be57e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-catholic-spirit": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "9d830499d64f54f1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-christian-perfection": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "be545ee63931517b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-justification-by-faith": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "aff40e38e8e9f7ff",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-on-sin-in-believers": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "016d14a091be7244",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-original-sin": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c19a17c187c06b8b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-salvation-by-faith": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1d7478f9fb305385",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-satans-devices": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "94e65bbce1d6df4a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-scriptural-christianity": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "66ebfdaf1b15f55d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-almost-christian": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2b4f953c6317fe07",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-circumcision-of-the-heart": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "a8c39e4ed43a3130",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-the-first-fruits-of-the-spirit": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f1dfc2448084f09e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-great-assize": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "fc11b1be57b824e3",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-great-privilege-of-those-that-are-born-of-god": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "28bfba8f6ae9323e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-kingdom-of-god-is-at-hand": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5283b3a9f6ccd38d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-law-established-through-faith-discourse-i": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "f264398419b5226c",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-the-law-established-through-faith-discourse-ii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5c7e000d25ac18cd",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-lord-our-righteousness": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f6a25d14b0ff1638",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-marks-of-the-new-birth": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "bdb30eba03965c38",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-the-means-of-grace": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2219d10214788ec3",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-nature-of-enthusiasm": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2e1400ec059a8183",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-original-nature-property-and-use-of-the-law": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0b995c58deb6967a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-repentance-of-believers": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a1f4e7adc51ca5b8",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-righteousness-of-faith": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "cc3f67e7825387d1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-scripture-way-of-salvation": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bd8210f3ebe4dbbc",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-spirit-of-bondage-and-of-adoption": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f929b16f3064241e",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-witness-of-our-own-spirit": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "f728d21469a9ef73",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-the-witness-of-the-spirit-discourse-i": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bfc084c27faf2ccd",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-the-witness-of-the-spirit-discourse-ii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d55278d511060fe1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-i": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a68723d43079fc2c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-ii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8fd2b31890f9a54a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-iii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "b21a31929a42e0ae",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-iv": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "ce4c78466342dad9",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-ix": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "faf6de1879f2e9a4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-v": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a1a45557b753a583",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-vi": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "dc94b6e1537bccef",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-vii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c3adb47c0186dcae",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-viii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "d40ceded51701c6e",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-x": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2016e121ac3e25aa",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-xi": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "cf86e88c62142591",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-xii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "6f04c374bd32c49d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "john-wesley-upon-our-lords-sermon-on-the-mount-discourse-xiii": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "a32c47a6198154b7",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "john-wesley-wandering-thoughts": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "68828d452b4f1e9f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "julian-collective-letter": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2821ed98aa25e201",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "julian-letter-to-rome": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "9f95316154b07bcb",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "julian-marriage-extracts": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 5
+    },
+    "date": "2026-11-08",
+    "hash": "f9b4d43b3d6735c6",
+    "kind": "first",
+    "notes": [
+     "5 Scripture references corrected"
+    ]
+   }
+  ],
+  "julian-to-florus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 43
+    },
+    "date": "2026-11-08",
+    "hash": "ca2cb281adec582c",
+    "kind": "first",
+    "notes": [
+     "43 Scripture references corrected"
+    ]
+   }
+  ],
+  "julian-turbantius-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a6192bb65d5ef4da",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "le-blanc-theses-theologicae": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8e7b4f672c2b5aa4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "lyons-vienne-letter": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "fb4736245176c258",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "marcellus-ancyranus-fragmenta": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 35
+    },
+    "date": "2026-11-08",
+    "hash": "9bf0d8c5282ad4c0",
+    "kind": "first",
+    "notes": [
+     "35 Scripture references corrected"
+    ]
+   }
+  ],
+  "marcellus-de-incarnatione-contra-arianos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "19ced1673799bb30",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "marianus-james": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bf106d18d6d60ddb",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "martyrdom-polycarp": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "369023d40e7e5625",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "maximus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "dfb171ebb59af998",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "methodius-martyrs": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c24bb16783a0e61f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "minucius-felix-octavius": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "93eb48a72c808c14",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "montanus-lucius": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a1c8a028cb3dddd9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "nemesius-de-natura-hominis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "4f61f331a7688456",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "novatian-on-the-public-shows": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ae37b50c77813a92",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "oecumenius-fragmenta-philippenses": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e104079bc32b2f84",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "oecumenius-fragmenta-titum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "0bd0309c9c0a752a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "oecumenius-fragmentum-philemonem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7ef36070b520ba75",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "olympiodorus-fragmentum-gaudete": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "23d464ce4a8e6c6a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-1-corinthians-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f38cfb13e8a9515f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-acta-homily-scrap": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b86c7e6372fd20d2",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-adnotationes-exodus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "dbdedffe91199e0b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-adnotationes-genesis": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3b2d9445a87ec82a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-adnotationes-joshua": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "227a101fefff5701",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-adnotationes-judges": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "20985084c9d92277",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-adnotationes-leviticus": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "025deef49c7b496c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-adnotationes-numbers": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3a04c88c7d8961af",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-book-1": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "9acfa8fc71c88b9f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-book-2": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "4fb0685b8c52d432",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-book-3": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "67277a24ff10d307",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-book-4": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ca0e4a7bed1e878a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-book-5": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a90a92dd644fe197",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-book-6": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "fd34e1db47ed81f7",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "origen-contra-celsum-book-7": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "4c0a01fe604a6b4c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-book-8": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f5a7a1ff18389f13",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-contra-celsum-preface": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f7b8d7d18778b1e4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-de-resurrectione-scrap": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "59b97e248da2fc4d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-dialogue-heraclides": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 12
+    },
+    "date": "2026-11-08",
+    "hash": "d144b96b1e503b23",
+    "kind": "first",
+    "notes": [
+     "12 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-ephesians-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "7b92759397fbba2d",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-exhortation-to-martyrdom": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 12
+    },
+    "date": "2026-11-08",
+    "hash": "5d07e6bddeba7785",
+    "kind": "first",
+    "notes": [
+     "12 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-hebrews-homily-scrap": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a4d9fa42872d3f0f",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-homilies-jeremiah": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 50
+    },
+    "date": "2026-11-08",
+    "hash": "c5813273715f7d75",
+    "kind": "first",
+    "notes": [
+     "50 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-homily-1samuel-28": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 9
+    },
+    "date": "2026-11-08",
+    "hash": "06f9f575a655f8e3",
+    "kind": "first",
+    "notes": [
+     "9 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-job-enarrationes": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c77e5e76ff326bc8",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-job-homilies": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5b6287052b72b9b2",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-job-selecta": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b5452845b8b2186c",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-lamentations-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 30
+    },
+    "date": "2026-11-08",
+    "hash": "3de698a176f2a2f2",
+    "kind": "first",
+    "notes": [
+     "30 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-nt-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ee455d3149c67bc9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-on-pascha": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "dc4383c7ecbee4ec",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-on-prayer": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 66
+    },
+    "date": "2026-11-08",
+    "hash": "48e0b80139060f03",
+    "kind": "first",
+    "notes": [
+     "66 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-osee-fragment": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "17f2929876afa7fa",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-proverbs-expositio": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5b68d3d4f1aa2f56",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-proverbs-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "762645703ba1c8c7",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-psalms-excerpta": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d84e81f7cfefb9dd",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-psalms-fragments-greek": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 80
+    },
+    "date": "2026-11-08",
+    "hash": "c6613ab5fc94c13b",
+    "kind": "first",
+    "notes": [
+     "80 Scripture references corrected"
+    ]
+   }
+  ],
+  "origen-regnorum-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c08df16b08e35e88",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-ruth-scrap": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d39f7882d4ff1c35",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-selecta-judges": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "2cf06e16bdbcb906",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-song-commentary-liber-4": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e63a7f93773d4a47",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "origen-song-homily-2": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f566776905f39b1a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "perpetua-felicitas": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7ea82906f1e66ae1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "philostorgius-he": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3ce10905c4855b12",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "photius-bibliotheca": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "699e31973b895db9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "photius-epigramma": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "ecb8b528dbe7c4bc",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "photius-fragmentum-2tim": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5794064fbb562a70",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "photius-fragmentum-philemonem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "bddc7b4dd6ab51bf",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "placeus-de-imputatione": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "40f06ec6558fdad1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "polycarp-philippians": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8071bd5a12218bed",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "polycrates-ephesus-letter-victor": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "8a13cef5d28bc9f9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "procopius-gaza-epistula": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "476ee05eb843d6b6",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "procopius-gaza-epistula-altera": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b46698d39d4e1faf",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "procopius-gaza-refutatio-procli": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5932a682da3f90c9",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "second-clement": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "94d64c6ec2c58af4",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "serapion-antioch-fragmenta": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "3de013771eb38f9d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-de-caeco-nato": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 16
+    },
+    "date": "2026-11-08",
+    "hash": "2b5c7cc8e6171e62",
+    "kind": "first",
+    "notes": [
+     "16 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-de-caeco-zacchaeo": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 14
+    },
+    "date": "2026-11-08",
+    "hash": "c50ef8c0a192b518",
+    "kind": "first",
+    "notes": [
+     "14 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-de-tribus-pueris": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 11
+    },
+    "date": "2026-11-08",
+    "hash": "64ce249692a3f08d",
+    "kind": "first",
+    "notes": [
+     "11 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-1thess": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "dfaec8ceda5bafb0",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-1tim": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "856febe4afb3232f",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-2cor": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 20
+    },
+    "date": "2026-11-08",
+    "hash": "c2937aace09ed955",
+    "kind": "first",
+    "notes": [
+     "20 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-2thess": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "db484139028e4582",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-fragmenta-2tim": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "af2c993ebb4a6833",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-fragmenta-colossenses": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "a19398bacfd36320",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-ephesios": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "f76410b16f35ee2b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-fragmenta-galatas": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "d7d719fecf3513e7",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-fragmenta-hebraeos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 6
+    },
+    "date": "2026-11-08",
+    "hash": "7d76d97193706d80",
+    "kind": "first",
+    "notes": [
+     "6 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-philippenses": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "b3e523ed73967731",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-romanos": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "38cee29877a7e899",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "severianus-fragmenta-titum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "b6e3fdc5416514a4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-fragmentum-philemonem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "5bdaeacb5ff072b0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-in-1cor": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "627a1aafe11f1cc1",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-in-genesim": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "1fd53ff3810bdfc0",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-in-illud-quando": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "a714783cdcb1b823",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "severianus-in-job": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7b0e4b46a2499cf4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "strimesius-in-controversias-evangelicorum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "844a47c9f7459ff4",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "tertullian-on-patience": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "063ace073b12f88a",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "tertullian-on-repentance": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "c0cbc052eabdbc9d",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "tertullian-to-scapula": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "e81bdae1b12b803b",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "tertullian-to-the-martyrs": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "7787f5dc9d0581eb",
+    "kind": "first",
+    "notes": []
+   }
+  ],
+  "theodorus-heracleensis-matthew-fragments": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 1
+    },
+    "date": "2026-11-08",
+    "hash": "50fb0488185b0730",
+    "kind": "first",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
+   }
+  ],
+  "theophilus-alex-fragmenta-joannem": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": {
+     "refs": 2
+    },
+    "date": "2026-11-08",
+    "hash": "b8183444bfeaa007",
+    "kind": "first",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
+   }
+  ],
+  "theophilus-alex-fragmenta-matthaeum": [
+   {
+    "at": "2026-11-08T17:29:18-05:00",
+    "counts": null,
+    "date": "2026-11-08",
+    "hash": "99f191ba846e8c3f",
+    "kind": "first",
+    "notes": []
+   }
+  ]
+ }
+}

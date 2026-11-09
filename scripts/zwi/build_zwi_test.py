@@ -3,6 +3,7 @@
 Run: <venv with beautifulsoup4>/bin/python -m unittest scripts/zwi/build_zwi_test.py
      (8 Nov 2026: ~/SaneApps/outputs/viapatrum/zwi-20261106/tools/venv)
 """
+import json
 import sys
 import unittest
 from pathlib import Path
@@ -137,6 +138,24 @@ class Note(unittest.TestCase):
         note, code = B.version_note(same, h, b"text2")
         self.assertEqual(code, "text_changed")
         self.assertIn("article text also changed", note)
+        # A new edition recorded by the site build names the version (scripts/editions.py).
+        note, code = B.version_note(same, h, b"text2", ("2026-11-09", ["12 Scripture references corrected"]))
+        self.assertEqual((note, code), ("Edition of 9 November 2026: 12 Scripture references corrected.",
+                                        "text_changed"))
+        # Unchanged text never takes an edition note.
+        self.assertEqual(B.version_note(same, h, t, ("2026-11-09", ["x"]))[1], "unchanged")
+
+    def test_edition_of_reads_the_site_build(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as t:
+            dist = Path(t)
+            self.assertEqual(B.edition_of(dist, "job"), ("", []))
+            (dist / "app" / "v1").mkdir(parents=True)
+            (dist / "app" / "v1" / "editions.json").write_text(json.dumps({"schema": "viapatrum-editions-1", "works": {
+                "job": [{"date": "2026-11-08", "hash": "a", "notes": [], "counts": None},
+                        {"date": "2026-11-09", "hash": "b", "notes": ["1 section added"], "counts": {"added": 1}}]}}))
+            B._EDITION_LOGS.clear()
+            self.assertEqual(B.edition_of(dist, "job"), ("2026-11-09", ["1 section added"]))
 
     def test_to_epoch(self):
         self.assertEqual(B.to_epoch("1794006778"), 1794006778)

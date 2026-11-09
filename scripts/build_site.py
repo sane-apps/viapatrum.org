@@ -25,6 +25,7 @@ except ImportError as e:
 ROOT = Path(__file__).resolve().parents[1]
 import downloads_page  # noqa: E402  (library pass: /downloads/ + "Keep this book")
 import zwi_page  # noqa: E402  (signed ZWI per work: /zwi/ + the About line, owner 2026-11-08)
+import editions  # noqa: E402  (edition date per work, /changes/ + feed, owner-approved sketch 2026-11-09)
 import games_page  # noqa: E402  (/games/: every game, owner 2026-10-06)
 import ask_page  # noqa: E402  (/ask/: answers in the writers' own sentences, owner 2026-10-06)
 import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, owner 2026-10-06)
@@ -6877,6 +6878,7 @@ def layout(
     robots: str = "",
     canonical: str = "",
     nav_omit: tuple[str, ...] = (),
+    head_extra: str = "",
 ) -> str:
     # Scripture pages carry licensed Bible text (YouVersion licences, 2026-10-22),
     # which may not sit next to a request for gifts, so they get no Support column.
@@ -6960,7 +6962,7 @@ def layout(
 <link rel="stylesheet" href="/assets/site.css?v={ASSET_VER}">
 <link rel="icon" href="/assets/favicon.svg?v={ASSET_VER}" type="image/svg+xml">
 <link rel="alternate icon" href="/favicon.ico" sizes="any">
-{extra_css}</head>
+{head_extra}{extra_css}</head>
 <body class="{escape(body_class)}">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -6997,7 +6999,7 @@ def layout(
     </nav>
     <nav aria-label="About the library">
       <h2>About</h2>
-      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="https://github.com/sane-apps/viapatrum.org" rel="noopener">Our code and process on GitHub</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
+      <ul><li><a href="/about/">About Via Patrum</a></li><li><a href="/methodology/">How we translate</a></li><li><a href="/changes/">What changed</a></li><li><a href="https://github.com/sane-apps/viapatrum.org" rel="noopener">Our code and process on GitHub</a></li><li><a href="/contribute/">Help us</a></li><li><a href="/privacy/">Privacy</a></li></ul>
     </nav>
     {'' if active == "scripture" else support_nav}
     <nav aria-label="Get the app">
@@ -10649,6 +10651,29 @@ def build() -> None:
     commentary_texts: dict[tuple[str, str], str] = {}
     commentary_sources: dict[tuple[str, str], dict] = {}
 
+    # Editions (owner-approved sketch 2026-11-09): each work's edition is the day its English last changed.
+    # The exported rows are made once here; app_export reuses them, so the hash is of the English it exports.
+    import app_export
+    for w in works:
+        w["_export_sections"] = app_export.section_rows(sys.modules[__name__], w, wrong_cites)
+    edition_now = editions.now_local()
+    edition_log, edition_changed = editions.update(
+        editions.load(),
+        {w["slug"]: editions.sections_of(w["_export_sections"]) for w in works if w["_export_sections"]},
+        editions.shipped_sections(), edition_now, editions.shipped_time(), editions.recorded_sections())
+    print(f"editions: {len(edition_changed)} works changed since their last edition"
+          f"{(' (' + ', '.join(edition_changed[:5]) + (' …' if len(edition_changed) > 5 else '') + ')') if edition_changed else ''}",
+          flush=True)
+
+    def edition_block(slug: str, keep: str) -> str:
+        """The rail's download block with the edition line inside it; a block of its own without downloads."""
+        ed = editions.work_html(editions.for_slug(edition_log, slug))
+        if not ed:
+            return keep
+        if keep.endswith("</section>"):
+            return keep[: -len("</section>")] + ed + "</section>"
+        return f'<section class="keep keep-edition" aria-label="Edition">{ed}</section>'
+
     for w in works:
         topic_links = []
         for tid in w.get("related_topics") or []:
@@ -10997,7 +11022,7 @@ def build() -> None:
                 f'<aside class="reader-rail">'
                 f"{contents_html}"
                 f"{author_link}{rel_topics}{book_about if book_page else rail_about}"
-                f"{LIBRARY.work_block(w['slug'])}"
+                f"{edition_block(w['slug'], LIBRARY.work_block(w['slug']))}"
                 f"</aside>"
                 f'<div class="reader-main">{main}</div>'
                 f"</div>"
@@ -11857,6 +11882,31 @@ def build() -> None:
     print("app export:", app_export.write(
         DIST, ROOT, sys.modules[__name__], works=works, by_topic=by_topic, topic_meta=topic_meta,
         tax=tax, sc_entries=sc_entries, wrong_cites=wrong_cites))
+    # The edition log this build would publish: the books, Word files, audiobooks and ZWI archives read it from
+    # here (app/v1 is not crawled); ship.sh copies it to data/editions.json only after a verified deploy.
+    exported = {p.stem for p in (DIST / "app" / "v1" / "works").glob("*.json")}
+    for w in works:
+        if w["slug"] in exported and editions.for_slug(edition_log, w["slug"])[-1:] and \
+                editions.for_slug(edition_log, w["slug"])[-1]["hash"] != editions.text_hash(
+                    editions.sections_of(json.loads((DIST / "app" / "v1" / "works" / f"{w['slug']}.json")
+                                                    .read_text(encoding="utf-8"))["sections"])):
+            raise SystemExit(f"BLOCKED: edition hash for {w['slug']} differs from its exported English")
+    editions.write_log(DIST / "app" / "v1" / "editions.json", edition_log)
+    edition_works = {
+        w["slug"]: {"title": public_reader_title(w["title"], slug=w["slug"]),
+                    "author": display_author(w.get("author") or ""),
+                    "sort": (author_sort_year(w.get("author"), None, None), alpha_key(w.get("author") or ""),
+                             alpha_key(w["title"]))}
+        for w in works if w["slug"] in exported}
+    write(DIST / "changes" / "index.html",
+          layout("What changed", editions.changes_body(edition_log, edition_works),
+                 crumb=[("Home", "/"), ("What changed", "")],
+                 description="Every correction to the Via Patrum translations, day by day, with an RSS feed.",
+                 head_extra=f'<link rel="alternate" type="application/rss+xml" title="Via Patrum: what changed" '
+                            f'href="{editions.FEED_PATH}">\n'))
+    (DIST / "changes" / "feed.xml").write_text(editions.feed_xml(edition_log, edition_works, edition_now),
+                                               encoding="utf-8")
+    print(f"editions: /changes/ lists {len(editions.change_days(edition_log, edition_works))} days", flush=True)
 
     # --- Where the churches stand (/explore/churches/ after timeline_page moves it) ---
     # Owner-approved redesign 2026-10-14: the dividing questions only, as answer

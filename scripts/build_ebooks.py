@@ -39,6 +39,7 @@ import argparse
 import atexit
 import concurrent.futures as cf
 import datetime as dt
+import functools
 import hashlib
 import html
 import json
@@ -54,6 +55,9 @@ import uuid
 import zipfile
 from html.parser import HTMLParser
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import editions  # noqa: E402  (edition date and lines, owner-approved sketch 2026-11-09)
 
 ROOT = Path(__file__).resolve().parent.parent
 WORK_ROOT = ROOT / ".ebook-build"  # Typst scratch data; must be a real folder inside ROOT
@@ -365,6 +369,19 @@ def norm_start(s: str) -> str:
     return re.sub(r"[^\w]+", "", curl_quotes(s).replace("…", "")).casefold()
 
 
+@functools.lru_cache(maxsize=4)
+def _edition_log(app_dir: str) -> dict | None:
+    return editions.read_app(Path(app_dir))
+
+
+def edition_facts(app_dir: Path, slug: str) -> dict:
+    """The work's edition (scripts/editions.py) as the book shows it: on the title page, the copyright page and
+    as the EPUB's dcterms:modified. Empty for a site build from before editions (no app/v1/editions.json)."""
+    entries = editions.for_slug(_edition_log(str(app_dir)), slug)
+    url = f"{SITE}/works/{slug}/"
+    return {"edition_iso": editions.edition(entries), "edition_lines": editions.lines_for(entries, url)}
+
+
 def assemble(app_dir: Path, site_dir: Path, work: dict, author: dict, licence: str, built: str) -> tuple[dict, list[str]]:
     """One book as plain data for both Typst and the EPUB writer."""
     warnings: list[str] = []
@@ -450,6 +467,7 @@ def assemble(app_dir: Path, site_dir: Path, work: dict, author: dict, licence: s
         "about": facts["about"],
         "notes": notes,
         "built": built,
+        **edition_facts(app_dir, slug),
         "parts": parts,
         "words": work.get("words") or 0,
     }
@@ -496,8 +514,19 @@ def title_page(book: dict) -> str:
 <p class="tp-orn" aria-hidden="true">◆</p>
 <p class="tp-author">{esc(book["author"])}</p>
 {dates}
-<p class="tp-site">viapatrum.org</p>
+{edition_html(book)}<p class="tp-site">viapatrum.org</p>
 </section>''')
+
+
+def edition_html(book: dict) -> str:
+    """Title page: 'Edition of 8 November 2026', the promise to correct, and the newest edition's address."""
+    lines = book.get("edition_lines") or []
+    if not lines:
+        return ""
+    url = lines[2].split(": ", 1)[1]
+    return (f'<div class="tp-edition"><p class="tp-ed">{esc(lines[0])}</p><p class="tp-ed-note">{esc(lines[1])}</p>'
+            f'<p class="tp-ed-note">Newest edition: <a href="{esc(url)}">{esc(url.removeprefix("https://"))}</a></p>'
+            '</div>\n')
 
 
 def colophon_lines(book: dict) -> list[tuple[str, str]]:
@@ -513,14 +542,18 @@ def colophon_lines(book: dict) -> list[tuple[str, str]]:
         lines.append(("line", f"Source: {book['edition']}"))
     if book["original_english"]:
         lines.append(("line", book["original_english"]))
+    ed = book.get("edition_lines") or []
+    if ed:
+        lines.append(("gap", ""))
+        lines.append(("line", f"{ed[0]}. {ed[1]}"))
     lines.append(("gap", ""))
     for n in book["notes"]:
         lines.append(("note", n))
     lines.append(("gap", ""))
-    lines.append(("line", "Read this work free online:"))
+    lines.append(("line", "Newest edition, free to read online:" if ed else "Read this work free online:"))
     lines.append(("link", book["url"]))
     lines.append(("gap", ""))
-    lines.append(("line", f"Via Patrum · viapatrum.org · this edition built {book['built']}"))
+    lines.append(("line", f"Via Patrum · viapatrum.org · this file made {book['built']}"))
     lines.append(("small", "Set in Literata and Cormorant Garamond, both under the SIL Open Font License."))
     return lines
 
@@ -746,7 +779,9 @@ def write_epub(book: dict, cover_jpg: Path, out: Path, fonts: dict[str, Path], w
         font_files.append((name, dst))
 
     ident = f"urn:uuid:{uuid.uuid5(uuid.NAMESPACE_URL, book['url'])}"
-    modified = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    # The book's own date is its edition: the day its English last changed (editions.py), not the day it was built.
+    modified = (f"{book['edition_iso']}T00:00:00Z" if book.get("edition_iso")
+                else dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
     manifest = [
         '<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>',
         '<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>',
@@ -1057,8 +1092,10 @@ def main() -> int:
     jobs, skipped = [], 0
     for w in works:
         prev = manifest["works"].get(w["slug"])
-        current, key = up_to_date((prev or {}).get("key", ""), w.get("hash", ""), site_dir, w["slug"],
-                                  version, LEGACY_VERSION)
+        # The edition date is printed in the book, so a new edition rebuilds it even if the hash matched.
+        ed = editions.edition(editions.for_slug(_edition_log(str(app_dir)), w["slug"]))
+        current, key = up_to_date((prev or {}).get("key", ""), w.get("hash", "") + (f"@{ed}" if ed else ""),
+                                  site_dir, w["slug"], version, LEGACY_VERSION)
         files = [out / "epub" / f"{w['slug']}.epub", out / "pdf" / f"{w['slug']}.pdf",
                  out / "covers" / f"{w['slug']}.jpg", out / "covers" / f"{w['slug']}-square.jpg"]
         if not args.force and prev and current and all(f.exists() for f in files):

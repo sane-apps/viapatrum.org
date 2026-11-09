@@ -617,6 +617,13 @@ PY
   if [[ "$LAST_SAVED" -eq 1 ]]; then write_last_receipt "$LAST" "$cut" 1; fi
   echo
   echo "SHIP OK"
+  # Editions (owner-approved sketch 2026-11-09): only a deploy makes an edition. The log this deploy published
+  # becomes the repo's record (append-only; refused if it would drop an entry). Never fails the ship: the next
+  # build also reads the shipped copy in outputs/ship-last.
+  if [[ -f "$STAGE/app/v1/editions.json" ]]; then
+    "$PYTHON" "$ROOT/scripts/editions.py" promote "$STAGE/app/v1/editions.json" "$ROOT/data/editions.json" \
+      || echo "WARN: data/editions.json not updated (the next build reads outputs/ship-last)"
+  fi
   local note="Site deployed to viapatrum.org"
   [[ "$AUDIO_ONLY" -eq 1 ]] && note="Audio-only ship deployed to viapatrum.org"
   NOTE="$note" python3 -c 'import os, sys; sys.path.insert(0, "'"$HOME"'/SaneApps/clients/translations/scripts"); import audit_log; audit_log.record("*", "shipped", os.environ["NOTE"], ref="scripts/ship.sh")' >/dev/null 2>&1 || true

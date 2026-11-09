@@ -37,6 +37,11 @@ h1.tp-title { font-family: "Cormorant Garamond", Georgia, serif; font-weight: bo
 .tp-author { font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold; font-size: 1.15em; letter-spacing: 0.12em; text-transform: uppercase; }
 .tp-dates { font-style: italic; font-size: 0.9em; margin-top: 0.2em; }
 .tp-site { font-size: 0.75em; letter-spacing: 0.1em; margin-top: 4em; }
+.tp-edition { margin-top: 2.6em; }
+.tp-edition p { margin: 0.15em 0; }
+.tp-ed { font-family: "Cormorant Garamond", Georgia, serif; font-weight: bold; font-size: 0.95em; letter-spacing: 0.06em; }
+.tp-ed-note { font-size: 0.78em; font-style: italic; }
+.tp-edition + .tp-site { margin-top: 2em; }
 
 /* Copyright page */
 .colophon { font-size: 0.82em; line-height: 1.45; padding-top: 8%; page-break-before: always; }
