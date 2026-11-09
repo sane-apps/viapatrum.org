@@ -2560,6 +2560,22 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .bx-desk .sc-list a { margin: 0; padding: 0.65rem 0.3rem; }
 .bx-desk .sc-list .who { font-size: 1.1rem; }
 .bx-desk .sc-list .snip { font-size: 0.95rem; }
+/* Fathers' commentary on a verse (commentary_view.py, owner 2026-11-08): tabs, then one card per comment. */
+.cm-tabs { display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 0.6rem 0 0.9rem; }
+.cm-tab { font: inherit; font-size: 0.85rem; font-weight: 650; min-height: 36px; padding: 0.35rem 0.85rem; border: 1px solid var(--rule); border-radius: 999px; background: var(--leaf); color: var(--ink); cursor: pointer; }
+.cm-tab:hover { background: var(--paper-2); }
+.cm-tab[aria-selected="true"], .cm-tab[aria-selected="true"]:hover { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.cm-tab:focus-visible { outline: 2px solid var(--lapis); outline-offset: 2px; }
+.cm-panel:focus-visible { outline: 2px solid var(--lapis); outline-offset: 4px; }
+.cm { background: var(--paper); border: 1px solid var(--rule); border-radius: 6px; padding: 0.9rem 1rem 0.8rem; margin: 0 0 0.8rem; }
+.cm-ref { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin: 0 0 0.3rem; }
+.cm-cap { font-family: var(--font-read); font-size: 1rem; font-weight: 700; line-height: 1.5; margin: 0; }
+.cm-by { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; text-align: right; margin: 0.25rem 0 0.5rem; }
+.cm-dates { font-family: var(--font-body); font-size: 0.8rem; font-weight: 400; color: var(--ink-soft); }
+.cm-body p { font-family: var(--font-read); font-size: 0.95rem; line-height: 1.6; margin: 0 0 0.6rem; }
+.cm-ed { color: var(--gold); background: color-mix(in srgb, var(--gold) 10%, transparent); border-radius: 3px; padding: 0 0.1em; }
+.cm-src { font-size: 0.85rem; margin: 0.2rem 0 0; }
+.cm-src a { font-weight: 600; }
 .bx-credit { margin-top: 1rem; }
 @media (max-width: 900px) {
   .bx-grid { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }

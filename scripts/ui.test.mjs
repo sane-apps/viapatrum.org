@@ -629,6 +629,45 @@ test('scripture: verse text stays readable; the opener is a real button; closing
   dom.window.close();
 });
 
+// Fixture mirrors commentary_view.desk_verse_html (commentary_view_test.py checks that side).
+const cmFixture = bxFixture.replace(/<section class="desk-verse"[\s\S]*?<\/section>/, `<section class="desk-verse has-cm" data-for="1" hidden><p class="eyebrow">Verse</p><h2>Isaiah 1:1</h2><p class="desk-count">2 comments from the Fathers, 2 passages citing this verse</p>
+<div class="cm-tabs" role="tablist" aria-label="Isaiah 1:1: commentary and passages"><button type="button" role="tab" class="cm-tab" id="cm1-sel-tab" aria-controls="cm1-sel" aria-selected="true">Selected (1)</button><button type="button" role="tab" class="cm-tab" id="cm1-all-c-tab" aria-controls="cm1-all-c" aria-selected="false" tabindex="-1">Complete (2)</button><button type="button" role="tab" class="cm-tab" id="cm1-p-tab" aria-controls="cm1-p" aria-selected="false" tabindex="-1">All 2 passages</button></div>
+<div class="cm-panel" role="tabpanel" id="cm1-sel" aria-labelledby="cm1-sel-tab" tabindex="0"><article class="cm">a</article></div>
+<div class="cm-panel" role="tabpanel" id="cm1-all-c" aria-labelledby="cm1-all-c-tab" tabindex="0" hidden><article class="cm">a</article><article class="cm">b</article></div>
+<div class="cm-panel" role="tabpanel" id="cm1-p" aria-labelledby="cm1-p-tab" tabindex="0" hidden><p class="desk-count">2 passages in the Fathers, earliest first</p><ul class="sc-list"></ul></div>
+<button type="button" class="desk-back">Back to the chapter</button></section>`);
+
+test('scripture: commentary tabs switch panels by click and arrow keys; the desk still opens and closes (2026-11-08)', ()=>{
+  const dom=mount(cmFixture,'/scripture/isaiah/1/');const w=dom.window;const doc=w.document;
+  doc.querySelector('button.v-open').click();
+  const sec=doc.querySelector('.desk-verse[data-for="1"]');
+  assert.equal(sec.hidden,false);
+  const [sel,all,pas]=[...sec.querySelectorAll('.cm-tab')];
+  const panel=(t)=>doc.getElementById(t.getAttribute('aria-controls'));
+  assert.equal(panel(sel).hidden,false,'Selected opens first');
+  assert.ok(panel(all).hidden&&panel(pas).hidden);
+  all.click();
+  assert.equal(all.getAttribute('aria-selected'),'true');
+  assert.equal(sel.getAttribute('aria-selected'),'false');
+  assert.equal(sel.getAttribute('tabindex'),'-1');
+  assert.equal(all.getAttribute('tabindex'),null);
+  assert.ok(panel(sel).hidden&&!panel(all).hidden&&panel(pas).hidden,'one panel at a time');
+  assert.equal(sec.hidden,false,'picking a tab keeps the desk open');
+  all.focus();all.dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
+  assert.equal(doc.activeElement,pas,'ArrowRight moves to the next tab');
+  assert.ok(!panel(pas).hidden&&panel(all).hidden);
+  pas.dispatchEvent(new w.KeyboardEvent('keydown',{key:'ArrowRight',bubbles:true}));
+  assert.equal(doc.activeElement,sel,'and wraps');
+  sel.dispatchEvent(new w.KeyboardEvent('keydown',{key:'End',bubbles:true}));
+  assert.equal(doc.activeElement,pas);
+  assert.equal(doc.querySelector('#desk-status').textContent,'','keyboard open focused the heading, so no status line');
+  pas.dispatchEvent(new w.KeyboardEvent('keydown',{key:'Escape',bubbles:true}));
+  assert.equal(sec.hidden,true,'Escape still closes the desk');
+  doc.querySelector('.v .vt').click();
+  assert.equal(doc.querySelector('#desk-status').textContent,'Isaiah 1:1, 2 comments from the Fathers, 2 passages citing this verse');
+  dom.window.close();
+});
+
 test('home: a quote that opens or ends with its own quote mark gets no second one (a11y 2026-10-23)', async ()=>{
   const html=`<!doctype html><html><body><div class="vp-today-card" data-daily>
 <blockquote class="vp-quote"><p><span class="vp-qm">&ldquo;</span><span class="vp-daily-q">x</span><span class="vp-qm">&rdquo;</span></p></blockquote>
