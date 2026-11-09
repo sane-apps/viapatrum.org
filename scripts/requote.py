@@ -8,7 +8,7 @@ Usage:
   SANE_LLM_API_RECEIPT=... CLOUDFLARE_API_TOKEN=... python3 requote.py \
       --manual outputs/prose-audit/applied.json \
       --verify outputs/prose-audit/verify-llama.json \
-      --model @cf/qwen/qwen3-30b-a3b-fp8 --out outputs/prose-audit/requoted.json
+      --model @cf/qwen/qwen3.8-27b --out outputs/prose-audit/requoted.json
 """
 import argparse, json, os, sys, threading
 from concurrent.futures import ThreadPoolExecutor
@@ -30,7 +30,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--manual", required=True)
     ap.add_argument("--verify", required=True)
-    ap.add_argument("--model", default="@cf/qwen/qwen3-30b-a3b-fp8")
+    ap.add_argument("--model", default="@cf/qwen/qwen3.8-27b")
     ap.add_argument("--max-calls", type=int, default=200)
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--out", required=True)

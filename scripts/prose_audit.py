@@ -57,7 +57,7 @@ def cf_call(model, user_text, token, timeout=90, system=None, max_tokens=2000):
     _spend_gate("prose_audit.cf_call %s" % model,
                 (len(user_text) + len(system or SYSTEM)) / 4 * 1.0 / 1e6 + max_tokens * 4.0 / 1e6)
     url = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT}/ai/run/{model}"
-    if "qwen3" in model and "/no_think" not in user_text:
+    if "qwen3-" in model and "/no_think" not in user_text:
         # Qwen3 hybrid thinking: schema has no thinking flag; /no_think in the
         # prompt is the vendor convention. Without it content comes back null
         # and the whole budget burns as reasoning (proven 2026-10-02 smoke).
@@ -69,6 +69,8 @@ def cf_call(model, user_text, token, timeout=90, system=None, max_tokens=2000):
         ],
         "max_tokens": max_tokens,
         "temperature": 0.6,
+        # Qwen 3.8 (live schema 2026-11-07): enable_thinking defaults true; false turns it off.
+        **({"chat_template_kwargs": {"enable_thinking": False}} if "qwen3.8" in model else {}),
     }).encode()
     req = urllib.request.Request(url, data=body, headers={
         "Authorization": f"Bearer {token}", "Content-Type": "application/json"})

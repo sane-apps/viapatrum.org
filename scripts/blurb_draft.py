@@ -39,7 +39,7 @@ def main():
                  "never draft factual copy. Author blurbs directly with sources.")
     ap = argparse.ArgumentParser()
     ap.add_argument("--slugs", required=True)
-    ap.add_argument("--model", default="@cf/qwen/qwen3-30b-a3b-fp8")
+    ap.add_argument("--model", default="@cf/qwen/qwen3.8-27b")
     ap.add_argument("--out", required=True)
     ap.add_argument("--llm-api-receipt", default=None)
     a = ap.parse_args()

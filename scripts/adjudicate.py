@@ -12,7 +12,7 @@ Resume-safe. Two receipts: Qwen purpose=translate, Llama purpose=translation-qa.
 
 Usage:
   python3 adjudicate.py --verify outputs/prose-audit/verify-llama.json \
-      --qwen-model @cf/qwen/qwen3-30b-a3b-fp8 \
+      --qwen-model @cf/qwen/qwen3.8-27b \
       --llama-model @cf/meta/llama-3.3-70b-instruct-fp8-fast \
       --qwen-receipt P --llama-receipt P --workers 8 --out outputs/prose-audit/adjudicate.json
 """
@@ -53,7 +53,7 @@ def build_judge_user(slug, chunk, items, defenses):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--verify", required=True)
-    ap.add_argument("--qwen-model", default="@cf/qwen/qwen3-30b-a3b-fp8")
+    ap.add_argument("--qwen-model", default="@cf/qwen/qwen3.8-27b")
     ap.add_argument("--llama-model", default="@cf/meta/llama-3.3-70b-instruct-fp8-fast")
     ap.add_argument("--qwen-receipt", default=None)
     ap.add_argument("--llama-receipt", default=None)

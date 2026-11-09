@@ -8,7 +8,7 @@ to translations or the site. Human review gates any application (owner standard)
 Usage:
   SANE_LLM_API_RECEIPT=... CLOUDFLARE_API_TOKEN=... python3 prose_rewrite.py \
       --in outputs/prose-audit/bulk-70b.json \
-      --model @cf/qwen/qwen3-30b-a3b-fp8 --max-fluency 3 \
+      --model @cf/qwen/qwen3.8-27b --max-fluency 3 \
       --max-calls 400 --workers 4 --out outputs/prose-audit/rewrites-qwen.json
 """
 import argparse, json, os, sys, time, urllib.request, threading
@@ -49,7 +49,7 @@ def build_user(slug, chunk, flagged):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--in", dest="inp", required=True)
-    ap.add_argument("--model", default="@cf/qwen/qwen3-30b-a3b-fp8")
+    ap.add_argument("--model", default="@cf/qwen/qwen3.8-27b")
     ap.add_argument("--max-fluency", type=int, default=3)
     ap.add_argument("--sections-per-call", type=int, default=3)
     ap.add_argument("--max-calls", type=int, default=400)
