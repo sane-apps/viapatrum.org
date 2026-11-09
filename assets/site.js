@@ -262,6 +262,10 @@
     };
     // Latest click wins: a slow earlier fetch must not repaint over a later pick.
     let trSeq = 0;
+    // The Listen bar (bx-listen.js) follows the text: "bx:tr" says a version was
+    // picked (phase "start") and which one is on the page now (phase "done").
+    bx.dataset.tr = "bsb";
+    const told = (detail) => bx.dispatchEvent(new CustomEvent("bx:tr", { detail }));
     const credit = bx.querySelector(".bx-tr-credit");
     // A failed load is said next to the pills, where the reader is looking.
     let trNote = null;
@@ -292,6 +296,7 @@
       const btn = srcOf(key);
       press(key);
       noteTr("");
+      told({ key, phase: "start" });
       if (key === "bsb") delete bx.dataset.loading;
       else bx.dataset.loading = key;
       try {
@@ -329,6 +334,8 @@
           paint(rows);
         }
         delete bx.dataset.loading;
+        bx.dataset.tr = key;
+        told({ key, phase: "done" });
         if (credit) {
           // Hosted versions are credited in the note below; loaded ones need their own notice.
           credit.textContent = notice || (btn && btn.dataset.remote && btn.dataset.credit) || "";
@@ -344,6 +351,8 @@
         delete bx.dataset.loading;
         paint(original);
         press("bsb");
+        bx.dataset.tr = "bsb";
+        told({ key: "bsb", failed: key, phase: "done" });
         if (credit) {
           credit.textContent = "";
           credit.hidden = true;

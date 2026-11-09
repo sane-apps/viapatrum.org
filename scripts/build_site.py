@@ -31,6 +31,7 @@ import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, own
 import history_page  # noqa: E402  (/history/christ-died-for-all/: history of the question, owner 2026-10-27; preview first)
 import timeline_page  # noqa: E402  (/explore/: 100 reader questions from checked dossiers, owner 2026-10-13)
 import commentary_view  # noqa: E402  (Fathers' commentary tabs on a Scripture verse, owner 2026-11-08)
+import kjv_listen  # noqa: E402  (Listen bar: the KJV read aloud on chapter pages, owner 2026-11-08)
 
 # FATHERS_DIST: build somewhere else to test without touching the ship staging dir.
 DIST = Path(os.environ["FATHERS_DIST"]) if os.environ.get("FATHERS_DIST") else ROOT / "dist"
@@ -9029,6 +9030,20 @@ def _attach_players() -> None:
         raise SystemExit("read-along injection failed")
 
 
+KJV_LISTEN: list = []  # this build's kjv_listen.Listen (the Scripture section fills it)
+
+
+def _list_kjv_audio() -> None:
+    """Put the Listen bar's mp3s on the R2 upload list ship.sh syncs before it
+    deploys. After _attach_players, whose reset would drop them; only for the
+    build that ships, never a package or test build."""
+    import inject_audio
+    for listen in KJV_LISTEN:
+        if listen.pending and inject_audio._labels_on():
+            n = listen.write_pending(inject_audio.R2_PENDING)
+            print(f"kjv listen: {n} mp3s listed for the R2 upload", flush=True)
+
+
 def _default_dist() -> bool:
     return DIST.resolve() == (ROOT / "dist").resolve()
 
@@ -11316,6 +11331,9 @@ def build() -> None:
         + "".join(f'<option value="{k}" data-yv="{i}" title="{escape(name)}">{escape(short)}</option>' for k, i, short, name in yv_more)
         + "</select>" if yv_key else "")
     tr_credit = " · ".join(f"{escape(v['name'])} ({escape(v['short'])}): {escape(v['license'])}" for v in bibles.values())
+    # Listen bar (owner sketch 2026-11-08): only the KJV is ever played or highlighted.
+    listen = kjv_listen.Listen(DIST, *kjv_listen.folders())
+    kjv_books = (bibles.get("kjv") or {}).get("books") or {}
 
     for book in BIBLE_ORDER:
         text_chaps = base_bible["books"].get(book) or {}
@@ -11432,8 +11450,11 @@ def build() -> None:
                 + (f'<a class="pn next" href="/scripture/{bslug}/{next_c}/">Chapter {next_c} →</a>' if next_c else '<span class="pn next"></span>')
                 + "</nav>"
             )
+            listen_bar = listen.chapter(USFM_ORDER[BIBLE_ORDER.index(book)], bslug, c,
+                                        (kjv_books.get(book) or {}).get(str(c))) if spans else ""
             text_html = (
-                f'<div class="bx-text" lang="en" data-book="{bslug}" data-booknum="{BIBLE_ORDER.index(book) + 1}" data-usfm="{USFM_ORDER[BIBLE_ORDER.index(book)]}" data-chap="{c}"><p>{"".join(spans)}</p></div>'
+                f'<div class="bx-text" lang="en" data-book="{bslug}" data-booknum="{BIBLE_ORDER.index(book) + 1}" data-usfm="{USFM_ORDER[BIBLE_ORDER.index(book)]}" data-chap="{c}">'
+                f'{listen_bar}<p>{"".join(spans)}</p>{kjv_listen.credit_html() if listen_bar else ""}</div>'
                 if spans else (
                     '<div class="bx-text"><p class="desk-hint">This chapter is in the Greek Old Testament only, '
                     'so the Bibles here do not have its text.</p></div>' if (book, c) in EXTRA_CANON
@@ -11491,6 +11512,7 @@ def build() -> None:
 </div>""",
                     crumb=[("Home", "/"), ("Scripture", "/scripture/"), (book_name(book), f"/scripture/{bslug}/"), (f"Chapter {c}", "")],
                     active="scripture",
+                    scripts=["/assets/bx-listen.js"] if listen_bar else None,
                     description=(
                         f"{ref_name(book)} {c} with the early Church Fathers beside it: {plural(len(rows), 'passage')} by {plural(len(writers), 'writer')}, verse by verse, in fresh English."
                         if rows else f"Read {ref_name(book)} {c} in the Berean Standard Bible, with the early Church Fathers beside it."
@@ -11524,6 +11546,8 @@ def build() -> None:
             )
         return "".join(cells)
 
+    print(listen.summary(), flush=True)
+    KJV_LISTEN[:] = [listen]
     sc_total = sum(b["refs"] for b in sc_books.values())
     write(
         DIST / "scripture" / "index.html",
@@ -12313,6 +12337,7 @@ def build() -> None:
     )
 
     _attach_players()
+    _list_kjv_audio()
     audio_manifests = sorted((ROOT / "outputs/audio").glob("*/manifest.json"))
     audio_hit = False
     if audio_manifests:

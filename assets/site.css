@@ -2639,6 +2639,29 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .bx-tr .bx-more { font: inherit; font-size: 0.85rem; font-weight: 650; padding: 0.35rem 0.7rem; min-height: 36px; border: 1px solid var(--rule); border-radius: 999px; background: var(--leaf); color: var(--ink); cursor: pointer; }
 .bx-tr .bx-more.is-on { background: var(--ink); color: var(--paper); }
 
+/* Listen bar on a chapter (kjv_listen.py, bx-listen.js): the read-along
+   player's look (.rdl-*), one row at the top of the text column. */
+.bx-listen { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 1.2rem; padding: 0.55rem 0.8rem; border: 1px solid var(--rule); border-radius: 0.6rem; background: var(--paper-2); }
+.bx-listen .rdl-play { flex: 0 0 auto; border: 1px solid var(--ink); background: var(--ink); color: var(--paper); border-radius: 0.45rem; padding: 0.3rem 0.8rem; min-height: 36px; cursor: pointer; font: inherit; font-weight: 650; white-space: nowrap; }
+.bx-listen .rdl-bar { flex: 1 1 auto; min-width: 3rem; height: 0.55rem; background: var(--rule); border-radius: 0.3rem; cursor: pointer; position: relative; }
+.bx-listen .rdl-bar::before { content: ""; position: absolute; inset: -0.6rem 0; }
+.bx-listen .rdl-fill { height: 100%; width: 0; background: var(--rubric); border-radius: 0.3rem; }
+.bx-listen .rdl-time { flex: 0 0 auto; font-size: 0.85rem; color: var(--ink-soft); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.bx-listen .bx-listen-rate { flex: 0 0 auto; min-width: 2.9rem; min-height: 36px; border: 1px solid var(--rule); background: var(--leaf); color: var(--ink); border-radius: 0.45rem; padding: 0.3rem 0.5rem; cursor: pointer; font: inherit; font-size: 0.85rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.bx-listen button:focus-visible, .bx-listen .rdl-bar:focus-visible { outline: 2px solid var(--lapis); outline-offset: 3px; }
+.bx-text p.bx-listen-note, .bx-text p.bx-listen-credit { font-family: var(--font-body); font-size: 0.85rem; line-height: 1.5; color: var(--ink-soft); }
+.bx-text p.bx-listen-note { margin: -0.6rem 0 1rem; }
+.bx-text p.bx-listen-credit { margin: 1.2rem 0 0; font-size: 0.8rem; }
+/* The verse being read, and the word in it: a tint, never an underline (AGENTS rule 2). */
+.bx-text .v.lv-on { background: color-mix(in srgb, var(--gold) 10%, transparent); }
+.bx-text .lw { border-radius: 3px; }
+.bx-text .lw.lw-on { background: color-mix(in srgb, var(--gold) 32%, transparent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--gold) 32%, transparent); }
+@media (max-width: 420px) {
+  .bx-listen { gap: 0.5rem; padding: 0.5rem 0.6rem; }
+  .bx-listen .rdl-play { padding: 0.3rem 0.65rem; }
+}
+@media print { .bx-listen, .bx-listen-note { display: none !important; } }
+
 /* Licence and AI note: at the foot of a work, after the reading. */
 .work-disclosure { max-width: 46rem; margin: 2.2rem 0 1rem; padding-top: 1rem; border-top: 1px solid var(--rule); }
 .work-disclosure .translation-note { font-size: 0.85rem; color: var(--ink-soft); margin: 0; }
