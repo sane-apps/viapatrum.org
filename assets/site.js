@@ -175,9 +175,34 @@
         // The jump button sits in the chapter list that show() hides: move focus with it.
         return show(jump.dataset.v, { focus: true });
       }
+      const tab = e.target.closest(".cm-tab");
+      if (tab) return pickTab(tab);
       if (e.target.closest(".desk-back, .desk-close")) show(null);
     });
+    // Commentary tabs on a verse (Selected / Complete / All passages): one panel at a time.
+    const pickTab = (tab, focus = false) => {
+      const list = tab.closest('[role="tablist"]');
+      if (!list) return;
+      list.querySelectorAll(".cm-tab").forEach((t) => {
+        const on = t === tab;
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        if (on) t.removeAttribute("tabindex");
+        else t.setAttribute("tabindex", "-1");
+        const panel = document.getElementById(t.getAttribute("aria-controls"));
+        if (panel) panel.hidden = !on;
+      });
+      if (focus) tab.focus();
+    };
     bx.addEventListener("keydown", (e) => {
+      const tab = e.target.closest && e.target.closest(".cm-tab");
+      if (tab && ["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) {
+        const tabs = Array.from(tab.closest('[role="tablist"]').querySelectorAll(".cm-tab"));
+        const i = tabs.indexOf(tab);
+        const next = e.key === "Home" ? 0 : e.key === "End" ? tabs.length - 1
+          : (i + (e.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+        e.preventDefault();
+        return pickTab(tabs[next], true);
+      }
       if (e.key === "Escape") show(null);
     });
     const fromHash = () => {

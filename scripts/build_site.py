@@ -29,6 +29,7 @@ import ask_page  # noqa: E402  (/ask/: answers in the writers' own sentences, ow
 import creeds_page  # noqa: E402  (/creeds/: creeds timeline + church cards, owner 2026-10-06)
 import history_page  # noqa: E402  (/history/christ-died-for-all/: history of the question, owner 2026-10-27; preview first)
 import timeline_page  # noqa: E402  (/explore/: 100 reader questions from checked dossiers, owner 2026-10-13)
+import commentary_view  # noqa: E402  (Fathers' commentary tabs on a Scripture verse, owner 2026-11-08)
 
 # FATHERS_DIST: build somewhere else to test without touching the ship staging dir.
 DIST = Path(os.environ["FATHERS_DIST"]) if os.environ.get("FATHERS_DIST") else ROOT / "dist"
@@ -838,17 +839,21 @@ def daily_quote_html(cls: str, text: str) -> str:
     )
 
 
-def scripture_verse_html(vnum, vtext: str, hits: int, vmax: int) -> str:
+def scripture_verse_html(vnum, vtext: str, hits: int, vmax: int, comments: int = 0) -> str:
     """One verse of a Scripture chapter. A cited verse keeps its text readable to
-    screen readers and gets a real button after it that opens the desk."""
+    screen readers and gets a real button after it that opens the desk. A verse with
+    commentary (commentary_view) opens the desk even when no passage cites it first."""
     body = f'<sup>{vnum}</sup><span class="vt">{escape(vtext)}</span>'
-    if not hits:
+    if not hits and not comments:
         return f'<span class="v" id="v{vnum}" data-v="{vnum}">{body}</span> '
+    label = f'{hits} passage{"s" if hits != 1 else ""} in the Fathers' if hits else "commentary from the Fathers"
+    if hits and comments:
+        label += ", with commentary"
     return (
         f'<span class="v cited" id="v{vnum}" data-v="{vnum}" '
         f'style="--heat:{round(0.25 + 0.75 * hits / vmax, 2)}">{body}'
         f'<button type="button" class="v-open vh" data-v="{vnum}" aria-controls="desk">'
-        f'Verse {vnum}: {hits} passage{"s" if hits != 1 else ""} in the Fathers</button></span> '
+        f'Verse {vnum}: {label}</button></span> '
     )
 
 
@@ -10635,6 +10640,13 @@ def build() -> None:
         ),
     )
 
+    # Fathers' commentary (commentary_view): keep the published text of each passage a comment quotes,
+    # so a comment is shown only while it is still word for word in that text.
+    commentary_all = commentary_view.load_commentary()
+    commentary_needed = commentary_view.needed_sections(commentary_all)
+    commentary_texts: dict[tuple[str, str], str] = {}
+    commentary_sources: dict[tuple[str, str], dict] = {}
+
     for w in works:
         topic_links = []
         for tid in w.get("related_topics") or []:
@@ -11131,7 +11143,16 @@ def build() -> None:
             _src_dest.parent.mkdir(parents=True, exist_ok=True)
             _src_dest.write_text(json.dumps(src_json, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
         for idx, s in enumerate(w["sections"]):
-            paras = "".join(f"<p>{render_reader_html(p)}</p>" for p in s["english"])
+            para_html = [render_reader_html(p) for p in s["english"]]
+            paras = "".join(f"<p>{p}</p>" for p in para_html)
+            if (w["slug"], str(s["section"])) in commentary_needed:
+                _ckey = (w["slug"], str(s["section"]))
+                commentary_texts[_ckey] = commentary_view.passage_plain_text(para_html)
+                commentary_sources[_ckey] = {
+                    "title": pub_title, "label": shown_section(s["section"], ordinals),
+                    "author": w_author, "dates": author_dates_display(w["author"]) or "",
+                    "text": commentary_texts[_ckey],
+                }
             # Same pattern as excerpt pages: English body, then language panels at the bottom.
             src_block = ""
             if s.get("greek"):
@@ -11226,6 +11247,11 @@ def build() -> None:
     def verse_key(v: str) -> tuple:
         nums = re.findall(r"\d+", v)
         return (int(nums[0]) if nums else 0, v)
+
+    commentary_kept, commentary_stats = commentary_view.filter_comments(commentary_all, commentary_texts)
+    if commentary_stats["total"]:
+        print(commentary_view.log_line(commentary_stats), flush=True)
+    commentary_verses = {book: commentary_view.by_verse(cs) for book, cs in commentary_kept.items()}
 
     sc_books: dict[str, dict] = {}
     for (book, chap), rows in sc_entries.items():
@@ -11355,22 +11381,22 @@ def build() -> None:
                     whole.append(r)
             verses = text_chaps.get(str(c)) or []
             vmax = max([len(v) for v in by_first.values()] + [1])
+            # Commentary on a verse of this chapter's text (a range comment sits under each of its verses).
+            text_vnums = {str(vn) for vn, _ in verses}
+            cm_here = {v: cs for (ch, v), cs in (commentary_verses.get(book) or {}).items()
+                       if ch == c and (v in text_vnums or v in by_first)}
             spans = []
             for vnum, vtext in verses:
-                spans.append(scripture_verse_html(vnum, vtext, len(by_first.get(str(vnum), [])), vmax))
+                spans.append(scripture_verse_html(vnum, vtext, len(by_first.get(str(vnum), [])), vmax,
+                                                  comments=len(cm_here.get(str(vnum), []))))
             # Verses cited but missing from the base text (versification differences).
             extra = [v for v in by_first if not any(str(vn) == v for vn, _ in verses)]
             desk_sections = []
-            for v in sorted(by_first, key=lambda x: int(x)):
-                items = "".join(sc_item(r) for r in sorted(by_first[v], key=lambda r: (r["year"], r["who"])))
-                n = len(by_first[v])
-                desk_sections.append(
-                    f'<section class="desk-verse" data-for="{escape(v)}" hidden>'
-                    f'<p class="eyebrow">Verse</p><h2>{escape(ref_name(book))} {c}:{escape(v)}</h2>'
-                    f'<p class="desk-count">{n} passage{"s" if n != 1 else ""} in the Fathers, earliest first</p>'
-                    f'<ul class="sc-list">{items}</ul>'
-                    f'<button type="button" class="desk-back">Back to the chapter</button></section>'
-                )
+            for v in sorted(set(by_first) | set(cm_here), key=lambda x: int(x)):
+                items = "".join(sc_item(r) for r in sorted(by_first.get(v, []), key=lambda r: (r["year"], r["who"])))
+                desk_sections.append(commentary_view.desk_verse_html(
+                    f"{ref_name(book)} {c}:{v}", v, items, len(by_first.get(v, [])),
+                    comments=cm_here.get(v), book=ref_name(book), sources=commentary_sources))
             cited_verses = sorted(by_first, key=lambda v: -len(by_first[v]))[:8]
             bars = "".join(
                 f'<li><button type="button" class="desk-jump" data-v="{escape(v)}">'
