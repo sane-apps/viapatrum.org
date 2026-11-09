@@ -1930,13 +1930,15 @@ h1, h2, h3,
   background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
 .dl-btn:hover, .dl-btn:focus-visible { background: var(--paper); color: var(--ink); }
 .dl-btn.is-active { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--rubric); }
-/* Donate (GitHub Sponsors): filled rubric pill beside Downloads in the
-   header tools (restored 2026-11-09); on phones it rides in the Menu as
-   .nav-donate, the same pattern as .nav-dl. */
+/* Donate (GitHub Sponsors): the site's primary button, solid ink like
+   .dl-btn, and the last item in the header tools so it sits at the far
+   right of the header (restored 2026-11-09; restyled the same day, the
+   first restore's rubric fill read as a sticker, not a button). On
+   phones it rides in the Menu as .nav-donate with the same ink look. */
 .donate-btn { display: inline-flex; align-items: center; min-height: 36px; padding: 0 0.85rem; border-radius: 999px;
   font-size: 0.85rem; font-weight: 650; white-space: nowrap; text-decoration: none;
-  background: var(--rubric); color: var(--paper); border: 1px solid var(--rubric); }
-.donate-btn:hover, .donate-btn:focus-visible { background: var(--paper); color: var(--rubric); }
+  background: var(--ink); color: var(--paper); border: 1px solid var(--ink); }
+.donate-btn:hover, .donate-btn:focus-visible { background: var(--paper); color: var(--ink); }
 .nav-toggle { display: none !important; }
 .crumbs { color: var(--ink-soft); }
 .crumbs a { color: var(--lapis); }
@@ -2880,6 +2882,9 @@ button.btn { font: inherit; font-weight: 650; cursor: pointer; }
   .site-nav.is-open a { min-height: 44px; display: flex; align-items: center; font-size: 1.05rem; }
   .site-nav.is-open .nav-dl { display: flex; }
   .site-nav.is-open .nav-donate { display: flex; }
+  .site-nav.is-open .nav-donate { background: var(--ink); color: var(--paper); border: 1px solid var(--ink);
+    border-radius: 999px; padding: 0 1.1rem; align-self: flex-start; font-weight: 650; text-decoration: none; }
+  .site-nav.is-open .nav-donate:hover, .site-nav.is-open .nav-donate:focus-visible { background: var(--paper); color: var(--ink); }
   .header-search input { width: 7.5rem; }
 }
 @media (max-width: 380px) { .header-search input { width: 5.5rem; } }

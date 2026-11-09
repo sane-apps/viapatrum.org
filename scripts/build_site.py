@@ -7021,8 +7021,8 @@ def layout(
         <input id="site-q" name="q" type="search" placeholder="Search…" autocomplete="off">
       </form>
       <a class="dl-btn{' is-active' if active == 'downloads' else ''}" href="/downloads/"{' aria-current="page"' if active == 'downloads' else ''}>Downloads</a>
-      {donate_btn}
       <button type="button" class="theme-toggle" aria-label="Switch light or dark reading" title="Light or dark">☾</button>
+      {donate_btn}
     </div>
   </div>
 </header>
