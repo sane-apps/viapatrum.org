@@ -2700,6 +2700,36 @@ a.tl-pt:hover, a.tl-pt:focus-visible { background: color-mix(in srgb, var(--lapi
 .keep p { margin: 0; font-size: 0.82rem; line-height: 1.4; }
 .keep p a { color: var(--ink-soft); }
 
+/* Editions (scripts/editions.py): the edition line under the downloads, and /changes/. */
+.keep .edition { margin: 0.75rem 0 0; padding: 0.7rem 0 0; border-top: 1px solid var(--rule); }
+.keep-edition .edition { margin: 0; padding: 0; border-top: 0; }
+.keep .edition-line { font: 600 0.86rem/1.35 var(--font-body); color: var(--ink); }
+.keep .edition-note, .keep .edition-more { margin-top: 0.3rem; color: var(--ink-soft); }
+.edition-log { margin-top: 0.35rem; }
+.edition-log > summary { cursor: pointer; list-style: none; display: inline-block; font: 650 0.78rem var(--font-body);
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold-deep); padding: 0.3rem 0; border-radius: 0.3rem; }
+.edition-log > summary::-webkit-details-marker { display: none; }
+.edition-log > summary::after { content: " +"; }
+.edition-log[open] > summary::after { content: " −"; }
+.edition-log > summary:focus-visible { outline: 2px solid color-mix(in srgb, var(--gold) 55%, transparent); outline-offset: 1px; }
+.edition-log ul { list-style: none; padding: 0; margin: 0.2rem 0 0.4rem; display: block; }
+.edition-log li { font-size: 0.82rem; line-height: 1.4; padding: 0.3rem 0; border-top: 1px dashed var(--rule); }
+.edition-log li:first-child { border-top: 0; }
+.edition-log time { display: block; font-weight: 650; color: var(--gold); font-size: 0.76rem; letter-spacing: 0.02em; }
+
+.changes-page { max-width: 46rem; }
+.changes-feed { margin: 0.4rem 0 1.6rem; font-size: 0.92rem; }
+.changes-day { margin: 0 0 1.8rem; }
+.changes-day h2 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.8rem; font-family: var(--font-display);
+  font-size: 1.55rem; font-weight: 600; margin: 0 0 0.5rem; padding-bottom: 0.35rem; border-bottom: 1px solid var(--rule); }
+.changes-n { font: 600 0.78rem var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
+.changes-list { list-style: none; margin: 0; padding: 0; }
+.changes-list li { padding: 0.55rem 0; border-bottom: 1px dashed var(--rule); overflow-wrap: anywhere; }
+.changes-list li > a { font-family: var(--font-read); font-size: 1.02rem; }
+.changes-by { color: var(--ink-soft); font-size: 0.9rem; }
+.changes-what { display: block; color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.1rem; }
+.changes-empty, .changes-older { color: var(--ink-soft); }
+
 .vp-keep { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.3rem 1rem; margin: 1.2rem 0 0; padding: 1rem 1.2rem;
   border: 1px solid var(--rule); border-radius: 12px; background: color-mix(in srgb, var(--gold) 7%, var(--leaf)); color: var(--ink); text-decoration: none; }
 .vp-keep-k { font: 650 0.78rem var(--font-body); letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }

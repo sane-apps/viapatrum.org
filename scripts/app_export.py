@@ -44,6 +44,27 @@ def _paragraph(b: ModuleType, raw: str, flagged: set | None) -> dict | None:
     return out
 
 
+def section_rows(b: ModuleType, w: dict, wrong_cites: dict) -> list[dict]:
+    """One work's exported sections: {id, n, head, p: [{t, r}], supplied?}, the reader page's English."""
+    flagged_book = b.work_book(w["slug"]) or w["slug"]
+    ordinals = b.section_ordinals(w["sections"])
+    sections = []
+    for s in w["sections"]:
+        sid = str(s["section"])
+        flagged = wrong_cites.get((flagged_book, sid))
+        paras = [p for p in (_paragraph(b, raw, flagged) for raw in s.get("english") or []) if p]
+        if not paras:
+            continue
+        # Same title rule as the reader's H2 (display_head), not the bare
+        # public_head: Placeus heads carried GAR/PLAC/tip worksheet tags
+        # into the app and the shelf files built from this export.
+        row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": b.display_head(s, w), "p": paras}
+        if (s.get("supplied_from") or "").strip():
+            row["supplied"] = s["supplied_from"].strip()
+        sections.append(row)
+    return sections
+
+
 def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic: dict,
           topic_meta: dict, tax: dict, sc_entries: dict, wrong_cites: dict) -> dict:
     out = dist / "app" / f"v{VERSION}"
@@ -75,22 +96,11 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
 
     work_rows = []
     for w in works:
-        flagged_book = b.work_book(w["slug"]) or w["slug"]
-        ordinals = b.section_ordinals(w["sections"])
-        sections = []
-        for s in w["sections"]:
-            sid = str(s["section"])
-            flagged = wrong_cites.get((flagged_book, sid))
-            paras = [p for p in (_paragraph(b, raw, flagged) for raw in s.get("english") or []) if p]
-            if not paras:
-                continue
-            # Same title rule as the reader's H2 (display_head), not the bare
-            # public_head: Placeus heads carried GAR/PLAC/tip worksheet tags
-            # into the app and the shelf files built from this export.
-            row = {"id": sid, "n": b.shown_section(s["section"], ordinals), "head": b.display_head(s, w), "p": paras}
-            if (s.get("supplied_from") or "").strip():
-                row["supplied"] = s["supplied_from"].strip()
-            sections.append(row)
+        # build_site computes these rows once, before the work pages, so the edition
+        # (scripts/editions.py) is taken from exactly the English exported here.
+        sections = w.get("_export_sections")
+        if sections is None:
+            sections = section_rows(b, w, wrong_cites)
         if not sections:
             continue
         body = {"slug": w["slug"], "sections": sections}

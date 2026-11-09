@@ -151,6 +151,17 @@
     ]
   ]
   #v(1fr)
+  // Edition (scripts/editions.py): the day this English last changed, and where the newest one is.
+  #let ed = d.at("edition_lines", default: ())
+  #if ed.len() == 3 [
+    #align(center)[
+      #text(font: display, weight: 600, size: 10.5pt, tracking: 0.06em, fill: ink, number-type: "lining", ed.at(0))
+      #v(0.03in)
+      #text(style: "italic", size: 8.5pt, fill: soft, ed.at(1)) \
+      #text(style: "italic", size: 8.5pt, fill: soft)[Newest edition: #link(d.url)[#d.url.replace("https://", "")]]
+    ]
+    #v(0.28in)
+  ]
   #align(center, text(size: 8.5pt, fill: soft, tracking: 0.08em)[viapatrum.org])
 ]
 
@@ -166,13 +177,18 @@
   #if d.period != "" [Date of the work: #d.period \ ]
   #if d.edition != "" [Source: #d.edition \ ]
   #if d.original_english != "" [#d.original_english \ ]
+  #let ed = d.at("edition_lines", default: ())
+  #if ed.len() == 3 [
+    #v(0.9em)
+    #text(fill: ink, ed.at(0) + ". " + ed.at(1))
+  ]
   #v(0.9em)
   #for n in d.notes [#n #parbreak()]
   #v(0.6em)
-  Read this work free online: \
+  #if ed.len() == 3 [Newest edition, free to read online: \ ] else [Read this work free online: \ ]
   #link(d.url)[#text(fill: ink, d.url)]
   #v(0.9em)
-  Via Patrum · viapatrum.org · this edition built #d.built \
+  Via Patrum · viapatrum.org · this file made #d.built \
   #text(size: 7.4pt)[Set in Literata and Cormorant Garamond, both under the SIL Open Font License.]
 ]
 

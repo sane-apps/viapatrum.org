@@ -236,6 +236,9 @@ def word_build_one(job: dict) -> dict:
         if book["subtitle"]:
             doc.add_paragraph(book["subtitle"], style="Subtitle")
         doc.add_paragraph(author + (f" ({book['author_dates']})" if book["author_dates"] else ""), style="Subtitle")
+        # Edition (scripts/editions.py): the day this English last changed, and where the newest one is.
+        for line in book.get("edition_lines") or []:
+            doc.add_paragraph(line)
         if book["about"] or book["intro"] or book["author_bio"]:
             doc.add_heading("About this text", 1)
             for blk in book["about"]:
@@ -295,6 +298,9 @@ def word_build_one(job: dict) -> dict:
             desc += " " + book["intro"][0]
         desc += (" A fresh English translation from Via Patrum. Bible references are linked and open in Logos."
                  f" The same English is free to read at {book['url']}")
+        if book.get("edition_lines"):
+            ed = book["edition_lines"]
+            desc += f" {ed[0]}. {ed[1]}"
         out = OUT / "word" / f"{slug}.zip"
         tmp = work_dir / f"{slug}.zip"
         with zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as z:

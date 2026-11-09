@@ -68,6 +68,7 @@ sys.path.insert(0, str(HERE))
 
 import build_audio as ba  # noqa: E402
 import inject_audio as ia  # noqa: E402
+import editions  # noqa: E402  (edition lines in the description, owner-approved sketch 2026-11-09)
 
 AUDIO = ROOT / "outputs" / "audio"
 SCRATCH = ROOT / "outputs" / "audiobooks-scratch"
@@ -429,8 +430,16 @@ def ffmeta_escape(text: str) -> str:
     return re.sub(r"([=;#\\\n])", r"\\\1", str(text))
 
 
-def note_for(slug: str) -> str:
-    return "%s https://viapatrum.org/works/%s/" % (NARRATION_NOTE, slug)
+EDITIONS: dict | None = None  # the site build's edition log (app/v1/editions.json), set in main()
+
+
+def note_for(slug: str, older: bool = False) -> str:
+    """Comment and description tags. With an edition log: the narration note, then 'Edition of 8 November 2026.
+    We correct our texts as we find errors. Newest edition: <work page>' (scripts/editions.py). A file kept from
+    an earlier wording (older=True, manifest "text_mismatch") is not of today's edition, so it gets no date."""
+    url = "https://viapatrum.org/works/%s/" % slug
+    ed = "" if older else editions.sentence_for(editions.for_slug(EDITIONS, slug), url)
+    return "%s %s" % (NARRATION_NOTE, ed) if ed else "%s %s" % (NARRATION_NOTE, url)
 
 
 def tags_for(plan: dict) -> dict:
@@ -665,7 +674,7 @@ def retag_pass(manifest: dict, man_path: Path, out_dir: Path) -> int:
         if not f.is_file():
             missing += 1
             continue
-        note = note_for(slug)
+        note = note_for(slug, older=slug in (manifest.get("text_mismatch") or {}))
         if file_note(f) == note:
             same += 1
             continue
@@ -837,6 +846,8 @@ def main(argv: list) -> int:
     except (OSError, ValueError):
         ia._PLAIN_CACHE = {}
     manifest = read_manifest(man_path)
+    global EDITIONS
+    EDITIONS = editions.read_app(args.app_dir.resolve())
 
     if args.covers_only:
         return covers_pass(manifest, man_path, out_dir)
@@ -956,6 +967,10 @@ def main(argv: list) -> int:
                 failures[p["slug"]] = note
                 log("[%d/%d] FAILED %s: %s" % (done, len(todo), p["slug"], note))
     covers_pass(manifest, man_path, out_dir, release=False)
+    # A new edition date reaches files that did not need a new encode (stream copy, no re-encode); each
+    # rewritten file gets a new sha256, so the next upload sends it.
+    if EDITIONS and not only:
+        retag_pass(manifest, man_path, out_dir)
     with _manifest_lock:
         manifest["failed"] = failures
         write_manifest(man_path, manifest)

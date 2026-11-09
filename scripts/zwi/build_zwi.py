@@ -587,10 +587,39 @@ def previous_version(zwi: Path) -> dict:
     return {"history": hist, "n": n, "meta": meta}
 
 
-def version_note(old_content: dict, art_html: bytes, art_txt: bytes) -> tuple[str, str]:
-    """One sentence for VersionNote, and a short code for the report."""
+def edition_of(dist: Path, slug: str) -> tuple[str, list[str]]:
+    """(ISO edition date, that day's notes) from the site build's edition log (scripts/editions.py), or ("", [])."""
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    import editions  # noqa: E402  (stdlib only, so the ZWI venv can import it)
+    key = str(dist)
+    if key not in _EDITION_LOGS:
+        _EDITION_LOGS[key] = editions.read_app(dist / "app" / "v1")
+    entries = editions.for_slug(_EDITION_LOGS[key], slug)
+    day = editions.edition(entries)
+    notes = next((n for d, n in editions.history(entries) if d == day), [])
+    return day, notes
+
+
+_EDITION_LOGS: dict = {}
+
+
+def edition_text(day: str) -> str:
+    """'8 November 2026' from '2026-11-08'."""
+    y, m, d = (int(x) for x in day.split("-"))
+    return f"{d} {('January February March April May June July August September October November December').split()[m - 1]} {y}"
+
+
+def version_note(old_content: dict, art_html: bytes, art_txt: bytes, edition: tuple[str, list[str]] = ("", [])
+                 ) -> tuple[str, str]:
+    """One sentence for VersionNote, and a short code for the report. When the text changed and the site build
+    recorded a new edition, the note is that edition and what changed: "Edition of 9 November 2026: 12 Scripture
+    references corrected."."""
     head = "Re-signed to ZWI 1.5: adds the Work field and numeric times"
     if old_content.get("article.txt") != sha1(art_txt):
+        day, notes = edition
+        if day:
+            return (f"Edition of {edition_text(day)}" + (": " + "; ".join(notes) if notes else "") + ".",
+                    "text_changed")
         return f"{head}; the article text also changed since the previous version.", "text_changed"
     if old_content.get("article.html") != sha1(art_html):
         return f"{head}; the article HTML changed, its text did not.", "html_changed"
@@ -651,11 +680,17 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
     derived = derive_work_id(GROUP_OF[slug]["title"] if slug in GROUP_OF else mast["title"],
                              split_author(mast["who"])[0])
     work = work_object(slug, mast, lang, english_source, other, work_id or derived)
+    site_edition = edition_of(dist, slug)  # (ISO date, notes) from scripts/editions.py, or ("", [])
     if previous:
         created = to_epoch(previous["meta"].get("TimeCreated"))
         if created is None:
             raise ValueError("previous version has no readable TimeCreated")
-        note, change = version_note(previous["meta"].get("Content", {}), art_html, art_txt)
+        # The edition names this version only when the site build made it today (its English changed now).
+        import datetime as _dt
+        from zoneinfo import ZoneInfo
+        today = _dt.datetime.fromtimestamp(now, ZoneInfo("America/New_York")).date().isoformat()
+        new_edition = site_edition if site_edition[0] == today else ("", [])
+        note, change = version_note(previous["meta"].get("Content", {}), art_html, art_txt, new_edition)
         for rel, data in previous["history"].items():
             (stage / rel).parent.mkdir(parents=True, exist_ok=True)
             (stage / rel).write_bytes(data)
@@ -678,7 +713,8 @@ def build_work(dist: Path, slug: str, out: Path, colicon: bytes, first_pub: dict
         "ShortDescription": short_desc(about),
         "Description": description(sections),
         "Comment": (f"Modern English reading of the {short_ed or 'original'} text. {status}".strip()
-                    if english_source else f"Fresh English translation{lang_part}. {status}".strip()),
+                    if english_source else f"Fresh English translation{lang_part}. {status}".strip())
+                   + (f" Edition of {edition_text(site_edition[0])}." if site_edition[0] else ""),
         "License": "CC BY 4.0",
         "SourceURL": f"{SITE}/works/{slug}/",
         "GeneratorName": "Via Patrum",
