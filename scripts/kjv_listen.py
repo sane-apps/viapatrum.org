@@ -4,7 +4,12 @@
 Audio: Larry Sanger's Deep Dive Bible KJV recordings, CC0 1.0, one mp3 per
 chapter. Word timings: our own (Whisper), one JSON per chapter in this shape:
 
-    {"verses": [{"start": 2.52, "end": 9.41, "words": [{"t": 2.52, "w": "in"}, ...]}, ...]}
+    {"verses": [{"start": 2.52, "end": 9.41, "mode": "words", "words": [{"t": 2.52, "w": "In"}, ...]},
+                {"start": 9.41, "end": 12.45, "mode": "verse"}, ...]}
+
+(scripts/kjv_audio/align_kjv.py writes them.) A "verse" row has no words and
+lights as a whole; a null start means no light for that verse. Larry's own
+files (lower-case words, no punctuation) load the same way.
 
 Verse i of the list is verse number i + 1. The bar only ever plays and
 highlights the KJV: licensed texts (NIV, NASB from YouVersion) are never
@@ -14,7 +19,8 @@ The build reads both from local folders and skips any chapter missing either,
 so a ship never fails for missing audio. Nothing happens unless KJV_AUDIO_DIR
 is set (the first ship with it uploads every listed mp3 to R2, about 4.7 GB):
 
-    KJV_AUDIO_DIR      mp3 root: <dir>/<USFM>/<ch>.mp3 (also <dir>/kjv/<USFM>/<ch>.mp3)
+    KJV_AUDIO_DIR      the download: <dir>/mp3/KJV read aloud/43 John/John 01.mp3
+                       (or <dir>/<USFM>/<ch>.mp3)
     KJV_TIMINGS_DIR    timing root: <dir>/<USFM>/<ch>.json (default <KJV_AUDIO_DIR>/timings)
 
 Pages point at AUDIO_BASE/kjv/<USFM>/<ch>.<sha10>.mp3 (the audio_r2.py key
@@ -90,7 +96,7 @@ def load_timings(path: Path) -> list[dict] | None:
             out.append(None)
             continue
         words = []
-        for w in r.get("words") or []:
+        for w in (r.get("words") or []) if r.get("mode") != "verse" else []:
             if not isinstance(w, dict) or not isinstance(w.get("w"), str):
                 continue
             t = _num(w.get("t"))
@@ -197,11 +203,49 @@ def chapter_listen(text_verses: list, timings: list[dict | None] | None) -> dict
     return out
 
 
+# Book order of the Deep Dive Bible folders ("43 John") and of build_site.USFM_ORDER.
+USFM = (
+    "GEN EXO LEV NUM DEU JOS JDG RUT 1SA 2SA 1KI 2KI 1CH 2CH EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZK DAN "
+    "HOS JOL AMO OBA JON MIC NAM HAB ZEP HAG ZEC MAL MAT MRK LUK JHN ACT ROM 1CO 2CO GAL EPH PHP COL 1TH 2TH 1TI "
+    "2TI TIT PHM HEB JAS 1PE 2PE 1JN 2JN 3JN JUD REV"
+).split()
+# The Deep Dive Bible download: "<dir>/mp3/KJV read aloud/43 John/John 01.mp3",
+# "19 Psalms/Psalm 119.mp3" (chapter padded to 2 digits, 3 for Psalms).
+DDB_FOLDERS = (Path("mp3") / "KJV read aloud", Path("KJV read aloud"), Path("."))
+_CHAP_RE = re.compile(r"(?:^|\s)0*(\d+)\.mp3$", re.I)
+_BOOK_FILES: dict[tuple[str, str], dict[int, Path]] = {}
+
+
+def _book_files(audio_dir: Path, usfm: str) -> dict[int, Path]:
+    """{chapter: mp3} in the book's numbered folder ("43 John"), listed once per build."""
+    key = (str(audio_dir), usfm)
+    if key not in _BOOK_FILES:
+        found: dict[int, Path] = {}
+        if usfm in USFM:
+            prefix = f"{USFM.index(usfm) + 1:02d} "
+            for sub in DDB_FOLDERS:
+                root = audio_dir / sub
+                if not root.is_dir():
+                    continue
+                for book in sorted(root.iterdir()):
+                    if not (book.is_dir() and book.name.startswith(prefix)):
+                        continue
+                    for f in book.iterdir():
+                        m = _CHAP_RE.search(f.name)
+                        if m and f.is_file():
+                            found.setdefault(int(m.group(1)), f)
+                if found:
+                    break
+        _BOOK_FILES[key] = found
+    return _BOOK_FILES[key]
+
+
 def find_mp3(audio_dir: Path, usfm: str, chap: int) -> Path | None:
-    for p in (audio_dir / usfm / f"{chap}.mp3", audio_dir / "kjv" / usfm / f"{chap}.mp3"):
-        if p.is_file() and p.stat().st_size > 0:
-            return p
-    return None
+    """The chapter's mp3: <dir>/<USFM>/<ch>.mp3, else the Deep Dive Bible folders."""
+    p = audio_dir / usfm / f"{chap}.mp3"
+    if not p.is_file():
+        p = _book_files(audio_dir, usfm).get(chap)
+    return p if p and p.is_file() and p.stat().st_size > 0 else None
 
 
 def find_timings(timings_dir: Path, usfm: str, chap: int) -> Path | None:

@@ -57,6 +57,25 @@ class LoadTimingsTest(unittest.TestCase):
         ]}]}))
         self.assertEqual(got[0]["words"], [(10.0, "a"), (11.0, "b")])  # sorted, strays gone
 
+    def test_align_kjv_shape(self) -> None:
+        # scripts/kjv_audio/align_kjv.py: display words with punctuation, "verse" rows
+        # without words, a null start when a verse got no time at all.
+        got = kl.load_timings(self.put({"verses": [
+            {"start": 2.6, "end": 6.66, "mode": "words", "matched": 1.0,
+             "words": [{"t": 2.6, "w": "In"}, {"t": 6.1, "w": "earth."}]},
+            {"start": 6.66, "end": 17.28, "mode": "verse", "matched": 0.6},
+            {"start": None, "end": 20.0, "mode": "verse", "matched": 0.0},
+            {"start": 20.0, "end": 22.0, "mode": "verse", "words": [{"t": 20.5, "w": "stray"}]},
+        ], "check": {"ok": True}}))
+        self.assertEqual(got[0]["words"], [(2.6, "In"), (6.1, "earth.")])
+        self.assertEqual(got[1], {"s": 6.66, "e": 17.28, "words": []})
+        self.assertIsNone(got[2])
+        self.assertEqual(got[3]["words"], [], "a verse row lights as a whole even if words came along")
+        chapter = kl.chapter_listen([[1, "In earth."], [2, "x"], [3, "y"], [4, "z"]], got)
+        self.assertEqual(chapter["verses"][0]["w"], [2.6, 6.1])
+        self.assertEqual([r["v"] for r in chapter["verses"]], [1, 2, 4])
+        self.assertNotIn("w", chapter["verses"][1])
+
     def test_verse_without_words_keeps_its_times(self) -> None:
         got = kl.load_timings(self.put({"verses": [{"start": 1.5, "end": 3}]}))
         self.assertEqual(got, [{"s": 1.5, "e": 3.0, "words": []}])
@@ -182,6 +201,30 @@ class ListenBuildTest(unittest.TestCase):
         listen = self.make()
         self.assertEqual(listen.chapter("JHN", "john", 3, [[1, "x"]]), "")
         self.assertEqual(listen.skipped["no_verse_times"], 1)
+
+    def test_deep_dive_bible_folders(self) -> None:
+        # "<dir>/mp3/KJV read aloud/43 John/John 01.mp3", Psalms padded to 3 digits.
+        dl = self.tmp / "ddb"
+        root = dl / "mp3" / "KJV read aloud"
+        for rel in ("43 John/John 01.mp3", "43 John/John 21.mp3", "19 Psalms/Psalm 119.mp3",
+                    "19 Psalms/Psalm 001.mp3", "62 1 John/1 John 01.mp3", "65 Jude/Jude 01.mp3"):
+            (root / rel).parent.mkdir(parents=True, exist_ok=True)
+            (root / rel).write_bytes(b"ID3")
+        (root / "README.txt").write_text("x")
+        self.assertEqual(kl.find_mp3(dl, "JHN", 1), root / "43 John/John 01.mp3")
+        self.assertEqual(kl.find_mp3(dl, "JHN", 21), root / "43 John/John 21.mp3")
+        self.assertEqual(kl.find_mp3(dl, "PSA", 119), root / "19 Psalms/Psalm 119.mp3")
+        self.assertEqual(kl.find_mp3(dl, "PSA", 1), root / "19 Psalms/Psalm 001.mp3")
+        self.assertEqual(kl.find_mp3(dl, "1JN", 1), root / "62 1 John/1 John 01.mp3")  # not "43 John"
+        self.assertEqual(kl.find_mp3(dl, "JUD", 1), root / "65 Jude/Jude 01.mp3")
+        self.assertIsNone(kl.find_mp3(dl, "JHN", 2))
+        self.assertIsNone(kl.find_mp3(dl, "GEN", 1))
+        self.assertIsNone(kl.find_mp3(dl, "XYZ", 1))
+
+    def test_book_order_matches_the_builder(self) -> None:
+        src = (ROOT / "scripts" / "build_site.py").read_text(encoding="utf-8")
+        block = re.search(r"USFM_ORDER = \((.*?)\)\.split\(\)", src, re.S).group(1)
+        self.assertEqual(kl.USFM, "".join(re.findall(r'"([^"]*)"', block)).split())
 
     def test_pending_rows_append(self) -> None:
         listen = self.make()
