@@ -466,6 +466,10 @@ def assign_work_ids(rows: list[dict], pinned: dict) -> dict:
             unit_id[key] = pinned[members[0]["slug"]]
     for key, members in units.items():
         if not key.startswith("slug:"):
+            shared = {pinned.get(m["slug"]) for m in members}
+            if len(members) > 1 and len(shared) == 1 and None not in shared:  # all files pinned to one ID (ZWIBook key, 9 Nov 2026)
+                unit_id[key] = shared.pop()
+                continue
             if members[0]["derived_id"] in unit_id.values():
                 raise ValueError(f"group {key}: ID {members[0]['derived_id']} is already another work's")
             unit_id[key] = members[0]["derived_id"]
@@ -750,6 +754,23 @@ def coverage(report: list[dict]) -> dict:
     return dict(sorted(c.items()))
 
 
+def mark_id_changes(report: list[dict], prev_ids: dict, stage: Path) -> list[str]:
+    """Works whose Work.ID moved since their last signed version: change "work_id_changed" and a VersionNote that
+    says so, so refresh_zwi signs them again. A text change keeps its own change code and note."""
+    moved = []
+    for r in report:
+        old_id = prev_ids.get(r["slug"])
+        if old_id and old_id != r["work"]["ID"] and r["change"] != "text_changed":
+            r["change"] = "work_id_changed"
+            mp = stage / r["slug"] / "metadata.json"
+            meta = json.loads(mp.read_text(encoding="utf-8"))
+            meta["VersionNote"] = (f"Work ID changed from {old_id} to {r['work']['ID']}, ZWIBook's key for this work; "
+                                   "text unchanged.")
+            mp.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+            moved.append(r["slug"])
+    return moved
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dist", required=True, type=Path)
@@ -770,10 +791,13 @@ def main() -> int:
         slugs = [s for s in slugs if s in want]
     now = int(time.time())
     report, errors = [], []
+    prev_ids: dict[str, str] = {}
     for i, slug in enumerate(slugs, 1):
         try:
             prev_zwi = a.previous / f"{slug}.zwi" if a.previous else None
             previous = previous_version(prev_zwi) if prev_zwi and prev_zwi.exists() else None
+            if previous:
+                prev_ids[slug] = ((previous["meta"].get("Work") or {}).get("ID") or "")
             report.append(build_work(a.dist, slug, a.out, colicon, first_pub, now, a.translations,
                                      previous, pinned.get(slug, "")))
         except Exception as e:  # report every failure; do not stop the run
@@ -789,6 +813,9 @@ def main() -> int:
             meta = json.loads(mp.read_text(encoding="utf-8"))
             meta["Work"]["ID"] = ids[r["slug"]]
             mp.write_text(json.dumps(meta, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    # A work whose Work.ID moved since its last signed version is signed again with a note saying so (owner
+    # 9 Nov 2026: our Work IDs follow ZWIBook's keys, as promised to Larry Sanger). A text change keeps its own note.
+    mark_id_changes(report, prev_ids, a.out / "stage")
     by_id: dict[str, list[dict]] = {}
     for r in report:
         by_id.setdefault(r["work"]["ID"], []).append(r)
@@ -812,6 +839,7 @@ def main() -> int:
                "first_signature": [r["slug"] for r in report if not r["history_folders"]],
                "text_changed": [r["slug"] for r in report if r["change"] == "text_changed"],
                "html_changed_only": [r["slug"] for r in report if r["change"] == "html_changed"],
+               "work_id_changed": [r["slug"] for r in report if r["change"] == "work_id_changed"],
                "id_differs_from_slug": [r["slug"] for r in report if ids[r["slug"]] != r["slug"]],
                "new_work_ids": [s for s in ids if pinned.get(s) != ids[s]],
                "works_distinct": len(set(ids.values())),

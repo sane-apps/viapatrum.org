@@ -121,6 +121,7 @@ def refresh(dist: Path, dry: bool) -> str:
     summary = json.loads((WORK / "build_report.json").read_text())["summary"]
     built = {p.name for p in (WORK / "stage").iterdir() if p.is_dir()}
     changed = set(summary.get("text_changed") or []) | set(summary.get("html_changed_only") or [])
+    changed |= set(summary.get("work_id_changed") or [])  # Work.ID moved (9 Nov 2026: ZWIBook keys)
     changed |= {s for s in built if not (LIVE / f"{s}.zwi").is_file()}  # new works
     arch = WORK / "archives"
     arch.mkdir()

@@ -91,6 +91,31 @@ class Groups(unittest.TestCase):
                          {"a-work"})
         self.assertEqual(set(B.assign_work_ids(rows[:1], {"a-1": "a-work-book-1"}).values()), {"a-work"})
 
+    def test_group_takes_a_pin_all_its_files_share(self):
+        rows = [{"slug": "a-1", "derived_id": "a-work", "group": "A"},
+                {"slug": "a-2", "derived_id": "a-work", "group": "A"}]
+        self.assertEqual(set(B.assign_work_ids(rows, {"a-1": "zwibook-key", "a-2": "zwibook-key"}).values()),
+                         {"zwibook-key"})
+
+    def test_moved_work_id_is_marked_and_noted(self):
+        import json, tempfile
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as d:
+            stage = Path(d)
+            for slug in ("moved", "same", "edited"):
+                (stage / slug).mkdir()
+                (stage / slug / "metadata.json").write_text(json.dumps({"VersionNote": "old"}))
+            report = [{"slug": "moved", "work": {"ID": "new-key"}, "change": "unchanged"},
+                      {"slug": "same", "work": {"ID": "same-id"}, "change": "unchanged"},
+                      {"slug": "edited", "work": {"ID": "new-2"}, "change": "text_changed"}]
+            moved = B.mark_id_changes(report, {"moved": "old-id", "same": "same-id", "edited": "old-2"}, stage)
+            self.assertEqual(moved, ["moved"])
+            self.assertEqual(report[0]["change"], "work_id_changed")
+            self.assertIn("from old-id to new-key", json.loads((stage / "moved" / "metadata.json").read_text())["VersionNote"])
+            self.assertEqual(json.loads((stage / "same" / "metadata.json").read_text())["VersionNote"], "old")
+            self.assertEqual(report[2]["change"], "text_changed")
+
+
     def test_group_work_block_names_the_work(self):
         mast = {"who": "Origen of Alexandria (c. 185–c. 254 AD)", "title": "Against Celsus, Book III"}
         w = B.work_object("origen-contra-celsum-book-3", mast, "Greek", False, "", "origen-against-celsus")
