@@ -40,6 +40,10 @@ Do not regress: tip-suffix strip, ESTC/identifiers in About, publication gate + 
 - Build with the translations venv (PyYAML). Agents and test runs build only through `scripts/pkg_build.sh <ROOT>/outputs/pkg-<name>/dist <log>` (absolute dist): one build at a time on the 8 GB Mini, waits for `outputs/build.lock`, refuses under 15 GB free. Delete that dist when done. `build_site.py` and `scripts/ship.sh` take the same lock and floor themselves, so a second build or ship exits BLOCKED instead of filling the disk (2026-10-06: six parallel builds filled it and killed every job).
 - Keep the game entry points (nav `Games` → /games/, which lists every game, + the home Games section; owner 2026-10-06) through any redesign. See `docs/GAME_LINKS.md`.
 
+## Every writer is treated the same (owner, 9 Nov 2026)
+
+Via Patrum provides the early church writers; it does not edit them by what later people said about them. Never label a writer by his party or by what a church or council later said of him (heretic, Pelagian, Arian and the like) in commentary capsules, brackets, notes, cards or page copy, and never drop or down-rank a comment or a work for the writer's views. Author bios may state history plainly. Checks: `check_commentary.py` rule 8 and `check_mybible.py` in `~/SaneApps/outputs/viapatrum/commentary-gospels-20261109/`.
+
 ## Works reader SOP (permanent)
 
 How every whole work is presented on the site. Do not invent a second reading pattern.
