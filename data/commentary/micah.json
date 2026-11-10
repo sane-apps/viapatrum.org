@@ -1,0 +1,329 @@
+{
+ "book": "Micah",
+ "title": "The Fathers on Micah",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 17,
+ "selected_count": 10,
+ "comments": [
+  {
+   "id": "MIC01-001",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Because God is a fountain of goodness who descends in sympathy, Scripture says he goes out, whether to save or in wrath.",
+   "comment": "… Being a fountain of goodness and 'full of grace and truth' (John 1:14), the cause of all things, descending in sympathy with those being managed by him, becomes outside himself as if he were among them. For the Lord and our Savior says in the Gospels concerning himself: 'I went out from God and I have come; for I did not come from myself, but he sent me' (John 8:42). With the same thought the prophet Habakkuk spoke toward him: 'You went out for the salvation of your people, to save your anointed ones' (Habakkuk 3:13). … And just as he goes out and comes to those being saved, so much more when he is wroth or wars. For it is written concerning Michael [Micah]: 'Behold, the Lord goes forth from his house, and he shall be among us for a witness and shall descend' (Micah 1:3), and in Isaiah: 'The Lord of powers will go forth and will crush war, and he will arouse zeal and will cry out against his enemies with strength' (Isaiah 42:13).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u34-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u34-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC01-002",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The evils from the Lord were the pains inflicted by enemies to bring the people to conversion.",
+   "comment": "Nor would it be absurd if “evils come down from the Lord upon the gates of Jerusalem” (Micah 1:12), evils that consisted in the pains inflicted by enemies and brought upon them for their conversion; nor if he visits “with a rod the iniquities” of those who have forsaken “the law” of God, “and with scourges their sins” (Psalm 89:30–32); …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the evils that come down from the Lord are.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "56",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/56/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC01-003",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "Bodily and external things that help or work against life are called goods and evils in a looser sense.",
+   "comment": "But we may also find bodily and external things called goods and evils in a looser sense: those that contribute to life according to nature are regarded as goods, and those that work against it as evils. … Now in the divine Scriptures we find, in one place, God saying in his own person, “I am he who makes peace and creates evils” (Isaiah 45:7), and in another place, again about him, “that evils came down from the Lord upon the gates of Jerusalem, the noise of chariots and horsemen” (Micah 1:12–13).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "55",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/55/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC01-004",
+   "chapter": 1,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Shaving brings insult and dishonor and is most fitting for those who mourn.",
+   "comment": "For if God says to the mother of the Jews, I mean Jerusalem, ‘Shave and shear yourself for your delicate children; make your widowhood wide like an eagle, because they have been taken captive from you’ (Micah 1:16), it is because shaving brings insult and dishonor, and is most fitting for those who mourn.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse commands shaving.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/20/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC03-001",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Those who build Zion in blood do so by causing scandal and pouring out the blood of those they deceive.",
+   "comment": "… all the heretics through whom they think badly and act, 'build Zion in blood and Jerusalem in iniquity' (Micah 3:10). For how is it that they do not build Zion in blood, causing scandal and pouring out the blood of those whom they deceive? Therefore also they build Jerusalem in iniquity. That those being deceived are wronged by the deceivers, the Scripture of the divine Proverbs declares most clearly concerning such things, saying thus: 'They shall be filled with their own impiety; for because they wronged the helpless, they shall be slain, and the scrutiny shall consume the impious' (Proverbs 1:31-32).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u31-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u31-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC04-001",
+   "chapter": 4,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The prophet foretells a peaceful and stable day when no one is afraid, because strifes and wars are dissolved.",
+   "comment": "This peaceful and stable state is being described, and the prophet Micah foretells presciently that day, saying: 'Each one will call his neighbor and his brother under his fig tree and his vine, not being afraid' (Micah 4:4). For how can anyone still be afraid, when all strifes and wars are dissolved?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the verse's picture of peace.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u06-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u06-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC04-002",
+   "chapter": 4,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The fig tree signifies the practical life and the vine the contemplative, and one who has both is fearless.",
+   "comment": "And the peace which is principally the tranquility of the soul is given to the holy one, the Word saying: 'every man shall rest under his vine and under his fig tree, and none shall terrify him' (Mic 4:4). And this is not sensually; but he who has the practical life, signified by the fig tree, and the contemplative, which is signified by the vine—being a poetic thing of gladness—is therefore fearless, not having a deceiver to terrify him or demons.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u18-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u18-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC05-001",
+   "chapter": 5,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "All the prophets foretold that Christ would be born in Bethlehem, and the Jews gave Herod this testimony.",
+   "comment": "All the prophets foretold that Christ would come not from Nazareth, but from Bethlehem, and would be born there. For it is written: “And you, Bethlehem, land of Judah, are by no means least among the rulers of Judah; for out of you shall come a ruler who will shepherd my people Israel” (Micah 5:2). And the Jews of that time, when asked by Herod where Christ was to be born, gave him this testimony.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse names Bethlehem.",
+   "author": "John Chrysostom",
+   "work": "On Christmas Day",
+   "work_slug": "chrysostom-in-diem-natalem",
+   "section": "3",
+   "url": "https://viapatrum.org/works/chrysostom-in-diem-natalem/3/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC05-002",
+   "chapter": 5,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Christ born in Bethlehem has goings forth from the beginning because he is God, though he endured a fleshly birth for our sake.",
+   "comment": "How, then, is the one born in Bethlehem of Judea said to have goings forth from the beginning of the age (Micah 5:2) — that is, the beginning of existence — though he was born in the last times of the age? So Christ is God, and what is most ancient of the Word of God would befit him. For he was God, and for our sake endured a fleshly birth from a woman.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the ruler born in Bethlehem can have goings forth from the beginning.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "46",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/46/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC05-003",
+   "chapter": 5,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The prophecy of the ruler from Bethlehem fits only one clearly shown to have been born there.",
+   "comment": "About the place of his birth it has been said that \"the ruler will come forth\" (Matthew 2:6) from \"Bethlehem,\" in this way: \"And you, Bethlehem, house of Ephrathah, are small indeed to be among the thousands of Judah; out of you shall come forth for me one who is to be ruler in Israel, and his goings forth are from the beginning, from the days of eternity\" (Micah 5:2). This prophecy would fit none of those who, as Celsus's Jew says, are in a frenzy and go about begging and say they have come from above, unless he were clearly shown to have been born in Bethlehem, or, as someone else might put it, to have come from Bethlehem to lead the people.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "51",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/51/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC06-001",
+   "chapter": 6,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Israel forsook the one God and worshipped demons on mountains and hills, so God told the prophet to plead his case before the mountains.",
+   "comment": "Those of Israel dishonoured the training given through the Law and neglected the saving teachings; they forsook the one God, who is God by nature, and brought their worship to unclean demons on mountains and hills, and in the most thickly wooded ravines they burned incense to the works of their own hands and bowed down to them. The God of all was angered at this, and with very good reason, and He said to one of the holy prophets: “Arise, plead your case before the mountains, and let the hills hear your voice. Hear, O hills, the judgment of the Lord …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the setting of God's plea before the mountains.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos1-rem-early",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos1-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC06-002",
+   "chapter": 6,
+   "verse_start": 6,
+   "verse_end": 8,
+   "capsule": "God seeks not legal worship but doing judgment, loving mercy and walking with him, as Christ asks his followers to deny themselves and follow him.",
+   "comment": "And through Micah he has brought in the person of a man, wanting to learn how he might accomplish the good without blame: 'With what shall I take hold of the Lord, shall I lay hold of God most high? Shall I take hold of him with whole burnt offerings, with yearling calves? Will the Lord receive thousands of rams, or ten thousands of fat goats? Shall I give my firstborn, fruit of my belly for ungodliness, for the sin of my soul?' (Micah 6:6–8) Then, joined and in order: 'Has it been told you, O man, what is good, or what the Lord seeks from you, but to do judgment and to love mercy, and to be ready to walk with the Lord your God?' (Micah 6:8) Is this not clearly what Christ said: 'If anyone wants to come after me, let him deny himself, and take up his cross, and follow me' (Matthew 16:24)? And again, 'Let the one who loves me follow me, and where I am, there let my servant also be.' (John 12:26) Not in the legal worship, the one according to Christ, but in a holy and spiritual one.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what God asks instead of sacrifices.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/7/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC06-003",
+   "chapter": 6,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "One who prepares himself to go always with the Lord is entirely unstumbling.",
+   "comment": "'Has it not been announced to you, O man, what the Lord requires from you: except to love mercy, to do judgment, and to be ready to go with the Lord your God?' (Micah 6:8). He who prepares himself to always go with the Lord your God is entirely unstumbling. Only let him prepare himself for this, saying: 'My heart is ready, O God, my heart is ready.' And no one among those who are stumbled by shameful thoughts or some impulse can say: 'My heart is ready, O God, my heart is ready'; for he has bonds, 'he is constricted by the chains of his own sins.'",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what being ready to walk with the Lord means.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u39-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u39-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC07-001",
+   "chapter": 7,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The Savior's voice of weeping over Jerusalem is 'woe', and the verse's woes are spoken by him too.",
+   "comment": "We will set out from agreed sayings, which fit no one but the Savior, how he also wept over Jerusalem; and the voice of one weeping is 'woe.' And it lies in the Gospel that seeing Jerusalem he wept over it and said: 'Jerusalem, Jerusalem, who kills the prophets and stones those sent to her, how often I wanted to gather your children,' (Luke 19:41) and what follows. And clearly these too were spoken by the Savior in the 'Woe that I became as one gathering stubble in harvest and as gleaning in vintage, there being no ear to eat the firstfruits. Woe, soul, that the devout has perished from the earth, and the one who walks upright among humans does not exist. All are judged for bloodshed.' (Micah 7:1-2)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "14.6",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/14.6/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC07-006",
+   "chapter": 7,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The 'Woe is me' belongs to the Savior as man, whose soul took a body for the sake of men and grieves when it sees their sins.",
+   "comment": "For it is not alien to the divinity of our Savior, when he beholds the sins of men, that the saying 'Woe is me' should now belong to the Savior—not as God but as man, not as Wisdom but as soul. I set beside it that prophetic word: 'Woe is me, soul, for the godly one has perished from the earth, and the one who acts uprightly among men does not exist.' (Micah 7:2) The blessed soul came upon human life; it took a body for the sake of men. If it sees the sins, it says to the Father: 'What profit is there in my blood, in my going down into corruption? Will dust confess to you?' (Psalm 30:9)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says in plain terms who speaks the 'Woe is me' and why.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "15.4",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/15.4/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC07-003",
+   "chapter": 7,
+   "verse_start": 8,
+   "verse_end": 10,
+   "capsule": "The wrath of the Lord leads to many goods and proves beneficial, like a physician of souls.",
+   "comment": "A soul thus benefited praises the one surrounding her with affliction, saying: 'Let not my enemy rejoice over me, for I have fallen, but I shall arise; I will endure the wrath of the Lord because I have sinned against him, until he justifies my judgment, and he will execute my sentence, and he will bring me out into the light. I shall see his righteousness, and my enemy shall see it, and she shall be clothed in shame, she who says to me: Where is the Lord your God? My eyes shall see him; now he shall be a footstool' (Micah 7:8-9). The wrath of the Lord, leading to so many goods, proves not harmful, but beneficial, being skillfully led by a physician of souls 'healing every disease and weakness'. For how is it not salvific to be brought out into the light toward which the merciful God was angry, so as to finally behold the envenomed evil power falling into shame, having been clothed in it because it has become a footstool?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the sufferer can bear the Lord's wrath.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u14-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u14-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MIC07-005",
+   "chapter": 7,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "God is patient and rich in mercy, so when he is grieved we should repent at once.",
+   "comment": "So when we learn that God has been grieved, we must repent at once and soothe him instead with unceasing prayers, not provoke him further once he has been moved, nor despise him when he threatens. For he is patient and rich in mercy, taking away lawless deeds and passing over wrongs (compare Numbers 14:18; Micah 7:18), and sometimes, at the few tears of those who have sinned, he turns back to the calm that is dearest to him.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos4-rem-early",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos4-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

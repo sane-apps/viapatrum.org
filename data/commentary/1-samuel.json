@@ -1,0 +1,846 @@
+{
+ "book": "1 Samuel",
+ "title": "The Fathers on 1 Samuel",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 45,
+ "selected_count": 23,
+ "comments": [
+  {
+   "id": "1SA01-001",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "Hannah's 'she prayed' and 'she vowed a vow' are two things: prayer as we usually mean it, and a vow of the kind ordered in Leviticus and Numbers.",
+   "comment": "One might not unreasonably say here, attending to 'she prayed to the Lord' (1 Samuel 1:10) and 'she vowed a vow': if she did both — that is, she prayed to the Lord and she vowed a vow — perhaps 'she prayed' is placed for what we customarily call prayer, while 'she vowed a vow' is placed for what is signified as ordered in Leviticus and Numbers. For 'I will give him to the Lord as a gift all the days of his life, and no razor shall come upon his head' (1 Samuel 1:9–11) is not strictly prayer but that vow …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the text says Hannah both prayed and vowed.",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-on-prayer/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA01-002",
+   "chapter": 1,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Hannah called upon the Trinity, using the names Adonai, Lord and Eloi Sabaoth.",
+   "comment": "But also Hannah, praying toward the kingdoms, called upon the Trinity saying: “Adonai, Lord, Eloi Sabaoth” (1 Samuel 1:11). For “Adonai” is interpreted with the Hebrew voice as “Lord”; and again with the Greek voice he said “Lord.” And a third time in Hebrew he said “Eloi Sabaoth,” which is: God of hosts, or of powers.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u05-open",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u05-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA02-001",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Seven means completeness, so 'borne seven' means very many.",
+   "comment": "For the number seven in a way suggests completeness everywhere, as when it says, for instance, ‘The barren woman has borne seven’ (1 Samuel 2:5), that is, very many, as many as were needed to be enough.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what \"seven\" means in the verse.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "28",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/28/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA02-002",
+   "chapter": 2,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The sons of Eli, though near the temple, were outside it in disposition and works.",
+   "comment": "Concerning such things it is said, 'God is not before him' (Psalm 10:4), and concerning the sons of Eli it is said, 'The sons of Eli did not know the Lord' (1 Sam 2:12); for if they drew near to the temple, it was in their disposition and works that he was found outside.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u14-open",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u14-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA02-003",
+   "chapter": 2,
+   "verse_start": 13,
+   "verse_end": 15,
+   "capsule": "The sons of Eli seized and profaned the offerings before the sacrifice, and their deliberate insolence was punished.",
+   "comment": "… So it was necessary that the portion of what was brought be consecrated to God, according to the law that fitted each offering, and that the ministers be sustained with the rest of the body of the sacrifice. But if anyone kept back the whole gift entirely for himself and spent it on his own needs, having burned none of it, he was charged under the law as one who had eaten holy things. This is just what the sons of Eli the priest did: they seized and profaned the sacred offerings before the sacrifices were made, and said most impiously to those who came to sacrifice, ‘Give meat for the priest to roast’ (1 Samuel 2:15). But those deeds, being deliberate and plainly insolent, were punished accordingly.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Eli's sons did wrong with the sacrifices.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 12",
+   "work_slug": "cyril-adoration-12",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-12/15/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA02-005",
+   "chapter": 2,
+   "verse_start": 30,
+   "verse_end": 30,
+   "capsule": "God directs graces to the diligent and glorifies them, while dishonoring him brings dishonor on the wicked.",
+   "comment": "Because for the wicked, the manner of punishment follows, they themselves bringing it upon themselves, but to the diligent, God directs the graces, it has been said: 'those I will glorify, but those dishonoring me shall be dishonored' (1 Samuel 2:30). Because the dishonoring of God brings upon them dishonor. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u24-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u24-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA03-001",
+   "chapter": 3,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Samuel did not yet know God, not from malice but because he lacked the knowledge of the word.",
+   "comment": "… For even the saints, even if they have not come into life for the sake of anything else, have the filth in childhood age, which is not sin. According to this it was said concerning Samuel: 'And Samuel before knowing God' (1 Samuel 3:7). And the child was not knowing God, not because of malice, but because he had not the knowledge of the word.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what \"before knowing God\" means for the child Samuel.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u15-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA03-002",
+   "chapter": 3,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Samuel, though brought up in godly fashion, did not know God before he could reason.",
+   "comment": "… for it is written, 'Even Samuel, before knowing God' (1 Sam 3:7), although he was brought up God-fearingly from tender nails by God-fearing parents. For the children of men have a time from which they are able to move logically.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u32-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u32-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA04-001",
+   "chapter": 4,
+   "verse_start": 11,
+   "verse_end": 13,
+   "capsule": "Eli feared first for the ark, not his sons, and Israel's sins, not the foreigners' strength, brought the defeat.",
+   "comment": "… Eli was pious in himself: his first anxiety was not the children's salvation but the ark, lest it fall under the foreigners—and that is what happened. The foreigners were to learn that God was not defeated through Israel, nor conquered by their own strength; Israel's sins and impieties produced the defeat. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Eli trembled for the ark and why God let it be taken.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA05-001",
+   "chapter": 5,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Dagon fell to break, not to worship.",
+   "comment": "… Dagon fell before the ark not to worship—he was unworthy—but to be shattered; and so it was. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the idol fell before the ark.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA07-001",
+   "chapter": 7,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Samuel's sacrifice of a suckling lamb was a type of Christ, the mediator, whose mystery saved Israel from the Philistines.",
+   "comment": "“And Samuel took one suckling lamb” (1 Samuel 7:9). Do you see how he took Christ as his mediator and, at the same time, as the one who presides over salvation? And how the mystery concerning him, set like an unbreakable weapon against the attacks of the Philistines, saved Israel? For he sacrificed a suckling lamb as a type of Christ, who also cried out long ago through the voice of the prophets: “But I, like an innocent lamb led to the slaughter, did not know” (Jeremiah 11:19).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the lamb offered by Samuel stood for.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA07-002",
+   "chapter": 7,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The power of the sacrifice made the Father ready to help, thundering against the enemies.",
+   "comment": "Observe, too, how the power of the sacrifice made the Father all the readier to help those who were in distress. For he thundered something great and extraordinary against their enemies (1 Samuel 7:10), and to those who offered the sacrifice he gave salvation as their reward, as a type of the mystery of Christ.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God thundered against the Philistines while Samuel was offering.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA08-001",
+   "chapter": 8,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Though things were going well, the people shook off the yoke of the kingdom under God and asked for a king.",
+   "comment": "Though their affairs were going well for them and were set in the best of order, the wretched people planned bitter things against themselves. Shaking off, as it were, the yoke of the kingdom under God, they came to the blessed Samuel, saying: “Appoint a king over us to judge us” (1 Samuel 8:5), and the rest. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what was wrong with the people asking for a king.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA08-002",
+   "chapter": 8,
+   "verse_start": 5,
+   "verse_end": 7,
+   "capsule": "Saul is a type of the evil spirit that ruled Israel after it despised God.",
+   "comment": "… Saul bears the type of the evil spirit that once ruled Israel when they said they had no king: the ancient people, despising the Lord who reigned over them, asked that Saul be given as ruler. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA09-001",
+   "chapter": 9,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Those who have been helped naturally want to repay their benefactors, and a grateful character shows this eagerness.",
+   "comment": "… It is always natural for those who have been helped, that is, who have received very pleasant things from others, to want to make whatever return they can, and to gladden their benefactors with equal or even greater honors. And those in whom a good and grateful character is present always show, in one way or another, their eagerness in these things as proof of their gratitude.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA09-002",
+   "chapter": 9,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "The prophets foretold even ordinary matters, such as Samuel on the lost asses, to comfort those who longed to know what was coming.",
+   "comment": "If the Jews had had no comfort from knowledge of the future, the mere human craving to know what is to come would have led them to despise what was their own, as having nothing divine in it. They would not have received any prophet after Moses, nor written down the prophets’ words, but would have deserted to the oracles and oracle-shrines of the nations, or else tried to set up something of the kind among themselves. So it is not at all strange that their prophets foretold even ordinary matters, to comfort those who longed for such things: so that Samuel prophesied even “about lost asses” (1 Samuel 9:20) …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Samuel spoke of the lost asses.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "36",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/36/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA15-001",
+   "chapter": 15,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Bodily words such as hand and eye, and wrath and repentance, are said of God so that dull hearers could receive the truth, and repentance names a change in how he orders events, not a passion.",
+   "comment": "As among humans \"hand,\" \"foot,\" \"eye,\" and \"ear\" name bodily members, upon God \"hand\" means creative power, \"eye\" oversight, \"ear\" hearing, and \"foot\" his presence when he acts. So \"wrath of God\" names discipline upon those who stumble, not a divine passion; and \"repentance\" names the transfer of God's economy [God's way of ordering events] from one deed to another. What we do when we repent—leaving what we regret and pursuing what is better—is called God's repentance in that transferred sense.\n\nWhy speak so? The prophets had to address hearers heavy in mind with more bodily speech about God, so the truth could be received. People who thought carved and cast images—and even irrational animals—to be gods could not have received spiritual words about God. If God foreknows all, he is not angered or \"repentant\" from what he knows; wrath's work is punishment, and repentance's work is standing away from a former deed and transferring into another economy.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA15-002",
+   "chapter": 15,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "God did not change his mind about Saul: Saul made himself unworthy, and so God transferred the kingdom to another.",
+   "comment": "Do not attach human turnability of judgment to God. We ourselves work the turns of the divine economy that justly meet us, proving by our deeds that we are unworthy of the honor God gave. Having condemned Saul and wishing to hand rule to David—and to keep the kingdom for his seed because of the king of all creation to be born from him according to flesh—God used human words in dialogue with humans: \"I have repented that I anointed Saul king,\" meaning he wills to give the kingdom's beginning to another and end Saul's power.\n\n\"I have repented\" on Saul's account means: Saul made himself so unworthy that if God had a repenting nature he would have changed his mind about him. Why then was Saul anointed? Because then he was worthy; having turned, he became unworthy again. So what I said is shown: God's \"repentance\" names the transfer of his economy from one deed to another.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA15-003",
+   "chapter": 15,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "A change of plan in God is a change in his providential plan: Saul is ended, another appointed.",
+   "comment": "Therefore, in God's case, a change of plan is a change in his providential plan. For he says, “I have changed my mind about having made Saul king” (1 Samuel 15:11), which means: I decided to put an end to him and to appoint another.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms what it means that God \"repented\" of making Saul king.",
+   "author": "Origen of Alexandria",
+   "work": "Notes on Genesis",
+   "work_slug": "origen-adnotationes-genesis",
+   "section": "7",
+   "url": "https://viapatrum.org/works/origen-adnotationes-genesis/7/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA15-004",
+   "chapter": 15,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "God's regret is like-named with ours but is other in substance, and what it did was take down Saul and raise David.",
+   "comment": "We said there is also a regret of God that looks discordant at first glance, since it is written: 'I have regretted that I anointed Saul as king.' (1 Samuel 15:11) Worthily seek also the regret, and do not think his regret has kinship with the regret of those who regret. As his Word had something exceptional, and his wrath something surpassing, and nothing was akin to these among the like-named, so also his regret is like-named with our regret; and like-named are those whose name alone is common, but the account of the substance according to the name is other. Therefore only the name is common of God’s anger and anyone’s anger, and only the name of anyone’s wrath and God’s wrath. So also upon regret. And the one able will seek what God’s regret works, what it worked. It took down Saul reigning lawlessly; it raised as king for the people the one according to God’s heart; for he said because of that good regret: 'I have found a man according to my heart, David son of Jesse.' (Acts 13:22)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "20.1",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/20.1/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA16-001",
+   "chapter": 16,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "David's redness with beautiful eyes showed his clear sight.",
+   "comment": "Esau was reddish like a hairy hide, carrying deadness from sin and murderous toward Jacob; David was reddish with beauty of eyes, to show his clear sight.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the description of David in the verse points to.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA16-002",
+   "chapter": 16,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Saul, who despised the covenant, lost the Spirit and was oppressed by an evil spirit sent by judgment.",
+   "comment": "… he deprived Saul of the spirit, who, despising the covenant of God, was rejected by Samuel; for it is said, 'The Spirit of the Lord departed from Saul' (1 Sam 16:14), and he was oppressed by an evil spirit from the Lord, sent upon him by judgment and vote.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u35-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u35-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA16-003",
+   "chapter": 16,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Saul was separated from the angel who had been his friend because of his wickedness, 'a spirit of the Lord' meaning the angel.",
+   "comment": "But Saul is separated even from his existing friend because of wickedness; for it is written: 'And the Spirit of God departed from Saul, and an evil spirit from the Lord tormented Saul' (1 Sam 16:14); 'a spirit of the Lord' saying the angel: 'For he says the Maker makes his angels spirits, and his ministers a flaming fire' (Ps 104:4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Evagrius Ponticus",
+   "work": "Exposition on Proverbs",
+   "work_slug": "evagrius-expositio-proverbia",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/evagrius-expositio-proverbia/u03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA16-004",
+   "chapter": 16,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The speaker foretold David's future, except that he was good in appearance and had the Lord with him.",
+   "comment": "How then is the still-shepherding lad called a man, understanding in speech, and a warrior? The speaker did not speak from himself, but foretold what would be as if present, witnessing what David was about to become—except \"the Lord is with him\" and \"good in appearance,\" which were his from childhood, one by nature and one by grace.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how a young shepherd can be called a man and a warrior.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA17-001",
+   "chapter": 17,
+   "verse_start": 45,
+   "verse_end": 45,
+   "capsule": "Goliath trusted in his own strength and luck, and his arrogance is why he was not saved.",
+   "comment": "And a great giant will not be saved by the abundance of his own strength. This also contains a history: Goliath was a great giant and had an abundance of strength, and he believed in nothing other than in his own luck and his own strength and greatness. And he was also arrogant; therefore he was not saved …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u26-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u26-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA17-002",
+   "chapter": 17,
+   "verse_start": 51,
+   "verse_end": 51,
+   "capsule": "Goliath was beheaded with his own sword, just as the devil is routed through death and caught by his own deceit.",
+   "comment": "Just as Goliath had his head cut off with his own sword (1 Samuel 17:51), so too the devil, who gave birth to death, is routed through death. He finds that the easy method of his own deceit is a strong instrument of his own destruction. Impaled on the Godhead as on a hook, having swallowed the familiar bait and seized God instead of a man, the one who thought he was catching is plainly caught.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Gregory Thaumaturgus",
+   "work": "Sermon on All Saints",
+   "work_slug": "gregory-thaumaturgus-sermo-in-omnes-sanctos",
+   "section": "2",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-sermo-in-omnes-sanctos/2/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA18-001",
+   "chapter": 18,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Jonathan's soul was bound to David's, and bound souls cannot be forced apart because the soul is free and is wherever its own activities are.",
+   "comment": "“And the soul of Jonathan was bound to David” (1 Samuel 18:1). I read this only later in the holy Scriptures, but I had felt it before, no less vividly than it is told there, though the inspired words there put it most vividly. For it was not simply Jonathan who was bound to David, but what is most truly theirs, their souls: things which, even when the men who appear and are seen are parted, will not be forced apart by any device, not against their will at any rate. For the soul is a free thing and cannot be shut in by any means, not even if you lock it up and guard it in a little cell. By nature it is, in the primary sense, wherever the mind is; and if it seems to you to be in the cell, it is pictured as being there in a secondary sense. This in no way prevents it from being wherever it wishes to be. Rather, it can be, and would rightly be believed to be, wholly and in every way only there where the activities that belong to it alone are found, and toward which they are directed.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that souls, not just men, were bound together.",
+   "author": "Gregory Thaumaturgus",
+   "work": "Thanksgiving Address to Origen",
+   "work_slug": "gregory-thaumaturgus-panegyricus",
+   "section": "6.3",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-panegyricus/6.3/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA19-001",
+   "chapter": 19,
+   "verse_start": 23,
+   "verse_end": 24,
+   "capsule": "God's grace made Saul prophesy in David's favour and cast him naked, a sign he would lose the kingdom.",
+   "comment": "… Saul had strength and a crowd helping him wickedly against David, while only Samuel and David were hunted. God's grace makes Saul prophesy not only what cuts against himself but what favors David, and casts him down naked, foresignifying that he will be stripped of the kingdom. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Saul's prophesying and lying naked signify.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA21-001",
+   "chapter": 21,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "\"Profane\" means those who are not holy, as lay bread is set against the holy loaves, not unclean.",
+   "comment": "\"Profane\" here means not the unclean but those who are not holy, set over against the holy loaves of the table. The table held six loaves continually changed for Israel's twelve tribes—called shewbread—so each loaf stood for two tribes and the six for twelve. The good of this was binding the tribes toward concord; the better foresign was the apostles sent two by two by the Savior to preach first among Israel's tribes, so that six pairs make twelve disciples. Lay bread is \"profane\" only by comparison with the holy, not because the non-holy are unclean as such.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the word \"profane\" in the verse.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA21-002",
+   "chapter": 21,
+   "verse_start": 4,
+   "verse_end": 5,
+   "capsule": "The priest asked whether the young men were clean even from a wife, and whoever receives the greater bread ought to be cleaner still.",
+   "comment": "And in the Kingdoms, when Abathar or Ahimelech the priest wishes to set holy bread before David fleeing Saul’s plot, what does he say except: If the young men are clean from a woman?—not from a strange woman but from a wife (1 Samuel 21:4–5). Then, that someone may receive the bread of the Presence, he ought to be clean from a woman; but that he may receive the greater breads than the Presence, over which the name of God and of Christ and of the Holy Spirit has been invoked, how much more ought someone to be cleaner, that he may truly receive the breads unto salvation and not unto judgment?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the priest's question about the young men means.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "origen-1-corinthians-fragments",
+   "section": "u06-rem-early",
+   "url": "https://viapatrum.org/works/origen-1-corinthians-fragments/u06-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA21-003",
+   "chapter": 21,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "The priest gives David the loaves only priests may eat, a prophecy through deeds that the royal and priestly tribes would be joined in the Saviour.",
+   "comment": "\"Today it will be sanctified through the vessels\" is said less clearly, but means: my children have been sanctified and kept from a woman yesterday and the day before—that is his claim that the children also are purified. If not, he was sanctified through eating the bread of the Presence. Persuaded, the priest gives David loaves none else ought to eat but priests. This is prophecy through deeds: the royal tribe (Judah) and the priestly (Levi) were about to be joined into one dignity—priestly and royal—in our Savior from David, priest and king together \"according to the order of Melchizedek.\"",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA21-004",
+   "chapter": 21,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Neessar means Doeg stood before the Lord confessing, or was demonized.",
+   "comment": "Neessar shows either that through sin Doeg the Idumaean remained before the Lord being treated and confessing, or that he was demonized like Saul, whose mules he pastured.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Samuel",
+   "work_slug": "origen-regnorum-fragments",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/origen-regnorum-fragments/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA21-005",
+   "chapter": 21,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "The king of Gath to whom David fled is Achish in the history and Abimelech in the psalm, a double name like Jethro and Reuel.",
+   "comment": "Regarding David, when he changed his face before Abimelech (1 Samuel 21:13), and released him, and departed. To those who read the royal histories, the present narrative is clear. How intensely David was being pursued by Saul and was about to be captured, he departed to Gath toward King Achish. It is here that Abimelech is named. The word is a double name; for double names are also found in the Scripture, such as regarding Moses' father-in-law; and Jethro is called also Reuel. And Thomas is called also Didymus.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the king David fled to can be called both Achish and Abimelech.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u26-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u26-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA22-001",
+   "chapter": 22,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "Doeg, a bitter and barbarous man, reported to Saul that David had very few men and could easily be seized.",
+   "comment": "He [Doeg] was a herdsman, but a bitter and barbarous man, with nothing genuine about him at all. He used to meet Saul in secret and report to him David’s deliberations and all his plans, and he promised that in due time he would also hand him over. And once, having seen the blessed David enter the house of God, when he ate the bread of the Presence, and meet Ahimelech the priest (1 Samuel 21:1–6), he reported to Saul that David had only a very few men with him, and that Saul could easily seize him by coming upon him, and overpower him without trouble (1 Samuel 22:9–10).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who Doeg was and what he told Saul.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA24-001",
+   "chapter": 24,
+   "verse_start": 4,
+   "verse_end": 9,
+   "capsule": "David's non-retaliation, cutting off only a piece when he could have cut off Saul's head, taught Saul that God rescues the powerless.",
+   "comment": "We have this in the Kings (1 Samuel 24), for Saul pursued David so fiercely that he had to hide in a cave, in which Saul was delighted. And what is the paradox? For being surrounded by enemies, he was saved by divine power, as if the enemy were given into his hand, even though by the virtue of non-retaliation (1 Samuel 24:10) he surpassed the slaughter against the opponent, not only by not striking down but also by teaching him to turn away from hardship. For having cut off 'the lobe of the ear' (1 Samuel 24:10) of him, he showed him that he was able even to cut off the head. Therefore, he instructs both: the care of God regarding his own servants, and his own non-retaliation, for which he calls upon the enemy to imitate him, teaching him that God rescues the powerless from the powerful and the oppressors.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u09-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u09-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-001",
+   "chapter": 28,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "Saul went to the medium because the Lord did not answer him, and one who runs to such practices is forsaken.",
+   "comment": "Which Saul experienced: 'You have not listened to me,' he says, 'nor even in sleep' (1 Samuel 28:6); and he went toward the medium. If ever, therefore, you see a rich Christian having everything well, but having haste toward astrologers or toward necromancers or toward such things, these were forsaken. And if you see a poor man having fallen from wealth, but possessing God, such as Job was (Job 1:1), this one was not forsaken.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u04-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-003",
+   "chapter": 28,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "Saul, fearing the battle and getting no answer from God, turned to necromancy, and what appeared as Samuel was a shadow formed by demonic working.",
+   "comment": "Is it then still lawful for you to hesitate, that Saul has melted away condemned by his own votes? For since he was fearing the weakness unto battle of those gathered against him, he was claiming to learn the things about to be from God. And when that one was silent, and unveiling nothing, he turns toward grieving the one who has chosen to be silent. And he arrives unto necromancy, although he had wiped out, it says, the knowers—I mean those thinking to know the things about to be. Then he says: ‘Lead up Samuel for me,’ (1 Samuel 28:11) not as if the charm or the magicians’ art were able to bring the holy one’s soul, but as those divinizing always using such a voice; and I have learned that with certain unspeakable words bewitching the demons, and charming water, they look down upon idols and shadows, and as in a mirror shapes of some, the demons perhaps fashionably molding the figures of those said to be brought up. And indeed the little woman said at the beginnings: I see gods going up from the earth. Then after this: ‘And the woman,’ (1 Samuel 28:12) it says, ‘saw Samuel.’ And nothing hard, that in equal and like shape of blessed Samuel a shadow and idol was seen, formed from demonic working. If then someone should think the prophet’s soul was truly called up, and will vote the true for the little woman’s words, since she says she has also seen gods going up from the earth, then let him also gift the lie to the customs of the divination, yet let him think according to truth that there are also some gods of such a rank who have risen from the earth—although God by nature is one and alone.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the woman saw when the text says she saw Samuel.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/16/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-004",
+   "chapter": 28,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "The words \"the woman said\" are the narrative voice of the writer, who is believed to be the Holy Spirit.",
+   "comment": "For what things are written? “And the woman said, ‘Whom shall I bring up for you?’” (1 Samuel 28:11–14) Whose person is it that says, “the woman said”? Is it the person of the Holy Spirit, from whom the Scripture is believed to have been written, or of someone else? For the narrative person everywhere—as even those practiced in all sorts of discourses know—is the person of the writer; and the writer for these words is believed to be not a human being, but the Holy Spirit who moved human beings as writer. Therefore the Holy Spirit says: “And the woman said, ‘Whom shall I bring up for you?’ And he said, ‘Samuel for me.’ Who says: ‘And the woman saw Samuel, and the woman cried out with a great voice, saying…’?” (1 Samuel 28:11-12)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-005",
+   "chapter": 28,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "Some of the brothers say the medium lies and Samuel was not brought up, since so holy a prophet cannot be in Hades.",
+   "comment": "And indeed we know some of our brothers who have looked the Scripture in the face and say: “I do not believe the medium. The medium says she has seen Samuel—she lies.” (1 Samuel 28:12)\n\n“Samuel was not brought up; Samuel does not speak. But just as there are some false prophets saying, ‘Thus says the Lord,’ and ‘the Lord has not spoken,’ so also this demon lies, promising to bring up the one Saul commands. ‘Whom shall I bring up?’ she says; ‘Bring Samuel up for me.’ And these things are said by those who claim this story is not true: Samuel in Hades? Samuel is brought up by a medium—the exceptional one among the prophets, the one dedicated to God from birth, the one said before birth to be in the temple, the one who at weaning put on the ephod and the double cloak and became a priest of the Lord, to whom while still a child the Lord gave oracles by speaking? Samuel in Hades? Samuel among the underworld—the one who succeeded Eli when he was condemned by providence for the children’s sins and lawlessness? Samuel in Hades, whom God heard at the time of wheat harvest and gave rain to come from heaven? Samuel in Hades—the one who spoke so boldly: Did he take anyone’s desire? He did not take the calf; he did not take the ox; he judged and condemned the people while remaining poor; he never desired to take anything from so great and so large a people.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "3",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/3/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-002",
+   "chapter": 28,
+   "verse_start": 11,
+   "verse_end": 14,
+   "capsule": "It is nonsense to think that a prophet's soul, entrusted to a faithful Creator, was dragged from its place by a woman's charms.",
+   "comment": "And most wise Peter somehow perhaps has cheated the athletes of the piety unto Christ, having written thus: ‘So that even suffering under others according to his will, let them set aside their souls to a faithful Creator.’ (1 Peter 4:19) And if Satan forces a soul set aside to God, leading and carrying wherever he should choose according to times, how would the one standing before the saints be understood faithful, having taken as it were each one’s spirit as a deposit? These things then are nonsense, and a terrible stroke, to think according to truth that a prophet’s voice was dragged down by cold charms of a most foul little woman from the places allotted to her.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/15/",
+   "from_cite": false
+  },
+  {
+   "id": "1SA28-007",
+   "chapter": 28,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Scripture says in its own person, not the demon's, that she saw Samuel, so it is Samuel who has come up.",
+   "comment": "These things, then, show that the words are not false and that it is Samuel who has come up. What then is a medium doing here? What is a medium doing about the bringing-up of the righteous man’s soul? That first speaker fled—so as not to seem to have a contest against so many other questions in the passage—and says: “It is not Samuel; the demon lies, since the Scripture cannot lie.” (Psalm 16:10) But the Scripture’s words are not from the demon’s person but from her own [Scripture's own person]: “And she saw Samuel,” (1 Samuel 28:12) “Saul said…”—the things spoken from Samuel. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/6/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-009",
+   "chapter": 28,
+   "verse_start": 12,
+   "verse_end": 14,
+   "capsule": "Scripture says the woman saw Samuel and that Saul knew it was Samuel, not that he supposed it, and no one knows what is not.",
+   "comment": "… I know that the one from that argument says: “No wonder; for Satan himself transforms himself into an angel of light. So it is no great thing if his servants also transform themselves as servants of righteousness.” (2 Corinthians 11:14–15) But what is it that “the woman saw”? “Samuel.” And why has it not been said: “The woman saw a demon that pretended to be Samuel”? But it is written that “Saul knew that it is Samuel.” If it were not Samuel, it ought to have been written: “Saul supposed him to be Samuel.” But now it is written: “Saul knew”—and no one knows what is not; therefore “Saul knew that it is Samuel,” “and he fell on his face on the earth and worshiped.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the words 'saw Samuel' and 'perceived that it was Samuel' imply.",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-011",
+   "chapter": 28,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Samuel could be in Hades because Christ himself went down there to save, and the prophets went before him to announce his coming.",
+   "comment": "… I ask the one who said the earlier things (“Samuel in Hades?” and what follows) and let him answer the question: Who is greater, Samuel or Jesus the Christ? Who is greater, the prophets or Jesus the Christ? … Here no one who has once come to know the Lord as Jesus Christ, the one proclaimed beforehand by the prophets, will dare to say that the Christ is not greater than the prophets.\n\nWhen therefore you confess that Jesus Christ is greater—Christ in Hades, or did he not come to be there? … It is written that the fifteenth Psalm is borne upon him: “For you will not abandon my soul to Hades, nor will you give your holy one to see corruption.” (Acts 2:27–31) Then Jesus Christ is in Hades. …\n\nThen after this if he answers that Christ has gone down into Hades, I will say: Christ has gone down into Hades to do what—to conquer, or to be conquered by death? … Therefore the Savior has come down to save; has he come down there proclaimed beforehand by the prophets, or not? …\n\nWhat then? Moses—yes—but not the prophets after him? And not Samuel? What is out of place in physicians going down to those who are badly off? And what is out of place in the chief physician also going down to those who are badly off? … Do not fear; do not be stunned: Jesus has come to be in Hades, and the prophets before him, and they proclaim beforehand Christ’s sojourn.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how a holy prophet could be brought up from the place of the dead.",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/6/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-010",
+   "chapter": 28,
+   "verse_start": 15,
+   "verse_end": 17,
+   "capsule": "Scripture, which must be believed, says that Samuel himself spoke to Saul.",
+   "comment": "… Then again the person of the Scripture: “And Samuel said to Saul, ‘Why have you provoked me to bring me up?’” “Said,” says the Scripture that must be believed—“Samuel said, ‘Why have you provoked me to bring me up?’” … Again the Scripture has not spoken otherwise, but that Samuel himself said: “And why have you inquired of me? And the Lord has stood away from you.” Does he speak truly or falsely when he says these things: “The Lord has stood away from you and has become against you and has made another for himself, as he spoke by my hand, and he will tear the kingdom from your hand”—and a demon prophesies about Israel’s kingdom? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1SA28-008",
+   "chapter": 28,
+   "verse_start": 17,
+   "verse_end": 19,
+   "capsule": "A demon could not know David's kingdom, Saul's sparing of Amalek, or Saul's death tomorrow, so the words are God's.",
+   "comment": "I say that both the story and the examination concerning it are necessary, so that we may see what holds us after the departure. “He has spoken by my hand, and the Lord will tear the kingdom from your hand and will give it to your neighbor, to David.” (1 Samuel 28:17–19) But a demon cannot know David’s kingdom, the one appointed by the Lord. “Because you did not hear the Lord’s voice, you did not execute the wrath of his anger on Amalek.” Are these not God’s words? Are they not true? For truly Saul did not do the Lord’s will, but “spared the king of Amalek,” for which Samuel reproached Saul both before his falling asleep and at the departure: “And because of this word the Lord has done this to you on this day; and the Lord will also give Israel into the foreigners’ hand.” Can a demon prophesy concerning the whole people of God that the Lord is about to hand Israel over? “And also the camp of Israel the Lord will hand over into the foreigners’ hand. Make haste, Saul; tomorrow you also and your sons with me.” And can a demon know this—concerning a king appointed with a prophetic act—that tomorrow Saul was about to leave life, and his sons with him? “Tomorrow you and your sons with me.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the argument that the prophecy against Saul could not have come from a demon.",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "5",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/5/",
+   "from_cite": true
+  }
+ ]
+}

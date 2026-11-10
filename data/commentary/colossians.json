@@ -1,0 +1,964 @@
+{
+ "book": "Colossians",
+ "title": "The Fathers on Colossians",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 51,
+ "selected_count": 33,
+ "comments": [
+  {
+   "id": "COL01-001",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Greeks and Jews who had believed were leading the Colossians to keep old observances and to turn to angels as go-betweens, and this letter is aimed at correcting that.",
+   "comment": "Those who had believed from among the Greeks were also drawing in the still-Greek people into Greek observances, desiring to; and those Jews who believed were persuading others to keep the law, as if grace were incomplete without the law. Besides these, both Greeks and Jews were persuading the Colossians to pay attention to angels; the Greeks, saying that their gods are angels, because indeed the one God is immeasurable and great, not reachable by men, but through these angels, as mediators, he provides benefits to those receiving them; but the Jews said that God set boundaries of nations according to a number of God's angels; thus also Michael is the ruler of the Jews, … Toward these things is the aim for Paul, and these things are corrected.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the setting of the whole letter in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-002",
+   "chapter": 1,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "Paul names Christ often because Christ was being set aside, and he shows that the hope of resurrection came through Christ, not angels.",
+   "comment": "… it is necessary to note that in a few verses he often remembers Christ; for the one being set aside, he constantly makes remembrance, impressing upon the souls the longing toward him (Col 1:5–6). Already he shows them that the hope laid up for the resurrection and the kingdom was not established by the administration of angels, but by the presence of our Savior Jesus Christ. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul keeps naming Christ and what hope he points to.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-003",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The gospel is true, has reached the whole world, and bears fruit and grows.",
+   "comment": "A true and unfalse gospel. This is so as to add to and confirm their faith in all the world; for he says that the gospel has reached not only to you, but already even to all the world, which is a sign of the power of Christ working in the preaching. It was not neglected, but it bears fruit and grows.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Plain reading of what Paul says about the gospel's spread.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-004",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 9,
+   "capsule": "God's will is that they know they are saved through Jesus Christ and not through angels.",
+   "comment": "Epaphras is presented as being one of the saints and having instructed them, so that they might more attend to his teaching (Col 1:7). And what was the will of God? To know you and to realize that it is not possible for you to be saved through angels but through Jesus Christ (Col 1:9). How then do we come to knowledge? In spiritual wisdom, not worldly.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows what Paul wants the readers to know and why.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-005",
+   "chapter": 1,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Patience needs long-suffering and joy, and the one who rejoices in afflictions for Christ receives a reward from God.",
+   "comment": "Above all, it brought patience along with long-suffering (Col 1:11); for patience without long-suffering does not stand, and without joy, patience has no reward. And it is necessary above all in these things to have joy; for not the one who grieves over afflictions for Christ, but the one who rejoices over them receives a reward from God. And what is the reward? The adoption, the inheritance, the fellowship with the angels.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul joins patience with long-suffering and joy.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-007",
+   "chapter": 1,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "The Son, having loved us, suffered to make us worthy of his kingdom.",
+   "comment": "Thus: he transferred us into the kingdom of the love of his Son. Because the Son, having loved us, suffered on our behalf so that he might make us worthy of his kingdom, for this reason he says: he transferred us into the kingdom of the Son of his love; …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-006",
+   "chapter": 1,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "Angels served God for our salvation but did not establish us; God has now brought us into the kingdom of his Son, who is loved as a son while angels are loved as servants.",
+   "comment": "And before the flood and after the flood, before the law and in the law, there were angels ministering to God for our salvation, but they did not establish us. But now God, through the administration of the Lord, has transferred us into his kingdom. Whom he loved: for indeed he loves angels as servants, but Christ as a Son. Therefore he did not lead you into the kingdom of the angels, but into the kingdom of the Son of his love. We are under the heir, not under the slaves.\n\nThus he says 'Son of love', because he is loved as a son, not because he is of the love of God; for neither are the sons of this disobedience sons by nature, nor are the sons of this Gehenna children, nor is the devil a son by nature of destruction, nor is the adversary a son of sin; likewise, the Lord is not a son of love. But since we are loved slaves, and the Son is loved as a son, he said: of the Son of his love.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the kingdom of the Son of his love means and why Paul words it so.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-010",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "God the Father gave his only-begotten Son, the image of the invisible God, a share of his own greatness, since a fitting image of the invisible God must show his greatness too.",
+   "comment": "But in our teaching the God and Father of all is not the only one who is great. For he has given a share of himself and of his greatness to the only-begotten and “firstborn of all creation” (Colossians 1:15), so that, being himself “the image of the invisible God” (Colossians 1:15), he might keep the image of the Father in greatness too. For there could not have been a well-proportioned image, if I may call it that, and a beautiful image “of the invisible God,” that did not also present the image of his greatness.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that Christ is the image of the invisible God.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "69",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/69/",
+   "from_cite": true
+  },
+  {
+   "id": "COL01-008",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "Christ is before all things, and 'firstborn' cannot be taken strictly, since an only-begotten has no brothers and a firstborn does.",
+   "comment": "Having been born firstborn of all creation. … For if he was not before all things, how were all things created in him? So that the term 'firstborn' is not strictly applied, since it is contrary to 'only-begotten'; for by nature the only-begotten is the only one of the Father, but the firstborn is he who has other brothers, of whom he is first. It is not possible to take both terms in the strict sense.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul words Christ as firstborn and what the word does and does not mean.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-009",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 18,
+   "capsule": "Christ is firstborn from the dead by rising to incorruption before the other dead.",
+   "comment": "Just as he said him to be the firstborn of all creation, being before the creation (Col 1:15-17), so he is firstborn from the dead, having risen before all other dead unto incorruption (Col 1:18). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-014",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 18,
+   "capsule": "Paul calls the Son the image of the invisible God and also firstborn from the dead, because the body he took was truly his own and so he could die in a human way for us.",
+   "comment": "… He [Paul] calls the Son naturally begotten from him — that is, the God Word — the image of the invisible God, and also that through him all things were brought to birth, whether visible or invisible, in heaven and on earth, and that he himself is before all things: “for in the beginning was the Word,” (John 1:1) and he is the maker of the ages, having existence older than all time. But he says that the one who is such by his own nature has been given by the Father as head of the church’s body, and that he himself is the firstborn from the dead. Then how is the God Word who always exists, in whom all things hold together, said to become firstborn from the dead and firstfruits of those who have fallen asleep, unless the body taken by him is truly his own? When it has suffered death, he himself would be understood to suffer — the event having a not-implausible account in him, for what is his own has suffered. In this way he is understood as firstborn from the dead, though by nature immortal and life itself. … So when, having lowered himself into emptying, he has been given as head of the church’s body, then the one who as God does not know how to suffer death is also said to die in a human way for us.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/18/",
+   "from_cite": true
+  },
+  {
+   "id": "COL01-011",
+   "chapter": 1,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "Since all things were created in him, he was before all things, and we should hope in him and not in angels.",
+   "comment": "He intends to say that he was before: for if he were not before all, how would all things be created in him? And in him he said all things are being created, so that, having turned away from hoping in angels, we might have hope in Christ; and the 'in him' is instead of 'through him'. … All things were created through him and unto him. Instead of the cause of creation turning toward him, he said 'into him', meaning that nothing of the created things is outside him, but all things are contained by him. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-012",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Christ is first in all things according to God's plan of salvation: first in obedience, baptism, suffering and rising, and so the beginning for those who follow.",
+   "comment": "In all, in what way? According to the economy [God's plan of salvation]; for first in obedience, first in baptism, first in citizenship, first in suffering, first from the dead, so that it is fitting for him to be first in all, having become the beginning to those who follow. And he is the head of the body, the church. Creator indeed of creation, but also Creator of our return. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the phrase 'first in all things' with a plain list.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-013",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Christ became firstborn from the dead by first raising his own body, and so opened a way for human nature to rise and overcome corruption.",
+   "comment": "… He [Christ] says that those who have believed in him have been given to him by the Father, so that he may not lose them but raise them on the last day (John 6:39). How then did he raise them, if not clearly through his own resurrection from the dead? For having made alive his own temple even before the others, and having shaken death’s power through the death of his own flesh, he became a way for human nature toward resurrection and toward being able at last to overpower corruption. So what is proper to the God-Word who came down from heaven is that through which he became firstborn from the dead (Colossians 1:18) — so that what was given him may also follow the raised one toward life, no longer being lost through the first-formed man’s transgression, but rather being saved through Christ’s obedience.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Christ is called the firstborn from the dead.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "25",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/25/",
+   "from_cite": true
+  },
+  {
+   "id": "COL01-015",
+   "chapter": 1,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The fullness is the church, which is filled with the Holy Spirit, and Christ was pleased that all the fullness should dwell in him and through him reconcile all things.",
+   "comment": "… And he said 'fullness' referring to the church, which is rightly and already said of him because the church is being filled with the Holy Spirit. He says, however, that Christ was pleased that all the fullness should dwell in him, and thus through himself to reconcile and to unify all things to himself. In the epistle to the Ephesians, he was showing that the church is called the fullness of God (Eph 1:23). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-016",
+   "chapter": 1,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "The one who sins is God's enemy, but God is an enemy to no one.",
+   "comment": "… Those sinning are his [the Savior's] enemies. This is said: 'For being enemies, we were estranged' (Colossians 1:21). The one sinning is an enemy of God, not God is an enemy of him; for God is an enemy to no one. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says in plain words in what sense we were God's enemies.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u21-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u21-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "COL01-017",
+   "chapter": 1,
+   "verse_start": 26,
+   "verse_end": 28,
+   "capsule": "The mystery is great and rich in glory only if Christ is God the Word, who became human and remained what he was.",
+   "comment": "“…Christ in you, the hope of glory, whom we proclaim.” (Colossians 1:27–28) How is the mystery hidden, or how is it God’s word at all, and what riches of glory are in it, if Christ is merely a common human as we are? The mystery is neither great nor worth naming unless we approach Christ as God and understand that the Word, being God and in the equality and form of the Father, lowered himself into emptying — becoming human and remaining what he was. Only so is the mystery thought rich and full of glory.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul calls the gospel a hidden mystery rich in glory.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "37",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/37/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-017",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The treasures are called hidden so that the unworthy do not find divine knowledge, while those who labor for it attain it.",
+   "comment": "… It is customary to call the things said unclearly 'hidden' because of a certain economy [a purposeful plan]; for according to this also the wisdom of God is hidden in a mystery. Just so, 'The treasures of wisdom and knowledge are hidden' (Colossians 2:3) have been said. And the end or purpose of these hidden things is not to let the unworthy find the knowledge of divine things, so that those having a desire for the attainment of divine knowledge, having given themselves to labors and exercises, might attain the purpose. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the treasures of wisdom and knowledge are called hidden.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u21-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u21-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-018",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "We received Christ as the Word made flesh, who did not cease to be the Word and is named Lord of glory.",
+   "comment": "… “As therefore you received Christ Jesus the Lord, walk in him, rooted and built up in him and established in faith.” (Colossians 2:6–7) How did we receive Christ? Wise John will teach it: “And the Word became flesh.” (John 1:14) Yet he has not ceased to be Word even though he became flesh; even so he sits with his own Father, and the crucified one is named Lord of glory. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what it means to have received Christ Jesus the Lord.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "37",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/37/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-001",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Greek philosophy holds persuasive arguments that present falsehood as truth, and Paul calls the words of the philosophers 'according to the elements of the world'.",
+   "comment": "Paul, then, saw that Greek philosophy holds persuasive arguments, not easy for most people to dismiss, which present falsehood as truth. Of these he says: “See to it that no one carries you off as spoil through philosophy and empty deceit, according to the tradition of men, according to the elements of the world, and not according to Christ” (Colossians 2:8). And seeing that a certain greatness shows itself in the words of the wisdom of the world (1 Corinthians 1:20), he said that the words of the philosophers were “according to the elements of the world.” …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by philosophy and the elements of the world.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Preface",
+   "work_slug": "origen-contra-celsum-preface",
+   "section": "5",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-preface/5/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-003",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Fleshly circumcision is a type of the inward circumcision by the Spirit, which strips off the old self and cuts away the pleasures of the flesh.",
+   "comment": "For circumcision in the flesh would be a very clear type of the inward circumcision, the circumcision in the spirit (Romans 2:29), by which Christ removes all defilement from our thoughts. For, in the words of the blessed Paul, ‘we have been circumcised with a circumcision made without hands, in the putting off of the flesh’ (Colossians 2:11). For when we have, as it were, stripped off the old self, which is being corrupted by deceitful desires (Ephesians 4:22), and have all but cut away the pleasures of the flesh by the keen edge and the working of the Spirit, we shall already, in some measure, show ourselves fit to be counted worthy even of seeing God, and of becoming a sacred dwelling place of the holy and consubstantial Trinity. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the circumcision made without hands.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "29",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/29/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-004",
+   "chapter": 2,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "We are said to be buried and raised with Christ because the whole of human nature was in him as he trampled on death.",
+   "comment": "Yet the Word who is from God the Father does not give life to a temple foreign to him, nor simply to that of someone else, but rather to his own body, through which he is also said to have died for us, so that the good of the resurrection too might be found to have truly come about for us. For the whole of human nature was in him, trampling on death; this is how we are said to have been buried with him and raised with him (Colossians 2:12), and seated with him “in the heavenly places” (Ephesians 2:6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how we are buried and raised with Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u05-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u05-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-005",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The people's consent to the law became a handwritten document, which Christ erased with his own teachings.",
+   "comment": "When the law was given, which condemns those who transgress (Col 2:14–15), all the people of Israel, standing, cried out, and they consented to those things being said, accepting them; and the consent became like a handwritten document. This, then, the handwritten document, the consent toward the law, Christ erased with his own dogmas [teachings]; for he demonstrated according to the observances of the law, as regarding uncleanness, that it is not the things entering but the things exiting that defile a man, and regarding the keeping of the Sabbath, that he healed in the Sabbath; and one will find many other such things. … And since the people said 'Amen' in the curses, it was cast as a sub-script to the handwritten document.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the handwritten document was and how Christ erased it.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-007",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "By his cross Christ triumphed over the hostile powers, drove Satan from his tyranny, and pulled down death's power.",
+   "comment": "… For by his own cross Christ triumphed over the evil and hostile powers, nailing to the wood “the bond written against us” (Colossians 2:14–15). He drove Satan away from his tyranny over us, abolished the sin of the world, opened the gates of Hades to the spirits below, and pulled down the power of death.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly what Christ's triumph on the cross accomplished.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-008",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "By laying aside the flesh Christ brought down the opposing powers, and the evil one could not learn who he was until Christ was finally revealed.",
+   "comment": "Having stripped off the rulers and the authorities, he demonstrated in boldness, triumphing in the cross (Col 2:15). Since through the stripping off and the laying aside of the flesh he brought down the opposing powers, having stripped off the rulers and the authorities, he boldly demonstrated, triumphing over them in it. For even until the cross and even death, our Lord was being revealed as being both God and Son of God, and with miracles he struck, but with the body he was covered; therefore also the Satan tempted him, desiring to learn if he is the one being proclaimed by the prophets, so that if he might learn that he is, he might obstruct the economy. But the evil one did not prevail, for he was not able to learn; so finally Christ was revealed.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what stripping the rulers and authorities means.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-009",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "After the cross and resurrection, Christ stripped off the hiddenness and showed the divinity that had been with the body.",
+   "comment": "And since he was crucified and died and was buried and rose and fulfilled all the things of the economy, he stripped off the hiddenness, and with a bare head he showed the divinity existing with the body. First, indeed, the resurrection from the dead was a work of God, then the ascent into the heavens, then the energy through the servants and the other saints in his name. Having stripped off the hiddenness, he demonstrated the opposing authorities in boldness. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-011",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Paul called a festival kept on set days a 'part of a feast', hinting that a life lived by the divine Word is a complete and unceasing feast.",
+   "comment": "But the great number of those who are thought to believe, and who are not of such stature, are unwilling or unable to keep all days in this way, and so they need outward examples, perceived by the senses, to remind them, so that they do not drift away altogether (Hebrews 2:1). I think that Paul had this in mind when he called the festival kept on days set apart from the others a “part of a feast” (Colossians 2:16), and that by speaking in this way he hinted that the life lived at all times according to the divine Word is not “in part of a feast,” but in a feast that is complete and unceasing.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the phrase 'part of a feast'.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "23",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/23/",
+   "from_cite": true
+  },
+  {
+   "id": "COL02-010",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "Paul teaches that the law is abolished and the evil one has fallen, so they should no longer obey what was abolished, for it was a shadow of the body of Christ.",
+   "comment": "Therefore let no one judge you (Col 2:16-18a). It teaches that the law is abolished, having erased the handwriting against us of Christ. And it teaches that also the evil one has fallen, of the Lord having stripped off and having exemplified the rulers and the authorities. It commands therefore not to obey any longer these things which have been abolished through the energy of Christ; so that neither, he says, let the Jews persuade you to keep the things that are under the law. For those were a shadow of the body of Christ, which is the church (Col 2:17). The shadow indeed runs ahead of the body, but it does not have standing by itself. Therefore he says: do not obey the law.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul tells them not to be judged by the law and what the shadow means.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-open/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-012",
+   "chapter": 2,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "The shadow runs ahead of the body, and once the body, Christ, has come, the shadow is no longer needed.",
+   "comment": "These things happened, he says, being a shadow of the things that were to come; and the shadow runs ahead of the body. Since therefore the shadow is the legal requirements, what is the body? The Christ is not a shadow. Therefore, having come the body, the shadow is superfluous.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-013",
+   "chapter": 2,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Paul speaks to the Jews about being judged and to the Greeks about being led into worshiping angels.",
+   "comment": "But also, let no one lead you Greeks into worshiping angels or the elements of this world; for they enter into things which they have not seen with their own mind and with their own reason, being overthrown. Therefore, 'let no one judge you' is said concerning the Jews, and 'let no one condemn you' concerning the Greeks.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-open/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-014",
+   "chapter": 2,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Those who say God is too great to reach lead people to him through angels and call this humility, but Paul asks why they leave Christ, the head of the angels.",
+   "comment": "… Since therefore until Him we do not reach, through His angels we are being led to Him and being brought to Him. And more highly he was saying: He who is head of every rule and authority, and now he says: Why are you returning to the elements and angels, having abandoned the head of these, which is Christ? … Since they were saying that God is great, He is ungraspable, He is invisible, and we do not reach there. Because of this, since we do not make room for the Great One, through the angels we are being brought. And this is humility, he says.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the 'humility and worship of angels' Paul warns against.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-015",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "God the Word is the head of all, so those who leave the head cannot hold the body, since every benefit comes to the whole body from the head.",
+   "comment": "… It is necessary, he says, to have the head; for God the Word is the head of all. What therefore, having left the head, do you hold the body? … But therefore from the head comes to all the benefit, to angels as angels, to archangels as archangels, to the visible things as visible things. Set for me the heaven to be instead of a head to the world, instead of eyes the sun and the moon, and thus having arranged each part of the world in a growing order, you will find one body of the all. And just as soul is in a body and body of a soul, so the invisible powers are in the visible things. And of all these the head is more masterful, from which the benefit comes to the whole body, being supplied, it is evident, from the head.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what holding fast to the Head means.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-016",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "Those who command not to touch or taste anything that lives follow a Greek teaching, and though self-control is good, their second part is impious.",
+   "comment": "… These things are set forth as Greek dogmas; for these people command, in their own plan, not even to touch or taste anything that lives. For all these things were given to men for destruction, such as to corrupt them and consume them in their use and in the violence of life. …\n\nInstead of fearing these things—I am indeed speaking of 'do not handle, do not taste, do not touch' (Colossians 2:21)—there seems to be some logic, since they are of the low-minded and are stingy with the body, to restrain it from filth and not to honor the flesh through gluttony. But even if self-control is beautiful, the second part is impious; for they do not only abstain as if from a superior stomach, but also as if they were not obligated to wrong living things, which were given for destruction in the use of life, and rather they wish to be merciful to God contrary to reason.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "A person made to stand upright and look up is fitted to seek the things above, where Christ is, and to rise above earthly things in the mind.",
+   "comment": "… Your head stands upright toward heaven; your eyes look upward. So if you ever dishonor yourself with the passions of the flesh, serving the belly and the parts beneath it, you have been grouped with the senseless cattle and have become like them. … A different concern befits you: to seek the things above, where Christ is (Colossians 3:1-2), and to be above earthly things in your mind. As you have been shaped, so order your life as well. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Plain picture of what seeking the things above means.",
+   "author": "Basil of Caesarea",
+   "work": "Homilies on the Six Days of Creation",
+   "work_slug": "basil-homiliae-hexaemeron",
+   "section": "70",
+   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/70/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-002",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Our hidden life is eternal blessedness, shown at Christ's coming.",
+   "comment": "Our life is hidden (Col 3:3), instead of the blessedness of the eternal life which will be revealed to all when also the glory of Christ is revealed in his second coming. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly what the hidden life is and when it will be revealed.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL03-003",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Those who keep the Savior's commandments have a share in his glory stored up with God, for their life is hidden with Christ until he is revealed.",
+   "comment": "… And how could those who keep the commandments of our Savior, and have trained themselves thoroughly in a life and conduct of shining distinction, not be filled with the highest joy? For them a share in his glory is stored up with God, wholly and surely. For it says: ‘For you have died, and your life is hidden with Christ in God. When Christ, our life, is revealed, then you also will be revealed with him in glory’ (Colossians 3:3–4). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "35",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/35/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-004",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Sin is often called the flesh, so its members are members of sin.",
+   "comment": "… Just as often sin is called the flesh (Col 3:5), so also, enumerating now the members of the flesh, he speaks of fornication and uncleanness and the following; for these are the members of sin.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL03-005",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "We die to sin, not in the flesh, by making sin idle in us.",
+   "comment": "… We, however, do not die according to the flesh—how could we?—but to sin, as it is written (Romans 6:2); that is, we render sin idle and ineffective in ourselves by putting to death “the members that are on the earth: sexual immorality, impurity, passion, evil desire, and greed” (Colossians 3:5). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what putting the earthly members to death means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u03-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-006",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 7,
+   "capsule": "Paul calls sins members, as the Colossian passage shows by naming fornication, impurity and greed as the members to be put to death.",
+   "comment": "… To see that Scripture commonly calls sins “members”, read what this same apostle says to the Colossians: “Put to death your members that are on earth: fornication, impurity, and greed, which is the service of idols. Because of these things God's wrath comes upon the sons of unbelief. In these things you too once walked, when you lived in them” (Colossians 3:5–7). See how he calls “members” the things he identifies as sins. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows from the verse itself that Paul's \"members\" are sins.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "1.67",
+   "url": "https://viapatrum.org/works/julian-to-florus/1.67/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-008",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Putting off a garment is a picture of putting off the old man and casting off sin with it, for the sake of Christ.",
+   "comment": "[The forty martyrs, told to strip:] … “We are not taking off a garment,” they said, “but we are putting away the old man, who is being corrupted according to the desires of deceit (Ephesians 4:22; Colossians 3:9). We thank you, Lord, that with this garment we cast off sin together with it. Since we put it on because of the serpent, let us take it off because of Christ. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Basil of Caesarea",
+   "work": "Homily on the Forty Martyrs of Sebaste",
+   "work_slug": "basil-in-quadraginta-martyres",
+   "section": "4",
+   "url": "https://viapatrum.org/works/basil-in-quadraginta-martyres/4/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-007",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "The old man is the sinful mindset; the new, the spiritual.",
+   "comment": "He calls the sinful mindset the old man, and the evil deeds the members (Col 3:9-10); but the spiritual mindset is the new man, and his members are the good deeds. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the old and new man in simple terms.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL03-009",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "The image of the Creator is stamped on the soul that no longer has the old man with his deeds.",
+   "comment": "… He [Celsus] speaks, too, without even having stopped to consider in which part of man the “after the image” of God is stamped, and that it lies in the soul that either never had or no longer has “the old man with his deeds” (Colossians 3:9), a soul which, because it does not have these, is called “after the image” of the Creator (Colossians 3:10). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says in what part of a person the image of God lies.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "63",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/63/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-011",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The soul is more precious than the body, for only the soul can receive the Creator's image.",
+   "comment": "… we say that the soul, and above all the rational soul, is a thing more precious than any body, since the soul can receive what is “according to the image of Him who created” it (Colossians 3:10), while the body cannot at all. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "49",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/49/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-012",
+   "chapter": 3,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "When people think and do the things of Christ, God does the work through them and is in them.",
+   "comment": "[Christ being “all and in all”:] This is similar to the statement that all things may be in all (Col 3:11). And what he says is such: that in all those who think the things of God, God may work all things. For when you think the things of Christ and do them, he is the one doing through you and is in you. It is similar: that God may be all things in all; not heaven in heaven, nor earth in earth. But what he says is such: when you think and do these things, God is the one doing through you, and he is in you to do in you what he intends.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL03-013",
+   "chapter": 3,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Virtue is a divine garment, and putting on compassion means being adorned in a merciful and Christ-like way of life.",
+   "comment": "… for virtue is a divine garment. Thus also Paul exhorts: 'Put on the Lord Jesus' (Rom 13:14) and 'Put on the bowels of compassion' (Col 3:12), which is: be adorned in a merciful manner and in the Christ-like way of life; and again: 'Let us put on the armor of light' (Rom 13:12) to prepare ourselves to fight against the adversaries. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u09-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u09-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "COL03-014",
+   "chapter": 3,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Love must come first, for nothing else required is perfected without it.",
+   "comment": "… If love does not precede, nothing of the required things is perfected; for then we both refrain from doing evil to one another and we care for doing good, when we love one another. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the reason love comes first in Paul's list.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL03-015",
+   "chapter": 3,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Let the peace of Christ, not those who mislead, be the umpire in you.",
+   "comment": "… Let not those who mislead you be awarded, he says, but let the peace of Christ be the umpire in you unto being united to Christ; and become thankful. To whom? Evidently to him who called you in Christ, and do not run to angels. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL04-001",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Masters should repay their slaves' goodwill with just and equal care.",
+   "comment": "… To the slaves, he says, serving with goodwill, and you masters, according to what is just and equal, repay them with the proper care. Therefore, equality according to goodwill.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL04-002",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 4,
+   "capsule": "If Christ were only a man there would be nothing deep to speak and no door to open, but since the Word became human we need God to open the door and grant us to speak the mystery.",
+   "comment": "“Continue steadfastly in prayer, watching in it with thanksgiving, praying also for us, that God may open to us a door for the word, to speak the mystery of God for which I am also in bonds, that I may make it clear as I ought to speak.” (Colossians 4:2-4) If Christ is not God but only a human honored by divine grace, there is nothing deep in the mystery about him. What door would he need for making it plain and speaking as one ought? There is nothing great or hard in saying about a human that he is human by nature. But if the Word from God is proclaimed as having become human, then we need God himself — the one who opens the door and grants us to speak the mystery in the fitting way (Colossians 4:2–4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "37",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/37/",
+   "from_cite": true
+  },
+  {
+   "id": "COL04-003",
+   "chapter": 4,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The word of the saints is seasoned with grace and salt, and the salt hints at understanding.",
+   "comment": "… the salt hints at understanding. For the word of the saints is not senseless or foolish but, as it is written, seasoned with grace and salt (Colossians 4:6), and it gives grace to those who hear (Ephesians 4:29). Christ also said to them, ‘You are the salt of the earth’ (Matthew 5:13). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what a speech seasoned with salt means.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/17/",
+   "from_cite": true
+  },
+  {
+   "id": "COL04-004",
+   "chapter": 4,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "We bring the word to each person in the way that suits his character and condition.",
+   "comment": "So we do not say to everyone who comes to us, “First believe that the one I am introducing to you is the Son of God.” Rather, we bring the word to each person in the way that suits his character and condition, for we have learned “to know how we ought to answer each one” (Colossians 4:6). There are some to whom we preach this, since they can do no more than be urged to believe; to others we come, as far as we can, with proof by way of questions and answers.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows what knowing how to answer each one looks like in practice.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "10",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/10/",
+   "from_cite": true
+  }
+ ]
+}

@@ -1,0 +1,2318 @@
+{
+ "book": "Deuteronomy",
+ "title": "The Fathers on Deuteronomy",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 125,
+ "selected_count": 55,
+ "comments": [
+  {
+   "id": "DT01-001",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The people who were promised to be like the stars in number and in hope would not worship the stars they were to resemble.",
+   "comment": "So then the Hebrew people, called by God to be “a chosen race” and “a royal priesthood” and “a holy nation” and “a people for his possession” (1 Peter 2:9; Exodus 19:6), the people about whom it had been foretold to Abraham by the voice of the Lord speaking to him, “Look up to heaven and count the stars, if you are able to count them. And he said to him: So shall your offspring be” (Genesis 15:5), this people, having the hope of becoming like the stars in heaven, was not going to worship those whom they were to resemble through understanding and keeping the law of God. For it has been said to them: “The Lord your God has multiplied you, and behold, you are today like the stars of heaven in number” (Deuteronomy 1:10). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "10",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/10/",
+   "from_cite": true
+  },
+  {
+   "id": "DT01-002",
+   "chapter": 1,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "A judge examines actions, not faces, and God's law commands that great and small be judged alike.",
+   "comment": "… The best judge of matters is the examiner; he does not look toward the faces of those being judged. For if those being judged were rich or rulers or others possessing superior value, he does not look toward their face, but toward the actions, which he judges. … But God, standing as protector, does not will thus, but lays down law: “according to the great and the small you will judge, you will not receive a face,” clearly of the rich, and “you will not have mercy on the poor in judgment” (Deuteronomy 1:17). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why the law forbids partiality in judgment.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u20-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u20-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DT01-003",
+   "chapter": 1,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "The law does not count wealth, rank or poverty in a judgment but only works and deeds.",
+   "comment": "… of the divine lawgiver saying: 'You will judge the great and the small, not receiving a person' (Deuteronomy 1:17), even if the one being judged is rich, even if he has honor and rank. For the law of those being judged does not count the abundance of wealth and poverty, nor rank and dishonor, but works and deeds having been performed according to virtue or malice.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u13-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u13-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DT01-004",
+   "chapter": 1,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "Scripture speaks of God bearing human ways as a man bears his son's, so that the many can be told what they need.",
+   "comment": "And in general, about this manner of speaking of God, it is said in Deuteronomy: “The Lord your God bore your ways, as a man might bear the ways of his son” (Deuteronomy 1:31). Bearing, as it were, the ways of a man for the benefit of human beings, the Word says such things. For the many did not need God, where he is represented as speaking, to say what was to be said to such people in a way befitting himself.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse speaks of God in human terms.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "71",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/71/",
+   "from_cite": true
+  },
+  {
+   "id": "DT01-005",
+   "chapter": 1,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "God is called a man not because he is one but because he comes down to men and governs their affairs.",
+   "comment": "The God of all things is called many times human… It is not that he has become a man or is a man, but because he descends with men, he governs their affairs in such a way, and as their judge, he becomes like a man who sympathizes. 'He shall nurture him as a man nurtures his son' (Deuteronomy 1:31). He observed your ways by nourishing and governing you. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u23-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u23-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT04-001",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Because the people of Israel were fickle, the law barred them from adding to or taking from the commandments.",
+   "comment": "The people of Israel were found to be very fickle and easily carried away toward anything at all that pleased them. For this very reason they were rightly barred by the law from giving rulings of their own. For of the commandments it says, “To them nothing may be added, and from them nothing may be taken away” (Deuteronomy 4:2; compare Deuteronomy 4:2). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse forbids adding to or taking from the commandments.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT04-002",
+   "chapter": 4,
+   "verse_start": 16,
+   "verse_end": 18,
+   "capsule": "The law banished image-makers from the commonwealth so that nothing would draw the soul's eyes from God to earth or counterfeit the truth of things.",
+   "comment": "Among them nothing else was held to be God but the One who is over all, and none of those who make images had a place among their citizens. For there was neither painter nor sculptor in their commonwealth, since the law banished all such people from it, so that there might be no occasion for the making of statues, which lures the foolish among men and drags the eyes of the soul down from God to earth. So they had a law such as this: “Do not act lawlessly and make for yourselves a carved likeness, any image, a likeness of male or female, a likeness of any beast of those that are on the earth, a likeness of any winged bird that flies under heaven, a likeness of any creeping thing that creeps on the earth, a likeness of any fish, all that are in the waters beneath the earth” (Deuteronomy 4:16–18). … Indeed, the law wished them to keep company with the truth about each thing and not to fashion other things contrary to the truth, counterfeiting what is truly male or really female, or the nature of beasts, or the kind of birds, of creeping things, or of fish.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the purpose of the law against making images.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "31",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/31/",
+   "from_cite": true
+  },
+  {
+   "id": "DT04-003",
+   "chapter": 4,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Those who live by the law revere the One who made heaven and do not worship heaven, its array or the angels.",
+   "comment": "And it is plain that those who live by the law, revering the One who made heaven, do not revere heaven together with God; nor does anyone who serves the law of Moses worship the angels in heaven either. Just as they do not worship the sun and the moon and the stars, “the array of heaven,” so they abstain from worshipping heaven and the angels in it, obeying the law which says: “And do not, when you look up to heaven and see the sun and the moon and the stars, all the array of heaven, be led astray and worship them and serve them, things which the Lord your God has allotted to all the nations” (Deuteronomy 4:19).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/6/",
+   "from_cite": true
+  },
+  {
+   "id": "DT04-004",
+   "chapter": 4,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "The heavenly bodies were allotted to all the nations, but Israel was taken out of Egypt as God's own inheritance.",
+   "comment": "But if we, who refuse to worship angels and the sun, the moon and the stars alike, must make a defence for not worshipping even those whom the Greeks call visible and perceptible gods, we will say that the law of Moses also knows that these were allotted by God “to all the nations under heaven” (Deuteronomy 4:19), but not to those who were taken as God’s chosen portion out of all the nations on earth. It is written, at any rate, in Deuteronomy: “And do not, when you look up to heaven and see the sun and the moon and the stars, all the array of heaven, be led astray and worship them and serve them, things which the Lord your God allotted to all the nations under the whole heaven. But the Lord God took us and brought us out of the iron furnace, out of Egypt, to be a people of his own inheritance, as on this day” (Deuteronomy 4:19–20).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says about the heavenly bodies and Israel's place among the nations.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "10",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/10/",
+   "from_cite": true
+  },
+  {
+   "id": "DT04-005",
+   "chapter": 4,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "Moses likens the all-powerful might of the divine nature to a consuming fire.",
+   "comment": "… the holy Scripture always clothes the divine nature in the form of fire. Indeed, the inspired Moses said: ‘Our God is a consuming fire’ (Deuteronomy 4:24), likening to fire, I think, the all-powerful might of the divine and pure nature. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God is called a consuming fire.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "25",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/25/",
+   "from_cite": true
+  },
+  {
+   "id": "DT04-006",
+   "chapter": 4,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "God is called fire as a figure, since the Spirit is no more a body than fire is.",
+   "comment": "… For the Spirit we speak of is not a body, just as fire is not a body either, which God is said to be in the words: “Our God is a consuming fire” (Hebrews 12:29; Deuteronomy 4:24). All these things are said figuratively, to present the nature of what is grasped by the mind by means of familiar and bodily names.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains that the fire language is figurative.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "70",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/70/",
+   "from_cite": true
+  },
+  {
+   "id": "DT04-007",
+   "chapter": 4,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "As fire God consumes wickedness and the deeds that spring from it, and refines the soul like a refiner.",
+   "comment": "So when he is said to be “a consuming fire” (Deuteronomy 4:24), we ask what it is fitting for God to consume. And we say that God, as fire, consumes wickedness and the deeds that spring from it, which are figuratively called “wood” and “hay” and “straw.” …\n\nOur God, then, is “a consuming fire” (Deuteronomy 4:24) in the sense we have given, and so he “comes in like a refiner’s fire” (Malachi 3:2), to refine the rational nature, which is filled with the lead of wickedness and with the other impure materials that have debased the golden nature of the soul, if I may call it so, or its silver nature. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it is that the consuming fire consumes.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "13",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/13/",
+   "from_cite": true
+  },
+  {
+   "id": "DT05-001",
+   "chapter": 5,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Moses stood between God and the people, offering their prayers and passing on God's graces, as the Savior is mediator of God and men.",
+   "comment": "… 'I stand in the midst of the Lord and you' (Deuteronomy 5:5), offering your supplications to God and ministering the graces from him to you. So also the Savior, having become man, is a mediator of God and men; for being God, he joins us to the Father, and having become man, in a certain way as a lover of mankind, he speaks to us those things which he heard from the Father. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Moses meant by standing between the Lord and the people.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u04-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT05-002",
+   "chapter": 5,
+   "verse_start": 6,
+   "verse_end": 10,
+   "capsule": "God began the law with the knowledge of the one true God, and called himself jealous to frighten the people into keeping the commandment firm.",
+   "comment": "… And indeed when the God of all set over those from Israel as it were some pedagogue and wise director—the law through Moses—he laid down beforehand as it were some base and unshaken beginning the knowledge from the one and true Godhead; for he supposed they would not be strong enough to reach the blameless and pure life, or to be rhythm-trained by the introducer of the finest things—the law—and to yield to commandments, unless having taken the faith upon God into mind as a fore-wall they should nobly stand against the pleasures that whet them unto slackness. … For it was necessary, necessary, that those about to make the commandment unmovable be terrified with hard fears; therefore he also names himself a jealous God, and one who lays fathers’ sins upon those from them, …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/2/",
+   "from_cite": true
+  },
+  {
+   "id": "DT05-003",
+   "chapter": 5,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The saying about repaying the sins of fathers on children is called a parable in Ezekiel, where each shall die for his own sin.",
+   "comment": "But if anyone says that the words, “repaying the sins of fathers upon children to the third and fourth generation of those who hate me” (Deuteronomy 5:9; compare Exodus 20:5), are like “to children’s children, who may be born later,” let him learn that in Ezekiel such a saying is called a “parable” (Ezekiel 18:2–3), where the prophet blames those who say, “The fathers ate a sour grape, and the children’s teeth were set on edge” (Ezekiel 18:2; compare Jeremiah 31:29), and to this is added, “As I live, says the Lord” (Ezekiel 18:3), “but each shall die for his own sin” (Jeremiah 31:30). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "40",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/40/",
+   "from_cite": true
+  },
+  {
+   "id": "DT05-004",
+   "chapter": 5,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "God stands firm and steadfast, and so he calls the righteous man to stand with him; passages that seem to describe motion in him are figures.",
+   "comment": "… Nor does he share in motion: it is because he stands firm and his nature is steadfast that he calls the righteous man too to the same, saying, “But you, stand here with me” (Deuteronomy 5:31). And if some passages seem to describe a kind of motion in him, such as the one that says, “They heard the Lord God walking in the garden in the evening” (Genesis 3:8), we must understand such passages to mean that God is thought of as moving by those who have sinned; or we must understand them in the same way as when sleep, or anger, or anything of the kind is ascribed to God figuratively.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that God calls the righteous to stand with him.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "64",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/64/",
+   "from_cite": true
+  },
+  {
+   "id": "DT06-001",
+   "chapter": 6,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The Father, Son and Holy Spirit are each God, yet the Trinity is one God and not three gods.",
+   "comment": "… It is not that the Father is the same as the Son and the Holy Spirit, but that the Father is Father, the Son is Son, and the Holy Spirit is Holy Spirit, and this Trinity is one God, as it is written: \"Hear, Israel: the Lord your God is one God\" (Deuteronomy 6:4). Yet if we are asked about each one individually and someone says to us, \"Is the Father God?\" we will answer, \"God.\" If it is asked whether the Son is God, we will answer the same. And if such a question is asked about the Holy Spirit, we must not answer that he is anything other than God, while being very careful not to take this the way it was said of human beings: \"You are gods\" (Psalm 82:6). For those who are made and created by the Father through the Son in the gift of the Holy Spirit are not gods by nature. The Trinity itself is what the apostle means when he says: \"For from him and through him and in him are all things\" (Romans 11:36). Therefore, although when asked about each one individually we answer that the one in question is God—whether Father, Son, or Holy Spirit—let no one suppose that three gods are worshipped by us.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "States plainly in what sense the Lord is one God.",
+   "author": "Augustine of Hippo",
+   "work": "On Faith and the Creed",
+   "work_slug": "augustine-on-faith-and-the-creed",
+   "section": "16",
+   "url": "https://viapatrum.org/works/augustine-on-faith-and-the-creed/16/",
+   "from_cite": true
+  },
+  {
+   "id": "DT06-003",
+   "chapter": 6,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The greatest commandment is to love God, the first reality, because he loved us first and gave us our being, and in loving him we receive incorruption.",
+   "comment": "So the Teacher, when asked which is the greatest of the commandments, says: “You shall love the Lord your God with all your soul and with all your strength” (Deuteronomy 6:5 (cf. Mark 12:30)). He says that no commandment is greater than this, and very rightly so, for it was commanded concerning the first and greatest reality—God our Father himself, through whom all things came to be and exist, and to whom all that are saved return again. Since we were first loved by him and received our very coming into being, it is not holy to hold anything else as older or more precious than him. We repay this one small favor for the greatest gifts, and we have nothing at all to devise as recompense for a God who lacks nothing and is perfect. But by the very act of loving the Father, we receive incorruption as our own strength and power. For as much as someone loves God, by that much he slips further inside God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the commandment to love God is the greatest.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "27",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/27/",
+   "from_cite": true
+  },
+  {
+   "id": "DT06-006",
+   "chapter": 6,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Those at peace with God must be yoked to him alone and name no other god, as the law of Moses also proclaimed.",
+   "comment": "… For those who are at peace with him must be single-minded and yoked to God alone, so as to know him only and not even to carry on their tongue the name of any other, falsely named god at all. For we must name him alone, because he alone is God over us by nature and in truth. The law of the all-wise Moses proclaimed something of this kind to us: “You shall worship the Lord your God, and him only shall you serve, and by his name” (Deuteronomy 6:13; compare Matthew 4:10). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book3-tomos1-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book3-tomos1-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT06-007",
+   "chapter": 6,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "True worship belongs to the Trinity alone, though men may be said to worship others in a lesser sense of honor.",
+   "comment": "To worship truly and principally it is fitting for the Trinity alone; for 'You shall worship the Lord your God, and Him alone shall you serve' Deut 6:13. According to this meaning of worship, the Lord Jesus is also worshipped: 'For all the angels of God shall worship him' Matt 4:10. But in another way, for the sake of honor, men are said to worship those in eminence according to this Scripture. For it is often recorded that many worshiped king David, and also the other kings of Israel.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u47-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u47-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT07-006",
+   "chapter": 7,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The seven nations were destroyed for deeds done by free will, sorcery, idol sacrifices and the killing of their children, and not for anything in their birth.",
+   "comment": "He [the writer of the Wisdom of Solomon] testifies why God wished the seven nations to perish, after whose destruction for the most part the promised land was given to the Israelites (compare Deuteronomy 7:1–2). Lest God appear to distinguish persons by partiality within one human nature, he explains why the Canaanites deserved to be killed. “You hated,” he says, “those ancient inhabitants of your holy land.” (Wisdom 12:3) Why? According to you, he should certainly have added: because they were generated from a devilish union; because the ruler of darkness possessed them; because Adam infected everyone who would come from his stock. But he says none of these things. What reason does he give for the hatred? Only deeds committed through free will. “You hated them,” he says, “because they did deeds hateful to you.” (Wisdom 12:4)\n\nBut so that we would not be ignorant of the deeds, and so that you could not call these acts of the nations reproductive desire, he details the kinds of action themselves. “Through spells,” he says, “and unjust sacrifices; and they were merciless killers of children.” That is, they served sorcery and sacrifices that were unjust because they were offered to idols, after worship of the Creator had been abandoned. To these sacrileges they devoted their own relatives, appeasing demons even by the enormity of murdering their children. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.128",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.128/",
+   "from_cite": true
+  },
+  {
+   "id": "DT07-001",
+   "chapter": 7,
+   "verse_start": 1,
+   "verse_end": 4,
+   "capsule": "The law walls off the clean, who already belong to God, from the unholy, since what is unholy cannot be joined with what has been made holy.",
+   "comment": "… That is why the law walls off from their foulness those who have been washed and are clean and who already belong to God, saying: … So the law keeps us safe. ‘For you shall not make,’ it says, ‘a covenant with them’ (Deuteronomy 7:2). For what is still unholy cannot agree or be joined with what has been made holy, nor what is in mist and darkness with what has been enlightened, nor what is rejected with what has been received, nor what is thrust out of the holy and divine tabernacle with one who enters it.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "8",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/8/",
+   "from_cite": true
+  },
+  {
+   "id": "DT07-002",
+   "chapter": 7,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The law forbade marriage with foreigners because Israel's mind was unsteady, whereas those in Christ are firm enough to live with unbelievers and win them.",
+   "comment": "… The law forbade the children of Israel to associate with foreigners and to be bound to them in marriage (compare Deuteronomy 7:3); … For their mind was unsound and unsteady, but we are not so; for we have been anointed with the Holy Spirit for adoption as sons, and Christ has come to dwell in us. Standing so firmly, then, toward every good thing, we are in no way afraid any longer to live with one of the unbelievers. Rather, we are confident that we will draw them as in a net into godliness, and that we will not become the prey of the ignorance that is in them. We bless those who have not yet believed rather than being defiled by them.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "DT07-004",
+   "chapter": 7,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The promise that none would be barren was spiritual, meaning the mind that sees God would be fruitful, though in Israel childlessness was felt as a bitter reproach.",
+   "comment": "… The law given through Moses says to the sons of Israel, “There shall be no one childless or barren among you” (Deuteronomy 7:14). So among the Jews it was counted one of the worst reproaches for a woman not to bear children, or for any man to be childless; for at once the stigma of the childless and the barren was fastened on them.\n\nThe law was indeed spiritual (Romans 7:14). For the God of all was promising that the spiritual Israel, that is, the mind that sees God, would not be fruitless or made barren, but fruitful instead, like a good and choice land. But the Jews understood it in a fleshly way, for they were natural men, not having the Spirit (Jude 19). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the promise of no barrenness means.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos3-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos3-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT07-005",
+   "chapter": 7,
+   "verse_start": 17,
+   "verse_end": 19,
+   "capsule": "Moses does not allow unmanly cowardice, since we can look to the defending hand that did great wonders in Egypt.",
+   "comment": "… And he does not allow being sick with the unmanly cowardice, when we look well at the defending hand. And he writes thus again: ‘And if you say in your mind that This nation is much, or I, how will I be able to wipe them out? you will not fear them; with memory you will remember as many things as the Lord your God did to Pharaoh, and to all the Egyptians—the great trials which your eyes have seen; the signs, and those great wonders, the strong hand, and the high arm; as the Lord your God led you out; thus the Lord our God will do to all the nations whom you fear from their face.’ (Deuteronomy 7:17–19) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "26",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/26/",
+   "from_cite": true
+  },
+  {
+   "id": "DT08-001",
+   "chapter": 8,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Moses teaches that toils for virtue are not endured in vain, since God led Israel through the desert to test what was in their heart.",
+   "comment": "… For that we do not drip unprofitable sweat, having endured through the toils on behalf of virtue, Moses will teach saying in Deuteronomy: ‘And you will remember all the way which the Lord your God led you in the desert, in order that he might afflict you and test you out, and the things in your heart might be known through, whether you will keep his commandments, or not.’ (Deuteronomy 8:2) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "26",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/26/",
+   "from_cite": true
+  },
+  {
+   "id": "DT08-002",
+   "chapter": 8,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "Temptations make manifest what is hidden in the soul, so that we may know our own evils and give thanks for the goods.",
+   "comment": "The need of being tempted is something like this. What our soul received — hidden from all but God, and even from ourselves — becomes manifest through temptations: that we no longer be hidden from ourselves, whatever we are, but, knowing even ourselves, perceive, if we will, our own evils, and give thanks for the goods manifested to us through temptations. That temptations come to manifest us, whatever we are, or to discern what is hidden in our heart, is shown by what the Lord said to Job, and what stands written in Deuteronomy, running thus: 'Thinkest thou that I dealt with thee otherwise than that thou mightest appear righteous?' (Job 40:8) And in Deuteronomy thus: 'He afflicted thee and starved thee and fed thee manna' (Deuteronomy 8:3) — and led thee 'in the wilderness,' 'where biting serpent and scorpion and thirst' (Deuteronomy 8:15) — 'that' 'what is in thy heart be discerned.'",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God tests his people in the wilderness.",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-on-prayer/29/",
+   "from_cite": true
+  },
+  {
+   "id": "DT08-004",
+   "chapter": 8,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Reading and understanding the divine Scriptures gives us the strength of spiritual bread, which is the word from God's mouth.",
+   "comment": "… We should take it that he means to teach something like this. When we come upon the sacred words and read the divine Scriptures, and then understand them, we receive the strength of spiritual bread. “For man shall not live,” He says, “by bread alone, but by every word that proceeds through the mouth of God” (Matthew 4:4; compare Deuteronomy 8:3). You will understand spiritual waters in the same way.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what living by every word of God means.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos2-rem-close",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos2-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT09-001",
+   "chapter": 9,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Moses abstained from food and drink forty days while reshaping Israel for life under the law, and Christ's nature was likewise reshaped through self-control.",
+   "comment": "… For this very reason they say that Moses the all-excellent, somehow travailing and reshaping Israel from the wandering in Egypt unto the life in law, abstained from foods and drinks; ‘For bread,’ he says, ‘I did not eat, and water I did not drink forty days.’ (Deuteronomy 9:9) And unto us ourselves one must suspect that Christ both did and endured this. For in him the nature was reshaped unto sanctification through self-control, having from unbridled appetite in beginnings in the first-formed sickened the pollution unto sin and transgression. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/7/",
+   "from_cite": true
+  },
+  {
+   "id": "DT10-002",
+   "chapter": 10,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "What God asks of Israel needs the hearer's own choice and assent, so that he becomes worthy of the promises.",
+   "comment": "… For if someone is to will what the one who admonishes says, and, having listened to it, is to become worthy of God’s promises, there must be the hearer’s choice and his assent to what is said. That is why it seems to me that this was said with emphasis in Deuteronomy: “And now, Israel, what does the Lord your God ask of you, but to fear the Lord your God, and to walk in all His ways, and to love Him, and to keep His commandments?” (Deuteronomy 10:12–13).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God asks and does not compel.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "57",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/57/",
+   "from_cite": true
+  },
+  {
+   "id": "DT11-001",
+   "chapter": 11,
+   "verse_start": 18,
+   "verse_end": 21,
+   "capsule": "The lawgiver raises us to continual remembrance of his commands by writing them in the heart and marking them on doorposts, hands and garments.",
+   "comment": "… And at any rate raising us unto the continual remembrance of the things having been legislated, the lawgiver says: ‘And you will cast these words into your heart and into your soul, and you will fasten them as a sign upon your hand, and they will be unshaken before your eyes, and you will teach them to your children, to speak them sitting in a way and lying down and rising, and you will write them upon the doorposts of your houses and of your gates, in order that you may be many-dayed, and days of your sons upon the earth which the Lord swore to your fathers to give them, just as the days of the heaven upon the earth.’ (Deuteronomy 11:18) … Having commanded beforehand then very well that we write the law down in hearts, then knowing forgetfulness a hard sickness of mind, he commands that the commandments must be marked off as on a tablet upon the doorposts; and indeed also to fasten to the right hand little tablets somehow perhaps pregnant with the law and having the oracle written in, and indeed also that they be hung from the garments themselves, he says is not unprofitable unto benefit—through both fringes and the hyacinth-colored cord.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 7",
+   "work_slug": "cyril-adoration-7",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-7/2/",
+   "from_cite": true
+  },
+  {
+   "id": "DT12-001",
+   "chapter": 12,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "The nations worshipped nymphs and demons on heights and under trees, and those under the true God must shake down such playthings and keep far from those customs.",
+   "comment": "… The wise and select of Greeks, and poets especially, name some mountain-nymphs and tree-nymphs, or demons. And there are those who having chosen to honor the gods beside themselves with the heights according to place, setting altars on mountains, were eager to sacrifice oxen, and having settled around the more well-grown of the trees groves and images of demons, were using sheep-slaughters. Yet it was necessary that those come to be under God who is according to truth and by nature, dreading nothing, shake down the playthings of the wanderers, and go as far as possible from the customs beside those ones. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "6",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/6/",
+   "from_cite": true
+  },
+  {
+   "id": "DT12-002",
+   "chapter": 12,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "The Law commanded worship only at the temple in Jerusalem, lest minds that were easily carried away turn to carved images and altars of their own.",
+   "comment": "… For the Law did not command this to be done in every place; it commanded them to come to the divine temple itself in Jerusalem (Deuteronomy 12:13–14). It feared, as one would expect, how easily their minds could be carried away: if they were commanded to worship or sacrifice in every place, they might perhaps take the Law as a pretext for turning to more shameful things, and worship carved images, setting up temples and altars for themselves.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why worship was limited to one place.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "DT12-003",
+   "chapter": 12,
+   "verse_start": 13,
+   "verse_end": 16,
+   "capsule": "To sacrifice in every place and not to fulfill the mystery of Christ in the house of God is an offense liable to indictment.",
+   "comment": "… But our wise Moses, who reveals holy things to us, gives this charge in Deuteronomy: ‘Take care that you do not offer your burnt offering in every place that you see, but only in the place which the Lord your God chooses, in one of your cities; there you shall offer your burnt offerings, and there you shall do all that I command you today. But you may slaughter whenever you desire, and eat meat as your soul desires, according to the blessing of the Lord your God which he has given you in every city. The unclean among you and the clean alike shall eat it, as they would a gazelle or a deer; only you shall not eat the blood; you shall pour it out on the ground like water’ (Deuteronomy 12:13–16). To dare, then, to sacrifice in every place, and not to fulfill the mystery of Christ in the house of God, is the offense of a most loathsome mind, and liable to indictment.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "24",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/24/",
+   "from_cite": true
+  },
+  {
+   "id": "DT12-004",
+   "chapter": 12,
+   "verse_start": 17,
+   "verse_end": 19,
+   "capsule": "The Divine is unapproachable, and a sacrifice without a Levite is unacceptable, since the Levites act as mediators imitating Christ.",
+   "comment": "… For the Divine is unapproachable, and a sacrifice without a Levite is unacceptable, since the Levites act as mediators, imitating the Mediator between God and humans, that is, Christ (1 Timothy 2:5). And the law showed plainly that the Church is one and the mystery of Christ is one, and that a sacrifice not performed in the Church is unlawful, or rather is to be rejected and cannot please God; I mean that it showed this by laying down that the sacred rites must not be performed outside the holy tent. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "19",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/19/",
+   "from_cite": true
+  },
+  {
+   "id": "DT13-001",
+   "chapter": 13,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "A trial is a proof of our love toward God, and the tempted who go after the Lord are added to him.",
+   "comment": "We must deem the standing trial to have become a proof and testing-place of our love toward the Divine. For 'the Lord shall tempt you,' as written in Deuteronomy, 'to know whether you love the Lord your God with your whole heart and your whole soul.' (Deuteronomy 13:3–4) But you, being tempted, 'shall go after the Lord your God, and fear him, and keep his commandments' (Deuteronomy 13:4) — especially the 'Thou shalt have no other gods beside me' — 'and hear his voice, and be added to him': with him taking you from the places here, and adding you to himself, 'unto,' as the Apostle named it, 'the increase of God' in him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Lord tests his people.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/6/",
+   "from_cite": true
+  },
+  {
+   "id": "DT13-002",
+   "chapter": 13,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "God is greater than every place and contains all things, so the command to walk after him is not a bodily journey.",
+   "comment": "But neither shall we ask anyone, as though God were in a place, and say: “How are we to go to him?” For God is greater than every place and contains all things whatever, and there is nothing that contains God. So the command given us, “You shall walk after the Lord your God” (Deuteronomy 13:4), does not tell us to go to God in a bodily way; nor is it in a bodily way that the prophet, who clung to God, says in his prayer: “My soul has clung close after you” (Psalm 63:8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains that following God is not a movement in space.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "34",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/34/",
+   "from_cite": true
+  },
+  {
+   "id": "DT13-003",
+   "chapter": 13,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Death is the right penalty for the one who brings ruinous wandering on a soul, since it is due even to murderers of bodies.",
+   "comment": "… How holy and fitting to God the law! For if indeed for murderers of bodies death must follow altogether and in every way according to laws, how would the one bringing the ruinous wandering upon a soul, and casting the better than body into pits of destruction, according to the Savior’s own voice, not reasonably be in danger? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/7/",
+   "from_cite": true
+  },
+  {
+   "id": "DT14-001",
+   "chapter": 14,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The law forbids imitating the Greek rites of cleansing, since a dead body does not pollute the soul and shaving the head benefits nothing.",
+   "comment": "… For he said again: ‘You will not Phoebize, you will not set a baldness upon a dead one, in the midst of your eyes.’ (Deuteronomy 14:1) For the select of Greeks mythologize Apollo a god, whom they also name Phoebus, that is, clean and undefiled. And they say he is the same as the sun. They used to say then to Phoebize, and again to be Phoebized, according to the Greek custom, the cleansing and being cleansed, according at least to what seems to them, and the laws beside themselves. The divine oracle therefore bars us from such shameful and most unbeautiful practices. For it is not at all fitting to count the death of bodies a pollution of soul, nor indeed to think that the sight upon a dead one impresses filth upon the hearts of those seeing, nor again upon this is it fitting to strip the hair. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/21/",
+   "from_cite": true
+  },
+  {
+   "id": "DT14-002",
+   "chapter": 14,
+   "verse_start": 12,
+   "verse_end": 17,
+   "capsule": "Moses understood the natures of animals and called unclean those the nations reckoned prophetic, such as the eagle and the hawk.",
+   "comment": "Hence, if I have admired anything else in Moses, I will declare this too worthy of admiration. He understood the different natures of animals, and, whether he learned from God about them and about the demons akin to each animal, or found it out himself as he rose by wisdom, in his ordinance concerning animals he said that all those reckoned prophetic by the Egyptians and the rest of mankind are unclean, and that, in general, those not of this kind are clean (Leviticus 11:1–47; Deuteronomy 14:3–20). Among the unclean in Moses are the wolf, the fox and the serpent, the eagle, the hawk and the like (Leviticus 11:13–19, 27, 42; Deuteronomy 14:12–18). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "93",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/93/",
+   "from_cite": true
+  },
+  {
+   "id": "DT14-004",
+   "chapter": 14,
+   "verse_start": 22,
+   "verse_end": 24,
+   "capsule": "Because the road to the holy place was long, the law was arranged so that no hardship would impair the truth of bringing offerings there.",
+   "comment": "… It was not at all unlikely, indeed it was the case, that the cities throughout the whole of Judea, which were not easily counted, were separated from Jerusalem by the great distances lying between. And what hardship and toil followed from this? That those who wished to offer first fruits of grain, and of oil and wine as well, had to be able to carry them over so long a road. The labor involved might perhaps have made some reluctant. Yet it was unseemly, indeed utterly out of place, that because the thing was hard and not easy to accomplish for those who lived farther away, the beauty of the truth should be impaired, with the Israelites not bringing their offerings to the holy tent. So, in order that every obstacle in the way might be usefully removed for us, and that the law on this matter might from then on be carried out as the lawgiver intended, Moses gives instruction and sets out the divine will in Deuteronomy, saying: ‘You shall set apart a tenth of all the produce of your seed, the produce of your field, year by year, and you shall eat it before the Lord your God in the place which the Lord your God chooses for his name to be called upon. There you shall bring the tithes of your grain, of your wine and of your oil, and the firstborn of your cattle and of your sheep, so that you may learn to fear the Lord your God at all times. But if the road is too long for you, and you are not able to carry them up …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "19",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/19/",
+   "from_cite": true
+  },
+  {
+   "id": "DT14-005",
+   "chapter": 14,
+   "verse_start": 24,
+   "verse_end": 26,
+   "capsule": "The law levels the steep road, and the Levite is brought in everywhere because God would not accept a sacrifice from an unconsecrated hand.",
+   "comment": "… Do you see the skill of the law? It levels the steep climb, makes rough roads quite passable, and eases even what is very hard. And this, I think, is what was said through the voice of the prophet: ‘The way of the godly has become straight, and the way of the godly is made ready.’ (Isaiah 26:7) Notice too that the Levite is brought in everywhere and of necessity, since the law shows us plainly that the God of all would not accept a sacrifice offered by an unconsecrated hand, in a way that is at odds with the law.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the law eased the long journey to the chosen place.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/20/",
+   "from_cite": true
+  },
+  {
+   "id": "DT15-001",
+   "chapter": 15,
+   "verse_start": 1,
+   "verse_end": 4,
+   "capsule": "The release of debts foreshadows the Savior, who released those who came near him through faith from their debts though they had paid nothing.",
+   "comment": "… Do you see the truth flashing through in the shadows? For this also would show most clearly our Savior’s economy unto us. For those having come near him through the faith, and already having been shown intimates and brothers, through partaking of Holy Spirit, and having become sharers of a divine nature, he released from debts, they having paid out nothing; for he did not seek from them the justices of the transgression, although they were owing to him the accounts of the things lived by them …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 7",
+   "work_slug": "cyril-adoration-7",
+   "section": "13",
+   "url": "https://viapatrum.org/works/cyril-adoration-7/13/",
+   "from_cite": true
+  },
+  {
+   "id": "DT15-002",
+   "chapter": 15,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The wise man lends to many nations from his wealth in the word, as Paul did.",
+   "comment": "… If this is how the passages about wealth are understood, see whether it is not in keeping with God’s promise that the man who is rich “in all speech and all knowledge” (1 Corinthians 1:5), and in all wisdom, and in every good work, lends “to many nations” (Deuteronomy 15:6) out of his wealth in the word and in wisdom and knowledge, just as Paul lent when, “from Jerusalem and round about” as far as “Illyricum”, he fully preached “the gospel of Christ” (Romans 15:19) to all the nations he visited. And since divine things were made known to him by revelation (Ephesians 3:3), his soul being enlightened by the divinity of the Word, for this reason he himself did not borrow, nor did he need any man to minister the word to him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the promise to lend to many nations can be understood.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "21",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/21/",
+   "from_cite": true
+  },
+  {
+   "id": "DT15-004",
+   "chapter": 15,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "A fellow believer is not kept a slave past six years, which wrongs neither side.",
+   "comment": "As for the rule that one who holds the same beliefs may not be kept a slave for more than six years (Exodus 21:2; Deuteronomy 15:12), what need is there to say how reasonable it is, and how it wrongs neither the master nor the slave? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "43",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/43/",
+   "from_cite": true
+  },
+  {
+   "id": "DT15-005",
+   "chapter": 15,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "The gift on release foreshadows that we were set free for nothing and given Christ as provision.",
+   "comment": "… And this I say is the ‘He will go away free for a gift.’ (Exodus 21:2) But, ‘Whenever,’ he says, ‘you send him out free from you, you will not send him out empty; you will provision him a provision from your sheep, from your grain, and from your winepress.’ (Deuteronomy 15:13-14) Do you see clearly the power of the mystery according to Christ shining out in these things? for we have been ransomed, and the Savior of us all has let us go free, for a gift. For not from works of justice which we did, but according to his much mercy, according as it has been written, we have partaken of such supernatural mildness; and letting us go free—that is, having freed from sins, and having adorned with the grace of the adoption—he has added himself for us as a good provision, as a blameless victim, and as a sheep led unto slaughter through us, having also gifted the partaking of the life-giving blessing—that is, of his holy flesh and blood. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 7",
+   "work_slug": "cyril-adoration-7",
+   "section": "12",
+   "url": "https://viapatrum.org/works/cyril-adoration-7/12/",
+   "from_cite": true
+  },
+  {
+   "id": "DT15-006",
+   "chapter": 15,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "'For an age' means a lifetime, since a man's life is called an age.",
+   "comment": "… A man's life is called that which is from birth until death, sometimes called one day, sometimes an age. Thus it is said: 'I will not eat meat for ever' (1 Corinthians 8:13), and: 'he shall be thy servant for ever' (Deuteronomy 15:17). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u53-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u53-open/",
+   "from_cite": true
+  },
+  {
+   "id": "DT16-001",
+   "chapter": 16,
+   "verse_start": 18,
+   "verse_end": 19,
+   "capsule": "The law required judges who love money less than justice, who show no partiality and take no gifts, imitating Christ the judge of all.",
+   "comment": "… For the law thought it necessary, and very fittingly, that those who would have been led unto judging also be seen better than loving to make money, and not granting to reverence toward certain ones the stepping-beyond of what holds well and without slander, and indeed also shaking off the otherwise-leaning as unholy, and weighing each of the matters lawfully, and imitating the judge of the wholes—that is, Christ—whom the law itself also has clearly pre-announced, knowing him also as being judge as God. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "22",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/22/",
+   "from_cite": true
+  },
+  {
+   "id": "DT16-002",
+   "chapter": 16,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "One must pursue justice rightly, with a disposition of righteousness, not merely practise it outwardly.",
+   "comment": "Therefore the Lord seeks these; so strive as far as you are able to receive some truth, for God seeks these. Even if you receive truth regarding practical virtues, the truth of practical virtues is judged from the disposition, if one participates in justice through that very thing. Since 'let the righteous pursue justice rightly' (Deuteronomy 16:20), pursue that very justice rightly, pursue the practice of the righteous with a disposition of righteousness.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u24-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u24-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DT16-005",
+   "chapter": 16,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "A grove is planted with fruitless trees for pleasure, like fine words that bear no fruit, and so the lawgiver forbids the grove by name.",
+   "comment": "… when they plant trees, they do not plant the fruit-bearing ones, not a fig, not a vine, but only, for pleasure, trees without fruit. You will find the words of the heterodox like that, and the beauties of their persuasions, not turning those who hear.\n\nWhen then someone gives himself to such words, he has gone 'under every grove-tree.' … For this reason you will understand why the lawgiver says: 'You shall not plant any tree beside the altar of the Lord your God, and you shall not make a grove.' (Deuteronomy 16:21) For you have the name of the grove itself forbidden.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why a grove is forbidden beside the altar.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "4.4",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/4.4/",
+   "from_cite": true
+  },
+  {
+   "id": "DT16-003",
+   "chapter": 16,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "God has the worshipper shake off pagan customs, even harmless ones.",
+   "comment": "… See how he removes the worshipper of the truth entirely from idolatrous deceit. He by no means allows him to make use of the laws of the pagans, and he charges him to shake off their customs, even if they do no harm and even if they come about by chance.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the purpose of forbidding groves and pillars.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "28",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/28/",
+   "from_cite": true
+  },
+  {
+   "id": "DT16-004",
+   "chapter": 16,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "The pillar signifies the life raised up by one who practises forbidden things.",
+   "comment": "They say the law: 'You shall not make for yourself a pillar' (Deuteronomy 16:22), signifying that everyone who practices forbidden things raises up a life like a pillar. Therefore, one may also rightly say that the one doing good things is setting up a pillar, as a symbol of the contests through which he has struggled.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u26-rem-early",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u26-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DT17-001",
+   "chapter": 17,
+   "verse_start": 2,
+   "verse_end": 7,
+   "capsule": "When God is wronged in his worship, pity is unsafe, and he must be served through a pious hardness.",
+   "comment": "… For when God has been wronged concerning his own worship, to pity is not secure. And altogether harmful is not to be soft at the right time toward unmanly mutual-affections; and this, I think, is what the Lord said: ‘The one loving father or mother above me is not worthy of me.’ (Matthew 10:37) For let even then a law of affection go away, and let a power of natural love depart, and every thing whatever of the things coming unto love-of-humanity, and that we may speak thus, let God be served through a pious hardness. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "8",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/8/",
+   "from_cite": true
+  },
+  {
+   "id": "DT17-002",
+   "chapter": 17,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Creatures must not be worshiped with the Creator present, and the sun itself would refuse worship as the Lord refused to be called good.",
+   "comment": "… But the enemy will likely wish to outwit us, by whatever means, toward worshiping 'the sun or the moon or all the order from heaven.' (Deuteronomy 17:3) But we shall say that God's Word commanded not these. For in no way must creatures be worshiped, with the Creator present, who endures and cries toward the prayer of all. Nor would the sun itself wish to be worshiped by those of God's portion — likely not by anyone else either — but imitating him who said, 'Why callest thou me good? None is good but one, God, the Father,' (Mark 10:18) it will as it were say to one willing to worship it: 'Why callest thou me God? One is the true God. And why worshipest thou me? For the Lord thy God shalt thou worship, and him only shalt thou serve. I too am generated. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the sun and moon are not to be worshiped.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "7",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/7/",
+   "from_cite": true
+  },
+  {
+   "id": "DT17-004",
+   "chapter": 17,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "Judging is the dignity of Christ, to whom the Father gave all judgment, and the lawgiver assigns it to the priests, who are a type of Christ.",
+   "comment": "… the priest is a type and an imprint of Christ. … Now look, if you will, at another way as well in which the priest is crowned with the glory of Christ. Christ himself has cried out to us plainly, saying: ‘For the Father judges no one, but has given all judgment to the Son, so that all may honor the Son just as they honor the Father.’ (John 5:22–23) … And the inspired David also sings that ‘God is Judge.’ (Psalm 50:6; Psalm 75:7) Assigning this splendid dignity of judging to those of priestly blood, the lawgiver speaks in this way in Deuteronomy: ‘If a matter for judgment is too hard for you, between one kind of bloodshed and another, … then you shall rise and go up to the place which the Lord your God chooses, and you shall come to the priests, the Levites, and to the judge who is in office in those days; and they shall search the matter out and declare the judgment to you. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the law sends hard cases to the priests.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/20/",
+   "from_cite": true
+  },
+  {
+   "id": "DT17-003",
+   "chapter": 17,
+   "verse_start": 8,
+   "verse_end": 13,
+   "capsule": "The law makes the priest judge and arbiter, who conveys faithfully what the lawgiver decided, and death follows those who disobey.",
+   "comment": "… You see how the law clearly charges those who have chosen to bring a complaint on any ground to make the priest their judge and arbiter. Indeed, ‘you shall take great care to act in keeping with all that is laid down for you’ (Deuteronomy 17:10). For ‘the lips of a priest will guard judgment, and they will seek the law from his mouth,’ as the prophet says (Malachi 2:7). He does not make law himself at all; rather, he conveys faithfully what the lawgiver has decided, setting it out without partiality, and, as the best arbiter of justice, he weighs the judgment in each case with precision. For this reason a charge of savagery and contempt follows those who choose to disobey, and the worst of all evils, that is, death, is appointed for them. For whoever disregards the priest who stands to minister in the name of the Lord God, it says, shall die (Deuteronomy 17:12). Great, then, and truly wonderful is this attendance and ministry under God. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/21/",
+   "from_cite": true
+  },
+  {
+   "id": "DT18-001",
+   "chapter": 18,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The arm, the jaws and the stomach given to the priests signify the power to act, the speech that teaches, and fruitfulness.",
+   "comment": "… To those appointed to minister are reserved the arm, the jaws, and also the stomach (Deuteronomy 18:3). For the chosen race must have in it the power to act and to accomplish, and this is the arm; and also speech, plainly the speech that teaches, of which the jaws are a type; and besides these, the stomach, which very aptly signifies fruitfulness. For must not the one who is truly known to God be active, most eloquent, and most fruitful as well?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the priests' portion signifies.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "11",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/11/",
+   "from_cite": true
+  },
+  {
+   "id": "DT18-002",
+   "chapter": 18,
+   "verse_start": 6,
+   "verse_end": 8,
+   "capsule": "Since God is one, those chosen for his service have a place among the priests everywhere, as is kept in the churches even now.",
+   "comment": "… For since God is one, those who have been brought forward to this office and chosen by the vote from above must everywhere have their place among the priests. This is kept even now in the churches, and we honor the law; for each of those chosen for the priesthood has a city and a lot of his own, yet he is welcomed to share in the sacred ministry even if he happens to go from one city or region to another, and he eats with the priests and is honored by the laws of love. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why a Levite from any city may serve at the chosen place.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/18/",
+   "from_cite": true
+  },
+  {
+   "id": "DT18-003",
+   "chapter": 18,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "The nations used divination, which was forbidden to the Jews, and the prophets' foretelling comforted a people who longed to know what was coming.",
+   "comment": "The nations, then, used divination by “omens,” or by augury, or by birds, or by mediums, or by those who profess the art of reading sacrifices, or by Chaldeans who cast nativities, all of which were forbidden to the Jews (Deuteronomy 18:10–11). If the Jews had had no comfort from knowledge of the future, the mere human craving to know what is to come would have led them to despise what was their own, as having nothing divine in it. They would not have received any prophet after Moses, nor written down the prophets’ words, but would have deserted to the oracles and oracle-shrines of the nations, or else tried to set up something of the kind among themselves. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why divination was forbidden and prophets given.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "36",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/36/",
+   "from_cite": true
+  },
+  {
+   "id": "DT18-004",
+   "chapter": 18,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "Israel needed prophets of its own, so that kept within the law it would have no occasion to fall away to the gods of the nations.",
+   "comment": "… To them we shall say that one must accept that the Jews too had prophets, if they were to be kept within the law given them, to believe in the Creator as they had received him, and, as far as the law was concerned, to have no occasion to fall away into the many gods of the nations. We shall show this necessity as follows. “The nations,” as is written in the very law of the Jews, “will listen to omens and divinations” (Deuteronomy 18:14); but to that people it is said, “But to you the Lord your God has not granted it so” (Deuteronomy 18:14). And to this is added, “The Lord your God will raise up for you a prophet from among your brothers” (Deuteronomy 18:15).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God raised prophets for Israel.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "36",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/36/",
+   "from_cite": true
+  },
+  {
+   "id": "DT18-005",
+   "chapter": 18,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "What is truly divine uses the holiest and purest souls of men, not animals, to make known the future, and Moses forbids augury.",
+   "comment": "What is truly divine does not use irrational animals, nor just any men, for the knowledge of the future, but the holiest and purest souls of men, which it fills with God and makes prophets (Wisdom of Solomon 7:27). Therefore, if anything else in the law of Moses is wonderfully said, sayings like these must also be counted among them: “You shall not practise augury, nor watch birds” (Leviticus 19:26); and elsewhere: “For the nations, whom the Lord your God will destroy from before you, will listen to omens and divinations; but to you the Lord your God has not granted it so” (Deuteronomy 18:14); and then, next, he says: “The Lord your God will raise up for you a prophet from among your brothers” (Deuteronomy 18:15).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "95",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/95/",
+   "from_cite": true
+  },
+  {
+   "id": "DT18-006",
+   "chapter": 18,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "Moses made his own office an image of the mediation in Christ, who as master of law and prophets mediates as both God and man.",
+   "comment": "And Moses made his own affairs an image and stamp of the mediation in Christ, saying to those from Israel, 'The Lord your God will raise up for you a prophet from your brothers, like me. You shall hear him, according to all that you asked from the Lord your God at Horeb, on the day of the assembly.' (Deuteronomy 18:15–16) So the things through Moses, and the force of the mediation according to him, are in type and image. The manner of the mediation in Christ is more unspeakable. For Moses was a servant of law and shadow, and a carrier of the tutoring from above. Christ, as master of law and prophets, lays down what seems good to him, and he was mediator, deity and humanity running together in him and coming as it were into one. For Christ is understood as both at once. 'And Moses was faithful in all his house as a servant; but Christ as a son over his house, whose house we are' (Hebrews 3:5–6) — we who have been led through faith in him into the true freedom.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how Moses, the prophet like him, points to Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/2/",
+   "from_cite": true
+  },
+  {
+   "id": "DT18-007",
+   "chapter": 18,
+   "verse_start": 18,
+   "verse_end": 19,
+   "capsule": "Emmanuel is called a prophet because of his humanity, standing in Moses' place as mediator, and the truth makes the law's types clearer.",
+   "comment": "… Emmanuel has been called a prophet because of his humanity, standing, as it were, in the place of Moses as mediator between God and men (1 Timothy 2:5). And again, the law was in shadows, yet it is seen to be in labor with the form of the truth; and the truth does not abolish the types but makes them clearer.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT19-002",
+   "chapter": 19,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Interpretations need witnesses from the Scriptures, and two or three witnesses from the Old and New Covenants make a word stand.",
+   "comment": "… Witnesses must be taken from the Scriptures. For our guesses, if they have no witness, and our interpretations, are not to be trusted. And 'every word shall be established at the mouth of two or three witnesses' (Deuteronomy 19:15) fits interpretations more than it fits men, so that I may establish the words of the interpretation by taking two witnesses from the New and the Old Covenant, taking three from gospel, from prophet, from apostle. For so every word will stand.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the rule of two or three witnesses applies to interpreting Scripture.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "1.7",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/1.7/",
+   "from_cite": true
+  },
+  {
+   "id": "DT20-001",
+   "chapter": 20,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The fearful are sent home, since one who lies in earthly things is cowardly and will harm others.",
+   "comment": "… Because of this God has ordered the army-herald to make the last voice bare and unveiled. For ‘And the Scribes will add,’ (Deuteronomy 20:8) he says, ‘to speak toward the people, and will say: If any human fearing and cowardly in heart, let him go into his house, so that he may not make cowardly his brother’s heart, just as his own.’ For he all but says that clearly: The one lying upon the earthy things, and building houses, and planting a vineyard, and being worsted by the pleasures unto flesh-love, will somehow altogether be both cowardly and strengthless; and such a one is altogether unapproved, and will be toward harms for the others; for ‘Bad conversations corrupt useful habits.’ (1 Corinthians 15:33) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/7/",
+   "from_cite": true
+  },
+  {
+   "id": "DT21-001",
+   "chapter": 21,
+   "verse_start": 18,
+   "verse_end": 21,
+   "capsule": "Whoever disregards the counsels of father or mother ends stoned, which shows that honor to parents follows the track of honor to God.",
+   "comment": "… And having disregarded perhaps father’s or mother’s counsels, he ends stone-pelted, the divine law having commanded this also. And he said thus in Deuteronomy: ‘And if someone has a disobedient and provocating son, not hearing his father’s voice (Deuteronomy 21:18–21) and mother’s voice, and they educate him, and he does not listen to them; and having taken him his father and his mother, they will lead him out upon the gerousia of his city, and upon the gate of his place, and they will say to the men of his city saying, that This our son disobeys, and provokes, and does not listen to our voice, being a club-companion he is wine-soaked; and the men of his city will stone him with stones, and he will die. And you will lift out the evil one from yourselves, and the remaining having heard will fear.’ Is it still lawful for you hereafter to doubt even after this, that the things unto father and mother are according to a track of the honor of God?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 7",
+   "work_slug": "cyril-adoration-7",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-7/16/",
+   "from_cite": true
+  },
+  {
+   "id": "DT21-003",
+   "chapter": 21,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "Christ took the law's curse on himself, so that dying for all he might loose their disobedience.",
+   "comment": "“Christ redeemed us from the curse of the law by becoming a curse for us, for it is written: Cursed is everyone who hangs on a tree.” (Deuteronomy 21:23) (Galatians 3:13) While the letter of the law declares cursed the one in transgression and sins, the One who did not know sin — that is, Christ — was brought under the curse, enduring an unjust sentence and suffering what befits those under a curse, so that the One worth all, dying for all, might loose the charges of everyone’s disobedience and buy what is under heaven with his own blood.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'cursed is everyone who hangs on a tree' means for Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "5",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/5/",
+   "from_cite": true
+  },
+  {
+   "id": "DT22-001",
+   "chapter": 22,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The commandment through Moses leads us step by step to love even enemies, overcoming evil with good, as in returning a straying animal.",
+   "comment": "… For the word of the commandment through Moses interprets for us types of matters, not the matters themselves clearly; and you would see how he also brings us up little by little already into modes of the uppermost mutual love. For he tries to persuade us to love even those who have struck against us, and to be seen better than grief unto enemies, not being conquered by the evil, but rather conquering the evil in the good. For he said again in Exodus: ‘And if you should meet the ox of your enemy, or his beast of burden, wandering in the way, having turned back you will give it back to him; and if you should see the beast of burden of your enemy fallen under its load, you will not pass it by, but you will raise it with him.’ (Exodus 23:4–5) And in Deuteronomy: ‘Having seen the calf of your brother, or his sheep, wandering in the way, do not overlook them; turning back you will turn them back to your brother; …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "14",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/14/",
+   "from_cite": true
+  },
+  {
+   "id": "DT22-002",
+   "chapter": 22,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "No one may profit from found goods, even if they belong to an enemy, but must return them to the owner.",
+   "comment": "Let no one deceive himself, nor plead that he found the goods; for not even a finder may make a profit. For Deuteronomy says: “If you see your brother’s calf or his sheep straying on the road, do not ignore them; you shall surely bring them back to your brother. And if your brother is not near you, and you do not know him, you shall gather them in, and they shall stay with you until your brother looks for them, and you shall give them back to him. You shall do the same with his donkey, the same with his garment, and the same with anything your brother loses—whatever is lost by him and you find” (Deuteronomy 22:1–3). So says Deuteronomy. And in Exodus this holds not only when someone finds what belongs to his brother but also what belongs to his enemy: “You shall surely bring them back,” it says, “to the house of their owner” (Exodus 23:4).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the law requires of one who finds a brother's lost property.",
+   "author": "Gregory Thaumaturgus",
+   "work": "Canonical Letter",
+   "work_slug": "gregory-thaumaturgus-epistula-canonica",
+   "section": "4",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-epistula-canonica/4/",
+   "from_cite": true
+  },
+  {
+   "id": "DT22-003",
+   "chapter": 22,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Saints must be single-mannered, and the law counts softness in men and a show of manliness in women as equally abominable.",
+   "comment": "… And that the saints must be seen everywhere single-mannered, and not other-minded, would become clear, the law saying evidently: ‘There will not be a man’s vessels (Deuteronomy 22:5) upon a woman, nor will a man put on a womanish garment, because every one doing these things is an abomination before the Lord.’ For equal abomination beside God and most ugly sight is a reputation of nobility upon softnesses—for this is the being a man’s vessels upon a woman; and being sick with softness in manlinesses—for this likewise is the man putting on a womanish garment.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "5",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/5/",
+   "from_cite": true
+  },
+  {
+   "id": "DT22-004",
+   "chapter": 22,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Like a house without a crown, a good work is unpersuasive unless it is led to its fitting end, and danger follows the idle.",
+   "comment": "… And that it is fitting for us to be such the law was again hinting, calling under: ‘If you should build a new house, you will make a crown for your roof. And you will not make a murder in your house, if the one falling should fall upon it.’ (Deuteronomy 22:8) … For just as a house empty of a fillet is unbeautiful, and of the after-buildings not having been brought upon it, in the same way, I think, every good work is altogether unpersuasive for us, if it should not be led toward the end fitting for it; and not only as far as these things, but danger will also follow those who are idle. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "27",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/27/",
+   "from_cite": true
+  },
+  {
+   "id": "DT22-005",
+   "chapter": 22,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The law forbids giving occasion for negligence, as with parapets.",
+   "comment": "For example, the law forbids homicide. It also forbids providing an occasion of negligence through which people fall into danger, as with a goring bull (Exodus 21:28–32) and the parapets of houses (Deuteronomy 22:8). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "5.47",
+   "url": "https://viapatrum.org/works/julian-to-florus/5.47/",
+   "from_cite": true
+  },
+  {
+   "id": "DT22-007",
+   "chapter": 22,
+   "verse_start": 25,
+   "verse_end": 27,
+   "capsule": "A woman of proven chastity who is violated by force is not guilty, as the law shows in the case of the girl found in the open country.",
+   "comment": "… If, however, a woman who had lived in extreme chastity and had shown her former life to be clean and beyond all suspicion has now fallen into violation through force and necessity, we have the example in Deuteronomy concerning the young woman whom a man found in the open country and, after forcing her, slept with her: “You shall do nothing to the young woman; there is no capital sin for the young woman, because just as if a man rises up against his neighbor and takes his life, so is this matter. The young woman cried out, and there was no one to help her” (Deuteronomy 22:25–27). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains that violation by force is no sin on the woman.",
+   "author": "Gregory Thaumaturgus",
+   "work": "Canonical Letter",
+   "work_slug": "gregory-thaumaturgus-epistula-canonica",
+   "section": "1",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-epistula-canonica/1/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-001",
+   "chapter": 23,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Though joined to Israel by kinship, the Ammonites and Moabites showed no natural affection and no pity, so they were shut out of the assembly.",
+   "comment": "… Do you not see that, though they were joined to Israel by the tie of kinship, they were shown by the events themselves to be without natural affection and hard of heart, no different from wild beasts? When they ought to have pitied them as brothers, toiling and sweating as they were, they marched out to lay them waste. That is why the law says: ‘They shall not enter the assembly of the Lord, because they did not meet you with bread and water when you were coming out of Egypt’ (Deuteronomy 23:3–4); that is, because they were so utterly without compassion and had strayed into the unholiness of savage ways. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Ammonites and Moabites were barred.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "6",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/6/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-002",
+   "chapter": 23,
+   "verse_start": 3,
+   "verse_end": 6,
+   "capsule": "The law bars the Ammonites and Moabites from the holy places and sets the saints wholly apart from them, even from greeting them.",
+   "comment": "… The holy places, then, are barred to the Ammonites and to the Moabites too, and very rightly. For those whose crimes are akin and whose boldness is of one kind may fittingly be caught in equal penalties. And see how careful the law is. It sets the saints wholly apart from them and charges them not even to wish so much as to enter into conversation with them, saying: ‘You shall not greet them in peace, and you shall not speak to them for their good, all your days for ever’ (Deuteronomy 23:6). Is this not plainly what that pair of saints, Paul and John, also taught us? One of them said: ‘If anyone comes to you and does not bring this teaching, do not greet him’ (2 John 1:10); and this, I think, is ‘You shall not greet them in peace, nor for their good.’ The other, again: ‘After a first and a second warning, have nothing to do with a heretical man, knowing that such a person is perverted’ (Titus 3:10–11). This is ‘You shall not speak to them for their good.’ …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/7/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-003",
+   "chapter": 23,
+   "verse_start": 4,
+   "verse_end": 5,
+   "capsule": "The Moabites, idolaters who trusted in divination, hired Balaam to curse Israel, but God turned the curse into blessing.",
+   "comment": "… Now consider the Moabites too, if you like, who were openly the bitterest enemies of those who wish to serve the God who alone is God by nature and in truth. They were worshippers of idols, who put special trust in divinations and sorceries and were taken up beyond all measure with the flights of birds. Grinding their teeth at Israel’s good fortune, they hired Balaam and set him to curse; but by the inexpressible power of God the soothsayer’s mouth was turned to blessings they did not want (Numbers 22:5–6; Deuteronomy 23:4–5). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Moabites were excluded and what happened with Balaam.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/7/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-004",
+   "chapter": 23,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The holy must not cling to the profane, nor turn away one who runs to them.",
+   "comment": "Yet the old law forbade the holy to glue themselves to the profane, lest their mind slip — not the opposite: if a profane person runs toward a holy one, one must not turn him away, according to “You shall not abhor an Edomite or an Egyptian.” (Deuteronomy 23:7)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the limit of the separation commands.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "89",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/89/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-005",
+   "chapter": 23,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The law counts the dog with the prostitute because men with a dog-like manner are base toward filth.",
+   "comment": "But he says 'dogs' here to mean men having a dog-like manner. And he slanders the movements of the dog in many ways. They are entirely base toward filth. Thus, it has become customary to call the lawless and the women 'dogs' in this sense. Indeed, even the law also, suggesting this meaning, counted the dog along with the prostitute: 'You shall not substitute a dog for a change, nor a prostitute's hire' (Deuteronomy 23:18). He did not say a change of a donkey or a horse; for these changes were being brought into the house of the Lord.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u06-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u06-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-006",
+   "chapter": 23,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "The lawgiver bars interest from brothers and bids us lend, leading us toward mutual love.",
+   "comment": "… And see how most craftily and very urbanely he unhabits us from the worse things, and persuades us to be eager away from the unpitying, and leads us toward the better, and embarks us into the modes of mutual love; for he urges, if they should somehow need something, to lend out to brothers, and he bars interests, and commands to push away increasings. And having further ordered that one must not be burdensome, nor lie upon those who owe, he bids to make a release of debts. And he writes thus: ‘You will not take interest from your brother—interest of silver, and interest of foods, and interest of every matter—what you should lend to the alien, you will not take interest; that the Lord your God may bless you in all your works upon the earth which you are entering there to inherit.’ (Deuteronomy 23:19-20) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/17/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-007",
+   "chapter": 23,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Failing to pay a vow promptly is among the most dangerous faults, and the law records it as sin, except for those under another's hand.",
+   "comment": "… For I would count failing to do such things promptly among the most dreadful and dangerous of faults, and so does sacred Scripture itself. If, thinking rightly, we reckon it among the most outrageous things to be convicted on a charge of lying, how would it not be utterly shameful to pledge something and promise it to God, and afterwards to prove false to that promise? So whenever anyone has vowed and then delayed, or has even shrunk back from paying altogether, the law records it against him as sin (Deuteronomy 23:21). But it releases from the charge those who have nothing at all of their own, but are yoked as by a binding necessity and act under another’s hand. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "27",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/27/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-008",
+   "chapter": 23,
+   "verse_start": 21,
+   "verse_end": 23,
+   "capsule": "Whatever we vow to God we must carry out promptly, since in such matters delay is not without loss.",
+   "comment": "… For I say that we must remember him who speaks plainly through the most wise Moses: ‘You shall keep what goes out through your lips’ (Deuteronomy 23:23). That is, whatever you vow, hasten to carry it out, and very promptly. For in such matters delay is not without loss. ‘For if you make a vow to the Lord,’ it says, ‘do not delay in paying it’ (Deuteronomy 23:21; Ecclesiastes 5:4). ‘It is better that you should not vow than that you should vow and not pay’ (Ecclesiastes 5:5).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why a vow must be paid without delay.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/16/",
+   "from_cite": true
+  },
+  {
+   "id": "DT23-009",
+   "chapter": 23,
+   "verse_start": 24,
+   "verse_end": 25,
+   "capsule": "The law's example shows that taking a few ears or grapes is the law of love, but bringing iron or a vessel goes into grasping.",
+   "comment": "… Which again the law guides for us as in a form of parable and clear example, saying: ‘And if you should enter into the harvest of your neighbor, and should gather ears in your hands, you will not set a sickle upon the harvest of your neighbor; and if you should enter into the vineyard of your neighbor, and should eat grape as much as for your soul to be filled, you will not cast into a vessel.’ (Deuteronomy 23:24–25) … For gathering a few ears with hands, or shearing a cluster unto desire or food, would have no harm. For he will bear it, I think, with good cheer; these things are the law of love, and the matter does not appear beyond the measure. But also bringing iron while reaping upon the things of the neighbor somehow swims over and thereafter leaps over the mutual-loving, and goes into the bounds already of grasping. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "13",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/13/",
+   "from_cite": true
+  },
+  {
+   "id": "DT24-001",
+   "chapter": 24,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "In the newly married man the law pictures one newly joined to virtue, whom it does not load with toils but leaves at leisure to grow fond of virtue.",
+   "comment": "… Rightly therefore the law, having shaped elegantly as in a form of a woman the virtue cohabiting with the saints, ‘If someone takes a woman freshly,’ (Deuteronomy 24:5) it says, ‘he will not go out unto war, and no deed will be cast upon him; he will be guiltless in his house. One year he will gladden the woman whom he took.’ (Deuteronomy 24:5) For it does not allow the as-it-were newly fixed, and having a fresher eagerness unto the good, to be loaded with toils and persecutions, but as it were leisurely and remaining upon himself, and being warmed to be bound with the affections unto virtue. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "10",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/10/",
+   "from_cite": true
+  },
+  {
+   "id": "DT24-002",
+   "chapter": 24,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The law forbids taking the tools of food in pledge.",
+   "comment": "… For the law also forbids taking a millstone or upper millstone in pledge, so that someone who takes the tools of food may not become an obstacle to those being fed. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "246",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/246/",
+   "from_cite": true
+  },
+  {
+   "id": "DT24-003",
+   "chapter": 24,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The law puts to death the man who steals and sells one of his brothers, for the holy race in Christ must not be dragged down into slavery.",
+   "comment": "… Rightly then the law adjudges that every such one must have died as of wild beasts. For it has been written in Exodus: ‘If someone should steal one of the sons of Israel, and having overpowered him should sell him, and he should be found in him, let him die by death.’ (Exodus 21:16) And in Deuteronomy: ‘And if a human should be caught stealing a soul from his brothers, the sons of Israel, and having overpowered him should sell him, that thief will die.’ (Deuteronomy 24:7) For it is not lawful that the holy race in Christ be laid waste, and be brought down somehow into an unfamiliar slavery by those accustomed to do this; …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "3",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/3/",
+   "from_cite": true
+  },
+  {
+   "id": "DT24-004",
+   "chapter": 24,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Fathers' sins do not strike those who did nothing wrong, though the wrath reaches descendants who follow their fathers' impiety.",
+   "comment": "… For we do not say somewhere that fathers’ sins strike down upon those who have altogether done nothing wrong, although God has cried out expressly: ‘Fathers will not die on behalf of children, nor children on behalf of fathers; each will die in his own sin.’ (Deuteronomy 24:16) Yet if those from them should follow the fathers’ judgments, and be zealots of ancestral impiety, the wrath somehow stretches even unto them. And even if somehow from inborn love-of-humanity the God above all should let go the first ones from needing to be punished, yet late he brings upon the second or the third the anger fitting and owed at the beginnings to the profane race. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "3",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/3/",
+   "from_cite": true
+  },
+  {
+   "id": "DT24-005",
+   "chapter": 24,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "God separated father and son in judgment, showing that parents' sins no more pass to children than children's to parents.",
+   "comment": "In establishing the pattern to be followed in trials, God commanded that innocence should not be implicated in the dangers faced by a relative. Just as he separated the father from the punishment of a sinful son, he separated the son from the father’s condemnation. By giving both persons the same outcome, he clearly showed that parents’ sins can no more pass to children than children’s sins pass to parents (Deuteronomy 24:16).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says about each bearing his own guilt.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.14",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.14/",
+   "from_cite": true
+  },
+  {
+   "id": "DT24-006",
+   "chapter": 24,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Birth cannot damage innocence, so parents' crimes no more pass to their descendants than children's crimes pass to their parents.",
+   "comment": "And so parents’ crimes do not pass to their descendants, although those descendants were born from them, just as children’s crimes do not pass to their parents, who certainly could not have been born from their own children. Birth, then, can no more damage someone’s innocence where that birth exists than it can where it does not exist (Deuteronomy 24:16).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.19",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.19/",
+   "from_cite": true
+  },
+  {
+   "id": "DT24-007",
+   "chapter": 24,
+   "verse_start": 19,
+   "verse_end": 22,
+   "capsule": "Because the law is an elementary teacher, it commands leaving a forgotten sheaf and gleanings for the poor as a first practice of ungrudging giving.",
+   "comment": "… And since the law is an elementary teacher, and carries back unto beginnings of the oracles of God, it commands to make as somehow a fore-practice of the path unto this the ungrudging as in few things; for this reason it says: ‘And if you should reap your harvest in your field, and should forget a sheaf in your field, you will not turn back to take it (Deuteronomy 24:19); it will be for the poor and the sojourner and the orphan and the widow, that the Lord your God may bless you in all the works of your hands; and if you should gather olives you will not turn back to glean the things behind you, it will be for the sojourner and the orphan and the widow, and you will remember that you were a house-slave in the land of Egypt, for this reason I command you to do this word. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/17/",
+   "from_cite": true
+  },
+  {
+   "id": "DT25-001",
+   "chapter": 25,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The law names the holy disciples threshing oxen.",
+   "comment": "… For has not the law through Moses named for us the threshing oxen the holy disciples? for he said enigmatically: ‘You will not muzzle an ox threshing.’ (Deuteronomy 25:4) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 3",
+   "work_slug": "cyril-adoration-3",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-3/16/",
+   "from_cite": true
+  },
+  {
+   "id": "DT25-002",
+   "chapter": 25,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The law of the threshing ox fits its allegory, for it lets us recognize the teacher and the labors he endures for his pupils.",
+   "comment": "It should be noted, however, that if something is interpreted allegorically, it is not always necessary to smooth everything over; for if the literal sense is understood to be appropriate for an allegory, once this is understood, it is not necessary to accept everything as an upward leading, such as regarding 'you shall not muzzle an ox while it is trampling' (Deuteronomy 25:4), which, because it is fitting, allows one to recognize the teacher and the labors which he endures for the sake of those being instructed.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u11-open",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u11-open/",
+   "from_cite": true
+  },
+  {
+   "id": "DT25-003",
+   "chapter": 25,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Where the law seems to legislate about oxen, what was written for human beings contains a teaching about the nature of things.",
+   "comment": "… For he would have seen that “God does not care for oxen” (1 Corinthians 9:9), even where He seems to be making laws about oxen or animals without reason (Deuteronomy 25:4), but that what was written for the sake of human beings (1 Corinthians 9:10), under the outward appearance of dealing with animals without reason, contains a teaching about the nature of things.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the law about oxen is read as written for human beings.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "36",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/36/",
+   "from_cite": true
+  },
+  {
+   "id": "DT25-004",
+   "chapter": 25,
+   "verse_start": 13,
+   "verse_end": 16,
+   "capsule": "Everywhere the law legislates for equality and exact justice, as in the command for a true weight and measure.",
+   "comment": "… For everywhere the law is seen legislating, providing for equality, and making the exact test of the just. For it has been written in Deuteronomy: ‘There will not be in your bag a great or small weight; a true just weight will be for you, and a true just measure will be for you, in order that you may become many-dayed upon the earth which the Lord your God gives you in a lot, because an abomination to the Lord your God is everyone doing these things, everyone doing an unjust thing.’ (Deuteronomy 25:13-16) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 7",
+   "work_slug": "cyril-adoration-7",
+   "section": "22",
+   "url": "https://viapatrum.org/works/cyril-adoration-7/22/",
+   "from_cite": true
+  },
+  {
+   "id": "DT28-005",
+   "chapter": 28,
+   "verse_start": 30,
+   "verse_end": 30,
+   "capsule": "The wife is the old covenant, which the nations have gained; the house is the fallen temple; the vineyard bore thorns.",
+   "comment": "… “You shall take a wife”: the old covenant; “and another man shall have her”: for the people from the nations has gained it. “You shall build a house, and you shall not live in it”: the temple, plainly, for you see it fallen. “You shall plant a vineyard, and you shall not gather its grapes”: for it bore not grapes but thorns (Isaiah 5:2). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains each threat of the verse and how it came about.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DT28-006",
+   "chapter": 28,
+   "verse_start": 30,
+   "verse_end": 31,
+   "capsule": "Christ the vine came from them but we gather his grapes, and his sacrifice was theirs but the supper is ours.",
+   "comment": "[The vineyard can also mean Christ,] for Christ came from them (Romans 9:5), the vine of our life (John 15:1); but it is we who gather his grapes, we who mix the wine, we who drink the new wine. “Your calf shall be slaughtered before you, and you shall not eat of it”: for theirs is the sacrifice of Christ – they led the calf from heaven up to the altar – but ours is the supper, ours the table.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the vineyard not gathered and the calf not eaten as fulfilled in Christ.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT28-001",
+   "chapter": 28,
+   "verse_start": 43,
+   "verse_end": 43,
+   "capsule": "The proselyte rising above Israel describes a change of circumstances, as Gentiles who believe now stand above those who turn from the gospel.",
+   "comment": "Concerning these proselytes, Moses said to Israel, saying, 'If you do not obey the commandments of the Lord your God, the proselyte who is among you will be above you, but you will be below' (Deuteronomy 28:43), through the changing of circumstances. Indeed, before the coming of the Savior, those of the Gentiles who hurried to worship God approached Israel being instructed and obeying them; but now, those who wish to approach the faith of Christ from the Israelites are setting aside the evangelical commonwealth, approaching as sacrifices among those of the Gentiles who have believed.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the saying about the proselyte rising above Israel was fulfilled.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u63-rem-early",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u63-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DT28-007",
+   "chapter": 28,
+   "verse_start": 43,
+   "verse_end": 44,
+   "capsule": "Those who once came to the law as proselytes now lead the assembly that draws near to God, and the synagogues follow.",
+   "comment": "… the synagogues of the Jews would most fittingly be second and following, according to 'The first will be last and the last first' (Matthew 20:16), and 'The proselyte among you will rise above you as head, and you will be as the tail' (Deuteronomy 28:43-44). For those who long ago became proselytes of the law in order to be made close to God now themselves lead the assembly that draws near to God, …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT28-002",
+   "chapter": 28,
+   "verse_start": 66,
+   "verse_end": 66,
+   "capsule": "The life that hangs before their eyes is Christ on the wood of the cross, and their unbelief has become the cause of fear.",
+   "comment": "… they fell sick with unbelief, brought ignorance instead of knowledge, and at the time for theology slid into blasphemy. They entered the bridal chamber and did not receive the Bridegroom; they wreathed the wedding hall and refused the marriage; and when the cross was carried out, the elements were shaken, but they were not changed. For this is what he added next: “And your life shall hang before your eyes” (Deuteronomy 28:66). What is the life? Christ, who says: “I am the way and the life and the truth” (John 14:6). And where does it hang? On the wood of the cross. For he who hung the earth by a word (Job 26:7) hangs on the wood; on it he who carries is carried, he who suspends is suspended, he who lifts up is lifted up: “For when I am lifted up,” he says, “I will draw all to myself” (John 12:32). “And you shall fear day and night, and you shall not believe in your life” (Deuteronomy 28:66). So unbelief has become the cause of fear.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'your life shall hang before your eyes' meant.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT28-003",
+   "chapter": 28,
+   "verse_start": 66,
+   "verse_end": 66,
+   "capsule": "The prophecy was fulfilled in those who did not believe the Life among men.",
+   "comment": "… And in you the prophecy is fulfilled that says, “Your life will be hanging before your eyes, and you will not believe your life” (Deuteronomy 28:66). For you did not believe the Life that had come to dwell among the human race.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "75",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/75/",
+   "from_cite": true
+  },
+  {
+   "id": "DT28-004",
+   "chapter": 28,
+   "verse_start": 67,
+   "verse_end": 67,
+   "capsule": "The signs at the cross, the earthquake and the darkened sun, made them afraid, so that they asked when evening would come.",
+   "comment": "… Because of the signs and wonders that were being done at the time of the cross – the earth quaking, the sun fleeing, the sky hiding, the rocks splitting, the veil tearing, the tombs opening (Matthew 27:51-52) – they were afraid and troubled, and so they were naturally driven to say to one another: “When will it be evening, so that we may take the Life down from the cross, hide in the earth the one who came from heaven, …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT30-003",
+   "chapter": 30,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Love attentive to God is luminous and so prepares long, many-dayed life for those who share in it.",
+   "comment": "… the prophet of the divine laws, Moses, [is] saying to the God-lover: 'This is your life and the length of your days: to love the Lord your God with all your soul and with all your heart' (Deut 6:5). For since love that is attentive to God is luminous, it prepares long and great days, so that those participating in it find themselves having many-dayed and long-lasting existence.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse calls love of God the length of one's days.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u08-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-001",
+   "chapter": 32,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Souls that minister the word are rain clouds, and Moses is one.",
+   "comment": "… Souls ministering to the 'word of salvation' happen to be 'clouds being filled with rain.' Moses, being a single 'cloud,' says: 'let my utterance be expected like rain' (Deut 32:2). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the rain of Moses' teaching as a figure for those who minister the word.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u10-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u10-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-002",
+   "chapter": 32,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "A spiritual dew descends from the heavenly light of him who came as light into the world.",
+   "comment": "Upon these mountains descends a spiritual dew, regarding which Moses said, 'And I will come down as dew' (Deuteronomy 32:2), and in the prophet, 'For the dew from you is its essence' (Isaiah 26:19). From this heavenly dew, the habitation of the blessed shall be from heaven. This spiritual dew does not descend from random clouds, but from the celestial light of the one saying, 'I have come as light into the world' (John 12:46). For this light both dews and shines from above, and makes things to become in most piercing brightness.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u58-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u58-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-019",
+   "chapter": 32,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "God's name means his proper quality, and one who has called on it can bring his hearers words like fruitful rain and comforting dew.",
+   "comment": "… God's proper quality — which I take to be called God's 'name' in the Scriptures: … in Deuteronomy, 'Let my utterance wait as rain; let my words come down as dew, as shower upon grass and as snowfall upon herb: for I have called the name of the Lord' (Deuteronomy 32:2); … he who can utter rain that co-works with his hearers for the fruit-bearing of their souls, and bring forth words like dew — comforting words — and by the rush of well-built speeches bring upon his hearers most profitable rain or most useful snowfall — can do these things for this reason. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "24",
+   "url": "https://viapatrum.org/works/origen-on-prayer/24/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-004",
+   "chapter": 32,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "God is called faithful because he is worthy of being believed and unchangeable in nature, not because he believes.",
+   "comment": "… It is called faithful not from the act of believing, but from the worthiness of being believed, just as the Word 'Faithful' is said of the Faithful One, and concerning God it is said, 'God is faithful and there is no injustice in him' (Deuteronomy 32:4) and 'God is faithful through whom you were called' (1 Cor 1:9). For because of worthiness and the being worthy of being believed, it was so named, but also because of the certain and unchangeable nature. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in what sense God is called faithful.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u10-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u10-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-005",
+   "chapter": 32,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Scripture calls God's works true to set them apart from the things of sense, none of which is true.",
+   "comment": "… And, in a word, to set them apart from the things of sense, none of which is true, it says: “God, true are his works” (Deuteronomy 32:4). It applies the name “works of God” to some things, and the so-called “works of his hands” to lesser ones. At any rate, when it reproaches certain people through Isaiah, it says: “They do not look upon the works of the Lord, and they do not consider the works of his hands” (Isaiah 5:12). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'true are his works' means.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "31",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/31/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-006",
+   "chapter": 32,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "One who repays evil for good is more lawless, as Israel was toward God.",
+   "comment": "… If he who gives evil instead of evil is lawless, how much more the one who gives evil instead of good is more lawless? Such became toward God the Israel of the wilderness, to whom Moses says in Deuteronomy: 'These generations are crooked and perverse, repaying the Lord' (Deut 32:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Evagrius Ponticus",
+   "work": "Notes on Proverbs",
+   "work_slug": "evagrius-scholia-proverbia",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/evagrius-scholia-proverbia/u03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-008",
+   "chapter": 32,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The angels lead us, since God set the nations' boundaries by their number.",
+   "comment": "… In acting rightly, we treat the angels; for they are our leaders having taken us from the beginning, 'when the Most High divided the nations' (Deut 32:8) and 'he set the boundaries of the nations according to the number of his angels' (Deut 32:8). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Evagrius Ponticus",
+   "work": "Notes on Proverbs",
+   "work_slug": "evagrius-scholia-proverbia",
+   "section": "u07-rem-mid",
+   "url": "https://viapatrum.org/works/evagrius-scholia-proverbia/u07-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-020",
+   "chapter": 32,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "Moses tells of the division of the nations in this song and again, as history, at the tower in Genesis, and the teaching hidden there is long and mystical.",
+   "comment": "We say that Moses, the prophet of God among us and his true servant, sets out in the song of Deuteronomy the following about the division of the earth: “When the Most High divided the nations, when he scattered the sons of Adam, he set the boundaries of the nations according to the number of the angels of God; and his people Jacob became the Lord’s portion, Israel the measured lot of his inheritance” (Deuteronomy 32:8–9).\n\nAnd the same Moses, in the book entitled Genesis, tells of the division of the nations in the form of a history, as follows: … “The Lord came down,” it says, “to see the city and the tower which the sons of men had built. And the Lord said: Behold, they are one race and all have one language; and this they have begun to do, and now nothing that they set out to do will fail them. Come, let us go down and confound their tongue there, so that none of them may understand the speech of his neighbour. And the Lord scattered them from there over the face of all the earth, and they stopped building the city and the tower. For this reason its name was called Confusion, because there the Lord God confounded the language of all the earth, and from there the Lord God scattered them over the face of all the earth” (Genesis 11:5–9). …\n\nThe teaching on these matters is long and mystical … It is enough to present in the manner of a history what is told in a hidden way as though it were history, so that those who are able may work out for themselves what bears on the passage.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/29/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-021",
+   "chapter": 32,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Those who did not move from the east and kept the original language alone became the Lord's portion, under a ruler who did not receive them for punishment.",
+   "comment": "… if anyone can, as under the figure of a history which has something true in itself and yet also points to something secret, let him see also those who kept the original language [when the tongues were confounded at the tower]: because they did not move “from the east,” they remained in the east and in the eastern language. And let him understand that these alone became the Lord’s portion and his people called “Jacob,” and became also “Israel, the measured lot of his inheritance” (Deuteronomy 32:9). And let these alone be governed by a ruler who did not receive those under him for punishment, as the others did.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "31",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/31/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-010",
+   "chapter": 32,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Moses adorned Israel with God's tender care, as an eagle that carries its young on its back, and David sings of the same overshadowing.",
+   "comment": "… The divine Moses said something like this when he adorned Israel with the tender care that comes from God: ‘As an eagle would shelter its nest, and yearned over its young, spreading its wings it received them, and took them up on its back’ (Deuteronomy 32:11). David too sings to every holy one who has made his dwelling in the help of the Most High (Psalm 91:1): ‘He will overshadow you upon his back,’ he says (Psalm 91:4). By ‘back’ I take him to mean the parts just below the neck, the region, as it were, of the shoulders, and not the back as a whole. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the image of the eagle bearing its young.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "6",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/6/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-007",
+   "chapter": 32,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Deuteronomy calls God the one who begot his people, yet the passage shows the sons blameworthy, and firm sonship is not seen among the ancients.",
+   "comment": "… That God has been called Father, and that those who have come to the word of God are sons, can be seen in many places — as in Deuteronomy: 'Thou hast forsaken God who begot thee, and forgotten God who nourishes thee' (Deuteronomy 32:6,18,20) … If, then, God is called Father, and those begotten by the word of faith in him are sons, yet the firm and unfallen character of sonship is not to be seen among the ancients. At any rate the very passages we set out show those called sons to be blameworthy …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "22",
+   "url": "https://viapatrum.org/works/origen-on-prayer/22/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-011",
+   "chapter": 32,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Because of the sins of the Hebrew people, God chose the foolish things of the world and made a senseless nation versed in divine words.",
+   "comment": "The prophets also foretold this: that because of the sins of the Hebrew people God would choose not one nation but picked people from every quarter, and that, choosing “the foolish things of the world” (1 Corinthians 1:27), he would make the senseless nation (compare Deuteronomy 32:21) become versed in the divine words, with the kingdom of God taken from them and given to these (Matthew 21:43). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the senseless nation is.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "78",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/78/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-022",
+   "chapter": 32,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "God guides even those who are not sensible, as he foretold through Moses of the senseless nation and Paul said of the foolish things of the world.",
+   "comment": "… God, giving laws in Jesus to men everywhere, guides even those who are not sensible, so far as such people can be guided toward the better.\n\nThe God who speaks in Moses knew this, as we have also said above, and says: “They moved me to jealousy with what is no god; they provoked me to anger with their idols; and I will move them to jealousy with what is no nation; with a senseless nation I will provoke them to anger” (Deuteronomy 32:21). Knowing it, Paul too said: “God chose the foolish things of the world to put the wise to shame” (1 Corinthians 1:27). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "73",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/73/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-023",
+   "chapter": 32,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Those who honored ungodliness had to be put outside God's mercy, while those caught in sin through ignorance were pitied and called, which Moses' words also say.",
+   "comment": "… it was necessary, truly necessary, that those who had held ungodliness toward God in honor should be put outside his sparing mercy and love; but that those who through ignorance had been caught in the pits of sin and had fallen under the devil's hand should be pitied by the Creator of all, and called to the knowledge of him and to the light of the truth.\n\nThis, I think, is found in the words of the all-wise Moses too, where he says: 'They provoked me to jealousy with what is no god; they angered me with their carved images. And I will provoke them to jealousy with what is no nation; with a senseless nation I will anger them' (Deuteronomy 32:21). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God turned to the senseless nation.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book4-logos1-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos1-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-012",
+   "chapter": 32,
+   "verse_start": 32,
+   "verse_end": 33,
+   "capsule": "One must flee godless doctrines, the wine of Sodom's vine.",
+   "comment": "As, then, it is salutary to abstain from the flesh of the dragon — and the flesh of the dragon is godless doctrines and false opinions — so it is beneficial and choiceworthy to refuse and flee 'the grape gathered from the vine of Sodom' and the wine gathered from it, being 'the fury of dragons and the incurable fury of asps' (Deuteronomy 32:32-33). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u12-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u12-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-013",
+   "chapter": 32,
+   "verse_start": 35,
+   "verse_end": 35,
+   "capsule": "Vengeance is his, so patience is ours and he rewards it.",
+   "comment": "… He promises this to us, saying: Vengeance is mine, and I will repay (Romans 12:19; Deuteronomy 32:35)—that is, patience is yours, and I will reward patience. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what leaving vengeance to the Lord means.",
+   "author": "Tertullian",
+   "work": "On Patience",
+   "work_slug": "tertullian-on-patience",
+   "section": "10",
+   "url": "https://viapatrum.org/works/tertullian-on-patience/10/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-014",
+   "chapter": 32,
+   "verse_start": 39,
+   "verse_end": 39,
+   "capsule": "By dying to the flesh we gain birth in the Spirit, as the Lord says he kills and makes alive.",
+   "comment": "… But I am about to speak of spiritual rebirth, and so I place death before life. For by dying to the flesh we gain birth in the Spirit, as the Lord also says: \"I kill, and I make alive\" (Deuteronomy 32:39). Let us die, then, so that we may live. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Basil of Caesarea",
+   "work": "Exhortation to Holy Baptism",
+   "work_slug": "basil-homilia-ad-baptisma",
+   "section": "1",
+   "url": "https://viapatrum.org/works/basil-homilia-ad-baptisma/1/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-015",
+   "chapter": 32,
+   "verse_start": 39,
+   "verse_end": 39,
+   "capsule": "God puts to death those who live in wickedness and brings in a better life, as a physician cuts to remove what harms.",
+   "comment": "… For they too seem to have heard “I will kill,” and they often throw it in our faces, but “I will make alive” (Deuteronomy 32:39) they do not even remember. Yet the whole saying shows that those who live to the common harm and act out of wickedness are put to death by God, and that a better life is brought in for them in its place, the life God would give to those who have died to sin (Romans 6:2). In the same way they have heard “I will strike,” but they do not go on to see “and I will heal” (Deuteronomy 32:39). That is like what a physician might say who has cut into bodies and made severe wounds in order to remove what harms them and stands in the way of health …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains that 'I kill' is followed by 'I make alive' and 'I will strike' by 'I will heal'.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "24",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/24/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-016",
+   "chapter": 32,
+   "verse_start": 39,
+   "verse_end": 39,
+   "capsule": "Scripture names the grim things first and the cheerful ones second, so God kills first and then makes alive, as with Paul.",
+   "comment": "… And we have always watched in Scripture that the things which look grim, if I may call them so, are named first, then the things that seem cheerful are said second. 'I will kill and I will make alive.' (Deuteronomy 32:39) He did not say, 'I will make alive,' and after that, 'I will kill.' For it is impossible that what God has made alive should be taken away by him or by anyone else. But 'I will kill and I will make alive.' (Deuteronomy 32:39) Whom will I kill? Paul the betrayer, Paul the persecutor. 'And I will make alive,' (Deuteronomy 32:39) so that he may become 'Paul, an apostle of Jesus Christ.' (1 Corinthians 1:1)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "1.16",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/1.16/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-017",
+   "chapter": 32,
+   "verse_start": 42,
+   "verse_end": 42,
+   "capsule": "In many places the sword signifies punishment, as in the Lord's sword devouring blood.",
+   "comment": "… In many places of the Scriptures the sword signifies punishment, as in: 'I will drink my arrows, and my sword devours the blood of the wounded' (Deuteronomy 32:42), and: 'my sword was drunken in heaven' (Isaiah 34:5); …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u14-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u14-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DT32-018",
+   "chapter": 32,
+   "verse_start": 43,
+   "verse_end": 43,
+   "capsule": "The call to rejoice is for all nations at once, not one Hebrew nation.",
+   "comment": "Concerning the simultaneous joy and delight of all men, it has been written: 'Rejoice, O nations, with his people' (Deuteronomy 32:43), no longer of one single Hebrew nation, but of all at once worshiping and serving God …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who is called to rejoice with the Lord's people.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u16-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u16-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DT33-001",
+   "chapter": 33,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The word of God calls only those worthy of God men of God, such as Moses, and will not call anything wicked his possession.",
+   "comment": "… the word of God is unwilling to call anything wicked God’s possession, since it judges such a thing unworthy of so great a Lord. That is why not all men are called men of God, but only those who are worthy of God, such as Moses (Deuteronomy 33:1) and Elijah (1 Kings 17:24), and anyone else who is recorded as “a man of God,” or who is like those so recorded.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the title 'man of God' given to Moses.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "25",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/25/",
+   "from_cite": true
+  },
+  {
+   "id": "DT33-002",
+   "chapter": 33,
+   "verse_start": 13,
+   "verse_end": 15,
+   "capsule": "Moses blessed Joseph's tribe with the seasons, dew and sun's turnings, which make the earth fruitful.",
+   "comment": "… And Moses, blessing the tribe of Joseph, gives blessings from the seasons of heaven and the dew, and from the sun's turnings and the meetings of months, and from the tops of mountains and everlasting hills (Deuteronomy 33:13-15), since the region around the earth is made fruitful through the good order in these things. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Basil of Caesarea",
+   "work": "Homilies on the Six Days of Creation",
+   "work_slug": "basil-homiliae-hexaemeron",
+   "section": "24",
+   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/24/",
+   "from_cite": true
+  },
+  {
+   "id": "DT34-001",
+   "chapter": 34,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "The charge the Jew brings against Jesus could be turned on Moses, who wrote that no one knows his burial, so dignifying it.",
+   "comment": "For just as the Jew makes it a charge that Jesus foretold that after dying he would rise again, so the man who argues the like about Moses will reply to the one who says this that Moses too wrote (for Deuteronomy also is his) that “no one knows his burial to this day” (Deuteronomy 34:6), dignifying and exalting even his burial as unknown to the human race.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "54",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/54/",
+   "from_cite": true
+  }
+ ]
+}

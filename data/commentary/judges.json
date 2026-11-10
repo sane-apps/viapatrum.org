@@ -1,0 +1,108 @@
+{
+ "book": "Judges",
+ "title": "The Fathers on Judges",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 5,
+ "selected_count": 5,
+ "comments": [
+  {
+   "id": "JDG05-001",
+   "chapter": 5,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Deborah was a mother to the people through piety, and the victory came from the power of prophecy, not a woman's courage.",
+   "comment": "Furthermore, the wonderful Deborah, having the weakness of a woman but prophesying the courage of virtue, about whom the Scripture says, 'And Deborah arose, a mother in Israel' (Judges 5:7), and she became a mother to the people through piety, … They did not boast of the woman's courage, but of the power of prophecy. Many went out as co-workers of God's counsel, and they cut down the foreign tribes.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what \"a mother in Israel\" means.",
+   "author": "Severianus of Gabala",
+   "work": "On the Man Born Blind",
+   "work_slug": "severianus-de-caeco-nato",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-nato/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JDG05-002",
+   "chapter": 5,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "Those who love the Lord shine like the never-quenched sun, but his enemies are a lamp that burns briefly and goes out.",
+   "comment": "That blessed Deborah, bringing the truth, says: 'Lord, those who love you, like the rising of the sun; but your enemies, like the glimmer of a lamp' (Judg 5:31). Lord, those who love you, like the rising of the sun; because the sun is never extinguished; but your enemies, like the glimmer of a lamp; for a lamp has light for a short time, and again it is extinguished.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the image of the sun for those who love the Lord.",
+   "author": "Severianus of Gabala",
+   "work": "On the Man Born Blind",
+   "work_slug": "severianus-de-caeco-nato",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-nato/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JDG11-001",
+   "chapter": 11,
+   "verse_start": 30,
+   "verse_end": 30,
+   "capsule": "The Spirit came to help and did not suggest the vow; Jephthah erred by promising rashly.",
+   "comment": "And Jephthah made a vow to the Lord (Judges 11:30). If the Spirit of the Lord was upon him, how could he vow what was not fitting? For a dog could have met Jephthah as he returned. Did the Spirit make a mistake, then? Not at all. The Spirit came to help, not to suggest the absurd vow. Jephthah himself made the mistake by promising rashly.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how Jephthah could vow wrongly while the Spirit was on him.",
+   "author": "Origen of Alexandria",
+   "work": "Selections on Judges",
+   "work_slug": "origen-selecta-judges",
+   "section": "1",
+   "url": "https://viapatrum.org/works/origen-selecta-judges/1/",
+   "from_cite": true
+  },
+  {
+   "id": "JDG15-001",
+   "chapter": 15,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The blow of the jawbone split the earth and water came out.",
+   "comment": "… “And God broke the wound in the jawbone, and water came out of it.” Instead of this, it means: He split the earth by the blow of the jawbone, and waters came out.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains where the water came from.",
+   "author": "Origen of Alexandria",
+   "work": "Notes on Judges",
+   "work_slug": "origen-adnotationes-judges",
+   "section": "15",
+   "url": "https://viapatrum.org/works/origen-adnotationes-judges/15/",
+   "from_cite": false
+  },
+  {
+   "id": "JDG16-001",
+   "chapter": 16,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Samson's hair appears to secure all his strength.",
+   "comment": "\"No iron has come up upon my head, because I am a Nazirite of God\" (Judges 16:17). Throughout the whole story of Samson, his hair appears to secure for him all his strength.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the hair matters to Samson.",
+   "author": "Origen of Alexandria",
+   "work": "Selections on Judges",
+   "work_slug": "origen-selecta-judges",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-selecta-judges/4/",
+   "from_cite": true
+  }
+ ]
+}

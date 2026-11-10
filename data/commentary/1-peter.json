@@ -1,0 +1,922 @@
+{
+ "book": "1 Peter",
+ "title": "The Fathers on 1 Peter",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 49,
+ "selected_count": 27,
+ "comments": [
+  {
+   "id": "1PE01-001",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Foreknowledge means God saw their faith and works ahead of time and so chose them.",
+   "comment": "From Origen's interpretation of 'according to the foreknowledge of God.' For God, having foreseen the faith and the works of men having been perfected in them through the evangelical teaching, foreknowingly chose them in Christ before the foundation of the world, having then predestined them to be sons through the participation of the spirit of sonship; for foreknowledge is to be regarded as nothing other than a vision of things to come, which is no longer foreknowledge, but is knowledge toward the existence of those having been foreseen; even so, according to foreknowledge, they were chosen, as Peter writes (1 Pet 1:2)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'according to the foreknowledge of God' means.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-002",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Hope is held toward a person, the Lord, and this hope is living.",
+   "comment": "Hope is held toward a person. One must strive, for the Lord holds hope; for blessed is the man who has trusted in the Lord (Ps 40:4), and he will be the Lord's hope. For this hope is living; therefore it is written, 'Born again into a living hope' (1 Pet 1:3)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u32-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u32-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-003",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The inheritance is not perishable or made of earthly wealth, and the Savior calls the worthy into it.",
+   "comment": "But this inheritance is not corruptible and does not possess being in sensible wealth; for it is said that the heirs of this are to be brought into an inheritance incorruptible, undefiled, and unfading, kept in the heavens (1 Peter 1:4) … Into this, the Savior calls the worthy: 'Come, you who are blessed by my Father, inherit the kingdom prepared for you' (Matthew 25:34)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the imperishable inheritance is.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-011",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "The evils that befall us are trials in which the soul, like gold in fire, is exposed or proved admirable.",
+   "comment": "And if need be, we will share in the things of life, bearing the appointed evils as trials of the soul. For this is what the divine words usually call what befalls men; and in these the soul of man, tested like gold in the fire, is either exposed or shown to be admirable (1 Peter 1:6–7; Sirach 2:5).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the trials are and what the image of gold in the fire means.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "56",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/56/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-005",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "Peter calls the Holy Spirit Christ's though he is God's, so Christ is God as one who has the Spirit as his own.",
+   "comment": "“Concerning this salvation the prophets who prophesied of the grace that would come to you searched and inquired, inquiring what person or time the Spirit of Christ in them was indicating.” (1 Peter 1:10–11) See again: here the Holy Spirit is called Christ’s, though he is God’s. So Christ is God, as one who has the Holy Spirit as his own.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Spirit in the prophets is called the Spirit of Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "43",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/43/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-006",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Angels long to look into these things because they lack innate knowledge of them.",
+   "comment": "'Angels desire to look into things' (1 Pet 1:12), he says. And if they had any innate knowledge, they would not long to even stoop into it, but because they do not have it, they fall into a sort of excessive desire, like men, for those things whose knowledge is not above them.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u18-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u18-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-007",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 19,
+   "capsule": "Christ's blood could redeem the whole world because he is God in flesh and not a common human.",
+   "comment": "That we have been redeemed through the blood of Christ. From Peter’s letter. “Knowing that you were not redeemed with perishable things, silver or gold, from your futile ancestral way of life, but with precious blood as of a lamb without blemish and without spot — Christ.” (1 Peter 1:18–19) For we have been redeemed, Christ having given his own body for us. But if he is understood as a common human, how is his blood a match for the life of all? But if the one worthier than all was God in flesh, he would be sufficient for the redemption of the whole world through his own blood — and very reasonably so.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the blood of Christ is a sufficient ransom.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "69",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/69/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-012",
+   "chapter": 1,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Redeemed by Christ's precious blood, we belong to him alone and are named after no one else.",
+   "comment": "Since Christ redeemed us with his precious blood (1 Peter 1:19), having endured the death of the flesh, we surely belong to him who bought us, and to no others, even if some have become for us ministers, reconcilers, mediators, and teachers of the mysteries of the grace that comes from him. That is why we are named after no others, but after Christ alone, who is also our Lord.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-008",
+   "chapter": 1,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Christ was foreknown before the world yet shone forth at the time God willed, the incarnation.",
+   "comment": "Christ and His mystery were foreknown before the foundation of the world (1 Peter 1:20), but they shone forth at the times the Sovereign willed, the times at which He has helped us; and the time of the incarnation he calls a day of salvation.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains 'foreknown before the foundation of the world but manifest in these last times'.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book4-logos4-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos4-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-009",
+   "chapter": 1,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "Truth and right thoughts purify the soul and heart, as Peter and James both teach.",
+   "comment": "Because the truth and those things thought truly purify the soul and the heart, Peter the apostle writes: 'having purified your souls in the obedience of the truth' (1 Peter 1:22). And James writes: 'Cleanse your hands, sinners, and purify your hearts, double-minded' (James 4:8).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u12-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u12-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE01-010",
+   "chapter": 1,
+   "verse_start": 24,
+   "verse_end": 25,
+   "capsule": "The glory of flesh, seen in bodily beauty, is what the prophet likens to a flower that falls.",
+   "comment": "Flesh is as grass, and its 'glory,' which appears in what is called the beauty of women and children, has been likened by the prophetic word to a flower, saying: 'All flesh is as grass, and all its glory as the flower of grass. The grass is withered, and the flower fallen; but the word of the Lord abides forever.' (1 Peter 1:25)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'all flesh is grass' says about human glory.",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "17",
+   "url": "https://viapatrum.org/works/origen-on-prayer/17/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-001",
+   "chapter": 2,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "God adapts the Word's nourishing power to each person's worth, as milk for the infant, vegetables for the weaker, solid food for the mature.",
+   "comment": "Concerning the nature of the Word: just as the quality of foods is changed into milk in the nurse to suit the nature of the infant, or is prepared by the physician to meet the sick man’s need for health, or is made ready accordingly for the stronger man, since he is more able to take it; so God changes the power of the Word, whose nature is to nourish the human soul, for each person according to his worth. To one, as Scripture has named it, he becomes “the pure milk of the word” (1 Peter 2:2); to another, who is weaker, something like vegetables (Romans 14:2); to another, who is mature, he is given as “solid food” (Hebrews 5:14). And surely the Word does not belie his own nature when he becomes nourishment for each, as each is able to receive him; he neither leads astray nor lies.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the image of pure milk of the word.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "18",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/18/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-002",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Christ is the unshakable foundation of all, and on him believers are built up as a spiritual house.",
+   "comment": "Christ is indeed the foundation of all and the unshakable base, who upholds all things and holds firm in well-being whatever has been set upon Him. For on Him we are all built up, a spiritual house (1 Peter 2:5), fitted together through the Spirit into a holy temple, into His dwelling place (Ephesians 2:20-22).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how believers are built as a spiritual house.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book4-logos2-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos2-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-003",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Scripture hints that each believer, through the same Word, is a precious stone of God's temple.",
+   "comment": "They [the divine Scriptures] say that the temple will be built again with living and most precious stones, hinting that each of those who are of one spirit, through the same Word, in the piety that accords with him is a precious stone of the whole temple of God. So Peter says: “You are being built up, living stones and a spiritual house, for a holy priesthood, to offer spiritual sacrifices acceptable to God through Jesus Christ” (1 Peter 2:5); and Paul: “built on the foundation of the apostles and prophets, Christ Jesus our Lord himself being the cornerstone” (Ephesians 2:20)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "19",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/19/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-016",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The spiritual sacrifices are ourselves, offered to God in Christ's footsteps in place of sheep and calves.",
+   "comment": "So we too, in Christ, shall cease from earthly pursuits, fulfilling the inward Sabbath rest; but we shall not hold back from the sacred works — I mean, from our duty to bring God spiritual sacrifices and inward gifts (1 Peter 2:5). Following, as it is written, in the footsteps of Christ (1 Peter 2:21), we shall offer ourselves in sacrifice, honoring the God of all not with slaughtered sheep and the blood of calves, but rather dedicating ourselves to him as a fragrant aroma.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the spiritual sacrifices are.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/2/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-004",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Christ was the chosen cornerstone, unwounded by sins and undivided, one and the same God and also man.",
+   "comment": "For Christ was the chosen stone, the precious cornerstone (Isaiah 28:16; 1 Peter 2:6): unwounded by sins, and knowing nothing of suffering the blows that come from the devil; not divided between God and the world, even though he became flesh, but holy through and through; not divided into God separately and man separately after the ineffable union, that is, his coming together with flesh, but being one and the same, God and also man.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-005",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The stone is saving for those joined in the corner but crushing for those who remain outside, so Christ is a rock of stumbling to some.",
+   "comment": "Blessed David marveled at this corner (Matthew 21:42) — that is, the meeting of the two peoples into one — saying, “This was from the Lord, and it is marvelous in our eyes.” (Psalm 118:22–23) So the stone is saving for the corner made by him, but crushing and ruin for those who remained outside this intelligible and spiritual concurrence. For some, Christ is “a rock of stumbling and a stone of scandal.” (1 Peter 2:8)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Christ is both cornerstone and stone of stumbling.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "216",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/216/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-006",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The tribe of Levi was a type of us, the royal priesthood, who enter the Church and please God with faith and spiritual offerings.",
+   "comment": "And it [the law] set apart the tribe of Levi as chosen and dedicated to God (Numbers 3:12), making the thing a type given to us and pointing to ourselves. For we too are called in the divine Scriptures ‘a chosen race, a royal priesthood, a holy nation, a people for his own possession’ (1 Peter 2:9). And we enter the truer tent, which the Lord pitched and not man (Hebrews 8:2), that is, the Church; not appeasing the Maker of all things with calves and goats (Hebrews 9:12), but excelling in a right and blameless faith, and giving off, in a spiritual way, a sweet fragrance through spiritual offerings of fruit.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains 'chosen race, royal priesthood' through the tribe of Levi and says what this priesthood offers.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/2/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-008",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "One whose citizenship is in heaven is truly a sojourner and stranger on earth, and so must abstain from fleshly desires that war against the soul.",
+   "comment": "For the one who walks on the earth, and has a bright citizenship in heaven (Philippians 3:20), would reasonably appear, from the things themselves, a sojourner and a stranger in truth. And so the Savior's disciple commands that we ourselves also make this a conspicuous and fair boast, saying in this way: 'Beloved, I exhort you as sojourners and strangers to abstain from the fleshly desires which war against the soul.' (1 Peter 2:11)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why believers are called sojourners and strangers.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/17/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-009",
+   "chapter": 2,
+   "verse_start": 20,
+   "verse_end": 21,
+   "capsule": "Christ suffered humanly to leave a pattern and to teach how trials must be met.",
+   "comment": "[Peter writes:] “For what credit is it if, sinning and being struck, you endure? But if, doing good and suffering, you endure, this is grace with God; because Christ also died for you, leaving you a pattern so that you might follow his tracks.” (1 Peter 2:20–21) So the Only-begotten, having likeness toward us, became an aim: to suffer humanly, and to teach those known to him in what manner one must meet the assaults of trials, and what sort those persecuted for piety toward God ought to be.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Christ left an example.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "35",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/35/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-010",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Christ refashioned human nature in himself into a blameless life so that we, following his steps, might have sin's power made idle in us.",
+   "comment": "It was not for His own sake that the Word, being God, achieved this, that He should be seen above the passions that are in us; for He knows no sin (2 Corinthians 5:21). Rather, He was, as it were, refashioning the whole of human nature in Himself into a holy and blameless life, when He became man and took the form that is ours. For He became “first in all things” (Colossians 1:18), so that we too, following in His steps (1 Peter 2:21), might have His dying in ourselves, that is, the power of sin made idle in the flesh, and so might be able to take up the blamelessness that leads to life.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what following in his steps means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u03-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-011",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "Peter counted it enough to clear Christ's actions of crimes, and he offers Christ as an example only because Christ shares our nature.",
+   "comment": "But if there were a crime in nature [that is, sin inherited at birth], Peter’s statement would have been ignorant. He evidently judged it sufficient testimony to spotless holiness to clear Christ’s actions of crimes, although sin would be believed to dwell in him through natural poison. If Peter had thought anything of natural evil, he would therefore have mentioned this part more carefully and emphatically. He would have written, “Christ left us an example: he neither committed sin nor acquired the sin we inherit at birth.” (1 Peter 2:21–22) Then it could fittingly follow that no deceit was found in his mouth (compare 1 Peter 2:21–22). But if Peter had thought this, he would never have mentioned an example. For whom would he have presented for human beings to imitate if the nature of an alien flesh had set Christ apart, and a difference of substance had impeached the authority of his teaching?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.86",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.86/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-017",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "Peter says Christ committed no sin to show he had none, and Christ could be our example because he took flesh of the same nature as ours.",
+   "comment": "Let the Mediator’s dignity therefore stand by his example and his work, and by our faith. Defending the truth through both his words and his apostle’s, that faith never ceases to proclaim that Christ, a true human being, assumed from Mary’s womb flesh of the same nature as ours. Though a true human being in every respect, he had no sin. To indicate this, it suffices for the apostle Peter to say that he committed no sin, teaching that one who had not committed it could not possess it (compare 1 Peter 2:21–22). No deceit was found in his mouth.\n\nHe offered a holy example to those sharing his nature, which he himself had made in everyone. Sin is therefore clearly not inborn, since Christ did not have it: without losing the honor of his divinity, he became flesh precisely so that we could imitate him (1 Peter 2:21–22).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Peter can hold up the sinless Christ as an example to follow.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.87",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.87/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-012",
+   "chapter": 2,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "Christ lived a life divine and blameless, keeping his mind untouched by unseemly pleasures, and took food and drink freely.",
+   "comment": "For God the Word, who came forth from God the Father and is God by nature, united the human to Himself and lived not a human life like ours, but a life divine, fitting for God, and wholly blameless. For “He committed no sin” (1 Peter 2:22): He kept His mind untouched by unseemly pleasures, and it could not be caught by desires for food. For even though He is seen to have taken food and drink, so that He might be believed to be truly a man like us, still He partook of them freely. For He was in the flesh for our sake, in keeping with the plan of salvation, and yet again above the flesh; for He was a life-giving spirit as God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u07-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u07-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-013",
+   "chapter": 2,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "Paul recalls Christ, who when reviled did not revile in return, to make the Corinthians meek and gentle.",
+   "comment": "So he gives them a charge, saying: I, Paul myself, the priest of the divine mysteries, the steward and apostle, the one renowned for zeal, who spur you yourselves on to say with me, “For to me to live is Christ, and to die is gain” (Philippians 1:21), entreat you by the meekness and gentleness of Christ, “who when He was reviled did not revile in return, when He suffered did not threaten, but entrusted Himself to Him who judges justly” (1 Peter 2:23). So at the right moment he brings them to remember the life of Christ, and makes them most meek and gentle.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-014",
+   "chapter": 2,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "We live for Christ when we order life by the Gospel and loathe the deadness of the passions.",
+   "comment": "So we live for Christ when we order our lives by the Gospel and loathe the deadness that comes from sin, that is, the death that comes from the passions. Indeed the inspired Peter writes of Christ: ‘He bore our sins in his body on the tree, so that we, having died to sins, might live to righteousness’ (1 Peter 2:24). For I think that those who care to live a shining life must go far from everything that can bring death, and must succeed in ridding themselves of defilements.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/20/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE02-015",
+   "chapter": 2,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "The holy life requires first dying to the world, as Peter says Christ bore our sins for this.",
+   "comment": "For it is impossible for us to achieve the holy life unless we have first died to the world. For Peter writes about Christ: ‘He bore our sins in his body on the tree, so that, having died to sins, we might live to righteousness.’ (1 Peter 2:24)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what dying to sins and living to righteousness means.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-001",
+   "chapter": 3,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Those who are ready to give an account of the hope in them also try to resolve apparent incongruities in Scripture and show nothing wicked is in its words.",
+   "comment": "But it must be understood that those who wish to live by the divine Scriptures, who know that “the knowledge of the senseless is unexamined words” (Sirach 21:18), and who have read the words “always ready to make a defence to everyone who asks us for an account of the hope that is in us” (1 Peter 3:15), do not take refuge only in the fact that these things were foretold. They also try to resolve the apparent incongruities, and to show that there is nothing wicked, shameful, unclean or foul in the words, but that they become so for those who do not understand the divine Scripture as it ought to be interpreted.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what being ready to make a defence involves.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "12",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/12/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-002",
+   "chapter": 3,
+   "verse_start": 18,
+   "verse_end": 20,
+   "capsule": "Only Christ died for sins, brought us to God, and preached to the spirits in prison, because he is God in flesh and gave his body for the life of all.",
+   "comment": "“Because Christ once died concerning sins, a righteous one for unrighteous ones, so that he might bring us to God, put to death in flesh but made alive in spirit; in which also he went and preached to the spirits in prison who once were disobedient.” (1 Peter 3:18–20) Many of the holy prophets have been killed, but none of those is said to have died for sins, nor to bring us to God through his own death, nor did anyone preach to the spirits in prison. But Christ has done this, and through him and in him we have been redeemed, and his suffering was saving for the world. So he died for us not as one human among those like us, but as God in flesh, giving his own body as an exchange for the life of all.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what sets Christ's death apart from the deaths of the prophets.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "72",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/72/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-003",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Christ went down among the spirits in prison to lead them up, not for his own sake.",
+   "comment": "[Christ, of his going down to Hades:] I became there not to remain myself, but neither to simply depart and return, but to lead up those there. 'Having been put to death in the flesh, but made alive in the spirit, in which he also preached the message to the spirits in prison' (1 Peter 3:19), he led them up. And because of these things he went down there, and because of these things he says he is ascending; for he went down to lead up. If he were not ascending them, he would not have gone up there; for he did not descend or ascend for his own sake.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u19-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u19-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-004",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Jesus persuaded many while in the body, and as a soul bare of the body he spoke with souls bare of their bodies, turning to himself those who were willing.",
+   "comment": "Whether he likes it or not, we do say this: that while he was in the body he persuaded not a few, but so many that he was plotted against because of the great number of those persuaded; and that when he had become a soul bare of the body, he spoke with souls bare of their bodies, turning to himself those of them also who were willing, or those whom he saw to be better suited, for reasons he himself knew (compare 1 Peter 3:19).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Christ's preaching to spirits means.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "43",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/43/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-005",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "Peter shows God's long-suffering and call to repentance in Christ's preaching to those who were disobedient in Noah's days.",
+   "comment": "That this happened for the sake of long-suffering and to call men to repentance, Peter, the spokesman of the apostles, in the epistle concerning him, marks out concerning the Savior: 'In which also he went and preached to the spirits in prison, who indeed in the days of Noah, while the ark was being constructed, were disobedient, when the long-suffering of God was waiting' (1 Peter 3:19).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u18-rem-close",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u18-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-009",
+   "chapter": 3,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Scripture says 'soul' for a person, and the eight are Noah, his wife, his three sons and the three with them.",
+   "comment": "[That Scripture calls a person a 'soul'] … it is sufficient to take up the voice of Paul and Peter. For what Paul wrote: 'Every soul'—that is, man—'must be subject to the superior authorities' (Romans 13:1); and what Peter said: 'That is, eight souls were saved,' saying eight souls regarding those saved in the ark during the flood: Noah and his three sons, his wife, and the three living with his sons (1 Pet 3:20).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u29-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u29-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-006",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Christ sanctifies us through water that washes the soul's defilements, not the body's dirt.",
+   "comment": "For the Savior’s passion is the ransom from sin; he sanctifies us through water, through which we gain not the removal of the filth of the flesh, as it is written (1 Peter 3:21), but the washing away of the defilements in our souls.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains 'not the removal of dirt from the body'.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "10",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/10/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-007",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "In baptism we gain not the removal of dirt from the flesh but freedom from the defilements of mind and heart.",
+   "comment": "It is plain enough, then, that the grace given through holy baptism was being sketched in advance here [in the bronze laver of Exodus 30]. For when we are baptized, what we gain is not the removal of dirt from the flesh (1 Peter 3:21); rather, we are set free from the defilements of mind and heart, and we wash away the stains of our offenses, by the grace and loving-kindness of the One who calls us to salvation.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/21/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE03-008",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "We first give the pledge of a good conscience toward Christ and believe, and so receive forgiveness of sins in baptism.",
+   "comment": "For having first given, as it were, the good pledge of an upright conscience toward Christ (1 Peter 3:21), and having accepted by faith that he died for us, was buried, and came to life again, we have received the forgiveness of sins through holy baptism. We undergo the deadening of sin, and as it were die together with him who died for us, by putting to death our members that are on the earth (Colossians 3:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE04-001",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Peter says Christ suffered in the flesh, exempting the divine nature from suffering, so he is impassible in his divinity but passible in the flesh.",
+   "comment": "“Christ therefore having suffered for us in flesh.” (1 Peter 4:1) For as Christ being God, the disciple wisely and thoughtfully says he has suffered in flesh, exempting from suffering the ineffable nature, to which suffering is foreign. So he has suffered in his own flesh, though the Word from God is accustomed to have no share in suffering. So Christ is God, then — impassible divinely, but passible according to the flesh.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Peter says Christ suffered 'in the flesh'.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "72",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/72/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE04-002",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Love covers a multitude of sins by making them vanish rather than keeping them.",
+   "comment": "For just as the divine love, that which is from God toward those experiencing good, and that of the benefactors toward the magnanimous, 'covers a multitude of sins' (1 Pet 4:8), vanishing the sins, but not guarding them, and covering what was done crudely, so the knowledge of God, existing as living water, covers the seas, changing them into sweetness and something drinkable.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u36-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u36-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE04-003",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Love overshadows hidden sins.",
+   "comment": "For those who sin without law are pardonable; the hidden sins are not forgiven altogether but are overshadowed from love: 'For love covers a multitude of sins' (1 Pet 4:8)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u16-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u16-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE04-004",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "One who takes this love into his soul can, whatever his sins, come to pure repentance and fight back against his wrongs.",
+   "comment": "But you, learn the way according to excess that Paul points to for salvation. \"Love does not seek its own things,\" but is poured out upon the brother. It is frantic for him, and soberly raves for him. \"Love covers a multitude of sins\" (1 Peter 4:8). … If someone casts this love into his soul, he can—even if he was born in sins, even if he has done many of the things that are forbidden—grow the love, receive pure repentance, and fight back against the things he has done wrong.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how love covers a multitude of sins.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "38",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/38/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE04-005",
+   "chapter": 4,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Through Christ, released souls no longer run into Hades but go into God's hands.",
+   "comment": "Something great and exceptional was accomplished for our souls through Christ. Since we have been justified through faith in God, and in him human nature was found enriched with faultlessness, he has opened something new for us: that souls released from bodies no longer run into Hades as before, but are rather sent into the hands of the living God. Knowing this, holy Stephen said, “Lord Jesus, receive my spirit.” (Acts 7:59) And another of the apostles writes, “So that those who suffer according to God’s will should also entrust their souls to a faithful Creator.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what entrusting the soul to a faithful Creator means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "282",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/282/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-001",
+   "chapter": 5,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Those who suffer for Christ's name are sharers in his sufferings and partakers of the glory to be revealed.",
+   "comment": "For just as Christ was put on display for our sake when He endured death on the tree and was made perfect through sufferings (Hebrews 2:10), so they [the apostles] too say that they are led in triumph for Him, that is, made known to people everywhere and made glorious through trials, and that they conquer the world by being ready to suffer all things, and very gladly, for the name of Christ. For they are sharers in His sufferings and, as he says, partakers “of the glory that is to be revealed” (1 Peter 5:1)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-002",
+   "chapter": 5,
+   "verse_start": 1,
+   "verse_end": 4,
+   "capsule": "The elders Peter urges hold the rank of those Paul said the Spirit appointed bishops, and they must shepherd willingly to gain the unfading crown.",
+   "comment": "Immediately, indeed, it is brought forward in the Acts of the Apostles (Acts 20:17) that 'Paul called the elders of the Church,' to whom he also says: 'The Holy Spirit has appointed you as bishops to shepherd the Church, which He acquired with His own blood' (Acts 20:28), and the following. To those having this rank, Peter, the foremost of Christ's disciples, addresses them in his epistle (1 Peter 5:1): 'I urge the elders among you.' And let us see what it is that he urges: to shepherd Christ's flock, not by compulsion, but willingly, so that, when the Chief Shepherd is revealed, they may receive the unfading crown of glory (1 Peter 5:4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u16-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u16-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-004",
+   "chapter": 5,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Leaders in Christ are not to drive people like harsh masters but to be examples to the flock.",
+   "comment": "He [Isaiah] teaches that they [the exactors] lord it over the people, not dealing gently with them as teachers with disciples, but like harsh and savage masters, forcing them to think as they see fit and driving them to anything at all, at times even against their own judgment.\n\nBut the aim of those in Christ was not of this kind. The inspired Peter writes to those called to oversight, whose lot it is to lead the rational flocks: “not as lording it over those in your charge, but being examples to the flock”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows by contrast what lording it over the flock means.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos3-rem-early",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos3-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-005",
+   "chapter": 5,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Glory comes to the one who humbles himself, and humbling comes first, as Peter exhorts.",
+   "comment": "Again, glory is brought to the one humbling himself, so that he may be un-blinded. Before this glory, it is necessary to be humbled; it is necessary to work, so that he may receive a reward. Therefore, he receives glory of the un-blinding from God. In this way also Peter exhorts, saying: \"Humble yourselves under the mighty hand of God, so that you may be lifted up in due time\"",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u30-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u30-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-006",
+   "chapter": 5,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "A humble-minded man need not abase himself in an unseemly way; he walks among great things and humbles himself under God's mighty hand.",
+   "comment": "At the same time these words show that the humble-minded man does not necessarily humble himself in an unseemly and degrading way, falling to the ground on his knees and throwing himself face down, putting on the clothes of the wretched and heaping dust on himself. For the man who is humble-minded as the prophet describes walks “among great and wonderful things” above him (Psalm 131:1), among doctrines that are truly “great” and thoughts that are truly “wonderful,” and he humbles himself “under the mighty hand of God” (1 Peter 5:6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means to humble oneself under God's hand.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "15",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/15/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-009",
+   "chapter": 5,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "God's hand is laid on us to guard and lift us up, and no enemy snatches away those who stay under it.",
+   "comment": "[The psalmist to God:] having formed me, You were not satisfied with having made me, but You also placed Your hand upon me in order to improve and guard me and to lift me up by it. Therefore, let him who understands this gift and advises others be careful, saying, 'Humble yourselves under the mighty hand of God, so that He may lift you up in due time' (1 Pet 5:6), so that, being secured by it, you may not have any insolence or scheme occur. For no one snatches from the hand of the Father; for the invisible enemies only tear apart those who have been cast away from it.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u59-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u59-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-007",
+   "chapter": 5,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Not worrying about tomorrow means throwing all anxiety upon the Lord.",
+   "comment": "The Lord, commanding his own disciples, says: 'Do not worry about tomorrow' (Matt 6:34). And it is a command, so that 'we should throw all anxiety upon the Lord' (1 Pet 5:7).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u23-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u23-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1PE05-008",
+   "chapter": 5,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "The roaring lion is the devil, whom we resist, firm in the faith.",
+   "comment": "This is the enemy we must flee. A lion pursues us. Who is this? Peter teaches, saying: 'Your adversary the devil walks about like a roaring lion seeking whom he may swallow (1 Peter 5:8); resist him, firm in the faith.'",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the roaring lion is and how to meet him.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "5.16",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/5.16/",
+   "from_cite": true
+  }
+ ]
+}

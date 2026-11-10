@@ -1,0 +1,403 @@
+{
+ "book": "Malachi",
+ "title": "The Fathers on Malachi",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 21,
+ "selected_count": 12,
+ "comments": [
+  {
+   "id": "MAL01-002",
+   "chapter": 1,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Israel kept the precious things for itself and offered the cheap ones, and the prophet rebukes it for this.",
+   "comment": "They present their offerings as thanksgiving, doing so naturally; but those who use them carelessly, as if keeping the precious things for themselves and offering the cheap ones, have made a poor choice. Since Israel does this very thing, the prophetic word says rebukingly and admonishingly: 'If you bring a blind man for sacrifice, is it not bad? And if you bring a lame or sick man, is it not bad? Bring him to your leader' (Malachi 1:8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Plainly explains what the rebuke of the offerings is about.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u13-open",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u13-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL01-003",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "The pure sacrifice from every nation condemns the ancient sacrifice as not pure, since it neither cleanses nor perfects toward virtue.",
+   "comment": "…'I have no will in you, says the Lord Almighty, and I will not receive a sacrifice from your hands, because from the rising of the sun even to its setting my name has been glorified among the nations, and in every place incense is offered to my name and a pure sacrifice, because my name is great among the nations, says the Lord Almighty.' (Malachi 1:10–11) You understand that he says incense and a pure sacrifice will be brought up to him from every nation. And just as, naming the new covenant in Christ 'new,' he has made the first old — for divine Paul writes to us this way — so here too, having said that the sacrifice from every nation will be pure in its times, he condemns the ancient one as not being so. For how is something pure in a way, which neither cleanses nor even has the power to perfect toward virtue?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the pure sacrifice among the nations is set against the old one.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "8",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/8/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL01-004",
+   "chapter": 1,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Every place becomes fit for prayer for one who prays well.",
+   "comment": "And concerning place, know that every place becomes fit for praying by one who prays well: 'For in every place they bring incense to me,' (Malachi 1:11) 'says the Lord'; and 'I will, then, that men pray in every place.' (1 Timothy 2:8)…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "31",
+   "url": "https://viapatrum.org/works/origen-on-prayer/31/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL01-005",
+   "chapter": 1,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The Lord's-day breaking of bread, offered after confession and reconciliation, is the pure sacrifice of which the Lord spoke.",
+   "comment": "On the Lord's day, gather together, break bread, and give thanks, after you have confessed your transgressions, so that your sacrifice may be pure.\n\nAnyone who has a dispute with his companion must not join you until they are reconciled, so that your sacrifice may not be defiled.\n\nFor this is what the Lord has spoken: \"In every place and time offer me a pure sacrifice, because I am a great king, says the Lord, and my name is great among the nations\" (Malachi 1:11, 1:14).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Applies the pure sacrifice offered in every place to the Lord's-day gathering, in plain words.",
+   "author": "The Didache",
+   "work": "The Didache",
+   "work_slug": "didache",
+   "section": "14",
+   "url": "https://viapatrum.org/works/didache/14/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL02-001",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The priest does not make the law but faithfully conveys what the lawgiver decided, and so all should obey him when he interprets it, even if he is slack himself.",
+   "comment": "…For ‘the lips of a priest will guard judgment, and they will seek the law from his mouth,’ as the prophet says (Malachi 2:7). He does not make law himself at all; rather, he conveys faithfully what the lawgiver has decided, setting it out without partiality, and, as the best arbiter of justice, he weighs the judgment in each case with precision…\n\n…So let no one judge the priest, even if he is seen to be somewhat slack, and even if he is careless about choosing to live in keeping with the law; but when he interprets the law, let everyone give him ready obedience. For his weaknesses arise from his own will, but what he expounds belongs to God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the priest's lips guarding judgment means in practice.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/21/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL02-002",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "What the people seek from the priest is right doctrine, the mysteries of the kingdom and a law against injustice.",
+   "comment": "Since a prophet is at hand, named Malachi; and his word has it thus: 'The lips of a priest shall guard knowledge, and they shall seek law from his mouth,' Malachi 2:7 desiring to learn from a divine teacher what must be known: orthodox doctrines and mysteries of the kingdom, and a law forbidding injustices and protecting the teachings of virtues.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u19-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u19-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL02-003",
+   "chapter": 2,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "One God made us and is Father of us all, so his aim is that those on earth live in equality.",
+   "comment": "…Is it then, tell me, still hard to spy, or rather is it not clear hereafter to everyone, that the aim of the divine counsel is that those upon earth live in equality? And hear him saying, if it seems good, also through one of the prophets: ‘Did not one God create us? Is there not one Father of us all? Why have you each left behind his brother?’ (Malachi 2:10)…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "27",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/27/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL02-004",
+   "chapter": 2,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Those who perform the rite improperly cover the altar with tears and are rebuked, while to those who do it piously the altars bring joy.",
+   "comment": "…just as those performing the rite in an improper way cover the altar with tears, the most corrective voice saying to them: 'You covered my altar with tears; is it still worthy to look upon your sacrifice, or to receive a gift from your hands?' (Mal 2:13) Let these things be said to those sacrificing after impiety; but to those performing the rite piously, as their sacrifices are to be acceptable, the altars will be bowls making joy…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u23-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u23-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL03-002",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The prophecy's opening signifies the economy and what follows the Lord's fearsome yet kindly second appearance.",
+   "comment": "Concerning the prophecy of calling God and angel, Malachi says thus: 'The Lord whom you seek shall come into his temple, and the angel of the covenant whom you desire. Behold, the Lord comes, and who will endure the day of his entrance? Or who will stand at his appearing?' (Malachi 3:1-2). The beginning of the word signifies the economy [God's plan of salvation in the incarnation], but the following signifies his fearsome and philanthropic second appearance…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says directly how the two halves of the prophecy divide.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u04-open",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u04-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "Christ scours away all the filth in us by the working of the Spirit, as the prophet foretold in the refiner's fire.",
+   "comment": "…He is able to scour away all the filth that is in us, melting it down by the working of the Spirit, and he knows how to make us washed clean and holy. This is why the sacred word speaks to us in just this way, crying out long beforehand about the working of the Spirit that was to come upon us: ‘For suddenly the Lord whom you seek will come to his temple, and the messenger of the covenant whom you desire. Behold, he is coming, says the Lord Almighty. And who will endure the day when he comes in? Or who will stand when he appears? For he comes in like a refiner’s fire and like fullers’ soap, and he will sit refining and purifying, as silver and as gold.’ (Malachi 3:1–3)…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "1",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/1/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL03-003",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The Lord comes as a refiner's fire to those in whom wickedness is mixed like base metal that must be smelted out.",
+   "comment": "The divine words say that the Lord will come “like a refiner’s fire and like fullers’ soap” (Malachi 3:2) to each of those who need it, because there has been mixed into them, as it were, a base matter that melts, the matter that comes from wickedness; to those, I mean, who need fire, as though he were smelting those who have been mixed with “bronze and tin and lead” (Ezekiel 22:18–20). Anyone who wishes may learn this from the prophet Ezekiel.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Lord comes as a refiner's fire.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "15",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/15/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL03-004",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "Christ's refining fire is no fire of the senses but the Holy Spirit, who melts away the defilement in souls.",
+   "comment": "…For we have been baptized not into fire that the senses perceive, but in the Holy Spirit, who like fire melts away the defilement in souls. That is why it is also written of Christ: ‘Behold, he comes in like a refiner’s fire and like fullers’ soap; and he will sit refining and cleansing, as silver and as gold’ (Malachi 3:2–3).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the fire in the verse is.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 12",
+   "work_slug": "cyril-adoration-12",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyril-adoration-12/21/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL03-005",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "God does not change in deed or in thought but, remaining the same, governs changeable things according to their nature.",
+   "comment": "If he had read the words of the prophets, David saying: “But You are the same” (Psalm 102:27), and Malachi, I think: “And I have not changed” (Malachi 3:6), he would have seen that none of us says that there is change in God, either in deed or in thought. For, remaining “the same,” He governs changeable things according to their nature, and His Word chooses that they be governed.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what God's not changing means.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "62",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/62/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL03-006",
+   "chapter": 3,
+   "verse_start": 8,
+   "verse_end": 10,
+   "capsule": "Gifts to God from righteous labor must feed the poor, for keeping back what should be offered is reckoned as robbery.",
+   "comment": "…if you acquire from righteous labors but do not bring offerings to God from which the poor are fed, it will be reckoned to you as robbery. So he says through the prophet Malachi: “The firstfruits and the tithes are with you, and the plunder will be in your houses” (Malachi 3:8-10). Therefore you must mix mercy and justice together: acquire with justice, and spend for mercy, according to what is written: “Keep mercy and justice, and draw near to your God always” (Hosea 12:6)…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how robbing God applies to withholding offerings.",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Mercy and Judgment",
+   "work_slug": "basil-homilia-misericordia-judicio",
+   "section": "1",
+   "url": "https://viapatrum.org/works/basil-homilia-misericordia-judicio/1/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL03-007",
+   "chapter": 3,
+   "verse_start": 13,
+   "verse_end": 16,
+   "capsule": "Chastised with failed harvests after the return from Babylon, the Israelites called those who did not serve God happy, and the prophet quotes their words against them.",
+   "comment": "…After the return from Babylon, the sons of Israel, ordered by Cyrus to rebuild the temple, to pay their vows and to offer sacrifices, grew slack, pleading poverty and the hardship left by the captivity. For this they were corrected by measured chastisements: failed harvests and lack of rain (Haggai 1:9–11). Chafing at such blows, they called the foreigners and those who did not serve God happy, as living in good cheer, and said that those people were better off than they were. And so the prophet Malachi said to them: “You have made your words heavy against me, says the Lord. And you said, ‘How have we spoken against you?’ You said,” he says, “‘It is vain to serve God. What more have we gained because we kept his charges, and because we walked as suppliants before the Lord Almighty? And now we call strangers happy, and those who do lawless deeds are built up; they opposed God and were saved.’ This is how those who feared the Lord spoke against him, each to his neighbor; and the Lord gave heed and heard” (Malachi 3:13–16).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL04-001",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Christ, the sun of righteousness, is not stained by touching impure places but consumes sin with his rays of goodness.",
+   "comment": "…just as the sun is not defiled by filth when casting its own rays, but on the contrary clothes itself in the present joy without being insulted itself, so also Christ, as the sun of righteousness (Malachi 4:2), seizes every impure and profane place, and consumes the malodorous sin with his rays of goodness, undergoing no insult, no diminution, no stain, according to the nature of the divinity.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Makes the sun image clear: the sun is not defiled by what it shines on.",
+   "author": "Amphilochius of Iconium",
+   "work": "On the Sinful Woman",
+   "work_slug": "amphilochius-in-mulierem-peccatricem",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/amphilochius-in-mulierem-peccatricem/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL04-002",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Greater than the sun coming down to run on the earth is the Sun of Righteousness sending out his rays from our own flesh.",
+   "comment": "…Consider how great a thing it is to see the sun come down from the heavens and run upon the earth, sending out its rays to all from here. If this happened with the visible light and it would have astounded everyone who saw it, then consider and reckon now how great a thing it is to see the Sun of Righteousness sending out His rays from our own flesh and illuminating our souls (Malachi 4:2).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "John Chrysostom",
+   "work": "On Christmas Day",
+   "work_slug": "chrysostom-in-diem-natalem",
+   "section": "1",
+   "url": "https://viapatrum.org/works/chrysostom-in-diem-natalem/1/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL04-003",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Christ, the true light, rose as the sun of righteousness, scattered the darkness of the devil's deceit and freed those bound by their sins.",
+   "comment": "But the true light (John 1:9), that is, Christ, rose for us as a spiritual morning star and as the sun of righteousness (Malachi 4:2); spreading the ray of the true knowledge of God, He scattered the darkness that the devil's deceit had brought down on those upon the earth, and He set free from their bonds those who were held fast, beyond escape, by the chains of their own sins…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the rising of the sun of righteousness accomplished.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book4-logos1-open",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos1-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL04-004",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "When corruption is wholly abolished we shall go out and leap like calves set free, mocking death.",
+   "comment": "…Then, yes then, when corruption has been wholly abolished, we shall go out, as the prophet says, and leap “like calves set free from bonds” (Malachi 4:2), and indeed we shall say, mocking corruption, “Where is your penalty, O death? Where is your sting, O Hades?” (Hosea 13:14; 1 Corinthians 15:55). For sin and death will have ceased, and Christ will reign over the saints in incorruption.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the image of the calves set free.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u04-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u04-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL04-006",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The sun that rises on those who fear is the Savior, not a light of the senses.",
+   "comment": "…For He Himself is day and light; light indeed according to essence, but light through intellect illuminates. For 'the sun of righteousness shall rise' (Malachi 4:2) 'upon you who fear my name.' Nor is it about a sensory light, but it rises as a sun to those who fear…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MAL04-009",
+   "chapter": 4,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Israel will later understand the one it ignored, and the fathers' hearts will be restored to the sons.",
+   "comment": "…the restoration of the ear signifies the later restoration of the understanding of Israel, which is now removed, when they shall understand Him whom they ignored and may perhaps hear the preaching of Elijah; for the heart of the fathers shall be restored to the sons according to Malachi (Malachi 4:6)…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on John",
+   "work_slug": "apollinaris-fragmenta-joannem",
+   "section": "u05-rem-early",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-joannem/u05-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

@@ -1,0 +1,455 @@
+{
+ "book": "Hosea",
+ "title": "The Fathers on Hosea",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 24,
+ "selected_count": 10,
+ "comments": [
+  {
+   "id": "HOS02-001",
+   "chapter": 2,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The cast-out wife is a type of the Synagogue, and the Church from the Gentiles is Christ's pure virgin.",
+   "comment": "She [the woman who has been driven out, whom the priest may not marry] may also stand as a type of the Synagogue of the Jews, for she has been cast out of union with him, and he says of her through the prophet’s voice: ‘She is not my wife, and I am not her husband.’ (Hosea 2:2) But Paul betrothed the Church from the Gentiles to Christ as a pure virgin (2 Corinthians 11:2), without spot or wrinkle, or rather holy and blameless (Ephesians 5:27).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 12",
+   "work_slug": "cyril-adoration-12",
+   "section": "19",
+   "url": "https://viapatrum.org/works/cyril-adoration-12/19/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS02-002",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Like a wife who left her husband and then returns to him, Jerusalem remembers the one who first took her as his companion and wishes to go back to him.",
+   "comment": "From cohabiting women the example was taken for men. The woman who set aside the marriage rights, and strayed from the bed in love toward strangers, no longer being under the guardianship of the former cohabitant, is henceforth neglected, so that it is said to her by the slighted husband: I will no longer spare you, nor be jealous. For how could one be jealous or care when the marriage is dissolved? Even if, then, the one who despised the marriage bed becomes an outcast, having a place of repentance, returning to the one she left, she becomes an object of jealousy again, the former cohabitant receiving her with great goodness. But from the case of women we must pass to the contemplation concerning Zion and Jerusalem. By Jerusalem and Zion I mean not the places, but those dwelling in them. God led her to cohabitation, bringing her up from Egypt, providing laws and ordinances as a dowry, so henceforth to care for and spare the wedded one, and to chamber as fitting with the cohabiting bride. After the harmony thus made according to laws, setting aside the marriage laws, she set aside the protecting and helping husband, as it says: 'As a wife sets aside her companion, the house of Israel set me aside' (Jeremiah 3:20), so henceforth to go to guilty demons and unclean spirits, and to be insulted harlot-wise. And those coming together with her are Babylonians and Assyrians according to allegory. When these things happened for long, Jerusalem and Zion, coming to themselves, remembered the one who of old had taken her as a companion, so as to wish to return to the one from whom she was unyoked. She uttered these voices: 'I will return to my former husband, for it was well with me then rather than now' (Hosea 2:7). Receiving such repentance of hers, he to whom she began to return and come back says: 'In that day,' when the return is confirmed, 'she shall call me: My husband,' as henceforth, as protector and guardian, to be jealous over her with great wrath, avenging those who insulted her.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u15-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS02-003",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "The soul united to Christ by faith and the Spirit is like a wife, and the one only called to the beginnings of knowledge is like a betrothed virgin awaiting baptism.",
+   "comment": "To a woman then, cohabiting with a husband according to laws, one must very well liken the soul cohabiting and united to Christ through faith and Spirit. And we will reckon as a betrothed virgin the one called unto beginnings of true knowledge, not yet wholly united to Christ, and still awaiting as somehow a marriage and a truer mode of joining the grace through holy baptism and the participation of the holy Spirit, having received as earnest and as beginning of converse the word of catechesis. Thus our divine mystagogue—Paul this is—brought the Church from the nations to Christ; for he writes thus: ‘For I betrothed you to one husband, to present a pure virgin to Christ.’ (2 Corinthians 11:2) And the Bridegroom himself somehow says through a voice of prophets: ‘And I will betroth you to myself unto the age, in righteousness and in judgment and in mercy and in compassions; and I will betroth you in faith, and you will know the Lord.’ (Hosea 2:19–20)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the betrothal in the verse means for a believer, in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "5",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/5/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS02-004",
+   "chapter": 2,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The servants of idols, once not his people, have received mercy through faith.",
+   "comment": "We too, the servants of idols, who did not know the one who is God by nature and in truth, were not his people (Hosea 2:23); but we have received mercy through faith, have come under him, have been called through grace, and have been justified and sanctified through Christ.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly who the 'not my people' are and what became of them.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u09-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u09-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS03-001",
+   "chapter": 3,
+   "verse_start": 4,
+   "verse_end": 5,
+   "capsule": "Israel will return to the original good only through Christ, having left the customs of the Law, and all Israel will be saved in him.",
+   "comment": "And Israel, having slipped from kinship with him — since, not having accepted the faith, he did not know God — will return to the original good, he says very well, in no other way except through Christ alone, having left off the customs according to Law. And it is written again: ‘Therefore the sons of Israel will sit many days, there being no altar, nor priesthood, nor manifestations; and after these things the sons of Israel will return and will seek the Lord their God, and David their king, and will be amazed at the Lord and at his goods in the last of these days.’ (Hosea 3:4–5) For when the fullness of the nations has entered, then all Israel will be saved — yet in Christ; and he has been named David because of being from David’s seed and tribe.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Israel's return after many days means, in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "9",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/9/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS03-002",
+   "chapter": 3,
+   "verse_start": 4,
+   "verse_end": 5,
+   "capsule": "The Synagogue, widowed and cast out for her impiety toward Christ, will return to her Father's house through faith.",
+   "comment": "For the Synagogue of the Jews was shown to be a widow and cast out because of her impiety toward Christ; she has remained in sins, possessing none of the spiritual goods, and has continued so for a long time. But she will return to her father’s house; for she too will be called to God through faith; with us she will claim as Father the Creator of all things, and so would come to share in the blessing of Christ. The prophet’s words will make this mystery clear to you as well; for he spoke thus: ‘For the sons of Israel will remain many days without king or ruler, without sacrifice or altar, without priesthood or oracles; and afterward the sons of Israel will return and seek the Lord their God and their king, and they will be filled with awe at the Lord and at his good things in the last days’ (Hosea 3:4–5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 12",
+   "work_slug": "cyril-adoration-12",
+   "section": "14",
+   "url": "https://viapatrum.org/works/cyril-adoration-12/14/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS03-003",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The words 'they shall stand astonished' declare a wonder, a great ecstasy of the Lord upon those who are benefited.",
+   "comment": "For in the prophet Hosea, what is written: 'The sons of Israel shall turn and shall seek the Lord their God and David their king; and they shall stand astonished at the Lord and at His good things' (Hosea 3:5), declares a wonder, or, as some have said, a marvel. Of the same thought exists also that which is written by Habakkuk: 'I have understood your works and was astonished' (Habakkuk 3:2). The prophet says that the ecstasy thus interpreted having come from the Lord upon those being benefited, has become enlarged.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u37-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u37-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS04-001",
+   "chapter": 4,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "The night to which God likens the mother is the darkness of a people without knowledge.",
+   "comment": "For when God was saying to the Jews through the prophet: I likened your mother to a night (Hosea 4:5); and interpreting what kind of night he means, like darkness, he added: My people were made like a people not having knowledge. Because of this, they did not know, nor did they understand; they wander in the night (Psalm 82:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Man Born Blind",
+   "work_slug": "severianus-de-caeco-nato",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-nato/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS04-004",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The priests ate the sins of the people because under the law the sacrifices offered for sins were called 'sins' and eaten by the ministers of the altar.",
+   "comment": "Know rather that He [Christ] was given by the God and Father for our sins, just as, under the law of Moses, they called the victims slain for sin “sins.” At any rate it is written in the prophets about those appointed to serve as priests: “They will eat the sins of My people, and in their iniquities they will take their souls” (Hosea 4:8). For under the law the overseers and ministers of the divine altars ate the sacrifices offered for sins.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the priests are said to eat the people's sins.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS04-005",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The very thing offered is called sin, and in that way Christ can be called sin, being sacrificed for the sin of all.",
+   "comment": "It indicates, then, that the very thing being offered is also called sin. This is how we must understand the text: “They will eat the sins of my people” (Hosea 4:8). If, then, the one who sins seems to offer the sin itself as a sacrifice in repenting, he ought not to fall back into the same sins, since the sin comes to life again. In this way it is possible to call Christ sin, as having been sacrificed for the sin of all.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Notes on Leviticus",
+   "work_slug": "origen-adnotationes-leviticus",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-adnotationes-leviticus/4/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS04-007",
+   "chapter": 4,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The people were entangled with the idolaters at Peor, sharing their meals and dancing with their women.",
+   "comment": "They were defiled at Shittim, they served idols, they were initiated into the rites of Baal of Peor (Numbers 25:1–3; Psalm 106:28). See, then, how those baptized in the cloud and in the sea, though they had eaten the bread from heaven and drunk the spiritual drink, became entangled with the idolaters. Because they shared meals with them and touched the table of the idols, they were at once easily carried away and slid into apostasy, and they danced with women: “And the people who understood were entangled with a prostitute,” in the words of the prophet (Hosea 4:14). For this is what is meant by “they rose up to play” (1 Corinthians 10:7).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS04-008",
+   "chapter": 4,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "God's 'I will not visit' is said of those handed over to an unproven mind, while those he wishes to train he visits with a rod.",
+   "comment": "This same thing is said regarding God in the prophet, concerning those of worthy consideration and those handed over to an unproven mind: \"I will not visit their daughters when they play the harlot, nor their virgins when they commit adultery. For when they are sinning, those whom he wishes to train, he says: 'I will visit their lawlessness with a rod and their sins with whips, but my mercy I will not withdraw from them.'\" (Hosea 4:14; Ezekiel 20:47).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u13-rem-close",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u13-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS06-001",
+   "chapter": 6,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The darkness at the cross counted as a night, so two days ran in order and the prophecy of 'two days' reached its term.",
+   "comment": "Then it was night, for darkness covered the whole earth (Matthew 27:45); but day ran its course again from the ninth hour until evening; then night followed the day by the law set over it, and day in turn succeeds the night. So the course of two days ran in order, and the term of the prophecy reached its end: 'He will make us whole after two days' (Hosea 6:2).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Andrew",
+   "work_slug": "hesychius-in-andream",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-andream/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS06-002",
+   "chapter": 6,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The saying was fulfilled plainly: Christ appeared early to the women and late to the apostles, like the early and the late rain.",
+   "comment": "This has been fulfilled plainly, word for word. The saying needs no spiritual interpretation; we have no need to allegorize the prophet's meaning: 'He will come to us like the early and the late rain upon the earth.' See him, then, appearing early to the women and late to the apostles. Early, here, he greeted the women with 'Rejoice' (Matthew 28:9); late, in Zion, he greeted the disciples with 'Peace' (John 20:19). 'Rejoice' to the women, to undo the sentence of sorrow; 'Peace' to the disciples, to put an end to the enmity the dragon had planted.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the early and late rain of the verse in plain terms.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Andrew",
+   "work_slug": "hesychius-in-andream",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/hesychius-in-andream/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS06-003",
+   "chapter": 6,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "God wants faith that justifies rather than the law commanding sacrifices, for 'mercy' is the gospel word.",
+   "comment": "He wants faith that justifies the human being, not the law in letters that commands sacrifices through bloods — which he makes clear by adding also “knowledge of God rather than burnt offerings,” for “mercy” (Hosea 6:6) is the gospel word. So we are justified from faith freely, without works of law.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse puts mercy and knowledge above sacrifice.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "89",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/89/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS08-001",
+   "chapter": 8,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "What is done apart from God's judgment is hollow, so God laments that they reigned, but not through him.",
+   "comment": "Because things apart from God's judgment are hollow, He himself says, lamenting, 'They reigned and not through me; they began and did not make known to me' (Hosea 8:4), through which, in wrath, such people are again released, the opportunity for reconciliation being provided again for a time.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u19-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u19-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS09-001",
+   "chapter": 9,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "God casts away those who did not listen, and the cause lies in them, since it is not his will to cast anyone away from him.",
+   "comment": "Concerning some it is said: 'God will cast them away, because they did not listen to him, and they shall be wanderers among the nations' (Hosea 9:17). When they depart, they were led astray here and there, no longer having a firm purpose. And he assigns the cause to us: 'because they did not listen.' It is not God's will to cast anyone away from him. But it is his will to send away those who did not listen, so that he might not seem to hate virtue. And since they did not listen, 'according to the abundance of their lawlessness, cast them out, because they have turned aside from you, Lord' (Psalm 5:10). This is what it means to be led astray.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God casts them out and what their wandering is.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u18-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u18-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS12-001",
+   "chapter": 12,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Jacob is a wrestler, and all who wrestle against the opposing evil powers are Jacob; to prevail with God is a great exploit.",
+   "comment": "And we take here Jacob the patriarch and say that: since this one has become a wrestler and from this deed he received the appellation, all those wrestling, being surrounded by evil, of the opposing powers, of the evil adversaries, these are Jacob; for in his exploits Hosea arranged this, saying: 'In the womb he wrestled with his brother and prevailed with God and was able' (Hos 12:4). To prevail with God and to be able is a great exploit. Thus indeed he counted the one who wrestled with his brother in the womb.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u08-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS12-002",
+   "chapter": 12,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Those who walk with God are many yet one in mind, so the verse moves from the plural while they weep to the singular once they have found God.",
+   "comment": "Those who walk according to God and hold fast to his commandments, even if they are many, are one by being of one mind. For this reason, when a command about something good is given, it is said in the singular: “You shall eat for food” (Genesis 2:16). But when the matter of transgression is already being distinguished, he no longer speaks in the singular but in the plural: “You shall not eat from it; and on whatever day you eat, by death you shall die” (Genesis 2:17).\n\nSo here too, while they are still weeping and beseeching God, it is said in the plural: “They wept and beseeched” (Hosea 12:4). But when they find God, he no longer says in the plural, “There it was spoken to them,” but “to him” (Hosea 12:4). For the many have already become one in having found God and in hearing his word.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragment from the Commentary on Hosea",
+   "work_slug": "origen-osee-fragment",
+   "section": "frag-rem-mid",
+   "url": "https://viapatrum.org/works/origen-osee-fragment/frag-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HOS12-004",
+   "chapter": 12,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Mercy and justice must be mixed together, acquiring with justice and spending for mercy, and the one who attends to both draws near to God.",
+   "comment": "For neither is a good deed to the needy from unjust gains acceptable to God, nor is the one who abstains from injustice praiseworthy if he shares nothing of his own. … Therefore you must mix mercy and justice together: acquire with justice, and spend for mercy, according to what is written: “Keep mercy and justice, and draw near to your God always” (Hosea 12:6). For God loves almsgiving and justice (Psalm 33:5). So the one who attends to mercy and justice draws near to God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why the verse names mercy and judgment together.",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Mercy and Judgment",
+   "work_slug": "basil-homilia-misericordia-judicio",
+   "section": "1",
+   "url": "https://viapatrum.org/works/basil-homilia-misericordia-judicio/1/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS13-002",
+   "chapter": 13,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Since Christ plundered Hades, the martyrs triumph over death, and this proves that death has been destroyed.",
+   "comment": "Let the one who disbelieves that death has been destroyed, that Hades has been trampled, that its bonds have been torn apart, that the tyrant has been bound—let that one look at the martyrs tumbling against death and acclaiming the victory of Christ. O the wonder! From the time Christ plundered Hades, human beings have triumphed over death. Where, O death, is your sting? Where, O Hades, is your victory? (Hosea 13:14 / 1 Corinthians 15:55). Hades has been plundered, and the devil too; he has been stripped of his ancient armor, and he has been cast out from his own dominion.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows in plain terms how the taunt to death has come true.",
+   "author": "Gregory Thaumaturgus",
+   "work": "Sermon on All Saints",
+   "work_slug": "gregory-thaumaturgus-sermo-in-omnes-sanctos",
+   "section": "1",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-sermo-in-omnes-sanctos/1/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS13-003",
+   "chapter": 13,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The prophets foretold the overthrow of death's victory and of its sting, which wounds the soul with sin.",
+   "comment": "… so that when “the corruptible puts on incorruption and the mortal immortality, then” there “will come to pass” (1 Corinthians 15:54) what the prophets foretold long ago: the overthrow of the victory death won when it conquered us and made us subject to itself (Isaiah 25:8), and of the sting that comes from it, with which it stings the soul that is not guarded on every side and inflicts on it the wounds that come from sin (Hosea 13:14; 1 Corinthians 15:55–56).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "19",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/19/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS13-004",
+   "chapter": 13,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Paul quoted the passage from the Hebrew text, and the Septuagint reads differently.",
+   "comment": "It should be known that the blessed Paul cited the passage before us according to the Hebrew text. The Septuagint does not read this way, for it is written in the Prophets, “Where is your penalty, O death? Where is your sting, O Hades?” (Hosea 13:14).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u08-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u08-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HOS14-001",
+   "chapter": 14,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Scripture speaks in riddles, dark sayings and parables to exercise the understanding of its hearers.",
+   "comment": "Our teaching so wants there to be wise men among believers that, to exercise the understanding of its hearers, it has spoken some things in riddles, some in what are called dark sayings (Proverbs 1:6), some through parables, and others through puzzles. And one of the prophets, Hosea, says at the end of his words: “Who is wise, and will understand these things? Or who is prudent, and will know them?” (Hosea 14:9).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the book ends by asking who is wise.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "45",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/45/",
+   "from_cite": true
+  }
+ ]
+}

@@ -1,0 +1,70 @@
+{
+ "book": "2 Thessalonians",
+ "title": "The Fathers on 2 Thessalonians",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 3,
+ "selected_count": 3,
+ "comments": [
+  {
+   "id": "2TH02-004",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Daniel foretells the same figure as Paul's man of sin, a shameless king who destroys by deceit, and the abomination set upon the temple.",
+   "comment": "… the prophecy about him [the Antichrist] is given in Daniel, and it can move one who reads with good sense and fairness to marvel at the words as truly inspired and prophetic. … see whether what concerns the Antichrist is not as follows: “And at the last of their kingdom, when their sins are coming to the full, there shall arise a king shameless of face and understanding riddles. And his strength shall be mighty, and he shall destroy marvellously, and shall prosper and act, and shall destroy the mighty and a holy people. And the yoke of his collar shall prosper; deceit is in his hand, and he shall be magnified in his heart, and by deceit he shall destroy many, and he shall stand up for the destruction of many, and shall crush them like eggs in the hand” (Daniel 8:23–25).\n\nAnd what is said in Paul, … which says, “so that he takes his seat in the temple of God, proclaiming himself to be God” (2 Thessalonians 2:4), is also said in Daniel in this way: “And upon the temple an abomination of desolations, and until the end of the time an end shall be given upon the desolation” (Daniel 9:27).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Points the reader to the prophecies of Daniel that Paul's words about the man of sin take up.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "46",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/46/",
+   "from_cite": true
+  },
+  {
+   "id": "2TH02-002",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Evil is at its height when it plays the part of the good, so lying signs and wonders attend the Antichrist with the devil's help.",
+   "comment": "What is absurd, then, in there being among men two extremes, if I may so call them, one of good and the other of its opposite, so that the extreme of good is in the man discerned in Jesus, from whom so great a conversion, healing and betterment flowed to the human race, and the extreme of the opposite is in the man discerned in the one called Antichrist? …\n\nIt was fitting that one of the two extremes, the best, should be proclaimed Son of God because of his surpassing excellence, and the one diametrically opposite to him the son of the evil demon, Satan, the devil. Then, since evil is most clearly marked as being at the outpouring of wickedness and at its height when it plays the part of the better, for this reason signs and wonders and powers of falsehood attend the worse one, through the help of his father the devil (2 Thessalonians 2:9). For beyond the help that demons give to sorcerers, who deceive men for the basest ends, there comes help from the devil himself for deceiving the human race.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the lawless one comes with false signs: evil is worst when it imitates the good.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "45",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/45/",
+   "from_cite": true
+  },
+  {
+   "id": "2TH02-001",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "The antichrist's signs and wonders are 'of falsehood', like the Egyptian enchanters' works against Moses, and bear no fruit of salvation.",
+   "comment": "… just as the power of the enchanters in Egypt was not like the wondrous grace in Moses, but the outcome proved that the works of the Egyptians were trickery while those of Moses were divine (Exodus 7:10–12; 8:18–19), so the works of the antichrists, and of those who make a show of mighty works as though they were disciples of Jesus, are said to be signs and wonders “of falsehood” (2 Thessalonians 2:9), prevailing “with all the deceit of unrighteousness for those who are perishing” (2 Thessalonians 2:10); whereas the works of Christ and of his disciples bore as their fruit not deceit but the salvation of souls. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'signs and wonders of falsehood' means by comparison with Moses.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "50",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/50/",
+   "from_cite": true
+  }
+ ]
+}

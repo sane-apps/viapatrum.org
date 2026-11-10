@@ -1,0 +1,480 @@
+{
+ "book": "James",
+ "title": "The Fathers on James",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 25,
+ "selected_count": 17,
+ "comments": [
+  {
+   "id": "JAS01-005",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The saints open their writings by calling themselves servants of God, professing that service as others claim high rank and nobility.",
+   "comment": "…the saints position themselves in their prefaces thus: 'James, a servant of the Lord God Jesus Christ' (James 1:1), and 'Paul, a servant of Christ', and Jonah being asked, 'From what country and what people?', then he says, 'I am a servant of God' (Jonah 1:9). And just as those who are being promoted by virtue of their ranks claim their rank and dignity, these saints, as if professing a greatest nobility and surpassing fame and great rank, profess the servitude of God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why James introduces himself as a servant, in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u35-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u35-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-006",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The name brothers urges them toward perfection.",
+   "comment": "He [James] subsequently calls them brothers, rather than children or sons, exhorting toward perfection through courage and endurance (Matt 18:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-007",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "To ask while doubting is an insult, for it accuses the Almighty of not fulfilling the request.",
+   "comment": "The one who doubts is plainly insolent. For if you did not believe that he will fulfill your request, you should not have come at all, so as not to be found accusing the Almighty by being double-minded against your will. So we must refuse so shameful a sickness.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why James forbids doubting in prayer, in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-001",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "After urging joy under trials, James adds that the one who endures trial is blessed, for the tested runner is given the crown of life.",
+   "comment": "…Having sufficiently exhorted to stand under trials with joy, so that tested work and perfect patience might be produced; … he [James] attempts to persuade through another exhortation, rightly setting forth the things laid ahead by saying that he who endures trial is blessed. For he who thus athletically runs the race, trained through all things, will become a tested man; and thus, having been revealed from the shadows, a crown of life will be given to those loved by God who have been made compliant (James 1:12).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-008",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Afflictions come either to correct sins or to show the courage of those who are tested, and the blessing in James speaks of the second kind.",
+   "comment": "There are two irreconcilable principles concerning the things coming upon men: one is for the correction of sins, the other is for the showing of courage and testing of those being afflicted, which is what the saying having this character means: 'Blessed is the man who endures temptation, because having been tested, he shall receive the crown of life, which He promised to those who love Him' (James 1:12). And again: 'Consider it all joy, my brothers, when you fall into various trials, because the testing of affliction works patience, and patience, testing, and testing, hope' (James 1:2-4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u06-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u06-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-002",
+   "chapter": 1,
+   "verse_start": 13,
+   "verse_end": 15,
+   "capsule": "The mind falls into wrongdoing already in desire, while it is still free to turn either way, and James shows that desire conceived gives birth to sin and sin to death.",
+   "comment": "Before the deeds are done, the mind has certainly already fallen into wrongdoing, having first been in labor with the pleasure. Yet while the sin still lies only in desires, the mind stands between the two and looks toward both. It is free to lean toward whichever it may choose; it has not yet suffered deadness, though it has come very near to the evil and is in labor with the passion. The Savior’s disciple has clearly told us something of this kind: ‘Let no one,’ he says, ‘when he is tempted, say, “I am tempted by God”; for God cannot be tempted by evil, and he himself tempts no one. But each one is tempted when he is drawn away and enticed by his own desire. Then desire, when it has conceived, gives birth to sin; and sin, when it is completed, brings forth death’ (James 1:13–15).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/18/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-003",
+   "chapter": 1,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "What happened to Adam happens in each of us hiddenly, as pleasure bewitches the mind and draws it little by little to think a transgression of God's law is nothing.",
+   "comment": "For the pleasures with us and in us always somehow shake us toward what is not fair, that is, into sin; and the woman [Eve] is a type of pleasure; and the mind is often run down by the flatteries from pleasures toward what it did not wish. What then is seen to have happened in Adam as in a narrative of events and perceptibly, this one may see fulfilled in each of us also, in the mind and hiddenly. For pleasure, rising beforehand, bewitches the mind, and little by little draws it under toward thinking at last that a transgression of the divine law is nothing at all (James 1:14–15).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows from the story of Adam how desire lures the mind step by step into sin, in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "8",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/8/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-004",
+   "chapter": 1,
+   "verse_start": 23,
+   "verse_end": 24,
+   "capsule": "James blames not the looking into the mirror but the going away at once, as with one who turns to the law and does not do it.",
+   "comment": "James writes: the 'one having become a hearer of the word' (James 1:23) and not a 'doer of the work' says: 'he perceived his face in a mirror and immediately went away and forgot what he was' (Jas 1:24). He did not blame the perceiving of the face in the mirror, but the departing immediately. Just as the one looking in the mirror, when he turns away from the mirror, no longer sees himself, so the one returning to the law, if he is not a doer of the law, passes away according to the one departing from the mirror…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u16-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u16-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS02-001",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "Those who say 'Go in peace, be satisfied' to the naked and hungry, yet give nothing, do not help them and are not showing mercy.",
+   "comment": "The righteous, therefore, shows mercy and gives, and he is full of grace and simply participates in good things toward his neighbor. Those saying that, 'if a brother or sister are naked and lacking of the daily food' (James 2:15), that is: 'Go in peace, be satisfied,' but do not give to them the necessities, did not benefit them, since they do not 'show mercy and give.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u38-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u38-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS02-002",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "Abraham was justified when he believed God's promise of a son, and his offering of Isaac was the clear proof of that same firm faith, so James and Paul do not contradict each other.",
+   "comment": "[James says Abraham was justified by works; Paul, by faith.] Do the Spirit-bearing writers, then, say things contrary to one another? What, then, do we say to this? To him, when he was already far on in years, the God of all promised a son, quite beyond all expectation, and said that the offspring to come from him would rival the countless multitude of the stars (Genesis 15:5). And because he honored the one who promised, bearing witness to God by this that he can accomplish all things, he was justified before him (Genesis 15:6), and received, as a reward worthy of so God-loving a mind, the forgetting of his former offences. In due course God made the oracle concerning Isaac a trial for the righteous man (Genesis 22:1–2); but in this too he was faithful and loved God, as one who put nothing ahead of his love for God. Yet, as the Savior's disciple says, “Faith was working together with the works, and by the works faith was made firm” (James 2:22). And the admirable Paul himself said somewhere of our forefather Abraham: “By faith he offered up Isaac when he was tested; he who had received the promises was offering up his only son, he to whom it was said, ‘Through Isaac shall your offspring be named’; for he reasoned that God is able even to raise from the dead” (Hebrews 11:17–19). So even if it should perhaps be said that he was justified by works because, when tested, he offered up Isaac, this too was for him a clear proof of the firmest faith.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS02-004",
+   "chapter": 2,
+   "verse_start": 22,
+   "verse_end": 23,
+   "capsule": "Abraham set nothing earthly against his love for God, and faith that honors God has righteousness as its prize.",
+   "comment": "He [Abraham] was bringing the rational sacrifice, bidding the laws of nature farewell, trampling the goad of a father's unyielding love, and setting nothing earthly against his love for God. … So the one who honors the God and Master of all with faith has righteousness as his prize.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS02-003",
+   "chapter": 2,
+   "verse_start": 26,
+   "verse_end": 26,
+   "capsule": "Where James says the body without the spirit is dead, 'spirit' means the soul, as when Stephen says 'receive my spirit'.",
+   "comment": "Because it is sometimes said that the soul is spirit, Stephen teaches; for as he was about to die, and he exhorted them not to let the sin of those murdering him stand, he says: 'Lord Jesus, receive my spirit' (Acts 7:59), instead of 'my soul.' And James writes: 'just as the body without spirit is dead' (James 2:26), calling the soul spirit.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u20-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u20-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Teachers are warned of a greater judgment because the law's strictness fell chiefly on those set over others, since to whom much is given, much is required.",
+   "comment": "And the blame from Moses was practiced not toward all simply, but toward only the overseers of the force, and toward chiliarchs [commanders of a thousand] and centurions; for ‘Powerful ones will be examined powerfully,’ (Wisdom 6:6) and the law’s precision especially against them; ‘For to whom they have set much,’ (Luke 12:48) he says, ‘they will seek much from him.’ Therefore the Savior’s disciple has also written: ‘Do not become many teachers, my brothers, knowing that we will receive a greater judgment.’ (James 3:1) The accusation according to all is therefore carried upon the overseers and those set over the ranks.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 4",
+   "work_slug": "cyril-adoration-4",
+   "section": "14",
+   "url": "https://viapatrum.org/works/cyril-adoration-4/14/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS03-002",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Controlling the tongue is essential, a great virtue and the mark of a perfect person who can bridle the whole body.",
+   "comment": "…it is essential to control one's tongue, stopping it from evil, as the Bible says that death and life are in the hand of the tongue (Proverbs 18:21). Those who can control their tongue will eat its fruits, and this restraint is a great virtue, just as not having it is a painful disease. The restraint of the tongue is a crucial aspect of being a perfect person, able to bridle also the whole body, as Scripture says that if someone does not stumble in word, this one is a perfect man, able to bridle also the whole body (James 3:2).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u03-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS03-003",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The bit in the horse's mouth is about holding the restless tongue, which should be reined in so that it does not rush into a pit.",
+   "comment": "…the blessed James wrote in his epistle, regarding the holding of the restless tongue that has become wild through much talk that it ought not to say (James 3:3). His wording has it thus: 'We put the bit in the mouths of the horses, and we lead their whole body' (James 3:3), so that there may be a straight course and a steady walk.\n\nHow much more it is fitting to rein in the tongue, that is, the word, so that it does not rush into a pit but remains harmless…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the image of the bit means, in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u38-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u38-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS04-001",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Wars and quarrels have their source in the appetites and pleasures of the flesh, as the Savior's disciple confirms.",
+   "comment": "For the appetites that carry us off toward every kind of passion, and the faults of a pleasure-loving life, have their source in the flesh. The Savior’s disciple confirms us in this when he says, “Where do wars and where do quarrels among you come from? Do they not come from here, from your pleasures that wage war in your members?” (James 4:1).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u05-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u05-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS04-002",
+   "chapter": 4,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Saints should ask Christ for nothing carnal but for what is divine and spiritual, and those who ask wrongly do not receive.",
+   "comment": "So it is unseemly for saints to seek to receive from Christ the things that suit those who live in the world and follow a way of life that is not wholly sanctified. Rather, one must seek nothing carnal, but everything divine and spiritual. … To those, then, who ask improperly for what the leader [Christ] does not give, we shall say, ‘You ask and do not receive, because you ask wrongly’ (James 4:3).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/17/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS04-005",
+   "chapter": 4,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Everyone who asks receives, but only one who asks in the right way, as a pupil must truly attend to his teacher; those who ask in order to be praised do not receive.",
+   "comment": "Truly the position of the Savior is as it is said: 'Ask and it shall be given to you,' which is confirmed by the saying: 'Everyone who asks receives.' If anyone were to ask how some who pray are not heard… he who comes to ask, following the way and leaving nothing undone of those things contributing to the attainment of what the diligent seek, will receive all that he urged to be given to him; …\n\nFor even when a teacher says: 'everyone who approaches me for the sake of lessons will have their knowledge,' we understand grammatically 'to approach the teacher,' that is, to attend closely to what is from the teacher along with practicing and studying them; but he who does not do so, it must be said to him: you did not approach him as I instructed …\n\n… But someone will say: 'and indeed, some asking for the sake of divine knowledge and the taking up of virtues do not receive'; it must be said also to them, that they were not worthy to receive according to those very good things, but asked for the sake of being praised through them; and it is the nature of pleasure-seekers to rejoice in praises; whence also this is not given to them, because they wish to spend on pleasures those things for which they are worthy …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Answers the reader's question why some who pray do not receive, with a plain comparison.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS04-006",
+   "chapter": 4,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Whoever loves the world by sinning is God's enemy, and the friend of God is the world's enemy, since no one can be a friend to both.",
+   "comment": "He who loves the world through sinning is shown to be an enemy of God; likewise also he who, confirming friendship toward God through piety, is immediately found to be an enemy of the world; whence it is impossible, just as one cannot serve God and Mammon (Matt 6:24), so one cannot be a friend to God and the world. For the Lord, having come, made those who are friends of God and obey Him a sword and a division upon the earth (Matt 10:34); for the word of His teaching divides and separates, preparing through this to have enmity toward the world and union toward God, which is friendship toward Him; …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why friendship with the world is enmity with God, in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS04-003",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Those whose actions are crooked are to cleanse their hands, and hearts are purified by casting away all double-mindedness.",
+   "comment": "And James writes: 'Cleanse your hands, sinners, and purify your hearts, double-minded' (James 4:8). They cleanse hands, those making their actions crooked, and they purify their soul, those casting away all double-mindedness; 'and purify' indeed, he says, 'hearts, double-minded.' … Most of all, those thinking wrongly are double-minded.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u12-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u12-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS04-004",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "God draws near to those who draw near to him, and his presence is received by relationship and disposition rather than in a place.",
+   "comment": "For God distances himself from the wicked, just as he draws near to those who come to him. For the great apostle James writes, 'Draw near to God, and He will draw near to you' (James 4:8). It is as if you were saying even to the wicked, 'Draw near to virtue, and it draws near to you.' We do not receive the presence of God in a place, but in relationship and disposition.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u35-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u35-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS04-007",
+   "chapter": 4,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Those who slander a weak brother forget their own weaknesses and condemn themselves, since they suffer from the same flaws.",
+   "comment": "…Although it is necessary for some to examine themselves and live according to God, they do not do this, but rather meddle in the affairs of others.\n\nWhen people see others who are weak, they often use this as an opportunity to slander and condemn them, as if they have forgotten about their own weaknesses. However, in doing so, they are actually condemning themselves, because they suffer from the same flaws as those they are criticizing. This is a point that even the wisest of writers, Paul, has made—that when we judge others, we are essentially condemning ourselves, since we are guilty of the same things.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why speaking against a brother is wrong, in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS05-004",
+   "chapter": 5,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "Some chase gain through hard journeys, others exploit people or take excessive interest, and the rich are warned that their wealth will rot.",
+   "comment": "There are those who are driven by a desire for wealth and gain, and they will endure all sorts of hardships, including long journeys and dangerous navigation, in pursuit of their goals. Others use their power and influence to exploit and take advantage of others, while some accumulate their wealth through unjust and wicked means, such as collecting excessive interest on loans. But to those who are rich and powerful, the warning is clear: your wealth will ultimately rot and decay, your fine clothes will be eaten away by moths, and your gold and silver will be corrupted. Weep and wail, for your troubles are coming.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS05-002",
+   "chapter": 5,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "The sick person who has faith may pray for himself, and Scripture also tells him to call the elders, whose prayer of faith will save him and forgive his sins.",
+   "comment": "…And you, if you ache in some of the body’s portions, and have truly believed that the Lord Sabaoth, and such callings which the divine Scripture distributes to the God according to nature, will become loosening for you of the evil, yourself praying on behalf of yourself, cry out the words; for you will do better than those, laying up the glory for God, and not for the unclean spirits. And I will also remember the God-breathed Scripture saying: ‘Is someone weak among you? Let him call the elders of the Church, and let them pray upon him, having anointed him with oil, in the name of the Lord; and the prayer of the faith will save the one laboring, and the Lord will raise him, and if he has done sins, it will be forgiven him.’ (James 5:14–15)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "34",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/34/",
+   "from_cite": false
+  },
+  {
+   "id": "JAS05-003",
+   "chapter": 5,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "In Scripture 'confession' can mean the public disclosure of sins, as in 'Confess your sins to one another', and one so confesses while wailing and stripping off one's former sins.",
+   "comment": "The name of confession in the Scriptures signifies two things, so I will not speak of a third meaning. … The public disclosure regarding sins is called confession, as if one says: 'having been gathered to confess concerning your sins.' This is found in the Epistle of Barnabas, in the epistle according to him: 'having been gathered to confess concerning your sins.' And again: 'confess your sins to one another' (James 5:16) … One confesses while wailing and stripping off his former sins.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u49-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u49-rem-mid/",
+   "from_cite": true
+  }
+ ]
+}

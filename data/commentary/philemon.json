@@ -1,0 +1,32 @@
+{
+ "book": "Philemon",
+ "title": "The Fathers on Philemon",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 1,
+ "selected_count": 1,
+ "comments": [
+  {
+   "id": "PHM01-001",
+   "chapter": 1,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Paul wanted Philemon's good to be willing, because God persuades rather than forces and wants goodness freely offered.",
+   "comment": "… God does not tyrannize but reigns, and reigning he does not force but persuades, and wants those under him to offer themselves willingly to his economy [his ordering of things], that someone’s good may not be according to necessity but according to the willing. Which Paul also knowing said in the letter to Philemon about Onesimus: 'that your good may not be according to necessity but according to willing.' (Philemon 1:14) The God of all could then make a supposed good in us, that of necessity we give alms and of necessity be temperate, but he has not wished it. Therefore he does not command us to do what we do from grief or from necessity, that what comes to be may be willing. He seeks a way, so to speak, how someone may willingly do what God wants.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul wants Philemon's kindness to be freely given.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "20.2",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/20.2/",
+   "from_cite": true
+  }
+ ]
+}

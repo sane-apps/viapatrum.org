@@ -1,0 +1,236 @@
+{
+ "book": "2 Peter",
+ "title": "The Fathers on 2 Peter",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 12,
+ "selected_count": 7,
+ "comments": [
+  {
+   "id": "2PE01-001",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "God's Son became human and was born of a Virgin so that we might become a holy race who share in the divine nature.",
+   "comment": "And if God sent his Son born of a woman, the matter brings us no shame, but rather glory and great grace. For he became human so that he might make us divine in himself; and he was born of a woman and begotten of a Virgin, so that he might transfer our wayward birth to himself, and that we might from then on become a holy race and sharers of the divine nature, as the blessed Peter wrote (2 Peter 1:4).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how believers come to share the divine nature, in plain terms.",
+   "author": "Athanasius of Alexandria",
+   "work": "Letter to Adelphius",
+   "work_slug": "athanasius-epistula-adelphium",
+   "section": "3",
+   "url": "https://viapatrum.org/works/athanasius-epistula-adelphium/3/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE01-002",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The Church is made holy by sharing in the Holy Spirit and so partaking of Christ's divine nature.",
+   "comment": "He calls the Church a holy city. For she was made holy, not through worship under the Law (for the Law made no one perfect; Hebrews 7:19), but by being conformed to Christ and becoming a partaker of his divine nature (2 Peter 1:4), that is, by sharing in the Holy Spirit, in whom we were also sealed for the day of redemption (Ephesians 4:30) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book5-part1-open",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book5-part1-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE01-004",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The Holy Spirit works like leaven in the souls of the faithful and changes the whole person, and that is why we become sharers of the divine nature.",
+   "comment": "… all after the advent, through baptism and union with the Spirit, have become “sharers of the divine nature” (2 Peter 1:4) and were named sons of God, while all before the advent were named born of women — though they too are to be called to this. For even if the prophets became partakers of the Spirit, it was not as the faithful: somehow the Holy Spirit becomes like leaven in the faithful’s souls and transforms the whole human into another state of life. That is why we become “sharers of the divine nature” and cry out boldly, “Abba, Father.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how sharing the divine nature comes about, with a plain image.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "199",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/199/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE01-003",
+   "chapter": 1,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The rising morning star is Christ at his second appearance, shining on souls and lighting all that darkness held.",
+   "comment": "… Peter in the second epistle: 'until the day dawns and the morning star rises in your hearts' (2 Pet 1:19); … he was saying, I think, that the one from his second appearance is about to rise to the souls as a light and making everything held by darkness shine brightly …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u09-open",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u09-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE02-004",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The Master who bought us is Christ, who paid with his own blood, so we belong to him and he is God.",
+   "comment": "From Peter’s letter: “There were also false prophets… who will bring in destructive heresies, even denying the Master who bought them.” (2 Peter 2:1) For we were bought at a price “not with perishable things, silver or gold, but with the precious blood of Christ.” (1 Peter 1:18–19) So we belong to the one who purchased us, even while we serve the living and true God. How, then, is Christ not God — the one we have enrolled as Master, and know as living and true?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the Master is and how he bought us.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "44",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/44/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE02-005",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "To be overcome and enslaved implies a contest of the will that ended in surrender, so the verse cannot apply to newborn children.",
+   "comment": "[Julian to Augustine:] I therefore wonder that you dared to quote the testimony: “Whatever has overcome someone has made him its slave” (2 Peter 2:19). This most plainly supports us, who maintain that no one can be subject to the devil except someone who, after a contest of will, has been overcome by a base surrender. You should not have appropriated it, since it strongly opposes your attempt to persuade us that newborn children belong to the devil's kingdom. Without a will of their own, they could neither have been defeated nor have sinned.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what being overcome implies in the verse's own wording.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "1.112",
+   "url": "https://viapatrum.org/works/julian-to-florus/1.112/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE02-002",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Peter does not call ignorance of the way of righteousness good; it is better than knowing it and then despising it.",
+   "comment": "… Peter alludes in the second epistle: 'it was better for them not to have known the way of righteousness, or to have known and to have turned back from the holy commandment handed down to them' (2 Pet 2:21). For he does not say at all that it is good to not have known the way of righteousness, but rather it is better not to have known than to have known and to despise it.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse does and does not say.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u04-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u04-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE02-003",
+   "chapter": 2,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "We must not wake sleeping passions or run back to where we began, lest the proverb apply to us.",
+   "comment": "… So we must guard above all against waking passions that have already been lulled to sleep, against reopening the wounds of the mind, and against running back to where we were at the beginning. Otherwise we too shall hear a saint crying aloud: ‘What the true proverb says has happened to them: The dog returns to its own vomit, and the sow, after washing, to wallowing in the mire’ (2 Peter 2:22).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Applies the proverb to the reader in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "22",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/22/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE03-003",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "As the old world perished in the flood, so the ungodly will perish when heaven and earth are dissolved in fire.",
+   "comment": "Behold: 'the present heavens and earth are stored up by the same word' (2 Peter 3:7), which is like those things that happened during the flood … Just as the world then was destroyed, being overwhelmed by the flood, so the ungodly and sinners will be utterly destroyed when the elements of the heavens and the earth are dissolved into fire; that is, the similarity is that they will perish just as those who perished in the flood. For the Lord says, 'As it was in the days of Noah, they were eating, drinking, marrying, being given in marriage, until the day Noah entered the ark and the flood came and swept them all away, so will the coming of the Son of Man be' (Matt 24:37-39).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the comparison Peter draws between the flood and the coming fire.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE03-001",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The Lord is long-suffering and wants all to repent, so repent before the evil comes.",
+   "comment": "… 'Repentance' has a 'place'; 'the Lord of the promise is not slow, as some think He is slow, but is long-suffering toward them, not wishing to destroy anyone, but wishing to bring all to repentance' (2 Pet 3:9). Since therefore 'repentance' is given to you as a superior thing, repent before the 'evil comes.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u13-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u13-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE03-004",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 13,
+   "capsule": "The day of judgment comes like a thief, the heavens pass away in fire, and new heavens and a new earth follow.",
+   "comment": "… He says that the day of judgment will come stealing like a thief, in which the heavens will pass away swiftly and unexpectedly, the elements being removed by the approaching fire; after which the heavens having passed away in a rushing manner, there will be new heavens and a new earth, in which righteousness and the promises of God hold dominion.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2PE03-002",
+   "chapter": 3,
+   "verse_start": 11,
+   "verse_end": 14,
+   "capsule": "Since all things are being dissolved, we must be holy and blameless, honoring the Savior and living by the Gospel.",
+   "comment": "… But since all these things are being dissolved, as the Savior’s disciple firmly declared, what sort of people must we be found to be (2 Peter 3:11, 14)? Holy and blameless in his sight (Ephesians 1:4), honoring him as Savior and Redeemer with spiritual sacrifices (1 Peter 2:5), and practicing a holy and chosen way of life that agrees with the laws of the Gospel …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/2/",
+   "from_cite": true
+  }
+ ]
+}

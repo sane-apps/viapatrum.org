@@ -1,0 +1,1347 @@
+{
+ "book": "Mark",
+ "title": "The Fathers on Mark",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 72,
+ "selected_count": 38,
+ "comments": [
+  {
+   "id": "MK01-001",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Mark himself begins the gospel by citing the prophets, which shows that the beginning of the gospel rests on the Jewish writings.",
+   "comment": "And what is out of place in the law being the beginning of our doctrine, that is, of the gospel? For our Lord himself says to those who did not believe in him: “If you believed Moses, you would believe me; for he wrote about me. But if you do not believe his writings, how will you believe my words?” (John 5:46–47). Moreover, one of the evangelists, Mark, says: “The beginning of the gospel of Jesus Christ, as it is written in Isaiah the prophet: ‘Behold, I send my messenger before your face, who will prepare your way before you’ ” (Mark 1:1–2; Malachi 3:1; Exodus 23:20), showing that the beginning of the gospel depends on the Jewish writings.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Mark opens with the prophets, in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/4/",
+   "from_cite": true
+  },
+  {
+   "id": "MK01-002",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "That John was a Baptist baptizing for the forgiveness of sins was recorded by a writer who lived not long after John and Jesus, and Josephus also bears witness to him.",
+   "comment": "I should have liked to say to Celsus, who presents his Jew as somehow accepting John as a Baptist who baptized Jesus, that the fact that John was a Baptist, baptizing for the forgiveness of sins (Mark 1:4), was recorded by one who lived not long after John and Jesus. For in the eighteenth book of his Jewish Antiquities Josephus bears witness to John as a Baptist who promised purification to those who were baptized (Josephus, Jewish Antiquities 18.116–119).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "47",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/47/",
+   "from_cite": true
+  },
+  {
+   "id": "MK01-003",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "John's belt of dead leather at the loins showed he had put to death all bodily desire.",
+   "comment": "… John the Baptist too, since he was perfect, had a leather belt around his loin — it being shown that he had put to death there all his seed-motion. The leather shows deadness: deadness had filled his whole nature (Matthew 3:4) (Mark 1:6) (Colossians 3:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Pascha",
+   "work_slug": "origen-on-pascha",
+   "section": "1.107",
+   "url": "https://viapatrum.org/works/origen-on-pascha/1.107/",
+   "from_cite": true
+  },
+  {
+   "id": "MK01-004",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Mark preaches Jesus according to the flesh, while John proclaims his divine nature.",
+   "comment": "… Mark preached the economy [God's plan] of salvation according to the flesh, saying, 'Jesus came from Nazareth of Galilee' (Mark 1:9), while John proclaimed the unborn and unwitnessed birth of Jesus, emphasizing his divine nature.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Luke",
+   "work_slug": "hesychius-in-lucam",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-lucam/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MK01-005",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "The marvel of the dove and the voice at Jesus' baptism is of a piece with the marvels of the law and the prophets, and traces of that Spirit are still preserved among Christians.",
+   "comment": "The law and the prophets are full of marvels like the one recorded about Jesus at his baptism, concerning the dove and the voice from heaven (Matthew 3:16–17; Mark 1:10–11; Luke 3:21–22). And I think that the marvels Jesus performed are a sign that the Holy Spirit was then seen in the form of a dove … And traces of that Holy Spirit who was seen in the form of a dove are still preserved among Christians. They drive out demons, perform many healings, and, as the Word wills, see certain things about the future.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "46",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/46/",
+   "from_cite": true
+  },
+  {
+   "id": "MK01-007",
+   "chapter": 1,
+   "verse_start": 35,
+   "verse_end": 35,
+   "capsule": "If Jesus prayed, and not in vain, then none of us should neglect prayer.",
+   "comment": "If Jesus prays, and prays not in vain — obtaining what he asks through praying, which perhaps he would not have received without prayer — who of us neglects praying? Mark says: 'Rising very early in the night he went out and departed to a desert place, and there prayed.' (Mark 1:35) Luke: 'And it came to pass, as he was praying in a certain place' (Luke 11:1) — and elsewhere: 'And he spent the night in the prayer of God.' (Luke 6:12) John records his prayer … And 'I knew that You always hear me,' (John 11:42) recorded by him as spoken by the Lord, shows that always praying he is always heard.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows from Mark and the other Gospels why Jesus' praying matters to us.",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "13",
+   "url": "https://viapatrum.org/works/origen-on-prayer/13/",
+   "from_cite": true
+  },
+  {
+   "id": "MK02-001",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Jesus forgives by giving a renewing power, and the word he speaks, 'Child, your sins are forgiven,' destroys the evil.",
+   "comment": "Jesus forgives if he says: “the Son of Man has authority to forgive sins” (Matt 9:6). And: “Child, your sins are forgiven” (Mark 2:5); for he does not say: “Behold, your sins have been forgiven I.” He has given a power that is making new. And the energy having come to pass destroyed the evil. Therefore those whose sins were forgiven are blessed.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u24-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u24-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MK02-002",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Only God forgives sins, as Isaiah shows, and so the Savior's word to the paralytic, 'Child, your sins are forgiven,' is a divine act.",
+   "comment": "For that only God forgives sins, glorious sayings of God indicate: 'I,' for he says, 'am he who wipes out your sins' (Isa 43:25), and: 'If your sins are as scarlet, I will make them as white as snow; if they are red, they shall be like wool' (Isa 1:18). And the Savior, as a child of God, said to the paralytic: 'Child, your sins are forgiven' (Mark 2:5), and: 'Behold the Lamb of God, who takes away the sins of the world' (John 1:29).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Ties Jesus' words to the paralytic to the Old Testament teaching that God alone forgives sins.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u18-open",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u18-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MK02-004",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Levi was not an apostle, except in some copies of Mark.",
+   "comment": "Granted that Levi too, a tax collector, followed Jesus (Mark 2:14); yet he was not of the number of his apostles, except in some copies of the Gospel according to Mark.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "62",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/62/",
+   "from_cite": true
+  },
+  {
+   "id": "MK02-005",
+   "chapter": 2,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Christians call sinners to healing, because the Word holds remedies for those who are sick.",
+   "comment": "… we call them to healing. For in the divinity of the Word there are, on the one hand, healing remedies for those who are “sick,” about whom the Word said: “Those who are well have no need of a physician, but those who are sick” (Matthew 9:12; Mark 2:17).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "61",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/61/",
+   "from_cite": true
+  },
+  {
+   "id": "MK03-001",
+   "chapter": 3,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "James and John were called sons of thunder from their loud voice, as Peter was surnamed for his faith.",
+   "comment": "Those around James and John heard this “thunder”: for they were called “sons of thunder” (Mark 3:17). And as Peter, because of the firmness of the faith he had — the “rock” as it is called — was surnamed “Peter,” so these too were called “sons of thunder” from their loud voice.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the name 'sons of thunder' in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u15-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MK03-002",
+   "chapter": 3,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Names change when people become perfect, as Simon became Peter and James and John became Boanerges.",
+   "comment": "That the perfect, having become another than what he was, then receives promises and blessing from God, let us consider. Abram does not receive the promises, but Abraham does. Jacob does not receive the blessings, but Israel does. And Simon does not become the first disciple of the Savior, but Peter does. James and John are sent as apostles when they have become Boanerges, that is, sons of thunder (Mark 3:17).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Pascha",
+   "work_slug": "origen-on-pascha",
+   "section": "1.20",
+   "url": "https://viapatrum.org/works/origen-on-pascha/1.20/",
+   "from_cite": true
+  },
+  {
+   "id": "MK03-003",
+   "chapter": 3,
+   "verse_start": 22,
+   "verse_end": 26,
+   "capsule": "Jesus' wonders showed him to be the power of God, and he refuted the charge of Beelzebul by pointing to the kingdom of evil.",
+   "comment": "He indeed showed among the Jews that he was “the power of God” (1 Corinthians 1:24) by the wonders he worked. Celsus suspected that these were done by sorcery; the Jews of that time, who had learned the tales about Beelzebul from I know not where, suspected that he cast out “demons by Beelzebul, the ruler of the demons” (Matthew 12:24; Mark 3:22; Luke 11:15). Our Saviour refuted them there for speaking most absurdly, by pointing out that the kingdom of evil had not yet come to an end (Matthew 12:26; Mark 3:26).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "9",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/9/",
+   "from_cite": true
+  },
+  {
+   "id": "MK04-001",
+   "chapter": 4,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The parables spoken to those outside hold a profound meaning whose clear sense Jesus kept for those who came to him privately in the house.",
+   "comment": "… the close study of everything written in the Gospels, each part of which holds a meaning that is large and hard to discern, not only for the many but even for some of the intelligent. That meaning contains a most profound explanation of the parables, which Jesus spoke to “those outside” (Mark 4:11), while he kept their clear sense for those who had passed beyond outward hearing and came to him privately (Mark 4:34) “in the house” (Matthew 13:36). And he will marvel when he understands why some are called “outside” and others “in the house.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'those outside' and the private explanation mean.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "21",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/21/",
+   "from_cite": true
+  },
+  {
+   "id": "MK04-003",
+   "chapter": 4,
+   "verse_start": 26,
+   "verse_end": 28,
+   "capsule": "The Lord likens the perfecting of those who believe in him to the growth of seed in the ground.",
+   "comment": "Already the Lord also likens the perfecting of those who have believed in him to the growth of seeds, saying: \"As when a man casts the seed on the ground, and sleeps, and rises night and day, and the seed rises and lengthens, he does not know how. For the earth bears fruit by itself: first the blade, then the ear, then the full grain in the ear\" (Mark 4:26-28).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the point of the parable of the growing seed plainly.",
+   "author": "Basil of Caesarea",
+   "work": "Homilies on the Six Days of Creation",
+   "work_slug": "basil-homiliae-hexaemeron",
+   "section": "37",
+   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/37/",
+   "from_cite": true
+  },
+  {
+   "id": "MK04-004",
+   "chapter": 4,
+   "verse_start": 33,
+   "verse_end": 34,
+   "capsule": "Jesus spoke privately to the disciples, and what he said was never recorded for the many.",
+   "comment": "And Jesus, who is greater than all of these, is said to have “spoken” the word of God “to the disciples” “privately” (Mark 4:33–34), especially in times of retreat; but what he said has not been recorded. For it did not “seem” to them that these things “could be adequately written for the many” or “spoken”.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/6/",
+   "from_cite": true
+  },
+  {
+   "id": "MK04-005",
+   "chapter": 4,
+   "verse_start": 34,
+   "verse_end": 34,
+   "capsule": "The crowds hear parables as those outside, while the disciples privately learn their explanations.",
+   "comment": "If you go on to the books written after Jesus as well, you would find that the crowds of believers hear the parables as those who are outside (Mark 4:11) and worthy only of the outward teachings, while the disciples learn privately the explanations of the parables. For Jesus “privately explained everything to his own disciples” (Mark 4:34), honouring above the crowds those who laid claim to his wisdom.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says in plain terms why the disciples received explanations the crowds did not.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "46",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/46/",
+   "from_cite": true
+  },
+  {
+   "id": "MK04-006",
+   "chapter": 4,
+   "verse_start": 34,
+   "verse_end": 34,
+   "capsule": "Those who heard the explanation of the parables were superior in hearing, and so also in sight, to those who heard the parables alone.",
+   "comment": "Moreover, since he privately explained to his own disciples the parables that had been spoken in a veiled way to the crowds outside (Mark 4:11, 34), then just as those who heard the explanation of the parables were superior in their hearing to those who heard the parables without explanations, so too were they superior in their sight: certainly the sight of the soul, and, I believe, of the body as well.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "64",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/64/",
+   "from_cite": true
+  },
+  {
+   "id": "MK05-001",
+   "chapter": 5,
+   "verse_start": 30,
+   "verse_end": 31,
+   "capsule": "The woman touched Jesus by faith with an inner touch, and so power went out from him to her, while the crowds pressing him did not touch him.",
+   "comment": "The outer man has perceptible touch, and the inner man has touch — that touch by which the woman with the flow of blood touched the hem of Jesus. She touched. For the one who said, Who touched me? bore witness. And a little before, Peter was saying to him: The crowds are pressing you, and you say, Who touched me? He thinks that those who touch bodily are touching, not spiritually. So those pressing Jesus were not touching him; for they were not touching him by faith. But she alone, having a certain divine touch, touched Jesus and for this reason was healed. And since she touched with his divine touch, for this reason power of Jesus went out upon her divine touch …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Jesus asked who touched him when the crowds were pressing him.",
+   "author": "Origen of Alexandria",
+   "work": "Dialogue with Heraclides",
+   "work_slug": "origen-dialogue-heraclides",
+   "section": "19",
+   "url": "https://viapatrum.org/works/origen-dialogue-heraclides/19/",
+   "from_cite": true
+  },
+  {
+   "id": "MK05-002",
+   "chapter": 5,
+   "verse_start": 39,
+   "verse_end": 39,
+   "capsule": "Few are said to have been raised, which shows the raisings are no fiction, and of the ruler's daughter Jesus said she was sleeping, saying something not true of all who have died.",
+   "comment": "That he also raised the dead, and that this is not a fiction of those who wrote the Gospels, is shown by this: if it were a fiction, many would have been recorded as raised, and among them some who had already lain longer in their tombs; but since it is not a fiction, very few are told of. There is the daughter of the ruler of the synagogue (Luke 8:41–42, 49–56), of whom he said, in what sense I do not know, “She is not dead but is sleeping” (Luke 8:52; compare Mark 5:39; Matthew 9:24), saying something about her that was not true of all who have died.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "48",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/48/",
+   "from_cite": true
+  },
+  {
+   "id": "MK08-001",
+   "chapter": 8,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "They asked for a sign from heaven as if he could do nothing fitting for God, though his works were God's alone.",
+   "comment": "“Since the signs that have happened,” (Matthew 12:38) they say, “were of demons, who produce appearances only on earth, you too make a sign from heaven by your own power.” (Mark 8:11) Another evangelist said clearly that they were asking him to make a sign “from heaven,” which it was fitting for divine power to do. They said this as if he could not do anything God-befitting, blind in mind — for opening blind eyes, raising the dead, and rebuking sea and winds belong to God-befitting authority alone.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the sign was asked from heaven and what Jesus' signs already showed.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "138",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/138/",
+   "from_cite": true
+  },
+  {
+   "id": "MK08-002",
+   "chapter": 8,
+   "verse_start": 34,
+   "verse_end": 35,
+   "capsule": "We owe it to deny ourselves, and losing our soul for Christ's sake in death wins it true salvation.",
+   "comment": "Long since, then, we owed to deny ourselves and say the 'No longer I.' Now let it appear whether, taking up our cross, we followed Jesus … For if we lose it [our soul] for Christ's sake, casting it upon him in death through him, we shall procure it true salvation.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "11",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/11/",
+   "from_cite": true
+  },
+  {
+   "id": "MK08-003",
+   "chapter": 8,
+   "verse_start": 36,
+   "verse_end": 37,
+   "capsule": "The whole world profits nothing, for the soul is more precious than all bodies, and only Christ paid for it.",
+   "comment": "… we shall hear that he who gained the whole sensible world profits nothing, through his own destruction or being forfeited himself. Once one loses his soul or forfeits it — though he gain the whole world — he cannot give it in 'exchange' for the perishing 'soul.' For what is fashioned 'after God's image' is more precious than all bodies. One alone could give an exchange for our formerly perishing soul: he who bought us with his own 'precious blood.'",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the question about exchanging the soul means.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "11",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/11/",
+   "from_cite": true
+  },
+  {
+   "id": "MK08-004",
+   "chapter": 8,
+   "verse_start": 38,
+   "verse_end": 38,
+   "capsule": "The Father's glory, in which the Son will come again, is the glory he had before the world existed.",
+   "comment": "And he proceeds again: 'And now glorify me, Father, with the glory I had with you before the world existed' (John 17:5). … And what was this glory? Which, as I think, Mark also said: 'When the Son comes in the glory of his Father' (Mark 8:38), instead of: he possesses the Father's glory and in it he will come a second time.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u07-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u07-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "MK09-001",
+   "chapter": 9,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "God was transfigured on the high mountain, showing a better form to those who could follow him, for those below lacked eyes to see it.",
+   "comment": "… not in the way Celsus and those like him would have it, our God “was transfigured” and, going up “onto the high mountain” (Matthew 17:1-2; Mark 9:2), showed another form of himself, far better than the one seen by those who stayed below and could not follow him to the height. For those below did not have eyes able to see the transfiguration of the Word into what is glorious and more divine.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why only some saw the transfiguration.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "16",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/16/",
+   "from_cite": true
+  },
+  {
+   "id": "MK09-002",
+   "chapter": 9,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The voice from the cloud on the mountain was heard only by those who had gone up with him, because the divine voice is heard only by those whom the speaker wishes to hear it.",
+   "comment": "Moreover, the voice from the cloud on the very high mountain was heard only by those who had gone up with him (Matthew 17:1–5; compare Mark 9:2–7; Luke 9:28–35). For the divine voice is of such a kind that it is heard only by those whom the speaker wishes to hear it. … And whenever the speaker wishes his voice not to be audible to all, the one who “has” the higher “ears” (Matthew 13:9) hears God, while the one whose soul’s hearing has been deafened does not perceive God speaking.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why only the three disciples heard the voice.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "72",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/72/",
+   "from_cite": true
+  },
+  {
+   "id": "MK09-003",
+   "chapter": 9,
+   "verse_start": 29,
+   "verse_end": 29,
+   "capsule": "Fasting does not trample on demons without prayer, and prayer does not go up to heaven without almsgiving.",
+   "comment": "Fasting is good, but without prayer it does not trample on demons. For he says, “This kind does not go out except by fasting and prayer” (Mark 9:29). Prayer is good too, but without almsgiving it cannot go up to heaven. You have heard the angel saying to Cornelius, “Your prayers and your almsgiving have gone up for a memorial before God” (Acts 10:4). So almsgiving carried prayer up to heaven.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "In Praise of the Holy Martyrs",
+   "work_slug": "hesychius-in-sanctos-martyres",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-sanctos-martyres/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MK09-004",
+   "chapter": 9,
+   "verse_start": 47,
+   "verse_end": 47,
+   "capsule": "If possessions defeat you, you should cast them away, for it is better to enter the kingdom of God with one eye than to be thrown into the fire with both.",
+   "comment": "But do you see yourself being defeated by your possessions and overturned by them? Then let them go. Throw them away. Hate them, renounce them, flee from them. \"If your right eye causes you to stumble, cut it out quickly\" (Mark 9:47). It is better to enter the kingdom of God with one eye than to be thrown into the fire with both eyes intact. And if it is your hand, or your foot, or even your very soul—hate it. For if it is destroyed here for Christ's sake, it will be saved there.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how the cutting-off sayings apply, in plain terms.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "24",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/24/",
+   "from_cite": true
+  },
+  {
+   "id": "MK09-005",
+   "chapter": 9,
+   "verse_start": 49,
+   "verse_end": 49,
+   "capsule": "The part that is sanctified is led through the purifying fire, as the Savior says, 'Every one shall be salted with fire.'",
+   "comment": "… the third part, being divided from the two parts, is sanctified and made better by the Giver of good things, the Divine Word, being led through the purifying fire and 'burning with the spirit,' concerning which the same One saving all things says: 'I came to cast fire upon the earth, and would I were it were already kindled' (Luke 12:49), and again: 'Every one shall be salted with fire' (Mark 9:49).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u34-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u34-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-002",
+   "chapter": 10,
+   "verse_start": 17,
+   "verse_end": 18,
+   "capsule": "Called good, Christ sent the speaker back to the Father as the one who is good.",
+   "comment": "Our Saviour and Lord, hearing himself once addressed as “Good Teacher” (Mark 10:17; Luke 18:18), sent the speaker back to his own Father and said: “Why do you call me good? No one is good but one, God the Father” (Mark 10:18; Luke 18:19).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Christ answers the address 'Good Teacher' as he does, in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "11",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/11/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-003",
+   "chapter": 10,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "A man who had kept the law from his youth and still knelt to ask for immortality shows that the law alone did not give eternal life.",
+   "comment": "If the law of Moses had been sufficient to provide eternal life, then the Savior would have come in vain and suffered in vain, running through our humanity from birth to the sign. And in vain would the man who had kept all the commandments of the law \"from his youth\" (Mark 10:20) kneel before another and ask for immortality. For he has not only fulfilled the law, but he did so beginning right from his earliest age. After all, what is so great or brilliant about an old age barren of the wrongs that youthful desires give birth to, or that boiling anger or love of money produce? But if someone in the leaping of youth and the burning heat of that age shows a mind ripe and older than his years, that man is a marvelous and distinguished athlete, gray in judgment.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows from the young man's own words why the law was not enough.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "8",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/8/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-004",
+   "chapter": 10,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "The one thing the man lacked was the Savior's own gift, beyond the law, and he went away because he did not truly want life.",
+   "comment": "… \"One thing you lack\" (Mark 10:21): the one thing, which is mine. The good. What is already beyond the law. What the law does not give. What the law cannot contain, what belongs to the living. Indeed, the man who fulfilled all the things of the law \"from his youth\" and boasted of his excessive accomplishments could not add this one thing to all the rest: the special gift of the Savior, so that he might receive the eternal life he longed for. But he went away vexed, disgusted by the command of life. For he did not truly want life, as he claimed; he was only clothing himself in the reputation of a good choice. He was capable of busying himself with many things, but the one thing, the work of life, he was unable, unwilling, and too weak to accomplish.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains 'one thing you lack' in clear terms.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "10",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/10/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-005",
+   "chapter": 10,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Selling one's possessions means driving out of the soul its attachment to money, since being without money is worth nothing unless it is for the sake of life.",
+   "comment": "\"Sell your possessions\" (Mark 10:21). And what does this mean? It is not what some hastily take it to be, a command to throw away the substance that belongs to him and to part with his money. Rather, it means expelling from the soul the opinions about money, the attachment to it, the excessive desire for it, the excitement and sickness about it, the cares, the thorns of life that choke the seed of life (Matthew 13:22). For it is no great and enviable thing to be without money for no reason, if it is not for the sake of life.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'sell what you have' means.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "11",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/11/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-006",
+   "chapter": 10,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "The Lord commands us to put away not the things of life but the sicknesses of the soul, so that a pure soul may hear 'Come, follow me.'",
+   "comment": "He commands us to put away, not the things of life, but the things that are used badly. These are the sicknesses and passions of the soul. The wealth of these, when present, is deadly to everyone; when destroyed, it brings salvation. A person must present his soul pure from this wealth—that is, poor and naked—and only then can he hear the Savior say, “Come, follow me” (Mark 10:21). For he himself already becomes a way for the one pure in heart, but the grace of God does not slip into an unclean soul. And the soul that is unclean is the one rich in desires, tormented by many worldly loves.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "16",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/16/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-007",
+   "chapter": 10,
+   "verse_start": 23,
+   "verse_end": 26,
+   "capsule": "The saying that it is hard for a rich man to enter the kingdom means either a man hindered by wealth, as by thorns, or a man rich in false doctrines.",
+   "comment": "From these points too, then, it is clear how Jesus, the “Nazarene” man, does not lay down contrary laws in what he said about wealth and about those who were amazed, namely, that it is hard for a rich man to enter the kingdom of God (Mark 10:23–26; Luke 18:24). This holds whether one takes the “rich man” more simply as the one who is distracted by wealth and hindered by it, as by thorns, from bearing the fruits of the word (Matthew 13:22), or as the one who is rich in false doctrines, of whom it is written in Proverbs: “Better a poor man who is righteous than a rich man who is a liar” (Proverbs 19:22).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "23",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/23/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-008",
+   "chapter": 10,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "Some rich hearers despaired at the camel saying, while others understood it rightly but neglected the works that lead to salvation.",
+   "comment": "The reason salvation seems harder for the rich than for those without money is likely not a simple one, but varied. Some, hearing the Lord's voice at once and without reflection—that it is easier for a camel to pass through the eye of a needle than for a rich person to enter the kingdom of heaven (Mark 10:25)—despaired of themselves as having no hope of life. They granted everything to the world, hung upon the life here as the only one left to them, and turned away from the way there, no longer troubling themselves about whom the Master and Teacher calls rich, or how what is impossible for human beings becomes possible. Others understood this rightly and fittingly, but neglected the works that lead to salvation and did not make the necessary preparation to obtain what they hoped for. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how the camel saying was heard and misheard.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "2",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/2/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-009",
+   "chapter": 10,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "A rich man who rules his possessions inwardly and seeks God alone stands before the commandments as a poor man.",
+   "comment": "But if someone is able to bend the power of his possessions inward, to think moderate thoughts, to be self-controlled, to seek God alone, to breathe God, and to live as a citizen with God, then this man stands before the commandments as a poor person—free, unconquered, without sickness, unwounded by money. But if not, a camel will enter through a needle's eye more quickly than such a rich person will pass into the kingdom of God (Mark 10:25).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says in plain words when a rich man is counted as poor.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "26",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/26/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-010",
+   "chapter": 10,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "The camel was chosen for its crooked build and its mixed character in the law, and the needle's eye recalls the narrow way to life.",
+   "comment": "… he would have considered why a camel was chosen for comparison with the rich man, an animal crooked in its build; and what Jesus meant by the narrow “eye of the needle” (Mark 10:25), since he says that the way that leads “to life” is narrow and hard (Matthew 7:14); and the fact that in the law this animal is recorded as “unclean,” having something acceptable, in that it chews the cud, but also something to be blamed, in that it does not part the hoof (Leviticus 11:4; Deuteronomy 14:7). He would also have examined how often the camel is mentioned in the divine Scriptures, and in connection with whom, so as to see the intent of the saying about the rich.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "16",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/16/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-011",
+   "chapter": 10,
+   "verse_start": 26,
+   "verse_end": 26,
+   "capsule": "The disciples, who had already left their nets, feared because they knew they had not yet put away the passions, and salvation belongs to souls free from passions.",
+   "comment": "The disciples too at first were themselves very fearful and astonished. When they heard this, why was it? Was it because they also possessed much money? No—they had long ago left behind those very things that were their only possessions: the little nets and hooks and the small boats that served them. What then did they fear when they said, \"Who can be saved?\" (Mark 10:26). They had heard well, as disciples, what the Lord had said in parable and obscurely, and they perceived the depth of the words. On account of their lack of possessions, then, they were hopeful about salvation. But since they were conscious that they had not yet completely put away the passions—for they were newly taught and had only recently been enlisted by the Savior—they were \"utterly astonished\" and despaired of themselves no less than that man of much money who clung so terribly to his possession, which he preferred to eternal life. It was altogether fitting, then, for the disciples to be afraid. For if both the one who possesses money and the one who is pregnant with the passions—with which they too were rich—will alike be driven away from heaven, then salvation belongs to souls that are free from passions and pure.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the disciples were astonished.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "20",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/20/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-012",
+   "chapter": 10,
+   "verse_start": 27,
+   "verse_end": 27,
+   "capsule": "God's help is added to the one who truly desires freedom from the passions, since he gives grace to those who choose it and does not force the unwilling.",
+   "comment": "And the Lord answers: “What is impossible among humans is possible for God” (Mark 10:27). This too is full of great wisdom. For a person who practices and labors at freedom from passions on his own accomplishes nothing; but if he becomes clearly one who desires this exceedingly and has set his whole heart on it, he prevails through the addition of power from God. For God breathes together with willing souls—but if they abandon their eagerness, the Spirit given by God is also withdrawn. To save the unwilling is the act of one using force; to give grace to those who choose it is the act of one who gives freely. Nor does the kingdom of God belong to those who sleep and are idle, but “the violent seize it” (Matthew 11:12). For this alone is a noble violence: to force God, and to seize life from God. And God, knowing those who cling violently—or rather, steadfastly—yields to them. For God rejoices to be defeated in such contests.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how what is impossible for humans is possible for God.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "21",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/21/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-013",
+   "chapter": 10,
+   "verse_start": 27,
+   "verse_end": 27,
+   "capsule": "'Everything is possible to God' does not mean things that have no existence or cannot be conceived, nor shameful things, since then God would not be God.",
+   "comment": "Nor do we retreat to “a most absurd refuge” when we say that “everything is possible to God” (Matthew 19:26; Mark 10:27). For we know how to understand that “everything”: it does not refer to things that have no existence, nor to things that cannot be conceived. We say, too, that God cannot do shameful things, since then God would be able not to be God; for if God does anything shameful, he is not God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "23",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/23/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-014",
+   "chapter": 10,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "Peter's 'we have left everything' means more than leaving small possessions: it means casting off the old passions of the soul and following the Savior in his sinlessness.",
+   "comment": "When blessed Peter heard these things—Peter the chosen, the exceptional, the first of the disciples, for whom alone and for himself the Savior pays the tax—he quickly seized and grasped the meaning. And what does he say? “Look, we have left everything and followed you” (Mark 10:28). Now if by “everything” he means his own possessions, leaving perhaps four obols, so to speak, he exalts himself and, by valuing the kingdom of heaven at the level of these, would forget the kingdom of heaven. But if—as we have just now been saying—they have thrown away the old mental possessions and psychic diseases and follow in the footsteps of the teacher, this would already belong to those who are about to be enrolled in heaven. For this is truly to follow the Savior: to pursue his sinlessness and perfection, and to adorn and order one's soul as a mirror toward him, and to dispose all things alike in all respects.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Peter's 'everything' means.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "21",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/21/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-015",
+   "chapter": 10,
+   "verse_start": 29,
+   "verse_end": 30,
+   "capsule": "Leaving family for Christ is not hatred, since the same mind loves enemies and will not honor a father above Christ.",
+   "comment": "Jesus answered, “Truly I tell you, whoever leaves his own things and parents and brothers and money for my sake and for the sake of the gospel will receive back a hundredfold” (Mark 10:29-30). But let this not disturb us, nor the still harsher saying uttered elsewhere in the words: “Whoever does not hate father and mother and children, and even his own soul, cannot be my disciple” (Luke 14:26). For the God of peace is not introducing hatred and separation from those most loved—he who urges us to love even our enemies. If enemies must be loved, then by the same reasoning, moving upward from them, so must those nearest in family; or if those of one's own blood must be hated, then the saying, moving downward, teaches that enemies must be hated far more, so that the two sayings would be shown to refute each other. But they do not refute each other, nor come close. For from the same mind and disposition and on the same principle a person would hate a father and love an enemy—one who neither takes revenge on an enemy nor reverences a father more than Christ. In the one saying he cuts out hatred and wrongdoing; in the other, the deference toward intimates. If it harms salvation—if, say, a father or son or brother is godless to someone and becomes a hindrance to faith and an obstacle to the life above—let him not join with that one or be of one mind with him, but let him dissolve the fleshly kinship because of the spiritual enmity.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "22",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/22/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-016",
+   "chapter": 10,
+   "verse_start": 38,
+   "verse_end": 38,
+   "capsule": "The 'cup of salvation' in the Psalms is the martyr's death, and the baptism Christ names may bring healing to many.",
+   "comment": "The 'cup of salvation' in the Psalms is the martyr's death — which is why 'I will take the cup of salvation' is followed by 'Precious before the Lord is the death of his holy ones.' Precious then comes death to us, God's holy ones — not the common, as it were idle death of godliness, but a choice one: through Christianity and godliness and holiness. 'Can ye drink the cup that I drink, or be baptized with the baptism I am baptized with?' (Mark 10:38) And elsewhere: 'I have a baptism to be baptized with, and how am I straitened till it be accomplished!' (Luke 12:50) Consider whether the baptism after martyrdom, as the Savior's cleansing came to be for the world, itself comes to be for many unto healing.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "28",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/28/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-018",
+   "chapter": 10,
+   "verse_start": 47,
+   "verse_end": 47,
+   "capsule": "The blind man called on the Savior as Son of David although he had not read the law, the prophets or the Gospels.",
+   "comment": "But I marvel how this blind man, not having read the law, not having passed through the prophets, not having encountered the Gospels, and not having been confirmed by the apostles, called upon the Savior of the inhabited world, saying, 'Jesus, Son of David, have mercy on me' (Mk 10:47). From where did you learn to call these things, without having learned what you invoke? Deprived of sight, you did not read books; you did not occupy yourself with teachings …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Points out how much the blind man's cry shows of his faith.",
+   "author": "Severianus of Gabala",
+   "work": "On the Blind Man and Zacchaeus",
+   "work_slug": "severianus-de-caeco-zacchaeo",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-zacchaeo/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MK10-019",
+   "chapter": 10,
+   "verse_start": 48,
+   "verse_end": 48,
+   "capsule": "Each person should cry out to Jesus for his own wounds, as the blind man did, and not shrink back when others rebuke him.",
+   "comment": "Let each one, then, cry out for his own wounds, and call upon Jesus, the healer of souls and bodies, just as the blind man cried out: 'Son of David, have mercy on me' (Mark 10:48). And some may go forward, rebuking him; but boldness is not hindered by those who obstruct. Faith knows how to fight against all things, and overcomes all things. Even if men rebuke, the believer does not shrink back, but follows the Lord, knowing that boldness for the sake of piety is beautiful. For if many are shameless for the sake of money, for the sake of the soul's salvation, there is nothing more beautiful than holy boldness.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Draws a plain lesson from the blind man's persistence.",
+   "author": "Severianus of Gabala",
+   "work": "On the Blind Man and Zacchaeus",
+   "work_slug": "severianus-de-caeco-zacchaeo",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-zacchaeo/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MK11-001",
+   "chapter": 11,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The colt on which no one had sat is the nations, which the apostles untied from darkness and brought to the Lord.",
+   "comment": "They were sent “to bring the colt to Him” (Luke 19:35), and the colt is the nations, so that He might mount them and reign over them, as the psalmist says: “God has become King over the nations; the Lord sits on His holy throne” (Psalm 47:8). “On which no one has ever sat” (Mark 11:2; Luke 19:30): for the nations had neither God mounting and ruling over them, nor law, nor prophets. “Untie it,” He says, “and bring it to Me” (Matthew 21:2; Luke 19:30). For the apostles untied the nations from darkness, that is, from ignorance of God; from error, from sin, from slavery to an alien master, from “the power of darkness” (Colossians 1:13), from “the ruler of this age” (John 12:31). And they brought them to the Lord, their Creator and Maker.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the colt and the untying in terms a reader can follow.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Lazarus and the Palm Branches",
+   "work_slug": "hesychius-in-lazarum-ramos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/hesychius-in-lazarum-ramos/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "MK11-002",
+   "chapter": 11,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "In 'Hosanna in the highest' the evangelist shows the exalted nature of the Godhead, and in 'Blessed is He who comes in the name of the Lord' the substance of Christ's humanity.",
+   "comment": "And look with me at the evangelist, how he proclaims Christ as twofold. When he says, “Hosanna in the highest,” he shows the exalted nature of the Godhead; and when he says, “Blessed is He who comes in the name of the Lord,” he signifies the substance of His humanity, the blessed seed with which blessed Abraham was blessed, that in his seed all the nations of the earth should be blessed (Genesis 22:18). For he says: “Blessed is the coming kingdom of our father…” (Mark 11:10)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the two parts of the crowd's cry.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Lazarus and the Palm Branches",
+   "work_slug": "hesychius-in-lazarum-ramos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-lazarum-ramos/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MK11-003",
+   "chapter": 11,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "In giving the rule for prayer Christ told us to forgive whatever we have against anyone, and he sends a man at odds with his brother to be reconciled first.",
+   "comment": "So when he gave the rule for praying, he added these words: “And when you stand to pray, forgive whatever you have against anyone, so that your Father in heaven may forgive you your sins” (Mark 11:25). And he calls back from the altar the one who comes to sacrifice while at odds with a brother, and orders him first to be reconciled with his brother, and then to return in peace and offer his gift to God (Matthew 5:23-24). For God did not even look upon Cain’s gifts (Genesis 4:5), since no one who lacked peace with his brother through the discord of envy could have God at peace with him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the command to forgive when standing to pray.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "13",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/13/",
+   "from_cite": true
+  },
+  {
+   "id": "MK11-004",
+   "chapter": 11,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "Forgetting wrongs is a great feat, and when we come to prayer free of them we keep the Savior's command to forgive.",
+   "comment": "If forgetfulness of wrongs is a greatest feat — with the prophet Jeremiah summing the whole Law in it, saying: Not these things did I command your fathers when they went out of Egypt, but this I commanded: let each not remember his neighbor's evil in his heart — coming from forgetfulness of wrongs to prayer, we keep the Savior's command, saying: Whenever you stand praying, forgive whatever you hold against anyone. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "9",
+   "url": "https://viapatrum.org/works/origen-on-prayer/9/",
+   "from_cite": true
+  },
+  {
+   "id": "MK12-001",
+   "chapter": 12,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The invisible powers and then the Jews tried to cast out the true king and take an inheritance not theirs.",
+   "comment": "For this was eagerly pursued, he says, first by the invisible powers, then by the visible Jews, to cast out the true king from his natural rule, thinking to take possession of an inheritance that did not belong to them (Psalm 41:5). Therefore they said: “Come, let us kill him, and the inheritance will be ours” (Mark 12:7).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MK12-002",
+   "chapter": 12,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "Human beings made perfect become equal to the angels, since in the resurrection the righteous neither marry nor are given in marriage.",
+   "comment": "We know also that the angels are so far above human beings that human beings, once made perfect, become equal to angels; for “in the resurrection of the dead” the righteous “neither marry nor are given in marriage, but are like the angels of heaven” (Matthew 22:30; compare Mark 12:25), and they become “equal to angels” (Luke 20:36).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Christ means by 'like the angels' in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/29/",
+   "from_cite": true
+  },
+  {
+   "id": "MK12-003",
+   "chapter": 12,
+   "verse_start": 30,
+   "verse_end": 30,
+   "capsule": "No commandment is greater than loving God, because he is the first and greatest reality, and loving him brings incorruption as our own strength.",
+   "comment": "So the Teacher, when asked which is the greatest of the commandments, says: “You shall love the Lord your God with all your soul and with all your strength” (Deuteronomy 6:5 (cf. Mark 12:30)). He says that no commandment is greater than this, and very rightly so, for it was commanded concerning the first and greatest reality—God our Father himself, through whom all things came to be and exist, and to whom all that are saved return again. Since we were first loved by him and received our very coming into being, it is not holy to hold anything else as older or more precious than him. We repay this one small favor for the greatest gifts, and we have nothing at all to devise as recompense for a God who lacks nothing and is perfect. But by the very act of loving the Father, we receive incorruption as our own strength and power. For as much as someone loves God, by that much he slips further inside God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the love of God is the greatest commandment.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "27",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/27/",
+   "from_cite": true
+  },
+  {
+   "id": "MK12-004",
+   "chapter": 12,
+   "verse_start": 32,
+   "verse_end": 33,
+   "capsule": "The scribe, who seems to have learned piety through the law, praises the Savior's word 'Hear, O Israel' that the Lord our God is one.",
+   "comment": "… And the scribe said to him: 'Well, Teacher, in truth you have spoken, that one is the God and there is none other besides him' (Mark 12:32-33). But the scribe, seeming to have learned piety through the law, appears to be praising the explicit word of the Savior: 'Hear, O Israel' (Deuteronomy 6:4), saying, 'the Lord our God is one,' and believing that he has spoken well by an oath; for he says, 'in truth you have spoken that one is the God and there is no other besides him.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Marcellus of Ancyra",
+   "work": "Fragments",
+   "work_slug": "marcellus-ancyranus-fragmenta",
+   "section": "u03-rem-early",
+   "url": "https://viapatrum.org/works/marcellus-ancyranus-fragmenta/u03-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "MK12-006",
+   "chapter": 12,
+   "verse_start": 42,
+   "verse_end": 44,
+   "capsule": "The poor woman who gave the least, yet all she had, carried off the testimony of giving more, because the sacred word weighs a gift by the giver's choice and not by the amount.",
+   "comment": "… So it is recorded in the sacred books that a small and poor woman, among the rich and powerful who were offering great and costly gifts from their wealth, contributed small things, the very least, yet all that she had, and she alone carried off the testimony of having given more (Mark 12:41–44; Luke 21:1–4). For I think the sacred word did not weigh generosity and magnificence by the amount of the material given, which is outside a person, but by the intention of the one offering it, or rather by the choice.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Christ praised the widow's small gift.",
+   "author": "Gregory Thaumaturgus",
+   "work": "Thanksgiving Address to Origen",
+   "work_slug": "gregory-thaumaturgus-panegyricus",
+   "section": "3.1",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-panegyricus/3.1/",
+   "from_cite": true
+  },
+  {
+   "id": "MK13-002",
+   "chapter": 13,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "We see always being fulfilled what Jesus said before it came to pass, that the gospel would be preached in the whole world, and so we stand in awe of him.",
+   "comment": "Jesus, then, made what he promised credible by the good he did to those who gave heed to him. And as we see always being fulfilled what he said before it came to pass, that “the gospel” would “be preached” in the whole world (Matthew 26:13; compare Matthew 24:14; Mark 13:10), that his disciples would go to “all the nations” (Matthew 28:19) and proclaim his word, and further that they would be “led before governors and kings” (Matthew 10:18) for no other cause than his teaching, we stand in awe of him and daily confirm our faith in him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how the prophecy that the gospel would be preached to all is read as fulfilled.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "42",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/42/",
+   "from_cite": true
+  },
+  {
+   "id": "MK13-003",
+   "chapter": 13,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Confession is the beginning of glory, not yet the crown, because whatever comes before the end is a step toward salvation and the danger is greater after it.",
+   "comment": "Confession is the beginning of glory, not already the merit of the crown; it does not complete the praise but initiates the dignity. And since it is written, “Whoever perseveres to the end will be saved” (Matthew 10:22; 24:13; Mark 13:13), whatever comes before the end is a step by which one ascends to the summit of salvation, not the endpoint where the height of the summit is already held. He is a confessor, but after confession the danger is greater, because the adversary has been provoked more.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'whoever perseveres to the end' means for a confessor.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/21/",
+   "from_cite": true
+  },
+  {
+   "id": "MK13-004",
+   "chapter": 13,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The faithlessness of many should strengthen our faith because it was foretold, and the Lord's warning means we must beware of such people and avoid them.",
+   "comment": "But let the excessive and abrupt faithlessness of many not move or disturb us. Instead, let it strengthen our faith by the truth of the thing foretold. Just as certain people have begun to be this way because these things were predicted beforehand, so let the rest of the brethren beware of such people, because these things too were predicted beforehand, with the Lord instructing and saying: \"But you, beware; behold, I have foretold everything to you\" (Mark 13:23). I beg you, avoid people of this kind, and keep their destructive conversations away from your side and from your ears like the contagion of death, as it is written: \"Fence your ears with thorns, and do not listen to a wicked tongue\" (Sirach 28:24).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Lord's 'I have foretold everything' gives a reason for caution.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/17/",
+   "from_cite": true
+  },
+  {
+   "id": "MK13-005",
+   "chapter": 13,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "The Savior's own glory will be enough to light the saints when the sun is darkened.",
+   "comment": "The Savior himself said something of the same kind: “In those days the sun will be darkened, and the moon will not give its light” (Mark 13:24; compare Matthew 24:29). For the glory of the Savior itself will be enough to give the saints their light.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book5-part2-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book5-part2-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "MK13-006",
+   "chapter": 13,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "The words, the principles of each thing, will not pass away even if heaven and earth do.",
+   "comment": "For we know that even if “heaven and earth” pass away, and the things in them, still the “words,” the principles of each thing, which stand to the Word who was “in the beginning” “with God,” God the Word (John 1:1), as parts to a whole or species to a genus, will never pass away.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "22",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/22/",
+   "from_cite": true
+  },
+  {
+   "id": "MK13-007",
+   "chapter": 13,
+   "verse_start": 32,
+   "verse_end": 32,
+   "capsule": "The Son is said not to know the day in a human way, but in a divine way he knows it, since he is the Father's wisdom and power.",
+   "comment": "“But about that day and hour no one knows, not even the angels of the heavens, nor the Son, but only the Father.” (Matthew 24:36; Mark 13:32) You have learned to confess one Christ, the Word of God made flesh — that is, become human. How then did he not know the day of the consummation? We say that for the creation not to know the mysteries in God is neither unusual nor otherwise unfitting: “For who has known the mind of the Lord?” (Romans 11:34) according to what is written. And if the Son is said to have been made a little lower than angels (Hebrews 2:9) — clearly insofar as he became human, though he is beyond all creation in a divine way — what wonder if he is also said, together with the angels, not to know the mystery in God, though he is the Father’s wisdom and power (1 Corinthians 1:24)? Then how would the Father’s wisdom not know what is hidden in him? And if the Spirit is said to “search all things, even the depths of God,” (1 Corinthians 2:10) and the Spirit is Christ’s, how would he himself not know what his Spirit knows exactly? So even if he is said not to know in a human way, yet he knows in a divine way.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Answers the question a reader asks about 'not even the Son' in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "13",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/13/",
+   "from_cite": true
+  },
+  {
+   "id": "MK13-008",
+   "chapter": 13,
+   "verse_start": 35,
+   "verse_end": 36,
+   "capsule": "In the night of the present age we must stay watchful, since we do not know when the lord comes.",
+   "comment": "Meditate, then, in the night of the present age; for “the wrestling is not for you toward blood and flesh, but toward the rulers, toward the authorities” (Ephesians 6:12); for “you do not know when the lord of the house comes, late or at midnight or at cock-crow or early; lest coming suddenly he find you sleeping.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "60",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/60/",
+   "from_cite": true
+  },
+  {
+   "id": "MK14-001",
+   "chapter": 14,
+   "verse_start": 33,
+   "verse_end": 33,
+   "capsule": "A first stirring of feeling at the 'beginning' is not sin, and a soul that was never shaken would have no glory or crowns.",
+   "comment": "But pre-passion is not sin; for if you do not grant this, you bring something foreign into the soul, and it would have neither glory nor worthiness of praise and crowns if it were not shaken. For you have in the Gospel that: 'she began to be terrified and to be in distress' (Mark 14:33); for is not the 'beginning' something other than the pre-passion? This beginning is only the beginning itself; it has nothing with it.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u34-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u34-open/",
+   "from_cite": true
+  },
+  {
+   "id": "MK14-002",
+   "chapter": 14,
+   "verse_start": 36,
+   "verse_end": 36,
+   "capsule": "The words 'not what I will, but what you will' are the voice of one content with what was happening, not of one who had given way.",
+   "comment": "What seems to be a plea to be spared the cup, as it is called, has indeed its own explanation, which we have examined and set out at greater length elsewhere. But to take the saying more simply, see whether the prayer too was not spoken with piety toward God. For everyone at all regards hardship as not a matter of first choice, and yet, when the occasion calls, endures what does not come about by first choice. Moreover, the voice that says, “Yet not what I will, but what you will” (Mark 14:36), was not the voice of one who had given way, but of one well content with what was happening, and who put first the hardships sent by providence.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how to read Christ's prayer that the cup pass.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "55",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/55/",
+   "from_cite": true
+  },
+  {
+   "id": "MK14-003",
+   "chapter": 14,
+   "verse_start": 36,
+   "verse_end": 36,
+   "capsule": "The prayer that the cup pass does not make the Savior a coward about death, since the same Lord says in the Psalms 'whom shall I fear?'",
+   "comment": "But likely someone, through the 'Father, if it be possible, let this cup pass from me,' (Matthew 26:39) will deem the Savior cowardly concerning death. To whom we must say that, if all Scripture is one instrument of one God, the same Lord who says 'let this cup pass' also says in the Psalms, 'The Lord is my light and my savior; whom shall I fear? The Lord is the defender of my life; of whom shall I be afraid? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/29/",
+   "from_cite": true
+  },
+  {
+   "id": "MK14-004",
+   "chapter": 14,
+   "verse_start": 49,
+   "verse_end": 49,
+   "capsule": "Jesus was not hiding, since he said he was in the temple day after day teaching openly and they did not seize him.",
+   "comment": "On what grounds has Celsus’s Jew said that Jesus was in hiding? For he says of him: “Who, sent as a messenger, ever hides himself when he ought to announce what he has been commanded?” Yet the one who said to those seeking to arrest him, “Day after day I was in the temple, teaching openly, and you did not seize me” (Mark 14:49; compare Matthew 26:55; John 18:20), was not hiding.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "70",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/70/",
+   "from_cite": true
+  },
+  {
+   "id": "MK15-001",
+   "chapter": 15,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The envy of the chief priests, elders and scribes shows that Jesus had persuaded crowds, who were held by his words and mighty works.",
+   "comment": "… For where did the envy that the chief priests, elders and scribes of the Jews stirred up against him come from (Matthew 27:18; Mark 15:10), if not from the crowds who were persuaded to follow him even into desert places (Matthew 14:13)? They were held not only by the coherent order of his words, for he always spoke in a way that suited his hearers, but also by his mighty works, by which he astonished those who did not believe through the coherence of his word.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "39",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/39/",
+   "from_cite": true
+  },
+  {
+   "id": "MK15-003",
+   "chapter": 15,
+   "verse_start": 34,
+   "verse_end": 34,
+   "capsule": "Jesus laid down his soul by his own authority, not by the necessity common to men, when he cried out and gave up the spirit.",
+   "comment": "Now my Jesus said of his own soul, which was parted from the body not by the necessity common to men but by the extraordinary authority given to him over this also: “No one takes my soul from me, but I lay it down of myself. I have authority to lay it down, and I have authority to take it again” (John 10:18). For since he had “authority to lay it down,” he laid it down when he said, “Father, why have you forsaken me?” (Matthew 27:46; Mark 15:34) and, “crying out with a loud voice, he gave up the spirit” (Matthew 27:50). In this he forestalled the executioners in charge of the crucified, who cut the legs of those crucified, and cut them for this reason, that they may not suffer punishment any longer (compare John 19:31–33).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms how the cry on the cross shows Christ giving up his life freely.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "32",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/32/",
+   "from_cite": true
+  },
+  {
+   "id": "MK15-004",
+   "chapter": 15,
+   "verse_start": 46,
+   "verse_end": 46,
+   "capsule": "The three evangelists agree in recording that the tomb was hewn in rock, which is worth reflecting on, as is the newness of the tomb.",
+   "comment": "… For now it is enough to mention the clean linen cloth in which the pure body of Jesus had to be wrapped (Matthew 27:59), and the new tomb “which” Joseph “had hewn in the rock” (Matthew 27:60), “where no one had yet lain” (Luke 23:53), or, as John says, “in which no one had yet been placed” (John 19:41). Consider whether the agreement of the three evangelists can move anyone. They took care to record that the tomb was quarried or hewn in rock (Matthew 27:60; Mark 15:46; Luke 23:53), so that whoever examines the meaning of what is written may see something worth reflecting on about these things too, and about the newness of the tomb, which Matthew and John relate, and about no dead body having been there, as Luke and John say.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "69",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/69/",
+   "from_cite": true
+  },
+  {
+   "id": "MK15-005",
+   "chapter": 15,
+   "verse_start": 46,
+   "verse_end": 46,
+   "capsule": "Christ's body became a dead body, for a spiritual body could not be wrapped in linen, anointed and laid in a tomb.",
+   "comment": "Christ the firstfruits: for this reason his body became a dead body. For if his body had not become dead — able to be wrapped in linen, to receive myrrh and whatever else belongs to the dead, and to be laid in a tomb — a spiritual body cannot suffer these things. For it is in no way possible for what is spiritual to be made dead, or for what is spiritual to become without sensation.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Dialogue with Heraclides",
+   "work_slug": "origen-dialogue-heraclides",
+   "section": "5",
+   "url": "https://viapatrum.org/works/origen-dialogue-heraclides/5/",
+   "from_cite": true
+  },
+  {
+   "id": "MK16-001",
+   "chapter": 16,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Matthew and Mark report one angel and Luke and John two without contradiction, since the one rolled away the stone and the two stood by the women or sat inside.",
+   "comment": "[Of Celsus:] He did not notice, I think, that Matthew and Mark reported one (Matthew 28:2–5; Mark 16:5), and Luke and John two (Luke 24:4; John 20:12). These accounts were not contradictory. For those who recorded one say that this was the one who rolled away “the stone” from the tomb (Matthew 28:2); while the others say that the two are those who, “in dazzling clothing” (Luke 24:4), stood by the women who had come to the tomb, or those who were seen inside “sitting in white” (John 20:12).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Gospels differ on the number of angels.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "56",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/56/",
+   "from_cite": true
+  },
+  {
+   "id": "MK16-002",
+   "chapter": 16,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The angels did not raise Christ but rolled the stone away for the women, for the tomb was already empty before they came.",
+   "comment": "'…the Nazarene, who was crucified. He is not here, for he has risen, as he said (Mark 16:6; Matthew 28:6). That is, heaven is his place; send the myrrh there. He has risen; it was not we who raised him. For your sake we rolled away the stone, for before we came down the tomb had already been emptied. He has risen, as he himself said.'",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the angel's words to the women with their meaning.",
+   "author": "Hesychius of Jerusalem",
+   "work": "Homily II on the Holy Pascha",
+   "work_slug": "hesychius-homilia-ii-pascha",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/hesychius-homilia-ii-pascha/u01-rem-mid/",
+   "from_cite": true
+  }
+ ]
+}

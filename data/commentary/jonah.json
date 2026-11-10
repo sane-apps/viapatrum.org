@@ -1,0 +1,125 @@
+{
+ "book": "Jonah",
+ "title": "The Fathers on Jonah",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 6,
+ "selected_count": 4,
+ "comments": [
+  {
+   "id": "JON01-001",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "God answered the cry of Nineveh's wickedness with a proclamation of repentance, not with wrath.",
+   "comment": "And from the Scriptures one can take examples: the Ninevites had become in much wickedness, as if 'their cry of wickedness had ascended' (Jonah 1:2) to God calling for punishment and retribution. But God sent a proclamation of repentance. They approached the proclamation. They were instructed and reproved, not in wrath or anger. For example, the Sodomites were reproved and instructed in wrath and anger.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the cry of wickedness led to.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u40-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u40-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JON01-003",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "Jonah is a type of Christ, but not in every respect: Jonah fled his mission, while the Son was not unwilling for his.",
+   "comment": "So if Jonah is taken as a type of Christ, he is not taken in every respect. For example, he was sent to preach to the Ninevites, but sought to flee from God’s face and is seen hesitating toward the mission. The Son too was sent from God the Father preaching to the nations, but he was not unwilling for the service.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows in plain terms how far Jonah's flight fits Christ and where it does not.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "140",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/140/",
+   "from_cite": true
+  },
+  {
+   "id": "JON01-002",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The saints profess themselves servants of God as their highest rank, and the servant of God knows what opposes his will.",
+   "comment": "Indeed, it has been said many times that the saints position themselves in their prefaces thus: 'James, a servant of the Lord God Jesus Christ' (James 1:1), and 'Paul, a servant of Christ', and Jonah being asked, 'From what country and what people?', then he says, 'I am a servant of God' (Jonah 1:9). And just as those who are being promoted by virtue of their ranks claim their rank and dignity, these saints, as if professing a greatest nobility and surpassing fame and great rank, profess the servitude of God. The servant of God, knowing the will of God, knows also the things that are contrary to the will of God. For impiety, lawlessness, and every kind of evil oppose the will of God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u35-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u35-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JON01-004",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 17,
+   "capsule": "Like Jonah cast into the sea and given up after three days, Christ died and rose, but unlike Jonah he was not grieved when others were saved.",
+   "comment": "The prophet urged those sailing with him to throw him into the sea; he was also swallowed by a whale, then given up after three days, and after that went to Nineveh and fulfilled the service (Jonah 1–3) — yet he was not moderately grieved when God pitied the Ninevites. Christ also endured death willingly, remained in the heart of the earth, rose again, and after that went into Galilee and commanded that the preaching to the nations begin — yet he was not grieved when he saw those called into knowledge being saved.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "140",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/140/",
+   "from_cite": true
+  },
+  {
+   "id": "JON03-001",
+   "chapter": 3,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The prophet said 'Yet three days', not 'After three days', meaning God would bear with them for three more days if they did not repent.",
+   "comment": "The Ninevites fasted and were saved, and through fasting they changed the wrath of God. And fasting blocked the sentence that had been pronounced against them. For the prophet says: “Yet three days, and Nineveh will be overthrown” (Jonah 3:4). He did not say, “After three days, Nineveh will be overthrown.” For if he had said, “After three days,” it would have been overthrown. But he said, “Yet three days,” showing this: “For so long I bore with you, and you did not repent. Yet for three days I bear with you, and if you do not repent within the three days, then the city will be overthrown.” And for so long they did not repent, except through the three days—that is, through the Father and the Son and the Holy Spirit.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse is worded 'Yet three days'.",
+   "author": "Hesychius of Jerusalem",
+   "work": "Homily on Fasting",
+   "work_slug": "hesychius-homilia-jejunio",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/hesychius-homilia-jejunio/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JON03-002",
+   "chapter": 3,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "God gave the Ninevites room for repentance by sending a prophet, so that those already condemned might repent and meet his mercy.",
+   "comment": "The Ninevites had become sinners, and they were condemned by God. Yet three days, and Nineveh was about to be overthrown. God did not wish to condemn the city in silence. He gave them room for repentance and turning, and sent a Hebrew prophet, so that when the prophet said, 'Yet three days, and Nineveh shall be overthrown,' (Jonah 3:4) those already condemned might not be condemned, but might repent and meet with the mercy of God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God sent a warning at all.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "1.1",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/1.1/",
+   "from_cite": true
+  }
+ ]
+}

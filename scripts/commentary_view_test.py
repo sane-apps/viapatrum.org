@@ -181,5 +181,21 @@ class VerseButtonTest(unittest.TestCase):
         self.assertIn("Verse 15: commentary from the Fathers</button>", html)
 
 
+
+class LabelledAsTest(unittest.TestCase):
+    def test_labelled_as_byline(self):
+        """Words the source labels as another writer's show that writer, not the filed author or his dates (10 Nov 2026)."""
+        import commentary_view as cv
+        base = {"capsule": "C", "comment": "W", "work": "Fragments", "work_slug": "x", "section": "80", "chapter": 19,
+                "verse_start": 1, "verse_end": 1, "author": "Origen of Alexandria"}
+        src = {"author": "Origen of Alexandria", "dates": "c. 185–254"}
+        plain = cv.comment_card_html(dict(base), "Psalm", dict(src))
+        lab = cv.comment_card_html(dict(base, labelled_as="Eusebius"), "Psalm", dict(src))
+        assert "&mdash; Origen of Alexandria<span class=\"cm-dates\">" in plain
+        assert "&mdash; Eusebius (so labelled in the source, which is filed under Origen of Alexandria)</p>" in lab
+        assert "185" not in lab
+
+
 if __name__ == "__main__":
     unittest.main()
+

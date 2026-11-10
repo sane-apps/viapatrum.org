@@ -1,0 +1,143 @@
+{
+ "book": "Zephaniah",
+ "title": "The Fathers on Zephaniah",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 7,
+ "selected_count": 4,
+ "comments": [
+  {
+   "id": "ZEP01-001",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The lamp with which God searches Jerusalem is the law.",
+   "comment": "…the prophet Zephaniah introduced God himself saying: \"I will search Jerusalem with a lamp and will not find a man\" (Zephaniah 1:12). Does the light need a lamp? No, he says, but he calls the law a lamp…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "Homily I on the Presentation",
+   "work_slug": "hesychius-homilia-i-hypapante",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-homilia-i-hypapante/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "ZEP02-001",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The Lord, once found, raises up the humble who seek him.",
+   "comment": "…Zephaniah too cries out: 'Seek the Lord, all you humble of the earth' (Zephaniah 2:3). For once he is found, he lifts up the humble, raises them from the earth, frees them from corruption, and makes them higher than the high.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Andrew",
+   "work_slug": "hesychius-in-andream",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-andream/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "ZEP02-002",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The word 'prevail' shows it was foretold that the nations would first attack the church and that the Lord would overcome them and remove their false gods.",
+   "comment": "…the prophets of God foretold that the nations would worship him after the false gods they once served had been exterminated. “The Lord will prevail against them,” he says, “and will exterminate all the gods of the nations of the earth, and they will worship him, each from his own place, all the islands of the nations” (Zephaniah 2:11). And not only the islands, but all the nations—so much so that even all the islands of the nations are included…\n\n…And indeed the testimony I used first, where it says, “The Lord will prevail against them, and will exterminate all the gods of the nations of the earth,” shows clearly enough in the word “prevail” that this too was foretold: that the nations would first attack the church and persecute the Christian name as much as they could, so that, if possible, it would be entirely wiped from the earth. And because he was going to overcome them by the patience of the martyrs, the greatness of miracles, and the faith of the peoples that would follow, it was said this way: “The Lord will prevail against them.” For it would not say “he will prevail against them” unless they were resisting him by attacking…\n\nBy these and similar prophetic testimonies it is shown that what we see being fulfilled through Christ was foretold: that the God of Israel, whom we understand to be the one true God, would be worshiped not only in that one nation called Israel but among all the nations, and that he would remove all the false gods of the nations both from their temples and from the hearts of their worshipers.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse foretold about the false gods and the nations, in plain words.",
+   "author": "Augustine of Hippo",
+   "work": "On the Divination of Demons",
+   "work_slug": "augustine-divination-of-demons",
+   "section": "13",
+   "url": "https://viapatrum.org/works/augustine-divination-of-demons/13/",
+   "from_cite": true
+  },
+  {
+   "id": "ZEP02-003",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Gentiles called through faith in Christ are commanded to worship in every place, not all in Jerusalem, as the prophets spoke.",
+   "comment": "…now that we who come from the Gentiles have been called, through faith in Christ, into a close bond with God, and have been enriched with the security that comes through the Holy Spirit, we are commanded to worship, not all of us in Jerusalem, but in every place. This, then, was what was spoken through the prophets: “And they shall worship the Lord, each one from his own place” (Zephaniah 2:11).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what worshiping each from his own place means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "ZEP02-004",
+   "chapter": 2,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The sword that wounds the Ethiopians is a name for the punishment coming on those who sin.",
+   "comment": "…And not everywhere do all perish by swords, but the name of the sword indicates the punishment that is about to be brought upon those who sin. And the saying 'You Ethiopians are wounded by my sword' (Zephaniah 2:12) presents the same thought; but also that which is said in the Exodus by those being afflicted by Pharaoh against Moses and Aaron: 'Behold, God is judging to give a sword into the hands of Pharaoh' (Exodus 5:21), they show by the name of the sword the tribulation brought upon themselves.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u12-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u12-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "ZEP03-002",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The tongue turned for the peoples, so that all serve the Lord under one yoke, speaks of the setting right of every soul and answers to the time before the confusion of tongues.",
+   "comment": "…we say that the Word will one day gain mastery over the whole of rational nature and transform every soul into his own perfection, when each one, using nothing but his own freedom, chooses what he wills and comes to be in what he has chosen…\n\nNow the prophecies say many things, in veiled terms, about the complete destruction of evils and the setting right of every soul; for the present it is enough to set out the passage from Zephaniah…\n\nLet anyone who is able, having studied all of this, set out the clear meaning of the prophecy; and let him examine above all what it means that, when all the earth is being consumed, a tongue is turned “for the peoples into its own generation” (Zephaniah 3:9), in a way that answers to the state of things before the confusion (Genesis 11:7–9). And let him consider what it means for “all to call upon the name of the Lord and serve him under one yoke” (Zephaniah 3:9), so that “the contemptible things of insolence” are taken away (Zephaniah 3:11), and there is no longer “wrong,” nor vain words, nor a deceitful tongue (Zephaniah 3:13).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the turned tongue and the one yoke as all peoples coming to agree in serving the Lord.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "72",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/72/",
+   "from_cite": true
+  },
+  {
+   "id": "ZEP03-001",
+   "chapter": 3,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "God renewed us in Christ when he loved us, so that all things in him are a new creation.",
+   "comment": "…A holy prophet said, “Take courage, Zion; do not let your hands grow slack. The Lord your God is in you, mighty to save you, and He will renew you in His love” (Zephaniah 3:16–17). For when God the Father loved us, then, at that very time, He renewed us in Christ. And indeed it is true that all things in Him are “a new creation; the old things have passed away, and new things have come” (2 Corinthians 5:17).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the renewal in love means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u07-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u07-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

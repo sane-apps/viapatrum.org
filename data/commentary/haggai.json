@@ -1,0 +1,88 @@
+{
+ "book": "Haggai",
+ "title": "The Fathers on Haggai",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 4,
+ "selected_count": 3,
+ "comments": [
+  {
+   "id": "HAG01-001",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 11,
+   "capsule": "After the return from Babylon the Israelites grew slack in rebuilding and were corrected by failed harvests and drought.",
+   "comment": "…After the return from Babylon, the sons of Israel, ordered by Cyrus to rebuild the temple, to pay their vows and to offer sacrifices, grew slack, pleading poverty and the hardship left by the captivity. For this they were corrected by measured chastisements: failed harvests and lack of rain (Haggai 1:9–11)…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the historical setting of the drought in the verse.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HAG02-002",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "God's own voice names the Spirit standing among his people, so the Spirit belongs to God's glory and is sent from God.",
+   "comment": "…And the voice of God says this about himself and the Spirit: “I am in your midst, says the Lord, and my Spirit stands in the midst of you” (Haggai 2:5). Therefore the Spirit is not foreign to the glory of God, having come forth ineffably from the ineffable mouth; nor is God himself without the Spirit, but the Spirit is God’s Spirit, and with God, sent from God, and supplied through the Son…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Basil of Caesarea",
+   "work": "Homily on the Holy Spirit",
+   "work_slug": "basil-homilia-de-spiritu-sancto",
+   "section": "2",
+   "url": "https://viapatrum.org/works/basil-homilia-de-spiritu-sancto/2/",
+   "from_cite": true
+  },
+  {
+   "id": "HAG02-003",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Haggai shows the dry land is one thing and the earth another, naming our ground dry land.",
+   "comment": "…Haggai shows clearly that “the dry land” is one thing and “the earth” another, giving the name dry land to this ground on which we are. He speaks thus: “Once more I will shake the heaven and the earth and the dry land and the sea” (Haggai 2:6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse lists earth and dry land separately.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "30",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/30/",
+   "from_cite": true
+  },
+  {
+   "id": "HAG02-004",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The house of greater glory is the Church of Christ, compared with the synagogue.",
+   "comment": "…someone will interpret what the prophet Haggai intends by saying, 'the glory of this house shall be greater than the first' (Haggai 2:9), that is, of the Church of Christ and the glorification within it, compared to the synagogue of the Jews, in which God alone was theologized and glorified.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says directly what the greater glory of the house refers to.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u07-rem-early",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u07-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

@@ -1,0 +1,1292 @@
+{
+ "book": "Song of Solomon",
+ "title": "The Fathers on Song of Solomon",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 69,
+ "selected_count": 37,
+ "comments": [
+  {
+   "id": "SS01-001",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "The ointment poured out is the name of the Only-begotten, whose fragrance the nations give off, and the maidens draw Him by following in His footsteps.",
+   "comment": "'Your name is ointment poured out' (Song of Songs 1:3). This also points to the name of the Only-begotten, called upon among all the nations, for all the nations that bear His name give off a sweet fragrance toward Him.\n\n'Therefore the maidens…' (Song of Songs 1:3). Paul too was one of the maidens, for he says, 'I can do all things in Christ who strengthens me' (Philippians 4:13). That is why he loved so deeply, saying, 'Who shall separate us from the love of Christ?' (Romans 8:35). And how did the maidens draw Him (Song of Songs 1:4)? By following in His footsteps and enjoying the ointments of the Gospel.\n\nAs for 'we will run' (Song of Songs 1:4), the words are the maidens', and they mean that we shall walk after the Lord God. In the present words she calls this kingdom a 'chamber' (Song of Songs 1:4).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the ointment, the maidens and their running in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "SS01-002",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "As the nostrils take in scent, the inner man takes in the fragrance of righteousness, and so the young women run to the smell of His ointments.",
+   "comment": "The outer man smells with nostrils, receiving fragrance and stench. And the inner man receives the fragrance of righteousness and the stench of sins with other nostrils … And Solomon too says in the Song of Songs, in the person of the young women, the daughters of Jerusalem: After you we will run to the smell of your ointments. As, then, with the nostrils we receive perceptible fragrance and perceptible stench, so according to the inner man there is a reception, in the one who is healthy according to the divine senses, of the fragrance of righteousness …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Dialogue with Heraclides",
+   "work_slug": "origen-dialogue-heraclides",
+   "section": "18",
+   "url": "https://viapatrum.org/works/origen-dialogue-heraclides/18/",
+   "from_cite": true
+  },
+  {
+   "id": "SS01-010",
+   "chapter": 1,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The bride says through repentance that she is black and beautiful, and she becomes luminous after reaching out her hand to God.",
+   "comment": "… it presents the bride saying through repentance: 'I am black and beautiful'; black indeed and double-natured because of idolatry and practical wickedness, but beautiful because of the withdrawal from them. And it happened to her to become luminous after having reached out her hand to God, as those seeing her with the benefactor say: 'Who is she, the one ascending, having become white?' (Song of Solomon 8:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u31-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u31-open/",
+   "from_cite": true
+  },
+  {
+   "id": "SS01-003",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The vineyard she did not keep is the Law's worship, which the sons of her mother the Synagogue, the scribes and Pharisees, commanded, and she counted it loss for Christ.",
+   "comment": "'They made me keeper…' (Song of Songs 1:6). Perhaps she is accusing herself because she did not keep her own vineyard, but left it for everyone who passes along the road to plunder, for the boar from the forest to ravage and the lone wild beast to graze on (Psalm 80:12–13). Or perhaps she is also glorifying God, because, though she was not able to keep her own vineyard, by neither tilling it nor keeping it she advanced so far that she could keep many vineyards.\n\nThat is, by 'the sons of her mother' (Song of Songs 1:6), her mother being the Synagogue, she means the scribes and Pharisees, who fought against those who believed in Christ and commanded them to keep the worship prescribed by the Law; for this is the vineyard. 'But I,' she says, 'did not keep it; for whatever was gain to me, I have counted as loss for the sake of Christ,' as the blessed Paul says (Philippians 3:7).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says who the sons of her mother are and what the vineyard is.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "SS01-004",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "His companions are the apostles, and the veiled one is the one with a veil over her heart.",
+   "comment": "'Like one who wraps herself beside the flocks of your companions' (Song of Songs 1:7). By His companions she means the apostles, for He said, 'No longer do I call you servants, but friends; for you are friends' (John 15:14–15). By 'one who wraps herself' she means 'one who is veiled', as Paul says, 'To this day, whenever Moses is read, a veil lies over their heart' (2 Corinthians 3:15).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "SS01-005",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "The repentant Synagogue asks Christ to make Himself known, and He answers that without repentance she will be found behind the nations.",
+   "comment": "So this is the voice of the repentant Synagogue speaking to Christ: 'Make Yourself known to me, so that, while You shepherd the Churches of Your companions, I may not remain with the veil over my heart' (Song of Songs 1:7). 'If you do not know yourself' (Song of Songs 1:8): that is, 'If you do not repent,' He says, 'you will be found behind the nations, since you have no fruits of righteousness but remain fruitless, and behind the flocks that I have gathered to Myself.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS01-006",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "The Church that received His faith is likened to the apostles, with the modest cheeks of the turtledove and a neck ready for Christ's yoke, unlike the Synagogue.",
+   "comment": "'I have likened you to My mare' (Song of Songs 1:9): that is, 'Having received My faith, O Church, you have been likened to the apostles.' Of them it is said, 'You will mount upon Your horses, and Your riding is salvation' (Habakkuk 3:8); and they were made ready against the chariots of the unseen Pharaoh. 'Your cheeks are like a turtledove's' (Song of Songs 1:10): through the turtledove He shows her modesty toward the Bridegroom, for the turtledove's cheeks are red.\n\nTo the Synagogue, on the contrary, it is said: 'You had the face of a prostitute; you were shameless toward all' (Jeremiah 3:3). By the neck (Song of Songs 1:10) He means the soul's readiness to submit; for what a fine ornament is a neck that has learned to bear the yoke of Christ (Matthew 11:29)!",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS01-007",
+   "chapter": 1,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Silver stands for divine teaching and gold for divine gifts, and before Christ the likenesses of Him were drawn from the Law and the Prophets.",
+   "comment": "In Scripture, silver usually stands for divine teaching, and gold for divine gifts (Song of Songs 1:11). Before Christ came among us, all things were likenesses and, as the Apostle says, a shadow of the good things to come (Hebrews 10:1). But Christ, having risen, has given humankind what is perfect; before the resurrection we had likenesses, drawn from the praises of Him in the Law and the Prophets.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS01-008",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "The nard and myrrh signify Christ's burial, and the two Testaments are the bride's breasts.",
+   "comment": "The nard and the bundle of myrrh (Song of Songs 1:12–13) signify the burial of Christ: Nicodemus brought these and wrapped His body in them (John 19:39–40). For breasts the bride has the two Testaments, and between them Christ lodges (Song of Songs 1:13).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a clear reading of nard, myrrh and the breasts.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS01-009",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "The Bridegroom doubles His praise of the bride for her contemplation and her action, and her dove's eyes show a mind that sees God alone.",
+   "comment": "The Bridegroom calls her beautiful, no longer only 'among women' as before (Song of Songs 1:8), but now also as one near Him, and so He doubles His praise of the bride (Song of Songs 1:15), praising both her contemplation and her action. By eyes He means the eyes of the mind and heart; and 'of a dove' marks their clear sight, in the sense in which the dove is also taken for the Spirit. He says, then, that the bride has received a mind that sees God alone.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the doubled praise and the dove's eyes.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-001",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Having received the rain from above and borne virtue, the bride compares herself to a flower of the plain, and Christ's coming has filled even the valleys with such flowers.",
+   "comment": "'I am a flower of the plain, a lily of the valleys' (Song of Songs 2:1). Since the bride has received the rain from above and has borne virtue, she compares herself to a flower of the plain; and she shows how much the coming of Christ has helped, since it has shown even the valleys, unfit for any sowing, full of such flowers. For by a valley she means what the demons who once dwelt in it had hollowed out.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the flower and the valleys in terms of Christ's coming.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-004",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "He bore fruit in virtue from the beginning and shares that fruitfulness with those among the trees of the grove.",
+   "comment": "… 'Like an apple in the trees of the grove, so is my brother among the sons' (Song of Solomon 2:3). For he himself from the beginning was bearing fruit in virtue, not knowing nor doing sin; therefore he also shares his own fruit-bearing quality with those who accompany the woods of the grove, being one who happens to be an apple in the midst.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u46-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u46-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "SS02-003",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 5,
+   "capsule": "Being hemmed in with apples is being made safe with the Gospel's words and ranked with His saints.",
+   "comment": "'Hem me in with apples' (Song of Songs 2:5): make me safe with the words of the Gospel, for these breathe the fragrance of Christ upon us. 'And may I too,' she says, 'be ranked with His saints'; for as He is an apple tree (Song of Songs 2:3), so those who share His body and partake with Him (Ephesians 3:6) are apples.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the apples in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-005",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The left hand is the Law and the right the Gospel, or the left is this life and the right the life to come, whose knowledge of divine things brings eternal life.",
+   "comment": "'His left hand…' (Song of Songs 2:6). The left hand is the Law, the right the Gospel. Or else the left is the present life and the right the life to come: the right hand that will embrace me when He says to those on His right, 'Come, you blessed of My Father' (Matthew 25:34). It also says elsewhere, 'Length of life and years of life are in the right hand of Wisdom, and in her left are riches and glory' (Proverbs 3:16). Her right hand, then, is the knowledge of divine things, from which comes eternal life; her left is the knowledge of human things, from which come riches and glory. So she says, 'My mind rises above human things, and divine knowledge will cover me.' For it is said again, 'Honor her, that she may embrace you' (Proverbs 4:8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives three readings of the left and right hand with Scripture support.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-006",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The same One is both our Bridegroom and our Archer, and the purified soul is both bride and arrow, aimed at the good mark and taken up into incorruptible eternity.",
+   "comment": "This shows, then, that the same One is both our Bridegroom and our Archer, and that the purified soul is both bride and arrow. As an arrow, then, He aims her at the good mark; as a bride He takes her up into fellowship in incorruptible eternity, granting through the right hand length of life and years of life (Proverbs 3:16), and through the left the riches of eternal goods and the glory of God, in which those who seek the glory of the world have no share. That is why she says, 'His left hand is at my head' (Song of Songs 2:6), the hand by which the arrow is aimed at the mark.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-008",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The left hand hints at the good things of this life, laid like a pillow beneath the head, and the right at the things to come; or else the hands are the actions of body and soul.",
+   "comment": "By the left hand, it seems, she hints at the good things of the present life, which she already enjoys; by the right, at the expectation of the things to come, held in promises. Their use, she says, as has been said, lies in promises and hopes. And it is well said that she is embraced by the right hand and that her head rests on the left. For the things of the present life, however useful and admired they may be thought, must be placed beneath the head of the perfect soul, supplying the body only with what it needs, as a pillow does for the head. But the things of the age to come, since they are divine and stand above human nature, she hinted at as surpassing by speaking of the embrace.\n\nOr perhaps, since hands are a symbol of actions, the actions of the left hand signify what belongs to the body and those of the right what belongs to the soul; and these, being on the right, have received the better lot and hold the needs of the body in their embrace. For as the embracing hand is above and holds within its arm what it embraces, so the actions directed toward the goal of the life to come hold fast every irrational movement of the body and keep life well ordered and bound together; and no one is able to plot against the soul that the Bridegroom has embraced.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-010",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "She appeals under oath to the daughters of the Jerusalem above to let love abound until God's will is fulfilled.",
+   "comment": "Then she turns her words to the daughters of the Jerusalem above (Song of Songs 2:7; Galatians 4:26). Her words are an appeal, made under oath, to make love abound and grow ever greater, until He who desires all people to be saved and to come to the knowledge of the truth (1 Timothy 2:4) brings His will to fulfillment.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says who the daughters of Jerusalem are and what the oath is for.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-011",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The bride perceives the voice as divine before she understands it, and she sees the Word lay hold of great truths without despising the lesser.",
+   "comment": "It is plain that the soul that is the bride of the Word, that is, the Church of Christ, perceives the voice as divine before she understands it. We the faithful experience the same: before we understand the voices of the Law and the Prophets, we are struck by them as full of divine grace.\n\nSuch is the phrase 'The voice of my beloved' (Song of Songs 2:8), set before the appearing of the Word from afar. Seeing Him lay hold of great truths without despising even the lesser ones, she says, 'Behold, He comes leaping upon the mountains, bounding over the hills' (Song of Songs 2:8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the voice comes first and what the leaping upon mountains and hills means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-open/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-012",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Throughout the book the Church longs for the Bridegroom when she is left to her trials and enjoys Him when He appears in His gifts, until made perfect we find Him making His dwelling with us.",
+   "comment": "Throughout the whole book, some things are said to the Bridegroom as present, and others as of one the bride is seeking. For with hard questions too, at times we search, at a loss for the answer, and at times we enjoy the answer, when the Word, the Bridegroom, shines upon our hearts. Then again we are at a loss over other things, and again He appears to us; and this happens many times, until, made perfect, we find the Bridegroom not only coming to us but also making His dwelling with us (John 14:23). So too the Church longs for Him when she is left to her trials, and He appears to her in His gifts. That is why she says, 'Behold, this One comes leaping upon the mountains' (Song of Songs 2:8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows why the bride sometimes seeks and sometimes enjoys the Bridegroom.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-open/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-021",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The mountains and hills are steps of progress in virtue, from a hill to a mountain and from lower mountains to higher.",
+   "comment": "For many mountains and hills are in the house of God, as from 'Behold, this one comes leaping upon the mountains, fleeing upon the hills' (Song of Solomon 2:8); and with each progress there is to ascend to a hill, and from the hill to a mountain, and from lower mountains to higher ones; for this is known both in the introductions of virtues and in the virtues themselves.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u22-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u22-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "SS02-013",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "He tears the nets the evil one has spread, and the Church receives the light through the windows of the Prophets and the nets of the Law while the wall of figures stands.",
+   "comment": "He comes also upon the nets that the evil one has spread near the Church, and having torn them, He teaches us to tread on them with contempt. …\n\n'Peering through the nets' (Song of Songs 2:9). Perhaps through the fisherman's craft he also meant the apostles. These things, then, the Church hears from the Word, receiving the light of truth through the windows of the Prophets and the nets of the Law, while the wall of teaching in figures still stands (Song of Songs 2:9), I mean the Law, which casts the shadow of the things to come (Hebrews 10:1)…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the window, the nets and the wall as the Prophets and the Law.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-open/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-022",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "The Savior entered the nets of temptation for the sake of those caught in them, and He calls them to rise.",
+   "comment": "I take the defeated in temptation to enter 'into' temptation, held in its nets. Into these nets, for the sake of those already caught in them, the Savior entered — 'stooping through the nets,' as said in the Song of Songs — and 'answers' those already caught by them, who entered 'into' temptation, and says, as 'bride' to his 'bride': 'Rise, come, my neighbor, my fair one, my dove.' (Song of Solomon 2:10)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-on-prayer/29/",
+   "from_cite": true
+  },
+  {
+   "id": "SS02-014",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 12,
+   "capsule": "The truth stood behind the wall and afterwards shines out, and the cutting is the spiritual harvest.",
+   "comment": "Behind it [the wall, the Law] the truth took its stand (Song of Songs 2:9), close by the place, and afterwards it shines out. Or else he spoke of the cutting (Song of Songs 2:12) as the cutting of the spiritual harvest, of which the Savior says, 'The harvest is plentiful' (Matthew 9:37).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-015",
+   "chapter": 2,
+   "verse_start": 10,
+   "verse_end": 12,
+   "capsule": "The spring of the first month shows the Church called from the Gentiles as a new budding, when Christ says the winter is past and the flowers have appeared, as human nature flourished once more after withering in death.",
+   "comment": "That those who are in Christ are a new creation (2 Corinthians 5:17), and, as it were, a new budding of times and of things, the figure of the first month (Exodus 40:2) would show this very well. In that month tender grass, freshly sprung, appears on the earth, plants flower again, and the varied beauty of the meadow flowers comes into view, while the fragrance of spring smiles. For it was in such a season, as it were, that Christ called the Church from the Gentiles, saying: ‘Arise, come, my companion, my fair one, my dove; for behold, the winter is past, the rain is gone, it has gone its way; the flowers have appeared in the land; the time of pruning has come’ (Song of Songs 2:10–12). For human nature flourished once more, like a plant, after it had withered away in death because of the transgression in Adam and the sin that tyrannized over us all.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the winter, rain and flowers as the renewal of human nature in Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "5",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/5/",
+   "from_cite": true
+  },
+  {
+   "id": "SS02-016",
+   "chapter": 2,
+   "verse_start": 10,
+   "verse_end": 12,
+   "capsule": "The martyrs' blessedness begins from something wintry, and only after the present winter is fought through comes what is said to the bride, that winter is past and flowers shall appear.",
+   "comment": "Let us not marvel if the martyrs' blessedness — to come in deep peace and calm and fair weather — must begin from something gloomier and, so to call it, wintry. First the narrow and afflicted road must be walked in winter, displaying the helmsmanship of the blessed each gained — that afterwards may come what in the Song of Songs is said to the bride who swam through winter: 'He answers, my kinsman says to me: Rise, come, my neighbor, my fair one, my dove. For lo, winter passed, the rain went, went its way.' And you still remember: no hearing 'winter passed' unless the present winter be warred robustly. After winter passes and rain departs, 'flowers shall appear' (Song of Solomon 2:12) — for 'planted in the Lord's house, in our God's courts they shall blossom.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "31",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/31/",
+   "from_cite": true
+  },
+  {
+   "id": "SS02-017",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "The Church that has passed through every winter of trial is shown that summer and cleansing are near.",
+   "comment": "To the Church that has passed through every winter of trial (Song of Songs 2:11) the signs in the air are shown, and that summer is near, of which the Psalms say, 'Summer and spring' (Psalm 74:17). For flowers have appeared to her, and the complete cleansing has drawn near, the time of what is called pruning (Song of Songs 2:12).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains winter, flowers and the time of pruning as trial and cleansing.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-open/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-023",
+   "chapter": 2,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Christ is the turtledove whose voice was heard, a pattern of gentleness, and the saints who send forth the divine word are turtledoves too.",
+   "comment": "For he himself [Christ] is truly the most vocal turtledove, the one from above, and likewise the gentlest dove. Indeed, in the Song of Songs it is written of him: ‘The voice of the turtledove was heard in the wilderness’ (Song of Songs 2:12). And he set himself before us as a type and pattern of the greatest and highest gentleness, saying: ‘Learn from me, for I am gentle and humble in heart’ (Matthew 11:29). … For they too [the saints] may rightly be understood as turtledoves, since they send forth the divine and holy word to those who listen, and are eager to make songs and melodies for the glory of God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "6",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/6/",
+   "from_cite": true
+  },
+  {
+   "id": "SS02-018",
+   "chapter": 2,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "A new vineyard of those called through faith has arisen, and Christ the true vine feeds its branches.",
+   "comment": "In its place a new vineyard has been raised up, made up of those called through faith to holiness. Of them the Bridegroom from heaven, that is, Christ, says: “The vines are in blossom; they have given their fragrance” (Song of Songs 2:13). He himself is the first, all-holy, and true vine, and we hang from him like branches, filled with the life-giving richness that comes from him.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos3-rem-close",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos3-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "SS02-019",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The outer wall shows safety, with help of every kind.",
+   "comment": "'In the shelter of the rock, close by the outer wall' (Song of Songs 2:14). The outer wall shows safety: once you are there, he says, you will find help of every kind.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a plain reading of the shelter of the rock and the outer wall.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS02-020",
+   "chapter": 2,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "She asks Him to leave the fruitless Synagogue for those once given to idols.",
+   "comment": "'Turn' (Song of Songs 2:17). She asks the bridegroom to leave the fruitless Synagogue and to come to those who have risen to heavenly height from a soul that was once sunken, brought low and given to idols.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS03-002",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The bride sought and did not find the bridegroom so that, distanced from Him, she might be more wounded by love, for love toward Him is raised by the distancing of the one loved.",
+   "comment": "One must observe whether it is said according to this thought by the bride of Christ in the erotic drama: 'On my bed in the night I sought him whom my soul loved and found him not; I called him, and he did not obey me. I will arise and go about the city, in the markets and in the streets, until I find him' (Song of Songs 3:1-4). For in the time of conjugal union and resting, whom he allegorically called night, having thought the divine bridegroom was present with her, she sought and found him not, and having called and not having him listening, it was so that something useful happened to her by being distanced, so that she might be more wounded by love toward him; for the love toward him is more raised by the distancing of the one being loved.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u15-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u15-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "SS03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "The bride seeking on her bed is the women who came to the tomb at dawn and did not find Jesus, and the angels who keep watch found her and she asks them where they have laid the Lord.",
+   "comment": "'On my bed by night I sought' (Song of Songs 3:1). He means the women who came to the tomb of Jesus at early dawn on the first day of the week and did not find Him (Luke 24:1–3). So by 'on my bed' she means either 'from bed', or she calls the Lord's tomb her own bed, since in it we are buried with Him (Romans 6:4). But she did not find Him, for she heard, 'He is not here; for He has risen' (Matthew 28:6). And the angels who keep watch found her (Song of Songs 3:3), and she asks them too, 'Where have you laid the Lord?' (John 20:13).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Reads the bride's night search as the women at the empty tomb.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS03-003",
+   "chapter": 3,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "When she had passed those she questioned, He met her and she took hold of Him, and her mother's house is the gathering of the apostles, to whom she announced the resurrection.",
+   "comment": "But when she [the bride] had passed those she questioned, He met her, saying, 'Rejoice' (Matthew 28:9). That is why she says, 'Scarcely had I passed from them when I found Him, and I will not let Him go' (Song of Songs 3:4). For she took hold of His feet (Matthew 28:9) and heard, 'Do not touch Me' (John 20:17). By her mother's house he means the gathering of the apostles, to which she went and announced the good news of Christ's resurrection (John 20:18).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Completes the reading of the finding and the mother's house.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS03-004",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Myrrh means she is buried with Him and frankincense that she has risen with Him and shares in His divinity, and she is perfumed too with the varied insights of knowledge.",
+   "comment": "'Perfumed with myrrh and frankincense' (Song of Songs 3:6). Myrrh, when she has been buried with Him; frankincense, when she has risen with Him and come to share in His divinity. And the soul of the Church is perfumed not only with these, but also with the varied insights of knowledge. For one who divides things with the utmost precision and examines them finely down to the least detail could be called a kind of perfumer, grinding fine and reducing to powder all the fragrant sayings with which the bride is now said to be perfumed.\n\nPerhaps, too, one who lives not according to the flesh but according to the Spirit (Romans 8:4), whose heart has in no way grown dull (Matthew 13:15), keeps the fragrance varied and of every kind, and makes a fragrance from all the things now called 'the powders of the perfumer' (Song of Songs 3:6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the myrrh and frankincense as burial and resurrection with Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS03-005",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The Church's soul comes up from the nations, leaving behind teachings empty of God.",
+   "comment": "One might also say that the holy soul of the Church, once a child bereft of God, comes up from the gathering of the nations, 'from the desert' (Song of Songs 3:6): she leaves behind teachings, words and deeds that are empty of God, and rises to the things of God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the coming up from the desert.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS03-006",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "The gold is the precious divine union and the purple rests upon the multitude called to the kingdom, and the litter was made out of love alone.",
+   "comment": "Let the spiritual union, precious and divine, be understood as the gold (Song of Songs 3:10). For gold coated the ark in the desert too, inside and out (Exodus 25:11), to make the divine union plain. The purple (Song of Songs 3:10) rests upon the multitude of those called to the kingdom. And whenever anyone believes, he receives into his heart Christ, who is the precious pearl (Matthew 13:46).\n\nAnd the litter, he says, was made from the daughters of Jerusalem out of love alone (Song of Songs 3:9–10): 'For God so loved the world that He sent His only-begotten Son, that everyone who believes in Him should not perish but have eternal life' (John 3:16).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the gold, the purple and the litter made of love.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS03-007",
+   "chapter": 3,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The Church from the nations speaks, and the day of the Passion is His wedding day.",
+   "comment": "It is the Church from the nations that says, 'Go forth and see' (Song of Songs 3:11). He calls the day of the Passion 'the day of His wedding', the day on which He took the Church as His bride through His blood (Acts 20:28).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says who speaks and what the wedding day is.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS04-001",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Her silence signifies obedience in everything.",
+   "comment": "Her silence (Song of Songs 4:1) signifies obedience in everything, as in the words, 'Be silent and listen, Israel' (Deuteronomy 27:9).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS04-002",
+   "chapter": 4,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The two fawns are the bride's two breasts, the moral and doctrinal teaching.",
+   "comment": "… the two fawns, the moral and the doctrinal teaching, are the bride's two breasts (Song of Songs 4:5); those nourished from them look toward God with keen sight. By the lilies he means the fragrance of the apostolic and Gospel words, on which we feed until the end.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the two fawns and the lilies.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS04-003",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The bride comes from Lebanon, a mountain full of idols, and passes through the law to the mystery of Christ.",
+   "comment": "'Come from Lebanon, bride' (Song of Songs 4:8). He teaches us where the bride comes from, and that she comes out of idolatry. For Lebanon is a mountain full of idols. From there, he says, you will come; and you will pass through the law, for without knowing the law you were instructed in the mystery of Christ.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Lebanon and where the bride comes from.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS04-004",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Lebanon signifies idolatry or pride, and the Church from the Gentiles, the bride of Christ, is called to come from wickedness into virtue and from unbelief into divine knowledge.",
+   "comment": "The name Lebanon, for the sake of allegory, signifies either idolatry or pride and arrogance. For in the Song of Songs, the Church from the Gentiles is the bride of Christ; he says, 'Come from Lebanon, O bride, to ascend and pass through from the beginning of faith' (Song of Solomon 4:8). Having received the word of Christ from the beginning, she comes to the one calling her from practical wickedness into moral virtue, and from ignorance and unbelief into a divine knowledge and a faith surpassing all through perfection.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u27-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u27-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "SS04-005",
+   "chapter": 4,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The bridegroom's friends, the angelic powers, praise her pure eye for the good alone, and call her sister for her freedom from passion and bride for her union with the Word.",
+   "comment": "'You have given us heart, my sister, bride' (Song of Songs 4:9). That is, you have drawn us to long for you by a single word of confession, which you held rightly, seeing with your inner eyes. For it was by submitting to the ornament on your neck that you made the confession. These words are spoken to her by the friends of the bridegroom, the angelic powers, I mean. For the activity of sight is twofold: one kind sees the truth, while the other wanders among vain things. Since the bride's pure eye is open to the nature of the good alone, while the other lies idle, the friends therefore offer their praise to one of her eyes. They call her sister because of the kinship that comes through freedom from passion, and bride because of her union with the Word.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says who speaks and why she is called sister and bride.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS04-006",
+   "chapter": 4,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Her eye looks toward the one and her soul is undivided, and her neck bears the Lord's yoke, so that through her they perceive the light.",
+   "comment": "Since, then, he says, your eye is one in that it looks toward the one, and your soul is one because it is not divided among differing dispositions, and the set of your neck is perfect, for it has taken the divine yoke upon itself, for this reason we confess that you have given us heart by these wonders (Song of Songs 4:9). This is what 'the ornament of your neck' means, namely the Lord's yoke (Matthew 11:29). That is, through yourself you have put into us a kind of soul and mind for perceiving the light. For in you, as in a mirror, we behold the Sun of righteousness (Malachi 4:2). And by saying it twice they lend credibility to what is said.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS04-007",
+   "chapter": 4,
+   "verse_start": 12,
+   "verse_end": 14,
+   "capsule": "The garden locked is shut to the world but open to the heavenly bridegroom, its spring sealed with the Holy Spirit, and its spices are the virtues.",
+   "comment": "'A garden locked' (Song of Songs 4:12). It is shut to the world, but open to the heavenly bridegroom. And the spring is sealed (Song of Songs 4:12) with the Holy Spirit, with whom we are anointed after baptism. For the virtues are signified by the spices (Song of Songs 4:14). By the trees of Lebanon he means the prophets. The myrrh and aloes show that Christ, once buried, came into fellowship with the saints who had gone before; for He went down into Hades and brought them up.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the locked garden, the sealed spring and the spices.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS04-008",
+   "chapter": 4,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "The bride sends away the cold north wind and calls the south wind, and her spices are good words and pious thoughts.",
+   "comment": "… concerning which in the Song of Songs the bride says to her bridegroom: 'Come, south wind,' the cold north wind and harsh wind having been sent away by her. The bride's saying goes thus: 'Awake, north wind, and come, south wind; blow through my garden, and let my spices flow' (Song of Songs 4:16). And good words and pious thoughts are the spices.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u10-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u10-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "SS05-001",
+   "chapter": 5,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "To be intoxicated, in the Bridegroom's words, is not to be strengthened by wine but made glad.",
+   "comment": "But those who drink, having taken a divine drink—that is, having been made glad—drink in a sober way. \"Eat, drink, be intoxicated, brothers,\" the Bridegroom says in the Song of Songs (Song of Songs 5:1). The \"be intoxicated\" does not mean this, not \"be strengthened\" from wine, but \"be made glad.\"",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'be intoxicated' means in the verse.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u11-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u11-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "SS05-005",
+   "chapter": 5,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "He would eat honeycomb after rising: the sweet after the bitter.",
+   "comment": "That after the resurrection He will eat from a honeycomb. In the Song of Songs it says, “I ate my bread with my honey” (Song of Solomon 5:1). The bitter before the passion, and the sweet after the resurrection.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Epiphanius of Salamis",
+   "work": "Testimonies from the Divine and Sacred Scriptures",
+   "work_slug": "epiphanius-testimonia-ex-divinis-et-sacris-scripturis",
+   "section": "u03-open",
+   "url": "https://viapatrum.org/works/epiphanius-testimonia-ex-divinis-et-sacris-scripturis/u03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "SS05-002",
+   "chapter": 5,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "As God He plundered Hades while accepting death on the cross.",
+   "comment": "[On the words 'I sleep':] 'On the cross,' he says, 'accepting death for the sake of mankind'; but the heart keeps watch (Song of Songs 5:2), in that as God He plundered Hades.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how He sleeps and yet His heart keeps watch.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS05-006",
+   "chapter": 5,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The bride is the virtuous soul, whose sleep is of the day and yoked to wakefulness.",
+   "comment": "But the bride—the soul adorned with the adornment of virtues—sleeping the sleep of the day, the sleep that has no share in night, the sleep yoked to wakefulness, said with good reason: “I sleep, but my heart is awake” (Song of Songs 5:2).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "SS05-003",
+   "chapter": 5,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Dripping lips confess His death.",
+   "comment": "… By the lips dripping myrrh (Song of Songs 5:13) he means lips that confess His death.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS05-004",
+   "chapter": 5,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "The pillars of marble may also be bases, built upon the foundation of the apostles and prophets.",
+   "comment": "'His legs are pillars of marble' (Song of Songs 5:15). These might also be bases, for those who are being built are built upon the foundation of the apostles and prophets (Ephesians 2:20). In due order, after the belly (Song of Songs 5:14), he praises the legs, which he says are pillars of marble set on bases of gold (Song of Songs 5:15).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the pillars of marble as the foundation of the apostles and prophets.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS06-001",
+   "chapter": 6,
+   "verse_start": 3,
+   "verse_end": 5,
+   "capsule": "She gives Him faith and He gives her the kingdom, pasturing in the purity of Scripture.",
+   "comment": "I give Him faith, and He gives me the kingdom (Song of Songs 6:3). He pastures in the purity of the Scriptures and of the holy doctrines. Turn your eyes away from those who disobey you (Song of Songs 6:5), and incline them toward me; for they, he says, have stirred up love in me.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the mutual giving and the pasturing in Scripture.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS06-002",
+   "chapter": 6,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "The queens, concubines and maidens are the differing souls approaching Christ, while the one perfect dove is the glorious Church.",
+   "comment": "'There are queens and concubines and maidens without number; my dove is one, my perfect one' (Song of Solomon 6:8-9). As it has been said concerning this: 'Her daughters have given her, and they shall bless her; queens and concubines shall praise her' (Song of Solomon 6:9), from which it is shown to one another that through the daughters they have been called maidens, concubines, and queens. It is made manifest from these words that the souls approaching Christ are such that some, having not yet the time for marriage, are maidens; but those coming to him after having been restored, some are noble and have ascended far above the world that became existent in six days. 'Sixty are queens,' referring to those having received the eight-day circumcision and possessing the spirit of the maturity of slavery. 'Eighty are concubines;' but the one surpassing them all according to the Spirit, having been perfected, to be a perfect dove of the Word, is the glorious Church, which has no nest, no wrinkle, or anything of that kind.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u21-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u21-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "SS06-004",
+   "chapter": 6,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The Holy Spirit, speaking in the person of the Lord, points to the one Church in the one dove, and no one who leaves that unity should think he holds the faith.",
+   "comment": "Certainly the other apostles were what Peter was, endowed with equal sharing both of honor and of power, but the beginning proceeds from unity, so that the Church of Christ may be shown to be one. The Holy Spirit also designates this one Church in the Song of Songs, speaking in the person of the Lord, and says: \"One is my dove, my perfect one; one is she to her mother, chosen to her who bore her\" (Song of Songs 6:9). Does someone who does not hold this unity of the Church believe that he holds the faith? Does someone who opposes and resists the Church trust that he is in the Church?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly who the one dove is.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/4/",
+   "from_cite": true
+  },
+  {
+   "id": "SS06-003",
+   "chapter": 6,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The bride emerges like the dawn, changes toward perfection like the moon coming to full, and then passes from the lunar light to the solar.",
+   "comment": "And the bride who is being hymned in the Song of Songs, 'emerging beautiful like the dawn' (Song of Songs 6:10), becomes 'like a chosen moon.' This change happens toward the better, toward the perfection; for in one way the moon changes: passing from the moon-like, it comes to the full moon. … In this way, the bride of the Word, the perfect soul, the church having been betrothed to him, emerges like the dawn. And she changes so as to become beautiful, chosen like a full moon. And after this he says: 'as a sun, a haze.' And from the lunar light it comes to the solar, being fulfilled of that prophecy which says: 'the moon shall be as the sun' (Isaiah 30:26).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the dawn, moon and sun as stages of the bride's growth.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u30-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u30-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "SS07-001",
+   "chapter": 7,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The craftsman is Christ the Creator, and the Church is obedient as He was.",
+   "comment": "'The work of a craftsman' (Song of Songs 7:1): by 'craftsman' he means Christ the Creator; for as He became obedient (Philippians 2:8), so has the Church. He speaks also of her chastity and her submission: her soul is subject to faith, and her body to chastity.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the work of a craftsman and the Church's chastity.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS07-003",
+   "chapter": 7,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The bride, the church or the perfected soul, does not have the commonly called belly but the one in which God's law is, and in which we endured pain and gave birth through the fear of Him.",
+   "comment": "We have, most wisely, in the Song of Songs, something said concerning the bride, who is the church or the perfected soul: 'Your navel is like a rounded vessel; the swelling of your womb is like a fenced threshing-floor of lilies' (Song of Solomon 7:2). And that the soul does not have this commonly called 'belly,' concerning which it is said: 'food for the belly and the belly for food' (1 Corinthians 6:13), but rather that one concerning which it is written: 'your law in the midst of my belly' (Psalm 40:8), and: 'from the fear of you in the belly we have endured pain and have given birth' (Isaiah 26:18).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u10-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u10-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "SS07-002",
+   "chapter": 7,
+   "verse_start": 2,
+   "verse_end": 4,
+   "capsule": "The mixed wine is Christ's blood in the priests' hands, and the neck is the deacons who carry Christ.",
+   "comment": "He shows her priesthood too, when he says, 'not lacking mixed wine' (Song of Songs 7:2), that is, the blood of Christ; for this is in the hands of the priests. Her neck (Song of Songs 7:4) he calls the deacons of Christ, because they carry Christ, the head of the Church. For they carry His holy body with a pure conscience (1 Timothy 3:9), confessing His mysteries.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the mixed wine and the neck as the priests and deacons.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "SS07-004",
+   "chapter": 7,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The ivory neck means dignified, temperate deacons.",
+   "comment": "That is why he called it [the neck] ivory: such deacons as Paul calls dignified, not given to much wine (1 Timothy 3:8).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS07-005",
+   "chapter": 7,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "Taken another way, the bond of the peoples' love is brought into a royal priesthood.",
+   "comment": "'A king bound in the galleries' (Song of Songs 7:5). Or, taken another way, he says that the bond of the peoples' love is brought into a royal priesthood (1 Peter 2:9). Or else, 'in your delight' (Song of Songs 7:6) means in your love, because some are reckoned even among the righteous themselves.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS07-006",
+   "chapter": 7,
+   "verse_start": 7,
+   "verse_end": 10,
+   "capsule": "The breasts are likened to clusters that hold spiritual gladness, and the bride's food is made holy since Christ feasts with her.",
+   "comment": "The breasts are likened to clusters (Song of Songs 7:7), clusters that hold spiritual gladness. Or it means that I bring the confession, and 'His turning is toward me' (Song of Songs 7:10), either at the second coming, or also from the people of the Jews. So the bride's food is made holy, since Christ feasts with her.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS08-001",
+   "chapter": 8,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The Church prays that the Savior may come and dwell in Judea.",
+   "comment": "That is, the Church prays that the Savior may come to dwell in Judea, by the providence of the One who gives Him to mankind, so that He may nurse at the breast of the Mother of God (Song of Songs 8:1).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "SS08-002",
+   "chapter": 8,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Finding Him outside means outside Jerusalem, where He was crucified.",
+   "comment": "'Finding you' (Song of Songs 8:1): that is, outside Jerusalem, where He was crucified (Hebrews 13:12). Or he means the burial that Joseph and Nicodemus provided (John 19:38–40). By pomegranates (Song of Songs 8:2) he means the saints.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a short reading of finding Him outside and the pomegranates.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS08-004",
+   "chapter": 8,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The church leans on the Word, for He is its support and foundation.",
+   "comment": "And concerning the church it is said: 'Who is this that ascends, leaning upon her brother?' (Song of Solomon 8:5). For without the Word it is not possible for the church to be; for this is its support and foundation.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the church leans upon.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u04-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "SS08-005",
+   "chapter": 8,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The walls of the Church are fire.",
+   "comment": "'Its encircling walls are walls of fire' (Song of Songs 8:6): the walls of the Church, he says, are fire.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS08-006",
+   "chapter": 8,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The many waters that cannot quench love are not sensible waters but lawlessness, which stirs up hatred and shuts out the things of love.",
+   "comment": "'Many waters will not be able to quench the love' Song of Songs 8:7; but this does not happen from the sensible, but from that from which a little virtue is said to be, from 'because the lawlessness has been multiplied, the love of many will be cooled' Matt 24:12. Is not the water that attempts to quench the loving disposition lawlessness? For this stirs up hatred and shuts out the things of love",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what the many waters stand for.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u05-open",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u05-open/",
+   "from_cite": true
+  },
+  {
+   "id": "SS08-007",
+   "chapter": 8,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Many waters cannot quench love, for one is not overcome by the opposing power, and the waters mean the strange sons.",
+   "comment": "Regarding the things which are said, 'Many waters cannot quench love' (Song of Songs 8:7), being used as a symbol, one is not able to be overcome once by the opposing power, about which the saint cries, 'Save me from many waters' (Psalm 144:7), which leads to 'from the hand of strange sons' (Psalm 144:7), water meaning the strange sons.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "SS08-008",
+   "chapter": 8,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The vineyard is the Church, and Baal-hamon means among those who have believed.",
+   "comment": "The spiritual Solomon came to have a vineyard (Song of Songs 8:11), and he means the Church. Baal-hamon means 'among those who have believed'. And who are the ones who have believed, if not those who received His commandments?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the vineyard and Baal-hamon.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "SS08-009",
+   "chapter": 8,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "The one who sits in the gardens watches over the Churches, and the bride asks Him to come to the saints.",
+   "comment": "The one who sits in the gardens (Song of Songs 8:13) watches over the Churches. The companions listen, and they do not judge; rather, the Son does all the judging (John 5:22). The bride longs to hear, 'Enter into the joy of your Lord' (Matthew 25:21). She also asks Him to cast out the wicked, and by saying 'Flee' (Song of Songs 8:14) she asks Him to come to the saints.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the one who sits in the gardens and the closing 'Flee'.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on the Song of Songs",
+   "work_slug": "cyril-fragmenta-canticum",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-canticum/u03-rem-close/",
+   "from_cite": false
+  }
+ ]
+}

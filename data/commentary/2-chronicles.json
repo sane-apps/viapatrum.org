@@ -1,0 +1,143 @@
+{
+ "book": "2 Chronicles",
+ "title": "The Fathers on 2 Chronicles",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 7,
+ "selected_count": 4,
+ "comments": [
+  {
+   "id": "2CH12-001",
+   "chapter": 12,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The prophet threatened them with slavery to Shishak, so they would know serving God and serving kings.",
+   "comment": "… The sale is the alienation and the coming to be under human masters instead of God. This is what he also threatened Jeroboam [the KJV has Rehoboam] and the people with him through Shemaiah the prophet: that they would become slaves to the Egyptian king Shishak, and they would know the slavery of God and the slavery of the kings of the earth (2 Chronicles 12:8).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2CH19-001",
+   "chapter": 19,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Jehoshaphat was reproached through the prophet for befriending one whom God hated.",
+   "comment": "… So the greatest proof of loving the law is hating those who have turned aside from the law. For this reason Jehoshaphat’s friendship with such a person [Ahab] became a reproach through the prophet, because he loved the one hated by God (2 Chronicles 19:2).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u08-open",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u08-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2CH20-001",
+   "chapter": 20,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "Jehoshaphat, by God's promise, saw his enemies destroyed without fighting.",
+   "comment": "… This is what happened to Jehoshaphat according to the promise, so that without fighting—but singing and praising God through one another—he saw the enemies destroyed. For it says, \"They came to the watchtower of the wilderness and looked and saw the multitude, and behold, all were dead, fallen on the ground, and there was no one saved\" (2 Chronicles 20:24).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the verse shows God's help without battle.",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u05-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u05-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2CH26-001",
+   "chapter": 26,
+   "verse_start": 16,
+   "verse_end": 21,
+   "capsule": "Uzziah, made proud by luxury and fame, tried to burn incense in the temple himself and was struck with leprosy.",
+   "comment": "… For from excessive luxury, and overcome by the height of his fame, he [Uzziah] grew in a way proud; and, mastered by the sickness of arrogance, he rose up against the divine Law itself. For he thought he ought to crown himself with the glories of the divine priesthood as well. He attempted to force his way into the divine temple, to burn incense to God himself, by his own hand, and so to perform unlawfully the rites the Law prescribes. For this reason he was struck with leprosy at once and was held in the deepest dishonor; for under the Law one gripped by the disease of leprosy is unclean (2 Chronicles 26:16-21).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "prologue",
+   "url": "https://viapatrum.org/works/cyril-isaiah/prologue/",
+   "from_cite": true
+  },
+  {
+   "id": "2CH27-001",
+   "chapter": 27,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Jotham followed his father's practices but did not, like Uzziah, seek to offer incense as a priest.",
+   "comment": "When Azariah, also called Uzziah, had died, Jotham succeeded to the kingdom and followed the aim and practices of his own father. He too is said to have done what was right in the eyes of the Lord, as Uzziah had, except that he did not remove the high places, but the people still burned incense on the high places (2 Kings 15:34–35). Uzziah had sought, against what was lawful, to serve God as a priest and to offer incense, and for this reason he was struck with leprosy (2 Chronicles 26:16–21). Jotham, however, did not do so (2 Chronicles 27:2).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'he entered not into the temple' refers to.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos4-rem-close",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos4-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2CH28-001",
+   "chapter": 28,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Ahaz shut the temple, stopped the feasts, set up altars everywhere, and burned his own children as sacrifices.",
+   "comment": "When Jotham died, Ahaz succeeded to the scepter, a most loathsome man, hateful to God, and full of a wickedness that had reached its very height. He even shut the divine temple itself and would not allow the God of all to be honored with the sacrifices of the Law. He also stopped the customary feasts of the Jews, and, setting up altars in every place in Jerusalem, he ordered the people to worship things made by hand and to serve the host of heaven. He even “made his own children pass through the fire” (2 Chronicles 28:3), that is, burned them as a sacrifice to the unclean demons; and, in a word, there was no form of impiety he did not practice.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a plain account of Ahaz's idolatry and what passing through the fire meant.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "prologue",
+   "url": "https://viapatrum.org/works/cyril-isaiah/prologue/",
+   "from_cite": true
+  },
+  {
+   "id": "2CH28-002",
+   "chapter": 28,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Pekah's great slaughter of Judah came because the impieties of Ahaz provoked God.",
+   "comment": "When he too died, Ahaz succeeded to the kingdom, while Pekah son of Remaliah was reigning over Israel, that is, over the twelve tribes. He waged war against Ahaz and Judah, and killed a hundred and twenty thousand in one day (2 Chronicles 28:6). For the God of all was provoked by the impieties of Ahaz, of whom it is written in the Second Book of Kings that he walked in the way of the king of Israel (2 Kings 16:3).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the reason for the defeat.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "logos4-rem-close",
+   "url": "https://viapatrum.org/works/cyril-isaiah/logos4-rem-close/",
+   "from_cite": true
+  }
+ ]
+}

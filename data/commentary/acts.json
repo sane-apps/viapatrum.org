@@ -1,0 +1,1460 @@
+{
+ "book": "Acts",
+ "title": "The Fathers on Acts",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 78,
+ "selected_count": 43,
+ "comments": [
+  {
+   "id": "AC01-001",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Christ showed his wounds and ate so that the disciples would recognize him as the one who rose.",
+   "comment": "… And just as having risen from the dead and appearing to the disciples, desiring to confirm to them that the body which he had has risen, he showed the marks of the wounds, he showed the side, not that the body possesses a side—for to have a side is difficult and unusual—but so that he might be fully known as the one who rose, …\n\nNot so that we might eat, for he ate after the resurrection, but so that they might see that he, whom he said, was himself the one who rose. This indeed Luke says: 'To whom he also proved himself alive after his suffering, by showing many proofs and by eating and touching' (Acts 1:3). Observe that he also proved himself alive after his suffering by eating. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the risen Christ ate and showed his wounds.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u12-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u12-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC01-002",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The apostles are taught not to pry into what is hidden in God but to fulfill their ministry.",
+   "comment": "He said to them: 'It is not for you to know the times or the seasons which the Father has set in his own authority' (Acts 1:7).\n\nFor it is not necessary to be overly curious about things that are too secret and hidden in God, and through these things he taught; rather, they wanted to go and were very youthful towards what is beneficial, and they wanted to fulfill the ministry of the apostleship, having entrusted the knowledge of all things to God. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Lord withholds the times and seasons.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "AC01-003",
+   "chapter": 1,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The power promised in Acts 1:8 is the power of the Holy Spirit, without whose coming we have no power or hope toward God.",
+   "comment": "… For the Savior says in the deeds: 'But you will receive power, upon the coming of the Holy Spirit upon you' (Acts 1:8). Just as without his coming, there is to us no power or hope toward God. And it must be understood by this, first, that the presence of the Holy Spirit signifies that he has come by authority; second, that he did not come as a mere messenger, but was foretold by him, the great God and Savior. And again therefore he says: 'But you sit in the city, until you are clothed with power from on high' (Luke 24:49/1:8). And this was the power of the Holy Spirit. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the promised power is.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u15-rem-close",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u15-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC01-005",
+   "chapter": 1,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "The psalm that speaks of Judas is the one the Holy Spirit spoke through David, though an objector may say its words belong to the Savior.",
+   "comment": "It was necessary for Scripture to be fulfilled, which the Holy Spirit foretold through the mouth of David about Judas (Acts 1:16).\n\nIn that psalm the things about Judas are written. Someone might say that the Holy Spirit is not speaking, for clearly the words belong to the Savior when he says: “O God, do not pass over my praise in silence, for the mouth of the sinner and the mouth of the deceitful have opened against me” (Psalm 108:2 LXX / Psalm 109:2 Hebrew), and so on until: “And let another take his office” (Psalm 108:8 LXX / Psalm 109:8 Hebrew).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragment from the Homilies on the Acts of the Apostles",
+   "work_slug": "origen-acta-homily-scrap",
+   "section": "frag-open",
+   "url": "https://viapatrum.org/works/origen-acta-homily-scrap/frag-open/",
+   "from_cite": false
+  },
+  {
+   "id": "AC01-008",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Judas did not die by strangulation but lived on after it, as the Acts of the apostles declare.",
+   "comment": "… Observe that Judas did not die from strangulation, but lived on after being driven to it before being suffocated. And the deeds of the apostles declare this, that 'having become rash he struck' (Acts 1:18) and the following.\n\nBut this is more clearly recounted by Papia, the pious disciple of John the Apostle, saying: Judas fell upon a great example of impiety in this world; for having become so much a part of the flesh, such that he could not easily pass through the narrowness, it is said that his entrails were spilled out by the narrowness. Having become so much a part of the flesh that he could not pass easily even where the narrowness passes, he could not pass even just the size of the head; for they say the eyelids of the eyes were so swollen that he could not see the light at all, and his eyes could not even be seen by a medical lens; such depth they had from the external appearance. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on Matthew",
+   "work_slug": "apollinaris-fragmenta-matthaeum",
+   "section": "u05-open",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-matthaeum/u05-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC01-011",
+   "chapter": 1,
+   "verse_start": 25,
+   "verse_end": 26,
+   "capsule": "The whole of Psalm 109 prophesies about Judas, including that he cut himself off from the apostles and another was chosen.",
+   "comment": "… If we must also set out an argument about Judas that will put them to shame, we shall say that in the Book of Psalms the whole of the hundred and eighth Psalm (Psalm 109) contains the prophecy about Judas. It begins: “O God, do not pass over my praise in silence, for the mouth of a sinner and the mouth of a deceiver have been opened against me” (Psalm 109:1–2). It is also prophesied in it that Judas cut himself off from the number of the apostles because of his sin, and that another was chosen in his place (Acts 1:25–26); and this is shown in the words, “And let another take his office” (Psalm 109:8). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how the choice of Matthias fulfils the psalm.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "11",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/11/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-001",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Pentecost is kept under both covenants, and in Acts the Holy Spirit was given when it was fulfilled.",
+   "comment": "… Thus also in the feast of the weeks, the Pentecost is celebrated according to the old and the new covenant; for you have in the Acts of the Apostles that when the Pentecost was fulfilled (Acts 2:1), the gift of the Holy Spirit was given, and the various gifts of the Spirit were measured; for it was necessary to exceed the seven times seven number and to take the beginning of another such number and thus be perfected. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u18-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u18-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-002",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Some spoke in tongues they had not known before, others interpreted, and Paul calls the gift a sign for the faithful.",
+   "comment": "… And there appeared to them divided tongues like fire.\n\nSome spoke with tongues, although they did not know them before; others understood, interpreting, although they had not previously been accustomed to such things.\n\nThe divine Paul boasts of those who then received the grace to speak in tongues, not as a portion of charisma, but as a sign in order to the faithful, and he also set forth a prophetic word: 'That I will speak in different tongues and different lips to this people, and even so they will not believe' (Isaiah 28:11). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the speaking in tongues was and what it was for.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "AC02-004",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 10,
+   "capsule": "Those about to proclaim the saving message to every nation were given the tongues as a sign, and they spoke the languages by the Spirit's working.",
+   "comment": "… And after a little while: when those who were mystagogues under the sun were about to proclaim the evangelical and saving message to every nation and every language, the tongues gave them a sign.\n\nBeing men of Galilee and having been brought up in Judea, Hebrews and from Hebrews, Medes and Parthians, and indeed Elamites, and those from the middle of the flowing rivers, Cappadocians and Egyptians, they spoke in their own languages; and the matter was being accomplished for them by the Spirit's working and grace. …\n\nBut the manner of the economy was what was being done; however, not all understood. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "AC02-005",
+   "chapter": 2,
+   "verse_start": 22,
+   "verse_end": 24,
+   "capsule": "Death belonged to the humanity of Jesus without injury to his divinity, and it belonged to divinity to raise him.",
+   "comment": "… The apostle Peter’s assertion agrees: ‘People of Israel, listen: Jesus of Nazareth, a man approved by God among you, you killed through the hands of the wicked. God raised him, releasing the pains of the underworld.’ Again: ‘God raised this Jesus, of whom we are all witnesses’ (Acts 2:22–24, 32). There it belonged to humanity to undergo death without injury to divinity, and to divinity to raise that man from the dead. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who suffered death and who raised him in Peter's words.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "6.36",
+   "url": "https://viapatrum.org/works/julian-to-florus/6.36/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-006",
+   "chapter": 2,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "Christ, who is Life by nature, could not be held by death and came back to life.",
+   "comment": "… For Christ sprang up again and came back to life, ‘having loosed the pangs of death’ (Acts 2:24), as it is written. Since he is Life by nature, as God, how could he be held by death (Acts 2:24), and not rather triumph over corruption? …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why death could not hold him.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "13",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/13/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-007",
+   "chapter": 2,
+   "verse_start": 27,
+   "verse_end": 31,
+   "capsule": "The apostles interpreted the psalm as saying that the Savior went down into Hades.",
+   "comment": "… Is what was said in the Psalms not true, interpreted by the apostles in their Acts, concerning the Savior’s having gone down into Hades? It is written that the fifteenth Psalm is borne upon him: “For you will not abandon my soul to Hades, nor will you give your holy one to see corruption.” (Acts 2:27–31) Then Jesus Christ is in Hades. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homily on Saul and the Medium of Endor",
+   "work_slug": "origen-homily-1samuel-28",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-homily-1samuel-28/6/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-009",
+   "chapter": 2,
+   "verse_start": 33,
+   "verse_end": 33,
+   "capsule": "Jesus, exalted to God's right hand, received the Spirit from the Father and poured it out, having first humbled himself.",
+   "comment": "… The divine Peter proclaimed to the Jewish crowds concerning the Spirit, saying that Jesus, having been exalted to the right hand of God, received the promise of the Spirit from the Father and poured it out (Acts 2:33). You hear in these words that He was exalted to the right hand of God, received and gave the Spirit; He was exalted, of course, when He humbled Himself. Just as He willingly humbled Himself for this purpose, so again He exalts Himself, being the hand of the Father by which all things are worked in a godly manner. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Peter says about the exalted Jesus and the Spirit.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u03-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-010",
+   "chapter": 2,
+   "verse_start": 33,
+   "verse_end": 35,
+   "capsule": "Peter's words show the whole mystery of the Word's becoming human, emptied for the human yet exalted into what he was.",
+   "comment": "… “Therefore, having been exalted by the right hand of God and having received from the Father the promise of the Holy Spirit, he poured out this which you see and hear. For David did not go up into the heavens; yet he himself says: The Lord said to my Lord: Sit at my right until I put your enemies as a footstool of your feet.” (Acts 2:33–35) (Psalm 110:1) In these we may behold the whole mystery of the Only-begotten’s becoming human. For existing in the form and equality of the Father, the God-Word from him—the all-powerful right hand and all-working hand—is said to have been emptied (Philippians 2:6–9) because of the human, yet is exalted again not into a foreign dignity and not by crossing into what had not long belonged to him, but into what he was; and the Word, having appeared, is for this reason also co-seated with God and Father.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "41",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/41/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-011",
+   "chapter": 2,
+   "verse_start": 36,
+   "verse_end": 36,
+   "capsule": "Jesus becomes Lord and Christ to each person who begins to serve him.",
+   "comment": "… Thus also in the deeds of the apostles he says: 'Let all the house of Israel know securely this, that God made him both Lord and Christ' (Acts 2:36). He becomes Lord of those fleeing to serve him. If therefore anyone begins to serve him even today, he has become Lord to him today. And if anyone subjects him to his own kingdom and to his own priesthood, he has become Christ to him today; for the Christ declares nothing other than king and high priest. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in what sense God made him Lord and Christ.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u18-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u18-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC02-012",
+   "chapter": 2,
+   "verse_start": 36,
+   "verse_end": 36,
+   "capsule": "God made Lord the Jesus who suffered, the one who stretched out his hands upon the cross.",
+   "comment": "… since God also made him Lord and Christ, as the apostles say when speaking with one mind to Israel according to the flesh: \"Let all the house of Israel therefore know with certainty that God made him Lord and Christ, this Jesus whom you crucified\" (Acts 2:36). God therefore made the Jesus who suffered Lord. He did not make the Wisdom Lord, nor the Word, who from the beginning holds the power of lordship. He made Lord the one who stretched out his hands upon the cross, lifted high.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Eustathius of Antioch",
+   "work": "Oration on “The Lord Created Me”",
+   "work_slug": "eustathius-oratio-dominus-creavit",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/eustathius-oratio-dominus-creavit/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC03-001",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The healing that followed the words of Acts 3:6 was done through the Spirit, and so great a wonder compels assent to the divinity of the Only-begotten.",
+   "comment": "… Faith is what draws the soul to assent by means that surpass logical methods; faith is what comes about not by geometrical necessities but by the energies of the Spirit. “In the name of Jesus Christ of Nazareth, rise up and walk” (Acts 3:6). The deed followed that voice through the Spirit. From the wonder, the acceptance of the divinity of the Only-begotten became necessary for those who saw. Tell me, what is more compelling toward assent: the weaving together of propositions dragging their conclusion along after them, or a wonder so great, seen so clearly, surpassing every human power? …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the healing at the Temple gate shows.",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Psalm 115",
+   "work_slug": "basil-homilia-in-psalmum-115",
+   "section": "1",
+   "url": "https://viapatrum.org/works/basil-homilia-in-psalmum-115/1/",
+   "from_cite": true
+  },
+  {
+   "id": "AC03-003",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "The times of refreshing that Peter foretells are the coming time when the Lord appears and mercy comes down from heaven.",
+   "comment": "He [the psalm's speaker] fittingly called this entire time \"night,\" in which a human being sleeps while being put to death, and \"morning\" the time that is coming, in which we will live when the Lord appears and mercy comes down from heaven. He asks that the sun come and the day shine forth, and that enduring gladness be given to the righteous in place of the days in which we were afflicted, falling into countless evils. These were the times of refreshing that Peter also foretells, into which he says the appointed Jesus our Lord will be sent (Acts 3:20). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the times of refreshing are.",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u05-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u05-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC03-004",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "The words until the times of restoration mark an age to come in which all things reach the perfection of restoration.",
+   "comment": "… For this reason also the Acts of the Apostles concerning this man, whom the Word of God took and having taken sits at the right hand of the Father, teach in this way, saying, 'whom it is necessary to receive into heaven until the times of restoration' (Acts 3:21). And these, as if defining a certain boundary and a deadline in which it is fitting the economy according to man to be joined to the Word, say so. For what else does 'until the times of restoration' mean, except to signify to us an age to come, in which it is necessary for all things to attain the perfection of restoration? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Marcellus of Ancyra",
+   "work": "Fragments",
+   "work_slug": "marcellus-ancyranus-fragmenta",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/marcellus-ancyranus-fragmenta/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC03-005",
+   "chapter": 3,
+   "verse_start": 22,
+   "verse_end": 23,
+   "capsule": "The prophet whom Moses foretold and whom all must hear is the Savior, who is also high priest and physician.",
+   "comment": "… He [the Savior] truly prophesied to all the nations. For he is, as he is ten thousand other things, also a prophet. As he is high priest, as he is savior, as he is physician, so he is also prophet. Moses, prophesying about him, did not say only 'a prophet,' but said it with a special force: 'The Lord your God will raise up for you a prophet from your brothers, like me (Deuteronomy 18:15); him you shall hear, and it shall be that whoever does not hear that prophet shall be destroyed from his people.' (Acts 3:23) …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the prophet like Moses is.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "1.12",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/1.12/",
+   "from_cite": true
+  },
+  {
+   "id": "AC04-001",
+   "chapter": 4,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Peter applies the psalm's rejected stone, a name for the Savior, to the leaders who despised him.",
+   "comment": "… Even the named mountain, Savior, is called a stone in the saying: 'The stone which the builders rejected, this has become the head of the corner' (Ps 118:22). Remembering this word in the Acts of the Apostles, the preeminent disciple of the Savior, Peter, most strictly rebuked the Pharisees, scribes, and Sadducees who were listening to the Jewish teaching, saying: 'This is the stone which was despised by you, the builders, which has become the head of the corner' (Acts 4:11). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the rejected stone is.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u07-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u07-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC04-004",
+   "chapter": 4,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Unlettered men spoke boldly to Jews and other nations and succeeded, which points to a divine power given them by Jesus.",
+   "comment": "… But as it is, the Gospel records that these fishermen and tax collectors had not learned even their first letters (Acts 4:13), and on this point Celsus has believed them, as telling the truth about their lack of learning. Who, then, seeing such men speaking boldly not only to Jews about faith in Jesus but also preaching him among the other nations, and succeeding, would not ask where their power to persuade came from? …\n\nAnd who would not say that Jesus fulfilled the words “Come after me, and I will make you fishers of men” (Matthew 4:19) by some divine power in his apostles? …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the apostles' lack of learning shows.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "62",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/62/",
+   "from_cite": true
+  },
+  {
+   "id": "AC04-006",
+   "chapter": 4,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "When the apostles say they cannot stop speaking, the word means not that it is impossible but that they could not bear to be silent.",
+   "comment": "… You take the word “cannot” in two ways, both in common usage and in the divine Scripture. “Cannot” is said both of things that are impossible and of things that are not permitted. Not being able is one thing; not being permitted is another. About impossible things Paul speaks this way: “The blood of bulls and goats cannot take away sins” (Hebrews 10:4). For the blood of an irrational animal does not cleanse the passions of a rational soul. About things not permitted, the apostles say in Acts: “We cannot,” they say, “stop speaking about what we have seen and heard” (Acts 4:20). And yet they were unable to stop speaking, for they could not bear to be silent, lest they seem to deny the grace of the one who worked wonders. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the apostles mean by we cannot.",
+   "author": "Amphilochius of Iconium",
+   "work": "On “It Is Not Possible”",
+   "work_slug": "amphilochius-in-illud-non-potest",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/amphilochius-in-illud-non-potest/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC04-007",
+   "chapter": 4,
+   "verse_start": 32,
+   "verse_end": 32,
+   "capsule": "The believers' oneness of soul and mind, and their united prayer, is why their prayers were effective.",
+   "comment": "This unanimity once existed under the apostles. So the new people of believers, keeping the Lord's commands, held fast to its love. Scripture proves this when it says: \"The crowd of those who had believed acted with one soul and mind\" (Acts 4:32). And again: \"They were all persevering with one mind in prayer, together with the women and Mary the mother of Jesus and his brothers\" (Acts 1:14). That is why they prayed with effective prayers; that is why they were able to obtain with confidence whatever they asked from God's mercy.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the first believers' prayers were answered.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "25",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/25/",
+   "from_cite": true
+  },
+  {
+   "id": "AC05-001",
+   "chapter": 5,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Satan fills the heart of one who is not watchful, not by being partaken of but by deceiving and working malice.",
+   "comment": "… But they again raise objections, saying: “It is written, allegedly, concerning Ananias: ‘Why has Satan filled your heart?’ (Acts 5:3); and concerning Judas, that ‘Satan entered into him’ (John 13:27).” To them it must be said that he fills the one who does not attend to “Do not let your foot be moved, and he who keeps you will not slumber” (Psalm 121:3; LXX 120:3) — not by being partaken of, nor by riding upon the soul as it were, but by deceiving, and working in the treacherous manner of malice, and making his own wickedness a mere side-show. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that Satan filled Ananias's heart.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u06-rem-close",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u06-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC05-003",
+   "chapter": 5,
+   "verse_start": 29,
+   "verse_end": 29,
+   "capsule": "Laws that disagree with the divine laws are not laws in the proper sense, or are laws of wicked men, so we must obey God rather than men.",
+   "comment": "… And according to what laws does Celsus want us to offer acceptable sacrifices to the demons? If according to the laws established in the cities, let him prove that they agree with the divine laws. But if he cannot do this (for the laws of the many cities do not even agree with one another), then clearly they are either not laws in the proper sense, or laws of wicked men, which we must not trust; for “we must obey God rather than men” (Acts 5:29). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "26",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/26/",
+   "from_cite": true
+  },
+  {
+   "id": "AC05-004",
+   "chapter": 5,
+   "verse_start": 36,
+   "verse_end": 39,
+   "capsule": "Theudas and Judas the Galilean claimed greatness and were overthrown, while Gamaliel says that what is from God cannot be overthrown.",
+   "comment": "… But since we examine these matters with a love of truth, we shall say that a certain Theudas arose among the Jews before the birth of Jesus, “saying that he was somebody great”; and when he died, those he had deceived were scattered (Acts 5:36). After him, “in the days of the census” (Acts 5:37), about the time when Jesus seems to have been born (Luke 2:1–2), a certain Judas the Galilean led many of the Jewish people to revolt with him, as a wise man and one bringing in something new. When he too paid the penalty, his teaching was overthrown, and it survived only among a very small number indeed. … But it is not unreasonable to quote what was said, very wisely, by Gamaliel, as recorded in the Acts of the Apostles, to show how those men were strangers to the promise, being neither sons of God nor powers of his, while Christ Jesus was truly the Son of God. Gamaliel said there: “If this plan and this word are from men, they will be overthrown,” as the movements of those men were overthrown when they died; “but if it is from God, you will not be able to overthrow this man’s teaching, or you may even be found fighting against God” (Acts 5:38–39). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "57",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/57/",
+   "from_cite": true
+  },
+  {
+   "id": "AC06-003",
+   "chapter": 6,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "What the accusers called blasphemy against the place and the law were prophecies that came from God, so they are false witnesses.",
+   "comment": "… “This man does not stop speaking words against this holy place and the law” (Acts 6:13).\n\nWhat words are these? “For we have heard him say that this Jesus of Nazareth will destroy this place and will change the customs that Moses handed down to us” (Acts 6:14). Rightly are you called false witnesses and slanderers, because you speak the truth as though it were not the truth; because you call blasphemies against God the prophecies that came from him and concern this place; and because you count as a setting aside of the law the very things he himself threatened would come to pass. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Stephen's accusers are called false witnesses.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-001",
+   "chapter": 7,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The high priest's question is answered by the crimes of a people who plotted, hired slanderers and bought false witnesses.",
+   "comment": "This is the testimony the law bears, and Moses through it, or rather God in each of them, against the thankless people; and Stephen the theologian, for convicting that people, is called a blasphemer by them. And the high priest says: “Are these things so?” (Acts 7:1). Do you not know how they are? Did you not contrive the plot? Did you not hire the slanderers? Are not the witnesses of the deceit in your pay? “But there is need,” he says, “of falsehood and pretense, and we need deceit for the trap we have laid. So we sold Joseph (Genesis 37:28), so we murdered Naboth (1 Kings 21:13), so we crucified Christ.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-002",
+   "chapter": 7,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Stephen began by calling them brothers and fathers so that no one would think he accused them as enemies, but truth must come before kinship.",
+   "comment": "And how is it that at the beginning you say, “Men, brothers and fathers, hear me” (Acts 7:2)? “Those words,” he says, “belong to the nobility of Abraham, these to the wickedness of these men. Those belong to the good root, these to the bad branches. Those show what is distinguished in the flock, these the unruliness, the hardness, the unbridled temper of the many.” Isaiah urged him toward that opening: “Say ‘Our brothers’ to those who hate us and abhor us, so that the name of the Lord may be glorified” (Isaiah 66:5). But toward this ending they themselves forced his speech, even against his will: “I called them brothers, I addressed them as fathers, so that no one would think I was accusing them as enemies or refuting them as foes. But I called the same men hard-hearted and uncircumcised, since truth must be put before kinship, and one must not spare friends or brothers or fathers or any other relatives when they break the law.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Stephen began by calling them brothers and fathers and then spoke hard words.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-003",
+   "chapter": 7,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "Stephen testifies that Moses had wide learning, which is why some suspected his wonders came from Egyptian arts rather than from God.",
+   "comment": "Stephen, in the Acts of the Apostles, bears witness to the wide learning of Moses, no doubt taking this from ancient writings that had not reached many; for he says: “And Moses was instructed in all the wisdom of the Egyptians” (Acts 7:22). For this reason it was also suspected that he might be working his wonders not, as he professed, because he had come from God, but by the learning of the Egyptians, in which he was wise. For it was because he suspected something of this kind about him that the king called the enchanters of the Egyptians, and the wise men, and the sorcerers (Exodus 7:11); and they were proved to be nothing compared with the wisdom in Moses, which surpassed all the wisdom of the Egyptians.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Moses' Egyptian learning meant and why it mattered.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "46",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/46/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-005",
+   "chapter": 7,
+   "verse_start": 48,
+   "verse_end": 50,
+   "capsule": "Solomon built a famous temple and the Jews thought God dwelt in it, but God rebukes those who think small of him.",
+   "comment": "Jacob asked to find a dwelling place for God, saying that he would not rest until he found the place of the Lord and the dwelling of God, which is clearly Christ (Psalm 132:5).\n\nHowever, Solomon built a house for him, but the Most High does not dwell in handmade temples (Acts 7:48).\n\nThe wise Solomon built a famous temple in Jerusalem, and the crowd of Jews was very pleased with it, thinking that God had dwelled in it, but they were slow to understand and ignorant of the words of God.\n\nThey thought Jerusalem was the city of God and that he dwelled only in it, but God rebukes those who think small, saying, 'What kind of house will you build for me, who has the heaven as a throne and the earth as a footstool?' (Isaiah 66:1-2, Acts 7:49-50).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Stephen says God does not dwell in houses made by hands.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-006",
+   "chapter": 7,
+   "verse_start": 51,
+   "verse_end": 54,
+   "capsule": "When Stephen saw that the evil could not be proved wrong, he spoke boldly, and stood alone among murderous people.",
+   "comment": "But when he saw the evil to be unprovable and the opinion unyielding, then he was filled with boldness and, forbidding all the flattering art toward the life here, he unhesitatingly reproved them: stiff-necked, uncircumcised in heart, fighting against the law, warring against the Spirit. And what things from here? Many dogs and fattened bulls stood around him as a Master, as the psalmody says, surrounding the righteous man (Psalm 22:12-16). But he stood alone, surrounded on every side by the people of the murderers. And no one was near at that hour, no friend, no householder, no relative. For it is as if one offers a consolation to those in danger by seeing someone known nearby.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u16-rem-early",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u16-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-008",
+   "chapter": 7,
+   "verse_start": 54,
+   "verse_end": 56,
+   "capsule": "Stephen looked to God and saw the heavens opened, which shows that the way into heaven is open to all and that the Son of Man has joined earth and heaven.",
+   "comment": "Yet the children of the Jews could not bear these words, but gnashed their teeth like wild beasts, eager to swallow Stephen up while he was still speaking. “They gnashed their teeth” (Acts 7:54). For of them it had been said: “Sons of men, their teeth are weapons and arrows, and their tongue a sharp sword” (Psalm 57:4). But Stephen kept his eyes not on them but on God, and leaving the earth behind he hastened toward the courts of heaven, and with a ringing voice he proclaimed: “Look, I see the heavens opened” (Acts 7:56). That is: the gain is shared, the way is ready for all, the gate has been opened to those who wish to enter. Let the brave man contend with all his strength; let the true soldier now use his weapons, now show the greatness of his might. For the one who presides over the contest is watching; he stands ready, handing out the crowns and the prizes.\n\n“Look, I see the heavens opened.” And he did not leave the one who wishes to know in ignorance of who opened them. For this reason he cried out: “and the Son of Man standing at the right hand of God” (Acts 7:56), meaning God the Word made flesh. For since the Son of God has become Son of Man, since he who is from the Father has himself come from a virgin and stood as the common border of earth and the heavens, the dividing wall of enmity has been taken away (Ephesians 2:14), the barrier is out of the way, and citizenship is shared by angels and men, if men are willing. Those who are on earth may serve as soldiers in heaven, be below in the flesh and present above in the spirit, be with the clay by the clay, but with God by the mind.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Stephen saw and what the open heaven means for others.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-009",
+   "chapter": 7,
+   "verse_start": 55,
+   "verse_end": 56,
+   "capsule": "Stephen stood alone with no human friend, so God showed him the Son standing at his right hand to assure him that rest was ready.",
+   "comment": "But the high champion of the great struggle, having seen the need for a man to stand by, for he was very brave, shows that he suffered all human things unceasingly; as it seems to him, gazing intently toward heaven (Acts 7:55), he shows also the Son standing at the right hand in the form of humanity (Acts 7:56). O, the philanthropy! O, the goodness! To the athlete, those for which he struggled appeared, and the God of all things did not leave such a voice to him alone. Do not suffer anything ungentle, O Stephen; you have no human ally, no friend stood by you in the time of terrors, but I, with the Beloved, watch over the things being done. Rest is ready, the gates of paradise having been opened. Having endured a little, leave behind a brief life and hasten toward the life which is eternal and perfect. Still finding yourself in the flesh, you see God, a thing of all the world.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God let Stephen see the vision at that moment.",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u16-rem-early",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u16-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-010",
+   "chapter": 7,
+   "verse_start": 56,
+   "verse_end": 56,
+   "capsule": "God appeared to Stephen himself, not through an angel, so that the first witness would set a strong example for those who followed.",
+   "comment": "[God to Stephen:] You were initiated by the more prominent apostles into the truth that the Father has a genuine, beloved Son. I show myself to you so that you may be able to bear the burden. And the Son stood by my side, so that you might know his honor by the relation of place. At that time, many were scandalized that God had clothed himself in flesh on earth; but see him now in the heights, with me, bearing the form of man in the heavenly and hyper-heavenly realms, as a confirmation of the completed economy. Do not be crushed or grow limp by being overwhelmed by this. …\n\nAfter this resolve, God appeared to the patient one, so that he might not suffer something cowardly, and might release much eagerness through the greatness of fear. Therefore, God neither sent him an angel as a helper, as he later did for the apostles in prison (Acts 5:19), nor any ministerial and fellow-servant power, but he manifested himself. For it was then the firstfruits of the testimony, and it was necessary for the first work to be completed, so that those following, being built up as witnesses, might receive a strong foundation of zeal and not become imitators of cowardice, which is exactly what happens in common wars. For one soldier, a champion, providing the glorious part of the work, having conquered and having emboldened all his own, strikes down the opponents; yet, having suffered a slight injury, he immediately collapses and fills the souls of his kinsmen with cowardice, and flight becomes a habit. For this reason, God appeared from heaven.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u16-rem-mid",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-011",
+   "chapter": 7,
+   "verse_start": 57,
+   "verse_end": 58,
+   "capsule": "The mob stopped their ears, dragged Stephen outside the city and surrounded him with stones.",
+   "comment": "They held their ears against the word as if it were blasphemy, immediately ready for death. Dragging the Christ-bearing man outside the city, bearing his endurance as the Lord bore the cross, they return evil for evil and justify murder with murder, and with stones they bind the one who serves the cornerstone.\n\nStanding him on a certain level field, that long body and high trophy of the martyrs, the mob of blood and wrath surrounded him, and imitating the sling used in wars, they threw stones at the servant of the cornerstone, and every Hebrew hand enacted the murder; the aim was for those leaving that the martyr stood in the middle like a target for an archer.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u16-rem-mid",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-012",
+   "chapter": 7,
+   "verse_start": 58,
+   "verse_end": 59,
+   "capsule": "Stephen was taken outside the old Jerusalem, and his prayer gave back to Christ the spirit he had been given.",
+   "comment": "With no weapons to hand, they armed themselves from the ground; for want of swords, they made do with stones in their right hands, and they took him outside the city and offered him in sacrifice (Acts 7:58). For the old Jerusalem was not a fitting place for this victim. The lamb had to be slain beside the Shepherd’s Lamb, and the soldier had to receive the pledges of victory there, where the King had set up the trophy over all.\n\nBut what provision did he take for the journey of his death? Prayer, and the incense that rises from it; and as he put off the flesh, he put on prayer. And what was the prayer? “Lord Jesus, receive my spirit” (Acts 7:59). That is: “Take what is yours; take back the deposit you gave; welcome the pearl you entrusted; what I bear after your image (Genesis 1:26), this I send to you. ‘Receive my spirit’; for no longer into Hades, the place of weeping, do the…”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Stephen was killed outside the city and what his prayer meant.",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-013",
+   "chapter": 7,
+   "verse_start": 59,
+   "verse_end": 59,
+   "capsule": "Because the dead take courage from Christ, the firstfruits, Stephen asks that no enemy spoil his departure from the earth or his ascent into the heavens.",
+   "comment": "[Stephen's prayer goes on:] “…souls of the righteous enter; no longer do the gloomy regions of death take in the spirits of the living. Following you, who became at once the firstfruits of the living and of the dead (1 Corinthians 15:20), so that you might be Lord of both the dead and the living (Romans 14:9), the whole mass of the dead takes courage, and not without reason.\n\n‘Receive, then, my spirit’ (Acts 7:59). Do not let the hunters lie in wait for your sparrow (Psalm 124:7), nor let the enemies who meet me at the gates spoil my departure from the earth or trouble my ascent into the heavens.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "On Saint Stephen",
+   "work_slug": "hesychius-in-stephanum",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-stephanum/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-014",
+   "chapter": 7,
+   "verse_start": 59,
+   "verse_end": 59,
+   "capsule": "Through Christ, souls released from bodies no longer run into Hades but are sent into the hands of the living God, as Stephen knew.",
+   "comment": "Something great and exceptional was accomplished for our souls through Christ. Since we have been justified through faith in God, and in him human nature was found enriched with faultlessness, he has opened something new for us: that souls released from bodies no longer run into Hades as before, but are rather sent into the hands of the living God. Knowing this, holy Stephen said, “Lord Jesus, receive my spirit.” (Acts 7:59) And another of the apostles writes, “So that those who suffer according to God’s will should also entrust their souls to a faithful Creator.” (1 Peter 4:19)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Stephen's prayer shows about where the soul goes after Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "282",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/282/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-015",
+   "chapter": 7,
+   "verse_start": 59,
+   "verse_end": 59,
+   "capsule": "Stephen says 'spirit' where he means 'soul', as James also calls the soul spirit.",
+   "comment": "Because it is sometimes said that the soul is spirit, Stephen teaches; for as he was about to die, and he exhorted them not to let the sin of those murdering him stand, he says: 'Lord Jesus, receive my spirit' (Acts 7:59), instead of 'my soul.' And James writes: 'just as the body without spirit is dead' (James 2:26), calling the soul spirit. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the word 'spirit' in Stephen's prayer.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u20-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u20-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-016",
+   "chapter": 7,
+   "verse_start": 59,
+   "verse_end": 60,
+   "capsule": "As the stones struck, Stephen knelt in prayer and gave up his spirit as if going home to his fatherland, praying also for the men who stoned him.",
+   "comment": "As the body was shattered from every side and smeared with blood, it rushed toward the upright position; it leaned and threatened to fall like a tall plane tree being worked on by many carpenters; but it did not suffer an improper fall according to the many. For it was not cast headlong, nor was it thrown on its side, nor was the form reclined upon its back, but having set its knees in the proper form of one praying, it descended, hastening with the soul through prayer the separation from the flesh and crying out to the visible Lord: 'Lord Jesus Christ, receive my spirit.'\n\nFor he was hastening as if to some migration, as if from a foreign land to a fatherland, as if to a bright city from a desert and smoky land. And he added to his petition the prayer for those throwing stones. For those blessing and those stoning were saving, and those murdering were making alive, and those separating from the clay were sending to the kingdom.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u16-rem-mid",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC07-018",
+   "chapter": 7,
+   "verse_start": 60,
+   "verse_end": 60,
+   "capsule": "Stephen's prayer was made with attention and care, setting his anger aside so that his words would be acceptable.",
+   "comment": "Stephen's prayer was not just a simple one, but one that was said with attention and care, as he was apologizing, saying that not even the previous things were of anger, he says, 'Lord', and wanting to draw them to this.\n\nFor just as he was apologizing, he was able to leave his anger and wrath behind, and cleanse his soul of the passion, making his words acceptable.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-019",
+   "chapter": 7,
+   "verse_start": 60,
+   "verse_end": 60,
+   "capsule": "The prayer does not mean the murderers' sin goes unpunished, but asks that God lead those who dared it to repentance.",
+   "comment": "Let us therefore consider also the word of the prayer, regarding toward what end it carries 'Lord, do not hold their sin against them' (Acts 7:60). For it is not, as some wickedly thinking men suppose, that the sin of the enemies becomes unpunished and unaccountable. For this was clearly to stand against God's decree and to restore the judgment and law of the righteous, having completed what was due to the murderers.\n\nBut what does he say? 'Lord, do not hold their sin against them,' that is: Give the fear of compunction, lead to repentance those now having dared …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Stephen asked for when he prayed that the sin not be held against them.",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u16-rem-mid",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC08-002",
+   "chapter": 8,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Simon was praiseworthy until he tried to buy the gift of God with money, and then he became an enemy of the apostles.",
+   "comment": "But Peter said to him: 'May your silver be with you for destruction (Acts 8:20), because you thought to acquire the gift of God through money and the following things.' This is Simon, who before having renounced the devil and his angels and all his works; this is the one who, having been received by the apostle Philip, received baptism (Acts 8:13); but he was praiseworthy until this, and after these things, wretched. For having missed the goal and such grace and the laying on of hands, having been judged unworthy, he begins to fight against the apostles, no longer knowing the workers, no longer knowing the one who begat, forgetting all things together; the one who a little while ago was a disciple and now is an enemy.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Peter's rebuke and how far Simon had fallen.",
+   "author": "Amphilochius of Iconium",
+   "work": "Against the Heretics",
+   "work_slug": "amphilochius-contra-haereticos",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/amphilochius-contra-haereticos/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC09-002",
+   "chapter": 9,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Paul was called from heaven and led straight into apostleship, which adds something to him beyond the other apostles.",
+   "comment": "… Because many, having seen the Lord or not having seen him, believed, but Paul is called from heaven, 'Saul, Saul, why do you persecute me?' (Acts 9:4). And there is added to him something more than the other apostles; for the Lord himself had called Peter, James, and John as disciples, and did not immediately make or name them apostles, but he called Paul likewise and led him into apostleship. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul's call from heaven set him apart.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Romans",
+   "work_slug": "severianus-fragmenta-romanos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-romanos/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-001",
+   "chapter": 10,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Prayer cannot go up to heaven without almsgiving, as the angel's word to Cornelius shows.",
+   "comment": "… Prayer is good too, but without almsgiving it cannot go up to heaven. You have heard the angel saying to Cornelius, “Your prayers and your almsgiving have gone up for a memorial before God” (Acts 10:4). So almsgiving carried prayer up to heaven.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the angel's words to Cornelius mean for prayer.",
+   "author": "Hesychius of Jerusalem",
+   "work": "In Praise of the Holy Martyrs",
+   "work_slug": "hesychius-in-sanctos-martyres",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-in-sanctos-martyres/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-003",
+   "chapter": 10,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The sheet on the roof symbolized the world, and its animals the characters of men.",
+   "comment": "… The linen cloth revealed on the roof (Acts 10:11) was a symbol of this sensible world; for the various animals contained therein showed the diverse characters of men, having been purified by the cross of Christ. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Evagrius Ponticus",
+   "work": "Exposition on Proverbs",
+   "work_slug": "evagrius-expositio-proverbia",
+   "section": "u06-rem-close",
+   "url": "https://viapatrum.org/works/evagrius-expositio-proverbia/u06-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-004",
+   "chapter": 10,
+   "verse_start": 13,
+   "verse_end": 15,
+   "capsule": "The animals in the sheet signify the character of men, and Peter learns to call no man common or unclean.",
+   "comment": "… Since the character of men is signified through irrational animals, this is shown from the book of the Acts of the apostles, when certain foreigners came to the foremost of the apostles, calling him to preach the gospel to them, being foreigners. For when he had gone up to the rooftop to pray, there appeared a vessel like a veil set down with four corners from heaven to earth, in which were all the quadrupeds and the creeping things and the beasts of the earth, and a voice came from heaven to him saying, 'Rise, Peter, slaughter and eat' (Acts 10:13). But he said, 'By no means, Lord, for I have never eaten anything common or unclean' (Acts 10:14). And a voice a second time came to him, saying, 'What God has cleansed, do not call common' (Acts 10:15). This is the vision of the animals appearing in the veil, which Peter himself explains when he came to those calling him, saying, 'God also showed me not to call any man common or unclean' (Acts 10:28), lifting up the appearing quadrupeds and beasts to men, having been cleansed by the casting away of impurity.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the animals in Peter's vision stand for.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u06-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-005",
+   "chapter": 10,
+   "verse_start": 13,
+   "verse_end": 15,
+   "capsule": "The Spirit came to Peter while he was still bound to old customs and taught him the doctrine of true and spiritual foods.",
+   "comment": "And according to the promise of Jesus, “the Spirit of truth” came upon Peter, saying to him about the four-footed creatures and creeping things of the earth and the birds of the sky: “Rise, Peter, kill and eat” (Acts 10:13). And the Spirit came to him while he was still superstitious; for even to the divine voice he says: “By no means, Lord, for I have never eaten anything common and unclean” (Acts 10:14). And he taught the doctrine of true and spiritual foods in the words “What God has cleansed, you must not call common” (Acts 10:15). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "2",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/2/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-006",
+   "chapter": 10,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "The law does not make anything that exists profane, since all things are pure to the pure, but uses each animal as a picture of a human character.",
+   "comment": "… When the disciple cried out, still fearing the observance of the law, and said, ‘By no means, Lord, for I have never eaten anything common or unclean, nor has any profane meat entered my mouth’ (Acts 10:14; Acts 11:8), God spoke again: ‘What God has cleansed, you must not call common.’ (Acts 10:15) And the inspired Paul also writes that ‘food does not commend us to God.’ (1 Corinthians 8:8) It is quite clear, then, that the law by no means makes anything that exists profane, but knows that all things are pure to the pure (Titus 1:15). Rather, by taking the natural traits of each animal very aptly as pictures of the qualities of human character, it does no small good. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'What God has cleansed' means for the law about animals.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/17/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-007",
+   "chapter": 10,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "The distinctions between clean and unclean animals were symbols of certain realities until the coming of Jesus.",
+   "comment": "… These things, too, were symbols of certain realities until the coming of Jesus. After Him it was said to His disciple, who did not yet understand the meaning of these things and said, “Nothing common or unclean has entered my mouth” (Acts 11:8), “What God has cleansed, you must not call common” (Acts 10:15).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "49",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/49/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-008",
+   "chapter": 10,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "Peter needed a vision to share the words of faith with Cornelius, since he still lived by Jewish traditions.",
+   "comment": "See in these words [Peter’s answer in the vision, that he had never eaten anything common and unclean] how Peter is presented as still keeping the Jewish customs about clean and unclean. And what follows makes clear that he needed a vision so that he would share the words of faith with Cornelius, who was not an Israelite according to the flesh, and with those who were with him; for he was still a Jew, living by the traditions of the Jews and looking down on those outside Judaism (Acts 10:28).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Peter needed a vision before going to Cornelius.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "1",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/1/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-009",
+   "chapter": 10,
+   "verse_start": 34,
+   "verse_end": 34,
+   "capsule": "Peter, seeing the calling of the nations, says that God shows no partiality, and Israel should rejoice at God's judgment as the apostles did.",
+   "comment": "“This is your righteousness,” he says, “which has no partiality.” And Peter, perceiving the calling of the nations, says: “In truth I understand that God shows no partiality” (Acts 10:34). When the wise Israel sees the nations brought in and understands the mercy, he will not envy, but will rejoice in God’s judgment, just as Peter and the apostles did then (Psalm 48:11).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u03-open",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC10-010",
+   "chapter": 10,
+   "verse_start": 38,
+   "verse_end": 38,
+   "capsule": "Peter's word about the anointing concerns Christ's humanity, whose flesh is holy by participation in what comes from God.",
+   "comment": "… For he who is holy by nature, as God, is said to have needed God to sanctify him. Blessed Peter says this too: ‘Jesus of Nazareth, how God anointed him with the Holy Spirit’ (Acts 10:38). So the anointing concerns his humanity, and the sanctification belongs to the flesh, which is not holy by nature but holy by participation in what comes from God. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "22",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/22/",
+   "from_cite": true
+  },
+  {
+   "id": "AC11-001",
+   "chapter": 11,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "The Spirit foretold through Agabus a famine under heaven as a warning, which came true in the reign of Claudius.",
+   "comment": "… And through the prophet Agabus, he forewarned of a famine coming under heaven because of the failings of men, as a good thing, just as also regarding Nineveh, that if they had been made reverent by repentance they would flee the evil (Acts 11:28; Jonah 3:10), which also happened to many in later times during the reign of Claudius. And in the Gospel, Christ says concerning the Spirit: 'And He will announce to you the things that are coming,' that is, the things to come (John 16:13).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u19-rem-close",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u19-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC12-002",
+   "chapter": 12,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Angels attend teachers and little ones in the church, so they said of Peter, 'It is his angel'.",
+   "comment": "If you take the church, the teachers — and angels attend upon these. Concerning Peter, at any rate, they said: “It is his angel” (Acts 12:15). And the little ones in the church have angels “always beholding the face of the Father” (Matt 18:10); and if the little ones, how much more the perfect. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'It is his angel' means.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u13-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u13-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC13-004",
+   "chapter": 13,
+   "verse_start": 9,
+   "verse_end": 11,
+   "capsule": "Paul blinded the sorcerer Elymas by a word through the power of the Holy Spirit.",
+   "comment": "… in the surpassing power of the Holy Spirit, Paul in Cyprus blinded the magician Elymas, who was campaigning against the saints and ravaging with the truth, by a word. For the Scripture, showing the power to be of the Spirit, says to them by names thus: 'Then Paul, being filled with the Holy Spirit, said to him: Behold, the hand of the Lord is upon you, and you shall be blind, not seeing the sun' (Acts 13:11). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u19-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u19-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC13-002",
+   "chapter": 13,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The straight ways of the Lord are the virtues, since in a straight way there is no deviation.",
+   "comment": "… Therefore, do not pay attention to Elymas the sorcerer; the apostle says: 'Will you not cease perverting the straight ways of the Lord?' (Acts 13:10). They are straight and good. And the virtues are called straight because of being a mean; for in a straight way there is no deviation. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the 'straight ways of the Lord' are.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u36-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u36-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC13-006",
+   "chapter": 13,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "The virtues in their kinds are the wills of God, and the general virtue is called one will.",
+   "comment": "'I have found', he says, 'David the son of Jesse, a man after my own heart, who will do all my will' (Acts 13:22). The virtues according to species are the wills of God. But the general one is called one will; for he says: 'Not everyone who says to me, Lord, Lord, shall enter, but he who does the will of my Father' (Matt 7:21). Here he named the general virtue as a singular will. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u35-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u35-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC13-007",
+   "chapter": 13,
+   "verse_start": 37,
+   "verse_end": 37,
+   "capsule": "Christ's body is incorruptible because the Word who dwells in it set it above corruption by the power of his Spirit.",
+   "comment": "… For the body of Christ is incorruptible: it is held fast in incorruption, as by a kind of gold, by the power and radiance of the Word who dwells in it, and by the nature and life-giving working of the Holy Spirit. That is why Christ is also said to give life. For the Word who is from God the Father, being Life by nature, himself brought his own temple back to life by the power of his own Spirit, setting it above corruption. For ‘his flesh knows no corruption,’ in the words of holy Paul (Acts 13:37; Acts 2:31). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "6",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/6/",
+   "from_cite": true
+  },
+  {
+   "id": "AC13-008",
+   "chapter": 13,
+   "verse_start": 46,
+   "verse_end": 46,
+   "capsule": "The call of the nations began from the fall of Israel, when the apostles told the synagogues they were turning to the nations.",
+   "comment": "The call of the nations had its beginning from the fall of Israel. And the apostles, preaching to the synagogues of the Jews, say: 'To you the word of salvation was sent; since you judge yourselves unworthy, behold, we turn to the nations.' (Acts 13:46) And the apostle, knowing what he knows about these things, says: 'By their fall salvation has come to the nations, to make them jealous.' (Romans 11:11)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the apostles turned to the nations.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "4.2",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/4.2/",
+   "from_cite": true
+  },
+  {
+   "id": "AC14-001",
+   "chapter": 14,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "God's kindness in giving rain and food, even to the ungrateful, shows his compassion and gives time for repentance.",
+   "comment": "God’s feeding even sinners and being kind to the ungrateful and evil (Luke 6:35) testifies to his compassion, not his malice. … He does not quickly punish those who stray. He does this for no other purpose than that his goodness may grant time for repentance. … He [Paul] also argues among the Lycaonians and the Areopagites that even in past times of ignorance God did not remove the evidence of his providence (Acts 14:16–17; Acts 17:30): ‘He did not leave himself without testimony, giving rains from heaven and fruitful seasons, filling their hearts with food and gladness’ … (Acts 14:17).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "5.64",
+   "url": "https://viapatrum.org/works/julian-to-florus/5.64/",
+   "from_cite": true
+  },
+  {
+   "id": "AC14-002",
+   "chapter": 14,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "Every good thing costs toil, and the tribulations that lead into the kingdom of heaven end in blessedness, unlike the toil of sin.",
+   "comment": "But these things are hard. What good thing is easy? Who has set up a trophy while sleeping? Who has been adorned with the crowns of endurance while living in luxury and being serenaded by flutes? No one has taken the prize without running. Labors give birth to glory; toils procure crowns. “Through many tribulations we must enter the kingdom of heaven” (Acts 14:22), I say too. But these tribulations are awaited by the blessedness in the kingdom of heaven, while the painful and gloomy toil of Gehenna awaits the toils of sin.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why the verse says tribulations must come first.",
+   "author": "Basil of Caesarea",
+   "work": "Exhortation to Holy Baptism",
+   "work_slug": "basil-homilia-ad-baptisma",
+   "section": "7",
+   "url": "https://viapatrum.org/works/basil-homilia-ad-baptisma/7/",
+   "from_cite": true
+  },
+  {
+   "id": "AC14-003",
+   "chapter": 14,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "Being rescued from tribulation does not mean having none, since the apostles say they are always afflicted and must enter the kingdom through many tribulations.",
+   "comment": "Many times we have spoken about these things, that God's rescuing from tribulation does not mean the becoming of an absence of tribulation; for if the apostles are telling the truth, saying: 'in all things we are being afflicted' (2 Cor 4:8), and again: 'through many tribulations it is necessary for us to enter the kingdom of God' (Acts 14:22), it is never necessary to be outside of being afflicted. If someone does not take 'to be rescued' in this way, the saints were never heard; always being afflicted, they passed their lives lacking until the last breath.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Clarifies what being rescued from trouble means, using the verse.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u28-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u28-open/",
+   "from_cite": true
+  },
+  {
+   "id": "AC15-003",
+   "chapter": 15,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Since the law has so many commandments, even a careful keeper must stumble, and the disciples admitted it is burdensome.",
+   "comment": "And since the law contains a great many commandments, even the careful keeper of the law must surely stumble in some of them and become a transgressor of the law. The inspired disciples plainly admitted that it is truly burdensome, for they said: “Now therefore, why are you putting God to the test by placing on the neck of the disciples a yoke that neither our fathers nor we have been able to bear?” (Acts 15:10).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains plainly why the law is called a yoke no one could bear.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC15-004",
+   "chapter": 15,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Peter speaks openly, but James gives the ruling in a few words.",
+   "comment": "Peter speaks in public, but James gives the law, and a few words contracted the magnitude of the question: “I judge not to trouble those from the nations,” and so on (Acts 15:19).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Hesychius of Jerusalem",
+   "work": "On James, the Brother of the Lord, and David",
+   "work_slug": "hesychius-homilia-i-lazarum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/hesychius-homilia-i-lazarum/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AC15-005",
+   "chapter": 15,
+   "verse_start": 28,
+   "verse_end": 29,
+   "capsule": "The disciples told Gentile converts to keep only a few things because a tender, childlike mind must not be weighed down with heavy burdens.",
+   "comment": "Knowing this, the inspired disciples, writing to those from the Gentiles, even though Christ had given a very great body of Gospel commandments, told them that they must keep themselves from fornication, from what is strangled and from blood; and they said that those who did these things would do well (Acts 15:28–29). For a mind that is still tender and childish must not be weighed down with very heavy burdens.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the decree asks so little of new believers.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/15/",
+   "from_cite": true
+  },
+  {
+   "id": "AC15-007",
+   "chapter": 15,
+   "verse_start": 28,
+   "verse_end": 29,
+   "capsule": "Where the law commanded much about foods, the apostles required only abstaining from idol offerings, blood, strangled things and sexual immorality.",
+   "comment": "Since the law commanded many things concerning foods, the apostles only commanded to keep away from things sacrificed to idols, from blood, from things strangled, and instead of keeping circumcision, they opposed keeping away from sexual immorality; for circumcision, even though it was a sign and a reminder of the faith of Abraham, was also given as an evident symbol of temperance, showing how one must cut away unchastity.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Diodorus of Tarsus",
+   "work": "Fragments on Romans",
+   "work_slug": "diodorus-fragmenta-romanos",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/diodorus-fragmenta-romanos/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC17-001",
+   "chapter": 17,
+   "verse_start": 23,
+   "verse_end": 28,
+   "capsule": "At Athens Paul used Greek learning, the poets and the altar to an unknown god, to begin teaching reverence for God to those without the law.",
+   "comment": "To those without law as without law: he came to Athens; he found philosophers there; he used not prophetic words nor legal ones, but wherever there was a lesson from Greek preparatory education he, recalling it, spoke to Athenians; for he says: as also some of your own poets have said, for we too are his offspring (Acts 17:28). There to those without law he became as without law, that he might gain those without law. And again he says: going through and observing your objects of worship, I found also an altar on which was inscribed: To an unknown god. What therefore you worship in ignorance, this I proclaim to you (Acts 17:23). And through these he begins to hand on reverence for God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "origen-1-corinthians-fragments",
+   "section": "u07-rem-close",
+   "url": "https://viapatrum.org/works/origen-1-corinthians-fragments/u07-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC20-001",
+   "chapter": 20,
+   "verse_start": 25,
+   "verse_end": 30,
+   "capsule": "Paul warned that he would be seen no more and that savage wolves would come from among the flock itself, which makes the war more dangerous.",
+   "comment": "What does Paul say? When he was about to be taken to Rome on his final journey abroad, after which he would no longer see his disciples—for he says, “I will see you no more” (Acts 20:25), and he said this not to grieve them but to make them secure—so when he was about to depart from there, he made them secure by speaking in this way: “I know that after my departure savage wolves will come in among you, and from among your own selves men will arise speaking twisted things” (Acts 20:29-30). The war is threefold: the nature of the beasts, the ferocity of the war, and the fact that the enemies are not outsiders but their own people. For this reason it is more dangerous—and rightly so.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "John Chrysostom",
+   "work": "On Saint Eustathius of Antioch",
+   "work_slug": "chrysostom-in-eustathium",
+   "section": "6",
+   "url": "https://viapatrum.org/works/chrysostom-in-eustathium/6/",
+   "from_cite": true
+  },
+  {
+   "id": "AC20-002",
+   "chapter": 20,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "A wound that grows within the body is hard to fight, so Paul told the elders to keep watch over the flock and not to flee.",
+   "comment": "If someone attacks me from outside and makes war on me, I can easily overcome him. But if the wound grows from within the body itself, the evil becomes hard to fight—and that is exactly what happened then. That is why he also exhorted them, saying, “Keep watch over yourselves and over all the flock” (Acts 20:28). He did not say, “Abandon the sheep and flee outside.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "John Chrysostom",
+   "work": "On Saint Eustathius of Antioch",
+   "work_slug": "chrysostom-in-eustathium",
+   "section": "7",
+   "url": "https://viapatrum.org/works/chrysostom-in-eustathium/7/",
+   "from_cite": true
+  },
+  {
+   "id": "AC20-003",
+   "chapter": 20,
+   "verse_start": 35,
+   "verse_end": 35,
+   "capsule": "Giving is like God and receiving is not, so those who imitate God give, since being a recipient is a deficiency.",
+   "comment": "… those becoming imitators of God do so for no other reason than that “it is more blessed to give than to receive” (Acts 20:35); for giving is like God, but receiving is not; for each of those receiving is a recipient of something. But being a recipient is a deficiency, and that is to say, the saying that it is good “to give rather than to receive.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why giving is more blessed.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u25-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u25-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC21-003",
+   "chapter": 21,
+   "verse_start": 21,
+   "verse_end": 26,
+   "capsule": "Paul became a Jew to the Jews and brought an offering to the altar to persuade the Jews that he was not an apostate from the law.",
+   "comment": "But why do I say that those who preached “to the circumcision” drew back and separated themselves from the Gentiles, when Paul himself also became “to the Jews a Jew, that he might win Jews” (1 Corinthians 9:20)? That is why, as is written in the Acts of the Apostles, he even brought an offering to the altar, to persuade the Jews that he was not an apostate from the law (Acts 21:21–26).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book II",
+   "work_slug": "origen-contra-celsum-book-2",
+   "section": "1",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/1/",
+   "from_cite": true
+  },
+  {
+   "id": "AC23-001",
+   "chapter": 23,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Paul answered the high priest who ordered him struck by saying God would strike him, a whitewashed wall that is handsome only on the surface.",
+   "comment": "And it is written in Acts that someone struck Paul, ordered by Ananias the high priest. Therefore Paul said: 'God is about to strike you, whitewashed wall.' (Acts 23:3) And until now Ebionites, ordered by an unlawful high-priestly word, strike the apostle of Jesus Christ with blasphemous words. And Paul says toward such a high-priestly word: 'God is about to strike you.' And such a high priest is handsome on the surface and a whitewashed wall.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "19.12",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/19.12/",
+   "from_cite": true
+  },
+  {
+   "id": "AC23-002",
+   "chapter": 23,
+   "verse_start": 6,
+   "verse_end": 9,
+   "capsule": "Paul split the council by naming the resurrection, and had they seen that their agreement was gone they would have stopped plotting against him.",
+   "comment": "'Knowing that the one part belongs to the Sadducees and the other to the Pharisees,' something said that dissolved and split their agreement; for he said: 'Concerning the resurrection of the dead I am judged today' (Acts 23:6), and they were split, some saying: 'He says nothing absurd' (Acts 23:6), and the other part, the lying. If they had realized from this split, they would no longer have plotted against Paul. They were not unified, therefore; they did not know the cause of the division.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u33-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u33-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AC26-001",
+   "chapter": 26,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "God turned the persecutor into a friend, striking him with light and with the words of Christ so that he would learn that the Lord lives and defends the grieving.",
+   "comment": "Our God saw well what he had done, that the strong enemy might become a noble friend; and having suddenly surrounded him with light, He strikes him with astonishment and changes him toward humility, making him stand in the road through fear, and having brought to sobriety the eyes that were looking with fiery and angry temper through the darkness. And He punishes him not in silence, but also added a word to the deed, saying that written thing: 'Saul, Saul, why do you persecute me? It is hard for you to kick against the pricks' (Acts 26:14). For it was not as if he himself needed a discussion, since the words of the facts were sufficient, but so that he might have an occasion within to ask and to learn that he who was thought to be dead and to be Christ lives, and appears from the heavens, and thus defends those who are grieving from authority.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the voice from heaven did for Saul.",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u11-rem-close",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u11-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AC28-001",
+   "chapter": 28,
+   "verse_start": 3,
+   "verse_end": 5,
+   "capsule": "Wild beasts show faith: the viper did Paul no harm because he was full of faith, and the faithless should fear their own faithlessness more.",
+   "comment": "The wild beasts are a demonstration of faith. Have you trusted in the Lord? Upon asp and basilisk you will tread, and you will trample lion and dragon (Psalm 90:13 (LXX; Hebrew 91:13)). And you have through faith the authority to tread upon snakes and scorpions (Luke 10:19). Or do you not see that when Paul was gathering sticks, the viper fastened on him and caused him no harm, because the holy man was found to be full of faith (Acts 28:3-5)? But if you are faithless, fear not so much the wild beast as your own faithlessness, through which you have made yourself easy prey to every corruption.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the viper did not harm Paul.",
+   "author": "Basil of Caesarea",
+   "work": "Homilies on the Six Days of Creation",
+   "work_slug": "basil-homiliae-hexaemeron",
+   "section": "75",
+   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/75/",
+   "from_cite": true
+  }
+ ]
+}

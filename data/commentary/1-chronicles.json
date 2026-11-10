@@ -1,0 +1,50 @@
+{
+ "book": "1 Chronicles",
+ "title": "The Fathers on 1 Chronicles",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 2,
+ "selected_count": 1,
+ "comments": [
+  {
+   "id": "1CH21-001",
+   "chapter": 21,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Comparing the “wrath” of 2 Samuel 24:1 with the “devil” of 1 Chronicles 21:1 shows whose wrath moved David.",
+   "comment": "And anyone who reads in the second book of Samuel of the “wrath” of God that moved David to number the people (2 Samuel 24:1), and in the first book of Chronicles of “the devil” (1 Chronicles 21:1), and compares the texts with each other, will see to whom the wrath is to be assigned.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "72",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/72/",
+   "from_cite": true
+  },
+  {
+   "id": "1CH28-001",
+   "chapter": 28,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "David wanted to build for the Lord but was forbidden, so he stopped and prepared the materials instead.",
+   "comment": "But he who speaks according to the history says that David the king, having been eager to build something tangible for the Lord, was forbidden by God speaking to him (1 Chronicles 28:3): 'Not you shall build for me something, because you are a man of war from your youth, but he who comes out of your loins shall build for me something.' Having been persuaded by the oracle, David ceased from building, but he pre-arranged the materials for the building.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what happened to David's wish to build the temple.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u15-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

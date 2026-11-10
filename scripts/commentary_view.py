@@ -189,6 +189,12 @@ def comment_card_html(c: dict, book: str, src: dict | None = None) -> str:
     """One comment. src: {"title", "label", "author", "dates", "text"} from the build for the passage, when known."""
     src = src or {}
     author = src.get("author") or c.get("author") or ""
+    # Words the source prints under another writer's catena label ("Of Eusebius.") carry that writer's name; the
+    # filed author's dates do not apply to them (release JSON field labelled_as, 10 Nov 2026).
+    labelled = str(c.get("labelled_as") or "").strip()
+    if labelled:
+        author = f"{labelled} (so labelled in the source, which is filed under {author})"
+        src = {k: v for k, v in src.items() if k != "dates"}
     title = src.get("title") or c.get("work") or ""
     label = src.get("label") or str(c.get("section") or "")
     href = f"/works/{c.get('work_slug')}/{c.get('section')}/"

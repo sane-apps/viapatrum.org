@@ -1,0 +1,698 @@
+{
+ "book": "Philippians",
+ "title": "The Fathers on Philippians",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 37,
+ "selected_count": 19,
+ "comments": [
+  {
+   "id": "PHP01-001",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Paul's defense and his chains are not wasted, because the Philippians' steadfastness and faith prove their worth.",
+   "comment": "[Paul, in effect:] For whether I make my defense when I am accused for the sake of those who believe—and you are among them—or whether I want to confirm the gospel to some, I do so from your steadfastness. Or whether I want to show that I do not endure chains without profit, I do so from your faith. (Philippians 1:7)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms what Paul says his readers' faith proves.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Philippians",
+   "work_slug": "severianus-fragmenta-philippenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-philippenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "PHP01-002",
+   "chapter": 1,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "Paul can call departing better only because the righteous soul, even before the resurrection, leaves the body and rests with Christ.",
+   "comment": "…it is clear that Paul says well: For it is better to depart and to be with Christ. Before the resurrection the righteous man is with Christ, and in that very soul he lives with Christ. For this reason: For it is better to depart and to be with Christ.\n\nBut according to you who say that the soul lies in the tomb with the body, it has not gone out from the body, it does not rest, it has not come to be in the paradise of God, it does not rest in Abraham's bosom. And according to you who say such things, it is not better to depart and to be with Christ; for he is not with Christ at the moment of departing… If the soul lies in the tombs, how can it be with Christ?\n\nBut according to me and the word of God, the soul that has departed from the labors, that has departed from the sweats, that has been released from the body, that can say, Now you release your servant, Master, in peace, goes out in peace and rests with Christ.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows what 'to be with Christ' implies about the soul after death, in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "Dialogue with Heraclides",
+   "work_slug": "origen-dialogue-heraclides",
+   "section": "23",
+   "url": "https://viapatrum.org/works/origen-dialogue-heraclides/23/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP01-003",
+   "chapter": 1,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "Since Paul longed to depart and be with the Lord, grieving impatiently for the dead shows we do not want what Christians desire.",
+   "comment": "It is a departure that you think is death. The one who goes ahead is not to be mourned, but certainly to be longed for. And that longing too must be tempered by patience. Why should you bear immoderately the departure of someone you will soon follow? Besides, impatience in such matters speaks ill of our hope and violates our faith. We also wrong Christ when we do not accept with equanimity those he has called away, as if they were to be pitied. I long, the apostle says, to be received now and to be with the Lord (Philippians 1:23). How much better he shows his desire! So if we grieve impatiently when others have attained the desire of Christians, we ourselves do not want to attain it.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Tertullian",
+   "work": "On Patience",
+   "work_slug": "tertullian-on-patience",
+   "section": "9",
+   "url": "https://viapatrum.org/works/tertullian-on-patience/9/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-010",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Christ's mind is to think and will only what serves the Father's glory and pleases him.",
+   "comment": "Christ’s mind would be to think only what looks toward the glory of God the Father, and to will to accomplish what pleases the One who begot him. ‘I have come down from heaven,’ he says, ‘not to do my own will, but the will of him who sent me.’ (Jn 6:38; Phil 2:5)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "6",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/6/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-001",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "The lowly sayings about Christ show no inequality of nature; “he emptied himself” means not that his wisdom changed but that he chose to be known in a lowly way.",
+   "comment": "All of these [sayings such as “The Father is greater than I”] were set down not to signify an inequality of nature and substance—otherwise these would be false: “I and the Father are one” (John 10:30), and “Whoever has seen me has seen my Father” (John 14:9), and “The Word was God” (John 1:1)—for he was not made God, since all things were made through him—and “He did not consider equality with God something to be grasped” (Philippians 2:6), and other such statements.\n\nRather, those statements were set down partly because of the administration of the man he took up, which is why it says: “He emptied himself” (Philippians 2:7)—not because that wisdom was changed, since it is entirely unchangeable, but because he willed to become known to human beings in such a lowly way. So partly because of this administration those things were written about which the heretics make false accusations, and partly because the Son owes to the Father that he exists, and in owing this he also owes to the Father that he is equal to or on a par with the Father. But the Father owes nothing of what he is to anyone.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Augustine of Hippo",
+   "work": "On Faith and the Creed",
+   "work_slug": "augustine-on-faith-and-the-creed",
+   "section": "18",
+   "url": "https://viapatrum.org/works/augustine-on-faith-and-the-creed/18/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-002",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 8,
+   "capsule": "In emptying and humbling himself the Word underwent no change for the worse, and was no less blessed.",
+   "comment": "What came down to men existed “in the form of God” (Philippians 2:6), and out of love for mankind “emptied himself” (Philippians 2:7), so that he could be received by men. Surely no change from good to bad took place in him, for “he committed no sin” (1 Peter 2:22); nor from beautiful to shameful, for he “knew no sin” (2 Corinthians 5:21). Nor did he pass from happiness to misery: he “humbled himself” (Philippians 2:8), yet he was no less blessed, even while he humbled himself for the good of our race. Nor did any change take place in him from what is best to what is most wicked; for how can kindness and love for mankind be most wicked?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the emptying and humbling mean and do not mean.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "15",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/15/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-015",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 11,
+   "capsule": "Creation saw its maker in a body and every knee bends to Jesus, for the flesh did not dishonor the Word, nor did the form of a servant lessen his divinity.",
+   "comment": "For creation does not worship a creature, nor again did it refuse to worship its Lord because of the flesh. It saw its own maker in a body, and at the name of Jesus Christ every knee bent, and will bend, in heaven and on earth and under the earth, and every tongue will confess, even if the Arians do not think so, that Jesus Christ is Lord, to the glory of God the Father (Philippians 2:10-11).\n\nFor the flesh did not bring dishonor to the Word. Never! Rather, it has been glorified by him. Nor, because the Son who was in the form of God took the form of a servant, was he diminished in his divinity (Philippians 2:6-7). Rather, he himself became the liberator of all flesh and of all creation.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Athanasius of Alexandria",
+   "work": "Letter to Adelphius",
+   "work_slug": "athanasius-epistula-adelphium",
+   "section": "2",
+   "url": "https://viapatrum.org/works/athanasius-epistula-adelphium/2/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-003",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Though he put on the slave's form, the Word remained God and Lord by nature and did not stop being God.",
+   "comment": "Yet though he became as we are and put on the slave’s form by the plan of the economy, he remained in the deity and lordship that are his by nature. He did not stop being God when he became flesh — that is, when he became as we are, a human. Because he is unchangeable by nature as God, remaining what he always was and is and will be, he has also been named Son of Man (Philippians 2:7).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/4/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-011",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "“He emptied himself” shows that the Son became flesh willingly, as “sent” shows that he did not do so apart from the Father.",
+   "comment": "The Lord also was called sent, not as having moved from places to places—for the divine is unmoved—but as somehow moved from the Father’s bosom and having come to our poverty, for which he is also said to have humbled himself.\n\nSo when Scripture speaks words fitting the economy [God's plan of salvation], if it says that “he emptied himself” (Philippians 2:7), it signifies the self-ruling and royal—that he was incarnate willingly; but if it says that he was sent, it teaches that he was not incarnate apart from the Father. We say these things as human beings; for the will of Father and Son is one…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the wording 'emptied himself' tells us: he acted of his own will.",
+   "author": "Ammonius of Alexandria",
+   "work": "Fragments on John",
+   "work_slug": "ammonius-fragmenta-joannem",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/ammonius-fragmenta-joannem/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-012",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The Word is emptied though his nature cannot be emptied: the bodiless is handled, the perfect grows, the rich one is born in an inn.",
+   "comment": "From bishop Atticus: … “The Word of love for humankind is emptied, though his nature cannot be emptied; for he emptied himself, taking a slave’s form. The fleshless one is enfleshed for you; for the Word became flesh. He who cannot be touched, because his nature is bodiless, is handled. The one without beginning comes under a bodily beginning. The perfect one grows. The unchangeable advances. The rich one is born in an inn. He who wraps the heaven in clouds is wrapped in swaddling cloths.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "10",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/10/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-004",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The word “as” in this phrase means “truly,” not mere likeness.",
+   "comment": "“And being found in form as a human” (Philippians 2:8). The word “as” does not express likeness but intensity; it means “truly.” It is like the phrase “truly good is God to Israel,” and “truly I have loved your law, Lord,” meaning “I have loved it very much.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Clears up what the word 'as' means in Paul's wording.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Philippians",
+   "work_slug": "severianus-fragmenta-philippenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-philippenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "PHP02-005",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Christ's humility went beyond his birth to death on the cross, so that no kind of death would frighten us.",
+   "comment": "Yet our Lord's humility in being born was a small thing for our sake; he also deigned to die for mortals. For he humbled himself, made subject all the way to death, even the death of the cross (Philippians 2:8), so that none of us—even if we could manage not to fear death—would shudder at some kind of death that people consider most disgraceful.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a clear reason why Christ died such a death.",
+   "author": "Augustine of Hippo",
+   "work": "On Faith and the Creed",
+   "work_slug": "augustine-on-faith-and-the-creed",
+   "section": "11",
+   "url": "https://viapatrum.org/works/augustine-on-faith-and-the-creed/11/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-013",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Christ's obedience unto death blotted out the charges of Adam's rebellion, and through it we have been saved.",
+   "comment": "[Christ] …placed himself in subjection to God the Father. ‘For he became obedient to the point of death’ (Philippians 2:8), blotting out the charges of the rebellion that came from Adam; and he brought the fragrance of his ready obedience to God the Father on behalf of all together and of each one, and through him we have been saved.\n\nPaul is a witness, writing thus: ‘So then, as through one trespass there came condemnation to all people, so also through one righteous act there comes justification that brings life to all people. For as through the disobedience of the one man the many were made sinners, so through the obedience of the one man the many will be made righteous’ (Romans 5:18–19).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul stresses that Christ was obedient: his obedience answers Adam's disobedience.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/18/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-006",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The exaltation and the name above every name are given to Christ's flesh, not to the Word, who was already God.",
+   "comment": "And when he says, \"Therefore God highly exalted him and granted him the name that is above every name\" (Philippians 2:9), he speaks about the temple, which is his body. For the Most High is not exalted, but the flesh of the Most High is exalted; and to the flesh of the Most High he granted the name that is above every name. And the Word of God did not receive by grace to be called God, but his flesh together with him was declared God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Marcellus of Ancyra",
+   "work": "On the Incarnation and against the Arians",
+   "work_slug": "marcellus-de-incarnatione-contra-arianos",
+   "section": "2",
+   "url": "https://viapatrum.org/works/marcellus-de-incarnatione-contra-arianos/2/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-014",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 11,
+   "capsule": "The one who is God by nature is said to be exalted because, having become human, he ascends again into his own glory with his flesh.",
+   "comment": "…since he also endured the cross itself, it says he is exalted, and that the name above every name has been given him so that every knee should bow and every tongue confess to him. How then does the one in God’s form and equality let himself down into emptying, and after this is said to be exalted? Is not Christ’s mystery most evident?\n\nFor being God by nature he became human in humiliation and lowliness, and having become as we are, he ascends again into his own glory even with flesh. And being exalted would befit the economy [God's plan of salvation in the flesh], not rather the Word’s nature itself. So there is one Christ, God in humanity, and with the humanity remaining what he was.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Answers the plain question of how one equal with God can be said to be exalted.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "78",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/78/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-007",
+   "chapter": 2,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "God working in us does not cut off our freedom but gives power toward virtue.",
+   "comment": "Therefore the apostle also says elsewhere that God is the one working in you, both to will and to work according to his good pleasure (Philippians 2:13), not cutting off our autonomy, but explaining the power from God toward virtue.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on Romans",
+   "work_slug": "apollinaris-fragmenta-romanos",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-romanos/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-016",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Set beside the public assemblies of the cities where they sojourn, the churches of God are like lights in the world.",
+   "comment": "[God] …made churches arise everywhere that live as a rival commonwealth to the assemblies of the superstitious, the licentious and the unjust. For such are the crowds that everywhere act as citizens in the assemblies of the cities. But the churches of God that have been made disciples of Christ, when compared with the assemblies of the peoples among whom they dwell as sojourners, are \"like lights in the world\" (Philippians 2:15). For who would not admit that even the worse members of the church, and those who fall short by comparison with the better, are much better than the assemblies of the peoples?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/29/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-008",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "Paul's \"luminaries in the world\" shows the believers share in the true light and together form one light, the church.",
+   "comment": "For the Lord said to his own disciples, 'You are the light of the world' (Matt 5:14), not solar—for he himself was the sun of righteousness—but lesser and provided by him. But also the apostle, saying, 'In which you are as luminaries in the world' (Phil 2:15), shows that having participated in the true light, they are the light of the world; for he leads on: 'holding the word of life' (Philippians 2:16). And the relationship to this light of his might be a moon; for he did not say 'you are the lights,' but the light; for all having unity toward themselves, they are thus one light, being the church.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP02-009",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "“Holding fast” the word of life means paying attention to it.",
+   "comment": "“Holding fast the word of life” (Philippians 2:16) means “paying attention to the word of life.” And to Timothy he also writes, “Pay attention to yourself” (1 Timothy 4:16), meaning “attend to yourself.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the meaning of Paul's phrase with a parallel.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Philippians",
+   "work_slug": "severianus-fragmenta-philippenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-philippenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "PHP03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Paul repeats the choicest lessons because even lessons heard many times still bring benefit.",
+   "comment": "The choicest lessons, even if people hear them many times, still bring benefit. So the all-wise Paul writes to those who believed through him: “To say the same things to you is no trouble to me, and for you it is safe” (Philippians 3:1). So in many ways he comes to us saying the same things, making plain the roads to good standing and describing the splendor of the rewards to be given to the saints. He does this to make them still more eager to choose to do the things by which they would become worthy of honor and would find the generosity that comes from above, from him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains plainly why Paul repeats himself.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book5-part2-rem-early",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book5-part2-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-010",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 8,
+   "capsule": "To be blameless under the law is not yet to do the deeds that make one renowned, so Paul counted it all loss.",
+   "comment": "…the blessed Paul too said that he himself had become “blameless as to the righteousness that is in the law” (Philippians 3:6). But one who is blameless in these things has not yet done the deeds that will make him illustrious and renowned. Indeed, the blessed Paul himself said again that he counted everything in the law as loss and reckoned it as so much refuse, and that he would seek instead “the surpassing excellence of the knowledge of Christ” (Philippians 3:7–8).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-011",
+   "chapter": 3,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "What Paul counts as loss was not evil but gain, and is loss only beside the surpassing greatness of better things.",
+   "comment": "If he counts it as loss for the sake of Christ, it was not evil; for it was gains. And he said “I have counted.” For it was not loss, but in comparison with the surpassing greatness of better things he counts it as loss.\n\nRubbish is a part of the stalk, and the stalk and the ear of grain once came from the seed.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain words in what sense Paul calls his former gains loss.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Philippians",
+   "work_slug": "severianus-fragmenta-philippenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-philippenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "PHP03-002",
+   "chapter": 3,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The law is called rubbish like the chaff separated from the grain, yet grace could not have been accomplished without it.",
+   "comment": "So the stalk of the law finally ceased, and circumcision, Sabbath observance, and the other things were separated off like rubbish. The pure grain of faith that had been hidden in the prophetic stalk was stored away in the storehouses of the common Master. This name 'rubbish,' then, shows that the name is appropriate to the law. And just as the seed could not have come to be without the rubbish, so neither could the perfection of grace have been accomplished without the law.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Paul's word 'rubbish' with a clear image.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Philippians",
+   "work_slug": "severianus-fragmenta-philippenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-philippenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "PHP03-003",
+   "chapter": 3,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Paul counted the law as rubbish because the law is a tutor that leads on to the better thing, Christ.",
+   "comment": "…the law leads us like a tutor to Christ (Galatians 3:24); and one appointed to lead others to someone else does not have his pupils stop at himself, but rather carries them on to something better and greater than himself. That is why the inspired Paul says that he counted the things in the law as rubbish “because of the surpassing worth of the knowledge of Christ” (Philippians 3:8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a clear reason for Paul's judgment on the law.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-012",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "To be conformed to Christ's death is to die to the world and put the passions to death, and so to share his resurrection and glory.",
+   "comment": "We die to the world and to minding the things of the flesh (Romans 8:5), we endure the putting to death of the passions, and we are all but crucified with Christ (Galatians 2:19–20), so that, passing over to a holy and blameless life, we may live as he wills. The inspired Paul, too, writes something of this kind: ‘Always carrying about in the body the dying of Jesus, so that the life of Jesus may also be made visible in our body’ (2 Corinthians 4:10). And again: ‘If we endure, we shall also reign with him’ (2 Timothy 2:12). If we are conformed to his death and his sufferings, as it is written, we shall share in the resurrection and the glory as well (Philippians 3:10–11).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says in plain terms what being conformed to Christ's death means in a believer's life.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "23",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/23/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-013",
+   "chapter": 3,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Paul can lay hold only because Christ first laid hold of him: we were chosen so that we might become pleasing.",
+   "comment": "From Him, the familiarity toward Him is given to men, and the good is not grasped by men, as the Apostle, teaching, says: 'I press on, if I may lay hold of it, because I was also laid hold of by Christ' (Phil 3:12). For we were not chosen because we were pleasing, but so that we might be pleasing.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on John",
+   "work_slug": "apollinaris-fragmenta-joannem",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-joannem/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-004",
+   "chapter": 3,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Paul means he attends to what lies ahead, not to remembering his past struggles.",
+   "comment": "…'Forgetting what lies behind'—not as though those things were evil, but what Paul says is this: 'I do not busy myself with remembering my past struggles, but with giving my attention to what I will accomplish in what lies ahead.'",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says in plain words what Paul means by forgetting.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Philippians",
+   "work_slug": "severianus-fragmenta-philippenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-philippenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "PHP03-005",
+   "chapter": 3,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "Those who have been negligent can still recover what they lost, so no one should despair but press on toward the prize.",
+   "comment": "Let those, then, who have accepted what was said and fulfilled it through their deeds remain stretching forward to what lies ahead. But those who have not yet touched this good work, let them touch it from now on, so that they may drive away the condemnation that comes from negligence by their zeal from this point forward. For it is possible—it is possible—for one who has been extremely negligent, if he afterward uses zeal, to recover all the loss of the time that has passed. Therefore it says, \"Today, if you hear his voice, do not harden your hearts as in the rebellion\" (Psalm 95:7-8). It says this to exhort and counsel us never to despair, but as long as we are here, to have good hopes, to press on toward what lies ahead, and to pursue the prize of the upward call of God (Philippians 3:13-14).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows what pressing on toward the prize means for an ordinary believer.",
+   "author": "John Chrysostom",
+   "work": "Baptismal Instructions",
+   "work_slug": "chrysostom-catecheses-illuminandos",
+   "section": "9",
+   "url": "https://viapatrum.org/works/chrysostom-catecheses-illuminandos/9/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-006",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Paul speaks of great sinners who think theirs is the best life and take pride in their own pleasures.",
+   "comment": "…think of certain exceedingly great sinners who suppose that they are living the truly best life, and that nothing could equal the luxury and the fleeting things of this world. They loathe the ways of decency, but they take pride in their own pleasures and wallow in them without restraint. It is of them, I think, that Paul says, “Those who set their minds on earthly things, whose god is the belly, and whose glory is in their shame” (Philippians 3:19).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who Paul describes in this verse.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u05-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u05-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-007",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Those whose glory is in their shame are glorified for appearing shameful and are bold where they ought to be ashamed.",
+   "comment": "They are glorified for appearing shameful. For the apostle says: 'of whom God is the womb and the glory in their shame, those who think on earthly things' (Philippians 3:19). In those things in which it is necessary to be ashamed, they are bold; and we see such things by nature even among men.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u31-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u31-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-014",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "Beasts look down toward the belly, but man stands upright toward heaven and should order his life to match, with his citizenship above.",
+   "comment": "What is the shape of the four-footed animals? Their head is bent down toward the earth, it looks toward the belly, and it pursues the belly's pleasure in every way. Your head stands upright toward heaven; your eyes look upward. So if you ever dishonor yourself with the passions of the flesh, serving the belly and the parts beneath it, you have been grouped with the senseless cattle and have become like them.\n\nA different concern befits you: to seek the things above, where Christ is (Colossians 3:1-2), and to be above earthly things in your mind. As you have been shaped, so order your life as well. Have your citizenship in heaven (Philippians 3:20). Your true homeland is the Jerusalem above, and your fellow citizens and kin are the firstborn, enrolled in heaven (Hebrews 12:22-23).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Basil of Caesarea",
+   "work": "Homilies on the Six Days of Creation",
+   "work_slug": "basil-homiliae-hexaemeron",
+   "section": "70",
+   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/70/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-008",
+   "chapter": 3,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Not warring according to the flesh is the same as having our citizenship in heaven.",
+   "comment": "The present passage [2 Corinthians 10:3] means what is written in another letter: 'Though we walk on earth, our citizenship is in heaven' (Phil 3:20); for walking 'according to the flesh' is the same as walking 'on earth' — and, conversely, not warring 'according to the flesh' is having our citizenship in heaven (2 Corinthians 10:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "didymus-fragmenta-2cor",
+   "section": "u03-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-2cor/u03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-015",
+   "chapter": 3,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "A Christian's city, occupation and kin are all in heaven, so the one name Christian tells everything about him.",
+   "comment": "[Of the martyr Lucian at his trial:] For by saying 'I am a Christian,' he revealed his homeland, his family, his occupation, and everything. How? I will tell you. A Christian has no city on earth, but the heavenly Jerusalem. For the heavenly Jerusalem is free, and she is our mother (Galatians 4:26). A Christian has no earthly occupation, but fulfills the way of life above. For our citizenship is in heaven (Philippians 3:20). A Christian has all the saints as relatives and fellow citizens. For we are fellow citizens with the saints and members of God's household (Ephesians 2:19). So with one phrase he taught with precision who he was, where he came from, who his people were, and what he continued to do.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows by a vivid example what it means to have one's citizenship in heaven.",
+   "author": "John Chrysostom",
+   "work": "On Saint Lucian",
+   "work_slug": "chrysostom-in-lucianum",
+   "section": "4",
+   "url": "https://viapatrum.org/works/chrysostom-in-lucianum/4/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-009",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "The body of our lowliness is this earthly body held by death, and it will be transformed into a glorified body, still human.",
+   "comment": "So He Himself, by His own power and a working fitting for God, “will transform the body of our lowliness to be conformed to the body of His glory” (Philippians 3:21). And what is the body of our lowliness? This body from the earth, held fast by death because of that ancient curse (Genesis 3:17–19), which Christ undid by “becoming a curse for us” (Galatians 3:13).\n\nThe transformation will not carry us off into some other nature. For we shall be what we are, that is, human beings, but incomparably better: incorruptible and imperishable, and glorified besides.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly what the lowly body is and what the change will be.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u08-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP03-016",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Only bodies kept pure as members of Christ will receive the transformation; the ungodly will be raised but have no share in glory.",
+   "comment": "The members of our body, if through purity they have remained members of Christ, will surely share in the life and glory that come from him; for “he will transform the body of our lowliness to be conformed to the body of his glory” (Philippians 3:21). But if they should become members of a prostitute, how could they receive that transformation and the spiritual splendor of being conformed to him?\n\nFor when earthly bodies have been raised at the time of the resurrection, “the righteous will shine like the sun” (Matthew 13:43). The ungodly, the profane, and those who have lived outrageously will indeed be raised, yet they will not go on to live the glorious life; they remain without any share in glory. For they will rise not “in judgment, nor in the council of the righteous” (Psalm 1:5), but for penalty and punishment, for they will go down into the outer darkness (compare Matthew 25:30). For how can what is being punished be in glory?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "PHP04-001",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Some name the jailer's household.",
+   "comment": "…Some say that Euodia was the jailer's wife [the jailer at Philippi, Acts 16], and Syntyche was the man.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Philippians",
+   "work_slug": "severianus-fragmenta-philippenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-philippenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "PHP04-002",
+   "chapter": 4,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The book of life is God's memory, in which the faithful are written and from which a name can be erased by one's ways.",
+   "comment": "…it is called a book, not because it is skin before God and letters; but because, since the book of memory is an instrument for you, it records the memory of God just as in a book; for God has no need of a book; for to God, memory is the book. …\n\n…even if your evil works are recorded, they can be erased through good works; just as if someone's name is written through piety, but he denies it by his ways, … it is erased. So that you may learn that the one written through piety and cast out through negligence is erased, David says concerning the Jews who were once written and later erased: 'Let them be blotted out from the book of the living, and let them not be written with the righteous' (Psalm 69:28). Just as the unfaithful are blotted out, so the faithful are written. Listen to Paul saying: 'Greet the brothers whom we love, and Clement and the other fellow workers, whose names are in the book of life' (Phil 4:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Blind Man and Zacchaeus",
+   "work_slug": "severianus-de-caeco-zacchaeo",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-zacchaeo/u02-rem-mid/",
+   "from_cite": true
+  }
+ ]
+}

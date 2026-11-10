@@ -1,0 +1,367 @@
+{
+ "book": "2 Kings",
+ "title": "The Fathers on 2 Kings",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 19,
+ "selected_count": 12,
+ "comments": [
+  {
+   "id": "2KI02-001",
+   "chapter": 2,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Elisha called Elijah a horseman because the one who rides most excellently, guiding his own vehicle, is more than a mere rider.",
+   "comment": "… An ancient wise man commanded that horsemen be distinguished from mere riders, calling one false and the other praiseworthy; for he who holds back without skill, not guiding the horse with reins, is merely a rider, as the aforementioned wise man demonstrated, whereas the one practicing the art of horsemanship is called righteous. Immediately, as the great prophet Elijah was being taken up, Elisha the God-inspired one cried out, 'Father, father, the chariot of Israel and its horsemen!' (2 Kings 2:12). For the one riding most excellently, having guided his own vehicle, ought to be called a horseman, not merely a rider.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u25-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u25-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI02-002",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Elijah left his mantle as a symbol of his power, and though it was only an old skin, the Jordan yielded to it.",
+   "comment": "Likewise, for Elijah, the one who guided this prophet with the flaming horses and the fiery chariot, living in another kind of life and having departed from men to the place he received, he left a symbol sufficient of his own power, even the mantle. Yet what was the value of that thing? For it was nothing other than a dead and trivial skin from old age. However, even the Jordan itself yielded to it, and the water was split and stood divided, just as the old Jordan was before Jesus [that is, Joshua], who was a type of what was to come (2 Kings 2:14).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the point of the mantle and the divided water.",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u15-open",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u15-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI02-004",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Elisha's first blow on the water did nothing, which shows that the river parted for the honor of Elijah and not because it was struck.",
+   "comment": "… And so that it might be clearly shown that the miracle concerning the river did not happen because of the cause of the water being struck, but because of the honor of the one inhabited and taken up, Elisha struck the water, and the water flowed normally, nothing new having suffered. And since, having failed, he cried out: 'Where is the God of Elijah?' (2 Kings 2:14), and having cried out a second time, he sat down, immediately the river split the stream, showing the dry land, and the prophet, having trodden, arrived at the other side.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u15-open",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u15-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI02-003",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Elisha's salt made the spring alive, and at the Lord's word the barren land bore again.",
+   "comment": "Such was the spring that encircled Jericho in ancient times, until the prophet Elisha came, took salt, threw it into the spring, and made the waters alive. For this is what the Lord says: “I heal these waters” (2 Kings 2:21). This is what he says who always speaks and brings his word to deed: “Let there no longer be from you one barren and sterile.” He spoke, and the water was changed: wombs were in labor, the earth put forth grain, the grape clusters bloomed again, and the olive tree displayed its own grace.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the healing of the water brought about.",
+   "author": "Amphilochius of Iconium",
+   "work": "On Zacchaeus",
+   "work_slug": "amphilochius-in-zacchaeum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/amphilochius-in-zacchaeum/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI05-001",
+   "chapter": 5,
+   "verse_start": 26,
+   "verse_end": 26,
+   "capsule": "Elisha, though absent in body, went with Gehazi in the spirit and so knew what he took.",
+   "comment": "Such was Elisha. Even when he was not present in the body, he went along with Gehazi in the spirit and said to him: “Was not my heart with you when he took the two talents of silver and the garments from Naaman the Syrian?” (2 Kings 5:26). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "origen-1-corinthians-fragments",
+   "section": "u05-open",
+   "url": "https://viapatrum.org/works/origen-1-corinthians-fragments/u05-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI13-001",
+   "chapter": 13,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Elisha, though dead, still did good, for a dead man thrown on his tomb was revived.",
+   "comment": "Many also, having ended their lives, holy saints are able, even after departing from life, to do good to men; and witness to these things is Elisha, who long ago, having departed from life and fallen asleep, but having received the grace of God immortal and inseparable, was present in the earth and with the lifeless bones (2 Kings 13:21). For you know, as a lover of the Scriptures and a disciple, that someone dead, being carried out by his own people, perhaps being seized by robbers or enemies, such as it is pleasing to happen in commotion and noise, having been thrown upon the tomb of the thrice-blessed prophet, was immediately revived and rose to the living.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u14-rem-close",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u14-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI14-001",
+   "chapter": 14,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "The account recalls God's law to show that Amaziah's judgment was just, so that the deed is not discounted because of the man.",
+   "comment": "In the fourth Book of Kingdoms, we read about Amaziah, son of Joash, king of Judah: ‘After the kingdom was firmly established in his hands, he killed his servants who had killed his father. But he did not kill their sons, in accordance with the covenant of the Lord’s law, which commands: Fathers shall not die for their children, nor children for their fathers’ (2 Kings 14:5–6). You see how the truthful historical account displays the justice of the king’s judgment. Although he had been devout, he is reported to have faltered in some respects. The authority of God’s law was therefore recalled to confirm his judgment. So that the deed should not carry too little weight because of the person who did it, it is commended as having been performed according to God’s law and covenant.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the text appeals to the law here.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.30",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.30/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI15-001",
+   "chapter": 15,
+   "verse_start": 35,
+   "verse_end": 35,
+   "capsule": "Jotham loved God, yet the people still sacrificed on the high places because he did not remove them.",
+   "comment": "Then Jotham, his son, succeeded to the kingdom of Uzziah. He was a man who loved God; yet “he did not remove the high places,” Scripture says (2 Kings 15:35), but the people of Israel still sacrificed to the works of their own hands, taking to the mountains and hills, “under oak and poplar and shady tree,” as Hosea says, “because shade is good” (Hosea 4:13).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the high places were and why they mattered.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "prologue",
+   "url": "https://viapatrum.org/works/cyril-isaiah/prologue/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI17-001",
+   "chapter": 17,
+   "verse_start": 24,
+   "verse_end": 26,
+   "capsule": "The settlers in Samaria had children and, terrified by the lions, inclined toward the customs of the Jews.",
+   "comment": "“And they took possession of Samaria” (2 Kings 17:24). These, then, who took the land of the Samaritans as their lot and settled there, in time, it seems, became fathers of children; and they inclined toward the customs of the Jews, terrified by the attacks of the lions (2 Kings 17:25-26). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI18-001",
+   "chapter": 18,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Hezekiah rebelled against the king of the Assyrians because he would not let his kingdom pay tribute as Ahaz had.",
+   "comment": "When Ahaz ended his human life, Hezekiah reigned in his place. He was his son, but a man dear to God, who had won the glories of the highest righteousness and piety. He, it says, “rebelled against the king of the Assyrians” (2 Kings 18:7); for he would not let his kingdom be brought under tribute, as Ahaz of course had done.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Hezekiah rebelled.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book3-tomos4-open",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book3-tomos4-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI18-002",
+   "chapter": 18,
+   "verse_start": 34,
+   "verse_end": 34,
+   "capsule": "The Assyrian wrongly supposed the Lord was like the gods made by human hands, though the Lord made all things and Samaria fell only because God withheld help.",
+   "comment": "“Where is the god of Hamath?” and so on; “Have they delivered Samaria out of my hand?” (2 Kings 18:34). For the barbarian, whose tongue matched his pride, perhaps supposed that the Master of earth and heaven, the Maker and Lord of all things, was just like one of the falsely named gods. Indeed it is the habit of those who do not know God sometimes to mock the hope of the saints, and to dare to say that they would not be delivered by God. Yet he was not unaware that human hands had made the falsely named gods, while the One who is God by nature and in truth was made by no one, but rather himself brought into being things that once did not exist. Samaria, then, was captured because God withheld his help. And, as I said before, even if none of the gods spoken of among the Greeks saved its own land, that counts for nothing against God, who truly and by nature exists and is great. For those gods have received from human craft only this much, that they can at least be seen; but he rules over all things, being the Lord of hosts.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the boast and why it was wrong.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI19-001",
+   "chapter": 19,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Hezekiah tore his clothes, as the Jews did at blasphemies against God, grieving for God's sake.",
+   "comment": "“He tore his garments” (2 Kings 19:1). Do you see how, disregarding his own affairs, he grieves for God’s sake and seeks vengeance? “He tore his garments,” it says, “and covered himself with sackcloth, and went into the house of the Lord” (2 Kings 19:1). And what was the reason for tearing his clothes? It was the custom of the Jews to do this at blasphemies against God; and the Gospels record that Caiaphas did the same (Matthew 26:65).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the king tore his garments.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI19-002",
+   "chapter": 19,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The cedar means the kingdom of Judea, whose glories under Hezekiah were about to rise.",
+   "comment": "“I cut down the height of its cedar” (2 Kings 19:23). Its: whose? Lebanon’s, that is, Judea’s. By the height of the cedar he means their kingdom. For the glories of Hezekiah’s kingdom were about to be raised on high.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the figure of the cedar.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI19-003",
+   "chapter": 19,
+   "verse_start": 34,
+   "verse_end": 34,
+   "capsule": "The sparing for David's sake passed to his descendants, as the word to Hezekiah shows.",
+   "comment": "… Just as it is said directly to Solomon that because of David he would not fall entirely from the kingdom, so also the sparing for David's sake passed to his descendants, just as it is said to Hezekiah: \"I will shield this city for the sake of David my servant\" (2 Kings 19:34).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u08-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u08-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI19-004",
+   "chapter": 19,
+   "verse_start": 34,
+   "verse_end": 34,
+   "capsule": "God shields the city for his own sake, not because those helped are worthy.",
+   "comment": "“And I will shield this city for my own sake” (2 Kings 19:34). For this befits the One who is God. Therefore: “I will do these things for my own sake,” and not because those who are helped are worthy.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God says 'for my own sake'.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI19-007",
+   "chapter": 19,
+   "verse_start": 35,
+   "verse_end": 35,
+   "capsule": "The angel's blow ended the war, so that Jerusalem's great mourning was turned into great joy.",
+   "comment": "“And the angel of the Lord went out and struck down in the camp of the Assyrians a hundred and eighty-five thousand” (2 Kings 19:35). So the war is ended, and the threats flee along with the dangers; and so from then on the inhabitants of Jerusalem, rejoicing greatly at the help that came from God, could say: “You have turned my mourning into joy for me” (Psalm 30:11). … Great was the mourning because of the multitude of those making war; great has the joy become because of the multitude of those who have fallen.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the angel's blow meant for Jerusalem.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI19-006",
+   "chapter": 19,
+   "verse_start": 37,
+   "verse_end": 37,
+   "capsule": "He survived his army, as Pharaoh was kept as an onlooker, yet his own sons murdered him.",
+   "comment": "… Yet even if he [Sennacherib] did not share the fate of the multitude, for the reason already stated, the same reason for which Pharaoh too was kept as an onlooker while the rest of the Egyptians were punished, still he found his own sons to be his murderers when he had come back to his own land (2 Kings 19:37).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the king survived the army but not his sons.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI22-001",
+   "chapter": 22,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "God promised Josiah as a great benefit that he would die in peace before seeing the coming evils.",
+   "comment": "… What then is this, that God promised the most pious king Josiah as a great benefit that he would die before seeing the evils that threatened to come upon that place and people? These are the words of God: \"Thus says the Lord God of Israel: My words which you have heard, and you feared before my face when you heard what I spoke about this place and those who dwell in it, that it should be deserted and be under a curse, and you tore your garments and wept in my sight, and I have heard—says the Lord of hosts. Not so: behold, I will gather you to your fathers, and you shall be gathered in peace; and your eyes shall not see all the evils which I am bringing upon this place and those who dwell in it\" (2 Kings 22:19-20). Terrified by God's threats, he had wept and torn his garments; and he is made secure from all future evils by his hastening death, because he would rest in peace in such a way that he would not see all those things. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what God's promise to Josiah meant.",
+   "author": "Augustine of Hippo",
+   "work": "On Care for the Dead",
+   "work_slug": "augustine-care-for-the-dead",
+   "section": "16",
+   "url": "https://viapatrum.org/works/augustine-care-for-the-dead/16/",
+   "from_cite": true
+  },
+  {
+   "id": "2KI25-001",
+   "chapter": 25,
+   "verse_start": 8,
+   "verse_end": 10,
+   "capsule": "Israel's ever-growing impiety provoked God, who let them be enslaved by the Chaldeans, who burned the city.",
+   "comment": "… And the things of impiety were not practiced by those from Israel only up to this. Always bringing as it were an addition to the daring deeds, the unbridled departure toward anything out of place, they provoked him not moderately to angers against themselves, though the lawgiver is kind. And when they shook off the slavery to him in a youthful way, he thereafter let them also be defrauded even by enemies, and be carried already toward a necessary bondage, I mean the one under Chaldeans and Babylonians. For these came, leaving their own homes, enslaved them, and burned the holy and famous city …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "12",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/12/",
+   "from_cite": true
+  }
+ ]
+}

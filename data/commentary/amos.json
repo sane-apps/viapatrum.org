@@ -1,0 +1,253 @@
+{
+ "book": "Amos",
+ "title": "The Fathers on Amos",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 13,
+ "selected_count": 6,
+ "comments": [
+  {
+   "id": "AM02-001",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "The consecrated ones are the Nazirites, who consecrated themselves to God, such as Samson.",
+   "comment": "He [in Lamentations] means those who consecrated themselves to God; for “consecrated ones” (Amos 2:11–12) is what Nazirites shows—thus Symmachus and Theodotion in Amos rendered the consecrated ones, having said Nazirites. Moses also mentions these; and such was also Samson. And among Jews they were also eminent.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "102",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/102/",
+   "from_cite": true
+  },
+  {
+   "id": "AM04-001",
+   "chapter": 4,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "God sends the drought for our turning away and neglect, not to destroy us but to set us right as good fathers do.",
+   "comment": "Let the same prophet I mentioned a moment ago in the introduction speak to us as well: “I withheld the rain from you three months before the harvest. I will send rain on one city, and on another city I will send no rain. One field will be soaked, and the field on which I send no rain will wither. Two or three cities will gather to one city to drink water, and they will not be satisfied, because you did not turn back to me, says the Lord” (Amos 4:7-8). Let us learn, then, that God sends these blows upon us because of our turning away and neglect—not seeking to destroy us, but eager to set us right, like good fathers with careless children, who grow angry with the young and rise up against them, not because they are eager to do them harm, but to lead them from childish indifference and the sins of youth into careful living.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God withholds the rain, in plain terms.",
+   "author": "Basil of Caesarea",
+   "work": "Homily in Time of Famine and Drought",
+   "work_slug": "basil-homilia-tempore-famis",
+   "section": "2",
+   "url": "https://viapatrum.org/works/basil-homilia-tempore-famis/2/",
+   "from_cite": true
+  },
+  {
+   "id": "AM05-008",
+   "chapter": 5,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Amos speaks of the Israel that is destroyed and Paul of the Israel that is saved, the remnant Isaiah foretold, so the two do not disagree.",
+   "comment": "Rather, it is worthy to seek the matter: would Paul disagree with the prophet, saying: 'The house of Israel has fallen, and it shall no longer add to rising' (Amos 5:2)?\n\nOtherwise the prophet himself would seem to disagree with himself in the following, saying other good things and the end: 'And I will plant them upon their own land, and they shall never again be uprooted from the land which I gave them, says the Lord' (Amos 9:15).\n\nBut the prophet Isaiah clearly solves the question: the remnant of the people that shall be saved, and Israel being called by a wholly different name … Therefore it is necessary also for them [the Jews] to confess that there shall be a change of those who are to be saved from among them into another mind and polity, as it is true to say concerning them, either that they are not Israel, or truly these are Israel of the Israel being destroyed according to the flesh.\n\nThe prophet has spoken of the one being destroyed, but the apostle of the one being saved, separating him from the one according to the flesh.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on Romans",
+   "work_slug": "apollinaris-fragmenta-romanos",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-romanos/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AM05-002",
+   "chapter": 5,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The ungodly hate rebuke in the gates, and Proverbs forbids rebuking such people.",
+   "comment": "For it was said by another prophet: 'They hated me in the gates while rebuking, and they detested a holy word,' (Amos 5:10) as the ungodly make manifest. For regarding them, the proverbial ordinance forbids: 'Do not rebuke the evil, lest they hate you' (Prov 9:8).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u19-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u19-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AM05-003",
+   "chapter": 5,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The day is this age, and darkness and night are the consummation because of the punishments.",
+   "comment": "[The Savior said:] 'Work while it is day; night comes when no one can work.' (John 9:4) There he named day this age … and darkness and night the consummation because of the punishments. For 'Why do you desire the day of the Lord? And this is darkness and not light,' (Amos 5:18) says Amos the prophet.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the day of the Lord as darkness, in a few clear lines.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "12.10",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/12.10/",
+   "from_cite": true
+  },
+  {
+   "id": "AM05-009",
+   "chapter": 5,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The day of the Lord is darkness only for those who deserve it, for that day is without evening, succession or end.",
+   "comment": "For “the day of the Lord,” it says, “is great and glorious” (Joel 2:11). And again, “Why do you seek the day of the Lord? It is darkness and not light” (Amos 5:18). Darkness, clearly, for those who deserve the darkness. For the word knows that day to be without evening, without succession, and without end—the day the psalmist also called the eighth, because it lies outside this sevenfold time. So whether you say “day” or “age,” you will mean the same thing.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms for whom the day of the Lord is darkness.",
+   "author": "Basil of Caesarea",
+   "work": "Homilies on the Six Days of Creation",
+   "work_slug": "basil-homiliae-hexaemeron",
+   "section": "17",
+   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/17/",
+   "from_cite": true
+  },
+  {
+   "id": "AM05-004",
+   "chapter": 5,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Feasts are good when the spiritual Jerusalem lives in peace, not when they are kept while enemies prevail.",
+   "comment": "… Good feasts are fulfilled when the spiritual Jerusalem lives peacefully, being a vision of peace, not when the feasts occur propitiatorily while enemies prevail. For when things are thus, God says: 'I have hated, I have despised your feasts, and I will not be fragrant in your assemblies' (Amos 5:21). And even further threatening: 'I will turn,' He says, 'your feasts into mourning and your songs into lamentations' (Amos 8:10).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u19-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u19-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AM05-005",
+   "chapter": 5,
+   "verse_start": 21,
+   "verse_end": 23,
+   "capsule": "God legislated in types and shook off the shadow of worship through blood, saying he hated their feasts.",
+   "comment": "For God legislated even of old the things in types. And he showed beforehand again the things from the true worship as coming and about to be present in their times. And he made the approach through blood, and the shadow, a thing to be thrown away. He shook it off through the prophet, saying in Amos, 'I have hated, I have rejected your feasts, and I will not smell in your assemblies. Because if you bring me whole burnt offerings and your sacrifices, I will not look. Take away from me the noise of your songs, and I will not hear the psalm of your instruments.' (Amos 5:21–23)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/7/",
+   "from_cite": true
+  },
+  {
+   "id": "AM07-002",
+   "chapter": 7,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "The threat is painful because husbands see their wives corrupted by savage enemies and cannot prevent the violence on their own land.",
+   "comment": "… The excess is shown in the women suffering violence from tyrannizing enemies in addition to the men living with them, and from what was said to the worthless priest Amaziah by the prophet Amos, seeing sharply: 'Your wife in the city shall commit fornication, and your land shall be measured with a cord' (Amos 7:17). Both the threatened things are painful and cause agony to those living together, seeing the cohabitants inside the city and not outside it, being corrupted in their lawful marital rights by the most savage enemies, and their own land being measured with a cord, while the owners are present and are not strong enough to prevent the violence.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms what the threat to Amaziah means.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u34-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u34-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "AM08-002",
+   "chapter": 8,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The famine is not a scarcity of food but the deprivation of divine teachings.",
+   "comment": "For famine he speaks of not the scarcity of edible foods, but the deprivation of divine teachings. Accompanying this is the saying, 'I will send famine upon the earth' (Amos 8:11), not a famine of bread nor a thirst for water, but a famine of hearing the word of the Lord.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly what kind of famine the verse means.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u16-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u16-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "AM08-003",
+   "chapter": 8,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "Those pressed by the famine of the word fall out of virtue and are laid under the devil's rule.",
+   "comment": "Rebuking the Jews' unbelief, God said somewhere: 'Behold, I bring a famine on the land, not a famine of bread, nor a thirst of water, but a famine of hearing the word of the Lord. And they will run from east to west seeking the word of the Lord, and they shall not find it.' (Amos 8:11–12) Would not then, my friend, those pressed by such a famine, and fallen out of the supply that holds them toward virtue, and not having the foods from heaven and from above, of every necessity make the mind as it were a migrant and a fugitive, chasing thereafter after the more shameful things, and, as if pushed out of a land of its own — the strength toward virtue — go down into another habit and will, no longer the one under God, but rather one laid under the devil's rule? For the father, I think, and king of sin is the first who brought it into the world, whose image and type one might also receive, I think, and with much reason, as Pharaoh, ruling the Egyptians. Among whom the darkness of having wandered was very deep, and no manner of vice was wholly unpracticed.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "10",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/10/",
+   "from_cite": true
+  },
+  {
+   "id": "AM09-003",
+   "chapter": 9,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Not all sinners die by swords, so the sword names the punishment that is to come upon those who sin.",
+   "comment": "'By the sword' he says, 'all the people of the sinners shall perish' (Amos 9:10). And not everywhere do all perish by swords, but the name of the sword indicates the punishment that is about to be brought upon those who sin. And the saying 'You Ethiopians are wounded by my sword' (Zephaniah 2:12) presents the same thought; but also that which is said in the Exodus by those being afflicted by Pharaoh against Moses and Aaron: 'Behold, God is judging to give a sword into the hands of Pharaoh' (Exodus 5:21), they show by the name of the sword the tribulation brought upon themselves.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the sword means.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u12-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u12-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "AM09-002",
+   "chapter": 9,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "The bright restoration promised through Amos surpasses a return from captivity, as Christ proclaims release to the captives.",
+   "comment": "… But the things of the bright restoration have surpassed this [the return of the captives] intellectually when he came, the one saying: 'The Spirit of the Lord is upon me, because he has anointed me to preach to the poor, he has sent me to proclaim release to the captives and sight to the blind, to heal the crushed in heart' (Luke 4:18). The same is promised also in the prophet Amos, saying: 'I will restore the captivity of my people Israel, and they shall build the ruined cities and replant them' (Amos 9:14-15).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u17-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u17-rem-close/",
+   "from_cite": true
+  }
+ ]
+}

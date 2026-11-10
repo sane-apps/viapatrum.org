@@ -1,0 +1,344 @@
+{
+ "book": "Revelation",
+ "title": "The Fathers on Revelation",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 18,
+ "selected_count": 7,
+ "comments": [
+  {
+   "id": "RV01-003",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The words 'who is and who was and who is to come' fit Christ's work in time, for he was on earth, is now in heaven, and will come as judge.",
+   "comment": "… this earthly mission [Christ's work in time] is not merely as that generation according to God [his eternal birth from the Father] is, but it also was and will be. For our Lord was on earth, and now he is in heaven, and he will be in glory as judge of the living and of the dead. For he will come just as he ascended, according to the authority contained in the Acts of the Apostles. From this earthly mission, then, he speaks in Revelation, where it is written: These things says he who is and who was and who is to come (Revelation 1:4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Augustine of Hippo",
+   "work": "On Faith and the Creed",
+   "work_slug": "augustine-on-faith-and-the-creed",
+   "section": "15",
+   "url": "https://viapatrum.org/works/augustine-on-faith-and-the-creed/15/",
+   "from_cite": true
+  },
+  {
+   "id": "RV01-001",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Christ's coming with the clouds is his second and glorious appearance, when he comes as king with his saints and angels.",
+   "comment": "The present voice [the passage of Zechariah under discussion] is able to signify a second and glorious appearance of the Savior, concerning which John in Revelation spoke highly and God-appropriately thus: 'Behold, he comes with the clouds, and every eye shall see him, and those who pierced him' (Rev 1:7). This understanding is based on what the Savior said concerning himself: 'Clouds shall see the Son of Man coming upon the clouds of heaven with much power and glory' (Matt 24:30). For how could he who comes royally not shine with much glory? And he comes also with much power, with the saints coming with him, not of men alone but also of angels.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u35-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u35-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "RV01-002",
+   "chapter": 1,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Jesus calls himself beginning and end, first and last: things that appear opposite, yet he is both.",
+   "comment": "Jesus himself therefore says to be 'beginning and end'; 'I', he says, 'am the Alpha and the Omega, the beginning and the end, the first and the last, the living one and I became dead, and behold, I am living forever' (Rev 1:8, 22:13). See how these things, appearing to be opposite, he says to be himself both before and after. For he says, 'I am the first and I am the last', or first, 'I am the Alpha and I am the Omega'.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u11-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u11-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "RV01-004",
+   "chapter": 1,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The Savior is rightly called the Almighty, since all things came into being through him and he holds them all.",
+   "comment": "… if all things came into being through Him, and He is before all things, and all things consist in Him, and He holds providentially all things having come into being through Him, and He is before all things consisting in Him, it follows that He is called Pantokrator [the Almighty, the one who holds all things]. … For the Son is the Pantokrator being sent by the Pantokrator, being sent by the Father. And most clearly in the Apocalypse of John, the Savior is called Pantokrator: 'These things says the Lord, the faithful and true witness, the one who was and the one who is and the one who is coming, the Lord God the Pantokrator' (Rev 1:8). For these things have been said about the Son without dispute.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Savior is called the Almighty in this verse.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u13-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u13-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "RV01-005",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "He is life itself, so though he became dead he did not stay dead forever.",
+   "comment": "… 'I am the living one,' not the 'one having become living'; for he is 'living,' for he is 'life,' but 'he became' 'dead'; but the intervening part is resolved: for he came up; 'and behold, I am living forever' (Rev 1:18). For if even 'living' he happens to have 'become dead,' he has not 'become dead forever' …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u12-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u12-open/",
+   "from_cite": true
+  },
+  {
+   "id": "RV03-003",
+   "chapter": 3,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "He who shuts alone opens: only the divine Word makes the dark sayings of Scripture clear.",
+   "comment": "… For those who prophesy and those who listen to the prophets need the same power; and no one can hear a prophet unless the very Spirit who prophesied gives him understanding of His words. Such an oracle stands written in the sacred Scriptures as well, saying that He who shuts alone opens, and no one else at all (Revelation 3:7; Isaiah 22:22). And the divine Word opens what is shut by making the riddles clear. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Gregory Thaumaturgus",
+   "work": "Thanksgiving Address to Origen",
+   "work_slug": "gregory-thaumaturgus-panegyricus",
+   "section": "15",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-panegyricus/15/",
+   "from_cite": true
+  },
+  {
+   "id": "RV03-001",
+   "chapter": 3,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The crown is held only while one keeps to the Lord's way, as Solomon's fall shows, since if justice departs the crown must depart too.",
+   "comment": "For confession does not make a person immune from the snares of the devil, nor does it defend with perpetual security someone still placed in the world against temptations and dangers and the attacks and assaults of the age. … Whatever confessor he is, he is not greater or better than Solomon or more dear to God. Yet as long as Solomon walked in the ways of the Lord, so long he held the grace which he had obtained from the Lord; after he abandoned the way of the Lord, he lost also the grace of the Lord. And therefore it is written: Hold what you have, so that no one else takes your crown (Revelation 3:11). Surely the Lord would not threaten that the crown of justice could be taken away unless, when justice departs, the crown also must necessarily depart.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/20/",
+   "from_cite": true
+  },
+  {
+   "id": "RV03-002",
+   "chapter": 3,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The one who calls himself the beginning of God's creation is Almighty, so he is the beginning as the ruling kingdom over all creatures, not as one created.",
+   "comment": "… Indisputably in John's Revelation the Savior is confessed as Almighty, he himself saying thus concerning himself: 'Thus says the faithful witness, the beginning of God's creation, the one who is and who was and who is coming, the Lord God the Almighty' (Revelation 3:14). Being Almighty, the one saying these things is not a creature, lest he also hold himself. For this is absurd: the same one creating and being created by himself, and reigning and being held. But even if the theologized one is called 'beginning of God's creation' in the quoted voice, as royally ruling and being Almighty by this very fact, he is the beginning of creation — that is, the reigning and leading kingdom over all creatures. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u04-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u04-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "RV05-001",
+   "chapter": 5,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The incense in John's vision is the prayers of the saints, rising from a pure conscience.",
+   "comment": "… our altars are the ruling mind of each righteous person, from which there truly and spiritually rises fragrant “incense”: “prayers” from a pure conscience. That is why John says in the Revelation: “The incense is the prayers of the saints” (Revelation 5:8); and the Psalmist: “Let my prayer be as incense before you” (Psalm 141:2).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "17",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/17/",
+   "from_cite": true
+  },
+  {
+   "id": "RV06-001",
+   "chapter": 6,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The souls overcome because of the testimony of Jesus are near the altar in heaven as priests.",
+   "comment": "… And there is an altar in heaven, and the souls of those having been overcome because of the testimony of Jesus (Revelation 6:9) are near it. And the word shows that 'those having been overcome because of the testimony of Jesus' are as a priest near the altar. Not everyone is able, but 'the one having been overcome because of the testimony'. Therefore this altar is an interior one.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u50-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u50-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "RV06-002",
+   "chapter": 6,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The souls of the martyrs are seen under the heavenly altar because they came there as victims sacrificed to God.",
+   "comment": "… \"We were counted\" then \"as sheep for slaughter.\" Everyone who wishes to slaughter us can do so. And this is possible; even if some fight us, we consider ourselves as sheep being ritualized, as being sacrificed to God for a \"pleasing sacrifice\" (Ps 50:5). Indeed, in the Revelation of John, \"the souls of those being persecuted for the testimony of Jesus\" (Rev 6:9) appeared dancing under the altar of the heavenly God, clearly as victims having come there.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u53-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u53-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "RV08-001",
+   "chapter": 8,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "The woe is for those who dwell on the earth and not for those who only sojourn on it, for God means to snatch the man from the earthlings.",
+   "comment": "… for the lowly one is a resident of the earth, the holy one being not a resident but a sojourner. Thus also it is said in Jeremiah: 'The evils shall be burned upon those dwelling on the earth' (Jeremiah 1:14), those rooting themselves on the earth, … and in the Revelation it is said: 'Woe to those dwelling on the earth' (Revelation 8:13), not to those sojourning; but the purpose of God is to snatch the man from the earthlings, even if he himself holds to the earthlings.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u16-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "RV10-002",
+   "chapter": 10,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "John's seven thunders show that some things taught by God are not to be written down.",
+   "comment": "… I say that these men [the prophets and apostles] saw better than Plato, from the thoughts they received by the grace of God, which things are “to be written” and how they are “to be written”, and which are by no means “to be written for the many”, and which are “to be spoken” and which are not of that kind. And again John, teaching us the difference between what is to be written and what is not, says that he heard seven thunders teaching him about certain things and forbidding him to commit their words to writing (Revelation 10:3–4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/6/",
+   "from_cite": true
+  },
+  {
+   "id": "RV10-001",
+   "chapter": 10,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "John, like Ezekiel, eats the book so that it is not written down and betrayed to the unworthy.",
+   "comment": "… For Ezekiel receives a roll “of a book”, written “in front” and behind, in which there was “lamentation and song and woe” (Ezekiel 2:9–10); and at the command of the Word he eats the book, so that he might not write it down and betray it to the unworthy (Ezekiel 3:1–3). John too is recorded to have seen and done something similar (Revelation 10:9–10). And Paul too “heard unspeakable words, which it is not lawful for a man to utter” (2 Corinthians 12:4). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/6/",
+   "from_cite": true
+  },
+  {
+   "id": "RV12-001",
+   "chapter": 12,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The devil and Satan are the same, since Satan is the Hebrew name meaning adversary.",
+   "comment": "Regarding this lion and dragon thus spoken of, in the Apocalypse of John it is said that he is 'the ancient Satan' (Rev 12:9). From a parallel it will seem to be revealed in such a theory that 'devil' and 'Satan' are the same, the name Satan being Hebrew, meaning 'adversary' in the Greek voice. These things being thus considered, it is blessed to have the devil as an enemy and an adversary and not a friend; for his fellowship is harmful and strikes toward destruction. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u05-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u05-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "RV14-001",
+   "chapter": 14,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The virgins of Revelation are those holy in thought and action, not virgins by the body.",
+   "comment": "… so too virgins possessing holiness in thought and action do not have a female body by necessity. In the Revelation of John, the one hundred and forty-four thousand virgins were not such things according to the body; for it was brought forth: 'These are they who were not defiled with a woman; for they are virgins, and there is no deceit in their mouth; for they are without blemish' (Rev 14:4). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u16-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "RV19-001",
+   "chapter": 19,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The angel's own words show that angels do not wish to be worshipped.",
+   "comment": "… And how can you paint angels, who are spirits and always alive, painting them in dead things and worship them, when the prophet says, \"He who makes his angels spirits and his ministers a flaming fire\" (Psalm 103:4 LXX, 104:4 Hebrew)? I say that they themselves do not wish to be worshipped. \"See that you do not do it; I am a fellow servant with you and your brothers who hold the testimony of Jesus. Worship God,\" he says (Revelation 19:10). But the apostles did not wish to be worshipped either.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Epiphanius of Salamis",
+   "work": "Treatise against Those Who Make Images",
+   "work_slug": "epiphanius-tractatus-contra-eos-qui-imagines-faciunt",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/epiphanius-tractatus-contra-eos-qui-imagines-faciunt/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "RV22-001",
+   "chapter": 22,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "The Savior's words show that beginning is taken in one sense and first in another.",
+   "comment": "And so that what is said may not seem a mere assertion, we also call the Savior himself as witness, teaching us to have a distinction between beginning and first. For in the Apocalypse that is current of John he is saying: \"I am the Alpha and the Omega, the first and last, the beginning and the end.\" (Revelation 22:13) … it is shown that the beginning is taken in one sense and the first in another (Revelation 1:8).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Pascha",
+   "work_slug": "origen-on-pascha",
+   "section": "1.32",
+   "url": "https://viapatrum.org/works/origen-on-pascha/1.32/",
+   "from_cite": true
+  }
+ ]
+}

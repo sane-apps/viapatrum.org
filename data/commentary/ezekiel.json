@@ -1,0 +1,936 @@
+{
+ "book": "Ezekiel",
+ "title": "The Fathers on Ezekiel",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 50,
+ "selected_count": 23,
+ "comments": [
+  {
+   "id": "EZK01-001",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The opening of the heavens is an impression made on the ruling mind, as in a dream, not a splitting of the visible sky.",
+   "comment": "We say that, just as it is believed that many have had visions in dreams, some of more divine things, others telling of future events of this life, whether clearly or in riddles, and this is plain to all who accept providence, so what is absurd in holding that what forms impressions on the ruling mind in a dream can form them on it while awake as well, for the benefit of the one in whom they are formed, or of those who will hear of them from him? And just as in a dream we have the impression that we hear and that our bodily ear is struck, and that we see with our eyes, though neither the eyes of the body nor the hearing is being struck, but the ruling mind is undergoing these things, so there is nothing absurd in such things having happened to the prophets, when it is recorded that they saw certain quite extraordinary things, or heard words of the Lord, or beheld the heavens opening. For I do not suppose that the visible heaven was opened, and its body split apart as it opened, so that Ezekiel might record such a thing.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'the heavens were opened' means in a way a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "48",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/48/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK01-002",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The powers on high never sink toward baser things but speed along a blameless path.",
+   "comment": "“And four wings for each one” (Ezekiel 1:6). For in a sense the rational powers on high always stand: they do not sink down toward baser things, but speed along the straight and blameless path of the life that befits them.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a plain reading of the living creatures' wings.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-open/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK01-003",
+   "chapter": 1,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "Scripture calls God's untouchable essence \"glory\" so that we worship and do not demand an account, and Ezekiel was first to do so.",
+   "comment": "Scripture often calls God's very essence \"glory.\" Since that essence is untouchable and unattainable, Scripture named it \"glory\" so that you may not demand an account but worship. Ezekiel is the first to call God's essence \"glory,\" when in visions he saw God seated and added, \"This was the likeness of the glory of the Lord\" (Ezekiel 1:28). Interpreting this elsewhere, God says, \"I multiplied visions and was likened through the prophets\" (Hosea 12:10). So the \"glory\" Ezekiel spoke of is what God calls \"the I.\"",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the vision is called the glory of the Lord.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Ephesians",
+   "work_slug": "severianus-fragmenta-ephesios",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-ephesios/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK02-001",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Whoever is shod with the gospel of peace is not harmed even when bitten by the scorpions.",
+   "comment": "For Christ encourages me through the prophet, saying: \"Son of man, do not be afraid of their faces, for they will rage against you on every side. For you dwell in the midst of scorpions\" (Ezekiel 2:6). I am not afraid of stinging scorpions. For I do not walk with bare feet; I have the sandals of the gospel of peace, so that even if I am bitten, I am not harmed. \"And having shod your feet,\" he says, \"with the readiness of the gospel of peace\" (Ephesians 6:15).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Amphilochius of Iconium",
+   "work": "On “Father”",
+   "work_slug": "amphilochius-in-illud-pater",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/amphilochius-in-illud-pater/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK02-002",
+   "chapter": 2,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The book is written within for spiritual things and without for sensible ones, and the wise man finds them in harmony.",
+   "comment": "'take it and eat, and your belly shall be filled' (Ezek 3:3). 'And I ate', he says, 'and it became sweetness in my belly'. And he says: 'this book is written within and without' (Ezek 3:3). According to the spiritual and intelligible things it is written within, according to the sensible and manifest things without. But the wise man understands both and finds harmony between the symbols and the realities.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what is meant by a book written within and without.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u46-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u46-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "Ezekiel eats the book at the Word's command so as not to write it down and betray it to the unworthy.",
+   "comment": "For Ezekiel receives a roll “of a book”, written “in front” and behind, in which there was “lamentation and song and woe” (Ezekiel 2:9–10); and at the command of the Word he eats the book, so that he might not write it down and betray it to the unworthy (Ezekiel 3:1–3). John too is recorded to have seen and done something similar (Revelation 10:9–10).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the prophet is told to eat the scroll.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/6/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK07-001",
+   "chapter": 7,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "The doves on the mountains are the disciples, who went about the earth speaking Christ's mystery.",
+   "comment": "“And they shall be on the mountains like doves” (Ezekiel 7:16). These are the blessed disciples. For they went about all the earth under heaven, speaking the mystery of Christ (Colossians 4:3), and they had it as their song and their lyre.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Names who the doves of the verse are.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-open/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK07-002",
+   "chapter": 7,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Thighs wet with moisture mean people unrestrained in pursuit of pleasures.",
+   "comment": "Often the things of generation are also signified by the name of the thigh.\n\nFor when it says in Ezekiel: 'and every thigh shall be moistened with moisture' (Ezekiel 7:17), this means: all are unrestrained, pursuing the moisture of pleasures.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u51-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u51-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK09-001",
+   "chapter": 9,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The mark the destroyers must not touch is the sign of the cross, which saves the world.",
+   "comment": "Do you see how the cruciform passion was called forth as a sign, not only in the new covenant, but also in the old? For the old agrees exceedingly with the new, since he is the one and the same God who there legislated and here rewarded. And who is witness to this? The Lord himself. Listen to him saying in the prophet Ezekiel to the harvesting angels, indicating the universal conclusion: 'Do not spare your eyes, and do not have mercy, neither an old man nor a young man nor a maiden nor a child, but kill women to complete them; but those coming upon the foreheads, do not touch the sign' (Ezek 9:6). See the sign of the old and the new. For it is the cross that saves the world …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Amphilochius of Iconium",
+   "work": "On the Meeting of the Lord",
+   "work_slug": "amphilochius-in-occursum-domini",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/amphilochius-in-occursum-domini/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK11-001",
+   "chapter": 11,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "God gives a heart of flesh for the heart of stone, so that His law is written within, in the mind, through the Spirit, and not in ink on stone.",
+   "comment": "But our Lord Jesus Christ writes His holy and divine laws for us on fleshly tablets of the heart, that is, on tablets that can feel (2 Corinthians 3:3). That is why He also said through the voice of the prophet Ezekiel, “And I will tear out their heart of stone from their flesh and give them a heart of flesh, so that they may walk in My ordinances” (Ezekiel 11:19–20). If anyone, then, does not lean on the shadows given through Moses, and does not have the law written in ink as on tablets of stone, but within, in the mind, through the Spirit, he is a letter of Christ known by all men (2 Corinthians 3:2–3).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the heart of stone and the heart of flesh mean.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK13-001",
+   "chapter": 13,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "False prophets spoke smoothly for a handful of barley and could not reprove sins.",
+   "comment": "Vain prophecy is that which has no outcome and which vain idols prepare. And from themselves some were prophesying, forsooth, “for a handful of barley and a fragment of bread” (Ezekiel 13:19) according to what is written—who do not know how to reprove sins and to save from the captivity under demons, twisting the souls through smooth speech.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "56",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/56/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK14-001",
+   "chapter": 14,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "We must ask why Noah, Job and Daniel, already dead, are said to be saved by their own righteousness while the land is destroyed.",
+   "comment": "“And if these three men, Noah and Daniel and Job, are in its midst” (Ezekiel 14:14). Since I think we must not leave the prophet’s words unexamined, come, let us say why it is that, when Noah and Job and Daniel were already dead (and perhaps even Daniel himself), he says that they will be saved by their own righteousness (Ezekiel 14:14), even though all the rest of the land, against which the sentence of death might be pronounced, is being destroyed.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-open/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK14-002",
+   "chapter": 14,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Noah, Daniel and Job stand for faith, wisdom and endurance.",
+   "comment": "[On Noah, Daniel and Job:] It seems, then, that he likens to Noah those who, through faith in God, serve him well; to Daniel, those who are wise and clear-sighted; and to Job, in turn, those who please him through endurance, clearly meaning endurance in anything at all that is praised.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what the three righteous men stand for.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK14-003",
+   "chapter": 14,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "If even Noah, Job and Daniel cannot rescue their children by their righteousness, we need holy works of our own to enter the kingdom.",
+   "comment": "And the scripture says in Ezekiel: “Even if Noah and Job and Daniel should rise, they will not rescue their children” … If even such righteous men cannot rescue their children by their own righteousness, then with what confidence will we enter the kingdom of God unless we keep our baptism pure and undefiled? Or who will be our advocate, unless we are found to have works that are holy and righteous?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Anonymous (2 Clement)",
+   "work": "Second Clement: An Ancient Homily",
+   "work_slug": "second-clement",
+   "section": "6",
+   "url": "https://viapatrum.org/works/second-clement/6/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK16-001",
+   "chapter": 16,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Descendants who imitate their ancestors' sins are rebuked in the language of kinship, so Jerusalem is told her mother was a Hittite and her father an Amorite.",
+   "comment": "In the Law, imitation by descendants is frequently rebuked using terms of kinship. Thus the Lord says to the Jews in the Gospel, “You are from your father the devil” (John 8:44). Daniel is also read rebuking the filthy elders, though they came from Israel’s stock, in the same way: “Seed of Canaan, not of Judah” (Susanna 1:56; Susanna 56). The prophet Ezekiel likewise reproaches the people of Jerusalem: “Your mother was a Hittite and your father an Amorite” (Ezekiel 16:3, 45).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Jerusalem is given Hittite and Amorite parents.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.129",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.129/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK16-002",
+   "chapter": 16,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Fine linen stands for beautiful, subtle thoughts and works, and purple for the actions and words of the senses.",
+   "comment": "Toward this one swelling with worldly pleasures, the one providing her the same as a bridegroom says: 'I have clothed you in fine linen and purple' (Ezekiel 16:10), fine linen being the beautiful and subtle thoughts and works woven out, and purple being the actions and words of the senses woven together, like the purple growing from the earth, so as to be compared to the sensible things.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u37-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u37-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK16-003",
+   "chapter": 16,
+   "verse_start": 45,
+   "verse_end": 46,
+   "capsule": "Scripture gives Jerusalem Amorite and Hittite parents and a Sodomite sister to show that kinship comes from one's ways and not from one's race.",
+   "comment": "For this reason the Scripture, desiring to show to the Jews that whoever adopts the ways of those, receives also their claim, says: 'Your father was an Amorite, and your mother a Hittite, and your sister a Sodomite' (Ezekiel 16:45-46). See how he constructs kinship from the ways. Because he thought of the things of the Sodomites, a sister of Sodom heard, a daughter of the Canaanites heard; and thus it was being shown not the race that is righteous, but the character that is venerable.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Jerusalem is called the daughter of Amorites and sister of Sodom.",
+   "author": "Severianus of Gabala",
+   "work": "On the Blind Man and Zacchaeus",
+   "work_slug": "severianus-de-caeco-zacchaeo",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-zacchaeo/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK16-005",
+   "chapter": 16,
+   "verse_start": 51,
+   "verse_end": 51,
+   "capsule": "To say Sodom was justified because of Jerusalem is a comparison; it does not mean Sodom has been justified.",
+   "comment": "The things said to be comparative are said as being of the same kind, not as being opposed; just as when I say, 'Sodom was justified because of you' (Ezekiel 16:51), it is not that Sodom has been justified. 'Because of your own sins, O Jerusalem', because a prophet was killed and has become a traitor to the Savior. That Sodom incited one man, Lot. 'That Sodom was justified because of you.' Not simply was it justified—for it has not been justified—but 'because of you.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u34-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u34-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK17-001",
+   "chapter": 17,
+   "verse_start": 22,
+   "verse_end": 24,
+   "capsule": "The chosen part of the cedars of Israel was David, from whom God planted Emmanuel, who became a great cedar and received all into his shade.",
+   "comment": "“And I will take from the chosen parts of the cedar, from its top” (Ezekiel 17:22). He likens to cedars, tall and most beautiful, those who are from Israel. Among them the chosen part, and, as it were, a kind of heart, was the blessed David. From him God the Father took and planted Emmanuel, who also rose up into a great cedar and received all into his own shade (Ezekiel 17:23). And so, from then on, the whole world under the sun came to know the power and authority of God, who can do all things.\n\nFor he has brought low the green tree, and has made the dry tree grow and sprout again (Ezekiel 17:24), that is, the Church from among the Gentiles …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a reading of the cedar and its planting.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK18-001",
+   "chapter": 18,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "God binds himself by an oath so that no one among his people may suspect that children are condemned for others' sins.",
+   "comment": "With this same weight [of an oath] God warns and commands in the present case: no one among his people should suspect what the advocates of inherited sin assert, and everyone should understand that God cannot judge in the way he condemns. ‘As I live, says the Lord God, this proverb shall no longer be spoken in Israel’ (Ezekiel 18:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.41",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.41/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK18-002",
+   "chapter": 18,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "'It shall no longer be spoken' means no one of the people who accepts this Scripture's authority will believe the proverb after God's ruling.",
+   "comment": "What does ‘It shall no longer be spoken’ (Ezekiel 18:3) mean, when the Manichaeans still maintain it today with such effort? It means this: no one belonging to the people of Israel, or accepting this Scripture’s authority, will dare believe such a thing after my ruling. Anyone who persists in that opinion neither obeys these writings nor will be counted among the true Israel (Romans 9:6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that the proverb shall no longer be used.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.42",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.42/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK18-003",
+   "chapter": 18,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "God's ownership of every soul is the reason why relatives are not burdened with each other's sins.",
+   "comment": "After exposing the emptiness of that proverb and ratifying his judgment by a divine declaration and oath, he also deigns to explain the reason for his justice: why relatives are not burdened with each other’s sins. ‘All souls are mine,’ he says; ‘the father’s soul and the son’s soul alike—all souls are mine. The soul that sins shall itself die’ (Ezekiel 18:4). Thus he also uses his ownership of souls to show why this measured judgment is perfectly fair.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God says all souls are his.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.43",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.43/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK18-005",
+   "chapter": 18,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The soul that sins such a sin dies the real death, but one in blessedness beyond death is no longer mortal.",
+   "comment": "And there is another death, according to which we are not immortal, but we are able, from keeping watch, not to die. And perhaps the mortal of the soul is not always mortal. For so long as it admits of sinning such a sin that it becomes the soul that sins, it shall die, the soul is mortal of the real death. But if it comes to be in firmness of blessedness so as to be incapable of death, the one that has the eternal life is no longer mortal, but has become immortal according to this signification too",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Dialogue with Heraclides",
+   "work_slug": "origen-dialogue-heraclides",
+   "section": "26",
+   "url": "https://viapatrum.org/works/origen-dialogue-heraclides/26/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK18-009",
+   "chapter": 18,
+   "verse_start": 13,
+   "verse_end": 18,
+   "capsule": "God makes his decree plain by examples: a just father's standing does a corrupt son no good, and a sinner's iniquity does a better son no harm.",
+   "comment": "God persists in strengthening by an oath what he had made sacred by a command. He goes on to make his decree plain through examples. Suppose, he says, a man maintains every form of justice with unstained devotion and fathers a son who clings to corrupt behavior and turns away from his father’s paths. The noble standing acquired by his father’s great devotion to justice does that son no good. Conversely, he presents this sinner’s son avoiding his father’s ways by a better decision, and shows that his parent’s iniquity does him no harm. He places justice and sin on an equal footing, asserting that parents’ vices no more travel through reproductive seed than virtues can. All souls belong to his authority. This also exposes the irreverence of your claim that newborn children’s souls and bodies belong to the devil’s dominion (Ezekiel 18:5–18).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.46",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.46/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK18-006",
+   "chapter": 18,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "God promises to judge so that he charges neither children with their parents' sins nor parents with their children's.",
+   "comment": "‘The son shall not bear his father’s iniquity, nor shall the father bear his son’s injustice. The just person’s justice shall rest on himself, and the wicked person’s wickedness shall rest on himself’ (Ezekiel 18:20). The way God promises to judge shines clearly: he charges neither children with their parents’ sins nor parents with their children’s. Thus Scripture’s testimony has also established what reason would not allow to be doubted: God maintains in his judgments the same justice he maintained in his commands.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "States what the verse says about each person's own guilt.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.49",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.49/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK18-007",
+   "chapter": 18,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "The soul that sins shall die, yet the many were made sinners through Adam, not as sharing his transgression but as sharing his nature, which fell under the law of sin.",
+   "comment": "But someone might say: Yes, Adam slipped, and because he disregarded the divine commandment he was condemned to corruption and death. But then how were the many made sinners because of him? What are his failings to us? And how at all were we, who had not yet been born, condemned along with him? And this although God says, “Fathers shall not die for their children” (Deuteronomy 24:16), nor children for their fathers; “the soul that sins, it shall die” (Ezekiel 18:20). What, then, would be the way of our defence? Certainly, “the soul that sins, it shall die”; but we became sinners through Adam's disobedience in the following way.\n\nHe [Adam] had been made for incorruption and life, and in the paradise of delight he lived a life fit for the holy. … But when he fell under sin and slid into corruption, from then on pleasures and impurities rushed into the nature of the flesh, and the law that rages in our members sprang up (Romans 7:23). So nature caught the sickness of sin through the disobedience of the one, that is, Adam. In this way the many were made sinners (Romans 5:19): not as having transgressed together with Adam, for they did not yet exist at all, but as being of his nature, which fell under the law of sin.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK18-008",
+   "chapter": 18,
+   "verse_start": 32,
+   "verse_end": 32,
+   "capsule": "God's kindness even to sinners shows compassion, not malice, since he does not wish the sinner's death but gives time for repentance.",
+   "comment": "God’s feeding even sinners and being kind to the ungrateful and evil (Luke 6:35) testifies to his compassion, not his malice. He does not wish the death of one who dies, but that the person turn back and live (Ezekiel 18:32). He does not quickly punish those who stray. He does this for no other purpose than that his goodness may grant time for repentance.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God is patient with sinners.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "5.64",
+   "url": "https://viapatrum.org/works/julian-to-florus/5.64/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK20-002",
+   "chapter": 20,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "The Law is holy as spiritual contemplation, but its ordinances are not good as worship in shadows alone, which brings no eternal life.",
+   "comment": "“And I gave them ordinances that were not good” (Ezekiel 20:25). For in so far as it bears on spiritual contemplation, the Law is holy, and the commandment is holy and just and good (Romans 7:12). But in so far as it concerns the futility of the practice itself, and worship in shadows alone, the ordinances are not good; indeed they do not even bring eternal life. For no one is justified by the Law, as it is written (Galatians 3:11).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in what sense the ordinances were not good.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK20-003",
+   "chapter": 20,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "The law has two senses: the law by the letter is called 'not good' and the law by its meaning 'good', as Paul says the letter kills and the spirit gives life.",
+   "comment": "We say, then, that the law is twofold: one law according to the letter, the other according to the meaning, as some of those before us have also taught. The law according to the letter is said to be “statutes not good” and “commandments not good” (Ezekiel 20:25), not so much by us as by God, who speaks in one of the prophets; but the law according to the meaning is said by the same prophet, speaking in the person of God, to be “good statutes” and “good commandments” (Ezekiel 20:11). For the prophet does not openly contradict himself in the same place. In keeping with this, Paul too said that “the letter” kills, which is the same as the law according to the letter, but “the spirit” gives life (2 Corinthians 3:6), which is equivalent to the law according to the meaning.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "20",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/20/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK20-004",
+   "chapter": 20,
+   "verse_start": 47,
+   "verse_end": 47,
+   "capsule": "The moist tree stands for the righteous and the dry for the impious, and the righteous share in the misfortunes of the unjust as the Lord did.",
+   "comment": "This had also been said more allegorically: \"Behold, I kindle a fire in you, and it will consume every tree in you\"—Aquila says \"moist\"; the Septuagint, \"and every dry tree\" (Ezekiel 20:47). The moist tree is an allegory for the righteous man, and the dry tree for the impious. The Lord himself showed that he is the true righteous tree when he said, \"If they do these things when the wood is moist, what will happen when it is dry?\" (Luke 23:31). And if the Lord shared in the misfortunes brought upon the world insofar as he shared in flesh, though he had no sin, it is no wonder that righteous human beings, who are in some way partakers of sin, also become partakers of the misfortunes that follow upon sins. They suffer equally with the unjust, being put to death just as he himself was counted among the lawless, yet they are distinguished before God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what the green tree and the dry tree stand for.",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK21-001",
+   "chapter": 21,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Holy ones perished together with the unjust, as happens when a city and a nation are destroyed, and Ezekiel was shown it happening.",
+   "comment": "Or perhaps he means that holy ones perished together with the unjust, which happens in the capture and destruction of a city and a nation, and which was shown through Ezekiel as happening. For he says: \"Thus says the Lord: Behold, I am against you, and I will draw my dagger from its sheath and destroy from among you\"—Aquila says \"righteous and impious\"; the Septuagint, \"and I will cut off from you righteous and impious\" (Ezekiel 21:3-4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u04-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK22-001",
+   "chapter": 22,
+   "verse_start": 18,
+   "verse_end": 20,
+   "capsule": "The Lord comes like a refiner's fire to those who need it, because base matter from wickedness is mixed into them like bronze, tin and lead.",
+   "comment": "The divine words say that the Lord will come “like a refiner’s fire and like fullers’ soap” (Malachi 3:2) to each of those who need it, because there has been mixed into them, as it were, a base matter that melts, the matter that comes from wickedness; to those, I mean, who need fire, as though he were smelting those who have been mixed with “bronze and tin and lead” (Ezekiel 22:18–20).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "15",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/15/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK23-001",
+   "chapter": 23,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "Jerusalem's lovers, once friends, were turned to enmity by divine providence, as desire often turns to hate.",
+   "comment": "Who the lovers are, Ezekiel has shown, saying to Jerusalem, whom he calls Oholibah: “Thus says the Lord: Behold, I raise up your lovers against you round about, sons of Babylon and all the Chaldeans” (Ezekiel 23:22); for these, formerly being friends, according to divine providence changed unto enmity. Which indeed often comes about upon desire turning toward hate; …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "40",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/40/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK24-001",
+   "chapter": 24,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "Ezekiel is called a terror because of the symbolic acts done through him, lying on his side and shaving his hair.",
+   "comment": "Such also is what was said to the sinners by God: 'And I will be a terror to Ezekiel' (Ezekiel 24:24), as the prophet himself says, because of what happens most symbolically through him, to lay this one down for so many days on the right side, and so many again on the left, and the shaving of the hairs of the body. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u32-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u32-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK28-001",
+   "chapter": 28,
+   "verse_start": 12,
+   "verse_end": 15,
+   "capsule": "The Adversary in the proper sense is the first who shed his wings and fell from blessedness, having walked blameless until lawlessness was found in him.",
+   "comment": "But in the more proper sense the Adversary is he who, first of all those who were at peace and living in blessedness, shed his wings and fell from blessedness. He, as Ezekiel says, walked “blameless” in all his ways, until lawlessness was found in him (Ezekiel 28:15); and though he was “a seal of likeness and a crown of beauty” (Ezekiel 28:12) in the paradise of God (Ezekiel 28:13), as though sated with good things he came to destruction …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "44",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/44/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK33-001",
+   "chapter": 33,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The blood God requires from the watchman is the blood of the sinner's soul, not the sinner's bodily blood.",
+   "comment": "That blood of a sinful soul is poured out. For the blood of your souls shall be required. He did not say 'your blood,' but the blood of your souls. And The blood from the hand of the watchman I will require. What blood does God require from the hand of the watchman, if not that which is poured out of the sinner? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Dialogue with Heraclides",
+   "work_slug": "origen-dialogue-heraclides",
+   "section": "22",
+   "url": "https://viapatrum.org/works/origen-dialogue-heraclides/22/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK33-002",
+   "chapter": 33,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "God has opened the doors to everyone who truly repents, and true repentance is to root the condemned sins out of the soul and no longer look back.",
+   "comment": "For the doors have been opened to everyone who turns to God with truth from the whole heart, and the Father receives with exceeding joy a son who truly repents. True repentance is no longer being liable to the same sins, but rooting out completely from the soul the sins for which one has condemned oneself to death. For when these are destroyed, God will again take up residence in you. For he says that there is great and unsurpassable joy and a feast in heaven for the Father and the angels when one sinner turns and repents (Luke 15:7, 10). Therefore he has also cried out: \"I desire mercy and not sacrifice\" (Hosea 6:6). \"I do not desire the death of the sinner, but repentance\" (Ezekiel 33:11). \"Even if your sins are like crimson wool, I will make them white as snow; even if they are blacker than darkness, I will wash them and make them like white wool\" (Isaiah 1:18). For to God alone is it possible to grant forgiveness of sins and not to count transgressions, since indeed the Lord also commands us each day to forgive our brothers and sisters when they repent. If we, being evil, know how to give good gifts, how much more is \"the Father of mercies\" (2 Corinthians 1:3), the good Father \"of all comfort\" (2 Corinthians 1:3), the compassionate and merciful one, patient by nature! He waits for those who turn. And to turn truly from sins is to stop and no longer look back (Luke 9:62).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what God means by taking no pleasure in the sinner's death and what true repentance is.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "39",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/39/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK34-001",
+   "chapter": 34,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The shepherds took the people's offerings and took no account of their salvation.",
+   "comment": "“See, you eat up the milk” (Ezekiel 34:3). For while they demanded tithes, firstfruits, and thank offerings according to the Law, and reveled wantonly in the gifts the people brought, they took no account at all of the people’s salvation.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says who the shepherds are and what their fault was.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK34-002",
+   "chapter": 34,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The instruction through Moses was clear water, but they muddied it with thick, material teaching.",
+   "comment": "[The Levites, who had the finest pasture] and fine, clear water, namely the instruction given through Moses, which was well able to guide them to the truth, in a way trampled the pasture and muddied the water as well (Ezekiel 34:18), setting a thick, material teaching, full of earthly impurity, before those who followed them as sheep follow rams.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the trampled pasture and muddied water.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK34-003",
+   "chapter": 34,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The promised shepherd David is Christ, since David was already in the tomb when Ezekiel prophesied and the promise was of something to come.",
+   "comment": "“And I will raise up over them one shepherd … my servant David” (Ezekiel 34:23). That he says such things about Christ is easy to see. For when the blessed David had already died and was already lying in the tomb, the blessed Ezekiel prophesied; and God the Father made the promise as one that would come to pass in due time, not as one already fulfilled.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the promise of David is a promise of Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Ezekiel",
+   "work_slug": "cyril-fragmenta-ezechielem",
+   "section": "frag-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-ezechielem/frag-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "EZK36-001",
+   "chapter": 36,
+   "verse_start": 26,
+   "verse_end": 26,
+   "capsule": "The stony heart is the flinty intellect without sensation, and the heart of flesh is sensory choice.",
+   "comment": "It is sometimes said that 'flesh' signifies our sensory choice; for when it is said: 'I will break their stony heart from them and put a fleshy one in' (Ezek 36:26), 'stony heart' means the flinty intellect having been deprived of all sensation.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u40-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u40-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK36-002",
+   "chapter": 36,
+   "verse_start": 26,
+   "verse_end": 27,
+   "capsule": "God shows that our spirit is renewed by the Holy Spirit, who is specifically his own.",
+   "comment": "Therefore, in Ezekiel, God shows that our spirit is to be renewed, while the Holy Spirit renews, and indicates that it is not simply a spirit, but specifically His own, decreeing thus: 'And I will give you a new heart, and a new spirit I will give you; and I will take away the stony heart from your flesh, and I will give you a heart of flesh, and my spirit I will put in you' (Ezekiel 36:26).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u17-rem-close",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u17-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK37-001",
+   "chapter": 37,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "Ezekiel declares that God will perform the resurrection by his Spirit, who gives life to the dry bones.",
+   "comment": "Ezekiel himself declares this very thing, and prophesies that with God, as His Spirit, He will perform the resurrection: 'thus says the Lord to these dry bones: behold, I am bringing into you a spirit of life, and I will cause nerves to come upon you, and I will cause flesh to rise upon you, and I will stretch skin over you, and I will give my Spirit upon you, and you shall live and you shall know that I am the Lord' (Ezekiel 37:12-14).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u17-open",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u17-open/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK37-002",
+   "chapter": 37,
+   "verse_start": 19,
+   "verse_end": 22,
+   "capsule": "The two rods joined into one are the two peoples, from the nations and from the circumcision, called under one king.",
+   "comment": "For it must be understood through them [the two rods] the callings of the two peoples, both from the nations and from the circumcision, joined into one scepter of kingship, according to the meaning of the apostolic writing, which says: 'He is our peace, who makes both the two one and having broken down the middle wall of the partition, so that he might create the two in himself as one new man' (Ephesians 2:14), the Greek and the Jew.\n\nFor when one was Judaizing and the other was Hellenizing, two rods and two men existed, divided by the difference of religion, as if they were not under one king. … And the one called from the Gentiles is a rod upon which Judah the confessing was written, while the one from the circumcision is the scepter lying to Joseph.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u30-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u30-open/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK42-001",
+   "chapter": 42,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "The priests' vestments are holy and kept apart from the common people, so that the priests change their clothes when they touch the people.",
+   "comment": "And so that those chosen for sacred service may know the surpassing holiness of the divine altar, he attaches reverence even to the sacred vestments themselves. For with wise provision he does not allow them to appear outside the tent in their sacred dress. For he means: let not the holy things, after contact with the unclean and carrying defilement from what is foreign, wrong the reverence due to the holy tent. For this reason he directs them to gather the ash dressed in sacred vesture, but to change their clothes when they carry it outside and leave the holy places (Leviticus 6:10–11). A command akin to this was also given through the voice of Ezekiel, who writes thus: ‘And he said to me: The chambers on the north and the chambers on the south, which face the open spaces, these are the chambers of the sanctuary, in which the priests, the sons of Zadok, who draw near to the Lord, to the most holy things, shall eat; and there they shall lay the most holy things and the grain offerings, and the offerings for sin and the offerings for ignorance, for the place is holy. No one shall enter except the priests; they shall not go out from the court of the sanctuary into the outer court, so that those who bring the offerings may be holy always, and may not touch their vestments in which they minister, for these are holy; and they shall put on other garments when they touch the people’ (Ezekiel 42:13–14). So the very vestments of the priests are holy, and kept apart from the common people.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 12",
+   "work_slug": "cyril-adoration-12",
+   "section": "22",
+   "url": "https://viapatrum.org/works/cyril-adoration-12/22/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK44-001",
+   "chapter": 44,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The closed gate that only the Lord enters shows that Christ did not open the gate of the virgin or break the seal of nature.",
+   "comment": "For he did not open the gate of the virgin, but left it closed. He did not break the seal of nature, nor did he harm the one who bore him; he left intact for her the form of virginity. If you do not believe this, learn from Ezekiel: \"And he turned me back along the way of the gate of the sanctuary of the outer court, the one facing east, and it was closed. And the Lord said to me: This gate shall remain closed; it shall not be opened, and no one shall pass through it, for the Lord, the God of Israel, shall enter and go out through it, and it shall remain closed\" (Ezekiel 44:1-2).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the writer's reading of the shut gate.",
+   "author": "Hesychius of Jerusalem",
+   "work": "Homily I on the Presentation",
+   "work_slug": "hesychius-homilia-i-hypapante",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/hesychius-homilia-i-hypapante/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK44-002",
+   "chapter": 44,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The virginal gates were not opened, yet by the power of the Lord born nothing is shut to him.",
+   "comment": "Listen intelligently: regarding the virginal nature, the virginal gates were not opened at all, by the will of having been fully impregnated according to what is clearly said about him: 'This is the gate of the Lord; he will enter and go out, and the gate will be shut' (Ezekiel 44:2). Just as regarding the virginal nature the virginal gates were not opened at all, regarding the power of the born Lord nothing is shut to the Lord, but all things are opened. Nothing is hindering, nothing is troubling; all things are opened to the Lord.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Amphilochius of Iconium",
+   "work": "On the Meeting of the Lord",
+   "work_slug": "amphilochius-in-occursum-domini",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/amphilochius-in-occursum-domini/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK44-003",
+   "chapter": 44,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "The fat and blood and the liturgies at the table where the priests serve speak of the mystery of Christ.",
+   "comment": "He spoke again through Ezekiel’s voice about those allotted to be priests: ‘These will bring near to me to minister to me, and will stand before my face to offer me sacrifice, fat and blood, says the Lord God. These will enter into my holy places, and these will approach me toward my table, to minister to me.’ (Ezekiel 44:15) And fat and blood and the liturgies upon the table — would they not reasonably say the mystery of Christ?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "10",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/10/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK46-001",
+   "chapter": 46,
+   "verse_start": 17,
+   "verse_end": 18,
+   "capsule": "A leader's gift to his sons stays theirs, a gift to a servant returns at the year of release, and a minister must put away desire for the lots of others.",
+   "comment": "For if it should happen, he says, that one of the leaders, that is, of the ministers, gives part of his own lot to his own children, let what was given stand fixed, he says, and let the gift never pass away from the one who received it. For the lot does not pass to someone of another race, but from priests to those who are consecrated. But if he gives it as a favor to one of his household servants, the one who received it, he says, will not hold it securely; his lot will surely return to the leader in the year of release (Ezekiel 46:17). He further commands the minister to put away any desire for the lots of others; for this, I think, is the meaning of ‘the leader shall not take any of the inheritance of his people’ (Ezekiel 46:18).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the rule about the prince's gifts to sons and servants means.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/16/",
+   "from_cite": true
+  },
+  {
+   "id": "EZK46-002",
+   "chapter": 46,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Christ, our leader, never assigns to any of the sanctified a lot that does not befit them, a choice lot being for those fully given to God.",
+   "comment": "When the law adds, ‘The leader shall not take any of the inheritance of his people to give an inheritance to his sons’ (Ezekiel 46:18), it hints at something like this: that Christ, since he himself is our leader, would never assign to any of the sanctified a lot that does not befit them. For is there not, as it were, one portion and one lot for those who have not dedicated their life wholly to God, and another, a choice one, for those who have been chosen and have come through to their share in the splendor that is in Christ?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/17/",
+   "from_cite": true
+  }
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "book": "2 Samuel",
+ "title": "The Fathers on 2 Samuel",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 20,
+ "selected_count": 12,
+ "comments": [
+  {
+   "id": "2SA01-001",
+   "chapter": 1,
+   "verse_start": 24,
+   "verse_end": 26,
+   "capsule": "David lamented his friend Jonathan and his enemy Saul, mourning Saul as one who died in sin.",
+   "comment": "David also left us in song a lament for his friend Jonathan, and in it he also mourned his own enemy. “I am grieved for you, my brother Jonathan” (2 Samuel 1:26). And, “Daughters of Israel, weep for Saul” (2 Samuel 1:24). For he laments Saul as having died in sin, but Jonathan as having shared life with him to the very end.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why David's lament mourns both Saul and Jonathan.",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Thanksgiving",
+   "work_slug": "basil-homilia-gratiarum-actione",
+   "section": "3",
+   "url": "https://viapatrum.org/works/basil-homilia-gratiarum-actione/3/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA02-001",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Burial does nothing for those who feel nothing, so the men who buried Saul and Jonathan were blessed for the pity of their hearts.",
+   "comment": "It is by this wretched compassion I have described that those men are praised and blessed by King David who showed the mercy of burial to the dry bones of Saul and Jonathan (2 Samuel 2:5). … But since this is beyond any doubt utterly false, and it does no harm to the faithful if burial is denied to their bodies, nor does it benefit the unfaithful if it is given to them, why then are those who buried Saul and his son said to have shown mercy, and blessed for it by a pious king? Is it not because the hearts of those who show pity are well disposed when they grieve over the bodies of the dead—bodies not their own—for things which, by that affection by which no one ever hates his own flesh, they do not wish to happen to their own bodies after death? And what they wish to be done for themselves when they will feel nothing, they take care to do for others who feel nothing, while they themselves do feel.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why David blessed the men who buried Saul.",
+   "author": "Augustine of Hippo",
+   "work": "On Care for the Dead",
+   "work_slug": "augustine-care-for-the-dead",
+   "section": "11",
+   "url": "https://viapatrum.org/works/augustine-care-for-the-dead/11/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA05-001",
+   "chapter": 5,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The blind and lame of Jebus resisted David and perished, as Jerusalem's people resisted Christ when he came.",
+   "comment": "So then, the blind and the lame of Jerusalem, that is, of Jebus, resisted the blessed David; and for doing this they perished miserably, for he captured the city. The inhabitants of Jerusalem, lame and blind, resisted Christ, the Savior of all, at the time of his coming. For they did not know how to walk uprightly; nor did those who would not accept the faith receive the divine light into their minds, above all the scribes and Pharisees.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the blind and the lame were and what became of them.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA07-001",
+   "chapter": 7,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "God shared his power with David, choosing him from the sheepfold, anointing him, and destroying his enemies, as Nathan told him.",
+   "comment": "He [the psalmist] says that God declared he had shared his power with David and brought him forward into glory, choosing him according to the words, \"I took you from the sheepfold, from behind the flocks, to be leader over my people Israel\" (2 Samuel 7:8). And when he found him pleasing, he anointed him with holy oil for the kingdom. God was present with him, working together with him in everything, making the uprisings of his enemies ineffective, shattering their armies, and putting them to flight, according to the words, \"I was with you in all that you undertook, and I destroyed all your enemies before your face\" (2 Samuel 7:9) (Psalm 89:20). These things were spoken through Nathan the prophet. He says that David was exalted by the mercy that is from God and by the care that is fitting toward the righteous man, just as he also won victories in wars beyond all expectation and was undefeated.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what God did for David according to Nathan's words.",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u05-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u05-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA07-002",
+   "chapter": 7,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "David is taught that his kingdom will not fail like Saul's but will pass to his descendants.",
+   "comment": "… for it is said to David, 'From the fruit of your loins I will set someone upon your throne' (2 Sam 7:12), teaching him that his kingdom shall not fail like that of Saul, but that this shall be directed from his succession.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u57-rem-early",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u57-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA11-001",
+   "chapter": 11,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Do not be troubled when saints fall into lapses, for even the bravest soldiers are wounded without falling, and only Christ is without sin.",
+   "comment": "Do not be quickly troubled about the saints if at times they too have fallen into lapses. For it is true that even the very bravest of soldiers, those admired for bodily courage and skill, are sometimes wounded while fighting, yet they do not fall. And besides, I think I must add this to what has been said: for Christ alone, the Savior who loves mankind, has it been reserved not to suffer sin, because, being God by nature, he became flesh (John 1:14).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how to take David's fall.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA12-001",
+   "chapter": 12,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "David was rebuked by a private man and was led to repentance, and Providence allowed the sins of saints to be written so that they teach repentance.",
+   "comment": "For such a great and far-reaching king was rebuked in sin, that when he was rebuked by a private man, he not only did not feel indignation, but even made himself worse, as the rebuking prophet says: 'And the Lord showed your sin' (2 Samuel 12:13). For to say that the Lord showed it is to say that David himself, having led himself to most intense repentance, was led to his sin. … Thus Providence granted a pretext for sin to have occurred concerning them, so that just as they are teachers of virtue, so also they are teachers of repentance for those being instructed then, having done such things.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u23-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u23-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA15-001",
+   "chapter": 15,
+   "verse_start": 30,
+   "verse_end": 30,
+   "capsule": "Because of his sin against Uriah, people suspected David was paying the penalty and would be easy prey.",
+   "comment": "Since it happened that before the war against Absalom the blessed David had committed the sin, I mean the one against Uriah, there was talk throughout the whole land of the Jews, so to speak, and some held a not unlikely suspicion about him. For they thought that he was paying the penalty for his offenses against Uriah, and that, since he had offended God, he would now be easy prey for any who wished and weak on every side.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what people made of David's flight.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA15-002",
+   "chapter": 15,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "David feared Ahithophel most because he was deep, bitter, full of schemes and a skilled general.",
+   "comment": "“Scatter,” he says, “the counsel of Ahithophel, O Lord my God.” For Ahithophel was deep, bitter and full of schemes, able to find a way in every matter, and on top of this a most skilled general. So David feared Ahithophel most of all, because he always put forward bitter counsels and knew how to command an army.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why David prayed against Ahithophel's counsel.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA15-003",
+   "chapter": 15,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "Ahithophel's counsel was regarded as being like God's, and David's prayer that it be scattered was answered.",
+   "comment": "Without fail, it is said concerning Ahithophel, the counselor of King Israel, who was previously a counselor to David and later to Absalom; for it was said of him that the counsel of Ahithophel was like the counsel of God, and this was being circulated about him as being unsearchable in his counsels. Without fail, David, to whom the unmanifest and the hidden things of wisdom were revealed, praying to God said, 'Scatter the counsel of Ahithophel' (2 Sam 15:31), and so it happened.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u19-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u19-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA15-004",
+   "chapter": 15,
+   "verse_start": 32,
+   "verse_end": 34,
+   "capsule": "David persuaded his friend Hushai to feign desertion so that he could secretly defeat Ahithophel's counsels.",
+   "comment": "He persuades Hushai, who was one of his own friends, to feign desertion from him and a wish to be taken into Absalom’s service, so that he might secretly fight against the counsels of Ahithophel; and that is just what happened.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why David sent Hushai back to Absalom.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA16-001",
+   "chapter": 16,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "David endured Shimei's insults in silence, and Shimei paid a harsh penalty later.",
+   "comment": "Though Shimei insulted him and all but hurled bitter words at him as from a sling, he went away having suffered nothing from David at that time, even though afterward he paid a harsh penalty that he deserved (1 Kings 2:44–46). The point is that David endured, and though many urged him on, he counted silence worth everything, out of very great and admirable understanding.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains David's silence toward Shimei.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA16-002",
+   "chapter": 16,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "David bore the reviling of Shimei without answering back, knowing that God wills him to be trained by reproaches.",
+   "comment": "I bear, he says, being reproached now and not answering back, knowing in some such way that God wills me to be trained by reproaches (Psalm 39:9; LXX 38:9). So David himself bore being reviled by Shimei, saying that the Lord had told him to curse David (2 Samuel 16:10).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA17-001",
+   "chapter": 17,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Ahithophel urged Absalom to pursue at once, but Hushai persuaded him to gather a force first, since David was mighty and skilled in war.",
+   "comment": "Absalom wanted to pursue his father as he fled, and Ahithophel boldly advised that this must be done. But Hushai, persuasively drawing him back, urged him to keep in view his father’s fierceness, and not simply to rush straight at the task, but rather first to make ready a sufficient force and gather a crowd of soldiers, because the blessed David was mighty, skilled in war, and among the most warlike of all.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the two pieces of advice given to Absalom.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA17-003",
+   "chapter": 17,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "When good comes to us through men, the thanks belong to God.",
+   "comment": "“And the woman took and spread the covering,” and so on (2 Samuel 17:19). So then, even if at times good things come to us through men, let us not give thanks to them rather than to God, who through them has granted us what gladdens the heart.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA17-002",
+   "chapter": 17,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "Hushai prevailed, and Ahithophel in grief hanged himself.",
+   "comment": "The opinion of Hushai prevailed; and Ahithophel, deeply grieved at this, ended his life with a noose, bringing a just sentence against himself.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA18-001",
+   "chapter": 18,
+   "verse_start": 33,
+   "verse_end": 33,
+   "capsule": "David did not rejoice when Absalom met his death but mourned him as a son.",
+   "comment": "Absalom made war on the blessed David, and the young man unexpectedly took up the weapons of hostility against the one who begot him; but he was caught and perished. Yet his father did not rejoice over him when he met his death, but mourned him as a son.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains David's grief over Absalom.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b02-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA24-001",
+   "chapter": 24,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Comparing 2 Samuel with 1 Chronicles shows to whom the wrath that moved David to number the people is to be assigned.",
+   "comment": "And anyone who reads in the second book of Samuel of the “wrath” of God that moved David to number the people (2 Samuel 24:1), and in the first book of Chronicles of “the devil” (1 Chronicles 21:1), and compares the texts with each other, will see to whom the wrath is to be assigned. Paul says that all human beings have become “children” of this wrath, in the words: “We were by nature children of wrath, like the rest” (Ephesians 2:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "72",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/72/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA24-002",
+   "chapter": 24,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "Death pastured from early morning until the hour of the meal means that death was abolished once the holy table of Christ stood for us.",
+   "comment": "From early morning therefore—that is, from first times of the present age—death was pastured upon those upon the earth, until the hour of the meal—that is, until a time of table. For when a time of the holy table stood in for us—clearly that in Christ and mystical, upon which we eat the bread from heaven and life-making—the terrible and hard-to-meet one of old, death, was abolished, God having been entreated; and the destroyer has barely been shamed, who when he wished also to cast the destroying hand upon those inhabiting the holy city, the intelligible Jerusalem, God having been entreated, is then barely checked; for ‘Let go now,’ (2 Samuel 24:16) he says, ‘it is enough.’ (2 Samuel 24:16) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 3",
+   "work_slug": "cyril-adoration-3",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-3/15/",
+   "from_cite": true
+  },
+  {
+   "id": "2SA24-003",
+   "chapter": 24,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "David stands for Christ, who took the sin as his own and, as the good shepherd, chose to suffer in place of the sheep.",
+   "comment": "… Christ therefore has delivered us, being understood as in the person of David. For when he was seeing death consuming those upon the earth, he has become an advocate for us toward the Father; for he was bringing himself forward for us, and willingly put himself under death, and has shamed the destroyer, saying the sin is his own; not that he has done the sin, but that, according to the Scriptures, ‘he himself takes up our sins, and is in pain concerning us, and was reckoned among the lawless,’ (Isaiah 53:4–12) although not knowing sin; ‘and he has become a curse for us.’ (Galatians 3:13) And he says the shepherd rather than the sheep must suffer; for as a good shepherd he has set his soul for the sheep. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains David's plea for the sheep as a picture of Christ taking our sin on himself.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 3",
+   "work_slug": "cyril-adoration-3",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-3/15/",
+   "from_cite": true
+  }
+ ]
+}

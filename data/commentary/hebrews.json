@@ -1,0 +1,2711 @@
+{
+ "book": "Hebrews",
+ "title": "The Fathers on Hebrews",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 146,
+ "selected_count": 70,
+ "comments": [
+  {
+   "id": "HEB01-001",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "God spoke in many ways because his arrangements for us changed with each age.",
+   "comment": "In many ways, according to the differences of the ages in which things concerning us were dispensed (Hebrews 1:1-2), such as in the generation of Adam, in those according to Cain, in those according to Noah, in those according to Abraham, in those before the law, and in those after the law; for many are the parts of God's administration on our behalf. Also in various ways, that a command was given to Adam, another to Noah, another to Abraham, and through Moses another, and through the prophets various.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why Hebrews says God spoke in many parts and ways.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-002",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The Word is Lord of all by nature, yet he is placed heir because he became flesh, and the ages were made through the same one who is heir.",
+   "comment": "“In many parts and in many ways God, having spoken of old to the fathers in the prophets, in these last days spoke to us in a Son, whom he placed heir of all, through whom he also made the ages.” (Hebrews 1:1–2) The Only-begotten Word is believed to be by nature Lord of the wholes with God and Father, yet he is placed heir because he became flesh. For it was said to him, as one who appeared as a human like us for our sake: “Ask of me, and I will give you nations as your inheritance, and the ends of the earth as your possession.” (Psalm 2:8) But he says that through this same God who is heir—because of the human—the ages themselves were also made, the matter referring back to the Word’s seniority. So there is one Christ and Son, the same one God and human together.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why the Son is called heir of all things.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "79",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/79/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-003",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "God speaks in the Son as one managing the flesh, so that Jewish hearers are lifted up to the Word's eternal existence.",
+   "comment": "In us in the Son, instead of through the Son; for not in him as in an instrument, but through him as one managing the flesh, so that from here the hearing of the Jews, having grasped the Word by a certain touch, might be lifted up to the eternal existence. For previously it was said: he spoke to us in a Son whom also he appointed heir—instead of he made—he led the Word into the eternal existence. And he does this continuously, partly ascending into theology, partly descending into humanity.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-004",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Paul calls the Son the radiance to show he comes purely from the Father's essence, and the character of the subsistence to show he is not without real existence.",
+   "comment": "Seeking to present more grandly that the Word was begotten from the essence of the Father, he mentioned the radiance; for the radiance is from the essence of that of which it is a radiance, and it is continuous both from it and never thought of without it. But since the radiance shows a lesser nature compared to that of which it is a radiance and not in its own subsistence, he presented this in a different expression, saying: and the character of the subsistence, the first having set forth for the proof that it is purely from the essence, and the second, that it is not unsubstantial. Just as John, having named the Word, led us forward: he was with God and he was God (John 1:1), so also Paul, having said radiance, added: and the character of the subsistence.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse uses two images, radiance and imprint, for the Son.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-006",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Like light, the Son makes himself and the Father known to us.",
+   "comment": "As the Father is light, so also the Son. Therefore Paul, wanting to show the great resemblance, calls the Son “radiance” of the Father (Hebrews 1:3): just as light appearing makes both itself clear and the things seen, so the Son, being light and having come, made both himself and the Father known to us.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a simple picture of why the Son is called the radiance.",
+   "author": "Ammonius of Alexandria",
+   "work": "Fragments on John",
+   "work_slug": "ammonius-fragmenta-joannem",
+   "section": "u07-rem-early",
+   "url": "https://viapatrum.org/works/ammonius-fragmenta-joannem/u07-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-007",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "In Scripture glory names God's essence, which is the glory whose radiance and exact imprint the Son is.",
+   "comment": "Scripture often calls God's very essence \"glory.\" Since that essence is untouchable and unattainable, Scripture named it \"glory\" so that you may not demand an account but worship. Ezekiel is the first to call God's essence \"glory,\" when in visions he saw God seated and added, \"This was the likeness of the glory of the Lord\" (Ezekiel 1:28). Interpreting this elsewhere, God says, \"I multiplied visions and was likened through the prophets\" (Hosea 12:10). So the \"glory\" Ezekiel spoke of is what God calls \"the I.\" And Paul says, \"He is the radiance of the glory\"—of what glory?—\"and the exact imprint of his substance\" (Hebrews 1:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Ephesians",
+   "work_slug": "severianus-fragmenta-ephesios",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-ephesios/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-009",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Here hypostasis means the divine essence and existence.",
+   "comment": "Sometimes essence is called hypostasis; for instance, when the Son is called the 'character of the divine hypostasis' (cf. Heb 1:3), meaning the divine essence and existence.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u44-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u44-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-010",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Actual being is substance, meaning that which is, and Paul used the word of the Son when he called him the imprint of God's actual being.",
+   "comment": "From this you can see, brothers, that the men at Nicaea breathe the Scriptures, since God himself says in Exodus, \"I am who I am\" (Exodus 3:14), and through Jeremiah, \"Who has stood in his actual being and seen his word?\" (Jeremiah 23:18), and a little later, \"If they had stood in my actual being, they would have heard my words\" (Jeremiah 23:22). Now actual being is substance, and it signifies nothing other than that which is. Jeremiah calls this existence when he says, \"They did not hear the voice of existence\" (Jeremiah 9:10). For actual being and substance are existence: it is and it exists. Paul understood this and wrote to the Hebrews, \"He is the radiance of his glory and the imprint of his actual being\" (Hebrews 1:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Athanasius of Alexandria",
+   "work": "Synodal Letter to the Bishops of Africa",
+   "work_slug": "athanasius-epistula-afros",
+   "section": "3",
+   "url": "https://viapatrum.org/works/athanasius-epistula-afros/3/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-005",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "The Son who is the radiance and impress of God sat at the Father's right after cleansing sins, and though human he surpasses the invisible creation as God.",
+   "comment": "“Who being the radiance of the glory and the impress of his hypostasis, and bearing all things by the word of his power, having made cleansing of sins sat at the right of the Majesty on high, having become so much better than the angels as he has inherited a more different name than they.” (Hebrews 1:3–4) The radiance of the glory, the impress of the hypostasis of God and Father—that is, the Only-begotten Son from him by nature—in what manner, having made cleansing of our sins (clearly through his own blood), has sat at the Father’s right and is said to have become better than the angels, though by nature and by deity’s superiority he conquers all things? Therefore even having become human he has excelled as God the invisible creation, being the same radiance and impress and having worked the cleansing of our sins by his own blood. So there is one Christ and Son and Lord.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the Son can be called better than the angels while being God by nature.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "80",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/80/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-011",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Since Scripture forbids worshiping any creature, the worship all creation gives Christ shows that he is the Creator, though he united created flesh to himself.",
+   "comment": "If all created nature worships Christ—for through the designation of the angels he signifies a nature superior in reason, just as it was once said in some passage concerning the angels: 'Sit at my right hand' (Ps 110:1); and he is above this—and the word of the scriptures forbade worshiping a creature, saying: 'lest, looking up into heaven and seeing the sun and the moon and the stars and all the cosmos of heaven, going astray, you worship them' (Deut 4:19). Since worshiping these is forbidden, so also for the other creatures, even if any should happen to be highly ascended. As has been said before, it is fitting to be confirmed that it is not a creature but the Creator who is Christ, even if for our sake he united to himself the created flesh, having obtained a soul rational and intelligent, and thus he is worshiped as God by all the creation (Heb 1:6).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragment on Hebrews",
+   "work_slug": "didymus-fragmentum-hebraeos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-fragmentum-hebraeos/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-012",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "He is only-begotten by nature as alone begotten of the Father alone, and firstborn as one who entered the world as human, yet the holy angels worship him.",
+   "comment": "The Word from God the Father is named only-begotten by nature, because he alone has been begotten from the Father alone. He is also called firstborn when he entered the world as one who had become human and part of it. Yet even so he is worshiped by the holy angels — and worship is reserved and fitting for God alone. How, then, is Christ not God, the one worshiped even in heaven?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the two titles only-begotten and firstborn in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "38",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/38/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-013",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Christ is Only-begotten as God and is called Firstborn because of his humanity.",
+   "comment": "The inspired Paul says somewhere, “And when He again brings the Firstborn into the world, He says, ‘Let all the angels of God worship Him’” (Hebrews 1:6). And yet to which of all beings is it unclear that He is Only-begotten insofar as He is understood to be God? For He alone has been begotten of the Father alone. But when He lowered Himself into our condition and came to be among many brothers (Romans 8:29), then He was set in the first place. So besides being Only-begotten as God, He has also been called Firstborn because of His humanity.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-014",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "Of angels Paul says 'the one doing', of the Son 'your throne', showing the Son was always with the Father.",
+   "comment": "Just as he said: 'This was in the beginning, all things came through him' (John 1:2), instead of 'this was, these things were', so also Paul: regarding the angels, 'the one doing'; but regarding the Son, 'your throne'—in order to show: that which is being done was not, but the one having the throne was always toward the Father eternally.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-015",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Many are called christs, but the Christ loved righteousness most and received the whole anointing, while his companions share in it each according to capacity.",
+   "comment": "The divine Scriptures call them christs too, in the verse: “Do not touch my christs, and do my prophets no harm” (Psalm 105:15). For just as we have heard “that antichrist is coming,” and have learned no less that there are “many antichrists” in the world (1 John 2:18), in the same way, knowing that Christ has come, we see that because of him many christs have come into being in the world. Like him, they have “loved righteousness and hated injustice; and therefore God, the God” of Christ, “has anointed” them too “with the oil of gladness” (Psalm 45:7; Hebrews 1:9). But he, who loved “righteousness” and hated “lawlessness” more than his “companions” (Psalm 45:7), received the firstfruits of the anointing and, if one may so name it, the whole anointing with the oil of “gladness”; while his companions, each according to his capacity, shared in his anointing too.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains 'above thy fellows': Christ received the whole anointing, his companions a share of it.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "79",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/79/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-016",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 14,
+   "capsule": "The heavens perish only by comparison with the Son's immortality, and 'you yourself are' shows his unshakeable nature, while 'ministering spirits' shows he is a co-worker and not a minister.",
+   "comment": "He does not say a change of nature is happening, but speaks by comparison, that these things are more likely to perish, just as they are destroyed in comparison to the setting forth of the Son's immortality (Heb 1:12–14). For the Lord, foretelling the second coming, says that stars shall fall, but not yet sun or moon or heaven. … And it must be noted that through the phrase 'you yourself are' (Hebrews 1:12), he demonstrated the eternal and the unshakeable nature, and through the phrase 'are not all they are ministering spirits for service' (Heb 1:14), he demonstrated that the Son is not a minister but a co-worker.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-017",
+   "chapter": 1,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "After the ascension the Father says 'Sit at my right hand' to Jesus, as no angel was ever told.",
+   "comment": "Having fulfilled the economy, both having been raised from the dead and having been taken up into heaven, the Lord Jesus says, 'Sit at my right hand, until I make your enemies a footstool for your feet' (Psalm 110:1), that is, the Father. Paul, therefore, says that after this ascension, the voice was spoken through Him to say, 'Having made a cleansing of sins, He sat in the right hand of majesty in the high places.' For to which of the angels was it ever said, 'Sit at my right hand?' (Hebrews 1:13).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u51-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u51-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB01-018",
+   "chapter": 1,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Angels are ministering spirits who carry men's petitions up and bring God's commands down, and they are not to be worshiped in God's place.",
+   "comment": "For we too do indeed acknowledge that there are angels, who are “ministering spirits, sent out for service for the sake of those who are to inherit salvation” (Hebrews 1:14). They ascend, bringing men’s petitions up to the purest regions of the world, the heavenly ones, or even to the regions above the heavens, which are purer still; and they come down again from there, bringing to each, as he deserves, something of what God commands them to minister to those who receive the benefit. Since we have learned to call them angels from the work they do, we find that, because they are divine, they are sometimes even named “gods” in the sacred Scriptures. Yet this is not so that we should be commanded to revere and worship, in place of God, those who minister to us and bring us the things of God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the angels do for believers, in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "4",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/4/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-002",
+   "chapter": 2,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The law, though given through angels, did not supply the Spirit or the power to work wonders, but faith in Christ gives both.",
+   "comment": "The law through Moses, though it is God’s law and “spoken through angels,” (Hebrews 2:2) (Galatians 3:19) does not have the supply of the Holy Spirit, nor did it procure for anyone the power to work wonders. But through faith in Christ we gain both. How then is faith in him not better, if it has abolished the old law? And if we who live by faith are in a better state than those of the time when the law held, how is Christ not God?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows what the new message has that the law spoken through angels lacked.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "34",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/34/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-001",
+   "chapter": 2,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "The message was confirmed by the others being fully convinced that the preaching is sound.",
+   "comment": "He does not say a law, but the one many times administered through angels (Heb 2:2). It was confirmed to us by those who heard. This is similar to that in the epistle to the Galatians, where he says, 'I went up according to a revelation, and I proposed the gospel to them, lest I should be running in vain or have run' (Galatians 2:2). It was confirmed not by our asking, but by the being fully convinced of all the others, that what I preach, I preach well.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-004",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 8,
+   "capsule": "Man was made in God's image to rule the earth but lost that glory in Adam; since we do not yet see all things subject to him, another time is sought, the world to come, which is to be given to those upon the earth.",
+   "comment": "He begins, he says, with the thoughts toward the construction of man in the beginning and what first became; but he is occupied with how we have been made by God according to his image and likeness, and we have been richly honored, having received to rule over the things upon the earth. Since indeed the beginning of the race, that is, Adam, has grieved the divine commandment, and the human intellect has moreover become very easy toward wrongdoing, by this we are deprived in the world of glory and incorruption and of the good things in the beginning; yet we have been saved through Christ, and by the grace from him we have acquired the things formerly given toward ascension. …\n\nAnd the blessed David has indeed marveled appropriately at what is upon us. And the most wise Paul, being a very skilled craftsman in spiritual thoughts, indeed turns wittily toward an explanation of the mystery of the things said, but names the state of the age following this one, and the repetition according to the seasons of the things given to us, or rather their fulfillment. For we have pierced through, as I said, the grace in Adam. For it is indeed said regarding him, as the first in human nature, 'Increase and multiply and have dominion' over it (Gen 1:28); but now he does not say, 'we see all things subjected to him.'\n\nTherefore, let us seek a different time of the matter, according to which it shall be, … He says thus that the inhabited world to come is to be subjected not rather by angels, but that this is to be given to those upon the earth.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-003",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 9,
+   "capsule": "'The time to come' is the last time, and the man God remembered and made a little lower than the angels is Jesus.",
+   "comment": "He says 'the time to come' (Heb 2:5). Immediately he added 'the last'; but now we do not yet see all things made subject to him; but we see Jesus, being made a little lower than the angels (Heb 2:7–9). So what is it that he says, 'you remember him'? He says it was fitting for Jesus; for the things of common humanity were fitting for him. … he remembered the man and made him a little lower than the angels. And who is the man? Jesus.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-006",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Through Christ we recover the good things given at the beginning, and Paul brings the highest throne, worshiped by the angels, down among us when he says we see Jesus a little diminished and crowned with glory and honor.",
+   "comment": "And the Savior himself was remembering, saying, \"Blessed are the gentle, for they themselves shall inherit the earth\" (Matt 5:5). Who then is it that through whom the recapitulation of all things concerning us has become from God and the Father? It is evident that it is Christ, which also follows us to say, as through the lyre of the singer, \"The Lord is a part of my inheritance and of my cup; you are the one restoring my inheritance to me\" (Ps 16:5); for through him we have had the repetition of those good things granted in the beginning according to nature, and the certainty into possession. And it is unceasing to see this in no other way than having been written about it by the divine Paul: \"The one a little being diminished by angels\" we see Jesus through the passion of death \"with glory and honor being crowned\" (Heb 2:9).\n\nYou hear how above all things, the most supreme throne, which is worshiped with the Father by the spirits above in order of God, to whom thousands of thousands of angels serve, and also myriads of myriads stand by, the mystagogue brings down again among us and the manner of approaching the emptying he relates immediately, and whatever through it is made firm to the human nature as good things. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-007",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Christ was lowered below the angels only by taking a mortal body and willingly suffering in it; he is still worshiped by them as God, and by giving his body to death he trampled death's power.",
+   "comment": "Just as the transgression of Adam demonstrated the most dishonorable state, so shall we be glorified through the obedience of Christ on our behalf, He having set forth His own soul so that He might rule both over the dead and the living (Psalm 8:4-6).\n\nHow is Christ diminished from the angels, He who is worshiped among them? It is because He sat within the measures of humanity; having received a body destined to die, He willingly suffered in it.\n\nYet through Him, having abolished death and rendered corruption inactive, He is crowned with the highest glories, being incorruption and life. …\n\nBut Christ, though briefly diminished from the angels because of the measure of humanity, is worshiped by them in the excellence of His divinity …\n\nFor having given His own body to death, and as if having fleshly tasted that which occurred, He lived again and has immediately trampled the power of death.\n\nTherefore, the One said to be briefly diminished from the angels is the Word who is from God; He did not suffer this diminishment into His own nature, for He is always the same, possessing the same nature, unshakeable and unchangeable, yet He has endured this also through us in a human way.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what being made lower than the angels means for Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-008",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "God's grace allowed the Logos to taste death for all.",
+   "comment": "The most holy Paul says, 'by the grace of God' (Hebrews 2:9), indicating that it was God's grace that allowed the Logos to taste death for the salvation of all.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u08-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u08-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-009",
+   "chapter": 2,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "Christ's perfecting through sufferings adds to us what was lacking, and Paul shows it is the Only-begotten in human form, not a bare man, who sanctifies.",
+   "comment": "For it is truly glory to God and Father to abolish death through his own offspring. So the perfecting is his through sufferings, but for us what has happened is an addition of what was lacking; for the things in Christ are a new creation (2 Corinthians 5:17). And that he does not say a bare human — with the Word excluded — has been perfected for us, but rather the Only-begotten appearing in human form, the inspired Paul will confirm again, adding: “For both the one who sanctifies and those who are sanctified…” (Hebrews 2:11)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "28",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/28/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-011",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "'One' can be understood as God, not Adam.",
+   "comment": "Where it is said of Christ, ‘The one who sanctifies and those who are sanctified are all from one’ (Hebrews 2:11), this can be understood as referring not to Adam but to God, by whose power Christ according to the flesh and the whole human race were made.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.87",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.87/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-010",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "Christ sanctifies as God, since holiness is his by nature, and is sanctified with us as man.",
+   "comment": "“For both the one who sanctifies and those who are sanctified are all from one; for which reason he is not ashamed to call them brothers, saying: I will announce your name to my brothers.” (Hebrews 2:11–12) What is holy by nature is not sanctified, because it does not need sanctification; but what has become holy as by participation from another cannot sanctify others. How then the same one sanctifies and is sanctified must be asked. He sanctifies, then, as God, having received as a property of his own nature the power to sanctify, and he is sanctified with us according to the human. So there is one Christ and Son and Lord, sanctifying divinely and being sanctified with us humanly.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Answers how the same one can sanctify and be sanctified.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "80",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/80/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-012",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The Word shared our flesh so that by giving his own body to death and raising it he might destroy death's power, since that body was the own body of life itself.",
+   "comment": "“Since then the children have shared blood and flesh, he himself likewise shared the same things, so that through death he might abolish the one who has the power of death — that is, the devil.” (Hebrews 2:14) Likewise with whom? The Word from God has shared blood and flesh with those ranked among God’s children, so that by giving his own body to death he might make it alive again, existing as life itself by nature as God. For how has death’s power been abolished, unless the body that fell into death lived again — being the own body of the life by nature, that is, of the Word who is from God?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the Word shared blood and flesh.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "63",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/63/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-013",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The Word became flesh to triumph over death, destroy the one who has the power of death, and undo the curse that came through Adam.",
+   "comment": "For the Word “became flesh and dwelt among us” (John 1:14) for no other reason than this: that by enduring the death of the flesh he might triumph over the rulers and authorities (Colossians 2:15) and destroy “the one who has the power of death, that is,” Satan (Hebrews 2:14); that he might do away with corruption and, with it, remove the sin that had tyrannized over us; and that he might thus make powerless from then on that ancient curse which human nature underwent in Adam, as in the firstfruits of the race and as in its first root.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-014",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "Life under the law lay under the fear of death, but Christ abolished death's power, so the saints now grow bold even about dying.",
+   "comment": "For the life according to law is divided, as I said, and still also lies under the fear of death. For Moses was fearing to go down into Egypt, declining to die. But this also has been abolished in Christ. And the holy Paul will confirm saying concerning both Christ and us: ‘Since the children have shared flesh and blood, he himself likewise partook of the same; that through death he might abolish the one having the power of death—that is, the devil—and might free these, as many as by fear of death were through all the living liable to slavery.’ (Hebrews 2:15) Therefore also of dying itself thereafter, the mind of the saints grows bold. For Paul said again: ‘For to me to live is Christ, and to die is gain.’ (Philippians 1:21) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "23",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/23/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-015",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "The Word became man to offer his body for us and free us from the fear of death, since no mere man or creature could.",
+   "comment": "So by the good pleasure of the Father, he who is true God, and by nature the Word of God, and wisdom of the Father, became man in bodily manner for our salvation, so that, having something to offer for us, he might save all of us who through fear of death were held in slavery all our lives (Hebrews 2:15). For no mere man gave himself for us, since every man is liable to death, according to what Scripture said in Adam to all, “You are dust, and to dust you shall return” (Genesis 3:19), nor did any other created thing, since every creation is open to change. But the Word of God himself offered his own body for us, so that faith and hope may not be in a man, but we may have faith in God, the Word of God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who could free us from the fear of death and why.",
+   "author": "Athanasius of Alexandria",
+   "work": "Letter to Maximus the Philosopher",
+   "work_slug": "athanasius-epistula-maximum",
+   "section": "2",
+   "url": "https://viapatrum.org/works/athanasius-epistula-maximum/2/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-016",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "A man had to conquer death for us, so the Word took hold of Abraham's seed and became like his brothers, healing what had fallen and overcoming death through obedience.",
+   "comment": "See how he shows once more that the mystery of the dispensation in the flesh is full of a skill worthy of God. For it was needful, truly needful, he says, that a man should conquer death for us. For this reason God the Word, who shone forth from God, did not take hold of angels, as Paul himself says, but of the seed of Abraham, so that he might be made like his brothers in every way (Hebrews 2:16–17). For, as I said, what had fallen sick had to be healed, and what had fallen had to rise. What had come under death through transgression and sin had to overcome death through obedience and righteousness. That is why the Only-begotten Word of God, who knew no sin (2 Corinthians 5:21), became man: so that, as in Adam we have all been condemned, when human nature suffered death, so also, justified in Christ, we might strip off, together with sin, the death that sprang from it.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why he took the seed of Abraham and was made like his brothers.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u06-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u06-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB02-017",
+   "chapter": 2,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "He was made like his brothers in all things, not only in body, though in his divinity the Only-begotten has no brother.",
+   "comment": "'Wherefore he ought to have been made like his brothers in all things' (Hebrews 2:17). Not only according to the body, but according to all things. According to his divinity, the only-begotten Son of God does not have a brother; for if he had a brother, he would not be only-begotten. But to have brothers is opposed to being an only-begotten one. The only-begotten has no brothers. The one having brothers is not only-begotten.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how far 'like his brothers' goes.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u07-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u07-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "These titles are small for the Word's nature but fit his humanity.",
+   "comment": "Jesus has become apostle and high priest of our confession from God the Father — that is, the Word from God having appeared as human. For then he was also named Jesus through the angel’s voice. And both the name and the fact of priesthood and of apostleship are quite small for the Word’s nature; yet for the measures of humanity they would not be unfitting; …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in what sense the Word is called apostle and high priest.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "23",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/23/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-002",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Becoming an apostle means being sent to those far off, though the Son's essence is eternal.",
+   "comment": "Things said about the Savior: 'Understand the apostle and high priest of our confession, faithful in him who made him' (Hebrews 3:1-2). He made him an apostle; he did not merely make him, but an apostle. And behold, the essence of the Son is eternal. But to become an apostle happens then, when some depart from him; for he is sent to those far off. And observe that the becoming an apostle co-exists with him being far from certain ones, those having been distanced from him.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u18-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u18-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-003",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "'Made him' does not make the Son a creature, because Scripture uses 'made' without distinction for begetting, as when Hezekiah says he will 'make children.'",
+   "comment": "They cling to what the Apostle says about the Only-begotten—“being faithful to him who made him” (Hebrews 3:2)—as a great support for their heresy, and they insist that the Son of God is a creature. But this support of theirs is a bruised reed. For when a substance is a creature and a created thing, then “he made” and “he created” are properly said of it, and they signify a creature. But when a substance is an offspring and a son, then “he made,” “he became,” and “he created” are no longer properly applied to it, nor do they signify a creature; rather, a person uses “he made” without distinction in place of “he begot.” So the Arians will condemn themselves if they learn Scripture’s idiom. For even if parents speak of the children born from them as being made, becoming, and created, they do not thereby deny their nature. Hezekiah, for example, as it is written in Isaiah, prayed and said, “For from today I will make children” (Isaiah 38:19)—using “I will make” in place of “I will beget,” and speaking of the children born from him. And there is no difference. Here too it is said of Job, “And there were born to him seven sons” (Job 1:2), just as Moses also says in the law, “If they become” (Deuteronomy 25:5). One must first ask whether he is a son. For once this is demonstrated, the suspicion about creature and created thing ceases, and it becomes clear to all that the phrase “to him who made him” is of no benefit to their heresy, but rather leads to its condemnation. For it has been shown that the word “he made” is used in divine Scripture even of true and natural children. Therefore, since the Lord is demonstrated to be a true and natural Son, even if “he made” or “he became” is said of him, it is not said because he is a creature; rather, the saints use the word without distinction.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Athanasius of Alexandria",
+   "work": "Notes on Job",
+   "work_slug": "athanasius-scholia-job",
+   "section": "1",
+   "url": "https://viapatrum.org/works/athanasius-scholia-job/1/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-004",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Moses was faithful in all his house in the sense of being steadfast toward every good and whatever God wills.",
+   "comment": "Faith here would be, as I think, steadfastness toward every good thing whatever, and toward whatever God may will. For in this sense we say that Moses, the revealer of holy things, was faithful “in all his house” (Hebrews 3:2; Numbers 12:7). For faith would not be understood or spoken of as only the duty to believe that by nature and in truth there is one God of all, but as standing firm in soul, “and being ready to walk with the Lord God,” in the words of the prophet (Micah 6:8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that Moses was faithful in all his house.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u04-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-005",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "Moses is faithful as a servant in the house, but Christ is Master over his house and its builder, so the difference is that of maker to what is made.",
+   "comment": "And being somehow compared to Moses’ service according to the human, one may learn how great a superiority he has in that he is God… that the one is faithful as a household-servant in the house (Hebrews 3:5–6), but the other as Master over his house; and that Emmanuel is builder and maker of the house, whose house we are. And the difference of maker toward what is made is beyond compare, and of the Master by nature toward what is truly slave…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the contrast between Moses the servant and Christ the Son over the house.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "24",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/24/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-006",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The house is not a building but all who complete it, and Paul says Christ is son over the house that we are.",
+   "comment": "One must not understand 'house' in these matters as a place or a building, but the sum of those completing it, as the Apostle says: 'But Christ, as a son, upon his house, of which we are the house' (Hebrews 3:6). And to Timothy he writes: 'In case I delay, so that you may know how you ought to behave in the house of God, which is the church of the living God, a pillar and foundation of the truth' (1 Timothy 3:15).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'whose house we are' means.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u06-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-008",
+   "chapter": 3,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Paul introduces a passage from the Psalms with 'As the Holy Spirit says', since the Psalms contain spiritual meanings and were not composed by chance.",
+   "comment": "In the new covenant, the testimonies taken from the book of the Psalms are set forth as having been spoken by the Holy Spirit. Paul, having taken a chapter from the ninety-fourth Psalm in the epistle to the Hebrews, writes that it was announced by the Holy Spirit, saying, 'As the Holy Spirit says: If today you hear his voice...' (Hebrews 3:7), and the following. … If, therefore, the Psalms contain spiritual meanings, it was not by chance that they were composed in their scripture.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse says the Holy Spirit speaks the words of the Psalm.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB03-010",
+   "chapter": 3,
+   "verse_start": 17,
+   "verse_end": 19,
+   "capsule": "Believers keep the Sabbath spiritually in Christ by ceasing from sin, and Israel kept the Sabbath idleness yet did not enter the rest, because that Sabbath was only a type of the rest in Christ.",
+   "comment": "Through faith, O Palladius, understood spiritually in Christ we sabbatize, ceasing from the distractions in this world, and resting from empty carrying-around, and standing off from baseness, and stripping out of the yoke of the sin, we are let go hereafter unto free holiness. And at any rate the divine Paul says concerning those not yet having believed: ‘And with whom was he vexed forty years? Was it not with those having disobeyed, whose limbs fell in the desert? And to whom did he swear not to enter into his rest, if not to those having disobeyed? And we see that they were not able to enter because of disobedience. Let us fear then lest ever, a promise of entering into his rest being left, someone from you should seem to have come short.’ (Hebrews 3:17–4:1) And after other things: ‘Therefore a sabbatism is left for the people of God.’ (Hebrews 4:9) And yet how is it not true that if the sabbatism is only to be idle on Sabbath, how did Israel not enter into the rest, although having kept the idleness on Sabbath? But the matter was unto a type of the rest in Christ, and of the ceasing from sin of the one being justified by the faith.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 7",
+   "work_slug": "cyril-adoration-7",
+   "section": "9",
+   "url": "https://viapatrum.org/works/cyril-adoration-7/9/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-001",
+   "chapter": 4,
+   "verse_start": 6,
+   "verse_end": 9,
+   "capsule": "The Sabbath rest points to resting in spirit through Christ from the works of the flesh, a rest Israel never entered, as Paul says.",
+   "comment": "The type plainly points to the Sabbath rest kept in spirit, when through Christ himself we have been called to cease and rest from every work of the flesh and from wicked pursuits, shaking off the burden of sin, loving to turn away from wickedness and to rest from whatever lies outside the law. For such a Sabbath rest remained out of reach for those of Israel; for they never entered Christ’s rest at all, as blessed Paul says (Hebrews 4:6–9). But Christ has given us rest, and has persuaded us to keep the Sabbath in a spiritual way, giving ourselves freely to virtue and practicing a good idleness from offenses.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/2/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-002",
+   "chapter": 4,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The spiritual Sabbath is the coming of Christ, and Israel did not enter his rest because they did not accept faith.",
+   "comment": "The loaves [a figure of the apostles] are set out on the Sabbath day as well (Leviticus 24:8). For the day on which the holy apostles were made known is the time of the spiritual Sabbath, that is, the coming of Christ. Because those of Israel did not recognize it, Paul says of them, ‘So then there remains a Sabbath rest for the people of God’ (Hebrews 4:9). For they did not enter into his rest, because they did not accept faith (Hebrews 3:18–19). The spiritual and true Sabbath rest, then, is the time when our Savior came to dwell among us.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the Sabbath rest that remains is.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/17/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-003",
+   "chapter": 4,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Entering Christ's rest means giving up fleshly work and empty bustle.",
+   "comment": "… entering into the rest of Christ — to abstain thereafter from every fleshly work and from earthly ambitions and empty bustle, and rather to press on to finish only what leads to the unstained life and makes people reverent and holy. For as wise Paul writes to us: ‘The one who has entered his rest’ — clearly Christ’s — ‘has also rested from his works, as God did from his own.’ (Heb 4:10; Gen 2:2)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means to rest from one's works.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "9",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/9/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-004",
+   "chapter": 4,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Soul and spirit divide when the Spirit's grace draws upward.",
+   "comment": "He says of a division of soul and spirit (Heb 4:12), when the soul suffers with the body, but the grace of the Holy Spirit draws upward toward the heavenly things.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB04-005",
+   "chapter": 4,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The living word cuts away from the mind the uncleanness of fleshly impulses, as a razor shears hair, and by the Spirit's working they weaken.",
+   "comment": "For ‘the word of God is living and active and sharper…’ (Hebrews 4:12), and it cuts away from the mind, as one would hair and nails, the uncleanness of the impulses of the flesh that are inborn in us. Holy Scripture somewhere calls this a law of sin dwelling in the members of the flesh, waging war against the law of the mind, and dragging us toward what is forbidden (Romans 7:23). But cut as with a razor by the power and working of the Holy Spirit, it grows weak, and even if it somehow springs up again in us, it is all the more quickly shorn away.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives a picture of what the sharp, living word does in a person.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "27",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/27/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-006",
+   "chapter": 4,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The Word divides the earthly image in us from the heavenly.",
+   "comment": "For he brings not peace but a sword — dividing son from father, daughter from mother — that the Word, sharper than any two-edged sword, may divide in us the earthy image from the heavenly, soul from spirit, joints from marrow.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "37",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/37/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-008",
+   "chapter": 4,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Nothing can hide from God, since night is as light to him, and the deeds done in secret he brings to light when it is needed.",
+   "comment": "But even this, teaching again that the knowledge of God cannot be prevented, he says: 'The darkness shall not be darkness from you, and night shall be enlightened as the day' (Psalm 139:12). For to men, indeed, the night makes a difference from the day, but to you, O Lord, even these things are enlightened, instead of 'they become manifest'; which is also what the apostle makes manifest, saying: 'all things are naked and laid bare to the eyes of him' (Hebrews 4:13). And in Daniel it is said: 'knowing all things in the darkness, and the light is with him' (Daniel 2:22), which is our Savior, who 'enlightens every man' (John 1:9). Therefore, everything is manifest to him... and the deeds of men, those happening in secret and in darkness, he makes manifest when it is necessary.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms that nothing is hidden from God.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u19-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u19-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-009",
+   "chapter": 4,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Jesus, our great high priest, has passed through the heavens and will lead the worthy beyond the world.",
+   "comment": "For we too have “a great high priest,” who by the greatness of his power and of his mind “has passed through the heavens, Jesus the Son of God” (Hebrews 4:14). He has promised those who have truly learned divine things and have lived worthily of them that he will lead them on to what lies beyond the world. For he says: “so that where I am going, you also may be” (John 14:3).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what passing through the heavens means for believers.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "20",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/20/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-010",
+   "chapter": 4,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "Our great high priest is the Word who became as we are, offering himself as the lamb, and he was tempted in all things, learning our weakness through experience.",
+   "comment": "“Having therefore a great high priest who has passed through the heavens, Jesus the Son of God, let us hold the confession; for we do not have a high priest unable to sympathize with our weaknesses, but one tempted in all things according to likeness, without sin.” (Hebrews 4:14–15) And since there is confessedly one Son of God and Father—clearly Christ Jesus—who can sympathize with our weaknesses and has been tempted in all things according to likeness without sin, who then would our great high priest be? Is it not the Word who became as we are and suffered in flesh for us? For then he was styled our high priest—not as bringing forward a foreign and strange alien victim, as is customary with others, but being himself the lamb (John 1:29), the most fragrant sacrifice. For even if the Word of God had not yet become human, he already knew human weakness as Creator; but he had not yet been called into the very experience of our weaknesses. But since he was clothing himself with our flesh, he has been tempted in all things—not, we say, as having been ignorant, but because, with God-befitting knowledge already underlying, it also happened that he learned it through experience.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the sympathizing high priest is and how he was tempted.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "33",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/33/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB04-011",
+   "chapter": 4,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "His human body was tempted in all things like all human beings, yet wholly without sin.",
+   "comment": "That is why, among other things, we say that he also became a great contender: because his human body was “tempted in all things” like all human beings, yet not, as human beings are, with sin, but wholly “without sin” (Hebrews 4:15).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "69",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/69/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-002",
+   "chapter": 5,
+   "verse_start": 4,
+   "verse_end": 6,
+   "capsule": "No one may take the priesthood on his own but must wait for God's call, as Christ himself was called by the Father.",
+   "comment": "… For ‘no one takes the honor for himself, but the one who is called by God’ (Hebrews 5:4), as it is written. Let no one, then, go of his own accord into serving God as a priest; let him wait for a call. Otherwise, if he tries to seize what he does not hold by decree from above, he will suffer the punishment of Dathan and Abiram (Numbers 16:31–33). And do not be surprised that self-appointment is out of place and unseemly among us, when Paul writes even about Christ himself: ‘He did not glorify himself to become high priest, but the one who said to him, “You are a priest for ever, according to the order of Melchizedek”’ (Hebrews 5:5–6; Psalm 110:4). … Now Christ has been called, as it were, to be high priest through the counsel of the Father. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse says no one takes the honor for himself, and applies it to Christ.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/2/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-003",
+   "chapter": 5,
+   "verse_start": 4,
+   "verse_end": 6,
+   "capsule": "Christ waited for the Father's call to the priesthood, called as Aaron was but as Son, not as a household slave.",
+   "comment": "… “And no one takes the honor for himself, but being called by God, just as Aaron also was. So also Christ did not glorify himself to become high priest, but the one who spoke to him: You are my Son; today I have begotten you.” (Hebrews 5:4–5) (Psalm 2:7) The one who let himself down into emptying awaits the Father’s call that carries him into priesthood—the call most customary and fitting not rather to his own nature, but to the nature that is as we are, that is the human, into which, since he has come inside it, he endures what belongs to it. So he has been called as Aaron also was, yet not in an equal manner. For the one was anointed toward priestly service and was a household slave, but this one is called as Son and ministers to the Father according to the order of Melchizedek. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "34",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/34/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-004",
+   "chapter": 5,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Christ prayed with a strong cry and tears to teach us to pray without ceasing, and he was heard as Son.",
+   "comment": "… He [Christ] rather persuades us to strain toward prayers and to make unceasing entreaty toward God; he teaches these things, having brought petitions and entreaties in the days of his flesh (Hebrews 5:7) to the one able to save him from death. For he was approaching with a strong cry and entreaty as one who had become as we are, yet he was heard as Son by nature and truly, not disregarded: “For I,” he says, “knew that you always hear me.” (John 11:42) For so that he might also prepare our prayers to become acceptable, he himself again begins the matter. Therefore we were in him, as in a second firstfruit of the race—we who pray with a strong cry and not without tears, and entreat that death’s power be abolished.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Christ's prayers with a strong cry and tears teach us.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "35",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/35/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-005",
+   "chapter": 5,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "Learning obedience from suffering is a human way of speaking, like saying he humbled himself and was then exalted, and it is a pattern for us.",
+   "comment": "“For from what things he suffered,” it says, “he learned obedience.” (Hebrews 5:8) It is like saying: He humbled himself, becoming obedient unto death, even death of a cross (Philippians 2:8–9); yet he did not remain humble, for he was highly exalted, receiving the name above every name. And the shape of the wording is human, yet the type of the matter is best for us. So then it is a type and pattern for us that Emmanuel, being tempted, prays with a strong cry and tears—not before the incarnation, but in the days of his flesh (Hebrews 5:7), …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why the verse says he learned obedience from what he suffered.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "36",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/36/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-006",
+   "chapter": 5,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The first elements of the oracles of God are what was decreed through Moses, and the Law as tutor carries us toward the mystery of Christ.",
+   "comment": "… For the Law tutors, and carries us well toward the mystery that is in Christ (Galatians 3:24). And we say that the things of old decreed through Moses to the more ancient people are the first elements of the oracles of God (Hebrews 5:12). And if we push aside the tutor, who will still convey us to the mystery of Christ? And if we refuse to learn the first elements of the oracles of God, how, or from where, shall we still arrive at the end? …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what the 'first elements of the oracles of God' are.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/4/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-007",
+   "chapter": 5,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The law brings us only to the first entrances of knowledge about Christ, so its worship was the first principles of the oracles of God.",
+   "comment": "… For the altar of the worship under the law was set right at the entrances that lead into the Holy of Holies. For the law barely brings us as far as the beginnings of the mysteries of Christ, to what are, as it were, the first entrances of exact knowledge about him; but it does not bring us at all into the Holy of Holies, that is, into the inner tent, where Christ is found in many forms: as the Word of God, as light, as living bread, as a sweet fragrance to God the Father (Ephesians 5:2). Or would you not say that the preparatory practice of worship under the law was the elements and first principles of the oracles of God (Hebrews 5:12)? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "9",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/9/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-008",
+   "chapter": 5,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Paul gives milk to those who need it and wisdom, like honey, to the perfect.",
+   "comment": "Paul is like a spouse, a bride according to the soul of the divine Bridegroom, with the word on his lips, providing milk to those who need it, as it is said: 'You have become in need of milk, not solid food' (Hebrews 5:12). To those who are perfect, he provided honey, handing over wisdom to them, saying: 'But we speak wisdom among the perfect' (1 Corinthians 2:6). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u15-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-009",
+   "chapter": 5,
+   "verse_start": 12,
+   "verse_end": 14,
+   "capsule": "Teachings for beginners are like the milk of infants, and solid food belongs to the mature whose faculties are trained to tell good from evil.",
+   "comment": "… The same man [Paul], knowing that some things are food for a more mature soul, while the teachings for beginners are likened to the milk of infants, says: “And you have come to need milk, not solid food. For everyone who lives on milk is unskilled in the word of righteousness, for he is an infant. But solid food belongs to the mature, to those whose faculties have been trained by practice to distinguish good from evil” (Hebrews 5:12–14). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "53",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/53/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-010",
+   "chapter": 5,
+   "verse_start": 12,
+   "verse_end": 14,
+   "capsule": "Milk is for the immature and solid food for the perfect, and the words about eating all things or only herbs refer to God's words that nourish the soul.",
+   "comment": "… But Paul, discoursing to 'babes' and Corinthians walking 'after man,' says: 'Milk I gave you to drink, not food; for you were not yet able. But neither even now are you able; for you are still carnal.' (1 Corinthians 3:2) And in Hebrews: 'And you have come to need milk, not solid food. For everyone who shares milk is without experience of the word of righteousness — for he is a babe. But solid food is for the perfect, who by habit have their senses trained to discern good and evil.' (Hebrews 5:14) And I take even the 'One believes he may eat all things, but the weak eats herbs' (Romans 14:2) to be said by him principally not of bodily foods but of God's words that nourish the soul: the most faithful and most perfect can partake of all — whom he indicates through the 'One believes he may eat all things' — while the weaker and more imperfect begins with simpler lessons, which do not strongly impart vigor — whom, wishing to mark him, he calls 'the weak eats herbs.' …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "27",
+   "url": "https://viapatrum.org/works/origen-on-prayer/27/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB05-011",
+   "chapter": 5,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "God adjusts the Word's power to nourish the soul to each person, as milk, vegetables or solid food.",
+   "comment": "… Concerning the nature of the Word: just as the quality of foods is changed into milk in the nurse to suit the nature of the infant, or is prepared by the physician to meet the sick man’s need for health, or is made ready accordingly for the stronger man, since he is more able to take it; so God changes the power of the Word, whose nature is to nourish the human soul, for each person according to his worth. To one, as Scripture has named it, he becomes “the pure milk of the word” (1 Peter 2:2); to another, who is weaker, something like vegetables (Romans 14:2); to another, who is mature, he is given as “solid food” (Hebrews 5:14). And surely the Word does not belie his own nature when he becomes nourishment for each, as each is able to receive him; he neither leads astray nor lies. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows in simple terms how the Word is milk to some and solid food to others.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "18",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/18/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB06-001",
+   "chapter": 6,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "'Of teaching' is placed in the middle, and the sense is: not laying again a foundation of teaching and the items that follow.",
+   "comment": "… The saying in Hebrews 6:1 is transposed. The phrase “of teaching” has been placed in the middle and assigned to everything lying alongside it, and the arrangement according to its meaning is this: not laying down again a foundation of teaching—and then, in sequence, the items set out in the enumeration concerning which the foundation of the teaching exists.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Clears up the word order of a verse that is hard to read.",
+   "author": "Gennadius of Constantinople",
+   "work": "Fragments on the Epistle to the Hebrews",
+   "work_slug": "gennadius-fragmenta-hebraeos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/gennadius-fragmenta-hebraeos/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB06-002",
+   "chapter": 6,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Because the earthly things of the law are dead to Christians, it is absurd to turn back from faith and repentance to the baptisms of the law, though the law is a foundation and a precursor of piety.",
+   "comment": "… Since the beginning of Christ is from Judaism—for he lived according to the law—because of this he says: leaving these, let us bring forward perfection, knowing that according to the order Melchizedek must be a priest who is to be without law. From dead works, and faith toward God, and baptisms. To the Christians, the earthly things are dead. It is therefore absurd, he says, to depart from this course, whether from faith, or from having been made dead by all, to come again to the baptisms according to the law. The Lord, having come, proclaimed repentance, saying: Repent; for the kingdom of the heavens has drawn near; but repentance from dead works. Thus, therefore, it is to be read: repentance from dead works, instead of the repentance from the dead works. What he therefore says is this: it is not necessary to leave the repentance from dead works and the faith toward God and the baptism—which he named in the plural because of the multitude of those being made worthy. And he spoke of baptisms and the teaching, and the laying on of hands through which there are ordinations, and of the resurrection, the hope, and the following things—to turn back to the law. But this prepares the way, since the priests in the law were avenging the law, but Melchizedek was outside the law; and not having come according to the order, he was Melchizedek. It is not necessary, he says, to leave the Melchizedekian one according to the order to avenge the priesthood in the law, so that the things standing in the law might remain. But he said the things in the law are a foundation, since they have become a precursor of piety for men. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB06-003",
+   "chapter": 6,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Those sanctified, justified and made wise are called partakers of the Holy Spirit; they participate in him and are not participated in.",
+   "comment": "… Therefore, those who participate in Him—that is, those deemed to be sanctified by Him and justified and made wise—are called 'partakers of the Holy Spirit' (Hebrews 6:4), as the same apostle teaches the Hebrews. And to the Ephesians he writes, 'in whom also, having believed, you were sealed with the Holy Spirit of promise' (Eph 1:13). For it is clear that those being sealed, that is to say, being sanctified, participate, but are not participated in. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u15-open",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u15-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB06-004",
+   "chapter": 6,
+   "verse_start": 5,
+   "verse_end": 8,
+   "capsule": "Baptism given once suffices and repeating it is contempt, and the picture of the land is about the Spirit's power, not baptism.",
+   "comment": "… The apostles raised up dead men (Hebrews 6:5). And this was the power of the resurrection. Speaking by way of example, he said that if baptism is a mystery, the once-for-all suffices. But if the thing happens a second time, it is contempt and an example. An example was taken, not for the baptism—for how could a second baptism be prevented?—but for the power of the Holy Spirit greatly benefiting the land (Heb 6:7–8). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB06-005",
+   "chapter": 6,
+   "verse_start": 7,
+   "verse_end": 9,
+   "capsule": "Thorn-bearing earth is rejected and near to cursing, while those who duly used the rain bore the vegetation of salvation.",
+   "comment": "Take up virtue and stand apart from evil; and he says: “For the earth which drinks in the rain that often comes upon it, and brings forth vegetation useful to those for whom it is cultivated, receives blessing from God; but bearing thorns and thistles, it is rejected and near to cursing, its end” (Heb 6:7-8); and after other things he says: “but we are persuaded of better things concerning you, beloved, things that belong to salvation” (Heb 6:9) — instead of: having duly used the “rain” and been watered, you bore what he called “the vegetation of salvation.” …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u13-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u13-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB06-007",
+   "chapter": 6,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "God gave Abraham full assurance through the administration, and the power of the promise could not be changed.",
+   "comment": "… Having spoken above of the full assurance of hope, he showed that God provided full assurance to Abraham, not through works that belong to the citizenship, but through the administration (Heb 6:17). It is impossible, having made God swear, to be changed; it was impossible to change the power of the promise. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB06-008",
+   "chapter": 6,
+   "verse_start": 17,
+   "verse_end": 18,
+   "capsule": "God uses an oath to confirm his decree, so that through two unchangeable things the heirs of the promise have the strongest encouragement.",
+   "comment": "To illustrate and confirm the fairness of his judgment, God uses an oath, adding a solemn pledge to the authority of his decree. The apostle understood this manner of speaking when he explained to the Hebrews: ‘God, wishing to show the heirs of the promise the unchangeable nature of his purpose, intervened with an oath, so that through two unchangeable things, in which it is impossible for God to lie, we might have the strongest encouragement’ (Hebrews 6:17–18).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly why God added an oath to his promise.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.40",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.40/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB06-009",
+   "chapter": 6,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "Paul calls heaven a veil, since just as the veil separated the Holy of Holies from the outer places, so heaven walls off the things above it.",
+   "comment": "… And that the veil separated the Holy of Holies from the holy places outside, just as this heaven walls off the things above it from all that is here among us—listen to how he hinted at this too, calling heaven a veil. For when he speaks of hope, saying that we have it as an anchor of the soul, sure and firm, he adds: “and entering into the inner side of the veil, where Jesus has entered as a forerunner for us, above the heaven” (Hebrews 6:19-20). Do you see how he called heaven a veil? …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that Jesus entered within the veil.",
+   "author": "John Chrysostom",
+   "work": "On Christmas Day",
+   "work_slug": "chrysostom-in-diem-natalem",
+   "section": "5",
+   "url": "https://viapatrum.org/works/chrysostom-in-diem-natalem/5/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB06-010",
+   "chapter": 6,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Our own purity cannot bring us into the Holy of Holies, but Christ entered as a forerunner on our behalf, smoothing the way in for those outside.",
+   "comment": "… For how could whatever purity and righteousness may come from us, on their own, bring us into the Holy of Holies, when they are not wholly free from blame and fault? ‘For no one is wholly clean from filth’ (Job 14:4). But Christ brings us in, setting us free without holding our wrongs against us, and releasing us from every sin. For he has entered as a forerunner on our behalf (Hebrews 6:20), not, surely, for himself, but for those outside the doors who have now come, in a way, to the very threshold of the holy tent, smoothing the way in for them. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Christ's entering as forerunner does for us.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "25",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/25/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB07-001",
+   "chapter": 7,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The forefather of the Levites used Melchizedek, so the priesthood without law is superior.",
+   "comment": "… He [Paul] does not merely mention how Melchizedek met Abraham when the Assyrians were surrounding, and gave him tithes from all things (Heb 7:1–2), but showing that the forefather of the Levitical tribe used Melchizedek. Therefore, the priesthood without law is superior to the priesthood.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB07-002",
+   "chapter": 7,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Melchizedek is called without father, mother or genealogy by way of comparison with the priests of the law, and he remains a priest continually through the dignity of the priesthood, not as a mortal man.",
+   "comment": "… He says Melchizedek is without father and without mother and without genealogy, having neither beginning of days nor end of life according to the logic of priesthood; for he neither had a priestly race, nor did he begin anywhere as one succeeding another, nor from a day another, nor as having a law to be a priest for a whole life. And all these things are said entirely by way of analogy to the priests in the law.\n\nBut it is said concerning Melchizedek: having been made like to the Son of God, he remains a priest continually. And how does Melchizedek remain a priest? It is a question called forth, but the solution is this: just as Moses calls the law, so likewise here Melchizedek says both the man and the priesthood itself. If then Melchizedek is made like through the priesthood according to Christ, he remains continually; for not the mortal man, but the dignity of the priesthood. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'without father, without mother' means for a priest.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB07-003",
+   "chapter": 7,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Melchizedek, with no recorded genealogy, is made like the Son as a type of the Lord, who is without mother above and without father below.",
+   "comment": "… And the apostle, presenting to the Hebrews the unoriginate and incomprehensible nature of the generation of the Son of God, writes concerning Melchizedek: 'without father, without mother, without genealogy, having neither beginning of days nor end of life, made like the Son of God' Hebrews 7:3.\n\n… And he was made like—since he was not genealogized, as was the custom to do with the tribes of Israel concerning those honored among them—because he is a type and a certain pattern of the Lord, who is indeed without mother and without time above, but without father and from time below. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Melchizedek is said to be made like the Son of God.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u03-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u03-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB07-004",
+   "chapter": 7,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The mystery of Christ shone out beforehand in types, first in Melchizedek and then in Aaron, who signifies Christ the Priest of priests.",
+   "comment": "… Do you see the mystery of Christ, still in shadows, as it were, and shining out beforehand in types? For the one who receives tithes has himself been tithed, as the blessed Paul says (Hebrews 7:9). But at that time the type was in Melchizedek (Genesis 14:18–20); in the times of Moses it was kept again, as it were, in Aaron, who signifies in himself Christ, the Priest of priests, who leads and presides over the holy tent, that is, the Church …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/2/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB07-005",
+   "chapter": 7,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The priesthood of Aaron, which lay ahead until a time of correction, was transferred, and the covenant made toward the Savior is eternal.",
+   "comment": "… For the priesthood of Aaron, lying ahead until a time of correction, was transferred, as Paul says, 'When the priesthood is changed, there is a change also of law by necessity' (Heb 7:12). But the covenant made toward the Savior is eternal, preserving the priesthood without transgression, being able to save those coming to God through him into perfection, the one who lives always to intercede for them. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says why a change of priesthood means a change of law.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u52-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u52-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB07-006",
+   "chapter": 7,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Christ sanctifies us in countless ways, through his death, his life and the perfecting that comes through his body and blood, for perfection is in Christ, not in the law.",
+   "comment": "… Our Lord Jesus Christ sanctifies us in countless ways, and makes us sacred and acceptable. For through him and in him we have gained access (Romans 5:2), and we are not unwelcome to God the Father. For us who are subject to corruption and sin, his death is most needful and necessary for salvation; so too is his life, and besides these the perfecting that comes through his body and blood; for perfection is in Christ, not in the law (Hebrews 7:19). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse says the law made nothing perfect.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/16/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB07-007",
+   "chapter": 7,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "The Word and the man are not divided, and the one joined from both becomes the Paraclete who lives always to intercede.",
+   "comment": "I say 'according to man', do not divide him from the Word—because he is a 'Paraclete' 'towards the Father' (1 John 2:1). Neither is the Word without the man, nor the man without the Word, but the one joined from both becomes a Paraclete and 'living always to intercede on their behalf' (Hebrews 7:25) intercedes. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB07-008",
+   "chapter": 7,
+   "verse_start": 27,
+   "verse_end": 28,
+   "capsule": "By one offering through his own body Christ perfected those being sanctified forever, and he was weak in the flesh on the cross while as God beyond weakness.",
+   "comment": "… With one offering—clearly that through his own body—our Lord Jesus Christ has perfected those being sanctified forever; for he has brought himself forward for them as a fragrance of aroma to God and Father. About him the inspired Paul says that he was crucified from weakness (2 Corinthians 13:4). How then is the same one believed to be better than weakness, and as Son perfected, yet is also crucified from weakness? So it follows to think that he was weak fleshly, having endured a cross, yet is as God beyond being weak. “For the spirit is willing, but the flesh is weak.” …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the Son can be both perfected forever and weak.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "37",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/37/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB08-001",
+   "chapter": 8,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Christ brings believers to the Father, and his being seated at the Father's right shows that to minister does not make him less than the Father.",
+   "comment": "… Having come there [into the heavens] he brings forward to God and Father those who believe in him, sanctified through the Spirit: “for no one comes to the Father except through me.” (John 14:6) And that although he is said to minister he is not less than the Father, it shows further clearly by his being seated on the divine thrones and sitting at the right of the one who begot him. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "38",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/38/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB08-002",
+   "chapter": 8,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Christ became a minister of the holy places because of his humanity, offering the prayers of the saints as a spiritual sacrifice, yet he is still to be worshiped together with the Father.",
+   "comment": "… So even if the Father is glorified through Him, and since He has been set forth as “a propitiation through faith” (Romans 3:25), and has also become “a minister of the holy places” (Hebrews 8:2) because of His humanity, offering as a priest the prayer of each of the saints as a spiritual sacrifice (for through Him is our Amen), still He could not be thought to stand outside the duty of being worshiped and glorified together with the One who begot Him, both by us and by the multitude of holy spirits above. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB08-004",
+   "chapter": 8,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The tent pattern shown on the mountain shows that the law is a shadow.",
+   "comment": "… For that the law is a shadow and a type, the oracle shows, saying: \"See that you make everything according to the type of the tent that was shown you on the mountain.\" (Hebrews 8:5) (Exodus 25:40)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Pascha",
+   "work_slug": "origen-on-pascha",
+   "section": "1.58",
+   "url": "https://viapatrum.org/works/origen-on-pascha/1.58/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB08-006",
+   "chapter": 8,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Moses' mediation is a very clear type of the mediation through Christ.",
+   "comment": "… God, then, is the giver of salvation, and the steward of all our well-being, showing the road of kinship with himself, Christ mediating. Or would not Moses' mediation be a type, and a very clear one, of the mediation through Christ (Galatians 3:19–20) (1 Timothy 2:5) (Hebrews 8:6)?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "1",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/1/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB08-007",
+   "chapter": 8,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "God engraved a natural law on man at the beginning, and in the times of Christ's coming he puts his laws into their mind and writes them on their hearts.",
+   "comment": "… Taking the words in their universal sense and giving their meaning, we say that in the beginning the God of all fashioned man and engraved on him a natural law, training him toward the knowledge of evil and good. And this, I think, is what was said through the voice of John about the only-begotten Son of God: “He was the true light, which enlightens every man coming into the world” (John 1:9). We understand that this also came about in the last times, I mean the times of his coming. For it is written: “In those days, says the Lord, putting my laws into their mind, I will also write them on their hearts” (Jeremiah 31:33; Hebrews 8:10). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains when and how God writes his laws on the heart.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book2-tomos5-rem-close",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book2-tomos5-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB08-008",
+   "chapter": 8,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Writing the laws on hearts concerns Christ's coming in the flesh, and Paul understood this, calling believers 'our letter'.",
+   "comment": "… [The Lord speaks] concerning his own coming, which took place in this world with flesh: “In that time, says the Lord, I will put my laws into their mind, and I will write them on their hearts” (Jeremiah 31:33; Hebrews 8:10). The all-wise Paul rightly understood this too, and writes, saying to those who had received it, “You are our letter, written not with ink but with the Spirit of the living God” (2 Corinthians 3:2-3). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book4-logos5-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos5-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB08-009",
+   "chapter": 8,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Christ's coming is a new age that remakes what was growing old, so we no longer live in the Mosaic manner.",
+   "comment": "… For the season of our Savior’s sojourn is a new age for us, transferring all things toward the better and thoroughly remaking into the newness of creation what was growing old and near vanishing. (Heb 8:13) ‘If anyone is in Christ — a new creation; the old things have passed away; behold, they have become new.’ (2 Cor 5:17) And we ourselves no longer live in the Mosaic manner, but have been carried over into evangelical life, Christ renewing us through the Spirit. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what became old and what is new.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/4/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-001",
+   "chapter": 9,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The lamp in the first tent points to John the Baptist, a lamp going before Christ, whom the Jews put to death after rejoicing in his light for a short time.",
+   "comment": "… The lamp, perhaps, is John, the inspired Baptist, while the twelve loaves prefigure for us the company of the holy apostles. … Or do you not know that for those under the law in Judea the inspired Baptist was a kind of lamp going before Christ, and that God the Father spoke of him beforehand: ‘I have prepared a lamp for my Christ’ (Psalm 132:17)? The Savior himself also bore witness to this, saying of him to the teachers of the Jews: ‘He was the lamp that burns and shines, and you were willing to rejoice for a while in his light’ (John 5:35). See how blessed Paul, as one learned in the law, all but calls to mind the lamp in the first tent (Hebrews 9:2). For the lawgiver commanded that it must be kept unquenched, saying: ‘And Aaron and his sons shall burn it from evening until morning before the Lord continually’ (Leviticus 24:3). Yet the Jews took delight in John for a very short time, in that they ran to the baptism he gave and marveled greatly at him; then they put the ever-shining lamp to sleep in death, all but quenching it. For even if the crime may perhaps be called Herod’s (Matthew 14:10), still he was of Israel’s blood. That is why Christ, charging the peoples of the Jews with their insolence against every holy man, says: ‘It cannot be that a prophet should perish outside Jerusalem’ (Luke 13:33). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/16/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-002",
+   "chapter": 9,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "The tent had two parts, the innermost Holy of Holies, where the ark stood, and the Holy Place like an entrance hall around it.",
+   "comment": "… The holy tent, Palladius, was set up in the wilderness with a twofold arrangement and form, as it were. One part was the innermost, and its name was the Holy of Holies. Around it, like a kind of entrance hall, was the first part, called the Holy Place (Hebrews 9:2–3). In the innermost tent the ark had been placed, and it had a curtain about it, hung on four golden pillars and skillfully made of blue and purple and twisted scarlet and spun fine linen.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly how the tent was laid out.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "6",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/6/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-003",
+   "chapter": 9,
+   "verse_start": 2,
+   "verse_end": 4,
+   "capsule": "The lampstand, table and altar stood outside the veil and the ark and incense altar inside, and only the high priest entered the inner part, while the whole world was permitted into the outer, the worldly holy place.",
+   "comment": "… Outside the veil, then, were the lampstand, the table, and the bronze altar that received the sacrifices and burnt offerings. Inside the veil was the ark, covered all around with gold, holding the tablets of the covenant, the golden jar, and Aaron’s rod that budded, along with a golden altar—not for sacrifices or burnt offerings, but for incense alone. And the outer things all were permitted to walk in, but the inner things only the high priest alone. And of these very things I will again provide testimony, as Paul says in this way: “Now the first tabernacle had regulations for worship, and the worldly holy place” (Hebrews 9:1-2). He calls the outer tabernacle the worldly holy place because the whole world was permitted to enter it. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Describes how the tabernacle was arranged and who could enter where.",
+   "author": "John Chrysostom",
+   "work": "On Christmas Day",
+   "work_slug": "chrysostom-in-diem-natalem",
+   "section": "5",
+   "url": "https://viapatrum.org/works/chrysostom-in-diem-natalem/5/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-004",
+   "chapter": 9,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Aaron entered the Holy of Holies once a year with blood, and Christ likewise died once and is himself the Holy of Holies by nature.",
+   "comment": "… The revered Aaron, then, used to enter the Holy of Holies once a year with the blood of the purification of sins (Leviticus 16:34; Hebrews 9:7). See Christ again in these things, all but sprinkling his own cross with his own blood, the blood that is the salvation and life of all. For the horns [of the altar] are a figure of the cross, jutting out on this side and that, like arms stretched wide. Understand, then, that Christ died once, and that he is the Holy of Holies by nature, as God. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/20/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-005",
+   "chapter": 9,
+   "verse_start": 8,
+   "verse_end": 10,
+   "capsule": "Worship under the law stood in shadows with no entry into the Holy of Holies and could not cleanse sin, and it was kept until the time of reformation, when the Only-begotten became man.",
+   "comment": "… You understand, then, that the priests performed the services in the first tent but had no way of entry into the Holy of Holies. For such, in a way, is the worship under the law: it has its standing in shadows. And these things are of no use for cleansing and washing away sin. For you heard Paul just now cry out that they cannot perfect the worshiper as to the conscience (Hebrews 9:9). Rather, it was kept until the time of reformation (Hebrews 9:10), which plainly means the time when the Only-begotten became man, when what was unlovely in the types passed over into the truth. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the first tent and the time of reformation stand for.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/18/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-006",
+   "chapter": 9,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The time of reformation has come, so the shadow gives way to the truth.",
+   "comment": "… The commandment given through Moses was laid down “until the time of reformation,” he says (Hebrews 9:10). But since the time of the incarnation is no longer awaited, but is already here, let the shadow give way to the truth. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book4-logos5-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos5-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-008",
+   "chapter": 9,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "The greater tabernacle is the composition of grace, the body of Christ.",
+   "comment": "… Just as the tabernacle was constructed according to Moses so that the services might take place (Heb 9:11), so this tabernacle, the composition of grace, is greater, the body of Christ having Christ as head. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB09-009",
+   "chapter": 9,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "Under the law the service worked through the blood of another and only by a pattern and shadow, but Christ saved those under heaven by his own blood.",
+   "comment": "… The most wise Paul has written to us: 'But Christ, having come as a High Priest of the things about to come through the greater and more perfect tabernacle, not made by hands—that is, not of this creation—neither through the blood of goats and calves, but through his own blood, entered once into the holy places, having found eternal redemption' (Hebrews 9:11-12). For the power of the service was being exercised through the blood of another by those who performed divine service according to the law.\n\nFor they have worshiped the heavenly things only by a pattern and a shadow.\n\nBut Christ did not do so—and indeed much more is required—for he has saved those under heaven by his own blood …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Contrasts the old service with Christ's entering by his own blood.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u06-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB09-011",
+   "chapter": 9,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "The Son of God has his own blood because he was also styled son of man, and he gave it as exchange for the life of all.",
+   "comment": "… “But Christ, having arrived as high priest of the coming goods, through the greater and more perfect tent, not handmade… and through his own blood entered once for all into the holies, having found eternal redemption.” (Hebrews 9:11–12) How then would the one at the Father’s right as God be said to have his own blood, unless we have believed that the Son from God the Father by nature has also been styled son of man, and giving his own blood as exchange for the life of all, found for the world this redemption unto the age?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "38",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/38/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-012",
+   "chapter": 9,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "If there is benefit in the types and the shadow brings salvation, the blood of Christ must do far more.",
+   "comment": "… For he is our cleansing, the washing away of every stain, and the giver of sanctification. ‘For you shall sprinkle them,’ it says, ‘with water of purification’ (Numbers 8:7). This is just what the wise Paul made plain when he wrote: ‘For if the blood of goats and bulls, and the ashes of a heifer sprinkled on those who have been defiled, sanctify for the purity of the flesh, how much more the blood of Christ’ (Hebrews 9:13–14). And the saying is true. For if there is benefit in the types, and the shadow brings salvation, how could the truth, that is, the blood of Christ, not do so far more? …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the reasoning behind 'how much more' in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "26",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/26/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-013",
+   "chapter": 9,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "Christ sprinkles us with his own blood, cleansing not only the flesh as the rites of the law did but our conscience from dead works.",
+   "comment": "… As far as the type falls short of the truth, so far, I think, do those who serve it come behind those who minister the truth as priests. For Christ sprinkles us with His own blood, and not only for “the purity of the flesh,” as the rites of the law certainly did; rather He cleanses “our conscience from dead works” (Hebrews 9:13–14) and frees us from transgression. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-014",
+   "chapter": 9,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "The blood of a common human would do no more than the blood of goats, but the blood of the one who is from God by nature cleanses believers from dead works.",
+   "comment": "… If Christ is not true God, what is the benefit through his blood? Or how will he cleanse our conscience from dead works? What more does the blood of a common human have than the blood of goats? Nothing at all — except that one is of an irrational animal and the other of a rational one. But since the one who is from God by nature took flesh and laid down his own blood for all, by that very fact he can cleanse those who believe in him, free them from dead works, and lead them into worship of God. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "39",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/39/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-015",
+   "chapter": 9,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Dead works are those through which the soul is put to death by turning toward the things of the flesh and the world.",
+   "comment": "… We who are being made alive in Christ (and by making alive I mean the spiritual kind) must depart from dead works (Hebrews 9:14) and go as far from them as we can. These, I think, would be the works through which the soul is put to death and the mind grows cold, when it has turned without restraint toward the things of the flesh and of the world. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what the 'dead works' are.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "17",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/17/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-017",
+   "chapter": 9,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "The tabernacle was a type of the whole world, and the things here were antitypes of the true ones.",
+   "comment": "And to show that this is not our own speculation but that the tabernacle was constructed as a type of the whole world, listen to what Paul says when he speaks of Christ ascending into heaven: “For Christ did not enter a holy place made by hands, antitypes of the true ones” (Hebrews 9:24). He shows that the things here were antitypes of the true ones. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'antitypes of the true ones' means.",
+   "author": "John Chrysostom",
+   "work": "On Christmas Day",
+   "work_slug": "chrysostom-in-diem-natalem",
+   "section": "5",
+   "url": "https://viapatrum.org/works/chrysostom-in-diem-natalem/5/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-018",
+   "chapter": 9,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "Christ appears for us in a new way, no longer as a bare Word but in our nature, presenting us in the Father's eyes as in himself.",
+   "comment": "… And he appears now for us before God’s face—in what manner? Was he not always apparent even before the incarnation? Therefore he appears in a new way: no longer a naked and fleshless Word, as indeed he also was in the beginning (John 1:1), but in the form and nature that is as we are. For we say that thus he has now appeared for us and, as it were, led human nature into the sight of God and Father, although it had come into aversion through the transgression in Adam (Romans 5:12–19). So then he presents us in the Father’s eyes, as in himself and first, insofar as he has appeared as human, so that he might bring us near to the Father.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that he appears before God's face for us.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "39",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/39/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-019",
+   "chapter": 9,
+   "verse_start": 26,
+   "verse_end": 26,
+   "capsule": "Christ came at the end, when this age had all but reached its setting, and through him we have washed off the filth of sin.",
+   "comment": "… Thus the saying that the defiled man is unclean until evening would point very well to the time of Christ’s coming. For Christ came at the end (Hebrews 9:26), when this age had all but reached its very setting; through him and in him we have washed off all the filth that comes from sin, and we who were held fast by our offenses have been set free from charges both small and great. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "29",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/29/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB09-020",
+   "chapter": 9,
+   "verse_start": 27,
+   "verse_end": 27,
+   "capsule": "Paul's word that all men die once would be false if Elijah and Enoch remain in their bodies, so their mortal part must be set aside by the secret word of God.",
+   "comment": "… It is proper to observe here how what is said by Paul, 'And just as it is appointed for men to die once' (Heb 9:27), is made true. For if these, I say Elijah and Enoch, having been taken up, are to be with their thickest bodies even now and throughout the whole age, then the word of the wise and holy Paul concerning the necessity of all men dying is false. But it is not false. Therefore, what is set forth requires a theory, even if not in the way accustomed, that although other men have shared in death now, it must be understood that their mortal part is to be set aside according to the secret word of God, so that they might possess the fleshy life. For if the Savior is the 'firstborn from the dead' (Col 1:18), He would be the firstborn of these. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u15-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-001",
+   "chapter": 10,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The law's shadow is no match for the Gospel's light, which reaches the whole world.",
+   "comment": "…For in spiritual brightness the shadow in the law (Hebrews 10:1) is in no way equal to the decrees of the Gospel. These flash their light around the whole inhabited world, while the shadow was a token for those of Israel alone. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/16/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-002",
+   "chapter": 10,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The old sacrifices were fulfilled, not condemned, when Christ, whom they foreshadowed, came.",
+   "comment": "…No one should be troubled here by seeing that the old sacrificial rites ceased in the age of the New Testament. Virtues and sacrificial victims are not governed by the same principle: commands are enduring; sacrifices are temporary. Yet when Christ came, whom the ancient sacrifices foreshadowed, what had been established was fulfilled, not condemned. Those observances are not denounced as having been practiced in their proper times; they came to rest when the perfection promised through their service arrived (Matthew 5:17) (Hebrews 10:1).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly why the law's shadows ended when Christ came.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "3.16",
+   "url": "https://viapatrum.org/works/julian-to-florus/3.16/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-004",
+   "chapter": 10,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Paul's \"cannot\" means impossible: animal blood has no power to cleanse the passions of a rational soul.",
+   "comment": "…“Cannot” is said both of things that are impossible and of things that are not permitted. Not being able is one thing; not being permitted is another. About impossible things Paul speaks this way: “The blood of bulls and goats cannot take away sins” (Hebrews 10:4). For the blood of an irrational animal does not cleanse the passions of a rational soul. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why animal blood could not take away sins.",
+   "author": "Amphilochius of Iconium",
+   "work": "On “It Is Not Possible”",
+   "work_slug": "amphilochius-in-illud-non-potest",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/amphilochius-in-illud-non-potest/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-005",
+   "chapter": 10,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Even consecrated priests had to wash before ministering, so the law's worship fell short of cleansing until baptism was added.",
+   "comment": "…Now see how Aaron, though he was holy according to the law, and those appointed to minister with him as well, first wash their hands and feet with water, and only then set their hands to the sacred tasks and run into the Holy of Holies free from fear. Here, I think, the law shows plainly and clearly, and the fact itself all but cries out, that even one who seems to be consecrated according to the law is unconsecrated before God unless he washes in the water, and that the power of worship under the law is not enough for cleansing. … And the most wise Paul writes that it is impossible for the blood of bulls and goats to take away sins (Hebrews 10:4). So the law falls short of sanctification unless saving baptism is added for those who thirst for closeness to God. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/21/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-006",
+   "chapter": 10,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Christ offered himself because the type's worship could not justify, so a second covenant was sought.",
+   "comment": "…He offered himself for us, since the worship of the type was powerless to achieve justification, for 'it was impossible to take away the sin of these' goats and calves (Hebrews 10:4); from this, a second covenant was sought, because the first did not possess blamelessness within itself. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u06-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB10-007",
+   "chapter": 10,
+   "verse_start": 5,
+   "verse_end": 7,
+   "capsule": "The Word entered the world by becoming part of it, taking the body the Father prepared, to be an exchange for the life of all.",
+   "comment": "…Knowing the will of God and the Father, the Son who is from Him according to nature, has become a man for all of us, both offering himself and performing divine service to Him.\n\nThe blessed Paul, who was no false-speaker, would become a witness to this for us; for he said again concerning him, 'Therefore, entering into the world, he says: Sacrifice and offering you did not desire, but a body you prepared for me' (Hebrews 10:5).\n\n'Burnt offerings and concerning sin you did not seek' (Hebrews 10:6); then I said, 'Behold, I have come, as it is written of me at the head of a book, to do your will' (Hebrews 10:7). Who then is it that is entering into the world? And how is it said that he has fully entered in? Is it not that he previously existed outside of him, as if exiled? The Word from God has indeed entered into this world, not in a local sense but rather naturally, when he himself became a part of the world, having prepared for him the body of God and Father, so that he might become an exchange for the life of all, having died in the flesh according to the writings. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u06-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB10-008",
+   "chapter": 10,
+   "verse_start": 5,
+   "verse_end": 7,
+   "capsule": "Since the Son said God wanted a prepared body and not offerings, clinging to the law's sacrifices is now sin.",
+   "comment": "…So it is sin and defilement, now that Christ has been revealed and the time of the law and the prophets has gone by, to cling to worship as in shadows, and to attempt to bring to God a sheep, or fat, or frankincense, even though the Son says plainly to God the Father: ‘Sacrifice and offering you did not desire, but a body you have prepared for me; in burnt offerings and sin offerings you took no pleasure. Then I said: See, I have come, as it is written of me in the scroll of the book, to do your will, O God’ (Hebrews 10:5–7; Psalm 40:6–8). For the Son, offering himself up for us as a spotless victim (Hebrews 9:14), put a stop to the things of the law, which could not take away sins (Hebrews 10:11); for Christ is the end of the law and the prophets (Romans 10:4). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows why the Son's words in these verses end the old offerings.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "26",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/26/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-010",
+   "chapter": 10,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "Christ entered heaven to appear before God for us, setting us in his own place, so in him we have access and boldness to enter.",
+   "comment": "…For when the Only Begotten became one of us, he then also entered into the Holy of Holies through the greater and more perfect tent (Hebrews 9:11–12), that is, into heaven, ‘now to appear in the presence of God for us’ (Hebrews 9:24), as it is written. For it is not himself he sets in the Father’s sight, but us, as in himself, though we had fallen from his presence and, as it were, out of his sight, through the transgression in Adam and the sin that ruled as a tyrant over all. So in Christ we have gained access, and boldness to enter the holy place (Ephesians 3:12; Hebrews 10:19), as wise Paul has told us. For just as we have been raised with him and seated with him in the heavenly places in Christ (Ephesians 2:6), so again in him we have come into the presence of the Father. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how Christ gives believers boldness to enter the holy place.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "12",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/12/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-011",
+   "chapter": 10,
+   "verse_start": 19,
+   "verse_end": 20,
+   "capsule": "Christ, our priest, opened the way in for us, entering the Holy of Holies ahead of us as forerunner.",
+   "comment": "…For we are made perfect nowhere else than in the churches, since it is there, wholly and in every way, that we shall be acceptable to God the Father, with Christ as priest bringing us to him. For through him we have obtained access (Romans 5:2; Ephesians 2:18), and he himself opened for us the way in (Hebrews 10:19–20), entering the Holy of Holies as forerunner on our behalf (Hebrews 6:20), and showing us the true path. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 16",
+   "work_slug": "cyril-adoration-16",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-16/4/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-012",
+   "chapter": 10,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Paul calls the body of Christ a veil, for the new and living way was opened through his flesh.",
+   "comment": "…But this much we will say for the present: the veil on four golden pillars with silver bases was then a hint of the mystery of Christ. Why so? Did not the wise Paul also name the body of Christ a veil for us, when he said: ‘the new and living way which he opened for us through the veil, that is, his flesh’ (Hebrews 10:20)? …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the veil in the verse means.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/7/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-013",
+   "chapter": 10,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "The word in which we are cleansed, washing the body with pure water, is the word of faith that confesses Jesus as Lord.",
+   "comment": "…What then is the word in which we have been cleansed, having washed “the body with pure water,” (Hebrews 10:22) if not altogether that about which the inspired Paul says: “This is the word of faith which we proclaim, that if you confess with your mouth Jesus as Lord, and believe in your heart that God raised him from the dead, you will be saved; for with the heart one believes unto righteousness, and with the mouth one confesses unto salvation.” (Romans 10:8–10) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "94",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/94/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-014",
+   "chapter": 10,
+   "verse_start": 26,
+   "verse_end": 26,
+   "capsule": "Those who know the master's will and do not do it are beaten with many blows, so we receive our stumbles double.",
+   "comment": "…But it must be said that 'the servant who knew his master’s will and did not do according to his will will be beaten' (Luke 12:47) not with few blows but with 'many.' Therefore it is right that those from the nations who sin receive their sins simply, but that we receive our stumbles double. For 'if we sin willingly after receiving the knowledge of the truth, there no longer remains a sacrifice for sins, but a fearful expectation of judgment, and a zeal of fire about to eat the adversaries.' (Hebrews 10:26) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "16.7",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/16.7/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-015",
+   "chapter": 10,
+   "verse_start": 28,
+   "verse_end": 29,
+   "capsule": "Setting aside a divine law brings a far heavier charge than sinning against a human.",
+   "comment": "…“Anyone who has set aside the law of Moses dies without mercy on the evidence of two or three witnesses. How much worse punishment do you think will be deserved by the one who has trampled underfoot the Son of God, and has counted the blood of the covenant a common thing, and has insulted the Spirit of grace by which he was sanctified?” (Hebrews 10:28–29) The one who insults — that is, sets aside — a divine law does not face a charge equal to sinning against a human, but one far heavier.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "39",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/39/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-016",
+   "chapter": 10,
+   "verse_start": 28,
+   "verse_end": 29,
+   "capsule": "Christ's blood is not common, so those who count it so fall under a worse sentence.",
+   "comment": "So the one who has broken the law has fallen under the sentence of death, while the one who has wronged a human might even be worthy of pardon. How, then, is the one who counted Christ’s blood a common thing under a worse sentence than the one who sins against Moses’ law? Yet he is under a worse one — and very fittingly. Christ’s blood is not common, then: for the Word was God, having become flesh (Hebrews 10:28–29). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why counting Christ's blood common brings the worse punishment.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "40",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/40/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB10-017",
+   "chapter": 10,
+   "verse_start": 29,
+   "verse_end": 29,
+   "capsule": "An apostate does to Jesus spiritually what Jerusalem did to him bodily, by trampling the Son of God.",
+   "comment": "…And if one is also an apostate, still more does he do to Jesus spiritually what Jerusalem did to him bodily. Therefore: 'How much worse punishment do you think will be deserved by the one who has trampled the Son of God and counted common the blood of the covenant by which he was sanctified, and insulted the Spirit of grace?' (Hebrews 10:29) If you have trampled the Son of God and insulted the Spirit of grace, who 'will spare you? Who will look gloomy over you? Who will turn back to ask after the things that make for your peace?' (Jeremiah 15:5) The sinner's soul has betrayed the very Son of God who asked after the things that make for your peace. Who can turn back again and plead concerning peace? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "13.2",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/13.2/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB11-001",
+   "chapter": 11,
+   "verse_start": 1,
+   "verse_end": 6,
+   "capsule": "Faith asks us to believe that God exists, and not to doubt hoped-for things merely because we cannot yet grasp them by knowledge.",
+   "comment": "…So then, the mystery of theology also seeks assent from unexamined faith. For one must believe, it says, that God exists—not investigate, nor dispute what he is (Hebrews 11:6). And in general, if faith is the substance of things hoped for and the proof of things not seen (Hebrews 11:1), do not be contentious about seeing now the things stored far away, and do not make the things hoped for doubtful because you cannot yet grasp them by knowledge. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Psalm 115",
+   "work_slug": "basil-homilia-in-psalmum-115",
+   "section": "1",
+   "url": "https://viapatrum.org/works/basil-homilia-in-psalmum-115/1/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB11-002",
+   "chapter": 11,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Faith, by which we understand that the ages were prepared by God's word, is a great good that puts away sins and made the fathers well-pleasing.",
+   "comment": "…By faith we understand that the ages were prepared by the word of God, so that the things seen did not come from the things appearing (Heb 11:3). Faith is, therefore, a truly great and exceptional good. For it is a wealth that puts away sins and a cleansing from every defilement. Furthermore, there is a reminder of that which comes from God; it is a path toward sanctification and sonship, and serves altogether as a reminder of every good thing. In this way, the fathers became well-pleasing, and they possessed a glory that is both bright and unsung. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u07-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u07-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB11-003",
+   "chapter": 11,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Enoch was transferred to better things in a way unlike other men, who are parted from their bodies, being taken up or snatched into a divine place.",
+   "comment": "…The Apostle, having received the word concerning Enoch, says in the Epistle to the Hebrews: 'By faith Enoch was transferred so as not to see death' (Heb 11:5). His life is described in a number of days, and having completed a year and a remainder, he was transferred, which one would logically consider to be a translation into better things, since he was promised the virtue which ought to exist in humans according to perfection and fullness. But his translation did not happen like that of other men; for the bodies of the others, remaining here and being dissolved, were separated from the souls; concerning this it is said that he was transferred, about which we understand that either he was taken up like Elijah or by some other way he was snatched into a divine place. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Enoch's being transferred without seeing death means.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u15-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB11-004",
+   "chapter": 11,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Noah, trusting God's command, built the ark to save his household when the flood fell on a corrupted earth.",
+   "comment": "…Noah, having been charged by faith concerning things not yet seen, stepped forward in piety and was constructing an ark for the salvation of his household. Because the whole earth had destroyed its way, as it is written, and the heart of man has inclined toward evil from youth, God sent a flood upon all the earth. It was like a garden that had been plundered and watered, yet preserved a noble plant within it—the most excellent Noah—so that the human race might be transformed into a new beginning and be saved upon the earth once more. Thus, Noah, having been charged by faith, constructed the ark for the salvation of his house, 'into which a few, that is to say, eight souls were saved through water.' For a decree of death has gone out against all those upon the earth, as they were clearly filled with sin, calling down the Creator into irretrievable wrath. But Noah, being righteous, was being saved universally. For he believed in God, who commanded the construction of the ark; and while the whole earth was baptized, it was carried along by the waters, taking as its pilot God, the Savior of all. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Tells the verse's story of Noah's faith clearly.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u07-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u07-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB11-005",
+   "chapter": 11,
+   "verse_start": 17,
+   "verse_end": 19,
+   "capsule": "Abraham's offering of Isaac when tested was clear proof of his firmest faith, for he reasoned that God can raise even from the dead.",
+   "comment": "…To him, when he was already far on in years, the God of all promised a son, quite beyond all expectation, and said that the offspring to come from him would rival the countless multitude of the stars (Genesis 15:5). And because he honored the one who promised, bearing witness to God by this that he can accomplish all things, he was justified before him (Genesis 15:6), and received, as a reward worthy of so God-loving a mind, the forgetting of his former offences. In due course God made the oracle concerning Isaac a trial for the righteous man (Genesis 22:1–2); but in this too he was faithful and loved God, as one who put nothing ahead of his love for God. Yet, as the Savior's disciple says, “Faith was working together with the works, and by the works faith was made firm” (James 2:22). And the admirable Paul himself said somewhere of our forefather Abraham: “By faith he offered up Isaac when he was tested; he who had received the promises was offering up his only son, he to whom it was said, ‘Through Isaac shall your offspring be named’; for he reasoned that God is able even to raise from the dead” (Hebrews 11:17–19). So even if it should perhaps be said that he was justified by works because, when tested, he offered up Isaac, this too was for him a clear proof of the firmest faith. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how Abraham's offering of Isaac displays faith.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB11-006",
+   "chapter": 11,
+   "verse_start": 17,
+   "verse_end": 19,
+   "capsule": "Abraham's faith overcame the storm of testing, for he counted that God is able to raise even from the dead.",
+   "comment": "…Abraham, who had faith, offered his son Isaac when he was being tested, and this is a great wonder that I am unable to depart from. The blessed Abraham, an old man who was childless, sought an heir from God, and after receiving Isaac, he was commanded to sacrifice him. Abraham's faith was so strong that he overcame the storm of testing, and this is a testament to the stability and safety of holy thoughts, as the most law-abiding Paul will teach, saying Abraham offered Isaac when being tested, having calculated that God is able to raise even from the dead (Hebrews 11:19). Oh, the stability of faith; oh, the safety of holy thoughts; he gave to God the power to accomplish all. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u07-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u07-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB11-007",
+   "chapter": 11,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Isaac set Jacob before Esau by the order of blessing, not of birth.",
+   "comment": "…By faith Isaac blessed Jacob and Esau concerning things to come (Hebrews 11:20). Previously he set Jacob, then Esau, not according to the sequence of birth, but according to the order of the blessing. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse names Jacob before Esau.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB11-009",
+   "chapter": 11,
+   "verse_start": 37,
+   "verse_end": 38,
+   "capsule": "The prophets, chosen for a hard and fearless life, bore stoning, the sword and want for the truth while fixing their gaze on God's unseen things.",
+   "comment": "…They were chosen by providence to be entrusted with the divine Spirit and the words that come from him because of their way of life: a life hard to imitate, exceedingly strenuous and free, and wholly undaunted in the face of death and danger. For reason, too, shows that the prophets of the God who is over all must be such men. They made the hardihood of Antisthenes, Crates and Diogenes look like a game. At any rate, for the sake of truth and for rebuking sinners freely, “they were stoned, they were sawn in two, they were tempted, they died by the sword; for they went about in sheepskins and goatskins, destitute, ill-treated, wandering in deserts and mountains and caves and the holes of the earth, men of whom the world on earth was not worthy” (Hebrews 11:37–38). They always fixed their gaze on God and on the invisible things of God, which are not seen by the senses and are for that reason eternal (2 Corinthians 4:18). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the verse's sufferers were and what sustained them.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "7",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/7/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-001",
+   "chapter": 12,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Sin of carnal enjoyment is the weight, from which the besetting sin is born.",
+   "comment": "…Laying aside every weight (Heb 12:1). Sin of carnal enjoyment is a weight, from which the most easily encompassing sin is born. And he said the sin that easily surrounds us and leads us to its own will is 'most easily encompassing'. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly what the weight and the besetting sin are.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB12-002",
+   "chapter": 12,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Because joy was set before the sinless Christ, he despised the shame of the cross and trampled it.",
+   "comment": "…Again: 'Who, despising the shame, endured the cross instead of the joy set before him' (Hebrews 12:2). Reproach and shame are the same thing. And see how much it reached him, that joy was set before him, a man not having sin. Therefore he despised the shame, he trampled it. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u22-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u22-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-003",
+   "chapter": 12,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Christ endured the cross for the joy set before him in order to destroy the devil and free those enslaved by fear of death.",
+   "comment": "…For God the Word did not become man for his own sake; and “for the joy that was set before him he endured the cross, despising the shame” (Hebrews 12:2). For what reason? The most wise Paul himself will teach us, saying, “Since the children share in blood and flesh, he himself likewise partook of the same, so that through death he might destroy him who has the power of death, that is, the devil, and set free those who through fear of death were subject to slavery all their lives” (Hebrews 2:14–15). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the reason Christ endured the cross.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u06-open/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-004",
+   "chapter": 12,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "By his resurrection the Son, who voluntarily took the most dishonorable death, was glorified and abolished the shame of his humiliation.",
+   "comment": "…He [Christ] emptied himself, sitting among us, so that, having overcome death in the flesh, then, having conquered it through the resurrection from the dead, he would declare to us that it is possible to return to life. As the Son of God, he voluntarily took on the most dishonorable and inglorious death, without sparing himself from it, but through his resurrection, he was glorified and abolished the shame and ugliness of his humiliation. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u07-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u07-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB12-008",
+   "chapter": 12,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "God disciplines in order to transform the disobedient toward what is better, as Scripture says.",
+   "comment": "…And if we suffer the repayment for these things, either we are disciplined in the present life, as if handed over to torturers (Matthew 18:24–35) by trials and illnesses, or at least we are punished in the age to come. That God disciplines convertibly, transforming the disobedient and hard to lead toward what is better, is easy to see; for divine scripture is full of such things — as in the wise saying, “Whom the Lord loves he disciplines, and he scourges every son he accepts,” (Hebrews 12:6–7) and again, “Endure for discipline,” and what follows.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "191",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/191/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-009",
+   "chapter": 12,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Affliction lasts only a time, and God's love gives peaceful fruit to those trained by his discipline.",
+   "comment": "…For even if affliction is necessary for some time, it is not forever; and even if we are justly afflicted on our own account, we ought at least to obtain help according to God’s mercy, so that discipline may give back a peaceful fruit through God’s love for humanity to those who have been trained by it (Hebrews 12:11). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how discipline yields peaceful fruit.",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-010",
+   "chapter": 12,
+   "verse_start": 22,
+   "verse_end": 23,
+   "capsule": "The company of angels is a festival held for the glory of God.",
+   "comment": "…For a festival and a feast of angels is the one to the glory of God, and to the assembly of firstborns inscribed in the heavens and to God, the judge of all (Heb 12:22-23). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB12-011",
+   "chapter": 12,
+   "verse_start": 22,
+   "verse_end": 23,
+   "capsule": "Holy souls in every city run together to the heavenly Jerusalem as to one mother.",
+   "comment": "…Yet all these [holy souls in every city] run together, as to one common mother, to the heavenly Jerusalem (Galatians 4:26; Hebrews 12:22), the Church of the firstborn (Hebrews 12:23), the fair city above, the true tent which the Lord pitched and not man (Hebrews 8:2). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/18/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-014",
+   "chapter": 12,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The blessed are gathered together there, while sinners are punished by not being together.",
+   "comment": "…There is a 'church of firstborn enrolled in heaven,' (Hebrews 12:23) where is Mount Zion and city of the living God, heavenly Jerusalem. The blessed will be gathered there, that they may be together. But sinners are also punished in this: in not being with one another. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "12.3",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/12.3/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-015",
+   "chapter": 12,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "Christ's blood speaks better than Abel's, which cried out against the murderer, because it was poured out as the price for the life of all.",
+   "comment": "…He [Christ] it is who sanctifies the Church by the sprinkling of his own blood, and does so abundantly. ‘For the priest,’ it says, ‘shall dip his finger in the blood and sprinkle some of the blood seven times with his finger before the Lord’ (Leviticus 4:6). ‘For we have come,’ it says, ‘to the heavenly Jerusalem, and to the Church of the firstborn enrolled in heaven, and to the blood of sprinkling that speaks better than Abel’ (Hebrews 12:22–24). Abel’s blood cried out to God (Genesis 4:10), condemning the murderer; but the precious blood of Christ, the Savior of us all, speaks better things to God on our behalf, for it was poured out as the price given in exchange for the life of all. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what makes Christ's blood speak better than Abel's.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "9",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/9/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-016",
+   "chapter": 12,
+   "verse_start": 25,
+   "verse_end": 26,
+   "capsule": "The one who warned on earth was Moses, but Christ is from heaven, so the sentence is worse for those who turn from him.",
+   "comment": "…Who is the one who warned on earth, whom the fathers of the Jews refused and so were put in danger? Clearly Moses. But Christ is not from earth; rather from the heavens. For the God Word from above and from the Father became human — and is God. So the sentence is worse for those who turn away from him, and very fittingly. As wise John says: “He who is of the earth speaks from the earth” — that is, human things — “but he who comes from above is above all,” (John 3:31) as God, of course. And that is what Christ was and is. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who warns on earth and who warns from heaven.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "40",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/40/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB12-017",
+   "chapter": 12,
+   "verse_start": 27,
+   "verse_end": 27,
+   "capsule": "The form of this world is removed so eternal things may come, a gift lacking in the law.",
+   "comment": "…This is what Paul says elsewhere: for he removes the form of this world, so that the temporary things might pass away and the eternal things might come (Heb 12:27). This is, those in the law do not have this gift of which we partake. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB13-001",
+   "chapter": 13,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Giving the priests care of those who had suffered most is a type of the churches' care for prisoners.",
+   "comment": "…He commands that the cities of refuge be entrusted to the Levites, placing in the care of the priests a class of people who had suffered most and who needed the greatest possible help. Here, I think, the churches have a type: to care for prisoners. For ‘Remember,’ it says, ‘those in bonds, as bound with them, and those who are ill-treated, as being yourselves also in the body’ (Hebrews 13:3). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "12",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/12/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-002",
+   "chapter": 13,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Marriage is honorable and not a sin, since Paul sets it apart from fornication and adultery, which God will judge.",
+   "comment": "…Now indeed those living according to the Gospel are able to have an honorable marriage and an undefiled bed, as Paul writes to the believers: 'Marriage is honorable, and the bed undefiled; but fornicators and adulterers God will judge' (Hebrews 13:4). For by distinguishing the honorable marriage and those using it from fornicators and adulterers, he does not want this to be fornication or adultery; therefore marriage is not even a sin. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains plainly what the verse says about marriage.",
+   "author": "Didymus the Blind",
+   "work": "Against the Manichees",
+   "work_slug": "didymus-contra-manichaeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/didymus-contra-manichaeos/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-003",
+   "chapter": 13,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Marriage is honorable because the Maker planted in the body a desire for children, so desire that looks only to having children is blameless.",
+   "comment": "…I mean something like this: “Marriage is honorable, and the bed undefiled” (Hebrews 13:4). For the Maker of all has planted in the nature of the body a movement of appetite that stirs the living creature to the desire for children. For it was said to man, “Increase and multiply, and fill the earth” (Genesis 1:28); and, he says, “He who formed them in the beginning made them male and female” (Matthew 19:4; Genesis 1:27). So the desire that looks only to having children is blameless; yet as far as the nature of the act goes, the passion would be fleshly, that is, natural. And so it is with the other blameless passions as well. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u07-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u07-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-004",
+   "chapter": 13,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Believers should look to their leaders in order to imitate them, and this looking is praiseworthy.",
+   "comment": "…Paul writes to the men in Christ: 'perceiving them unto the provocation of love and good works' (Hebrews 10:24) and other things. They perceive in order to imitate them: 'obey' 'those who lead you,' 'who spoke to you the word of God, whose outcome of conduct observing, imitate the faith' (Heb 13:7). Here, perceiving is praiseworthy. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u39-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u39-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-005",
+   "chapter": 13,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Christ is the same because the Word's unchangeableness by nature remains even when he is understood together with the flesh.",
+   "comment": "…“Jesus Christ is the same yesterday and today and forever.” (Hebrews 13:8) We will find the Word sprung from God called Jesus Christ when he became human from a woman. How, then, is he the same yesterday and today and forever? Clearly by union with the Word from God into one Son, the flesh assumed by him being understood with him. For so the Word’s unchangeableness by nature remains for him even when he is understood with the flesh.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how Christ can be the same yesterday, today and forever.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "40",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/40/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-007",
+   "chapter": 13,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Christ's blood has sanctified us, which shows it is divine and not simply human.",
+   "comment": "…“Therefore Jesus also, so that he might sanctify the people through his own blood, suffered outside the gate.” (Hebrews 13:12) How would a common human’s blood show us holy? But Christ’s blood has sanctified. So it is divine, then, and not simply human; for God was in flesh, cleansing us by his own blood. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "72",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/72/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-006",
+   "chapter": 13,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "Christ suffered outside the gate and cleanses the defiled by the death of his flesh, and we must go out to him bearing his reproach.",
+   "comment": "…He is also the one who suffers outside the gate (Hebrews 13:12), and by the death of his own flesh cleanses those who were defiled. For ‘the ashes of a heifer, sprinkled on those who are defiled,’ it says, ‘sanctify for the purification of the flesh’ (Hebrews 9:13). So Emmanuel, being one and the same, gives off his fragrance in the holy tents, I mean the churches, and he also suffered outside the gate; and there, as the inspired Paul said, we too must go out, bearing his reproach (Hebrews 13:13). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 10",
+   "work_slug": "cyril-adoration-10",
+   "section": "21",
+   "url": "https://viapatrum.org/works/cyril-adoration-10/21/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-008",
+   "chapter": 13,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "Christ suffered for us outside the gate, and we too go out bearing his reproach, dying to the world and offering our souls as a sacrifice.",
+   "comment": "…For in a way, as if in the likeness of the victims, we offer up our own souls in sacrifice and bring them to God. We die to the world and to minding the things of the flesh (Romans 8:5), we endure the putting to death of the passions, and we are all but crucified with Christ (Galatians 2:19–20), so that, passing over to a holy and blameless life, we may live as he wills. The inspired Paul, too, writes something of this kind: ‘Always carrying about in the body the dying of Jesus, so that the life of Jesus may also be made visible in our body’ (2 Corinthians 4:10). And again: ‘If we endure, we shall also reign with him’ (2 Timothy 2:12). If we are conformed to his death and his sufferings, as it is written, we shall share in the resurrection and the glory as well (Philippians 3:10–11). So then Christ suffered for us outside the gate, as the blessed Paul says, and we too go out of the gate, bearing his reproach (Hebrews 13:12–13); slain in the same way, like a young calf, and burned whole like a ram, we make our life in Christ fragrant to God. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what going out to Christ outside the gate means for believers.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "23",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/23/",
+   "from_cite": true
+  },
+  {
+   "id": "HEB13-009",
+   "chapter": 13,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "God is pleased with the spiritual sacrifices of holy souls in every land: faith, hope, love, endurance, meekness and love for the poor.",
+   "comment": "…But the law, as I think, seems again to hint at something mystical. For there are countless regions and cities throughout the whole world in which holy and God-loving human souls serve God by living lawfully and conducting their lives according to the Gospel, offering to him, as it were, sacrifices for a fragrant aroma (a spiritual one, clearly): faith, hope, love, endurance, meekness and love for the poor. ‘For with such sacrifices God is well pleased’ (Hebrews 13:16), as the Scriptures say. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what the sacrifices of this verse are.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/18/",
+   "from_cite": true
+  }
+ ]
+}

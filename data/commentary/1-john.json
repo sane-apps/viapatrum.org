@@ -1,0 +1,1136 @@
+{
+ "book": "1 John",
+ "title": "The Fathers on 1 John",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 61,
+ "selected_count": 25,
+ "comments": [
+  {
+   "id": "1JN01-001",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "John's words show that the Son and Word of the Father was touched in the flesh.",
+   "comment": "… In the same way John also wrote: \"What was from the beginning, what we have heard, what we have seen with our eyes, what we have looked at, and our hands have touched concerning the Word of life\" (1 John 1:1). It is clear, then, that the Son and Word of the Father was touched in the flesh, and the divine Scripture has handed down that the whole together—the Word of life—was touched.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Marcellus of Ancyra",
+   "work": "On the Incarnation and against the Arians",
+   "work_slug": "marcellus-de-incarnatione-contra-arianos",
+   "section": "2",
+   "url": "https://viapatrum.org/works/marcellus-de-incarnatione-contra-arianos/2/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN01-002",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "There is a divine sense with its own sight, hearing, taste, smell and touch, and by its touch John handled the Word of life.",
+   "comment": "… There is, as Scripture has named it, a divine sense, general in kind, which only the blessed man finds even now, according to what is said in Solomon too: “You will find a divine sense” (Proverbs 2:5). This sense has its kinds: a sight naturally able to see things higher than bodies, among which the cherubim or the seraphim are shown (Ezekiel 10:1; Isaiah 6:2); a hearing that receives voices whose being is not in the air; a taste that feeds on living bread, which has come down from heaven and gives life to the world (John 6:33, 51); so too a smell that smells such things as Paul means when he speaks of being “the aroma of Christ to God” (2 Corinthians 2:15); and a touch, by which John says he has handled with his hands “the Word of life” (1 John 1:1). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how John could say he touched the Word of life.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "48",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/48/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN01-003",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "The apostles saw and handled the Word, who is by nature invisible and untouchable, because he has come to be in flesh.",
+   "comment": "… See: he says they have seen with eyes and even handled with hands the one who is from the beginning — that is, the Word from the Father, the eternal life — though according to his own nature the Word from the Father is invisible and untouchable; for what is bodiless is untouchable. But he says they have seen and handled the Word who has come to be in flesh. So there is one Son and God and Lord even if the Word has become flesh.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the Word could be seen and handled.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "64",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/64/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN01-006",
+   "chapter": 1,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "God is a light grasped by the mind and eternal, and the darkness that is not in him is ignorance and evil.",
+   "comment": "The disciples show that, since God exists as light, there is no darkness in him. We offer this same message to you, so that you may have the same glory concerning God as existing light; for God is an intelligible [grasped by the mind], eternal light; for nothing sensible exists perpetually. Regarding this light, one must understand darkness as ignorance and a deficiency of control, since neither of the forms of darkness—neither ignorance nor evil—is in God; thus it is rightly said that there is no darkness in him.\n\nIf it is said anywhere, 'the darkness of his hiding,' darkness here refers to the obscurity found in incomprehensibility; and our ignorance may be that obscurity, but not the light of God being such.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what John means by light and by darkness.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN01-004",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "We are cleansed from all sin and have communion with God through the blood of Jesus, because the Word became flesh and endured the cross to free us from all defilement.",
+   "comment": "Through the blood of Jesus Christ, we have been cleansed from all sin, and we have communion with God and the Father (1 John 1:7). This is because the Word became flesh, yet remained the radiance of the Father's glory and the exact representation of his being, and he endured the cross, despising shame, and insults, and blows, in order to free us from all defilement. As the Son of God, he has become superior to the angels, inheriting a more excellent name, and he is the door and the way to God and the Father (John 14:6). Although he was made a little lower than the angels, because of the measure of humanity, he was in glory and in the nature of divinity, and did not depart from the thrones of the Father. He was a man on earth, yet filled heaven again, and all things were full of him, and through him we have access to God and the Father.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN01-005",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "To make can mean to demonstrate, so those who say they have not sinned show God to be a liar.",
+   "comment": "… for often the Scripture signifies to do instead of to demonstrate, as in 'If we say that we have not sinned, we make him a liar' (1 John 1:10), not that we become creators of God, but we demonstrate him to be a liar to the extent concerning us. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u05-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u05-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN01-007",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Since God has declared that all lean toward sin, whoever claims to be sinless proves him a liar.",
+   "comment": "… since you are God, and the mind of men leans more toward evil things (Psalm 51:4), and there is no man who will not sin, God is justified in His own words, in which He says that all who have strayed ought to sin; by this also He conquers when being judged against men, proving them to be sinners. Accompanying this, if we say 'We have not sinned' (1 John 1:10), we make Him a liar; for if it had been declared that all lean toward sin, he who claims sinlessness proves God to be a liar.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u24-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u24-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-010",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The advocate with the Father is the one joined from both the Word and the man.",
+   "comment": "I say 'according to man', do not divide him from the Word—because he is a 'Paraclete' [advocate] 'towards the Father' (1 John 2:1). Neither is the Word without the man, nor the man without the Word, but the one joined from both becomes a Paraclete and 'living always to intercede on their behalf' (Hebrews 7:25) intercedes. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-001",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Christ is the true mercy seat and our propitiation, for through him the Father is gracious to us and every prayer reaches its end.",
+   "comment": "… But we say that the mercy seat, if it is understood spiritually, is he who became man for our sake, ‘whom God put forward as a mercy seat through faith, in his blood, to show his righteousness’ (Romans 3:25). For so Paul says. And John, the wisest disciple, also writes to us: ‘Little children, I am writing these things to you so that you may not sin. But if anyone does sin, we have an advocate with the Father, Jesus Christ the righteous; and he is the propitiation for our sins, and not for ours only but also for the whole world’ (1 John 2:1–2). For through him come propitiation, every prayer, and the asking of good things. … So he himself is the mercy seat. For through him the Father is gracious to us; in him every prayer reaches its end; and through him we draw near, since in no other way are we acceptable. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/7/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-003",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "To know in Scripture can mean to have experience of something and be united to it, so knowing God shows itself in keeping his commandments.",
+   "comment": "To know in the Scripture does not always signify merely to have certain knowledge, but also to have experienced something and to be united to it, as in: 'not knowing sin' (2 Corinthians 5:21), and: 'I never knew you, workers of lawlessness' (Matthew 7:23); for he did not know sin as in not having certain knowledge of what sin is, but as in not having practiced it. Therefore, he who says he has known God must necessarily follow by being transformed by him and participating in him by keeping his commandments; thus he contradicts himself. The two meanings of knowing are made clear from the context; for he says, 'by this we know' (1 John 2:3), that is, we have certain knowledge, 'that we have known him' (1 John 2:3) by being united to him and keeping his commandments; for he who does not keep them is clearly found outside the knowledge of God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what John means by knowing God.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-011",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The commandment heard from the beginning is the natural disposition by which all people love their neighbors, since the readers were not Jews.",
+   "comment": "Perhaps someone will say: how is it possible to understand the written commandment concerning love to be from the beginning and to have been heard by those to whom the epistle is written? For they were not Jews, as the end of the epistle demonstrates; for he says, 'Little children, keep yourselves from idols' (1 John 5:21). Therefore, is the commandment, existing from the beginning and heard by all men, a friendly disposition according to natural concepts? For all, being by nature diurnal and social animals, love their neighbors; whence the Savior, stirring up this natural disposition, says: 'Therefore, all that you wish that men would do to you, do likewise to them' (Matt 7:12).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the readers could have had the commandment from the beginning.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-012",
+   "chapter": 2,
+   "verse_start": 12,
+   "verse_end": 14,
+   "capsule": "Little children are those newly forgiven, fathers those expert in the theology from the beginning, and young men those strong against the evil one, whatever their bodily age.",
+   "comment": "… 'I write to you, little children, that your sins are forgiven you through his name' (1 John 2:12)—that is, the Savior—'I write to you, fathers, because you have known him who is from the beginning; I write to you, young men, because you are strong, and the word of God remains in you, and you have overcome the evil one' (1 John 2:13-14). He calls 'little children' those who have just received the forgiveness of sins, whatever age they might be according to the outer man; he names 'fathers' those who are expert in the theology from the beginning; and 'young men' those having strength, remaining unassailable with the word of the exhorting one remaining in them, even if the struggle be 'against principalities, against powers, against the rulers of the darkness of this world, against the spiritual forces of wickedness' (Eph 6:12). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains whom John means by little children, fathers and young men.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u16-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-006",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 17,
+   "capsule": "John's command not to love the world does not make its creator another god, but means that no desires of this life should be preferred to virtues.",
+   "comment": "He therefore commands us not to love the world or the things in it, and says that God’s love cannot be present in lovers of this age. But in saying that love must be withdrawn from the world, he does not mean us to understand that its creator is someone other than the true God. Rather, he wants the faithful to recognize that no desires of the present life should be preferred to virtues. Their minds must not become so occupied with acquiring wealth or pursuing pleasures that they are drawn away from the vigor of Christian philosophy, which is the true philosophy. … By the name “world,” then, he indicated the conduct of people who suppose there is nothing after this life, and the various displays and luxuries of mortals.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what John means by the world and not loving it.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.22",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.22/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-013",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 17,
+   "capsule": "Under the name of the whole world John gathered every attraction of present goods and pleasures, urging the faithful to the summit of virtue.",
+   "comment": "For the apostle John was urging the faithful toward the summit of every virtue and stretching their pursuit of holiness to the height of the Lord’s manner of life. To be brief, he embraced under the name of the whole world every attraction of present goods and pleasures: “Do not love the world or the things in the world. If anyone loves the world, the Father’s love is not in him, because everything in the world is the desire of the flesh, the desire of the eyes, and the pride of life, which is not from the Father but from the world. The world passes away, and its desire; but whoever does God’s will remains forever” (1 John 2:15–17). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.20",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.20/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-004",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "The desire of the flesh is inborn in us, while the delights brought in from outside come through the eyes.",
+   "comment": "… For the desire of the flesh is inborn and rooted in us ourselves and remaining, and the divine Paul also named it a law of sin, dwelling in the members of the flesh (Romans 7:23). And the delights and pleasures from outside and brought in are the things through the eyes. For the things from wealth are wondered at through eyes, and also fine clothing, and the things to which some would cling, that they may have the sweetest enjoyment, giving them no small vote. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "16",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/16/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-005",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "John names what is in the world as a passion and material disposition, shown in the desire of the flesh, which wages war against the soul, and the lust of the eyes.",
+   "comment": "So that no one might think the system of those in heaven and earth and those in them to be present here from the voice of the world, he interpreted what 'those in it' turns out to be, so that we too might accordingly receive it; for 'and those in it' signifies a passion and a material disposition indicated through the desire of the flesh, which wages war against the soul, and the lust of the eyes (1 John 2:16).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-007",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "John was not condemning the world made by the Father through the Son.",
+   "comment": "When the apostle John said, “Everything in the world is the desire of the flesh, the desire of the eyes, and worldly ambition, which is not from the Father but from the world” (1 John 2:16), he was not condemning this world—that is, heaven and earth and all the things that substantially exist in it, the world made by the Father through the Son.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "Fragments to Turbantius",
+   "work_slug": "julian-turbantius-fragments",
+   "section": "4-13-64",
+   "url": "https://viapatrum.org/works/julian-turbantius-fragments/4-13-64/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-014",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Under the names desire of the flesh, desire of the eyes and world, John condemned not the things themselves but only their excess.",
+   "comment": "[To Augustine:] If you say that the name “desire” (1 John 2:16) includes even that measure in which it experiences the lawful pleasure of natural things, so that the desire of the flesh seems condemned in its entirety, then profess that the sense of sight, the world itself, and everything in the world were created by the devil. For all are equally said not to be from God. If you agree to that, you will certainly not become a Manichaean, since you already are one. You will simply show it by your confession, as you long ago showed it by your arguments. But if, frightened at having your error exposed, you say that under the names “desire of the flesh,” “desire of the eyes,” and “world” the apostle did not condemn the things themselves—which are harmless when they remain within permitted limits, and become blameworthy when they run into forbidden territory—then the point I argued in my first work will be clear: neither the kind, nor the form, nor the proper measure of natural desire is blameworthy, but only its excess. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.25",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.25/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-008",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "John means those who seemed to be from the apostles yet became outside the Church that bore them.",
+   "comment": "Concerning such things the most wise John, the disciple loved by Jesus, says in which he inscribed in a holy epistle: 'They went out from us, but they were not of us; for if they had been of us, they would have remained with us' (1 John 2:19). For they seemed to be from the apostles and disciples of Christ, and having taken the same gospel to themselves, and having been born 'through the bath of rebirth,' they became outside of the holy mother who bore them and of those born from her who remained in having 'the spirit of adoption.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u14-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u14-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-009",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The good cannot depart from the Church, as wind carries off only chaff, and John curses those who went out.",
+   "comment": "… Let no one think that the good can depart from the Church: the wind does not carry away the wheat, nor does a gale overturn a tree founded on a solid root. Empty chaff is tossed by the storm; weak trees are overturned by the blast of the whirlwind. The apostle John curses and strikes these, saying: \"They went out from us, but they were not of us. For if they had been of us, they would have remained with us\" (1 John 2:19).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the verse with a plain picture.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "9",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/9/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-001",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The perfect are made like God in quality, as the heavenly Father is perfect.",
+   "comment": "Likeness is understood in two ways. For when there is identity in essence, it is called similarity and even strictly identity; but when it is according to quality, it is called simply similarity. According to the second meaning, those becoming perfect are said to be made like God, just as the heavenly Father is perfect; therefore it is said, 'When he is revealed, we shall be like him' (1 John 3:2), meaning, like God. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what likeness to God means in the verse.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u38-rem-close",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u38-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-002",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The mind is first stamped according to the image of God and later, through progress toward perfection, becomes according to the likeness of God, as John says.",
+   "comment": "For the mind, having approached godliness, is first stamped according to the image of God, but later, through progress toward perfection, it becomes according to the likeness of God, as the blessed John says: 'Beloved, now we are children of God, and it has not yet been revealed what we shall be; we know that when He is revealed, we shall be like Him' (1 John 3:2). For already being according to an image, they hope to become according to a likeness. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how we are now children of God and shall be like him.",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u06-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u06-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-003",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "When the partial is abolished and the end remains, men become like God, and this is the end of those being transformed.",
+   "comment": "… But when 'the partial' is abolished and the end remains, and 'face to face' is seen, and men become like God according to what has been said: 'when He is revealed, we shall be like Him, for we shall see Him as He is' (1 John 3:2), here is the end of those being transformed. And it is well to say 'those being transformed' and not 'those having been transformed.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u54-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u54-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-004",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Those made perfect hope to rise to a likeness with the angels and, lastly, to be like God and see him as he is.",
+   "comment": "We know also that the angels are so far above human beings that human beings, once made perfect, become equal to angels; for “in the resurrection of the dead” the righteous “neither marry nor are given in marriage, but are like the angels of heaven” (Matthew 22:30; compare Mark 12:25), and they become “equal to angels” (Luke 20:36). We know that in the ordering of the universe there are some who are called thrones, others dominions, others authorities and others rulers (Colossians 1:16). And we see that we human beings, though we fall far short of these, have hope that by living well and doing everything in accordance with reason we shall rise to a likeness with all of them. And lastly, since “it has not yet been revealed what we shall be, we know that when he is revealed we shall be like God and shall see him as he is” (1 John 3:2).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/29/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-005",
+   "chapter": 3,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Lawlessness and sin can be said in parallel, since sin is lawlessness.",
+   "comment": "… Here, lawlessness and sin can be said in parallel. Concerning this, John writes in the epistle attributed to him, saying: 'Everyone who practices sin also practices lawlessness, and sin is lawlessness' (1 John 3:4). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u43-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u43-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-006",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The doer of evil belongs to darkness and has neither seen God nor known him, but the pure of heart see him.",
+   "comment": "The good-doer, in practice and in contemplation, having God — Christ — existing as the true light, is far from darkness and from Beliar. But since doing evil is the opposite of doing good, the evil-doer, by this very activity, being of Beliar and of darkness, has not seen God nor has any knowledge of him: “for everyone who sins has not seen God nor known him” (1 John 3:6). Since seeing a body or not seeing it is recognized by using sight or not using it — the sensible object being seen by the evil-doer too, if he has sight, but not seen by the one deprived of sight, even if he be a good-doer — it is shown indisputably by the same things together: that to the good-doer, because he has a pure heart, he is seen, even if he lacks sight; but he is not seen by the evil-doer, even if he be most sharp-sighted. He presents that doing good and doing evil are opposites and therefore incompatible, both from “turn away from evil and do good” (Psalm 37:27; LXX 36:27) and from the passages written similarly.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the one who sins has not seen God, with a plain comparison.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u03-rem-early",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u03-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-007",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "He is not able to do justice while doing injustice, and he who always keeps his eyes on the Lord does not sin.",
+   "comment": "And regarding 'is not able' I say this: he is not able to do justice while he is doing injustice; for I do not say as I say 'it is not possible for a man to fly,' but rather that as far as he is righteous, he is not able toward sin, and when he is a sinner, he is not able toward virtue. 'My eyes' therefore 'are continually toward the Lord' (Ps 25:15). I always see Him. And he who sees God does not sin; 'everyone who sins has not seen Him nor known Him' (1 John 3:6). And behold the piety of the saints; even if he himself chooses to direct his eyes toward the Lord, it is evident that he is not sinning; the achievement of sinlessness is inscribed by God: 'since my eyes are continually toward Him' (Ps 25:15), because of this I escape the snare which sin prepares; for 'He Himself will rescue my feet from the snare' (Psalm 25:15).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u14-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u14-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-008",
+   "chapter": 3,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "He who does sin is of the devil, but the Son was manifested to loose the devil's works so we may become children of God.",
+   "comment": "… But if such say 'Our Father who art in the heavens' in all things, then plainly 'he who does sin' — as John says in the catholic epistle — 'is of the devil, for the devil sins from the beginning.' (1 John 3:8) And as God's 'seed,' abiding in the one 'born of God,' causes the inability to sin in the one formed after the Only-begotten Word — so in everyone who 'does sin' there is the devil's 'seed,' so far as it is present in the soul, not permitting its possessor to succeed. But since 'for this the Son of God was manifested, that he might loose the works of the devil,' (1 John 3:8) it is possible, by the visitation of God's Word upon our soul — the 'devil's' works being loosed — for the evil 'seed' implanted in us to be wiped away, and for us to become 'children of God.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "22",
+   "url": "https://viapatrum.org/works/origen-on-prayer/22/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-009",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The one born of God does not commit sin because his seed remains in him, though the virtuous is hard, not impossible, to shake.",
+   "comment": "This is shown from: \"Everyone born of God does not commit sin\" (1 John 3:9). And assigning the cause, he asserts: \"because his seed remains in him,\" saying that it made him. For concerning such a thing it is also said in the Gospel: \"No one is able to snatch them out of the hand of my Father\" (John 10:29). And we did not say that the virtuous one is unshakeable, but that he is difficult to shake.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u10-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u10-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-010",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Some men are called of God and others of the devil, as only the blessed angels are called angels of God.",
+   "comment": "So too not all angels are said to be “angels of God,” but only the blessed ones; while those who turned aside to wickedness are named angels of the devil (Matthew 25:41), just as wicked men are called men of sin (2 Thessalonians 2:3), or sons of pestilence (1 Samuel 2:12), or sons of unrighteousness. Among men, then, some are good and some are wicked, and for this reason some are said to be “of God” and others of the devil (1 John 3:10); and among “angels” too, some are “of God” and others of the evil one. But demons are not divided in two in this way, for all of them are shown to be wicked.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what being of God or of the devil means.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "25",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/25/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-011",
+   "chapter": 3,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "John says we have passed, not that we were led, since God does not force us.",
+   "comment": "… The steps are not given; for it is ours to will to walk from the bad to the good. Immediately, indeed, in the epistle of John, he writes: 'We know that we have passed from death to life' (1 John 3:14). 'We have passed,' not 'we were led.' God, directing the steps, did not force us into this by violence.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why John says we have passed from death to life.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u38-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u38-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-014",
+   "chapter": 3,
+   "verse_start": 15,
+   "verse_end": 17,
+   "capsule": "Christ laid down his soul for each of us and asks the same from us for one another, so we cannot lock away our goods from our brothers.",
+   "comment": "… For each one of us he laid down his soul, the soul worth the whole of all things. This he demands back from us for one another. If we owe our souls to our brothers and sisters, and we have made such an agreement with the Savior, shall we still shut up the things of the world—poor, alien, flowing-away things—by storing them away? Shall we lock away from one another what the fire will soon possess? Divinely and with the Spirit's breath John says, \"The one who does not love his brother is a murderer\" (1 John 3:15), a seed of Cain, a nursling of the devil. He has no compassion of God; he has no hope of better things. He is unsown; he is barren. He is not a branch of the ever-living vine above the heavens; he is cut off, and awaits the gathered fire.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the one who does not love his brother is called a murderer, and what love owes.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "37",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/37/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-015",
+   "chapter": 3,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Life can also mean possessions, as when John speaks of having the life of the world.",
+   "comment": "… Life signifies many things, namely this living or the way of life; it also signifies possession, as it is said: 'whoever has the life of the world and sees his brother in need' (1 John 3:17). And money is said to be life, as it is said: 'if a man gives his life in love, they will render him nothing.' …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u13-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u13-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-013",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "If we approach the light, we have much boldness.",
+   "comment": "If therefore we approach the light, by which we ceased sinning, our faces are not being shamed, and we have much boldness; for he says: 'if our heart does not condemn us, we have boldness toward God' (1 John 3:20).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u28-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u28-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-016",
+   "chapter": 3,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "While we are on life's road we should heed the reminder of conscience, for if our conscience does not condemn us we have confidence toward God.",
+   "comment": "As long as we are on this path of life, which is a journey taken by all people, we should receive and not disregard the reminder from our conscience.\n\nHowever, if we disregard and run past our life, our conscience will accuse you before the judge, make you subject to the verdict of the one judging, and subject you to unbearable punishments.\n\nWe would not have suffered these things if we had obtained favor towards the opponent by receiving rebukes with favor, as the divine evangelist John also reminds us that if our conscience does not condemn us, we have confidence towards God (1 John 3:21).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the heart that does not condemn us as the conscience.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u04-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN03-017",
+   "chapter": 3,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "Since the Father commands us to believe in the name of his Son, and faith is owed to God, Christ is God.",
+   "comment": "… “And this is his commandment, that we believe in the name of his Son Jesus Christ.” (1 John 3:23) If it is not against the Father’s will that we believe in the name of his Son Jesus Christ, and faith is also practiced by us not as toward a mere human but as toward the living and true God — then Christ is God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "64",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/64/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-010",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "Testing the spirits needs the Spirit's gift of discernment, and the mark of the antichrist is denying that Jesus came in the flesh.",
+   "comment": "… It is necessary to have that gift of the Holy Spirit, which is named the discernment of spirits, so that we may have knowledge to test the spirits, so as for one to believe and for the other to resist. … He calls characteristic of the antichrist, of whom we have heard that he is coming, but is already in the world, the denying the incarnation of Jesus through false prophets and spirits in not confessing that he has come in the flesh …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-002",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "To confess Jesus is to confess that the Word, being God, became flesh and remained what he was, so whoever shrinks the glory of Christ has the spirit of the antichrist.",
+   "comment": "“By this the Spirit of God is known: every spirit that confesses Jesus Christ come in flesh is from God, and every spirit that does not confess Jesus is not from God; and this is the spirit of the antichrist, which you have heard is coming, and now is already in the world.” (1 John 4:2–3) So do we confess Jesus as a human and as one like us — or rather that the Word, being God, became flesh, not neglecting to be God, but rather remaining what he was even if he became human? This is not doubtful. So the one who does not say that Christ is truly God, but divides and shrinks his glory, will be caught having the spirit of the antichrist.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means to confess Jesus Christ come in flesh.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "65",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/65/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-005",
+   "chapter": 4,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "The love that is from God is the Only-begotten, so whoever has love has Christ in himself.",
+   "comment": "If love is from God and God is love, who would be the one proceeding from him or the Word himself? If anyone therefore has love, he has Christ in himself …\n\nA love from God, which must be considered as nothing other than the Only-begotten, just as God is from God, so also is a love existing from love.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-003",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Those who share in a quality are called by its name, and God is called love because the same essence is signified by both names.",
+   "comment": "This signifies a participation in the quality; that those who participate are called by the same name as the quality they possess. … And in many places of the Scripture you will find such things. It says, 'God is love' (1 John 4:8). See the greatness of love: 'God is love' (1 John 4:8). The same essence is signified by both names, God and Love.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u30-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u30-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-004",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "One who becomes one with this love is a son of love.",
+   "comment": "… 'God' indeed 'is love' (1 John 4:8). And just as the one participating in righteousness is righteous, so the one having approached by this love and having become one with it is a child of wisdom, a son of love.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u29-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u29-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-006",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "God himself is love and was seen by us through love, and for love the Son came down, took on humanity and suffered.",
+   "comment": "… Gaze upon the mysteries of love, and then you will gaze upon the bosom of the Father, which the only-begotten God alone has revealed (John 1:18). God himself is love (1 John 4:8), and through love he was seen by us. His inexpressible aspect is Father; his compassion toward us became Mother. The Father loved, and was made feminine. And a great sign of this is the one he begot from himself; and the fruit born from love is love. For this reason he himself came down. For this reason he clothed himself in humanity. For this reason he willingly suffered the things of human beings, so that, measured against our weakness, he might measure us whom he loved against his own power. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that God is love.",
+   "author": "Clement of Alexandria",
+   "work": "Who Is the Rich Man That Shall Be Saved?",
+   "work_slug": "clement-alexandria-rich-man",
+   "section": "37",
+   "url": "https://viapatrum.org/works/clement-alexandria-rich-man/37/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-007",
+   "chapter": 4,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "God dwells in human beings through his Spirit, for where the Spirit of God is, there God is, as John says.",
+   "comment": "… Again, when Peter says to Ananias, “Why has Satan filled your heart to lie to the Holy Spirit and to keep back from the price of the field? You have not lied to men but to God” (Acts 5:3–4), it follows that the one who lied to the Holy Spirit lied to God, who dwells in human beings through his Spirit. For where the Spirit of God is, there God is. “By this,” he says, “we know that God abides in us, because he has given us of his Spirit” (1 John 4:13).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how we know that God abides in us.",
+   "author": "Marcellus of Ancyra",
+   "work": "On the Incarnation and against the Arians",
+   "work_slug": "marcellus-de-incarnatione-contra-arianos",
+   "section": "9",
+   "url": "https://viapatrum.org/works/marcellus-de-incarnatione-contra-arianos/9/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-008",
+   "chapter": 4,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "Whoever confesses that the Word from God is Jesus has God remaining in him and is himself in God.",
+   "comment": "… We say that the Son has been sent from God the Father — that is, the Only-begotten Word from him by nature — and that he was named Jesus when he also endured the birth according to flesh from a woman economically [in God's plan of salvation]. So the Word from God became human. And if someone confesses him thus, he has God remaining in him, and he himself will also be in God; for God will remember him and will also count him as his own, as a sharer in him. But the one who does not confess that the Word from God the Father himself is Jesus — having lowered himself into humanity — would neither grow rich with God in him, nor himself be in God according to the mode of spiritual kinship.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means to confess that Jesus is the Son of God.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "65",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/65/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-009",
+   "chapter": 4,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Perfect love is to flee evil from a genuine passion for the good and not from fear of punishment.",
+   "comment": "… And we took the explicit word of John and clarified it thus: \"Perfect love casts out fear, because fear has punishment, but the one fearing is not perfected\" (1 John 4:18). Perfect love, therefore, is when someone, loving toward the good, flees from the evil; not because of the fear of punishment does he remain away from evil, but because he has a genuine passion toward the good. And the opposites are incompatible.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why perfect love casts out fear.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u24-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u24-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-011",
+   "chapter": 4,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The fear that love casts out is the fear of punishment, not the fear of God.",
+   "comment": "… But not every fear is of God; for there is a fear of punishment. This is not of God. Furthermore, regarding 'perfection' toward God, 'love casts out fear' (1 John 4:18). The one having love toward God from all heart and all mind does not have a passive fear. In this way, the disciples of Jesus were called by the Savior to be outside of passive fear, saying, 'Do not fear those who kill the body' (Matt 10:28). … They cast out the passive fear; for the fear of God is not passive, it is not of punishment …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u08-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-001",
+   "chapter": 5,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Those who do righteousness, and those who believe that Jesus is the Christ, are born of God and are sons of God.",
+   "comment": "But they become his brothers again according to the Spirit, those partaking of the 'spirit of adoption' (Rom 8:15); for if 'he who does righteousness is born of God' (1 John 5:1) and 'he who believes that Jesus is the Christ is born of God' (1 John 5:1), some are sons of God. These, however, are brothers again, not only-begotten, not according to the divinity, but according to the one who became man. The apostle, therefore, using the word in this way, applied it to the man: 'for which reason he is not ashamed to call them his brothers'; for he left nothing of what is required for a man to be a man. Since if he does not have all things, he is not a man.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u08-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u08-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-008",
+   "chapter": 5,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The faith by which one is born of God is not mere mental assent but faith joined to works of virtue, such as Abraham had.",
+   "comment": "He who is born from God, having believed that Jesus is the Christ, is not born from God having a mere mental assent regarding the preaching of the Christ, but rather that faith which is joined to works according to virtue; which Abraham, having, was reckoned to have righteousness (Gen 15:6). According to this, the thing signified is to be accepted: 'to find a faithful man'; for such a one is rarely found, among many being eager but having a dead faith without works, which is not even at all faith. He who has believed thus, as to be born from God, has eternal life, as the Savior says: 'he who believes in me has eternal life' (John 3:36); if indeed someone is born from God by acting uprightly in the things said, being worthy of acceptance, he must love also him who begot him before that.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what kind of believing makes one born of God.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-002",
+   "chapter": 5,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "John says the commandments are not heavy, because from habit and training heavy things appear most light.",
+   "comment": "… For John indeed writes, 'And his commandments are not heavy' (1 John 5:3), and Jesus says to those hearing his words, 'My yoke is good and my burden is light' (Matt 11:30). For from much habituation and training, approaching without interruption, the heavy things appear most light, and the bitter and joyless things are made upright with much ease.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why John says the commandments are not heavy.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u07-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u07-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-003",
+   "chapter": 5,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Whoever finds the commandments heavy blames his own weakness, and the one born of God conquers the world.",
+   "comment": "If indeed anyone, coming to them, says they are heavy in a way other than what is required, he blamed his own weakness; for it is considered a friend to those who excessively cast off strength to think commandments heavy and everything light and trivial; whence he did not write: 'his commandments are light', but: 'they are not heavy' alone, and of one perceiving everything, having known through experience the just pursuing the just despite their uselessness, that the yoke of Christ is light, having much kindness (Matt 11:30). He who is thus disposed is born from God, and having obtained this, he despises the life of the entering world and the pleasant things of the world; and by this he conquers the world, having passed from it into a super-cosmic citizenship. This thus progressing in faith will work even toward righteousness reckoned as such; which he also shows as having been established and remaining, saying: 'this is the victory that has conquered the world' (1 John 5:4); which faith we have, having adhered to Jesus being the Son of God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-009",
+   "chapter": 5,
+   "verse_start": 6,
+   "verse_end": 8,
+   "capsule": "The Son is one, who sanctifies us by the Spirit, cleanses by the blood and washes with water, and all three are his.",
+   "comment": "… The one who believes that Jesus is the Son of God conquers the world; and who Jesus is, the disciple himself makes clear to us saying: “This is the one who came through water and blood, Jesus Christ.” But he also speaks of blood and of Spirit, and says the three are the one. So the Word became flesh, and he sanctifies us by the Spirit, and cleanses by the blood, and washes again with clean water; and the Son is altogether one, whose we also say the Spirit and the water and the blood are.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the Spirit, the water and the blood.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "66",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/66/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-010",
+   "chapter": 5,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "Not everyone who asks receives, but those who ask according to the will of God, and such boldness belongs to the rare person with a pure heart.",
+   "comment": "… 'the one asking receives' (Luke 11:10) does not mean that all people, asking haphazardly, receive the same things that do not benefit them, but rather those containing the request according to the will of God. Such boldness approaches one living a life beyond understanding; but such a person is rare; 'for who shall boast of having a pure heart?' (Proverbs 20:9); for few are those existing thus in virtue, as it is said: 'if I had seen injustice in my heart, Lord, do not listen to me; because of this, he listened to me' (Psalm 66:18-19), since he did not see injustice; but he desisted from fear that he might be judged according to the one saying: 'I do not know myself; but not in this am I justified' (1 Corinthians 4:4); he takes up what is set forth and also: 'if our heart does not condemn us, we have boldness toward God' (1 John 3:21).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-011",
+   "chapter": 5,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "Sin leads to death when desires issue in deeds, and while evil is still only in the mind there is not yet death.",
+   "comment": "[On the law about leprosy:] … being wholly dead, as in leprosy (I mean the leprosy of the mind) and as in the condition of deadness that comes from sin, would perhaps come about not in desires alone but when they issue in deeds. As long as the evil is still in the mind’s birth pangs, there is not yet deadness and not yet death, for ‘not every sin leads to death,’ as the Savior’s disciple has said (1 John 5:16–17). There is still only a suspicion that it may suffer the things that can bring death. … For before God it is not beyond rebuke even to dwell in desires and come near to evil. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 15",
+   "work_slug": "cyril-adoration-15",
+   "section": "18",
+   "url": "https://viapatrum.org/works/cyril-adoration-15/18/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-005",
+   "chapter": 5,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "John adds that he guards himself, to show that not sinning comes from attentiveness and not from nature, since man is a choosing being.",
+   "comment": "For if being from God comes from doing righteousness, as we have often said, but it is impossible to sin and practice righteousness at the same time, it is therefore evident that one thus disposed and acting is just and does not sin; then, securing the position that man is a choosing being and not a son of God by nature, he appropriately added: 'but he guards himself, and the evil one does not touch him' (1 John 5:18); for if because of this the evil one does not touch him, that he guards himself, he has the not-sinning not from construction, but from attentiveness; and if someone is guarding himself, what does he pray to God for? That he might remain entirely unswayed by the evil one.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-012",
+   "chapter": 5,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The whole world lies in the evil one because in the present age the wicked prevail over the things on earth.",
+   "comment": "… He commands us to look far off and not be astounded by present things, and to foresee the destruction of the wicked and the preservation of the good (Psalm 37:9). These things clearly reach their end in another age, since the present age does not have the outcomes of these things, but rather the wicked prevail over the things on earth. Therefore he says, The whole world lies in the evil one (1 John 5:19).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on the Psalms",
+   "work_slug": "apollinaris-fragmenta-psalmos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-013",
+   "chapter": 5,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The world that lies in the evil one is not God's creation but the people moved by passions.",
+   "comment": "Having learned through many those bad men who are made manifest by the voice [the word] of the world, we do not stand in awe like the heretics, lest the creation of God, being a world, be established in the evil one; the voice of the world lies upon men, as has been said …\n\nFor John says, “Do not marvel if the world hates you”; it is clear to everyone possessing understanding that the world hates the holy, meaning the wicked men. And he adds, “They are of the world and the world hears them”; for the world that hears those speaking deceitfully signifies not the creation, but the people moved by passions.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-006",
+   "chapter": 5,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Jesus Christ is not the Word outside flesh, and John calls him the true God.",
+   "comment": "… Jesus Christ is not understood as the Word from God the Father naked, by himself, and outside flesh; but when he became human, then he was also named Christ Jesus. So when he himself is the true God and the eternal life, who among those who think otherwise will put up with it?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "44",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/44/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-007",
+   "chapter": 5,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "John calls the Son the true God, and he is true God both before he became man and after he became mediator, the man Jesus Christ.",
+   "comment": "… And when the Lord says in the Gospel according to John, “This is eternal life, that they may know you, the only true God, and Jesus Christ whom you have sent” (John 17:3), the same John elsewhere calls the Son the true God. For he says, “We know that the Son of God has come, and he has given us understanding so that we may know the true God, and we are in the true one, in his Son Jesus Christ. This is the true God and eternal life” (1 John 5:20). So the Son is true God both before he became man and after he became mediator of God and men, the man Jesus Christ. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how John calls the Son the true God.",
+   "author": "Marcellus of Ancyra",
+   "work": "On the Incarnation and against the Arians",
+   "work_slug": "marcellus-de-incarnatione-contra-arianos",
+   "section": "15",
+   "url": "https://viapatrum.org/works/marcellus-de-incarnatione-contra-arianos/15/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-014",
+   "chapter": 5,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "The understanding the Son gives is the mind of Christ, by which we know the true one and are united to him.",
+   "comment": "He gave a mind, by which the true one, having come as the Son of God, is known; this is the same as to say, “But we have the mind of Christ.” He who possesses this very mind and this very intellect knows the one who is true according to essence and is united to him, truly having his understanding.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the understanding that the Son of God has given us.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-015",
+   "chapter": 5,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "John says true twice, to show that the Son is both true Son and true God, truly begotten and of one essence with the Father.",
+   "comment": "… John, the great one among theologians: “And we know,” he says, “that the Word of God has come and has given us understanding, that we may know the true God; and we are in the true one, in Jesus Christ the Son of God. This is the true God and eternal life” (1 John 5:20). “Seek no other god or Son of God in respect of essence,” he says. For I have said the “true” to you twice concerning him, that he is both “true Son” and “true God,” giving understanding to those worthy to receive; so that you may know that he has truly been begotten and truly is consubstantial with the God who begot him.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u08-rem-close",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u08-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN05-016",
+   "chapter": 5,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Though he has praised their perfection, John warns against idols because he wrote to the whole church.",
+   "comment": "How then, having testified to this perfection through the whole epistle, does he now exhort them to keep themselves from idols? We say therefore: since it was written to the whole church, and it was likely in such a gathering to be now standing apart from idolatry, for their sake he engraved the word.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-close/",
+   "from_cite": true
+  }
+ ]
+}

@@ -1,0 +1,459 @@
+{
+ "book": "1 Kings",
+ "title": "The Fathers on 1 Kings",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 24,
+ "selected_count": 14,
+ "comments": [
+  {
+   "id": "1KI01-001",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "David reached old age after unbearable struggles, having overcome both foreign enemies and rebels.",
+   "comment": "“And King David was old and advanced in years” (1 Kings 1:1). He had come through unbearable struggles, yet he had triumphed over his enemies and proved unconquerable to those who plotted against him. For he prevailed not only over foreigners, nor did he only put to flight the ranks of bloodthirsty barbarians; he prevailed also over those who rose up against him from time to time, and over those who joined shields with them.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the background to David's old age.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI03-001",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Those who serve God must be wise, as a ship needs a rudder to escape the storm.",
+   "comment": "“And you will give your servant a heart to hear and to judge your people in righteousness” (1 Kings 3:9). For those who wish to serve God, and who wish to escape the rough sea of this present life, must be wise and know what is profitable, with minds kept alert toward those they deal with. For just as ships, when they have rudders, are carried straight to their goal and escape the battering of the waves, even if the sea sometimes rages against them, but when they have no rudders are easily tossed this way and that, reel as if drunk in their drifting, and strike on stones and rocks and are shattered; so too a human soul, when it is governed by good sense, will easily escape Satan, who stirs up the storm, and in this way it also makes useless the evil schemes of those who plot against it. But a heart that has no wisdom suffers a grievous shipwreck.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Solomon's request for a wise heart matters, with a clear picture.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI03-002",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "God was pleased with Solomon's request and granted it, since he gladly grants what is asked rightly and wisdom is his choice gift.",
+   "comment": "“And it pleased the Lord,” it says, “that Solomon asked for this thing.” He was praised in no small measure, and he was counted worthy of the gift. For the Master of all, rich in his giving, granted his request; for God gladly grants the requests of those who ask rightly. For wisdom and understanding are truly a choice gift from God. … Wisdom and knowledge, then, are a truly precious and lovely possession for the human soul: the knowledge, that is, of God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God was pleased with Solomon's request.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI03-003",
+   "chapter": 3,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "God gave wisdom first to the one who asked rightly and then added the rest, showing what to ask for.",
+   "comment": "In this he teaches us what we ought to ask for, and what we ought to receive as something added. For to the one who rightly asked for wisdom he first gave it, and then added all the rest besides, since he is the very one who said in the Gospels: “Seek first the kingdom of God and his righteousness, and all these things will be added to you” (Matthew 6:33).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why riches were added to the gift of wisdom.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI08-001",
+   "chapter": 8,
+   "verse_start": 29,
+   "verse_end": 29,
+   "capsule": "Scripture speaks of God's eyes and ears because our mind and tongue are too poor for what is beyond words.",
+   "comment": "“That your eyes may be open toward this house” (1 Kings 8:29). “And let your eyes,” he says, “and your ears be open” (1 Kings 8:52). If the divine Scripture, speaking to us about God, mentions parts, that is, limbs, we must understand that it converses with us in terms of what we know and of what we are by nature; for otherwise we could not have understood the things concerning God. The true cause and reason, then, why the God-inspired Scripture speaks to us about God in bodily terms is the poverty of both mind and tongue in us; for the things concerning him are wholly beyond words. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Scripture speaks of God in bodily terms.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI10-001",
+   "chapter": 10,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The queen of Sheba overcame distance and reluctance to hear Solomon's wisdom, not to gather riches.",
+   "comment": "A foreign woman, though great distances kept her away, overcame her reluctance, not to gather riches but to hear the wisdom of Solomon, who spoke in parables and riddles and sketched both the beauties and the faults of human character.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the queen came.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI10-002",
+   "chapter": 10,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The 'great power' with which the queen came was her wealth, called 'heavy' for 'precious'.",
+   "comment": "For they have become accustomed to call things that are honorable and most precious 'heavy'. This too the Scripture witnesses; for how much the Queen of Sheba came to Solomon, it says, 'in great power' (1 Kings 10:1). And it says the 'heavy power' is her possession, which she had brought. She brought many precious stones, many delicacies, gold, silver, and other accompaniments of wealth. And that power of wealth was called 'heavy' instead of 'precious' or 'valuable'.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u34-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u34-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI11-001",
+   "chapter": 11,
+   "verse_start": 1,
+   "verse_end": 6,
+   "capsule": "Solomon, so famed for wisdom, was dragged by pleasure in foreign women into idolatry.",
+   "comment": "He was so brilliant and so celebrated that he had, in a sense, already won a glory beyond compare; yet he passed over into what is shameful, or rather he leapt down basely into the very depth of impiety toward God. … Yet this man, so glorious and so celebrated, who had advanced so far in wisdom that he became an object of boundless wonder even among the most eminent, was pried loose by pleasure in wicked women; and that pleasure, as it were, dragged him out of the divine tent itself and threw him into the pits of idolatry. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "10",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/10/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI11-002",
+   "chapter": 11,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Giving to demons the honor that belongs to the one God, and building temples to idols of stone and wood, is the gravest of offenses.",
+   "comment": "“Then Solomon built a high place for Chemosh, the idol of Moab” (1 Kings 11:7). What could be more grievous than such monstrous offenses: to assign to herds of demons the dignity of honor and love that belongs to the one God, who is God by nature; or rather, to fashion them out of stones and wood, and to build temples for them?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI11-003",
+   "chapter": 11,
+   "verse_start": 9,
+   "verse_end": 11,
+   "capsule": "God was angry because Solomon forgot the command against marrying foreigners and gave God's honor to creatures, so his kingdom would be torn away.",
+   "comment": "“And the Lord was angry with Solomon,” and so on (1 Kings 11:9). And what, then, had been commanded to him and to all men under the Law? That they should not marry foreigners. For he said: “You shall not give your daughter to his son, and you shall not take his daughter for your son. For he will turn your son away from me, and he will go and serve other gods” (Deuteronomy 7:3-4). Forgetting this command, then, he joined himself to the daughters of foreigners. “Since, then,” he says, “you have counted as nothing the command that was given, and have slipped into apostasy and served the gods of foreigners; and since, though you knew that creation is my servant, you have assigned to it the honor and glory that are mine and that befit me alone, I too will tear your kingdom apart and give it to your servant (1 Kings 11:11), so that you may learn what you have done from what has happened to you.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why God was angry and why the kingdom was torn away.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI11-005",
+   "chapter": 11,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "Solomon overturned the piety of his fathers, yet the kingdom was not torn away in his own days, because he was the son of a God-loving father.",
+   "comment": "… For there [in the books of the Kings] also he is seen worthy of pity, because he was the offspring of a God-loving father. And this is Solomon, the one of many thrones; who, since as time went on he was not a ruler of sufferings, but rather a slave and more uncontrolled in the flesh, and because of the heedlessness of life, he changed and subverted the ancestral piety, shaping idols that are stumbling blocks to the law.\n\nGod says to him: 'I will tear your kingdom apart and give it to your servant; however, in your days I will not do this because of David your father; from the hand of your son I will receive it' (1 Kings 11:11). These things instruct us through history …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u15-rem-early",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u15-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI11-004",
+   "chapter": 11,
+   "verse_start": 30,
+   "verse_end": 32,
+   "capsule": "Ahijah tore his garment when Israel was divided, while Christ's tunic was not torn, signifying the unity of the Church.",
+   "comment": "… Finally, when Solomon was dying and his kingdom and people were being divided, the prophet Ahijah met King Jeroboam in the field and tore his own garment into twelve pieces, saying: \"Take ten pieces for yourself, for this is what the Lord says: 'Look, I am tearing the kingdom out of Solomon's hand and will give you ten scepters, and two scepters will remain his for the sake of my servant David and for the sake of Jerusalem, the city I chose to put my name there'\" (1 Kings 11:30-32). When the twelve tribes of Israel were being divided, the prophet Ahijah tore his garment. But because the people of Christ cannot be divided, his tunic, woven throughout and holding together, was not divided by those who possessed it. Undivided, joined, connected, it shows the cohering harmony of our people who have put on Christ. By the sacred sign of the garment and its meaning, he declared the unity of the Church.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the meaning of the torn garment by contrast.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/7/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI12-001",
+   "chapter": 12,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "Jeroboam ruined Israel by inventing calves and giving them God's glory so that he himself might hold the kingdom securely.",
+   "comment": "“And the king took counsel, and went, and made two calves” (1 Kings 12:28). Jeroboam became the author of ruin for the people of Israel, displaying their choice of the kingship of men instead, and their turning away from being ruled by God through prophets. For: “See, Jeroboam has provoked me, the Master, by devising new calves and investing them with my own dignity.” And again: At the start Jeroboam devised the calves and ordered the customary rites to be performed before them, the wretch, attaching to his own inventions the glory that befits God, so that he himself might hold the kingdom securely; and so he robs God, as it were, of what is his own.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Jeroboam made the calves.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI13-001",
+   "chapter": 13,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "The threat that his corpse would not lie in his fathers' tomb was a punishment because a man grieves over what will happen to his body, and it was a limited chastisement of one who was deceived.",
+   "comment": "… So it is that in the books of the Kingdoms we find God threatening through a prophet another prophet who had transgressed his word, that his corpse would not be brought into the tomb of his fathers. The Scripture reads like this: \"This is what the Lord says: Because you were disobedient to the mouth of the Lord and did not keep the command that the Lord your God commanded you, and you turned back and ate bread and drank water in the place where he commanded you not to eat bread or drink water, your corpse shall not be brought into the tomb of your fathers\" (3 Kingdoms 13:21-22; cf. 1 Kings 13:21-22). … But if we consider the human affection for one's own flesh, the living man could be terrified or saddened by what the dead man would not feel; and this was the punishment, because his soul grieved over what would happen to his body, even though when it happened he would not grieve. For the Lord willed to chastise his servant only to this extent—a servant who had despised fulfilling his command, not out of his own stubbornness, but who believed he was obeying when he did not obey, deceived by another's treachery.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the punishment was and why it was mild.",
+   "author": "Augustine of Hippo",
+   "work": "On Care for the Dead",
+   "work_slug": "augustine-care-for-the-dead",
+   "section": "9",
+   "url": "https://viapatrum.org/works/augustine-care-for-the-dead/9/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI13-002",
+   "chapter": 13,
+   "verse_start": 24,
+   "verse_end": 28,
+   "capsule": "The lion that killed him yet guarded his body shows he was chastised in this life, not punished after death.",
+   "comment": "Nor should we think that he was killed by the bite of a beast in such a way that his soul was then carried off to Tartarean punishment, since the very lion that killed him guarded his body, leaving unharmed even the donkey on which he rode, and stood by its master's corpse with that huge wild beast in fearless attendance. By this wonderful sign it appears that the man of God was chastised in this life right up to death, rather than punished after death.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Augustine of Hippo",
+   "work": "On Care for the Dead",
+   "work_slug": "augustine-care-for-the-dead",
+   "section": "9",
+   "url": "https://viapatrum.org/works/augustine-care-for-the-dead/9/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI13-003",
+   "chapter": 13,
+   "verse_start": 29,
+   "verse_end": 32,
+   "capsule": "The old prophet who deceived him buried him in his own tomb so that his own bones might be spared when Josiah defiled the altars.",
+   "comment": "The one who had deceived him, however, buried him quite honorably in his own tomb and arranged to be buried next to his bones, hoping in this way that his bones too might be spared when the time came when, according to the prophecy of that man of God, Josiah king of Judah dug up the bones of many dead in that land and defiled the sacrilegious altars that had been set up for idols with those bones. He spared, indeed, that tomb where the prophet lay, who had foretold these things more than three hundred years earlier; and for his sake the burial of the one who had led him astray was not violated either.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Augustine of Hippo",
+   "work": "On Care for the Dead",
+   "work_slug": "augustine-care-for-the-dead",
+   "section": "9",
+   "url": "https://viapatrum.org/works/augustine-care-for-the-dead/9/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI17-003",
+   "chapter": 17,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Whoever gives from what he lacks, as the widow did, will find the oil jar overflowing and the flour jar never empty.",
+   "comment": "… Say also the words of the widow of Zarephath in similar circumstances, remembering the story at the right moment: “As the Lord lives, this is all I have in my house for food for myself and my children” (1 Kings 17:12). If you give from what is lacking, you too will have the oil jar overflowing by grace, and the flour jar never empty. For toward the faithful, God’s grace is generous and imitates wells that are always being emptied and never drawn dry, bringing back double in return. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Draws out what the widow's giving from her little teaches.",
+   "author": "Basil of Caesarea",
+   "work": "Homily in Time of Famine and Drought",
+   "work_slug": "basil-homilia-tempore-famis",
+   "section": "7",
+   "url": "https://viapatrum.org/works/basil-homilia-tempore-famis/7/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI18-002",
+   "chapter": 18,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "To limp upon both hams is to approach God with an unhealthy, unsteady heart, which destroys what is genuine in each.",
+   "comment": "… For toward those approaching God not from a healthy heart, but from a suspected and corrupted one, and having chosen to be sick with the strengthless and easily-shaken, the prophet says: ‘Until when will you limp upon both your hams, either Baal, Baal, or God, God?’ (1 Kings 18:21) For the neither healthy altogether toward faith, nor indeed loving to have been fixed unto wandering, is to limp upon both, and indeed, what is upon each destroys the genuine. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 6",
+   "work_slug": "cyril-adoration-6",
+   "section": "36",
+   "url": "https://viapatrum.org/works/cyril-adoration-6/36/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI18-003",
+   "chapter": 18,
+   "verse_start": 33,
+   "verse_end": 34,
+   "capsule": "The water poured three times on the altar, which kindled the fire, showed the power of baptism.",
+   "comment": "… Elijah showed the power of baptism at the altar of whole burnt offerings, when he consumed the sacrifice not with fire but with water. By nature fire and water are at war with each other, but when the water was mystically poured over the altar a third time, it became the starting point for the fire and kindled the flame as if it were oil. “Take jars,” he says, “and pour water on the whole burnt offering and on the pieces of wood.” And he said, “Do it a second time,” and they did it a second time. “Do it a third time,” and they did it a third time (1 Kings 18:33-34). The word shows that through baptism the one who comes forward is made a member of God's household, and that pure, heavenly light shines forth in the souls of those who approach through faith in the Trinity. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the writer's reading of the water poured on the altar.",
+   "author": "Basil of Caesarea",
+   "work": "Exhortation to Holy Baptism",
+   "work_slug": "basil-homilia-ad-baptisma",
+   "section": "3",
+   "url": "https://viapatrum.org/works/basil-homilia-ad-baptisma/3/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI19-001",
+   "chapter": 19,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The number seven thousand does not declare a multitude, for otherwise the prophet would not have said he was left alone.",
+   "comment": "… But that a certain number, if it is signified in the divine letters, does not always declare a multitude, but a reason, it is to be understood from what has been said concerning God: 'I have left behind seven thousand men who have not bowed the knee to Baal' (1 Kings 19:18). For if such a number was the case, the prophet would not have said, 'I am left alone' (1 Kings 19:10) …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u04-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u04-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI19-002",
+   "chapter": 19,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Even when sacrifice was made to idols and prophets were killed, the righteous seven thousand did not withdraw from unity but endured the unjust.",
+   "comment": "… Certainly the earlier ones also had holy men, as the scriptures show. For God said he had left himself seven thousand men (1 Kings 19:18), and many priests and kings are righteous in the law. There you have so many prophets, and you have many from the people too. Tell me which of the righteous then separated an altar for himself. That wicked people committed many crimes: sacrifice was made to idols, so many prophets were killed, and yet none of the righteous withdrew from unity. The righteous endured the unjust until the coming winnower; they were mixed in one temple, but they were not mixed in heart. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Augustine of Hippo",
+   "work": "Psalm against the Donatist Party",
+   "work_slug": "augustine-psalm-against-the-donatists",
+   "section": "1",
+   "url": "https://viapatrum.org/works/augustine-psalm-against-the-donatists/1/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI20-001",
+   "chapter": 20,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The foreigners supposed that God could save only on mountains, a folly that made God angry with them.",
+   "comment": "“The God of Israel is a God of mountains” (1 Kings 20:23). For they supposed that the Israelites had won because God could save only on the mountains, or perhaps on the hills as well. “So we were defeated,” it says, “because the God of Israel is a God of mountains; but if we should meet in battle on bare plains, we shall surely prevail, since the God of Israel is powerless in the valleys.” These are the faults of pagan madness, the dreadful unbridled tongue of those who do not know the true God, who is God by nature. So God, who is mighty in all things, was angry with the foreigners, and with very good reason, because when they defeated Israel, as I said, they credited their thank offerings to their own gods, and in their folly supposed that they had prevailed over God himself.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the Syrians meant and why it was wrong.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI20-002",
+   "chapter": 20,
+   "verse_start": 35,
+   "verse_end": 37,
+   "capsule": "The man who refused to strike the prophet died because disobedience to the Lord's word is hard to escape, even when it seems reverent.",
+   "comment": "“And he found another man and said, ‘Strike me’” (1 Kings 20:37). Do you hear how the man who refused to strike the prophet was miserably killed when he fell in with a fierce beast? And yet how could it not be true to say that it was the fruit of reverence not to dare to strike down a holy man and a prophet? But since it was at the word of the Lord, disobedience became a charge hard to escape (1 Kings 20:35-36). So hard to escape is the charge of doing anything against what seems good to God, or of not doing without delay what he commands. It is necessary, then, that whatever pleases God be carried out by us without hesitation or delay. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the man was punished.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1KI21-001",
+   "chapter": 21,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The vineyard is Israel, which its leaders, of whom Ahab is the type, longed to possess.",
+   "comment": "“And Naboth had a vineyard” (1 Kings 21:1). Isaiah teaches us to understand the vineyard as Israel (Isaiah 5:7). But its leaders, of whom Ahab bears the type, longed to have it; yet they could not persuade him to betray to them his father’s choice vineyard, so that they might turn it into a vegetable garden, teaching as doctrines the commandments of men (Matthew 15:9)…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Kings",
+   "work_slug": "cyril-fragmenta-regum",
+   "section": "b03-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-regum/b03-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

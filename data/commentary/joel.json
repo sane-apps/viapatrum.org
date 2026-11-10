@@ -1,0 +1,178 @@
+{
+ "book": "Joel",
+ "title": "The Fathers on Joel",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 9,
+ "selected_count": 3,
+ "comments": [
+  {
+   "id": "JL01-001",
+   "chapter": 1,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Those whose minds are sick from love of the flesh are like drunkards who do not know what they are doing.",
+   "comment": "Let them hear, then: “Wake up, you drunkards, from your wine” (Joel 1:5). For just as lovers of drink and the drunken, their clear thinking impaired by the passion, would not know what they were doing while they were drunk, so those whose minds have grown sick from love of the flesh and the most shameful pleasures would not know what they are doing at all. So Paul is explaining to us a disease of the human heart when he says, “For what I am doing, I do not understand.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the call to wake from wine means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u05-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u05-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "JL01-002",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The drink offering and burnt offering stand for the shadows of the law, which are done away in Christ, as the prophet says.",
+   "comment": "And he altogether forbids any drink offering to be poured out on it, or any burnt offering to be offered up on it (Exodus 30:9), meaning, clearly, on the altar, which is Christ. For in Christ the things of the law have been abolished, and the shadows are drawing to their end. That, I think, is what the drink offering and the burnt offering stand for. The prophet bears witness when he says, ‘Sacrifice and drink offering have been taken away from the house of the Lord’ (Joel 1:9). For now that worship and service in spirit and truth (John 4:23–24) have been revealed, the shadows are in a sense superfluous, and whatever is done in types is futile and wholly useless; for in Christ there is a new creation (2 Corinthians 5:17).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "19",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/19/",
+   "from_cite": true
+  },
+  {
+   "id": "JL01-004",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "If the prophet trembles at the day of the Lord, sinners should not remember it without fear.",
+   "comment": "Let us flee the coming judgment, brothers, I beg you. … See how the prophet cries out: 'Woe is me toward the day of the Lord, for the day of the Lord is near' (Joel 1:15). If a prophet trembles remembering the day, shall we, who are responsible for myriads of sins, remember without fear?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Blind Man and Zacchaeus",
+   "work_slug": "severianus-de-caeco-zacchaeo",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-zacchaeo/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JL02-001",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Those who proclaim the truth boldly and loudly praise Jesus and his Father with a trumpet.",
+   "comment": "He who is not ashamed of Jesus and his words, clearly and loudly bringing forth the things of theology with boldness, praises him and his Father in a trumpet; for even the heralds of the truth have the command to proclaim the teaching more boldly and clearly, having as a trumpet to lift up their voice. For words are indeed spoken to them, 'Sound the trumpet in the trumpet, proclaim in Zion in my holy mountain' (Joel 2:1).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what sounding the trumpet means for those who proclaim the truth.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u64-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u64-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JL02-003",
+   "chapter": 2,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "To pour out signifies a bountiful gift and a rich provision.",
+   "comment": "To pour out signifies always, as if it says: 'I will pour out from my Spirit upon all flesh' (Joel 2:28); it signifies a bountiful gift and a rich provision through the word. 'The love of God is poured out in our hearts' (Romans 5:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u31-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u31-open/",
+   "from_cite": true
+  },
+  {
+   "id": "JL02-004",
+   "chapter": 2,
+   "verse_start": 28,
+   "verse_end": 28,
+   "capsule": "'Flesh' here means humanity, which is made worthy of the bountiful gift of the Holy Spirit.",
+   "comment": "… But there is also when only men are revealed by the designation of flesh, as in: 'Hearken to prayer, to you all flesh shall come' (Psalm 65:2). And it comes to God in relation and disposition, not the irrational, but the humanity, being made worthy of the bountiful gift of the Holy Spirit by the one saying: 'I will pour out from my Spirit upon all flesh, and your sons and your daughters shall prophesy' (Joel 2:28).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u04-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JL02-005",
+   "chapter": 2,
+   "verse_start": 28,
+   "verse_end": 29,
+   "capsule": "The promised prophecies and visions are recognized and honored, together with the other powers of the Holy Spirit given to the church.",
+   "comment": "For the Lord says in Scripture, \"In the last days I will pour out my Spirit on all people, and your sons and daughters will prophesy; I will pour out my Spirit on my servants, both men and women, and your young men will see visions, and your old men will dream dreams\" (Joel 2:28-29; Acts 2:17-18 …). So we recognize and honor prophecies and new visions alike as promised, together with the other powers of the Holy Spirit assigned as equipment for the church. He was sent to the church, administering all his gifts among all people as the Lord assigns to each one.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Passion of Perpetua and Felicity",
+   "work": "The Passion of Perpetua and Felicity",
+   "work_slug": "perpetua-felicitas",
+   "section": "1",
+   "url": "https://viapatrum.org/works/perpetua-felicitas/1/",
+   "from_cite": true
+  },
+  {
+   "id": "JL03-001",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Those who hand over their maidservants for money, sinking to impurity, are the ones the prophet describes.",
+   "comment": "And again, are there not some who are overcome by shameful gain, who hand over to anyone who wants them their own maidservants, or such males as they may happen to have bought, and so the wretches collect money? Of them the prophet says: ‘And they sold the girls for wine, and drank’ (Joel 3:3). For it is true that some sink to such depths of wickedness and impurity that they impiously dare at times to levy tribute even on shameful things like these.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "11",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/11/",
+   "from_cite": true
+  },
+  {
+   "id": "JL03-002",
+   "chapter": 3,
+   "verse_start": 4,
+   "verse_end": 6,
+   "capsule": "The foreign cities plundered the Jews and dedicated sacred vessels to their false gods, and God promises to repay them.",
+   "comment": "In another way, too, they themselves joined in plundering the nation of the Jews: on the one hand by falling on them when they were worn down and seizing those who were left; on the other by dedicating sacred vessels to their falsely named gods, and by driving those who had come under the yoke of slavery to them away, by force as it were, from the worship the law prescribes. And so God said through one of the holy prophets: “And what are you to me, Tyre and Sidon and all Galilee of the foreigners? Are you paying me back, or do you bear a grudge against me? Swiftly and speedily I will return your payment on your own heads, because you took my silver and my gold, and carried my choice and fine things into your temples, and you sold the sons of Judah and the sons of Israel to the sons of the Greeks, to drive them out of their own borders” (Joel 3:4–6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Tyre and Sidon did to the Jews and why God answers them.",
+   "author": "Cyril of Alexandria",
+   "work": "Commentary on Isaiah",
+   "work_slug": "cyril-isaiah",
+   "section": "book2-tomos5-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-isaiah/book2-tomos5-rem-mid/",
+   "from_cite": true
+  }
+ ]
+}

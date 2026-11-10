@@ -1,0 +1,453 @@
+{
+ "book": "2 Timothy",
+ "title": "The Fathers on 2 Timothy",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 24,
+ "selected_count": 8,
+ "comments": [
+  {
+   "id": "2TI01-001",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Paul, who came from the Jews, shows that he serves the same God as his forefathers.",
+   "comment": "Yet those who prove from the same writings that one and the same God is God of Jews and of Gentiles (Romans 3:29–30) are not to be accused on that account. So Paul too, who came over to Christianity from the Jews, says plainly: “I thank my God, whom I serve, as my forefathers did, with a pure conscience” (2 Timothy 1:3).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "61",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/61/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI01-002",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 12,
+   "capsule": "Life, darkened by death, is enlightened again by the Savior's resurrection, and the deposit is the healthy teaching.",
+   "comment": "Having enlightened life. The being is being enlightened. Because indeed life was given before the hearing of Adam, but by death it was darkened, again by the resurrection of the savior the life is being enlightened. Regarding 2 Timothy 1:12, what deposit? The healthy teaching taught him.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Timothy",
+   "work_slug": "severianus-fragmenta-2tim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2tim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2TI02-001",
+   "chapter": 2,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The faithful men are bishops and elders Timothy would ordain.",
+   "comment": "\"Faithful men\" (2 Timothy 2:2) — that is, bishops and elders, whom Timothy was about to ordain. \"Through many witnesses\" means through the Law and the Prophets.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Short, clear identification of the faithful men and the witnesses.",
+   "author": "Photius of Constantinople",
+   "work": "Fragment on 2 Timothy",
+   "work_slug": "photius-fragmentum-2tim",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/photius-fragmentum-2tim/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "2TI02-002",
+   "chapter": 2,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Paul showed that one must live from the good news.",
+   "comment": "Regarding 2 Timothy 2:4, because he said beforehand, it is not necessary for the one serving in battle to entangle himself in the affairs of life; moreover, it was being sought how, without entangling himself, one possesses the things toward the need. He showed that it is necessary to live from the good news.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Timothy",
+   "work_slug": "severianus-fragmenta-2tim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2tim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2TI02-011",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "A decent life without the knowledge of God wins no crown, since no one is crowned unless he competes by the rules.",
+   "comment": "…For just as faith without works is dead (James 2:26), so the reverse is also true: good order of life and decency in deeds are surely dead when the knowledge of God is absent and the word of godliness has not made its home in our souls. … We shall find not a few who have suffered something of this kind. At times they lead a dignified and pure life, but because they have not come to know the One who is God by nature and in truth, they fix the eye of their mind, as it were, on earthly things alone. Such a person, too, is unclean; for ‘no one is crowned unless he competes according to the rules,’ as it is written (2 Timothy 2:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/20/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI02-004",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "The understanding Paul asks God to give is practical virtue, not only knowledge.",
+   "comment": "…Writing about ministry and the service toward the saints, he [Paul] says: \"May God grant you understanding in all things\" (2 Timothy 2:7); for he does not say understanding as the knowledge of things combined and uncombined, but the practical virtue; for who is so wise as he who has perfected his own character and regulated it? … The one teaching wisely about prudence possesses the virtue of prudence himself, which also those being instructed with him possess; for this reason the right word teaches as a teacher, and especially the one of ethics, so that those hearing might become such as the speaker is.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u48-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u48-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI02-005",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Superfluous and contentious debates breed needless fights and strike the minds of the hearers.",
+   "comment": "…the divine Paul himself also made for us a most excellent of lessons, saying: ‘Not to word-fight upon nothing useful, or upon overturn of the hearers.’ (2 Timothy 2:14) For superfluous dialogues, and the contentious altogether about inquiries, generate fights not necessary, and strike the mind of the hearers; for some, from lightness, sometimes receive readily and ignorantly what is not upright and said, and are eager to praise it…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 8",
+   "work_slug": "cyril-adoration-8",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-8/7/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI02-007",
+   "chapter": 2,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Gangrene spreads easily through bodies.",
+   "comment": "Regarding 2 Timothy 2:17, gangrene is a disease, spreading and easily running through the bodies.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the image Paul uses for false talk.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Timothy",
+   "work_slug": "severianus-fragmenta-2tim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2tim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2TI02-008",
+   "chapter": 2,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Hymenaeus and Alexander slandered the mystery of the resurrection.",
+   "comment": "…Hymenaeus and Alexander also slandered the mystery of the resurrection, “saying that the resurrection has already taken place” (2 Timothy 2:18). But those men made shipwreck of their faith (1 Timothy 1:19–20), as have all who wish to follow their empty notions.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u06-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI02-012",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "When Scripture says the Lord knows, it means he honors, and only the good is known by him.",
+   "comment": "…“Because the Lord knows the way of the righteous, and the way of the ungodly will perish” (Psalm 1:6). “Knows” instead of “honors,” according to what was said by God to Moses: “I know you above all, and you have found favor with me” (Exodus 33:17). It is to be noted universally that only the good is known by the Lord; for the way of the righteous is good; but also “the Lord knew those who are his” (2 Timothy 2:19)…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on the Psalms",
+   "work_slug": "origen-psalms-fragments-greek",
+   "section": "3",
+   "url": "https://viapatrum.org/works/origen-psalms-fragments-greek/3/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI02-009",
+   "chapter": 2,
+   "verse_start": 20,
+   "verse_end": 21,
+   "capsule": "Even the worst contribute something to the universe, while the virtuous are the most useful and are set in the finest place.",
+   "comment": "Paul too, the apostle of Jesus, teaches us that even the very worst will contribute something to the use of the universe, but will through their own fault be in a wretched state, and that the most virtuous will also be most useful to the universe and, through their own doing, will be set in the finest place. He says: “In a great house there are not only vessels of gold and silver, but also of wood and of clay, some for honour and some for dishonour. If anyone, then, cleanses himself, he will be a vessel for honour, sanctified and useful to the master, prepared for every good work” (2 Timothy 2:20–21).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the great house and its vessels in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book IV",
+   "work_slug": "origen-contra-celsum-book-4",
+   "section": "70",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-4/70/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI02-013",
+   "chapter": 2,
+   "verse_start": 20,
+   "verse_end": 21,
+   "capsule": "Gold vessels are those who purify the mind, silver those who minister the word, and no nature is fixed, since anyone may purify himself.",
+   "comment": "…in the world there are diligent men; and these are 'vessels' of 'gold and silver' (2 Timothy 2:20).\n\nAnd whoever 'purifies' their own mind and works through fire, they are 'gold vessels', having diligence concerning the intelligible things, being moved toward the supra-cosmic things. But 'silver' vessels are those ministering the word. …\n\n… And there are other 'vessels of wood and clay'. And of these, 'some for honor, others for dishonor' there are (2 Timothy 2:20). The 'gold and silver' are precious, but the 'wood and clay' are 'dishonorable'. The 'wood' is able to be consumed by fire, and the 'clay' is such as it is 'to be crushed'.\n\nBut natures are not introduced here as unchangeable, as the myth of the heterodox desires. For it follows that 'if anyone purifies himself from the dishonor of them', it is evident that 'as a vessel', 'he will be a vessel for honor to the master for every good work'; so that by himself someone becomes a dishonorable and ignoble 'vessel'.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u13-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u13-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI02-010",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Cleansing oneself is the work of free will, so each vessel is prepared for wrath or glory by its own pursuits.",
+   "comment": "See the task of free will: “If anyone cleanses himself” from association with cheap vessels, a name that denotes vices, “he will be a vessel sanctified for honor, useful to the Lord, prepared for every good work” (2 Timothy 2:21). These vessels [of wrath and of mercy, Romans 9:22–23] are therefore prepared for either wrath or glory through their own pursuits. God makes his power known in both cases, either by displaying severity toward the impious or by bestowing blessing on the faithful. It is therefore clear that this statement of the outstanding teacher [Paul] has given no aid to Manichaean views [that evil is fixed in our nature]; on the contrary, it has consistently armed us.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "1.135",
+   "url": "https://viapatrum.org/works/julian-to-florus/1.135/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI03-001",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Paul spoke these words not as an apostle but as a prophet.",
+   "comment": "…I declare, and I speak with confidence, that Paul was not only an apostle but also a prophet. He was such when he said: “People will be lovers of themselves, lovers of money, boastful, arrogant, blasphemers, disobedient to parents” (2 Timothy 3:2); for he said these things not as an apostle but as a prophet.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "origen-1-corinthians-fragments",
+   "section": "u05-open",
+   "url": "https://viapatrum.org/works/origen-1-corinthians-fragments/u05-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI03-002",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "Those who enter houses prey on weak women, who are easy to deceive, as the serpent deceived the first woman.",
+   "comment": "…Concerning these things also the apostle Paul clearly touched upon, saying: 'These are they who enter into houses and capture little women piled up with sins, led by various incantations, always learning and never able to come to the knowledge of the truth' (2 Timothy 3:6). He showed through the word 'those entering' the den of the serpent that deceived the first woman (Gen 3:1); and he also revealed the harmful and cowardly nature of their ways and of their preaching, the weakness and the shallowness of those being deceived; for he does not remember a man, except only little women easy for deception…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Amphilochius of Iconium",
+   "work": "Against the Heretics",
+   "work_slug": "amphilochius-contra-haereticos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/amphilochius-contra-haereticos/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI03-003",
+   "chapter": 3,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The godly will be persecuted, so pray to be persecuted only for righteousness.",
+   "comment": "…And it is necessary that 'those who want to live in a godly way in Christ Jesus be persecuted in every case by opposing powers, through the vessels they find.' (2 Timothy 3:12) Therefore those who are persecuted must not be surprised, but must do everything, only praying that they be persecuted unjustly and not justly — not for injustice, not for sin, not for greed. And if someone is ever persecuted for righteousness, let him also hear, 'Blessed are you when they reproach you and persecute you and say every evil word against you, lying, for my sake (Matthew 5:11). Rejoice and be glad, because your reward is great in the heavens; for so they persecuted the prophets who were before you.' (Matthew 5:10–12)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why the godly are persecuted and how to bear it.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "1.13",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/1.13/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI03-004",
+   "chapter": 3,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "The complete man of God is equipped for every good work.",
+   "comment": "…The divine Paul also told us that the man of God must be complete (2 Timothy 3:17); and by ‘complete’ he means one who is equipped for every good work and well fitted to achieve virtue fully.…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what \"complete\" means in the verse.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/15/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI04-001",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Paul does not testify as one condemning a laggard.",
+   "comment": "Regarding 2 Timothy 4:1, he does not testify as one condemning a laggard, but so that in the testimony he might guard for himself through all his own purpose. I testify before God and the Lord Jesus Christ, the one about to judge the living and the dead, according to his appearance and his kingdom.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Timothy",
+   "work_slug": "severianus-fragmenta-2tim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2tim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2TI04-007",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The kingdom Paul names belongs to the Son together with the Father and the Spirit, now and in the age to come.",
+   "comment": "…And to Timothy in the second epistle [Paul writes]: 'I testify before God and Christ Jesus, who is to judge the living and the dead, and by his appearance and his kingdom: preach the word' (2 Tim 4:1). It is clear, then, that he speaks of a kingdom which he [the Son] possesses indivisibly and without succession with the Father and the Holy Spirit, now and into the coming age.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u09-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u09-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI04-002",
+   "chapter": 4,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "We will to reach the end of the way, while God directs and guides us.",
+   "comment": "…It is not within our power to run the way, but to will to arrive at the end of the way, so as to say: 'I have finished the race' (2 Timothy 4:7). From Him is the directing, from Him is the guiding. 'Lead me in your truth' (Psalm 25:5). The one being led by God does not make himself straight. But he intends to be made straight and has given himself to the One who is able to lead him into perfection.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u39-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u39-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI04-003",
+   "chapter": 4,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "The devout run until the race ends, and say the crown is laid up for them.",
+   "comment": "…But those who are devout according to the teaching of Jesus also run, until, having reached the end of the race, they say in a strong and truthful frame of mind: “I have fought the good fight, I have finished the race, I have kept the faith; from now on there is laid up for me the crown of righteousness” (2 Timothy 4:7–8). And each of us runs in this way, “not aimlessly”, and boxes against wickedness in this way, “not as one beating the air” (1 Corinthians 9:26)…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "52",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/52/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI04-004",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "One is crowned from his own works; the just pursuer receives the crown of righteousness.",
+   "comment": "One is crowned from his own works and practices. Without doubt, he who has justly pursued the just shall receive the crown of righteousness (2 Tim 4:8), and he who has rightly glorified the Trinity shall bring the incorruptible crown of glory (1 Pet 5:4).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the crown of righteousness simply.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u11-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u11-open/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI04-005",
+   "chapter": 4,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Paul cursed Alexander not as a private enemy but as an enemy of Christ and the gospel.",
+   "comment": "Someone may bring forward blessed Paul cursing Alexander the smith to persuade us not to love enemies. To him we say: Paul curses not as against a private enemy, but as against an enemy of Christ and the gospel, teaching that one must always war against such people (Matthew 5:44) (2 Timothy 4:14).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul spoke against Alexander.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "59",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/59/",
+   "from_cite": true
+  },
+  {
+   "id": "2TI04-006",
+   "chapter": 4,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Paul understands the lion as Nero.",
+   "comment": "…[The 'lion' of Job 4:10 is a figure of the arrogant man,] Which the blessed Paul also understands concerning Nero, saying: 'In my first defense no one stood by me, but the Lord stood by me and rescued me from the mouth of a lion' (2 Timothy 4:17).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Identifies the lion in Paul's words.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u07-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u07-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

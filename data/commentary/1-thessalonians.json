@@ -1,0 +1,497 @@
+{
+ "book": "1 Thessalonians",
+ "title": "The Fathers on 1 Thessalonians",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 26,
+ "selected_count": 16,
+ "comments": [
+  {
+   "id": "1TH01-004",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Paul writes to comfort Gentile believers who were persecuted and bereaved, and his opening thanksgiving attests their piety.",
+   "comment": "The Christians in Thessalonica, the ones from the Gentiles who believed, endured many persecutions under those still being Greeks, and Paul comforts them for these things. He also mentions the resurrection of the dead, comforting them in the losses of their relatives. The thanksgiving to God placed before the opening is a testimony to the piety of the Thessalonians. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the setting and purpose of the letter in plain terms.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH01-001",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Faith, love and hope each help the struggler.",
+   "comment": "Faith rouses a person toward the work of the good, love makes them remain in their labors, and hope makes those who struggle endure with patience. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Plainly sets out what faith, love and hope each do.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH01-002",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 5,
+   "capsule": "Paul's gospel came with displayed powers and wonders, not with words alone.",
+   "comment": "Paul says, “You know, brothers beloved by God, that the gospel did not come to you in word only, but also in power” (1 Thessalonians 1:4-5). He means: we did not only preach the word to you, but we also displayed powers and wonder-workings to you.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly what \"in power\" means.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH01-003",
+   "chapter": 1,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Their faith had spread far and wide.",
+   "comment": "On “your faith has gone forth” (1 Thessalonians 1:8), he means: it is spread abroad and noised abroad.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH02-001",
+   "chapter": 2,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "Paul kept his boldness after the trouble at Philippi, and the gospel he preached to comfort the afflicted is true, not mistaken.",
+   "comment": "Paul says, “The evils at Philippi did not take away our boldness toward Christ, but when we came to you we preached the word without fear” (1 Thessalonians 2:2).\n\nThe gospel through which we comfort the afflicted—that is, the resurrection and the reward-giving in it—is preached not according to error but according to truth (1 Thessalonians 2:3).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Paul's boldness and the truth of his message in plain terms.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH02-002",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The apostles could have burdened them by demanding honors.",
+   "comment": "On “we were able to be burdensome” (1 Thessalonians 2:6), he means: burdensome and oppressive, because of demanding the honors with which the apostles of Christ ought to be honored.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH02-003",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "To share one's soul with someone is to prepare him according to the quality one possesses.",
+   "comment": "… 'we were pleased to share with you not only the gospel, but also our own souls' (1 Thess 2:8). Someone shares his own soul with someone when he prepares him according to the quality he possesses. Not only, he says, do we have the readiness to share the gospel with you, but also our own souls. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what sharing one's own soul means.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u15-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u15-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH03-001",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Paul chose a word that would not accuse the Thessalonians of weakness.",
+   "comment": "On “so that no one would be disturbed” (1 Thessalonians 3:3): he did not say “so that no one would waver,” lest he seem to be accusing them, but he chose a word that cannot serve as a reproof of their weakness when he said “so that no one would be disturbed.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul worded the verse as he did.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH03-002",
+   "chapter": 3,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Paul did not count himself alive unless his brothers were being saved.",
+   "comment": "… “Now we live, if you stand firm in the Lord” (1 Thessalonians 3:8). See how precious the good reputation of his brothers was to him—he did not even consider himself alive if they were not being saved.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "John Chrysostom",
+   "work": "On Saint Romanus",
+   "work_slug": "chrysostom-in-romanum",
+   "section": "1",
+   "url": "https://viapatrum.org/works/chrysostom-in-romanum/1/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH04-001",
+   "chapter": 4,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Belief in Christ's resurrection makes grief over the dead empty, since they will return.",
+   "comment": "The apostle's warning must be placed first. He says: Do not be saddened by anyone's sleep, as the pagans are, who lack hope (1 Thessalonians 4:13). And rightly so.\n\nFor since we believe in Christ's resurrection, we believe in our own as well, because it was for us that he both died and rose again. Therefore, since the resurrection of the dead is certain, grief over death is empty, and impatience in grief is empty too. Why should you grieve if you do not believe the person has perished? Why should you bear impatiently the temporary removal of someone you believe will return? It is a departure that you think is death. The one who goes ahead is not to be mourned, but certainly to be longed for. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows why Paul tells believers not to grieve like those without hope.",
+   "author": "Tertullian",
+   "work": "On Patience",
+   "work_slug": "tertullian-on-patience",
+   "section": "9",
+   "url": "https://viapatrum.org/works/tertullian-on-patience/9/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH04-002",
+   "chapter": 4,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Scripture calls death sleep because the one who dies will be raised, as a sleeper is.",
+   "comment": "… And death is also called sleep according to the Scripture because of the expectation of the resurrection; for just as he who sleeps, if he suffers no harm to nature, might be raised, so the dying man will be raised. Thus indeed it is said, 'all shall sleep,' and, 'I do not want you to be ignorant concerning those who have slept' (1 Thessalonians 4:13), that is, concerning mortals. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul calls the dead \"those who have slept\".",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u48-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u48-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH04-003",
+   "chapter": 4,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "\"We who are left\" stands for the few who will remain, and some are overtaken alive at Christ's coming.",
+   "comment": "On “we who are left” (1 Thessalonians 4:15): he did not mean that he himself was going to be left behind, he says, but “we” stands for “so few and easily counted will be left that they will not precede those holy ones who have fallen asleep into the meeting with Christ.” For even if all are raised, not all will meet Christ, but only the righteous. It is clear, then, that at the coming of Christ some are overtaken while still living.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who Paul means by \"we who are left\".",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH04-004",
+   "chapter": 4,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "If Christ came now, those left today would not go ahead of those who have fallen asleep.",
+   "comment": "Or what he says is something like this: if it happened that Christ came now, we who are left today would certainly not precede those who have fallen asleep at the coming of Christ. One must punctuate after “we who are left”: “into the day of the Lord we will certainly not precede those who have fallen asleep.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH04-007",
+   "chapter": 4,
+   "verse_start": 15,
+   "verse_end": 17,
+   "capsule": "Paul speaks as one alive, setting himself and those like him apart from the dead in Christ who rise first.",
+   "comment": "… He [Celsus] ought to have considered what the speaker [Paul] had in mind when, as one by no means dead, he set himself and those like him apart from the dead, and after “and the dead will be raised incorruptible” said: “and we shall be changed.”\n\nTo confirm that the apostle had some such meaning when he wrote the words I have quoted from the First Letter to the Corinthians, I will quote also the words from the First Letter to the Thessalonians, where Paul, as one living and awake and other than those who have fallen asleep, says this: “For this we say to you by the word of the Lord, that we who are living, who are left until the coming of the Lord, will by no means go before those who have fallen asleep; for the Lord himself will come down from heaven with a word of command, with the voice of an archangel and with the trumpet of God” (1 Thessalonians 4:15–16). Then again, right after this, knowing that the dead in Christ are others than himself and those like him, he goes on to say: “The dead in Christ will rise first; then we who are living, who are left, will be caught up together with them in the clouds to meet the Lord in the air” (1 Thessalonians 4:16–17).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "17",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/17/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH04-005",
+   "chapter": 4,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Some are overtaken alive at Christ's coming, and the Gospel and Paul both hint that it will come at night.",
+   "comment": "And this is what the Savior says: “For as in the days of Noah they were marrying and being given in marriage, and suddenly the flood came and took them all, so will be the coming of the Son of Man” (Matthew 24:38-39). So, he says, some are overtaken while still living. “With a shout of command and with the voice of an archangel, and the dead in Christ will rise” (1 Thessalonians 4:16). The Lord himself says this in the Gospel: “At midnight,” he says, “there was a cry: The bridegroom is coming” (Matthew 25:6). And that some are overtaken while living—those who are taken up together with those who have fallen asleep—the Lord makes clear in the Gospel when he says: “Two will be in one bed; one will be taken and one will be left. Two will be grinding; one will be taken and one will be left” (Luke 17:34-35). Both the Lord and Paul hint that the coming will be at night. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH04-006",
+   "chapter": 4,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "\"We who are alive, who are left\" means the righteous around Paul, some of whom are overtaken alive.",
+   "comment": "“Then we who are alive, who are left” (1 Thessalonians 4:17): that is, the righteous around us. He wants it to be understood that some are still living and are overtaken at the coming of Christ, and this is made clear from “we who are left at the coming of the Lord.”",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH05-001",
+   "chapter": 5,
+   "verse_start": 2,
+   "verse_end": 4,
+   "capsule": "The day of the Lord is likened to a thief because it comes unnoticed and unexpectedly.",
+   "comment": "… He calls his coming the day of the Lord. He has likened it to a thief because it comes unnoticed and unexpectedly. And he says it is at night because the day, when it arrives, exposes the evil deeds done at night. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the thief and the night in plain terms.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH05-007",
+   "chapter": 5,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Scripture calls the unbelieving darkness, and believing the Word, who is light, makes us sons of light.",
+   "comment": "… For the Divine Scripture, regarding those who are companions of ignorance and live with unbelief, justly names them darkness, because they do not receive the torch of truth, so that they might be sons of light. Therefore the divine apostle Paul says: We are not sons of night, nor of darkness, but sons of light and of day (1 Thessalonians 5:5). … we are truly sons of light through the evangelical Word spoken through the mouth of God: I am the light of the world, says Christ; he who follows me will not walk in darkness, but will have the light of life (John 8:12). For that Word is light, which, if believed by us, prepares one to become a son of light. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in plain terms why believers are called sons of light.",
+   "author": "Severianus of Gabala",
+   "work": "On the Man Born Blind",
+   "work_slug": "severianus-de-caeco-nato",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-nato/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH05-002",
+   "chapter": 5,
+   "verse_start": 9,
+   "verse_end": 10,
+   "capsule": "Awake means alive and asleep means dead, and those armed as Paul said will live and reign with Christ.",
+   "comment": "… “Because God has not destined us for wrath, but for obtaining salvation through our Lord Jesus Christ” (1 Thessalonians 5:9). For this reason Paul says: “Christ died for us, so that whether we are awake—that is, alive—or asleep—that is, whether we die, for here he takes sleeping in a different sense than above—we may live together with him” (1 Thessalonians 5:10). For those who have acquired the weapons that were spoken of will live together with Christ and reign together with Christ. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what \"awake or asleep\" means in verse 10.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH05-008",
+   "chapter": 5,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Hope of what is stored up lets the godly rejoice even in affliction, as an athlete bears blows for the crown.",
+   "comment": "… Even if those joined to God pass their days in flame, like the three children in Babylon, even if they are shut up with lions, even if they are swallowed by a sea monster, we ought to call them blessed, and they themselves ought to pass their days in joy—not pained by present things, but gladdened by the hope of what is stored up for us hereafter.\n\nFor I think that the noble athlete, once he has stripped for the contest of godliness, must bear the blows of his opponents bravely through hope of the glory that comes from the crowns. In athletic contests, those who have trained their bodies in the wrestling schools are not cowed by the pain of a blow, but they go straight at their opponents out of desire for the proclamation, despising the immediate pains. In the same way, for the earnest man, even if something harsh is present, it will not overshadow his joy. For affliction produces endurance, and endurance produces character, and character produces hope, and hope does not put us to shame (Romans 5:3-5). Therefore elsewhere we have been commanded by the same Apostle to endure in affliction and rejoice in hope. So it is hope that prepares joy to dwell in the soul of the earnest man. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how it is possible to rejoice always, with a picture any reader can follow.",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Thanksgiving",
+   "work_slug": "basil-homilia-gratiarum-actione",
+   "section": "3",
+   "url": "https://viapatrum.org/works/basil-homilia-gratiarum-actione/3/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH05-010",
+   "chapter": 5,
+   "verse_start": 16,
+   "verse_end": 18,
+   "capsule": "Paul's three commands were spoken to the Thessalonians but lay down law for all of human life.",
+   "comment": "You have heard the words of the Apostle, in which he speaks to the Thessalonians, laying down law for all of life. His teaching was addressed to those who happened to be with him at the time, but the benefit from it extends to the whole of human life. “Rejoice always,” he says; “pray without ceasing; in everything give thanks” (1 Thessalonians 5:16-18). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Thanksgiving",
+   "work_slug": "basil-homilia-gratiarum-actione",
+   "section": "1",
+   "url": "https://viapatrum.org/works/basil-homilia-gratiarum-actione/1/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH05-009",
+   "chapter": 5,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Thanks are owed for unpleasant things as well as pleasant, as Job gave them and as a patient accepts the physician's knife.",
+   "comment": "… He who blesses God at all times is the one who is giving thanks in all things falling upon him. And the apostle also writes: 'giving thanks in all things' (1 Thessalonians 5:18). He who gives thanks to God does not do so only for pleasant things; he does this, but also for unpleasant things. Job, indeed, does not bless God only in prosperity and the salvation of children and the other surrounding wealth, but also when all was taken from him at once. …\n\n… when the physician treats him [the sick man], even if he divides him with a sword so that he may be saved, he accepts it, not only when the physician gives him pleasant helps. He looks not to the pleasant or the unpleasant of the things coming, but to the profitable and the effective. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what giving thanks in everything asks, with Job and the physician as examples.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u27-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u27-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH05-003",
+   "chapter": 5,
+   "verse_start": 19,
+   "verse_end": 21,
+   "capsule": "The spirit is quenched by an unworthy life, and prophecies must be tested.",
+   "comment": "… The spirit is quenched whenever the way of life is unworthy of the faith. “Do not despise prophecies. Test everything” (1 Thessalonians 5:19-21). Do not, Paul says, lie in wait for the hidden things of the spirit, nor accept every report without testing it either. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what quenching the spirit and testing prophecy mean.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "1TH05-004",
+   "chapter": 5,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "The sound mind tests everything like a money-changer, keeping what is good and rejecting what is counterfeit.",
+   "comment": "… The human mind, I would say, if it is sound in what belongs to it, sets out vigorously to discern the quality of things and will make an exact test of each; and like an excellent money-changer, testing everything, holding fast to what is good and keeping away from every form of evil, as it is written (1 Thessalonians 5:21–22), it will win high approval. For it rejects as counterfeit whatever among our deeds is in any way shameful and falsely stamped, and it would readily accept what is profitable and better. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "The money-changer picture makes the command to test everything easy to follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 12",
+   "work_slug": "cyril-adoration-12",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-12/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH05-005",
+   "chapter": 5,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "To test all things, one must know the evil in order to flee it and the good in order to choose it.",
+   "comment": "… See: the one knowing the good immediately knows also the evil. But to know in this way does not mean to use, but only to know. For if a commandment is given so that 'we may turn away from evil and do good,' it is necessary also to know the evil, so that we may turn away from it and choose the good. Concerning such things the apostle writes, saying: 'Test all things, hold fast to the good; abstain from every form of evil' (1 Thess 5:21). You see, how the one testing all things knows the good, and that it is to be chosen and kept, and the evil, that it is to be fled from; it is proper to be estranged from it.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u09-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u09-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1TH05-006",
+   "chapter": 5,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The three parts are placed only on believers, and \"blamelessly\" means we preserve them by godly conduct.",
+   "comment": "… Nowhere has Paul placed the three—spirit, soul, body—upon an unbeliever, but only upon those who believe. Their soul and body belong to nature, but the spirit belongs to God's kindness—that is, the gift of those who believe. And he did not say \"may they be kept blameless,\" so that you would not think he is praying for the gifts, but \"blamelessly\"—that is, with us conducting ourselves blamelessly and preserving them through godliness.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Thessalonians",
+   "work_slug": "severianus-fragmenta-1thess",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1thess/u01-rem-close/",
+   "from_cite": false
+  }
+ ]
+}

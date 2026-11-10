@@ -1,0 +1,437 @@
+{
+ "book": "Daniel",
+ "title": "The Fathers on Daniel",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 23,
+ "selected_count": 10,
+ "comments": [
+  {
+   "id": "DN01-001",
+   "chapter": 1,
+   "verse_start": 17,
+   "verse_end": 20,
+   "capsule": "Daniel and his companions, schooled in outside learning, were found ten times better than all the wise men there.",
+   "comment": "For he [Celsus] did not see that from the very beginning our wise men were schooled in outside learning as well: Moses “in all the wisdom of the Egyptians” (Acts 7:22), and Daniel, Hananiah, Azariah and Mishael in all the learning of the Assyrians, so that they were found ten times better than all the wise men there (Daniel 1:4, 17, 20).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "14",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/14/",
+   "from_cite": true
+  },
+  {
+   "id": "DN02-001",
+   "chapter": 2,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "The God who sets up kings and removes them, not the son of Cronus, appoints kings and knows what he is doing.",
+   "comment": "Let there be, then, “one lord, one king” (Homer, Iliad 2.204–205); not one “to whom the son of crooked-counselling Cronus gave it,” but one to whom He gave it who “sets up kings and removes them” (Daniel 2:21) and at the right time raises up “the man who is useful” over the earth (Sirach 10:4). And it is not the son of Cronus who appoints kings, the son who drove from his rule the father who, as the myths of the Greeks say, was cast down into Tartarus; nor is it so even if someone allegorises what is said in those passages. Rather, God who governs all things knows what He is doing in the matter of the appointment of kings.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "68",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/68/",
+   "from_cite": true
+  },
+  {
+   "id": "DN02-002",
+   "chapter": 2,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "The Lord is the light who reveals the deep and hidden things, showing the wise the true face of the law, which leads like a tutor to Christ.",
+   "comment": "The Lord Himself is the light, and He “reveals the deep and hidden things” (Daniel 2:22); He shows the true and glorified face of the law to the wise, who are sanctified in the Spirit and made radiant through faith in Christ. For the law leads us like a tutor to Christ (Galatians 3:24); and one appointed to lead others to someone else does not have his pupils stop at himself, but rather carries them on to something better and greater than himself. That is why the inspired Paul says that he counted the things in the law as rubbish “because of the surpassing worth of the knowledge of Christ” (Philippians 3:8).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DN02-003",
+   "chapter": 2,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "God's incomprehensible hiddenness is called darkness, and he uncovers the deeps out of the darkness and makes them clear.",
+   "comment": "Previously and truly, the God who dwells is unapproachable light, the Son who is true light, and the Holy Spirit who is the possession of knowledge and wisdom, just as of this light it is said, 'And the light is with Him' (Daniel 2:22). Secondly, by reason of the incomprehensibility concerning His essence, it is said that His hiddenness is called darkness. For that which is indistinct and incomprehensible because of the depth of the matter is called darkness. In this way, it is said that He perceives a parable and a dark speech; and God, uncovering the deeps out of darkness, makes manifest and clear those things hidden under indistinctness and difficulty of comprehension.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u08-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DN03-001",
+   "chapter": 3,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The king doubts that those who profess piety dare oppose his commands, but the trial would show that men of God endure both threats and fire.",
+   "comment": "And that wicked-minded and impious tyrant, as it was foretold concerning those disobeying the command of iniquity, being pressed by the diabolical blindness, and having, so to speak, taken upon it the face of the ruler of evil, calls to them, he says: 'If truly, Shadrach, Meshach, and Abednego, you do not worship my gods, and do not worship the golden image which I have set up?' (Daniel 3:14). He deemed piety to be a mere form, and asks if they truly dare to oppose royal commands, they who profess piety; but it was about to be taught through this trial, that the men of God do not only endure the threats of the tyrant, but also the intensity of the fire.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Three Young Men",
+   "work_slug": "severianus-de-tribus-pueris",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-de-tribus-pueris/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DN03-004",
+   "chapter": 3,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "The king widens his threat and then boasts like another Pharaoh, and God in his patience endures the insolence of clay.",
+   "comment": "It is impossible for those worshiping demons not to fall either into destruction or to fall away from the truth. But if not, he says, you will be thrown at that very hour into the furnace of fire that burns. Certainly, if it is a furnace, it is evident that it is fire; and if it is fire, it is evident that it is burning. But he enlarges and widens the threat, in order to bend the mind of impiety …\n\n… but see what he adds after this: 'And who is the god who will deliver you from my hands?' Another is this Pharaoh; for he also says to Moses: 'Who is the Lord, that I should obey him?' (Exodus 5:2). … Oh, the much pride of men! Oh, the great patience of God! A man speaks, and God endures; the clay speaks, and the Maker endures; a fleshly tongue speaks, and the Master of the incorporeal angels is moved to compassion.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the king's threat and boast and sets them beside Pharaoh's.",
+   "author": "Severianus of Gabala",
+   "work": "On the Three Young Men",
+   "work_slug": "severianus-de-tribus-pueris",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-de-tribus-pueris/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "DN03-002",
+   "chapter": 3,
+   "verse_start": 15,
+   "verse_end": 18,
+   "capsule": "The three, unstartled by the blasphemy, answered the tyrant's unbelief with faith and refused to bow to the image.",
+   "comment": "A man, surrounded by flesh, dared to say: 'Who is this god who will deliver you from my hands?' (Daniel 3:15). But these three blessed children, having heard this, were not startled by the blasphemy; for they themselves were companions of God's patience. Instead, taking up the voice of faith against the words of unbelief, they answered back to the tyrant, undoing lawlessness by law, and overcoming the threat of injustice with the freedom of righteousness, saying: 'Know this, O king: we do not worship your gods, nor do we bow down to the golden image which you have set up.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Three Young Men",
+   "work_slug": "severianus-de-tribus-pueris",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-de-tribus-pueris/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DN03-003",
+   "chapter": 3,
+   "verse_start": 17,
+   "verse_end": 18,
+   "capsule": "The three young men say that God can free them but that whether he will is uncertain, so they hold a certain resolve to reject idols and endure punishment.",
+   "comment": "When a most arrogant king tried to compel them to worship a statue, they resisted with complete faithfulness, undeterred by the panting furnace lit to devour the devout. They answered as faith and steadfastness required: ‘Our God is able, O king, to free us from this furnace. But even if he does not free us, know that we do not worship your gods or adore the statue you have set up’ (Daniel 3:17–18). How reverently they mingled desire with judgment, without letting desire weaken the weight of their resolve! They neither cast faith’s courage down through despair nor suspend it on craving. They include their wishes, but do not abandon the proper order; they comfort endurance, but subordinate gentler outcomes to just ones. ‘It is certain,’ they say, ‘that our God can free us; whether he wills to do so is uncertain. Therefore, amid the uncertain outcome of events, the devout hold to a certain resolution: to reject idols and endure punishments. Let God consider what good our deliverance may bring to others. Meanwhile,’ they say, ‘let undefeated faith preserve our true happiness.’",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the three mean by saying God can deliver them but even if not they will not worship.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "5.4",
+   "url": "https://viapatrum.org/works/julian-to-florus/5.4/",
+   "from_cite": true
+  },
+  {
+   "id": "DN03-005",
+   "chapter": 3,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The furnace was heated sevenfold so that the saints, like the most tested silver, might be purified sevenfold.",
+   "comment": "When the tyrant heard this promise of faith, he was all the more inflamed with rage and commanded the furnace to be heated sevenfold; for it was necessary that the most tested silver be purified sevenfold. For the words of the Lord are pure words, like silver refined in the earth and purified sevenfold; therefore the furnace was heated sevenfold, so that the saints might be purified sevenfold.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the furnace was heated seven times.",
+   "author": "Severianus of Gabala",
+   "work": "On the Three Young Men",
+   "work_slug": "severianus-de-tribus-pueris",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-de-tribus-pueris/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DN03-006",
+   "chapter": 3,
+   "verse_start": 24,
+   "verse_end": 27,
+   "capsule": "God blunted the heat of the fire, keeping his promise through Isaiah, so that the flame did not touch the saints' bodies.",
+   "comment": "For these three holy children, having entered with faith, trod upon the flame … For He who does all things and transforms, blunted the heat of the fire and cut short its caustic energy, as that hymn of praise confirms it: 'The voice of the Lord cutting through the flame of fire.' The fire had indeed settled within, becoming calm, but the holy children were dancing, enjoying alone that promise which God, through the prophet Isaiah, promises to every soul filled with piety and faith: 'Even if you walk through fire,' He says, 'I am with you, and the flame shall not burn you.'\n\nAnd one could see the promise advancing through works. For the fire did not touch the members of the saints; it did not scorch the eyes, which were looking rightly toward piety and recognizing the Creator through the order of those things seen; it did not wrong the ears that had fulfilled the divine law; it did not approach the mouth, nor touch the lips …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Three Young Men",
+   "work_slug": "severianus-de-tribus-pueris",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-de-tribus-pueris/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "DN03-007",
+   "chapter": 3,
+   "verse_start": 27,
+   "verse_end": 27,
+   "capsule": "The fire spared their hair for their piety and their garments for their modesty.",
+   "comment": "For even the fire did not dare to consume the hairs, because they were more properly covered by piety as a diadem; and thus it also spared the garment because of the modesty of the saints.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Three Young Men",
+   "work_slug": "severianus-de-tribus-pueris",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-de-tribus-pueris/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DN04-001",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Daniel, who bore the name of the king's god, was kept out of the furnace so that the wonder would not be put down to that name.",
+   "comment": "For since the king's dream was interpreted, and he [Daniel] was worshiped by this king as a god, and he was called Belteshazzar by the name of the god among the Persians (Daniel 4:8), so that it might not be thought—because of the name of Belteshazzar being attached to him—that the fire's energy had ceased, God manages that Daniel not be brought into the middle, so that the wonder might be pure in its piety.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Daniel, named Belteshazzar after the king's god, was not in the furnace with the three.",
+   "author": "Severianus of Gabala",
+   "work": "On the Three Young Men",
+   "work_slug": "severianus-de-tribus-pueris",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-de-tribus-pueris/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "DN06-001",
+   "chapter": 6,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Daniel prayed three times a day with his windows open toward Jerusalem, so that in thought he could be in the temple though captive in a foreign land.",
+   "comment": "And the most wise Daniel himself also, though he held to holy pursuits, and was a captive together with the others, outwitted the thing of necessity. And in what manner, I will say: for he prayed three times of the day (Daniel 6:10). But the windows in the upper rooms were looking and opened toward Jerusalem for him. For it is written so. For he thought his own prayer would then barely be acceptable with God, if, from a foreign and hated land, he could, if not perhaps in flesh, at least in thoughts be separated, and with the eyes of the mind, looking toward the land most dear to God, and as if having slipped into the temple itself, he might bring the petition for whatever he would choose.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Daniel prayed toward Jerusalem.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "39",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/39/",
+   "from_cite": true
+  },
+  {
+   "id": "DN07-001",
+   "chapter": 7,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "'Ancient of Days' does not mean grown old through many days but existing before all time.",
+   "comment": "But see that you are not deceived hearing in Daniel the 'Ancient of Days' (Dan 7:9). For there, it does not signify having become old through a multitude of days, but that he is ancient and old of days; as it is possible in the Psalms to say, 'He who exists from before the ages' (Psalm 55:19). Thus also, 'Before the days,' that is, before all time, he is ancient and old.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what 'Ancient of Days' means.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u49-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u49-open/",
+   "from_cite": true
+  },
+  {
+   "id": "DN07-002",
+   "chapter": 7,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "When the Son came in our form, the Father opened the books and released the guilty from judgment.",
+   "comment": "The books were opened (Daniel 7:10). For when the only Son came in the form that is ours, then the Father opened the books. He released those guilty of sins from judgment, and he permitted those who act courageously to be enrolled and numbered among the choirs above and to be held in remembrance.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says what the opening of the books means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Daniel",
+   "work_slug": "cyril-fragmenta-danielem",
+   "section": "frag-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-danielem/frag-open/",
+   "from_cite": false
+  },
+  {
+   "id": "DN07-003",
+   "chapter": 7,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Daniel saw not one book but many, so the enrollment matches each one's measure.",
+   "comment": "And perhaps the enrollment is in other books as well; for the inspired Daniel saw not one book, but, as he himself says: ‘The court sat, and books were opened’ (Daniel 7:10). So the enrollment matches each one’s measure.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/2/",
+   "from_cite": true
+  },
+  {
+   "id": "DN07-004",
+   "chapter": 7,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The thousand thousands who stand beside God work with those who pray sincerely, appearing to them to benefit and save them.",
+   "comment": "And if we long also for a multitude of beings whose kindness we wish to win, we learn “that a thousand thousands stood beside him, and ten thousand times ten thousand ministered to him” (Daniel 7:10). These, seeing as their kindred and friends those who imitate their own piety toward God, work together for the salvation of those who call upon God and pray sincerely. They appear to them, and they think they must listen to them and, as if at a single signal, come among them to benefit and save those who pray to God, to whom they themselves also pray. For “they are all ministering spirits, sent out to serve for the sake of those who are to inherit salvation” (Hebrews 1:14).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the multitude serving God does for believers.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "34",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/34/",
+   "from_cite": true
+  },
+  {
+   "id": "DN07-005",
+   "chapter": 7,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "The divine is not in a place, so 'reached as far as' is not spatial.",
+   "comment": "And what does it mean, “He reached as far as the Ancient of Days” (Daniel 7:13)? Is it in a spatial sense? Then how is this not foolish? Because the divine is not in a place, for it fills all things.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Daniel",
+   "work_slug": "cyril-fragmenta-danielem",
+   "section": "frag-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-danielem/frag-open/",
+   "from_cite": false
+  },
+  {
+   "id": "DN07-006",
+   "chapter": 7,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "The Son reached into the glory of the Father, as shown by the honor and kingdom given to him.",
+   "comment": "What then does it mean, “He reached as far as the Ancient of Days” (Daniel 7:13)? Clearly the Son reached into the glory of the Father. And from where is it possible to see this? He himself said again next: “To him was given the honor and the kingdom” (Daniel 7:14). For he heard the Father saying, “Sit at my right hand until I make your enemies a footstool for your feet” (Psalm 110:1; LXX 109:1).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that the Son of Man reached the Ancient of Days.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Daniel",
+   "work_slug": "cyril-fragmenta-danielem",
+   "section": "frag-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-danielem/frag-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "DN08-001",
+   "chapter": 8,
+   "verse_start": 23,
+   "verse_end": 25,
+   "capsule": "Daniel's prophecy of the kingdoms to come reaches to the end of the world, and its shameless king is the Antichrist.",
+   "comment": "But the prophecy about him [the Antichrist] is given in Daniel, and it can move one who reads with good sense and fairness to marvel at the words as truly inspired and prophetic. In them are told the things concerning the kingdoms to come, beginning from the times of Daniel and reaching to the destruction of the world. Anyone who wishes may read it; but see whether what concerns the Antichrist is not as follows: “And at the last of their kingdom, when their sins are coming to the full, there shall arise a king shameless of face and understanding riddles. And his strength shall be mighty, and he shall destroy marvellously, and shall prosper and act, and shall destroy the mighty and a holy people. And the yoke of his collar shall prosper; deceit is in his hand, and he shall be magnified in his heart, and by deceit he shall destroy many, and he shall stand up for the destruction of many, and shall crush them like eggs in the hand” (Daniel 8:23–25).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "46",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/46/",
+   "from_cite": true
+  },
+  {
+   "id": "DN09-002",
+   "chapter": 9,
+   "verse_start": 27,
+   "verse_end": 27,
+   "capsule": "What Paul says of the one who takes his seat in God's temple, Daniel says of the abomination upon the temple.",
+   "comment": "And what is said in Paul, in the passage of his that I set out, which says, “so that he takes his seat in the temple of God, proclaiming himself to be God” (2 Thessalonians 2:4), is also said in Daniel in this way: “And upon the temple an abomination of desolations, and until the end of the time an end shall be given upon the desolation” (Daniel 9:27).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "46",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/46/",
+   "from_cite": true
+  },
+  {
+   "id": "DN12-001",
+   "chapter": 12,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "Daniel prophesies the resurrection, with those who understand shining like the stars, and Paul takes his point from it.",
+   "comment": "And in Daniel also such things are prophesied about the resurrection: “And at that time your people shall be saved, everyone who is written in the book; and many of those who sleep in the dust of the earth shall awake, some to everlasting life, and some to reproach and everlasting shame; and those who understand shall shine like the brightness of the firmament, and from among the many righteous, like the stars, for ever and beyond” (Daniel 12:1–3). From this Paul too takes his point when, speaking of the resurrection, he says: “There are also heavenly bodies and earthly bodies; but the glory of the heavenly is one, and the glory of the earthly is another. There is one glory of the sun, and another glory of the moon, and another glory of the stars; for star differs from star in glory. So also is the resurrection of the dead” (1 Corinthians 15:40–42).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "10",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/10/",
+   "from_cite": true
+  },
+  {
+   "id": "DN12-002",
+   "chapter": 12,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "At the end of the age the dead will rise, but the glory of shining like the firmament is for those chosen and conformed to the Son's image.",
+   "comment": "And indeed our Lord Jesus Himself plainly affirmed that at the time of the end of this age the dead will come back to life (Matthew 13:40–43; Daniel 12:2), but “those who understand will shine like the brightness of the firmament” (Daniel 12:3). Yet the grace of such honor and glory will not be set before all without distinction. It would rather befit those who have been chosen out from the rest, who have also been conformed to the image of His Son (Romans 8:29).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who will shine like the brightness of the firmament.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "cyril-fragmenta-1-corinthios",
+   "section": "u08-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-1-corinthios/u08-open/",
+   "from_cite": true
+  }
+ ]
+}

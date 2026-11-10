@@ -1,0 +1,85 @@
+{
+ "book": "Jude",
+ "title": "The Fathers on Jude",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 4,
+ "selected_count": 0,
+ "comments": [
+  {
+   "id": "JUD01-002",
+   "chapter": 1,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "God brought the people out of Egypt through the Son, his strong hand, as Jude says of Jesus.",
+   "comment": "… For the Word—through whom all things were made and in whom all things exist, which the Father made—is His hand creating the all. But also in a strong hand, having brought the people out of Egypt, God accomplished this in the same Son, as one of the apostles writes: 'Jesus, having saved a people once out of Egypt, twice destroyed those who did not believe' (Jude 1:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u52-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u52-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "JUD01-003",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The angels were able to remain beside God in heaven, yet fell from it through their own wickedness.",
+   "comment": "… 'Angels,' he says, 'who did not keep their own beginning, but having left their own habitation, fell into everlasting chains' (Jude 1:6). This reproach of the angels is not praiseworthy, because having been granted to dwell in heaven and being able to stand and remain beside God always praising, they became in wickedness so as to fall from heaven. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u52-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u52-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JUD01-004",
+   "chapter": 1,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "God did not make the demons what they are; they embraced their own destruction.",
+   "comment": "… For God did not make a devil or demons as such they are, but they themselves embraced their own destruction; for the Scripture says of the angels who did not keep their own rank (Jude 1:6).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u05-rem-early",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u05-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "JUD01-001",
+   "chapter": 1,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Admiring faces for advantage means flattering the powerful and denying justice, which a true judge does not do.",
+   "comment": "The best judge of matters is the examiner; he does not look toward the faces of those being judged. For if those being judged were rich or rulers or others possessing superior value, he does not look toward their face, but toward the actions, which he judges. This also is carried forward in the Catholic Epistle: “admiring faces for the sake of advantage” (Jude 1:16), and it is clear that the flatterers are justifying the ungodly because of gifts and removing the justice of the just.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Job",
+   "work_slug": "didymus-commentarii-job",
+   "section": "u20-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-job/u20-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

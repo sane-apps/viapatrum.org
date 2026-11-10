@@ -1,0 +1,31 @@
+{
+ "book": "Obadiah",
+ "title": "The Fathers on Obadiah",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 1,
+ "selected_count": 0,
+ "comments": [
+  {
+   "id": "OB01-001",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Said of the devil: the many crevices of the rocks are the divisions of false teachers, which harm, unlike the one blessed crevice of the rock.",
+   "comment": "And it is said concerning the devil: 'The pride of your heart has carried you away to dwell in the crevices of the rocks' (Obadiah 1:3)—not 'in the crevice of the rock', for that is blessed—but because they pay attention to antichrists and false teachers and false prophets, the 'crevice' of those is not for seeing but rather for harming. 'Fissures of rocks' indeed are called 'crevices' in other places; and the discord of the teaching is a 'schism' and a multitude of 'crevices'.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u14-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u14-rem-early/",
+   "from_cite": true
+  }
+ ]
+}

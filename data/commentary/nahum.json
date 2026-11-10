@@ -1,0 +1,86 @@
+{
+ "book": "Nahum",
+ "title": "The Fathers on Nahum",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 4,
+ "selected_count": 1,
+ "comments": [
+  {
+   "id": "NAH01-001",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "God often punishes sinners only here, since the Lord will not avenge twice for the same.",
+   "comment": "For though God often either exacts accounts from sinners only here and not also there — according to “the Lord will not avenge twice for the same” (Nahum 1:9) — or forbears in the present age without also granting forgiveness from there, of such people he says the punishment is indelible and without pardon both here and there.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "135",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/135/",
+   "from_cite": true
+  },
+  {
+   "id": "NAH02-001",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Christ breathing the Spirit on his disciples after the resurrection fulfils Nahum's words about one who breathes into the face.",
+   "comment": "…Christ, after the resurrection, breathing into the faces of the disciples, was reclaiming and sanctifying what was corrupted by human disobedience, and said: 'Receive Holy Spirit' (John 20:22); fulfilling the prophecy of Nahum, which relates the thing happening as if already done, through the unbridled desire for the immeasurable beauty of the matter: 'The one who breathes into your face has ascended from the earth, and is lifting you out of tribulation' (Nahum 2:1).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how the verse about breathing into the face was read as the giving of the Spirit.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u17-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u17-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "NAH03-001",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Nineveh's leaders are fettered so that they cannot freely do forbidden things, for being hindered from iniquity is good.",
+   "comment": "…it is said to Nineveh: 'And upon your glorious things they shall cast a lot, and all your magnates shall be bound in fetters' (Nahum 3:10), so that they might not do the forbidden things with easy release and hands not hindered; for it is for good to be hindered by 'hands entwined with iniquities.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u27-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u27-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "NAH03-002",
+   "chapter": 3,
+   "verse_start": 11,
+   "verse_end": 12,
+   "capsule": "Nineveh thought much of her defenses, but the prophet says her strongholds will fall like figs into the mouth of one eating.",
+   "comment": "Regarding Nineveh, being taken to mean 'becoming beautified,' she was thinking greatly of those things she had constructed in defenses and unassailable garrisons, which the destroyer of such things says: 'And you will be drunken and will be seen as a wanton, and you will seek for yourself a standing against enemies. Your strongholds will have the purposes of figs, and if they are shaken, they will fall into the mouth of one eating.' (Nahum 3:11-12).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u21-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u21-open/",
+   "from_cite": true
+  }
+ ]
+}

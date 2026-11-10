@@ -1,0 +1,958 @@
+{
+ "book": "1 Timothy",
+ "title": "The Fathers on 1 Timothy",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 51,
+ "selected_count": 27,
+ "comments": [
+  {
+   "id": "1TI01-001",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The title Savior fits properly only the one who is God by nature, so Paul's use of it for Christ shows that Christ is God.",
+   "comment": "From Timothy: “Paul, an apostle of Jesus Christ by the command of God our Savior, to Timothy, my true child in faith.” (1 Timothy 1:1) The name Savior fits no one else properly and truly — except the one who is God by nature. So the mystagogue has named him that even here. Yet our Lord Jesus Christ is also Savior: he is named Jesus, and the blessed angel made the force of the name clear: “You shall call his name Jesus, for he will save his people from their sins.” (Matthew 1:21) So Christ is God, if he is Savior of all people, as the inspired Paul says.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul's word Savior matters, in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "41",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/41/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI01-002",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "If Christ saves sinners, is long-suffering toward their faults and gives eternal life through faith, he must be God.",
+   "comment": "From Timothy. “Faithful is the word and worthy of all acceptance, that Christ Jesus came into the world to save sinners, of whom I am first; but for this reason I was shown mercy, that in me first Christ Jesus might show the whole long-suffering, as a pattern for those about to believe upon him unto eternal life.” (1 Timothy 1:15–16) If Christ saves sinners, and is long-suffering toward their faults, receiving their repentance, and if all our faith is upon him, and through the faith toward him we have gained eternal life, how would he not be God? For it would reasonably befit God alone both to be able to save the world, and to be long-suffering toward those who sin, and to make alive through the faith toward him.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "95",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/95/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI01-003",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "Paul's words about Christ's patience concern a bad life, not human nature, since patience means waiting for a person's conversion.",
+   "comment": "The speaker had already experienced this kindness himself: “This is a human saying: Christ Jesus came into this world to save sinners, of whom I am the first. But I received mercy for this reason: that in me Christ Jesus might show all his patience, as an example for those who would believe in him for eternal life” (1 Timothy 1:15–16). To make you understand that this concerns a bad life, not human nature, and to prevent you from thinking that the reason for Christ's coming meant he also declared infants sinners, Paul says: “In me he showed all his patience.” God's patience is what he speaks of to the Romans: “Do you not know that God's kindness leads you to repentance? But according to your hardness and unrepentant heart you store up wrath for yourself on the day of wrath” (Romans 2:4–5). God's patience is therefore exercised when he waits a considerable time for a person's conversion. But patience cannot be displayed toward infants. If there were sins of nature which the Savior attributed to them, he would falsely be called patient but most certainly be called cruel. Yet God cannot be anything but kind and just, as is my God Jesus Christ. Paul, long a persecutor, and the others in whose person he speaks experienced his patience: they were waited for a long time, even though they were freed late. The apostle therefore condemns human lives, not human nature.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by Christ's patience toward sinners.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "1.67",
+   "url": "https://viapatrum.org/works/julian-to-florus/1.67/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI01-004",
+   "chapter": 1,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Satan first made Hymenaeus and Alexander blasphemers and then punished them for it.",
+   "comment": "As enemy, Satan forces us to sin; as avenger, he punishes those who are handed over. So Hymenaeus and Alexander, having himself made them blasphemers, he again disciplined, because of the blasphemies against God (1 Timothy 1:20).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on the Psalms",
+   "work_slug": "origen-psalms-fragments-greek",
+   "section": "36",
+   "url": "https://viapatrum.org/works/origen-psalms-fragments-greek/36/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI01-005",
+   "chapter": 1,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Being handed over to Satan for sins is like Jerusalem being handed over to Nebuchadnezzar.",
+   "comment": "If we sin, we also are about to become captives. For 'to hand such a one over to Satan' (1 Corinthians 5:5) differs in nothing from handing those from Jerusalem over to Nebuchadnezzar. As they were handed over to him because of sins, so we are handed over to Satan because of sins — Satan who is a Nebuchadnezzar. And 'those I handed over to Satan, that they may be taught not to blaspheme,' (1 Timothy 1:20) the apostle says of other sinners.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "1.3",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/1.3/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-001",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Paul's four names mean different things: petition asks for what we lack, prayer asks greater things with praise, intercession asks boldly, and thanksgiving confesses benefits received.",
+   "comment": "Since with the apostle four names seem said for four things — 'I exhort then first of all that petitions, prayers, intercessions, thanksgivings be made for all men' (1 Timothy 2:1) — it is very useful for us to expound each separately as we can, what each signifies. Petition, then, we take to be some asking of a needy one for things he lacks. Prayer, a nobler asking with doxology for greater things. Intercession, a bolder asking to God from one having more frankness. Thanksgiving, confession with prayer for benefits received — or for the magnitude of benefits, appearing great to the benefited.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the four words of the verse in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "14",
+   "url": "https://viapatrum.org/works/origen-on-prayer/14/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-011",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 2,
+   "capsule": "Christians obey Paul by helping rulers with their prayers, and the more pious a person is, the more this helps, more than soldiers do.",
+   "comment": "[Celsus urges Christians to fight for the emperor.] To this too we must say that we do help emperors when there is need, with a help that is, so to speak, divine, and taking up “the whole armour of God” (Ephesians 6:13). And we do this in obedience to the apostle’s voice, which says: “I urge you, then, first to make petitions, prayers, intercessions and thanksgivings for all people, for kings and all who are in high positions” (1 Timothy 2:1–2). And the more pious a person is, the more effective he is in helping those who reign: more effective than the soldiers who go out to the battle lines and kill as many of the enemy as they can.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how prayer for kings is a real help to them.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "73",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/73/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-002",
+   "chapter": 2,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Though God wants all to be saved, salvation happens only when his will and ours come together, for no one is good or saved against his will.",
+   "comment": "And behold the doctrine: how 'God wants all men to be saved and to come to the knowledge of the truth' (1 Tim 2:4)? If no one opposes His will, how is it that some are lagging behind, despite His wanting all to be saved and to come to the knowledge of the truth—so that I may not say, the majority? If He wants it, and if we also want it, and a convergence of the two wills occurs, salvation happens; for no one is good against his will, no one who does not want is saved…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what God's wanting all to be saved means.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on the Psalms",
+   "work_slug": "didymus-commentarii-psalmos",
+   "section": "u29-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u29-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-003",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Christ is mediator of God and human beings because he has flesh from humanity and invisible essence from the Father.",
+   "comment": "And in order that he might show that Christ is “mediator of God and human beings” (1 Timothy 2:5), possessing both realities—flesh from humanity and invisible essence from the Father—he speaks as God the divine things that are fitting for God, and as man the same one speaks the human things that are fitting for a human. In both he holds authority naturally and substantially, without confusion and without division, both divinely and humanly.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Epiphanius of Salamis",
+   "work": "On Faith",
+   "work_slug": "epiphanius-de-fide",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/epiphanius-de-fide/u01-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-004",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Because Christ is the Mediator through whom alone the Father is approached, every prayer reaches fulfillment through him.",
+   "comment": "For since He is the Mediator (1 Timothy 2:5), through whom alone the Father can be approached, and in whom is every spiritual gift, surely through Him every prayer will also reach its fulfillment; and this is the Amen. … For it is our custom to close every prayer in the name of Christ.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "cyril-fragmenta-2-corinthios",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-005",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "Scripture says both that the Father delivered up his Son and that Christ gave himself, and \"his own Son\" shows the Son is of the Father's essence.",
+   "comment": "And see how the God-inspired Scripture carries this out according to the similar pattern: on the one hand, Christ is said to be handed over by the Father, and on the other hand, it is written that he himself handed himself over. And Paul, writing to the Romans, says concerning the Father: 'who did not spare his own Son, but delivered him up for us all' (Rom 8:32). But to Timothy he writes this: 'one God and mediator of God and men, the man Christ Jesus, who gave himself as a ransom for all' (1 Tim 2:5). And behold for me the precision and accuracy of the Scripture. For there he said Christ is the proper Son of God and of the Father, and said: 'who did not spare his own Son,' showing that the one existing of the same essence is proper and not an alien.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI02-006",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "Christ's death saves the whole world, and he alone sufficed to be a ransom for all because he is also above all.",
+   "comment": "“For there is one God, and one mediator of God and humans, the human Christ Jesus, who gave himself as a ransom for all.” (1 Timothy 2:5–6) Christ’s death is confessedly saving for the whole world. Yet if he is not God, how would he himself alone suffice to become a ransom for all? But he alone sufficed, dying for all, because he is also above all. So he is God, then — having destroyed the world’s death by the death of his own flesh.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why one man could be a ransom for all.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "72",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/72/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-012",
+   "chapter": 2,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "Where Paul speaks of the man Christ Jesus, he says not that he was delivered but that he gave himself.",
+   "comment": "And where the economic plan [God's plan of salvation in the flesh] preceded, it said: Jesus Christ the man. It approached the God-befitting manner and did not say 'the one delivered,' but 'the one who gave himself as a ransom for all.' And he says writing to the Galatians in this way: 'But now I live in the flesh, I live by the faith of the Son of God who loved me and gave himself for me' (Galatians 2:20).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI02-007",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Every place becomes fit for prayer by one who prays well, yet he should choose a reverent spot and examine whether anything wrong was done there.",
+   "comment": "And concerning place, know that every place becomes fit for praying by one who prays well: 'For in every place they bring incense to me,' (Malachi 1:11) 'says the Lord'; and 'I will, then, that men pray in every place.' (1 Timothy 2:8) But there is an ordinance, for performing prayers at leisure undistracted — each choosing, of his own house if possible, the more reverend spot — to pray thus, so to speak, in a place: overseeing, besides the general examination of it, whether in this place where he prays anything was ever done amiss and against right reason.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul's \"in every place\" means for praying.",
+   "author": "Origen of Alexandria",
+   "work": "On Prayer",
+   "work_slug": "origen-on-prayer",
+   "section": "31",
+   "url": "https://viapatrum.org/works/origen-on-prayer/31/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-008",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Since the whole world is God's temple, the Christian prays in every place and rises above the world.",
+   "comment": "But the Christian, even the unlearned one, is convinced that every place in the world is a part of the whole, since the whole world is God’s temple. Praying “in every place” (1 Timothy 2:8), and closing the eyes of sense and raising those of the soul, he rises above the whole world.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VII",
+   "work_slug": "origen-contra-celsum-book-7",
+   "section": "44",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/44/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-013",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Anger must not be present in those who pray, as even the old custom of putting the dogs out at the time of prayer hints.",
+   "comment": "And besides these things I marvel, as though the saints were forgotten — David crying, ‘Cease from anger, and forsake thumos [wrath]’ (Ps 37:8); the Preacher commanding, ‘Remove thumos from your heart, and put away evil from your flesh’ (Eccl 11:10); the Apostle commanding, ‘to lift up holy hands to the Lord in every place, without anger and doubting’ (1 Tim 2:8). And why do we not learn from the mystic and ancient custom of men, which drives the dogs out of the houses at the time of prayer, hinting at this: that thumos must not be present with those who pray?",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Evagrius Ponticus",
+   "work": "On Evil Thoughts",
+   "work_slug": "evagrius-de-malignis-cogitationibus",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/evagrius-de-malignis-cogitationibus/u01-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-009",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Paul forbids braided hair, gold, pearls and costly clothing because they can bring a plot against us and are lost at death, while virtue stays safe with us.",
+   "comment": "But if you think this world is something great, tell me: what good will those pearls do you on that day? And why speak of that day, when it is possible to prove all this from the present as well? When those who were thought to have insulted the king were dragged into court and were in danger of losing everything, then their mothers and wives laid aside their necklaces and gold and pearls and all their adornment and their golden garments, took plain and cheap clothing, sprinkled themselves with ashes, and rolled before the doors of the courtroom, and in this way they bent the judges. Now if in the courts here gold and pearls and embroidered clothing would be a plot and a betrayal, while gentleness and meekness and ashes and tears and cheap garments draw the judge to one's side, how much more will this be so at that incorruptible and fearful verdict. For what argument will you have to make, tell me, what defense, when the Master accuses you about these pearls and brings into the midst the poor who were destroyed by famine? This is why Paul said: not with braided hair, or gold, or pearls, or expensive clothing (1 Timothy 2:9). For from these a plot could arise; and even if we enjoyed them continually, we will certainly be separated from them by death. But from virtue comes all security, and no change or fall; it makes us safer here, and it crosses over with us there. Do you want to acquire pearls, and never to lay aside this wealth? Strip off all your adornment and deposit it into the hands of Christ through the poor.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul warns against costly adornment.",
+   "author": "John Chrysostom",
+   "work": "Baptismal Instructions",
+   "work_slug": "chrysostom-catecheses-illuminandos",
+   "section": "16",
+   "url": "https://viapatrum.org/works/chrysostom-catecheses-illuminandos/16/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI02-010",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 15,
+   "capsule": "Paul's words about childbearing are not a reproach but an exhortation to mothers to rear their children in piety, so that they are saved from the transgression.",
+   "comment": "Because this woman has come into transgression, she will be saved through the children she will have and the descendants who will accomplish piety. What then, if she does not have children, or if she does have them but they are not males? But if indeed some are born, they are born of the common race; through which it is said universally that the transgression belongs to the female race. For if one is the cause for all of evil, how is it not fitting that the many should undo through the generation of the pious the evil that was brought upon them by one woman, since Christ has given the beginning of the undoing through himself? How then will the woman be saved? From the transgression and the disobedience; so that she must also have her own accomplishments, so that when the disobedience is forgiven, she is not condemned for other sins.\n\nIt is not simply said to her: she will be saved through childbearing, but so that the mothers, having the children, may rear them in all piety and righteousness so as to be saved. … And this he says, as we have said, so that the mothers may rear the children in piety. From the reproach of the transgression she will be saved through childbearing. For this the apostle says, not to reproach, but to exhort toward piety and toward rearing the children in faith.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains a hard verse in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI03-001",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Oversight is a good work, not an honor, and calls for fitness more than desire.",
+   "comment": "He did not say of honor, he did not say of wielding a spear, but of a good work, such as a good means, a good labor for the protection of the churches. If anyone aspires to the oversight, he desires a good work. He conceded not that of desire, but that of fitness, so that someone might equip himself for the fitness of oversight; …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul calls the oversight a good work.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI03-002",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "In his sketch of the bishop Paul prefers the man married once, blameless, sober, self-controlled and orderly, and above all apt to teach.",
+   "comment": "And it is clear that when Paul, in his sketch of those called bishops, describes what kind of man the bishop must be, he also made him a teacher, saying that he must be able “also to refute those who contradict” (Titus 1:9), so that by the wisdom in him he may stop the mouths of empty talkers and deceivers (Titus 1:10–11). And just as for the office of bishop he prefers a man married once to one married twice, the “blameless” to the blameworthy, the “sober” to one who is not, the “self-controlled” to one who lacks self-control, and the “orderly” to one who is even slightly disorderly (1 Timothy 3:2), so he wants the man who is to be appointed bishop to be, above all, apt to teach (1 Timothy 3:2) and able “to refute those who contradict” (Titus 1:9).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul asks of a bishop, plainly.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "48",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/48/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI03-003",
+   "chapter": 3,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "The house of God is not a place or a building but the sum of those who complete it.",
+   "comment": "One must not understand 'house' in these matters as a place or a building, but the sum of those completing it, as the Apostle says: 'But Christ, as a son, upon his house, of which we are the house' (Hebrews 3:6). And to Timothy he writes: 'In case I delay, so that you may know how you ought to behave in the house of God, which is the church of the living God, a pillar and foundation of the truth' (1 Timothy 3:15).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by the house of God.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u06-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u06-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI03-004",
+   "chapter": 3,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Christ was manifested in the flesh yet subjected the flesh to the spirit, and was manifested to angels through the flesh since God's divinity is invisible to angels and men alike.",
+   "comment": "[On “justified in the Spirit”:] For if indeed he was in the flesh, but was not conducting himself according to the flesh, but subjected the flesh to the spirit, opening for us the way of righteousness. Or this also he says, that while the Spirit was making signs, Christ was being justified according to our confession and faith. He was manifested to angels. Who? The crucified Christ. But he does not say this, that the angels do not see his divinity; for the Savior himself said that the angels see the face of my Father who is in the heavens. But when he says, 'No one has ever seen God,' it is evident that he has not seen Him as He is, but as far as it is possible to see, both for angel and man. Therefore God is invisible to both angels and men, but he was manifested through the economy. … He who came for the salvation of men was manifested to angels; through this he showed that the divinity of the Only-Begotten is invisible to angels, but he was manifested to them through the flesh. He was taken up in glory; upon the clouds, he says.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI03-005",
+   "chapter": 3,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "The mystery of piety is great because the Word, being God, became human without ceasing to be what he was.",
+   "comment": "“And confessedly great is the mystery of piety: who was manifested in flesh, justified in spirit, seen by angels, preached among nations, believed in the world, taken up in glory.” (1 Timothy 3:16) If the Word, being God, is said to have become human — and certainly not releasing being God, but remaining always in what he was — then the mystery of piety is confessedly great. But if Christ is thought a common human, joined to God only by equality of dignity or authority — for some of the more ignorant have thought such things — how has he been manifested in flesh? And yet how is it not clear to all that every human both is in flesh and would not be seen by anyone otherwise? And in what way does it say he has also been seen by the holy angels? Or do angels not also see us ourselves? What then is strange in Christ…? And how was he also preached to nations…? For if the disciples proclaimed him as one of those like us, a human simply… we have been held by human-worship and have worshiped the creation… But if, having been raised from the dead, he was saying to the holy apostles: “Going, make disciples of all the nations, baptizing them into the name of the Father and of the Son and of the Holy Spirit,” (Matthew 28:19) and then we have believed in him… then Christ is not a human honored by a bare conjunction toward God the Word, but rather by a coming-together toward the human according to an economic union — one Son and Lord. For then the mystery of piety is great; for the Word, being God, has been manifested in flesh.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul calls the mystery great.",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Empresses Pulcheria and Eudocia",
+   "work_slug": "cyril-recta-fide-pulcheria",
+   "section": "30",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-pulcheria/30/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI03-006",
+   "chapter": 3,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "That Jesus was taken up in glory shows God's plan to commend the teacher to those who saw it.",
+   "comment": "But if my Jesus is said to have been taken up “in glory” (1 Timothy 3:16), I see the plan in it: the God who brought this about was commending the teacher to those who saw it, so that, as men contending not for human teachings but for divine teaching, they might devote themselves with all their strength to the God over all and do everything to please him, as those who would receive at the divine judgment seat, according to their deserts, whatever they had done in this life, whether good or evil (compare 2 Corinthians 5:10).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "31",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/31/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI03-007",
+   "chapter": 3,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Paul gives Christ's flesh its reality and his spirit its holiness, and then foretells that this truth will be opposed.",
+   "comment": "… the Teacher of the Nations assigns reality to Christ’s flesh and holiness to his spirit: “Great,” he says, “is the mystery of devotion, which was manifested in flesh, justified in spirit, appeared to angels, was preached among the nations, was believed in this world, and was taken up in glory” (1 Timothy 3:16). Just as he commended this to be believed as true, so he announced that its opponents would arise at the end of the age.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.55",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.55/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI04-001",
+   "chapter": 4,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Paul was a prophet as well as an apostle, so the Spirit who expressly speaks of later times is the Spirit in him.",
+   "comment": "I declare, and I speak with confidence, that Paul was not only an apostle but also a prophet. He was such when he said: “People will be lovers of themselves, lovers of money, boastful, arrogant, blasphemers, disobedient to parents” (2 Timothy 3:2); for he said these things not as an apostle but as a prophet. And he says: “The Spirit expressly says that in later times some will depart from the faith” (1 Timothy 4:1). Which Spirit? As if he were saying: the Spirit in me.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains whose voice \"the Spirit expressly says\" is.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on 1 Corinthians",
+   "work_slug": "origen-1-corinthians-fragments",
+   "section": "u05-open",
+   "url": "https://viapatrum.org/works/origen-1-corinthians-fragments/u05-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI04-002",
+   "chapter": 4,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Paul's warning about abstinence from foods is aimed not at Christian fasting but at people who said the animals God created were polluted by the devil.",
+   "comment": "When he says that abstinence from foods will be taught, an intelligent reader understands that he is not accusing Christian restraint or announcing the possible appearance of people who prescribe the ordeal of fasting (compare 1 Timothy 4:1–4). Rather, he shows that people would arise who said that all the animals God created for mortals’ food were polluted by the devil’s evil because they were born through desire and sexual union. He then expressed the consequence: foods must be renounced if their reproduction is believed devilish.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains whom Paul's warning about abstaining from foods is aimed at.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "4.56",
+   "url": "https://viapatrum.org/works/julian-to-florus/4.56/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI04-003",
+   "chapter": 4,
+   "verse_start": 4,
+   "verse_end": 5,
+   "capsule": "Eating and drinking to the glory of God is no feast with demons, for every creature of God is good and is sanctified by the word of God and prayer.",
+   "comment": "So when we eat and drink and breathe “to the glory of God” (1 Corinthians 10:31), and do all things according to the word, we feast with none of the demons, but with the divine angels. For “every creature of God is good, and nothing is to be rejected if it is received with thanksgiving; for it is sanctified by the word of God and prayer” (1 Timothy 4:4–5). But it would not be “good,” nor could it be sanctified, if, as Celsus thinks, these things had been assigned to demons.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why every creature of God is good, in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VIII",
+   "work_slug": "origen-contra-celsum-book-8",
+   "section": "32",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/32/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI04-004",
+   "chapter": 4,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "As far as its nature goes, no food is common or profane, since it is made holy by the word of God and prayer.",
+   "comment": "No doubt he remembers that Christ said, “It is not what goes into the mouth that defiles a man” (Matthew 15:11), and that all food passes into the stomach and is sent out into the drain (Matthew 15:17); this is its nature and its use. So, as far as their own nature goes, nothing that serves as food is common or profane, “for it is made holy by the word of God and prayer” (1 Timothy 4:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u10-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u10-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI04-005",
+   "chapter": 4,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The promise of present life means not common animal life but eternal life, knowing the true God.",
+   "comment": "The apostle has written that piety is useful for everything, possessing the promise of life, both of the present and of the one to come (1 Tim 4:8). Regarding the present, he does not speak of the common life of living creatures, but of that which exists in life, concerning which the Savior says, 'He who believes in me has eternal life, and this is eternal life, that he may know you, the only true God, and whom you have sent, Jesus Christ' (John 17:3).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the promise of the present life means.",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u28-open",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u28-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI04-006",
+   "chapter": 4,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "The word calls the simple and also those far above them, since Christ is Savior of all men.",
+   "comment": "The word does call these [the uneducated and the lowly], to make them better; but it also calls those who are far above them, since Christ is “the Saviour of all men, and especially of believers” (1 Timothy 4:10), whether intelligent or simpler, and he is “the propitiation” “with the Father” “for our sins, and not for ours only but also for the whole world” (1 John 2:1–2).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "49",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/49/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI04-007",
+   "chapter": 4,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Paul urges holding to the virtues so that progress may show.",
+   "comment": "Persist in them, as the apostle says: 'Hold these things, be in these, so that your progress may become evident' (1 Tim 4:15), in the virtues. Meditating on these, it is necessary to remain in them, not to depart further from them.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u07-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u07-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI05-001",
+   "chapter": 5,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Widows who are truly widows are those deprived of all human help who have raised children rightly, hosted guests, served God's servants and fed the poor.",
+   "comment": "Regarding such a way of life, Paul, the one speaking in Christ, says to Timothy, marking him: 'Honor widows who are truly widows' (1 Timothy 5:3), meaning those who are deprived of all human things, having deeds bringing praise, having raised children as is necessary, generously hosting guests, having surpassed in service to God's servants, having nourished the poor, and adorning themselves with works of virtue toward all those nearby.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who is truly a widow.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u16-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u16-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI05-002",
+   "chapter": 5,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Welcoming strangers and washing the saints' feet are required of a widow only according to her ability.",
+   "comment": "If she has welcomed strangers, making it evident that she is also called faithful even in marriage. If she has washed the feet of the saints, this he added to show that they must also be received with care. And it is evident that he says all these things as requiring them according to ability; for there is no one more perplexed than she who casts in the two obols.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI05-003",
+   "chapter": 5,
+   "verse_start": 11,
+   "verse_end": 14,
+   "capsule": "Paul reproaches widows who break their first faith by marrying, yet advises younger widows who have no children to marry.",
+   "comment": "Hannah came in the order of a harvest; she did not make a forgetting of her husband, she did not reject the first faith, she did not bring an insolent man to her bed, she did not yield the wood of monogamy to another. She kept in her bed the memory, as if the dead man were living; she did not defile the bridal shroud, nor did the reproach of Paul touch her, saying: 'But when they have become faithless to Christ, they wish to marry, having a judgment that they rejected the first faith' (1 Timothy 5:11-12). Truly, such a judgment is worthy of her who buried the memory with her God-wedded husband, and especially in the presence of a child or children, for this reason also the law of marriage is fruit-bearing; if, however, there is no child present to the new widow, it is likely that she is driven toward a second marriage by the passion of motherly love.\n\nSince even this, the blessed Paul has cried out advising: 'I wish younger widows to marry' (1 Timothy 5:14); then, showing what the symbol of the progress of a second marriage is, he added saying: 'I wish younger widows to marry, to bear children, to rule households' (1 Timothy 5:14)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Amphilochius of Iconium",
+   "work": "On the Meeting of the Lord",
+   "work_slug": "amphilochius-in-occursum-domini",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/amphilochius-in-occursum-domini/u01-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI05-004",
+   "chapter": 5,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The widows had promised to remain Christ's and later married.",
+   "comment": "[On “they have cast off their first faith”:] that having promised to remain to Christ, they later married. And regarding the first, he says 'faith' instead of 'first subjection,' and in ancient times 'first' meant the one being first and supreme and highest above all.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI05-005",
+   "chapter": 5,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Teaching is handing down and explaining Scripture.",
+   "comment": "teaching is the simple handing down through the words of the Scripture and the explanation of the meanings in the words.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI05-006",
+   "chapter": 5,
+   "verse_start": 22,
+   "verse_end": 22,
+   "capsule": "Approving of those who do wrong harms the soul as doing wrong does, since one who consents is a partner in the sin.",
+   "comment": "For just as doing what is not permitted harms and deadens both soul and mind, so does approving of those who do such things; and the one who consents would be a partner with those who commit the sin themselves, for he is in no way blameless. That is why Paul too says: ‘Keep yourself pure, and do not share in other people’s sins’ (1 Timothy 5:22).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means to share in others' sins.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/4/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI05-007",
+   "chapter": 5,
+   "verse_start": 22,
+   "verse_end": 24,
+   "capsule": "Some sins are hidden and show later, so Paul says not to lay hands on anyone quickly lest we share in a hidden fall.",
+   "comment": "Since he said above: do not quickly lay hands on anyone, nor share in the sins of others (1 Timothy 5:22), now he tells the reason for which he said that. Not all sins are manifest; for many indeed sin while hiding it. He says therefore: judge by time; for what is able to escape notice today is reproved tomorrow, and of the sins, some are manifest, leading to the judgment of men—for all will know that they sin and judge themselves unworthy—but after these things, some that are otherwise behaving seem unable to be hidden. Since therefore things are thus concerning men, do not quickly lay hands on anyone, lest you should ever be found sinning in what was hidden and be brought forward unworthily and share in that fall with him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives the reason for Paul's warning.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI05-008",
+   "chapter": 5,
+   "verse_start": 25,
+   "verse_end": 25,
+   "capsule": "Good works cannot be hidden, while some evil works escape notice.",
+   "comment": "Likewise, good works are also manifest. Concerning good works he said this only, that they cannot be hidden—he did not say that they escape notice—but concerning evil works, some are manifest, and some escape notice. Why? Because no one quickly hides the good; for he who does the truth comes toward the light, but he who does evil hides, desiring to escape notice.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why good works are manifest.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI06-001",
+   "chapter": 6,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Impiety arises when the wicked gather, like fire from friction.",
+   "comment": "Just as fire is produced from the friction of stone and wood, so impiety is generated from the gathering of the wicked (1 Tim 6:5).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI06-002",
+   "chapter": 6,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "Care for the body should be only enough to keep it strong for the soul's service, and when it craves more Paul's law of contentment applies.",
+   "comment": "But if someone wishes to spare the body as well, as the one necessary possession of the soul and its fellow worker for living on earth, he will turn only a little attention to its needs—just enough to hold it together and keep it strong for the soul’s service through moderate care, but certainly not to allow it to leap about from being overfed. And if he ever sees it inflamed with desires for more than what is profitable, he will cry out to it, laying down Paul’s law: “We brought nothing into this world, and it is clear that we can carry nothing out. But if we have food and covering, with these we will be content” (1 Timothy 6:7-8).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how Paul's contentment works for the body.",
+   "author": "Basil of Caesarea",
+   "work": "Homily on Not Clinging to Worldly Things",
+   "work_slug": "basil-quod-rebus-mundanis",
+   "section": "5",
+   "url": "https://viapatrum.org/works/basil-quod-rebus-mundanis/5/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI06-003",
+   "chapter": 6,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The saints may have what sustains life, but whatever goes beyond that is harmful.",
+   "comment": "For the saints are permitted, even in this world, to possess what sustains life, as much as would suffice them for the necessary needs of the body. ‘For if we have food and clothing,’ it says, ‘with these we shall be content’ (1 Timothy 6:8). And anything beyond this is not without harm.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how much is enough.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 13",
+   "work_slug": "cyril-adoration-13",
+   "section": "12",
+   "url": "https://viapatrum.org/works/cyril-adoration-13/12/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI06-004",
+   "chapter": 6,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Greed produces unsearchable wickedness, as many evils are bound together by one root, like veins of gold spreading like the roots of trees.",
+   "comment": "Thus then, according to the apostle, greed and idolatry occur and are the root of all evils, having produced unsearchable wickedness from themselves (1 Timothy 6:10). For just as those searching for gold from the depths of the earth say that gold lies hidden safely in the earth at its beginning and its sovereign generation, but from there it flows out like certain veins here and there for a long distance and extends in many directions, like the roots of trees that pass through the soil, so also here I find many natures bound together by a single root, by greed.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by the root of all evils.",
+   "author": "Asterius of Amasea",
+   "work": "Homilies",
+   "work_slug": "asterius-homiliae",
+   "section": "u05-open",
+   "url": "https://viapatrum.org/works/asterius-homiliae/u05-open/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI06-005",
+   "chapter": 6,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Covetousness is not only desiring what belongs to another, for nothing is ours since all things are God's, so grieving over loss is akin to it.",
+   "comment": "The Spirit of the Lord declared through the apostle that covetousness is the root of all evils (1 Timothy 6:10). Let us not interpret it as consisting only in desiring what belongs to another. For even what seems to be ours belongs to another. Nothing is ours, since all things are God's, and we ourselves are his. Therefore if we feel impatient when we suffer loss, grieving over the loss of what is not ours, we will be caught as akin to covetousness.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the reach of Paul's word covetousness.",
+   "author": "Tertullian",
+   "work": "On Patience",
+   "work_slug": "tertullian-on-patience",
+   "section": "7",
+   "url": "https://viapatrum.org/works/tertullian-on-patience/7/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI06-006",
+   "chapter": 6,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Paul reminds Timothy of the one who gives life so that the hope of that life may urge him to keep the commandment unspotted.",
+   "comment": "[On “who gives life to all things”:] It is not simply said of the one giving life, but so that he may remind us that the one giving life and giving revival to each, and who will give the reward to each worthily according to the time of the resurrection, since he was about to command the keeping according to the faith (1 Tim 6:13). And he did not simply set down the word; for if everything gives life, it is evident that he will make the godly men worthy also of the resurrection in the common giving of life, and of those denying bodies, giving the revival. Therefore, about to command that which is to keep the unspotted commandment, he reminds us of the one giving life, so that the hope of that life may urge toward godliness. And it is to be noted that he said 'the one giving life to all things,' not so that we should think him gives life even to the soulless. Such is also the case that all things came through him; for not all things in general, but the things about which the word is.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI06-007",
+   "chapter": 6,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "Christ was foreordained as Saviour but appeared at the times the Sovereign willed.",
+   "comment": "He had indeed been foreordained as Saviour and Redeemer in the will and forethought of God the Father, but he appeared at his own proper times, those the Sovereign willed (1 Timothy 6:15); and these are the times at the end, at the sunset, as it were, of the present age.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the words \"in his own time\".",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Romans",
+   "work_slug": "cyril-fragmenta-romanos",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-romanos/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI06-008",
+   "chapter": 6,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "God's nature is beyond all understanding and wholly beyond sight, dwelling in unapproachable light, so no one may see his face.",
+   "comment": "If someone thinks that the seraphim were covering the face of God, and his feet too, there is nothing unreasonable in taking it so. For if we put the meaning of the word ‘seraphim’ into Greek, we shall find that it signifies a fullness of knowledge, or an outpouring of wisdom. By their posture, then, these all-wise and highest powers hint very clearly that it is not lawful for God’s face to be seen by anyone. For the nature that is beyond all understanding is wholly beyond sight, and ‘dwells in unapproachable light’ (1 Timothy 6:16), in the words of blessed Paul; and ‘no one shall see the face of God and live’ (Exodus 33:20), as God rightly told the most holy Moses.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 9",
+   "work_slug": "cyril-adoration-9",
+   "section": "8",
+   "url": "https://viapatrum.org/works/cyril-adoration-9/8/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI06-009",
+   "chapter": 6,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "God is unknown to us in his substance and beyond our sight, and is made known only by the radiance of his virtues.",
+   "comment": "Learn, then, the first foundations of faith. Our God, the God of the catholic Church, is unknown to us in his substance and likewise beyond our sight, “whom no human being has seen or can see” (1 Timothy 6:16). As he is eternal without beginning, so he is holy and just without fault: supremely powerful, supremely fair, supremely merciful, made known only by the radiance of his virtues.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what it means that no one has seen God.",
+   "author": "Julian of Eclanum",
+   "work": "To Florus",
+   "work_slug": "julian-to-florus",
+   "section": "1.50",
+   "url": "https://viapatrum.org/works/julian-to-florus/1.50/",
+   "from_cite": true
+  },
+  {
+   "id": "1TI06-010",
+   "chapter": 6,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Immortality belongs principally to God alone, who is self-life and the supply of all good.",
+   "comment": "As the creatures remain in immortality and incorruption according to his grace and will, and desiring participation from him, even if they have a little nature of immortality like the angels, since this belongs principally to him alone (1 Tim 6:16), because he is self-life and the constitution and the supply of all good of the existing things.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 1 Timothy",
+   "work_slug": "severianus-fragmenta-1tim",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-1tim/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "1TI06-012",
+   "chapter": 6,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Paul's words mean that God is invisible by nature, seen not by the senses but by a pure mind.",
+   "comment": "… Paul saying concerning God: 'Whom no man of men has seen nor is able to see' (1 Tim 6:16), which signifies that which is invisible by nature. For some of the visible things we do not see, but we are able to see, even if this does not follow; such is the nature of the visible things. … It is therefore clear that seeing is twofold: one according to sense, the other according to intellect; the one is perceptive of visible things, the other of invisible things, which is a pure mind, through which God appeared to Abraham (Genesis 12:7).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On Genesis",
+   "work_slug": "didymus-in-genesim",
+   "section": "u21-rem-close",
+   "url": "https://viapatrum.org/works/didymus-in-genesim/u21-rem-close/",
+   "from_cite": true
+  }
+ ]
+}

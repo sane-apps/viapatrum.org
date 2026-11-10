@@ -1,0 +1,233 @@
+{
+ "book": "Habakkuk",
+ "title": "The Fathers on Habakkuk",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 12,
+ "selected_count": 4,
+ "comments": [
+  {
+   "id": "HAB01-001",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Where judgment is perverted and the law dissolved, the judges who take bribes are altogether unrighteous and lawless.",
+   "comment": "Concerning those who lawlessly act thus, the prophet Habakkuk cries to God: \"Judgment has become contrary to me and the judge takes bribes; therefore the law is dissolved and justice does not go to its end, because the ungodly oppresses the righteous\" (Hab 1:4). It must be said to those examining things in this way, who dispute among themselves, that they are not to be considered just judges, but altogether unrighteous and lawless judges.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u13-rem-early",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u13-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB01-002",
+   "chapter": 1,
+   "verse_start": 13,
+   "verse_end": 17,
+   "capsule": "The net and hook of the prophet's image show how the enemy hunts nations, differently from the way the Word of salvation gathers them.",
+   "comment": "And concerning the devil it is said in one of the twelve prophets—and this is Amos—'Will he be silent in swallowing up the ungodly the righteous? And will you make men like the fish of the sea and like the creeping things that have no leader?' (Habakkuk 1:13-14). For he says: 'He drew to a conclusion in a hook and gathered in his net. Because of this, he sacrifices to his net and offers sacrifice to his bob. His bob always wavers, and will he show no mercy in killing nations?' Thus the enemy hunts differently, just as 'the Word of salvation' does. For Jesus 'cast it into the sea' as a snare, and 'Peter is about to cast nets.'…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u08-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u08-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB01-003",
+   "chapter": 1,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "The devil's choice foods are the pleasures that soothe a captured mind so that it will not leave its bondage.",
+   "comment": "…'For his [the devil's] foods,' according to what is written, 'are choice' (Habakkuk 1:16); and they [the evil powers] soothe, as it were, the mind that has been caught and has slipped, so that, not looking much toward the free, it may not leave the bondage under them. They sometimes procure the pleasures in earthly things, and as it were enrich them with delights toward nothing…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 1",
+   "work_slug": "cyril-adoration-1",
+   "section": "10",
+   "url": "https://viapatrum.org/works/cyril-adoration-1/10/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB02-001",
+   "chapter": 2,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "To stand on the watch with Habakkuk is to meditate on God's commandments through the night of the present age.",
+   "comment": "The night is attentive, the soul being gathered together in it in the quiet of the senses. Then he commands to meditate in the commandments of God and to say with David: “by night I was meditating with my heart, and my spirit was searching.” (Psalm 77:6) And the night being divided into four watches, say with David: “my eyes anticipated the watches,” (Psalm 119:148) and with Habakkuk: “upon my watch I will stand, and I will look out what the Lord God will speak in me.” (Habakkuk 2:1) For then you will say: “for he will speak peace upon his people.” (Psalm 85:8) Meditate, then, in the night of the present age…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "60",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/60/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB02-002",
+   "chapter": 2,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Paul cites 'the righteous shall live from faith' to show that justification is in Christ through faith, not in the Law, which condemns transgressors.",
+   "comment": "For if what is under sin is still a slave, and the Law justifies least of all — it condemns rather, and writes down those who transgress — how would it not be clear to everyone that all justification is in Christ, and the perfecting in the Spirit through sanctification, through him and in him? And so the all-wise Paul writes, 'For I am not ashamed of the gospel, for it is the power of God for salvation to everyone who believes, to the Jew first and to the Greek. For in it the righteousness of God is revealed from faith to faith, as it is written, The righteous shall live from faith.' (Habakkuk 2:4) And he writes down the uselessness and weakness of the old Law in this, saying, 'That no one is justified in the Law before God is clear, because the righteous shall live from faith. And the Law is not from faith, but the one who has done them shall live in them.' (Galatians 3:11–12) So in Christ we are justified through faith, and we have been redeemed from the intelligible slavery.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the verse was used to teach justification by faith.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 2",
+   "work_slug": "cyril-adoration-2",
+   "section": "3",
+   "url": "https://viapatrum.org/works/cyril-adoration-2/3/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB02-003",
+   "chapter": 2,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "'The righteous shall live by faith' is a law God set through the prophets, and to follow it is to die to the law of Moses.",
+   "comment": "…A law was set by God through the voice of the prophets, and it was this: “The righteous shall live by faith.” (Habakkuk 2:4) A law was also set through Moses. So having followed the law of faith, he says, I died to the law through Moses — no longer working the things marked out for the ancients as in shadow and types. For that is what it means to die to the Mosaic law: that we may live to God, clinging to faith in Christ (Romans 1:17).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "33",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/33/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB02-004",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Those who arise suddenly and bite are believers from the nations, who against all expectation cause the evil one pain.",
+   "comment": "…'And seven shepherds shall arise against him,' he says—the holy ones before the visitation, as it was said, because the Sabbath named 'seven'—'and eight marks of men' after the visitation who believed. These 'bite' and cause him pain. For the wording in the Scripture means this: 'But if you bite and devour one another' (Galatians 5:15); and in Habakkuk again concerning this same evil one, it is said that 'suddenly they shall arise, biting him' (Habakkuk 2:7). Contrary to expectation, those from the nations who once 'shall arise' against him cause him pain, 'biting him.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Ecclesiastes",
+   "work_slug": "didymus-commentarii-ecclesiasten",
+   "section": "u10-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u10-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB02-005",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Even if men keep silent, the prophet says that stones from a wall shall cry out.",
+   "comment": "A stone is able to deny and say: 'The son of impiety is not my child; the son of injustice is not my child; for I, even if I am a stone, have heard the Scripture saying: God is able even from these stones to raise up children to Abraham' (Matt 3:9). Then, 'Yes,' he says, 'he personifies from the person of the stone, and a stone speaks?' Listen to the prophet saying, that 'stones from a wall shall cry out those things,' and a reed from wood shall speak (Habakkuk 2:11). Even if you keep silent, the stones shall cry out.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "On the Blind Man and Zacchaeus",
+   "work_slug": "severianus-de-caeco-zacchaeo",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/severianus-de-caeco-zacchaeo/u02-rem-early/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB03-002",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "God coming from Teman, the south, was fulfilled when the Child came from Bethlehem, south of Jerusalem, into Zion.",
+   "comment": "Forty days have passed since the birth from the virgin, and the Child has now come into earthly Jerusalem. Concerning this child, Habakkuk proclaimed, saying: 'God will come from Teman,' that is, from the south (Habakkuk 3:3). For from the south of Jerusalem, from Bethlehem, He has now come into Zion…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Teman means and how the verse was applied.",
+   "author": "Cyril of Jerusalem",
+   "work": "Homily on the Presentation of the Lord",
+   "work_slug": "cyril-jerusalem-homilia-occursum",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-jerusalem-homilia-occursum/u01-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB03-003",
+   "chapter": 3,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The horses are the saints, yoked with Christ, through whom the saving gospel was stretched out into the inhabited world.",
+   "comment": "The voices of the choir of the saints are yoked together with him: Moses and the prophets, the apostles, the evangelists, the angels, the archangels, the principalities, the powers, the dominions, and those simply receiving God and having the Holy Spirit, who in the psalm says, 'Ride upon the horses, O Lord, and thy chariot is salvation' (Habakkuk 3:8). For through them the saving gospel was stretched out into the inhabited world. For more ranks appear yoked to the yoke of Christ…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Fragments on the Psalms",
+   "work_slug": "didymus-fragmenta-psalmos",
+   "section": "u30-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u30-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB03-006",
+   "chapter": 3,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "God is said to go out for his people's salvation because in goodness he descends in sympathy to those he governs.",
+   "comment": "…Being a fountain of goodness and 'full of grace and truth' (John 1:14), the cause of all things, descending in sympathy with those being managed by him, becomes outside himself as if he were among them. For the Lord and our Savior says in the Gospels concerning himself: 'I went out from God and I have come; for I did not come from myself, but he sent me' (John 8:42). With the same thought the prophet Habakkuk spoke toward him: 'You went out for the salvation of your people, to save your anointed ones' (Habakkuk 3:13). … And just as he goes out and comes to those being saved, so much more when he is wroth or wars…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in what sense God is said to go out.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u34-rem-close",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u34-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "HAB03-008",
+   "chapter": 3,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The apostles, who at first spoke scarcely and in secret, broke the bridle of fear and filled the world with their voice.",
+   "comment": "About the apostles’ boldness in preaching, marvelous Habakkuk also foretold: “They will open their bridles like a poor man eating in secret” (Habakkuk 3:14) — that is, the apostles who at first scarcely spoke to a few, and in secret, fed by the faith of believers, later broke the bridle of fear set on them and will fill the world under heaven with their own voice…",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the image of opening bridles.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Matthew",
+   "work_slug": "cyril-matthew-fragments",
+   "section": "107",
+   "url": "https://viapatrum.org/works/cyril-matthew-fragments/107/",
+   "from_cite": true
+  }
+ ]
+}

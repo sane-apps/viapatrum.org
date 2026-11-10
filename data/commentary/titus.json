@@ -1,0 +1,236 @@
+{
+ "book": "Titus",
+ "title": "The Fathers on Titus",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 12,
+ "selected_count": 7,
+ "comments": [
+  {
+   "id": "TIT01-001",
+   "chapter": 1,
+   "verse_start": 5,
+   "verse_end": 7,
+   "capsule": "Paul left Titus to appoint elders in every city and lists what such men must be, also calling them bishops by ancient custom.",
+   "comment": "… the Apostle, writing to his disciple Titus (Titus 1:5), has likewise inscribed to others: 'For this reason I left you in Crete, that you should set in order the things that are lacking, as I commanded you, and establish elders in every city.' He mentions the characteristics of those previously appointed, those being placed into ecclesiastical ranks: monogamy, the best upbringing of children, and being perfected in the remaining virtues, whom he also calls bishops by ancient custom, as we have said elsewhere.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Titus was left in Crete to do and who the elders are.",
+   "author": "Didymus the Blind",
+   "work": "Commentary on Zechariah",
+   "work_slug": "didymus-commentarii-zacchariam",
+   "section": "u16-open",
+   "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u16-open/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT01-002",
+   "chapter": 1,
+   "verse_start": 9,
+   "verse_end": 11,
+   "capsule": "A bishop must be a teacher able to refute opponents, so that his wisdom stops the mouths of empty talkers and deceivers.",
+   "comment": "… when Paul, in his sketch of those called bishops, describes what kind of man the bishop must be, he also made him a teacher, saying that he must be able “also to refute those who contradict” (Titus 1:9), so that by the wisdom in him he may stop the mouths of empty talkers and deceivers (Titus 1:10–11). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows why Paul requires a bishop to be able to refute opponents.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book III",
+   "work_slug": "origen-contra-celsum-book-3",
+   "section": "48",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/48/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT01-003",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "Paul borrowed the poet's line about Cretans but added that his testimony is true, so that no one would think he agreed with the poet's claim about Zeus.",
+   "comment": "The poet who said, “Cretans are always liars, evil beasts, idle gluttons” (Titus 1:12) was attacking them for pointing to a tomb of Zeus that does not exist. Paul used that same line, but so that he would not be thought to agree with the poet and testify to the immortality of the so-called Zeus, he added, “This testimony is true” (Titus 1:13). That poet lied in defending Zeus, but I speak the truth when I say that Cretans are always liars and idle gluttons. This testimony is true, not that one.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul quotes a poet and adds that the testimony is true.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Titus",
+   "work_slug": "severianus-fragmenta-titum",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-titum/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "TIT01-004",
+   "chapter": 1,
+   "verse_start": 13,
+   "verse_end": 15,
+   "capsule": "Paul orders sharp rebuke because the Cretans needed a goad, and calling things impure accuses the God who made them.",
+   "comment": "Since Paul often teaches gentleness with praise, but found that the Cretans needed the goad of rebuke, as it were, he said for this reason: “Rebuke sharply” (Titus 1:13). “All things indeed are pure to the pure” (Titus 1:15). God made all things pure; but if they are impure, the accusation touches the one who made them.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Says plainly why Paul orders a sharp rebuke and why nothing God made is impure.",
+   "author": "Oecumenius",
+   "work": "Fragments on Titus",
+   "work_slug": "oecumenius-fragmenta-titum",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/oecumenius-fragmenta-titum/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "TIT02-001",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The word reverent shows that women share the clerical inheritance.",
+   "comment": "… Paul showed that he calls women to a share in the clerical inheritance, for he would not have called them reverent [KJV: “as becometh holiness”] in Titus 2:3 otherwise.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Titus",
+   "work_slug": "severianus-fragmenta-titum",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-titum/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "TIT02-003",
+   "chapter": 2,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Paul here calls Jesus Christ our great God.",
+   "comment": "Then who will say Emmanuel [Christ] is not true God, when blessed Paul speaks of him as “our great God and Savior Jesus Christ” (Titus 2:13)? …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On the True Faith, to the Princesses Arcadia and Marina",
+   "work_slug": "cyril-recta-fide-arcadia",
+   "section": "42",
+   "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/42/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT02-002",
+   "chapter": 2,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "Paul says Christ gave himself for us, which could only happen because he wore flesh and offered it to abolish death.",
+   "comment": "… Paul writes, “Awaiting the blessed hope and the appearing of the glory of our great God and Savior Jesus Christ, who gave himself for us, that he might redeem us from all sin and purify for himself a people of his own possession, eager for good works” (Titus 2:13-14). How then did he give himself for us, unless he was wearing flesh? For by offering this flesh, he gave himself for us, so that, having taken up death in it, he might abolish the devil, the one having the power of death. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how Christ 'gave himself for us' in terms a reader can follow.",
+   "author": "Athanasius of Alexandria",
+   "work": "Letter to Adelphius",
+   "work_slug": "athanasius-epistula-adelphium",
+   "section": "4",
+   "url": "https://viapatrum.org/works/athanasius-epistula-adelphium/4/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT03-001",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 6,
+   "capsule": "Countless people have turned from a wasted life and speak of their former lives in Paul's words, and through the washing of rebirth they became what they are.",
+   "comment": "… with Jesus it was not only the twelve at that time; it has always been many times as many, who have become a company of the self-controlled and say of their former lives: “For we ourselves were once foolish, disobedient, led astray, slaves to all kinds of desires and pleasures, living in malice and envy, hateful, hating one another; but when the kindness and love for humankind of God our Saviour appeared” (Titus 3:3–4), then “through the washing of rebirth and renewal of the Spirit, which he poured out on us richly” (Titus 3:5–6), we became what we are. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book I",
+   "work_slug": "origen-contra-celsum-book-1",
+   "section": "64",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/64/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT03-002",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Baptism has many names in Scripture, and the washing of regeneration is one of them, beside enlightenment, burial, circumcision and cross.",
+   "comment": "… let us first discuss the name of this mystical cleansing. For it does not have one name, but many and varied. This purification is called the washing of regeneration: He saved us, Paul says, through the washing of regeneration and renewal of the Holy Spirit (Titus 3:5). It is also called enlightenment, and Paul himself called it this as well: Remember the earlier days when, after you were enlightened, you endured a great struggle of sufferings (Hebrews 10:32) … It is also called baptism: For as many of you as were baptized into Christ have put on Christ (Galatians 3:27). It is called burial: You were buried with him, Paul says, through baptism into death (Romans 6:4). It is called circumcision: In him you were also circumcised with a circumcision not made by hands, in the stripping off of the body of the sins of the flesh (Colossians 2:11). It is called cross: Our old self was crucified with him, so that the body of sin might be brought to nothing (Romans 6:6). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "John Chrysostom",
+   "work": "Baptismal Instructions",
+   "work_slug": "chrysostom-catecheses-illuminandos",
+   "section": "3",
+   "url": "https://viapatrum.org/works/chrysostom-catecheses-illuminandos/3/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT03-003",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The washing of regeneration is the sign given through water, and regeneration means the beginning of another birth.",
+   "comment": "… I speak of the sign given through water to those who have hoped in Christ, which has been named a washing of regeneration. For what else does regeneration mean but the beginning of another birth (Titus 3:5) (John 3:3–5) (Colossians 1:12–13) (1 Peter 2:9)?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the washing is and what 'regeneration' means.",
+   "author": "Origen of Alexandria",
+   "work": "On Pascha",
+   "work_slug": "origen-on-pascha",
+   "section": "1.13",
+   "url": "https://viapatrum.org/works/origen-on-pascha/1.13/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT03-005",
+   "chapter": 3,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "'Richly' means God does not give the Spirit in part but places him in the saints from his own fullness.",
+   "comment": "… You see that rejection came about through sin, and that man is accepted for adoption when he is blessed in Christ by sharing in the Spirit, whom he also poured out on us richly (Titus 3:6); he does not give the Spirit to the saints in part, but places him in them as from his own fullness. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 11",
+   "work_slug": "cyril-adoration-11",
+   "section": "25",
+   "url": "https://viapatrum.org/works/cyril-adoration-11/25/",
+   "from_cite": true
+  },
+  {
+   "id": "TIT03-004",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 11,
+   "capsule": "Christians try to bring those who differ to something better, and only if they are not persuaded do they follow Paul's command to have nothing more to do with them.",
+   "comment": "… Rather, if we can, we would do everything to bring them over to what is better, by their holding fast to the Creator alone and doing everything as people who will be judged. But if those of other opinions are not persuaded, we keep the word that gave such commands about them: “After a first and second admonition, have nothing more to do with a heretic, knowing that such a one is perverted and sins, being self-condemned” (Titus 3:10–11).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows how Paul's command is meant to be applied: persuade first, withdraw after warnings.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book V",
+   "work_slug": "origen-contra-celsum-book-5",
+   "section": "63",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-5/63/",
+   "from_cite": true
+  }
+ ]
+}

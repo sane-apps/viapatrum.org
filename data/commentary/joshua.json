@@ -1,0 +1,217 @@
+{
+ "book": "Joshua",
+ "title": "The Fathers on Joshua",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 11,
+ "selected_count": 6,
+ "comments": [
+  {
+   "id": "JOS02-001",
+   "chapter": 2,
+   "verse_start": 18,
+   "verse_end": 19,
+   "capsule": "Rahab, who stands for the Church, was told that whoever leaves her one house is guilty, so there is no safety outside the one Church.",
+   "comment": "Do you think you can stand and live while departing from the Church, building other seats and different dwellings for yourself? For it was said to Rahab, in whom the Church was prefigured: \"You will gather your father and your mother and your brothers and the whole house of your father to yourself in your house, and everyone who goes out the door of your house outside will be guilty for himself\" (Joshua 2:18-19).\n\nLikewise, the sacred sign of the Passover in the law of Exodus contains nothing other than that the lamb, which is killed as a figure of Christ, is eaten in one house. God speaks, saying: \"It will be eaten in one house; you will not throw the flesh outside the house\" (Exodus 12:46). The flesh of Christ and the holy thing of the Lord cannot be thrown outside, and there is no other house for believers except the one Church.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Rahab was told to keep everyone inside her house, in terms a reader can follow.",
+   "author": "Cyprian of Carthage",
+   "work": "On the Unity of the Catholic Church",
+   "work_slug": "cyprian-on-the-unity-of-the-church",
+   "section": "8",
+   "url": "https://viapatrum.org/works/cyprian-on-the-unity-of-the-church/8/",
+   "from_cite": true
+  },
+  {
+   "id": "JOS03-001",
+   "chapter": 3,
+   "verse_start": 14,
+   "verse_end": 16,
+   "capsule": "The water of the Jordan was piled up like a heap of wheat, a sign of the apostles.",
+   "comment": "“And all the people departed from their tents” (Joshua 3:14). That is, as a threshing floor is full. For the water was not merely congealed, as at the Red Sea, but was heaped up like a heap of wheat—clearly as a type of the apostles.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Notes on Joshua",
+   "work_slug": "origen-adnotationes-joshua",
+   "section": "3",
+   "url": "https://viapatrum.org/works/origen-adnotationes-joshua/3/",
+   "from_cite": true
+  },
+  {
+   "id": "JOS06-003",
+   "chapter": 6,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "Christ commands through the leaders, and we go armed before him against rulers and authorities, not flesh and blood.",
+   "comment": "… For Christ commanding through the leaders’ voice, we campaign against the enemies, not choosing the battle toward blood and flesh, but rather toward rulers and authorities, and the law that has tyrannized in the members of the flesh. And we will then also be in God’s sight, fitted as it were with the divine and intelligible full armor. (For our weapons are not fleshly, according to Paul’s voice), and conspicuous with the boasts of righteousness. The Master God of all therefore looks upon the most fight-ready, wearing round them the bright vessels of righteousness—that is, the fight-ready going along armed as before Christ. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/2/",
+   "from_cite": true
+  },
+  {
+   "id": "JOS06-001",
+   "chapter": 6,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "Jericho was devoted to destruction as the first city taken, as firstfruits of the plunder, and its fall by trumpets alone taught Israel that defeat would come from despising God's laws.",
+   "comment": "\"Shout! For the Lord has handed the city over to you\" (Joshua 6:16).\n\nWhy did he command that Jericho be devoted to destruction? This was the first city they took after crossing the river. Just as he commanded them to offer the firstfruits of the crops, so he ordered them to offer the first spoils of the plunder. In addition to this, he trains them through these laws so that they will keep the necessary laws. And to show them his own power, he arranged for the first city to be taken without weapons or siege engines, and he destroyed it by the sound of trumpets alone—so that when they are defeated in battle, they will know that they themselves provided the causes of their defeat by despising the divine laws.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Jericho alone was devoted to destruction and taken without weapons.",
+   "author": "Origen of Alexandria",
+   "work": "Notes on Joshua",
+   "work_slug": "origen-adnotationes-joshua",
+   "section": "6",
+   "url": "https://viapatrum.org/works/origen-adnotationes-joshua/6/",
+   "from_cite": false
+  },
+  {
+   "id": "JOS06-002",
+   "chapter": 6,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The ban meant the metals marked off for the Lord's treasury, while other plunder was allowed.",
+   "comment": "For he was allowing those playing the man to revel in the other plunderings, yet says that every silver and gold, bronze and iron must be brought into the Lord’s treasury; for this was the so-called ban—that is, what has been allotted from all and marked off for God.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the ban on Jericho meant in practice.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "2",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/2/",
+   "from_cite": true
+  },
+  {
+   "id": "JOS07-001",
+   "chapter": 7,
+   "verse_start": 21,
+   "verse_end": 21,
+   "capsule": "Achan saw the robe, the silver and the golden tongue and let himself desire them, and these stand for greed, worldly brightness and polished Greek learning.",
+   "comment": "You understand that even the thief himself says he has seen in the plunder a variegated robe, and two hundred didrachms of silver, and a golden tongue of fifty didrachms, and to have thought of them—that is, to have come unto a lawless desire of them. The robe then they think a soldier’s garment, and say it is a cloak woven variegatedly; and the clothing is soldierly, and a symbol of greed. For somehow always greed as most sweet has grown beside the military race. And again a type of worldly brightness is the silver; and of the sweet-speaking Hellenic wisdom, the tongue. Some such is also the tongue and education of the wise among Greeks, as it were golden and most honorable, because of the conspicuousness in diction.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 5",
+   "work_slug": "cyril-adoration-5",
+   "section": "4",
+   "url": "https://viapatrum.org/works/cyril-adoration-5/4/",
+   "from_cite": true
+  },
+  {
+   "id": "JOS08-001",
+   "chapter": 8,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Cattle could be plundered, since not everything was devoted as at Jericho.",
+   "comment": "\"And the plunder of the cattle you shall plunder for yourself\" (Joshua 8:2). This was because it was not necessary for everything to be devoted as it had been at Jericho.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the rule on plunder differs from Jericho.",
+   "author": "Origen of Alexandria",
+   "work": "Notes on Joshua",
+   "work_slug": "origen-adnotationes-joshua",
+   "section": "8",
+   "url": "https://viapatrum.org/works/origen-adnotationes-joshua/8/",
+   "from_cite": false
+  },
+  {
+   "id": "JOS08-002",
+   "chapter": 8,
+   "verse_start": 26,
+   "verse_end": 26,
+   "capsule": "Joshua held out his hand so the ambush would seize the city.",
+   "comment": "\"And Joshua stretched out the spear, and his hand\" (Joshua 8:26). For Joshua remained with his hand stretched out, so that when those of the ambush saw it, they might seize the city first.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Joshua held out the spear.",
+   "author": "Origen of Alexandria",
+   "work": "Notes on Joshua",
+   "work_slug": "origen-adnotationes-joshua",
+   "section": "8",
+   "url": "https://viapatrum.org/works/origen-adnotationes-joshua/8/",
+   "from_cite": false
+  },
+  {
+   "id": "JOS18-001",
+   "chapter": 18,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Gehenna, also called the Valley of Ennom, is named in the lot of the tribe of Benjamin, the tribe in which Jerusalem lay.",
+   "comment": "We found that in some places Scripture calls it the “Valley of the son of Ennom” (Jeremiah 7:31–32); but in the Hebrew, as we have learned, where “Valley” stands, “the Valley of Ennom” and “Gehenna” were used of one and the same place. Keeping close watch on the readings, we find also that Gehenna, or the Valley of Ennom, is listed in the lot of the tribe of Benjamin, in which Jerusalem also lay (Joshua 18:16, 28).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the place Joshua names, in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "Against Celsus, Book VI",
+   "work_slug": "origen-contra-celsum-book-6",
+   "section": "25",
+   "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/25/",
+   "from_cite": true
+  },
+  {
+   "id": "JOS22-001",
+   "chapter": 22,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "Achan sinned alone yet wrath fell on all Israel, and gain taken from one's brothers is likewise a thing under the ban.",
+   "comment": "“Did not Achan son of Zerah commit a grave trespass concerning what was under the ban, and wrath fell on the whole congregation of Israel? He was only one man who sinned; did he die alone in his sin?” (Joshua 22:20). For us, at this time, every gain that is not our own but someone else’s ought to be counted as a thing under the ban. For Achan took from the spoil, and these men too now take from the spoil. But he took what belonged to enemies; these men now take what belongs to their brothers, and reap a deadly gain.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Gregory Thaumaturgus",
+   "work": "Canonical Letter",
+   "work_slug": "gregory-thaumaturgus-epistula-canonica",
+   "section": "3",
+   "url": "https://viapatrum.org/works/gregory-thaumaturgus-epistula-canonica/3/",
+   "from_cite": true
+  },
+  {
+   "id": "JOS24-001",
+   "chapter": 24,
+   "verse_start": 14,
+   "verse_end": 18,
+   "capsule": "What Joshua said to Israel is now said to Christians pressed to commit idolatry, who promised to serve the Lord and must not break that promise.",
+   "comment": "What Jesus said, then, settling the people on the holy land, Scripture might now say to us. The wording runs: 'Now fear the Lord, and serve him in uprightness and righteousness.' (Joshua 24:14–18) And to us, persuaded to commit idolatry, it will say this and what follows, running thus: 'Put away the strange gods your fathers served beyond the river and in Egypt, and serve the Lord.' (Joshua 24:14) … But in the godliness compacts too, you answered your catechists of old with this: 'We too shall serve the Lord; for this is our God.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "17",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/17/",
+   "from_cite": true
+  }
+ ]
+}

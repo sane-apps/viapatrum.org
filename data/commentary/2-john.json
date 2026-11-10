@@ -1,0 +1,31 @@
+{
+ "book": "2 John",
+ "title": "The Fathers on 2 John",
+ "generated": "2026-11-10",
+ "license": "CC BY 4.0",
+ "credit": "Via Patrum (viapatrum.org)",
+ "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
+ "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
+ "comment_count": 1,
+ "selected_count": 0,
+ "comments": [
+  {
+   "id": "2JN01-001",
+   "chapter": 1,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "John's command not to greet one who does not bring this teaching is the Law's own command, 'You shall not greet them in peace.'",
+   "comment": "… And see how careful the law is. It sets the saints wholly apart from them [the Ammonites and Moabites] and charges them not even to wish so much as to enter into conversation with them, saying: ‘You shall not greet them in peace, and you shall not speak to them for their good, all your days for ever’ (Deuteronomy 23:6). Is this not plainly what that pair of saints, Paul and John, also taught us? One of them said: ‘If anyone comes to you and does not bring this teaching, do not greet him’ (2 John 1:10); and this, I think, is ‘You shall not greet them in peace, nor for their good.’ The other, again: ‘After a first and a second warning, have nothing to do with a heretical man, knowing that such a person is perverted’ (Titus 3:10–11). This is ‘You shall not speak to them for their good.’",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 14",
+   "work_slug": "cyril-adoration-14",
+   "section": "7",
+   "url": "https://viapatrum.org/works/cyril-adoration-14/7/",
+   "from_cite": true
+  }
+ ]
+}
