@@ -1,7 +1,7 @@
 {
  "book": "Romans",
  "title": "The Fathers on Romans",
- "generated": "2026-11-09",
+ "generated": "2026-11-10",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
@@ -490,8 +490,8 @@
    "chapter": 1,
    "verse_start": 27,
    "verse_end": 27,
-   "capsule": "Paul calls the use of the woman natural, showing it is praiseworthy within its bounds.",
-   "comment": "… Speaking of the ungodly, he says: “Abandoning the natural use of the woman, they burned with desire for one another, males doing what is shameful with males” (Romans 1:27). He therefore shows that the use of the woman is natural and, within its proper bounds, praiseworthy; shameful conduct, however, is committed by a person’s own will against the modesty of the created order.",
+   "capsule": "To show that children born of marriage are good by nature, he points out that Paul calls the use of the woman natural, and so praiseworthy within its bounds.",
+   "comment": "Let us learn from the apostle that children born from marriage are good by nature. Speaking of the ungodly, he says: “Abandoning the natural use of the woman, they burned with desire for one another, males doing what is shameful with males” (Romans 1:27). He therefore shows that the use of the woman is natural and, within its proper bounds, praiseworthy; shameful conduct, however, is committed by a person’s own will against the modesty of the created order.",
    "editions": [
     "complete",
     "selected"
@@ -1376,8 +1376,8 @@
    "chapter": 4,
    "verse_start": 15,
    "verse_end": 15,
-   "capsule": "The law brings wrath through the wickedness of those who prefer sins to virtues, and where there is no law there is no transgression.",
-   "comment": "Sinners under the law deserved punishment, and before the law righteousness and faith were not deprived of their reward’s fruits. Clearly, then, the glory of that promise belongs not to flesh cut with a blade, but to minds distinguished by uprightness. What follows is a thunderbolt against inherited transmission: ‘For the law,’ he says, ‘produces wrath; but where there is no law, neither is there transgression’ (Romans 4:15). … This law produces wrath not through its own fault but through the wickedness of those who prefer sins to virtues.",
+   "capsule": "Where there is no law there is no transgression, so there is none at an age when no law could be given, and the law produces wrath only through the wickedness of those who prefer sins to virtues.",
+   "comment": "Sinners under the law deserved punishment, and before the law righteousness and faith were not deprived of their reward’s fruits. Clearly, then, the glory of that promise belongs not to flesh cut with a blade, but to minds distinguished by uprightness. What follows is a thunderbolt against inherited transmission: ‘For the law,’ he says, ‘produces wrath; but where there is no law, neither is there transgression’ (Romans 4:15). Persuade us, then, that a law was given to those conceived in the womb, that a law can be given to newborn children, so that it may convict them of transgression. We, however, believe with the apostle—whom we defend as having meant nothing contrary to reason—that there is no transgression at an age when law could not exist, because ‘where there is no law, neither is there transgression.’ This law produces wrath not through its own fault but through the wickedness of those who prefer sins to virtues.",
    "editions": [
     "complete",
     "selected"
@@ -1729,7 +1729,7 @@
    "verse_start": 12,
    "verse_end": 12,
    "capsule": "By naming and counting one man, Paul shows that what is accused is imitation, not generation, which cannot take place except through two.",
-   "comment": "The apostle showed that he was not saying sin passed on by generation when, naming a human being, he added ‘one.’ One is the beginning of number. Explaining through whom he said sin had entered, he not only named him but also counted him: ‘Through one man sin entered this world’ (Romans 5:12). This one person is sufficient to supply an example for imitation but insufficient to accomplish generation. Sin passed on, but through one. Clearly, then, what is accused here is imitation, not generation, which cannot take place except through two.",
+   "comment": "The apostle showed that he was not saying sin passed on by generation when, naming a human being, he added ‘one.’ One is the beginning of number. Explaining through whom he said sin had entered, he not only named him but also counted him: ‘Through one man sin entered this world’ (Romans 5:12). This one person is sufficient to supply an example for imitation but insufficient to accomplish generation. Sin passed on, but through one. Clearly, then, what is accused here is imitation, not generation, which cannot take place except through two. Either show that generation occurred through Adam alone, without a woman—that would hardly be inconsistent with the refinement of your mind—or else, since you see that generation cannot exist without two, agree at last that the work of two was not accused by the number one.",
    "editions": [
     "complete"
    ],
@@ -2057,8 +2057,8 @@
    "chapter": 5,
    "verse_start": 16,
    "verse_end": 16,
-   "capsule": "Grace is poured in once and wipes away many crimes in one action, so Paul sets 'one' and 'many' side by side only to praise grace.",
-   "comment": "Grace, however, is not conferred in the same way, repeatedly applied to each sin individually. Instead, poured in once, it wipes away many different crimes in a single concentrated action of its power. That is why he says, ‘From many offenses to justification’ (Romans 5:16): it leads human beings freed from many offenses to the glory of justification bestowed on them. … He uses the numbers one and many solely to praise grace: grace need not be repeated as often as each mortal person has sinned, as though individual baptisms could heal only individual sins.",
+   "capsule": "Grace, poured in once, wipes away many crimes in one action, so Paul does not mean Adam's single sin here but uses 'one' and 'many' only to praise grace.",
+   "comment": "Grace, however, is not conferred in the same way, repeatedly applied to each sin individually. Instead, poured in once, it wipes away many different crimes in a single concentrated action of its power. That is why he says, ‘From many offenses to justification’ (Romans 5:16): it leads human beings freed from many offenses to the glory of justification bestowed on them. Therefore he does not here mean Adam’s single sin, as you suppose. He uses the numbers one and many solely to praise grace: grace need not be repeated as often as each mortal person has sinned, as though individual baptisms could heal only individual sins.",
    "editions": [
     "complete",
     "selected"
@@ -2368,8 +2368,8 @@
    "chapter": 5,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "Sin abounded after the law because the same evil will that sinned before the law now also transgressed a command, adding the weight of transgression.",
-   "comment": "In this sense, then, the offense is rightly said to have abounded: each person’s will committed it both before and after the law, but before the law the will was sinful, while after the law it was also transgressive. Something grows and abounds when it gains increase within its own kind, just as after Moses the additional weight of transgression was added to the sin of free will.",
+   "capsule": "Sin abounded after the law because the same evil will that sinned before it now also transgressed a command, so the law is not shown to have made inherited sin more abundant.",
+   "comment": "In this sense, then, the offense is rightly said to have abounded: each person’s will committed it both before and after the law, but before the law the will was sinful, while after the law it was also transgressive. Something grows and abounds when it gains increase within its own kind, just as after Moses the additional weight of transgression was added to the sin of free will.\n\nFor it belonged to the same kind, though at a different time: an evil will which sinned both before and after the law, not through irresistible compulsion, but through blameworthy effort. Since this is so, nothing in the apostle’s words can fit your position. The coming of the law is not shown to have made inherited sin more abundant or greater. Nor can something plainly unrelated to newborn children’s will rightly be said to abound through sins of will. Therefore what the law could neither prohibit nor punish did not abound after the law.",
    "editions": [
     "complete"
    ],
@@ -2624,8 +2624,8 @@
    "chapter": 6,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "The old self and body of sin mean the earthly body, condemned in Adam and sick with love of pleasure, which the Only-begotten took on.",
-   "comment": "“Knowing this, that our old self…,” and so on (Romans 6:6). Who is our old self, what is the body of sin that is done away with, and in what way was it crucified with Christ? We must look into this closely. …\n\nBy “body of sin” and “our old self,” then, he means the earthly body, which, from the old condition in Adam, must waste away into corruption; for we were condemned in him, the first man. Besides this, it is also sick with the love of pleasure, for that is how the flesh is by nature, because of its inborn impulses. How, then, was it crucified with Christ? The Only-begotten became man and clothed himself with the earthly flesh, which, as I said, had fallen sick with death because of the old condition in Adam, and which carried within itself, as if in labour, the tendency to be sharpened toward sin by its inborn impulses.",
+   "capsule": "Setting aside the view that flesh was given to souls as punishment for earlier sin, he takes the old self and body of sin to be the earthly body, condemned in Adam and sick with love of pleasure, which the Only-begotten took on.",
+   "comment": "“Knowing this, that our old self…,” and so on (Romans 6:6). Who is our old self, what is the body of sin that is done away with, and in what way was it crucified with Christ? We must look into this closely. Some will perhaps suppose that the earthly flesh is called the body of sin because it was given to the human soul by way of punishment, since the soul had sinned even before there were bodies; for that is how some think and speak. But since this opinion belongs to the Greeks, let us thrust it away as untrue.\n\nBy “body of sin” and “our old self,” then, he means the earthly body, which, from the old condition in Adam, must waste away into corruption; for we were condemned in him, the first man. Besides this, it is also sick with the love of pleasure, for that is how the flesh is by nature, because of its inborn impulses. How, then, was it crucified with Christ? The Only-begotten became man and clothed himself with the earthly flesh, which, as I said, had fallen sick with death because of the old condition in Adam, and which carried within itself, as if in labour, the tendency to be sharpened toward sin by its inborn impulses.",
    "editions": [
     "complete",
     "selected"
@@ -2845,8 +2845,8 @@
    "chapter": 6,
    "verse_start": 15,
    "verse_end": 16,
-   "capsule": "Some might say that people freed from the law may safely sin under grace, and Paul answers that we are slaves of whomever we obey, whether sin or righteousness.",
-   "comment": "But this gave occasion for the same question he had explained above: someone might object that people freed from the law, which threatened wrath, could safely sin under the kindness of God’s grace. He therefore immediately added: ‘What then? Shall we sin because we are not under law but under grace? Far from it! Or do you not know that when you present yourselves as slaves for obedience, you are slaves of the one you obey, whether of sin or of obedience to righteousness?’ (Romans 6:16). Do we now believe him about the kind of sin he has been discussing? When you present yourselves, he says, as slaves for obedience, you are slaves of that one, whether of sin or righteousness.",
+   "capsule": "To the objection that people under grace may safely sin, Paul answers that we are slaves of the one we present ourselves to obey, and nothing here points to a sin passed through the seed before the age of willing.",
+   "comment": "But this gave occasion for the same question he had explained above: someone might object that people freed from the law, which threatened wrath, could safely sin under the kindness of God’s grace. He therefore immediately added: ‘What then? Shall we sin because we are not under law but under grace? Far from it! Or do you not know that when you present yourselves as slaves for obedience, you are slaves of the one you obey, whether of sin or of obedience to righteousness?’ (Romans 6:16). Do we now believe him about the kind of sin he has been discussing? When you present yourselves, he says, as slaves for obedience, you are slaves of that one, whether of sin or righteousness. Where, then, does the apostle indicate here that sin which is imagined to have flown over the very seed before the time of willing, before the activity of obedience, before the age of knowledge and conscience? Such a thing certainly can be found only in Manichaean books.",
    "editions": [
     "complete",
     "selected"
@@ -2882,8 +2882,8 @@
    "chapter": 6,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "Paul says free from righteousness but could not say freed, a word used only of being delivered from evil.",
-   "comment": "The apostle says: “When you were slaves of sin, you were free from righteousness” (Romans 6:20). He certainly could not have said “freed”. The language of liberation is fittingly and properly used when a person is freed from harmful things. Those who resolve to owe nothing to the virtues, however, can be called free from virtues. A person can therefore be called free either from good or from evil when, serving one, he aims to owe nothing to the other. But a person can be called freed only from evil, because the word “liberation” contains a sign of the distress that is driven away. What difficulty, then, could be raised here about the apostle's words when, following ordinary human usage, he called them free from good and freed from evil?",
+   "capsule": "Paul says free from righteousness, not freed, a word used only of evil, and since people present themselves as slaves of sin he imputes sin to will, not birth.",
+   "comment": "The apostle says: “When you were slaves of sin, you were free from righteousness” (Romans 6:20). He certainly could not have said “freed”. The language of liberation is fittingly and properly used when a person is freed from harmful things. Those who resolve to owe nothing to the virtues, however, can be called free from virtues. A person can therefore be called free either from good or from evil when, serving one, he aims to owe nothing to the other. But a person can be called freed only from evil, because the word “liberation” contains a sign of the distress that is driven away. What difficulty, then, could be raised here about the apostle's words when, following ordinary human usage, he called them free from good and freed from evil?\n\n… But lest you suppose that we become slaves of sin through nature, hear the apostle himself speaking in the same passage: “Do you not know that when you present yourselves as slaves to obey someone, you are slaves of the one you obey, whether of sin or of obedience to righteousness?” (Romans 6:16). He says that you presented yourselves as slaves to sin, so that you would understand him to impute sin to will, not birth. He therefore called them free from righteousness solely because they had refused to keep its commands.",
    "editions": [
     "complete",
     "selected"
@@ -3637,8 +3637,8 @@
    "chapter": 7,
    "verse_start": 14,
    "verse_end": 14,
-   "capsule": "The one who knows the law is spiritual, a statement made of the saints in general, is not himself the flesh sold under sin, for Paul separates himself from such things.",
-   "comment": "'We know that the law is spiritual' (Rom 7:14)—we, the perfect, the disciples of the Spirit, those having received the divine and spiritual law. 'But I am flesh, sold under sin' (Rom 7:14). It is not the one knowing that the law is spiritual who is flesh, sold under sin; for he was separating himself from those things. 'We know that the law is spiritual,' he says generally concerning the saints. 'But I am flesh, sold under sin.'",
+   "capsule": "The one who knows the law is spiritual separates himself from the flesh sold under sin, and 'I am flesh' means not by nature but through being sold, a state that came by an action.",
+   "comment": "'We know that the law is spiritual' (Rom 7:14)—we, the perfect, the disciples of the Spirit, those having received the divine and spiritual law. 'But I am flesh, sold under sin' (Rom 7:14). It is not the one knowing that the law is spiritual who is flesh, sold under sin; for he was separating himself from those things. 'We know that the law is spiritual,' he says generally concerning the saints. 'But I am flesh, sold under sin.'\n\nAnd many doctrines this very brief expression subverts: 'I am flesh'; not by nature, nor am I such by construction, but 'having been sold under sin.' For he who is sold under a certain master in order to become so is not fleshly by nature; for his state has become such through an action.",
    "editions": [
     "complete"
    ],
@@ -6222,7 +6222,7 @@
    "verse_start": 14,
    "verse_end": 15,
    "capsule": "The Jews' strife deprived them of the universal grace, so that those not calling on the Lord, like the blind or deaf, were deprived of the salvation sent to the nations.",
-   "comment": "… that the salvation of the Lord's calling is for all men, but the previously mentioned strife of the Jews deprived them of the universal grace, having a private unfitness for the common good, because of which the apostleship, the preaching, the hearing, the faith, and the calling stood not toward them, but toward the nations.\n\nJust as light, being common to all by nature, becomes foreign to those darkening themselves, and the sun shines not for the blind nor rises, nor does the one who has cried out speak to the deaf, so indeed the ones sent and preaching do nothing toward the Jews; for it is a prerequisite that they are unable to hear, as if they had fallen into deafness toward the divine preachings, whence they were deprived of salvation by not calling upon Him, just as it was revealed in the prophet: 'For there is not,' he says, 'one who calls upon your name and remembers to take hold of you, because you turned your face away from us.'",
+   "comment": "… that the salvation of the Lord's calling is for all men, but the previously mentioned strife of the Jews deprived them of the universal grace, having a private unfitness for the common good, because of which the apostleship, the preaching, the hearing, the faith, and the calling stood not toward them, but toward the nations.\n\nJust as light, being common to all by nature, becomes foreign to those darkening themselves, and the sun shines not for the blind nor rises, nor does the one who has cried out speak to the deaf, so indeed the ones sent and preaching do nothing toward the Jews; for it is a prerequisite that they are unable to hear, as if they had fallen into deafness toward the divine preachings, whence they were deprived of salvation by not calling upon Him, just as it was revealed in the prophet: 'For there is not,' he says, 'one who calls upon your name and remembers to take hold of you, because you turned your face away from us.'\n\nThis also is sufficient testimony even against the Jews; for it is evident that the Christ whom they do not call upon, they do not hold fast to.\n\nHe is the one who turned His face from them, from whom He indeed said: 'You shall not see my face from now until you say: Blessed is he who comes in the name of the Lord.'",
    "editions": [
     "complete"
    ],
@@ -6933,7 +6933,7 @@
    "verse_start": 30,
    "verse_end": 30,
    "capsule": "Both Israel and the nations stand under equal charges and have been healed by one grace.",
-   "comment": "“For just as you once disobeyed God,” and so on (Romans 11:30). He shows that the charges against both are equal, and that those from the nations and Israel alike have been healed by one grace. For Israel was called in its time through Moses and rescued from its misery in Egypt; …",
+   "comment": "“For just as you once disobeyed God,” and so on (Romans 11:30). He shows that the charges against both are equal, and that those from the nations and Israel alike have been healed by one grace. For Israel was called in its time through Moses and rescued from its misery in Egypt; but the worshippers of demons, that is, the nations,…",
    "editions": [
     "complete"
    ],
@@ -6951,7 +6951,7 @@
    "verse_start": 30,
    "verse_end": 31,
    "capsule": "The nations, pictured by the Egyptians, once disobeyed the mercy shown to Israel, but now receive mercy while Israel in turn disobeys the mercy shown to the nations so that it too may receive mercy in due time.",
-   "comment": "… [The nations,] whom we may understand as signified by the Egyptians, for a time disobeyed the mercy shown to those of Israel. For they did not believe the divine signs worked through Moses; they would not know the God of the Hebrews. The people of the Jews was sent out, though barely, to offer sacrifice in the wilderness, while the Egyptians held fast to their ancient error. But now they have received mercy, since Israel has stumbled; and Israel in turn has disobeyed the mercy shown to the nations, so that it too may receive mercy in due time (Romans 11:30–31).",
+   "comment": "… [but the worshippers of demons, that is, the nations,] whom we may understand as signified by the Egyptians, for a time disobeyed the mercy shown to those of Israel. For they did not believe the divine signs worked through Moses; they would not know the God of the Hebrews. The people of the Jews was sent out, though barely, to offer sacrifice in the wilderness, while the Egyptians held fast to their ancient error. But now they have received mercy, since Israel has stumbled; and Israel in turn has disobeyed the mercy shown to the nations, so that it too may receive mercy in due time (Romans 11:30–31).",
    "editions": [
     "complete"
    ],
@@ -7869,8 +7869,8 @@
    "chapter": 15,
    "verse_start": 3,
    "verse_end": 3,
-   "capsule": "Christ bears, in his person toward the Father, the insults of those who insulted God, as when Israel made gods.",
-   "comment": "For indeed they compelled Aaron to make gods for themselves which would go before them, as an insult and a reproach to God. Therefore, as concerning the person of Christ toward the Father, the psalm is said, saying: 'the insults of those insulting you have fallen upon me' (Psalm 69:9).",
+   "capsule": "The Jews insulted God by running to other gods, as when they made Aaron make gods, and the psalm speaks in Christ's person to the Father of those insults falling on him.",
+   "comment": "He will establish their knowledge and their unbelief will be set right; for such are most especially the Jews, as if fleeing to other gods as an insult to God, and as if insulting God as not willing or not able to help, they ran to gods, trusting more in the help from others. For indeed they compelled Aaron to make gods for themselves which would go before them, as an insult and a reproach to God. Therefore, as concerning the person of Christ toward the Father, the psalm is said, saying: 'the insults of those insulting you have fallen upon me' (Psalm 69:9).",
    "editions": [
     "complete"
    ],

@@ -1,12 +1,12 @@
 {
  "book": "Matthew",
  "title": "The Fathers on Matthew",
- "generated": "2026-11-09",
+ "generated": "2026-11-10",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 637,
+ "comment_count": 638,
  "selected_count": 333,
  "comments": [
   {
@@ -460,13 +460,13 @@
    "chapter": 2,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "“Go” instead of “flee” hints at relief, and Egypt repeats Israel's captivity and rescue.",
-   "comment": "He no longer says “flee,” (Matthew 2:20) but “go,” hinting at relief after the trial. …\n\nIn Christ’s economic [relating to God's plan of salvation] descent into Egypt and his return from there into Judea, God recapitulates the people’s captivity and redeems them from the plot, leading them home again.",
+   "capsule": "“Go” hints at relief, “the child's soul” overturns the claim of flesh without a soul, and Egypt repeats Israel's captivity and rescue.",
+   "comment": "He no longer says “flee,” (Matthew 2:20) but “go,” hinting at relief after the trial. By speaking of the child’s soul he overturns Apollinaris’s claim that the Lord took flesh without mind and without soul.\n\nIn Christ’s economic [relating to God's plan of salvation] descent into Egypt and his return from there into Judea, God recapitulates the people’s captivity and redeems them from the plot, leading them home again.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the change from 'flee' to 'go' and why Christ goes to Egypt and back.",
+   "selected_reason": "Explains the change from 'flee' to 'go', the words 'the child's soul' and why Christ goes to Egypt and back.",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Matthew",
    "work_slug": "cyril-matthew-fragments",
@@ -1780,8 +1780,8 @@
    "chapter": 5,
    "verse_start": 23,
    "verse_end": 24,
-   "capsule": "A man at odds with his brother must be reconciled before he offers his gift, for without peace with his brother he cannot have God at peace with him.",
-   "comment": "And he [the Lord] calls back from the altar the one who comes to sacrifice while at odds with a brother, and orders him first to be reconciled with his brother, and then to return in peace and offer his gift to God (Matthew 5:23-24). For God did not even look upon Cain’s gifts (Genesis 4:5), since no one who lacked peace with his brother through the discord of envy could have God at peace with him.",
+   "capsule": "A man at odds with his brother must be reconciled before he offers his gift, so those gathered outside the Church, enemies of their brothers, can promise themselves no peace.",
+   "comment": "And he [the Lord] calls back from the altar the one who comes to sacrifice while at odds with a brother, and orders him first to be reconciled with his brother, and then to return in peace and offer his gift to God (Matthew 5:23-24). For God did not even look upon Cain’s gifts (Genesis 4:5), since no one who lacked peace with his brother through the discord of envy could have God at peace with him.\n\nWhat peace, then, do the enemies of brothers promise themselves? What sacrifices do rivals of priests believe they are celebrating? Do those who are gathered outside the Church of Christ imagine that Christ is with them when they assemble?",
    "editions": [
     "complete",
     "selected"
@@ -3242,8 +3242,8 @@
    "chapter": 7,
    "verse_start": 22,
    "verse_end": 23,
-   "capsule": "Calling Jesus Lord counts only when said in the Holy Spirit, with diligent work and true disposition.",
-   "comment": "For the Savior himself says: 'Many will say to me in that day, Lord, Lord' (Matt 7:22); and I, he says, will confess to them, 'Depart from me, workers of iniquity, I never knew you' (Matt 7:23). And again: 'Why do you call me Lord, Lord, and do not do what I say?' (Luke 6:46). Therefore, the one saying 'Lord Jesus' in the Holy Spirit, not in mere utterance but in diligent work and true disposition, is truly a servant, …",
+   "capsule": "Many heretics and hypocrites say “Lord” in mere utterance without the Holy Spirit, but the true servant says it in the Spirit, with diligent work and true disposition.",
+   "comment": "It will not be so, with myriads of heretics and hypocrites saying it is mere utterance and not having the Holy Spirit of God. For the Savior himself says: 'Many will say to me in that day, Lord, Lord' (Matt 7:22); and I, he says, will confess to them, 'Depart from me, workers of iniquity, I never knew you' (Matt 7:23). And again: 'Why do you call me Lord, Lord, and do not do what I say?' (Luke 6:46). Therefore, the one saying 'Lord Jesus' in the Holy Spirit, not in mere utterance but in diligent work and true disposition, is truly a servant, …",
    "editions": [
     "complete"
    ],
@@ -3539,8 +3539,8 @@
    "chapter": 8,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "Christ took our passions on himself, and distress, grief and fear are ailments of the soul.",
-   "comment": "Rather, the Word was displaying in himself the passions of our nature, taking up the part that was given over to suffering. As it is written, “He himself took up our weaknesses and bore our ailments” (Isaiah 53:4; Matthew 8:17). For distress, grief and fear are ailments of the soul; but weariness, sleep and the wounding of the body are weaknesses of the flesh.",
+   "capsule": "Christ's body cannot be without soul or mind, for the Word took up our passions, and distress, grief and fear are ailments of the soul.",
+   "comment": "How can anyone say that the body of Christ is without soul or mind? For distress, grief and fear belong neither to flesh without a soul, nor to a soul without understanding, nor to the unchangeable divinity. Nor are they the show of an empty appearance, nor the failure of a human weakness that gives way. Rather, the Word was displaying in himself the passions of our nature, taking up the part that was given over to suffering. As it is written, “He himself took up our weaknesses and bore our ailments” (Isaiah 53:4; Matthew 8:17). For distress, grief and fear are ailments of the soul; but weariness, sleep and the wounding of the body are weaknesses of the flesh.",
    "editions": [
     "complete"
    ],
@@ -6891,7 +6891,7 @@
    "verse_start": 1,
    "verse_end": 2,
    "capsule": "Christ was transfigured into a better form that only those who could follow him to the height were able to see.",
-   "comment": "…our God “was transfigured” and, going up “onto the high mountain” (Matthew 17:1-2; Mark 9:2), showed another form of himself, far better than the one seen by those who stayed below and could not follow him to the height. For those below did not have eyes able to see the transfiguration of the Word into what is glorious and more divine. They could barely receive him as he was, so that those who could not see his better form might say of him: “We saw him, and he had no form or beauty; but his form was without honour, falling short of the sons of men” (Isaiah 53:2-3).",
+   "comment": "For there are, as it were, different forms of the Word, as the Word appears to each of those who are being led into knowledge, in proportion to the state of each: the one who is just beginning, or who has made a little progress or more, or is already drawing near to virtue, or has even come to live in virtue.\n\nHence, not in the way Celsus [a critic of the Christians, whom Origen is answering] and those like him would have it, our God “was transfigured” and, going up “onto the high mountain” (Matthew 17:1-2; Mark 9:2), showed another form of himself, far better than the one seen by those who stayed below and could not follow him to the height. For those below did not have eyes able to see the transfiguration of the Word into what is glorious and more divine. They could barely receive him as he was, so that those who could not see his better form might say of him: “We saw him, and he had no form or beauty; but his form was without honour, falling short of the sons of men” (Isaiah 53:2-3).",
    "editions": [
     "complete"
    ],
@@ -7094,7 +7094,7 @@
    "verse_start": 9,
    "verse_end": 9,
    "capsule": "Jesus' command to tell no one the vision fits his character, for he avoided speaking about himself and showed he was the Christ by deeds.",
-   "comment": "…it does not fit the one who said to his disciples about the vision on the mountain, “Tell the vision to no one until the Son of Man has risen from the dead” (Matthew 17:9), to have told his disciples what John saw and heard at the Jordan. One may see this also in the character of Jesus, who everywhere avoided speaking about himself and for that reason said, “Even if I speak about myself, my testimony is not true” (John 5:31). And since he avoided speaking about himself, and wished to show that he was the Christ by his deeds rather than by his words…",
+   "comment": "Further, I will add to my argument the very point Celsus [a critic of the Christians] assumes: that Jesus himself told of the opening of the heavens and of the Holy Spirit that came down upon him in the form of a dove at the Jordan, although Scripture does not present him as saying that he saw this. This most noble man did not see that it does not fit the one who said to his disciples about the vision on the mountain, “Tell the vision to no one until the Son of Man has risen from the dead” (Matthew 17:9), to have told his disciples what John saw and heard at the Jordan. One may see this also in the character of Jesus, who everywhere avoided speaking about himself and for that reason said, “Even if I speak about myself, my testimony is not true” (John 5:31). And since he avoided speaking about himself, and wished to show that he was the Christ by his deeds rather than by his words, for this reason the Jews say to him, “If you are the Christ, tell us plainly” (John 10:24).",
    "editions": [
     "complete"
    ],
@@ -7445,8 +7445,8 @@
    "chapter": 18,
    "verse_start": 19,
    "verse_end": 20,
-   "capsule": "Christ's promise to two or three depends on their agreement, not on their number.",
-   "comment": "Nor should certain people deceive themselves with a false interpretation of what the Lord said: \"Wherever two or three are gathered in my name, I am with them.\" … For when the Lord was urging unanimity and peace upon his disciples, he said: \"I tell you, if two of you agree on earth about anything you ask, it will be granted to you by my Father who is in heaven. For wherever two or three are gathered in my name, I am with them\" (Matthew 18:19-20). He was showing that much is given not to the number of those praying but to their unanimity.",
+   "capsule": "Those who quote 'two or three gathered' without the words before it split the passage, for the promise depends on agreement, not on number.",
+   "comment": "Nor should certain people deceive themselves with a false interpretation of what the Lord said: \"Wherever two or three are gathered in my name, I am with them.\" Corrupters of the Gospel and false interpreters put the last words forward and pass over what comes before, remembering part and slyly suppressing part. Just as they themselves have been cut off from the Church, so they split the meaning of a single passage. For when the Lord was urging unanimity and peace upon his disciples, he said: \"I tell you, if two of you agree on earth about anything you ask, it will be granted to you by my Father who is in heaven. For wherever two or three are gathered in my name, I am with them\" (Matthew 18:19-20). He was showing that much is given not to the number of those praying but to their unanimity.",
    "editions": [
     "complete",
     "selected"
@@ -8073,8 +8073,8 @@
    "chapter": 19,
    "verse_start": 29,
    "verse_end": 29,
-   "capsule": "Leaving wife and marriage is not praised as evil but so it is no obstacle to the minister.",
-   "comment": "So, therefore, not even the separation from wife and marriage is to be counted as something evil to be praised, but so that even this is not an obstacle to the minister; and the preference of spiritual things altogether shows that the fleshly things are not foreign …",
+   "capsule": "Leaving wife and marriage does not make fleshly things foreign, as the Manichaeans hold, but removes an obstacle to the minister.",
+   "comment": "So, therefore, not even the separation from wife and marriage is to be counted as something evil to be praised, but so that even this is not an obstacle to the minister; and the preference of spiritual things altogether shows that the fleshly things are not foreign, unlike the Manichaeans who invalidate the creation of God.",
    "editions": [
     "complete"
    ],
@@ -9106,8 +9106,8 @@
    "chapter": 22,
    "verse_start": 23,
    "verse_end": 23,
-   "capsule": "The Sadducees' dispute was about bodies, not souls: the dead rise when the soul is reunited with its body.",
-   "comment": "But the dispute with the Sadducees was not about souls, but about bodies, so that the answer was about these (Mt 22:23).\n\nIt is said then that the dead rise, when the soul is with a body, not as if the soul were dissolved in the interval, but as being inactive and lacking the proper things of life which are with a body; for man and life are one thing in common, and both must be reunited toward the life from death.",
+   "capsule": "Though the followers of Valentinus and Marcion apply the saying to souls, the Sadducees' dispute was about bodies, and the dead rise when the soul is reunited with its body.",
+   "comment": "We know, however, that even regarding this word, those from Valentinus and Marcion still contend, bringing the word up to souls; for they say that these live, …\n\nBut the dispute with the Sadducees was not about souls, but about bodies, so that the answer was about these (Mt 22:23).\n\nIt is said then that the dead rise, when the soul is with a body, not as if the soul were dissolved in the interval, but as being inactive and lacking the proper things of life which are with a body; for man and life are one thing in common, and both must be reunited toward the life from death.",
    "editions": [
     "complete",
     "selected"
@@ -9769,6 +9769,24 @@
    "work_slug": "cyril-matthew-fragments",
    "section": "239",
    "url": "https://viapatrum.org/works/cyril-matthew-fragments/239/",
+   "from_cite": false
+  },
+  {
+   "id": "MT24-023",
+   "chapter": 24,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Simon the Magician, Mani, Dositheos the Samaritan and Montanus are among those who came in his name.",
+   "comment": "And who came in His name?\n\nSimon the Magician, saying he was the great power; Mani came; a certain Dositheos the Samaritan came, claiming to be the prophet proclaimed by Moses.\n\nMontanus alone said in his own writings: 'I am the Word, the Bridegroom, the Paraclete, the Pantocrator [the Almighty], I am all things.'",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Apollinaris of Laodicea",
+   "work": "Fragments on Matthew",
+   "work_slug": "apollinaris-fragmenta-matthaeum",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/apollinaris-fragmenta-matthaeum/u04-rem-mid/",
    "from_cite": false
   },
   {
@@ -11126,8 +11144,8 @@
    "chapter": 27,
    "verse_start": 25,
    "verse_end": 25,
-   "capsule": "The Lord blamed this outcry through Jeremiah, saying he had left his house to its enemies.",
-   "comment": "The Lord was blaming this unholy outcry of theirs (Matthew 27:25) through Jeremiah’s voice: “I have abandoned my house; I have left my inheritance; I have given my beloved soul into the hands of her enemies. My inheritance has become to me like a lion in a thicket; she raised her voice against me; therefore I hated her.” (Jeremiah 12:7–8) …",
+   "capsule": "The Lord blamed this outcry through Jeremiah, saying he had left his house to its enemies, and Hosea too spoke of their impiety against him.",
+   "comment": "The Lord was blaming this unholy outcry of theirs (Matthew 27:25) through Jeremiah’s voice: “I have abandoned my house; I have left my inheritance; I have given my beloved soul into the hands of her enemies. My inheritance has become to me like a lion in a thicket; she raised her voice against me; therefore I hated her.” (Jeremiah 12:7–8) Somewhere Hosea also spoke about the Jews’ unholiness: “Woe to them, for they leaped away from me; they are wretched, for they acted impiously against me. I redeemed them, but they spoke false things against me. Their rulers will fall by the sword through the lack of training of their tongue.” (Hosea 7:13–16)",
    "editions": [
     "complete"
    ],
@@ -11404,8 +11422,8 @@
    "chapter": 27,
    "verse_start": 51,
    "verse_end": 51,
-   "capsule": "The torn veil shows the temple mourning and the end of the law's shadow, and opens the holy of holies to all justified by faith.",
-   "comment": "The tearing of the veil was no unclear sign that the temple itself all but mourned, and those brought down into ruin and destruction who crucified the Master of that very temple — perhaps also convicting them …\n\nBut what happened also seems to hint something else needful for our benefit: the veil that hid the holies of holies within, when the time arrived in which the law’s shadow had to be drawn together and the worship in types to cease, and the holies of holies to be opened to those justified through faith in Christ, is torn around, God as it were showing them to the worthy, so that henceforth, with nothing restraining, those who go in Christ’s track may run into the inner tent (Matthew 27:51).",
+   "capsule": "The torn veil shows the temple mourning and, like a garment torn at blasphemy, convicting the crucifiers of impiety, and it opens the holy of holies to those justified by faith.",
+   "comment": "The tearing of the veil was no unclear sign that the temple itself all but mourned, and those brought down into ruin and destruction who crucified the Master of that very temple — perhaps also convicting them, through the custom among them, of impiety against Christ. For it was a Jewish custom to tear clothing around when God was blasphemed.\n\nBut what happened also seems to hint something else needful for our benefit: the veil that hid the holies of holies within, when the time arrived in which the law’s shadow had to be drawn together and the worship in types to cease, and the holies of holies to be opened to those justified through faith in Christ, is torn around, God as it were showing them to the worthy, so that henceforth, with nothing restraining, those who go in Christ’s track may run into the inner tent (Matthew 27:51).",
    "editions": [
     "complete",
     "selected"
