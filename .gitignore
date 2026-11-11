@@ -45,3 +45,4 @@ node_modules/
 /AGENTS.local.md
 /docs/WRAPUP_PLAN_2026-10-14.md
 /docs/GPU_RENDER_COSTS.md
+.claude/

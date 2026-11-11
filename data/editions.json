@@ -3750,6 +3750,24 @@
     "hash": "59b97e248da2fc4d",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-10T23:26:44-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 4,
+     "layout": 0,
+     "refs": 0,
+     "removed": 0,
+     "sentences": 18
+    },
+    "date": "2026-11-10",
+    "hash": "658eaf75521ed5a3",
+    "kind": "change",
+    "notes": [
+     "wording corrected in 18 sentences",
+     "4 section titles corrected"
+    ]
    }
   ],
   "origen-dialogue-heraclides": [
