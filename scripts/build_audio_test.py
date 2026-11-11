@@ -837,6 +837,16 @@ class RereadGuardTests(unittest.TestCase):
         from build_audio import reread_block
         self.assertIsNone(reread_block("w", "s", None, None, "aura-2-orion", self.mp3))
 
+    def test_fetch_needs_a_recorded_key(self):
+        from build_audio import fetch_old_mp3
+        self.assertFalse(fetch_old_mp3({"sentences": [{"t": "a"}]}, self.mp3))
+        self.assertFalse(fetch_old_mp3(None, self.mp3))
+
+    def test_existing_old_mp3_is_kept(self):
+        from build_audio import fetch_old_mp3
+        self.mp3.write_bytes(b"x")
+        self.assertTrue(fetch_old_mp3({"r2_key": "k", "bytes": 99, "sentences": [{"t": "a"}]}, self.mp3))
+
     def test_missing_or_bad_proof_does_not_unlock(self):
         from build_audio import _reread_proof_ok
         self.assertFalse(_reread_proof_ok(""))

@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -390,6 +391,37 @@ def reread_block(work: str, stem: str, prev: dict | None, prev_voice: str | None
             "owner's approval." % (work, stem, len(old), why, _r2_copies(work, stem), old_mp3))
 
 
+def fetch_old_mp3(prev: dict | None, old_mp3: Path) -> bool:
+    """Download a recorded passage's mp3 from R2 so reuse_plan can keep every
+    unchanged sentence (SOP, owner 11 Nov 2026: only the broken parts). The
+    manifest's r2_key and bytes name the exact recording its timings belong to;
+    a size mismatch is discarded. Returns True when the file is in place."""
+    prev = prev or {}
+    key, size = prev.get("r2_key"), prev.get("bytes")
+    if old_mp3.is_file():
+        return True
+    if not key or not prev.get("sentences"):
+        return False
+    import urllib.request
+    part = old_mp3.with_suffix(".part.mp3")
+    old_mp3.parent.mkdir(parents=True, exist_ok=True)
+    req = urllib.request.Request("%s/%s" % (AUDIO_PUBLIC, key),
+                                 headers={"User-Agent": "Mozilla/5.0 (viapatrum build_audio)"})
+    try:
+        with urllib.request.urlopen(req, timeout=300) as r, open(part, "wb") as out:
+            shutil.copyfileobj(r, out, 1 << 20)
+    except OSError as e:
+        part.unlink(missing_ok=True)
+        _say("old recording %s not fetched: %s" % (key, e), err=True)
+        return False
+    if size and part.stat().st_size != int(size):
+        _say("old recording %s is %d bytes, manifest says %s; not used" % (key, part.stat().st_size, size), err=True)
+        part.unlink(missing_ok=True)
+        return False
+    part.replace(old_mp3)
+    return True
+
+
 def _r2_copies(work: str, stem: str) -> str:
     """Where the old recording sits in R2, from the bucket ledger (outputs/audio-r2-ledger.json)."""
     try:
@@ -437,6 +469,8 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
     old_mp3 = OUT / work / (eng_file.stem + ".mp3")
     if _os.environ.get("KOKORO_ENGINE") == "cf-worker":
         return _render_via_worker(eng_file, work, manifest, sentences, parts_of, sig, quote_voice)
+    if prev and not old_mp3.is_file():
+        fetch_old_mp3(prev, old_mp3)  # the exact recording the timings belong to, from R2
     refused = reread_block(work, eng_file.stem, prev, prev_voice, voice, old_mp3)
     if refused and not _reread_proof_ok(_os.environ.get("AUDIO_REREAD_PROOF", "")):
         raise SystemExit(refused)
