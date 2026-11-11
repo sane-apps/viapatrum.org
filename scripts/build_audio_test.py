@@ -805,6 +805,45 @@ class AudiobookKeptOnSaleTests(unittest.TestCase):
             self.assertIn("never-built", data["skipped"])
             self.assertIn("text moved on, kept on the shelf: old-voice", buf.getvalue())
 
+class RereadGuardTests(unittest.TestCase):
+    """SOP (owner, 11 Nov 2026): never re-record unless needed, and then only the broken parts.
+    Trap: on 10 Nov two recorded works were re-spoken whole because their old mp3s were not on the Mini."""
+
+    def setUp(self):
+        import tempfile
+        from pathlib import Path
+        self.dir = Path(tempfile.mkdtemp())
+        self.mp3 = self.dir / "gebet_english.mp3"
+        self.prev = {"sentences": [{"t": "One.", "s": 0.0, "e": 1.0}, {"t": "Two.", "s": 1.0, "e": 2.0}]}
+
+    def test_recorded_passage_without_old_mp3_is_refused(self):
+        from build_audio import reread_block
+        msg = reread_block("origen-prayer-martyrdom", "gebet_english", self.prev, "aura-2-orion", "aura-2-orion", self.mp3)
+        self.assertIn("REFUSED", msg)
+        self.assertIn("only the broken parts", msg)
+
+    def test_recorded_passage_in_another_voice_is_refused(self):
+        from build_audio import reread_block
+        self.mp3.write_bytes(b"x")
+        msg = reread_block("w", "s", self.prev, "aura-2-orion", "aura-2-arcas", self.mp3)
+        self.assertIn("recorded as aura-2-orion", msg)
+
+    def test_same_voice_with_old_mp3_reuses_and_is_allowed(self):
+        from build_audio import reread_block
+        self.mp3.write_bytes(b"x")
+        self.assertIsNone(reread_block("w", "s", self.prev, "aura-2-orion", "aura-2-orion", self.mp3))
+
+    def test_never_recorded_passage_is_allowed(self):
+        from build_audio import reread_block
+        self.assertIsNone(reread_block("w", "s", None, None, "aura-2-orion", self.mp3))
+
+    def test_missing_or_bad_proof_does_not_unlock(self):
+        from build_audio import _reread_proof_ok
+        self.assertFalse(_reread_proof_ok(""))
+        bad = self.dir / "fake.json"
+        bad.write_text('{"what": "x"}')
+        self.assertFalse(_reread_proof_ok(str(bad)))
+
 
 if __name__ == "__main__":
     unittest.main()

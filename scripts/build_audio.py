@@ -363,6 +363,59 @@ def _passage_plan(eng_file: Path, quote_voice=_UNSET) -> tuple[list[str], dict, 
     return sentences, parts_of, sig, quote_voice
 
 
+def reread_block(work: str, stem: str, prev: dict | None, prev_voice: str | None,
+                 voice: str, old_mp3: Path) -> str | None:
+    """Refuse a re-read that would re-speak a recorded passage whole.
+
+    SOP (owner, 11 Nov 2026): never re-record unless needed, and then only the
+    broken parts. Each book keeps its own narrator; there is no site voice.
+    A passage that already has a recording is re-read only when its old mp3 is
+    here in the same voice, so reuse_plan keeps every unchanged sentence and
+    only edited ones are spoken. Cause: on 10 Nov two works were re-spoken in
+    full ($10.31) because their old mp3s were not on the Mini."""
+    old = (prev or {}).get("sentences") or []
+    if not old:
+        return None
+    why = None
+    if prev_voice != voice:
+        why = "it was recorded as %s but this run would read it as %s" % (prev_voice, voice)
+    elif not old_mp3.is_file():
+        why = "its old recording %s is not on this machine, so no sentence could be reused" % old_mp3
+    if why is None:
+        return None
+    return ("REFUSED: %s/%s already has a recording (%d sentences) and %s. SOP: never re-record unless needed, "
+            "and then only the broken parts. Every published recording is in the R2 bucket; %s. Download it to %s "
+            "(same voice) so only changed sentences are spoken. A full re-read needs AUDIO_REREAD_PROOF=<spend "
+            "proof> from ~/SaneApps/infra/SaneProcess/scripts/spend_proof.rb with --full-redo-reason, and the "
+            "owner's approval." % (work, stem, len(old), why, _r2_copies(work, stem), old_mp3))
+
+
+def _r2_copies(work: str, stem: str) -> str:
+    """Where the old recording sits in R2, from the bucket ledger (outputs/audio-r2-ledger.json)."""
+    try:
+        ledger = json.loads((ROOT / "outputs" / "audio-r2-ledger.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return "look it up in outputs/audio-r2-ledger.json"
+    keys = sorted(k for k in ledger if k.startswith("narration/%s/%s." % (work, stem)))
+    if not keys:
+        return "the ledger lists no narration/%s/%s.*.mp3; ask before going further" % (work, stem)
+    return "the ledger lists " + ", ".join("%s/%s" % (AUDIO_PUBLIC, k) for k in keys[:3])
+
+
+def _reread_proof_ok(path: str) -> bool:
+    """True when path is a valid signed spend proof (checked by the SaneProcess hook code)."""
+    if not path:
+        return False
+    hooks = Path.home() / "SaneApps/infra/SaneProcess/scripts/hooks"
+    code = "require_relative %r; p = SaneSpendProof.verify(ARGV[0]); puts(p.nil? ? 'OK' : p)" % str(hooks / "core/spend_proof.rb")
+    try:
+        out = subprocess.run(["ruby", "-e", code, str(Path(path).expanduser())], capture_output=True,
+                             text=True, timeout=60).stdout.strip()
+    except (OSError, subprocess.SubprocessError):
+        return False
+    return out == "OK"
+
+
 def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Path,
                          work: str, manifest: dict, prev: dict | None = None,
                          prev_voice: str | None = None) -> int:
@@ -384,6 +437,9 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
     old_mp3 = OUT / work / (eng_file.stem + ".mp3")
     if _os.environ.get("KOKORO_ENGINE") == "cf-worker":
         return _render_via_worker(eng_file, work, manifest, sentences, parts_of, sig, quote_voice)
+    refused = reread_block(work, eng_file.stem, prev, prev_voice, voice, old_mp3)
+    if refused and not _reread_proof_ok(_os.environ.get("AUDIO_REREAD_PROOF", "")):
+        raise SystemExit(refused)
     plan: dict[int, tuple[float, float]] = {}
     if prev and prev_voice == voice and old_mp3.is_file():
         if quote_voice:
@@ -401,7 +457,10 @@ def _render_english_file(eng_file: Path, pipeline, cpu_fallback, mlx, tmpdir: Pa
         print("  %s reuse %d, speak %d of %d sentences"
               % (eng_file.stem, len(plan), len(todo), len(sentences)), flush=True)
     if cf_mode:
-        from cf_tts import render_all
+        if os.environ.get("TTS_PROVIDER", "").strip().lower() == "deepgram":
+            from dg_tts import render_all   # same Aura-2 voices, Deepgram's own API (owner, 10 Nov 2026)
+        else:
+            from cf_tts import render_all
         CF_SPEAKER = _cf_speaker(voice)
         mixed = [i for i in todo if i in parts_of]
         print("  %s cf_tts %d sentences (%s%s)"
