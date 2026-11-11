@@ -930,6 +930,25 @@
     "hash": "63b4c5665aee8180",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 11,
+     "layout": 0,
+     "refs": 146,
+     "removed": 0,
+     "sentences": 657
+    },
+    "date": "2026-11-11",
+    "hash": "ea8175a000119508",
+    "kind": "change",
+    "notes": [
+     "146 Scripture references corrected",
+     "wording corrected in 657 sentences",
+     "11 section titles corrected"
+    ]
    }
   ],
   "cyril-adoration-2": [
@@ -1126,6 +1145,25 @@
     "notes": [
      "7 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 1,
+     "layout": 0,
+     "refs": 65,
+     "removed": 0,
+     "sentences": 206
+    },
+    "date": "2026-11-11",
+    "hash": "dafc94348f7c0c59",
+    "kind": "change",
+    "notes": [
+     "65 Scripture references corrected",
+     "wording corrected in 206 sentences",
+     "1 section title corrected"
+    ]
    }
   ],
   "cyril-fragmenta-canticum": [
@@ -1203,6 +1241,25 @@
     "kind": "first",
     "notes": [
      "14 Scripture references corrected"
+    ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 2,
+     "layout": 0,
+     "refs": 40,
+     "removed": 0,
+     "sentences": 149
+    },
+    "date": "2026-11-11",
+    "hash": "3c97c1dfa273b75f",
+    "kind": "change",
+    "notes": [
+     "40 Scripture references corrected",
+     "wording corrected in 149 sentences",
+     "2 section titles corrected"
     ]
    }
   ],
@@ -1522,6 +1579,25 @@
     "notes": [
      "180 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 69,
+     "layout": 0,
+     "refs": 699,
+     "removed": 0,
+     "sentences": 2244
+    },
+    "date": "2026-11-11",
+    "hash": "5b51c20d7ac55c18",
+    "kind": "change",
+    "notes": [
+     "699 Scripture references corrected",
+     "wording corrected in 2,244 sentences",
+     "69 section titles corrected"
+    ]
    }
   ],
   "didymus-enarratio-catholicas": [
@@ -1535,6 +1611,25 @@
     "kind": "first",
     "notes": [
      "18 Scripture references corrected"
+    ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 1,
+     "layout": 0,
+     "refs": 66,
+     "removed": 0,
+     "sentences": 32
+    },
+    "date": "2026-11-11",
+    "hash": "5210f18929db316d",
+    "kind": "change",
+    "notes": [
+     "66 Scripture references corrected",
+     "wording corrected in 32 sentences",
+     "1 section title corrected"
     ]
    }
   ],
@@ -3402,6 +3497,24 @@
     "hash": "a6192bb65d5ef4da",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 2,
+     "removed": 0,
+     "sentences": 99
+    },
+    "date": "2026-11-11",
+    "hash": "24eb2b5bdb48675c",
+    "kind": "change",
+    "notes": [
+     "2 Scripture references corrected",
+     "wording corrected in 99 sentences"
+    ]
    }
   ],
   "le-blanc-theses-theologicae": [
@@ -3796,6 +3909,24 @@
     "notes": [
      "2 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 102,
+     "removed": 0,
+     "sentences": 371
+    },
+    "date": "2026-11-11",
+    "hash": "9770493c4e5f4359",
+    "kind": "change",
+    "notes": [
+     "102 Scripture references corrected",
+     "wording corrected in 371 sentences"
+    ]
    }
   ],
   "origen-exhortation-to-martyrdom": [
@@ -3809,6 +3940,25 @@
     "kind": "first",
     "notes": [
      "12 Scripture references corrected"
+    ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 49,
+     "layout": 0,
+     "refs": 244,
+     "removed": 0,
+     "sentences": 505
+    },
+    "date": "2026-11-11",
+    "hash": "01b44d4b1b74bf76",
+    "kind": "change",
+    "notes": [
+     "244 Scripture references corrected",
+     "wording corrected in 505 sentences",
+     "49 section titles corrected"
     ]
    }
   ],
@@ -3834,6 +3984,24 @@
     "notes": [
      "50 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 38,
+     "removed": 0,
+     "sentences": 26
+    },
+    "date": "2026-11-11",
+    "hash": "9e6c4f6d072ff876",
+    "kind": "change",
+    "notes": [
+     "38 Scripture references corrected",
+     "wording corrected in 26 sentences"
+    ]
    }
   ],
   "origen-homily-1samuel-28": [
@@ -3858,6 +4026,24 @@
     "hash": "c77e5e76ff326bc8",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 204,
+     "removed": 0,
+     "sentences": 701
+    },
+    "date": "2026-11-11",
+    "hash": "1aeeabec940d736c",
+    "kind": "change",
+    "notes": [
+     "204 Scripture references corrected",
+     "wording corrected in 701 sentences"
+    ]
    }
   ],
   "origen-job-homilies": [
@@ -3868,6 +4054,25 @@
     "hash": "5b6287052b72b9b2",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 2,
+     "layout": 0,
+     "refs": 116,
+     "removed": 0,
+     "sentences": 469
+    },
+    "date": "2026-11-11",
+    "hash": "b1e891f134c8e77c",
+    "kind": "change",
+    "notes": [
+     "116 Scripture references corrected",
+     "wording corrected in 469 sentences",
+     "2 section titles corrected"
+    ]
    }
   ],
   "origen-job-selecta": [
@@ -3892,6 +4097,23 @@
     "notes": [
      "30 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 36,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-11",
+    "hash": "03f8f5caf3dad010",
+    "kind": "change",
+    "notes": [
+     "36 Scripture references corrected"
+    ]
    }
   ],
   "origen-nt-fragments": [
@@ -3902,6 +4124,25 @@
     "hash": "ee455d3149c67bc9",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 7,
+     "layout": 0,
+     "refs": 33,
+     "removed": 0,
+     "sentences": 100
+    },
+    "date": "2026-11-11",
+    "hash": "95b7a416083a3e5b",
+    "kind": "change",
+    "notes": [
+     "33 Scripture references corrected",
+     "wording corrected in 100 sentences",
+     "7 section titles corrected"
+    ]
    }
   ],
   "origen-on-pascha": [
@@ -3994,6 +4235,23 @@
     "hash": "c08df16b08e35e88",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 17,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-11",
+    "hash": "61603ce6ffcd8d59",
+    "kind": "change",
+    "notes": [
+     "17 Scripture references corrected"
+    ]
    }
   ],
   "origen-ruth-scrap": [
@@ -4220,6 +4478,23 @@
     "notes": [
      "11 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 8,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-11",
+    "hash": "d2682ec96c59512d",
+    "kind": "change",
+    "notes": [
+     "8 Scripture references corrected"
+    ]
    }
   ],
   "severianus-fragmenta-1thess": [
@@ -4262,6 +4537,25 @@
     "notes": [
      "20 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 1,
+     "layout": 0,
+     "refs": 93,
+     "removed": 0,
+     "sentences": 281
+    },
+    "date": "2026-11-11",
+    "hash": "9b266b0cc385c7fc",
+    "kind": "change",
+    "notes": [
+     "93 Scripture references corrected",
+     "wording corrected in 281 sentences",
+     "1 section title corrected"
+    ]
    }
   ],
   "severianus-fragmenta-2thess": [
@@ -4296,6 +4590,24 @@
     "notes": [
      "2 Scripture references corrected"
     ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 30,
+     "removed": 0,
+     "sentences": 209
+    },
+    "date": "2026-11-11",
+    "hash": "cd575cf41c52f621",
+    "kind": "change",
+    "notes": [
+     "30 Scripture references corrected",
+     "wording corrected in 209 sentences"
+    ]
    }
   ],
   "severianus-fragmenta-ephesios": [
@@ -4316,6 +4628,24 @@
     "hash": "d7d719fecf3513e7",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 15,
+     "removed": 0,
+     "sentences": 128
+    },
+    "date": "2026-11-11",
+    "hash": "b481ed80bfc6dde1",
+    "kind": "change",
+    "notes": [
+     "15 Scripture references corrected",
+     "wording corrected in 128 sentences"
+    ]
    }
   ],
   "severianus-fragmenta-hebraeos": [
@@ -4329,6 +4659,24 @@
     "kind": "first",
     "notes": [
      "6 Scripture references corrected"
+    ]
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 26,
+     "removed": 0,
+     "sentences": 104
+    },
+    "date": "2026-11-11",
+    "hash": "f9df0af0c1cec6dd",
+    "kind": "change",
+    "notes": [
+     "26 Scripture references corrected",
+     "wording corrected in 104 sentences"
     ]
    }
   ],
@@ -4388,6 +4736,24 @@
     "hash": "627a1aafe11f1cc1",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-11T13:49:02-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 57,
+     "removed": 0,
+     "sentences": 863
+    },
+    "date": "2026-11-11",
+    "hash": "a92fc8b2f9f70a04",
+    "kind": "change",
+    "notes": [
+     "57 Scripture references corrected",
+     "wording corrected in 863 sentences"
+    ]
    }
   ],
   "severianus-in-genesim": [
