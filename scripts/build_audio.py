@@ -1305,10 +1305,36 @@ def _book_candidates(tiers: dict, failures: dict) -> tuple[list, int]:
     return sorted(candidates), aside
 
 
+def _changed_count(work: str, stems, passages: dict) -> int:
+    """Sentences that would actually be spoken again for these English files: new or changed
+    sentences only, since unchanged ones are reused (2026-11-11: sorting the stale queue by
+    total size left passages with one corrected reference behind costly rewrites)."""
+    folder = BOOKS / work / "translations"
+    total = 0
+    for stem in stems:
+        eng = folder / (stem + ".json")
+        if not eng.is_file():
+            continue
+        new = []
+        try:
+            rows = json.loads(eng.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        rows = rows if isinstance(rows, list) else rows.get("sections", [])
+        for row in rows:
+            for para in row.get("english", []) or []:
+                new.extend(split_sentences(read_text(para)))
+        old = [str(x.get("t", "")) for x in ((passages.get(stem) or {}).get("sentences") or [])]
+        import difflib
+        same = sum(b.size for b in difflib.SequenceMatcher(None, old, new, autojunk=False).get_matching_blocks())
+        total += max(0, len(new) - same)
+    return total
+
+
 def _scan_stale(tiers: dict, failures: dict) -> dict:
     """Every recorded book's changed text, split by what the drain may do.
 
-    ready: [(tier, sentences, work, stems)] in the current voice (any voice
+    ready: [(tier, changed sentences, work, stems)] in the current voice (any voice
     with AUDIO_RESTEM_OLD_VOICE=1). old_voice: works whose changed files are in
     an older voice; a re-read would re-voice them in full, so they wait for the
     owner and are reported instead of dropped in silence."""
@@ -1347,7 +1373,7 @@ def _scan_stale(tiers: dict, failures: dict) -> dict:
                 counts["set_aside"] += 1
                 continue
             counts["stale_current_voice"] += len(now)
-            ready.append((tiers.get(work, 1), _sentence_count(work, set(now)), work, now))
+            ready.append((tiers.get(work, 1), _changed_count(work, now, passages), work, now))
     return {"ready": sorted(ready, key=lambda r: r[:3]), "old_voice": old, "counts": counts}
 
 
