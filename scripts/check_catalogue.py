@@ -229,13 +229,14 @@ named_holds = [
     "origen-ezekiel-fragments", "origen-philocalia", "origen-romans-catena", "origen-de-principiis",
     "origen-letters", "origen-song-homily-1",
     "pseudo-cyprian-to-vigilius", "didymus-dialexis-montanistae",
+    # Held 2026-11-11: the page was a digest with editor's notes, not a translation.
+    "origen-song-homily-2",
 ]
 kept_named, held_named = site.split_withheld(
     [{"slug": slug, "status": "available"} for slug in named_holds]
-    + [{"slug": "origen-song-homily-2", "status": "available"},
-       {"slug": "origen-letters-gregory-series", "status": "available"}]
+    + [{"slug": "origen-letters-gregory-series", "status": "available"}]
 )
-assert [w["slug"] for w in kept_named] == ["origen-song-homily-2", "origen-letters-gregory-series"], kept_named
+assert [w["slug"] for w in kept_named] == ["origen-letters-gregory-series"], kept_named
 assert held_named == named_holds, held_named
 evag = json.loads((site.BOOKS / "evagrius-sententiae-monachos/translations/esm_u01_open_english.json").read_text())
 evag_text = "\n".join(evag[0]["english"])
