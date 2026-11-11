@@ -1,4 +1,5 @@
-// viapatrum-narrator: speaks a Via Patrum passage with Workers AI (Aura-2)
+// viapatrum-narrator: speaks a Via Patrum passage with Aura-2 (Deepgram's own
+// API when the DEEPGRAM_API_KEY secret is set, else Workers AI)
 // and writes one mp3 plus exact sentence timings to R2, so the Mini sends
 // only text and never downloads or re-uploads audio (owner 2026-10-03).
 //
@@ -133,6 +134,34 @@ async function toBytes(out) {
   throw new Error("unexpected Aura output: " + JSON.stringify(out).slice(0, 200));
 }
 
+// One unit as raw PCM. With the DEEPGRAM_API_KEY secret set, Aura-2 is called
+// at Deepgram itself (owner 9 Nov 2026: stop using Cloudflare AI models; the
+// Deepgram account has its own credits). It is the same model and voices, so
+// the PCM cache keys stay as they are. Without the secret, Workers AI speaks.
+// No fallback from one to the other: a Deepgram failure fails the job.
+const DEEPGRAM_TRIES = 5;
+async function synth(env, unit) {
+  if (!env.DEEPGRAM_API_KEY) {
+    return await toBytes(await env.AI.run(MODEL, { text: unit.text, speaker: unit.speaker, encoding: "linear16", container: "none", sample_rate: SR }));
+  }
+  const url = `https://api.deepgram.com/v1/speak?model=aura-2-${unit.speaker}-en&encoding=linear16&container=none&sample_rate=${SR}`;
+  let last = "";
+  for (let t = 0; t < DEEPGRAM_TRIES; t++) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { Authorization: `Token ${env.DEEPGRAM_API_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ text: unit.text }),
+    });
+    if (res.ok) return new Uint8Array(await res.arrayBuffer());
+    last = `Deepgram HTTP ${res.status}: ${(await res.text()).slice(0, 200)}`;
+    // Too many at once, or a server fault: wait and try again. Anything else
+    // (bad key, no credit, bad text) will not get better by retrying here.
+    if (res.status !== 429 && res.status < 500) break;
+    await new Promise((r) => setTimeout(r, 1000 * 2 ** t));
+  }
+  throw new Error(last);
+}
+
 async function pcmKey(unit) {
   return `pcm/${await sha256hex([MODEL, unit.speaker, "linear16", SR, unit.text].join("\u0000"))}.pcm`;
 }
@@ -142,8 +171,7 @@ async function speak(env, unit) {
   const key = await pcmKey(unit);
   const head = await env.WORK.head(key);
   if (head) return [head.size / 2, 0];
-  const out = await env.AI.run(MODEL, { text: unit.text, speaker: unit.speaker, encoding: "linear16", container: "none", sample_rate: SR });
-  const bytes = await toBytes(out);
+  const bytes = await synth(env, unit);
   if (bytes.length < 2 || bytes[0] === 0x7b) throw new Error("Aura returned no audio: " + new TextDecoder().decode(bytes.slice(0, 200)));
   const even = bytes.length % 2 ? bytes.slice(0, bytes.length - 1) : bytes;
   await env.WORK.put(key, even);
