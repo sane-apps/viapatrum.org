@@ -585,16 +585,42 @@ def scripture_page_href(search: str) -> str | None:
     return f"/scripture/{slugify(book)}/{chap}/{tail}"
 
 
+def _section_text_norm(book: str, section: str, cache: dict) -> str | None:
+    """Current English of one section, markup stripped, case and spacing folded; None if not found."""
+    if book not in cache:
+        texts: dict[str, str] = {}
+        folder = BOOKS / book / "translations"
+        for f in sorted(folder.glob("*_english.json")) if folder.is_dir() else []:
+            try:
+                rows = json.loads(f.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            rows = rows if isinstance(rows, list) else rows.get("sections", [])
+            for r in rows:
+                if isinstance(r, dict) and r.get("section") is not None:
+                    texts[str(r["section"])] = _fold(strip_logos_markup(" ".join(r.get("english") or [])))
+        cache[book] = texts
+    return cache[book].get(section)
+
+
+def _fold(text: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"[“”‘’\"']", "", text)).strip().lower()
+
+
 def flagged_wrong_citations(min_conf: float = 0.8) -> dict[tuple[str, str], set[tuple[str, int, str]]]:
     """Citations the translations citation sweep judged wrong: (book slug, section) -> {(book, chap, verse)}.
 
     A wrongly filed reference must not list a passage under a verse it does not
     quote. Text stays as written until the citation is corrected at the source.
-    """
+    A flag holds only while the clause it judged is still in the section's current
+    English (2026-11-11): once a section is retranslated or its reference moved,
+    the September sweep no longer describes it, and keeping the flag hid correct,
+    newly placed verse tags (14 Lamentations fragments)."""
     path = BOOKS.parent / "outputs" / "jev-cite-sweep-20260925.jsonl"
     out: dict[tuple[str, str], set[tuple[str, int, str]]] = defaultdict(set)
     if not path.exists():
         return out
+    cache: dict = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         try:
             row = json.loads(line)
@@ -605,9 +631,14 @@ def flagged_wrong_citations(min_conf: float = 0.8) -> dict[tuple[str, str], set[
         if float(row.get("confidence") or 0) < min_conf:
             continue
         m = re.match(r"^(.+?) (\d+):(\d+)", str(row.get("display") or ""))
-        if m:
-            book = {"Psalms": "Psalm"}.get(m.group(1), m.group(1))
-            out[(str(row.get("book")), str(row.get("section")))].add((book, int(m.group(2)), m.group(3)))
+        if not m:
+            continue
+        clause = _fold(strip_logos_markup(str(row.get("clause") or "")))
+        current = _section_text_norm(str(row.get("book")), str(row.get("section")), cache)
+        if clause and current is not None and clause[:120] not in current:
+            continue   # the judged clause is gone: the text was rewritten since the sweep
+        book = {"Psalms": "Psalm"}.get(m.group(1), m.group(1))
+        out[(str(row.get("book")), str(row.get("section")))].add((book, int(m.group(2)), m.group(3)))
     return out
 
 
@@ -9202,6 +9233,13 @@ FORCED_WITHHOLD = {
     # The letter to Africanus is a section of origen-letters, not its own work.
     # Naming the part slug held nothing: the loader never emits it.
     "origen-song-homily-1": _RECERT,
+    # 2026-11-11 (claude, owner "go ahead with all of those"): the locked "Latin source" of these two is a
+    # short modern digest, not Baehrens GCS 33 / Rufinus (homily 2: 1,176 Latin words against ~7,200 in
+    # Baehrens; book 4: 676), with the digest-maker's notes ("Caveat lector...", "Recapitulatio Libri IV...")
+    # printed as Origen's text, and Homily II was labelled Complete. Held until translated from Baehrens.
+    # Evidence: outputs/viapatrum/summary-fixes-20261111/origen-song.md.
+    "origen-song-homily-2": "Held: the text was a digest with editor's notes, not a translation (2026-11-11).",
+    "origen-song-commentary-liber-4": "Held: the text was a digest with editor's notes, not a translation (2026-11-11).",
     # cyril-adoration-10..16 released 2026-10-23: re-translated from the Greek by Claude
     # (translate + independent clause review; old word-for-word English replaced).
     # The same Lamentations fragments twice under one title (2026-10-14 audit).

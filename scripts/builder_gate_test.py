@@ -439,5 +439,37 @@ class MartyrActsTest(unittest.TestCase):
         self.assertFalse(build_site.blurb_repeats_intro("", ["Anything."]))
 
 
+
+class StaleCitationFlagTests(unittest.TestCase):
+    """A September sweep flag holds only while its judged clause is still in the current English (2026-11-11)."""
+
+    def run_with(self, clause, english):
+        import tempfile, json as _json
+        from pathlib import Path as _P
+        root = _P(tempfile.mkdtemp())
+        books = root / "books"
+        (books / "bk" / "translations").mkdir(parents=True)
+        (books / "bk" / "translations" / "x_english.json").write_text(
+            _json.dumps([{"section": "7", "english": [english]}]), encoding="utf-8")
+        (root / "outputs").mkdir()
+        (root / "outputs" / "jev-cite-sweep-20260925.jsonl").write_text(_json.dumps(
+            {"stratum": "POS_DIRECT", "book": "bk", "section": "7", "display": "Lamentations 1:2",
+             "clause": clause, "choice": "contradicts", "confidence": 0.9}) + "\n", encoding="utf-8")
+        real = build_site.BOOKS
+        build_site.BOOKS = books
+        try:
+            return build_site.flagged_wrong_citations()
+        finally:
+            build_site.BOOKS = real
+
+    def test_flag_holds_while_clause_is_present(self):
+        got = self.run_with("She weeps bitterly in the night", "She weeps bitterly in the night (Lamentations 1:2).")
+        self.assertIn(("Lamentations", 1, "2"), got[("bk", "7")])
+
+    def test_flag_drops_when_clause_was_rewritten(self):
+        got = self.run_with("She weeps bitterly in the night", "Weeping, she wept in the night (Lamentations 1:2).")
+        self.assertNotIn(("bk", "7"), got)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
