@@ -58,7 +58,7 @@ class Env:
             mock.patch.object(B, "_audit", lambda *a: None),
             mock.patch.object(B, "_voice_name", lambda: "aura-2-orion"),
             mock.patch.object(B, "_hold_next_lock", lambda: os.open(str(lock), os.O_CREAT | os.O_RDWR)),
-            mock.patch.dict(os.environ, {"KOKORO_ENGINE": self.engine, "CF_TTS_QUOTE_VOICE": ""}),
+            mock.patch.dict(os.environ, {"KOKORO_ENGINE": self.engine, "CF_TTS_QUOTE_VOICE": "", "DRAIN_NEW_WORKS_CLOUD": "1"}),
             mock.patch.object(cf_tts, "require_llm_receipt", lambda *a, **k: True),
         ]
         for p in self.patches:
@@ -252,10 +252,23 @@ class FakeWorker:
 
 class BatchTests(unittest.TestCase):
 
-    def _run(self, env, worker):
+    def _run(self, env, worker, new_works=True):
+        flag = {"DRAIN_NEW_WORKS_CLOUD": "1" if new_works else ""}
         with mock.patch.object(cf_tts, "submit_passage", worker.submit), \
-             mock.patch.object(cf_tts, "collect_passages", worker.collect):
+             mock.patch.object(cf_tts, "collect_passages", worker.collect), \
+             mock.patch.dict(os.environ, flag):
             return B.drain(budget_s=60)
+
+    def test_cloud_drain_starts_no_new_work_by_default(self):
+        # Owner 9 Nov 2026: "Kokoro for all new work." Without the override the cloud drain reads no new book.
+        with Env("cf-worker") as env:
+            _book(env.books, "fresh", {"f1_english": ["New one."]})
+            env.publish("fresh")
+            worker = FakeWorker()
+            with mock.patch.object(B, "_work_words", lambda w: (100, False)):
+                self._run(env, worker, new_works=False)
+            self.assertEqual(worker.submitted, [])
+            self.assertFalse((env.out / "fresh" / "manifest.json").exists())
 
     def test_new_books_go_out_together_and_a_failed_passage_spares_the_rest(self):
         with Env("cf-worker") as env:

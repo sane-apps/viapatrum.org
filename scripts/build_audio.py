@@ -1377,6 +1377,13 @@ def _scan_stale(tiers: dict, failures: dict) -> dict:
     return {"ready": sorted(ready, key=lambda r: r[:3]), "old_voice": old, "counts": counts}
 
 
+def _cloud_may_start_new_works() -> bool:
+    """False on a cloud engine unless DRAIN_NEW_WORKS_CLOUD=1 (owner 9 Nov 2026: new works are read by Kokoro)."""
+    if os.environ.get("KOKORO_ENGINE") not in CF_ENGINES:
+        return True
+    return os.environ.get("DRAIN_NEW_WORKS_CLOUD") == "1"
+
+
 def _next_item() -> str:
     """One unit of work under the held lock: 'book', 'stale' or 'idle'.
 
@@ -1398,6 +1405,11 @@ def _next_item() -> str:
     failures = _load_failures()
     batch = os.environ.get("KOKORO_ENGINE") == "cf-worker"
     candidates, _aside = _book_candidates(tiers, failures)
+    if candidates and not _cloud_may_start_new_works():
+        # Owner 9 Nov 2026: "Kokoro for all new work." The cloud drain only re-reads changed passages of works
+        # already recorded (repairs keep the work's voice); a work with no audio waits for a Kokoro lane.
+        _RUN["new_waiting"] = len(candidates)
+        candidates = []
     if candidates:
         if batch:
             return _book_batch(candidates)
@@ -2024,6 +2036,9 @@ def drain(budget_s: int = 3 * 3600) -> int:
         _say("audio drain: %d stale works re-read, %d new audiobooks, %d works given the quotation voice, "
              "%d works re-voiced, %d failed, %.0f min" % (done["stale"], done["book"], done["quotes"],
                                                          done["revoice"], done["failed"], minutes))
+        if _RUN.get("new_waiting"):
+            _say("audio drain: %d works with no audio wait for Kokoro (cloud drain re-reads only; "
+                 "DRAIN_NEW_WORKS_CLOUD=1 overrides)" % _RUN["new_waiting"])
         try:
             # After an idle pass the last scan is current: reuse it.
             write_reports(_RUN["scan"] if idle else None, None, done, minutes)
