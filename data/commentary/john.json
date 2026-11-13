@@ -1,7 +1,7 @@
 {
  "book": "John",
  "title": "The Fathers on John",
- "generated": "2026-11-10",
+ "generated": "2026-11-12",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (email of 8 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
@@ -3644,7 +3644,7 @@
    "verse_start": 6,
    "verse_end": 6,
    "capsule": "Jesus waits to show his power through his passion and resurrection.",
-   "comment": "[John 7:6. Christ to his brothers:] You do what you want without looking around; I do not, because I arrange each thing toward what is useful. I wait for the passion, that rising I may make my power plain to all.",
+   "comment": "[Christ to his brothers:] You do what you want without looking around; I do not, because I arrange each thing toward what is useful. I wait for the passion, that rising I may make my power plain to all.",
    "editions": [
     "complete"
    ],
@@ -7536,7 +7536,7 @@
    "verse_start": 36,
    "verse_end": 36,
    "capsule": "The disciples cannot follow yet because their race is unfinished, but souls later follow Christ into heaven.",
-   "comment": "[John 13:36: “you cannot follow me now”] Only because they cannot walk into heaven in the body, and also because they have not yet completed the 'race' of the apostolate, which made them worthy of following the Lord. But the saying shows that the souls follow the Lord into heaven, becoming no longer below or under the earth as captives (John 13:36).",
+   "comment": "[On “you cannot follow me now”:] Only because they cannot walk into heaven in the body, and also because they have not yet completed the 'race' of the apostolate, which made them worthy of following the Lord. But the saying shows that the souls follow the Lord into heaven, becoming no longer below or under the earth as captives (John 13:36).",
    "editions": [
     "complete",
     "selected"
