@@ -275,6 +275,7 @@ def youversion_web_key() -> str:
         print("WARNING: YOUVERSION_WEB_KEY not found; NIV, NASB and the More menu are left off the Scripture pages.", file=sys.stderr)
     return key
 SITE_NAME = "Via Patrum"
+INDEXNOW_KEY = "100c3debaea7194cc5243d3e6448f951"
 SITE_ORIGIN = "https://viapatrum.org"  # the one canonical host; others 301 here
 # The iPhone and iPad app (App Store id 6818696772; 1.0 live on 2026-10-14).
 APP_STORE_ID = "6818696772"
@@ -6894,6 +6895,48 @@ NAV_LINKS = (("works", "Works"), ("authors", "Fathers"), ("topics", "Topics"), (
              ("listen", "Listen"), ("explore", "Timeline"), ("charts", "Charts"), ("games", "Games"))
 
 
+# Search results cut titles at about 60 characters (SEO pass 2026-11-12:
+# 11,284 pages ran longer). The site name is dropped when it would push a
+# title past that; it still rides in og:site_name and the WebSite JSON-LD,
+# which search engines show as the site name. The page's own words (a work
+# title, a writer's name, a question) are never cut.
+TITLE_MAX = 60
+
+
+def page_title(title: str) -> str:
+    """The <title>, og:title and twitter:title text for a page titled `title`."""
+    if title == "Home":
+        return f"{SITE_NAME} · The way of the Church Fathers"
+    branded = f"{title} · {SITE_NAME}"
+    return branded if len(branded) <= TITLE_MAX else title
+
+
+# Pages llms.txt lists after its fixed "Start here" rows (SEO pass 2026-11-12).
+# The note is the page's own meta description, read from the built page, so
+# llms.txt never says more than the page does. A page not built is left out.
+LLMS_EXTRA_PAGES = (
+    ("/ask/", "Ask the Fathers"),
+    ("/creeds/", "Creeds and churches"),
+    ("/history/christ-died-for-all/", "Did Christ die for all? A history"),
+    ("/charts/", "Charts"),
+    ("/games/", "Games"),
+    ("/changes/", "What changed"),
+)
+
+
+def _llms_extra_pages() -> list[tuple[str, str, str]]:
+    import html as _h
+    rows = []
+    for path, label in LLMS_EXTRA_PAGES:
+        page = DIST / path.strip("/") / "index.html"
+        if not page.is_file():
+            continue
+        m = re.search(r'<meta name="description" content="([^"]*)"', page.read_text(encoding="utf-8")[:6000])
+        if m:
+            rows.append((path, label, _h.unescape(m.group(1))))
+    return rows
+
+
 def layout(
     title: str,
     body: str,
@@ -6950,7 +6993,7 @@ def layout(
         "contribute": "help",
         "about": "about",
     }.get(active, "home")
-    full_title = f"{SITE_NAME} · The way of the Church Fathers" if title == "Home" else f"{title} · {SITE_NAME}"
+    full_title = page_title(title)
     desc = meta_description(description)
     img = f"{SITE_ORIGIN}/assets/og/{card}.png"
     # One address per page: a page that names another as canonical shares that address too.
@@ -12263,6 +12306,9 @@ def build() -> None:
         f"Sitemap: {SITE_ORIGIN}/sitemap.xml\n",
         encoding="utf-8",
     )
+    # IndexNow key file: lets SaneProcess seo/indexnow.sh tell Bing and others
+    # which pages changed. The key is public by design.
+    (DIST / f"{INDEXNOW_KEY}.txt").write_text(INDEXNOW_KEY + "\n", encoding="utf-8")
     # llms.txt + llms-full.txt: the library's map for AI systems, written from
     # this build's lists (2026-10-23: hand-kept root copies went ten days
     # stale, with old counts and a paywall that no longer exists). Same
@@ -12289,6 +12335,7 @@ def build() -> None:
         works=[(w["slug"], public_reader_title(w["title"], slug=w["slug"]), display_author(w["author"])) for w in works],
         writers=author_n, fathers=_fathers_rows, topics=_llms_topics, scripture=_llms_books,
         passages=len(excerpts), audio=n_audio, questions=n_tl,
+        extra_pages=_llms_extra_pages(),
     )
     _live_slugs = {w["slug"] for w in works}
     for _llms_name, _llms_text in zip(("llms.txt", "llms-full.txt"), llms_txt.build(_llms_lib)):
@@ -12325,8 +12372,10 @@ def build() -> None:
             # The description is already escaped: unescape once, escape once.
             words = html_lib.unescape(dm.group(1) if dm else "").split(":", 1)[-1].split()
             tag = " ".join(words[:6]).rstrip(",.;:") + "\u2026" if words else page.parent.name
-            base = title.replace(f" · {SITE_NAME}", "")
-            new = f"{base}: \u201c{escape(tag)}\u201d · {SITE_NAME}"
+            base = title.removesuffix(f" · {SITE_NAME}")
+            new = f"{base}: \u201c{escape(tag)}\u201d"
+            if len(html_lib.unescape(new)) + len(f" · {SITE_NAME}") <= TITLE_MAX:
+                new += f" · {SITE_NAME}"
             html = html.replace(f"<title>{title}</title>", f"<title>{new}</title>", 1)
             html = html.replace(f'content="{title}"', f'content="{new}"')
             page.write_text(html, encoding="utf-8")
