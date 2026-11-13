@@ -2275,6 +2275,28 @@ PUBLIC_ENGLISH_TITLES: dict[str, str] = {
     "julian-turbantius-fragments": "Fragments to Turbantius",
     # Its only file stem gave "Dormition Homilies" (2026-10-23).
     "john-damascus-homiliae-in-dormitionem": "Homilies on the Dormition of the Mother of God",
+    # COL intake 2026-11-13 (source text on translations main; English not yet drafted).
+    "irenaeus-against-heresies": "Against Heresies",
+    "augustine-city-of-god": "The City of God",
+    "augustine-letters": "Letters",
+    "athanasius-de-decretis": "On the Decrees of the Council of Nicaea",
+    "augustine-on-the-grace-of-christ": "On the Grace of Christ",
+    "augustine-on-nature-and-grace": "On Nature and Grace",
+    "augustine-on-original-sin": "On Original Sin",
+    "augustine-summary-of-the-conference": "Summary of the Conference with the Donatists",
+    "augustine-memorandum": "Memorandum",
+    "augustine-harmony-of-the-gospels": "On the Harmony of the Gospels",
+    "augustine-on-the-good-of-marriage": "On the Good of Marriage",
+    "augustine-the-mirror": "The Mirror",
+    "augustine-retractations": "Retractations",
+    "jerome-letters": "Letters",
+    "ambrosiaster-quaestiones": "Questions on the Old and New Testament",
+    "origen-commentarii-joannis": "Commentary on John",
+    "methodius-fragmenta-incerta": "Uncertain or Spurious Fragments",
+    "severian-in-cosmogoniam-homilia-4": "Homily 4 on the Creation",
+    "severian-in-cosmogoniam-homilia-5": "Homily 5 on the Creation",
+    "severian-in-cosmogoniam-homilia-6": "Homily 6 on the Creation",
+    "severian-de-incarnatione": "On the Incarnation",
 }
 
 # Latin secondary under an English-leading H1 (Le Blanc already has English identity).
@@ -2592,6 +2614,28 @@ PUBLIC_LATIN_SUBTITLES: dict[str, str] = {
     "origen-on-prayer": "Περὶ εὐχῆς",
     "polycarp": "Martyrium Polycarpi",
     "second-clement": "Clementis ad Corinthios epistula secunda",
+    # COL intake 2026-11-13.
+    "irenaeus-against-heresies": "Adversus haereses",
+    "augustine-city-of-god": "De civitate Dei",
+    "augustine-letters": "Epistulae",
+    "athanasius-de-decretis": "De decretis Nicaenae synodi",
+    "augustine-on-the-grace-of-christ": "De gratia Christi",
+    "augustine-on-nature-and-grace": "De natura et gratia",
+    "augustine-on-original-sin": "De peccato originali",
+    "augustine-summary-of-the-conference": "Breviculus collationis cum Donatistis",
+    "augustine-memorandum": "Commonitorium",
+    "augustine-harmony-of-the-gospels": "De consensu evangelistarum",
+    "augustine-on-the-good-of-marriage": "De bono coniugali",
+    "augustine-the-mirror": "Liber qui appellatur Speculum",
+    "augustine-retractations": "Retractationes",
+    "jerome-letters": "Epistulae",
+    "ambrosiaster-quaestiones": "Quaestiones Veteris et Novi Testamenti",
+    "origen-commentarii-joannis": "Commentarii in evangelium Joannis",
+    "methodius-fragmenta-incerta": "Fragmenta incerta",
+    "severian-in-cosmogoniam-homilia-4": "In cosmogoniam homilia 4",
+    "severian-in-cosmogoniam-homilia-5": "In cosmogoniam homilia 5",
+    "severian-in-cosmogoniam-homilia-6": "In cosmogoniam homilia 6",
+    "severian-de-incarnatione": "De incarnatione",
 }
 
 
