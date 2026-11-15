@@ -96,6 +96,23 @@
     "hash": "f9a0fd6f818421b7",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 0,
+     "removed": 0,
+     "sentences": 1
+    },
+    "date": "2026-11-13",
+    "hash": "78d6b63e208e2123",
+    "kind": "change",
+    "notes": [
+     "wording corrected in 1 sentence"
+    ]
    }
   ],
   "amphilochius-iambi-seleucum": [
@@ -776,6 +793,23 @@
     "hash": "1f1036c9a04df9f5",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 1,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "5c5c0aa1620826db",
+    "kind": "change",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
    }
   ],
   "cyprian-on-the-unity-of-the-church": [
@@ -1311,6 +1345,23 @@
     "hash": "bb1213e410577a7f",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-14T19:31:12-05:00",
+    "counts": {
+     "added": 1,
+     "heads": 0,
+     "layout": 0,
+     "refs": 0,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-14",
+    "hash": "de1b2ae9e56bccfc",
+    "kind": "change",
+    "notes": [
+     "1 section added"
+    ]
    }
   ],
   "cyril-fragmentum-papyraceum": [
@@ -1321,6 +1372,23 @@
     "hash": "8e99533a92e9325e",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 1,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "287c316c79f5d72b",
+    "kind": "change",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
    }
   ],
   "cyril-fragmentum-proverbia": [
@@ -1375,6 +1443,23 @@
     "hash": "7adcb10d938dc37e",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 0,
+     "removed": 0,
+     "sentences": 2
+    },
+    "date": "2026-11-13",
+    "hash": "ba996de284093fd6",
+    "kind": "change",
+    "notes": [
+     "wording corrected in 2 sentences"
+    ]
    }
   ],
   "cyril-jerusalem-homilia-ego-vado": [
@@ -1461,6 +1546,23 @@
     "hash": "729dc917644f4b23",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 3,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "dea625404430b5e1",
+    "kind": "change",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
    }
   ],
   "davenant-dissertationes-duae": [
@@ -1735,6 +1837,23 @@
     "hash": "7c17de4d9f46222a",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 38,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "4c836e3ef60f467c",
+    "kind": "change",
+    "notes": [
+     "38 Scripture references corrected"
+    ]
    }
   ],
   "dionysius-corinth-fragments": [
@@ -1745,6 +1864,23 @@
     "hash": "b792cfb4c3aa43c1",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 3,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "aa58cc217d561573",
+    "kind": "change",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
    }
   ],
   "epiphanius-anacephalaeosis": [
@@ -1899,6 +2035,23 @@
     "hash": "415f23619e855a9e",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 0,
+     "removed": 0,
+     "sentences": 8
+    },
+    "date": "2026-11-13",
+    "hash": "1cfb42785862721e",
+    "kind": "change",
+    "notes": [
+     "wording corrected in 8 sentences"
+    ]
    }
   ],
   "epiphanius-epistula-ad-theodosium-imperatorem": [
@@ -1909,6 +2062,23 @@
     "hash": "198a06a211258c8e",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 3,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "451ec773b5ab533d",
+    "kind": "change",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
    }
   ],
   "epiphanius-fragmenta-precationis-et-exorcismi": [
@@ -2033,6 +2203,23 @@
     "hash": "3fca83a25f00406f",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 4,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "613cbc81d627764d",
+    "kind": "change",
+    "notes": [
+     "4 Scripture references corrected"
+    ]
    }
   ],
   "epiphanius-testimonia-ex-divinis-et-sacris-scripturis": [
@@ -2133,6 +2320,23 @@
     "hash": "5cb0c61a78d1d1bb",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 0,
+     "removed": 0,
+     "sentences": 1
+    },
+    "date": "2026-11-13",
+    "hash": "da21185620e35b8b",
+    "kind": "change",
+    "notes": [
+     "wording corrected in 1 sentence"
+    ]
    }
   ],
   "eustathius-de-anima-contra-philosophos": [
@@ -2143,6 +2347,23 @@
     "hash": "ce8a274fa1c04d57",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 1,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "0415a93c91135f94",
+    "kind": "change",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
    }
   ],
   "eustathius-de-fide-contra-arianos": [
@@ -2249,6 +2470,23 @@
     "hash": "cb7b4915d562f914",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 1,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "aff6f2f34b8c3b1f",
+    "kind": "change",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
    }
   ],
   "eustathius-in-proverbia": [
@@ -2323,6 +2561,24 @@
     "hash": "e2cc58f2b636b72a",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 1,
+     "layout": 0,
+     "refs": 0,
+     "removed": 0,
+     "sentences": 10
+    },
+    "date": "2026-11-13",
+    "hash": "ed330cdda244f8b6",
+    "kind": "change",
+    "notes": [
+     "wording corrected in 10 sentences",
+     "1 section title corrected"
+    ]
    }
   ],
   "evagrius-de-malignis-cogitationibus": [
@@ -2509,6 +2765,23 @@
     "hash": "3ae979980df487b5",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 5,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "eae963035a2fec20",
+    "kind": "change",
+    "notes": [
+     "5 Scripture references corrected"
+    ]
    }
   ],
   "gennadius-fragmentum-2thess": [
@@ -2519,6 +2792,23 @@
     "hash": "83786bcfe3e70ae0",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 2,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "ad5d6ca63df29abd",
+    "kind": "change",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
    }
   ],
   "georgius-peccator-hymnus": [
@@ -2947,6 +3237,23 @@
     "hash": "547db48c5ccad606",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 6,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "84f6049962cace72",
+    "kind": "change",
+    "notes": [
+     "6 Scripture references corrected"
+    ]
    }
   ],
   "john-damascus-homiliae-in-dormitionem": [
@@ -3569,6 +3876,23 @@
     "hash": "bf106d18d6d60ddb",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 4,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "5f8cac64cf72014e",
+    "kind": "change",
+    "notes": [
+     "4 Scripture references corrected"
+    ]
    }
   ],
   "martyrdom-polycarp": [
@@ -3579,6 +3903,23 @@
     "hash": "369023d40e7e5625",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 3,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "7ea68765c33eff8c",
+    "kind": "change",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
    }
   ],
   "maximus": [
@@ -3589,6 +3930,23 @@
     "hash": "dfb171ebb59af998",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 1,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "159de0b77cfbf6fe",
+    "kind": "change",
+    "notes": [
+     "1 Scripture reference corrected"
+    ]
    }
   ],
   "methodius-martyrs": [
@@ -3679,6 +4037,23 @@
     "hash": "23d464ce4a8e6c6a",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 3,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "ed5f997cb7459c65",
+    "kind": "change",
+    "notes": [
+     "3 Scripture references corrected"
+    ]
    }
   ],
   "origen-1-corinthians-fragments": [
@@ -3962,6 +4337,18 @@
     ]
    }
   ],
+  "origen-genesis-homily-10": [
+   {
+    "at": "2026-11-14T19:31:12-05:00",
+    "counts": null,
+    "date": "2026-11-14",
+    "hash": "3f7e28ea8fb56dcd",
+    "kind": "added",
+    "notes": [
+     "added to the library"
+    ]
+   }
+  ],
   "origen-hebrews-homily-scrap": [
    {
     "at": "2026-11-08T17:29:18-05:00",
@@ -4191,6 +4578,23 @@
     "hash": "5b68d3d4f1aa2f56",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 54,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "85025a8f110c9102",
+    "kind": "change",
+    "notes": [
+     "54 Scripture references corrected"
+    ]
    }
   ],
   "origen-proverbs-fragments": [
@@ -4262,6 +4666,23 @@
     "hash": "d39f7882d4ff1c35",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 6,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "7b9da8b50d72a5dc",
+    "kind": "change",
+    "notes": [
+     "6 Scripture references corrected"
+    ]
    }
   ],
   "origen-selecta-judges": [
@@ -4382,6 +4803,23 @@
     "hash": "8a13cef5d28bc9f9",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 2,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "af563d90f9cb899d",
+    "kind": "change",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
    }
   ],
   "procopius-gaza-epistula": [
@@ -4764,6 +5202,24 @@
     "hash": "1fd53ff3810bdfc0",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 18,
+     "removed": 0,
+     "sentences": 2
+    },
+    "date": "2026-11-13",
+    "hash": "1fb466626647837a",
+    "kind": "change",
+    "notes": [
+     "18 Scripture references corrected",
+     "wording corrected in 2 sentences"
+    ]
    }
   ],
   "severianus-in-illud-quando": [
@@ -4816,6 +5272,18 @@
     "notes": []
    }
   ],
+  "tertullian-on-the-flesh-of-christ": [
+   {
+    "at": "2026-11-14T23:51:09-05:00",
+    "counts": null,
+    "date": "2026-11-14",
+    "hash": "64c3ac9c30c2e387",
+    "kind": "added",
+    "notes": [
+     "added to the library"
+    ]
+   }
+  ],
   "tertullian-to-scapula": [
    {
     "at": "2026-11-08T17:29:18-05:00",
@@ -4824,6 +5292,23 @@
     "hash": "e81bdae1b12b803b",
     "kind": "first",
     "notes": []
+   },
+   {
+    "at": "2026-11-13T14:36:37-05:00",
+    "counts": {
+     "added": 0,
+     "heads": 0,
+     "layout": 0,
+     "refs": 2,
+     "removed": 0,
+     "sentences": 0
+    },
+    "date": "2026-11-13",
+    "hash": "292dfff15c64fb64",
+    "kind": "change",
+    "notes": [
+     "2 Scripture references corrected"
+    ]
    }
   ],
   "tertullian-to-the-martyrs": [
