@@ -3934,24 +3934,58 @@ def work_card_html(w: dict, *, catalog: bool = False) -> str:
             f'<span class="work-meta">{" · ".join(bits)}</span></a></li>')
 
 
+# "…, Book 12", "…, Book IV", "…, Homilia II", "… Discourse IX", and "…, Preface" (part 0,
+# read first). Roman numerals, Preface and Discourse: owner approved 15 Nov 2026, so Against
+# Celsus and Wesley's discourse sermons fold into one row like On Adoration.
 _SERIES_PART_RE = re.compile(
-    r"(?:,?\s+Book\s+(\d+)\s*$)|(?:,?\s+Homilia\s+([IVXLC]+|\d+)\s*$)",
+    r"(?:,?\s+(Book)\s+(\d+|[IVXLC]+)\s*$)|(?:,?\s+(Homilia)\s+([IVXLC]+|\d+)\s*$)"
+    r"|(?:\s+(Discourse)\s+([IVXLC]+|\d+)\s*$)|(?:,\s+(Preface)\s*$)",
     re.I,
 )
 _ROMAN = {"i": 1, "ii": 2, "iii": 3, "iv": 4, "v": 5, "vi": 6, "vii": 7, "viii": 8, "ix": 9, "x": 10}
 
 
-def series_base_and_part(title: str) -> tuple[str, int | None]:
-    """Split 'Treatise, Book 12' / '…, Homilia II' into (base, part_num)."""
+def _series_match(title: str):
     raw = (title or "").strip()
     m = _SERIES_PART_RE.search(raw)
     if not m:
-        return raw, None
-    base = raw[: m.start()].strip().rstrip(",").strip()
-    token = (m.group(1) or m.group(2) or "").strip()
-    if token.isdigit():
-        return base, int(token)
-    return base, _ROMAN.get(token.casefold())
+        return raw, None, "", ""
+    word = next(g for g in (m.group(1), m.group(3), m.group(5), m.group(7)) if g)
+    token = (m.group(2) or m.group(4) or m.group(6) or "").strip()
+    return raw[: m.start()].strip().rstrip(",").strip(), m, word, token
+
+
+def series_base_and_part(title: str) -> tuple[str, int | None]:
+    """Split 'Treatise, Book 12' / '…, Book IV' / '…, Homilia II' / '… Discourse IX' /
+    '…, Preface' into (base, part_num); a preface is part 0."""
+    base, m, word, token = _series_match(title)
+    if not m:
+        return base, None
+    if word.casefold() == "preface":
+        return base, 0
+    return base, _part_number(token)
+
+
+def series_span(titles: list[str]) -> str:
+    """The parts a folded row holds, in the titles' own numbering: 'Books 1–17',
+    'Preface, Books I–VIII', 'Discourses I–XIII'."""
+    numbered = []
+    preface = False
+    for t in titles:
+        _, m, word, token = _series_match(t)
+        if not m:
+            continue
+        if word.casefold() == "preface":
+            preface = True
+        else:
+            numbered.append((_part_number(token) or 0, word, token))
+    numbered.sort()
+    if not numbered:
+        return f"{len(titles)} parts"
+    kind = "Discourses" if all(w.casefold() == "discourse" for _, w, _ in numbered) else "Books"
+    first, last = numbered[0][2], numbered[-1][2]
+    span = f"{kind} {first}" if first == last else f"{kind} {first}–{last}"
+    return ("Preface, " + span) if preface else span
 
 
 # A work published one book per work ("Against Celsus, Book IV", "…, Preface",
@@ -4143,8 +4177,7 @@ def author_works_list_html(ww: list[dict]) -> str:
             ),
             key=lambda t: t[0],
         )
-        nums = [n for n, _ in parts if n]
-        span = f"Books {nums[0]}–{nums[-1]}" if nums else f"{len(members)} parts"
+        span = series_span([public_reader_title(m.get("title") or "", slug=m.get("slug") or "") for _, m in parts])
         total = sum(m["section_count"] for m in members)
         lis = "".join(
             f'<li><a href="/works/{escape(m["slug"])}/">'
@@ -4286,9 +4319,8 @@ def works_title_template(works: list[dict]) -> str:
         members.sort(key=lambda t: t[0])
         w = members[0][1]
         if len(members) > 1:
-            nums = [n for n, _ in members if n]
             title = key
-            span = f"Books {nums[0]}–{nums[-1]}" if nums else f"{len(members)} parts"
+            span = series_span([public_reader_title(m.get("title") or "", slug=m.get("slug") or "") for _, m in members])
         else:
             title = public_reader_title(w.get("title") or "", slug=w.get("slug") or "")
             span = ""

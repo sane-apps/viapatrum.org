@@ -1494,7 +1494,7 @@ details.toc-group .toc {
 }
 :where(h1, h2, h3, .meta, .crumbs, .body, .intro) { overflow-wrap: anywhere; }
 :where(main, section, aside, .split > div) { min-width: 0; }
-:where(#main, #contents, .reader-sec, .reader .vnum, .explore-chrome) {
+:where(#main, #contents, .reader-sec, .reader .vnum, .explore-chrome, .work-series, #filed-more) {
   scroll-margin-top: var(--header-offset);
 }
 .reader-sec .reader-head, .reader-sec .body { color: var(--ink); }

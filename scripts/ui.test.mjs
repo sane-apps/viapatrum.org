@@ -760,4 +760,28 @@ test('author pages: a long "Part only" note wraps instead of pushing the page si
   const rule=css.match(/(^|\n)\.work-count \{[^}]*\}/);
   assert.ok(rule,'.work-count rule ships');
   assert.doesNotMatch(rule[0],/white-space:\s*nowrap/);
+  assert.match(css,/:where\([^)]*\.work-series, #filed-more\) \{\s*scroll-margin-top: var\(--header-offset\)/,'a folded row opened by a link clears the sticky header');
+});
+test('author pages fold Against Celsus and the Wesley discourses into one row each (owner 15 Nov 2026)',()=>{
+  const row=(doc,title)=>[...doc.querySelectorAll('li.work-series')].find(li=>li.querySelector('.work-series-title')?.textContent===title);
+  const origen=builtPage('/authors/origen/');
+  const cel=row(origen,'Against Celsus');
+  assert.ok(cel,'Against Celsus is one folded row');
+  assert.match(cel.querySelector('summary').textContent,/Preface, Books I–VIII/);
+  const parts=[...cel.querySelectorAll('.series-parts a')].map(a=>a.getAttribute('href'));
+  assert.deepEqual(parts,['/works/origen-contra-celsum-preface/',...[1,2,3,4,5,6,7,8].map(n=>`/works/origen-contra-celsum-book-${n}/`)],'Preface first, then Books I-VIII in order');
+  assert.equal([...origen.querySelectorAll('main a[href="/works/origen-contra-celsum-book-4/"]')].length,1,'no loose Book IV row beside the fold');
+  assert.equal(navBar(builtPage('/works/origen-contra-celsum-book-4/'),'Books').toc,'/authors/origen/#'+cel.id,'"All books" opens the folded row');
+  const wesley=builtPage('/authors/john-wesley/');
+  const som=row(wesley,'Upon Our Lord’s Sermon on the Mount');
+  assert.ok(som,'Sermon on the Mount discourses fold');
+  assert.match(som.querySelector('summary').textContent,/Discourses I–XIII/);
+  assert.equal(som.querySelectorAll('.series-parts a').length,13);
+  for(const t of ['The Law Established Through Faith','The Witness of the Spirit']){
+    const r=row(wesley,t); assert.ok(r,t+' folds'); assert.match(r.querySelector('summary').textContent,/Discourses I–II/);
+  }
+  assert.match(row(builtPage('/authors/cyril-of-alexandria/'),'On Adoration and Worship in Spirit and Truth').querySelector('summary').textContent,/Books 1–17/,'Arabic series keep their numbering');
+  const tpl=new JSDOM(readFileSync(new URL('works/index.html',DIST),'utf8')).window.document.querySelector('#works-by-title').innerHTML;
+  assert.match(tpl,/Against Celsus<\/span><span class="meta">[^<]*Preface, Books I–VIII/,'Works title view: one Against Celsus row');
+  assert.doesNotMatch(tpl,/Against Celsus, Book IV</,'no separate Book IV title row');
 });
