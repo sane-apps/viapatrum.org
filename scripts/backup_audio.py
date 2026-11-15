@@ -18,6 +18,7 @@ Needs CLOUDFLARE_API_TOKEN (the LaunchAgent sources ~/.config/nv/env).
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -37,21 +38,50 @@ LOCK = ROOT / "outputs/backup/audio.lock"
 TYPES = {"mp3": "audio/mpeg", "json": "application/json", "m4a": "audio/mp4", "wav": "audio/wav"}
 
 
-def put(token: str, path: Path, key: str) -> bool:
-    ctype = TYPES.get(path.suffix.lstrip("."), "application/octet-stream")
+# One REST PUT tops out near 300 MB (a 392 MB mp3 failed every night with
+# "Broken pipe", 13-14 Nov 2026). Bigger files go up as numbered parts under
+# <key>.part-001 ... plus <key>.parts.json (size, sha256, part sizes); restore
+# is `cat <key>.part-* > file`. The admin route cannot take them: it accepts
+# only flat backup/*.epub|pdf|zip|m4b keys.
+PART_MAX = 256 * 1024 * 1024
+
+
+def put_bytes(token: str, data: bytes, key: str, ctype: str) -> bool:
     for attempt in range(4):
-        req = urllib.request.Request(R2_API + key, data=path.read_bytes(), method="PUT",
+        req = urllib.request.Request(R2_API + key, data=data, method="PUT",
                                      headers={"Authorization": f"Bearer {token}", "Content-Type": ctype})
         try:
             with urllib.request.urlopen(req, timeout=600) as r:
                 body = json.loads(r.read() or b"{}")
                 # The REST HEAD gives no length; the PUT reply names the stored size.
                 if body.get("success"):
-                    return int((body.get("result") or {}).get("size") or -1) == path.stat().st_size
+                    return int((body.get("result") or {}).get("size") or -1) == len(data)
         except Exception as e:  # noqa: BLE001
             print(f"  retry {key}: {e}", flush=True)
         time.sleep(min(60, 5 * 2 ** attempt))
     return False
+
+
+def put(token: str, path: Path, key: str) -> bool:
+    ctype = TYPES.get(path.suffix.lstrip("."), "application/octet-stream")
+    size = path.stat().st_size
+    if size <= PART_MAX:
+        return put_bytes(token, path.read_bytes(), key, ctype)
+    digest, parts = hashlib.sha256(), []
+    with path.open("rb") as f:
+        for n in range(1, 1000):
+            chunk = f.read(PART_MAX)
+            if not chunk:
+                break
+            digest.update(chunk)
+            if not put_bytes(token, chunk, f"{key}.part-{n:03d}", "application/octet-stream"):
+                return False
+            parts.append(len(chunk))
+    if sum(parts) != size:  # the file changed while it was read
+        return False
+    manifest = {"key": key, "size": size, "sha256": digest.hexdigest(), "content_type": ctype,
+                "parts": [{"key": f"{key}.part-{i:03d}", "size": s} for i, s in enumerate(parts, 1)]}
+    return put_bytes(token, json.dumps(manifest, indent=1).encode(), key + ".parts.json", "application/json")
 
 
 def main() -> int:
