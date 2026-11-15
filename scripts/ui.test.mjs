@@ -692,3 +692,72 @@ test('home: a quote that opens or ends with its own quote mark gets no second on
   assert.deepEqual(marks2('.vp-sc-v'),[true,true],'verse that ends with its own closing quote: outer marks hidden');
   dom2.window.close();
 });
+
+// Keep reading (owner 14 Nov 2026: a reader who opens a text needs a way on, not only Back).
+const builtPage=(p)=>new JSDOM(readFileSync(new URL(p.replace(/^\//,'')+'index.html',DIST),'utf8')).window.document;
+const navBar=(doc,label)=>{const n=[...doc.querySelectorAll('main nav.section-nav')].filter(x=>x.getAttribute('aria-label')===label);
+  return n.length?{n:n.length,prev:n[0].querySelector('a.pn.prev')?.getAttribute('href')||null,toc:n[0].querySelector('a.pn.toc')?.getAttribute('href')||null,next:n[0].querySelector('a.pn.next')?.getAttribute('href')||null,text:n[0].textContent}:null;};
+test('scripture: previous and next chapter run across books (nav review 2026-11-14)',()=>{
+  const g50=navBar(builtPage('/scripture/genesis/50/'),'Chapters');
+  assert.equal(g50.next,'/scripture/exodus/1/','Genesis 50 goes on to Exodus 1');
+  assert.match(g50.text,/Exodus 1 →/);
+  assert.equal(g50.prev,'/scripture/genesis/49/');
+  const e1=navBar(builtPage('/scripture/exodus/1/'),'Chapters');
+  assert.equal(e1.prev,'/scripture/genesis/50/','Exodus 1 goes back to Genesis 50');
+  assert.match(e1.text,/← Genesis 50/);
+  assert.equal(e1.toc,'/scripture/exodus/');
+  assert.equal(navBar(builtPage('/scripture/genesis/1/'),'Chapters').prev,null,'Genesis 1 has nothing before it');
+  assert.equal(navBar(builtPage('/scripture/revelation/22/'),'Chapters').next,null,'Revelation 22 has nothing after it');
+  assert.equal(navBar(builtPage('/scripture/matthew/1/'),'Chapters').prev,'/scripture/malachi/4/','the Testaments join');
+});
+test('excerpt pages step through their topic in the topic page order (nav review 2026-11-14)',()=>{
+  const tid='apologetic-method';
+  const topic=builtPage(`/topics/${tid}/`);
+  const ids=[...topic.querySelectorAll('article.topic-card[id]')].map(a=>a.id);
+  const filed=[...topic.querySelectorAll('details.filed-more a[href^="/e/"]')].map(a=>a.getAttribute('href').split('/')[2]);
+  const order=[...ids,...filed];
+  assert.ok(order.length>2,'topic has passages');
+  if(filed.length) assert.equal(topic.querySelector('details.filed-more').id,'filed-more','folded list has a target');
+  for(const [i,id] of order.entries()){
+    if(i>2&&i<order.length-2) continue;  // the ends and the joins are what break
+    const b=navBar(builtPage(`/e/${id}/`),'Passages in this topic');
+    assert.ok(b,`/e/${id}/ has the topic bar`);
+    assert.equal(b.prev,i?`/e/${order[i-1]}/`:null,`/e/${id}/ previous`);
+    assert.equal(b.next,i+1<order.length?`/e/${order[i+1]}/`:null,`/e/${id}/ next`);
+    assert.equal(b.toc,`/topics/${tid}/#${i<ids.length?id:'filed-more'}`,`/e/${id}/ position opens the list`);
+    assert.match(b.text,new RegExp(`${i+1} of ${order.length} in this topic`));
+  }
+});
+test('a work published one book per page steps to the next book (nav review 2026-11-14)',()=>{
+  const b4=builtPage('/works/origen-contra-celsum-book-4/');
+  const b=navBar(b4,'Books');
+  assert.ok(b&&b.n===2,'Against Celsus IV: bar above and below the text');
+  assert.equal(b.prev,'/works/origen-contra-celsum-book-3/');
+  assert.equal(b.next,'/works/origen-contra-celsum-book-5/');
+  assert.match(b.text,/← Book III.*All books.*Book V →/);
+  assert.equal(navBar(builtPage('/works/origen-contra-celsum-preface/'),'Books').next,'/works/origen-contra-celsum-book-1/','the preface leads into Book I');
+  assert.equal(navBar(builtPage('/works/origen-contra-celsum-book-8/'),'Books').next,null);
+  const c=navBar(builtPage('/works/cyril-adoration-4/'),'Books');
+  assert.equal(c.next,'/works/cyril-adoration-5/');
+  assert.equal(c.toc,'/authors/cyril-of-alexandria/#series-on-adoration-and-worship-in-spirit-and-truth');
+  const hub=builtPage('/authors/cyril-of-alexandria/');
+  assert.ok(hub.querySelector('#series-on-adoration-and-worship-in-spirit-and-truth > details'),'hub row is the link target');
+  assert.equal(navBar(builtPage('/works/origen-on-prayer/'),'Books'),null,'a single work gets no book bar');
+});
+test('a link to a folded row opens it (nav review 2026-11-14)',()=>{
+  const html=readFileSync(new URL('authors/cyril-of-alexandria/index.html',DIST),'utf8');
+  const dom=mount(html,'/authors/cyril-of-alexandria/#series-on-adoration-and-worship-in-spirit-and-truth');
+  const d=dom.window.document.querySelector('#series-on-adoration-and-worship-in-spirit-and-truth > details');
+  assert.equal(d.open,true,'series row opens from the hash');
+  dom.window.close();
+  const t=mount(readFileSync(new URL('topics/apologetic-method/index.html',DIST),'utf8'),'/topics/apologetic-method/#filed-more');
+  const f=t.window.document.querySelector('#filed-more');
+  if(f) assert.equal(f.open,true,'Other passages filed here opens from the hash');
+  t.window.close();
+});
+test('author pages: a long "Part only" note wraps instead of pushing the page sideways (nav review 2026-11-14)',()=>{
+  const css=readFileSync(new URL('assets/site.css',DIST),'utf8');
+  const rule=css.match(/(^|\n)\.work-count \{[^}]*\}/);
+  assert.ok(rule,'.work-count rule ships');
+  assert.doesNotMatch(rule[0],/white-space:\s*nowrap/);
+});

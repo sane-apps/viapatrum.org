@@ -350,7 +350,10 @@ body {
   color: var(--gold-deep);
   font-size: 0.85rem;
   font-weight: 550;
-  white-space: nowrap;
+  /* Wraps: a "Part only: ..." note can be a sentence long, and nowrap pushed
+     author pages sideways (1,697 px wide at 390, nav review 2026-11-14). */
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .author-works .work-title { font-weight: 650; font-size: 1.05rem; }
 /* TOC citations: styled text with tooltip (anchors cannot nest inside the row link). */

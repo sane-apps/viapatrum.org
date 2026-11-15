@@ -3954,6 +3954,87 @@ def series_base_and_part(title: str) -> tuple[str, int | None]:
     return base, _ROMAN.get(token.casefold())
 
 
+# A work published one book per work ("Against Celsus, Book IV", "…, Preface",
+# "… Discourse II", "Homily I on …"): its reader ends with a bar to the previous
+# and next part, as the books of one work do (owner 14 Nov 2026, after the app
+# had no way on from an open text).
+_READING_PART_RE = re.compile(
+    r"^(?P<base>.+?),?\s+(?P<label>(?:Book|Discourse)\s+(?P<num>\d+|[IVXLC]+)|Preface|Prologue)\s*$")
+_HOMILY_PART_RE = re.compile(r"^(?P<label>Homily\s+(?P<num>\d+|[IVXLC]+))\s+(?P<base>on\s+.+)$")
+
+
+def _part_number(token: str) -> int | None:
+    if token.isdigit():
+        return int(token)
+    vals = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
+    total = prev = 0
+    for ch in reversed(token.upper()):
+        v = vals.get(ch)
+        if v is None:
+            return None
+        total = total - v if v < prev else total + v
+        prev = max(prev, v)
+    return total or None
+
+
+def reading_series_part(title: str) -> tuple[str, int, str] | None:
+    """(series name, order, part label) for a part title, else None. A preface comes first (order 0)."""
+    t = (title or "").strip()
+    m = _READING_PART_RE.match(t)
+    if m:
+        order = 0 if m.group("num") is None else _part_number(m.group("num"))
+        return (m.group("base").strip().rstrip(","), order, m.group("label")) if order is not None else None
+    m = _HOMILY_PART_RE.match(t)
+    if m:
+        order = _part_number(m.group("num"))
+        return ("Homilies " + m.group("base"), order, m.group("label")) if order else None
+    return None
+
+
+def series_anchor(base: str) -> str:
+    """Id of a collapsed series row on an author hub, so a link can open it."""
+    return "series-" + slugify(base)
+
+
+def reading_series_nav(works: list[dict]) -> dict[str, str]:
+    """slug -> the "← previous part · All books · next part →" bar for works that are
+    parts of one series by one writer. Two or more parts, no repeated number."""
+    groups: dict[tuple[str, str], list[tuple[int, str, dict]]] = {}
+    for w in works:
+        if w.get("groups"):
+            continue  # already one reader per book with its own bar
+        part = reading_series_part(public_reader_title(w.get("title") or "", slug=w.get("slug") or ""))
+        if not part:
+            continue
+        base, order, label = part
+        groups.setdefault((w.get("author_slug") or "", base.casefold()), []).append((order, label, w))
+    out: dict[str, str] = {}
+    for (a_slug, _), members in groups.items():
+        if len(members) < 2 or len({o for o, _, _ in members}) != len(members):
+            continue
+        members.sort(key=lambda t: t[0])
+        books = all(lab.split()[0].casefold() in ("book", "preface", "prologue") for _, lab, _ in members)
+        hub = f"/authors/{a_slug}/" if a_slug else "/works/"
+        # The hub folds a numbered-book series into one row; open that row.
+        hub_bases = {series_base_and_part(public_reader_title(w.get("title") or "", slug=w.get("slug") or ""))
+                     for _, _, w in members}
+        if all(p is not None for _, p in hub_bases) and len({b for b, _ in hub_bases}) == 1:
+            hub += "#" + series_anchor(next(iter(hub_bases))[0])
+        for i, (_, _, w) in enumerate(members):
+            prev = members[i - 1] if i else None
+            nxt = members[i + 1] if i + 1 < len(members) else None
+            out[w["slug"]] = (
+                '<nav class="section-nav" aria-label="Books">'
+                + (f'<a class="pn prev" href="/works/{escape(prev[2]["slug"])}/">← {escape(prev[1])}</a>'
+                   if prev else '<span class="pn prev"></span>')
+                + f'<a class="pn toc" href="{escape(hub)}">All {"books" if books else "parts"}</a>'
+                + (f'<a class="pn next" href="/works/{escape(nxt[2]["slug"])}/">{escape(nxt[1])} →</a>'
+                   if nxt else '<span class="pn next"></span>')
+                + "</nav>"
+            )
+    return out
+
+
 _TAUTOLOGY_RE = None
 
 def _is_tautological_blurb(blurb: str) -> bool:
@@ -4076,7 +4157,7 @@ def author_works_list_html(ww: list[dict]) -> str:
             (
                 alpha_key(base),
                 (
-                    f'<li class="work-series"><details>'
+                    f'<li class="work-series" id="{escape(series_anchor(base))}"><details>'
                     f'<summary><span class="work-series-title">{escape(base)}</span>'
                     f' <span class="meta">({escape(span)} · {total} sections)</span></summary>'
                     f'<ul class="series-parts">{lis}</ul></details></li>'
@@ -10362,6 +10443,21 @@ def build() -> None:
         ]
         rel_html = related_panel("The books", related_works)
         primary, rest = split_topic_rows(tid, rows)
+        # Keep reading in the topic (owner 14 Nov 2026): each excerpt page steps to the
+        # previous and next passage in the topic page's own order, quoted ones first.
+        e_order = [x["id"] for x in primary + rest]
+        e_pos = {eid: n for n, eid in enumerate(e_order)}
+        e_rest = {x["id"] for x in rest}
+        e_names = {x["id"]: f"{display_author(x.get('author') or '')}, {excerpt_cite(x)}" for x in primary + rest}
+
+        def e_step(eid: str | None, side: str) -> str:
+            if not eid:
+                return f'<span class="pn {side}"></span>'
+            word = "Previous" if side == "prev" else "Next"
+            label = f"← {word}" if side == "prev" else f"{word} →"
+            return (f'<a class="pn {side}" href="/e/{escape(eid)}/">{label}'
+                    f'<span class="vh">: {escape(e_names.get(eid, ""))}</span></a>')
+
         items_html = [topic_card_html(x, topic_keywords(meta), stance_chip(tid, x["id"])) for x in primary]
         for x in rows:
             paras_list = excerpt_paragraphs(x)
@@ -10393,6 +10489,17 @@ def build() -> None:
                     and display_author(works_by_slug[ws].get("author") or "") == display_author(x.get("author") or "")
                 ][:3],
             )
+            e_nav = ""
+            _n = e_pos.get(x["id"])
+            if _n is not None and len(e_order) > 1:
+                _spot = "filed-more" if x["id"] in e_rest else x["id"]
+                e_nav = (
+                    '<nav class="section-nav e-nav" aria-label="Passages in this topic">'
+                    + e_step(e_order[_n - 1] if _n else None, "prev")
+                    + f'<a class="pn toc" href="/topics/{escape(tid)}/#{escape(_spot)}">{_n + 1} of {len(e_order)} in this topic</a>'
+                    + e_step(e_order[_n + 1] if _n + 1 < len(e_order) else None, "next")
+                    + "</nav>"
+                )
             e_cite = excerpt_cite(x)
             e_author = display_author(x.get("author") or "")
             # A text as author whose cite already names it: "Epistle to
@@ -10436,6 +10543,7 @@ def build() -> None:
   {e_older}{e_reader}
   <div class="body">{paras}</div>
   {src_block}
+  {e_nav}
   {report_mistake_html(f"{e_author}, {e_cite}", url=f"{SITE_ORIGIN}/e/{x['id']}/", label="Report a mistake in this passage", cls="meta")}
   {cross}
 </article>
@@ -10498,7 +10606,7 @@ def build() -> None:
                     f'<span class="c">{escape(dates)}</span></a></li>'
                 )
             filed_html = (
-                f'<details class="filed-more"><summary>Other passages filed here ({len(rest)})</summary>'
+                f'<details class="filed-more" id="filed-more"><summary>Other passages filed here ({len(rest)})</summary>'
                 f'<ul class="topic-list">{"".join(filed_items)}</ul></details>'
             )
         _turn = rupture_for.get(tid)
@@ -10825,6 +10933,7 @@ def build() -> None:
             return keep[: -len("</section>")] + ed + "</section>"
         return f'<section class="keep keep-edition" aria-label="Edition">{ed}</section>'
 
+    series_bars = reading_series_nav(works)
     for w in works:
         topic_links = []
         for tid in w.get("related_topics") or []:
@@ -11300,12 +11409,13 @@ def build() -> None:
             for s in w["sections"]:
                 sec_contents_href[str(s["section"])] = f"/works/{w['slug']}/#s{s['section']}"
             blocks = reader_body(w["sections"])
+            snav = series_bars.get(w["slug"], "")
             write(
                 DIST / "works" / w["slug"] / "index.html",
                 layout(
                     title_by(pub_title, w_author, canonical_author_slug(w.get("author_slug"), w.get("author"))),
                     reader_page(
-                        f'<div class="reader">{blocks}</div>',
+                        f'{snav}<div class="reader">{blocks}</div>{snav}',
                         contents_html=contents_details(w["sections"]),
                     ),
                     crumb=[("Home", "/"), ("Works", "/works/"), (pub_title, "")],
@@ -11499,6 +11609,24 @@ def build() -> None:
     listen = kjv_listen.Listen(DIST, *kjv_listen.folders())
     kjv_books = (bibles.get("kjv") or {}).get("books") or {}
 
+    # Previous and next chapter run on across books, as in a printed Bible
+    # (Genesis 50 -> Exodus 1; owner 14 Nov 2026). Same chapter set as the pages below.
+    sc_seq: list[tuple[str, int]] = []
+    for _bk in BIBLE_ORDER:
+        _tc = base_bible["books"].get(_bk) or {}
+        _bc = (sc_books.get(_bk) or {}).get("chapters") or {}
+        if _tc or _bc:
+            sc_seq.extend((_bk, _c) for _c in sorted({int(c) for c in _tc} | set(_bc)))
+    sc_at = {ref: n for n, ref in enumerate(sc_seq)}
+
+    def sc_step(ref: tuple[str, int] | None, here: str, side: str) -> str:
+        if not ref:
+            return f'<span class="pn {side}"></span>'
+        bk, ch = ref
+        label = escape(f"Chapter {ch}" if bk == here else f"{ref_name(bk)} {ch}")
+        return (f'<a class="pn {side}" href="/scripture/{slugify(book_name(bk))}/{ch}/">'
+                + (f"← {label}" if side == "prev" else f"{label} →") + "</a>")
+
     for book in BIBLE_ORDER:
         text_chaps = base_bible["books"].get(book) or {}
         b = sc_books.get(book, {"chapters": {}, "refs": 0, "writers": set()})
@@ -11605,13 +11733,12 @@ def build() -> None:
                 + (f'<p class="desk-hint">Also cited: verse{"s" if len(extra) > 1 else ""} {escape(", ".join(sorted(extra, key=int)))} (numbered differently in this translation).</p>' if extra and (book, c) not in EXTRA_CANON else "")
                 + "</section>"
             )
-            prev_c = all_chaps[i - 1] if i else None
-            next_c = all_chaps[i + 1] if i + 1 < len(all_chaps) else None
+            _at = sc_at[(book, c)]
             nav = (
                 '<nav class="section-nav" aria-label="Chapters">'
-                + (f'<a class="pn prev" href="/scripture/{bslug}/{prev_c}/">← Chapter {prev_c}</a>' if prev_c else '<span class="pn prev"></span>')
+                + sc_step(sc_seq[_at - 1] if _at else None, book, "prev")
                 + f'<a class="pn toc" href="/scripture/{bslug}/">All of {escape(book_name(book))}</a>'
-                + (f'<a class="pn next" href="/scripture/{bslug}/{next_c}/">Chapter {next_c} →</a>' if next_c else '<span class="pn next"></span>')
+                + sc_step(sc_seq[_at + 1] if _at + 1 < len(sc_seq) else None, book, "next")
                 + "</nav>"
             )
             listen_bar = listen.chapter(USFM_ORDER[BIBLE_ORDER.index(book)], bslug, c,

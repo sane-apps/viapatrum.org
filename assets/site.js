@@ -21,6 +21,18 @@
     });
   }
 
+  // A link to a folded row (/authors/x/#series-..., /topics/x/#filed-more) opens it.
+  const openFromHash = () => {
+    let el = null;
+    try { el = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch (e) { el = null; }
+    if (!el) return;
+    const box = el.matches("details") ? el : el.querySelector(":scope > details");
+    for (let d = box || el.closest("details"); d; d = d.parentElement && d.parentElement.closest("details")) d.open = true;
+    if (box && el.scrollIntoView) el.scrollIntoView({ block: "start" });
+  };
+  openFromHash();
+  window.addEventListener("hashchange", openFromHash);
+
   // Home Ask field: the hint inside it turns through a few topics (owner 2026-10-18).
   // The field's name stays fixed (aria-label); the hint holds still while the field
   // has focus or text, while the tab is hidden, and always under reduced motion.
