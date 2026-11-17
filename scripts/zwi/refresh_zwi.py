@@ -107,6 +107,19 @@ def publish(dist: Path, live: Path | None = None) -> int:
     return len(files)
 
 
+def sign_groups(changed: set[str], live: Path) -> list[tuple[list[str], str]]:
+    """Split the works to sign into (slugs, extra sign_zwi.mjs flag) groups.
+
+    A work with a signed archive in the live set is signed again with --resign (sign_zwi.mjs then requires
+    history/, so a re-sign can never start a fresh chain). A new work has no earlier version and no history/,
+    so it gets a first signature without --resign. 17 Nov 2026: new works went in with --resign, sign_zwi.mjs
+    refused them, and that one refusal kept the whole live set at its 13 Nov state for nine ships.
+    """
+    again = sorted(s for s in changed if (live / f"{s}.zwi").is_file())
+    new = sorted(s for s in changed if not (live / f"{s}.zwi").is_file())
+    return [(g, f) for g, f in ((again, " --resign"), (new, "")) if g]
+
+
 def refresh(dist: Path, dry: bool) -> str:
     for need in (Path(PY), COLICON, FIRST, IDS, LIVE):
         if not need.exists():
@@ -131,12 +144,13 @@ def refresh(dist: Path, dry: bool) -> str:
         if dry:
             return f"dry run: {len(changed)} to sign ({', '.join(sorted(changed)[:5])}...)"
         only = ",".join(sorted(changed))
-        sign = run(["zsh", "-c", 'source ~/.config/nv/env >/dev/null 2>&1; '
-                    '_sane_export_secret VIAPATRUM_PSQR_PUBLISH_JWK >/dev/null 2>&1; '
-                    'node "$1" --stage "$2" --resign --only "$3"', "_",
-                    str(HERE / "sign_zwi.mjs"), str(WORK / "stage"), only], timeout=1800)
-        if sign.returncode != 0:
-            return f"sign rc={sign.returncode}: {sign.stderr[-300:]}"
+        for group, flag in sign_groups(changed, LIVE):
+            sign = run(["zsh", "-c", 'source ~/.config/nv/env >/dev/null 2>&1; '
+                        '_sane_export_secret VIAPATRUM_PSQR_PUBLISH_JWK >/dev/null 2>&1; '
+                        f'node "$1" --stage "$2"{flag} --only "$3"', "_",
+                        str(HERE / "sign_zwi.mjs"), str(WORK / "stage"), ",".join(group)], timeout=1800)
+            if sign.returncode != 0:
+                return f"sign rc={sign.returncode}: {sign.stderr[-300:]}"
         pack = run([PY, str(HERE / "pack_zwi.py"), "--stage", str(WORK / "stage"), "--out", str(arch), "--only", only],
                    timeout=1800)
         if pack.returncode != 0:
