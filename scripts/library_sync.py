@@ -490,7 +490,10 @@ AUDIO_ZIPS = (
     ("didymus-other", "Didymus the Blind, other works", ""),
     ("cyril-alexandria", "Cyril of Alexandria", ""),
     ("after-chalcedon", "After Chalcedon", ""),
-    ("later-writers", "Later writers who read the Fathers", ""),
+    ("later-writers", "Later writers who read the Fathers", "John Wesley is in his own zip."),
+    # 2026-11-17: Later writers reached 2.30 GB and blocked assemble; Wesley (784 MB) gets his own.
+    # Added last so the earlier zips keep their numbered file names.
+    ("john-wesley", "John Wesley", ""),
 )
 ZIP_MAX = 2 * 1024 ** 3
 FREE_MIN = 15 * 1000 ** 3  # never zip below this much free disk (2026-10-06 disk-full crash)
@@ -502,6 +505,8 @@ def audio_zip_of(w: dict) -> str:
         return "didymus-psalms" if "psalm" in w["slug"] else "didymus-other"
     if (w.get("author") or "").strip().lower() == "cyril of alexandria":
         return "cyril-alexandria"
+    if (w.get("author") or "").strip().lower() == "john wesley":
+        return "john-wesley"
     y = w.get("year")
     y = 9999 if y is None else int(y)
     # 2026-10-23: one After Chalcedon zip reached 2.19 GB; the site's own era

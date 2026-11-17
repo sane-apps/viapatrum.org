@@ -38,7 +38,9 @@ class EraZips(unittest.TestCase):
         self.assertEqual(ls.audio_zip_of({"author": "Cyril of Jerusalem", "slug": "cyril-y", "year": 386}), "nicaea-to-chalcedon")
         self.assertEqual(ls.audio_zip_of({"author": "Didymus the Blind", "slug": "didymus-fragmenta-psalmos", "year": 390}), "didymus-psalms")
         self.assertEqual(ls.audio_zip_of({"author": "Hesychius of Jerusalem", "slug": "h", "year": 450}), "nicaea-to-chalcedon")
-        self.assertEqual(ls.audio_zip_of({"author": "John Wesley", "slug": "w", "year": 1739}), "later-writers")
+        # 2026-11-17: Later writers hit 2.30 GB; Wesley has his own zip, other later writers stay.
+        self.assertEqual(ls.audio_zip_of({"author": "John Wesley", "slug": "w", "year": 1739}), "john-wesley")
+        self.assertEqual(ls.audio_zip_of({"author": "John Davenant", "slug": "d", "year": 1641}), "later-writers")
         self.assertEqual(ls.audio_zip_of({"author": "John of Damascus", "slug": "j", "year": 749}), "after-chalcedon")
 
     def test_every_routed_zip_is_declared(self):
