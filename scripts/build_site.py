@@ -7506,6 +7506,38 @@ EXCERPT_LETTER_SECTIONS = {
 }
 
 
+# One work the site publishes as one reader per book (owner 16 Nov 2026: quotes
+# from Against Celsus led nowhere). Work key -> slug prefix of its book readers.
+# A quote cites "1.5" (book 1, chapter 5) or only "36", a chapter with no book.
+EXCERPT_SPLIT_WORKS = {
+    ("origen", "against celsus"): "origen-contra-celsum-",
+    ("origen", "contra celsum"): "origen-contra-celsum-",
+}
+
+# The same work under another title in the excerpt list -> the published slug.
+EXCERPT_WORK_ALIASES = {
+    ("cyprian", "unity church"): "cyprian-on-the-unity-of-the-church",
+    ("cyprian", "treatises unity church"): "cyprian-on-the-unity-of-the-church",
+}
+
+
+def _split_work_reader(x: dict, prefix: str, locus: str, by_slug: dict) -> tuple[dict | None, str]:
+    """(book reader, chapter) for a quote from a work split into book readers.
+    "3.36" names the book. A bare "36" goes to the book whose chapter 36 shares
+    the most of the quote's words, only on a clear win (the neighbour rule in
+    excerpt_reader_sections); otherwise no match."""
+    m = re.fullmatch(r"(\d+)\.(\d+)", locus)
+    if m:
+        return by_slug.get(f"{prefix}book-{m.group(1)}"), m.group(2)
+    if not locus.isdigit():
+        return None, locus
+    scores = sorted(((_excerpt_overlap(x, s), w["slug"]) for w in by_slug.values() if w["slug"].startswith(prefix)
+                     for s in w.get("sections") or [] if str(s["section"]) == locus and s.get("english")), reverse=True)
+    if not scores or scores[0][0] < 0.4 or (len(scores) > 1 and scores[0][0] - scores[1][0] < 0.15):
+        return None, locus
+    return by_slug[scores[0][1]], locus
+
+
 def excerpt_reader_sections(excerpts: list[dict], works: list[dict]) -> dict[str, tuple[dict, dict, str]]:
     """Excerpt id -> (work, section, reader href) when the excerpt's chapter is
     published as a whole-work reader. The excerpt then shows the reader's own
@@ -7520,12 +7552,14 @@ def excerpt_reader_sections(excerpts: list[dict], works: list[dict]) -> dict[str
     out: dict[str, tuple[dict, dict, str]] = {}
     for x in excerpts:
         key = _work_key(canonical_author_slug(None, x.get("author")), x.get("work") or "", x.get("author") or "")
-        w = by_key.get(key)
+        w = by_key.get(key) or by_slug.get(EXCERPT_WORK_ALIASES.get(key, ""))
         locus = str(x.get("locus") or "").strip()
         letter = next((v for (a, t), v in EXCERPT_LETTER_SECTIONS.items()
                        if key[0] == a and key[1].split()[-1:] == [t]), None) if not w else None
         if letter and letter[0] in by_slug and locus.isdigit():
             w, locus = by_slug[letter[0]], f"{letter[1]}.{locus}"
+        if not w and key in EXCERPT_SPLIT_WORKS:
+            w, locus = _split_work_reader(x, EXCERPT_SPLIT_WORKS[key], locus, by_slug)
         if not w or not key[1]:
             continue
         secs = {str(s["section"]): s for s in w.get("sections") or [] if s.get("english")}
@@ -9882,6 +9916,7 @@ def build() -> None:
             if _ww:
                 x["_reader_href"] = f"/works/{_ww['slug']}/"
                 x["_reader_title"] = public_reader_title(_ww["title"], slug=_ww["slug"])
+                x["_reader_slug"] = _ww["slug"]  # app: Keep reading opens the book (app_export)
             continue
         _w, _s, _href = hit
         x["english"] = list(_s["english"])
@@ -9892,9 +9927,15 @@ def build() -> None:
         if _loc.isdigit() and _loc != _sid and str(x.get("citation") or "").endswith(" " + _loc):
             # Text check moved the match to the next chapter: name the one shown.
             x["citation"] = str(x["citation"])[: -len(_loc)] + _sid
+        _bk = re.search(r"-book-(\d+)$", _w["slug"])
+        if (_bk and any(_w["slug"].startswith(p) for p in EXCERPT_SPLIT_WORKS.values())
+                and str(x.get("citation") or "").endswith(" " + _sid)):
+            # A bare chapter matched to its book by text: cite book.chapter ("Against Celsus 7.10").
+            x["citation"] = str(x["citation"])[: -len(_sid)] + f"{_bk.group(1)}.{_sid}"
         x["_reader_href"] = _href
         x["_cite_href"] = f"/works/{_w['slug']}/{_s['section']}/"
         x["_reader_title"] = public_reader_title(_w["title"], slug=_w["slug"])
+        x["_reader_slug"], x["_reader_section"] = _w["slug"], str(_s["section"])  # app: Keep reading at this chapter
     _old_english = sorted(x["id"] for x in excerpts
                           if str(x.get("confidence") or "") in ("seed_anf", "seed_edition"))
     print(f"excerpts: {len(reader_for_excerpt)} shown from a whole-work reader; "

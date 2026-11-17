@@ -165,5 +165,41 @@ class UndatedAuthorTest(unittest.TestCase):
         self.assertIsInstance(a["year"], int)
 
 
+class KeepReadingTest(unittest.TestCase):
+    """Owner 16 Nov 2026: a topic quote led nowhere; Next only moved to another
+    writer. Each quote now names its published book (and chapter when the site
+    matched one) so the app can offer Keep reading."""
+
+    SLUG = "athanasius-on-the-incarnation"  # work() exports section "1"
+
+    def row(self, **reader) -> dict:
+        x = {"id": "q", "author": "Athanasius", "paras": ["Grace is given."], **reader}
+        return topic_json([x])["excerpts"][0]
+
+    def test_matched_chapter_gives_book_and_chapter(self) -> None:
+        r = self.row(_reader_slug=self.SLUG, _reader_section="1")
+        self.assertEqual((r["work"], r["section"]), (self.SLUG, "1"))
+
+    def test_book_without_chapter_opens_the_book(self) -> None:
+        r = self.row(_reader_slug=self.SLUG)
+        self.assertEqual(r["work"], self.SLUG)
+        self.assertNotIn("section", r)
+
+    def test_chapter_the_app_lacks_falls_back_to_the_book(self) -> None:
+        r = self.row(_reader_slug=self.SLUG, _reader_section="99")
+        self.assertEqual(r["work"], self.SLUG)
+        self.assertNotIn("section", r)
+
+    def test_unpublished_book_gives_no_link(self) -> None:
+        r = self.row(_reader_slug="hermas-shepherd", _reader_section="1")
+        self.assertNotIn("work", r)
+        self.assertNotIn("section", r)
+
+    def test_unmatched_quote_gives_no_link(self) -> None:
+        r = self.row()
+        self.assertNotIn("work", r)
+        self.assertNotIn("section", r)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -229,6 +229,44 @@ class CleanupPassTest(unittest.TestCase):
         self.assertIsNotNone(hit)
         self.assertEqual(hit[1]["section"], "6.1")
 
+    def _celsus(self, *chapters):
+        # chapters: (book, chapter, english) -> one reader per book, as published
+        works = {}
+        for book, ch, text in chapters:
+            w = works.setdefault(book, {"slug": f"origen-contra-celsum-book-{book}", "title": f"Against Celsus, Book {book}",
+                                        "author": "Origen", "author_slug": "origen", "sections": []})
+            w["sections"].append({"section": ch, "english": [text]})
+        return list(works.values())
+
+    CELSUS_A = "Celsus says the Christians teach in secret because they fear the penalty of death hanging over them"
+    CELSUS_B = "the prophets foretold the coming of the Word in the flesh long before the birth from the virgin"
+
+    def test_against_celsus_book_and_chapter_finds_that_book(self):
+        works = self._celsus(("1", "5", self.CELSUS_A), ("3", "5", self.CELSUS_B))
+        x = {"id": "c", "author": "Origen", "work": "Contra Celsum", "locus": "1.5", "english": [self.CELSUS_A]}
+        hit = build_site.excerpt_reader_sections([x], works).get("c")
+        self.assertEqual((hit[0]["slug"], hit[1]["section"]), ("origen-contra-celsum-book-1", "5"))
+
+    def test_against_celsus_bare_chapter_goes_to_the_book_whose_words_match(self):
+        works = self._celsus(("1", "36", self.CELSUS_A), ("3", "36", self.CELSUS_B))
+        x = {"id": "c", "author": "Origen", "work": "Against Celsus", "locus": "36", "english": [self.CELSUS_B]}
+        hit = build_site.excerpt_reader_sections([x], works).get("c")
+        self.assertEqual((hit[0]["slug"], hit[1]["section"]), ("origen-contra-celsum-book-3", "36"))
+
+    def test_against_celsus_bare_chapter_with_no_clear_book_gives_no_link(self):
+        works = self._celsus(("1", "36", self.CELSUS_A), ("3", "36", self.CELSUS_A))
+        x = {"id": "c", "author": "Origen", "work": "Against Celsus", "locus": "36", "english": [self.CELSUS_A]}
+        self.assertNotIn("c", build_site.excerpt_reader_sections([x], works))
+
+    def test_cyprian_unity_quotes_find_the_catholic_church_title(self):
+        text = "the Lord speaks to Peter saying I say unto thee that thou art Peter and upon this rock I will build my church"
+        work = {"slug": "cyprian-on-the-unity-of-the-church", "title": "On the Unity of the Catholic Church",
+                "author": "Cyprian of Carthage", "author_slug": "cyprian-of-carthage",
+                "sections": [{"section": "4", "english": [text]}]}
+        x = {"id": "u", "author": "Cyprian", "work": "On the Unity of the Church", "locus": "4", "english": [text]}
+        hit = build_site.excerpt_reader_sections([x], [work]).get("u")
+        self.assertEqual(hit[1]["section"], "4")
+
     def test_long_text_after_a_lacuna_mark_stays(self):
         tail = "text after a gap " * 20
         self.assertIn(tail.strip(), build_site.excerpt_paragraphs({"english": "before ****** " + tail})[0])

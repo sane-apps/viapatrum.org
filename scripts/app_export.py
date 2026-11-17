@@ -95,6 +95,7 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
         return key
 
     work_rows = []
+    exported_sections: dict[str, set[str]] = {}  # slug -> section ids the app can open
     for w in works:
         # build_site computes these rows once, before the work pages, so the edition
         # (scripts/editions.py) is taken from exactly the English exported here.
@@ -104,6 +105,7 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
         if not sections:
             continue
         body = {"slug": w["slug"], "sections": sections}
+        exported_sections[w["slug"]] = {s["id"] for s in sections}
         blob = json.dumps(body, ensure_ascii=False, separators=(",", ":"))
         digest.update(blob.encode("utf-8"))
         (out / "works").mkdir(parents=True, exist_ok=True)
@@ -142,13 +144,21 @@ def write(dist: Path, root: Path, b: ModuleType, *, works: list[dict], by_topic:
                 paras = [p for p in (_paragraph(b, raw, None) for raw in b.excerpt_paragraphs(x)) if p]
                 if not paras:
                     continue
-                excerpts.append({
+                row = {
                     "id": x["id"],
                     "author": author_entry(x.get("author") or ""),
                     "cite": b.public_citation(x.get("citation") or x["id"], x.get("work") or ""),
                     "older": bool(b.excerpt_is_anf(x)),  # the site's own ANF test (seed_edition New Advent too)
                     "p": paras,
-                })
+                }
+                # Keep reading: the published book this passage comes from, and its
+                # chapter when the site matched one (build_site excerpt_reader_sections).
+                # Only books this export carries, so the link never opens an empty reader.
+                if x.get("_reader_slug") in exported_sections:
+                    row["work"] = x["_reader_slug"]
+                    if x.get("_reader_section") and x["_reader_section"] in exported_sections[x["_reader_slug"]]:
+                        row["section"] = x["_reader_section"]
+                excerpts.append(row)
             if not excerpts:
                 continue
             # Same reader-facing note the topic page shows (build_site.py topic header).

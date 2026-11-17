@@ -34,7 +34,10 @@ Static files under `dist/app/v1/`, served by the same Pages project:
   Listen where `/assets/audio/<slug>/<section>.json` is 404.
 - `works/<slug>.json` — sections `{id, head, paragraphs[], scripture[]}` (plain
   text, Logos markup stripped, same as the reader page).
-- `topics/<id>.json` — excerpts for one topic.
+- `topics/<id>.json` — excerpts for one topic: `id, author, cite, older, p`,
+  plus `work` (a published book slug in this export) and `section` (that
+  book's section id) when the site matched the quote to its book. The app
+  shows "Keep reading" into the reader there; older apps ignore both.
 - `scripture-index.json` — the `sc_entries` rows keyed `Book Chapter`.
 
 The app downloads `catalog.json` on launch, fetches works on demand, and keeps
