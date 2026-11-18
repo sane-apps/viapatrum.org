@@ -1,13 +1,13 @@
 {
  "book": "2 Corinthians",
  "title": "The Fathers on 2 Corinthians",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 262,
- "selected_count": 102,
+ "comment_count": 278,
+ "selected_count": 141,
  "comments": [
   {
    "id": "2CO01-001",
@@ -69,8 +69,8 @@
    "chapter": 1,
    "verse_start": 1,
    "verse_end": 2,
-   "capsule": "Paul does not write alone, and Timothy's part shows the matter is reliable.",
-   "comment": "Because in the former letter he did not reproach alone, and now in comforting he does not write alone, but by the reception of holy Timothy he shows the matter reliable (2 Cor 1:1–2).",
+   "capsule": "Timothy's partnership shows the message can be trusted, and God is both God and Father to the born but Father only to the Son.",
+   "comment": "On 2 Corinthians 1:1: When he reproached them before, he did not reproach them alone; and now that he is making peace, he does not write alone either. By taking holy Timothy as his partner he shows that the matter can be trusted. Here he also showed that \"through\" belongs to the Father as well, when he said \"through the will of God.\"\n\nThe second catena form adds: Since he says \"from God our Father,\" we should know that with respect to those who are born he is called both God and Father, but with respect to the Son he is Father only. For Christ said \"my God and your God\" while he was in the flesh (John 20:17).",
    "editions": [
     "complete"
    ],
@@ -143,12 +143,13 @@
    "chapter": 1,
    "verse_start": 3,
    "verse_end": 4,
-   "capsule": "Paul begins with God's mercies and comfort to give the afflicted good hope, and God makes the comfort no small thing.",
-   "comment": "… He begins intimately with those being afflicted from the mercies of God and comfort, showing to them good hopes; for if God is the Father of mercies, he would have comforted those being persecuted and afflicted through him.\n\nComforting, God does not make the comfort a small thing (2 Cor 1:4). He pre-announces these things, because it was going to call back the one condemned through sin by means of comfort.",
+   "capsule": "Paul opens with God's mercies and comfort to give afflicted hearers hope, and God's consolation is not a small matter.",
+   "comment": "On 2 Corinthians 1:3: The glory he gives to God and the titles he uses for him already announce the coming reconciliation. \"Father of mercies and God of all comfort\": with respect to those who are born he is called both God and Father, but with respect to the Son he is confessed as Father only. To people in affliction it is fitting that he opens with God's mercies and comfort, letting good hopes show through; for if God is the Father of mercies, he would comfort those who are persecuted and afflicted for his sake.\n\nOn 2 Corinthians 1:4: When God comforts and consoles, his consolation is not a small thing. Paul announces this in advance because he was about to call back, by this comfort, the man condemned for his sin.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Shows why Paul begins with comfort and what God's consolation means for those under trial.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -161,13 +162,13 @@
    "chapter": 1,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "Paul's affliction, borne for the Corinthians' salvation because he preaches Christ, becomes their comfort and urges them to suffer the same.",
-   "comment": "Our affliction becomes comfort to you; for if the apostles are afflicted, much more the others (2 Cor 1:6). Or he also says this: if even we are being afflicted by men for the sake of your salvation, we suffer this, because we preach Christ to you. If we receive comfort from God through you, so that we may be sufficient for your exhortation, so as to urge you to suffer the same things which even we undergo.",
+   "capsule": "The apostles' affliction becomes the Corinthians' consolation and urges them to bear the same sufferings for Christ.",
+   "comment": "On 2 Corinthians 1:6: Our affliction turns into your consolation; for if the apostles suffer affliction, how much more the rest. Or he means this: if men afflict us for the sake of your salvation, we suffer it because we preach Christ to you. And if God consoles us on your account, it is so that we may be equal to encouraging you, and so urge you to bear the same sufferings that we endure.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains in plain terms how Paul's affliction becomes the Corinthians' comfort.",
+   "selected_reason": "Explains how teachers' afflictions and God's comfort serve the hearers' encouragement.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -194,6 +195,25 @@
    "from_cite": false
   },
   {
+   "id": "2CO01-034",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Those who endure with Paul will receive God's comfort.",
+   "comment": "On 2 Corinthians 1:7: I hope that you who endure the same things as I do will receive comfort from God just as I do.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "States plainly the link between shared suffering and shared consolation.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-open/",
+   "from_cite": false
+  },
+  {
    "id": "2CO01-011",
    "chapter": 1,
    "verse_start": 7,
@@ -216,8 +236,8 @@
    "chapter": 1,
    "verse_start": 8,
    "verse_end": 9,
-   "capsule": "Paul tells of Asia to encourage endurance, and the sentence of death teaches trust in God, not self.",
-   "comment": "Not boasting, he recounts the tribulations that befell him in Asia (2 Cor 1:8), but rather encourages them toward endurance of the sufferings. …\n\n… for we have had the decision of death (2 Cor 1:9), through which we are being disciplined not to trust in ourselves but in the saving God and those who forbid themselves to trust in self.",
+   "capsule": "Paul recounts Asia's afflictions to strengthen endurance, and the verdict of death teaches trust in God, not self.",
+   "comment": "On 2 Corinthians 1:8: He tells of the afflictions that came on him in Asia, not to show off, but to anoint them for enduring their sufferings. The phrase means: so that we gave up even on living.\n\nOn 2 Corinthians 1:9: A \"sentence\" is the verdict that a judgment delivers. So, as far as it lay with us, we had received the verdict of death. It brings us to our senses, so that we trust not in ourselves but in God, who saves even those who have given themselves up for lost.",
    "editions": [
     "complete"
    ],
@@ -270,8 +290,8 @@
    "chapter": 1,
    "verse_start": 11,
    "verse_end": 11,
-   "capsule": "Paul asks prayer not that his attackers flee but that his gifts be useful and many give thanks.",
-   "comment": "He does not pray for those attacking him to flee as if they were lovers of the body, but so that it may be useful to the gifts given to him, so that through many persons of the now and through many of those coming, the preaching that saves them may be thanked …",
+   "capsule": "Paul prays not to escape plotters out of bodily love but so his gifts may serve many and many may give thanks for the preaching.",
+   "comment": "On 2 Corinthians 1:11: He does not pray to escape those plotting against him because he loves his body. He prays so that he may serve the gifts given to him, and so that many people now, and many still to come, may give thanks for the preaching that keeps them safe. By saying \"through many,\" he pointed to the teaching that will reach those still to come. And \"thanks may be given on your behalf\" stands for \"for the gift that we ourselves have also received.\"",
    "editions": [
     "complete"
    ],
@@ -324,9 +344,9 @@
    "id": "2CO01-018",
    "chapter": 1,
    "verse_start": 12,
-   "verse_end": 14,
-   "capsule": "Paul's boast is a conscience witnessing that he preaches rightly in plain words, with God's power working faith.",
-   "comment": "This is our boasting: that our conscience testifies to us that we preach rightly (2 Cor 1:12). …\n\nWe did not teach you other things, agreeing with you, apart from what we now send, but these things which even as you read, being unadorned: whence also you recognize that our word is as an ordinary man, but the power of God working toward faith (2 Cor 1:13–14).",
+   "verse_end": 12,
+   "capsule": "Paul's boast is a conscience witnessing right preaching, without outsiders' wisdom or fleshly gain.",
+   "comment": "On 2 Corinthians 1:12: Our boast is this: our conscience testifies that we preach rightly. He holds that the wisdom of outsiders is merely natural, and here he hints that he did not speak as outsiders do. Nor did he preach for a fleshly motive, such as getting something from them.",
    "editions": [
     "complete"
    ],
@@ -359,10 +379,10 @@
   {
    "id": "2CO01-020",
    "chapter": 1,
-   "verse_start": 14,
+   "verse_start": 13,
    "verse_end": 14,
-   "capsule": "Paul boasts of his approval in preaching, the Corinthians of believing it, and each is the other's boast.",
-   "comment": "Paul says boasting of himself in those things in which he was approved by preaching; but the boasting of the Corinthians themselves is in the day of Christ, as if they possessed glory in those things in which they received the preaching. I hope that you will come to know, since even now you have already partially come to know that in the day of the Lord we are your boasting, just as you are ours; for those who have preached in those things in which they were approved are venerable, but those who were zealous in those things in which they believed the preaching.",
+   "capsule": "Paul's written and spoken teaching agree; plain speech and God's power in faith make preacher and believer each the other's boast on the day of the Lord.",
+   "comment": "On 2 Corinthians 1:13–14: What we taught you when we were with you is no different from what we write now. It is the very same, and you read it without ornament. From this you can tell that our speech is untrained, while the power that works for faith belongs to God. Paul calls the Corinthians his boast because of what he achieved by preaching to them; and on the day of Christ he is the Corinthians' own boast, since they will have glory, so to speak, for receiving the preaching. I hope you will come to see, as in part you already see, that on the day of the Lord we are your boast as you are ours. Preachers take pride in what their preaching achieved, and believers take honor in having believed it.",
    "editions": [
     "complete"
    ],
@@ -379,13 +399,13 @@
    "chapter": 1,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "Paul decided to come spiritually and not carelessly, since one deciding spiritual matters must never be false.",
-   "comment": "… the matter of deciding through God to come about is not a light thing. Having decided to come to you, I promised this not out of recklessness or carelessness; for not according to the flesh do I decide, but spiritually. It is proper that one deciding concerning spiritual things should nowhere be false, so that his yes may be yes and his no, no.",
+   "capsule": "Planning a visit for God's sake is not fickleness, and spiritual plans must keep yes as yes and no as no.",
+   "comment": "… To plan a visit for God's sake is no mark of fickleness. When I planned to come to you, I made you that promise, not out of rashness or lightness; for when I make plans, I do not make them according to the flesh: I plan spiritual things. And one who plans spiritual things must never prove false, so that with him yes is yes and no is no.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "States plainly why Paul's travel plans were made with care and why his yes means yes.",
+   "selected_reason": "Clarifies what Paul means by planning not according to the flesh.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -453,13 +473,13 @@
    "chapter": 1,
    "verse_start": 18,
    "verse_end": 19,
-   "capsule": "If the preaching had yes and no, so would Paul's decision to come, but since the word is true the whole decision is true.",
-   "comment": "… If, therefore, the proclamation had yes and no, my decision regarding my arrival to you would justly have yes and no; but if the word is true, then the whole decision is true. I believe to God that none of those things which we preached is a lie (2 Cor 1:19). For even the Son of God, our Lord Jesus, did not become a liar (2 Cor 1:19).",
+   "capsule": "If the preaching were yes and no, Paul's plan would be too; because the word is true, so is the plan and the Son did not prove a liar.",
+   "comment": "On 2 Corinthians 1:18: Whether I come or not does not rest with me; making the plan does. If the preaching had a yes and a no, my plan to come to you would rightly have had a yes and a no as well. But if the word is true, then the plan is true through and through. I trust God that nothing we have preached is false.\n\nOn 2 Corinthians 1:19: For the Son of God, our Lord Jesus, did not prove a liar either.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains how the truth of Paul's preaching bears on his own word about his plans.",
+   "selected_reason": "Links Paul's steadiness to the truth of the gospel preached among them.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -528,13 +548,13 @@
    "chapter": 1,
    "verse_start": 20,
    "verse_end": 22,
-   "capsule": "Through Christ we say the amen to God, and God's seal marks us as his own like a shepherd's mark on a flock, while the earnest is a small deposit of the whole.",
-   "comment": "… Through Christ we send up the amen to God the Father, the confirmation toward Christ we received through God; and through the one having sealed us, He demonstrated our belonging to God and our separation from the evil one (2 Cor 1:20–22). For even shepherds place their own seal upon the flocks, distinguishing them from the strangers. Having said 'earnest', He presented that we have received a small deposit of the knowledge, but the perfection is owed to us; for the earnest is a part of the whole.",
+   "capsule": "Through Christ believers say Amen to God; God's seal marks them as his own, and the Spirit's pledge is a first portion of the full gift.",
+   "comment": "On 2 Corinthians 1:20–22: Through Christ we send up the Amen to God the Father, and through God we received our confirmation in Christ. By \"who sealed us\" he made plain that we belong to God and are estranged from the evil one; shepherds, too, set a seal on their flocks to tell their own sheep from other people's. By saying \"pledge\" he indicated that we have received a small security out of knowledge, while the full gift is still owed to us; for a pledge is a part of the whole.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the seal and the earnest (pledge) in plain terms.",
+   "selected_reason": "Explains seal and pledge in terms a reader can follow without controversy.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -602,12 +622,13 @@
    "chapter": 1,
    "verse_start": 23,
    "verse_end": 24,
-   "capsule": "Paul held back from coming to condemn them, wishing to come not as lord of their faith but as a fellow-worker of their joy, since their faith was still unfruitful.",
-   "comment": "Because there were many complaints against them, he did not want, having gone, to condemn them (2 Cor 1:23–24). The word is spoken incompletely; for he wants to say that I desired to come to you, but not as one who is lord and teacher of your faith. … To correct those among you who stumble, and those among us who stumble, so that we might become fellow-workers of the joy according to God. … And he says 'joy according to God'; for the apostle would not have joined in with them for a worldly joy. … Having spoken of faith, he presented that they are left without works. Therefore, since they have faith as unfruitful and still incomplete, he says he is a fellow-worker to them.",
+   "capsule": "Paul stayed away to avoid condemning them, coming not as lord of faith but as fellow worker of joy according to God while faith still lacks works.",
+   "comment": "On 2 Corinthians 1:23–24: Since the charges against them were many, he did not want to go there and condemn them. The sentence is elliptical. He means: I did want to come to you, but not as one who is lord and teacher of your faith. Stumbling is your affair; setting right those who stumble is ours, so that we may become fellow workers in the joy that is according to God.\n\nThe second catena form adds: By joy he means the joy that is according to God, for the apostle would not have worked with them toward a worldly joy. When he says \"by faith,\" he hints that they fall short in works. So, since their faith is still fruitless and incomplete, he says that he is their fellow worker.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why Paul delayed his visit and what helper of their joy means.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -619,13 +640,33 @@
    "id": "2CO02-001",
    "chapter": 2,
    "verse_start": 1,
-   "verse_end": 2,
-   "capsule": "Paul stayed away so as not to grieve himself or condemn anyone, and grieving them for their own benefit is a proper thing.",
-   "comment": "Because of this I did not come, not so that I might not grieve you but myself, and so that I might not condemn anyone on account of what they are doing (2 Cor 2:1). …\n\nHe appears to be feeling sorrow—for he who has not been grieved clearly shows that he did not even take heed when rebuked (2 Corinthians 2:2). For even if I grieve you, I am doing a proper thing; cooperate toward my joy regarding your own benefit.",
+   "verse_end": 1,
+   "capsule": "Paul stayed away to spare himself grief and avoid condemning offenders.",
+   "comment": "This is why I did not come: not to keep from grieving you, but to keep from grieving myself, and so as not to condemn some for what they are doing.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why Paul stayed away in plain terms.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO02-023",
+   "chapter": 2,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Grieving rebukes do good when the grief shows the hearer has understood.",
+   "comment": "You grieve me and I grieve you, but not for the same reasons. You grieve me by your sins; I grieve you by my rebukes. Yet the one who feels grief makes me glad, for his grief seems to show that he has understood; whoever feels no grief plainly did not care when he was accused.\n\nSo even if I grieve you, I am doing the right thing, and it leads to my own gladness at your benefit.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by grief and gladness.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -637,13 +678,14 @@
    "id": "2CO02-002",
    "chapter": 2,
    "verse_start": 3,
-   "verse_end": 4,
-   "capsule": "Paul wrote instead of coming so that he would find them corrected and glad, and wrote with grief and tears out of love, that joy according to God might take away the grief.",
-   "comment": "I wrote this, that sparing you, I did not come, so that at the end of this letter, where it lies, lest having come, God might humble me (2 Corinthians 2:3). And because of this I wrote, so that in gladness I might find you having been corrected, so that you might not grieve. Not looking to my own, but to yours I said this; for I know that if you see me rejoicing, you rejoice, and if you see me grieving, you grieve. I wrote these things so that if you wish for me to come to you, you might beforehand correct the faults.\n\nShowing that he makes the same faults his own, he brought grief and tears, which he has love toward them (2 Corinthians 2:4). Having said, I wrote to you, not that you might simply be grieved, but that the joy according to God might take away the grief.",
+   "verse_end": 3,
+   "capsule": "Paul wrote ahead so he would find them already set right and they would not be grieved.",
+   "comment": "“I wrote this,” that is, that I stayed away to spare you, at the end of this letter, where it says, “lest perhaps when I come God may humble me” (2 Corinthians 12:21). I wrote for this reason: to find you, to my pleasure, already set right, so that you would not be grieved.\n\nI said this with an eye to your good, not to mine; for I know that if you see me rejoicing, you rejoice, and if you see me in pain, you are in pain. I wrote these things so that, if you want me to come, you may correct your faults before I arrive.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why Paul wrote instead of coming.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -671,16 +713,36 @@
    "from_cite": false
   },
   {
+   "id": "2CO02-024",
+   "chapter": 2,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Paul's tears show love, seeking godly joy to replace grief.",
+   "comment": "Having shown that he makes their faults his own, he revealed by his mourning and his tears the love he has for them. When he says “I wrote to you,” he means: not that you should simply be grieved, but that joy according to God should take the place of your grief.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the tears and love behind the painful letter.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-early/",
+   "from_cite": false
+  },
+  {
    "id": "2CO02-004",
    "chapter": 2,
    "verse_start": 5,
    "verse_end": 5,
-   "capsule": "Paul says the offender grieved them in part too, and does not add Christ, so as not to burden them.",
-   "comment": "If anyone has grieved even him whom you love, he has not grieved me alone, but in part also you, so that I might not burden you by saying even Christ (2 Cor 2:6). And he fell silent from saying 'and Christ,' so that he might not burden you even by saying it.",
+   "capsule": "Paul says the offence grieved the readers too but withholds a heavier word.",
+   "comment": "If anyone has grieved me, a man who loves, he has grieved not me alone but, in part, you as well. He stops there so as not to press too hard by adding “and Christ.” He kept back the words “and Christ,” so that saying them would not weigh too heavily.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why Paul phrases the rebuke as he does.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -692,13 +754,33 @@
    "id": "2CO02-005",
    "chapter": 2,
    "verse_start": 6,
-   "verse_end": 10,
-   "capsule": "Paul calls the condemnation by the many the reproof, and asks them to obey him in forgiving as they did in condemning.",
-   "comment": "He says 'reproof' is the condemnation from the many (2 Corinthians 2:6). To forgive him this (2 Kor 2:8). Obey me in condemning, obey me also in recalling him who has been condemned (2 Cor 2:9). Forgive him this, he says; … And because of this he shows that he wants them to think the same things about themselves by a disposition toward them.",
+   "verse_end": 6,
+   "capsule": "Punishment means majority condemnation.",
+   "comment": "By “punishment” he means the condemnation passed by the majority.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Says in one plain line that punishment means the condemnation passed by the majority.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO02-025",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 9,
+   "capsule": "As they obeyed in condemning, they should obey in restoring.",
+   "comment": "To forgive him this. …\n\nYou obeyed me when I said to condemn him; obey me also when I say to call the condemned man back.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the call to forgive and restore the offender.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -722,6 +804,25 @@
    "work_slug": "didymus-fragmenta-2cor",
    "section": "u01-rem-mid",
    "url": "https://viapatrum.org/works/didymus-fragmenta-2cor/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO02-026",
+   "chapter": 2,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Paul forgives as they forgive from affection and oneness of mind.",
+   "comment": "“Forgive him this,” he says, “for you know that whatever you forgive this man, I too want to forgive.” In this way he shows that his affection for them makes him want to be of one mind with them.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Paul's forgiveness as sharing their mind.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-early/",
    "from_cite": false
   },
   {
@@ -766,12 +867,13 @@
    "chapter": 2,
    "verse_start": 12,
    "verse_end": 13,
-   "capsule": "Paul seems grieved with the Troas believers who did not hold Titus, and he left despite an open door, either to admonish them or because he could correct matters later.",
-   "comment": "He appears to have been grieved toward those in Troas, because they did not do much regarding Titus, nor did they hold him until his arrival, but as if they had become lawless concerning the faith, they departed (2 Cor 2:12-13). Thus, admonishing them as unworthy, he departed even though a door had been opened and no one was closing against the proclamation. Or indeed because of this he departed, as being able easily to correct the things there later upon arrival, as no one being there to hinder.",
+   "capsule": "Paul passed Troas by to rebuke its slackness though preaching lay open.",
+   "comment": "He seems to have been grieved with the people in Troas. They had not made much of Titus or kept him there until Paul himself arrived, but, slack about the faith, they let him go.\n\nSo, to bring them to their senses as unworthy, he passed them by, even though a door had been opened and no one was shutting out the preaching. Or he passed them by for this reason as well: he could easily set things right there on a later visit, since nothing stood in the way.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why Paul left Troas despite the open door.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -802,8 +904,8 @@
    "chapter": 2,
    "verse_start": 14,
    "verse_end": 14,
-   "capsule": "Paul finds greater grace in what makes him worthy to triumph through Christ.",
-   "comment": "This is to the one proclaiming our insults and the circumstances through Christ (2 Cor 2:14). But he confesses a greater grace regarding those things through which he is made worthy to triumph through Christ.",
+   "capsule": "Being led in triumph is grace to suffer insult for Christ.",
+   "comment": "That is, to him who makes public the insults and hardships we suffer for Christ. Paul confesses it a greater grace that he is counted worthy to be led in triumph because of Christ. …",
    "editions": [
     "complete"
    ],
@@ -945,6 +1047,25 @@
    "from_cite": false
   },
   {
+   "id": "2CO02-027",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "The same gospel fragrance brings deeper death or fuller life.",
+   "comment": "The idolaters are in a death of the mind because of the ignorance and hardness within them, and when they do not accept the preaching of the gospel they fall into a second death as well. But those whom the training of the law brought to the beginnings of the knowledge of God are, in a sense, already in life; yet if they believe in Christ, they receive the fragrance of the knowledge of the Father, from life to life.\n\nA little later he explains this passage differently: Those who achieve such things are the fragrance of Christ, and they are not just anyone, but those who serve God sincerely. Since such words would sound boastful, Paul does not say them of himself; but by what he adds, “For we are not like the many,” he pointed to himself.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains in followable terms why the same preaching is a second death to idolaters and life to life for those the law has already begun to teach.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "2CO02-020",
    "chapter": 2,
    "verse_start": 16,
@@ -986,8 +1107,27 @@
    "chapter": 2,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "To peddle the word is to mix it with circumcision and Sabbaths or treat piety as profit, whereas Paul speaks sincerely from God.",
-   "comment": "He says that to peddle the word means to mingle with circumcision and keep Sabbaths, or to think that some consider piety to be a profit. I say, however, that he speaks from sincerity, and says that this very thing is from God, and not from a private power. … He says this because there were also false apostles who considered the word concerning piety to be a profit. …",
+   "capsule": "Peddling means mixing the word with profit or legal observance, unlike sincere speech from God.",
+   "comment": "By “peddling” the word he means either mixing it with circumcision and sabbath-keeping, or the way some people treat godliness as a way to make money. “I say that I speak out of sincerity”: and he says he has this very sincerity from God, not from any power of his own. He also gives another sense: we speak out of sincerity because we speak from God, not trifling with these matters but preaching a revelation from God. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Gives two clear senses of peddling the word, mixing it with circumcision and sabbath or preaching for money, then sincerity as speech from God.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO03-034",
+   "chapter": 3,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Grace stands far above the law, so Gentile believers should not be shamed into keeping it.",
+   "comment": "From here on he wants to show how far the law falls short of grace, so that no one from the circumcision would use the standing of Moses and the prophets to shame those from the Gentiles into keeping the law.",
    "editions": [
     "complete"
    ],
@@ -1015,24 +1155,6 @@
    "work_slug": "didymus-fragmenta-2cor",
    "section": "u01-rem-close",
    "url": "https://viapatrum.org/works/didymus-fragmenta-2cor/u01-rem-close/",
-   "from_cite": false
-  },
-  {
-   "id": "2CO03-034",
-   "chapter": 3,
-   "verse_start": 1,
-   "verse_end": 3,
-   "capsule": "Paul guards the Gentile believers against being led into the observance of Moses, and by 'stony tablets' and 'fleshy hearts' he shows that grace is superior to the law.",
-   "comment": "From here he wants to show how much the law of grace leaves behind, so that none of those from the circumcision, while hypocritically facing those from the Gentiles, might lead them into the observance of the requirement of Moses and the prophets (2 Cor 3:1). This is your faith and your life, becoming a letter to all and a recognition of our preaching (2 Cor 3:2–3). Because of saying 'stony tablets' and 'fleshy hearts,' he shows the superiority of grace over the law … He also shows how much the grace of the Spirit remains superior to the law and the ministry of the prophets' preaching.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Severianus of Gabala",
-   "work": "Fragments on 2 Corinthians",
-   "work_slug": "severianus-fragmenta-2cor",
-   "section": "u01-rem-mid",
-   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-mid/",
    "from_cite": false
   },
   {
@@ -1070,6 +1192,24 @@
    "work_slug": "cyril-fragmenta-2-corinthios",
    "section": "u02-rem-early",
    "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO03-037",
+   "chapter": 3,
+   "verse_start": 2,
+   "verse_end": 3,
+   "capsule": "Believers themselves are Christ's letter, showing grace surpasses the law as a living heart surpasses stone.",
+   "comment": "That is, this faith and life of yours becomes a letter to everyone and a token by which our preaching is known. “Written with the Spirit,” he says, meaning by the working of the Holy Spirit.\n\nBy saying “tablets of stone” and “hearts of flesh,” he shows how far grace surpasses the law: as far as a heart is better than a lifeless tablet. He also shows how much better the grace of the Spirit is than the law, and how much higher the preaching of the apostles stands than the ministry of the prophets.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-mid/",
    "from_cite": false
   },
   {
@@ -1148,6 +1288,25 @@
    "from_cite": false
   },
   {
+   "id": "2CO03-035",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "The law commands without helping and therefore kills, while the Spirit cleanses and leads to life.",
+   "comment": "“From ourselves” stands for “from one another.” … He calls the law “letter” and grace “spirit.”\n\nThe law gives commands but no help, and so it weighs down those who could not fulfill it and kills them by its punishment. The Spirit cleanses from sin and supplies the gifts, and so it plainly leads to life.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by letter and spirit in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "2CO03-008",
    "chapter": 3,
    "verse_start": 6,
@@ -1184,31 +1343,12 @@
    "from_cite": true
   },
   {
-   "id": "2CO03-035",
-   "chapter": 3,
-   "verse_start": 6,
-   "verse_end": 6,
-   "capsule": "The letter is the law, which kills by punishing, and the Spirit is grace, which cleanses and leads to life.",
-   "comment": "… The letter says the law, but the Spirit says grace (2 Cor 3:6); for the law, while commanding, does not help, but is heavy and kills through punishment those unable to fulfill it, whereas the Spirit makes one clean from sin and provides gifts, clearly leading toward life (2 Cor 3:6).",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Says in one plain sentence why the letter kills and the Spirit gives life.",
-   "author": "Severianus of Gabala",
-   "work": "Fragments on 2 Corinthians",
-   "work_slug": "severianus-fragmenta-2cor",
-   "section": "u01-rem-mid",
-   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-mid/",
-   "from_cite": false
-  },
-  {
    "id": "2CO03-036",
    "chapter": 3,
    "verse_start": 7,
-   "verse_end": 10,
-   "capsule": "Paul calls the law a minister of death because it kills those who do not fulfil it, yet he does not slander Moses, and the glory of the law is as nothing beside the surpassing glory of the Spirit.",
-   "comment": "And indeed the glory did not come on tablets but on the face of Moses. And wishing to speak here also regarding Moses, he makes Moses evident through the law. He calls the law itself a minister of death, because the law kills those not fulfilling it. And he does not say this as slandering him, for he also said the apostles are a stench of death because of those not obeying the proclamation. …\n\nHe calls Moses a minister of condemnation and death—for he condemned in the law those not obeying—and the apostles a minister of the Spirit; for Moses brought down the law, but the apostles conveyed the Spirit to the world. The letter of the law, which was glorified, has not been glorified when examined against the surpassing glory of the Spirit (2 Cor 3:10). …",
+   "verse_end": 9,
+   "capsule": "He calls Moses a ministry of death because the disobeyed law brought death, and he speaks of the tablets to spare Moses while showing the apostles' grace is greater.",
+   "comment": "And yet the glory was not on the tablets but on Moses' face, as he says next: “because of the glory of his face, which was being done away.” Not wanting to speak against the prophet Moses, he calls Moses “the law” and aims his words at it, showing that the grace given to Moses is less than the grace of the apostles. “But if the ministry of death”: he calls Moses a ministry of death, and calls the law death, because the law, once disobeyed, brought death about.\n\nYet this does not discredit the law, for the apostles too are called “the fragrance of death to death” (2 Corinthians 2:16). He calls the apostles a ministry of the Spirit and Moses a ministry of death. But to spare Moses he speaks of tablets: Moses brought tablets down from the mountain, while the apostles, sent into the world, brought the Spirit.",
    "editions": [
     "complete"
    ],
@@ -1276,6 +1416,24 @@
    "from_cite": false
   },
   {
+   "id": "2CO03-038",
+   "chapter": 3,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Beside the Spirit's glory the law pales.",
+   "comment": "When the glorified letter of the law is weighed against the surpassing glory of the Spirit, it has not been glorified. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "2CO03-013",
    "chapter": 3,
    "verse_start": 11,
@@ -1298,13 +1456,14 @@
    "id": "2CO03-014",
    "chapter": 3,
    "verse_start": 11,
-   "verse_end": 14,
-   "capsule": "The law must cease while the grace of the Spirit remains, and the end of the law comes when the veil is taken away through faith in Christ.",
-   "comment": "… [Paul] showed that it was necessary to cease and to be idle regarding the law, but the grace of the Spirit, having been opposed to the law, remains. … He says immediately: until today they have a veil. The end of the law is when the veil is taken away and they behold the glory of the Spirit, because in Christ it is made void, that is, it is through the faith into him.",
+   "verse_end": 11,
+   "capsule": "The law ceases while the Spirit's grace remains.",
+   "comment": "He showed that the law must cease and lie idle, while the grace of the Spirit, brought in to replace it, must remain.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It states the verse directly: the law must cease and lie idle, and the grace of the Spirit brought in to replace it must remain.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -1353,9 +1512,9 @@
    "id": "2CO03-017",
    "chapter": 3,
    "verse_start": 12,
-   "verse_end": 13,
-   "capsule": "The hope is that the grace of the Spirit, unlike the law, remains even after the resurrection, so the apostles teach with boldness and do not imitate Moses' veil.",
-   "comment": "What kind of hope? That the grace of the Spirit is not made void like the law, but remains even after the resurrection. We, because of the blessed hope of the grace of the Spirit remaining, teach with boldness, and we do not imitate the commands of Moses, who through the veil upon the face signaled that the Jews are not able to gaze intently and realize that the law shall receive an end and shall be idle. The veil remains showing no appearance, that the law is made void upon the coming of Christ.",
+   "verse_end": 14,
+   "capsule": "Grace remains and grows, and the law ends once the veil is lifted in Christ.",
+   "comment": "“Since, then, we have such a hope.” Hope that is seen is not hope (Romans 8:24). He made clear that grace remains and receives its increase even after the resurrection. “So that the children of Israel could not gaze at the end of what was being done away”: just as it was not possible to look steadily at the glory …, so they could not look at the end of the law either, that is, at the fact that the law will cease.\n\nAt once he says, “To this day they have a veil.” The end of the law, once the veil is lifted and they behold the glory of the Spirit, is this: it is done away in Christ, that is, through faith in him.",
    "editions": [
     "complete"
    ],
@@ -1446,8 +1605,8 @@
    "chapter": 3,
    "verse_start": 15,
    "verse_end": 16,
-   "capsule": "Moses' veil was taken away when he returned to the Lord, and yours is taken away when you turn to the Spirit.",
-   "comment": "… Just as Moses, while speaking to the Jews, had the veil, but returning to the Lord it is taken away, and now the Jews, after reading the law and returning the book, carry the veil as if Moses had returned to the Lord. If therefore, having turned away, you come to the Spirit, your veil is taken away just as Moses' was being taken away when returning to the Lord.",
+   "capsule": "As Moses removed the veil returning to the Lord, believers lose theirs coming to the Spirit.",
+   "comment": "Moses wore the veil while he spoke to the Jews but took it off when he turned back to the Lord. In the same way the Jews now, after reading the law and handing back the book, carry the veil away, as if Moses had turned back to the Lord.\n\nSo if you leave and come to the Spirit, your veil is taken off, just as Moses' was when he turned back to the Lord.",
    "editions": [
     "complete"
    ],
@@ -1538,12 +1697,13 @@
    "chapter": 3,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "Whoever is made worthy of the Spirit is freed from the law's condemnation.",
-   "comment": "… The one made worthy of the Spirit of the Lord, this one was freed from the condemnation of the law; for through the Spirit the gifts are being worked. And the gift is toward the worthy ones.",
+   "capsule": "Those counted worthy of the Spirit are freed from the law's condemnation.",
+   "comment": "Whoever has been counted worthy of the Spirit of the Lord has been set free from the law's condemnation, for the gifts are worked through the Spirit. And the gift is for those who are worthy.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It says in plain words that liberty in this verse is freedom from the law's condemnation for the one who has received the Spirit.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -1648,8 +1808,8 @@
    "chapter": 3,
    "verse_start": 18,
    "verse_end": 18,
-   "capsule": "Unlike Moses' glory, the glory of God approaches the apostles, who are changed from legal knowledge into spiritual grace and the glory of adoption.",
-   "comment": "… We, he says, the apostles, are seen by men with an unveiled face; but having said this, we all demonstrate the common benefit of the Spirit. And for Moses the glory was not approaching the Israelites, but for us the glory of God is approaching; for having established ourselves on faith, we reflect the glory of God, …\n\nWe are being transformed from legal knowledge into spiritual grace, moving from the glory of the Spirit working in us toward the glory of adoption. This is made clear by the Lord Spirit, not the Son of God. Just as one sees in that mirror, and another receives the reflection of the one seeing, so it is with the Spirit; for those reflecting the glory of Christ carry a certain likeness from that glory into glory, that is, they receive and take upon themselves the glory of the spiritual image.",
+   "capsule": "Beholding God's glory as in a mirror, we are changed from knowledge under the law into spiritual grace, or else from the Spirit's glory into the glory of adoption.",
+   "comment": "“We,” he says, meaning the apostles, are seen by people with unveiled face; but when he says “we all,” he shows that the Spirit's kindness is shared by all. The Israelites could not approach the glory of Moses, but for us the glory of God is easy to approach.\n\nOnce we have set ourselves firmly in faith and cleansed ourselves, we behold the glory of God as in a mirror: we see it, and in our souls, as in a mirror, we take the imprint of the image of the Spirit's glory. From knowledge under the law we are transformed into spiritual grace. Or it may be understood this way: from the glory of the Spirit at work in us we come, plainly, into the glory of adoption.\n\n“Just as” here means “inasmuch as it comes from the Lord, the Spirit.” Notice that he called the Holy Spirit Lord, not the Son of God. One person looks into a mirror, and another takes on the image of the one looking; so it is with the Spirit. Those who behold the glory of Christ as in a mirror carry away from that glory some likeness into glory; that is, they draw to themselves the glory of the spiritual image and receive it.",
    "editions": [
     "complete"
    ],
@@ -1666,12 +1826,13 @@
    "chapter": 4,
    "verse_start": 1,
    "verse_end": 2,
-   "capsule": "Grace gives strength to endure tribulations, while shameful deeds are hidden by those who lack boldness.",
-   "comment": "He says 'of grace', not 'of the law'; for through the abundance of grace we endure tribulations. The shameful and the base things are hidden, which those practicing strive to hide because of shame; for the base things do not partake of boldness, but wander in darkness.",
+   "capsule": "The ministry of grace gives strength to trample afflictions underfoot, while shameful deeds hide in darkness because they lack openness.",
+   "comment": "He means the ministry of grace, not that of the law; for because grace so far exceeds them, we trample our afflictions underfoot. … “The hidden things of shame” are the base and shameful deeds that their doers work hard to hide because they are ashamed. Base deeds have no part in openness; they slip by unnoticed in the dark.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what Paul means by ministry and hidden shame in plain terms.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -1684,8 +1845,8 @@
    "chapter": 4,
    "verse_start": 3,
    "verse_end": 4,
-   "capsule": "The gospel is covered only to unbelievers, and the \"god of this age\" is called God not in truth but by what the nations think, as the belly is called the god of gluttons.",
-   "comment": "Even if the gospel is covered, it is covered to the unbelieving, not as the glory of Moses' face was covered from all Israel in the law (2 Cor 4:3).\n\nIf the god of this age is said to be associated with reading, it follows that he blinded them. But if God blinded, it was supernaturally, as God gave them a spirit of stupor, eyes that do not see, and 'I hardened the heart of Pharaoh' (Exodus 10:27) according to the spoken word. Just as it was said of a ruler, not that he is naturally a ruler, but that those deceived showed him to be their ruler by obeying him, so also the god of this age has been forbidden, not as being truly God, but because of what the nations say and think, being called God, just as the belly is called the god of gluttons.",
+   "capsule": "The gospel is veiled only to unbelievers, and the adversary is called god of this age only because those he deceived obey him, not because he is truly God.",
+   "comment": "Even if the gospel is veiled, it is veiled to unbelievers. It is not as it was under the law, when the glory of Moses’ face was veiled from all Israel. … If “the god of this age” is read as one phrase, “blinded” follows in its natural order. But if the reading is “God blinded,” with the words transposed, it is like “God gave them a spirit of stupor, eyes that they should not see” (Romans 11:8) and “I hardened Pharaoh’s heart,” in the sense already explained.\n\nJust as he is called “ruler of this age” not because he is a ruler by nature, but because those he deceived made him their ruler by obeying him, so he is also called “the god of this age.” He is not truly God; he is called god from what the nations say and believe, just as the belly is called the god of gluttons (Philippians 3:19).",
    "editions": [
     "complete"
    ],
@@ -1753,25 +1914,6 @@
    "from_cite": false
   },
   {
-   "id": "2CO04-006",
-   "chapter": 4,
-   "verse_start": 5,
-   "verse_end": 5,
-   "capsule": "A preacher who proclaims Christ and His glory, and not himself, cannot be suspected of deceiving by his word.",
-   "comment": "It is said: he who seeks his own glory is not true, but he who seeks the glory of the one who sent him, he is true. If we were proclaiming ourselves, it would be suspected that we are deceiving with the word, but if we proclaim Christ and his glory, there is no deception in the preaching.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why preaching Christ and not oneself removes any suspicion of deceit.",
-   "author": "Severianus of Gabala",
-   "work": "Fragments on 2 Corinthians",
-   "work_slug": "severianus-fragmenta-2cor",
-   "section": "u02-open",
-   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-open/",
-   "from_cite": false
-  },
-  {
    "id": "2CO04-007",
    "chapter": 4,
    "verse_start": 5,
@@ -1787,6 +1929,25 @@
    "work_slug": "didymus-fragmenta-2cor",
    "section": "u02-rem-early",
    "url": "https://viapatrum.org/works/didymus-fragmenta-2cor/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO04-037",
+   "chapter": 4,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Preaching Christ and His glory leaves no room for deceit in the preaching.",
+   "comment": "If we had preached ourselves, he says, people could have suspected that we were falsifying the word. But if we preach Jesus Christ and his glory, there is no deceit at all in the preaching …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul stresses preaching Christ rather than himself.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u01-rem-close/",
    "from_cite": false
   },
   {
@@ -1849,12 +2010,13 @@
    "chapter": 4,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "\"In the face of\" means \"through\", and the knowledge of God was given by revelation and illumination, not found by reasoning.",
-   "comment": "In the face of Jesus Christ (2 Cor 4:6), instead of 'through Jesus Christ', through him. … Instead of 'through Jesus Christ' it shone in our hearts, and the knowledge was not found by reasoning, but was made known through revelation and illumination; for no man could ever reach this, having taken on flesh (2 Cor 4:7–9).",
+   "capsule": "Knowledge of God is given through Jesus Christ by revelation, which no human reasoning could ever reach.",
+   "comment": "“In the face of Jesus Christ” stands for “through Jesus Christ,” that is, because of him. “For the illumination of the knowledge”: because this knowledge was not discovered by reasoning but laid open by revelation. … It was made known by revelation and illumination, for no human being wrapped in a scrap of flesh could ever have reached it.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains Paul's wording and how this knowledge is given.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -1976,13 +2138,13 @@
    "chapter": 4,
    "verse_start": 8,
    "verse_end": 9,
-   "capsule": "God does not let believers be tested beyond their strength, but widens the way for those afflicted for piety.",
-   "comment": "Through these and the following, he shows that God does not allow to be tested beyond what we are able. For even if we are being afflicted by those who persecute, yet we are not so distressed as to have no escape or recourse anywhere; for God widens the way for those afflicted through piety, as David says: 'In affliction you widened me' (Psalm 4:1).",
+   "capsule": "God does not let believers be tested beyond their strength but makes room for those afflicted for godliness.",
+   "comment": "By these words and the ones that follow he shows that God does not let us be tested beyond our strength (1 Corinthians 10:13).\n\nPersecutors may afflict us, but we are never so hemmed in that we have no escape and no way out anywhere; for God makes room for those afflicted for godliness’ sake. That is why David says, “In affliction you made room for me” (Psalm 4:1).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains how Paul's list of afflictions fits God's care for the afflicted.",
+   "selected_reason": "Explains Paul's afflictions in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2064,6 +2226,24 @@
    "from_cite": false
   },
   {
+   "id": "2CO04-038",
+   "chapter": 4,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Always in danger, believers share Christ's sufferings.",
+   "comment": "We always carry about the dying because we are always in danger for Christ’s sake, sharing in the sufferings of Christ.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-open/",
+   "from_cite": false
+  },
+  {
    "id": "2CO04-023",
    "chapter": 4,
    "verse_start": 10,
@@ -2086,8 +2266,8 @@
    "chapter": 4,
    "verse_start": 11,
    "verse_end": 11,
-   "capsule": "The apostles risk death as sharers in Christ's sufferings, so that they may share His life.",
-   "comment": "We always carry the death, always risking because, being partakers of the sufferings of Christ, we are at risk (2 Cor 4:11). The Lord was delivered unto death for us, but we for ourselves through Jesus, so that we might become partakers of his life (2 Corinthians 4:11).",
+   "capsule": "Handed over to death, believers come to share His life.",
+   "comment": "The Lord was handed over to death for us; we are handed over for our own good, because of Jesus, so that we may come to share in his life.",
    "editions": [
     "complete"
    ],
@@ -2141,9 +2321,9 @@
    "id": "2CO04-027",
    "chapter": 4,
    "verse_start": 12,
-   "verse_end": 13,
-   "capsule": "The apostles risked death so that believers might have life, and they have the same spirit of faith as David, not the spirit of slavery under the law.",
-   "comment": "Because of the preaching the apostles were risking, but they proclaimed so that the believing ones might live, and this is the life in you (2 Corinthians 4:12). Since, he says, there is a spirit of slavery in the law, but a spirit of adoption in the grace. And he said that we have the same spirit which David also had; the same spirit added the faith, not of the legal slavery. Having, he says, the same spirit as David who spoke according to faith, just as he said: 'I believed, therefore I spoke' (Psalm 116:10).",
+   "verse_end": 12,
+   "capsule": "The apostles risked danger in preaching so believers might live.",
+   "comment": "Because of the preaching the apostles were in danger, yet they preached so that believers might live; that is what “but life in you” means.",
    "editions": [
     "complete"
    ],
@@ -2172,6 +2352,24 @@
    "section": "u53-rem-close",
    "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u53-rem-close/",
    "from_cite": true
+  },
+  {
+   "id": "2CO04-039",
+   "chapter": 4,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Under grace believers have the same spirit of faith that David had, not the spirit of slavery under the law.",
+   "comment": "For, he says, under the law there is a spirit of slavery, but under grace a spirit of adoption (Romans 8:15). He said that we have the same spirit that David had, and he added “of faith”: the same spirit of faith, not the slavery of the law. … We have the same spirit, he says, as David, who spoke by faith when he said, “I believed, therefore I spoke” (Psalm 116:10). …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-open/",
+   "from_cite": false
   },
   {
    "id": "2CO04-029",
@@ -2252,12 +2450,13 @@
    "chapter": 4,
    "verse_start": 17,
    "verse_end": 18,
-   "capsule": "Set against the glory of the coming age, even the heaviest afflictions are light and temporary, and \"weight\" is a figure from the scales.",
-   "comment": "If deaths and dangers and temptations follow (2 Cor 4:17–18), how is the affliction lighter? How is it being spent away? For the temptations remained with him and were driving him into old age. How then is the affliction of the saints light? Or is it evident that, being weighed against the glory of the coming age and against the prepared good things for the righteous, even the heaviest temptations appear light to me? And the afflictions are not merely light, but excessive, yet these afflictions fall far short of the greatness of the glory; for the great thing is a body and is heavy. Or he said 'weight' by way of a metaphor of the scales; for the glory, being weighed against the afflictions, is found to be most heavy of all. And he says 'spent away' regarding the temporal; for even if the crushing is long and causes grief, it appears temporal as compared to the infinite glory.",
+   "capsule": "Afflictions seem light and momentary beside the coming glory, which outweighs them like a heavy weight on the scales.",
+   "comment": "If deaths, dangers and trials dogged him, how is the affliction “light”? How is it “momentary”? His trials stayed with him and pursued him into old age. How then is the affliction of the saints light?\n\nOr rather, it is plainly light when set against the glory of the age to come and the good things laid up for the righteous; beside these, even the heaviest trials seem light to me. The afflictions are not simply light but light beyond all measure, because they fall far short of the greatness of the glory; a large body is also a heavy one.\n\nOr else he spoke of “weight” by a metaphor from the scales: weighed against the afflictions, the glory proves very heavy indeed.\n\nBy “momentary” he means temporary; for even if what afflicts and grieves us lasts long, it looks brief beside the endlessness of the glory.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains how lifelong afflictions are light and momentary in comparison to eternal glory, and illuminates the weight of glory with the metaphor of scales.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2380,12 +2579,13 @@
    "chapter": 5,
    "verse_start": 1,
    "verse_end": 2,
-   "capsule": "The tent is the body, which will be laid aside as corruptible, and God provides in heaven another dwelling, incorruptible and not made by hands.",
-   "comment": "He says 'dwelling, tent' regarding the body, which, he says, even if it should be corrupted in temptations and dangers through Christ, we shall lay it aside as a corruptible dwelling among the last of things made by hands. But we shall find in the heavens another dwelling, which God provides, incorruptible and not made by hands. … Through the 'putting on', he shows that the corruptible flesh rises up and puts on the immortal; for the 'putting on' is said in reference to another garment. … And he calls the one from heaven 'habitation'—the incorruption from the heavens—since it is not made by hands but is a gift of God.",
+   "capsule": "The earthly body will be laid aside like a perishable house, while God provides an imperishable heavenly dwelling put on over the risen flesh.",
+   "comment": "… By “the house of the tent” he means the body. Even if it is destroyed, he says, in trials and dangers for Christ's sake, we will lay it aside as a perishable house and the last of things made by hands, and we will find in heaven another house, which God provides, imperishable and not made by hands.\n\nBy “to be clothed over” he shows that the perishable flesh rises and puts on immortality over itself; for one is said to be clothed over when a garment goes on top of another. He speaks of two houses, the mortal and the one we wait for, and of two dwellings, corruption and incorruption, because we are released from the one and clothed over with the other. By “the dwelling from heaven” he means the incorruption that comes from heaven, since it is not made by hands but is a gift of God.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains the two houses and being clothed over in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2470,13 +2670,14 @@
    "id": "2CO05-009",
    "chapter": 5,
    "verse_start": 3,
-   "verse_end": 4,
-   "capsule": "What we want to be clothed with is incorruption, not to strip off the body itself into corruption, so that the mortal may be swallowed up by life.",
-   "comment": "They are clothed in incorruption. But if anyone is handed over to punishment, he is no different from being naked (2 Corinthians 5:3). The following is intended: that which we want to be clothed with is incorruption, but not to strip off the body itself into corruption. Therefore also it has led to this: so that the mortal might be swallowed up by life (2 Cor 5:5). For this very purpose, it is evident, to become incorruptible (2 Corinthians 5:4).",
+   "verse_end": 5,
+   "capsule": "Believers seek to be clothed over with incorruption rather than stripped of the body, so that the mortal is swallowed up by life.",
+   "comment": "… But if anyone is handed over to punishment, he is no better off than a naked man. … He means the thought to run on like this: we want to be clothed over with incorruption, not to strip off the body itself into corruption. That is why he added, “so that what is mortal may be swallowed up by life.” … “For this very thing”: that is, for becoming incorruptible.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what being clothed and naked means in the verse.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2599,13 +2800,13 @@
    "chapter": 5,
    "verse_start": 6,
    "verse_end": 8,
-   "capsule": "We hope by faith in the God we cannot now see, and shall see Him as far as a man can.",
-   "comment": "… while living in the body, that is to say, still passing through this world in the flesh (2 Cor 5:6), we hope through faith toward God (2 Cor 5:7); for his appearance is not visible to us; but this we believe, that we shall depart to him, when we shall see him, insofar as it is possible to see God as a man (2 Cor 5:8).",
+   "capsule": "While living in the body we hope in the unseen God, trusting we shall go to Him and see Him as far as creatures can.",
+   "comment": "… It stands for “being persuaded that while we are at home in the body,” that is, while we still live in the flesh in this world. … By faith we hope in God, for his form is not visible to us. But we believe that we will leave home and go to him, and then we will see him as far as a human being can see God. Moses, too, saw in a bodily way, and angels see as far as they are able to see; for no one has ever seen God (John 1:18), and every creature falls short of seeing God.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains 'at home in the body, away from the Lord' and walking by faith.",
+   "selected_reason": "Explains being at home in the body and walking by faith.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2618,12 +2819,13 @@
    "chapter": 5,
    "verse_start": 9,
    "verse_end": 9,
-   "capsule": "Pleasing God here leads to pleasing Him more there.",
-   "comment": "If you are pleasing here, you will be even more pleasing there without contradiction, no longer struggling but secure in being pleasing (2 Cor 5:9).",
+   "capsule": "Present pleasing secures still greater pleasing hereafter.",
+   "comment": "… If you are pleasing here, beyond question you are more pleasing there, no longer struggling but secure in pleasing. …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what labouring to be accepted means.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2652,14 +2854,15 @@
   {
    "id": "2CO05-019",
    "chapter": 5,
-   "verse_start": 11,
+   "verse_start": 12,
    "verse_end": 13,
-   "capsule": "Boasting that goes beyond measure is called ecstasy, and the apostles are sometimes compelled to boast so that God may be glorified, though they strive to be prudent.",
-   "comment": "Those who please men and boast not through piety, it is evident they boast through the face of men; for the heart is observed by God (2 Cor 5:11). Boasting is called ecstasy (2 Cor 5:12). … The boasting regarding the state of affairs is called ecstasy; for boasting has gone out of bounds, while the prudent ones measure. Often, therefore, we are compelled to step out and boast, so that God may be glorified through us. But we strive to be prudent and to measure, so that I may also teach you not to boast.",
+   "capsule": "Boasting to impress people is mere show, while Paul boasts only when compelled so that God is glorified.",
+   "comment": "… Those who please people, and do not boast for the sake of reverence itself, plainly boast for show before people; for God watches the heart. … He calls boasting “being beside ourselves.” We boast so that he may be glorified; we say nothing of our boasting, and this he calls being of sound mind, so that we may teach you not to boast. He calls it “being beside oneself” when one who ought to shun boasting is forced to boast. … He means boasting about one's way of life. Boasting belongs to people who are beside themselves; moderation belongs to people of sound mind.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It spells out appearance versus heart, and reads “beside ourselves” and “sober” as forced boasting versus refusing to boast.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2746,12 +2949,13 @@
    "chapter": 5,
    "verse_start": 14,
    "verse_end": 15,
-   "capsule": "All have died to the world through baptism and life, and no longer live for themselves but for Christ, who died for all and made the world his debtor.",
-   "comment": "Desiring to be silent, we are compelled to boast, being compelled by the love of Christ, so that he might be glorified (2 Cor 5:14–15).\n\nAll have died; he speaks of the faithful as being dying to the world both through baptism and through life. And they no longer live for themselves; for even I, if I were living for myself, I would not have boasted, but since I live for Christ, through him I am silent if it would be for your benefit, and through him I boast, so that he might be glorified. Whether we are beside ourselves or we act with prudence for you, we do everything through the love of Christ (2 Corinthians 5:13-14). Since he who dies for some rescues those already judged from death, and insofar as we were dead regarding what concerns us, if one died for all, therefore all have died insofar as to the condemnation. But he speaks of the faithful, who through baptism were crucified to the world, no longer living for themselves but for Christ; for Christ, having died for all and having paid the common debt, made the world his debtor.",
+   "capsule": "Held fast by the love of Christ, Paul speaks only for Christ's glory, since Christ's death for all makes believers dead to the world and living for Him.",
+   "comment": "… We would rather keep silent, but we are forced to boast, held fast by the love of Christ, so that he may be glorified. “All died”: he means the faithful, who are made dead to the world through baptism and through their way of life. “And no longer live for themselves”: for if I lived for myself, I would not boast either; but since I live for Christ, I keep silent for his sake when your good requires it, and for his sake I also boast, so that he may be glorified.\n\n“Whether we are beside ourselves,” he says, “or of sound mind for you,” we do everything because of the love of Christ. Now one who dies for others frees from death those already condemned, and as far as it lay with us, we were dead. If one died for all, then all died, as far as the sentence goes. He means the faithful, who through baptism were made dead to the world and no longer live for themselves but for Christ. For Christ, by dying for all and paying the common debt, made the world his debtor.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why Christ's death for all constrains Paul to speak.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2836,12 +3040,13 @@
    "chapter": 5,
    "verse_start": 16,
    "verse_end": 16,
-   "capsule": "Knowing no one according to the flesh means no longer living by circumcision, food laws and the Sabbath, for Christ, who as a man fulfilled the law, abolished it by dying and rising.",
-   "comment": "Thus we from now on know no one according to the flesh (2 Cor 5:16). Since circumcision is of the flesh, and this to eat and that not to eat, and the Sabbath, he says that we of the faithful know no one according to the flesh. … for even if Christ was circumcised and became subject to the observances of the law—that is, even if we knew Christ according to the flesh—but now we no longer know him. … For when he was among men, as a man he lived out his citizenship fulfilling the law by his life; but having died and having risen, incorruptible, he abolished the things of the law and showed the way of the heavenly citizenship.",
+   "capsule": "Knowing no one by the flesh means leaving circumcision, food rules and sabbath behind, since the risen Christ ended life under the law.",
+   "comment": "… “So that from now on we know no one according to the flesh.” Circumcision belongs to the flesh, and so do “eat this” and “do not eat that,” and the sabbath; so he says that we who believe know no one according to the flesh. But since it could be objected that the Lord was circumcised and kept the sabbath, he says this at the right moment, to help those who are under the law. “But now we have not yet […] known this”: for he does not want us to live by the law. This was said not only to put our desires to death but also so that we no longer obey the law.\n\nFor even if Christ was circumcised and came under the observances of the law, that is, “even if we have known Christ according to the flesh, yet now we know him so no longer.” When he was among men, he lived as a man and fulfilled the law in his life; but when he died and rose incorruptible, he abolished what belongs to the law and showed the way of the heavenly life.\n\nThat is why the baptized, as people who have died, put to death the bodily ways of living, and by imitating the pure life of heaven they join themselves to God in their hearts.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It explains knowing no one according to the flesh as leaving circumcision, food rules and the sabbath once the risen Christ ends life under the law.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2891,12 +3096,13 @@
    "chapter": 5,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "Those baptized die to bodily ways of life and become a new creation living by the Spirit's grace, not the law.",
-   "comment": "Therefore also those being baptized, as if dying to bodily citizenships, imitate the pure conduct in the heavens and join themselves according to the heart to God. If anyone lives in Christ and is baptized, this one is a new creation (2 Cor 5:17), no longer living according to the law but according to the new grace of the Spirit.",
+   "capsule": "Baptized life in Christ is new creation by grace.",
+   "comment": "… If anyone lives in Christ and is baptized, he is a new creation, living no longer by the law but by the new grace of the Spirit. …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It says the baptized person in Christ is a new creation, living by the Spirit’s grace instead of the law.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -2927,12 +3133,13 @@
    "chapter": 5,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "The time of the Savior's coming is a new age that remakes what was growing old, and we live no longer in the Mosaic manner but in the gospel life.",
-   "comment": "For the season of our Savior’s sojourn is a new age for us, transferring all things toward the better and thoroughly remaking into the newness of creation what was growing old and near vanishing. (Heb 8:13) ‘If anyone is in Christ — a new creation; the old things have passed away; behold, they have become new.’ (2 Cor 5:17) And we ourselves no longer live in the Mosaic manner, but have been carried over into evangelical life, Christ renewing us through the Spirit.",
+   "capsule": "The Savior's coming opens a new age that remakes what was growing old into a new creation living the gospel.",
+   "comment": "… For a new age has come to us, the time of our Savior's coming among us, which changes all things for the better and very well refashions into a newness of creation what was growing old and aging and near to vanishing (Hebrews 8:13). ‘For the things in Christ are a new creation; the old things have passed away; behold, all things have become new’ (2 Corinthians 5:17). And we ourselves live no longer in the manner of Moses; we have been carried over, rather, into the life of the gospel, since Christ makes us new through the Spirit.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains the new creation as the gospel life after the Savior's coming.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
@@ -3001,13 +3208,13 @@
    "chapter": 5,
    "verse_start": 18,
    "verse_end": 19,
-   "capsule": "The preaching is a ministry of reconciliation, and \"God was in Christ reconciling the world\" means that God reconciled it through Christ.",
-   "comment": "… He says the proclamation is a ministry of reconciliation, through which believing ones shall be reconciled to God (2 Cor 5:18-19). Thus it must be understood: that God was reconciling the world to himself in Christ. Thus then it must be grasped: that God was in Christ reconciling the world to himself, which is to say through Christ (2 Cor 5:19).",
+   "capsule": "Preaching reconciles believers to God, and God was in Christ reconciling the world to Himself through Christ.",
+   "comment": "… He says the preaching is a ministry of reconciliation; through it, when we believe, we will be reconciled to God. … It is to be understood like this: God was reconciling the world to himself in Christ. So the punctuation should run: that God was, in Christ, reconciling the world to himself, that is, through Christ.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains 'God was in Christ' in plain words.",
+   "selected_reason": "Explains the ministry of reconciliation and the wording in Christ.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3057,12 +3264,13 @@
    "chapter": 5,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "The apostles are ambassadors in Christ's place, and God pleads through them as through Christ, because they are His ministers and servants.",
-   "comment": "Now we are ambassadors instead of Christ, entreating you by God through us (2 Cor 5:20). Then also he shows that he is grieved because of those keeping the law; for on account of Christ, he says, not on account of the law (2 Cor 5:20). And God entreats through us as through Christ, of whom we are ministers and servants (2 Cor 5:20).",
+   "capsule": "As Christ's ambassadors and servants, the apostles carry God's appeal on behalf of Christ rather than the law.",
+   "comment": "… Now we are ambassadors in Christ's place, and God makes his appeal to you through us. Then he also shows that he is grieved over those who keep the law; for he says “on behalf of Christ,” not on behalf of the law. God appeals through us as through Christ, whose ministers and servants we are.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It explains the apostles as Christ’s ambassadors through whom God appeals, on behalf of Christ rather than the law.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3167,12 +3375,13 @@
    "chapter": 5,
    "verse_start": 21,
    "verse_end": 21,
-   "capsule": "Keeping the law made us sinners, but Christ became sin to deliver us from sin.",
-   "comment": "He showed from here how he is grieved because of those striving who keep the law; for keeping the law, he says, we have become sinners (2 Cor 5:21). Christ has become sin, so that he might deliver us from sin (2 Cor 5:21).",
+   "capsule": "Christ became sin to free from sin those whom keeping the law had made sinners, opening the way to reconciliation.",
+   "comment": "… From here he showed how grieved he is over those who insist on keeping the law; for by keeping the law, he says, we have become sinners. Christ became sin to free us from sin. God has provided all this: receive the reconciliation, and give up keeping the ordinances of the law.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It explains Christ being made sin as freeing those whom law-keeping had made sinners, so they should receive the reconciliation.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3185,8 +3394,8 @@
    "chapter": 6,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "Believers are to receive the reconciliation, and the apostles may cooperate and suffer with them toward salvation.",
-   "comment": "And God provided these things; receive the reconciliation, turning away from keeping the legalities (2 Cor 6:1).\n\nIt was permitted to the apostles not only to entreat but also to cooperate and suffer with them toward salvation, so that they might sincerely receive the grace from God (2 Corinthians 6:1).",
+   "capsule": "Apostles both urge believers and labour alongside them toward salvation.",
+   "comment": "He [God] entrusted the apostles not only with exhorting but also with working and toiling alongside them for salvation, so that they might receive God's grace sincerely.",
    "editions": [
     "complete"
    ],
@@ -3254,30 +3463,12 @@
    "from_cite": false
   },
   {
-   "id": "2CO06-006",
-   "chapter": 6,
-   "verse_start": 3,
-   "verse_end": 8,
-   "capsule": "The ministry is commended through honor and dishonor, good report and evil report.",
-   "comment": "Let no stumbling-block be given, that the ministry be not blamed, but in all things commending: through honor won by confession and dishonor borne from torturers, through good report of angels and evil report of men — deceivers in persecutors' eyes, true before God.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "43",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/43/",
-   "from_cite": true
-  },
-  {
    "id": "2CO06-007",
    "chapter": 6,
    "verse_start": 4,
    "verse_end": 4,
-   "capsule": "Endurance is the foundation for facing trials.",
-   "comment": "As an unbreakable foundation, endurance is pre-laid, which enduring, it is easy to face every trial (2 Corinthians 6:4).",
+   "capsule": "Endurance is the foundation for keeping every commandment.",
+   "comment": "He [Paul] lays down endurance first, as an unbreakable foundation; once it is in place, any commandment can easily be built on it.",
    "editions": [
     "complete"
    ],
@@ -3329,14 +3520,14 @@
    "id": "2CO06-010",
    "chapter": 6,
    "verse_start": 7,
-   "verse_end": 8,
-   "capsule": "The right hand of righteousness does good and the left avoids evil, and both glory and dishonor come from those who receive or insult the word.",
-   "comment": "The weapons of righteousness: the right hand to do good works, and the left to avoid evil deeds, and through both of these righteousness is established; for it is clear that when one is absent, the other becomes idle (2 Cor 6:7). Through the glory, indeed, of those receiving the word and marveling at it, and through the dishonor of those insulting the believing ones; and the same word is also regarding the following (2 Cor 6:8).",
+   "verse_end": 7,
+   "capsule": "Righteousness needs both doing good and avoiding evil, for one without the other lies idle.",
+   "comment": "The weapons of righteousness on the right hand are holding fast to good works; those on the left are keeping away from evil works. Righteousness is achieved through both, for plainly, if one is missing, the other is left idle.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the 'weapons of righteousness for the right hand and for the left'.",
+   "selected_reason": "Explains plainly what the weapons of righteousness on the right and on the left are, and why both are needed.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3345,17 +3536,55 @@
    "from_cite": false
   },
   {
-   "id": "2CO06-011",
+   "id": "2CO06-014",
    "chapter": 6,
-   "verse_start": 11,
-   "verse_end": 13,
-   "capsule": "Paul has not constricted them with the saving teaching, since his heart and mouth are open, so they in return should widen their minds and receive it.",
-   "comment": "Having said 'do not be compressed in us', he teaches this: instead of 'we do not compress you with the saving teaching, nor shall there be a lack from us'; for our heart has been widened and our mouth has been opened for teaching (2 Cor 6:11-13). And you therefore, as in a response, widen your own mind and receive the teaching; for your heart has not been enlarged in such a way as to receive the teachings from me. …",
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Admirers of the word give glory; those insulting believers give dishonor.",
+   "comment": "“Through glory” comes from those who receive the word and admire it, and “dishonor” from those who insult the believers. The same account holds for the phrases that follow.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains Paul's 'our heart is wide open' and the call to widen theirs in return.",
+   "selected_reason": "Explains what glory and dishonor mean in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO06-006",
+   "chapter": 6,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "Those commended through glory and good report should endure dishonour, ill report and seeming obscurity without vanity, as discipline that does not kill.",
+   "comment": "… If a man must commend himself “by the weapons of righteousness, for the right hand and for the left” (2 Corinthians 6:7), then, having commended ourselves “through glory” (2 Corinthians 6:8) without growing vain over it, let us now endure dishonour as well. And if we have lived in a way that deserved good report, and were well spoken of, let us now bear the ill report of the ungodly too.\n\nFurther, if we were admired as truthful by those who love the truth, let us now laugh when it is said that we have gone astray. In many dangers from which we were rescued, many people said that we were acknowledged by God; now let anyone who likes say that we are unknown, at a time when perhaps we are more fully acknowledged. So, bearing what happens to us, we are “disciplined but not put to death” (2 Corinthians 6:9), and we who rejoice look like those who grieve.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains glory, good report, unknown and disciplined as endurance a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "43",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/43/",
+   "from_cite": true
+  },
+  {
+   "id": "2CO06-011",
+   "chapter": 6,
+   "verse_start": 11,
+   "verse_end": 13,
+   "capsule": "Paul has opened heart and mouth to teach without holding back, so the Corinthians must open their minds wide in return.",
+   "comment": "When he [Paul] says, “You are not restricted by us,” he means: we do not restrict you in the saving teaching, nor by holding anything back, for our heart has been opened wide and our mouth has opened to teach.\n\nSo you too, in return, open your minds wide and take in the teaching; your heart has not opened wide enough to receive the teachings I give. So you are restricted by your own doing, unable to take in more precepts.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by restriction and enlargement in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3553,15 +3782,15 @@
   {
    "id": "2CO07-009",
    "chapter": 7,
-   "verse_start": 8,
+   "verse_start": 9,
    "verse_end": 9,
-   "capsule": "Silence would have left them ungrieved and unrepentant, so Paul rejoices in a grief that is spiritual.",
-   "comment": "For if I kept silent, he says, and did not strike, you were not grieved; but if you were not grieved, you would have been harmed if you were not repenting. I rejoice, he says, over your afflictions, because they are not worldly but spiritual.",
+   "capsule": "A rebuke that grieves readers into repentance causes no loss, so Paul rejoices over spiritual rather than worldly affliction.",
+   "comment": "Receive us when we say, “so that you may suffer no loss from us in anything.” If I had kept silent, he [Paul] says, and had not rebuked you, you would not have been grieved; and if you had not been grieved, you would have suffered loss by not repenting. I rejoice, he [Paul] says, over your afflictions, because they are not worldly but spiritual. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Shows why Paul can rejoice that the letter grieved them.",
+   "selected_reason": "Explains what Paul means by rejoicing over sorrow in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3648,8 +3877,8 @@
    "chapter": 7,
    "verse_start": 12,
    "verse_end": 13,
-   "capsule": "Paul wrote to show the Corinthians' eagerness and obedience, and he was refreshed by it.",
-   "comment": "But as it seems and as the outcome showed, not because of this I wrote, but so that your eagerness and your obedience might be shown; … In this he has been refreshed, because they were obeying his teaching.",
+   "capsule": "Paul did write about the offender, but the outcome revealed the Corinthians' zeal and obedience, and their obedience brought refreshment.",
+   "comment": "And yet he did write for this reason. But, as it seems, and as the outcome showed, “I was not writing for this reason, but so that your zeal and obedience might be shown.” So under the cover of one thing, another came to light. …\n\nHe has been refreshed by this: they were obeying his teaching.",
    "editions": [
     "complete"
    ],
@@ -3684,13 +3913,13 @@
    "chapter": 8,
    "verse_start": 2,
    "verse_end": 2,
-   "capsule": "Persecuted and poor, the Macedonians rejoiced the more and became bountiful, to stir the Corinthians.",
-   "comment": "In which, he says, they are greatly afflicted being persecuted, in this they rejoice more, and their poverty according to the depth overflowed into the wealth of their generosity. And the apostle testifies to the Macedonians that being poor they became bountiful in well-doing, so that also the Corinthians might be stirred toward fruitfulness.",
+   "capsule": "Though persecuted and poor, the Macedonians rejoiced and gave lavishly, and Paul praises them to stir the Corinthians to give.",
+   "comment": "In the very thing in which they are sorely afflicted by persecution, he says, they rejoice the more, and their deep poverty overflowed into the wealth of their generosity. The apostle bears witness to the Macedonians that, poor as they were, they gave lavishly to good works, so that the Corinthians too might be stirred to bear fruit.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the verse about the Macedonians' joy and poverty overflowing in generosity.",
+   "selected_reason": "Explains what Paul says about the Macedonians in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3703,13 +3932,13 @@
    "chapter": 8,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "Macedonian eagerness moved Paul to send Titus to Corinth.",
-   "comment": "The eagerness of the Macedonians toward well-doing prompted us to entreat Titus to come to you, so that he might also prompt you toward fruitfulness.",
+   "capsule": "Macedonian eagerness moved Paul to send Titus to stir Corinth.",
+   "comment": "The Macedonians' eagerness for good works moved us to ask Titus to come to you, so that he might move you too to bear fruit. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Gives the reason Paul sent Titus to Corinth.",
+   "selected_reason": "Explains why Paul sent Titus in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -3797,8 +4026,8 @@
    "chapter": 8,
    "verse_start": 18,
    "verse_end": 21,
-   "capsule": "Paul sent the brother so that no one could blame the giving before men.",
-   "comment": "This joining to the fact that we sent along the brother, whose praise is in the gospel, … lest anyone should blame us as hindering the well-doing toward the saints. Before the Lord it is good to serve in well-doing, and before men not to be blamed and slandered in the vigor of the ministry.",
+   "capsule": "Paul sent the brother with him so they could administer the generous gift carefully and avoid blame for standing in the way of kindness to the saints.",
+   "comment": "This should be joined to “we sent with him the brother whose praise is in the gospel,” so that they would be equal to administering the large and generous gift from the Gentiles, taking care and keeping watch, lest anyone blame us for standing in the way of the kindness meant for the saints.\n\nBefore the Lord it is good to serve this kindness; before people it is good not to be blamed or slandered over so generous a ministry.",
    "editions": [
     "complete"
    ],
@@ -3905,6 +4134,24 @@
    "from_cite": false
   },
   {
+   "id": "2CO10-017",
+   "chapter": 10,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Paul preaches without pay, unlike soldiers.",
+   "comment": "We do not preach to earn wages, the way the world's soldiers take their pay.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "2CO10-005",
    "chapter": 10,
    "verse_start": 4,
@@ -3983,8 +4230,8 @@
    "chapter": 10,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "Paul was ready to punish disobedience but did not want to use the sword at once.",
-   "comment": "And having readiness to avenge every disobedience, when your obedience is fulfilled. Because I knew that some are persuaded by speech and exhortation, I was not willing immediately to use the sword, as I consider against some, since they did not seem to be obeying by speech alone.",
+   "capsule": "Paul held back the severity he intended, since some people are won over by word and exhortation.",
+   "comment": "“And being ready to punish all disobedience, when your obedience is complete”: since I knew that some are won over by word and exhortation, I did not want to use at once the severity I intend against some, because those who obey a word alone were not showing themselves. …",
    "editions": [
     "complete"
    ],
@@ -3994,6 +4241,24 @@
    "work_slug": "severianus-fragmenta-2cor",
    "section": "u02-rem-mid",
    "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO10-018",
+   "chapter": 10,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Paul's word teaches the willing and exposes those needing harsher deeds.",
+   "comment": "… I rebuked with a word, so that those who correct themselves by it would be taught, and those who do not obey a word but need the severity of deeds would be exposed.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-rem-close/",
    "from_cite": false
   },
   {
@@ -4019,12 +4284,13 @@
    "chapter": 10,
    "verse_start": 7,
    "verse_end": 7,
-   "capsule": "Paul says to judge each person by his conduct, so that reputation does not hide the truth.",
-   "comment": "Test accurately each one according to the worthiness of the face's conduct (2 Cor 10:7). This he sees regarding the apostles; for since it was destined to reprove those from circumcision, and they were putting forward Peter and James and John, be certain, he says, lest the status of faces might ever prevent you from perceiving the truth.",
+   "capsule": "Judge each teacher by conduct, so that the rank of the apostles his opponents cite does not hide the truth.",
+   "comment": "Test each one carefully by what the person's conduct is worth. This looks to the apostles. He [Paul] was about to refute those of the circumcision, and they kept putting forward Peter, James and John; so he says, Be on your guard, so that the rank of these persons does not keep you from seeing the truth.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what 'outward appearance' refers to: the rank of the apostles his opponents appealed to.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4055,13 +4321,13 @@
    "chapter": 10,
    "verse_start": 12,
    "verse_end": 12,
-   "capsule": "Those who commend themselves measure themselves only against themselves, and next to others they are nothing.",
-   "comment": "We write these things not imitating those commending themselves—for this is not good (2 Cor 10:12)—for they do not perceive that they themselves measure themselves within themselves and are not able to compare themselves to another; for when compared to others they are nothing.",
+   "capsule": "Self-commenders measure themselves only by themselves, and beside others they are nothing.",
+   "comment": "We write this without imitating those who commend themselves, for that is not good. They do not understand that they measure themselves by themselves and cannot stand comparison with anyone else; set beside others, they are nothing.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains Paul's point about self-commendation in simple terms.",
+   "selected_reason": "Plainly explains why measuring oneself by oneself is unwise.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4073,14 +4339,14 @@
    "id": "2CO10-014",
    "chapter": 10,
    "verse_start": 14,
-   "verse_end": 15,
-   "capsule": "Paul boasts only of the measure God allotted him, which reached as far as Corinth, and hopes to preach beyond them as their faith grows.",
-   "comment": "We do not boast beyond our measure as if we were superior to greater things (2 Cor 10:14); for even unto you we came and proclaimed the word (2 Corinthians 10:14). They boast of their own labors regarding our things, but we do not, but according to law we boast of the rule and the measure allotted to us, hoping to evangelize even beyond you as your faith increases. And he says 'rule' to mean reaching as far as them (2 Corinthians 10:15).",
+   "verse_end": 16,
+   "capsule": "Paul boasts only within the measure assigned to him, which reached Corinth, unlike rivals who boast of his labors, and he hopes to preach beyond them.",
+   "comment": "We are not cheap men boasting of great things beyond our own measure; for we did come as far as you and preached the word.\n\n… They boast of our labors; we do not. We boast, as is right, of the rule and the measure assigned to us, and we hope, as your faith grows, to preach the gospel even beyond you. By “rule” he means that he has come as far as them for the present.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what Paul's 'measure' and 'rule' are.",
+   "selected_reason": "Explains Paul's 'measure' and 'rule' and the hope of preaching beyond Corinth in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4093,8 +4359,8 @@
    "chapter": 10,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "If Paul boasts, it is through the Spirit's grace.",
-   "comment": "Even if we boast, it is not as if we were rectifying by our own wisdom, but by the grace of the Spirit (2 Corinthians 10:17).",
+   "capsule": "Paul's success comes from the Spirit's grace.",
+   "comment": "Even if we boast, it is not as though we succeed by our own understanding, but by the grace of the Spirit.",
    "editions": [
     "complete"
    ],
@@ -4148,13 +4414,14 @@
    "id": "2CO11-002",
    "chapter": 11,
    "verse_start": 2,
-   "verse_end": 4,
-   "capsule": "A man who died to the law and was reborn in baptism is rightly called a pure virgin.",
-   "comment": "You died, he says, to the law, and have become another man, to the one risen from the dead. How then could a pure virgin have been previously married? But having been reborn through the bath of regeneration and having passed into another life, a pure virgin is justly so named. Faith in Christ and the brightness of the Spirit confirm the Christian life (2 Cor 11:4). If then you did not receive these things, you seek well those who still wish to live according to the law (2 Cor 11:10–12).",
+   "verse_end": 2,
+   "capsule": "Though she was married to the law before, new birth through the washing of regeneration makes her a pure virgin.",
+   "comment": "You died to the law, he says, and you have become another man's, the one who rose from the dead (Romans 7:4). How then can she be a pure virgin, when she was married before?\n\nBut born again through the washing of regeneration (Titus 3:5), and passed into another life, she is rightly called a pure virgin.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains how Paul can call them a pure virgin in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4179,6 +4446,24 @@
    "section": "91",
    "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/91/",
    "from_cite": true
+  },
+  {
+   "id": "2CO11-012",
+   "chapter": 11,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Not having received faith and the Spirit from us, seeking law-keepers would be right.",
+   "comment": "Faith in Christ and the illumination of the Spirit confirm Christianity. So if you had not received these from us, you would be right to look for those who still want to live by the law.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-rem-close/",
+   "from_cite": false
   },
   {
    "id": "2CO11-004",
@@ -4222,13 +4507,13 @@
    "chapter": 11,
    "verse_start": 10,
    "verse_end": 12,
-   "capsule": "Paul takes no pay so as to cut off the pretext of his accusers, and he blames only those who make the preaching a business.",
-   "comment": "Not reproaching the Corinthians, he says this, but reproving those who use the preaching as a matter of commerce. Therefore he says that I do not stop boasting.\n\nHe means that I have not made the preaching a commercial venture like those; for I neither received anything from you nor do I receive, not as one not loving you—for I do love—but so that I might cut off the pretext of the accusers, so that whether they boast falsely or truly, they may be revealed just as we also are revealed (2 Corinthians 11:12).",
+   "capsule": "Paul boasts of preaching without pay to expose profiteers and remove his accusers' pretext.",
+   "comment": "He says this not to reproach the Corinthians but to expose those who treat the preaching as a trade. That is why he says: I do not stop boasting that I have not made the preaching a trade, as they have; I have taken nothing from you and take nothing now.\n\nIt is not that I do not love you, for I do; it is to cut away my accusers' pretext, so that, whether their boasting is false or true, they may be shown for what they are, as we have been shown.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why Paul refuses support in Corinth.",
+   "selected_reason": "Explains the unpaid boast, the love question, and the pretext in plain terms.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4371,12 +4656,13 @@
    "chapter": 12,
    "verse_start": 2,
    "verse_end": 4,
-   "capsule": "Paul's doubt whether he was in the body shows that the soul is not mortal, and the third heaven is the third of the expanse, with Paradise planted on earth in Eden.",
-   "comment": "… for if he had known it [the soul] was mortal, he would not have been wavering whether he saw the vision outside the body or in the body. And regarding the third heaven, he said the third of the expanse; for if he had ascended up to the three heavens, he certainly would have heard the unspeakable words there and not in Paradise. And let no one suppose Paradise to be above the heaven; for according to the east it is planted upon the earth in the place of Eden, whence also Adam was formed, as Moses recounts.",
+   "capsule": "Paul’s doubt whether the vision was in the body or out of it is proof the soul is immortal; “the third heaven” means a third of the distance, and paradise is Eden on earth, not above heaven.",
+   "comment": "This is strong proof that the soul is immortal; if he had known it to be mortal, he would not have doubted whether he saw the vision out of the body or in the body.\n\nBy “as far as the third heaven” he meant the third part of the distance; for if he had gone up through three heavens, he would surely have heard the unspeakable words there and not in paradise. And let no one think that paradise lies above heaven: it was planted in the east, on earth, in the place called Eden, from where Adam too was formed, as Moses relates (Genesis 2:8).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "A reader can follow three plain claims on these verses: the doubt shows the soul is immortal, “third heaven” means a third of the distance, and paradise is earthly Eden.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4477,16 +4763,36 @@
    "from_cite": false
   },
   {
+   "id": "2CO12-018",
+   "chapter": 12,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Paul means persecutions, not illness.",
+   "comment": "By “weaknesses” he means the persecutions, not a bodily illness, as some think.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "It tells a reader directly that the infirmities of verse 5 are persecutions, not bodily illness.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-rem-close/",
+   "from_cite": false
+  },
+  {
    "id": "2CO12-009",
    "chapter": 12,
    "verse_start": 7,
    "verse_end": 7,
-   "capsule": "The thorn is not a bodily ailment, as many suppose, but persecutions that came from the devil's working through a Satanic angel.",
-   "comment": "And he speaks of persecutions as weaknesses, not a bodily passion as some suppose (2 Cor 12:7).\n\nIt is suspected by many as having a pain around the head, but the truth is he speaks of persecutions, since the temptations came from a diabolical energy. And he called the one serving the temptation to the devil a Satanic angel, from a transformation of the angels serving God.",
+   "capsule": "The thorn is persecution stirred up by the devil, called an angel of Satan, permitted by God as with Job.",
+   "comment": "Many suspect that he had a pain in his head, but in truth he means the persecutions, since the trials came from the devil's working. He called the trial that serves the devil “an angel of Satan,” by a metaphor from the angels who serve God.\n\n“Was given” must be understood as by God's permission, as in the case of Job; for God does not give evil things.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It explains the thorn as persecution, the “angel of Satan” as a metaphor, and “was given” as God’s permission, as with Job.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4555,12 +4861,13 @@
    "chapter": 12,
    "verse_start": 9,
    "verse_end": 9,
-   "capsule": "The power given is perfected in persecutions and tribulations.",
-   "comment": "You have an apostolic grace; do not seek this and succeed even without temptations; for my power is perfected in persecutions and tribulations (2 Corinthians 12:9).",
+   "capsule": "Apostolic grace works through trials, not apart from them.",
+   "comment": "You have apostolic grace; do not ask to carry it out free of trials as well, for my power is made perfect in persecutions and afflictions.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "It states the force of the reply: apostolic grace is not to be carried out free of trials, because power is made perfect in persecutions and afflictions.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
@@ -4573,8 +4880,27 @@
    "chapter": 12,
    "verse_start": 13,
    "verse_end": 13,
-   "capsule": "Paul asks pardon if they think his taking nothing wrong.",
-   "comment": "If then you have nothing to accuse me of, that I, having desisted from seeking sustenance despite the need, received nothing from you, in which even if you think I have sinned, forgive me and grant me grace for this injustice which you think is being done by me (2 Corinthians 12:13).",
+   "capsule": "Paul asks pardon if the Corinthians count his taking nothing from them as a fault.",
+   "comment": "Unless, then, you have this charge against me: that I took nothing from you for my keep and grew numb to my own want. If you think I sinned in this, pardon me, and forgive me the wrong you think I did you.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "It makes the irony of “forgive me this wrong” plain: the only charge is that he took nothing from them for his keep.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on 2 Corinthians",
+   "work_slug": "severianus-fragmenta-2cor",
+   "section": "u02-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-2cor/u02-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "2CO12-019",
+   "chapter": 12,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Paul calls them to witness his repeated comings.",
+   "comment": "He calls them to witness this, concerning his coming to them a second and a third time because of the preaching.",
    "editions": [
     "complete"
    ],
@@ -4739,12 +5065,13 @@
    "chapter": 13,
    "verse_start": 4,
    "verse_end": 4,
-   "capsule": "Christ was crucified not from weakness of his own but from what he took on himself for us.",
-   "comment": "Just as Christ was said to have become sin and a curse, being neither sin nor a curse, but he took upon himself our evils so that we might be delivered from them; so also now, he is said to have been crucified not from his own weakness, but from that which he received on our behalf, the dispensations on our behalf.",
+   "capsule": "The weakness of the cross was one he took on for us, as he is called sin and a curse without being either.",
+   "comment": "Christ is said to have become sin and a curse (2 Corinthians 5:21; Galatians 3:13), though he was neither sin nor a curse; he made our evils his own in order to rescue us from them.\n\nIn the same way he is now said to have been crucified through weakness: not his own, but the weakness he took on for us, as he managed everything for our sake.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "A reader can follow the point that the cross’s weakness was taken on for us, not Christ’s own, by the same way of speaking that calls him sin and a curse.",
    "author": "Severianus of Gabala",
    "work": "Fragments on 2 Corinthians",
    "work_slug": "severianus-fragmenta-2cor",
