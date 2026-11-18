@@ -226,7 +226,7 @@ assert eust_meta["slug"] == "eustathius-engastrimytho"
 assert eust_meta["slug"] in site.FORCED_WITHHOLD
 named_holds = [
     "evagrius-sententiae-monachos", "didymus-fragmenta-romanos", "macarius-spiritual-homilies",
-    "origen-ezekiel-fragments", "origen-philocalia", "origen-romans-catena", "origen-de-principiis",
+    "origen-philocalia", "origen-romans-catena", "origen-de-principiis",
     "origen-letters", "origen-song-homily-1",
     "pseudo-cyprian-to-vigilius", "didymus-dialexis-montanistae",
     # Held 2026-11-11: the page was a digest with editor's notes, not a translation.
@@ -237,6 +237,9 @@ kept_named, held_named = site.split_withheld(
     + [{"slug": "origen-letters-gregory-series", "status": "available"}]
 )
 assert [w["slug"] for w in kept_named] == ["origen-letters-gregory-series"], kept_named
+# 17 Nov 2026: origen-ezekiel-fragments met its recert hold (3 sections pass, read [3, 3], certified
+# a929f3ddd) and publishes again.
+assert site.split_withheld([{"slug": "origen-ezekiel-fragments", "status": "available"}])[0], "ezekiel held"
 assert held_named == named_holds, held_named
 evag = json.loads((site.BOOKS / "evagrius-sententiae-monachos/translations/esm_u01_open_english.json").read_text())
 evag_text = "\n".join(evag[0]["english"])
