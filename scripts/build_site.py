@@ -9457,7 +9457,6 @@ FORCED_WITHHOLD = {
     "didymus-fragmenta-romanos": _RECERT,
     # Named defects. The English is not rewritten here.
     "macarius-spiritual-homilies": _RECERT,
-    "origen-ezekiel-fragments": _RECERT,
     # The loader publishes each of these books under its book slug, so the
     # book slug holds every part (the part slugs in the metas never load).
     "origen-philocalia": _RECERT,
