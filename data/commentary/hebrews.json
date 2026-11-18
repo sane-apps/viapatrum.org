@@ -1,31 +1,50 @@
 {
  "book": "Hebrews",
  "title": "The Fathers on Hebrews",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 146,
- "selected_count": 70,
+ "comment_count": 163,
+ "selected_count": 86,
  "comments": [
   {
    "id": "HEB01-001",
    "chapter": 1,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "God spoke in many ways because his arrangements for us changed with each age.",
-   "comment": "In many ways, according to the differences of the ages in which things concerning us were dispensed (Hebrews 1:1-2), such as in the generation of Adam, in those according to Cain, in those according to Noah, in those according to Abraham, in those before the law, and in those after the law; for many are the parts of God's administration on our behalf. Also in various ways, that a command was given to Adam, another to Noah, another to Abraham, and through Moses another, and through the prophets various.",
+   "capsule": "God spoke in many parts and many ways because His care for us spans different times and commandments.",
+   "comment": "“In many parts” refers to the different times in which God arranged our affairs: at the creation of Adam, in the time of Cain, in the time of Noah, in the time of Abraham, before the law and after the law. God’s governance on our behalf has many parts. “In many ways”, because one commandment was given to Adam, another to Noah, another to Abraham, another through Moses, and various commandments through the prophets.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains in plain terms why Hebrews says God spoke in many parts and ways.",
+   "selected_reason": "Explains what many parts and many ways mean in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
    "section": "u01-open",
    "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-019",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The letter opens with the fathers and prophets to make the message easy to receive, while the Only-begotten spoke through the prophets to sketch out His becoming man.",
+   "comment": "His aim is to teach at every point, and to persuade those who will read him, that the things given through Moses were types, in labor with the power of the truth, while the truth is Christ. … He says nothing of the grace of his apostleship, and turns instead to the need to remember the fathers and the holy prophets, trusting that this would make his word easy for them to receive. So he said, \"having spoken to the fathers in the prophets\" (Hebrews 1:1).\n\nGod did speak to the people of earlier times in the Spirit, through the mouth of saints and the voice of prophets. … So it was the Only-begotten who spoke long ago as well, through the Holy Spirit, to the people of earlier times. And he spoke in many ways (Hebrews 1:1), bidding that the holy and great mystery of his becoming man be sketched out.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse begins with the fathers and prophets in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u01-open/",
    "from_cite": false
   },
   {
@@ -52,8 +71,8 @@
    "chapter": 1,
    "verse_start": 2,
    "verse_end": 2,
-   "capsule": "God speaks in the Son as one managing the flesh, so that Jewish hearers are lifted up to the Word's eternal existence.",
-   "comment": "In us in the Son, instead of through the Son; for not in him as in an instrument, but through him as one managing the flesh, so that from here the hearing of the Jews, having grasped the Word by a certain touch, might be lifted up to the eternal existence. For previously it was said: he spoke to us in a Son whom also he appointed heir—instead of he made—he led the Word into the eternal existence. And he does this continuously, partly ascending into theology, partly descending into humanity.",
+   "capsule": "The Son speaks not as a mere instrument but as one who worked salvation in the flesh to lift hearers toward His eternal existence.",
+   "comment": "“He spoke to us in a Son” stands for “through a Son”: not in him as in an instrument, but through him as the one who carried out his saving work in the flesh. In this way the Jews could begin to listen from there, grasp the Word as if by touch, and so be led up to his existence before the ages.\n\nFor having first said, “He spoke to us in a Son, whom he also appointed heir” (“appointed” stands for “made”), he raised his discourse to the Son’s existence before the ages. He does this all the time: now he rises to speak of Christ as God, now he comes down to his becoming man.",
    "editions": [
     "complete"
    ],
@@ -70,13 +89,13 @@
    "chapter": 1,
    "verse_start": 3,
    "verse_end": 3,
-   "capsule": "Paul calls the Son the radiance to show he comes purely from the Father's essence, and the character of the subsistence to show he is not without real existence.",
-   "comment": "Seeking to present more grandly that the Word was begotten from the essence of the Father, he mentioned the radiance; for the radiance is from the essence of that of which it is a radiance, and it is continuous both from it and never thought of without it. But since the radiance shows a lesser nature compared to that of which it is a radiance and not in its own subsistence, he presented this in a different expression, saying: and the character of the subsistence, the first having set forth for the proof that it is purely from the essence, and the second, that it is not unsubstantial. Just as John, having named the Word, led us forward: he was with God and he was God (John 1:1), so also Paul, having said radiance, added: and the character of the subsistence.",
+   "capsule": "The Son is called radiance to show He comes from the Father’s essence, and exact stamp of His subsistence to show He truly exists in Himself.",
+   "comment": "He wanted to show more clearly that the Word was begotten from the Father’s essence, so he spoke of radiance. Radiance comes from the essence of that whose radiance it is; it is continuous with it, it comes from it, and it can never be thought of apart from it. But radiance suggests a nature lesser than that whose radiance it is, and one with no subsistence of its own. So he expressed the point with a second word, saying, “and the exact stamp of his subsistence”. The first word he set down to prove that the Son is from the Father’s essence without division; the second, to show that he is not without a subsistence of his own.\n\nJust as John named him “Word” and then added, “he was with God, and he was God” (John 1:1), so Paul said “radiance” and then added, “and the exact stamp of his subsistence”.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the verse uses two images, radiance and imprint, for the Son.",
+   "selected_reason": "Explains why the verse uses radiance and stamp in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -177,6 +196,61 @@
    "from_cite": true
   },
   {
+   "id": "HEB01-020",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Better marks a difference of nature between Son and servants, not a comparison within one kind.",
+   "comment": "With things of different kinds, however, when someone sets them side by side, then \"better\" is said of what is different, as it is said of wisdom and of stones (Proverbs 8:11). So if the apostle had said, \"By so much more the Son goes before the angels,\" or \"by so much is he greater,\" you would have had a pretext, on the ground that the Son was being compared with the angels. But as it is, by saying that he is better, and differs by as much as a son stands apart from servants, he shows that he is other than the nature of the angels.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse says better in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-021",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Having become better points not to a change in the Word but to the greater grace His coming in flesh brings over ministry through angels.",
+   "comment": "The apostle too, when he said, \"having become so much better than the angels\" (Hebrews 1:4), did not mean first of all to set the substance of the Word apart from the things that have come into being; for it admits no comparison, or rather it is something other. He was looking to the Word’s economy …in the flesh, and to the economy he carried out at that time, and wanted to show that he is not like those who came before.\n\nSo, by as much as he differs in nature from those he had sent before, by so much more the grace that came from him and through him would be better than the ministry carried out through angels. For it was the part of servants only to demand the fruits, but of the Son and Master to forgive the debts and to hand the vineyard over to others.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-022",
+   "chapter": 1,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "If the Son were merely an angel, angels would share His sonship and throne, or He would share their service.",
+   "comment": "But perhaps, because it is written \"having become better,\" they will not hear \"having become,\" said of the Son, as equal to \"is,\" nor take \"having become\" to refer to the better ministry that came about and understand it as we have said; perhaps they think that this word says the Word is a thing that came into being. Then let them hear again. If the Son is one of the angels, let \"having become\" be said of him as of them, and let him differ from them in nothing by nature. Then either they too are sons, or he too is an angel; and either let them all sit together at the right hand of the Father, or let the Son too stand with all of them as a ministering spirit, himself sent on ministries like theirs.\n\n…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "HEB01-011",
    "chapter": 1,
    "verse_start": 6,
@@ -232,16 +306,35 @@
    "from_cite": true
   },
   {
-   "id": "HEB01-014",
+   "id": "HEB01-023",
    "chapter": 1,
-   "verse_start": 7,
-   "verse_end": 8,
-   "capsule": "Of angels Paul says 'the one doing', of the Son 'your throne', showing the Son was always with the Father.",
-   "comment": "Just as he said: 'This was in the beginning, all things came through him' (John 1:2), instead of 'this was, these things were', so also Paul: regarding the angels, 'the one doing'; but regarding the Son, 'your throne'—in order to show: that which is being done was not, but the one having the throne was always toward the Father eternally.",
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "Firstborn means holding first place in all things, not being ranked with creation.",
+   "comment": "\"And when he again brings in the firstborn\" (Hebrews 1:6). He calls him firstborn not, as those who twist what is right say, because they rank him with creation, but because he himself holds first place in all things (Colossians 1:18) …",
    "editions": [
     "complete"
    ],
    "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB01-014",
+   "chapter": 1,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "The wording sets the angels who are made apart from the Son whose throne shows He was always with the Father.",
+   "comment": "With “radiance” and “stamp” he followed John’s thought, for John called him the Word and said that he was with God. Here too he follows John. John said, “He was in the beginning” (John 1:2) and “All things came into being through him” (John 1:3), meaning: he was, and these things were not.\n\nSo too Paul: to the angels, “who makes”, but to the Son, “your throne”. He wants to show that what is made once was not, while the one whose throne is eternal was always with the Father.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the contrast between the angels who are made and the eternal throne of the Son in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -271,10 +364,10 @@
   {
    "id": "HEB01-016",
    "chapter": 1,
-   "verse_start": 12,
+   "verse_start": 11,
    "verse_end": 14,
-   "capsule": "The heavens perish only by comparison with the Son's immortality, and 'you yourself are' shows his unshakeable nature, while 'ministering spirits' shows he is a co-worker and not a minister.",
-   "comment": "He does not say a change of nature is happening, but speaks by comparison, that these things are more likely to perish, just as they are destroyed in comparison to the setting forth of the Son's immortality (Heb 1:12–14). For the Lord, foretelling the second coming, says that stars shall fall, but not yet sun or moon or heaven. … And it must be noted that through the phrase 'you yourself are' (Hebrews 1:12), he demonstrated the eternal and the unshakeable nature, and through the phrase 'are not all they are ministering spirits for service' (Heb 1:14), he demonstrated that the Son is not a minister but a co-worker.",
+   "capsule": "Creation is called perishable only by comparison with the Son who always remains, and angels are called servants to show the Son is no servant but fellow worker.",
+   "comment": "He is not speaking of a change in their nature but making a comparison. These things are more liable to perish, and set beside the everlasting life of the Son they are as good as perishing. Indeed, the Lord, foretelling his second coming, says that the stars will fall (Matthew 24:29), but no longer the sun, the moon or the heaven.\n\n“To which of the angels has he ever said …?” Passing over the whole creation, he names what stands above it, the angels. For if the Son differs from the angels, in that they came into being and he did not, how much more does he differ from all the invisible things?\n\nNotice also that by saying “But you are the same”, he showed that the Son’s nature is before the ages and cannot change. And by saying “Are they not all ministering spirits sent to serve?”, he showed that the Son is not a minister but a fellow worker.",
    "editions": [
     "complete"
    ],
@@ -347,12 +440,13 @@
    "chapter": 2,
    "verse_start": 2,
    "verse_end": 3,
-   "capsule": "The message was confirmed by the others being fully convinced that the preaching is sound.",
-   "comment": "He does not say a law, but the one many times administered through angels (Heb 2:2). It was confirmed to us by those who heard. This is similar to that in the epistle to the Galatians, where he says, 'I went up according to a revelation, and I proposed the gospel to them, lest I should be running in vain or have run' (Galatians 2:2). It was confirmed not by our asking, but by the being fully convinced of all the others, that what I preach, I preach well.",
+   "capsule": "The word spoken through angels means the message they often delivered, not the law, and the gospel was confirmed so that all the others might be sure it was rightly preached.",
+   "comment": "He [Paul] does not mean the law, but the word that was many times delivered through angels.\n\n“It was confirmed to us by those who heard.” This is like the passage in the letter to the Galatians: “I went up by revelation and laid before them the gospel, lest somehow I should be running, or had run, in vain” (Galatians 2:2). It was confirmed, not because we needed it, but so that all the others might be fully assured that what I [Paul] preach, I preach rightly.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what 'the word spoken by angels' and 'confirmed unto us by them that heard' mean, in plain terms.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -383,8 +477,8 @@
    "chapter": 2,
    "verse_start": 5,
    "verse_end": 9,
-   "capsule": "'The time to come' is the last time, and the man God remembered and made a little lower than the angels is Jesus.",
-   "comment": "He says 'the time to come' (Heb 2:5). Immediately he added 'the last'; but now we do not yet see all things made subject to him; but we see Jesus, being made a little lower than the angels (Heb 2:7–9). So what is it that he says, 'you remember him'? He says it was fitting for Jesus; for the things of common humanity were fitting for him. … he remembered the man and made him a little lower than the angels. And who is the man? Jesus.",
+   "capsule": "The age to come is meant, and the man whom the Son remembered and made a little lower than the angels is Jesus, to whom our common humanity belonged.",
+   "comment": "He [Paul, by “the world to come”,] means the age to come. And straight after, at the end, he added: “But now we do not yet see all things subjected to him; but we see Jesus, made a little lower than the angels” (Hebrews 2:8–9).\n\nSo the words “What is man, that you remember him?” (Hebrews 2:6), he says, belong to Jesus, since what belongs to our common humanity belonged to him. But it is the Son himself who says, “Out of the mouth of infants and nursing babies you have prepared praise because of your enemies” (Psalm 8:2) and “I will look at the heavens, the works of your fingers” (Psalm 8:3). No one would say that the man whom God remembered is the one who did this, … It is the Son who remembered the man and made him a little lower than the angels. And who is the man? Jesus. …",
    "editions": [
     "complete"
    ],
@@ -394,6 +488,80 @@
    "work_slug": "severianus-fragmenta-hebraeos",
    "section": "u01-rem-early",
    "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-018",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 6,
+   "capsule": "The 'man' whom God remembers in the psalm cannot be a mere man favored by God the Word, for Christ is Emmanuel from the womb, one Son, to whom we pray as God.",
+   "comment": "But if someone were to say that the man born of the holy Virgin was thought worthy of remembrance and visitation [the words of Hebrews 2:6] by God the Word, and was benefited and thought worthy of honor beyond his own nature, he will bring the glory of the mystery down, as it were, to the ground, … For tell me, where is Christ a mere man? When is he thought of apart from the Word united to him? He is Emmanuel from the womb, and this did not come about by stages. How then do they say that he was thought worthy of visitation and remembrance by God the Word? Then, by dividing and separating him entirely, they would also be caught setting him apart, showing us another Christ and Son, stripped of the Word united to him. For the one who thought him worthy of visitation and remembrance must be understood as other than the one to whom these things were given by him. … For even if the difference between the natures is great, the manner of the union has shown that the Son who is from both is one. …\n\n… How then is Christ God, if he too, with us, has been thought worthy of remembrance from God and has become one of those who receive benefits? And yet we come to him as to God, praying and asking him to supply good things from above, as the one who grants requests to the whole creation in a manner befitting God.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-019",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 8,
+   "capsule": "In the psalm quoted here, David marvels that the Son, God by nature, stooped so low for us, and that the Creator remembered and visited the human race when it had perished.",
+   "comment": "… The inspired David knew as a prophet that, according to the unlying and divine promise, one would be born \"of the fruit of his loins according to the flesh\" (Acts 2:30); yet he was well aware that, being God by nature, he would let himself down into our condition in due time. So in the eighth psalm he converses with him and addresses his words to him as to man and at the same time God, recognizing as one God the one who is from both. …\n\nSo, seeing the Son made man and all but riding on the colt [into Jerusalem], David was rightly astounded, as he pondered this: that one who is God by nature is seen to have let himself down to so great a lowliness. Then, seeing no other reason for the self-emptying than us alone, whom it was necessary to rescue from corruption and sin and to snatch from the tyrant's hands (I mean the devil's), the blessed David holds the mystery of the economy [God's plan of salvation] in the flesh worthy of all wonder. That is why he says, \"Lord, what is man, that you remember him, or the son of man, that you visit him?\" (Psalm 8:4).\n\nFor what is the nature of man compared with God? And why do I say this? What is the human race? And at what share would those on earth be reckoned, compared, I mean, with the ranks of the holy angels? But even if man is nothing at all, in nature and in number, the Creator did not overlook us. He remembered us too and thought us worthy of his visitation, as men who had perished; he who at the beginning, when he brought us into being, made us a little lower than the angels, but crowned us with honor and glory, set us over the works of his hands, and put all things in subjection under our feet (Psalm 8:5-6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the words of Psalm 8 that Hebrews quotes here: why David wonders that God remembers and visits man.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-020",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "When Paul says we do not yet see all things subjected to him, he means man in general, stripped of the glory given long ago, which Christ renews.",
+   "comment": "But the inspired Paul reasons very deeply, and with great skill he turns our sick condition around into newness through Christ. For what is in him is a new creation: the old things have passed away, and all things have become new (2 Corinthians 5:17). …\n\nSo Paul shows that we are stripped of the glory given us long ago; that is why he says, \"But now we do not yet see all things subjected to him\" (Hebrews 2:8). Since we have chosen to think rightly, we surely do not think that he says such things about one man. Rather, signifying man in general as in one person, he says that he has been robbed of his share in the renown given long ago.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains whom 'him' means in 'we see not yet all things put under him': mankind as a whole, which lost its first glory.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB02-021",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 9,
+   "capsule": "Paul shows man's loss of glory in Adam so as to show its recovery, for the Word was made a little lower than the angels to crown human nature with glory as one of us.",
+   "comment": "[Paul shows] that man has fallen short of the glory through the transgression in Adam, so that he may also describe the way it is recovered; and he makes plain how poor the race was, so that he may show in turn the one through whom we have been made rich. For he adds at once, \"But we see Jesus, who was made a little lower than the angels, crowned with glory and honor because of the suffering of death\" (Hebrews 2:9).\n\nFor the Word from God, being God by nature, … let himself down into self-emptying and was counted among us as a man, a little lower than the angels, so that, having become obedient to the Father even to death (Philippians 2:8), he might crown the nature of man with glory and honor, being crowned as one of us, though he is the Lord of glory.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-rem-close/",
    "from_cite": false
   },
   {
@@ -419,13 +587,13 @@
    "chapter": 2,
    "verse_start": 9,
    "verse_end": 9,
-   "capsule": "Christ was lowered below the angels only by taking a mortal body and willingly suffering in it; he is still worshiped by them as God, and by giving his body to death he trampled death's power.",
-   "comment": "Just as the transgression of Adam demonstrated the most dishonorable state, so shall we be glorified through the obedience of Christ on our behalf, He having set forth His own soul so that He might rule both over the dead and the living (Psalm 8:4-6).\n\nHow is Christ diminished from the angels, He who is worshiped among them? It is because He sat within the measures of humanity; having received a body destined to die, He willingly suffered in it.\n\nYet through Him, having abolished death and rendered corruption inactive, He is crowned with the highest glories, being incorruption and life. …\n\nBut Christ, though briefly diminished from the angels because of the measure of humanity, is worshiped by them in the excellence of His divinity …\n\nFor having given His own body to death, and as if having fleshly tasted that which occurred, He lived again and has immediately trampled the power of death.\n\nTherefore, the One said to be briefly diminished from the angels is the Word who is from God; He did not suffer this diminishment into His own nature, for He is always the same, possessing the same nature, unshakeable and unchangeable, yet He has endured this also through us in a human way.",
+   "capsule": "Christ was made a little lower than the angels by becoming man and suffering willingly in a mortal body, to honor and restore human nature, yet as God he is still worshiped by the angels.",
+   "comment": "… So he was made a little lower than the angels by becoming man, in order to honor the nature of man and to bring it back to what it was at the beginning, being crowned with glory and honor in it as well, though as God he is the Lord of glory. For just as Adam's transgression showed us to be utterly without honor, so we have been glorified through the obedience of Christ on our behalf, who laid down even his own life \"so that he might be Lord both of the dead and of the living\" (Romans 14:9).\n\nHow was he made lower than the angels, he who is worshiped by them? Was it not that he came down into the measures of humanity, took a body that by nature dies, and suffered in it willingly; and that he is crowned with the highest glories because of the suffering, as having abolished death through it and made corruption powerless, since he is incorruption and life? The angels' advantage is that they are outside the flesh and above dying, while the Son came to be in these things through his voluntary self-emptying. But the one made a little lower than the angels because of the measure of humanity, being in the supremacy of the Godhead, is worshiped by them, and he is seated on thrones around which they stand, glorifying him always and naming him Lord of the powers.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what being made lower than the angels means for Christ.",
+   "selected_reason": "Explains how the one the angels worship could be 'made a little lower than the angels' and why he is 'crowned with glory and honour'.",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Hebrews",
    "work_slug": "cyril-fragmenta-hebraeos",
@@ -450,6 +618,25 @@
    "section": "u08-rem-close",
    "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u08-rem-close/",
    "from_cite": true
+  },
+  {
+   "id": "HEB02-022",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "He tasted death for everyone by giving his own body to death and rising to trample death's power, while as the Word he suffered no lessening in his own nature.",
+   "comment": "\"So that by the grace of God he might taste death for everyone\" (Hebrews 2:9). What \"he tasted for everyone\" means is clear, I think. For he gave his own body to death and, so to speak, tasted in the flesh what befell it; then he came back to life and at once trampled down the power of death.\n\nSo the one said to have been made a little lower than the angels is the Word who is from God himself. He did not suffer the lessening in his own nature, for he is always himself and the same, unchangeable and unalterable; but he underwent this too for our sake, in a human way. For though he is God by nature, he put up with the measures of humanity for the sake of the economy [God's plan of salvation]. And this, in the mystery that concerns him, is what most deserves our wonder. … For what took place is truly an amazement, beyond all wonder.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains plainly what 'taste death for every man' means.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u04-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u04-rem-early/",
+   "from_cite": false
   },
   {
    "id": "HEB02-009",
@@ -809,13 +996,13 @@
    "chapter": 4,
    "verse_start": 10,
    "verse_end": 10,
-   "capsule": "Entering Christ's rest means giving up fleshly work and empty bustle.",
-   "comment": "… entering into the rest of Christ — to abstain thereafter from every fleshly work and from earthly ambitions and empty bustle, and rather to press on to finish only what leads to the unstained life and makes people reverent and holy. For as wise Paul writes to us: ‘The one who has entered his rest’ — clearly Christ’s — ‘has also rested from his works, as God did from his own.’ (Heb 4:10; Gen 2:2)",
+   "capsule": "Whoever enters Christ's rest must keep away from the works of the flesh and idle pursuits, and hasten only toward a holy life.",
+   "comment": "[Entering] … into the rest of Christ [means], from then on to keep away from every work of the flesh, from earthly pursuits and idle running about, and to hasten instead to accomplish only what leads to the undefiled life and makes people venerable and holy. For as the wise Paul writes to us, ‘Whoever has entered his rest’ (that is, clearly, Christ’s) ‘has himself also rested from his works, as God did from his own’ (Hebrews 4:10).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what it means to rest from one's works.",
+   "selected_reason": "Explains in plain terms what resting from one's works in Christ's rest means for the believer's life.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
@@ -828,8 +1015,8 @@
    "chapter": 4,
    "verse_start": 12,
    "verse_end": 12,
-   "capsule": "Soul and spirit divide when the Spirit's grace draws upward.",
-   "comment": "He says of a division of soul and spirit (Heb 4:12), when the soul suffers with the body, but the grace of the Holy Spirit draws upward toward the heavenly things.",
+   "capsule": "Soul and spirit divide as body draws the soul and grace draws upward.",
+   "comment": "He [Paul] speaks of a dividing of soul and spirit when the soul is drawn to share what the body feels, while the grace of the Holy Spirit pulls the other way, toward heavenly things.",
    "editions": [
     "complete"
    ],
@@ -865,8 +1052,8 @@
    "chapter": 4,
    "verse_start": 12,
    "verse_end": 12,
-   "capsule": "The Word divides the earthly image in us from the heavenly.",
-   "comment": "For he brings not peace but a sword — dividing son from father, daughter from mother — that the Word, sharper than any two-edged sword, may divide in us the earthy image from the heavenly, soul from spirit, joints from marrow.",
+   "capsule": "The living Word gives peace to the soul but casts a sword between the earthly and heavenly image in us, so as later to make us wholly heavenly.",
+   "comment": "… For since “the word of God is living and active, sharper than any two-edged sword, piercing as far as the division of soul and spirit, of joints and marrow, and able to judge the thoughts and intentions of the heart” (Hebrews 4:12), this Word now above all bestows on our souls the peace that surpasses all understanding (Philippians 4:7), which he left to his apostles (John 14:27); but he has cast a sword between the image of the earthy one and that of the heavenly one (1 Corinthians 15:49), so that, taking to himself for the present the heavenly one in us, he may later, when we have become worthy not to be cut in two, make us wholly heavenly.",
    "editions": [
     "complete"
    ],
@@ -1162,12 +1349,13 @@
    "chapter": 6,
    "verse_start": 1,
    "verse_end": 2,
-   "capsule": "Because the earthly things of the law are dead to Christians, it is absurd to turn back from faith and repentance to the baptisms of the law, though the law is a foundation and a precursor of piety.",
-   "comment": "… Since the beginning of Christ is from Judaism—for he lived according to the law—because of this he says: leaving these, let us bring forward perfection, knowing that according to the order Melchizedek must be a priest who is to be without law. From dead works, and faith toward God, and baptisms. To the Christians, the earthly things are dead. It is therefore absurd, he says, to depart from this course, whether from faith, or from having been made dead by all, to come again to the baptisms according to the law. The Lord, having come, proclaimed repentance, saying: Repent; for the kingdom of the heavens has drawn near; but repentance from dead works. Thus, therefore, it is to be read: repentance from dead works, instead of the repentance from the dead works. What he therefore says is this: it is not necessary to leave the repentance from dead works and the faith toward God and the baptism—which he named in the plural because of the multitude of those being made worthy. And he spoke of baptisms and the teaching, and the laying on of hands through which there are ordinations, and of the resurrection, the hope, and the following things—to turn back to the law. But this prepares the way, since the priests in the law were avenging the law, but Melchizedek was outside the law; and not having come according to the order, he was Melchizedek. It is not necessary, he says, to leave the Melchizedekian one according to the order to avenge the priesthood in the law, so that the things standing in the law might remain. But he said the things in the law are a foundation, since they have become a precursor of piety for men. …",
+   "capsule": "Christians must press on to perfection and not forsake repentance, faith and baptism to return to the law's washings.",
+   "comment": "Christ's beginning was in Judaism, for he lived according to the law. That is why he says: let us leave this behind and press on to perfection, knowing that the one who was to be a priest without the law had to be after the order of Melchizedek. \"From dead works, and of faith toward God, of baptisms\": for Christians, earthly things are dead. So it is absurd, he says, for people who have left this way of life, whether we call it the life of faith or the life of those who have died to everything, to go back again to the washings of the law. When the Lord came, he preached repentance, saying, \"Repent, for the kingdom of heaven has come near\" (Matthew 4:17); and that repentance is repentance from dead works. So the phrase should be read like this: \"of repentance from dead works\", meaning \"of the repentance that turns from dead works\". What he means, then, is this: we must not abandon repentance from dead works, faith in God and baptism and run back to the law. He named baptism in the plural because of the great number of those found worthy of it; and he spoke of the teaching about baptisms, the laying on of hands, by which ordinations are made, the hope of the resurrection and the rest. He is preparing the ground for what follows: the priests under the law upheld the law, but Melchizedek stood outside the law, and the one who came was after the order of Melchizedek. We must not, he says, abandon the priest after the order of Melchizedek and take up the cause of the priesthood under the law, as if to keep the things of the law standing. He called the things of the law a \"foundation\" because they were, for human beings, the prelude to godliness.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Clarifies why the \"first principles\" in the verse are not reasons to turn back to the law but steps Christians should keep as they press on toward the Melchizedek priesthood.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -1180,12 +1368,13 @@
    "chapter": 6,
    "verse_start": 4,
    "verse_end": 4,
-   "capsule": "Those sanctified, justified and made wise are called partakers of the Holy Spirit; they participate in him and are not participated in.",
-   "comment": "… Therefore, those who participate in Him—that is, those deemed to be sanctified by Him and justified and made wise—are called 'partakers of the Holy Spirit' (Hebrews 6:4), as the same apostle teaches the Hebrews. And to the Ephesians he writes, 'in whom also, having believed, you were sealed with the Holy Spirit of promise' (Eph 1:13). For it is clear that those being sealed, that is to say, being sanctified, participate, but are not participated in. …",
+   "capsule": "Those sanctified and justified by the Holy Spirit share in Him and are called partakers of the Holy Spirit.",
+   "comment": "… That is why those who share in him, that is, those counted worthy to be sanctified, justified and made wise by him, are called \"partakers of the Holy Spirit\" (Hebrews 6:4), as the same apostle teaches the Hebrews. And to the Ephesians he writes: \"In him you also, when you believed, were sealed with the Holy Spirit of promise\" (Ephesians 1:13). It is plain that those who are sealed, that is, sanctified, share in him; they are not shared in. …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what \"partakers of the Holy Spirit\" means in terms of sharing in the Spirit's sanctifying work.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -1197,13 +1386,33 @@
    "id": "HEB06-004",
    "chapter": 6,
    "verse_start": 5,
-   "verse_end": 8,
-   "capsule": "Baptism given once suffices and repeating it is contempt, and the picture of the land is about the Spirit's power, not baptism.",
-   "comment": "… The apostles raised up dead men (Hebrews 6:5). And this was the power of the resurrection. Speaking by way of example, he said that if baptism is a mystery, the once-for-all suffices. But if the thing happens a second time, it is contempt and an example. An example was taken, not for the baptism—for how could a second baptism be prevented?—but for the power of the Holy Spirit greatly benefiting the land (Heb 6:7–8). …",
+   "verse_end": 6,
+   "capsule": "Once baptism suffices; repeating it is contempt and public shame.",
+   "comment": "The apostles raised the dead, and that was the power of the resurrection. He said \"holding him up to contempt\" because, if baptism is a mystery, once is enough. If the act is repeated, it becomes contempt and public shame.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Connects the power tasted in the preceding verses with the impossibility of renewing apostates, using baptism's unrepeatable character as the analogy.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB06-011",
+   "chapter": 6,
+   "verse_start": 7,
+   "verse_end": 8,
+   "capsule": "The parable illustrates the Spirit's power, not a second baptism.",
+   "comment": "He took this illustration not with baptism in view (how could it be, when he was ruling out a second baptism?) but for the power of the Holy Spirit, which does us good again and again.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Shows that the blessed and cursed ground is about the Spirit's ongoing work, not repeating baptism.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -1234,8 +1443,8 @@
    "chapter": 6,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "God gave Abraham full assurance through the administration, and the power of the promise could not be changed.",
-   "comment": "… Having spoken above of the full assurance of hope, he showed that God provided full assurance to Abraham, not through works that belong to the citizenship, but through the administration (Heb 6:17). It is impossible, having made God swear, to be changed; it was impossible to change the power of the promise. …",
+   "capsule": "God gave Abraham full assurance by His own dispensation, and the sworn promise could not be altered.",
+   "comment": "Having spoken earlier of \"the full assurance of hope\" (Hebrews 6:11), he showed that God gave Abraham full assurance, not the kind that comes through works and belongs to one's way of life, but the kind that comes through God's own dispensation. Once God had sworn, he could not change; the power of the promise could not be altered.",
    "editions": [
     "complete"
    ],
@@ -1309,12 +1518,13 @@
    "chapter": 7,
    "verse_start": 1,
    "verse_end": 2,
-   "capsule": "The forefather of the Levites used Melchizedek, so the priesthood without law is superior.",
-   "comment": "… He [Paul] does not merely mention how Melchizedek met Abraham when the Assyrians were surrounding, and gave him tithes from all things (Heb 7:1–2), but showing that the forefather of the Levitical tribe used Melchizedek. Therefore, the priesthood without law is superior to the priesthood.",
+   "capsule": "Paul records Melchizedek’s meeting and Abraham’s tithe to show that Levi’s forefather had Melchizedek as priest.",
+   "comment": "… He [Paul] does not mention for nothing how Melchizedek met Abraham after his victory over the Assyrians, and how Abraham gave him a tenth of everything. He means to show that the forefather of the tribe of Levi had Melchizedek for his priest.…",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why the meeting and the tenth are mentioned in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -1327,13 +1537,13 @@
    "chapter": 7,
    "verse_start": 3,
    "verse_end": 3,
-   "capsule": "Melchizedek is called without father, mother or genealogy by way of comparison with the priests of the law, and he remains a priest continually through the dignity of the priesthood, not as a mortal man.",
-   "comment": "… He says Melchizedek is without father and without mother and without genealogy, having neither beginning of days nor end of life according to the logic of priesthood; for he neither had a priestly race, nor did he begin anywhere as one succeeding another, nor from a day another, nor as having a law to be a priest for a whole life. And all these things are said entirely by way of analogy to the priests in the law.\n\nBut it is said concerning Melchizedek: having been made like to the Son of God, he remains a priest continually. And how does Melchizedek remain a priest? It is a question called forth, but the solution is this: just as Moses calls the law, so likewise here Melchizedek says both the man and the priesthood itself. If then Melchizedek is made like through the priesthood according to Christ, he remains continually; for not the mortal man, but the dignity of the priesthood. …",
+   "capsule": "Melchizedek is called without father or end of life by comparison with the priests of the law, and he remains a priest for ever in his priesthood, not as a mortal man.",
+   "comment": "… “Without father, without mother, without genealogy” refers to the priesthood. In the tribe of Levi it was plain whose son each man was: which priest was his father and which priestly woman his mother. There were also set terms of priesthood: some priests served yearly courses of duty, others served as priests for their whole lives. Both kinds are found among the priests under the law, though not in the same periods. He calls Melchizedek fatherless, motherless and without genealogy, with neither beginning of days nor end of life, as far as the priesthood is concerned. He had no priestly family. He did not begin at some point as the successor of another, nor take over from another at the change of a course, nor did he have a law that made him priest for life. In short, everything said of him is said by comparison with the priests under the law.\n\nIt is said of Melchizedek: “made like the Son of God, he remains a priest for ever.” How, then, does Melchizedek remain a priest? The statement raises a question, and this is the answer. Just as the law is called “Moses”, so here “Melchizedek” sometimes means the man and sometimes the priesthood itself. If, then, Melchizedek has been made like the Son through the priesthood that is according to Christ, he remains for ever: not the man, for he was mortal, but the dignity of the priesthood.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what 'without father, without mother' means for a priest.",
+   "selected_reason": "Explains what without father and remains for ever mean in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -1346,13 +1556,13 @@
    "chapter": 7,
    "verse_start": 3,
    "verse_end": 3,
-   "capsule": "Melchizedek, with no recorded genealogy, is made like the Son as a type of the Lord, who is without mother above and without father below.",
-   "comment": "… And the apostle, presenting to the Hebrews the unoriginate and incomprehensible nature of the generation of the Son of God, writes concerning Melchizedek: 'without father, without mother, without genealogy, having neither beginning of days nor end of life, made like the Son of God' Hebrews 7:3.\n\n… And he was made like—since he was not genealogized, as was the custom to do with the tribes of Israel concerning those honored among them—because he is a type and a certain pattern of the Lord, who is indeed without mother and without time above, but without father and from time below. …",
+   "capsule": "Melchizedek, left without genealogy, is a type of the Lord, who is without mother above and without father below.",
+   "comment": "… And the Apostle, setting before the Hebrews how the generation of the Son of God is without beginning and beyond comprehension, writes of Melchizedek: “Without father, without mother, without genealogy, having neither beginning of days nor end of life, made like the Son of God” (Hebrews 7:3).\n\nHe had been made like him (in that he was not given a genealogy, as it was the custom to do in the tribes of Israel for those held in honour among them) because he is a type and a kind of outline of the Lord, who above is without mother and without time, and below is without father and in time.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why Melchizedek is said to be made like the Son of God.",
+   "selected_reason": "Explains what made like the Son means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -1567,13 +1777,13 @@
    "chapter": 8,
    "verse_start": 13,
    "verse_end": 13,
-   "capsule": "Christ's coming is a new age that remakes what was growing old, so we no longer live in the Mosaic manner.",
-   "comment": "… For the season of our Savior’s sojourn is a new age for us, transferring all things toward the better and thoroughly remaking into the newness of creation what was growing old and near vanishing. (Heb 8:13) ‘If anyone is in Christ — a new creation; the old things have passed away; behold, they have become new.’ (2 Cor 5:17) And we ourselves no longer live in the Mosaic manner, but have been carried over into evangelical life, Christ renewing us through the Spirit. …",
+   "capsule": "Christ's coming begins a new age that remakes what was growing old, carrying believers from the manner of Moses into the life of the gospel.",
+   "comment": "… For a new age has come to us, the time of our Savior's coming among us, which changes all things for the better and very well refashions into a newness of creation what was growing old and aging and near to vanishing (Hebrews 8:13). ‘For the things in Christ are a new creation; the old things have passed away; behold, all things have become new’ (2 Corinthians 5:17).\n\nAnd we ourselves live no longer in the manner of Moses; we have been carried over, rather, into the life of the gospel, since Christ makes us new through the Spirit. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what became old and what is new.",
+   "selected_reason": "Explains what the verse means by the old vanishing in terms a reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
@@ -1697,8 +1907,8 @@
    "chapter": 9,
    "verse_start": 11,
    "verse_end": 11,
-   "capsule": "The greater tabernacle is the composition of grace, the body of Christ.",
-   "comment": "… Just as the tabernacle was constructed according to Moses so that the services might take place (Heb 9:11), so this tabernacle, the composition of grace, is greater, the body of Christ having Christ as head. …",
+   "capsule": "The greater tent is the establishment of grace, Christ’s body with Christ as head.",
+   "comment": "… The tent was built in Moses’ time so that worship could be offered in it. This tent is greater: it is the establishment of grace, the body of Christ, which has Christ for its head. …",
    "editions": [
     "complete"
    ],
@@ -2287,13 +2497,13 @@
    "chapter": 11,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "Isaac set Jacob before Esau by the order of blessing, not of birth.",
-   "comment": "…By faith Isaac blessed Jacob and Esau concerning things to come (Hebrews 11:20). Previously he set Jacob, then Esau, not according to the sequence of birth, but according to the order of the blessing. …",
+   "capsule": "Isaac ordered Jacob before Esau by blessing, not by birth.",
+   "comment": "“By faith Isaac blessed Jacob and Esau concerning things to come.” He put Jacob first and Esau second, not in the order of their birth, but in the order of the blessing.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the verse names Jacob before Esau.",
+   "selected_reason": "Explains the order of the blessing in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -2321,17 +2531,36 @@
    "from_cite": true
   },
   {
-   "id": "HEB12-001",
-   "chapter": 12,
-   "verse_start": 1,
-   "verse_end": 1,
-   "capsule": "Sin of carnal enjoyment is the weight, from which the besetting sin is born.",
-   "comment": "…Laying aside every weight (Heb 12:1). Sin of carnal enjoyment is a weight, from which the most easily encompassing sin is born. And he said the sin that easily surrounds us and leads us to its own will is 'most easily encompassing'. …",
+   "id": "HEB11-010",
+   "chapter": 11,
+   "verse_start": 38,
+   "verse_end": 38,
+   "capsule": "The world-was-not-worthy praise belongs to the last martyrs who received grace for the people's good.",
+   "comment": "“Of whom the world was not worthy.” He does not say this of everyone, but of the last group, whom he also knows as martyrs.\n\nHe also mentions those who “turned back armies” (Hebrews 11:34) and who received grace for the good of the people.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Says plainly what the weight and the besetting sin are.",
+   "selected_reason": "Explains who the praise refers to in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB12-001",
+   "chapter": 12,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Fleshly pleasure is the weight from which the sin that easily besets us is born.",
+   "comment": "… \"Laying aside every weight.\" The weight is the sin of fleshly pleasure, and from it is born the sin that so easily besets us. He calls sin \"easily besetting\" because it readily surrounds us and draws us into doing its will.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the weight and the easily besetting sin mean in plain terms.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Hebrews",
    "work_slug": "severianus-fragmenta-hebraeos",
@@ -2436,8 +2665,8 @@
    "chapter": 12,
    "verse_start": 22,
    "verse_end": 23,
-   "capsule": "The company of angels is a festival held for the glory of God.",
-   "comment": "…For a festival and a feast of angels is the one to the glory of God, and to the assembly of firstborns inscribed in the heavens and to God, the judge of all (Heb 12:22-23). …",
+   "capsule": "The glory given to God is the angels' festal gathering and feast.",
+   "comment": "… The glory given to God is the festal gathering and feast of the angels; \"and to the assembly of the firstborn who are enrolled in heaven, and to God, the judge of all.\"",
    "editions": [
     "complete"
    ],
@@ -2528,8 +2757,8 @@
    "chapter": 12,
    "verse_start": 27,
    "verse_end": 27,
-   "capsule": "The form of this world is removed so eternal things may come, a gift lacking in the law.",
-   "comment": "…This is what Paul says elsewhere: for he removes the form of this world, so that the temporary things might pass away and the eternal things might come (Heb 12:27). This is, those in the law do not have this gift of which we partake. …",
+   "capsule": "The temporary must pass so that the eternal may come.",
+   "comment": "… This is what Paul says elsewhere: \"For the form of this world is passing away\" (1 Corinthians 7:31). The temporary must pass, so that the eternal may come.",
    "editions": [
     "complete"
    ],
@@ -2634,6 +2863,80 @@
    "from_cite": true
   },
   {
+   "id": "HEB13-010",
+   "chapter": 13,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The Son shares the Father's unchangeable nature and so is not among created things.",
+   "comment": "…an unchangeable and unalterable nature: that is where he confesses the Son to be set. This belongs to the God and Father alone, and to no other among the things that have come into being.\n\nSo if God the Father alone is unchangeable, and the Son too is in identity of nature with him, always being just what his begetter is, how could he be one of the things that have come into being? He alone is the match of the one who begot him, by the ineffable principle of the substance, and is by nature what the Father is, except only for being Father. For the Spirit-bearer has made known in these words that the Word was not altered when he became a man like us.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u08-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB13-011",
+   "chapter": 13,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "Yesterday, today and forever mean past, present and what is still to come, and one undivided Christ is the first two in the body and forever in the spirit.",
+   "comment": "He makes \"yesterday\" stand for time past, \"today\" for the present, and \"forever\" for what will be and is still to come (Hebrews 13:8). But if some insist on taking \"yesterday and today\" to mean something recent, how could the one who is \"yesterday and today\" also be \"forever\"? We too will turn the force of the question the other way: how could the Word, who is \"forever,\" take \"yesterday and today\" upon himself, if Christ is one and is not divided, as Paul says (1 Corinthians 1:13)?\n\nOr, plainly: Jesus Christ is \"yesterday and today\" in the body, and the same is \"forever\" in the spirit.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the wording of yesterday, today and forever in plain terms.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u08-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB13-012",
+   "chapter": 13,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Paul pictures unstable hearers swept about like reeds and calls them to stand firm.",
+   "comment": "\"Do not be carried away by various and strange teachings\" (Hebrews 13:9). \"Carried away\" is a metaphor taken from madmen, who are carried about this way and that; or from people who are easily swept aside, who bend readily, like reeds, toward whatever pushes them at the moment, and have nothing firm.\n\nYet Paul cried aloud, \"Be steadfast, unmovable\" (1 Corinthians 15:58); and the Master himself lays the gravest charge on those whose character is easily stung into frenzy and easily scared, and fixes his turning away as the penalty for that sickness. For he said of certain people: \"They loved to move their feet and did not hold back, and God took no pleasure in them\" (Jeremiah 14:10).\n\nFor whatever is settled firmly and without wavering is safe and secure for every purpose that leads to our good.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the swept-away metaphor as a call to stand firm.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u08-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "HEB13-013",
+   "chapter": 13,
+   "verse_start": 10,
+   "verse_end": 13,
+   "capsule": "They lack our shared gift; outside the camp means outside the law.",
+   "comment": "…That is, those under the law do not have this gift in which we share. \"Outside the camp\" means outside the ordinances of the law and the camp of Israel.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Hebrews",
+   "work_slug": "severianus-fragmenta-hebraeos",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-hebraeos/u01-rem-close/",
+   "from_cite": false
+  },
+  {
    "id": "HEB13-007",
    "chapter": 13,
    "verse_start": 12,
@@ -2687,6 +2990,25 @@
    "section": "23",
    "url": "https://viapatrum.org/works/cyril-adoration-11/23/",
    "from_cite": true
+  },
+  {
+   "id": "HEB13-014",
+   "chapter": 13,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "Christ cleansed us by dying in the flesh, so we bear his reproach by taking up the cross.",
+   "comment": "…Christ, however, died in the flesh, to cleanse us with his own blood (Hebrews 13:12). \"Let us therefore go forth to him\" and so on (Hebrews 13:13).\n\nLet us bear his reproach, then, that is, the cross borne for us. So he too said: \"Whoever does not take up his cross and follow after me is not worthy of me\" (Matthew 10:38). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "It says his reproach is the cross we take up and follow him with.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Hebrews",
+   "work_slug": "cyril-fragmenta-hebraeos",
+   "section": "u08-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-hebraeos/u08-rem-early/",
+   "from_cite": false
   },
   {
    "id": "HEB13-009",
