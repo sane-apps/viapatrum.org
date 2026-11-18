@@ -452,6 +452,11 @@ function retireLimit(unused, excerpts, pruneAll) {
   return '';
 }
 
+function moveFile(src, dest) {
+  try { fs.renameSync(src, dest); }
+  catch (e) { if (e.code !== 'EXDEV') throw e; fs.copyFileSync(src, dest); fs.unlinkSync(src); }
+}
+
 async function main() {
   const t0 = Date.now();
   const works = workCards(), authors = authorCards(), topics = topicCards();
@@ -560,7 +565,8 @@ async function main() {
     for (const r of unused) {
       const dest = path.join(RETIRED, r);
       fs.mkdirSync(path.dirname(dest), { recursive: true });
-      fs.renameSync(path.join(OUT, r), dest);
+      // outputs/ is a link to the external drive, and rename cannot cross drives (EXDEV, 18 Nov 2026).
+      moveFile(path.join(OUT, r), dest);
       delete cache[r.replace(/\.(png|jpg)$/, '')];
       retired++;
     }
