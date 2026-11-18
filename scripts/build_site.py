@@ -37,7 +37,7 @@ import kjv_listen  # noqa: E402  (Listen bar: the KJV read aloud on chapter page
 
 # FATHERS_DIST: build somewhere else to test without touching the ship staging dir.
 DIST = Path(os.environ["FATHERS_DIST"]) if os.environ.get("FATHERS_DIST") else ROOT / "dist"
-# Paid downloads (owner 2026-10-05): only files already uploaded to R2 are linked.
+# Downloads (owner 2026-10-05; all free since): only files already uploaded to R2 are linked.
 LIBRARY = downloads_page.Library(Path(os.environ.get("LIBRARY_STATE") or ROOT / "outputs" / "downloads") / "library.json")
 ASSETS = ROOT / "assets"
 
@@ -12627,7 +12627,7 @@ def build() -> None:
     # Old addresses answer with a real 301 instead of a meta-refresh page.
     logos_redirect = ""
     if logos_retired():
-        # Logos Word files are part of the paid library pass (owner 2026-10-05):
+        # Logos Word files are on the downloads shelf (owner 2026-10-05; all downloads are free now):
         # once the pass serves them, the free page and its zips are not built.
         logos_redirect = "/logos/ /downloads/ 301\n/logos/* /downloads/ 301\n"
     elif logos_pack_manifest():

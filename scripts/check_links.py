@@ -70,7 +70,7 @@ def main():
             checked += 1
             if url.path.startswith('/dl/'):
                 if url.path[4:] not in library:
-                    errors[f'Paid download not uploaded {url.path}'] += 1
+                    errors[f'Download not uploaded {url.path}'] += 1
                 continue
             target = (ROOT / url.path.lstrip('/') if url.path.startswith('/') else path.parent / url.path).resolve() if url.path else path
             if target.is_dir():
