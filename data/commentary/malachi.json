@@ -1,7 +1,7 @@
 {
  "book": "Malachi",
  "title": "The Fathers on Malachi",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
@@ -162,13 +162,13 @@
    "chapter": 3,
    "verse_start": 1,
    "verse_end": 2,
-   "capsule": "The prophecy's opening signifies the economy and what follows the Lord's fearsome yet kindly second appearance.",
-   "comment": "Concerning the prophecy of calling God and angel, Malachi says thus: 'The Lord whom you seek shall come into his temple, and the angel of the covenant whom you desire. Behold, the Lord comes, and who will endure the day of his entrance? Or who will stand at his appearing?' (Malachi 3:1-2). The beginning of the word signifies the economy [God's plan of salvation in the incarnation], but the following signifies his fearsome and philanthropic second appearance…",
+   "capsule": "The opening words point to the saving dispensation and the rest to the fearful yet loving second coming.",
+   "comment": "That he has been called both God and angel, the prophets foretell. Malachi says this: “The Lord whom you seek will come to his temple, and the angel of the covenant whom you desire. Behold, the Lord is coming; and who will endure the day of his entrance? Or who will stand at his appearing?” (Malachi 3:1-2).\n\nThe beginning of the saying shows the saving dispensation; what follows shows his second coming, fearful and full of love for mankind.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Says directly how the two halves of the prophecy divide.",
+   "selected_reason": "Explains what the opening verses point to in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",

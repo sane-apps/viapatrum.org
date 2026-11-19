@@ -1,13 +1,13 @@
 {
  "book": "Ezekiel",
  "title": "The Fathers on Ezekiel",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 50,
- "selected_count": 23,
+ "comment_count": 51,
+ "selected_count": 26,
  "comments": [
   {
    "id": "EZK01-001",
@@ -607,12 +607,13 @@
    "chapter": 23,
    "verse_start": 22,
    "verse_end": 22,
-   "capsule": "Jerusalem's lovers, once friends, were turned to enmity by divine providence, as desire often turns to hate.",
-   "comment": "Who the lovers are, Ezekiel has shown, saying to Jerusalem, whom he calls Oholibah: “Thus says the Lord: Behold, I raise up your lovers against you round about, sons of Babylon and all the Chaldeans” (Ezekiel 23:22); for these, formerly being friends, according to divine providence changed unto enmity. Which indeed often comes about upon desire turning toward hate; …",
+   "capsule": "The lovers raised against Jerusalem were former friends turned to enemies by divine providence, as desire often turns to hate.",
+   "comment": "Who the lovers are (Lamentations 1:19), Ezekiel has shown, saying to Jerusalem, whom he calls Oholibah: “Thus says the Lord: Behold, I raise up your lovers against you round about, sons of Babylon and all the Chaldeans” (Ezekiel 23:22); for these, formerly being friends, according to divine providence changed unto enmity.\n\nWhich indeed often comes about upon desire turning toward hate; for he says concerning Samaria: “And Oholah whored from me and set herself upon her lovers the Assyrians” (Ezekiel 23:5); and after a little: “For this reason he handed her over into hands of her lovers, into hands of sons of Assyrians” (Ezekiel 23:9); and he says also concerning Jerusalem: “And her sister Oholibah saw, and she corrupted her setting-upon beyond the whoredom of her sister, and she set herself upon the sons of the Assyrians.” (Ezekiel 23:11-12) …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains in accessible terms why the former lovers turn against Jerusalem under divine providence as desire turns to hate.",
    "author": "Origen of Alexandria",
    "work": "Fragments on Lamentations",
    "work_slug": "origen-lamentations-fragments",
@@ -773,8 +774,8 @@
    "chapter": 36,
    "verse_start": 26,
    "verse_end": 27,
-   "capsule": "God shows that our spirit is renewed by the Holy Spirit, who is specifically his own.",
-   "comment": "Therefore, in Ezekiel, God shows that our spirit is to be renewed, while the Holy Spirit renews, and indicates that it is not simply a spirit, but specifically His own, decreeing thus: 'And I will give you a new heart, and a new spirit I will give you; and I will take away the stony heart from your flesh, and I will give you a heart of flesh, and my spirit I will put in you' (Ezekiel 36:26).",
+   "capsule": "God shows that our spirit is renewed while the Holy Spirit renews, and that this Spirit is properly God's own.",
+   "comment": "This is why God in Ezekiel, showing that our spirit is renewed while the Holy Spirit renews, and that this is not simply a spirit but properly his own, declares: “And I will give you a new heart, and a new spirit I will give you; I will take away the heart of stone out of your flesh and give you a heart of flesh; and my Spirit I will put in you” (Ezekiel 36:26-27).",
    "editions": [
     "complete"
    ],
@@ -791,12 +792,13 @@
    "chapter": 37,
    "verse_start": 5,
    "verse_end": 6,
-   "capsule": "Ezekiel declares that God will perform the resurrection by his Spirit, who gives life to the dry bones.",
-   "comment": "Ezekiel himself declares this very thing, and prophesies that with God, as His Spirit, He will perform the resurrection: 'thus says the Lord to these dry bones: behold, I am bringing into you a spirit of life, and I will cause nerves to come upon you, and I will cause flesh to rise upon you, and I will stretch skin over you, and I will give my Spirit upon you, and you shall live and you shall know that I am the Lord' (Ezekiel 37:12-14).",
+   "capsule": "The Spirit, as God’s own Spirit, brings about the resurrection by giving life to the dry bones.",
+   "comment": "Ezekiel shows … that the Spirit, being God’s own Spirit, will bring about the resurrection together with God, when he prophesies: “Thus says the Lord to these dry bones: Behold, I am bringing into you a spirit of life. I will put sinews upon you, bring up flesh upon you and stretch skin over you; I will put my Spirit upon you, and you shall live, and you shall know that I am the Lord” (Ezekiel 37:5-6).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what the verses promise in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -858,6 +860,25 @@
    "section": "u01-rem-early",
    "url": "https://viapatrum.org/works/hesychius-homilia-i-hypapante/u01-rem-early/",
    "from_cite": true
+  },
+  {
+   "id": "EZK44-004",
+   "chapter": 44,
+   "verse_start": 1,
+   "verse_end": 3,
+   "capsule": "The shut east gate is the mysteries of God, closed to human beings until Christ opened the law and the prophets.",
+   "comment": "Ezekiel, the son of man, describes many gates, and he has something to say about each one. Now he speaks to those who have ears about the gate of the holy things that faces east. It is written of it: “This gate shall be closed,” and so on (Ezekiel 44:1). It is closed not only because the Lord, the God of Israel, passes through the gate, but also because the prince sits in that gate to eat before the Lord by way of Ailam, which means the vestibule of the gate (Ezekiel 44:3).\n\nThe closed gate is the mysteries of God, the unclosed things. … So the gate is closed to human beings, for what is inside the gate is what no eye has seen and no ear has heard, and so on (1 Corinthians 2:9).\n\nThe sealed scroll written about in Isaiah has the same meaning as this gate (Isaiah 29:11). You will find this same scroll more clearly in the Revelation of John, along with what is written about it, and how the one from the tribe of Judah opened these things, and he alone (Revelation 5:5). For until our Lord Jesus Christ came, the law and the prophetic word were closed, and over them lay a veil …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the shut gate means in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments of the Commentary on Ezekiel",
+   "work_slug": "origen-ezekiel-fragments",
+   "section": "44",
+   "url": "https://viapatrum.org/works/origen-ezekiel-fragments/44/",
+   "from_cite": false
   },
   {
    "id": "EZK44-002",

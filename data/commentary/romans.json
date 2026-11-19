@@ -1,12 +1,12 @@
 {
  "book": "Romans",
  "title": "The Fathers on Romans",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 441,
+ "comment_count": 440,
  "selected_count": 154,
  "comments": [
   {
@@ -1561,12 +1561,13 @@
    "chapter": 5,
    "verse_start": 5,
    "verse_end": 5,
-   "capsule": "The outpouring of the Holy Spirit is his unconstrained and abundant bestowal, so the love of God poured into our hearts is a fruit of the Spirit.",
-   "comment": "[On God's gift of the Spirit to the Gentiles:] That is to say: the outpouring of the Holy Spirit, as one might say, is the unconstrained and abundant bestowal of Him, the cause of prophecy and renewal and heavenly goods and of understanding the beauty of the divine truth. For as it seems to the apostle: 'the fruit of the Spirit is love, joy, peace' (Galatians 5:22). Therefore he writes again: 'for the love of God has been poured out in our hearts by the Holy Spirit' (Romans 5:5).",
+   "capsule": "The outpouring of the Holy Spirit is his unrestrained coming upon us to give prophecy, renewal, heavenly goods, and love.",
+   "comment": "…the outpouring of the Holy Spirit, or, as one might put it, his unrestrained and unstinting coming upon us, is the cause of prophecy and renewal, of heavenly goods, and of seeing the beauty of divine truth.\n\nFor, as the apostle holds, “the fruit of the Spirit is love, joy, peace” (Galatians 5:22). That is why he writes again, “For the love of God has been poured out in our hearts by the Holy Spirit” (Romans 5:5).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains the outpouring of the Holy Spirit and why God's love is poured into our hearts as the Spirit's fruit.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -6140,25 +6141,6 @@
    "work_slug": "cyril-adoration-3",
    "section": "2",
    "url": "https://viapatrum.org/works/cyril-adoration-3/2/",
-   "from_cite": true
-  },
-  {
-   "id": "RM10-014",
-   "chapter": 10,
-   "verse_start": 9,
-   "verse_end": 10,
-   "capsule": "Belief in the heart unto righteousness is not enough without confession of the mouth unto salvation, and the mouth must say what the heart believes.",
-   "comment": "That is why God is 'believed in the heart' by such 'unto righteousness,' and 'confessed with the mouth' by such 'unto salvation' — who grasp that neither shall they be justified unless they so believe God with their heart so disposed, nor be in salvation unless, as the disposition is, so too the word. For they deceive themselves who think the 'for with the heart is believed unto righteousness' (Romans 10:10) suffices toward obtaining an end in Christ — even if the 'but with the mouth confession is made unto salvation' be not added. One might even say it is rather honoring with lips, with the heart 'far' from God, than honoring him 'with the heart,' when the mouth confesses not 'unto salvation.'",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why Paul joins confessing with the mouth to believing in the heart.",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "4",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/4/",
    "from_cite": true
   },
   {

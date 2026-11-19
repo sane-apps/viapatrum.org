@@ -1,13 +1,13 @@
 {
  "book": "Song of Solomon",
  "title": "The Fathers on Song of Solomon",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
  "comment_count": 69,
- "selected_count": 37,
+ "selected_count": 38,
  "comments": [
   {
    "id": "SS01-001",
@@ -458,12 +458,13 @@
    "chapter": 2,
    "verse_start": 10,
    "verse_end": 12,
-   "capsule": "The martyrs' blessedness begins from something wintry, and only after the present winter is fought through comes what is said to the bride, that winter is past and flowers shall appear.",
-   "comment": "Let us not marvel if the martyrs' blessedness — to come in deep peace and calm and fair weather — must begin from something gloomier and, so to call it, wintry. First the narrow and afflicted road must be walked in winter, displaying the helmsmanship of the blessed each gained — that afterwards may come what in the Song of Songs is said to the bride who swam through winter: 'He answers, my kinsman says to me: Rise, come, my neighbor, my fair one, my dove. For lo, winter passed, the rain went, went its way.' And you still remember: no hearing 'winter passed' unless the present winter be warred robustly. After winter passes and rain departs, 'flowers shall appear' (Song of Solomon 2:12) — for 'planted in the Lord's house, in our God's courts they shall blossom.'",
+   "capsule": "The bride hears that winter is past only after enduring it, so martyrs reach calm blessedness and blossom like flowers only after persevering through present hardship.",
+   "comment": "Let us not be surprised if the blessedness of the martyrs, great as it is, which will be passed in deep peace, calm and fair weather, must begin from a state of things that is thought rather gloomy and, if I may call it so, wintry. For first each of the blessed, travelling the narrow and hard-pressed way (Matthew 7:14) in winter, will have to show the seamanship he has gained, so that afterwards there may come to pass what is said in the Song of Songs to the bride who has swum through the winter: “My beloved answers,” it says, “and says to me: Arise, come, my companion, my fair one, my dove; for see, the winter is past, the rain is gone, it has taken itself away” (Song of Solomon 2:10-11).\n\nAnd you, keep this in mind as well: you cannot hear the words “The winter is past” unless you fight your way through the present winter with strength and vigour. And after the winter has passed and the rain has gone and taken itself away, the flowers will appear (Song of Solomon 2:12); for “those planted in the house of the Lord will blossom in the courts of our God” (Psalm 92:13).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains the passing of winter and appearance of flowers as entering peaceful blessedness after enduring earthly hardship.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",

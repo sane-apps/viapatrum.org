@@ -1,13 +1,13 @@
 {
  "book": "Philippians",
  "title": "The Fathers on Philippians",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 37,
- "selected_count": 19,
+ "comment_count": 36,
+ "selected_count": 20,
  "comments": [
   {
    "id": "PHP01-001",
@@ -70,12 +70,13 @@
    "chapter": 2,
    "verse_start": 5,
    "verse_end": 5,
-   "capsule": "Christ's mind is to think and will only what serves the Father's glory and pleases him.",
-   "comment": "Christ’s mind would be to think only what looks toward the glory of God the Father, and to will to accomplish what pleases the One who begot him. ‘I have come down from heaven,’ he says, ‘not to do my own will, but the will of him who sent me.’ (Jn 6:38; Phil 2:5)",
+   "capsule": "Christ's mind is to seek only the glory of God the Father and to accomplish what pleases the one who sent him.",
+   "comment": "Christ's mind would be to think only of whatever looks toward the glory of God the Father, and to wish to accomplish what seems good to the one who begot him. ‘For I have come down from heaven,’ he says, ‘not to do my own will, but the will of him who sent me’ (John 6:38).\n\nHaving chosen to think this and to accomplish it, the inspired disciples too said plainly, ‘But we have the mind of Christ’ (1 Corinthians 2:16).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what the mind of Christ means in terms a general reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
@@ -564,24 +565,6 @@
    "work_slug": "didymus-commentarii-psalmos",
    "section": "u31-rem-mid",
    "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u31-rem-mid/",
-   "from_cite": true
-  },
-  {
-   "id": "PHP03-014",
-   "chapter": 3,
-   "verse_start": 19,
-   "verse_end": 20,
-   "capsule": "Beasts look down toward the belly, but man stands upright toward heaven and should order his life to match, with his citizenship above.",
-   "comment": "What is the shape of the four-footed animals? Their head is bent down toward the earth, it looks toward the belly, and it pursues the belly's pleasure in every way. Your head stands upright toward heaven; your eyes look upward. So if you ever dishonor yourself with the passions of the flesh, serving the belly and the parts beneath it, you have been grouped with the senseless cattle and have become like them.\n\nA different concern befits you: to seek the things above, where Christ is (Colossians 3:1-2), and to be above earthly things in your mind. As you have been shaped, so order your life as well. Have your citizenship in heaven (Philippians 3:20). Your true homeland is the Jerusalem above, and your fellow citizens and kin are the firstborn, enrolled in heaven (Hebrews 12:22-23).",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "70",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/70/",
    "from_cite": true
   },
   {

@@ -1,13 +1,13 @@
 {
  "book": "Matthew",
  "title": "The Fathers on Matthew",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 638,
- "selected_count": 333,
+ "comment_count": 643,
+ "selected_count": 336,
  "comments": [
   {
    "id": "MT01-001",
@@ -173,6 +173,62 @@
    "work_slug": "cyril-matthew-fragments",
    "section": "8",
    "url": "https://viapatrum.org/works/cyril-matthew-fragments/8/",
+   "from_cite": false
+  },
+  {
+   "id": "MT01-014",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "As a spoken word takes a body when it is written in a book, the Word made flesh can be seen and written, so there is a book of his genesis.",
+   "comment": "Here the evangelist speaks of his birth, but at the beginning of the Gospel of his genesis. … Take this spoken word of ours. By its own nature it cannot be touched or seen; but when it is written in a book and, as it were, takes a body, then it is both seen and handled. … So too the Word of God, without flesh and without body, is neither seen nor written in his Godhead; but since he took flesh, he is both seen and written. That is why, since he was made flesh, there is also a book of his genesis.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Matthew speaks of both birth and genesis of Christ.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on the New Testament",
+   "work_slug": "origen-nt-fragments",
+   "section": "matt-scholia",
+   "url": "https://viapatrum.org/works/origen-nt-fragments/matt-scholia/",
+   "from_cite": false
+  },
+  {
+   "id": "MT01-015",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Christ took sinlessness from genesis and liability to suffering from birth, taking neither incorruption nor liability to sin.",
+   "comment": "Genesis and birth differ. Genesis is the first fashioning, which comes from God. Birth is the succession of one from another, which comes from the sentence of death passed because of the transgression.\n\nAgain, genesis has incorruption and sinlessness, while birth has liability to suffering and to sin. So the Lord took from genesis its sinlessness, by nature, but did not also take its incorruption; and he took from birth its liability to suffering, but did not also take its liability to sin. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on the New Testament",
+   "work_slug": "origen-nt-fragments",
+   "section": "matt-scholia",
+   "url": "https://viapatrum.org/works/origen-nt-fragments/matt-scholia/",
+   "from_cite": false
+  },
+  {
+   "id": "MT01-016",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Christ's genesis is His road from the form of God to the form of a servant, and His birth joins a human birth with a birth from the Holy Spirit.",
+   "comment": "So in Christ's case genesis would not be a passage from not being into being. It would be a road, from existing in the form of God to taking up the form of a servant (Philippians 2:6-7).\n\nHis birth was twofold: like ours, and beyond ours. To be born of a woman is like ours. To be born not of the will of the flesh or of a man (John 1:13), but of the Holy Spirit, is beyond ours. And this proclaimed in advance the birth to come, which he would grant us from the Spirit.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what is like ours and beyond ours in Christ's birth.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on the New Testament",
+   "work_slug": "origen-nt-fragments",
+   "section": "matt-scholia",
+   "url": "https://viapatrum.org/works/origen-nt-fragments/matt-scholia/",
    "from_cite": false
   },
   {
@@ -3144,42 +3200,23 @@
    "from_cite": true
   },
   {
-   "id": "MT07-014",
-   "chapter": 7,
-   "verse_start": 15,
-   "verse_end": 15,
-   "capsule": "False friends are hard to guard against because their wickedness hides under friendship, so pursue sincerity and simplicity.",
-   "comment": "It is not easy to avoid such people [the double-faced], nor to guard against the harm they do, because their wickedness is deeply hidden under the guise of friendship. The Lord calls such characters ravenous wolves, appearing in garments of sheep (Matthew 7:15). Flee the varied and many-sided character; pursue truth, sincerity, simplicity.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why wolves in sheep's clothing are hard to spot and what to do.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "57",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/57/",
-   "from_cite": true
-  },
-  {
    "id": "MT07-015",
    "chapter": 7,
    "verse_start": 15,
    "verse_end": 15,
-   "capsule": "False teachers show light in their words but plan darkness within, like wolves in sheep's clothing.",
-   "comment": "[Of the false prophets:] They devise deeds worthy of darkness within, yet through their outward parts they bring forth words that seem to be full of light. For they are truly wolves who have put on sheep's clothing (Matthew 7:15). They wash only the outside of the cup and dish (Matthew 23:25), not knowing that unless the inside is cleansed, the outside cannot become clean.",
+   "capsule": "False prophets hide dark deeds within while speaking words that seem full of light.",
+   "comment": "[Of the false prophets:] They devise deeds worthy of darkness within, yet through their outward parts they bring forth words that seem to be full of light. For they are truly wolves who have put on sheep's clothing (Matthew 7:15). …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the sheep's clothing as outward words hiding inward deeds.",
+   "selected_reason": "Explains the sheep's clothing image as fair words hiding dark deeds.",
    "author": "Gregory Thaumaturgus",
    "work": "Fragment on Matthew",
    "work_slug": "gregory-thaumaturgus-matthew-fragment",
    "section": "frag-rem-early",
    "url": "https://viapatrum.org/works/gregory-thaumaturgus-matthew-fragment/frag-rem-early/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "MT07-016",
@@ -4605,25 +4642,6 @@
    "from_cite": false
   },
   {
-   "id": "MT10-028",
-   "chapter": 10,
-   "verse_start": 32,
-   "verse_end": 32,
-   "capsule": "Confessing Christ unites a person with him, and denying him cuts the person off.",
-   "comment": "I suppose that, as 'he who is joined to a harlot is one body,' (1 Corinthians 6:16) so he who confesses someone — especially in the season of torture and examination of faith — is mingled and united with the confessed; while he who denies, by denial itself, as by a dividing sword, suffers division from him whom he denies, severed from him whom he denied.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains how confessing Christ joins us to him and denying cuts us off.",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "9",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/9/",
-   "from_cite": true
-  },
-  {
    "id": "MT10-029",
    "chapter": 10,
    "verse_start": 34,
@@ -5966,13 +5984,13 @@
    "chapter": 13,
    "verse_start": 33,
    "verse_end": 33,
-   "capsule": "Leaven here stands for the beneficial power of gospel training, not for anything blameworthy.",
-   "comment": "So one must conceive, according to the word fitting for these contemplations, another kind of leaven that has nothing in itself that must be blamed — rather even admired by the God-breathed Scripture. The Savior likens to leaven the renowned and beneficial power of the divine and evangelical training, saying: ‘The kingdom of the heavens is like leaven, which a woman took and hid in three measures of flour, until the whole was leavened.’ (Mt 13:33; 1 Cor 5:7)",
+   "capsule": "Leaven here means the beneficial power of gospel teaching that transforms the whole person.",
+   "comment": "…We must therefore conceive, by the reasoning that fits such contemplations, of another kind of leaven, one that has nothing in itself to be blamed, but is rather even admired in the inspired Scripture. So the Savior likens the renowned and beneficial power of the divine and gospel training to leaven, saying: ‘The kingdom of heaven is like leaven, which a woman took and hid in three measures of flour, until the whole was leavened’ (Matthew 13:33).\n\nFor the life-giving working of the gospel training, sinking into mind and heart, changes soul and body and spirit, as it were, into its own quality.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the leaven stands for.",
+   "selected_reason": "Explains why leaven, usually blameworthy, is positive here.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
@@ -6126,6 +6144,24 @@
    "work_slug": "cyril-fragmenta-2-corinthios",
    "section": "u02-rem-close",
    "url": "https://viapatrum.org/works/cyril-fragmenta-2-corinthios/u02-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "MT13-022",
+   "chapter": 13,
+   "verse_start": 52,
+   "verse_end": 52,
+   "capsule": "The scribe discipled for the kingdom joins knowledge of the law of Moses to the new knowledge of the gospel.",
+   "comment": "…Would you not say, Palladius, that through a twofold training, of the law and of the gospel, we shall be holy and acceptable to God, and so go forward into a new and choice life? …The Savior himself made this clear to us, saying: ‘Therefore I said to you that every scribe who has been made a disciple in the kingdom of heaven is like a rich man who brings out of his treasure things new and old’ (Matthew 13:52).\n\nFor those whose mind knows what was decreed through Moses and has been filled with that ancient commandment given in types, and who on top of it have grown rich in the new knowledge of the gospel, can boast from then on, I think, of a twofold training.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "20",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/20/",
    "from_cite": true
   },
   {
@@ -6609,6 +6645,24 @@
    "from_cite": true
   },
   {
+   "id": "MT16-004",
+   "chapter": 16,
+   "verse_start": 16,
+   "verse_end": 17,
+   "capsule": "Peter’s confession that Christ is the true Son of God came by divine revelation, and the name Bar-Jonah implies that a son shares his father’s substance.",
+   "comment": "… Peter did not waver through flesh and blood when he saw God gladly dwelling on earth; that is what “flesh and blood has not revealed this to you” (Matthew 16:17) means. He recognized the branch of God that shares his nature and his eternity. In him he honoured the self-existent root without beginning that had revealed him. He believed in the oneness of Godhead that the Son has with the Father. He was declared blessed by the only blessed Master.\n\n… So, having spoken the truth in confessing him the Son of God, that is, genuine and of one substance, he heard the like in return: Bar-Jonah, which is translated “son of Jonah.” And Peter was certainly not of another substance from the one who begot him.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u09-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u09-rem-mid/",
+   "from_cite": true
+  },
+  {
    "id": "MT16-003",
    "chapter": 16,
    "verse_start": 16,
@@ -6625,24 +6679,6 @@
    "work_slug": "cyril-isaiah",
    "section": "book4-logos2-rem-mid",
    "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos2-rem-mid/",
-   "from_cite": true
-  },
-  {
-   "id": "MT16-004",
-   "chapter": 16,
-   "verse_start": 17,
-   "verse_end": 19,
-   "capsule": "Peter confessed the Son as of one nature with the Father, and the churches were built on that confession so the arguments of heretics did not prevail.",
-   "comment": "Peter did not hesitate seeing God indwelling on earth in flesh and blood; for this is that 'flesh and blood did not reveal to you' (Matt 16:17). He recognized the consubstantial and participating branch of God; in this he honored the root which was revealed to him, being self-begotten and unoriginated; he believed in his unity with the Father regarding divinity. He was made blessed by the only blessed Master. The churches were built upon this rock, whose 'gates of Hades' (Matt 16:18)—that is, the arguments of heretics—did not prevail; the keys of the heavens were handed to him, so that for those believing—as Peter himself seems to answer perfectly and as he heard from Christ along with the other apostles: 'baptizing them into the name of the Father and of the Son and of the Holy Spirit' (Matt 28:19)—they might be opened in the kingdom of God; but for those not thus glorifying the tri-blessed and most desirable entrance, he shall shut it. … Having truthfully confessed him as the Son of God, that is, genuine and consubstantial, he heard something nearby: 'Bar Jonah', which is interpreted: 'Son of Jonah' (Matthew 16:17). Peter was by no means of a different substance to the one who begot him.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Didymus the Blind",
-   "work": "On the Trinity",
-   "work_slug": "didymus-de-trinitate",
-   "section": "u09-rem-mid",
-   "url": "https://viapatrum.org/works/didymus-de-trinitate/u09-rem-mid/",
    "from_cite": true
   },
   {
@@ -6703,6 +6739,24 @@
    "from_cite": false
   },
   {
+   "id": "MT16-017",
+   "chapter": 16,
+   "verse_start": 18,
+   "verse_end": 19,
+   "capsule": "The churches built on Peter’s confession stand firm against false reasoning, and Peter opens or shuts the kingdom according to true confession of Father, Son and Holy Spirit.",
+   "comment": "… On this rock the churches have been built, and “the gates of Hades” (Matthew 16:18), that is, the syllogisms of heretics, shall not overcome them. He was entrusted with the keys of the heavens, so that for those who believe he might open the way in the kingdom of God, believing as Peter himself plainly answered just now, and as he heard from Christ together with the other apostles: “baptizing them in the name of the Father and of the Son and of the Holy Spirit” (Matthew 28:19); and that for those who do not give glory in this way he might shut the thrice-blessed and most longed-for entrance.\n\nFor by the very thing for which he was called blessed, he himself was received into this glory, while those who say the opposite were rebuked and cast out.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u09-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u09-rem-mid/",
+   "from_cite": true
+  },
+  {
    "id": "MT16-008",
    "chapter": 16,
    "verse_start": 19,
@@ -6719,6 +6773,25 @@
    "section": "168",
    "url": "https://viapatrum.org/works/cyril-matthew-fragments/168/",
    "from_cite": false
+  },
+  {
+   "id": "MT16-018",
+   "chapter": 16,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The authority to loose means not abandoning those who fall but receiving them when they repent.",
+   "comment": "… Besides this he received authority (or rather all received it through him) not to give up on those who fall, but to receive them when they repent. For no one is without sin except the one who entrusted this authority to Peter. That is the meaning of: “Whatever you loose on earth will be loosed in the heavens” (Matthew 18:18). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what loosing on earth means in practice.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u09-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u09-rem-mid/",
+   "from_cite": true
   },
   {
    "id": "MT16-009",
@@ -7314,9 +7387,9 @@
    "id": "MT17-025",
    "chapter": 17,
    "verse_start": 25,
-   "verse_end": 26,
-   "capsule": "By saying the sons are free, Christ shows that the Son is free by nature, since only created things are slaves of their maker.",
-   "comment": "Thus, the noble Son of God testifies by his own nature to being free from above and not to have the character of a sister to the creation—for everything produced is a slave to the one who brought it into being, and the created thing is a slave to the creator—and he says to Peter: 'From whom do the kings of the earth receive taxes or customs?' (Matt 17:25). 'From their sons or from strangers?' Answering, 'From strangers,' Jesus said to him; 'therefore the sons are free.",
+   "verse_end": 27,
+   "capsule": "Christ's word that the sons are free witnesses that the Son's nature is free from above and not on the level of creation, since everything made is slave to its maker.",
+   "comment": "So the august Son of God, bearing further witness that his own nature is free from above and does not have creation, so to speak, for a sister (for everything brought into being is the slave of the one who brought it into being, and what has been created is the creature of its creator), says to Peter:\n\n“From whom do the kings of the earth take toll or tribute? From their own sons, or from strangers?” And when he answered, “From strangers,” Jesus said to him, “Then the sons are free. But so that we may not give them offence, go to the sea, cast a hook, and take the first fish that comes up; when you open its mouth you will find a stater. Take that and give it to them for me and for you” (Matthew 17:25-27).",
    "editions": [
     "complete"
    ],
@@ -8128,8 +8201,8 @@
    "chapter": 19,
    "verse_start": 29,
    "verse_end": 29,
-   "capsule": "The promise of many kin leaves out a wife, since in the resurrection they neither marry nor are given in marriage.",
-   "comment": "Together, keep the holy multiplication Scripture promises — of brothers and children and parents and fields and houses. But wife is not counted with these. For it is not said, 'Everyone who left brothers or sisters or parents or children or fields or houses or wife for my name's sake shall receive manifold.' 'For in the resurrection of the dead they neither marry nor are given in marriage, but are as the angels in the heavens.' (Matthew 19:29) (Matthew 22:30)",
+   "capsule": "The hundredfold promise omits a wife because there is no marriage in the resurrection.",
+   "comment": "At the same time, note the dignity of Scripture: it promises brothers and children and parents and fields and houses many times over and a hundred times over, but a wife is not counted along with them. For it is not said, “Everyone who has left brothers or sisters or parents or children or fields or houses or a wife for the sake of my name will receive many times as much.” For “in the resurrection of the dead they neither marry nor are given in marriage, but are like the angels in heaven” (Matthew 22:30).",
    "editions": [
     "complete"
    ],
@@ -9496,19 +9569,19 @@
    "chapter": 23,
    "verse_start": 25,
    "verse_end": 26,
-   "capsule": "The hypocrites speak words of light while planning deeds of darkness, and the outside of the cup cannot be clean unless the inside is.",
-   "comment": "They devise deeds worthy of darkness within, yet through their outward parts they bring forth words that seem to be full of light. For they are truly wolves who have put on sheep's clothing (Matthew 7:15). They wash only the outside of the cup and dish (Matthew 23:25), not knowing that unless the inside is cleansed, the outside cannot become clean.",
+   "capsule": "Only a cleansed inside can make the outside clean.",
+   "comment": "They wash only the outside of the cup and dish (Matthew 23:25), not knowing that unless the inside is cleansed, the outside cannot become clean.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the picture of the cup washed only on the outside.",
+   "selected_reason": "Explains outward washing as hiding inward darkness in plain terms.",
    "author": "Gregory Thaumaturgus",
    "work": "Fragment on Matthew",
    "work_slug": "gregory-thaumaturgus-matthew-fragment",
    "section": "frag-rem-early",
    "url": "https://viapatrum.org/works/gregory-thaumaturgus-matthew-fragment/frag-rem-early/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "MT23-013",
@@ -10033,13 +10106,13 @@
    "chapter": 24,
    "verse_start": 37,
    "verse_end": 39,
-   "capsule": "As the flood destroyed the world, the ungodly will be destroyed when the elements dissolve into fire.",
-   "comment": "Just as the world then was destroyed, being overwhelmed by the flood, so the ungodly and sinners will be utterly destroyed when the elements of the heavens and the earth are dissolved into fire; that is, the similarity is that they will perish just as those who perished in the flood. For the Lord says, 'As it was in the days of Noah, they were eating, drinking, marrying, being given in marriage, until the day Noah entered the ark and the flood came and swept them all away, so will the coming of the Son of Man be' (Matt 24:37-39). Adding more to explain that it will be so, He says that the day of judgment will come stealing like a thief, in which the heavens will pass away swiftly and unexpectedly, the elements being removed by the approaching fire; after which the heavens having passed away in a rushing manner, there will be new heavens and a new earth, in which righteousness and the promises of God hold dominion.",
+   "capsule": "As the flood swept away the former world, the coming of Christ will destroy the ungodly by fire before the renewal of heaven and earth in righteousness.",
+   "comment": "Just as the world then was destroyed, being overwhelmed by the flood, so the ungodly and sinners will be utterly destroyed when the elements of the heavens and the earth are dissolved into fire (2 Peter 3:10); that is, the similarity is that they will perish just as those who perished in the flood.\n\nFor the Lord says, 'As it was in the days of Noah, they were eating, drinking, marrying, being given in marriage, until the day Noah entered the ark and the flood came and swept them all away, so will the coming of the Son of Man be' (Matt 24:37-39).\n\nAdding more to explain that it will be so, He says that the day of judgment will come stealing like a thief, in which the heavens will pass away swiftly and unexpectedly, the elements being removed by the approaching fire; after which the heavens having passed away in a rushing manner, there will be new heavens and a new earth, in which righteousness and the promises of God hold dominion.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the days of Noah are compared to.",
+   "selected_reason": "Explains the flood comparison and the fiery judgment and renewal that follow.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",
@@ -10793,12 +10866,32 @@
    "chapter": 26,
    "verse_start": 39,
    "verse_end": 39,
-   "capsule": "The prayer does not make the Savior a coward, since the same Lord says in the Psalms that he fears no one.",
-   "comment": "But likely someone, through the 'Father, if it be possible, let this cup pass from me,' (Matthew 26:39) will deem the Savior cowardly concerning death. To whom we must say that, if all Scripture is one instrument of one God, the same Lord who says 'let this cup pass' also says in the Psalms, 'The Lord is my light and my savior; whom shall I fear? The Lord is the defender of my life; of whom shall I be afraid? When evildoers drew near to eat my flesh, my tormentors and enemies fainted and fell. Though a camp stand against me, my heart shall not fear; though war rise against me, in this I hope.' (Psalm 27:1-3) And Matthew, Mark, Luke record the Gethsemane words diversely: 'let this pass from me' / 'bear away' / 'Abba, Father, all things are possible to thee; bear away this cup from me' (Mark 14:36) — and all add 'but not as I will.' …",
+   "capsule": "The same Saviour who prays for the cup to pass says in the Psalm that He fears no one, so the prayer cannot come from cowardice.",
+   "comment": "But perhaps someone, because of the words “Father, if it is possible, let this cup pass from me” (Matthew 26:39), and without having looked closely at what Scripture means, will think that the Saviour too, as it were, was afraid at the time of his passion. And if he was afraid, someone might say, who is ever brave? But first we will ask those who suppose this about the Saviour whether he was less than the one who says: “The Lord is my light and my Saviour; whom shall I fear? The Lord is the defender of my life; of whom shall I be afraid? When evildoers drew near me to eat my flesh, those who afflict me and my enemies themselves grew weak and fell. If an army sets itself in array against me, my heart will not fear; if war rises up against me, in this I will hope” (Psalm 27:1-3).\n\nPerhaps these words spoken in the prophet belong to no one else than the Saviour, who because of the light from the Father and the salvation from him feared no one, and because of the protection with which God shielded him was afraid of nothing. … So it does not belong to the same person to say from cowardice, “Father, if it is possible, let this cup pass from me,” and to declare from courage, “If an army sets itself in array against me, my heart will not fear.”",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why the prayer does not show fear, by the Psalm words of courage.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/29/",
+   "from_cite": true
+  },
+  {
+   "id": "MT26-034",
+   "chapter": 26,
+   "verse_start": 39,
+   "verse_end": 39,
+   "capsule": "By specifying 'this cup' rather than 'the cup', Christ was not refusing martyrdom itself, but perhaps asking for another, heavier martyrdom that would bring greater benefit to more people.",
+   "comment": "Then let nothing in the passage escape us, and you will notice the word “this”, pointing to the cup, in all three. Matthew recorded the Lord as saying, “Father, if it is possible, let this cup pass from me” (Matthew 26:39); Luke, “Father, if you are willing, take this cup away from me” (Luke 22:42); and Mark, “Abba, Father, all things are possible for you; take this cup away from me” (Mark 14:36).\n\nSee, then, whether you can say this. Since every martyrdom, a departure brought about on whatever pretext, is called a cup, the one who said “Let this cup pass from me” was not refusing martyrdom as a kind (for then he would have said, “Let the cup pass from me”), but perhaps this particular form of it. And consider whether it may be that the Saviour, looking into the forms of the cups, if I may call them that, and into what would come about through each, and grasping their differences with a very deep wisdom, declined this form of departure by martyrdom and was quietly asking perhaps for another, heavier one, so that a more universal benefit, reaching more people, might be accomplished through another cup. That was not yet the Father's will to bring about, since he orders things by way and order more wisely than the Son's wish and than what the Saviour saw.\n\nClearly, in the Psalms the “cup” of “salvation” is the death of the martyrs. That is why “I will take the cup of salvation and call on the name of the Lord” is followed by “Precious in the sight of the Lord is the death of his saints” (Psalm 116:13, 15). …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Christ says 'this cup': He seeks escape from this form of death, not from martyrdom itself.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",

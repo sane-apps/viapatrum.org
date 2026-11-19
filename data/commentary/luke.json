@@ -1,13 +1,13 @@
 {
  "book": "Luke",
  "title": "The Fathers on Luke",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
  "comment_count": 174,
- "selected_count": 111,
+ "selected_count": 113,
  "comments": [
   {
    "id": "LK01-001",
@@ -853,6 +853,25 @@
    "from_cite": true
   },
   {
+   "id": "LK03-009",
+   "chapter": 3,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "Christ baptizes with fire either by pouring grace on his disciples in fiery tongues or by the coming fire, which does not save but destroys evil and punishes endlessly.",
+   "comment": "The Spirit also comes down upon the apostles. For the Spirit is God, and God is a consuming fire (Deuteronomy 4:24).\n\nThis is why Christ is said to baptize with fire (Luke 3:16): because he poured out the grace of Christ upon his holy disciples in the form of fiery tongues (Acts 2:3), or because of the punishing nature of the fire to come.\n\nThat final baptism is not saving, but destructive of evil—for no longer will evil and sin hold sway—yet it punishes endlessly.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what baptizing with fire means in terms a reader can follow.",
+   "author": "John of Damascus",
+   "work": "Fragments on Luke",
+   "work_slug": "john-damascus-fragmenta-in-lucam",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/john-damascus-fragmenta-in-lucam/u01-open/",
+   "from_cite": false
+  },
+  {
    "id": "LK03-007",
    "chapter": 3,
    "verse_start": 23,
@@ -988,12 +1007,13 @@
    "chapter": 4,
    "verse_start": 39,
    "verse_end": 39,
-   "capsule": "Luke says he rebuked the fever, which suggests that what departs is a living being, and some powers harm the body without blaming the soul of the sufferer.",
-   "comment": "The Savior comes to Simon’s house and finds his mother-in-law feverish: ‘and standing over her, he rebuked the fever, and it left.’\n\nMay it not be, then, that in the ‘the fever left her’ as told by Matthew and Mark — where in the whole transaction nothing appears as of a living being effecting the fever — while in the ‘standing over, he rebuked the fever, and it left’ as told by Luke, I do not know, unless we shall be compelled to say that what is rebuked and departs is a living being not admitting the rebuker’s working; for it is not reasonable to say that what is soulless and insensible of rebuke is rebuked.\n\nAnd it is nothing marvelous that there are certain powers harmful to the human body — and we shall not in every case accuse the soul of the sufferers as being harmed by these; for neither, since the devil, having received authority to tempt him through the body, struck Job with a grievous sore, is Job to be accused on this account — he who contended and nobly endured the blow.\n\nOnly let this be said, whenever we are tried by bodily pains: ‘but not his soul’ — as the Lord too, rebuking, heals the sick.",
+   "capsule": "The word rebuked suggests the fever is caused by a living power, without blaming the soul of the sufferer.",
+   "comment": "The Saviour comes to Simon's house and finds his mother-in-law sick with fever: “And standing over her he rebuked the fever, and it left her” (Luke 4:39).\n\nPerhaps, then, in “the fever left her”, as Matthew and Mark tell it (Matthew 8:15; Mark 1:31), nothing in the whole wording points to a living being that was producing the fever. But in “standing over her he rebuked the fever, and it left her”, as Luke tells it, I do not see how we can avoid being compelled to say that what is rebuked and departs is a living being that could not withstand the power of the one rebuking it. For it is not reasonable to say that something without a soul, which cannot perceive a rebuke, is rebuked.\n\nIt is nothing strange that there are certain powers that do harm to the human body; and we shall not in every case accuse the soul of those who suffer, as though it were harmed by them. When the devil, having received authority to try Job through his body, struck him with an evil sore (Job 2:7), Job is not to be blamed for that; he contended and bravely endured the blow. Only, whenever we are tried by bodily pains, may it be said: “but do not touch his soul”, just as the Lord too, by rebuking, heals those who are sick. …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains why Christ rebuked the fever and offers accessible reassurance that bodily suffering is not spiritual guilt.",
    "author": "Origen of Alexandria",
    "work": "Fragments on the New Testament",
    "work_slug": "origen-nt-fragments",
@@ -1523,24 +1543,6 @@
    "work_slug": "origen-contra-celsum-book-2",
    "section": "48",
    "url": "https://viapatrum.org/works/origen-contra-celsum-book-2/48/",
-   "from_cite": true
-  },
-  {
-   "id": "LK10-004",
-   "chapter": 10,
-   "verse_start": 19,
-   "verse_end": 19,
-   "capsule": "Through faith we have authority over snakes and scorpions, so the faithless should fear their own faithlessness more than wild beasts.",
-   "comment": "The wild beasts are a demonstration of faith. Have you trusted in the Lord? Upon asp and basilisk you will tread, and you will trample lion and dragon (Psalm 90:13 (LXX; Hebrew 91:13)). And you have through faith the authority to tread upon snakes and scorpions (Luke 10:19). Or do you not see that when Paul was gathering sticks, the viper fastened on him and caused him no harm, because the holy man was found to be full of faith (Acts 28:3-5)? But if you are faithless, fear not so much the wild beast as your own faithlessness, through which you have made yourself easy prey to every corruption. …",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "75",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/75/",
    "from_cite": true
   },
   {

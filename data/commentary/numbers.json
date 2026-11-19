@@ -1,13 +1,13 @@
 {
  "book": "Numbers",
  "title": "The Fathers on Numbers",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 142,
- "selected_count": 71,
+ "comment_count": 143,
+ "selected_count": 73,
  "comments": [
   {
    "id": "NU01-001",
@@ -519,12 +519,13 @@
    "chapter": 6,
    "verse_start": 24,
    "verse_end": 26,
-   "capsule": "The threefold naming of the Lord in the blessing shows three persons.",
-   "comment": "In order to show three persons, he did not say once: “the Lord bless you and shine upon you and give you peace,” but a third time he named him “Lord.”",
+   "capsule": "The threefold naming of the Lord in the blessing points to three Persons.",
+   "comment": "… “May the Lord bless you and keep you; may the Lord make his face shine upon you and have mercy on you; may the Lord lift up his face upon you and give you peace” (Numbers 6:24-26). To show three Persons, he did not say once, “May the Lord bless you and shine upon you and give you peace”; he named “Lord” three times.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains the threefold naming of the Lord in the blessing as pointing to the Trinity in terms a general reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -1067,25 +1068,6 @@
    "work_slug": "origen-on-prayer",
    "section": "29",
    "url": "https://viapatrum.org/works/origen-on-prayer/29/",
-   "from_cite": true
-  },
-  {
-   "id": "NU12-001",
-   "chapter": 12,
-   "verse_start": 6,
-   "verse_end": 8,
-   "capsule": "At eighty Moses saw God as far as a human can, as God himself testifies, and so speaks to us from what he heard from God.",
-   "comment": "When he was already eighty years old, he saw God as far as it is possible for a human being to see—or rather, as it was granted to no one else, according to the very testimony of God: “If there is a prophet among you, I the Lord will make myself known to him in a vision, and I will speak to him in sleep. Not so with my servant Moses; he is faithful in all my house. Mouth to mouth I will speak to him, in visible form, and not in riddles” (Numbers 12:6-8). This man, then, who was counted worthy of the face-to-face vision of God equally with the angels, speaks to us from what he heard from God.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains what God's testimony about Moses means.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "1",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/1/",
    "from_cite": true
   },
   {
@@ -2144,25 +2126,6 @@
    "from_cite": true
   },
   {
-   "id": "NU25-003",
-   "chapter": 25,
-   "verse_start": 1,
-   "verse_end": 3,
-   "capsule": "Israel worshiped the idols but did not serve them, for it is not said that they served them.",
-   "comment": "So too the profaned people worshiped but served not idols, 'unto the daughters of Moab.' For it stands written in these very words that they called them to the sacrifices of their idols, and the people ate of their sacrifices, 'and worshiped their idols, and were joined to Belphegor.' (Numbers 25:1–3) And observe that it is not said 'and served their idols' — for it was not possible, under one season's moment, with such signs and wonders, to be persuaded by the women with whom they fornicated to deem the idols gods.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains the wording that the people worshiped but did not serve the idols.",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "5",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/5/",
-   "from_cite": true
-  },
-  {
    "id": "NU25-004",
    "chapter": 25,
    "verse_start": 3,
@@ -2257,13 +2220,70 @@
    "id": "NU28-003",
    "chapter": 28,
    "verse_start": 16,
-   "verse_end": 19,
-   "capsule": "The lamb slain in the first month is a type of Christ, whose death bears much fruit, and the calves, ram and lambs added signify the multitude called through faith.",
-   "comment": "Look then, Palladius, at Emmanuel’s death bearing much fruit, according to what he said clearly and truly: ‘Amen, amen, I say to you: unless the grain of wheat falls into the earth and dies, it remains alone; but if it dies, it bears much fruit.’ (Jn 12:24; Num 28:23)\n\nFor the lamb is slaughtered as a type of Christ, in the first month according to the law, on the fourteenth day. And calves and a ram and lambs are added for sacrifice and holocausts — signifying, I think, both the multitude of those called through faith into holiness and the measure of spiritual vigor, as in a type. (Ex 12:6)\n\nFor if Christ had not died for us, we would not have been received as a fragrance of sweet smell. …",
+   "verse_end": 16,
+   "capsule": "The lamb slain on the fourteenth day foreshadows Christ, whose death bears much fruit.",
+   "comment": "… Behold, then, Palladius, the death of Emmanuel bearing fruit in many, according to what he said clearly and truly: ‘Truly, truly, I say to you, unless a grain of wheat falls into the earth and dies, it remains alone; but if it dies, it bears much fruit’ (John 12:24). For the lamb is slaughtered as a type of Christ, in the first month according to the law, on the fourteenth day. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the lamb of the verse as foreshadowing Christ in terms a general reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/15/",
+   "from_cite": true
+  },
+  {
+   "id": "NU28-005",
+   "chapter": 28,
+   "verse_start": 19,
+   "verse_end": 21,
+   "capsule": "The different sizes of victims and measures of flour picture higher and lower degrees of holy life.",
+   "comment": "… And in mentioning a calf and a ram and a lamb, the law indicated the three degrees of the God-loving life of the saints: the highest, I mean, the middle, and the one still lower and inferior. For in the bodily sizes of the animals the amount of spiritual vigor was depicted. Did not the word of the gospel way of life also say that the most fertile soil gives its fruit in three degrees?\n\nPalladius: Yes. ‘One,’ it says, ‘yielded a hundredfold, another sixty, another thirty’ (Matthew 13:8).\n\nCyril: It is settled, then, that the difference in virtue and the variety of life are well sketched as in the number of the victims and in their bodily bulk: the highest and surpassing degree, as in the calf; the middle, falling below the perfect, as in the smaller ram; and the one still lower, as in the yet smaller lamb. For the lamb is smaller than the ram, just as, of course, the ram is smaller than the calf. Therefore the measure of fine flour, which is a type of life, is added in proportion to the size of each: three tenths for the calf, two for the ram, and one for the lamb. But he said that all of it must be moistened with oil, for the gifts from God will surely follow in proportion to each one’s measure. And in the life of glory and blessedness there will be a great difference. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the flour measures differ with each animal in terms a general reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/15/",
+   "from_cite": true
+  },
+  {
+   "id": "NU28-004",
+   "chapter": 28,
+   "verse_start": 19,
+   "verse_end": 22,
+   "capsule": "The two calves, one ram and seven lambs picture two peoples made one flock in Christ.",
+   "comment": "… And calves and a ram and lambs are added for sacrifice and whole burnt offerings, signifying in a type, I think, both the multitude of those called through faith to holiness and the measure of their spiritual vigor. …\n\nThere are two calves, then, because there are two peoples: I mean Israel and those from the nations. And there is one ram, because we are made one in Christ, ‘who made both one, and broke down the dividing wall of the fence, and abolished the law of commandments in ordinances, so that he might create the two into one new man, making peace’ (Ephesians 2:14–15), as it is written. And the lambs were seven: for all of us who have become one in Christ are a broad flock, running under the hand of the one chief shepherd of all, gathered somehow already from two flocks into one; and, distinguished by a pure and blameless life, we live on in the world because of the one who for us endured slaughter among the lawless (Isaiah 53:12) and for the sin of all, who is also signified in the male goat. …",
    "editions": [
     "complete"
    ],
    "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "15",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/15/",
+   "from_cite": true
+  },
+  {
+   "id": "NU28-006",
+   "chapter": 28,
+   "verse_start": 23,
+   "verse_end": 24,
+   "capsule": "Because Christ died and was made perfect, believers are received as a fragrant offering to God the Father.",
+   "comment": "… For if Christ had not died for you, we would not have been received as a fragrant aroma by God the Father. But since he has been made perfect through sufferings, we follow straight after him, bringing ourselves to God the Father as an offering fit for holy things, and as a truly spiritual sacrifice. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the continual offering as believers offering themselves after Christ in terms a general reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",

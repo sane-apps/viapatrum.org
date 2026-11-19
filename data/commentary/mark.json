@@ -1,12 +1,12 @@
 {
  "book": "Mark",
  "title": "The Fathers on Mark",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 72,
+ "comment_count": 69,
  "selected_count": 38,
  "comments": [
   {
@@ -138,25 +138,6 @@
    "from_cite": true
   },
   {
-   "id": "MK02-002",
-   "chapter": 2,
-   "verse_start": 5,
-   "verse_end": 5,
-   "capsule": "Only God forgives sins, as Isaiah shows, and so the Savior's word to the paralytic, 'Child, your sins are forgiven,' is a divine act.",
-   "comment": "For that only God forgives sins, glorious sayings of God indicate: 'I,' for he says, 'am he who wipes out your sins' (Isa 43:25), and: 'If your sins are as scarlet, I will make them as white as snow; if they are red, they shall be like wool' (Isa 1:18). And the Savior, as a child of God, said to the paralytic: 'Child, your sins are forgiven' (Mark 2:5), and: 'Behold the Lamb of God, who takes away the sins of the world' (John 1:29).",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Ties Jesus' words to the paralytic to the Old Testament teaching that God alone forgives sins.",
-   "author": "Didymus the Blind",
-   "work": "On the Trinity",
-   "work_slug": "didymus-de-trinitate",
-   "section": "u18-open",
-   "url": "https://viapatrum.org/works/didymus-de-trinitate/u18-open/",
-   "from_cite": true
-  },
-  {
    "id": "MK02-004",
    "chapter": 2,
    "verse_start": 14,
@@ -264,25 +245,6 @@
    "work_slug": "origen-contra-celsum-book-3",
    "section": "21",
    "url": "https://viapatrum.org/works/origen-contra-celsum-book-3/21/",
-   "from_cite": true
-  },
-  {
-   "id": "MK04-003",
-   "chapter": 4,
-   "verse_start": 26,
-   "verse_end": 28,
-   "capsule": "The Lord likens the perfecting of those who believe in him to the growth of seed in the ground.",
-   "comment": "Already the Lord also likens the perfecting of those who have believed in him to the growth of seeds, saying: \"As when a man casts the seed on the ground, and sleeps, and rises night and day, and the seed rises and lengthens, he does not know how. For the earth bears fruit by itself: first the blade, then the ear, then the full grain in the ear\" (Mark 4:26-28).",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Gives the point of the parable of the growing seed plainly.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "37",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/37/",
    "from_cite": true
   },
   {
@@ -397,49 +359,12 @@
    "from_cite": true
   },
   {
-   "id": "MK08-002",
-   "chapter": 8,
-   "verse_start": 34,
-   "verse_end": 35,
-   "capsule": "We owe it to deny ourselves, and losing our soul for Christ's sake in death wins it true salvation.",
-   "comment": "Long since, then, we owed to deny ourselves and say the 'No longer I.' Now let it appear whether, taking up our cross, we followed Jesus … For if we lose it [our soul] for Christ's sake, casting it upon him in death through him, we shall procure it true salvation.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "11",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/11/",
-   "from_cite": true
-  },
-  {
-   "id": "MK08-003",
-   "chapter": 8,
-   "verse_start": 36,
-   "verse_end": 37,
-   "capsule": "The whole world profits nothing, for the soul is more precious than all bodies, and only Christ paid for it.",
-   "comment": "… we shall hear that he who gained the whole sensible world profits nothing, through his own destruction or being forfeited himself. Once one loses his soul or forfeits it — though he gain the whole world — he cannot give it in 'exchange' for the perishing 'soul.' For what is fashioned 'after God's image' is more precious than all bodies. One alone could give an exchange for our formerly perishing soul: he who bought us with his own 'precious blood.'",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains what the question about exchanging the soul means.",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "11",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/11/",
-   "from_cite": true
-  },
-  {
    "id": "MK08-004",
    "chapter": 8,
    "verse_start": 38,
    "verse_end": 38,
-   "capsule": "The Father's glory, in which the Son will come again, is the glory he had before the world existed.",
-   "comment": "And he proceeds again: 'And now glorify me, Father, with the glory I had with you before the world existed' (John 17:5). … And what was this glory? Which, as I think, Mark also said: 'When the Son comes in the glory of his Father' (Mark 8:38), instead of: he possesses the Father's glory and in it he will come a second time.",
+   "capsule": "The glory of the Father in which the Son will come is the glory the Son has with the Father before the world existed.",
+   "comment": "… “And now, Father, glorify me with yourself with the glory that I had with you before the world was” (John 17:5). …\n\nAnd what was this glory? The one that Mark too, I think, spoke of: “when the Son comes in the glory of his Father” (Mark 8:38), which is to say: he has the Father’s glory, and in it he will come the second time.",
    "editions": [
     "complete"
    ],
@@ -808,14 +733,15 @@
   {
    "id": "MK10-016",
    "chapter": 10,
-   "verse_start": 38,
+   "verse_start": 37,
    "verse_end": 38,
-   "capsule": "The 'cup of salvation' in the Psalms is the martyr's death, and the baptism Christ names may bring healing to many.",
-   "comment": "The 'cup of salvation' in the Psalms is the martyr's death — which is why 'I will take the cup of salvation' is followed by 'Precious before the Lord is the death of his holy ones.' Precious then comes death to us, God's holy ones — not the common, as it were idle death of godliness, but a choice one: through Christianity and godliness and holiness. 'Can ye drink the cup that I drink, or be baptized with the baptism I am baptized with?' (Mark 10:38) And elsewhere: 'I have a baptism to be baptized with, and how am I straitened till it be accomplished!' (Luke 12:50) Consider whether the baptism after martyrdom, as the Savior's cleansing came to be for the world, itself comes to be for many unto healing.",
+   "capsule": "The cup Christ offers to those seeking places of honour is martyrdom, and drinking it brings a share in His reign.",
+   "comment": "It is customary to call martyrdom the cup of salvation, as we have found in the Gospel. For when those who wished to sit at the right and at the left of Jesus in his kingdom were reaching for a greater honour, the Lord says to them, “Can you drink the cup that I drink?” …, calling martyrdom a cup. …\n\nBut we learn that the one who drinks that cup which Jesus drank will sit with, reign with and judge with the King of those who reign.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what the cup means in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",
@@ -1201,12 +1127,32 @@
    "chapter": 14,
    "verse_start": 36,
    "verse_end": 36,
-   "capsule": "The prayer that the cup pass does not make the Savior a coward about death, since the same Lord says in the Psalms 'whom shall I fear?'",
-   "comment": "But likely someone, through the 'Father, if it be possible, let this cup pass from me,' (Matthew 26:39) will deem the Savior cowardly concerning death. To whom we must say that, if all Scripture is one instrument of one God, the same Lord who says 'let this cup pass' also says in the Psalms, 'The Lord is my light and my savior; whom shall I fear? The Lord is the defender of my life; of whom shall I be afraid? …",
+   "capsule": "The prayer for the cup to pass cannot come from fear, since the same Saviour speaks without fear in the Psalm.",
+   "comment": "But perhaps someone, because of the words “Father, if it is possible, let this cup pass from me” (Matthew 26:39), and without having looked closely at what Scripture means, will think that the Saviour too, as it were, was afraid at the time of his passion. … But first we will ask those who suppose this about the Saviour whether he was less than the one who says: “The Lord is my light and my Saviour; whom shall I fear? … If an army sets itself in array against me, my heart will not fear; if war rises up against me, in this I will hope” (Psalm 27:1-3).\n\nPerhaps these words spoken in the prophet belong to no one else than the Saviour, who because of the light from the Father and the salvation from him feared no one … So it does not belong to the same person to say from cowardice, “Father, if it is possible, let this cup pass from me,” and to declare from courage, “If an army sets itself in array against me, my heart will not fear.”",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Shows why the prayer does not mean fear, in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "29",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/29/",
+   "from_cite": true
+  },
+  {
+   "id": "MK14-005",
+   "chapter": 14,
+   "verse_start": 36,
+   "verse_end": 36,
+   "capsule": "Because he said this cup rather than the cup, he may have declined only this form of death, perhaps asking for a heavier one that would help more people.",
+   "comment": "Then let nothing in the passage escape us, and you will notice the word “this”, pointing to the cup, in all three. Matthew recorded the Lord as saying, “Father, if it is possible, let this cup pass from me” (Matthew 26:39); Luke, “Father, if you are willing, take this cup away from me” (Luke 22:42); and Mark, “Abba, Father, all things are possible for you; take this cup away from me” (Mark 14:36).\n\n… Since every martyrdom, a departure brought about on whatever pretext, is called a cup, the one who said “Let this cup pass from me” was not refusing martyrdom as a kind (for then he would have said, “Let the cup pass from me”), but perhaps this particular form of it. And consider whether it may be that the Saviour, looking into the forms of the cups, if I may call them that, and into what would come about through each, and grasping their differences with a very deep wisdom, declined this form of departure by martyrdom and was quietly asking perhaps for another, heavier one, so that a more universal benefit, reaching more people, might be accomplished through another cup. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse says this cup in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",

@@ -1,7 +1,7 @@
 {
  "book": "Nahum",
  "title": "The Fathers on Nahum",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
@@ -32,13 +32,13 @@
    "chapter": 2,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "Christ breathing the Spirit on his disciples after the resurrection fulfils Nahum's words about one who breathes into the face.",
-   "comment": "…Christ, after the resurrection, breathing into the faces of the disciples, was reclaiming and sanctifying what was corrupted by human disobedience, and said: 'Receive Holy Spirit' (John 20:22); fulfilling the prophecy of Nahum, which relates the thing happening as if already done, through the unbridled desire for the immeasurable beauty of the matter: 'The one who breathes into your face has ascended from the earth, and is lifting you out of tribulation' (Nahum 2:1).",
+   "capsule": "Breathing the Holy Spirit on the disciples after the resurrection fulfils Nahum's words about one who breathes into the face.",
+   "comment": "…That is why Christ, after the resurrection, re-creating and sanctifying with the all-holy Spirit the man who had been ruined by disobedience, breathed into the faces of the disciples and said: “Receive the Holy Spirit” (John 20:22).\n\nSo he fulfilled the prophecy of Nahum, which, out of an irrepressible longing for the boundless beauty of the event, tells what was still to come as if it were already being done: “He who breathes into your face has gone up from the earth, and he rescues you from affliction” (Nahum 2:1).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Shows how the verse about breathing into the face was read as the giving of the Spirit.",
+   "selected_reason": "Explains what the verse means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",

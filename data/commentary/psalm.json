@@ -1,13 +1,13 @@
 {
  "book": "Psalm",
  "title": "The Fathers on the Psalms",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 2669,
- "selected_count": 1101,
+ "comment_count": 2658,
+ "selected_count": 1097,
  "comments": [
   {
    "id": "PS01-001",
@@ -892,13 +892,13 @@
    "chapter": 4,
    "verse_start": 4,
    "verse_end": 4,
-   "capsule": "'Be angry' may mean the involuntary first stirring of anger or our assent to it, and we are told to put away the assent.",
-   "comment": "Ephesians 4:26 \"Be angry and do not sin\" comes from Psalm 4. \"Be angry\" has two senses. One is involuntary—the pre-passion even the mature may feel when circumstances provoke anger. The other is assent that it is right to punish the person one thinks has wronged you; that assent is in our power, and the apostle commands us to put it away. So the first sense of the verse means: even if anger once entered, leave it without effect.",
+   "capsule": "“Be angry” covers both the involuntary first stirring and consenting to punish, and we are told to leave the first without effect and put away the second.",
+   "comment": "“Be angry and do not sin” (Ephesians 4:26). It is clear that this is taken from the fourth Psalm (Psalm 4:4). The word “be angry” signifies two things. One is the involuntary, which some have called a pre-passion; it will happen even to the perfect, who suffer something involuntary when circumstances of this kind provoke them to anger.\n\nThe other is when assent already accepts that it is fitting to punish the one thought to have done wrong; and this, since it lies in our power, the apostle commands us to put away. So it is the first of these meanings that is shown in “Be angry and do not sin,” in place of “even if you have at some time admitted anger, leave it without effect.”",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains in plain terms what 'be angry and sin not' asks of us.",
+   "selected_reason": "Explains what the verse means in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Fragments on Ephesians",
    "work_slug": "origen-ephesians-fragments",
@@ -9371,25 +9371,6 @@
    "from_cite": false
   },
   {
-   "id": "PS24-007",
-   "chapter": 24,
-   "verse_start": 2,
-   "verse_end": 2,
-   "capsule": "The earth founded upon the seas shows water poured around it on every side, yet the earth hanging by itself presents the same or greater difficulty.",
-   "comment": "For what does “He founded it upon the seas” (Psalm 23:2 (LXX)) indicate, except that the nature of water is poured around the earth on every side? How then, since water is flowing and naturally falls downward, does it remain suspended and never flow away? But do you not consider that the earth hanging by itself, being heavier in nature, presents the same or even greater difficulty for reasoning?",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains what founding the earth upon the seas means.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "7",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/7/",
-   "from_cite": true
-  },
-  {
    "id": "PS24-008",
    "chapter": 24,
    "verse_start": 2,
@@ -9633,12 +9614,13 @@
    "chapter": 24,
    "verse_start": 7,
    "verse_end": 7,
-   "capsule": "The lower creation lifts the gates at his incarnation, and the upper at his ascension.",
-   "comment": "And in the twenty-third Psalm: 'Lift up your gates, O rulers, and be lifted up, everlasting gates, and the King of glory shall enter in' (Ps 24:7). He exhorts the lower creation to lift up the gates in his incarnation, and the upper in his ascension.",
+   "capsule": "The lower creation lifts its gates at the incarnation and the upper creation at the ascension.",
+   "comment": "And in the twenty-fourth: “Lift up your gates, you rulers, and be lifted up, you everlasting gates, and the King of glory shall come in” (Psalm 24:7). He [David] bids the creation below lift up the gates at his incarnation, and the creation above at his ascension.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains the verse by applying the two liftings of the gates to the lower creation at the incarnation and the upper creation at the ascension, in terms a general reader can easily follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -14795,12 +14777,13 @@
    "chapter": 33,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "In the verse 'Lord' names the Father, 'Word' the Son, and 'Spirit' the Holy Spirit, through whom the heavens were empowered.",
-   "comment": "Thus presenting that creation is triadically ordered, he sings: 'By the word of the Lord the heavens were made, and by the spirit of his mouth all their strength' (Psalm 33:6). For he said 'Lord' regarding God the Father, 'Word' regarding the Only-begotten Son, through whom also they were created, and 'Spirit' regarding the hypostatic Holy Spirit of God, through whom, having been sanctified, they were empowered.",
+   "capsule": "The verse names the Father, Son and Holy Spirit together to show that creation is their shared work.",
+   "comment": "Each divine hypostasis could, needing nothing further, have made all things perfectly. But the creation was brought to fullness in common by the Holy Trinity for this reason: to show that they work together, and that nothing varies between them, neither their essence nor the worship, glory and thanksgiving that we owe.\n\nSo, to present the creation as set in order by the Trinity, he sings: “By the word of the Lord the heavens were made firm, and by the spirit of his mouth all their powers” (Psalm 33:6). For he called God the Father “Lord”; the only-begotten Son “word”, through whom and by whom they were created; and “spirit” the Holy Spirit of God, who subsists in his own right, by whom they were sanctified and strengthened.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains how the verse reveals the Trinity—Father as Lord, Son as Word, and Holy Spirit as breath—and shows creation as their shared work in terms a general reader can easily follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -17780,8 +17763,8 @@
    "chapter": 36,
    "verse_start": 9,
    "verse_end": 9,
-   "capsule": "The Holy Spirit is light, and in him we are enlightened, as David sings that in your light we shall see light.",
-   "comment": "The Holy Spirit was praised and is light, in whom also we are enlightened, just as the apostle writes: 'that he might give you a spirit of wisdom and of revelation, in the knowledge of him, having the eyes of your heart enlightened' (Ephesians 1:17-18), and as David sings: 'for with you is the fountain of life; in your light we shall see light' (Psalm 36:9); that is to say, in your Son, the radiance of your glory, your Holy Spirit.",
+   "capsule": "The light in which we see is the Son, and the light we shall see is the Holy Spirit.",
+   "comment": "The Holy Spirit has also been hailed as light, in whom and by whom we are enlightened. … And David sings: “For with you is the fountain of life; in your light we shall see light” (Psalm 36:9), that is, in your Son, the radiance of your glory (Hebrews 1:3), your Holy Spirit. …\n\nFor what else could the Spirit be, who proceeds from the Father, that is, from the Light?",
    "editions": [
     "complete"
    ],
@@ -19314,8 +19297,8 @@
    "chapter": 38,
    "verse_start": 13,
    "verse_end": 14,
-   "capsule": "Deafness toward impious words is fair when there is no hope of correcting those who speak them.",
-   "comment": "We must expect impiety's prophet too — perhaps not one but more — speaking to us as the Lord's 'word' what the Lord 'commanded not,' or a wisdom-word foreign to wisdom, to kill us with his mouth's word. But even then, when the sinner stands against us, let us say: 'But I as one deaf heard not, and as one dumb who opens not his mouth. And I became as a man who hears not.' For deafness toward impious words is fair, when we despair of correcting those who say the worse (Psalm 38:13-14).",
+   "capsule": "Remaining deaf to impious words is good when there is no hope of correcting those who speak them.",
+   "comment": "We may expect also a certain prophet of impiety, perhaps not one but several, who will speak to us, as the Lord's word, what the Lord did not command (Deuteronomy 18:20), or, as a word of wisdom, what is foreign to wisdom, so that he may kill us with the word of his mouth.\n\nBut even then, when the sinner stands against us (Psalm 39:1), let us say: “But I, like one deaf, did not hear, and like one mute who does not open his mouth; and I became like a man who does not hear” (Psalm 38:13-14). For deafness to impious words is good, whenever we despair of correcting those who say what is worse.",
    "editions": [
     "complete"
    ],
@@ -21815,6 +21798,24 @@
    "from_cite": false
   },
   {
+   "id": "PS42-034",
+   "chapter": 42,
+   "verse_start": 1,
+   "verse_end": 4,
+   "capsule": "Anyone who finds martyrdom hard has not truly thirsted for God or pondered how the prophet rebuked his sorrowful soul with hope of reaching God's house.",
+   "comment": "If anyone finds such a thing [martyrdom] hard, he has not “thirsted for God, the mighty, the living” (Psalm 42:2); he has not longed for God “as the deer longs for the springs of water” (Psalm 42:1); nor has he said, “When then shall I come and appear before the face of God?” (Psalm 42:2).\n\nNor has he pondered within himself what the prophet pondered when, as “Where is your God?” was said to him “every day” (Psalm 42:3), he poured out “his soul” upon himself, rebuking his soul when, through weakness, it was still growing sorrowful and troubled, and saying: “For I will pass through into the place of the wonderful tent, as far as the house of God, with a voice of rejoicing and thanksgiving, the sound of one keeping festival” (Psalm 42:4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "3",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/3/",
+   "from_cite": true
+  },
+  {
    "id": "PS42-005",
    "chapter": 42,
    "verse_start": 2,
@@ -21850,24 +21851,6 @@
    "section": "u02-open",
    "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u02-open/",
    "from_cite": false
-  },
-  {
-   "id": "PS42-008",
-   "chapter": 42,
-   "verse_start": 2,
-   "verse_end": 4,
-   "capsule": "Whoever finds it hard to be freed from the body has not thirsted for the living God as the hind longs for water, nor poured out his soul in hope of reaching God's house.",
-   "comment": "But if this [being freed from the body] seems hard to anyone, he has not 'thirsted toward' God the strong, 'the living,' nor longed for God as the hind longs 'for the springs of waters' (Psalm 42:2–5); nor said, 'When shall I come and appear before God's face?'; nor reckoned with himself what the prophet, reckoning — when 'Where is thy God?' was said to him 'daily' — poured 'his soul' over himself, rebuking her if ever she became faint through weakness and troubled, and saying: 'I shall pass through to the place of the wondrous tent, unto God's house, with voice of exultation and confession, the sound of feasting.' (Psalms 42:4)",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "2",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/2/",
-   "from_cite": true
   },
   {
    "id": "PS42-009",
@@ -22106,24 +22089,6 @@
    "work_slug": "didymus-commentarii-job",
    "section": "u15-rem-mid",
    "url": "https://viapatrum.org/works/didymus-commentarii-job/u15-rem-mid/",
-   "from_cite": true
-  },
-  {
-   "id": "PS42-022",
-   "chapter": 42,
-   "verse_start": 5,
-   "verse_end": 6,
-   "capsule": "When the soul shrinks, the mind of Christ in us says 'Why art thou downcast' to it, and if it is still troubled the trouble is kept from outsiders and told to God.",
-   "comment": "And if ever you perceive a shrinking about your soul, let the mind of Christ in us say to her, who wills, so far as she can, to confound him too: 'Why art thou downcast, O soul? And why troublest thou me? Hope in God, for I shall confess to him.' (Psalm 42:5) And again — would that the soul be nowise troubled, but even before the tribunals and bare swords borne against the neck be guarded by God's peace that surpasses 'all mind,' and calm, reckoning that those absent 'from the body' go home to the Lord of all himself! But if we are not so great as to keep untroubled always — though the soul's trouble be not poured out nor shown to outsiders, that we may have room for defense before God, saying to him, 'My God, my soul is troubled toward myself.' (Psalm 42:5–6,11)",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "3",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/3/",
    "from_cite": true
   },
   {
@@ -23302,12 +23267,13 @@
    "chapter": 44,
    "verse_start": 21,
    "verse_end": 22,
-   "capsule": "The soul is crowned in secret too, because the testimony of a clear conscience is martyrdom before God, who knows the secrets of the heart.",
-   "comment": "But not the open martyrdom alone: secretly too the soul is crowned that denies itself through love toward God. 'The testimony of our conscience' (2 Corinthians 1:12) — this too is martyrdom before God, who 'knoweth the secrets of the heart.' (Psalm 44:21) For 'for thy sake we are killed all the day' (2 Corinthians 1:12) — the daily death of the self-denied. Blessed then are the pure in conscience, whether before tribunals or in secret, for God seeth in secret and rewardeth.",
+   "capsule": "Both open suffering and a clear conscience before God count as martyrdom, and the psalm gives martyrs facing death their words.",
+   "comment": "Let us strive to take up perfectly not only the martyrdom that is in the open but also the one that is in secret, so that we too may cry out with the apostle: “For this is our boast, the testimony of our conscience, that in holiness and the sincerity of God we have conducted ourselves in the world” (2 Corinthians 1:12). And to the apostle's word let us join the prophet's: “But he knows the secrets of the heart” (Psalm 44:21), our heart, and above all if we are being led away to death.\n\nThen we will say to God the words that martyrs alone speak: “For your sake we are put to death all day long; we have been counted as sheep for slaughter” (Psalm 44:22). …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains secret as well as open martyrdom and identifies verse 22 as the martyrs’ own speech.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",
@@ -26037,12 +26003,13 @@
    "chapter": 51,
    "verse_start": 10,
    "verse_end": 10,
-   "capsule": "'Create in me a clean heart' means sanctify me so that I may be renewed after being corrupted by sin, and a steadfast spirit is a spirit of God's reverence that makes him worthy of God's temple.",
-   "comment": "Because that it is to create and to sanctify, which the divine Spirit is accustomed to do, David testifies, singing: 'Create in me a clean heart, O God' (Ps 51:10), that is: sanctify me, so that I might be renewed, having been corrupted by sin; for how else could another heart be created for him? And he confirms this with: 'And a steadfast spirit establish within my innermost parts' (Psalm 51:10), instead of: 'Provide me a spirit of your exceeding reverence, so that,' he says, 'being revealed pure through its sanctification, I might become worthy of your temple. …",
+   "capsule": "To pray for a clean heart is to ask to be sanctified and renewed, and to pray for a renewed spirit is to ask for the Spirit who makes the purified a worthy temple.",
+   "comment": "That to sanctify, which the divine Spirit by nature does, is also to create, David testifies when he sings: “Create in me a clean heart, O God” (Psalm 51:10); that is, sanctify me, so that I may be renewed, ruined as I am by sin. For how else could another heart have been created for him? And he joins to this: “And renew a right spirit in my inmost parts” (Psalm 51:10). This stands for: grant me your venerable Spirit, who surpasses all things, so that, he says, made pure and shown so by his sanctification, I may become his worthy temple. …\n\nIt is plain to us, then, that David asks for this Spirit to be renewed in him; otherwise how could the spirit he already had be renewed as though it were only now coming upon him?",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains creating a clean heart as sanctifying what sin ruined, and renewing a right spirit as receiving the Holy Spirit to become God's temple.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -30650,13 +30617,13 @@
    "chapter": 72,
    "verse_start": 18,
    "verse_end": 18,
-   "capsule": "'Blessed' stands for 'glorified': God is blessed by His works and blesses creatures by sanctifying them.",
-   "comment": "'Blessed is the Lord God of Israel' (Psalm 72:18) he said, instead of 'being glorified' or 'being praised'. For God is blessed by his works, that is, he is glorified; but he himself blesses the resident creatures, that is, he sanctifies them.",
+   "capsule": "“Blessed” means glorified when said of God, while God blesses creatures by sanctifying them.",
+   "comment": "He said “Blessed be the Lord, the God of Israel” in place of “glorified” or “praised.” For God is blessed by his works, that is, glorified; and he himself blesses his own creatures, that is, sanctifies them.\n\n…",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the verse says 'Blessed'.",
+   "selected_reason": "Explains what blessed means in the verse in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -31309,25 +31276,6 @@
    "from_cite": true
   },
   {
-   "id": "PS75-007",
-   "chapter": 75,
-   "verse_start": 3,
-   "verse_end": 3,
-   "capsule": "The 'pillars' are the power that holds the earth together.",
-   "comment": "But if you ever hear in the Psalms, “I have made firm its pillars” (Psalm 74:3 (LXX)), consider the power that holds it together to be called pillars. …",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains what the 'pillars' of the earth are.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "7",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/7/",
-   "from_cite": true
-  },
-  {
    "id": "PS75-008",
    "chapter": 75,
    "verse_start": 4,
@@ -31961,8 +31909,8 @@
    "chapter": 77,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "The soul gathered in the quiet of the night is commanded to meditate on God's commandments.",
-   "comment": "The night is attentive, the soul being gathered together in it in the quiet of the senses. Then he commands to meditate in the commandments of God and to say with David: “by night I was meditating with my heart, and my spirit was searching.” (Psalm 77:6) And the night being divided into four watches, say with David: “my eyes anticipated the watches,” (Psalm 119:148) and with Habakkuk: “upon my watch I will stand, and I will look out what the Lord God will speak in me.” (Habakkuk 2:1) For then you will say: “for he will speak peace upon his people.” (Psalm 85:8) Meditate, then, in the night of the present age …",
+   "capsule": "The quiet night gathers the soul to meditate with the heart and keep watch for God's word.",
+   "comment": "The night is attentive, the soul being gathered together in it in the quiet of the senses (Lamentations 2:19). Then he commands to meditate in the commandments of God and to say with David: “by night I was meditating with my heart, and my spirit was searching.” (Psalm 77:6)\n\nAnd the night being divided into four watches, say with David: “my eyes anticipated the watches,” (Psalm 119:148) and with Habakkuk: “upon my watch I will stand, and I will look out what the Lord God will speak in me.” (Habakkuk 2:1) For then you will say: “for he will speak peace upon his people.” (Psalm 85:8) Meditate, then, in the night of the present age …",
    "editions": [
     "complete"
    ],
@@ -33600,8 +33548,8 @@
    "chapter": 82,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "Though there is one God and one true Son, all of us were called gods and sons through his goodness without being gods in truth.",
-   "comment": "For just as being one God and one Father and one true Son, all of us were called gods and sons through his goodness and abundance—not being gods in truth—according to: 'I said: You are gods and all of you are sons of the Most High' (Psalm 82:6), so just as there is one and only Holy Spirit of truth, many spirits are called, not being in nature spirits of God.",
+   "capsule": "Those called gods and sons are so called by God’s goodness and generosity, though not so in truth, as there is one God and Father and one true Son.",
+   "comment": "For while there is one God and Father, and one true Son, all of us who were made after the image have been called gods and sons through his goodness and generosity, though we are not so in truth, as the words run: “I said, You are gods, and all of you sons of the Most High” (Psalm 82:6).\n\nJust so, while there is one and only Holy Spirit of truth, many spirits are spoken of that are not by nature spirits of God.",
    "editions": [
     "complete"
    ],
@@ -36079,25 +36027,6 @@
    "from_cite": false
   },
   {
-   "id": "PS91-012",
-   "chapter": 91,
-   "verse_start": 13,
-   "verse_end": 13,
-   "capsule": "Faith gives authority to tread on beasts, as Paul was unharmed by the viper, and the faithless should fear their own faithlessness more than the beast.",
-   "comment": "The wild beasts are a demonstration of faith. Have you trusted in the Lord? Upon asp and basilisk you will tread, and you will trample lion and dragon (Psalm 90:13 (LXX; Hebrew 91:13)). And you have through faith the authority to tread upon snakes and scorpions (Luke 10:19). Or do you not see that when Paul was gathering sticks, the viper fastened on him and caused him no harm, because the holy man was found to be full of faith (Acts 28:3-5)? But if you are faithless, fear not so much the wild beast as your own faithlessness, through which you have made yourself easy prey to every corruption.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains the promise to tread on lion and dragon as a matter of faith.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "75",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/75/",
-   "from_cite": true
-  },
-  {
    "id": "PS91-013",
    "chapter": 91,
    "verse_start": 14,
@@ -36593,25 +36522,6 @@
    "section": "u45-rem-early",
    "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u45-rem-early/",
    "from_cite": false
-  },
-  {
-   "id": "PS95-004",
-   "chapter": 95,
-   "verse_start": 4,
-   "verse_end": 4,
-   "capsule": "Whatever holds the earth up, we should confess that the power of the Creator holds all things together.",
-   "comment": "But it is necessary, whether we grant that the earth exists by itself or say that it rests upon the water, never to depart from devout thinking, but to confess that all things are held together by the power of the Creator. So we must say to ourselves, and to those who ask us on what this immense and unbearable weight of the earth is supported, that “In the hand of God are the ends of the earth” (Psalm 94:4 (LXX)). This is safest for our understanding and beneficial for our hearers.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Gives the plain meaning of God holding the earth in his hand.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "7",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/7/",
-   "from_cite": true
   },
   {
    "id": "PS95-005",
@@ -39106,24 +39016,6 @@
    "from_cite": false
   },
   {
-   "id": "PS104-014",
-   "chapter": 104,
-   "verse_start": 15,
-   "verse_end": 15,
-   "capsule": "The vine and the olive were named first because they serve our life most, and the vine reminds us that Christ is the vine and we are branches.",
-   "comment": "But first, as we said, the things more essential to our life were deemed worthy of mention, all that were going to receive man with their own fruits and prepare for him an abundant way of life: the vine producing wine that was going to gladden the heart of man, and the olive providing fruit able to make the face cheerful with oil (Psalm 103:15 (104:15)). How many things came together at the same time, brought forth urgently by nature? The root of the vine; the branches around it, flourishing and great, spread above the ground; the shoot, the tendrils, the unripe grape, the clusters. A vine seen with understanding is enough for your sight to produce in you a reminder of nature. For you remember clearly the image of the Lord, that he calls himself the vine, and the Father the vinedresser, and he called each one of us, having been grafted into the Church through faith, branches (John 15:1-2). And he summons us to abundant fruit, so that we may not be condemned for uselessness and handed over to the fire.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "38",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/38/",
-   "from_cite": true
-  },
-  {
    "id": "PS104-015",
    "chapter": 104,
    "verse_start": 18,
@@ -39158,25 +39050,6 @@
    "section": "u50-rem-early",
    "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u50-rem-early/",
    "from_cite": false
-  },
-  {
-   "id": "PS104-018",
-   "chapter": 104,
-   "verse_start": 25,
-   "verse_end": 25,
-   "capsule": "Among the creeping things of the sea there is a wise order, since each kind of fish keeps its own region without walls or boundary stones.",
-   "comment": "This is the great and wide sea; there are creeping things without number, small animals with great (Psalm 103:25 LXX). Yet among them there is a wise and orderly arrangement. We cannot only find fault with fish; there are also things in them worth imitating. How is it that each kind of fish, having distributed to itself the region suited to it, does not encroach upon the others, but remains within its own boundaries? No surveyor among them divided up their dwellings; they are not marked off by walls; they are not separated by boundary stones; yet what is useful for each has been assigned to each automatically. This bay feeds certain kinds of fish, and that one others; and the kinds that multiply here are not found among others. No mountain rising with sharp peaks separates them, no river cuts off their passage, but there is a law of nature that allots to each its way of life equitably and justly according to what each needs.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Shows the wise order among the creatures of the sea that the verse names.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "57",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/57/",
-   "from_cite": true
   },
   {
    "id": "PS104-019",
@@ -41682,6 +41555,25 @@
    "from_cite": true
   },
   {
+   "id": "PS116-011",
+   "chapter": 116,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Only death in martyrdom balances the benefits received from God.",
+   "comment": "… The saint, being generous of spirit and wishing to repay the benefits that have come to him from God, asks what he might do for the Lord in return for all that he has received from him; and he finds nothing else that a person of good will could give back to God which would, as it were, balance those benefits, as death in martyrdom does.\n\nFor in the hundred and fifteenth Psalm (by the Greek count) the words of the perplexed question are written thus: “What shall I give back to the Lord for all that he has given me?” (Psalm 116:12).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Plainly explains the verse in terms a general reader can follow, showing that only death in martyrdom balances God's benefits.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "28",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/28/",
+   "from_cite": true
+  },
+  {
    "id": "PS116-010",
    "chapter": 116,
    "verse_start": 12,
@@ -41699,24 +41591,6 @@
    "section": "3",
    "url": "https://viapatrum.org/works/basil-homilia-in-psalmum-115/3/",
    "from_cite": false
-  },
-  {
-   "id": "PS116-011",
-   "chapter": 116,
-   "verse_start": 12,
-   "verse_end": 15,
-   "capsule": "The cup of salvation in the Psalms is the martyr's death, which is why it is followed by 'Precious before the Lord is the death of his holy ones.'",
-   "comment": "'What shall I render to the Lord for all he rendered to me? The cup of salvation I will take, and call on the Lord's name.' The 'cup of salvation' in the Psalms is the martyr's death — which is why 'I will take the cup of salvation' is followed by 'Precious before the Lord is the death of his holy ones.' Precious then comes death to us, God's holy ones — not the common, as it were idle death of godliness, but a choice one: through Christianity and godliness and holiness. 'Can ye drink the cup that I drink, or be baptized with the baptism I am baptized with?' (Mark 10:38) And elsewhere: 'I have a baptism to be baptized with, and how am I straitened till it be accomplished!' (Luke 12:50) Consider whether the baptism after martyrdom, as the Savior's cleansing came to be for the world, itself comes to be for many unto healing. For as those who served the Mosaic altar were deemed to minister forgiveness of sins through blood of goats and bulls, so the souls of the beheaded for Jesus' testimony, not idly attending the heavenly altar, minister to prayers forgiveness of sins. And as Jesus Christ the High Priest offered himself a sacrifice, so the priests whose High Priest he is offer themselves a sacrifice — seen by their own place at the altar. But of priests, the blameless offering blameless sacrifices healed the Divine; those stained with blemishes, which Moses recorded in Leviticus, were fenced from the altar. Who is the blameless priest offering a blameless victim but he who holds the confession and fills every number the martyrdom-word requires (Psalm 116:12–15)?",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Origen of Alexandria",
-   "work": "Exhortation to Martyrdom",
-   "work_slug": "origen-exhortation-to-martyrdom",
-   "section": "28",
-   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/28/",
-   "from_cite": true
   },
   {
    "id": "PS116-012",
@@ -41752,6 +41626,25 @@
    "work_slug": "cyril-adoration-12",
    "section": "27",
    "url": "https://viapatrum.org/works/cyril-adoration-12/27/",
+   "from_cite": true
+  },
+  {
+   "id": "PS116-022",
+   "chapter": 116,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "The cup of salvation is martyrdom, after the Lord's words about drinking his cup.",
+   "comment": "… And when it has been asked, “What will the one who says this give back to the Lord for all that he has received from him?”, the words of the answer are these: “I will take the cup of salvation and call on the name of the Lord” (Psalm 116:13).\n\nIt is customary to call martyrdom the cup of salvation, as we have found in the Gospel. For when those who wished to sit at the right and at the left of Jesus in his kingdom were reaching for a greater honour, the Lord says to them, “Can you drink the cup that I drink?” (Matthew 20:22), calling martyrdom a cup. This is clear also from the words, “Father, if it is possible, take this cup away from me; yet not what I will, but what you will” (Mark 14:36; Matthew 26:39). But we learn that the one who drinks that cup which Jesus drank will sit with, reign with and judge with the King of those who reign. This, then, is the cup of salvation: whoever takes it will call on the name of the Lord, and “everyone who calls on the name of the Lord will be saved” (Joel 2:32).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Plainly explains the cup of salvation in terms a general reader can follow, connecting it directly to Christ's cup in the Gospels.",
+   "author": "Origen of Alexandria",
+   "work": "Exhortation to Martyrdom",
+   "work_slug": "origen-exhortation-to-martyrdom",
+   "section": "28",
+   "url": "https://viapatrum.org/works/origen-exhortation-to-martyrdom/28/",
    "from_cite": true
   },
   {
@@ -45602,25 +45495,6 @@
    "from_cite": false
   },
   {
-   "id": "PS136-007",
-   "chapter": 136,
-   "verse_start": 8,
-   "verse_end": 9,
-   "capsule": "The sun and stars rule the day and night without making them, since day and night are older than the lights, and the sun brings day by dissolving the darkness.",
-   "comment": "… But let them be, Scripture says, also for days—not so as to make days, but so as to rule over the days. For day and night are older than the creation of the lights. The psalm shows us this when it says: He set the sun for authority over the day, the moon and stars for authority over the night (Psalm 135:8-9 LXX; Hebrew 136:8-9). How then does the sun have authority over the day? Because it carries light in itself, and whenever it rises above our horizon, it provides day by dissolving the darkness. So no one would go wrong in defining day as the air illuminated by the sun, or in defining day as a measure of time in which the sun spends its course in the hemisphere above the earth. …",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Clears up what it means that the sun and moon 'rule' day and night.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "50",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/50/",
-   "from_cite": true
-  },
-  {
    "id": "PS136-008",
    "chapter": 136,
    "verse_start": 10,
@@ -46171,25 +46045,6 @@
    "section": "u09-rem-mid",
    "url": "https://viapatrum.org/works/apollinaris-fragmenta-psalmos/u09-rem-mid/",
    "from_cite": false
-  },
-  {
-   "id": "PS139-006",
-   "chapter": 139,
-   "verse_start": 6,
-   "verse_end": 6,
-   "capsule": "Knowing oneself is hardest, yet it teaches God's wisdom as heaven and earth do, so knowing myself taught me his greatness.",
-   "comment": "… For truly it seems to be the most difficult thing of all to know oneself. … And yet it is no more possible to know God from heaven and earth than from our own constitution, at least for the one who examines himself intelligently. As the prophet says, 'Your knowledge became wonderful from me' (Psalm 138:6 (LXX; Hebrew 139:6))—that is, by learning to know myself, I was taught the surpassing greatness of the wisdom in you. …",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains in plain words why knowledge of God is 'too wonderful' and how self-knowledge leads to it.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "75",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/75/",
-   "from_cite": true
   },
   {
    "id": "PS139-007",
@@ -48612,25 +48467,6 @@
    "from_cite": false
   },
   {
-   "id": "PS148-004",
-   "chapter": 148,
-   "verse_start": 4,
-   "verse_end": 4,
-   "capsule": "The psalm, naming the heavens of heavens, gives the idea of still more heavens.",
-   "comment": "We, however, are so far from disbelieving in the second that we seek also the third, the vision of which the blessed Paul was counted worthy to receive. And the psalm, naming the heavens of heavens (Psalm 148:4), has given us the idea of still more.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains 'heavens of heavens' as pointing to more than one heaven.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "19",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/19/",
-   "from_cite": true
-  },
-  {
    "id": "PS148-005",
    "chapter": 148,
    "verse_start": 4,
@@ -48683,25 +48519,6 @@
    "work_slug": "origen-contra-celsum-book-6",
    "section": "60",
    "url": "https://viapatrum.org/works/origen-contra-celsum-book-6/60/",
-   "from_cite": true
-  },
-  {
-   "id": "PS148-008",
-   "chapter": 148,
-   "verse_start": 7,
-   "verse_end": 7,
-   "capsule": "The deep was not judged rejectable by the psalmist but was received into the common chorus of creation, completing the hymn to its maker.",
-   "comment": "For not only does the water above the heavens fulfill its praise to God, as holding first place in honor because of the superiority it possesses from virtue, but, as it says, 'Praise him, also the things from the earth, dragons and all deeps' (Psalm 148:7). So even the deep, which the allegorizers cast away into the worse portion, was not judged rejectable by the psalmist, but was received into the common chorus of creation; and it too, according to the principles inherent in it, harmoniously completes the hymn to its maker.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why dragons and deeps are called to praise: even the deep joins the chorus of creation.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "26",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/26/",
    "from_cite": true
   },
   {
@@ -49001,25 +48818,6 @@
    "section": "u64-rem-mid",
    "url": "https://viapatrum.org/works/didymus-fragmenta-psalmos/u64-rem-mid/",
    "from_cite": false
-  },
-  {
-   "id": "PS150-001",
-   "chapter": 150,
-   "verse_start": 1,
-   "verse_end": 1,
-   "capsule": "Scripture calls a thing that excels in strength a firmament, so the firmament of God's power is his strong and unyielding power.",
-   "comment": "The name “firmament” is customary in Scripture for things that excel in strength. For example, when it says, “The Lord is my firmament and my refuge” (Psalm 17:3 LXX [Hebrew 18:2]), and “I have made firm its pillars” (Psalm 74:4 LXX [Hebrew 75:3]), and “Praise him in the firmament of his power” (Psalm 150:1 LXX [Hebrew 150:1]). … But it is customary for Scripture to call what is strong and unyielding a firmament, as it often uses this word even of air that has been greatly condensed, as when it says, “He who makes firm the thunder” (Job 37:4 LXX [Hebrew 37:4]).",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains 'the firmament of his power': in Scripture a firmament is what excels in strength.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "20",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/20/",
-   "from_cite": true
   },
   {
    "id": "PS150-002",

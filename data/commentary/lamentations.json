@@ -1,13 +1,13 @@
 {
  "book": "Lamentations",
  "title": "The Fathers on Lamentations",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 96,
- "selected_count": 38,
+ "comment_count": 122,
+ "selected_count": 54,
  "comments": [
   {
    "id": "LAM01-001",
@@ -87,19 +87,19 @@
    "chapter": 1,
    "verse_start": 2,
    "verse_end": 2,
-   "capsule": "The city weeping in the night is the people reminded of how great a slavery they have fallen into, with none of those who loved her left to comfort them.",
-   "comment": "… But upon this one what would someone say—a city being said to have wept in the night, so that the tears are upon her cheeks—unless perhaps someone will say that those named a city, who also pay tribute, have wept, having been reminded from what sort of peace and freedom into how great a slavery and humiliation they have come? How then shall we also narrate “in the night,” (Lamentations 1:2) or that in the time of the common rest of all human beings the city, being reminded, while resting wept, and wept with the tears flowing fountain-like upon their cheeks? And the wailing was most stretched out for them and the tears flowed on, there not being even one comforting them from so many who loved them, and everyone who loved setting aside the friendship toward her and having changed into enmity. Who then, as toward the wording, are those who formerly loved her, from whom there was not one who would comfort her? Perhaps the remaining cities of Judea—loving the metropolis for this reason—in a time of distress did not encourage her.\n\nAnd after a little: These things then toward the literal. If the Word, as in the things before, should be said to weep—having fallen from her own country and coming to be in Confusion—and to have a condition opposite to laughing the laugh from joy and cheerfulness, which our Lord promises will belong to those who have wept the blessed weeping, saying: “Blessed are those who weep now, for they will laugh.” (Luke 6:21) And in Job also he says, “He will fill the mouth of the true ones with laughter.” (Job 8:21) And perhaps for this reason also one of the patriarchs is called Laughter. The one groaning, then—as also the apostle has made clear saying, “For indeed we who are in the tent groan, being burdened” (2 Corinthians 5:4)—weeps a weeping most nourishing and benefiting the soul, toward the cheerfulness in promise (2 Corinthians 5:4).",
+   "capsule": "The night weeping pictures a subject people recalling peace and freedom while no former ally comforts them.",
+   "comment": "… what would someone say—a city being said to have wept in the night, so that the tears are upon her cheeks—unless perhaps someone will say that those named a city, who also pay tribute, have wept, having been reminded from what sort of peace and freedom into how great a slavery and humiliation they have come? How then shall we also narrate “in the night,” (Lamentations 1:2) or that in the time of the common rest of all human beings the city, being reminded, while resting wept, and wept with the tears flowing fountain-like upon their cheeks? And the wailing was most stretched out for them and the tears flowed on, there not being even one comforting them from so many who loved them, and everyone who loved setting aside the friendship toward her and having changed into enmity. … Perhaps the remaining cities of Judea—loving the metropolis for this reason—in a time of distress did not encourage her.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "selected_reason": "Explains the night weeping and the missing comforters in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Fragments on Lamentations",
    "work_slug": "origen-lamentations-fragments",
    "section": "10",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/10/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "LAM01-006",
@@ -118,6 +118,24 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "11",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/11/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM01-041",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "The weeping nourishes the soul toward the promised cheerfulness of those who weep blessedly now.",
+   "comment": "… If the Word, as in the things before, should be said to weep—having fallen from her own country and coming to be in Confusion—and to have a condition opposite to laughing the laugh from joy and cheerfulness, which our Lord promises will belong to those who have wept the blessed weeping, saying: “Blessed are those who weep now, for they will laugh.” (Luke 6:21) …\n\nThe one groaning, then—as also the apostle has made clear saying, “For indeed we who are in the tent groan, being burdened” (2 Corinthians 5:4)—weeps a weeping most nourishing and benefiting the soul, toward the cheerfulness in promise (2 Corinthians 5:4).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "10",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/10/",
    "from_cite": false
   },
   {
@@ -193,6 +211,24 @@
    "section": "u19-rem-close",
    "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u19-rem-close/",
    "from_cite": true
+  },
+  {
+   "id": "LAM01-042",
+   "chapter": 1,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The roads mourn because no pilgrims travel them to the feasts, while the gates are gone and priests and virgins are taken.",
+   "comment": "The sense toward the wording is this. The law saying, “Three times in the year every male of yours shall appear before the Lord your God,” (Exodus 23:17) those from the people were eager, after the temple was built in Zion from Solomon’s time, to accomplish what was commanded. And the cities of Judea being round about Jerusalem, from everywhere there were roads leading upon Zion. These roads, then, the prophet says mourn because of the captivity (Lamentations 1:4)—looking gloomy and being in complete desolation—and in those times when there was much gladness and cheerfulness in them, when the Jews from everywhere were hastening unto a feast upon the mountain of Zion.\n\nAnd many being the gates built in Zion from all the quarters, the word says all have been made to vanish, and the priests unable to accomplish the other days—either because they have been taken captive or because there is no one approaching them and requiring the priestly liturgies. But also the virgins of Zion, it says, are being led away—clearly by the conquering enemies (Exodus 23:17) (Deuteronomy 16:16).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "13",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/13/",
+   "from_cite": false
   },
   {
    "id": "LAM01-011",
@@ -582,6 +618,25 @@
    "from_cite": true
   },
   {
+   "id": "LAM01-043",
+   "chapter": 1,
+   "verse_start": 15,
+   "verse_end": 15,
+   "capsule": "The trampled winepress means sinners gather and drink back the bitter fruit they themselves farmed.",
+   "comment": "And it is not hard to see how the Lord trampled a winepress for a virgin daughter of Judah (Lamentations 1:15); for since “whatever each sows, these things he will also reap,” (Galatians 6:7) perhaps also whatever one farms, these things he also gathers.\n\nThe one who has made better wine, then, will be gladdened from his own products; but the one who farmed a vine of Sodom and a branch of Gomorrah and bore fruit of a grape of gall and a cluster of bitterness and an incurable wrath of asps—all the evils being gathered by the Lord into one winepress, his base works being trampled and squeezed—will drink in sequence from such fruits for the sake of vomiting the gall and the bitterness and the wrath. And he will drink, according to Jeremiah unto vomiting out, and according to Isaiah unto being awakened and putting on the glory that is kindred; for not in vain does the Lord trample a winepress, and especially for a virgin daughter of Judah (Galatians 6:7) (Deuteronomy 32:32–33) (Isaiah 51:17).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the winepress image as reaping what was sown.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "33",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/33/",
+   "from_cite": false
+  },
+  {
    "id": "LAM01-033",
    "chapter": 1,
    "verse_start": 16,
@@ -652,6 +707,44 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "39",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/39/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM01-044",
+   "chapter": 1,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "Jerusalem suffers captivity for killing the prophets, then confesses God's righteousness as a warning to others.",
+   "comment": "Mouth of the Lord must be taken as the prophets, of whom Isaiah being one was saying: “For the mouth of the Lord has spoken these things.” (Isaiah 1:20) And Jerusalem has been reproached by the Savior as “having killed the prophets,” (Isaiah 1:20) inasmuch as she also embittered the mouth of the Lord, having given them over to most bitter pains. And God, who seeks out the blood of the prophets, hands over her young men and virgins to captivities from wars and again (Lamentations 1:18). In return, then, for what she has suffered, she confesses, providing herself as an example to the others, toward their not suffering similar things—having learned the righteousness of God (Matthew 23:37) (Luke 11:50).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the confession of God's righteousness after the killing of the prophets.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "38",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/38/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM01-045",
+   "chapter": 1,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The lovers who deceived Jerusalem are the Babylonians and Chaldeans, raised up against her after former friendship.",
+   "comment": "Who the lovers are (Lamentations 1:19), Ezekiel has shown, saying to Jerusalem, whom he calls Oholibah: “Thus says the Lord: Behold, I raise up your lovers against you round about, sons of Babylon and all the Chaldeans” (Ezekiel 23:22); for these, formerly being friends, according to divine providence changed unto enmity. Which indeed often comes about upon desire turning toward hate; for he says concerning Samaria: “And Oholah whored from me and set herself upon her lovers the Assyrians” (Ezekiel 23:5); and after a little: “For this reason he handed her over into hands of her lovers, into hands of sons of Assyrians” (Ezekiel 23:9); and he says also concerning Jerusalem: “And her sister Oholibah saw, and she corrupted her setting-upon beyond the whoredom of her sister, and she set herself upon the sons of the Assyrians.”… (Ezekiel 23:11–12)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Identifies the lovers from Ezekiel in plain terms.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "40",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/40/",
    "from_cite": false
   },
   {
@@ -746,6 +839,25 @@
    "from_cite": true
   },
   {
+   "id": "LAM02-018",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "The horns represent the rulers who give strength and the soul's outstanding thoughts, while the fire is the dishonorable passions to which the stumbling are handed over when God withdraws his saving hand.",
+   "comment": "Like the word in David: “he will crush all the horns of the sinners.” (Psalm 75:10) And he means now the rulers, in whom is the strength of the nation just as in the horn-bearing among animals, and because they stand out from the body as rulers from the subjects. And Daniel also likened the kingdoms to horns. And horn also shows the arrogance of the leading part, as in: “do not lift your horn unto height.” (Psalm 75:5)\n\nHaving turned away, then, his saving hand he made them easy to take for the enemies, whom indeed he also called a flame consuming all (Lamentations 2:3). And you would also say every outstanding thought a horn, and fire the “passions of dishonor,” (Romans 1:26) to which the one stumbling is handed over, having lost all the surrounding help according to: “the angel of the Lord will encamp round about those who fear him.” (Psalm 34:7)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the horn and the fire in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "45",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/45/",
+   "from_cite": false
+  },
+  {
    "id": "LAM02-001",
    "chapter": 2,
    "verse_start": 4,
@@ -787,8 +899,8 @@
    "chapter": 2,
    "verse_start": 5,
    "verse_end": 5,
-   "capsule": "Palaces are houses, which Symmachus called kingdoms; in the soul's sense the houses are virtues and the fortifications irrefutable reasonings.",
-   "comment": "“Palaces” (Lamentations 2:5) he says for the houses, which Symmachus rendered “kingdoms.” And he takes up the laments again, as someone greatly pained upon mourning. And again he shows that she has taken on a lowly reckoning and a lowly thought, the things like houses and fortresses having been taken down, as filling the leading part. For virtues are the houses—for by them we are sheltered—and fortifications the irrefutable reasonings. For the demolition now is not of worse heights, “lifting themselves up against the knowledge of God,” (Lamentations 2:5) nor of lowliness according to which one “learns the judgments of God”; for these are of a character for joy, not for grief.",
+   "capsule": "Palaces are the houses, which Symmachus called kingdoms, and in the soul they are virtues and strong reasonings now razed to lowly reckoning.",
+   "comment": "“Palaces” (Lamentations 2:5) he says for the houses, which Symmachus rendered “kingdoms.” And he takes up the laments again, as someone greatly pained upon mourning. And again he shows that she has taken on a lowly reckoning and a lowly thought, the things like houses and fortresses having been taken down, as filling the leading part.\n\nFor virtues are the houses—for by them we are sheltered—and fortifications the irrefutable reasonings. For the demolition now is not of worse heights, “lifting themselves up against the knowledge of God,” (Lamentations 2:5) nor of lowliness according to which one “learns the judgments of God”; for these are of a character for joy, not for grief.",
    "editions": [
     "complete"
    ],
@@ -798,7 +910,7 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "47",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/47/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "LAM02-004",
@@ -820,6 +932,25 @@
    "from_cite": false
   },
   {
+   "id": "LAM02-019",
+   "chapter": 2,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "God handed over the liturgical vessels, city wall and temple because he was no longer pleased with impious sacrifices, while the altar of the soul is the rational part where passions are slain.",
+   "comment": "He handed over the liturgical vessels, no longer being well-pleased with the sacrifices from the impious according to: “whole burnt offerings of rams and fat of lambs and blood of bulls and goats I do not want.” (Isaiah 1:11) And he also handed over the wall holding together the houses of the city—or the palaces, as Symmachus rendered. And the hostile ones, having taken even the temple, were then celebrating as upon a complete victory, shouting (Lamentations 2:7).\n\nAnd altar of a soul is the rational part in us, through which the passions are sacrificed when being put to death (Isaiah 1:11).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains God's abandonment of the sanctuary and wall in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "49",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/49/",
+   "from_cite": false
+  },
+  {
    "id": "LAM02-005",
    "chapter": 2,
    "verse_start": 8,
@@ -835,6 +966,25 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "50",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/50/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM02-020",
+   "chapter": 2,
+   "verse_start": 8,
+   "verse_end": 8,
+   "capsule": "The mourning wall moves even onlookers to weeping, and the angels who guarded the city or soul likely mourn its trampling.",
+   "comment": "And wall and rampart mourn (Lamentations 2:8)—things worthy of mourning, becoming causes of weeping also for those who see; for “who will scatter the counsel of the Lord? and who will turn back his high hand?” (Isaiah 14:27) according to blessed Isaiah.\n\nAnd for such a city or soul mourning so as to be a trampling for the enemies, it is likely that angels mourn—those who formerly were guarding her, others upon others, both greater and subordinate. For if they rejoice over those saved, how will they not mourn over those who have fallen (Isaiah 14:27) (Luke 15:10)?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the mourning wall means in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "51",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/51/",
    "from_cite": false
   },
   {
@@ -896,13 +1046,13 @@
    "chapter": 2,
    "verse_start": 13,
    "verse_end": 13,
-   "capsule": "The passion is so great that prophets could not heal it, so God alone, who struck, will heal.",
-   "comment": "He has shown the complete wickedness, as having no witness of virtue at all, nor anyone who has stumbled in similar things. For what sin is like that of the one far from God and of the one who after drawing near has thrown off the reins? For “if I had not come,” (John 15:22) he says, “and spoken to them, they would not have sin.” (John 15:22) For which reason also “among those who draw near to me I will be sanctified” (Leviticus 10:3); because the one who does not know the will of the Lord and does not do it will be beaten with few blows; but the one who knows and does not do it will be beaten with many. The passion so great, then, which prophets have not been able to heal, needs God alone. For which reason he has also worn flesh—the prophets confessing weakness in “Lord, who has believed our report?” (Isaiah 53:1) And formerly Jerusalem was also saying: “See if there is a passion according to my passion.” (Lamentations 1:12) The one who struck, then, will heal—“for he himself makes to suffer and again restores.” (Job 5:18) The “who” is taken both of the rare and of the none; for no human being can heal the blow brought on by God.",
+   "capsule": "The wound is so great that no prophet can heal it, but only God who struck it.",
+   "comment": "He has shown the complete wickedness, as having no witness of virtue at all, nor anyone who has stumbled in similar things (Lamentations 2:13). For what sin is like that of the one far from God and of the one who after drawing near has thrown off the reins? For “if I had not come,” (John 15:22) he says, “and spoken to them, they would not have sin.” (John 15:22) For which reason also “among those who draw near to me I will be sanctified” (Leviticus 10:3); because the one who does not know the will of the Lord and does not do it will be beaten with few blows; but the one who knows and does not do it will be beaten with many.\n\nThe passion so great, then, which prophets have not been able to heal, needs God alone. For which reason he has also worn flesh—the prophets confessing weakness in “Lord, who has believed our report?” (Isaiah 53:1) And formerly Jerusalem was also saying: “See if there is a passion according to my passion.” (Lamentations 1:12)\n\nThe one who struck, then, will heal—“for he himself makes to suffer and again restores.” (Job 5:18) The “who” is taken both of the rare and of the none; for no human being can heal the blow brought on by God.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why no one but God can heal her.",
+   "selected_reason": "Explains why the breach needs God alone to heal it.",
    "author": "Origen of Alexandria",
    "work": "Fragments on Lamentations",
    "work_slug": "origen-lamentations-fragments",
@@ -927,6 +1077,25 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "56",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/56/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM02-021",
+   "chapter": 2,
+   "verse_start": 16,
+   "verse_end": 16,
+   "capsule": "The hissing enemies are the devil as lion and serpent, scorching with pleasures and wrath, whom the Lord keeps from swallowing us.",
+   "comment": "For “our enemy the devil goes about as a roaring lion seeking whom he may swallow” (1 Peter 5:8) and as a serpent sending the hissings upon us (Lamentations 2:16). Yet may it not come about that he say “I have swallowed,” (Psalm 124:2–3) nor that he overtake in us a day which the scorching sun works; for it has been said: “the sun will not scorch you by day” (Psalm 121:6)—for with pleasures and wrath he scorches and provides the error as light and knowledge.\n\nSinging psalms, then, we will say: “if the Lord had not been in us, then living they would have swallowed us,” (1 Peter 5:8) and “the lamp of the impious will be quenched.” (Job 18:5)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the hissing and swallowing enemies as the devil in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "57",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/57/",
    "from_cite": false
   },
   {
@@ -963,6 +1132,25 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "61",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/61/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM02-022",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The night gathers the soul in quiet to meditate on God’s commandments and to stay awake, since no one knows when the Lord comes.",
+   "comment": "The night is attentive, the soul being gathered together in it in the quiet of the senses (Lamentations 2:19). Then he commands to meditate in the commandments of God and to say with David: “by night I was meditating with my heart, and my spirit was searching.” (Psalm 77:6)\n\nAnd the night being divided into four watches, say with David: “my eyes anticipated the watches,” (Psalm 119:148) and with Habakkuk: “upon my watch I will stand, and I will look out what the Lord God will speak in me.” (Habakkuk 2:1) For then you will say: “for he will speak peace upon his people.” (Psalm 85:8)\n\nMeditate, then, in the night of the present age; for “the wrestling is not for you toward blood and flesh, but toward the rulers, toward the authorities” (Ephesians 6:12); for “you do not know when the lord of the house comes, late or at midnight or at cock-crow or early; lest coming suddenly he find you sleeping.” (Mark 13:36) And again: “for if you had known in what watch the thief comes, you would have stayed awake and would not have let your house be dug through.” (Matthew 24:43)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the night watches as a call to meditate and stay awake.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "60",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/60/",
    "from_cite": false
   },
   {
@@ -1040,6 +1228,25 @@
    "from_cite": false
   },
   {
+   "id": "LAM03-019",
+   "chapter": 3,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Each day brings the same affliction, and God's hand that once gave good things now brings discipline.",
+   "comment": "The “whole day” (Lamentations 3:3) shows according to each day, as in David: “the whole day making war he afflicted me.” (Psalm 56:1)\n\nAnd “he turned his hand” would also signify that formerly supplying the good things to me, now he brings on the disciplines, as if having exchanged the hand.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the verse's wording means in terms a reader can follow.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "66",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/66/",
+   "from_cite": false
+  },
+  {
    "id": "LAM03-002",
    "chapter": 3,
    "verse_start": 4,
@@ -1076,6 +1283,25 @@
    "from_cite": false
   },
   {
+   "id": "LAM03-020",
+   "chapter": 3,
+   "verse_start": 5,
+   "verse_end": 6,
+   "capsule": "The siege represents the enemy wall around the city, darkness signifies the soul's trials, and both point to Christ.",
+   "comment": "For he did not let me flee the terrible things, being besieged from everywhere (Lamentations 3:5–6). And perhaps he would also mean the enemy wall thrown around the city.\n\nAnd he has uttered the same voice as David who said: “they seated me in dark places as eternal dead” (Psalm 143:3)… for trials are darkness of a soul. And specifically Pashhur also threw Jeremiah into the pit, being dark and without light…\n\nAnd the two Laments could also be taken unto Christ, of whom Jeremiah was a type, having suffered so many things from Jews and at the end having been handed over to a tomb (Psalm 143:3) (Jeremiah 38:6).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what siege and darkness mean in the verse.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "69",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/69/",
+   "from_cite": false
+  },
+  {
    "id": "LAM03-004",
    "chapter": 3,
    "verse_start": 7,
@@ -1095,6 +1321,25 @@
    "from_cite": false
   },
   {
+   "id": "LAM03-021",
+   "chapter": 3,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "God shuts the roads to hold the prophet to his ministry and to keep sinners from sinning.",
+   "comment": "For having set out many times he was not allowed to decline the ministry. For he was saying: “I will not name the name of the Lord,” (Jeremiah 20:9) and as by fire he was being driven.\n\nAnd he also blocks the roads of the sinners (Lamentations 3:9), not allowing them to sin. But the prophet is not such—he who says: “I did not sit with a council of those playing.” (Jeremiah 15:17)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the ways are enclosed.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "71",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/71/",
+   "from_cite": false
+  },
+  {
    "id": "LAM03-005",
    "chapter": 3,
    "verse_start": 12,
@@ -1111,6 +1356,25 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "72",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/72/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM03-022",
+   "chapter": 3,
+   "verse_start": 13,
+   "verse_end": 15,
+   "capsule": "The arrows wound his desire, his mockers made him their song, and his ministry left him embittered both by them and with them.",
+   "comment": "And kidneys in the scripture are the desirous part, and arrows the darts. And thereafter they were tearing me down as a liar, having made me a song (Lamentations 3:13–15).\n\nAnd formerly he was also saying: “I was sitting alone, because I was filled with bitterness” (Jeremiah 15:17)… for he was petitioning for them, and they were plotting, and yet it was not possible to decline the ministry. He was being embittered, then, both suffering from them and suffering-with those suffering and being weighed down beyond measure at those being impious (Jeremiah 15:17).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the arrows in the reins, the mockers' song, and the bitterness mean.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "73",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/73/",
    "from_cite": false
   },
   {
@@ -1152,6 +1416,24 @@
    "from_cite": false
   },
   {
+   "id": "LAM03-023",
+   "chapter": 3,
+   "verse_start": 27,
+   "verse_end": 28,
+   "capsule": "Since Christ's yoke is kind, the bearer must endure alone in what has been decided without being led away.",
+   "comment": "Because “his yoke is kind and the burden light.” (Matthew 11:30) Let no one assent with him about something; one must not be led away together, but even if he is isolated toward this, to endure in what has been decided and to be firmly settled (Lamentations 3:27–28).\n\nFor “the Lord settles mono-way ones in a house,” (Psalm 68:6) says David, and “I am alone until I pass by” (Psalm 68:6)—clearly the trials, having obtained kindness (Psalm 141:10).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "76",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/76/",
+   "from_cite": false
+  },
+  {
    "id": "LAM03-008",
    "chapter": 3,
    "verse_start": 27,
@@ -1168,6 +1450,25 @@
    "section": "25",
    "url": "https://viapatrum.org/works/origen-contra-celsum-book-7/25/",
    "from_cite": true
+  },
+  {
+   "id": "LAM03-024",
+   "chapter": 3,
+   "verse_start": 29,
+   "verse_end": 29,
+   "capsule": "Putting the mouth in the dust means humbling oneself as earth and ash in hope that does not shame.",
+   "comment": "For he will humble himself saying: “I am earth and ash,” (Genesis 18:27) if indeed he truly is a man (Lamentations 3:27–29), and he has been filled with the hope that does not shame—such as also “my soul was stuck to the floor.” (Genesis 18:27) (Romans 5:5) (Psalm 119:25)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what putting the mouth in the dust means.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "77",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/77/",
+   "from_cite": false
   },
   {
    "id": "LAM03-009",
@@ -1263,6 +1564,43 @@
    "from_cite": false
   },
   {
+   "id": "LAM03-025",
+   "chapter": 3,
+   "verse_start": 44,
+   "verse_end": 44,
+   "capsule": "Sins stand like a dark cloud walling us off, so prayer cannot pass through to God.",
+   "comment": "…And since our sins were standing us apart from you as a walling-off cloud, our prayer was not arriving toward you (Lamentations 3:43–44); for we did not have “wings of a dove” (Psalm 55:6) to fly over saying: “in God I will overleap a wall” (Psalm 18:29); for it was not easy to pass the sin, being both hard and dark and without share of a holy spirit (Psalm 18:29).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why prayer is shut out.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "83",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/83/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM03-026",
+   "chapter": 3,
+   "verse_start": 46,
+   "verse_end": 47,
+   "capsule": "Enmity swallowed them into fear and confusion because arrogance lifts men up only to fracture them.",
+   "comment": "Symmachus: “panic.” With a whole mouth they swallowed and we were carried down into a depth of evils, having been filled with fear and confusion (Lamentations 3:46–47); for “into what he dug the sinner falls,” (Psalm 7:15) paying penalties of what he sinned.\n\nAnd since “before fracture insolence leads” (Proverbs 16:18) according to Solomon—that is, arrogance—we were both lifted up and fractured. From which David sings: “let a foot of arrogance not come to me, and a hand of a sinner not shake me.” (Psalm 36:11)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "84",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/84/",
+   "from_cite": false
+  },
+  {
    "id": "LAM03-014",
    "chapter": 3,
    "verse_start": 48,
@@ -1318,6 +1656,25 @@
    "from_cite": false
   },
   {
+   "id": "LAM03-027",
+   "chapter": 3,
+   "verse_start": 52,
+   "verse_end": 52,
+   "capsule": "His enemies hunted him without cause though he benefited them, yet like a sparrow he was saved beyond hope.",
+   "comment": "Either what he has suffered he says—for he was thrown into a pit and as far as it went unto he died, but having been saved beyond hope with David: “my soul as a sparrow was delivered from the snare of the hunters” (Psalm 124:7); for it was not possible “to fall upon the earth without the Father who is in the heavens” (Matthew 10:29) according to the Savior’s voice. He says it, then, either about himself or also making the people’s passions his own.\n\nBut the “gratis” (Lamentations 3:52) would fittingly be said about him; for what injustice did he do them—rather, did he not benefit them?",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what without cause means.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "88",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/88/",
+   "from_cite": false
+  },
+  {
    "id": "LAM03-017",
    "chapter": 3,
    "verse_start": 58,
@@ -1333,6 +1690,24 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "89",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/89/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM03-028",
+   "chapter": 3,
+   "verse_start": 64,
+   "verse_end": 64,
+   "capsule": "The recompense is the ending of their worship, so that they are no longer named a nation of God.",
+   "comment": "He was also saying before: “finish them, and your word will be for me unto gladness and joy of my heart” (Jeremiah 15:16)—these things after the plot against the Savior, when they were scattered everywhere; for “every just blood” (Matthew 23:35) came upon them. The, then, shows the worship according to them taking an end, and no longer being named a nation of God (Lamentations 3:64).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "90",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/90/",
    "from_cite": false
   },
   {
@@ -1464,6 +1839,24 @@
    "from_cite": false
   },
   {
+   "id": "LAM04-024",
+   "chapter": 4,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "The famine means lacking hearing of the word of the Lord rather than bread and water.",
+   "comment": "These things they have suffered both being besieged and being led away (Lamentations 4:4). And you would also say that “they endured a famine not of bread, not of water” (Amos 8:11) according to the prophetic word, “but of hearing a word of the Lord.” (Amos 8:11) For which reason he prophesies of them as newborns.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "97",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/97/",
+   "from_cite": false
+  },
+  {
    "id": "LAM04-007",
    "chapter": 4,
    "verse_start": 5,
@@ -1479,6 +1872,24 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "100",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/100/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM04-025",
+   "chapter": 4,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "Those fed delicately are pitiable because they lack the nourishing word and delight only in empty things.",
+   "comment": "For the poor who are mistreated are not so pitiable. And Paul also laments these, saying “of whom is the adoption and the glory.” (Romans 9:4) For now meditating empty things they do not delight in Moses and the prophets—“delight in the Lord.” (Psalm 37:4) For there is no one baking the nourishing word for them, nor do they share in the fatted calf though themselves having sacrificed. And he calls exits the dispersions, or also the turnings-aside of the legal writings (Lamentations 4:5) (Psalm 37:4) (Luke 15:23).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "99",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/99/",
    "from_cite": false
   },
   {
@@ -1537,6 +1948,24 @@
    "from_cite": false
   },
   {
+   "id": "LAM04-026",
+   "chapter": 4,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "Death by the sword is better because the sword is the word of God, while famine means losing Christ the Bread and His church.",
+   "comment": "For better to die swiftly in war than to be mastered by famine through lack of the field’s products (Lamentations 4:9). And you would say a sword and a dagger is also the word of God; for Paul says: “and the sword of the spirit, which is a saying of God,” (Ephesians 6:17) by which, the bride says, “I am wounded with love.” (Song of Songs 2:5) And David also says: “gird your sword upon your thigh, O powerful one, in your beauty and your comeliness.” (Psalm 45:3) Those struck by such a sword fall under Jesus’s feet according to “peoples will fall under you,” (Psalm 45:3) having confessed his kingdom, but not to be taken by a soul-famine.\n\nFor offspring of a country is the Christ, the one born in Bethlehem, which is signified House of Bread—of whom Jews having become untasting were led away unto a country of demons. And a field blessed by the Lord and very fragrant, of which Jacob was smelling, shows Christ’s church (Genesis 27:27).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "104",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/104/",
+   "from_cite": false
+  },
+  {
    "id": "LAM04-011",
    "chapter": 4,
    "verse_start": 10,
@@ -1589,6 +2018,43 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "106",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/106/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM04-027",
+   "chapter": 4,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Kings thought Jerusalem could not fall because of its strength and because God shielded it.",
+   "comment": "Perhaps both through the strength of the places and of the wall and the strength of the inhabitants, and especially through God who was always shielding the city. And yet before Nebuchadnezzar the Egyptian, having entered, many times took the treasures from the Lord’s house, but not having sacked the city; for he was not pressing very hard, even if he was an enemy—toward it not being inconsistent for the paradoxical thing to come about even twice and thrice. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse says kings would not believe Jerusalem could fall.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "107",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/107/",
+   "from_cite": false
+  },
+  {
+   "id": "LAM04-028",
+   "chapter": 4,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The kings of the earth are the demons who opposed Christ and thought Jerusalem would never be handed over.",
+   "comment": "… And he would also mean kings of the earth as the demons who ruled the earthy ones (Lamentations 4:12), about whom it has been said: “all the kings of the earth stood by and their rulers were gathered together against the Lord and against his Christ.” (Acts 4:26)\n\nAbout who these are, “for if they had known, they would not have crucified the Lord of glory” (1 Corinthians 2:8) made clear, and “so that the many-colored wisdom of God may be made known to the rulers and the authorities in the heavenlies through the church” (1 Corinthians 2:8); for they were thinking Jerusalem not to be handed over unto the end, thinking the promise toward the fathers as far as this nation, knowing nothing about Christ (Ephesians 3:10).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "107",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/107/",
    "from_cite": false
   },
   {
@@ -1683,23 +2149,41 @@
    "from_cite": false
   },
   {
+   "id": "LAM04-029",
+   "chapter": 4,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "The apostles as fishers hunt childish minds off the broad road of their fathers.",
+   "comment": "For by the Savior having been appointed “fishers of human beings,” (Matthew 4:19) they were hunting Jews childish in thoughts, not to walk the broad and roomy road of their fathers (Lamentations 4:18)—whom indeed the Savior also was hinting saying: “let the children come to me.” (Matthew 4:19) (Matthew 7:13) (Matthew 19:14)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on Lamentations",
+   "work_slug": "origen-lamentations-fragments",
+   "section": "114",
+   "url": "https://viapatrum.org/works/origen-lamentations-fragments/114/",
+   "from_cite": false
+  },
+  {
    "id": "LAM04-018",
    "chapter": 4,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "Some see Josiah here as a type of Christ, but the spirit before our face is Christ himself, whom those who corrupted their piety seized, and under his shadow the prophets now live among all the nations.",
+   "capsule": "Some read the verse as about Josiah, but the spirit of our face is Christ himself, under whose shadow the prophets now live among all the nations.",
    "comment": "Some said that among the exceptional ones he more clearly laments Josiah; for they were hoping through his piety for Jerusalem to be raised in the midst of nations unto glory—for Jerusalem is in the midst of nations. And this one, they say, is a type of Christ, having died through the people’s lawlessnesses. And yet he was not seized in the people’s corruptions, but as the prophet forbade, having met Necho Pharaoh, though he was not willing to fight toward him.\n\nAccording to the divine apostle, then, “a veil lies upon the face of the Jews when Moses is read; but if it turns toward the Lord, the veil is taken around; and the Lord is the spirit.” (2 Corinthians 3:17) And through the prophet he calls the Lord spirit. Those, then, upon whom a veil lies would not say: “spirit of our face is Christ the Lord,” (Lamentations 4:20) but those “mirroring the Lord’s glory with uncovered face,” (2 Corinthians 3:18) before whose mind’s eyes the Lord always is; so that clearly the spirit that worked in the prophets was the Christ, who also having become human says: “I myself who speak am present,” (Isaiah 52:6) himself being spirit and Lord and Christ. This one those who first corrupted in themselves the seeds of piety seized. But we the prophets, not considering another the spirit of our face, after our seizure no longer having a place in them, will live under Christ’s shadow—no longer among Jews, but in all the nations—when “the kingdom of God having been lifted from them” (Matthew 21:43) through the daring against Christ “was given to the nations.” (Matthew 21:43) For behold prophets live, speaking about him and proclaiming, but no longer among those who still even now surround him with their own corruptions, blaspheming him daily.\n\nAnd Aquila said “spirit of our nostrils,” and Symmachus “breath of our nostrils.” For the God-loving continually breathe Christ, having him before the eyes. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains who the anointed is, how he was taken, and what living under his shadow among the nations means.",
+   "selected_reason": "Explains who the breath before our face is in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Fragments on Lamentations",
    "work_slug": "origen-lamentations-fragments",
    "section": "116",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/116/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "LAM04-022",
@@ -1725,8 +2209,8 @@
    "chapter": 4,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "Christ gave the spirit of prophecy and the law is his shadow, or else believers say they will live in his shadow by imitating him.",
-   "comment": "… And you would say “spirit of face is Christ,” the one who gifted us the spirit of prophecy; for this is prophets’ face, and spirit the gift, and shadow the law—“for the law having a shadow of the good things about to be.” (Hebrews 10:1) The prophets, then, lived among us and in the law’s shadow. The prophetic gift, then, toward which the outcome of all prophecy looks, is Christ—that is, from Christ. “For Christ is end of law and prophets.” (Romans 10:4) And it would also be said from the apostles’ and believers’ person; “for in him we both live and move and are” (Hebrews 10:1); of whom we said “in his shadow we will live,” that is according to imitation of him. For the divine apostle says: “become imitators of me just as I also of Christ.” (1 Corinthians 11:1)",
+   "capsule": "Christ gives the spirit of prophecy and the law is His shadow, and believers live in that shadow by imitating Him.",
+   "comment": "… And one must know that just as Christ being spirit spoke in the prophets, so also the Father; for Paul says in Hebrews: “God having spoken of old in many parts and in many ways in the prophets, upon the last of the days spoke to us in a Son.” (Hebrews 1:2) And thus also the Holy Spirit; for the Savior says: “well did the Holy Spirit say in Isaiah: with hearing you will hear, and you will not understand.” (Acts 28:25-26) And in Corinthians Paul, having said the gifts, among which is prophecy, says: “and all these the one and the same Spirit works, distributing to each as it wills” (1 Corinthians 12:11)—that is, authoritatively, not slavishly.\n\nAnd you would say “spirit of face is Christ,” the one who gifted us the spirit of prophecy; for this is prophets’ face, and spirit the gift, and shadow the law—“for the law having a shadow of the good things about to be.” (Hebrews 10:1) The prophets, then, lived among us and in the law’s shadow. The prophetic gift, then, toward which the outcome of all prophecy looks, is Christ—that is, from Christ. “For Christ is end of law and prophets.” (Romans 10:4)\n\nAnd it would also be said from the apostles’ and believers’ person; “for in him we both live and move and are” (Hebrews 10:1); of whom we said “in his shadow we will live,” that is according to imitation of him. For the divine apostle says: “become imitators of me just as I also of Christ.” (1 Corinthians 11:1)",
    "editions": [
     "complete"
    ],
@@ -1736,7 +2220,7 @@
    "work_slug": "origen-lamentations-fragments",
    "section": "116",
    "url": "https://viapatrum.org/works/origen-lamentations-fragments/116/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "LAM04-019",
