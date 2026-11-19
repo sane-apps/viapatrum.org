@@ -1,52 +1,14 @@
 {
  "book": "Genesis",
  "title": "The Fathers on Genesis",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 320,
- "selected_count": 122,
+ "comment_count": 281,
+ "selected_count": 100,
  "comments": [
-  {
-   "id": "GN01-001",
-   "chapter": 1,
-   "verse_start": 1,
-   "verse_end": 1,
-   "capsule": "Moses opens with God's name so that no one thinks the world is unguided, puts 'beginning' first so that no one thinks it had no beginning, and says 'made' to show creation is the smallest part of God's power.",
-   "comment": "Those who did not know God would not allow that an intelligent cause stood over the origin of all things, but drew their conclusions in a way consistent with their initial ignorance. For this reason some fled to material principles, assigning the cause of everything to the elements of the world; others imagined that atoms and partless bodies, masses and pores, hold together the nature of visible things. Now, they said, when the partless bodies come together with one another, and now when they are rearranged, births and destructions come about; and in the case of the more enduring bodies, the stronger interweaving of the atoms provides the cause of their permanence. Truly those who write these things weave a spider's web, setting up such fine and insubstantial principles for heaven and earth and sea. For they did not know how to say, “In the beginning God made the heaven and the earth” (Genesis 1:1). Because of this they were deceived by the godlessness dwelling within them into thinking that all things are unsteered and ungoverned, carried along as chance would have it.\n\nSo that we might not suffer this, the one who wrote the account of the world's creation at once, in his very first words, illuminated our minds with the name of God, saying, “In the beginning God made.” How beautiful is the order! He placed “beginning” first, so that no one would think the world is without beginning. Then he added “made,” so that it might be shown that what was made is the smallest part of the Creator's power. For just as a potter, having shaped countless vessels by the same art, has not used up either his art or his power, so also the Creator of this universe does not have a creative power measured to one world alone, but one that surpasses it to an infinite degree, and by the inclination of his will alone he brought the magnitudes of visible things into being. …\n\nDo not imagine, then, O man, that visible things are without beginning; and do not suppose, because the things that move in the heavens run round in a circle and the beginning of a circle is not easily grasped by our ordinary perception, that the nature of the bodies that move in circles is without beginning. For this circle—I mean the plane figure enclosed by a single line—even though it escapes our perception, and we cannot discover where it began or where it ended, we are not therefore obliged to suppose that it is without beginning. But even if it escapes perception, in truth it certainly began from some point, drawn by one who marked it out with a center and a radius. So you too, because the things that move in a circle return upon themselves, do not let the smoothness of their motion, uninterrupted by anything in the middle, leave in you the error that the world is without beginning and without end.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why Genesis opens with God's name and with the words 'beginning' and 'made'.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "2",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/2/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-002",
-   "chapter": 1,
-   "verse_start": 1,
-   "verse_end": 1,
-   "capsule": "God did not shape matter that already existed but brought it into being together with its form, as the maker of the very nature of things.",
-   "comment": "But God, before any of the things now seen came to be, set his mind to it and resolved to bring the things that were not into being; at one and the same moment he thought what kind of world it should be, and generated together with its form the matter that suited it. For heaven he set apart the nature proper to heaven; for the shape of the earth he supplied the substance that belonged to it and was owed to it. Fire and water and air he shaped as he willed, and brought them into being as the principle of each thing that came to be required. And the whole world, being of unlike parts, he bound together by some unbreakable bond of friendship into one communion and harmony, so that even the things most distant from one another in position seem to be united through their mutual sympathy. Let them cease, then, from their mythical fabrications, measuring by the weakness of their own reasoning the power that is incomprehensible to thought and utterly inexpressible by human speech. “God made the heaven and the earth” (Genesis 1:1)—not each halfway, but the whole heaven and the whole earth, the very substance taken together with the form. For he is not a discoverer of shapes, but the maker of the very nature of things.\n\nOtherwise let them answer us: how did the active power of God and the passive nature of matter ever meet one another—the one supplying the underlying thing without form, the other possessing the knowledge of shapes without the matter—so that each might receive from the other what it lacked: the maker having somewhere to display his craft, and the matter putting off its formlessness and its lack of shape?",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains that 'God made the heaven and the earth' means he made matter itself, not shaped something already there.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "11",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/11/",
-   "from_cite": true
-  },
   {
    "id": "GN01-004",
    "chapter": 1,
@@ -81,119 +43,6 @@
    "work_slug": "didymus-commentarii-psalmos",
    "section": "u36-rem-mid",
    "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u36-rem-mid/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-008",
-   "chapter": 1,
-   "verse_start": 2,
-   "verse_end": 2,
-   "capsule": "The earth was called unformed because it did not yet have the plants and adornment that would later spring from it, and the heaven likewise was not yet finished.",
-   "comment": "Now the earth was, it says, invisible and unformed (Genesis 1:2). How is it that when heaven and earth were both made at the same time, the heaven was completed, while the earth is still incomplete and unworked? Or what, in any case, is the unformed state of the earth? And for what reason was it invisible? The complete formation of the earth is its abundance: the sprouting of all kinds of plants, the putting forth of the tallest trees, both fruitful and unfruitful, the bright colors and sweet fragrances of flowers, and all the things that a little later were about to spring up at the command of God and adorn the earth that gave them birth. Since none of these yet existed, the text rightly called it unformed. We could say the same things about the heaven as well: it too was not yet finished, nor had it received its proper adornment, since it was not yet illuminated by moon or sun, nor crowned with the choirs of the stars.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains plainly what 'unformed' meant for the earth on the first day.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "9",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/9/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-009",
-   "chapter": 1,
-   "verse_start": 2,
-   "verse_end": 2,
-   "capsule": "Moses passed over water, air and fire in silence to train our minds, and the invisible earth was hidden under a covering that could not be fire.",
-   "comment": "“The earth was invisible and unformed” (Genesis 1:2). When Moses said, “In the beginning God made the heaven and the earth” (Genesis 1:1), he passed over many things in silence: water, air, fire, and the qualities that arise from them. All of these, as things that complete the world, clearly came into being together with the whole; but the account left them out, training our mind toward quickness, giving us from a few starting points the ability to reason out what remains. Since, then, nothing is said about the water—that God made it—but it is said that the earth was invisible, consider for yourself by what covering it was hidden from view. Fire could not have covered it, for fire gives light and makes visible whatever it comes near, rather than casting darkness.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "11",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/11/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-010",
-   "chapter": 1,
-   "verse_start": 2,
-   "verse_end": 2,
-   "capsule": "Darkness over the deep is simply light-less air over deep water, which hid the earth, and not an evil power opposed to God.",
-   "comment": "But “darkness,” it says, “was over the deep” (Genesis 1:2). Here again are other starting points for myths and beginnings of more impious fabrications, for those who twist the words to their own private notions. They do not explain darkness as it actually is—air without light, or a place shadowed by the blocking of a body, or in general a place deprived of light for whatever reason—but they explain darkness as an evil power, or rather evil itself, having its origin from itself, opposed and contrary to the goodness of God. … The word is simple and easy for all to grasp. The earth was invisible, it says. What is the cause? Because it had the deep spread over it. And what is the meaning of “the deep”? Much water, hard to reach, whose limit is downward. But we know that many bodies often appear through water that is thinner and clear. How then was no part of the earth shown through the waters? Because the air poured over it was still without light and darkened. A ray of the sun passing through waters often shows the pebbles in the depths; but in deep night no one could in any way see what is under the water. So the statement that follows confirms that the earth was invisible: because the deep was what covered it, and this deep was darkened. Therefore the deep is not a multitude of opposing powers, as some have imagined; nor is darkness an original and evil power arrayed against the good.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains in plain terms what the darkness and the deep over the earth were.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "12",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/12/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-011",
-   "chapter": 1,
-   "verse_start": 2,
-   "verse_end": 2,
-   "capsule": "The 'Spirit of God' may mean the air poured out, but the better reading is the Holy Spirit, whom Scripture honors with this mention in the work of creation.",
-   "comment": "“And the Spirit of God,” it says, “was borne upon the water” (Genesis 1:2). If this means the spirit as the pouring of the air, then accept that the writer is enumerating for you the parts of the world: God made heaven, earth, water, air—and this air already being poured out and flowing. But if—what is more true and was approved by those before us—the Spirit of God means the Holy Spirit, then accept this reading, because Scripture especially and uniquely honors the Spirit with this mention, and nothing else is called the Spirit of God except the Holy Spirit, the completing element of the divine and blessed Trinity. If you accept this meaning, you will find the benefit from it greater.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Gives the two ways of reading 'the Spirit of God' in plain terms.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "14",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/14/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-012",
-   "chapter": 1,
-   "verse_start": 2,
-   "verse_end": 2,
-   "capsule": "A Syrian teacher's reading takes 'was borne upon' to mean that the Spirit warmed the waters like a brooding bird, preparing them for life, so the Holy Spirit shares in creation.",
-   "comment": "So the meaning of the phrase is this. They [the Syrians] explain “was borne upon,” he [a Syrian teacher whom Basil quotes] says, as meaning that the Spirit warmed the nature of the waters and gave it life, in the image of a brooding bird that imparts a vital power to the things being warmed beneath it. They say that this word indicates something like this: the Spirit was borne upon the water—that is, the Spirit was preparing the nature of the water for the production of life. From this the question raised by some is sufficiently answered: the Holy Spirit is not absent even from the creative activity.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains 'moved upon the waters' through the picture of a bird brooding its eggs.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "15",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/15/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-013",
-   "chapter": 1,
-   "verse_start": 3,
-   "verse_end": 3,
-   "capsule": "At God's first voice the nature of light came into being and filled the whole world at once, and 'voice' and 'command' mean God's will and not a sound from vocal organs.",
-   "comment": "And God said, “Let there be light” (Genesis 1:3). The first voice of God created the nature of light, made the darkness vanish, dissolved the gloom, made the world bright, and brought to all things at once a lovely and pleasing appearance. For the heaven appeared, which until then had been hidden by darkness, and its beauty was as great as eyes still testify even now. The air shone round about—or rather, the air held the light wholly mixed through its entire being, sending the sharp transmissions of its radiance everywhere to its own limits. Above, it reached as far as the upper air and heaven itself; in breadth, it illuminated all the parts of the world—north, south, east, and west—in a sharp moment of time. For such is its nature, fine and transparent, that light passing through it needs no extension of time. Just as it carries our sight to visible things without time, so it receives the impulses of light in an instant—in a moment of time smaller than anyone could conceive—to all the limits of the air. And the upper air became more pleasant with the light, and the waters more radiant, not only receiving the radiance but also sending it back from themselves by the reflection of the light, with sparklings flashing from the water on every side. The divine voice transformed all things to the sweetest and most precious state. Just as those who pour oil into the deep make the place transparent, so the Maker of all things, when he spoke, poured the grace of light into the world all at once. “Let there be light.” And the command was a deed; and a nature came into being than which human reasoning cannot conceive anything more delightful for enjoyment.\n\nBut when we speak of voice and word and command in relation to God, we do not mean a sound emitted by vocal organs, nor air shaped by the tongue; we understand the divine Word, but we consider the inclination in the will, because it is easily grasped by learners, to be shaped in the form of a command.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Describes what happened when God said 'Let there be light' and what God's 'saying' means.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "15",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/15/",
    "from_cite": true
   },
   {
@@ -270,80 +119,6 @@
    "from_cite": true
   },
   {
-   "id": "GN01-018",
-   "chapter": 1,
-   "verse_start": 4,
-   "verse_end": 4,
-   "capsule": "God's testimony that light is good is praise greater than words, and light is beautiful because of its gentle effect on the sight rather than the proportion of its parts.",
-   "comment": "And God saw the light, that it was good (Genesis 1:4). What praise worthy of the light could we offer, when it received in advance the testimony of its Creator, that it is good? Among us, too, speech yields the judgment to the eyes, having nothing to say as great as what the senses testify in advance. But if beauty in a body has its being from the symmetry of its parts to one another and from the good color that appears on it, how is the principle of beauty preserved in the case of light, which is simple in nature and of uniform parts? Is it not because what is proportionate in light is testified not in its own parts, but in its painless and gentle effect on sight? For in this way gold is beautiful too, possessing what attracts the eye and gives delight not from the symmetry of its parts, but from its good color alone.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains in what sense the light was 'good'.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "15",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/15/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-019",
-   "chapter": 1,
-   "verse_start": 4,
-   "verse_end": 4,
-   "capsule": "God judged the light beautiful with a view to the benefit it would bring, since there were as yet no eyes, and he set light and darkness apart as opposites.",
-   "comment": "Then again, God's judgment about the beautiful was made not only with a view to what delights the sight, but also with foresight of the benefit that would come from it later. For there were as yet no eyes to judge the beauty in light. And God separated between the light and between the darkness (Genesis 1:4). That is, God made their natures unmixed and opposed to one another in contrariety. For he set them apart and divided them by the greatest distance.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "16",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/16/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-020",
-   "chapter": 1,
-   "verse_start": 5,
-   "verse_end": 5,
-   "capsule": "Before the sun, day and night followed the measure God fixed for the first light, and 'one day' names the full circuit of day and night.",
-   "comment": "And God called the light day, and the darkness he called night (Genesis 1:5). Now, after the creation of the sun, day is the air lit by the sun when it shines in the hemisphere above the earth, and night is the shadow of the earth that occurs when the sun is hidden. But then it was not according to the sun's movement; rather, as that firstborn light was poured forth and again contracted according to the measure fixed by God, day came to be, and night followed in turn.\n\nAnd there was evening, and there was morning, one day (Genesis 1:5). Evening, then, is the common boundary of day and night; and morning likewise is the neighborhood of night to day. So in order to give the privileges of birth to the day, he first named the end of the day, and then the end of the night, since night follows after day. For the state of the world before the creation of light was not night, but darkness; what was set in contrast to the day was named night, and it received this newer name after the day. So there was evening, and there was morning. He means the day-night. …\n\nAnd there was evening, and there was morning, one day (Genesis 1:5). Why did he not say first, but one? And yet it would have been more consistent for the one who was about to bring in a second, third, and fourth day to call the day that begins the sequence first. But he said one, either defining the boundary of the measure of day and night and joining together the time of the day-night, since the twenty-four hours complete the interval of one day—night being clearly included along with the day—so that even if at the turnings of the sun one of them happens to exceed the other, the intervals of both are nevertheless always circumscribed within the appointed time. It is as if he were saying: the measure of twenty-four hours is the interval of one day; or, the return of the heaven from the same point to the same point again happens in one day. So however often evening and morning overtake the world according to the sun's circuit, the period is completed not in more time, but in the interval of one day.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the text says 'one day' and what the first days were before the sun.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "16",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/16/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-021",
-   "chapter": 1,
-   "verse_start": 5,
-   "verse_end": 5,
-   "capsule": "The 'one day' is named so because it has kinship with eternity, a day without evening that points ahead to the life to come.",
-   "comment": "Or perhaps the more authoritative account is the one handed down in secret: that the God who fashioned the nature of time imposed measures and signs upon it—the intervals of days—and measuring it by the week, he commands the week always to return in a circle upon itself, counting out the movement of time. And the week, in turn, is completed by one day, returning upon itself seven times—and this is a circular shape, to begin from itself and end in itself. This is also the special property of eternity: to return upon itself and never come to an end. For this reason he named the head of time not “first day” but “one day,” so that even from the name it would have kinship with eternity. For the name that displays the character of what is solitary and unshared with another was fittingly and properly called “one.” And if Scripture presents many ages to us, speaking in many places of “age of age” and “ages of ages,” yet even there no first or second or third age has been counted out for us—so that from this we are shown differences of various conditions and affairs, not boundaries and limits and successions of ages. For “the day of the Lord,” it says, “is great and glorious” (Joel 2:11). And again, “Why do you seek the day of the Lord? It is darkness and not light” (Amos 5:18). Darkness, clearly, for those who deserve the darkness. For the word knows that day to be without evening, without succession, and without end—the day the psalmist also called the eighth, because it lies outside this sevenfold time. So whether you say “day” or “age,” you will mean the same thing. If that condition is called a day, it is one and not many; if it is called an age, it is solitary and not one of many. So to lead our thought toward the life to come, he named the image of eternity “one”—the firstfruits of days, the same age as the light, the holy Lord’s day, honored by the resurrection of the Lord.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "17",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/17/",
-   "from_cite": true
-  },
-  {
    "id": "GN01-022",
    "chapter": 1,
    "verse_start": 5,
@@ -359,81 +134,6 @@
    "work_slug": "didymus-in-genesim",
    "section": "u01-rem-close",
    "url": "https://viapatrum.org/works/didymus-in-genesim/u01-rem-close/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-023",
-   "chapter": 1,
-   "verse_start": 6,
-   "verse_end": 6,
-   "capsule": "Scripture shows God commanding in words to hint at one to whom he speaks, since God's word is his will and not a sound formed by vocal organs.",
-   "comment": "And God said, “Let a firmament come into being in the midst of the water, and let it separate water from water” (Genesis 1:6). Yesterday we already heard the words of God: “Let light come into being” (Genesis 1:3). And today: “Let a firmament come into being.” But the present words seem to have something more, because the word did not remain in the bare command alone, but also defined in addition the reason for which the construction of the firmament is required. “So that it may separate,” he says, “between water and water.” First, then, let us take up the question of how God speaks. Is it in our manner—first the impression from things arises in the understanding, then after imagining it, he selects from the underlying realities the proper and fitting signs of each and declares them, then hands over what has been understood to the service of the vocal organs, and so through the impression made on the air, by the articulate movement of the voice, makes the thought known secretly? And how is it not mythical to say that God needs such a roundabout way for the declaration of what he has understood? Or is it more reverent to say that the divine will and the first impulse of the intellectual movement—this is the Word of God? Scripture shapes him in a discursive way in order to show that he not only willed the creation to come into being, but also that it was brought into being through some co-worker. For it could have, as it said from the beginning, gone through all things: “In the beginning God made the heaven and the earth” (Genesis 1:1); then, “He made light”; then, “He made the firmament.” But now, by introducing God commanding and speaking, it hints at the one to whom he commands and to whom he speaks, in what is left silent—not begrudging us the knowledge, but kindling us toward desire, through the traces and indications it suggests of the ineffable.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains how Scripture means 'God said' and why it shows God speaking.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "18",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/18/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-024",
-   "chapter": 1,
-   "verse_start": 6,
-   "verse_end": 6,
-   "capsule": "The 'firmament' is not a hard body but a fine place that draws off moisture, and the water above keeps the burning heat of the ether from setting everything on fire.",
-   "comment": "'Let a firmament come into being in the midst of the water, and let it separate water from water' (Genesis 1:6). We have already said what the name 'firmament' means in Scripture. It does not mean a resistant and solid nature, one that has weight and offers resistance—Scripture does not call that a firmament. If it did, the earth would more properly have been given that name. But because the nature of the things above is fine and loose and not graspable by any sense, Scripture named it 'firmament' by comparison with the finest things that are imperceptible to the senses.\n\nAnd understand it as a place that separates the moist element: the fine and filtered part passes through to the upper regions, while the thickest and earthiest part is released below, so that from beginning to end the same good temperature may be preserved, as the moist elements are gradually drawn off in part. But you distrust the abundance of water, while you do not consider the abundance of heat—which, even if small in size, is capable of consuming a great deal of moisture because of its power. For it draws in the moisture that lies near it, as the cupping glass shows; and it consumes what it has drawn in, like the fire of a lamp, which draws up the fuel that lies near it through the wick and quickly turns it to ash through the change. And who doubts that the ether is fiery and burning hot? If it were not held back by the necessary limit set by its Maker, what would prevent it from setting everything ablaze and burning up all that is near it, consuming at once all the moisture in all things? For this reason there is aerial water, as the upper region becomes cloudy from the rising of vapors that rivers and springs and marshes and lakes and seas all send forth, so that the ether may not seize everything and set it on fire. Indeed, we see this very sun, in the summer season, often leaving a soaked and marshy land completely dry and parched in the briefest moment of time.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "23",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/23/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-025",
-   "chapter": 1,
-   "verse_start": 6,
-   "verse_end": 7,
-   "capsule": "The water above the firmament can rest on it, since a heaven that looks round on the inside need not be round on the outside.",
-   "comment": "And God said, “Let a firmament come into being in the midst of the water, and let it be separating between water and water.” And God made the firmament, and God separated between the water that was beneath the firmament and between the water that was above the firmament (Genesis 1:6-7). But before we touch the meaning of what is written, let us try to dissolve the objection brought against us by others. For they ask us: if the body of the firmament is spherical, as sight shows, and water is fluid and slips off high places, how could it have been made to sit firmly on the curved surface of the firmament? What then shall we say to this? That it is not at all necessary that what appears circular to us in its inner concavity should also have its outer surface finished spherically, and be perfectly turned and smoothly rounded throughout. For we see the stone roofs of baths and the construction of cave-like buildings, which are rounded into a semicircular shape on the inner view, yet often have a flat surface on the top of the roof. So for this reason let them neither make trouble for themselves nor cause trouble for us, as though we could not hold the water in the upper regions.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Answers a plain question about how water could stay above the firmament.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "20",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/20/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-026",
-   "chapter": 1,
-   "verse_start": 8,
-   "verse_end": 8,
-   "capsule": "The firmament is called heaven by likeness, since in Scripture the visible air around the earth also carries the name 'heaven.'",
-   "comment": "And God called the firmament heaven (Genesis 1:8)—the name properly belongs to another, but this also shares in the title by way of likeness. We have observed that in many places the visible region is called heaven, because the solid and continuous air clearly falls under our sight, and because it is seen it is deemed worthy of the name of heaven; as in the words, The birds of heaven (Genesis 1:26). And again: The things that fly across the firmament of heaven (Genesis 1:20). Of this kind also is the saying, They go up to the heavens. And Moses, blessing the tribe of Joseph, gives blessings from the seasons of heaven and the dew, and from the sun's turnings and the meetings of months, and from the tops of mountains and everlasting hills (Deuteronomy 33:13-15), since the region around the earth is made fruitful through the good order in these things. But also in the curses upon Israel he says, The heaven over your head shall be bronze (Deuteronomy 28:23).",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the firmament is called 'heaven' in the text.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "24",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/24/",
    "from_cite": true
   },
   {
@@ -474,80 +174,6 @@
    "from_cite": true
   },
   {
-   "id": "GN01-029",
-   "chapter": 1,
-   "verse_start": 9,
-   "verse_end": 9,
-   "capsule": "The water's downward flow comes from God's first command, which became a law of nature that still moves springs and rivers.",
-   "comment": "'Let the waters be gathered, and let the dry land appear' (Genesis 1:9). The curtains are drawn together, so that what was previously unseen may become visible. … First, why does the account attribute to the command of the Creator what belongs to water by nature—its movement toward a downward slope? For as long as water happens to lie on level ground, it is still, having nowhere to flow. But when it takes hold of some downward incline, when the leading water rushes forward, the water continuous with it seizes the base of the one that moved, and the following water seizes the base of that one. And so the leading water always escapes from under, while the water coming after pushes it on. And the flow becomes swifter the greater the weight of what is carried down and the deeper the hollow into which the influx runs. If water is like this by nature, then the command ordering it to be gathered into one gathering would be superfluous. For it was bound to run together of its own accord, because of the downward tendency of its nature, into the deepest region of all, and not to stop until its surface was leveled. For no place is as level as the surface of water. …\n\nTo the first of these questions we say this: you have come to know the movements of water after the Master's command—that it flows downward and is unstable, and is carried by nature toward slopes and hollows. But before that, what power it had before the course from this command was born in it, you neither saw yourself nor heard from anyone who saw. Understand that the voice of God is maker of nature, and the command given then to creation provided the continuity for what was created thereafter. Day and night were made once, and from that time until now they succeed one another and divide time in equal portions without ceasing.\n\n'Let the waters be gathered.' The nature of the waters was commanded to run, and it never grows weary, urged on continually by that command. …\n\nIf you have ever stood by a spring that sends up abundant water and wondered: Who is it that pushes this water from the flanks of the earth? Who urges it forward? What are the storehouses from which it comes? What is the place to which it hurries? How is it that these do not fail, and those are not filled up? All this depends on that first voice. From there the water received the signal to run.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the text speaks of a command for something water does by nature.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "28",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/28/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-030",
-   "chapter": 1,
-   "verse_start": 9,
-   "verse_end": 9,
-   "capsule": "The sea stays within its bounds because God's first command that the waters be gathered still holds, as the sand holds back its violence.",
-   "comment": "The flowing of the waters and the sea's confinement within its boundaries both come from that first legislation: \"Let the waters be gathered into one gathering\" (Genesis 1:9). The water that kept flowing in would have overflowed the places that received it, always moving on and filling one place after another, until it flooded the whole continent in an unbroken sweep. So it was commanded to be gathered into one gathering. That is why the sea, even when it rages under the winds and its waves rear up to an enormous height, the moment it touches the shore, dissolves its force into foam and turns back. \"Will you not fear me, says the Lord, who set the sand as a boundary for the sea?\" (Jeremiah 5:22). The sea, whose violence cannot be withstood, is bridled by the weakest thing of all—sand. What else kept the Red Sea from sweeping over all Egypt, which lies lower than the sea itself, and joining the ocean that borders Egypt, if it was not bound by the command of its Creator? That Egypt is lower than the Red Sea has been proved to us in practice by those who wanted to join the two seas to each other—the Mediterranean and the Indian Ocean, in which the Red Sea lies. That is why they abandoned the attempt: first Sesostris the Egyptian, who began it, and then Darius the Mede, who later wanted to carry it through. I have said all this so that we may understand the power of the command: \"Let the waters be gathered into one gathering.\" That is, let no other gathering be produced from this one, but let what is gathered remain in that first collection.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "29",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/29/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-031",
-   "chapter": 1,
-   "verse_start": 9,
-   "verse_end": 9,
-   "capsule": "God said 'dry land' and not 'earth' because the earth was still mud, and he dried it before the sun was made.",
-   "comment": "And God said, “Let the waters be brought together into one gathering, and let the dry land appear” (Genesis 1:9). He did not say, “Let the earth appear.” He refused to display it again as unformed, since it lay as mud and mixed with water, and had not yet received its own form and power. At the same time the Creator made the dryness of the earth older than the birth of the sun, so that we would not assign to the sun the cause of drying the earth.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains the wording 'dry land' and why the earth dried before the sun.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "30",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/30/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-032",
-   "chapter": 1,
-   "verse_start": 9,
-   "verse_end": 9,
-   "capsule": "Many copies add to 'and it was so' a repeated line about the gathering of the waters, which accurate copies mark with an obelus as redundant.",
-   "comment": "“And it became so.” This sequel is sufficient to show that the Creator’s voice came to fulfillment in deed. But in many copies there is added: “And the water under heaven was gathered into its gatherings, and the dry land appeared”—which neither some of the other translators have published, nor does the usage of the Hebrews appear to contain. For in truth, after the testimony that “It became so,” the further detailed narration of the same things is redundant. In the accurate copies, then, these words have been marked with an obelus; and the obelus is a sign of rejection.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "31",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/31/",
-   "from_cite": true
-  },
-  {
    "id": "GN01-033",
    "chapter": 1,
    "verse_start": 9,
@@ -563,190 +189,6 @@
    "work_slug": "didymus-in-genesim",
    "section": "u03-open",
    "url": "https://viapatrum.org/works/didymus-in-genesim/u03-open/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-034",
-   "chapter": 1,
-   "verse_start": 10,
-   "verse_end": 10,
-   "capsule": "'Dry' names the earth's own property and 'earth' is the name of the thing, just as 'rational' is the property of a human being.",
-   "comment": "“And God called the dry land earth, and the gatherings of the waters he called seas” (Genesis 1:10). Why is it that earlier it says, “Let the waters be gathered into one gathering, and let the dry land appear” (Genesis 1:9), but it is not written, “and let the earth appear”? And here again, “The dry land appeared, and God called the dry land earth”? Because “dry” is the peculiar property, the as it were characteristic of the nature of the underlying thing, while “earth” is a bare appellation of the thing. For just as rationality is the peculiar property of a human being, while the word “human being” signifies the animal in which that property resides, so also dryness is the peculiar and exceptional property of earth. That, then, which properly possesses dryness is called earth—just as that which properly possesses the neighing property is called a horse. And this is true not only of earth, but each of the other elements also has a peculiar and allotted quality, by which it is distinguished from the rest and by which each is recognized for what it is. Water has coldness as its own quality; air has moisture; fire has heat.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the text says 'dry land' first and then names it 'earth.'",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "31",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/31/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-035",
-   "chapter": 1,
-   "verse_start": 10,
-   "verse_end": 10,
-   "capsule": "'God saw that it was good' does not mean the sea looked pleasant to God's eyes but that the Creator judged the work by his wisdom.",
-   "comment": "“And God saw that it was good” (Genesis 1:10). The text does not mean that some pleasant sight of the sea appeared to God. For the Maker does not see the beauties of creation with eyes, but contemplates what comes into being with ineffable wisdom. A whitening sea is a sweet sight when a steady calm holds it; it is sweet too when its back is roughened by gentle breezes and it casts a purple or dark-blue color before those who watch—when it does not strike the neighboring land violently, but kisses it as if with peaceful embraces. But we must not think Scripture means that the sea appeared beautiful and sweet to God in this way. Rather, the good there is judged by the reasoning of the Creator's work.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains what it means that God 'saw' that his work was good.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "32",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/32/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-036",
-   "chapter": 1,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "God's first command became a law of nature that still gives the earth power to bear, and he made the earth's growth before the sun so that no one would worship the sun as the source of life.",
-   "comment": "And God said, \"Let the earth sprout the herb of grass, seed-bearing according to kind, and the fruit tree producing fruit according to kind, whose seed is in it\" (Genesis 1:11). It follows that after the earth had rested, having put off the weight of the water, the command came to it to sprout first herb, then tree—which we still see happening now. For that voice then, and that first command, became like a law of nature and remained in the earth, granting it the power to generate and bear fruit for the time to come. \"Let the earth sprout.\" First in the generation of growing things is the sprouting; then, when the sprouts come up a little, herb appears; then, when it has grown, it is grass, as the growing things are gradually articulated and advance to the completion of the seed. For the green and grassy state is similar in all of them. \"Let the earth sprout the herb of grass.\" Let the earth bring forth the sprouting by itself, needing no cooperation from any other source. Since some people think the sun is the cause of the things that grow from the earth, drawing up the power from the depths to the surface by the attraction of heat, for this reason the ordering of the earth is older than the sun—so that those who have gone astray may stop worshiping the sun as though it provided the cause of life. If they are persuaded that everything concerning the earth was ordered before the sun's creation, they will also let go of their excessive wonder at it, considering that it is younger than grass and herb in its origin. Was food then laid out beforehand for the cattle, while our own provision appeared worthy of no forethought? But surely the one who stored up fodder for cattle and horses beforehand is above all preparing wealth and enjoyment for you.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the plants come before the sun and how the first command still works in nature.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "33",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/33/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-037",
-   "chapter": 1,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "Each plant either has seed or a seedlike power within it, and 'according to kind' means that the kind of the first creation is kept by succession to this day.",
-   "comment": "\"Let the earth sprout the herb of grass, sowing seed,\" it says, \"according to kind\" (Genesis 1:11). So even if some kind of herb differs from others, its benefit comes back to us, and the use of the seeds is set apart for us. The meaning of the words, then, is this: \"Let the earth sprout the herb of grass, and seed sowing according to kind.\" In this way the sequence of the wording can be restored—since the syntax now seems inconsistent—and the necessary order of what nature arranges will be preserved. For first comes sprouting, then the green shoot, then the growth of the grass, then the completion of what grows through the seed. How then, they say, does the text show that everything growing from the earth has seed, when neither reed nor couch grass nor mint, not crocus, not garlic, not sedge, nor countless other kinds of plants appear to produce seed? To this we answer that many of the things growing from the earth have the power of their seeds in the base and the root. Just as the reed, after its yearly growth, sends out from the root a certain shoot having the principle of seed for the future. Countless other plants do the same, all that spread through the ground and possess their succession in their roots. So it is truer than anything that for each thing that grows there is either a seed or some seedlike power existing within it. And this is what \"according to kind\" means. For the shoot of the reed does not produce an olive tree, but from a reed comes another reed, and from seeds the things related to what was sown spring up. And so what the earth brought forth in the first creation is preserved even until now, the kind being guarded by the sequence of succession.\n\n\"Let the earth sprout.\" Consider for me how from a small utterance and so brief a command, the frozen and barren earth suddenly travails and is stirred toward fruit-bearing, as though throwing off a gloomy and mournful garment and clothing herself in a brighter one, rejoicing in her proper ornaments and putting forth the countless kinds of growing things.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "34",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/34/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-038",
-   "chapter": 1,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "The order of growth today, from sprout to herb to grass to ripened seed, testifies to the first arrangement.",
-   "comment": "\"Let the earth sprout the herb of grass, bearing seed according to kind and according to likeness\" (Genesis 1:11). Even now the order of growing things testifies to that first arrangement. For sprouting comes first for every herb and every grass. Whether something is sent out from a root by a shoot from below, like the crocus and the dog's-tooth grass, it must first sprout and push out to the surface; or whether it comes from seed, in that case too there must first be sprouting, then the herb, then the green grass, then the fruit ripening on the now dry and thick stalk. \"Let the earth sprout the herb of grass.\" When the seed falls into earth that has a proper measure of moisture and warmth, it becomes porous and full of holes, takes hold of the surrounding earth, and draws to itself the things that are akin and of the same kind. The finest particles of the seed enter the pores of the earth and slip through them, and they widen its own bulk more and more, so that the seed takes root downward and pushes upward, sending out stalks equal in number to the roots. As the sprout is continually warmed, the moisture drawn through the roots brings up with it, by the pull of the heat, a measured amount of the earth's nourishment, and distributes it into stalk and husk and the sheaths of the grain, and into the grain itself and the awns. And so, as the growth proceeds little by little, each of the growing things reaches its proper measure, whether it is one of the grains, or the legumes, or the vegetables, or the brushwood.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "35",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/35/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-039",
-   "chapter": 1,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "Poisonous plants are no charge against the Creator, since each thing fulfills its own purpose, feeds some creatures, and serves medicine.",
-   "comment": "\"Let the earth sprout the herb of grass\" (Genesis 1:11). And immediately the poisons were sent out together with the nourishing plants: with the grain, hemlock; with the other foods, hellebore, and aconite, and mandrake, and the juice of the poppy. What then? Shall we abandon giving thanks for the useful things and accuse the Creator for the things that destroy our life? And shall we not reckon this: that not all things have been created for the sake of our stomach? But the foods assigned to us are ready at hand and easily recognized by all; yet each of the things that came into being fulfills its own particular purpose in creation. For since bull's blood is poison to you, was it necessary for this reason either that the bull not be created, or that it be created without blood—whose strength our life needs for so many purposes? But the reason that dwells with you is sufficient for guarding against destructive things. For surely sheep and goats know how to flee from what harms their life, distinguishing what is harmful by sense perception alone; but for you, who have reason at hand, and the medical art supplying what is useful, and the experience of those who came before suggesting flight from harmful things—tell me, is it difficult to avoid poisons? And none of these things has come into being idly, none uselessly. For either it provides food for some of the brute animals, or it has been discovered by the medical art for our own relief from certain illnesses. For starlings feed on hemlock, escaping the harm of the poison through the construction of their bodies. Since they have narrow passages around the heart, they digest what they have swallowed before the chill from it can seize their vital parts. Hellebore is food for quails, which escape the harm by the peculiarity of their constitution. And these very things are also useful to us at times. For through mandrake doctors induce sleep; and with opium they lull the violent pains of the body. Some have already withered the rabid frenzy of appetites with hemlock; and with hellebore they have pried out many chronic afflictions. So what you thought you had as an accusation against the Creator has turned around for you into an increase of thanksgiving.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Answers the plain question why poisonous plants were created.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "36",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/36/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-040",
-   "chapter": 1,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "At the command, the earth brought plants to full growth in the briefest time, before the sin that condemned us to eat bread by the sweat of the face.",
-   "comment": "\"Let the earth bring forth vegetation\" (Genesis 1:11). And in the briefest moment of time, the earth began from the sprouting, so that it might keep the laws of its Creator, and passing through every form of growth, it immediately brought the sprouts to completion. The meadows were deep with the abundance of grass, and the fruitful plains, bristling with standing crops, preserved the image of a swelling sea in the movement of the ears of grain. Every herb and every kind of vegetable, and whatever belongs to brushwood and whatever belongs to pulses, then abounded on the earth in all abundance. For there was no failure among the things then brought forth: neither the inexperience of farmers, nor the harshness of the air, nor any other cause was harming what came to be. Nor indeed did the condemnation hinder the fertility of the earth. For these things are older than the sin for which we were condemned to eat our bread in the sweat of our face (Genesis 3:19).",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "37",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/37/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-041",
-   "chapter": 1,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "The command to sprout trees brought into being at once the trees useful for the table, for the herds and for medicine, all foreseen by the Creator.",
-   "comment": "“Let the earth sprout a fruit-bearing tree, producing fruit upon the earth” (Genesis 1:11). And immediately the mountain peaks were covered with foliage, and gardens were artfully arranged, and riverbanks were adorned with countless kinds of plants. Some had been prepared to adorn the human table; others were providing food for the herds, from their leaves and from their fruits. Others were furnishing us in advance with the benefits of medicine: their juices, their saps, their twigs, their barks, their fruit. And in a word, all the useful things that long experience has discovered for us, gathering what is beneficial from particular occurrences—these the keen forethought of the Creator, foreseeing them from the beginning, brought into being.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "41",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/41/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-042",
-   "chapter": 1,
-   "verse_start": 14,
-   "verse_end": 14,
-   "capsule": "The lights divide day and night, for night is only the earth's shadow, and their signs are useful to human life.",
-   "comment": "These lights were also appointed to separate between the day and between the night. For above, God separated between the light and between the darkness; then he set their natures in opposition to each other, so that they have no mixing with one another, and light has nothing in common with darkness. What a shadow is in the daytime, that is what we should understand the nature of darkness to be at night. For every shadow falls from bodies that block a shining ray, lying opposite the light; in the morning it stretches toward the west, in the evening it leans toward the east, and at noon it lies to the north. So too the night withdraws in the direction opposite the sun's rays, being nothing other in its nature than a shadowing of the earth. Just as in the daytime a shadow comes into being from whatever blocks the light, so the night naturally comes into being when the air around the earth is cast into shadow. This, then, is what is meant by the words, God separated between the light and between the darkness: the darkness flees the assaults of the light, because at the first creation their estrangement from one another was built into their natures. But now he commanded the sun to govern the measures of the day, and the moon, whenever it completes its own cycle, he made the ruler of the night. For at that time the lights stand nearly opposite one another across the diameter. When the sun rises at the full moon, the moon sinks down out of sight; and when the sun sets again, the moon often rises opposite it from the east. If in its other phases the moon's light does not exactly coincide with the night, that has no bearing on the present discussion. The point is that when the moon is at its fullest, it begins the night, outshining the stars with its own light and illuminating the earth, and it divides the measures of time equally with the sun. \"And let them be for signs, and for seasons, and for days, and for years\" (Genesis 1:14). The indications given by the lights are necessary for human life. If one does not busy himself beyond measure with the signs they give, he will find their observations, gained from long experience, useful. From them one can learn many things about heavy rain, and many things about droughts and the movement of winds, whether local or general, violent or gentle. One of the signs drawn from the sun the Lord himself has handed on to us, when he said, \"There will be a storm, for the sky reddens, being gloomy\" (Matthew 16:3). For when the sun rises through mist, its rays are dimmed, and its color appears like coals and tinged with blood, because the thickness of the air produces this appearance to the eyes. The air, which until then was dense and compact and not dispersed by the ray, shows that it could not be overcome because of the influx of vapors from the earth, but by the excess of moisture it will bring a storm upon the regions where it gathers.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "45",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/45/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-043",
-   "chapter": 1,
-   "verse_start": 14,
-   "verse_end": 14,
-   "capsule": "'Seasons' means the alternations of winter, spring and summer, which the sun brings by its course.",
-   "comment": "Let us return to the next words of the text. \"Let them be for signs and for seasons and for days and for years,\" it says (Genesis 1:14). We have already spoken about the signs. By seasons, I think he means the alternations of the year's periods: winter, spring, summer, and autumn. The ordered movement of the lights causes us to pass through these in good order. Winter comes when the sun lingers in the southern regions and produces a long stretch of nighttime shadow over our part of the earth, so that the air around the earth grows cold, and all the moist vapors gather around us and bring about rain, frost, and boundless snow. But when the sun returns again from the southern regions and reaches the midpoint, so that it divides the time equally between night and day, the more it lingers over the places above the earth, the more it gradually brings back a mild temperature. Then spring comes, which is the beginning of sprouting for all plants, grants renewal of life to most trees, and preserves the race of all land and water creatures through the succession of their offspring. From there the sun drives on toward the summer solstice, toward the Bear itself, and brings about the longest days for us. Because it stays in contact with the air for the greatest length of time, it scorches the air above our heads and dries out the whole earth, and in this way it helps the seeds to mature and urges the fruits of the trees toward ripeness.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "49",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/49/",
    "from_cite": true
   },
   {
@@ -804,116 +246,6 @@
    "from_cite": true
   },
   {
-   "id": "GN01-047",
-   "chapter": 1,
-   "verse_start": 20,
-   "verse_end": 20,
-   "capsule": "At the command the waters at once filled with every kind of swimming creature, for the small word of command holds as much meaning as all the kinds of fish.",
-   "comment": "“And God said, ‘Let the waters bring forth creeping things of living souls according to kind, and winged creatures flying across the firmament of heaven according to kind’” (Genesis 1:20). After the creation of the lights, the waters are now filled with living things, so that this region too may be adorned. The earth had already received its adornment from its own plants; the heaven had received the flowers of the stars, and had been adorned as it were by the twin beams of the great lights, like a pair of eyes. What remained was for the waters to receive their own adornment as well. The command came, and at once rivers became active and lakes productive, each of them bringing forth their own natural kinds. The sea gave birth to all the varied kinds of swimming creatures, and not even what was in the mud and pools of water—not even this remained idle or without its share in the work of creation. For frogs and gnats and mosquitoes were clearly produced from them. The things we still see now are proof of what happened then. So every water hastened to serve the creative command; and the great and ineffable power of God showed at once the life of creatures whose kinds no one could even count, active and moving, the moment the command was given and the waters received their fitness for producing life. “Let the waters bring forth creeping things of living souls.” Now for the first time a living creature is made that has a soul and shares in sensation. For plants and trees, even if they are said to live because they share in the power of nourishment and growth, are not animals, nor do they have souls. For this reason: “Let the waters bring forth creeping things.” Everything that swims—whether it floats on the surface of the water or cuts through the depths—belongs to the nature of creeping things, since it moves along through the body of the water. And even if some water creatures have feet and walk (most of these are amphibious—for example, seals, crocodiles, river horses, frogs, and crabs), their primary characteristic is still swimming. For this reason: “Let the waters bring forth creeping things.” In these few words, what kind has been left out? What has not been included in the command of creation? Are not the live-bearing creatures included—seals, dolphins, torpedo rays, and the similar ones called cartilaginous fish? Are not the egg-laying ones, which are nearly all the kinds of fish? Are not all the scaly ones, all those with rough skins, all those with fins and those without? The sound of the command is small—or rather, it is not even a sound, but only an inclination and impulse of the will. Yet the meaning contained in the command is as vast as all the differences and common features of fish. To go through all of them in detail would be like counting the waves of the sea, or trying to measure the water of the ocean with cups. “Let the waters bring forth creeping things.” In these are included the creatures of the open sea, the creatures of the shores, the creatures of the depths, the creatures of the rocks, those that move in schools, those that scatter, the sea-monsters, the enormous ones, and the smallest of fish. For by the same power and the same command, both the great and the small receive their existence.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Describes what happened on the fifth day and how much one command contained.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "54",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/54/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-048",
-   "chapter": 1,
-   "verse_start": 20,
-   "verse_end": 20,
-   "capsule": "God commanded the first beginnings of each kind to come forth now, as seeds of nature.",
-   "comment": "\"Let the waters bring forth creeping things that are living creatures according to kind\" (Genesis 1:20). He commands that the first beginnings of each kind be brought forth now, as seeds of nature, so to speak; their abundance is stored up for the succession that follows, when they must increase and multiply.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "55",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/55/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-049",
-   "chapter": 1,
-   "verse_start": 20,
-   "verse_end": 20,
-   "capsule": "Every creature of the water serves a purpose, for human use, for wonder, or to discipline our slackness.",
-   "comment": "\"Let the waters bring forth\" (Genesis 1:20). And what necessary thing has not come to be? What costly thing has not been granted to life? Some things are for the service of human beings; others are for the contemplation of the wonder in creation. Others are fearsome, disciplining our slackness.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "59",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/59/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-050",
-   "chapter": 1,
-   "verse_start": 20,
-   "verse_end": 20,
-   "capsule": "Winged creatures come from the waters because they are kin to swimming creatures, which cut the water with fins as birds cut the air with wings.",
-   "comment": "“Let the waters bring forth,” it says, “creeping things of living souls according to kind, and winged creatures flying over the earth across the firmament of heaven according to kind” (Genesis 1:20). Why did he give the winged creatures their origin from the waters? Because there is a certain kinship between flying creatures and swimming creatures. For just as fish cut through the water, moving forward by the motion of their wings, and steering their turns and straight courses by the movement of their tail, so also in the case of winged creatures one can see them swimming through the air with their wings in a similar way. Therefore, since swimming is one distinctive property in both, a single kinship was provided for them from their origin in the waters.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the text has birds come from the waters.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "62",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/62/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-051",
-   "chapter": 1,
-   "verse_start": 20,
-   "verse_end": 20,
-   "capsule": "Birds fly 'upon the earth' because their food comes from the earth, and 'firmament of heaven' here means the air above our heads.",
-   "comment": "\"Let the waters bring forth creeping things of living souls, and winged creatures flying upon the earth, across the firmament of heaven\" (Genesis 1:20). They were commanded to fly upon the earth because food for all comes from the earth. And \"across the firmament of heaven,\" as we have already explained, because the air is here called \"heaven\" from being seen, and \"firmament\" because the air above our heads is somehow denser in comparison with the ethereal body, and more compressed by the exhalations from below. You have, then, a heaven adorned, an earth beautified, a sea teeming with its own offspring, an air full of the birds that fly through it. All things were brought by the command of God from non-being into being.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "66",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/66/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-052",
-   "chapter": 1,
-   "verse_start": 21,
-   "verse_end": 21,
-   "capsule": "The great sea creatures are called great because their bodies rival the mountains, and they were made to rouse fear and astonishment.",
-   "comment": "\"God made the great sea creatures\" (Genesis 1:21). They are not called great merely because they are larger than a shrimp or a sprat, but because they rival the greatest mountains in the bulk of their bodies. They often present the appearance of islands whenever they swim up to the very surface of the water. Yet these creatures, enormous as they are, do not linger near shores or beaches, but inhabit the ocean called the Atlantic. Such are the animals created for our fear and astonishment.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "59",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/59/",
-   "from_cite": true
-  },
-  {
    "id": "GN01-053",
    "chapter": 1,
    "verse_start": 21,
@@ -947,63 +279,6 @@
    "work_slug": "didymus-in-genesim",
    "section": "u05-open",
    "url": "https://viapatrum.org/works/didymus-in-genesim/u05-open/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-055",
-   "chapter": 1,
-   "verse_start": 24,
-   "verse_end": 24,
-   "capsule": "The earth brings forth the soul of animals because the soul of a beast is its blood, which turns to flesh and then to earth, unlike the soul of a human being.",
-   "comment": "\"Let the earth bring forth a living creature\" (Genesis 1:24). Why does the earth bring forth a living creature? So that you may learn the difference between the soul of an animal and the soul of a human being. A little later you will learn how the human soul was constituted; for now, hear about the soul of creatures without reason. Since, as it is written, the soul of every living creature is its blood (Leviticus 17:11), and blood when it congeals naturally changes into flesh, and flesh when it decays dissolves into earth, the soul of animals is reasonably something earthy.\n\n\"Let the earth bring forth a living creature,\" then. Observe the sequence: soul to blood, blood to flesh, flesh to earth. And again, reversing the steps, go back from earth to flesh, from flesh to blood, from blood to soul, and you will find that the soul of animals is earth. Do not think that it is older than the substance of their body, or that it remains after the dissolution of the flesh.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the earth brings forth animals and how an animal's soul differs from a human soul.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "61",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/61/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-056",
-   "chapter": 1,
-   "verse_start": 24,
-   "verse_end": 24,
-   "capsule": "God's word runs through creation from that first command until the world's completion, so that each kind hands on its own kind through the generations.",
-   "comment": "“Let the earth bring forth the living creature of cattle and wild beasts and creeping things” (Genesis 1:24). Consider the word of God running through creation, beginning then and still at work now, and pressing on to a prosperous end until the world is completed. For just as a ball, when someone pushes it and it finds a slope, is carried downhill by its own construction and the suitability of the ground, and does not stop until something level receives it, so the nature of existing things, set in motion by a single command, passes evenly through the creation that is subject to birth and decay, preserving the successions of kinds through likeness, until it arrives at the end itself. For it makes a horse the successor of a horse, and a lion of a lion, and an eagle of an eagle, and it hands on each of the animals, preserved through successive generations, until the completion of all things. No time corrupts or makes obsolete the distinctive traits of animals, but their nature, as if just now established, always fresh, runs along with time.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains how the first command keeps working in the breeding of animals.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "70",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/70/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-057",
-   "chapter": 1,
-   "verse_start": 24,
-   "verse_end": 24,
-   "capsule": "The earth did not bring out what it had hidden inside, for God's word gave it the power to bring forth, and so the earth is not ensouled.",
-   "comment": "And God said, \"Let the earth bring forth a living creature according to kind: four-footed animals and creeping things and wild beasts according to kind.\" And it was so (Genesis 1:24). The command came walking along its path, and the earth received its own adornment. There, \"Let the waters bring forth creeping things of living creatures\" (Genesis 1:20); here, \"Let the earth bring forth a living creature.\" Is the earth then ensouled? Do the foolish Manichaeans have any ground for putting a soul into the earth? It is not because He said \"Let it bring forth\" that the earth brought out what was stored up within it; rather, the One who gave the command also granted it the power to bring forth. For when the earth heard, \"Let it sprout the herb of grass and the fruit tree\" (Genesis 1:11), it did not bring out grass it had hidden within itself; it did not send up to the surface a palm tree or an oak or a cypress that had been stored away somewhere in its hollows. No, the divine word is the nature of the things that come to be. \"Let the earth sprout\": not \"let it cast out what it has,\" but \"let it acquire what it does not have,\" since God grants the power to be active. So now also, \"Let the earth bring forth a living creature\": not the one stored up within it, but the one given to it by God through the command. And then the argument will turn back against them in the opposite direction. For if the earth brought out the soul, it left itself bereft of soul. But their abomination is obvious immediately. Why, however, were the waters commanded to bring forth creeping things of living creatures, while the earth was commanded to bring forth a living creature? We reason, then, that the nature of swimming things seems to share in a life that is somehow less complete, because they live in the thickness of the water.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains what the command 'Let the earth bring forth' does and does not mean.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "60",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/60/",
    "from_cite": true
   },
   {
@@ -1041,43 +316,6 @@
    "work_slug": "didymus-in-genesim",
    "section": "u05-rem-close",
    "url": "https://viapatrum.org/works/didymus-in-genesim/u05-rem-close/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-060",
-   "chapter": 1,
-   "verse_start": 26,
-   "verse_end": 26,
-   "capsule": "'Let us make man' shows that God is not speaking to himself, since no craftsman gives orders to himself, but is speaking with the partner of his work.",
-   "comment": "And God said, 'Let us make man' (Genesis 1:26). Where now is the Jew who, in the passages before, when the light of theology was shining through as if through certain windows, and a second Person was being indicated mystically but not yet clearly revealed, fought against the truth, saying that God was conversing with himself? For he himself said, he says, and he himself made. 'Let there be light,' and there was light (Genesis 1:3). Even then, of course, the absurdity in what they said was obvious. For what blacksmith, or carpenter, or leatherworker, sitting alone with the tools of his trade and with no one working with him, says to himself, 'Let us make the knife,' or 'Let us fit together the plow,' or 'Let us finish the sandal'? Does he not rather carry out the work before him in silence? For it is truly terrible nonsense to say that someone sits as ruler and overseer of himself, giving orders to himself in a lordly and urgent manner. … The present word, however, completely stops their mouth. 'And God said, Let us make man.' Tell me, is the Person solitary even now? For it is not written, 'Let man be made,' but 'Let us make man.' As long as the one being taught had not yet appeared, the proclamation of theology was hidden in depth. But when the creation of man is now expected, the faith is laid bare, and the doctrine of the truth is shown more clearly. 'Let us make man.' Do you hear, O fighter against Christ, that he is conversing with the partner of his creation, through whom he also made the ages, who upholds all things by the word of his power (Hebrews 1:2-3)?",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why Genesis says 'Let us make' in the plural.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "75",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/75/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-061",
-   "chapter": 1,
-   "verse_start": 26,
-   "verse_end": 26,
-   "capsule": "'Let us make' cannot be said to angels, because man is made 'according to our image,' and there is one image of God, his Son.",
-   "comment": "For they say he is speaking to the angels who stand beside him: 'Let us make man.' The fabrication is Jewish, the myth-making born of their ease in argument. So that they may not accept the one, they introduce countless persons. And rejecting the Son, they attach the dignity of counsel to servants, and make our fellow slaves lords of our creation. A man who is being perfected is raised up to the dignity of angels. But what created thing can be equal to its creator? Consider also what follows: 'According to our image.' What do you say to this? Is there one image of God and of angels? For of the Son and the Father there is every necessity that the form be the same—the form being understood, of course, in a way befitting God, not in bodily shape, but in the distinctive character of the Godhead. … To whom does he say, 'According to our image'? To whom else but the radiance of his glory and the exact impress of his substance, who is the image of the invisible God (Colossians 1:15)? To his own living image, then, to the one who said, 'I and the Father are one' (John 10:30), and 'Whoever has seen me has seen the Father' (John 14:9)—to this one he says, 'Let us make man according to our image' (Genesis 1:26). Where there is one image, where is the dissimilarity?",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "76",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/76/",
    "from_cite": true
   },
   {
@@ -1315,24 +553,6 @@
    "work_slug": "cyril-adoration-1",
    "section": "7",
    "url": "https://viapatrum.org/works/cyril-adoration-1/7/",
-   "from_cite": true
-  },
-  {
-   "id": "GN01-081",
-   "chapter": 1,
-   "verse_start": 27,
-   "verse_end": 27,
-   "capsule": "The singular 'God made' guards against many gods, while 'in the image of God' again brings in the co-worker, and the image is the same.",
-   "comment": "'And God made the man' (Genesis 1:27). He did not say, 'They made.' Here he fled from the plurality of persons. Through those words he instructs the Jew, and through these he shuts out Hellenism, and he safely ran back up to the monad, so that you may understand the Son with the Father, and may escape the danger of polytheism. 'In the image of God he made him' (Genesis 1:27). Again he introduced the person of the co-worker. For he did not say, 'In his own image,' but, 'In the image of God.' In what respect, then, man has that which is according to the image of God, and how he receives a share of that which is according to the likeness, will be said in what follows, God granting it.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "76",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/76/",
    "from_cite": true
   },
   {
@@ -1606,6 +826,25 @@
    "section": "u08-rem-close",
    "url": "https://viapatrum.org/works/didymus-commentarii-ecclesiasten/u08-rem-close/",
    "from_cite": true
+  },
+  {
+   "id": "GN01-103",
+   "chapter": 1,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "Scripture calls all things very good because even creatures used as images of wickedness are not evil by nature.",
+   "comment": "… not because the irrational [animals] are vile, for nothing evil was created from the Good. Let no one suppose that the irrational are placed in a land of wickedness because they provide an image of wickedness for those living not according to virtue. For if this were so, how did the Scripture say, 'And God saw all that he had made, and behold, it was good,' (Genesis 1:31) and not merely good, but also very good? When, then, the things that came to be were provided as an image of wickedness—for the lion is an image of the tyrant, and the serpent of the crooked and most evil way, and the scorpion of plague, and the wolf of the robber—where would the things that came to be good, if they were so obviously being received as an image of wickedness? It is necessary for those who love learning to know that these things are not evil by their own nature…\n\nFor all things are truly beautiful, and very beautiful, if they guard their own rank and pursue their own law. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the verse calls all things very good in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Sermon on Genesis",
+   "work_slug": "severianus-in-genesim",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-in-genesim/u01-open/",
+   "from_cite": false
   },
   {
    "id": "GN02-002",
@@ -2675,25 +1914,6 @@
    "from_cite": true
   },
   {
-   "id": "GN03-033",
-   "chapter": 3,
-   "verse_start": 18,
-   "verse_end": 18,
-   "capsule": "The thorn was added later to the rose's beauty, so that we remember the sin for which the earth was condemned.",
-   "comment": "… Except that the rose was then without a thorn; later the thorn was yoked to the beauty of the flower, so that close beside the delight of enjoyment we might have the grief placed nearby, remembering the sin for which the earth was condemned to bring forth thorns and thistles for us (Genesis 3:18).",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why thorns grow with beautiful flowers.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "37",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/37/",
-   "from_cite": true
-  },
-  {
    "id": "GN03-034",
    "chapter": 3,
    "verse_start": 18,
@@ -2934,8 +2154,8 @@
    "chapter": 3,
    "verse_start": 24,
    "verse_end": 24,
-   "capsule": "The cherubim and flaming sword pass none unworthy but admit the worthy through the fire of confession, so the martyr enters paradise.",
-   "comment": "… For as the cherubim with flaming sword guarding Paradise's road are passed by none unworthy, but admit the worthy through confession's fire — the denial-wood burning away — so, treading the serpent under feet, given authority 'to tread on serpents and scorpions,' (Luke 10:19) the martyr enters Paradise, whence Adam fell, and finds the tree of life (Genesis 3:24) (Luke 10:19).",
+   "capsule": "The flaming sword holds back those who have built the wood of denial, while the cherubim receive those who cannot be held by the sword and escort them to the tree of life.",
+   "comment": "… For even if both of these [the cherubim and the flaming sword] guard “the way of the tree of life”, they guard it so that no unworthy person may be allowed to pass along it and come to the tree of life. The flaming sword will hold back those who have built upon the foundation that is laid, Jesus Christ, “wood or hay or straw” (1 Corinthians 3:12), and the most combustible wood, the one that burns longest, the wood, if I may call it so, of denial. But the cherubim will receive those who by their nature cannot be held by the flaming sword, because they have built nothing akin to it, and will escort them to “the tree of life” and to all that “God planted” in the east and “made to spring up” “out of the earth” (Genesis 2:8-9).",
    "editions": [
     "complete"
    ],
@@ -4217,13 +3437,12 @@
    "chapter": 11,
    "verse_start": 7,
    "verse_end": 7,
-   "capsule": "At the tower God spoke to his Son and Holy Spirit when he said 'Come, let us descend'.",
-   "comment": "For in the book of Genesis, at the tower, God and Father spoke the blessed hypostases [the distinct persons] toward his own Son and his own Holy Spirit, saying: 'Come, let us descend and let us pour out their tongues there, so that each might not hear the voice of his neighbor' (Genesis 11:7).",
+   "capsule": "At Babel, God the Father disclosed the distinct persons when speaking to his Son and Holy Spirit.",
+   "comment": "In the book of Genesis, at the building of the tower, God the Father disclosed the blessed hypostases [the distinct persons] when he said to his own Son and to his Holy Spirit: “Come, let us go down and confuse their tongues there, so that each may not understand the voice of his neighbour” (Genesis 11:7).",
    "editions": [
-    "complete",
-    "selected"
+    "complete"
    ],
-   "selected_reason": "Explains the plural 'let us' in God's words.",
+   "selected_reason": "",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -5137,10 +4356,29 @@
   {
    "id": "GN22-002",
    "chapter": 22,
-   "verse_start": 13,
+   "verse_start": 11,
+   "verse_end": 13,
+   "capsule": "Abraham completed the sacrifice in intention through Isaac and in the slaughter through the ram, and the one who stopped it was the Word, since a serving angel dare not halt or accept a sacrifice offered to God.",
+   "comment": "… in Genesis God said to Abraham, “Offer me your son as a sacrifice” (Genesis 22:2). Abraham did this readily, and he was about to bring his hand down upon him, armed with a knife, when an angel of the Lord called to him and said, “Abraham, do not lay your hand on the boy, and do him no harm at all. For now I know that you fear God, and for my sake you have not spared your beloved son” (Genesis 22:12).\n\nThen a ram was found for the sacrifice in place of Isaac, and Abraham completed the sacrifice: in intention through the boy, in the slaughter through the ram.\n\n… Nor does he [a ministering angel] dare to halt a sacrifice that is being offered to God, nor, again, has he authority to accept it. No: the one who asked for the sacrifice was the only-begotten God, the Word, who granted Abraham his only son. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the 'angel of the Lord' is who stops the sacrifice, and how the ram completes it, in terms a reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u08-open",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u08-open/",
+   "from_cite": true
+  },
+  {
+   "id": "GN22-005",
+   "chapter": 22,
+   "verse_start": 15,
    "verse_end": 18,
-   "capsule": "The sacrifice was completed by Abraham, in intention through the boy and in slaughter through the ram.",
-   "comment": "… Then, after a ram was found for the sacrifice instead of Isaac, and the sacrifice was completed by Abraham—the intention being through the boy, but the slaughter through the ram—he says, 'an angel of the Lord called him a second time from heaven, saying: I have sworn by myself, says the Lord, because you have done this thing and you have not withheld your beloved son from me; surely blessing I will bless you, and multiplying I will multiply your seed like the stars of heaven and the sand of the sea; and all the nations shall be blessed in you, because you obeyed my voice' (Gen 22:16-18). …",
+   "capsule": "The angel who swears by himself and promises the blessing is neither the Father nor a serving angel but the Son, as Paul shows in Hebrews and Romans.",
+   "comment": "… And “the angel of the Lord,” it says, “called him a second time from heaven, saying: ‘By myself I have sworn, says the Lord: because you have done this thing, and for my sake have not spared your beloved son, I will surely bless you, and I will surely multiply your seed as the stars of heaven and as the sand of the sea; and in you all the nations shall be blessed, because you obeyed my voice’” (Genesis 22:15-18).\n\nYet this was neither the Father nor, for that matter, a ministering angel. For a servant does not swear by himself, or bless, or say, “For my sake you have not spared your beloved son.” …\n\nSo Paul explains when he writes to the Hebrews in this way: “For when God made his promise to Abraham” (the things he both promised and performed), “since he had no one greater by whom to swear, he swore by himself, saying, ‘I will surely bless you’” (Hebrews 6:13-14). And to the Romans, too, he explains that it is the Son who once more swears by himself: “For we shall all stand before the judgment seat of Christ, as it is written: ‘As I live, says the Lord, to me every knee shall bow, and every tongue shall confess to God’” (Romans 14:10-11). …",
    "editions": [
     "complete"
    ],
@@ -5393,6 +4631,44 @@
    "section": "u22-rem-close",
    "url": "https://viapatrum.org/works/didymus-in-genesim/u22-rem-close/",
    "from_cite": true
+  },
+  {
+   "id": "GN32-002",
+   "chapter": 32,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "True wisdom avoids evil rather than practicing it, as Jacob showed when, about to meet his murderous brother Esau, he asked God to save him.",
+   "comment": "…For the philanthropic God wills us to be not evil-doers, but all-wise; for the all-wise is one thing, and the evil-doer is another. To be all-wise is not to practice evil, but to avoid evil; and one uses shrewdness not to practice fraud against others, but to escape what is being woven by others. An evil-doer, however, is a murderer or a deceiver, one devising evils against others.\n\nSuch was Jacob, wise, as wise as a serpent, but not venomous as a serpent. For when he was about to encounter his brother Esau, who was full of malice and murder, he appealed to God, saying, 'Lord, save me from my brother Esau, for I fear him.' (Genesis 32:11)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Jacob's prayer as wisdom that avoids evil rather than practicing deceit.",
+   "author": "Severianus of Gabala",
+   "work": "Sermon on Genesis",
+   "work_slug": "severianus-in-genesim",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-in-genesim/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "GN33-001",
+   "chapter": 33,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Jacob's flattering words to his brother are judged by whether they came from deceit or from fear.",
+   "comment": "… When he [Jacob] met his brother [Esau], he appeased his temper through courtesy and flattery, and he extinguished the malice. For what does he say to Isaiah? 'I have seen your face, as if one had seen the face of God.' (Genesis 33:10)\n\nIf Jacob said these things so that he might conquer his brother through deceit, he spoke badly; but if he said them so that he might escape fear, he used cunning well.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Jacob speaks so humbly to Esau in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Sermon on Genesis",
+   "work_slug": "severianus-in-genesim",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-in-genesim/u01-rem-mid/",
+   "from_cite": false
   },
   {
    "id": "GN34-001",

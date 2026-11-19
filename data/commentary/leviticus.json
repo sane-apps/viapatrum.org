@@ -1,7 +1,7 @@
 {
  "book": "Leviticus",
  "title": "The Fathers on Leviticus",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
@@ -2071,25 +2071,6 @@
    "from_cite": true
   },
   {
-   "id": "LV17-005",
-   "chapter": 17,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "Since the soul of a living creature is its blood, and blood turns to flesh and flesh to earth, the soul of animals is something earthy and does not outlast the body.",
-   "comment": "Since, as it is written, the soul of every living creature is its blood (Leviticus 17:11), and blood when it congeals naturally changes into flesh, and flesh when it decays dissolves into earth, the soul of animals is reasonably something earthy. \"Let the earth bring forth a living creature,\" then. Observe the sequence: soul to blood, blood to flesh, flesh to earth. And again, reversing the steps, go back from earth to flesh, from flesh to blood, from blood to soul, and you will find that the soul of animals is earth. Do not think that it is older than the substance of their body, or that it remains after the dissolution of the flesh.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains in plain terms what 'the soul is the blood' means for animals.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "61",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/61/",
-   "from_cite": true
-  },
-  {
    "id": "LV17-007",
    "chapter": 17,
    "verse_start": 11,
@@ -3011,13 +2992,13 @@
    "chapter": 23,
    "verse_start": 10,
    "verse_end": 11,
-   "capsule": "The first sheaf sketches the resurrection, when human nature flourished again in Christ.",
-   "comment": "The season of new things sketches the mystery of the resurrection; for human nature flourished again in Christ first, wiping off corruption and casting away at last the aging that comes from sin.",
+   "capsule": "The sheaf of firstfruits sketches humanity blossoming anew into incorruption in Christ, the first yield offered to the Father.",
+   "comment": "… the season of the new crops reproduces the mystery in type. For human nature blossomed anew in Christ first, having rubbed off corruption and cast away, from then on, the oldness that came from sin. …\n\nLook, then, look at the firstfruits of humanity being renewed, that is, Christ, as in the type of a sheaf, as the first yield of a field, as firstfruits from the crops, brought as a holy offering to God the Father.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the offering of the firstfruits signifies.",
+   "selected_reason": "Explains what the sheaf signifies in terms a reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
@@ -3030,13 +3011,13 @@
    "chapter": 23,
    "verse_start": 14,
    "verse_end": 14,
-   "capsule": "The time to share in new life was when Christ shone forth, since he is the firstfruit of those created into incorruption.",
-   "comment": "For the fitting time to share in the new and unstained life would be only — and most reasonably — the time when Emmanuel shone forth. Before him no one at all was able to remake us into new life; he himself is like a firstfruit and first of those created into incorruption, inasmuch as he appeared as man and in flesh with us through likeness to us.",
+   "capsule": "The command to wait until the gifts are brought points to Emmanuel's appearing as the fitting time to share incorruptible life.",
+   "comment": "… For the fitting time to share in the new and undefiled life could only be, and very reasonably, the time when Emmanuel shone forth. Before him no one at all was able to refashion us into a new life; but he himself is, as it were, the firstfruits and the first of those created for incorruption, inasmuch as he appeared as a man and was in the flesh with us, because of his likeness to us.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why nothing may be eaten before the firstfruits are brought.",
+   "selected_reason": "Explains what the verse means in terms a reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
@@ -3049,13 +3030,32 @@
    "chapter": 23,
    "verse_start": 15,
    "verse_end": 16,
-   "capsule": "Seven weeks counted from the sheaf point to our Pentecost, kept after the resurrection of the Savior.",
-   "comment": "And at once he has brought in a clear sketch of our holy Pentecost, saying that seven weeks must be counted from the bringing-in of the sheaf. (Lev 23:15-16; Acts 2:1) For after the Savior’s resurrection day, stringing seven weeks together, we who have believed keep the feast.",
+   "capsule": "The seven weeks counted from the sheaf foreshadow Pentecost kept after the Savior's resurrection.",
+   "comment": "And at once the law introduced a clear foreshadowing of holy Pentecost for us, saying that seven weeks must be counted from the bringing of the sheaf. For after the day of the Savior's resurrection we who have believed count seven weeks together and keep the feast.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the counting of seven weeks points to.",
+   "selected_reason": "Explains what the counting signifies in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "On Adoration and Worship in Spirit and Truth, Book 17",
+   "work_slug": "cyril-adoration-17",
+   "section": "19",
+   "url": "https://viapatrum.org/works/cyril-adoration-17/19/",
+   "from_cite": true
+  },
+  {
+   "id": "LV23-007",
+   "chapter": 23,
+   "verse_start": 17,
+   "verse_end": 17,
+   "capsule": "Christ is the first bread and new dough of refashioned creation, and the two loaves are the two peoples brought into unity through him.",
+   "comment": "For Emmanuel is the firstfruits and, as it were, the first yield of the creation being refashioned into newness; and he is understood to be first among us, as bread and new dough. And we, taking as it were the path to the same thing, have been called a new dough too, in likeness to him. The bread brought from the new crops would be a clear type of this as well. But it says that not one loaf but two must be offered; for the peoples are two, even if they appear brought together into unity through Christ the mediator.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the two loaves signify in terms a reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "On Adoration and Worship in Spirit and Truth, Book 17",
    "work_slug": "cyril-adoration-17",
