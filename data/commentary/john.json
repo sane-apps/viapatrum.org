@@ -1,13 +1,13 @@
 {
  "book": "John",
  "title": "The Fathers on John",
- "generated": "2026-11-12",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (email of 8 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 8 Nov 2026.",
- "comment_count": 605,
- "selected_count": 318,
+ "comment_count": 607,
+ "selected_count": 322,
  "comments": [
   {
    "id": "J01-001",
@@ -89,12 +89,13 @@
    "chapter": 1,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "The Son is called “Word” because every work of making depends on a word, and he himself is the maker of all things.",
-   "comment": "Setting him forth as craftsman of all things, the name ‘Word’ is predicated of him.\n\nFor since, as a rule, every work of crafting depends on a word, there was no other way to declare him maker of all … But the Son of God, being none other than the craftsman of wisdom and art, is fittingly named ‘Word.’ For it is not some other substance, distinct from the Word, that makes existing things through him; he himself is the maker, being God the Word.",
+   "capsule": "The Son is called Word because all making depends on reasoned art, and he is the maker of all.",
+   "comment": "Since he presents him as the maker of all things, he gives him the name “Word”. For as a rule every act of making depends on a word, that is, on reason, in those who have art; and art is a habit of making joined with reason free of deceit. So there was no other way to show that he is the maker of all things. And the Son of God, being nothing other than the craftsman of wisdom and art, is fittingly named Word. For he is not some substance other than the Word, making existing things through a word; he himself is the maker, being God the Word.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why John calls him Word.",
    "author": "Origen of Alexandria",
    "work": "Fragments on the New Testament",
    "work_slug": "origen-nt-fragments",
@@ -107,13 +108,13 @@
    "chapter": 1,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "John says the Word “was” in the beginning but “became” flesh, using “was” for his Godhead and “became” for the incarnation in time.",
-   "comment": "Then, since this Word — being God in substance and being in himself the Son of God — became man for the sake of human salvation, the Word was named ‘Flesh.’ [John 1:14] And since some, having fallen from right faith, suppose that he exists only from the time when he came forth having become man from the virgin, the theologian most rightly writes against such people: In the beginning was the Word.\n\nAnd using the verbs fittingly, by ‘became’ he signifies his flesh, and by ‘was’ his Godhead. It would have been more proper to say ‘is’ of the Word of God; but since he was declaring the Word’s existence by way of distinguishing the incarnation, which happened at a certain time, the evangelist used ‘was’ instead of ‘is.’ But one must not take the proper significations of verbs when they are applied to eternal things; for it is when the things signified by them have an existence measured by time that ‘was’ means what is no longer but once was — just as ‘is’ signifies what now exists, as ‘will be’ what is going to exist. …",
+   "capsule": "John uses was for the Word's eternal Godhead and became for his flesh in time.",
+   "comment": "Then, since this Word, being God by substance and being this very thing, the Son of God, became man for the sake of human salvation, the Word was named “flesh” (John 1:14). And since some, who have fallen away from the right faith, think that he exists only from the time when he came forth from the virgin, having become man, the theologian writes most rightly against such people: “In the beginning was the Word” (John 1:1). And he uses the verbs fittingly: by “became” he signifies his flesh, and by “was” his Godhead.\n\nIt would indeed have been more proper to say “is” of God the Word. But since he was showing the existence of the Word in distinction from the incarnation, which took place at a certain time, the evangelist used “was” instead of “is”. Yet with eternal things we must not take the verbs in their proper meanings. … But since the Word of God is eternal, being God, the verbs used of him must not be taken as also signifying time, for what they signify is not under time.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why John says the Word “was” (and later “became” flesh): “was” for his Godhead, “became” for the incarnation.",
+   "selected_reason": "Explains John's was versus became.",
    "author": "Origen of Alexandria",
    "work": "Fragments on the New Testament",
    "work_slug": "origen-nt-fragments",
@@ -126,8 +127,8 @@
    "chapter": 1,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "The “beginning” is the Son as God's Wisdom turned toward creation, and as maker of creatures the same Son is rightly called “Word.”",
-   "comment": "The Son of God is also called ‘Wisdom,’ created as ‘beginning of God’s ways’ [Proverbs 8:22] according to the writing of Proverbs — because God’s Wisdom, existing in relation to him whose Wisdom she is, had no relation to anything else, but by God’s good pleasure willed that the creatures should come into being.\n\nThis Wisdom, then, willed to take up a creative relation to the things that were to be; and this is what is signified by her being created ‘beginning of God’s ways’ — along which ways he traverses, ordering beings, exercising providence, doing good, bestowing grace, in this Wisdom who was created.\n\nThey say, then, that the Word is ‘beginning’ — not being other than her in substance, but in our conception and in relation — so that it is the same existence which the scriptures now name in respect of substance: Wisdom insofar as she has been made God’s own, and the creative Word insofar as he has inclined, so to speak, toward the things made.\n\nBut it is not only here that the Son of God is called ‘Word’; sayings can be set alongside not only from the New Testament but also from the Old: ‘By the word of the Lord the heavens were established’ [Psalm 33:6]; and ‘He sent his word and healed them’ [Psalm 107:20] …",
+   "capsule": "Wisdom and Word are one being, named Wisdom toward God and Word toward creation.",
+   "comment": "The Son of God is also called Wisdom, created as “the beginning of the ways” of God, according to the scripture of Proverbs (Proverbs 8:22). For the Wisdom of God, existing in relation to him whose Wisdom she is, had no relation to anything else; but by God's good pleasure she willed that created things should exist. So this Wisdom chose to take up a creative relation to the things that were to be. And this is what is meant by her being created “the beginning of the ways” of God: the ways along which he passes as he orders beings, provides for them, does them good and gives them grace, in this Wisdom that was created.\n\nSo they say that the Word is the “beginning”, not being other than Wisdom in substance, but in concept and in relation. It is one and the same existence, which the scriptures here name according to its substance: Wisdom, insofar as it belongs to God as his own; the creative Word, insofar as it has inclined, if I may put it so, toward the things that are made.",
    "editions": [
     "complete"
    ],
@@ -144,8 +145,8 @@
    "chapter": 1,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "Genesis says God “made” the world and then it “was,” but John says the Word simply “was” in the beginning, so his “was” is not that of creatures.",
-   "comment": "But are their things then strong against the 'In the beginning was the Word' (John 1:1)? It was written also concerning creation, he [the objector] says, the 'was'. For it has 'In the beginning God made the heaven and the earth, and the earth was formless and void' (Gen 1:1-2), and 'there was a man of Ramathaim-Ziphah' (1 Samuel 1:1). There is nothing common to the 'In the beginning was' and the 'In the beginning God made', nor to the creator in relation to the creation. For the 'was' concerning the creation is said and believed only regarding the flowing and passing time.\n\nFor the creation was after the non-existent came to be. For he said in advance that He made it, and then he added the 'was', so that it might not be thought automatic. But concerning the God the Word, it signifies the super-beginning. For 'In the beginning', he says, 'was' and 'was God' (John 1:1), and the 'In the beginning was' pushes out from non-existence.",
+   "capsule": "The Word's was is beyond all beginning, while was said of creatures means time after they came to be.",
+   "comment": "But what are their supposedly strong arguments against “In the beginning was the Word” (John 1:1)? “The word ‘was’,” he says, “was written of creation too. For Scripture has, ‘In the beginning God made the heaven and the earth; and the earth was invisible and unformed’ (Genesis 1:1-2), and ‘There was a man from Armathaim Sipha’ (1 Samuel 1:1).”\n\nBut “In the beginning was” has nothing in common with “In the beginning he made,” any more than the Creator has with the creature. For “was,” in the case of creation, is said and believed only of time, which flows and comes to an end. Creation “was” after it came to be from things that are not. Scripture first said that God made it, and only then added “was,” so that it would not be thought to have come about of itself. But in the case of God the Word, “was” signifies what is beyond all beginning. For “In the beginning,” it says, “was,” and “was God” (John 1:1); and “In the beginning was” drives out “from things that are not.”",
    "editions": [
     "complete"
    ],
@@ -176,6 +177,42 @@
    "from_cite": true
   },
   {
+   "id": "J01-011",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "Was, with God, and was God show the Son is beyond time, shares the Father's nature, and truly is God.",
+   "comment": "“In the beginning was” (John 1:1) sets in plain view, and makes very clear indeed, how absurd and how much to be shunned is the saying “There was when he was not.” For the word “was” is indefinite. … So here it requires that he be understood as beyond time altogether, or without beginning. For if anyone were to say that he was not in the beginning, then the beginning, which has no cause, would once not have been. And again, how can time, which did not yet exist, be the measure of the one who made it?\n\n“Was with God” (John 1:1) sets before us the kinship of nature that the Son has with God the Father, and that from the time the self-originate Father was (if it is lawful to say so) the Son who is from him exists together with him. … For John’s aim, and his word handed down from God, is clear, firm, free of idle subtlety, and looks to the divine alone.\n\n“The Word was God” (John 1:1) establishes that the Word has real being, and that he is God such as that God is whose Word he is; and again, that he has no cause.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "J01-051",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "In the beginning means before every creature, since their maker must have been there when they came to be.",
+   "comment": "One can track down the meaning from the theologian's own words. For right at the start of his treatise he writes: “In the beginning was the Word”; for in the beginning he was making the heaven and the earth (Genesis 1:1). If “all things were made through him” (John 1:3), and heaven and earth were among all things, then he was their creator when they came into being. Then, since he did not say, “In the beginning of something was the Word”, the phrase must be taken universally, so that the meaning is this: In the beginning of the angels, and in the beginning of the archangels, was the Word; in short, in the beginning of the creatures visible and invisible was the Word, being of them all both beginning and maker.\n\n…",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on the New Testament",
+   "work_slug": "origen-nt-fragments",
+   "section": "john-catena-1",
+   "url": "https://viapatrum.org/works/origen-nt-fragments/john-catena-1/",
+   "from_cite": false
+  },
+  {
    "id": "J01-010",
    "chapter": 1,
    "verse_start": 1,
@@ -192,24 +229,6 @@
    "section": "u01-open",
    "url": "https://viapatrum.org/works/ammonius-fragmenta-joannem/u01-open/",
    "from_cite": false
-  },
-  {
-   "id": "J01-011",
-   "chapter": 1,
-   "verse_start": 1,
-   "verse_end": 4,
-   "capsule": "“Was God,” “all things were made by him” and “in him was life” show that the Word was not created but eternally begotten.",
-   "comment": "The phrase 'was God the Word' (John 1:1) establishes that the Word is of the essence, and that he is such a God as that Word is; and again, the uncaused. The phrase 'all things came through him, and without him nothing came into being' (John 1:3) demonstrates him, as has already been said, not merely as creator, but that he was not even created. For if not even one created thing received being apart from him, it is evident everywhere that he himself did not come into being, but was divinely begotten. …\n\nThe Father made through him as light through an inherent radiance, and as mind through a word. The phrase 'in him was life' (John 1:4) discloses that he is without beginning, being the life of the one and highest nature …",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Didymus the Blind",
-   "work": "On the Trinity",
-   "work_slug": "didymus-de-trinitate",
-   "section": "u02-rem-mid",
-   "url": "https://viapatrum.org/works/didymus-de-trinitate/u02-rem-mid/",
-   "from_cite": true
   },
   {
    "id": "J01-012",
@@ -248,6 +267,25 @@
    "section": "u01-open",
    "url": "https://viapatrum.org/works/ammonius-fragmenta-joannem/u01-open/",
    "from_cite": false
+  },
+  {
+   "id": "J01-052",
+   "chapter": 1,
+   "verse_start": 3,
+   "verse_end": 4,
+   "capsule": "Since all things came through him, he himself is uncreated, and as life itself he is without beginning.",
+   "comment": "“All things came into being through him, and without him not one thing came into being” (John 1:3) shows him, as has been said already, to be not only Creator, but also not created. For if not one created thing received its being without him, it is plain to everyone that he himself did not come into being, but was begotten as God is begotten. … And the Father made all things through him as light makes through its own radiance, and as mind through word.\n\n“In him was life” (John 1:4) teaches us further that he is without beginning, being the life of the one supreme nature, and that when nothing at all existed he was the cause of the things that exist. That is why he himself says, “I am the life” (John 14:6), “I am the light” (John 8:12).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why verse 3 proves the Word is uncreated and verse 4 calls him life.",
+   "author": "Didymus the Blind",
+   "work": "On the Trinity",
+   "work_slug": "didymus-de-trinitate",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-de-trinitate/u02-rem-mid/",
+   "from_cite": true
   },
   {
    "id": "J01-014",
@@ -568,13 +606,13 @@
    "chapter": 1,
    "verse_start": 16,
    "verse_end": 16,
-   "capsule": "“Grace for grace” means the grace of rebirth given in place of the grace we lost when the first law was broken.",
-   "comment": "… we received from the fullness because of his goodness. Which we by nature as slaves did not have, John saying: 'And from his fullness we all have received, and grace for grace' (John 1:16), that is, the grace of the rebirth instead of the grace which we were cast away from, striking at the first law given upon the single stock.",
+   "capsule": "Grace for grace is the grace of rebirth given in place of the grace lost by the first transgression.",
+   "comment": "But we, through his goodness, received grace from the fullness, a grace which by nature, as servants, we did not have. So John says: “And from his fullness we have all received, and grace for grace” (John 1:16); that is, the grace of rebirth in place of the grace we cast away when we set aside the first ordinance, given about the one tree. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains “grace for grace”.",
+   "selected_reason": "Explains what grace for grace means.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -1705,13 +1743,13 @@
    "chapter": 3,
    "verse_start": 32,
    "verse_end": 33,
-   "capsule": "No one receives Christ's testimony in its full greatness, yet beginners can still receive it in part, so the two verses do not conflict.",
-   "comment": "‘And no one receives his testimony’ [John 3:32] — and yet many have received his testimony, as John himself goes on to add, saying: ‘He who has received his testimony has set his seal that God is true.’ [John 3:33] But how can it be true, when some do receive his testimony, that ‘no one receives his testimony’? The difficulty must be resolved as follows.\n\nJesus, having come from above and speaking what he heard and saw, speaks a most lofty and very great testimony concerning the Father and himself; and no one receives this testimony as he himself speaks it, because the hearers, who are only beginning to receive, fall far short of the greatness of the testimony.\n\nYet even though no one is able to receive his testimony in this way, it is still possible to receive it as those just now coming to faith are able to receive it. Hence ‘he who received his testimony’ is not at odds with no one’s having received it…",
+   "capsule": "No one can receive Christ's testimony in its full greatness as he speaks it, yet those coming to faith can still receive it as they are able.",
+   "comment": "“And no one receives his testimony” (John 3:32). Yet many have received his testimony, as John himself goes on to add: “He who has received his testimony has set his seal to this, that God is true” (John 3:33). How, then, can “no one receives his testimony” be true, when some do receive his testimony? The difficulty must be resolved like this.\n\nJesus, having come from above and speaking what he heard and saw, speaks a most lofty and very great testimony about the Father and about himself. And no one receives this testimony as he himself speaks it, because his hearers, who have only the beginning of receiving, fall far short of the greatness of the testimony. Yet even if no one is able to accept his testimony in that way, it can still be received in the way that those who are just now coming to faith are able to accept it.\n\n…",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Resolves the apparent clash between 'no man receiveth his testimony' and the next verse.",
+   "selected_reason": "Resolves the apparent clash between verses in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Fragments on the New Testament",
    "work_slug": "origen-nt-fragments",
@@ -7424,12 +7462,13 @@
    "chapter": 13,
    "verse_start": 27,
    "verse_end": 27,
-   "capsule": "Satan 'enters' a careless soul not by dwelling in it but by deceiving it and working his malice through it.",
-   "comment": "But they again raise objections, saying: “It is written, allegedly, concerning Ananias: ‘Why has Satan filled your heart?’ (Acts 5:3); and concerning Judas, that ‘Satan entered into him’ (John 13:27).” To them it must be said that he fills the one who does not attend to “Do not let your foot be moved, and he who keeps you will not slumber” (Psalm 121:3; LXX 120:3) — not by being partaken of, nor by riding upon the soul as it were, but by deceiving, and working in the treacherous manner of malice, and making his own wickedness a mere side-show.",
+   "capsule": "Satan ‘enters’ not by dwelling in the soul but by deceiving it and working evil through it.",
+   "comment": "But they rise up again to object, with a show of reason: “It is written of Ananias, ‘Why has Satan filled your heart?’ (Acts 5:3), and of Judas, that ‘Satan entered into him’ (Luke 22:3; John 13:27).”\n\nTo them we must answer that Satan is not shared in, nor does he board the soul, as it were, and ride in it. He fills the one who does not heed the word, “Do not give your foot to be shaken, and he who guards you will not slumber” (Psalm 121:3), by deceiving him, by working evil counsels and a shifty character into him, and by making him a mere by-work of his own wickedness.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains that Satan enters not by boarding or indwelling the soul, but through deception and evil counsels when one lets down their guard.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -7722,8 +7761,8 @@
    "chapter": 14,
    "verse_start": 9,
    "verse_end": 9,
-   "capsule": "Man images God only as a product images its maker, but the Son bears the Father's very form, so that seeing him is seeing the Father.",
-   "comment": "…concerning man, he says, it has been written, that he is ‘an image and glory of God’ [1 Corinthians 11:7]. But nowhere, O you ones, has it been written that man or any other creature is to be ‘an emanation of the glory of God and a character of the hypostasis’ [Hebrews 1:3]. It is something else to be a man as an image of God, that is, the thing made of the maker, just as Solomon says concerning the product of a carpenter: ‘The maker is perceived in a likeness to the things created’; but it is something else to be, according to the same form and identical and co-ruling, an emanation of glory and a character of hypostasis, in-dwelling and unerring.\n\nFor he says: ‘He who has seen me has seen the Father’ (John 14:9). But he who has seen a man has not seen God, just as he who has seen the product has not seen the carpenter.",
+   "capsule": "Seeing the Son is seeing the Father because he alone is the Father's image by nature, while man is God's image only as a crafted thing is its maker's.",
+   "comment": "… “But of man too,” he says, “it is written that he is ‘the image and glory of God’” (1 Corinthians 11:7). But nowhere, you people, is man or any other thing made written to be “the radiance of the glory of God and the stamp of his hypostasis” (Hebrews 1:3). It is one thing for man to be the image of God, that is, as the thing crafted is the image of its craftsman, as a stool is of the carpenter (for Solomon says: “By analogy from created things their Maker is beheld”); and it is another thing to be, in sameness of form, identity of substance and equal beginninglessness, the radiance of glory and the stamp of the hypostasis, having its own subsistence and wholly true.\n\nFor he says: “He who has seen me has seen the Father” (John 14:9). But he who has seen a man has not seen God, as one who has looked at the stool has not seen the carpenter. Indeed, it is necessary that the image of the only invisible God be alone invisible, and not man, who is visible and made after the image.",
    "editions": [
     "complete"
    ],
@@ -8205,8 +8244,8 @@
    "chapter": 14,
    "verse_start": 30,
    "verse_end": 30,
-   "capsule": "The ruler of this world has nothing in Christ because Christ, who did no sin, owed no debt, unlike the rest of us.",
-   "comment": "It can be referred both to the prophet, according to one narrative, and to the Savior. … 'I owed nothing, and no one owed me.' (Jeremiah 15:10 or John 14:30) 'The ruler of this world comes, and he has nothing in me.' (John 14:30) And truly he owed nothing. But each of us is a debtor by sins and a debtor holding a certificate of debt. After his certificate has been wiped out, how many certificates have they made again? 'He who did no sin, and no deceit was found in his mouth,' (1 Peter 2:22 or Isa 53:9) made no certificate of debt.",
+   "capsule": "The ruler has nothing in Christ because Christ did no sin and owed nothing, while everyone else is a debtor by sins.",
+   "comment": "… ‘I owed nothing, and no one owed me.’ (Jeremiah 15:10) ‘The ruler of this world comes, and he has nothing in me.’ (John 14:30) And truly he owed nothing. But each of us is a debtor by sins and a debtor holding a certificate of debt. After his certificate has been wiped out, how many certificates have they made again? ‘He who did no sin, and no deceit was found in his mouth,’ (1 Peter 2:22) made no certificate of debt.",
    "editions": [
     "complete"
    ],
@@ -8273,25 +8312,6 @@
    "section": "u08-rem-mid",
    "url": "https://viapatrum.org/works/ammonius-fragmenta-joannem/u08-rem-mid/",
    "from_cite": false
-  },
-  {
-   "id": "J15-002",
-   "chapter": 15,
-   "verse_start": 1,
-   "verse_end": 2,
-   "capsule": "The vine teaches believers to bear fruit, to cling to neighbors in love, and to be dug around by casting off worldly cares.",
-   "comment": "For you remember clearly the image of the Lord, that he calls himself the vine, and the Father the vinedresser, and he called each one of us, having been grafted into the Church through faith, branches (John 15:1-2). And he summons us to abundant fruit, so that we may not be condemned for uselessness and handed over to the fire. …\n\nHe also wants us to hold fast to our neighbors by the twining of love, as if by tendrils, and to rest upon them, so that always having our impulse toward what is above, like some climbing vines we may set ourselves beside the tops of the highest things.\n\nHe also requires us to accept being dug around. And the soul is dug around in the putting away of the cares of the world, which are a weight on our hearts. So the one who has put away fleshly love, and the friendship toward money, or has considered the anxiety for this wretched little glory to be spit upon and contemptible, has been dug around, as it were, and has breathed again, having put off the vain weight of the earthly mind. But it is necessary, according to the word of the proverb, not to grow wild like wood—that is, not to live ostentatiously, nor to hunt for praise from outsiders—but to be fruitful, storing up the display of works for the true vinedresser.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Draws out the vine image in terms any reader can follow.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "38",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/38/",
-   "from_cite": true
   },
   {
    "id": "J15-003",
@@ -8652,13 +8672,13 @@
    "chapter": 15,
    "verse_start": 26,
    "verse_end": 26,
-   "capsule": "Christ says the Spirit proceeds from the Father, not that he was created, to show the Spirit shares the Father's divinity.",
-   "comment": "In order that no one might suspect his being a beginning or an end, but might truly believe that it is the Spirit of God, proceeding according to his nature, breathed uncaused and not becoming, as one of the other functional spirits, the Lord teaches in the Gospel according to John, saying: 'the Spirit of truth, which proceeds from the Father' (John 15:26). And he did not say 'is created.' For every birth and procession is accomplished through equal and similar things; but most distinctly is the birth and procession from the one Father through the union of his own divinity.",
+   "capsule": "Christ says the Spirit proceeds from the Father to show the Spirit is uncreated and shares the Father's nature.",
+   "comment": "For so that no one may suspect that he has a beginning or an end, but may truly believe, from the procession that belongs to his nature, that he is the Spirit of God, breathed forth without beginning and not made like one of the other ministering spirits, the Lord teaches in the Gospel according to John and says: “The Spirit of truth, who proceeds from the Father” (John 15:26). He did not say “is created”.\n\nFor every begetting and every procession is brought about through what is equal and alike; and most of all, beyond every other, is the begetting and procession from the one Father, in the unity of his own Godhead. But among creatures the original goes before in time; with God it is not so: they subsist together and have come forth together.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the verse says 'proceedeth' and what that word implies.",
+   "selected_reason": "Explains what 'proceeds from the Father' shows about the Spirit.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -9350,6 +9370,25 @@
    "work_slug": "ammonius-fragmenta-joannem",
    "section": "u09-rem-early",
    "url": "https://viapatrum.org/works/ammonius-fragmenta-joannem/u09-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "J17-025",
+   "chapter": 17,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "“One” can mean unity by agreement, by likeness of nature, and by sharing one head, first Adam by birth and now Christ by rebirth.",
+   "comment": "“That they may be one” …. The word “one” is used in many senses: by likeness, and in many other ways. By agreement, when it says, “The multitude of those who believed were of one heart and one soul” (Acts 4:32); by likeness, as when it says, “For we were all baptized in one Spirit into one body” (1 Corinthians 12:13), that is, by likeness of nature.\n\nAnd as we, who have Adam as our beginning and head according to the nature of our birth, are all said to have one body, so too we enrol Christ as our head through the divine rebirth. That rebirth has become for us a type of his death and resurrection, for he rose as the firstborn from the dead (Colossians 1:18). We enrol him as head in prefiguring his resurrection: he whose members we are in part, and body (1 Corinthians 12:27), being reborn through the Spirit to incorruption.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the senses of 'one' in the verse.",
+   "author": "Origen of Alexandria",
+   "work": "Fragments on the New Testament",
+   "work_slug": "origen-nt-fragments",
+   "section": "john-catena-close",
+   "url": "https://viapatrum.org/works/origen-nt-fragments/john-catena-close/",
    "from_cite": false
   },
   {
@@ -11111,12 +11150,13 @@
    "chapter": 21,
    "verse_start": 19,
    "verse_end": 19,
-   "capsule": "Every death for Christ glorifies God, whatever its manner, since the willingness is ours.",
-   "comment": "Know this too: the word spoken through John we learned, saying, 'These things said he, signifying by what death he shall glorify God.' (John 21:19) Every death for Christ glorifies the Father — whether by sword or fire or beasts or bonds. Let the manner be what God wills; ours is the willingness. For the confession hallows every manner, and every manner perfects the confessor.",
+   "capsule": "Martyrdom is an exaltation by which the martyr glorifies God through death.",
+   "comment": "… For there is good reason why death in martyrdom is called, in a special sense, an exaltation, as is clear from the words, “If I am lifted up from the earth, I will draw all to myself” (John 12:32).\n\nLet us too, then, glorify God, exalting him by our own death, since the martyr “will glorify God” by his own “death”. This too we have learned from John, who said, “He said this signifying by what death he would glorify God” (John 21:19).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what glorifying God by death means.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",
