@@ -1,13 +1,13 @@
 {
  "book": "2 Peter",
  "title": "The Fathers on 2 Peter",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
  "comment_count": 12,
- "selected_count": 7,
+ "selected_count": 8,
  "comments": [
   {
    "id": "2PE01-001",
@@ -70,12 +70,13 @@
    "chapter": 1,
    "verse_start": 19,
    "verse_end": 19,
-   "capsule": "The rising morning star is Christ at his second appearance, shining on souls and lighting all that darkness held.",
-   "comment": "… Peter in the second epistle: 'until the day dawns and the morning star rises in your hearts' (2 Pet 1:19); … he was saying, I think, that the one from his second appearance is about to rise to the souls as a light and making everything held by darkness shine brightly …",
+   "capsule": "The morning star rising in hearts is the illumination to dawn on souls at Christ's second appearing.",
+   "comment": "… And Peter in his second letter: “Until the day dawns and the morning star rises in your hearts” (2 Peter 1:19).\n\nHe meant, I think, the illumination that is to rise on souls at his second appearing and to make bright all that darkness holds fast. …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains the morning star rising in hearts as the illumination of souls at Christ's second coming.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -164,13 +165,13 @@
    "chapter": 3,
    "verse_start": 6,
    "verse_end": 7,
-   "capsule": "As the old world perished in the flood, so the ungodly will perish when heaven and earth are dissolved in fire.",
-   "comment": "Behold: 'the present heavens and earth are stored up by the same word' (2 Peter 3:7), which is like those things that happened during the flood … Just as the world then was destroyed, being overwhelmed by the flood, so the ungodly and sinners will be utterly destroyed when the elements of the heavens and the earth are dissolved into fire; that is, the similarity is that they will perish just as those who perished in the flood. For the Lord says, 'As it was in the days of Noah, they were eating, drinking, marrying, being given in marriage, until the day Noah entered the ark and the flood came and swept them all away, so will the coming of the Son of Man be' (Matt 24:37-39).",
+   "capsule": "As the world perished by water in the flood, so the ungodly will perish when heaven and earth are dissolved by fire.",
+   "comment": "Behold: 'the present heavens and earth are stored up by the same word' (2 Peter 3:7), which is like those things that happened during the flood …\n\nJust as the world then was destroyed, being overwhelmed by the flood, so the ungodly and sinners will be utterly destroyed when the elements of the heavens and the earth are dissolved into fire (2 Peter 3:10); that is, the similarity is that they will perish just as those who perished in the flood. For the Lord says, 'As it was in the days of Noah, they were eating, drinking, marrying, being given in marriage, until the day Noah entered the ark and the flood came and swept them all away, so will the coming of the Son of Man be' (Matt 24:37-39).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the comparison Peter draws between the flood and the coming fire.",
+   "selected_reason": "Explains the flood and fire parallel in terms a general reader can follow.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",

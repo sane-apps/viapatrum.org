@@ -1,7 +1,7 @@
 {
  "book": "Ecclesiastes",
  "title": "The Fathers on Ecclesiastes",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
@@ -728,13 +728,13 @@
    "chapter": 4,
    "verse_start": 2,
    "verse_end": 2,
-   "capsule": "'Better are the dead than the living' is said so that we may not fear death but desire it when the confession calls, leaving an example of dying well.",
-   "comment": "'Better are the dead than the living,' (Ecclesiastes 4:2) says Qoheleth — that we may not fear death but desire it when the confession calls. Eleazar the aged scribe would not even pretend to eat swine's flesh: spitting it out, he went willingly to the rack, 'leaving the young a noble example, willingly and manfully to die a good death for the revered and holy laws.' (2 Maccabees 6:18–31) So we too, refusing base compliance, shall leave children and brethren an example worth more than life.",
+   "capsule": "The dead praised above the living are those who freely accept death for godliness, as Eleazar did.",
+   "comment": "… Solomon says in Ecclesiastes, “I praised all the dead above the living, as many as are alive until now” (Ecclesiastes 4:2). Who among the dead could be praised with such good reason as the one who, of his own free choice, accepted death for the sake of godliness?\n\n… Such a man was Eleazar, who welcomed “death with glory rather than life with defilement” and of his own free will went forward to the rack (2 Maccabees 6:19) …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the Preacher says the dead are better than the living.",
+   "selected_reason": "Explains the verse as praise of those who accept death for godliness, in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",

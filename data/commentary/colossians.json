@@ -1,26 +1,45 @@
 {
  "book": "Colossians",
  "title": "The Fathers on Colossians",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 51,
- "selected_count": 33,
+ "comment_count": 62,
+ "selected_count": 44,
  "comments": [
   {
    "id": "COL01-001",
    "chapter": 1,
    "verse_start": 2,
    "verse_end": 2,
-   "capsule": "Greeks and Jews who had believed were leading the Colossians to keep old observances and to turn to angels as go-betweens, and this letter is aimed at correcting that.",
-   "comment": "Those who had believed from among the Greeks were also drawing in the still-Greek people into Greek observances, desiring to; and those Jews who believed were persuading others to keep the law, as if grace were incomplete without the law. Besides these, both Greeks and Jews were persuading the Colossians to pay attention to angels; the Greeks, saying that their gods are angels, because indeed the one God is immeasurable and great, not reachable by men, but through these angels, as mediators, he provides benefits to those receiving them; but the Jews said that God set boundaries of nations according to a number of God's angels; thus also Michael is the ruler of the Jews, … Toward these things is the aim for Paul, and these things are corrected.",
+   "capsule": "Paul writes against those urging Greek observances, the law, and angel worship as necessary for perfection.",
+   "comment": "The occasion was this. Believers who had come from among the Greeks had Greeks who were still pagans pulling them back to Greek observances. Believers from among the Jews had Jews urging them to keep the law, as though grace without the law were less than complete. The Greeks’ argument to them was that it is right to worship angels as well, for they said their gods were angels: God is great and out of human reach, and so he supplies his workings to those in need through these angels, as through go-betweens. … From all these texts Jews and Greeks alike, some of them believers and some not, drew their conclusion: the grace that comes through the Lord Jesus is superfluous, since the angels, who have been there from the beginning, are enough to bring to God those who obey; and to neglect all the observances kept by Jews and Greeks, they said, was to fall short of perfection. The apostles’ aim in the letter before us is directed against all this.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Gives the setting of the whole letter in terms a reader can follow.",
+   "selected_reason": "Explains the background of the letter in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-018",
+   "chapter": 1,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Paul keeps naming Christ because they were setting Christ aside.",
+   "comment": "Notice that in a few lines he names Christ many times. Christ was the one they were setting aside, so Paul keeps mentioning him, to stamp on their souls a longing for him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul names Christ so often.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -33,13 +52,13 @@
    "chapter": 1,
    "verse_start": 5,
    "verse_end": 6,
-   "capsule": "Paul names Christ often because Christ was being set aside, and he shows that the hope of resurrection came through Christ, not angels.",
-   "comment": "… it is necessary to note that in a few verses he often remembers Christ; for the one being set aside, he constantly makes remembrance, impressing upon the souls the longing toward him (Col 1:5–6). Already he shows them that the hope laid up for the resurrection and the kingdom was not established by the administration of angels, but by the presence of our Savior Jesus Christ. …",
+   "capsule": "The hope of the kingdom was won by Christ, not by angels.",
+   "comment": "… He is already showing them that the hope laid up for us, the hope of the resurrection and of the kingdom, was not won by the administration of angels but by the coming of our Saviour Jesus Christ. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why Paul keeps naming Christ and what hope he points to.",
+   "selected_reason": "Explains what Paul means by the hope laid up in heaven.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -52,13 +71,13 @@
    "chapter": 1,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "The gospel is true, has reached the whole world, and bears fruit and grows.",
-   "comment": "A true and unfalse gospel. This is so as to add to and confirm their faith in all the world; for he says that the gospel has reached not only to you, but already even to all the world, which is a sign of the power of Christ working in the preaching. It was not neglected, but it bears fruit and grows.",
+   "capsule": "The gospel reaching the whole world shows the power of Christ at work in the preaching.",
+   "comment": "… By adding “as also in all the world”, he strengthens their faith. The gospel has reached not only you, he says, but already the whole world, and that is a sign of the power of Christ at work in the preaching. “For it was not neglected; it bears fruit and grows.”",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Plain reading of what Paul says about the gospel's spread.",
+   "selected_reason": "Explains what Paul means by the gospel spreading and bearing fruit.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -70,47 +89,9 @@
    "id": "COL01-004",
    "chapter": 1,
    "verse_start": 7,
-   "verse_end": 9,
-   "capsule": "God's will is that they know they are saved through Jesus Christ and not through angels.",
-   "comment": "Epaphras is presented as being one of the saints and having instructed them, so that they might more attend to his teaching (Col 1:7). And what was the will of God? To know you and to realize that it is not possible for you to be saved through angels but through Jesus Christ (Col 1:9). How then do we come to knowledge? In spiritual wisdom, not worldly.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Shows what Paul wants the readers to know and why.",
-   "author": "Severianus of Gabala",
-   "work": "Fragments on Colossians",
-   "work_slug": "severianus-fragmenta-colossenses",
-   "section": "u01-rem-early",
-   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
-   "from_cite": false
-  },
-  {
-   "id": "COL01-005",
-   "chapter": 1,
-   "verse_start": 11,
-   "verse_end": 11,
-   "capsule": "Patience needs long-suffering and joy, and the one who rejoices in afflictions for Christ receives a reward from God.",
-   "comment": "Above all, it brought patience along with long-suffering (Col 1:11); for patience without long-suffering does not stand, and without joy, patience has no reward. And it is necessary above all in these things to have joy; for not the one who grieves over afflictions for Christ, but the one who rejoices over them receives a reward from God. And what is the reward? The adoption, the inheritance, the fellowship with the angels.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why Paul joins patience with long-suffering and joy.",
-   "author": "Severianus of Gabala",
-   "work": "Fragments on Colossians",
-   "work_slug": "severianus-fragmenta-colossenses",
-   "section": "u01-rem-early",
-   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
-   "from_cite": false
-  },
-  {
-   "id": "COL01-007",
-   "chapter": 1,
-   "verse_start": 13,
-   "verse_end": 13,
-   "capsule": "The Son, having loved us, suffered to make us worthy of his kingdom.",
-   "comment": "Thus: he transferred us into the kingdom of the love of his Son. Because the Son, having loved us, suffered on our behalf so that he might make us worthy of his kingdom, for this reason he says: he transferred us into the kingdom of the Son of his love; …",
+   "verse_end": 7,
+   "capsule": "Epaphras is praised so they will listen to him.",
+   "comment": "He commends Epaphras as one of the saints and as the man who would instruct them, so that they would listen all the more to his teaching.",
    "editions": [
     "complete"
    ],
@@ -123,17 +104,55 @@
    "from_cite": false
   },
   {
-   "id": "COL01-006",
+   "id": "COL01-019",
    "chapter": 1,
-   "verse_start": 13,
-   "verse_end": 14,
-   "capsule": "Angels served God for our salvation but did not establish us; God has now brought us into the kingdom of his Son, who is loved as a son while angels are loved as servants.",
-   "comment": "And before the flood and after the flood, before the law and in the law, there were angels ministering to God for our salvation, but they did not establish us. But now God, through the administration of the Lord, has transferred us into his kingdom. Whom he loved: for indeed he loves angels as servants, but Christ as a Son. Therefore he did not lead you into the kingdom of the angels, but into the kingdom of the Son of his love. We are under the heir, not under the slaves.\n\nThus he says 'Son of love', because he is loved as a son, not because he is of the love of God; for neither are the sons of this disobedience sons by nature, nor are the sons of this Gehenna children, nor is the devil a son by nature of destruction, nor is the adversary a son of sin; likewise, the Lord is not a son of love. But since we are loved slaves, and the Son is loved as a son, he said: of the Son of his love.",
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "God’s will is that they know salvation comes only through Christ.",
+   "comment": "What was God’s will? That you should recognize and know that you cannot be saved through angels, only through Jesus Christ. How, then, are we to come to know it? In wisdom that is spiritual, not worldly.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the kingdom of the Son of his love means and why Paul words it so.",
+   "selected_reason": "Explains what Paul means by knowing God’s will.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-005",
+   "chapter": 1,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Endurance needs long-suffering and joy, and God rewards those who rejoice in afflictions for Christ.",
+   "comment": "Above all, he joined long-suffering to endurance. Endurance does not hold firm without long-suffering, and endurance without joy earns no reward. Joy, more than anything, is needed here.\n\nIt is not the one who grieves over afflictions suffered for Christ who receives the reward from God, but the one who rejoices in them. And what is the reward? Adoption as sons, the inheritance, and a life spent with the angels.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by patience and joy in suffering.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-006",
+   "chapter": 1,
+   "verse_start": 13,
+   "verse_end": 14,
+   "capsule": "God has brought us into the kingdom of the Son, not of angels, and Son of love means beloved Son.",
+   "comment": "Before the flood and after it, before the law and under the law, the angels served God for your salvation. Yet that is not how God brought us into his kingdom. It is now, through our Lord, his Only-begotten, that his kingdom has been given to us. As for “the Son of his love”: this does not mean that Christ is a son born of God’s love. Some people are called sons of disobedience (Ephesians 2:2), others sons of Gehenna (Matthew 23:15), and the devil a son of perdition; and anyone else is named the son of whatever he has run to and attached himself to. He is not a son by nature but by likeness of character. In the same way the Saviour was called Son of God’s love, because he is Son of God not by nature only but also by the true bond of love. “The Father loves the Son,” it says, “and has given all things into his hand” (John 3:35). Or it is because he loved us and suffered for us. And the phrase should be read like this: “into the kingdom of the love of his Son.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Paul speaks of the kingdom of the Son of love.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -165,13 +184,13 @@
    "chapter": 1,
    "verse_start": 15,
    "verse_end": 16,
-   "capsule": "Christ is before all things, and 'firstborn' cannot be taken strictly, since an only-begotten has no brothers and a firstborn does.",
-   "comment": "Having been born firstborn of all creation. … For if he was not before all things, how were all things created in him? So that the term 'firstborn' is not strictly applied, since it is contrary to 'only-begotten'; for by nature the only-begotten is the only one of the Father, but the firstborn is he who has other brothers, of whom he is first. It is not possible to take both terms in the strict sense.",
+   "capsule": "Firstborn cannot be taken strictly alongside only-begotten.",
+   "comment": "… So “firstborn” is not used in its strict sense, since it is the opposite of “only-begotten”. By nature, the only-begotten is a father’s only child, while the firstborn has other brothers and is the first of them. The two words cannot both be taken strictly. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why Paul words Christ as firstborn and what the word does and does not mean.",
+   "selected_reason": "Explains why Paul uses firstborn in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -180,12 +199,12 @@
    "from_cite": false
   },
   {
-   "id": "COL01-009",
+   "id": "COL01-011",
    "chapter": 1,
    "verse_start": 15,
-   "verse_end": 18,
-   "capsule": "Christ is firstborn from the dead by rising to incorruption before the other dead.",
-   "comment": "Just as he said him to be the firstborn of all creation, being before the creation (Col 1:15-17), so he is firstborn from the dead, having risen before all other dead unto incorruption (Col 1:18). …",
+   "verse_end": 17,
+   "capsule": "Christ existed before all things, so hope should rest on him rather than on angels.",
+   "comment": "He means that Christ existed before. If he did not exist before all things, how are all things created in him? He said that all things are created in him so that we would stop putting our hope in angels and set our hope on Christ. “In him” stands for “through him”. … “All things have been created through him and for him.” This means that the cause of creation goes back to him. Or he said “for him” because nothing created is outside him; all things are held within him. “And in him all things hold together”: either “through him”, or it means that he holds all things fast by his will and power, according to the mystery hidden in God, who created all things.",
    "editions": [
     "complete"
    ],
@@ -193,8 +212,8 @@
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
-   "section": "u01-rem-mid",
-   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
    "from_cite": false
   },
   {
@@ -216,35 +235,17 @@
    "from_cite": true
   },
   {
-   "id": "COL01-011",
-   "chapter": 1,
-   "verse_start": 16,
-   "verse_end": 17,
-   "capsule": "Since all things were created in him, he was before all things, and we should hope in him and not in angels.",
-   "comment": "He intends to say that he was before: for if he were not before all, how would all things be created in him? And in him he said all things are being created, so that, having turned away from hoping in angels, we might have hope in Christ; and the 'in him' is instead of 'through him'. … All things were created through him and unto him. Instead of the cause of creation turning toward him, he said 'into him', meaning that nothing of the created things is outside him, but all things are contained by him. …",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Severianus of Gabala",
-   "work": "Fragments on Colossians",
-   "work_slug": "severianus-fragmenta-colossenses",
-   "section": "u01-rem-early",
-   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-early/",
-   "from_cite": false
-  },
-  {
-   "id": "COL01-012",
+   "id": "COL01-009",
    "chapter": 1,
    "verse_start": 18,
    "verse_end": 18,
-   "capsule": "Christ is first in all things according to God's plan of salvation: first in obedience, baptism, suffering and rising, and so the beginning for those who follow.",
-   "comment": "In all, in what way? According to the economy [God's plan of salvation]; for first in obedience, first in baptism, first in citizenship, first in suffering, first from the dead, so that it is fitting for him to be first in all, having become the beginning to those who follow. And he is the head of the body, the church. Creator indeed of creation, but also Creator of our return. …",
+   "capsule": "Christ has first place in all that belongs to his saving work, from obedience to rising from the dead.",
+   "comment": "He called him firstborn of all creation because he existed before creation. In the same way he calls him firstborn from the dead because he rose to incorruption before the rest of the dead. No one would say that when the dead have risen they will all be Christ’s brothers, as if the title had been given with that outcome in view; most of them are sinners and ungodly. So in the earlier verse, as in this one, the sense of time is beside the point.\n\n“That in all things he might come to have first place.” In which things? Those that belong to his saving dispensation. He was first in obedience, first in baptism, first in his way of life, first in suffering, first from the dead. So he rightly has first place in all things, since he became the beginning for those who follow him.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the phrase 'first in all things' with a plain list.",
+   "selected_reason": "Explains what Paul means by first place in all things.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -275,13 +276,14 @@
    "id": "COL01-015",
    "chapter": 1,
    "verse_start": 19,
-   "verse_end": 19,
-   "capsule": "The fullness is the church, which is filled with the Holy Spirit, and Christ was pleased that all the fullness should dwell in him and through him reconcile all things.",
-   "comment": "… And he said 'fullness' referring to the church, which is rightly and already said of him because the church is being filled with the Holy Spirit. He says, however, that Christ was pleased that all the fullness should dwell in him, and thus through himself to reconcile and to unify all things to himself. In the epistle to the Ephesians, he was showing that the church is called the fullness of God (Eph 1:23). …",
+   "verse_end": 20,
+   "capsule": "The church as fullness dwells in Christ its head, and God reconciles all things through Christ rather than angels.",
+   "comment": "He calls the church “fullness”, as he has already rightly said, because it has been filled with the Holy Spirit. He says that Christ was pleased to have all the fullness dwell in him, and so through himself to reconcile all things and make them one with himself. … So God was pleased that his fullness, the church he has filled, should dwell in Christ as in its own head: that is, it should keep in step with Christ and depend on him, not on angels. For God was pleased to reconcile all things through Christ, not through angels. Indeed, everything achieved for the world was achieved through Christ.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains what the fullness means and how God reconciles all things through Christ rather than angels.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -307,6 +309,82 @@
    "section": "u21-rem-close",
    "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u21-rem-close/",
    "from_cite": true
+  },
+  {
+   "id": "COL01-020",
+   "chapter": 1,
+   "verse_start": 21,
+   "verse_end": 22,
+   "capsule": "The Son, not angels, reconciles us to God in his flesh.",
+   "comment": "In these words too he teaches them that it is not angels who will reconcile them to God, but the Son. For he says, “He reconciled us in the body of his flesh.”",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who reconciles us to God and how.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-021",
+   "chapter": 1,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "They should stand firm as others worldwide have done.",
+   "comment": "The gospel has reached not only you but the whole world, and nowhere has anyone been moved from it; they all stand firm. So you, too, must make yourselves secure now.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Paul’s call to continue in the faith.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-022",
+   "chapter": 1,
+   "verse_start": 24,
+   "verse_end": 24,
+   "capsule": "Paul rejoices to fill up what remains of Christ’s afflictions by suffering for the church.",
+   "comment": "If anything is lacking as regards suffering, he says, still I am filling up what remains of the afflictions for Christ’s sake; I rejoice to suffer for you. Why “for you”? Because he suffered for preaching to them. If Christ is the head of the body, the church, then the afflictions stirred up against the church by those who rise against the word of truth are very rightly called Christ’s afflictions. So the one who distinguishes himself in these afflictions and struggles through them would not be wide of the mark to say that he is filling up, in his turn, what is lacking in the afflictions of Christ.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by filling up Christ’s afflictions.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL01-023",
+   "chapter": 1,
+   "verse_start": 26,
+   "verse_end": 27,
+   "capsule": "The mystery is Christ’s coming, and its riches free us from needing angel patronage.",
+   "comment": "The mystery is Christ’s saving dispensation and his becoming man. The glory of the mystery is the resurrection from the dead. The riches are the great mercy that comes from the forgiveness given in baptism, which also grants rebirth to the baptized. “What is the riches of the glory of this mystery?” Do not become poor, he says, by running to shelter under the patronage of angels. Christ, he says, has been given to us as our riches. Let us not become poor by turning to the patronage of angels.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the mystery and its riches mean for the reader.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
   },
   {
    "id": "COL01-017",
@@ -347,6 +425,25 @@
    "from_cite": true
   },
   {
+   "id": "COL02-019",
+   "chapter": 2,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "We share in the treasures through Christ himself.",
+   "comment": "If the hidden treasures of knowledge are in Christ, then clearly we share in them through Christ himself, not through angels.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "COL02-018",
    "chapter": 2,
    "verse_start": 6,
@@ -364,6 +461,25 @@
    "section": "37",
    "url": "https://viapatrum.org/works/cyril-recta-fide-arcadia/37/",
    "from_cite": true
+  },
+  {
+   "id": "COL02-020",
+   "chapter": 2,
+   "verse_start": 6,
+   "verse_end": 7,
+   "capsule": "Rootedness shows firm faith, while walking means living as Christ lived.",
+   "comment": "“Walking” may seem to be the opposite of “being rooted”, but in this passage it is not. “Being rooted” shows all of us the unshakeable firmness of faith, while “walking in Christ” means following plainly in Christ’s footsteps by living the same life.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Paul’s wording in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
   },
   {
    "id": "COL02-001",
@@ -385,6 +501,43 @@
    "from_cite": true
   },
   {
+   "id": "COL02-021",
+   "chapter": 2,
+   "verse_start": 9,
+   "verse_end": 9,
+   "capsule": "The church, filled with the Godhead, dwells bodily in Christ.",
+   "comment": "He means the church, since it has been filled with the Godhead of the Father. The sense is this: the church is full, and it dwells in Christ bodily …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-022",
+   "chapter": 2,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "To be filled in Christ is to be filled through Him with the Holy Spirit.",
+   "comment": "… “And you are filled in him” stands for “filled through him”. Filled with what? Clearly, with the Holy Spirit. “Who is the head of every rule and authority”: he is head not only of the church, he says, for that belongs to his saving dispensation, but also of every invisible power, since he is its maker as well.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by filled in Him.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
    "id": "COL02-003",
    "chapter": 2,
    "verse_start": 11,
@@ -402,6 +555,25 @@
    "section": "29",
    "url": "https://viapatrum.org/works/cyril-adoration-14/29/",
    "from_cite": true
+  },
+  {
+   "id": "COL02-023",
+   "chapter": 2,
+   "verse_start": 11,
+   "verse_end": 11,
+   "capsule": "Baptism is spiritual circumcision cutting away the sins of believers.",
+   "comment": "That is, he circumcised us from the sin of the flesh and made us alive to himself through baptism. So baptism in Christ is a spiritual circumcision, because it cuts away the sins of those who believe.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what Paul means by circumcision in Christ.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-close/",
+   "from_cite": false
   },
   {
    "id": "COL02-004",
@@ -423,17 +595,54 @@
    "from_cite": true
   },
   {
-   "id": "COL02-005",
+   "id": "COL02-024",
    "chapter": 2,
-   "verse_start": 14,
-   "verse_end": 14,
-   "capsule": "The people's consent to the law became a handwritten document, which Christ erased with his own teachings.",
-   "comment": "When the law was given, which condemns those who transgress (Col 2:14–15), all the people of Israel, standing, cried out, and they consented to those things being said, accepting them; and the consent became like a handwritten document. This, then, the handwritten document, the consent toward the law, Christ erased with his own dogmas [teachings]; for he demonstrated according to the observances of the law, as regarding uncleanness, that it is not the things entering but the things exiting that defile a man, and regarding the keeping of the Sabbath, that he healed in the Sabbath; and one will find many other such things. … And since the people said 'Amen' in the curses, it was cast as a sub-script to the handwritten document.",
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "The baptized already share Christ’s resurrection from the death of sins.",
+   "comment": "Through baptism our sins are stripped away and circumcised. “Buried with him in baptism, in which you were also raised with him.” Those baptized in the blood of Christ confess through baptism that they share in his death, and since they have shared in his death, they will also enjoy his resurrection.\n\nResurrection is spoken of in two ways: one spiritual, the other bodily. All human flesh will rise because Christ rose from the dead. But those who were not baptized in Christ and died in their unbelief will share in the common resurrection without enjoying the redemption and the promise. Those who were baptized into Christ, however, have been given another resurrection even before the common one, for they have already risen from the death of their sins.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the handwritten document was and how Christ erased it.",
+   "selected_reason": "Explains burial and raising with Christ in baptism.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-025",
+   "chapter": 2,
+   "verse_start": 12,
+   "verse_end": 13,
+   "capsule": "Those raised from the death of sins must no longer live for the flesh.",
+   "comment": "That is why he said, “in which you were also raised with him”, not “in which you will be raised with him”. Those, then, who have been raised from the death of their sins: how can they still live as people who are going to die again? Did they rise for nothing? If they live as people who will live for ever, they no longer spend their lives according to the flesh as slaves to its desires; they will live according to the Spirit.\n\nHe calls wrong deeds “the body of sin”, because they are carried out through the body. Baptism, then, is the circumcision of Christ, for it strips off the body of sin, which is the foreskin. As the foreskin is something superfluous to a Jew, so sin is to soul and body. He kept to this figure all the way through: by “the foreskin of the flesh” he means sin.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "COL02-005",
+   "chapter": 2,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "Israel’s assent to the law became a bond that Christ wiped out by His decrees.",
+   "comment": "When the law that curses transgressors was given, all the people of Israel stood and shouted their assent to what was said and accepted it. Their assent became a kind of handwritten bond. Christ wiped out this bond, their assent to the law, by his own decrees. For he made rulings against the observances of the law. About foods, he ruled that it is not what goes into a man but what comes out of him that defiles him (Matthew 15:11). About keeping the Sabbath, he ruled by healing on the Sabbath. Anyone who looks will find many more of the same kind.\n\nSo first of all, by his decrees he abolished the punishments the law laid on sinners for their sin, and he granted forgiveness of sins and repentance that leads to salvation. And because the people said “Amen” to the curses (Deuteronomy 27:15–26), the bond was set down as if signed.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the handwritten bond in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -465,13 +674,13 @@
    "chapter": 2,
    "verse_start": 15,
    "verse_end": 15,
-   "capsule": "By laying aside the flesh Christ brought down the opposing powers, and the evil one could not learn who he was until Christ was finally revealed.",
-   "comment": "Having stripped off the rulers and the authorities, he demonstrated in boldness, triumphing in the cross (Col 2:15). Since through the stripping off and the laying aside of the flesh he brought down the opposing powers, having stripped off the rulers and the authorities, he boldly demonstrated, triumphing over them in it. For even until the cross and even death, our Lord was being revealed as being both God and Son of God, and with miracles he struck, but with the body he was covered; therefore also the Satan tempted him, desiring to learn if he is the one being proclaimed by the prophets, so that if he might learn that he is, he might obstruct the economy. But the evil one did not prevail, for he was not able to learn; so finally Christ was revealed.",
+   "capsule": "Christ brought down the opposing powers by laying aside His flesh on the cross.",
+   "comment": "“Having stripped off the rulers and authorities, he made a public show of them, triumphing on the cross.” By stripping off and laying aside the flesh he brought down the opposing powers; so “having stripped off the rulers and authorities, he made a public show of them, triumphing over them in it.” Up to the cross and to death itself, it went unnoticed that our Lord was both God and Son of God. He astonished people with his miracles, but his body kept him veiled. That is why Satan tempted him: he wanted to find out whether he was the one the prophets had proclaimed, so that, if he learned that he was, he might block the saving plan. But the evil one got nowhere, because he could not find out; so for the time being Christ remained hidden.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what stripping the rulers and authorities means.",
+   "selected_reason": "Explains the triumph over the powers in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -484,8 +693,8 @@
    "chapter": 2,
    "verse_start": 15,
    "verse_end": 15,
-   "capsule": "After the cross and resurrection, Christ stripped off the hiddenness and showed the divinity that had been with the body.",
-   "comment": "And since he was crucified and died and was buried and rose and fulfilled all the things of the economy, he stripped off the hiddenness, and with a bare head he showed the divinity existing with the body. First, indeed, the resurrection from the dead was a work of God, then the ascent into the heavens, then the energy through the servants and the other saints in his name. Having stripped off the hiddenness, he demonstrated the opposing authorities in boldness. …",
+   "capsule": "After fulfilling the saving plan Christ openly showed the Godhead with His body.",
+   "comment": "But once he had been nailed to the cross, had died, been buried and risen, and had fulfilled everything in the saving plan, he stripped off his hiddenness and showed openly, with his head uncovered, that the Godhead was there to be seen together with his body. The first work of God was the resurrection from the dead, then the ascent into heaven, and then the works done in his name through his servants and the other saints. So, having stripped off his hiddenness, he openly made a show of the opposing powers. …",
    "editions": [
     "complete"
    ],
@@ -521,13 +730,13 @@
    "chapter": 2,
    "verse_start": 16,
    "verse_end": 17,
-   "capsule": "Paul teaches that the law is abolished and the evil one has fallen, so they should no longer obey what was abolished, for it was a shadow of the body of Christ.",
-   "comment": "Therefore let no one judge you (Col 2:16-18a). It teaches that the law is abolished, having erased the handwriting against us of Christ. And it teaches that also the evil one has fallen, of the Lord having stripped off and having exemplified the rulers and the authorities. It commands therefore not to obey any longer these things which have been abolished through the energy of Christ; so that neither, he says, let the Jews persuade you to keep the things that are under the law. For those were a shadow of the body of Christ, which is the church (Col 2:17). The shadow indeed runs ahead of the body, but it does not have standing by itself. Therefore he says: do not obey the law.",
+   "capsule": "The law is abolished, so Jews must not be obeyed about it, for it was a shadow.",
+   "comment": "“So let no one judge you.” He teaches that the law has been abolished, now that Christ has wiped out the bond that stood against us. He teaches too that the evil one has fallen, now that the Lord has stripped off the rulers and authorities and made an example of them. So he tells them not to obey any longer these things that Christ’s working has abolished. Do not, he says, be won over by Jews who try to persuade you to keep what is in the law. Those things were a shadow of the body of Christ, which is the church. A shadow runs ahead of the body, but it has no substance of its own. That is why he says: do not obey the law.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why Paul tells them not to be judged by the law and what the shadow means.",
+   "selected_reason": "Explains why Paul forbids judgment about the law.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -540,8 +749,8 @@
    "chapter": 2,
    "verse_start": 17,
    "verse_end": 17,
-   "capsule": "The shadow runs ahead of the body, and once the body, Christ, has come, the shadow is no longer needed.",
-   "comment": "These things happened, he says, being a shadow of the things that were to come; and the shadow runs ahead of the body. Since therefore the shadow is the legal requirements, what is the body? The Christ is not a shadow. Therefore, having come the body, the shadow is superfluous.",
+   "capsule": "Once the body has come, the shadow is superfluous.",
+   "comment": "… Since, then, the ordinances of the law are the shadow, what is the body? What belongs to Christ is not shadow. So once the body has come, the shadow is superfluous.",
    "editions": [
     "complete"
    ],
@@ -558,8 +767,8 @@
    "chapter": 2,
    "verse_start": 18,
    "verse_end": 18,
-   "capsule": "Paul speaks to the Jews about being judged and to the Greeks about being led into worshiping angels.",
-   "comment": "But also, let no one lead you Greeks into worshiping angels or the elements of this world; for they enter into things which they have not seen with their own mind and with their own reason, being overthrown. Therefore, 'let no one judge you' is said concerning the Jews, and 'let no one condemn you' concerning the Greeks.",
+   "capsule": "Greeks must not draw believers into angel worship through their own reasoning.",
+   "comment": "And do not be won over by Greeks who draw you into worshipping angels or the elements of this world either; for they “intrude into things they have not seen”, seeking purification from their own mind and their own reasoning. So “let no one judge you” is said about the Jews, and “let no one rob you of the prize” about the Greeks. He means: let no one plot against you, now that you are already winning and getting the better of the evil one.",
    "editions": [
     "complete"
    ],
@@ -576,13 +785,13 @@
    "chapter": 2,
    "verse_start": 18,
    "verse_end": 18,
-   "capsule": "Those who say God is too great to reach lead people to him through angels and call this humility, but Paul asks why they leave Christ, the head of the angels.",
-   "comment": "… Since therefore until Him we do not reach, through His angels we are being led to Him and being brought to Him. And more highly he was saying: He who is head of every rule and authority, and now he says: Why are you returning to the elements and angels, having abandoned the head of these, which is Christ? … Since they were saying that God is great, He is ungraspable, He is invisible, and we do not reach there. Because of this, since we do not make room for the Great One, through the angels we are being brought. And this is humility, he says.",
+   "capsule": "Calling angel worship humility abandons Christ, the head of every rule.",
+   "comment": "What sort of humility? The humility of saying: “We are lowly, and God is great, too great to be served by us. Since we cannot reach as far as him, we win his favour through his angels, and through them we are brought to him.” Earlier he said, “who is the head of every rule and authority” (Colossians 2:10), and now he says: why do you go to the elements and to angels, abandoning their head, which is Christ?",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the 'humility and worship of angels' Paul warns against.",
+   "selected_reason": "Explains the false humility in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -595,13 +804,12 @@
    "chapter": 2,
    "verse_start": 19,
    "verse_end": 19,
-   "capsule": "God the Word is the head of all, so those who leave the head cannot hold the body, since every benefit comes to the whole body from the head.",
-   "comment": "… It is necessary, he says, to have the head; for God the Word is the head of all. What therefore, having left the head, do you hold the body? … But therefore from the head comes to all the benefit, to angels as angels, to archangels as archangels, to the visible things as visible things. Set for me the heaven to be instead of a head to the world, instead of eyes the sun and the moon, and thus having arranged each part of the world in a growing order, you will find one body of the all. And just as soul is in a body and body of a soul, so the invisible powers are in the visible things. And of all these the head is more masterful, from which the benefit comes to the whole body, being supplied, it is evident, from the head.",
+   "capsule": "Every benefit reaches the whole body from the head, so believers must hold fast to Him.",
+   "comment": "Here he made plain the aim we have been speaking of: what moved him to write was that some people were urging others to approach God through angels. We must, he says, hold fast to the head, for God the Word is the head of the universe. Why, then, let go of the head and cling to the body? The power of the angels may serve as a joint that links two or more limbs, but the benefit still comes to all from the head: to angels as angels, to archangels as archangels, to visible things as visible things. Picture the heaven as the head of the world and the sun and moon as its eyes. Arrange each part of the world in this way, as limbs in their order, and you will find one body of the universe. As there is a soul in the body and the body belongs to the soul, so you will find the invisible powers in the visible things. But the head is more sovereign than all of these, and from it the benefit flows into the whole body, supplied, of course, from the head.",
    "editions": [
-    "complete",
-    "selected"
+    "complete"
    ],
-   "selected_reason": "Explains what holding fast to the Head means.",
+   "selected_reason": "",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -612,10 +820,10 @@
   {
    "id": "COL02-016",
    "chapter": 2,
-   "verse_start": 21,
+   "verse_start": 20,
    "verse_end": 22,
-   "capsule": "Those who command not to touch or taste anything that lives follow a Greek teaching, and though self-control is good, their second part is impious.",
-   "comment": "… These things are set forth as Greek dogmas; for these people command, in their own plan, not even to touch or taste anything that lives. For all these things were given to men for destruction, such as to corrupt them and consume them in their use and in the violence of life. …\n\nInstead of fearing these things—I am indeed speaking of 'do not handle, do not taste, do not touch' (Colossians 2:21)—there seems to be some logic, since they are of the low-minded and are stingy with the body, to restrain it from filth and not to honor the flesh through gluttony. But even if self-control is beautiful, the second part is impious; for they do not only abstain as if from a superior stomach, but also as if they were not obligated to wrong living things, which were given for destruction in the use of life, and rather they wish to be merciful to God contrary to reason.",
+   "capsule": "Rules forbidding touch and taste treat as forbidden what God gave to be used up.",
+   "comment": "… Why, as though you were living in the world, do you submit to rules: “Do not taste, do not touch, do not handle”, things which all perish as they are used? He presents these as Greek doctrines, for in their error these people command that no one should touch or taste anything that has life. Yet all these things were given to human beings to be used up, that is, to be spent and consumed in the use and the needs of life. So “do not touch” what God has given is a rule “according to their commandments and their teachings”.",
    "editions": [
     "complete"
    ],
@@ -628,36 +836,36 @@
    "from_cite": false
   },
   {
-   "id": "COL03-001",
-   "chapter": 3,
-   "verse_start": 1,
-   "verse_end": 2,
-   "capsule": "A person made to stand upright and look up is fitted to seek the things above, where Christ is, and to rise above earthly things in the mind.",
-   "comment": "… Your head stands upright toward heaven; your eyes look upward. So if you ever dishonor yourself with the passions of the flesh, serving the belly and the parts beneath it, you have been grouped with the senseless cattle and have become like them. … A different concern befits you: to seek the things above, where Christ is (Colossians 3:1-2), and to be above earthly things in your mind. As you have been shaped, so order your life as well. …",
+   "id": "COL02-026",
+   "chapter": 2,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "Harsh rules look like humility and self-control but spare living creatures against God’s purpose.",
+   "comment": "This means: be wary of these rules, I mean “do not handle, do not taste, do not touch”, which seem to make some sense, because abstaining from foods and refusing to pamper one’s own flesh with plenty is the mark of people who are humble-minded and do not spare the body. But although self-control is a fine thing, their second motive is impious. They abstain not only as people who have mastered the belly, but also as people who think they must not harm living creatures, which were given to be used up in the course of life. They want to be more merciful to the dumb animals than God is.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Plain picture of what seeking the things above means.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "70",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/70/",
-   "from_cite": true
+   "selected_reason": "Explains the false show of wisdom and humility in ascetic rules in terms a reader can follow.",
+   "author": "Severianus of Gabala",
+   "work": "Fragments on Colossians",
+   "work_slug": "severianus-fragmenta-colossenses",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/severianus-fragmenta-colossenses/u02-rem-mid/",
+   "from_cite": false
   },
   {
    "id": "COL03-002",
    "chapter": 3,
    "verse_start": 3,
    "verse_end": 3,
-   "capsule": "Our hidden life is eternal blessedness, shown at Christ's coming.",
-   "comment": "Our life is hidden (Col 3:3), instead of the blessedness of the eternal life which will be revealed to all when also the glory of Christ is revealed in his second coming. …",
+   "capsule": "Our hidden life is eternal blessedness revealed at Christ’s coming.",
+   "comment": "“Our life is hidden” stands for the blessedness of eternal life, which will be revealed to all when the glory of Christ is also revealed at his second coming.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Says plainly what the hidden life is and when it will be revealed.",
+   "selected_reason": "Explains what \"our life is hidden\" means in clear, accessible terms.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -688,8 +896,8 @@
    "chapter": 3,
    "verse_start": 5,
    "verse_end": 5,
-   "capsule": "Sin is often called the flesh, so its members are members of sin.",
-   "comment": "… Just as often sin is called the flesh (Col 3:5), so also, enumerating now the members of the flesh, he speaks of fornication and uncleanness and the following; for these are the members of sin.",
+   "capsule": "Because sin is called flesh, sins are its members.",
+   "comment": "Just as he often calls sin “flesh”, so now, listing the members of the flesh, he names fornication, uncleanness and the rest; for these are the members of sin.",
    "editions": [
     "complete"
    ],
@@ -762,13 +970,13 @@
    "chapter": 3,
    "verse_start": 9,
    "verse_end": 10,
-   "capsule": "The old man is the sinful mindset; the new, the spiritual.",
-   "comment": "He calls the sinful mindset the old man, and the evil deeds the members (Col 3:9-10); but the spiritual mindset is the new man, and his members are the good deeds. …",
+   "capsule": "The old man is the sinful mind; the new, the spiritual.",
+   "comment": "By “the old man” he means the mind set on sin, and by its members, evil deeds; by “the new man” he means the spiritual mind, and by its members, good deeds.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the old and new man in simple terms.",
+   "selected_reason": "Clearly defines what Paul means by the old man and the new man.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -818,8 +1026,8 @@
    "chapter": 3,
    "verse_start": 11,
    "verse_end": 11,
-   "capsule": "When people think and do the things of Christ, God does the work through them and is in them.",
-   "comment": "[Christ being “all and in all”:] This is similar to the statement that all things may be in all (Col 3:11). And what he says is such: that in all those who think the things of God, God may work all things. For when you think the things of Christ and do them, he is the one doing through you and is in you. It is similar: that God may be all things in all; not heaven in heaven, nor earth in earth. But what he says is such: when you think and do these things, God is the one doing through you, and he is in you to do in you what he intends.",
+   "capsule": "When believers think and do what belongs to Christ, he acts through them and is in them.",
+   "comment": "… This is like the words “that he may be all in all” (1 Corinthians 15:28). What he means is this: that God may work all things in all who set their minds on the things of God. When you think and do what belongs to Christ, he is the one acting through you, and he is in you.",
    "editions": [
     "complete"
    ],
@@ -854,13 +1062,13 @@
    "chapter": 3,
    "verse_start": 14,
    "verse_end": 14,
-   "capsule": "Love must come first, for nothing else required is perfected without it.",
-   "comment": "… If love does not precede, nothing of the required things is perfected; for then we both refrain from doing evil to one another and we care for doing good, when we love one another. …",
+   "capsule": "Love must lead the way, for without it no duty is completed.",
+   "comment": "Unless love leads the way, none of our duties is carried through to completion. It is when we love one another that we both keep from harming one another and take care to do one another good.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Gives the reason love comes first in Paul's list.",
+   "selected_reason": "Explains why love is called the bond of perfectness in simple and practical terms.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",
@@ -873,8 +1081,8 @@
    "chapter": 3,
    "verse_start": 15,
    "verse_end": 15,
-   "capsule": "Let the peace of Christ, not those who mislead, be the umpire in you.",
-   "comment": "… Let not those who mislead you be awarded, he says, but let the peace of Christ be the umpire in you unto being united to Christ; and become thankful. To whom? Evidently to him who called you in Christ, and do not run to angels. …",
+   "capsule": "Let the peace of Christ be your umpire, and thank Christ rather than seeking shelter in angels.",
+   "comment": "Do not let those who lead you astray, he says, rob you of the prize; let the peace of Christ be the umpire among you, so that you are united to Christ. “And be thankful.” To whom? To Christ, of course, who called you; and do not run to angels for shelter.",
    "editions": [
     "complete"
    ],
@@ -891,12 +1099,13 @@
    "chapter": 4,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "Masters should repay their slaves' goodwill with just and equal care.",
-   "comment": "… To the slaves, he says, serving with goodwill, and you masters, according to what is just and equal, repay them with the proper care. Therefore, equality according to goodwill.",
+   "capsule": "Masters must repay their slaves' goodwill with just and fair care.",
+   "comment": "Since your slaves, he [Paul] says, serve you with goodwill, you masters must also repay them justly and fairly, with the care that is fitting. So fairness answers to their goodwill.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what Paul asks of masters in plain terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "Fragments on Colossians",
    "work_slug": "severianus-fragmenta-colossenses",

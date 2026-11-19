@@ -1,12 +1,12 @@
 {
  "book": "Deuteronomy",
  "title": "The Fathers on Deuteronomy",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 125,
+ "comment_count": 124,
  "selected_count": 55,
  "comments": [
   {
@@ -661,13 +661,13 @@
    "chapter": 13,
    "verse_start": 3,
    "verse_end": 4,
-   "capsule": "A trial is a proof of our love toward God, and the tempted who go after the Lord are added to him.",
-   "comment": "We must deem the standing trial to have become a proof and testing-place of our love toward the Divine. For 'the Lord shall tempt you,' as written in Deuteronomy, 'to know whether you love the Lord your God with your whole heart and your whole soul.' (Deuteronomy 13:3–4) But you, being tempted, 'shall go after the Lord your God, and fear him, and keep his commandments' (Deuteronomy 13:4) — especially the 'Thou shalt have no other gods beside me' — 'and hear his voice, and be added to him': with him taking you from the places here, and adding you to himself, 'unto,' as the Apostle named it, 'the increase of God' in him.",
+   "capsule": "Present temptation proves love for God, and the tested who walk after God are joined to God.",
+   "comment": "So we must think that the present temptation has come about as a test and a proving of our love for God. “For the Lord will test you”, as it is written in Deuteronomy, “to know whether you love the Lord your God with all your heart and with all your soul” (Deuteronomy 13:3).\n\nBut you, when you are tested, “will walk after the Lord your God and fear him and keep his commandments”, above all the one, “You shall have no other gods besides me” (Exodus 20:3), “and you will hear his voice and be joined to him” (Deuteronomy 13:4), who takes you from the places here and joins you to himself, into what the apostle called “the growth of God” in him (Colossians 2:19).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the Lord tests his people.",
+   "selected_reason": "Explains the test in verse 3 and walking after God in verse 4 in plain terms.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",
@@ -991,13 +991,13 @@
    "chapter": 17,
    "verse_start": 3,
    "verse_end": 3,
-   "capsule": "Creatures must not be worshiped with the Creator present, and the sun itself would refuse worship as the Lord refused to be called good.",
-   "comment": "… But the enemy will likely wish to outwit us, by whatever means, toward worshiping 'the sun or the moon or all the order from heaven.' (Deuteronomy 17:3) But we shall say that God's Word commanded not these. For in no way must creatures be worshiped, with the Creator present, who endures and cries toward the prayer of all. Nor would the sun itself wish to be worshiped by those of God's portion — likely not by anyone else either — but imitating him who said, 'Why callest thou me good? None is good but one, God, the Father,' (Mark 10:18) it will as it were say to one willing to worship it: 'Why callest thou me God? One is the true God. And why worshipest thou me? For the Lord thy God shalt thou worship, and him only shalt thou serve. I too am generated. …",
+   "capsule": "Created things must not be worshipped when the Creator is present, and the sun itself would refuse such worship.",
+   "comment": "… But it is likely that the enemy will want to outwit us, by whatever means he can, into bowing down “to the sun or the moon or all the array of heaven”. But we will say that the Word of God “did not command” these things (Deuteronomy 17:3). For we must in no way bow down to created things when the Creator is present, who suffices for all and comes in time to the prayer of all. Not even the sun himself would wish to be bowed down to by those of God's portion, and probably not by anyone else either. Rather, imitating the one who said, “Why do you call me good? No one is good but one, God the Father” (Mark 10:18), he would say, as it were, to the one who wishes to bow down to him:\n\n“Why do you call me god? There is one true God. And why do you bow down to me? ‘For you shall bow down to the Lord your God and serve him alone’ (Matthew 4:10). I too am a created being. Why do you want to bow down to one who himself bows down? For I too bow down to God the Father and serve him, and in obedience to his commands I have been subjected to futility because of him who subjected it in hope, and I shall be set free from the bondage of corruption, though I too am now bound to a perishable body, into the freedom of the glory of the children of God (Romans 8:20-21).”",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the sun and moon are not to be worshiped.",
+   "selected_reason": "Explains why the verse forbids worship of sun and moon in terms a general reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Exhortation to Martyrdom",
    "work_slug": "origen-exhortation-to-martyrdom",
@@ -2276,24 +2276,6 @@
    "work_slug": "origen-contra-celsum-book-8",
    "section": "25",
    "url": "https://viapatrum.org/works/origen-contra-celsum-book-8/25/",
-   "from_cite": true
-  },
-  {
-   "id": "DT33-002",
-   "chapter": 33,
-   "verse_start": 13,
-   "verse_end": 15,
-   "capsule": "Moses blessed Joseph's tribe with the seasons, dew and sun's turnings, which make the earth fruitful.",
-   "comment": "… And Moses, blessing the tribe of Joseph, gives blessings from the seasons of heaven and the dew, and from the sun's turnings and the meetings of months, and from the tops of mountains and everlasting hills (Deuteronomy 33:13-15), since the region around the earth is made fruitful through the good order in these things. …",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "24",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/24/",
    "from_cite": true
   },
   {

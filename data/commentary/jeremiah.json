@@ -1,32 +1,32 @@
 {
  "book": "Jeremiah",
  "title": "The Fathers on Jeremiah",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 170,
- "selected_count": 90,
+ "comment_count": 171,
+ "selected_count": 93,
  "comments": [
   {
    "id": "JER01-001",
    "chapter": 1,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "The Seventy's \"The word of God which came upon Jeremiah\" differs from the Hebrew \"Words of Jeremiah\", which suits a prophet who, mocked for saying \"Thus says the Lord\", called God's words his own so that people would listen.",
-   "comment": "… Jeremiah came to be in times of people most sinful—for in his days the captivity came to be—and they were so sinful as to sneer and laugh and mock whenever the prophet spoke the prophetic opening, 'Thus says the Lord.' The hearers laughed and sneered at what was said. The one deceived and benefited from being deceived [Jeremiah] guarded himself from saying 'Thus says the Lord.' Therefore he also, wanting to deceive for benefit from deceiving, said: I speak my own words to you, since you do not hear the Lord’s words. Then they offered their ears as to words of Jeremiah and heard words of God. These things the one who handed the place over to me said, examining the openings and beginnings of the prophecies.\n\nThere is then also a beginning of Jeremiah’s prophecy among us, as the Seventy have handed down—I do not know with what aim: 'The word of God which came upon Jeremiah the son of Hilkiah from the priests' (Jeremiah 1:1); but in the Hebrew and the remaining editions: 'Words of Jeremiah son of Hilkiah,' … and all agreed to say: 'Words of Jeremiah son of Hilkiah.' Why then 'Words of Jeremiah'? Because his opening toward those not wanting to hear was: Hear my words.",
+   "capsule": "Jeremiah's book opens with 'Words of Jeremiah' because his opening to those who would not hear was 'Hear my words.'",
+   "comment": "There is then also a beginning of Jeremiah’s prophecy among us, as the Seventy have handed down—I do not know with what aim: 'The word of God which came upon Jeremiah the son of Hilkiah from the priests' (Jeremiah 1:1); but in the Hebrew and the remaining editions: 'Words of Jeremiah son of Hilkiah,' (Jeremiah 1:1) and all agreed to say: 'Words of Jeremiah son of Hilkiah.' Why then 'Words of Jeremiah'? Because his opening toward those not wanting to hear was: Hear my words.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the book is headed \"Words of Jeremiah\".",
+   "selected_reason": "Explains why the verse is worded as it is in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Homilies on Jeremiah",
    "work_slug": "origen-homilies-jeremiah",
    "section": "20.5",
    "url": "https://viapatrum.org/works/origen-homilies-jeremiah/20.5/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "JER01-002",
@@ -181,18 +181,19 @@
    "chapter": 1,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "The Savior's \"I do not know how to speak\" is great because speaking is human, and as the Word with God he knows what is greater than speaking.",
-   "comment": "How will you show that it is a great and glorious thing for the Savior to say, 'I do not know how to speak' (Jeremiah 1:6)? Speaking is a human thing. To speak is to use a dialect: the speech of the Hebrews, say, or of the Greeks, or of some others. If you go up to the Savior and see him as Word 'in the beginning with God,' (John 1:1) you will see that he does not know how to speak, because speaking is human. He does not know it, because what he knows is greater than speaking. And if you compare the tongues of angels with the tongues of men, and see that he is greater even than angels, as the apostle bore witness in the letter to the Hebrews, you will say that he was greater even than the tongue of angels when he was God, the Word with the Father.",
+   "capsule": "Not knowing how to speak is great for the Savior because human speech is lesser than what he knows as the Word with God.",
+   "comment": "… How will you show that it is a great and glorious thing for the Savior to say, 'I do not know how to speak' (Jeremiah 1:6)? Speaking is a human thing. To speak is to use a dialect: the speech of the Hebrews, say, or of the Greeks, or of some others. If you go up to the Savior and see him as Word 'in the beginning with God,' (John 1:1) you will see that he does not know how to speak, because speaking is human. He does not know it, because what he knows is greater than speaking.\n\n… Just as I force myself to lisp when I talk with little children … in the same way the Savior, being 'in the Father' and in the greatness of the glory of God, does not speak human things and does not know how to utter speech to those below. But when he comes into a human body he says at the beginning, 'I do not know how to speak, because I am younger.' (Jeremiah 1:6) … So he says, 'I do not know how to speak' (Jeremiah 1:6): I know things greater than speaking, I know things greater than this human sound. … I do not know how to speak to men. I am younger (Jeremiah 1:6).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains how the verse applies to the Savior through the accessible analogy of an adult lisping to speak with little children.",
    "author": "Origen of Alexandria",
    "work": "Homilies on Jeremiah",
    "work_slug": "origen-homilies-jeremiah",
    "section": "1.8",
    "url": "https://viapatrum.org/works/origen-homilies-jeremiah/1.8/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "JER01-011",
@@ -401,12 +402,13 @@
    "chapter": 2,
    "verse_start": 12,
    "verse_end": 13,
-   "capsule": "The prophet calls God a fountain and the Holy Spirit living water, which cleanses our sins in baptism.",
-   "comment": "Jeremiah, in the person of God, says: 'The heavens were out of joint at this, and the earth trembled at this: because my people have done two evil things. They have forsaken me, the fountain of living water, and have hewn for themselves broken cisterns, which cannot hold water' (Jeremiah 2:12). The prophet mystically sets forth the mystery. For he called God 'a fountain' and called the holy Spirit 'living water,' who in the baptismal pool cleanses all our sins, being unable to be split apart by the nature of the intellectual fountain, just as a stream from fountains cannot.",
+   "capsule": "The fountain is God and the living water is the Holy Spirit, who washes away sins in baptism and cannot be separated from God any more than a stream from its spring.",
+   "comment": "Jeremiah, speaking in the person of God: “Heaven was astonished at this, and the earth shuddered at this; for my people have done two evil things. They have forsaken me, the fountain of living water, and dug for themselves broken cisterns, which will not be able to hold water” (Jeremiah 2:12-13).\n\nThe prophet sets out the mystery in a hidden way. For he called God “fountain,” and the Holy Spirit “living water”: the Spirit who in the font washes away all our sins, who cannot be torn away from the nature of the spiritual fountain, as neither can the stream that flows from springs.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains the fountain and living water wording in terms a general reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -772,8 +774,8 @@
    "chapter": 3,
    "verse_start": 24,
    "verse_end": 24,
-   "capsule": "If our tilling is bad, shame consumes the labors of the fathers, but if it is good the firstborn are offered to God, and the soul's offspring are thoughts as sons and works as daughters.",
-   "comment": "'Shame,' then, 'has consumed the labors of our fathers from their youth—their sheep and their oxen.' (Jeremiah 3:24; 8:17) What is there in us that is tilling us—whether tilling badly (so that 'badly' is said of the tiller) or tilling well? If it tills badly, that is labor of the fathers being consumed by their shame. If it tills well, it is not the fathers' labor, but labor from which the firstborn are offered upon God's altar. They say 'their sons and their daughters.' (Wisdom of Solomon 7:27; cf. John 1:12–13; Romans 8:14–16) Whose 'their'? Are the sons of 'them' or of 'the fathers' consumed by their shame? And we have often said that the offspring of the soul are these: thoughts are sons, and the works and bodily practices are daughters.\n\nSince there are wicked thoughts—such as those from the nations thought—and wicked works as well, sons and daughters are consumed by those who made them, if shame arises in them over what was sinned. May it not be that we make sons and daughters for a consumption that comes from shame.",
+   "capsule": "Bad tillage lets shame consume the fathers' labor, while good tillage offers the firstborn on God's altar, and the soul's shame-consumed sons and daughters are wicked thoughts and works.",
+   "comment": "'Shame,' then, 'has consumed the labors of our fathers from their youth—their sheep and their oxen.' (Jeremiah 3:24) What is there in us that is tilling us—whether tilling badly (so that 'badly' is said of the tiller) or tilling well? If it tills badly, that is labor of the fathers being consumed by their shame. If it tills well, it is not the fathers' labor, but labor from which the firstborn are offered upon God's altar. They say 'their sons and their daughters.' (Jeremiah 3:24) Whose 'their'? Are the sons of 'them' or of 'the fathers' consumed by their shame? And we have often said that the offspring of the soul are these: thoughts are sons, and the works and bodily practices are daughters.\n\nSince there are wicked thoughts—such as those from the nations thought—and wicked works as well, sons and daughters are consumed by those who made them, if shame arises in them over what was sinned. May it not be that we make sons and daughters for a consumption that comes from shame.",
    "editions": [
     "complete"
    ],
@@ -959,13 +961,13 @@
    "chapter": 4,
    "verse_start": 4,
    "verse_end": 4,
-   "capsule": "The Lord's wrath goes out like fire against those who have not put away the foreskin of the heart, and the wickedness of our practices is the matter that fire feeds on.",
-   "comment": "But if someone does not put away the foreskin of his heart, let us see what the word threatens him: 'Lest my wrath go out,' it says, 'like fire and be kindled, and there will be none to quench it.' (Deuteronomy 10:16; Jer 4:4; Rom 2:29) So the wrath of the Lord goes out like fire upon those not circumcised to God, upon those who have not put away the foreskin of their heart, 'and there will be none to quench it from before the wickedness of their practices.' (Jeremiah 4:4) That fire has as its matter the wickedness of our practices. Where there is no wickedness of practices, the fire has nowhere to spread.",
+   "capsule": "The wrath that goes out like unquenchable fire feeds on the wickedness of our practices.",
+   "comment": "But if someone does not put away the foreskin of his heart, let us see what the word threatens him: 'Lest my wrath go out,' it says, 'like fire and be kindled, and there will be none to quench it.' (Jeremiah 4:4)\n\nSo the wrath of the Lord goes out like fire upon those not circumcised to God, upon those who have not put away the foreskin of their heart, 'and there will be none to quench it from before the wickedness of their practices.' (Jeremiah 4:4) That fire has as its matter the wickedness of our practices. Where there is no wickedness of practices, the fire has nowhere to spread.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the threat of unquenchable fire in the verse.",
+   "selected_reason": "Explains what the unquenchable fire in the verse is and what feeds it.",
    "author": "Origen of Alexandria",
    "work": "Homilies on Jeremiah",
    "work_slug": "origen-homilies-jeremiah",
@@ -1026,6 +1028,24 @@
    "work_slug": "origen-homilies-jeremiah",
    "section": "5.16",
    "url": "https://viapatrum.org/works/origen-homilies-jeremiah/5.16/",
+   "from_cite": false
+  },
+  {
+   "id": "JER04-017",
+   "chapter": 4,
+   "verse_start": 5,
+   "verse_end": 5,
+   "capsule": "The call to announce in Judah is addressed to those from the tribe of Judah of Christ.",
+   "comment": "… 'Announce in Judah, and let it be heard in Jerusalem; say, announce, signal with a trumpet upon the earth, and cry aloud.' (Jeremiah 4:5) These things announced, he says, say in Judah to those from the tribe of Judah of Christ—'for it is clear that our Savior has risen from Judah.' (Hebrews 7:14)",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "5.15",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/5.15/",
    "from_cite": false
   },
   {
@@ -1269,25 +1289,6 @@
    "from_cite": true
   },
   {
-   "id": "JER05-010",
-   "chapter": 5,
-   "verse_start": 22,
-   "verse_end": 22,
-   "capsule": "The sea, however it rages, dissolves its force into foam the moment it touches the shore, so that what cannot be withstood is bridled by the weakest thing, sand, and by the command of its Creator.",
-   "comment": "That is why the sea, even when it rages under the winds and its waves rear up to an enormous height, the moment it touches the shore, dissolves its force into foam and turns back. \"Will you not fear me, says the Lord, who set the sand as a boundary for the sea?\" (Jeremiah 5:22). The sea, whose violence cannot be withstood, is bridled by the weakest thing of all—sand. What else kept the Red Sea from sweeping over all Egypt, which lies lower than the sea itself, and joining the ocean that borders Egypt, if it was not bound by the command of its Creator?",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Shows concretely how sand can hold back the sea.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "29",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/29/",
-   "from_cite": true
-  },
-  {
    "id": "JER06-001",
    "chapter": 6,
    "verse_start": 21,
@@ -1415,25 +1416,6 @@
    "work_slug": "didymus-commentarii-psalmos",
    "section": "u34-rem-close",
    "url": "https://viapatrum.org/works/didymus-commentarii-psalmos/u34-rem-close/",
-   "from_cite": true
-  },
-  {
-   "id": "JER09-003",
-   "chapter": 9,
-   "verse_start": 23,
-   "verse_end": 24,
-   "capsule": "Not even wisdom, strength or wealth is a ground for boasting, and one should boast as Paul did, in the cross and in his weaknesses.",
-   "comment": "Hear the word of the prophet Jeremiah commanding us not to boast even in wisdom: 'Let not the wise man boast in his wisdom,' (Jeremiah 9:23) he says, 'nor the strong in his strength, nor the rich in his wealth, but let the one who boasts boast in this: understanding and knowing that I am the Lord.' Do you want to boast and, boasting, not hear 'Be ashamed of your boasting'? Boast as the apostle and say: 'Far be it from me to boast except in the cross of our Lord Jesus Christ, through which the world has been crucified to me and I to the world.' (Galatians 6:14) Do you want to boast so that it may not be said, 'Be ashamed of your boasting'? Hear Paul boasting and learn when he says: 'Most gladly then will I boast in my weaknesses, that the power of Christ may tabernacle upon me.' Hear what kinds of boasts he boasts: 'In labors more abundantly'—which of us can say this?—'in prisons beyond measure, in deaths often.'",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Gives concrete examples of what to boast in and what not to.",
-   "author": "Origen of Alexandria",
-   "work": "Homilies on Jeremiah",
-   "work_slug": "origen-homilies-jeremiah",
-   "section": "11.4",
-   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/11.4/",
    "from_cite": true
   },
   {
@@ -1608,19 +1590,19 @@
    "chapter": 12,
    "verse_start": 11,
    "verse_end": 11,
-   "capsule": "Christ is the speaker, and the land was desolated after the people killed the Christ of God.",
-   "comment": "Who is the one saying, 'Through me the whole land was made desolate with desolation' (Jeremiah 12:11)? Christ says these things. Before his sojourn many sins had indeed come to the people, but not of such a kind that they should be abandoned altogether and handed over to a long captivity. But when they filled up 'the measure of their fathers' (Matthew 23:32 … ) and added to killing the prophets and pursuing the righteous the killing of 'the Christ of God,' then what was spoken came to be: 'Your house is left to you.' And because of him they have suffered these things, and 'with desolation the whole land was made desolate.' (Matthew 23:38)",
+   "capsule": "Christ himself speaks the desolation, which came after killing the Christ of God filled up the full measure.",
+   "comment": "Who is the one saying, 'Through me the whole land was made desolate with desolation' (Jeremiah 12:11)? Christ says these things. Before his sojourn many sins had indeed come to the people, but not of such a kind that they should be abandoned altogether and handed over to a long captivity.\n\nBut when they filled up 'the measure of their fathers' (Matthew 23:32) and added to killing the prophets and pursuing the righteous the killing of 'the Christ of God,' then what was spoken came to be: 'Your house is left to you.' And because of him [Christ] they have suffered these things, and 'with desolation the whole land was made desolate.' (Matthew 23:38)",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Says who speaks the verse and why the land was made desolate.",
+   "selected_reason": "Explains who speaks the verse and why desolation came, in plain terms.",
    "author": "Origen of Alexandria",
    "work": "Homilies on Jeremiah",
    "work_slug": "origen-homilies-jeremiah",
    "section": "11.1",
    "url": "https://viapatrum.org/works/origen-homilies-jeremiah/11.1/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "JER12-004",
@@ -1683,18 +1665,19 @@
    "chapter": 12,
    "verse_start": 13,
    "verse_end": 13,
-   "capsule": "Boasting in riches and in things that are not worth boasting about calls for the rebuke to be ashamed of one's boasting.",
-   "comment": "Let us also look at the necessary rebuke next, which it is good to take up in the ethical place, saying: 'Be ashamed of your boasting, of reproach before the Lord.' (Jeremiah 12:13) There are things in which we boast through folly, though they are not worthy of boasting. For example, if someone boasts that he is rich and possesses much, one might say to him: 'Be ashamed of your boasting.' …",
+   "capsule": "Empty boasting about riches, rank, dress and houses deserves shame, while boasting in the cross and in weakness does not.",
+   "comment": "Let us also look at the necessary rebuke next, which it is good to take up in the ethical place, saying: 'Be ashamed of your boasting, of reproach before the Lord.' (Jeremiah 12:13) There are things in which we boast through folly, though they are not worthy of boasting. For example, if someone boasts that he is rich and possesses much, one might say to him: 'Be ashamed of your boasting.'\n\nIf someone boasts of this outward nobility, it will be said to him: 'Be ashamed of your boasting.' If someone boasts of costly clothing, of a house built richly, that boasting is foreign to the boasting of the saints; therefore it will be said to such a one: 'Be ashamed of your boasting.' Hear the word of the prophet Jeremiah commanding us not to boast even in wisdom: 'Let not the wise man boast in his wisdom,' (Jeremiah 9:23) he says, 'nor the strong in his strength, nor the rich in his wealth, but let the one who boasts boast in this: understanding and knowing that I am the Lord.' Do you want to boast and, boasting, not hear 'Be ashamed of your boasting'? Boast as the apostle and say: 'Far be it from me to boast except in the cross of our Lord Jesus Christ, through which the world has been crucified to me and I to the world.' (Galatians 6:14) Do you want to boast so that it may not be said, 'Be ashamed of your boasting'? Hear Paul boasting and learn when he says: 'Most gladly then will I boast in my weaknesses, that the power of Christ may tabernacle upon me.' Hear what kinds of boasts he boasts: 'In labors more abundantly'—which of us can say this?—'in prisons beyond measure, in deaths often.'\n\n'Five times I received from the Jews forty lashes less one (2 Corinthians 11:24); three times I was beaten with rods; once I was stoned; three times I was shipwrecked.' So we learn that there are also differences among boastings—some boastings worthy of shame, of which that apostolic word might be said: 'And their glory is in their shame'—things of which they ought to be ashamed, and about these they suppose they are glorified.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains the verse as a rebuke of empty boasting with clear examples.",
    "author": "Origen of Alexandria",
    "work": "Homilies on Jeremiah",
    "work_slug": "origen-homilies-jeremiah",
    "section": "11.4",
    "url": "https://viapatrum.org/works/origen-homilies-jeremiah/11.4/",
-   "from_cite": true
+   "from_cite": false
   },
   {
    "id": "JER13-001",
@@ -1794,13 +1777,13 @@
    "chapter": 13,
    "verse_start": 12,
    "verse_end": 12,
-   "capsule": "Read as a bare letter the saying seems foolish, but each wineskin, good or wicked, is filled with its own kind of wine according to its goodness or wickedness.",
-   "comment": "What the prophet is commanded by God to say ought to be worthy of God. Yet if we remain on the letter it does not appear worthy of God, so that someone hearing the letter might say: these letters are folly. But a psychic person will say this; for 'the psychic person does not receive the things of the Spirit of God; for they are folly to him.' (1 Corinthians 2:14)\n\nLook then at what the wording says. 'And you shall say to this people: Thus says the Lord the God of Israel'—what 'the Lord the God of Israel' says, let it be worthy of the Lord of Israel—'Every wineskin will be filled with wine. And if they say to you, “Shall we not know, knowing, that every wineskin will be filled with wine?” (Jeremiah 13:12)' And those who answer, if they say these things standing on the bare wording, claim to know that 'every wineskin will be filled with wine,' and they lie. For not every wineskin will be filled with wine. There are wineskins filled with oil or with some other liquid substance. So some lie; for not every wineskin will be filled with wine. And the people answers saying: 'Shall we not know, knowing, that every wineskin will be filled with wine?'—words that will receive an interpretation of this kind, as far as we can.\n\nIf we know the differences among wines and what is said about them, and accordingly look at the wineskins, we will see that it is true that every wineskin will be filled with wine. For whether someone is good—let us name him so among wineskins, a wineskin—he will be filled with wine according to his own goodness. Or whether he is, by comparison of wineskins and the judgment about them, wicked, he too according to his wickedness will be filled with wicked wine. How then can we take from Scripture the different wines? About the worse ones it is written like this: 'For their vine is from the vine of Sodom, and their shoot from Gomorrah.\n\nTheir grape is a grape of gall; a cluster of bitterness to them; their wine is the rage of dragons, and the incurable rage of asps.' And about the better ones: 'Your cup that makes drunk is as the strongest,' … and Wisdom calls to her own mixing-bowl saying: 'Come, eat my bread, and drink the wine I have mixed for you.' (Psalm 23:5 (LXX)) So there is wine from Sodom, and there is wine that Wisdom mixes. And again: 'A vineyard came to be for the beloved on a horn in a rich place,' planted by God, the vine called Sorek—choice and marvelous. And there is also a vine of the Egyptians, which God strikes according to what is written: that 'God struck their vine with hail, and their mulberry trees with frost.'",
+   "capsule": "Taken by itself the saying sounds foolish, yet each person is filled according to his own kind, whether with corrupt wine or with the wine Wisdom mixes.",
+   "comment": "What the prophet is commanded by God to say ought to be worthy of God. Yet if we remain on the letter it does not appear worthy of God, so that someone hearing the letter might say: these letters are folly. But a psychic person will say this; for 'the psychic person does not receive the things of the Spirit of God; for they are folly to him.' (1 Corinthians 2:14)\n\nLook then at what the wording says. 'And you shall say to this people: Thus says the Lord the God of Israel'—what 'the Lord the God of Israel' says, let it be worthy of the Lord of Israel—'Every wineskin will be filled with wine. And if they say to you, “Shall we not know, knowing, that every wineskin will be filled with wine?” (Jeremiah 13:12)' And those who answer, if they say these things standing on the bare wording, claim to know that 'every wineskin will be filled with wine,' and they lie. For not every wineskin will be filled with wine. There are wineskins filled with oil or with some other liquid substance. So some lie; for not every wineskin will be filled with wine. And the people answers saying: 'Shall we not know, knowing, that every wineskin will be filled with wine?'—words that will receive an interpretation of this kind, as far as we can.\n\nIf we know the differences among wines and what is said about them, and accordingly look at the wineskins, we will see that it is true that every wineskin will be filled with wine. For whether someone is good—let us name him so among wineskins, a wineskin—he will be filled with wine according to his own goodness. Or whether he is, by comparison of wineskins and the judgment about them, wicked, he too according to his wickedness will be filled with wicked wine. How then can we take from Scripture the different wines? About the worse ones it is written like this: 'For their vine is from the vine of Sodom, and their shoot from Gomorrah.\n\nTheir grape is a grape of gall; a cluster of bitterness to them; their wine is the rage of dragons, and the incurable rage of asps.' And about the better ones: 'Your cup that makes drunk is as the strongest,' (Psalm 23:5) and Wisdom calls to her own mixing-bowl saying: 'Come, eat my bread, and drink the wine I have mixed for you.' (Proverbs 9:5) So there is wine from Sodom, and there is wine that Wisdom mixes. And again: 'A vineyard came to be for the beloved on a horn in a rich place,' planted by God, the vine called Sorek—choice and marvelous. And there is also a vine of the Egyptians, which God strikes according to what is written: that 'God struck their vine with hail, and their mulberry trees with frost.'",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the puzzling saying that every wineskin will be filled with wine.",
+   "selected_reason": "Explains what the saying means in terms a general reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Homilies on Jeremiah",
    "work_slug": "origen-homilies-jeremiah",
@@ -2421,6 +2404,24 @@
    "from_cite": false
   },
   {
+   "id": "JER16-005",
+   "chapter": 16,
+   "verse_start": 18,
+   "verse_end": 18,
+   "capsule": "God first repays injustices so that through the disappearance of evils punishment may come to an end, and only afterwards repays good things.",
+   "comment": "What then? First it follows that, because of the wood, one receive the fire that consumes the wood and the grass and the straw. … He does not consume that which is according to the image and likeness; he does not consume his own creature, but the grass built upon it, the wood built upon it, the straw built upon it.\n\n… There were promises, and after the promises he says: 'And I will repay first double their injustices.' (Jeremiah 16:18) The 'first' is necessarily set beside it; for first the things of injustice are repaid, then the things of righteousness, for God does not repay in reverse. … But first we will receive the evils, and after these the goods, so that through the disappearance of the evils the punishment of those who suffered may come to an end, and after these he may repay the goods.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "16.6",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/16.6/",
+   "from_cite": false
+  },
+  {
    "id": "JER16-003",
    "chapter": 16,
    "verse_start": 19,
@@ -2885,6 +2886,25 @@
    "from_cite": false
   },
   {
+   "id": "JER20-010",
+   "chapter": 20,
+   "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "Since mockers would not hear 'Thus says the Lord,' Jeremiah offered his own words so hostile hearers would listen, a concealment teachers may still use for those hostile to the Christian name.",
+   "comment": "Jeremiah came to be in times of people most sinful—for in his days the captivity came to be—and they were so sinful as to sneer and laugh and mock whenever the prophet spoke the prophetic opening, 'Thus says the Lord.' … The one deceived and benefited from being deceived guarded himself from saying 'Thus says the Lord.' Therefore he also, wanting to deceive for benefit from deceiving, said: I speak my own words to you, since you do not hear the Lord’s words. Then they offered their ears as to words of Jeremiah and heard words of God. …\n\nAnd we also sometimes do such things when it appears profitable to us. Sometimes we bring words to those from the nations wanting to lead them to the faith, and if we see that they are slandered against Christianity and abominate the name and hate to hear that this word is of Christians, we do not pretend to speak a useful word of Christians. But when that word has been built up according to power by us, and we seem to take the hearer as one who has not heard what was said as it chanced, then we confess that this praiseworthy word was a word of Christians. And we do something near to the one who said no longer 'Thus says the Lord' but: Hear words of me, Jeremiah. These things because of 'I became a laugh.' And we are indignant if ever speaking we are laughed at, where such a Jeremiah says: 'I became a laugh all the day.' (Jeremiah 20:7)",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Jeremiah says he became a laugh and how withholding the divine name won a hearing.",
+   "author": "Origen of Alexandria",
+   "work": "Homilies on Jeremiah",
+   "work_slug": "origen-homilies-jeremiah",
+   "section": "20.5",
+   "url": "https://viapatrum.org/works/origen-homilies-jeremiah/20.5/",
+   "from_cite": false
+  },
+  {
    "id": "JER20-008",
    "chapter": 20,
    "verse_start": 8,
@@ -3091,12 +3111,13 @@
    "chapter": 40,
    "verse_start": 2,
    "verse_end": 3,
-   "capsule": "The enemies did nothing of themselves, for the Lord brought these evils on because the people sinned, as Nebuzaradan said and as all the prophets and Moses foretold.",
-   "comment": "Nothing, she [the speaker in Lamentations] says, did the enemies do from themselves; for it seemed good to God and has come to be. For which reason Nebuzaradan also was saying: “the Lord your God has spoken these evils unto this place, and the Lord has brought them on, because you sinned against him.” (Jeremiah 40:2-3) Everyone, then, who disbelieves the judgment will hear these words. All the prophets, then, were foretelling these things, and from ancient days Moses in Deuteronomy announced these things beforehand (Jeremiah 40:2–3).",
+   "capsule": "The destruction came not from the enemies themselves but because God brought it on the people for their sins, as Nebuzaradan confessed and the prophets had foretold.",
+   "comment": "Nothing, she [the speaker in Lamentations] says, did the enemies do from themselves; for it seemed good to God and has come to be (Lamentations 2:17). For which reason Nebuzaradan also was saying: “the Lord your God has spoken these evils unto this place, and the Lord has brought them on, because you sinned against him.” (Jeremiah 40:2-3)\n\nEveryone, then, who disbelieves the judgment will hear these words. All the prophets, then, were foretelling these things, and from ancient days Moses in Deuteronomy announced these things beforehand.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains Nebuzaradan's admission that God brought the disaster for the people's sins.",
    "author": "Origen of Alexandria",
    "work": "Fragments on Lamentations",
    "work_slug": "origen-lamentations-fragments",

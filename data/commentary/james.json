@@ -1,12 +1,12 @@
 {
  "book": "James",
  "title": "The Fathers on James",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 25,
+ "comment_count": 27,
  "selected_count": 17,
  "comments": [
   {
@@ -29,12 +29,30 @@
    "from_cite": true
   },
   {
+   "id": "JAS01-009",
+   "chapter": 1,
+   "verse_start": 1,
+   "verse_end": 1,
+   "capsule": "The apostles begin their writings by presenting themselves as servants of God and Christ.",
+   "comment": "For just as the men of this world, in the writings of life's transactions, wish to deal with the duties concerning them, so also the apostles, in the beginnings of their writings, are deemed to deal as servants of God and Christ (James 1:1).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-open/",
+   "from_cite": true
+  },
+  {
    "id": "JAS01-006",
    "chapter": 1,
    "verse_start": 2,
    "verse_end": 2,
-   "capsule": "The name brothers urges them toward perfection.",
-   "comment": "He [James] subsequently calls them brothers, rather than children or sons, exhorting toward perfection through courage and endurance (Matt 18:3).",
+   "capsule": "Calling them brothers exhorts toward perfection.",
+   "comment": "He subsequently calls them brothers (James 1:2), rather than children or sons, exhorting toward perfection through courage and endurance (Matt 18:3).",
    "editions": [
     "complete"
    ],
@@ -100,6 +118,24 @@
    "work_slug": "didymus-commentarii-job",
    "section": "u06-rem-close",
    "url": "https://viapatrum.org/works/didymus-commentarii-job/u06-rem-close/",
+   "from_cite": true
+  },
+  {
+   "id": "JAS01-010",
+   "chapter": 1,
+   "verse_start": 12,
+   "verse_end": 12,
+   "capsule": "Despising fleeting life and enduring trial gains eternal life beyond human thought.",
+   "comment": "…he who despises enduring trial, overlooking it, will receive the crown of eternal life instead of the fleeting life he despised (James 1:12).\n\nIf the crown of life which God prepared for those loving him is a thing to be sought, what God prepared for those loving him is something that, because of the greatness of divinity, will be seen and heard, having ascended beyond even simple human thought (1 Corinthians 2:9).",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u01-open/",
    "from_cite": true
   },
   {
@@ -257,13 +293,12 @@
    "chapter": 3,
    "verse_start": 2,
    "verse_end": 2,
-   "capsule": "Controlling the tongue is essential, a great virtue and the mark of a perfect person who can bridle the whole body.",
-   "comment": "…it is essential to control one's tongue, stopping it from evil, as the Bible says that death and life are in the hand of the tongue (Proverbs 18:21). Those who can control their tongue will eat its fruits, and this restraint is a great virtue, just as not having it is a painful disease. The restraint of the tongue is a crucial aspect of being a perfect person, able to bridle also the whole body, as Scripture says that if someone does not stumble in word, this one is a perfect man, able to bridle also the whole body (James 3:2).",
+   "capsule": "Mastery of the tongue is great, since death and life are in its power and the one who does not stumble in word can bridle the whole body.",
+   "comment": "… For it is written, “Death and life are in the power of the tongue, and those who master it will eat its fruits” (Proverbs 18:21). And the disciple of Christ also said somewhere, “If anyone does not stumble in word, he is a perfect man, able to bridle the whole body as well” (James 3:2).\n\nGreat, then, is mastery of the tongue, just as, of course, not having it is a most grievous disease.",
    "editions": [
-    "complete",
-    "selected"
+    "complete"
    ],
-   "selected_reason": "Explains what the verse says in terms a reader can follow.",
+   "selected_reason": "",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Acts and the Catholic Epistles",
    "work_slug": "cyril-fragmenta-acta-catholicas",
@@ -408,13 +443,13 @@
    "chapter": 4,
    "verse_start": 11,
    "verse_end": 11,
-   "capsule": "Those who slander a weak brother forget their own weaknesses and condemn themselves, since they suffer from the same flaws.",
-   "comment": "…Although it is necessary for some to examine themselves and live according to God, they do not do this, but rather meddle in the affairs of others.\n\nWhen people see others who are weak, they often use this as an opportunity to slander and condemn them, as if they have forgotten about their own weaknesses. However, in doing so, they are actually condemning themselves, because they suffer from the same flaws as those they are criticizing. This is a point that even the wisest of writers, Paul, has made—that when we judge others, we are essentially condemning ourselves, since we are guilty of the same things.",
+   "capsule": "Those who judge others condemn themselves, since they neglect their own faults while suffering from the same faults they censure.",
+   "comment": "…He [James] cuts away from our minds every grievous passion, the beginning and birth of arrogance. For although some people ought to examine themselves and live as God wills, they do not do it; they busy themselves with other people’s affairs instead.\n\nIf they see some who are weak, they seem to forget their own ailments and make the matter an occasion for fault-finding and slander. They pass sentence on them, not knowing that they condemn themselves, since they suffer from the same things as the people they have run down.\n\nSo also the most wise Paul writes somewhere, “For in judging another you condemn yourself, since you who judge do the same things” (Romans 2:1).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why speaking against a brother is wrong, in terms a reader can follow.",
+   "selected_reason": "Explains the verse's warning against judging others in terms a general reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Acts and the Catholic Epistles",
    "work_slug": "cyril-fragmenta-acta-catholicas",
@@ -423,16 +458,17 @@
    "from_cite": true
   },
   {
-   "id": "JAS05-004",
-   "chapter": 5,
-   "verse_start": 1,
-   "verse_end": 3,
-   "capsule": "Some chase gain through hard journeys, others exploit people or take excessive interest, and the rich are warned that their wealth will rot.",
-   "comment": "There are those who are driven by a desire for wealth and gain, and they will endure all sorts of hardships, including long journeys and dangerous navigation, in pursuit of their goals. Others use their power and influence to exploit and take advantage of others, while some accumulate their wealth through unjust and wicked means, such as collecting excessive interest on loans. But to those who are rich and powerful, the warning is clear: your wealth will ultimately rot and decay, your fine clothes will be eaten away by moths, and your gold and silver will be corrupted. Weep and wail, for your troubles are coming.",
+   "id": "JAS04-008",
+   "chapter": 4,
+   "verse_start": 13,
+   "verse_end": 13,
+   "capsule": "Some endure hardships for trade, while others seize what belongs to others or heap up interest, pouring punishment on their own heads.",
+   "comment": "…Some, gaping greedily after trade and the gain it brings, put up with long journeys, with sea voyages and their waves.\n\nOthers turn the power they have won into a weapon for grasping at what belongs to others. Still others fatten those same purses by wicked schemes and, impiously heaping interest on interest, pour fire and punishment on their own heads.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains the conduct the verse rebukes in terms a general reader can follow.",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Acts and the Catholic Epistles",
    "work_slug": "cyril-fragmenta-acta-catholicas",

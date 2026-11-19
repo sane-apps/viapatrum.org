@@ -1,13 +1,13 @@
 {
  "book": "2 Timothy",
  "title": "The Fathers on 2 Timothy",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
  "comment_count": 24,
- "selected_count": 8,
+ "selected_count": 9,
  "comments": [
   {
    "id": "2TI01-001",
@@ -343,12 +343,13 @@
    "chapter": 4,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "The kingdom Paul names belongs to the Son together with the Father and the Spirit, now and in the age to come.",
-   "comment": "…And to Timothy in the second epistle [Paul writes]: 'I testify before God and Christ Jesus, who is to judge the living and the dead, and by his appearance and his kingdom: preach the word' (2 Tim 4:1). It is clear, then, that he speaks of a kingdom which he [the Son] possesses indivisibly and without succession with the Father and the Holy Spirit, now and into the coming age.",
+   "capsule": "The kingdom Paul names belongs to the Son undivided with the Father and the Holy Spirit, now and in the age to come.",
+   "comment": "…And to Timothy in the second letter: “I charge you before God and Christ Jesus, who is to judge the living and the dead, and by his appearing and his kingdom: preach the word” (2 Timothy 4:1-2). It is clear that he means the kingdom which he holds undivided and without successor with the Father and the Holy Spirit, both now and in the age to come.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains whose kingdom Paul means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",

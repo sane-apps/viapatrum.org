@@ -1,13 +1,13 @@
 {
  "book": "Daniel",
  "title": "The Fathers on Daniel",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
  "comment_count": 23,
- "selected_count": 10,
+ "selected_count": 12,
  "comments": [
   {
    "id": "DN01-001",
@@ -160,13 +160,13 @@
    "chapter": 3,
    "verse_start": 19,
    "verse_end": 19,
-   "capsule": "The furnace was heated sevenfold so that the saints, like the most tested silver, might be purified sevenfold.",
-   "comment": "When the tyrant heard this promise of faith, he was all the more inflamed with rage and commanded the furnace to be heated sevenfold; for it was necessary that the most tested silver be purified sevenfold. For the words of the Lord are pure words, like silver refined in the earth and purified sevenfold; therefore the furnace was heated sevenfold, so that the saints might be purified sevenfold.",
+   "capsule": "The furnace was heated sevenfold so that the saints, as the most tested silver, might be purified sevenfold.",
+   "comment": "When the tyrant heard this promise of faith, he was all the more inflamed with rage and commanded the furnace to be heated sevenfold (Daniel 3:19); for it was necessary that the most tested silver be purified sevenfold. For the words of the Lord are pure words, like silver refined in the earth and purified sevenfold; therefore the furnace was heated sevenfold, so that the saints might be purified sevenfold.\n\nBecause the men of God are called silver, remember what Wisdom says: 'The tongue of the righteous is like refined silver.' And listen to the prophet Jeremiah, speaking concerning those rejected from piety: 'Call them rejected silver, because God has rejected them.' If the unrefined are rejected silver, but those who are perfected are clearly the most tested silver; for just as the furnace was heated, so much was the passion for the testimony brightened.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the furnace was heated seven times.",
+   "selected_reason": "Explains why the verse says the furnace was heated sevenfold in terms a reader can follow.",
    "author": "Severianus of Gabala",
    "work": "On the Three Young Men",
    "work_slug": "severianus-de-tribus-pueris",
@@ -177,14 +177,15 @@
   {
    "id": "DN03-006",
    "chapter": 3,
-   "verse_start": 24,
+   "verse_start": 25,
    "verse_end": 27,
-   "capsule": "God blunted the heat of the fire, keeping his promise through Isaiah, so that the flame did not touch the saints' bodies.",
-   "comment": "For these three holy children, having entered with faith, trod upon the flame … For He who does all things and transforms, blunted the heat of the fire and cut short its caustic energy, as that hymn of praise confirms it: 'The voice of the Lord cutting through the flame of fire.' The fire had indeed settled within, becoming calm, but the holy children were dancing, enjoying alone that promise which God, through the prophet Isaiah, promises to every soul filled with piety and faith: 'Even if you walk through fire,' He says, 'I am with you, and the flame shall not burn you.'\n\nAnd one could see the promise advancing through works. For the fire did not touch the members of the saints; it did not scorch the eyes, which were looking rightly toward piety and recognizing the Creator through the order of those things seen; it did not wrong the ears that had fulfilled the divine law; it did not approach the mouth, nor touch the lips …",
+   "capsule": "God blunted the heat of the fire and fulfilled in the saints the promise that the flame shall not burn those who walk with Him.",
+   "comment": "For these three holy children, having entered with faith, trod upon the flame (Daniel 3:25), breathing a thin air and a veil amidst the heights of the fire. For He who does all things and transforms, blunted the heat of the fire and cut short its caustic energy, as that hymn of praise confirms it: 'The voice of the Lord cutting through the flame of fire.' The fire had indeed settled within, becoming calm, but the holy children were dancing, enjoying alone that promise which God, through the prophet Isaiah, promises to every soul filled with piety and faith: 'Even if you walk through fire,' He says, 'I am with you, and the flame shall not burn you.'\n\nAnd one could see the promise advancing through works. For the fire did not touch the members of the saints (Daniel 3:27); it did not scorch the eyes, which were looking rightly toward piety and recognizing the Creator through the order of those things seen; it did not wrong the ears that had fulfilled the divine law; it did not approach the mouth, nor touch the lips, while disfiguring their hymns and their hymn-writing tongues. …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains how God blunted the fire and fulfilled Isaiah's promise as the three children walked unharmed in the flame.",
    "author": "Severianus of Gabala",
    "work": "On the Three Young Men",
    "work_slug": "severianus-de-tribus-pueris",
@@ -197,12 +198,13 @@
    "chapter": 3,
    "verse_start": 27,
    "verse_end": 27,
-   "capsule": "The fire spared their hair for their piety and their garments for their modesty.",
-   "comment": "For even the fire did not dare to consume the hairs, because they were more properly covered by piety as a diadem; and thus it also spared the garment because of the modesty of the saints.",
+   "capsule": "Piety like a diadem shielded their hair and modesty shielded their garments from the fire.",
+   "comment": "For even the fire did not dare to consume the hairs (Daniel 3:27), because they were more properly covered by piety as a diadem; and thus it also spared the garment because of the modesty of the saints.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why the fire spared their hair and garments in terms of piety and modesty.",
    "author": "Severianus of Gabala",
    "work": "On the Three Young Men",
    "work_slug": "severianus-de-tribus-pueris",

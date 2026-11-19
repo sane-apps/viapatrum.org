@@ -1,13 +1,13 @@
 {
  "book": "Acts",
  "title": "The Fathers on Acts",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 78,
- "selected_count": 43,
+ "comment_count": 97,
+ "selected_count": 59,
  "comments": [
   {
    "id": "AC01-001",
@@ -33,13 +33,13 @@
    "chapter": 1,
    "verse_start": 7,
    "verse_end": 7,
-   "capsule": "The apostles are taught not to pry into what is hidden in God but to fulfill their ministry.",
-   "comment": "He said to them: 'It is not for you to know the times or the seasons which the Father has set in his own authority' (Acts 1:7).\n\nFor it is not necessary to be overly curious about things that are too secret and hidden in God, and through these things he taught; rather, they wanted to go and were very youthful towards what is beneficial, and they wanted to fulfill the ministry of the apostleship, having entrusted the knowledge of all things to God. …",
+   "capsule": "Curiosity about hidden times should give way to eager apostolic ministry while leaving such knowledge to God.",
+   "comment": "“He said to them, ‘It is not for you to know times or seasons that the Father has fixed by his own authority’” (Acts 1:7).\n\n… By these words, too, he was teaching them not to pry into things that are deeply secret and hidden in God. They should rather be eager to go, and with real vigor, after what would profit them, and eager to carry out the ministry of their apostleship, leaving the knowledge of these things to the God of all.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the Lord withholds the times and seasons.",
+   "selected_reason": "Explains what the verse directs the apostles to do instead of prying into hidden times.",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Acts and the Catholic Epistles",
    "work_slug": "cyril-fragmenta-acta-catholicas",
@@ -52,13 +52,13 @@
    "chapter": 1,
    "verse_start": 8,
    "verse_end": 8,
-   "capsule": "The power promised in Acts 1:8 is the power of the Holy Spirit, without whose coming we have no power or hope toward God.",
-   "comment": "… For the Savior says in the deeds: 'But you will receive power, upon the coming of the Holy Spirit upon you' (Acts 1:8). Just as without his coming, there is to us no power or hope toward God. And it must be understood by this, first, that the presence of the Holy Spirit signifies that he has come by authority; second, that he did not come as a mere messenger, but was foretold by him, the great God and Savior. And again therefore he says: 'But you sit in the city, until you are clothed with power from on high' (Luke 24:49/1:8). And this was the power of the Holy Spirit. …",
+   "capsule": "The power promised is the Holy Spirit himself, without whose coming there is no power or hope, and who comes with authority as announced beforehand.",
+   "comment": "… For the Saviour says in the Acts, “But you will receive power when the Holy Spirit has come upon you” (Acts 1:8), for without his coming we have no power or hope toward God.\n\nTwo further things should be noticed here. First, the Saviour shows that the Holy Spirit came with authority. Second, the Spirit did not come as his own messenger; he was announced beforehand by the great God and Saviour himself. So again he says, “But you, stay in the city until you are clothed with power from on high” (Luke 24:49). And this was the power of the Holy Spirit. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the promised power is.",
+   "selected_reason": "Explains what the promised power in the verse is and why it is worded as it is.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -144,13 +144,31 @@
    "chapter": 2,
    "verse_start": 3,
    "verse_end": 4,
-   "capsule": "Some spoke in tongues they had not known before, others interpreted, and Paul calls the gift a sign for the faithful.",
-   "comment": "… And there appeared to them divided tongues like fire.\n\nSome spoke with tongues, although they did not know them before; others understood, interpreting, although they had not previously been accustomed to such things.\n\nThe divine Paul boasts of those who then received the grace to speak in tongues, not as a portion of charisma, but as a sign in order to the faithful, and he also set forth a prophetic word: 'That I will speak in different tongues and different lips to this people, and even so they will not believe' (Isaiah 28:11). …",
+   "capsule": "The gift of tongues was given then as a sign, as Paul shows from Scripture.",
+   "comment": "Some spoke in the tongues, though they had not known them before. Others were with them as interpreters, though some of them had never had an ear trained in such languages or used to them.\n\nThe inspired Paul firmly maintains that the grace of speaking in tongues was given to the believers of that time not as a share of a gift but as something with the standing of a sign. He even sets beside it a word of Scripture meant to stir them, which runs: “With other tongues and other lips I will speak to this people, and even so they will not believe” (1 Corinthians 14:21).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the speaking in tongues was and what it was for.",
+   "selected_reason": "Explains what the tongues were for in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-open",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "AC02-013",
+   "chapter": 2,
+   "verse_start": 4,
+   "verse_end": 4,
+   "capsule": "Those who received tongues boasted of the sign instead of preaching the gospel teachings.",
+   "comment": "Once they had spoken in other people’s languages, though, they made a kind of show of the grace given through the Spirit and took the sign as an excuse for boasting. They grew lazy about what they ought to do: to talk with the crowds about what the holy prophets had said and to argue for the teachings of the gospel, which had been proclaimed in advance from of old. Priding themselves on nothing but the ability to speak in tongues, they thought this alone was worth laying claim to, and it became their most earnest pursuit.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Acts and the Catholic Epistles",
    "work_slug": "cyril-fragmenta-acta-catholicas",
@@ -163,8 +181,8 @@
    "chapter": 2,
    "verse_start": 7,
    "verse_end": 10,
-   "capsule": "Those about to proclaim the saving message to every nation were given the tongues as a sign, and they spoke the languages by the Spirit's working.",
-   "comment": "… And after a little while: when those who were mystagogues under the sun were about to proclaim the evangelical and saving message to every nation and every language, the tongues gave them a sign.\n\nBeing men of Galilee and having been brought up in Judea, Hebrews and from Hebrews, Medes and Parthians, and indeed Elamites, and those from the middle of the flowing rivers, Cappadocians and Egyptians, they spoke in their own languages; and the matter was being accomplished for them by the Spirit's working and grace. …\n\nBut the manner of the economy was what was being done; however, not all understood. …",
+   "capsule": "Galileans could preach to every nation because the Spirit gave them tongues as a sign.",
+   "comment": "… So when the initiators of the world under the sun were about to speak the gospel, the message of salvation, to every tongue and every nation, he gave them the tongues as a sign. Though they were Galileans, raised in Judea, Hebrews born of Hebrews, they addressed Medes and Parthians, Elamites too, and those who live in Mesopotamia, Cappadocians and Egyptians, in their own languages. The thing was brought about in them by the working and grace of the Spirit, for it is written that “there appeared to them tongues, divided, as of fire,” and so on. What took place was a step in God’s plan; but not all understood it.",
    "editions": [
     "complete"
    ],
@@ -174,6 +192,44 @@
    "work_slug": "cyril-fragmenta-acta-catholicas",
    "section": "u01-open",
    "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-open/",
+   "from_cite": false
+  },
+  {
+   "id": "AC02-015",
+   "chapter": 2,
+   "verse_start": 19,
+   "verse_end": 19,
+   "capsule": "The blood, fire and smoke on earth foretell the suffering brought on the land by the Roman war.",
+   "comment": "These, then, I would call the signs or wonders in heaven. But those on earth, “blood and fire and vapor of smoke” (Acts 2:19), would point, I think, to the disasters of the Jews, which the most grievous war, waged by the hand of the Romans, heaped upon them. Their whole land was spattered with blood; the famous temple itself was about to be burned along with the cities, and houses, shaken to the ground, to send up smoke.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the earthly signs mean in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "AC02-016",
+   "chapter": 2,
+   "verse_start": 20,
+   "verse_end": 20,
+   "capsule": "The darkened sun and blood-like moon were seen at the cross, before the coming day of judgment.",
+   "comment": "At the impious deeds of the Jews, those they committed against Christ, the very nature of the elements was distressed, and creation, so to speak, broke into lament at the sight of its own Master outraged. The divine temple, as though it were nearly as grieved as the mourners, was torn right through; for it is written that “the veil of the temple was torn from top to bottom” (Matthew 27:51). The sun bound up its own blaze, drew in its rays, and would no longer deign to shine on those on the earth, for it brought darkness from the sixth hour to the ninth (Matthew 27:45). The rocks, too, were split. And perhaps something unusual was also happening around the disk of the moon, so that it too seemed to have been changed into blood.\n\nThe holy evangelists pass over this in silence, but prophecy gives trustworthy proof of it. At the Creator’s command the signs did not appear in the sun alone; the whole creation, as it were, passed into a state without beauty and strange to it. This would be made plain by the voice of Isaiah, who says: “And I will clothe the heaven with darkness, and make its covering like sackcloth” (Isaiah 50:3). When he says “heaven,” he surely means everything in heaven. He says he will wrap it in dark sackcloth, as it were, like one mourning and stricken with grief, and crying out by this very garb.\n\n… That such things will befall the Jews even before the great and manifest day, on which the divine judgment seat will be set before all, with Christ giving to each according to his works, he made plain when he said: “Before the great and manifest day of the Lord comes” (Acts 2:20).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the darkened sun and bloody moon in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-early/",
    "from_cite": false
   },
   {
@@ -215,6 +271,25 @@
    "from_cite": true
   },
   {
+   "id": "AC02-018",
+   "chapter": 2,
+   "verse_start": 27,
+   "verse_end": 27,
+   "capsule": "He left Hades after freeing its captives.",
+   "comment": "For he came back to life after plundering Hades and saying to those in bonds, “Come out,” and to those in darkness, “Be uncovered” (Isaiah 49:9).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what not being left in Hades means in terms a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-early/",
+   "from_cite": false
+  },
+  {
    "id": "AC02-007",
    "chapter": 2,
    "verse_start": 27,
@@ -231,6 +306,24 @@
    "section": "6",
    "url": "https://viapatrum.org/works/origen-homily-1samuel-28/6/",
    "from_cite": true
+  },
+  {
+   "id": "AC02-019",
+   "chapter": 2,
+   "verse_start": 31,
+   "verse_end": 31,
+   "capsule": "His flesh could not see corruption nor his soul stay captive in Hades.",
+   "comment": "… For it is not right to say that the flesh united to the Word could ever be held by corruption, or that the divine soul became a captive of the very gates of Hades. He was not left in Hades (Acts 2:31), as the inspired Peter also said.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-early/",
+   "from_cite": false
   },
   {
    "id": "AC02-009",
@@ -382,6 +475,25 @@
    "from_cite": true
   },
   {
+   "id": "AC04-008",
+   "chapter": 4,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Though the Father is said to have raised Christ, Christ himself gave life to his own body because he is the Father's life-giving power.",
+   "comment": "No one would doubt that the Father is said to have raised our Lord Jesus Christ from the dead, the deed plainly being worked on his flesh.\n\nAnd he himself, being the life-giving and active power of the Father, was giving life to his own temple, as in the saying, “Destroy this temple, and in three days I will raise it up” (John 2:19). So what was given life was not something foreign to him, nor the body of one of the men like us, but the very own body of the Word himself.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who raised Christ in terms a general reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "AC04-001",
    "chapter": 4,
    "verse_start": 11,
@@ -462,13 +574,13 @@
    "chapter": 5,
    "verse_start": 3,
    "verse_end": 3,
-   "capsule": "Satan fills the heart of one who is not watchful, not by being partaken of but by deceiving and working malice.",
-   "comment": "… But they again raise objections, saying: “It is written, allegedly, concerning Ananias: ‘Why has Satan filled your heart?’ (Acts 5:3); and concerning Judas, that ‘Satan entered into him’ (John 13:27).” To them it must be said that he fills the one who does not attend to “Do not let your foot be moved, and he who keeps you will not slumber” (Psalm 121:3; LXX 120:3) — not by being partaken of, nor by riding upon the soul as it were, but by deceiving, and working in the treacherous manner of malice, and making his own wickedness a mere side-show. …",
+   "capsule": "Satan fills the heart not by entering the soul but by deceiving it and working evil counsels into it.",
+   "comment": "… But they rise up again to object, with a show of reason: “It is written of Ananias, ‘Why has Satan filled your heart?’ (Acts 5:3), and of Judas, that ‘Satan entered into him’ (Luke 22:3; John 13:27).”\n\nTo them we must answer that Satan is not shared in, nor does he board the soul, as it were, and ride in it. He fills the one who does not heed the word, “Do not give your foot to be shaken, and he who guards you will not slumber” (Psalm 121:3), by deceiving him, by working evil counsels and a shifty character into him, and by making him a mere by-work of his own wickedness. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what it means that Satan filled Ananias's heart.",
+   "selected_reason": "Explains what filled means in the verse in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -511,6 +623,25 @@
    "section": "57",
    "url": "https://viapatrum.org/works/origen-contra-celsum-book-1/57/",
    "from_cite": true
+  },
+  {
+   "id": "AC06-004",
+   "chapter": 6,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Stephen at the very outset of his preaching silenced every opponent and threw his accusers into confusion.",
+   "comment": "… At the very outset of the preaching, Stephen was overflowing beyond any river, silencing everyone; he stopped the shameless tongues of the Jews, and no one could stand against him (Acts 6:10); he threw the whole Jewish cause into confusion and set up a brilliant trophy and a conspicuous victory. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the verse in plain terms a general reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-close/",
+   "from_cite": false
   },
   {
    "id": "AC06-003",
@@ -569,6 +700,43 @@
    "from_cite": true
   },
   {
+   "id": "AC07-020",
+   "chapter": 7,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Stephen asks his hearers to listen closely to divine words.",
+   "comment": "He [Stephen] tells them to make themselves ready to be teachable, and, as if bending down their ear, to grasp closely the force of the divine words.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-021",
+   "chapter": 7,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Those who put God before fleshly things will receive a rich blessing from above.",
+   "comment": "See, then: those who follow God wholly and in every way, and who have put the things of the flesh and worldly love of pleasure second to their hope in him, will surely be granted a rich share in the blessing from above.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains the promise to Abraham in terms a general reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "AC07-003",
    "chapter": 7,
    "verse_start": 22,
@@ -588,17 +756,110 @@
    "from_cite": true
   },
   {
-   "id": "AC07-005",
+   "id": "AC07-022",
    "chapter": 7,
-   "verse_start": 48,
-   "verse_end": 50,
-   "capsule": "Solomon built a famous temple and the Jews thought God dwelt in it, but God rebukes those who think small of him.",
-   "comment": "Jacob asked to find a dwelling place for God, saying that he would not rest until he found the place of the Lord and the dwelling of God, which is clearly Christ (Psalm 132:5).\n\nHowever, Solomon built a house for him, but the Most High does not dwell in handmade temples (Acts 7:48).\n\nThe wise Solomon built a famous temple in Jerusalem, and the crowd of Jews was very pleased with it, thinking that God had dwelled in it, but they were slow to understand and ignorant of the words of God.\n\nThey thought Jerusalem was the city of God and that he dwelled only in it, but God rebukes those who think small, saying, 'What kind of house will you build for me, who has the heaven as a throne and the earth as a footstool?' (Isaiah 66:1-2, Acts 7:49-50).",
+   "verse_start": 27,
+   "verse_end": 28,
+   "capsule": "Moses was blamed for killing an oppressor, as Christ was blamed for driving out demons.",
+   "comment": "The inspired Moses was accused of having killed the Egyptian, even though the Egyptian was the oppressor and the attacker.\n\nAnd when Christ was burying the evil demons, as it were, in the abyss, putting one who was unwilling out of his tyranny over us, and driving them out of those who had them, they said, when he ought to have been admired for this: “This man casts out demons only by Beelzebul, the ruler of the demons” (Matthew 12:24).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why Stephen says God does not dwell in houses made by hands.",
+   "selected_reason": "Explains the rejection in the verse through a parallel a reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-023",
+   "chapter": 7,
+   "verse_start": 32,
+   "verse_end": 32,
+   "capsule": "Moses turning away his face shows Israel could not gaze on the Son’s glory.",
+   "comment": "Notice the weakness of the law. The God of all shows himself, but as he makes himself manifest, Moses turns away his face.\n\nThis too would be a clear sign to us that the children of Israel could not gaze on the Son’s glory, the glory that befits God, even when he was showing himself and all but leading them to know him.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Moses turning away as a sign that Israel could not gaze on the Son’s glory.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-024",
+   "chapter": 7,
+   "verse_start": 33,
+   "verse_end": 33,
+   "capsule": "The sandal signifies deadness, so those under the law must be cleansed before approaching Christ.",
+   "comment": "The thing [the sandal] is a sign of deadness and corruption, since every sandal is the remains of an animal already dead and decayed.\n\nSo Christ cannot be approached by those who live under the law and its worship that served as a tutor. One must first wash off the defilement and first scrub away the filth that comes from sin.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Moses is told to remove his sandals.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-025",
+   "chapter": 7,
+   "verse_start": 43,
+   "verse_end": 43,
+   "capsule": "Israel is carried to Babylon for filling up its neighbors' wickedness.",
+   "comment": "Since you have filled up the wickedness of the Moabites, of Damascus your neighbor, for that very reason you will be carried off beyond Damascus, that is, to Babylon.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-026",
+   "chapter": 7,
+   "verse_start": 46,
+   "verse_end": 46,
+   "capsule": "The dwelling place sought in the psalm is plainly Christ.",
+   "comment": "“For I will take no rest,” he says, “until I learn the place of the Lord and the dwelling (that is, the tabernacle) of the God of Jacob” (Psalm 132:5), and plainly that means Christ.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u01-rem-close",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u01-rem-close/",
+   "from_cite": false
+  },
+  {
+   "id": "AC07-005",
+   "chapter": 7,
+   "verse_start": 47,
+   "verse_end": 48,
+   "capsule": "Solomon’s temple led people to think God dwelt only there, so God rebukes small thoughts of him.",
+   "comment": "The most wise Solomon built that famous temple in Jerusalem, and the people of the Jews took great delight in it and supposed that the God of all dwelt in it, enclosed there. For they are always somehow slow to understand and ignorant of what is said about God. They even thought Jerusalem was God’s city and insisted that he dwelt in it alone, because of what is said by the voice of David: “Glorious things are spoken of you, city of God” (Psalm 87:3).\n\nSo God rebukes them for their petty notions and says, “What kind of house will you build for me, when I have heaven for a throne and earth for a footstool?” (Isaiah 66:1).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why Stephen says God does not dwell in handmade temples.",
    "author": "Cyril of Alexandria",
    "work": "Fragments on Acts and the Catholic Epistles",
    "work_slug": "cyril-fragmenta-acta-catholicas",
@@ -796,8 +1057,8 @@
    "chapter": 7,
    "verse_start": 60,
    "verse_end": 60,
-   "capsule": "Stephen's prayer was made with attention and care, setting his anger aside so that his words would be acceptable.",
-   "comment": "Stephen's prayer was not just a simple one, but one that was said with attention and care, as he was apologizing, saying that not even the previous things were of anger, he says, 'Lord', and wanting to draw them to this.\n\nFor just as he was apologizing, he was able to leave his anger and wrath behind, and cleanse his soul of the passion, making his words acceptable.",
+   "capsule": "Stephen’s words show freedom from anger, and his kneeling shows careful prayer.",
+   "comment": "For he says “Lord” as though defending himself, to show that even his earlier words had not come from anger, and wishing in this way to win them over. Letting go of anger and wrath at his own murder, and having his soul cleansed of that passion, made his words easy to accept. … And this blessed man does not pray in a casual way, but with attention, on his knees. See how godlike his death is: until that moment the Master allowed his soul to remain in him. …",
    "editions": [
     "complete"
    ],
@@ -1037,12 +1298,13 @@
    "chapter": 11,
    "verse_start": 28,
    "verse_end": 28,
-   "capsule": "The Spirit foretold through Agabus a famine under heaven as a warning, which came true in the reign of Claudius.",
-   "comment": "… And through the prophet Agabus, he forewarned of a famine coming under heaven because of the failings of men, as a good thing, just as also regarding Nineveh, that if they had been made reverent by repentance they would flee the evil (Acts 11:28; Jonah 3:10), which also happened to many in later times during the reign of Claudius. And in the Gospel, Christ says concerning the Spirit: 'And He will announce to you the things that are coming,' that is, the things to come (John 16:13).",
+   "capsule": "The Spirit's foretelling of the famine through Agabus shows exact foreknowledge belonging to the divine nature alone and warns people toward repentance.",
+   "comment": "He foreknows, as the Father and the Son do; and to know the things to come exactly belongs to the divine nature alone. …\n\nAnd through the prophet Agabus too the Spirit, being good, foretold a famine that would come upon the world under heaven because of men’s offences (Acts 11:28), just as in the case of Nineveh (Jonah 3:4-10), so that people might take warning and escape the evil by repentance; and the famine did come, long afterwards, under Claudius. …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains the purpose of Agabus's prophecy by comparing it to Jonah and Nineveh as a merciful warning calling people to repentance, and notes its fulfillment under Claudius.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -1074,12 +1336,13 @@
    "chapter": 13,
    "verse_start": 9,
    "verse_end": 11,
-   "capsule": "Paul blinded the sorcerer Elymas by a word through the power of the Holy Spirit.",
-   "comment": "… in the surpassing power of the Holy Spirit, Paul in Cyprus blinded the magician Elymas, who was campaigning against the saints and ravaging with the truth, by a word. For the Scripture, showing the power to be of the Spirit, says to them by names thus: 'Then Paul, being filled with the Holy Spirit, said to him: Behold, the hand of the Lord is upon you, and you shall be blind, not seeing the sun' (Acts 13:11). …",
+   "capsule": "Paul blinded Elymas by a word only through the surpassing power of the Holy Spirit.",
+   "comment": "… It was by the surpassing power of the Holy Spirit that Paul, in Cyprus, blinded with a word Elymas the sorcerer, who was making war on the saints and doing violence to the truth.\n\nFor Scripture, to show that the power was the Spirit’s, says in so many words: “Then Paul, filled with the Holy Spirit, said to him: ‘Look, the hand of the Lord is upon you, and you will be blind, not seeing the sun’” (Acts 13:9-11).\n\nAnd truly, had he not had the Spirit’s power that works all things, he could not by a word have quenched the sight of a man who kept himself safe by sorceries and trusted in demons.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains how Paul could blind Elymas by a word.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -1125,6 +1388,25 @@
    "from_cite": true
   },
   {
+   "id": "AC13-009",
+   "chapter": 13,
+   "verse_start": 33,
+   "verse_end": 33,
+   "capsule": "'You are my Son' confesses the Son's eternal nature, while 'today I have begotten you' speaks of His birth in the flesh.",
+   "comment": "… Although He is eternal and has always co-existed with the Father, He became flesh, and as the unique Son, He is seen by the Father, who says, 'You are my Son; I have today begotten you.'\n\nThis statement shows the manifest confession, namely the exaltation, and the phrase 'You are my Son' establishes His eternal nature, while the phrase 'I have today begotten you' reveals His birth according to the flesh, which He willingly underwent through the Holy Virgin; and for this reason she is named Theotokos.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains how the two phrases of Psalm 2:7 distinguish Christ's eternal nature from His birth in the flesh.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-early/",
+   "from_cite": false
+  },
+  {
    "id": "AC13-007",
    "chapter": 13,
    "verse_start": 37,
@@ -1160,6 +1442,44 @@
    "section": "4.2",
    "url": "https://viapatrum.org/works/origen-homilies-jeremiah/4.2/",
    "from_cite": true
+  },
+  {
+   "id": "AC13-011",
+   "chapter": 13,
+   "verse_start": 47,
+   "verse_end": 47,
+   "capsule": "Christ shone divine light upon the Gentiles to reveal heavenly realms and establish spiritual worship.",
+   "comment": "… For the Lord has commanded us, 'I have set you as a light to the Gentiles, that you might be for salvation unto the ends of the earth' (Acts 13:47).\n\nChrist shone upon the Gentiles, leaving under the heavens a light infused with divinity, so that the divine nature and the higher realms might be beheld by eyes of pure intellect, and the ways of spiritual worship might be established.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what the light to the Gentiles means for the reader.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-early",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-early/",
+   "from_cite": false
+  },
+  {
+   "id": "AC14-004",
+   "chapter": 14,
+   "verse_start": 14,
+   "verse_end": 14,
+   "capsule": "The apostles tore their garments as Jews did against blasphemy, yet God calls for torn hearts rather than garments.",
+   "comment": "Since what was being done amounted to blasphemy, they tore their garments (Acts 14:14), following Jewish traditions and written customs.\n\nYet the custom has been condemned as not coming from the law and as wholly useless. Indeed, the God of all said to the Jews, who put on such shows and wandered far from true piety: “Turn to me with all your heart, with fasting and weeping and mourning; and tear your hearts, and not your garments” (Joel 2:12-13).",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains why the apostles tore their garments and what God seeks instead.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-mid/",
+   "from_cite": false
   },
   {
    "id": "AC14-001",
@@ -1237,6 +1557,44 @@
    "from_cite": true
   },
   {
+   "id": "AC15-008",
+   "chapter": 15,
+   "verse_start": 10,
+   "verse_end": 10,
+   "capsule": "Christ described those under the law as heavy laden and offered rest because, unlike the law, he is gentle.",
+   "comment": "The law was admittedly burdensome to those of Israel, and the inspired disciples admitted it too. The Savior himself taught us this when he called out and said: “Come to me, all you who labor and are heavy laden, and I will give you rest. Take my yoke upon you, and learn from me, for I am gentle and lowly in heart; and you will find rest for your souls” (Matthew 11:28-29). Those who labor and are heavy laden, he says, are those under the law; and he called himself gentle, because the law did not have that quality.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains Peter's reference to the burdensome yoke of the law by connecting it to Christ's promise of rest in Matthew 11:28-29.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
+   "id": "AC15-009",
+   "chapter": 15,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "The rebuilding of David's fallen tent was historically fulfilled in Israel's return from captivity under Cyrus, but its truer fulfillment is in Christ's resurrection, which raises and renews fallen humanity.",
+   "comment": "“The tent of David” means the race of the Jews. It should be known that when Cyrus let Israel go from captivity, they went back to Judea and built the divine temple; and when they had walled the desolate cities, they lived in them in safety “as in the days of the age,” that is, for many days and long years. They became a sign and an assurance to the other nations that from then on they too must turn to God.\n\n… That, then, is the sense of the history in these words; the deeper and truer sense would be found in Christ. For when he came back to life from the dead, God the Father raising his tent that had fallen into death, that is, the flesh taken from the earth, then, yes then, all that is human rose up to its ancient form, and all in us that had been thrown down has been brought to a new appearance. For “if anyone is in Christ, he is a new creation” (2 Corinthians 5:17), as the Scriptures say; for we have been raised together with him. Death tore down the tents of all, but God the Father rebuilt them in Christ.",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains both the historical fulfillment of David's fallen tent in the return from exile and its deeper spiritual fulfillment in Christ's resurrection.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-mid/",
+   "from_cite": false
+  },
+  {
    "id": "AC15-004",
    "chapter": 15,
    "verse_start": 19,
@@ -1290,6 +1648,25 @@
    "section": "u02-rem-close",
    "url": "https://viapatrum.org/works/diodorus-fragmenta-romanos/u02-rem-close/",
    "from_cite": true
+  },
+  {
+   "id": "AC17-002",
+   "chapter": 17,
+   "verse_start": 23,
+   "verse_end": 23,
+   "capsule": "The unknown God is God Most High, and worshiping Him alongside other gods deserves punishment for equating the divine with the worthless.",
+   "comment": "That is, God Most High. For the wretched Greeks think that they worship the God who truly is as well, if they give him reverence along with the rest of their gods. They do not know that they will be judged worthy of greater punishment, for putting light on a level with darkness, the good with the worthless, the rational with the irrational, and the divine with the cheap. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains who the unknown God is and why worshiping Him alongside idols is condemned, in terms a general reader can follow.",
+   "author": "Cyril of Alexandria",
+   "work": "Fragments on Acts and the Catholic Epistles",
+   "work_slug": "cyril-fragmenta-acta-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/cyril-fragmenta-acta-catholicas/u02-rem-mid/",
+   "from_cite": false
   },
   {
    "id": "AC17-001",
@@ -1435,25 +1812,6 @@
    "work_slug": "asterius-homiliae",
    "section": "u11-rem-close",
    "url": "https://viapatrum.org/works/asterius-homiliae/u11-rem-close/",
-   "from_cite": true
-  },
-  {
-   "id": "AC28-001",
-   "chapter": 28,
-   "verse_start": 3,
-   "verse_end": 5,
-   "capsule": "Wild beasts show faith: the viper did Paul no harm because he was full of faith, and the faithless should fear their own faithlessness more.",
-   "comment": "The wild beasts are a demonstration of faith. Have you trusted in the Lord? Upon asp and basilisk you will tread, and you will trample lion and dragon (Psalm 90:13 (LXX; Hebrew 91:13)). And you have through faith the authority to tread upon snakes and scorpions (Luke 10:19). Or do you not see that when Paul was gathering sticks, the viper fastened on him and caused him no harm, because the holy man was found to be full of faith (Acts 28:3-5)? But if you are faithless, fear not so much the wild beast as your own faithlessness, through which you have made yourself easy prey to every corruption.",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains why the viper did not harm Paul.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "75",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/75/",
    "from_cite": true
   }
  ]

@@ -1,13 +1,13 @@
 {
  "book": "1 Samuel",
  "title": "The Fathers on 1 Samuel",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
  "comment_count": 45,
- "selected_count": 23,
+ "selected_count": 24,
  "comments": [
   {
    "id": "1SA01-001",
@@ -33,8 +33,8 @@
    "chapter": 1,
    "verse_start": 11,
    "verse_end": 11,
-   "capsule": "Hannah called upon the Trinity, using the names Adonai, Lord and Eloi Sabaoth.",
-   "comment": "But also Hannah, praying toward the kingdoms, called upon the Trinity saying: “Adonai, Lord, Eloi Sabaoth” (1 Samuel 1:11). For “Adonai” is interpreted with the Hebrew voice as “Lord”; and again with the Greek voice he said “Lord.” And a third time in Hebrew he said “Eloi Sabaoth,” which is: God of hosts, or of powers.",
+   "capsule": "Hannah's threefold naming of God invokes the Trinity.",
+   "comment": "Hannah too, praying in the Book of Kingdoms, called upon the Trinity when she said, “Adonai, Lord, Eloi Sabaoth” (1 Samuel 1:11). In the Hebrew tongue “Adonai” means “Lord”; then she said “Lord” again in Greek; and a third time, in Hebrew, she said “Eloi Sabaoth”, that is, “O God of hosts”, or “of powers”.",
    "editions": [
     "complete"
    ],
@@ -162,13 +162,13 @@
    "chapter": 4,
    "verse_start": 11,
    "verse_end": 13,
-   "capsule": "Eli feared first for the ark, not his sons, and Israel's sins, not the foreigners' strength, brought the defeat.",
-   "comment": "… Eli was pious in himself: his first anxiety was not the children's salvation but the ark, lest it fall under the foreigners—and that is what happened. The foreigners were to learn that God was not defeated through Israel, nor conquered by their own strength; Israel's sins and impieties produced the defeat. …",
+   "capsule": "Eli feared most for the ark, and Israel's sins rather than God's weakness caused the defeat.",
+   "comment": "… Eli was pious in himself: his first anxiety was not the children's salvation but the ark, lest it fall under the foreigners (1 Samuel 4:13)—and that is what happened.\n\nThe foreigners were to learn that God was not defeated through Israel, nor conquered by their own strength; Israel's sins and impieties produced the defeat. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why Eli trembled for the ark and why God let it be taken.",
+   "selected_reason": "Explains Eli's fear for the ark and why Israel was defeated in plain terms.",
    "author": "Origen of Alexandria",
    "work": "Fragments on 1 Samuel",
    "work_slug": "origen-regnorum-fragments",
@@ -181,13 +181,13 @@
    "chapter": 5,
    "verse_start": 3,
    "verse_end": 4,
-   "capsule": "Dagon fell to break, not to worship.",
-   "comment": "… Dagon fell before the ark not to worship—he was unworthy—but to be shattered; and so it was. …",
+   "capsule": "Dagon fell to be shattered, not to worship.",
+   "comment": "… Dagon fell before the ark not to worship (1 Samuel 5:3–4)—he was unworthy—but to be shattered; and so it was. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the idol fell before the ark.",
+   "selected_reason": "Explains what Dagon's fall means in plain terms.",
    "author": "Origen of Alexandria",
    "work": "Fragments on 1 Samuel",
    "work_slug": "origen-regnorum-fragments",
@@ -385,13 +385,13 @@
    "chapter": 16,
    "verse_start": 12,
    "verse_end": 12,
-   "capsule": "David's redness with beautiful eyes showed his clear sight.",
-   "comment": "Esau was reddish like a hairy hide, carrying deadness from sin and murderous toward Jacob; David was reddish with beauty of eyes, to show his clear sight.",
+   "capsule": "David's reddish beauty of eyes signified clear sight.",
+   "comment": "Esau was reddish like a hairy hide, carrying deadness from sin and murderous toward Jacob; David was reddish with beauty of eyes (1 Samuel 16:12), to show his clear sight.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what the description of David in the verse points to.",
+   "selected_reason": "Explains David's description in the verse in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Fragments on 1 Samuel",
    "work_slug": "origen-regnorum-fragments",
@@ -514,13 +514,13 @@
    "chapter": 19,
    "verse_start": 23,
    "verse_end": 24,
-   "capsule": "God's grace made Saul prophesy in David's favour and cast him naked, a sign he would lose the kingdom.",
-   "comment": "… Saul had strength and a crowd helping him wickedly against David, while only Samuel and David were hunted. God's grace makes Saul prophesy not only what cuts against himself but what favors David, and casts him down naked, foresignifying that he will be stripped of the kingdom. …",
+   "capsule": "God's grace made Saul prophesy for David and lie naked as a sign of losing the kingdom.",
+   "comment": "… Saul had strength and a crowd helping him wickedly against David, while only Samuel and David were hunted. God's grace makes Saul prophesy not only what cuts against himself but what favors David, and casts him down naked (1 Samuel 19:23–24), foresignifying that he will be stripped of the kingdom. …",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what Saul's prophesying and lying naked signify.",
+   "selected_reason": "Explains what Saul's prophesying and nakedness signify in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Fragments on 1 Samuel",
    "work_slug": "origen-regnorum-fragments",
@@ -533,13 +533,13 @@
    "chapter": 21,
    "verse_start": 4,
    "verse_end": 4,
-   "capsule": "\"Profane\" means those who are not holy, as lay bread is set against the holy loaves, not unclean.",
-   "comment": "\"Profane\" here means not the unclean but those who are not holy, set over against the holy loaves of the table. The table held six loaves continually changed for Israel's twelve tribes—called shewbread—so each loaf stood for two tribes and the six for twelve. The good of this was binding the tribes toward concord; the better foresign was the apostles sent two by two by the Savior to preach first among Israel's tribes, so that six pairs make twelve disciples. Lay bread is \"profane\" only by comparison with the holy, not because the non-holy are unclean as such.",
+   "capsule": "“Profane” means merely not holy rather than unclean, and the six loaves for twelve tribes bound them to concord and foresignified the apostles sent two by two.",
+   "comment": "\"Profane\" here means not the unclean but those who are not holy, set over against the holy loaves of the table (1 Samuel 21:4). The table held six loaves continually changed for Israel's twelve tribes—called shewbread—so each loaf stood for two tribes and the six for twelve.\n\nThe good of this was binding the tribes toward concord; the better foresign was the apostles sent two by two by the Savior to preach first among Israel's tribes, so that six pairs make twelve disciples. Lay bread is \"profane\" only by comparison with the holy, not because the non-holy are unclean as such.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the word \"profane\" in the verse.",
+   "selected_reason": "Explains what profane means in terms a reader can follow.",
    "author": "Origen of Alexandria",
    "work": "Fragments on 1 Samuel",
    "work_slug": "origen-regnorum-fragments",
@@ -571,12 +571,13 @@
    "chapter": 21,
    "verse_start": 5,
    "verse_end": 6,
-   "capsule": "The priest gives David the loaves only priests may eat, a prophecy through deeds that the royal and priestly tribes would be joined in the Saviour.",
-   "comment": "\"Today it will be sanctified through the vessels\" is said less clearly, but means: my children have been sanctified and kept from a woman yesterday and the day before—that is his claim that the children also are purified. If not, he was sanctified through eating the bread of the Presence. Persuaded, the priest gives David loaves none else ought to eat but priests. This is prophecy through deeds: the royal tribe (Judah) and the priestly (Levi) were about to be joined into one dignity—priestly and royal—in our Savior from David, priest and king together \"according to the order of Melchizedek.\"",
+   "capsule": "David’s cleansing claim persuades the priest to give him the priests’ loaves, foresigning in deed the joining of kingship and priesthood in the Savior from David.",
+   "comment": "\"Today it will be sanctified through the vessels\" (1 Samuel 21:5) is said less clearly, but means: my children have been sanctified and kept from a woman yesterday and the day before—that is his claim that the children also are purified. If not, he was sanctified through eating the bread of the Presence. Persuaded, the priest gives David loaves none else ought to eat but priests.\n\nThis is prophecy through deeds: the royal tribe (Judah) and the priestly (Levi) were about to be joined into one dignity—priestly and royal—in our Savior from David, priest and king together \"according to the order of Melchizedek.\"",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Plainly explains why the priest gave David the holy bread and how David eating it foreshadows Christ uniting kingship and priesthood.",
    "author": "Origen of Alexandria",
    "work": "Fragments on 1 Samuel",
    "work_slug": "origen-regnorum-fragments",
@@ -589,8 +590,8 @@
    "chapter": 21,
    "verse_start": 7,
    "verse_end": 7,
-   "capsule": "Neessar means Doeg stood before the Lord confessing, or was demonized.",
-   "comment": "Neessar shows either that through sin Doeg the Idumaean remained before the Lord being treated and confessing, or that he was demonized like Saul, whose mules he pastured.",
+   "capsule": "Doeg remained before the Lord either confessing or demonized like Saul.",
+   "comment": "Neessar shows either that through sin Doeg the Idumaean remained before the Lord (1 Samuel 21:7) being treated and confessing, or that he was demonized like Saul, whose mules he pastured.",
    "editions": [
     "complete"
    ],

@@ -1,13 +1,13 @@
 {
  "book": "Isaiah",
  "title": "The Fathers on Isaiah",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 316,
- "selected_count": 173,
+ "comment_count": 314,
+ "selected_count": 174,
  "comments": [
   {
    "id": "IS01-001",
@@ -582,25 +582,6 @@
    "work_slug": "didymus-in-genesim",
    "section": "u18-rem-close",
    "url": "https://viapatrum.org/works/didymus-in-genesim/u18-rem-close/",
-   "from_cite": true
-  },
-  {
-   "id": "IS05-001",
-   "chapter": 5,
-   "verse_start": 1,
-   "verse_end": 2,
-   "capsule": "The vineyard stands for human souls, which God hedges around with the security of the commandments and the guard of the angels.",
-   "comment": "And he does not cease everywhere to compare the souls of men to vines. For a vineyard was made for the beloved, he says, on a horn, in a rich place (Isaiah 5:1). And, I planted a vineyard, and put a hedge around it (Isaiah 5:2). He clearly means the human souls as the vineyard, around which he put a hedge—the security from the commandments and the guard of the angels. For the angel of the Lord will encamp around those who fear him (Psalm 33:8 (34:7)).",
-   "editions": [
-    "complete",
-    "selected"
-   ],
-   "selected_reason": "Explains in plain terms what the vineyard and its hedge represent.",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "38",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/38/",
    "from_cite": true
   },
   {
@@ -2444,8 +2425,8 @@
    "chapter": 28,
    "verse_start": 9,
    "verse_end": 10,
-   "capsule": "Those weaned from milk are mature believers for whom affliction upon affliction is foretold, and whoever expects it like a noble athlete will enjoy hope upon hope after a little.",
-   "comment": "And you, then — after Isaiah — as no longer carnal nor babes 'in Christ,' advanced 'in' your intelligible 'stature,' most godly Ambrose and most pious Protoctetus, no longer 'having need of milk' but of 'solid food' — hear, as 'weaned from milk' and 'drawn from the breast,' in what way, as for weaned athletes, no simple affliction but an 'affliction upon affliction' is prophesied. He who does not push away the affliction 'upon affliction,' but as a noble athlete 'expects' it, straightway expects 'hope upon hope' too — which, after a little of the affliction 'upon affliction,' he shall enjoy. For such is the 'yet a little, yet a little.' …",
+   "capsule": "Those weaned from milk should welcome affliction upon affliction like noble athletes, and they will soon enjoy hope upon hope.",
+   "comment": "“You who are weaned from milk, you who are drawn from the breast, welcome affliction upon affliction, welcome hope upon hope; yet a little, yet a little, because of the scorn of lips, by another tongue” (Isaiah 28:9-11).\n\nYou too, then, … are in Isaiah's sense no longer people of the flesh, nor babes “in Christ” (1 Corinthians 3:1); you have advanced “in” the inward “stature” of your minds (Luke 2:52), and you no longer “need milk” but “solid food” (Hebrews 5:12). So listen, as those “weaned from milk” and “drawn from the breast”, to how, for the weaned, as for athletes, what is prophesied is not a simple affliction but a kind of “affliction upon affliction”.\n\nWhoever does not thrust away the affliction “upon affliction”, but welcomes it like a noble athlete, at once welcomes “hope upon hope” as well, and he will enjoy that hope not long after the affliction “upon affliction”. For that is what “yet a little, yet a little” means.",
    "editions": [
     "complete"
    ],
@@ -3518,13 +3499,14 @@
    "id": "IS44-005",
    "chapter": 44,
    "verse_start": 3,
-   "verse_end": 3,
-   "capsule": "Those in ignorance receive baptism, and God's Spirit poured out on them makes it overflow like plants sprouting beside water.",
-   "comment": "… Isaiah says similarly: 'I will give water in thirst to those going in no-water; I will pour my spirit upon your seed and my blessings upon your children; and they shall rise up in the midst of water like grass, and like a willow tree beside running water' (Isaiah 44:3). And this contains an intellectual division through hidden things. For those in ignorance, he says, happen to receive the baptism, and because of this, 'those going in no-water,' 'I will pour my spirit' is able to make the baptismal pool overflow upon them like the sprouts of plants, and: 'like the tree planted by the outlets of the waters; which will give its fruit in its season, and its leaf will not wither' (Psalm 1:3). …",
+   "verse_end": 4,
+   "capsule": "The promised water is the Holy Spirit, who makes those without baptism flower again like plants beside running water.",
+   "comment": "… Isaiah likewise: “I will give water in thirst to those who walk in a waterless land; I will put my Spirit upon your seed and my blessings upon your children; and they shall spring up in the midst of water like grass, and like a willow beside running water” (Isaiah 44:3-4).\n\nThis too, through hidden words, has a spiritual sense. For to those, he says, who are ignorant of baptism, and for that reason “walk in a waterless land,” “I will put my Spirit,” who is able to make the font … bring them to flower again like plants that love water, and “like the tree planted by the channels of the waters, which will give its fruit in its season, and its leaf will not fall” (Psalm 1:3). …",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains the promised water as the Holy Spirit given in baptism.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",
@@ -4475,24 +4457,6 @@
    "section": "book4-logos5-rem-mid",
    "url": "https://viapatrum.org/works/cyril-isaiah/book4-logos5-rem-mid/",
    "from_cite": false
-  },
-  {
-   "id": "IS51-004",
-   "chapter": 51,
-   "verse_start": 6,
-   "verse_end": 6,
-   "capsule": "Isaiah's \"as smoke\" gives heaven a fine nature, not a solid or thick one.",
-   "comment": "But concerning the substance of heaven, we are satisfied with what Isaiah said. In simple words he gave us an adequate understanding of its nature when he said, “He who made firm the heaven as smoke” (Isaiah 51:6)—that is, he gave the heaven a fine nature for its composition, not a solid nor thick one.",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Basil of Caesarea",
-   "work": "Homilies on the Six Days of Creation",
-   "work_slug": "basil-homiliae-hexaemeron",
-   "section": "6",
-   "url": "https://viapatrum.org/works/basil-homiliae-hexaemeron/6/",
-   "from_cite": true
   },
   {
    "id": "IS51-005",
@@ -5653,12 +5617,13 @@
    "chapter": 64,
    "verse_start": 4,
    "verse_end": 4,
-   "capsule": "Isaiah's words that no other God has been seen are read as pointing to the one born of the Virgin Mary and attested by the Father.",
-   "comment": "But Isaiah cries out to Him without comparison as the God the Father: 'From eternity we have not heard, nor have our eyes seen a God besides You' (Isa 64:4). … For we saw no other God than the one born according to the saving incarnation from the Virgin Mary, nor did we hear of any except the one attested by God the Father: … 'This is my beloved Son' (Matt 3:17).",
+   "capsule": "No other God has been seen or heard besides the one born of the Virgin Mary and attested by the Father.",
+   "comment": "Isaiah cries out that he [Christ], like God the Father, is beyond compare: “From of old we have not heard, nor have our eyes seen, a God besides you” (Isaiah 64:4). For we have seen no other God than the one born of the Virgin Mary in the saving incarnation; nor have we heard any other, except the one to whom God the Father bore witness: “This is my beloved Son” (Matthew 3:17).",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains what the verse means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",

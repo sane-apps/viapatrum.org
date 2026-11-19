@@ -1,13 +1,13 @@
 {
  "book": "1 Peter",
  "title": "The Fathers on 1 Peter",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
  "comment_count": 49,
- "selected_count": 27,
+ "selected_count": 28,
  "comments": [
   {
    "id": "1PE01-001",
@@ -108,12 +108,13 @@
    "chapter": 1,
    "verse_start": 12,
    "verse_end": 12,
-   "capsule": "Angels long to look into these things because they lack innate knowledge of them.",
-   "comment": "'Angels desire to look into things' (1 Pet 1:12), he says. And if they had any innate knowledge, they would not long to even stoop into it, but because they do not have it, they fall into a sort of excessive desire, like men, for those things whose knowledge is not above them.",
+   "capsule": "Angels long to look into salvation because knowledge of it is not within their reach by nature.",
+   "comment": "Besides these, there is what Peter declared … about the things that brought benefit to all men (I mean the things of the unspeakable plan of salvation), in these words: “Into which,” he says, “angels long to look” (1 Peter 1:12).\n\nBut if they had some innate knowledge, they would not long even to peer into it. Since they do not have it, they fall, in a way, as men do, into an overwhelming desire for things whose knowledge is not within their reach. For it is natural in other matters too that what is easy to find is overlooked, while what is rarer is prized.",
    "editions": [
-    "complete"
+    "complete",
+    "selected"
    ],
-   "selected_reason": "",
+   "selected_reason": "Explains why Peter says angels desire to look into these things.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",

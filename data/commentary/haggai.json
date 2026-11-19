@@ -1,7 +1,7 @@
 {
  "book": "Haggai",
  "title": "The Fathers on Haggai",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
@@ -70,13 +70,13 @@
    "chapter": 2,
    "verse_start": 9,
    "verse_end": 9,
-   "capsule": "The house of greater glory is the Church of Christ, compared with the synagogue.",
-   "comment": "…someone will interpret what the prophet Haggai intends by saying, 'the glory of this house shall be greater than the first' (Haggai 2:9), that is, of the Church of Christ and the glorification within it, compared to the synagogue of the Jews, in which God alone was theologized and glorified.",
+   "capsule": "The greater glory of the later house is the glory of the Church of Christ beyond the synagogue.",
+   "comment": "…let someone explain what the prophet Haggai means when he says that “great shall be the latter glory of this house, beyond the former” (Haggai 2:9): that is, the glory of the Church of Christ and of the praise given in it, beyond the synagogue of the Jews, in which God the Father alone was confessed as God and glorified.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Says directly what the greater glory of the house refers to.",
+   "selected_reason": "Explains what the greater glory means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "On the Trinity",
    "work_slug": "didymus-de-trinitate",

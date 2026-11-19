@@ -1,13 +1,13 @@
 {
  "book": "1 John",
  "title": "The Fathers on 1 John",
- "generated": "2026-11-10",
+ "generated": "2026-11-18",
  "license": "CC BY 4.0",
  "credit": "Via Patrum (viapatrum.org)",
  "rules": "Larry Sanger's rules for Deep Dive Bible commentary editions (emails of 8 and 9 Nov 2026): comments of at most 6 adjacent verses (Selected at most 3); cuts marked with an ellipsis; square brackets for editorial additions only; paragraphs added; one-sentence capsule no longer than 40% of the comment. Every word outside brackets is Via Patrum's published translation, checked by script.",
  "scope": "Church Fathers (all died by 749) in works published on viapatrum.org as of 9 Nov 2026.",
- "comment_count": 61,
- "selected_count": 25,
+ "comment_count": 64,
+ "selected_count": 26,
  "comments": [
   {
    "id": "1JN01-001",
@@ -70,13 +70,13 @@
    "chapter": 1,
    "verse_start": 5,
    "verse_end": 5,
-   "capsule": "God is a light grasped by the mind and eternal, and the darkness that is not in him is ignorance and evil.",
-   "comment": "The disciples show that, since God exists as light, there is no darkness in him. We offer this same message to you, so that you may have the same glory concerning God as existing light; for God is an intelligible [grasped by the mind], eternal light; for nothing sensible exists perpetually. Regarding this light, one must understand darkness as ignorance and a deficiency of control, since neither of the forms of darkness—neither ignorance nor evil—is in God; thus it is rightly said that there is no darkness in him.\n\nIf it is said anywhere, 'the darkness of his hiding,' darkness here refers to the obscurity found in incomprehensibility; and our ignorance may be that obscurity, but not the light of God being such.",
+   "capsule": "God is eternal light grasped by the mind, in whom neither ignorance nor evil has any place.",
+   "comment": "The disciples show that, since God exists as light, there is no darkness in him (1 John 1:5). We offer this same message to you, so that you may have the same glory concerning God as existing light; for God is an intelligible [grasped by the mind], eternal light; for nothing sensible exists perpetually. Regarding this light, one must understand darkness as ignorance and a deficiency of control, since neither of the forms of darkness—neither ignorance nor evil—is in God; thus it is rightly said that there is no darkness in him.\n\nIf it is said anywhere, 'the darkness of his hiding,' darkness here refers to the obscurity found in incomprehensibility; and our ignorance may be that obscurity, but not the light of God being such.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what John means by light and by darkness.",
+   "selected_reason": "Explains what light and darkness mean in the verse in plain terms.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",
@@ -178,14 +178,14 @@
    "id": "1JN02-003",
    "chapter": 2,
    "verse_start": 3,
-   "verse_end": 3,
-   "capsule": "To know in Scripture can mean to have experience of something and be united to it, so knowing God shows itself in keeping his commandments.",
-   "comment": "To know in the Scripture does not always signify merely to have certain knowledge, but also to have experienced something and to be united to it, as in: 'not knowing sin' (2 Corinthians 5:21), and: 'I never knew you, workers of lawlessness' (Matthew 7:23); for he did not know sin as in not having certain knowledge of what sin is, but as in not having practiced it. Therefore, he who says he has known God must necessarily follow by being transformed by him and participating in him by keeping his commandments; thus he contradicts himself. The two meanings of knowing are made clear from the context; for he says, 'by this we know' (1 John 2:3), that is, we have certain knowledge, 'that we have known him' (1 John 2:3) by being united to him and keeping his commandments; for he who does not keep them is clearly found outside the knowledge of God.",
+   "verse_end": 4,
+   "capsule": "Knowing God in Scripture means being united to Him through experience, so keeping His commandments proves that union.",
+   "comment": "To know in the Scripture does not always signify merely to have certain knowledge, but also to have experienced something and to be united to it, as in: 'not knowing sin' (2 Corinthians 5:21), and: 'I never knew you, workers of lawlessness' (Matthew 7:23); for he did not know sin as in not having certain knowledge of what sin is, but as in not having practiced it.\n\nTherefore, he who says he has known God must necessarily follow by being transformed by him and participating in him by keeping his commandments (1 John 2:3–4); thus he contradicts himself. The two meanings of knowing are made clear from the context; for he says, 'by this we know' (1 John 2:3), that is, we have certain knowledge, 'that we have known him' (1 John 2:3) by being united to him and keeping his commandments; for he who does not keep them is clearly found outside the knowledge of God.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what John means by knowing God.",
+   "selected_reason": "Explains what knowing God means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",
@@ -198,13 +198,13 @@
    "chapter": 2,
    "verse_start": 7,
    "verse_end": 7,
-   "capsule": "The commandment heard from the beginning is the natural disposition by which all people love their neighbors, since the readers were not Jews.",
-   "comment": "Perhaps someone will say: how is it possible to understand the written commandment concerning love to be from the beginning and to have been heard by those to whom the epistle is written? For they were not Jews, as the end of the epistle demonstrates; for he says, 'Little children, keep yourselves from idols' (1 John 5:21). Therefore, is the commandment, existing from the beginning and heard by all men, a friendly disposition according to natural concepts? For all, being by nature diurnal and social animals, love their neighbors; whence the Savior, stirring up this natural disposition, says: 'Therefore, all that you wish that men would do to you, do likewise to them' (Matt 7:12).",
+   "capsule": "The commandment heard from the beginning is the inborn human disposition to love neighbors, which Christ stirs up.",
+   "comment": "Perhaps someone will say: how is it possible to understand the written commandment concerning love to be from the beginning and to have been heard by those to whom the epistle is written (1 John 2:7)? For they were not Jews, as the end of the epistle demonstrates; for he says, 'Little children, keep yourselves from idols' (1 John 5:21).\n\nTherefore, is the commandment, existing from the beginning and heard by all men, a friendly disposition according to natural concepts? For all, being by nature diurnal and social animals, love their neighbors; whence the Savior, stirring up this natural disposition, says: 'Therefore, all that you wish that men would do to you, do likewise to them' (Matt 7:12).",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains how the readers could have had the commandment from the beginning.",
+   "selected_reason": "Explains why the commandment is called old and already heard.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",
@@ -229,6 +229,24 @@
    "work_slug": "didymus-commentarii-zacchariam",
    "section": "u16-rem-mid",
    "url": "https://viapatrum.org/works/didymus-commentarii-zacchariam/u16-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN02-005",
+   "chapter": 2,
+   "verse_start": 15,
+   "verse_end": 16,
+   "capsule": "The things in the world signify not the physical creation, but material passions such as the desire of the flesh and the lust of the eyes, which those who look to eternal things no longer love.",
+   "comment": "So that no one might think the system of those in heaven and earth and those in them to be present here from the voice of the world, he interpreted what 'those in it' turns out to be (1 John 2:15), so that we too might accordingly receive it; for 'and those in it' signifies a passion and a material disposition indicated through the desire of the flesh, which wages war against the soul, and the lust of the eyes (1 John 2:16).\n\nIt is also possible from what has been set forth to derive a view concerning the visible world, which is no longer loved by those who have ascended to seeing not the temporal things, but the eternal things; and since those who prefer to love life in it handle the sensible things passively, it is appropriately stated that in it there is the arrogance of life, of the flesh, and the lust of the eyes.",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-open",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-open/",
    "from_cite": true
   },
   {
@@ -284,24 +302,6 @@
    "work_slug": "cyril-adoration-1",
    "section": "16",
    "url": "https://viapatrum.org/works/cyril-adoration-1/16/",
-   "from_cite": true
-  },
-  {
-   "id": "1JN02-005",
-   "chapter": 2,
-   "verse_start": 16,
-   "verse_end": 16,
-   "capsule": "John names what is in the world as a passion and material disposition, shown in the desire of the flesh, which wages war against the soul, and the lust of the eyes.",
-   "comment": "So that no one might think the system of those in heaven and earth and those in them to be present here from the voice of the world, he interpreted what 'those in it' turns out to be, so that we too might accordingly receive it; for 'and those in it' signifies a passion and a material disposition indicated through the desire of the flesh, which wages war against the soul, and the lust of the eyes (1 John 2:16).",
-   "editions": [
-    "complete"
-   ],
-   "selected_reason": "",
-   "author": "Didymus the Blind",
-   "work": "Notes on the Catholic Epistles",
-   "work_slug": "didymus-enarratio-catholicas",
-   "section": "u02-open",
-   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-open/",
    "from_cite": true
   },
   {
@@ -474,13 +474,13 @@
    "chapter": 3,
    "verse_start": 6,
    "verse_end": 6,
-   "capsule": "The doer of evil belongs to darkness and has neither seen God nor known him, but the pure of heart see him.",
-   "comment": "The good-doer, in practice and in contemplation, having God — Christ — existing as the true light, is far from darkness and from Beliar. But since doing evil is the opposite of doing good, the evil-doer, by this very activity, being of Beliar and of darkness, has not seen God nor has any knowledge of him: “for everyone who sins has not seen God nor known him” (1 John 3:6). Since seeing a body or not seeing it is recognized by using sight or not using it — the sensible object being seen by the evil-doer too, if he has sight, but not seen by the one deprived of sight, even if he be a good-doer — it is shown indisputably by the same things together: that to the good-doer, because he has a pure heart, he is seen, even if he lacks sight; but he is not seen by the evil-doer, even if he be most sharp-sighted. He presents that doing good and doing evil are opposites and therefore incompatible, both from “turn away from evil and do good” (Psalm 37:27; LXX 36:27) and from the passages written similarly.",
+   "capsule": "The one who does evil has neither seen God nor known Him, while the pure of heart see Him because good and evil are incompatible opposites.",
+   "comment": "The good-doer, in practice and in contemplation, having God — Christ — existing as the true light, is far from darkness and from Beliar. But since doing evil is the opposite of doing good, the evil-doer, by this very activity, being of Beliar and of darkness, has not seen God nor has any knowledge of him (3 John 1:11): “for everyone who sins has not seen God nor known him” (1 John 3:6).\n\nSince seeing a body or not seeing it is recognized by using sight or not using it — the sensible object being seen by the evil-doer too, if he has sight, but not seen by the one deprived of sight, even if he be a good-doer — it is shown indisputably by the same things together: that to the good-doer, because he has a pure heart, he is seen, even if he lacks sight; but he is not seen by the evil-doer, even if he be most sharp-sighted. He presents that doing good and doing evil are opposites and therefore incompatible, both from “turn away from evil and do good” (Psalm 37:27; LXX 36:27) and from the passages written similarly.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains why the one who sins has not seen God, with a plain comparison.",
+   "selected_reason": "Explains what the verse means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",
@@ -676,9 +676,28 @@
    "id": "1JN04-010",
    "chapter": 4,
    "verse_start": 1,
-   "verse_end": 3,
-   "capsule": "Testing the spirits needs the Spirit's gift of discernment, and the mark of the antichrist is denying that Jesus came in the flesh.",
-   "comment": "… It is necessary to have that gift of the Holy Spirit, which is named the discernment of spirits, so that we may have knowledge to test the spirits, so as for one to believe and for the other to resist. … He calls characteristic of the antichrist, of whom we have heard that he is coming, but is already in the world, the denying the incarnation of Jesus through false prophets and spirits in not confessing that he has come in the flesh …",
+   "verse_end": 1,
+   "capsule": "Testing the spirits requires the Holy Spirit's gift of discerning one teaching from another.",
+   "comment": "… It is necessary to have that gift of the Holy Spirit, which is named the discernment of spirits, so that we may have knowledge to test the spirits (1 John 4:1), so as for one to believe and for the other to resist. …",
+   "editions": [
+    "complete",
+    "selected"
+   ],
+   "selected_reason": "Explains what testing the spirits requires in terms a general reader can follow.",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-012",
+   "chapter": 4,
+   "verse_start": 2,
+   "verse_end": 2,
+   "capsule": "Confessing Christ come in the flesh means acknowledging him living in the believer as well as in his own humanity.",
+   "comment": "… Having understood this: 'It is no longer I who live, but Christ lives in me' (Gal 2:20), through accepting Christ Jesus living in me, through carrying around the death of Jesus in the body (2 Corinthians 4:10); confessing that Jesus Christ has come in the flesh (1 John 4:2), not by his own alone, but also in mine. …",
    "editions": [
     "complete"
    ],
@@ -710,12 +729,48 @@
    "from_cite": true
   },
   {
+   "id": "1JN04-013",
+   "chapter": 4,
+   "verse_start": 3,
+   "verse_end": 3,
+   "capsule": "Denying the incarnation marks the spirit of antichrist, a necessary warning since many confess Christ with the tongue alone.",
+   "comment": "… He calls characteristic of the antichrist, of whom we have heard that he is coming, but is already in the world (1 John 4:3), the denying the incarnation of Jesus through false prophets and spirits in not confessing that he has come in the flesh; to say this is now truly to be heard; for many say it by tongue alone. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
    "id": "1JN04-005",
    "chapter": 4,
    "verse_start": 7,
+   "verse_end": 7,
+   "capsule": "People become beloved and able to love one another when the Savior restores God's image in them.",
+   "comment": "… Just as a crime and arrogance brings to the one not taking up the excellent and not loving the lovable, so the writer makes praise for those loving the worthy of being loved to be beloved; but when can this happen, except when the Savior takes away the sin of the world (John 1:29), so that the man may be shown as what he has become by God according to likeness and having been shown an image of the Maker?\n\nFor when the man is revealed, being immediately beloved and worthy of being loved, he becomes so; since therefore the Savior sent to the world, through love toward the works of the Father which are his own, came for the showing of the beauty of those who have become according to the image of God, those possessing this gift are beloved, whence they love one another; for each has both being the beloved and being the loving, having the commandment to love the neighbor. …",
+   "editions": [
+    "complete"
+   ],
+   "selected_reason": "",
+   "author": "Didymus the Blind",
+   "work": "Notes on the Catholic Epistles",
+   "work_slug": "didymus-enarratio-catholicas",
+   "section": "u02-rem-mid",
+   "url": "https://viapatrum.org/works/didymus-enarratio-catholicas/u02-rem-mid/",
+   "from_cite": true
+  },
+  {
+   "id": "1JN04-014",
+   "chapter": 4,
+   "verse_start": 7,
    "verse_end": 8,
-   "capsule": "The love that is from God is the Only-begotten, so whoever has love has Christ in himself.",
-   "comment": "If love is from God and God is love, who would be the one proceeding from him or the Word himself? If anyone therefore has love, he has Christ in himself …\n\nA love from God, which must be considered as nothing other than the Only-begotten, just as God is from God, so also is a love existing from love.",
+   "capsule": "The love that comes from God is the Only-begotten, so having love means having Christ within.",
+   "comment": "… If love is from God and God is love (1 John 4:7–8), who would be the one proceeding from him or the Word himself? If anyone therefore has love, he has Christ in himself; namely, he who said: 'God is love' (1 John 4:8), he again knew.\n\nA love from God, which must be considered as nothing other than the Only-begotten, just as God is from God, so also is a love existing from love. …",
    "editions": [
     "complete"
    ],
@@ -880,13 +935,13 @@
    "chapter": 5,
    "verse_start": 1,
    "verse_end": 1,
-   "capsule": "The faith by which one is born of God is not mere mental assent but faith joined to works of virtue, such as Abraham had.",
-   "comment": "He who is born from God, having believed that Jesus is the Christ, is not born from God having a mere mental assent regarding the preaching of the Christ, but rather that faith which is joined to works according to virtue; which Abraham, having, was reckoned to have righteousness (Gen 15:6). According to this, the thing signified is to be accepted: 'to find a faithful man'; for such a one is rarely found, among many being eager but having a dead faith without works, which is not even at all faith. He who has believed thus, as to be born from God, has eternal life, as the Savior says: 'he who believes in me has eternal life' (John 3:36); if indeed someone is born from God by acting uprightly in the things said, being worthy of acceptance, he must love also him who begot him before that.",
+   "capsule": "Being born of God comes through faith joined to virtuous works rather than through assent alone.",
+   "comment": "He who is born from God, having believed that Jesus is the Christ (1 John 5:1), is not born from God having a mere mental assent regarding the preaching of the Christ, but rather that faith which is joined to works according to virtue; which Abraham, having, was reckoned to have righteousness (Gen 15:6). According to this, the thing signified is to be accepted: 'to find a faithful man'; for such a one is rarely found, among many being eager but having a dead faith without works, which is not even at all faith.\n\nHe who has believed thus, as to be born from God, has eternal life, as the Savior says: 'he who believes in me has eternal life' (John 3:36); if indeed someone is born from God by acting uprightly in the things said, being worthy of acceptance, he must love also him who begot him before that.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains what kind of believing makes one born of God.",
+   "selected_reason": "Explains what being born of God means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",
@@ -1027,8 +1082,8 @@
    "chapter": 5,
    "verse_start": 19,
    "verse_end": 19,
-   "capsule": "The world that lies in the evil one is not God's creation but the people moved by passions.",
-   "comment": "Having learned through many those bad men who are made manifest by the voice [the word] of the world, we do not stand in awe like the heretics, lest the creation of God, being a world, be established in the evil one; the voice of the world lies upon men, as has been said …\n\nFor John says, “Do not marvel if the world hates you”; it is clear to everyone possessing understanding that the world hates the holy, meaning the wicked men. And he adds, “They are of the world and the world hears them”; for the world that hears those speaking deceitfully signifies not the creation, but the people moved by passions.",
+   "capsule": "John means by the world lying in the evil one the people moved by passions, not God's creation.",
+   "comment": "Having learned through many those bad men who are made manifest by the voice of the world, we do not stand in awe like the heretics, lest the creation of God, being a world, be established in the evil one (1 John 5:19); the voice of the world lies upon men, as has been said…\n\nFor John says, “Do not marvel if the world hates you” (1 John 3:13); it is clear to everyone possessing understanding that the world hates the holy, meaning the wicked men. And he adds, “They are of the world and the world hears them” (1 John 4:5); for the world that hears those speaking deceitfully signifies not the creation, but the people moved by passions.",
    "editions": [
     "complete"
    ],
@@ -1082,13 +1137,13 @@
    "chapter": 5,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "The understanding the Son gives is the mind of Christ, by which we know the true one and are united to him.",
-   "comment": "He gave a mind, by which the true one, having come as the Son of God, is known; this is the same as to say, “But we have the mind of Christ.” He who possesses this very mind and this very intellect knows the one who is true according to essence and is united to him, truly having his understanding.",
+   "capsule": "The understanding the Son gives is the mind of Christ by which believers know the true one and are united to him.",
+   "comment": "He gave a mind, by which the true one, having come as the Son of God, is known (1 John 5:20); this is the same as to say, “But we have the mind of Christ.” He who possesses this very mind and this very intellect knows the one who is true according to essence and is united to him, truly having his understanding.",
    "editions": [
     "complete",
     "selected"
    ],
-   "selected_reason": "Explains the understanding that the Son of God has given us.",
+   "selected_reason": "Explains what the gift of understanding means in terms a reader can follow.",
    "author": "Didymus the Blind",
    "work": "Notes on the Catholic Epistles",
    "work_slug": "didymus-enarratio-catholicas",
@@ -1101,8 +1156,8 @@
    "chapter": 5,
    "verse_start": 20,
    "verse_end": 20,
-   "capsule": "John says true twice, to show that the Son is both true Son and true God, truly begotten and of one essence with the Father.",
-   "comment": "… John, the great one among theologians: “And we know,” he says, “that the Word of God has come and has given us understanding, that we may know the true God; and we are in the true one, in Jesus Christ the Son of God. This is the true God and eternal life” (1 John 5:20). “Seek no other god or Son of God in respect of essence,” he says. For I have said the “true” to you twice concerning him, that he is both “true Son” and “true God,” giving understanding to those worthy to receive; so that you may know that he has truly been begotten and truly is consubstantial with the God who begot him.",
+   "capsule": "The double use of true shows the Son is both true Son and true God, truly begotten and of one essence with the Father.",
+   "comment": "John, the great among theologians, says: “And we know that the Word of God has come and has given us understanding, so that we may know the true God; and we are in the true one, in the Son of God, Jesus Christ. This is the true God and eternal life” (1 John 5:20).\n\nDo not seek, he means, a God other in substance than the Son of God. For I have twice told you that “true” belongs to him: he is both “true Son” and “true God,” who has given understanding to those worthy to receive it; so that you may know that he was truly begotten and is truly consubstantial with the God who begot him.",
    "editions": [
     "complete"
    ],
@@ -1119,8 +1174,8 @@
    "chapter": 5,
    "verse_start": 21,
    "verse_end": 21,
-   "capsule": "Though he has praised their perfection, John warns against idols because he wrote to the whole church.",
-   "comment": "How then, having testified to this perfection through the whole epistle, does he now exhort them to keep themselves from idols? We say therefore: since it was written to the whole church, and it was likely in such a gathering to be now standing apart from idolatry, for their sake he engraved the word.",
+   "capsule": "The warning against idols was written because the church included people who were only now standing apart from idolatry.",
+   "comment": "How then, having testified to this perfection through the whole epistle, does he now exhort them to keep themselves from idols (1 John 5:21)? We say therefore: since it was written to the whole church, and it was likely in such a gathering to be now standing apart from idolatry, for their sake he engraved the word.",
    "editions": [
     "complete"
    ],
